@@ -2,10 +2,10 @@
 title: Configure Connection Request Policies
 description: This topic provides information on how to configure Connection Request Policies in Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 ms.date: 08/07/2020
 ---
 

@@ -4,7 +4,7 @@ description: Navigation topic for planning user management in MultiPoint Service
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: e392f423-a64b-4825-91ab-334058721c4d
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ---

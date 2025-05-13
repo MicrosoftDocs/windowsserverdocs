@@ -1,10 +1,10 @@
 ---
 title: Server Manager
 description: Learn about the management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (rdP) connections to each server.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

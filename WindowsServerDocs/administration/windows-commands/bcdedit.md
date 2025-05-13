@@ -4,7 +4,7 @@ description: Reference article for the bcdedit command, which creates new stores
 ms.topic: reference
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 05/27/2021
 ---

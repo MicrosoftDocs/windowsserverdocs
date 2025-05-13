@@ -4,7 +4,7 @@ description: Reference article for the set verbose command, which specifies whet
 ms.topic: reference
 ms.assetid: 93cb93c9-666f-4c74-814b-1c404a949935
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

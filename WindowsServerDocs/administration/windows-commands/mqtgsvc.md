@@ -4,7 +4,7 @@ description: Reference article for the mqtgsvc command, which monitors a queue f
 ms.topic: reference
 ms.assetid: a6f78ffa-ad38-475b-8ed5-f5404b1658ab
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

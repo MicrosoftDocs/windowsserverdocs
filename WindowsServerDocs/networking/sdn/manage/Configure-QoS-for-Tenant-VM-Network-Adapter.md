@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Configure Quality of Service (QoS) for a VM network adapter

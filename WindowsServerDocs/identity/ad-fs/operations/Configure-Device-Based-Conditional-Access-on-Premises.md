@@ -2,11 +2,11 @@
 description: "Learn more about: Configure on-premises Conditional Access using registered devices"
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-premises
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 03/18/2025
+ms.topic: how-to
 ---
 
 

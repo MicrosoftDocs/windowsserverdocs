@@ -2,9 +2,9 @@
 title: Limit user access to the server
 description: Learn how to grant or deny access to MultiPoint Services for users and groups
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 4cabd4f1-a764-4be6-bc6e-0a5f5566390c
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

@@ -262,6 +262,16 @@ items:
       items:
       - name: DHCP failover overview
         href: technologies/dhcp/dhcp-failover.md
+      - name: Manage DHCP failover relationships
+        href: technologies/dhcp/manage-dhcp-failover-relationships.md
+      - name: Migrate existing DHCP failover deployments
+        href: technologies/dhcp/migrate-existing-dhcp-failover.md
+      - name: Migrate to DHCP failover
+        href: technologies/dhcp/migrate-to-dhcp-failover.md   
+      - name: Replicate DHCP failover settings
+        href: technologies/dhcp/replicate-dhcp-failover.md  
+      - name: DHCP failover events
+        href: technologies/dhcp/dhcp-failover-events.md  
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:

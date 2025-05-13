@@ -4,7 +4,7 @@ description: Reference article for the online command, which takes an offline di
 ms.topic: reference
 ms.assetid: aacc3f75-bbc8-4ae2-bf92-420a82594da2
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

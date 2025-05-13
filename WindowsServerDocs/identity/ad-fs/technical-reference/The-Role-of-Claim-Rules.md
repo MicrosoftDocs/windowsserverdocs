@@ -2,9 +2,9 @@
 description: "Learn more about: The Role of Claim Rules"
 ms.assetid: 65e474b5-3076-4ba3-809d-a09160f7c2bd
 title: The Role of Claim Rules
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

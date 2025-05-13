@@ -267,8 +267,9 @@ items:
     - name: 'Storage Replica: Frequently Asked Questions'
       href: storage-replica/storage-replica-frequently-asked-questions.yml
   - name: Storage Spaces
-    href: storage-spaces/overview.md
     items:
+    - name: Storage Spaces overview
+      href: storage-spaces/overview.md
     - name: Deploy Storage Spaces on a stand-alone server
       href: storage-spaces/deploy-standalone-storage-spaces.md
     - name: Enable storage bus cache with Storage Spaces on standalone servers

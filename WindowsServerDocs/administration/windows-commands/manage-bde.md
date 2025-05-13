@@ -4,7 +4,7 @@ description: Reference article for the manage-bde command, which turns on or tur
 ms.topic: reference
 ms.assetid: 276a7841-7289-48d4-a57d-bc7c300affbb
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the logman create trace command, which create
 ms.topic: reference
 ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

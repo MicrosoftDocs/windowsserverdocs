@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getproxyusage command, which re
 ms.topic: reference
 ms.assetid: f940a70e-3b02-497e-a47f-b37b905c299e
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the ping command, which verifies network conn
 ms.topic: reference
 ms.assetid: 49272671-2eec-4fa5-881f-65c24cfbef52
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 09/15/2023
 ---

@@ -4,7 +4,7 @@ title: Health Service faults
 manager: eldenc
 ms.author: jgerend
 ms.topic: article
-author: cosmosdarwin
+author: jasongerend
 ms.date: 10/05/2017
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to configure policy settings for Windows Local Administra
 author: jay98014
 ms.author: mosagie
 ms.date: 08/19/2024
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Configure policy settings for Windows LAPS
@@ -298,6 +298,10 @@ This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 Use this setting to specify the name or the name prefix of the automatically managed account.
 
 This setting defaults to `WLapsAdmin`.
+
+This setting is treated as a name if `AutomaticAccountManagementRandomizeName` is *0* (False).
+
+This setting is treated as a name prefix if `AutomaticAccountManagementRandomizeName` is *1* (True).
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 

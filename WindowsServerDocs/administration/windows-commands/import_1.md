@@ -4,7 +4,7 @@ description: Reference article for the import command, which imports a foreign d
 ms.topic: reference
 ms.assetid: 4b9d2751-7637-4738-83b0-8c578eb28f27
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

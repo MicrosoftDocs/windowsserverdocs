@@ -2,10 +2,10 @@
 title: Overview of the Test Lab Scenario
 description: Learn about what DirectAccess is deployed with and the four subnets that make up the the test lab.
 manager: brianlic
-ms.topic: article
+ms.topic: tutorial
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario

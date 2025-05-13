@@ -4,7 +4,7 @@ description: Reference article for the nslookup set vc command, which specifies 
 ms.topic: reference
 ms.assetid: e9232c92-cd8d-4eff-8ae5-0647bd03bdcb
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

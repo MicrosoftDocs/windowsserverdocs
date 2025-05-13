@@ -4,7 +4,7 @@ description: Reference article for the nfsstat command, which displays statistic
 ms.topic: reference
 ms.assetid: da7a9768-44bd-404b-97ee-c388d00dc395
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

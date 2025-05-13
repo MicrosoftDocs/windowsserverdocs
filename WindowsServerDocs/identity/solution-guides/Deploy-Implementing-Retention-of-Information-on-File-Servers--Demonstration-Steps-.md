@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)"
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
-author: robinharwood
+author: xelu86
 ms.author: alalve
-manager: femila
+manager: tedhudek
 ms.date: 04/01/2022
 ms.topic: how-to
 ---

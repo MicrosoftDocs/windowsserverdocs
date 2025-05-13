@@ -3,7 +3,7 @@ title: User Account Considerations
 description: PRovides user account, user name, and password considerations for MultiPoint Services
 ms.topic: article
 ms.assetid: e225900b-cee9-48c9-b21c-394dc5e72b78
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016

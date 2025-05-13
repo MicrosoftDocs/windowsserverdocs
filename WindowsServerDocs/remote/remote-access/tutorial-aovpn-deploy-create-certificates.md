@@ -1,85 +1,98 @@
 ---
-title: Tutorial - Deploy Always On VPN - Configure Certification Authority templates
-description:  Learn how to create certificate templates and enroll and validate certificates for Always On VPN connections.
-ms.topic: article
+title: "Tutorial: Configure Certificate Authority Templates for Always On VPN"
+description: Learn how to create certificate templates and enroll and validate certificates for users, VPN server, and NPS server to use with Always On VPN connections.
+ms.topic: tutorial
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.author: daknappe
-author: robinharwood
-ms.date:  03/14/2023
+author: dknappettmsft
+ms.date: 05/08/2025
 ---
 
-# Tutorial: Deploy Always On VPN - Configure Certificate Authority templates
+# Tutorial: Configure Certificate Authority templates for Always On VPN
 
-- [**Previous:** 1 - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md)
-- [**Next:** 3 - Configure Always On VPN profile for Windows 10+ clients](tutorial-aovpn-deploy-configure-client.md)
+This tutorial shows you how to configure the Certificate Authority (CA) templates for the Always On VPN deployment. It continues the series to deploy Always On VPN in a sample environment. Previously in the series, you [deployed a sample infrastructure](tutorial-aovpn-deploy-setup.md).
 
-In this part of the Deploy Always On VPN tutorial, you'll create certificate templates and enroll or validate certificates for the Active Directory (AD) groups that you created in [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md):
+The CA templates are used to issue certificates to the VPN server, NPS server, and users. The certificates are used to authenticate the VPN server and NPS server to clients, and to authenticate users to the VPN server.
 
-You'll create the following templates:
+In this tutorial, you:
 
-- *User authentication template*. With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a Trusted Platform Module (TPM) on client computers to secure the certificate. For an overview of TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).  The user template will be configured for auto-enrollment.
+> [!div class="checklist"]
+>
+> - Create a user authentication template.
+> - Create a VPN server authentication template.
+> - Create a NPS server authentication template.
+> - Enroll and validate the user certificate.
+> - Enroll and validate the VPN server certificate.
+> - Enroll and validate the NPS server certificate.
 
-- *VPN server authentication template*. With a VPN server authentication template, you'll add the IP Security (IPsec) IKE Intermediate application policy. The IP Security (IPsec) IKE Intermediate application policy determines how the certificate can be used, it can allow the server to filter certificates if more than one certificate is available. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you won't configure the VPN server certificate for auto-enrollment.
+Here's a description of the different templates:
 
-- *NPS server authentication template*. With an NPS server authentication template, you'll copy the standard RAS and IAS Servers template, and scope it for your NPS server. The new NPS server template includes the server authentication application policy.
+| Template | Description |
+|---|---|
+| **User authentication template** | This template is used to issue user certificates for VPN clients. The user certificate is used to authenticate the user to the VPN server.<br /><br />With a user authentication template, you can improve certificate security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. With the Microsoft Platform Crypto Provider, you can use a [Trusted Platform Module (TPM)](/windows/device-security/tpm/trusted-platform-module-overview) on client computers to secure the certificate. The user template is configured for autoenrollment. |
+| **VPN server authentication template** | This template is used to issue a server certificate for the VPN server. The server certificate is used to authenticate the VPN server to the client.<br /><br />With a VPN server authentication template, you add the IP Security (IPsec) IKE Intermediate application policy. The IP Security (IPsec) IKE Intermediate application policy determines how the certificate can be used, it can allow the server to filter certificates if more than one certificate is available. Because VPN clients access this server from the public internet, the subject and alternative names are different than the internal server name. As a result, you don't configure the VPN server certificate for autoenrollment. |
+| **NPS server authentication template** | This template is used to issue a server certificate for the NPS server. The NPS server certificate is used to authenticate the NPS server to the VPN server.<br /><br />With an NPS server authentication template, you copy the standard RAS and IAS Servers template, and scope it for your NPS server. The new NPS server template includes the server authentication application policy. |
+
+To learn more about Always On VPN, including supported integrations, security and connectivity features, see [Always On VPN Overview](overview-always-on-vpn.md).
 
 ## Prerequisites
 
-1. Complete [Deploy Always On VPN - Setup the environment](tutorial-aovpn-deploy-setup.md).
+To complete the steps in this tutorial, you need:
+
+- To complete all the steps in the previous tutorial: [Deploy Always On VPN Infrastructure](tutorial-aovpn-deploy-setup.md).
+
+- A Windows client device running a supported version of Windows to connect to Always On VPN that is joined to the Active Directory domain.
 
 ## Create the user authentication template
 
-1. On the CA server, which in this tutorial is the domain controller, open the Certification Authority snap-in.
+1. On the server with Active Directory Certificate Services installed, which in this tutorial is the domain controller, open the Certification Authority snap-in.
 
 1. In the left pane, right-click **Certificate Templates** and select **Manage**.
 
-1. In the Certificate Templates console, right-click **User** and select **Duplicate Template**.
+1. In the Certificate Templates console, right-click **User** and select **Duplicate Template**. Don't select **Apply** or **OK** until you finish entering information for all tabs. Some choices can only be configured at template creation; if you select these buttons before entering all parameters you can't change them, otherwise you need to delete the template and recreate it.
 
-   >[!WARNING]
-   >Do not select **Apply** or **OK** until you have completed entering information for all tabs.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if *Legacy Cryptographic Storage Provider* shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
+1. In the Properties of **New Template** dialog box, on the **General** tab, complete the following steps:
 
-1. In the Properties of New Template dialog box, on the **General** tab, complete the following steps:
+   1. In **Template display name**, enter **VPN User Authentication**.
 
-   1. In **Template display name**, enter *VPN User Authentication*.
-
-   2. Clear the **Publish certificate in Active Directory** check box.
+   1. Clear the **Publish certificate in Active Directory** check box.
 
 1. On the **Security** tab, complete the following steps:
 
    1. Select **Add**.
 
-   2. On the Select Users, Computers, Service Accounts, or Groups dialog, enter **VPN Users**, then select **OK**.
+   1. On the Select Users, Computers, Service Accounts, or Groups dialog, enter **VPN Users**, then select **OK**.
 
-   3. In **Group or user names**, select **VPN Users**.
+   1. In **Group or user names**, select **VPN Users**.
 
-   4. In **Permissions for VPN Users**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
+   1. In **Permissions for VPN Users**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
 
-      >[!IMPORTANT]
-      >Make sure to keep the Read permission check box selected. You'll need Read permissions for enrollment.
+      > [!IMPORTANT]
+      > Make sure to keep the **Read** permission check box selected. You need Read permissions for enrollment.
 
-   5. In **Group or user names**, select **Domain Users**, then select **Remove**.
+   1. In **Group or user names**, select **Domain Users**, then select **Remove**.
 
 1. On the **Compatibility** tab, complete the following steps:
 
    1. In **Certification Authority**, select *Windows Server 2016*.
 
-   2. On the **Resulting changes** dialog, select **OK**.
+   1. On the **Resulting changes** dialog, select **OK**.
 
-   3. In **Certificate recipient**, select *Windows 10/Windows Server 2016*.
+   1. In **Certificate recipient**, select *Windows 10/Windows Server 2016*.
 
-   4. On the **Resulting changes** dialog, select **OK**.
+   1. On the **Resulting changes** dialog, select **OK**.
 
-1. On the **Request Handling** tab, clear  **Allow private key to be exported** .
+1. On the **Request Handling** tab, clear  **Allow private key to be exported**.
 
 1. On the **Cryptography** tab, complete the following steps:
 
    1. In **Provider Category**, select **Key Storage Provider**.
 
-   2. Select **Requests must use one of the following providers**.
+   1. Select **Requests must use one of the following providers**.
 
-   3. Select both **Microsoft Platform Crypto Provider** and **Microsoft Software Key Storage Provider**.
+   1. Select both **Microsoft Platform Crypto Provider** and **Microsoft Software Key Storage Provider**.
 
-1. On the **Subject Name** tab, clear the **Include e-mail name in subject name** and **E-mail name** .
+1. On the **Subject Name** tab, clear the **Include e-mail name in subject name** and **E-mail name**.
 
 1. Select **OK** to save the VPN User Authentication certificate template.
 
@@ -93,40 +106,37 @@ You'll create the following templates:
 
 1. In the left pane of the Certification Authority snap-in, right-click **Certificate Templates** and select **Manage** to open the Certificate Templates console.
 
-1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**.
+1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**. Don't select **Apply** or **OK** until you finish entering information for all tabs. Some choices can only be configured at template creation; if you select these buttons before entering all parameters you can't change them, otherwise you need to delete the template and recreate it.
 
-   >[!WARNING]
-   >Do not select **Apply** or **OK** until you have completed entering information for all tabs.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if *Legacy Cryptographic Storage Provider* shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
-
-1. On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *VPN Server Authentication*.
+1. On the Properties of **New Template** dialog box, on the **General** tab, in **Template display name**, enter **VPN Server Authentication**.
 
 1. On the **Extensions** tab, complete the following steps:
 
-    1. Select **Application Policies**, then select **Edit**.
+   1. Select **Application Policies**, then select **Edit**.
 
-    2. In the **Edit Application Policies Extension** dialog, select **Add**.
+   1. In the **Edit Application Policies Extension** dialog, select **Add**.
 
-    3. On the **Add Application Policy** dialog, select **IP security IKE intermediate**, then select **OK**.
+   1. On the **Add Application Policy** dialog, select **IP security IKE intermediate**, then select **OK**.
 
-    4. Select **OK** to return to the **Properties of New Template** dialog.
+   1. Select **OK** to return to the **Properties of New Template** dialog.
 
 1. On the **Security** tab, complete the following steps:
 
-    1. Select **Add**.
+   1. Select **Add**.
 
-    2. On the **Select Users, Computers, Service Accounts, or Groups** dialog, enter **VPN Servers**, then select **OK**.
+   1. On the **Select Users, Computers, Service Accounts, or Groups** dialog, enter **VPN Servers**, then select **OK**.
 
-    3. In **Group or user names**, select **VPN Servers**.
+   1. In **Group or user names**, select **VPN Servers**.
 
-    4. In **Permissions for VPN Servers**, select **Enroll** in the **Allow** column.
+   1. In **Permissions for VPN Servers**, select **Enroll** in the **Allow** column.
 
-    5. In **Group or user names**, select **RAS and IAS Servers**, then select **Remove**.
+   1. In **Group or user names**, select **RAS and IAS Servers**, then select **Remove**.
 
 1. On the **Subject Name** tab, complete the following steps:
 
     1. Select **Supply in the Request**.
 
-    2. On the **Certificate Templates** warning dialog box, select **OK**.
+    1. On the **Certificate Templates** warning dialog box, select **OK**.
 
 1. Select **OK** to save the VPN Server certificate template.
 
@@ -136,30 +146,27 @@ You'll create the following templates:
 
 1. Select **VPN Server Authentication**, then select **OK**.
 
-1. Reboot the VPN server.
+1. Restart the VPN server.
 
 ## Create the NPS Server authentication template
 
 1. In the left pane of the Certification Authority snap-in, right-click **Certificate Templates** and select **Manage** to open the Certificate Templates console.
 
-1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**.
+1. In the Certificate Templates console, right-click **RAS and IAS Server** and select **Duplicate Template**. Don't select **Apply** or **OK** until you finish entering information for all tabs. Some choices can only be configured at template creation; if you select these buttons before entering all parameters you can't change them, otherwise you need to delete the template and recreate it.
   
-   >[!WARNING]
-   >Do not select **Apply** or **OK** until you have completed entering information for all tabs.  Some choices can only be configured at template creation, if you select these buttons before entering ALL parameters you cannot change them. For example, on the **Cryptography** tab, if *Legacy Cryptographic Storage Provider* shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
-
 1. On the Properties of New Template dialog box, on the **General** tab, in **Template display name**, enter *NPS Server Authentication*.
 
 1. On the **Security** tab, complete the following steps:
 
-    1. Select **Add**.
+   1. Select **Add**.
 
-    2. On the **Select Users, Computers, Service Accounts, or Groups** dialog, enter **NPS Servers**, then select **OK**.
+   1. On the **Select Users, Computers, Service Accounts, or Groups** dialog, enter **NPS Servers**, then select **OK**.
 
-    3. In **Group or user names**, select **NPS Servers**.
+   1. In **Group or user names**, select **NPS Servers**.
 
-    4. In **Permissions for NPS Servers**, select **Enroll** in the **Allow** column.
+   1. In **Permissions for NPS Servers**, select **Enroll** in the **Allow** column.
 
-    5. In **Group or user names**, select **RAS and IAS Servers**, then select **Remove**.
+   1. In **Group or user names**, select **RAS and IAS Servers**, then select **Remove**.
 
 1. Select **OK** to save the NPS Server certificate template.
 
@@ -169,32 +176,35 @@ You'll create the following templates:
 
 1. Select **NPS Server Authentication**, then select **OK**.
 
+Now you created the certificate templates you need to enroll and validate the certificates.
 
 ## Enroll and validate the user certificate
 
-Because you're using Group Policy to autoenroll user certificates, you only need to update the policy, and Windows 10 will automatically enroll the user account for the correct certificate. You can then validate the certificate in the Certificates console.
+Group Policy is configured to autoenroll user certificates, so once the policy is applied to Windows client devices, they automatically enroll the user account for the correct certificate. You can then validate the certificate in the **Certificates** console on the local device.
 
-**To validate the user certificate:**
+To check the policy is applied and the certificate is enrolled:
 
-1. Sign in to the VPN Windows client as the user that you created for the **VPN Users** group.
+1. Sign in to the Windows client device as the user that you created for the **VPN Users** group.
 
-2. Press Windows key + R, type **gpupdate /force**, and press ENTER.
+1. Open Command Prompt and run the following command. Alternatively, restart the Windows client device.
 
-3. On the Start menu, type **certmgr.msc**, and press ENTER.
+   ```cmd
+   gpupdate /force
+   ```
 
-4. In the Certificates snap-in, under **Personal**, select **Certificates**. Your certificates appear in the details pane.
+1. On the Start menu, type **certmgr.msc**, and press ENTER.
 
-5. Right-click the certificate that has your current domain username, and then select **Open**.
+1. In the Certificates snap-in, under **Personal**, select **Certificates**. Your certificates appear in the details pane.
 
-6. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
+1. Right-click the certificate that has your current domain username, and then select **Open**.
 
-7. Select **OK**, and close the Certificates snap-in.
+1. On the **General** tab, confirm that the date listed under **Valid from** is today's date. If it isn't, you might have selected the wrong certificate.
 
-### Enroll and validate the VPN server certificate
+1. Select **OK**, and close the Certificates snap-in.
 
-Unlike the user certificate, you must manually enroll the VPN server's certificate.
+## Enroll and validate the VPN server certificate
 
-**To enroll the VPN server's certificate:**
+To enroll the VPN server's certificate:
 
 1. On the VPN server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press ENTER.
 
@@ -208,13 +218,11 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 1. Under the VPN server check box, select **More information is required** to open the Certificate Properties dialog box.
 
-1. Select the **Subject** tab and enter the following information:
+1. Select the **Subject** tab and enter the following information in the **Subject name** section:
 
-    *In the **Subject name** section:*
-
-    1. For **Type** select *Common Name*.  
-    1. For **Value**, enter the name of the external domain that clients use to connect to the VPN (for example, vpn.contoso.com).
-    1. Select **Add**.
+   1. For **Type** select *Common Name*.  
+   1. For **Value**, enter the name of the external domain that clients use to connect to the VPN (for example, vpn.contoso.com).
+   1. Select **Add**.
 
 1. Select **OK** to close Certificate Properties.
 
@@ -222,11 +230,9 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 1. Select **Finish**.
 
-**To validate the VPN server certificate:**
+To validate the VPN server certificate:
 
-1. In the Certificates snap-in, under **Personal**, select **Certificates**.
-
-    Your listed certificates should appear in the details pane.
+1. In the Certificates snap-in, under **Personal**, select **Certificates**. Your listed certificates should appear in the details pane.
 
 1. Right-click the certificate that has your VPN server's name, and then select **Open**.
 
@@ -238,9 +244,7 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 
 ## Enroll and validate the NPS certificate
 
-Because you're using Group Policy to autoenroll NPS certificates, you only need to update the policy, and Windows server will automatically enroll the NPS server for the correct certificate. You can then validate the certificate in the Certificates console.
-
-**To enroll the NPS certificate:**
+To enroll the NPS certificate:
 
 1. On the NPS server's Start menu, type **certlm.msc** to open the Certificates snap-in, and press ENTER.
 
@@ -256,11 +260,9 @@ Because you're using Group Policy to autoenroll NPS certificates, you only need 
 
 1. Select **Finish**.
 
-**To validate the NPS certificate:**
+To validate the NPS certificate:
 
-1. In the Certificates snap-in, under **Personal**, select **Certificates**.
-
-    Your listed certificates should appear in the details pane.
+1. In the Certificates snap-in, under **Personal**, select **Certificates**. Your listed certificates should appear in the details pane.
 
 1. Right-click the certificate that has your NPS server's name, and then select **Open**.
 
@@ -268,8 +270,9 @@ Because you're using Group Policy to autoenroll NPS certificates, you only need 
 
 1. Select **OK**, and close the Certificates snap-in.
 
-## Next steps
+## Next step
 
-- [Deploy Always On VPN Tutorial: Configure Windows client Always On VPN connections](tutorial-aovpn-deploy-configure-client.md)
+Now you created the certificate templates and enrolled the certificates, you can configure a Windows client device to use the Always On VPN connection.
 
-- [Troubleshoot Always On VPN](/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn)
+> [!div class="nextstepaction"]
+> [Tutorial: Create an Always On VPN connection for Windows client devices](tutorial-aovpn-deploy-configure-client.md)

@@ -4,7 +4,7 @@ description: Reference article for the arp command, which displays and modifies 
 ms.topic: reference
 ms.assetid: 827e96eb-1945-483f-980f-714703456f7c
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

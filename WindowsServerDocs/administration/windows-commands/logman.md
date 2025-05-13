@@ -4,7 +4,7 @@ description: Reference article for the logman command, which creates and manages
 ms.topic: reference
 ms.assetid: 574a5203-5b3b-4759-a678-f26d00dde447
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the nslookup lserver command, which changes t
 ms.topic: reference
 ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

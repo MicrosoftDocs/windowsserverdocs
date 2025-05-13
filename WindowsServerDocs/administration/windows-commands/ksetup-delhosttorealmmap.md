@@ -4,7 +4,7 @@ description: Reference article for the ksetup delhosttorealmmap command, which r
 ms.topic: reference
 ms.assetid: 3faee482-a96c-4614-86fd-aaa446643ec4
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the detail vdisk command, which displays the 
 ms.topic: reference
 ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

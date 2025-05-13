@@ -3,7 +3,7 @@ title: A virtual machine running Windows Server 2008 R2 and configured with Dyna
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows Server 2008 R2.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 81b5034a-31ea-4397-bcd0-7b9ef50beb94
 ms.date: 8/16/2016
 ---

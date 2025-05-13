@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using key mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using key mode in a new dedicated forest (default)
-ms.topic: article
+ms.topic: how-to
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

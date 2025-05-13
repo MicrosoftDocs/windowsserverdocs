@@ -1,10 +1,10 @@
 ---
 title: Create a Windows shielded VM template disk
 description: "Learn more about: Create a Windows shielded VM template disk"
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 01/29/2019
 ---

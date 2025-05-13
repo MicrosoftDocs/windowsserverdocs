@@ -2,7 +2,7 @@
 title: Using Inherited Permissions with Access-based Enumeration
 description: This article describes how to use inherited permissions with access-based enumeration
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

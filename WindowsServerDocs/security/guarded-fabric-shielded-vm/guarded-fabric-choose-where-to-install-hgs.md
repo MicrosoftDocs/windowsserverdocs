@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Choose whether to install HGS in its own dedicated forest or in an existing bastion forest"
 title: Choose whether to install HGS in its own new forest or in an existing bastion forest
-ms.topic: article
+ms.topic: concept-article
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

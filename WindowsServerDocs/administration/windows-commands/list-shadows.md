@@ -4,7 +4,7 @@ description: Reference article for the list shadows command, which lists persist
 ms.topic: reference
 ms.assetid: fe568423-00ae-4ede-a1e7-07977cb50ad1
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

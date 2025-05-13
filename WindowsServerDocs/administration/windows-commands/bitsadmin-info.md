@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin info command, which displays su
 ms.topic: reference
 ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

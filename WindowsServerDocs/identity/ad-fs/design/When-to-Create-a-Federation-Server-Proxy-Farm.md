@@ -2,11 +2,11 @@
 description: "Learn more about: When to Create a Federation Server Proxy Farm"
 ms.assetid: ad0bf21d-2ace-4565-b1f5-ce57c8eb2689
 title: When to Create a Federation Server Proxy Farm
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # When to Create a Federation Server Proxy Farm

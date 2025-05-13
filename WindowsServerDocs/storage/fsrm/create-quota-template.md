@@ -2,7 +2,7 @@
 title: Create a Quota Template
 description: This article describes how to create a quota template to define a storage space limit
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

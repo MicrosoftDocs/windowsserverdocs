@@ -4,7 +4,7 @@ description: Reference article for the help command, which displays a list of th
 ms.topic: reference
 ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

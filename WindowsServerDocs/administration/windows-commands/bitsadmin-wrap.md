@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin wrap command, which wraps any l
 ms.topic: reference
 ms.assetid: 14e57522-539d-4621-ad15-09f7a44ccab7
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

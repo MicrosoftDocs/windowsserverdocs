@@ -4,7 +4,7 @@ description: This article provides information about Certificate Revocation hand
 ms.topic: concept-article
 ms.assetid: 13468d55-0acf-4160-a858-4f4c137e2993
 ms.author: jgerend
-author: marcussa
+author: jasongerend
 ms.date: 10/31/2023
 ms.contributor: alalve
 ---

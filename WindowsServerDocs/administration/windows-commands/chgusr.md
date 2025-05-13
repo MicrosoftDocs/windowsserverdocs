@@ -4,7 +4,7 @@ description: Reference article for the chgusr command, which changes the install
 ms.topic: reference
 ms.assetid: f119d9d3-ed8b-42da-81f7-77591d908c83
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

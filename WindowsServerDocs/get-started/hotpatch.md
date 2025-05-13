@@ -2,7 +2,7 @@
 title: Hotpatch for Windows Server
 description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/27/2025
 ms.author: roharwoo
 ---

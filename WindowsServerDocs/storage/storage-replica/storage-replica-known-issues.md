@@ -4,7 +4,7 @@ description: Review known issues with Storage Replica in Windows Server and how 
 manager: candyc
 ms.author: jgerend
 ms.topic: troubleshooting
-author: robinharwood
+author: jasongerend
 ms.date: 05/31/2023
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
@@ -496,4 +496,4 @@ Currently, Storage Replica doesn't support disks that have a physical sector siz
 - [Server-to-server storage replication](server-to-server-storage-replication.md)
 - [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica FAQ](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)

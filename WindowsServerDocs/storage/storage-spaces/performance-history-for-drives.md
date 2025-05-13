@@ -4,7 +4,7 @@ title: Performance history for drives
 ms.author: roharwoo
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: robinharwood
 ms.date: 02/02/2018
 ---
 

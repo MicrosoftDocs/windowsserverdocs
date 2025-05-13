@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin cancel command, which removes t
 ms.topic: reference
 ms.assetid: 7374b544-6a16-4d3e-872c-dcf4c02ad89d
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

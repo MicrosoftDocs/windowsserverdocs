@@ -4,7 +4,7 @@ description: Reference article for the sc.exe config command, which changes serv
 ms.topic: reference
 ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 06/05/2018
 ---

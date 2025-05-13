@@ -2,10 +2,10 @@
 description: Learn how to configure a computer that functions as a federation server to join it to a domain.
 ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
 title: Join a computer to a domain
-author: billmath
-manager: femila
+author: xelu86
+manager: tedhudek
 ms.date: 08/19/2024
-ms.topic: article
+ms.topic: how-to
 ms.author: alalve
 ---
 

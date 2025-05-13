@@ -5,7 +5,7 @@ ms.reviewer: ifufondu
 author: meaghanlewis
 ms.author: mosagie
 manager: chhuybre
-ms.topic: article
+ms.topic: how-to
 ms.date: 11/30/2020
 ---
 

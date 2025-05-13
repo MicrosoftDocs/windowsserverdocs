@@ -2,11 +2,12 @@
 description: Find out about Active Directory Domain Services, a directory service that makes network resource data available to authorized network users and administrators.
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services overview
-author: iainfoulds
+author: meaghanlewis
 ms.author: mosagie
 manager: daveba
 ms.date: 03/10/2025
-ms.topic: article
+ms.topic: overview
+
 # customer intent: As an administrator, I want to become familiar with Active Directory Domain Services so that I can store data on network resources and make this data available to authorized network users and administrators.
 ---
 

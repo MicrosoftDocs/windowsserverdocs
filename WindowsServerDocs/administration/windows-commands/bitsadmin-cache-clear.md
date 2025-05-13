@@ -3,7 +3,7 @@ title: bitsadmin cache and clear
 description: Reference article for the bitsadmin cache and clear command that purges the local cache.
 ms.topic: reference
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 ms.date: 01/06/2023
 ---
 

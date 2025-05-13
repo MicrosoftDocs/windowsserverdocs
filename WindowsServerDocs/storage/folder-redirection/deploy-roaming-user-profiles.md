@@ -2,8 +2,8 @@
 title: Deploy roaming user profiles
 description: Learn how to deploy roaming user profiles so that users receive the same operating system and application settings on multiple computers.
 TOCTitle: Deploy roaming user profiles
-ms.topic: conceptual
-author: robinharwood
+ms.topic: install-set-up-deploy
+author: meaghanlewis
 manager: brianlic
 ms.date: 03/21/2023
 ms.author: mosagie

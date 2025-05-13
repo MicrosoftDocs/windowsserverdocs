@@ -2,7 +2,7 @@
 title: Export a certificate with its private key
 description: Learn how to export a certificate with its private key.
 ms.topic: how-to
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 02/16/2024
 ---

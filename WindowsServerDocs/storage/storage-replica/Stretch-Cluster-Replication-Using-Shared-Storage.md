@@ -3,13 +3,12 @@ title: Configure Stretch Cluster Replication using shared storage in Windows Ser
 description: Stretch cluster replication using shared storage
 ms.author: alalve
 ms.topic: how-to
-author: nedpyle
+author: xelu86
 ms.date: 04/16/2025
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 
 # Stretch cluster replication using shared storage
-
 
 This evaluation example allows you to configure computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it isn't required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.
 
@@ -649,5 +648,4 @@ To alter replication source and destination within the stretch cluster, use the 
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
-- [Stretched Clusters in Azure Local](/azure/azure-local/concepts/stretched-clusters?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)

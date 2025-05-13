@@ -2,7 +2,7 @@
 title: Configure trusted roots and disallowed certificates in Windows
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs)
 ms.topic: how-to 
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.date: 08/22/2023
 ---
@@ -349,7 +349,7 @@ There are two procedures to customize the list of trusted CTLs.
 
 Here's how to generate SST files by using the automatic Windows update mechanism from Windows. For
 more information about generating SST files, see the
-[Certutil](../../administration/windows-commands/certutil.md#-generatesstfromwu) Windows
+[Certutil](../../administration/windows-commands/certutil.md) Windows
 commands reference.
 
 1. From a computer that is connected to the Internet, open Windows PowerShell as an Administrator or

@@ -4,7 +4,7 @@ description: Reference article for wdsutil get-image, which retrieves informatio
 ms.topic: reference
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

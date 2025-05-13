@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) topic - How to migrate the WSU
 ms.topic: how-to
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 07/25/2018
 ---

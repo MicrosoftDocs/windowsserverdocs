@@ -1,7 +1,7 @@
 ---
 title: Processor Power Management (PPM) tuning for the Windows Server balanced power plan
 description: Processor Power Management (PPM) Tuning for the Windows Server balanced power plan
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017
@@ -34,7 +34,7 @@ The tuning in each power policy is data driven by the following five workloads s
 
 - **File Server workload**
 
-    A Microsoft-developed benchmark called [FSCT](https://www.snia.org/sites/default/orig/sdc_archives/2009_presentations/tuesday/BartoszNyczkowski-JianYan_FileServerCapacityTool.pdf) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read, and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
+    A Microsoft-developed benchmark called [FSCT](https://techcommunity.microsoft.com/blog/filecab/file-server-capacity-tool-fsct-1-0-available-for-download/423993) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read, and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
 
 - **SPECpower – JAVA workload**
 

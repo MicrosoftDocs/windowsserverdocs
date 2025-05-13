@@ -2,11 +2,11 @@
 description: "Learn more about: Planning Your Deployment"
 ms.assetid: bb9b9e18-bf2f-4115-be77-9a165944db41
 title: Planning Your Deployment
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Planning Your Deployment

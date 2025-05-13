@@ -4,7 +4,7 @@ description: Reference article for the manage-bde changepassword command, which 
 ms.topic: reference
 ms.assetid: b174e152-8442-4fba-8b33-56a81ff4f547
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

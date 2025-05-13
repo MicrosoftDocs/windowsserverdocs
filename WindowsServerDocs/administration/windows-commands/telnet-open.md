@@ -4,7 +4,7 @@ description: Reference article for the telnet open command, which connects to a 
 ms.topic: article
 ms.assetid: e30ad68c-2366-4754-ac36-311a2392902a
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,7 +1,7 @@
 ---
 title: Netsh Commands for a network bridge of different network adapters.
 description: Use Netsh bridge commands to create and manage a bridge of network adapters for sharing connectivity.
-author: hiepkhuuMS
+author: jasongerend
 ms.author: jgerend
 ms.topic: how-to 
 ms.date: 09/09/2022

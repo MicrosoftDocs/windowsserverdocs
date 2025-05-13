@@ -4,7 +4,7 @@ description: Reference article for the manage-bde changepin command, which modif
 ms.topic: reference
 ms.assetid: c85aa1c7-3485-4839-a292-99dfcd6db252
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

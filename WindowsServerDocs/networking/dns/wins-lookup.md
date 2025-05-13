@@ -1,7 +1,7 @@
 ---
 title: DNS WINS Lookup Integration in Windows Server
 description: Learn about DNS WINS lookup integration, WINS resource records, how WINS lookup works, and how WINS reverse lookup works in Windows Server.
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/13/2025

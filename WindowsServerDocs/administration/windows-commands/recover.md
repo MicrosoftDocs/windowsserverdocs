@@ -4,7 +4,7 @@ description: Reference article for the recover command, which recovers readable 
 ms.topic: reference
 ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948e
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

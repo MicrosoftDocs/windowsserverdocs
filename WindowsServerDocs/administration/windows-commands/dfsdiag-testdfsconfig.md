@@ -4,7 +4,7 @@ description: Reference article for the dfsdiag testdfsconfig, which checks the c
 ms.topic: reference
 ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 06/30/2022
 ---

@@ -4,7 +4,7 @@ description: Reference article for the dfsdiag testdfsintegrity command, which c
 ms.topic: reference
 ms.assetid: 173ee832-26e1-4ec8-a23a-38a7d6229ac3
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

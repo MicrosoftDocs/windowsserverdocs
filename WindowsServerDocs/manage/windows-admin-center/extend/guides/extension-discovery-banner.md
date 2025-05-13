@@ -1,8 +1,8 @@
 ---
 title: Enabling the extension discovery banner
 description: Enabling the extension discovery banner
-ms.topic: article
-author: daniellee-msft
+ms.topic: how-to
+author: jasongerend
 ms.author: jgerend
 ms.date: 06/06/2019
 ---

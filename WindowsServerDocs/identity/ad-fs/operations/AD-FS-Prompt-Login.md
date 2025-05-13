@@ -1,9 +1,9 @@
 ---
 title: AD FS prompt=login
 description: Learn about the native support for the prompt=login parameter that is available in AD FS.
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ms.custom: it-pro, has-azure-ad-ps-ref, azure-ad-ref-level-one-done

@@ -4,7 +4,7 @@ description: Reference article for the makecab command, which packages existing 
 ms.topic: reference
 ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

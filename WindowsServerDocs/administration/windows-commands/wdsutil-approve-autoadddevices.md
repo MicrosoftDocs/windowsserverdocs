@@ -4,7 +4,7 @@ description: Reference article for the wdsutil approve-autoadddevices command, w
 ms.topic: reference
 ms.assetid: 8d76e8d3-ab35-429c-be7b-904f95d0782d
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

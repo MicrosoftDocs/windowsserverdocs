@@ -4,7 +4,7 @@ description: Reference article for the icacls command, which displays or modifie
 ms.topic: reference
 ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 ms.author: jgerend
-author: robinharwood
+author: jasongerend
 manager: mtillman
 ms.date: 08/21/2018
 ---
