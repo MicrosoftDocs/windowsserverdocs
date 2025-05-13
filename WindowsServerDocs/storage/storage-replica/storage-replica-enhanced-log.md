@@ -81,5 +81,5 @@ You can use `-LogType FileBased` to deploy the Storage Replica partnership by us
 * [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known issues](storage-replica-known-issues.md)
 * [Storage Replica: FAQ](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+* [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

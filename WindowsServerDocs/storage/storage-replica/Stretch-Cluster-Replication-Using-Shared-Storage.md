@@ -648,4 +648,4 @@ To alter replication source and destination within the stretch cluster, use the 
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
