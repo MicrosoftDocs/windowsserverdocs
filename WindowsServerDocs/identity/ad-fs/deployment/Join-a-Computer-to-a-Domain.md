@@ -76,7 +76,7 @@ Joining a device to a domain can be done using either graphical user interface (
 
 :::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
 
-## Server Manager method
+### Server Manager method
 
 1. In **Server Manager**, select **Local Server**, under **Workgroup**, select the workgroup or domain name hyperlink.
 
@@ -207,7 +207,9 @@ In cases where a client or server device is disjoined from the domain, you can r
 
 :::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
 
-To leave a domain using the *Server Manager* method, follow the previous steps to join the domain until you reach the **System Properties** window.
+### Rejoin a domain using Server Manager
+
+To leave a domain using the *Server Manager*, follow the previous steps to join the domain until you reach the **System Properties** window.
 
 1. Under **Member of**, select **Workgroup**, type the name of a workgroup to temporarily join, and then select **OK**.
 
@@ -215,7 +217,9 @@ To leave a domain using the *Server Manager* method, follow the previous steps t
 
 1. Once you sign back into the local account, repeat the steps to join your device to the domain it was disjoined from previously.
 
-To leave a domain using the *control panel* method, follow the previous steps to join the domain until you reach the **System Properties** window.
+### Rejoin a server to a domain using Control Panel
+
+To leave a domain using the *Control Panel*, follow the previous steps to join the domain until you reach the **System Properties** window.
 
 1. Under **Member of**, select **Workgroup**, type the name of a workgroup to temporarily join, and then select **OK**.
 
@@ -227,7 +231,9 @@ To leave a domain using the *control panel* method, follow the previous steps to
 
 :::zone pivot="windows-client-11,windows-client-10"
 
-To leave a domain using the *control panel* method, follow the previous steps to join the domain until you reach the **System Properties** window.
+### Rejoin a client to a domain using Control Panel
+
+To leave a domain using the *Control Panel*, follow the previous steps to join the domain until you reach the **System Properties** window.
 
 1. Under **Member of**, select **Workgroup**, type the name of a workgroup to temporarily join, and then select **OK**.
 
@@ -235,7 +241,9 @@ To leave a domain using the *control panel* method, follow the previous steps to
 
 1. Once you sign back into the local account, repeat the steps to rejoin your device to the domain it was disjoined from previously.
 
-To leave a domain using the *Settings app* method, follow the previous steps to join the domain until you reach the **Access work or school** window.
+### Rejoin a domain using Settings
+
+To leave a domain using the *Settings app*, follow the previous steps to join the domain until you reach the **Access work or school** window.
 
 1. Under your account, select **Disconnect**, then select **Yes**.
 
@@ -245,7 +253,9 @@ To leave a domain using the *Settings app* method, follow the previous steps to 
 
 ::: zone-end
 
-To leave a domain using the *Command line* method, follow these steps:
+### Rejoin a domain using the command line
+
+To leave a domain using the *command line*, follow these steps:
 
 # [Command Prompt](#tab/cmd)
 
