@@ -463,6 +463,6 @@ sections:
         answer: |
           AD FS enrolls for logon certificates on behalf of authenticated accounts under certain Windows Hello For Business scenarios, as documented here - [Configure single sign-on for Azure Virtual Desktop using AD FS](https://learn.microsoft.com/en-us/azure/virtual-desktop/configure-adfs-sso)
           By default, these certificates do not contain SID extension and will be denied by KDC. For more information about the KDC requirements, [see KB5014754: Certificate-based authentication changes on Windows domain controllers](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16)
-          Updates are now available for AD FS on Windows Server 2019, Windows Server 2022, and Windows Server 2025 to ensure that issued certificates include the SID extension to satisfy strong mapping requirements.
+          Updates are available for AD FS on Windows Server 2019, Windows Server 2022, and Windows Server 2025 to ensure that issued certificates include the SID extension to satisfy strong mapping requirements.
           To enable this behavior, install the latest Windows Updates on all AD FS servers of the farm, and run the following cmdlet on the primary AD FS server:
             - Set-AdfsCertificateAuthority -EnrollmentAgent -AddSIDCertificateExtension $true
