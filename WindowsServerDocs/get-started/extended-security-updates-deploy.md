@@ -4,7 +4,7 @@ description: Learn how to get Extended Security Updates (ESU) for Windows Server
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 07/12/2023
 ms.mktglfcycl: manage
 ---

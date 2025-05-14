@@ -74,59 +74,64 @@ items:
   - name: Disk Management
     href: disk-management/overview-of-disk-management.md
   - name: File Server and SMB
-    href: file-server/file-server-smb-overview.md
     items:
-    - name: SMB security hardening
-      href: file-server/smb-security-hardening.md
-    - name: SMB signing
-      href: file-server/smb-signing-overview.md
-    - name: Control SMB signing behavior
-      href: file-server/smb-signing.md
-    - name: Configure alternative SMB ports
-      href: file-server/smb-ports.md
-    - name: SMB over QUIC
-      href: file-server/smb-over-quic.md
-    - name: Configure client access control for SMB over QUIC
-      href: file-server/configure-smb-over-quic-client-access-control.md
-    - name: Configure SMB authentication rate limiter
-      href: file-server/configure-smb-authentication-rate-limiter.md
-    - name: Configure the SMB client to require encryption
-      href: file-server/configure-smb-client-require-encryption.md
-    - name: Manage SMB dialects
-      href: file-server/manage-smb-dialects.md
-    - name: Secure SMB traffic
-      href: file-server/smb-secure-traffic.md
-    - name: Enable insecure guest logons in SMB2 and SMB3
-      href: file-server/enable-insecure-guest-logons-smb2-and-smb3.md
-    - name: Block NTLM connections on SMB
-      href: file-server/smb-ntlm-blocking.md
-    - name: SMB security enhancements
-      href: file-server/smb-security.md
-    - name: SMB compression
-      href: file-server/smb-compression.md
-    - name: SMB Direct
-      href: file-server/smb-direct.md
-    - name: Protect SMB traffic from interception
-      href: file-server/smb-interception-defense.md
-    - name: 'SMB: File and printer sharing ports should be open'
-      href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
-    - name: Network File System overview
-      href: nfs/nfs-overview.md
-    - name: Deploy Network File System
-      href: nfs/deploy-nfs.md
+    - name: Server Message Block (SMB)
+      items:
+      - name: SMB overview
+        href: file-server/file-server-smb-overview.md
+      - name: SMB security hardening
+        href: file-server/smb-security-hardening.md
+      - name: SMB signing
+        href: file-server/smb-signing-overview.md
+      - name: Control SMB signing behavior
+        href: file-server/smb-signing.md
+      - name: Configure alternative SMB ports
+        href: file-server/smb-ports.md
+      - name: SMB over QUIC
+        href: file-server/smb-over-quic.md
+      - name: Configure client access control for SMB over QUIC
+        href: file-server/configure-smb-over-quic-client-access-control.md
+      - name: Configure SMB authentication rate limiter
+        href: file-server/configure-smb-authentication-rate-limiter.md
+      - name: Configure the SMB client to require encryption
+        href: file-server/configure-smb-client-require-encryption.md
+      - name: Manage SMB dialects
+        href: file-server/manage-smb-dialects.md
+      - name: Secure SMB traffic
+        href: file-server/smb-secure-traffic.md
+      - name: Enable insecure guest logons in SMB2 and SMB3
+        href: file-server/enable-insecure-guest-logons-smb2-and-smb3.md
+      - name: Block NTLM connections on SMB
+        href: file-server/smb-ntlm-blocking.md
+      - name: SMB security enhancements
+        href: file-server/smb-security.md
+      - name: SMB compression
+        href: file-server/smb-compression.md
+      - name: SMB Direct
+        href: file-server/smb-direct.md
+      - name: Protect SMB traffic from interception
+        href: file-server/smb-interception-defense.md
+      - name: 'SMB: File and printer sharing ports should be open'
+        href: file-server/best-practices-analyzer/smb-open-file-sharing-ports.md
+      - name: Advanced Troubleshooting SMB
+        href: file-server/Troubleshoot/troubleshooting-smb.md
+        items:
+        - name: Detect, enable, and disable SMBv1, SMBv2, and SMBv3
+          href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
+        - name: SMBv1 is not installed by default
+          href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
+    - name: Network File System (NFS)
+      items:
+      - name: Network File System overview
+        href: nfs/nfs-overview.md
+      - name: Deploy Network File System
+        href: nfs/deploy-nfs.md
     - name: NTFS overview
       href: file-server/ntfs-overview.md
     - name: Volume Shadow Copy Service
       href: file-server/volume-shadow-copy-service.md
     - name: Using Disk Cleanup
       href: file-server/disk-cleanup.md
-    - name: Advanced Troubleshooting SMB
-      href: file-server/Troubleshoot/troubleshooting-smb.md
-      items:
-      - name: Detect, enable, and disable SMBv1, SMBv2, and SMBv3
-        href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
-      - name: SMBv1 is not installed by default
-        href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
   - name: File Server Resource Manager
     href: fsrm/fsrm-overview.md
     items:
@@ -267,8 +272,9 @@ items:
     - name: 'Storage Replica: Frequently Asked Questions'
       href: storage-replica/storage-replica-frequently-asked-questions.yml
   - name: Storage Spaces
-    href: storage-spaces/overview.md
     items:
+    - name: Storage Spaces overview
+      href: storage-spaces/overview.md
     - name: Deploy Storage Spaces on a stand-alone server
       href: storage-spaces/deploy-standalone-storage-spaces.md
     - name: Enable storage bus cache with Storage Spaces on standalone servers

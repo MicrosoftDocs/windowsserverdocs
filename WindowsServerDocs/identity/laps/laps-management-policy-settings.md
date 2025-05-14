@@ -299,6 +299,10 @@ Use this setting to specify the name or the name prefix of the automatically man
 
 This setting defaults to `WLapsAdmin`.
 
+This setting is treated as a name if `AutomaticAccountManagementRandomizeName` is *0* (False).
+
+This setting is treated as a name prefix if `AutomaticAccountManagementRandomizeName` is *1* (True).
+
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
 ### AutomaticAccountManagementEnableAccount

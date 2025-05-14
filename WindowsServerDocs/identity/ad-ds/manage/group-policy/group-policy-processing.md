@@ -3,12 +3,12 @@ title: Group Policy processing for Windows
 description: Learn about how Group Policy processing works in Active Directory Domain Services on Windows Server and Windows client computers.
 author: Orin-Thomas
 ms.topic: concept-article
-ms.author: alalve
-contributor: orthomas
-ms.date: 04/16/2024
+ms.author: orthomas
+contributor: alalve
+ms.date: 05/06/2025
 ---
 
-# Group Policy Processing
+# Group Policy processing
 
 By default, Group Policy is inherited and cumulative, and it affects all computers and users in an Active Directory container and its children. Computer-related policy settings override user-related policy settings.
 
@@ -20,7 +20,7 @@ Group Policy Objects (GPO) are processed in the following order:
 1. GPOs linked to organizational units are applied. For nested organizational units (OUs), GPOs linked to parent organizational units are applied before GPOs linked to child organizational units are applied.
 
 > [!TIP]
-> The order in which GPOs are processed is significant because when policy is applied, it overwrites policy that was applied earlier.
+> The sequence of GPO processing is crucial because each subsequent policy application can override settings applied by earlier policies.
 
 The default inheritance method is to evaluate Group Policy starting with the highest parent Active Directory container. The Active Directory container closest to the computer or user overrides Group Policy set in a higher-level Active Directory container. Inheritance is ignored when you set the enforced option for that GPO link or when the block inheritance setting is applied. Local Group Policy is processed before domain-based policies. Policy settings from GPOs linked to Active Directory containers override local policy settings.
 
@@ -67,7 +67,9 @@ WMI allows you to use a WMI query to filter the application of group policy. Whe
 
 ## Loopback processing mode
 
-Loopback processing mode applies the user configuration settings of Group Policy Objects assigned to the computer regardless of who logs on. Loopback processing will either merge or replace the user settings from the GPOs assigned to the user. This policy setting is appropriate in certain closely managed environments with special-use computers, such as classrooms, public kiosks, and reception areas. For example, you might want to enable this policy setting for a specific server, where you must modify the user setting based on the computer that is being used. Enabling the loopback processing mode policy setting directs the system to apply the same user policy settings for any user who signs in the computer, based on the policy applied to the computer.
+Loopback processing mode applies the user configuration settings of Group Policy Objects assigned to the computer regardless of who logs on. Loopback processing will either merge or replace the user settings from the GPOs assigned to the user. This policy setting is appropriate in certain closely managed environments with special-use computers, such as classrooms, public kiosks, and reception areas.
+
+For instance, you might enable this policy setting on a specific server to adjust user settings based on the computer being utilized. When you enable the loopback processing mode policy setting, the system applies user policy settings based on the computer's configuration, regardless of who signs in. This ensures consistent user policy settings for all users on the computer, as defined by the computer's GPOs.
 
 By enabling the loopback processing policy setting in a GPO, you can configure user policy settings based on the computer that they sign in. Without loopback processing, GPOs applying a computer object will only process the computer configuration settings. GPOs applied to users will only process user configuration settings.  When you enable the loopback processing mode policy setting, you must ensure that both the Computer Configuration and User Configuration settings in the GPO are enabled. Those policy settings are applied regardless of which user logs on.
 
