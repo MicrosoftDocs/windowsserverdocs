@@ -43,7 +43,7 @@ For details, see [Export-VM](/powershell/module/hyper-v/export-vm).
 Importing a virtual machine registers the virtual machine with the Hyper-V host. You can import back into the host, or new host. If you're importing to the same host, you don't need to export the virtual machine first, because Hyper-V tries to recreate the virtual machine from available files. Importing a virtual machine registers it so it can be used on the Hyper-V host.
 
 > [!IMPORTANT]
-> Hyper-V virtual machine configurations have a specific version number. You can only import a virtual machine if the Hyper-V host supports that configuration version. Typically, this means that you can import a virtual machine to a Hyper-V host running a newer version of Hyper-V, but you cannot import a virtual machine created on a newer version of Hyper-V to an older version of Hyper-V. See [Supported virtual machine configuration versions](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions) for more information.
+> Hyper-V virtual machine configurations have a specific version number. You can only import a virtual machine if the Hyper-V host supports that configuration version. Typically, this means that you can import a virtual machine to a Hyper-V host running a newer version of Hyper-V, but you can't import a virtual machine created on a newer version of Hyper-V to an older version of Hyper-V. For more information, see [Supported virtual machine configuration versions](Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).
 
 The Import Virtual Machine wizard also helps you fix incompatibilities that can exist when moving from one host to another. This is commonly differences in physical hardware, such as memory, virtual switches, and virtual processors.
 
@@ -65,11 +65,11 @@ To import a virtual machine:
 
 ### [PowerShell](#tab/powershell)
 
-Use the **Import-VM** cmdlet, following the example for the type of import you want. For descriptions of the types, see [Import types](#import-types), below.
+Use the **Import-VM** cmdlet, following the example for the type of import you want. For descriptions of the types, see [Import types](#import-types).
 
 #### Register in place
 
-This type of import uses the files where they are stored at the time of import and retains the virtual machine's ID. The following command shows an example of an import file. Run a similar command with your own values.
+This type of import uses the files where they're stored at the time of import and retains the virtual machine's ID. The following command shows an example of an import file. Run a similar command with your own values.
 
 ```powershell
 Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx'
@@ -99,8 +99,8 @@ For details, see [Import-VM](/powershell/module/hyper-v/import-vm).
 
 Hyper-V offers three import types:
 
-- **Register in-place** – This type assumes export files are in the location where you'll store and run the virtual machine. The imported virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already registered with Hyper-V, it needs to be deleted before the import works. When the import has completed, the export files become the running state files and can't be removed.
+- **Register in-place** – The register in-place type assumes export files are in the location where you store and run the virtual machine. The imported virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already registered with Hyper-V, it needs to be deleted before the import works. When the import has completed, the export files become the running state files and can't be removed.
 
 - **Restore the virtual machine** – Restore the virtual machine to a location you choose, or use the default to Hyper-V. This import type creates a copy of the exported files and moves them to the selected location. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already running in Hyper-V, it needs to be deleted before the import can be completed. When the import has completed, the exported files remain intact and can be removed or imported again.
 
-- **Copy the virtual machine** – This is similar to the Restore type in that you select a location for the files. The difference is that the imported virtual machine has a new unique ID, which means you can import the virtual machine to the same host multiple times.
+- **Copy the virtual machine** – The copy type is similar to the restore type in that you select a location for the files. The difference is that the imported virtual machine has a new unique ID, which means you can import the virtual machine to the same host multiple times.
