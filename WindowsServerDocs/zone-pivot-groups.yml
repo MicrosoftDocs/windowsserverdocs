@@ -20,6 +20,10 @@ groups:
     title: Windows Server 2019
   - id: windows-server-2016
     title: Windows Server 2016
+  - id: windows-client-11
+    title: Windows 11
+  - id: windows-client-10
+    title: Windows 10
 - id: failover-clustering-management-tools
   title: Failover Clustering Management Tools
   prompt: "Choose your failover clustering management tool:"
@@ -27,7 +31,7 @@ groups:
   - id: windows-admin-center
     title: Windows Admin Center
   - id: powershell
-    title: PowerShell 
+    title: PowerShell
   - id: failover-cluster-manager
     title: Failover Cluster Manager
 - id: openssh-windows-version

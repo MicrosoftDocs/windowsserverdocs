@@ -1,20 +1,22 @@
 ---
 title: Join a computer to a domain
-description: Learn how to configure a computer that functions as a federation server to join it to a domain.
-ms.assetid: 10d6723e-c857-43da-9d2d-acb5641d3da8
+description: Learn how to add a client computer or server device to a domain in Windows Server.
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 05/06/2025
+ms.date: 05/15/2025
+zone_pivot_groups: windows-os-version
 ---
 
 # Join a computer to a domain
 
-For Active Directory Federation Services (AD FS) to operate effectively, each computer serving as a federation server must be joined to a domain. While federation server proxies can also be joined to a domain, it's not a mandatory requirement.
-
-You don't have to join a Web server to a domain if the Web server is hosting claims-aware applications only.
+Joining a server or client device to a domain is an essential step for achieving centralized management and improved security within an organization's network. Whether you're configuring a new device or optimizing your network setup, follow this guide for a seamless integration into your domain environment.
 
 ## Prerequisites
+
+**Server requirements**
+
+Your Windows Server device must have the **Active Directory Domain Services** role installed to use the Active Directory Users and Computers (ADUC) tool. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
 You must be a member of one of the following groups:
 
@@ -22,42 +24,245 @@ You must be a member of one of the following groups:
 - Domain Admins
 - Enterprise Admins
 
+**Client requirements**
+
+Your client device must have one of the following versions of Windows installed:
+
+- Enterprise
+- Enterprise N
+- Pro
+- Pro N
+- Pro Education
+- Pro Education N
+- Pro for Workstations
+- Pro N for Workstations
+
+The user account must have administrative privileges on the local machine to join a domain.
+
 > [!NOTE]
 > To keep time synchronized, organizations often use the Windows Time Service or a Network Time Protocol (NTP) server. Within a domain, computers typically sync their clocks with the Domain Controller, which should be aligned with a dependable time source. This process ensures consistent time settings across all devices in the domain, minimizing potential issues with Kerberos authentication.
 
+:::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
+
+## Prestage a device using ADUC
+
+1. In **Server Manager**, select the **Tools** button from the top right menu.
+
+1. In the drop-down menu, select **Active Directory Users and Computers**.
+
+1. In the left pane, navigate to and select the appropriate organizational unit (OU).
+
+1. Select the **Actions** tab, select **New**, then select **Computer**.
+
+1. Enter the computer name and configure which user or group the device should belongs to.
+
+1. Select **OK** This can help prepare for when the client is ready to join the domain.
+
+::: zone-end
+
 ## Join a device to a domain
 
-# [Client device](client)
+Joining a device to a domain can be accomplished through the GUI and command line depending on your preference or the specific requirements of your environment.
+
+:::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
+
+## Server Manager method
+
+1. In **Server Manager**, select **Local Server**, under **Workgroup**, select the workgroup or domain name hyperlink.
+
+1. Under the **Computer Name** tab, select **Change**.
+
+1. Under **Member of**, select **Domain**, type the name of the domain that you wish the computer to join, and then select **OK**.
+
+1. Provide the credentials needed to join the domain, then select **OK**.
+
+1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+
+::: zone-end
+
+### Control Panel method
+
+:::zone pivot="windows-server-2025,windows-client-11"
 
 1. Select **Start**, type **Control Panel**, and then press **ENTER**.
 
-1. Navigate to **System and Security**, and then select **System**.
+1. Ensure that from the **View by** drop-down menu at the top right is set to **Category**.
+
+1. Navigate to **System and Security**, then select **System**.
+
+1. Select **Domain or workgroup**, under the **Computer Name** tab, select **Change**.
+
+1. Under **Member of**, select **Domain**, type the name of the domain that you wish the computer to join, and then select **OK**.
+
+1. Provide the credentials needed to join the domain, then select **OK**.
+
+1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+
+::: zone-end
+
+:::zone pivot="windows-server-2022"
+
+1. Select **Start**, type **Control Panel**, and then press **ENTER**.
+
+1. Ensure that from the **View by** drop-down menu at the top right is set to **Category**.
+
+1. Navigate to **System and Security**, then select **System**.
+
+1. Select **Advanced system settings**, select **Change settings**.
+
+1. Under the **Computer Name** tab, select **Change**.
+'
+1. Under **Member of**, select **Domain**, type the name of the domain that you wish the computer to join, and then select **OK**.
+
+1. Provide the credentials needed to join the domain, then select **OK**.
+
+1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+
+::: zone-end
+
+:::zone pivot="windows-server-2019,windows-server-2016,windows-client-10"
+
+1. Select **Start**, type **Control Panel**, and then press **ENTER**.
+
+1. Ensure that from the **View by** drop-down menu at the top right is set to **Category**.
+
+1. Navigate to **System and Security**, then select **System**.
 
 1. Under **Computer name, domain, and workgroup settings**, select **Change settings**.
 
 1. Under the **Computer Name** tab, select **Change**.
 '
-1. Under **Member of**, select **Domain**, type the name of the domain that you wish this computer to join, and then select **OK**.
+1. Under **Member of**, select **Domain**, type the name of the domain that you wish the computer to join, and then select **OK**.
 
-1. Select **OK** in the Computer Name/Domain Changes dialog box, and then restart the computer.
+1. Provide the credentials needed to join the domain, then select **OK**.
 
-# [Server device](server)
+1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
 
-1. Select **Start**, type **Control Panel**, and then press **ENTER**.
+::: zone-end
 
-1. Navigate to **System and Security**, and then select **System**.
+:::zone pivot="windows-client-11,windows-client-10"
 
-1. Under **Related settings**, select **Rename this PC (advanced)**.
+### Settings app method
 
-1. Under the **Computer Name** tab, select **Change**.
+1. Select **Start**, select **Settings**, then select **Accounts**.
 
-1. Under **Member of**, select **Domain**, type the name of the domain that you wish this server to join, and then select **OK**.
+1. Select **Access work or school**, then select **Connect**.
 
-1. Select **OK** in the Computer Name/Domain Changes dialog box, and then restart the server.
+1. Select **Join this device to a local Active Directory domain**.
+
+1. Enter the domain name, select **Next**, and the account credentials, then select **OK**.
+
+1. Restart the device.
+
+::: zone-end
+
+### Command line method
+
+Adding a device to a domain can be performed through the command prompt or PowerShell.
+
+# [Command Prompt](#tab/cmd)
+
+1. Open an elevated command prompt window.
+
+1. Run the following command replacing `YourDomainName` and `DomainUsername` with your values:
+
+   ```cmd
+   netdom join %COMPUTERNAME% /domain:YourDomainName /userd:DomainUsername /passwordd:*
+   ```
+
+1. The system prompts you to enter the password for the specified domain user account.
+
+1. Reboot your device to join the domain.
+
+# [PowerShell](#tab/powershell)
+
+1. Open an elevated PowerShell window.
+
+1. Run the following command replacing `YourDomainName` with your value:
+
+   ```powershell
+   Add-Computer -DomainName "YourDomainName" -Credential (Get-Credential)
+   Restart-Computer
+   ```
+
+1. You'll be prompted to enter the domain credentials.
+
+Your device restarts after entering the domain credentials to join the domain.
 
 ---
 
-## See also
+## Rejoin a disjoined device in a domain
 
-- [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
-- [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)
+In cases where a client or server device has been disjoined from the domain, you can restore its trust relationship by removing the device from the domain and then rejoining it. This process re-establishes the connection between the device and the domain. The process in leaving a domain is similar to joining one.
+
+:::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
+
+To leave a domain using the *Server Manager* method, follow the previous steps to join the domain until you reach the **System Properties** window.
+
+1. Under **Member of**, select **Workgroup**, type the name of a workgroup to temporarily join, and then select **OK**.
+
+1. Select **OK** again and then reboot your device.
+
+1. Once you sign back into the local account, repeat the steps to join your device to the domain it was disjoined from previously.
+
+To leave a domain using the *control panel* method, follow the previous steps to join the domain until you reach the **System Properties** window.
+
+1. Under **Member of**, select **Workgroup**, type the name of a workgroup to temporarily join, and then select **OK**.
+
+1. Select **OK** again and then reboot your device.
+
+1. Once you sign back into the local account, repeat the steps to join your device to the domain it was disjoined from previously.
+
+::: zone-end
+
+:::zone pivot="windows-client-11,windows-client-10"
+
+To leave a domain using the *control panel* method, follow the previous steps to join the domain until you reach the **System Properties** window.
+
+1. Under **Member of**, select **Workgroup**, type the name of a workgroup to temporarily join, and then select **OK**.
+
+1. Select **OK** again and then reboot your device.
+
+1. Once you sign back into the local account, repeat the steps to rejoin your device to the domain it was disjoined from previously.
+
+To leave a domain using the *Settings app* method, follow the previous steps to join the domain until you reach the **Access work or school** window.
+
+1. Under your account, select **Disconnect**, then select **Yes**.
+
+1. Reboot your device.
+
+1. Once you sign back into the local account, repeat the steps to rejoin your device to the domain it was disjoined from previously.
+
+::: zone-end
+
+To leave a domain using the *Command line* method, follow these steps:
+
+# [Command Prompt](#tab/cmd)
+
+1. Open an elevated command prompt window.
+
+1. Run the following command replacing `YourDomainName` and `DomainUsername` with your values:
+
+   ```cmd
+   netdom remove %COMPUTERNAME% /domain:YourDomainName /userd:DomainUsername /passwordd:*
+   ```
+
+1. The system prompts you to enter the password for the specified domain user account.
+
+1. After your device reboots, sign into the local account.
+
+1. Follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
+
+# [PowerShell](#tab/powershell)
+
+1. Open an elevated PowerShell window.
+
+1. Run the following command:
+
+   ```powershell
+   Remove-Computer -UnjoinDomainCredential (Get-Credential) -PassThru -Verbose -Restart
+   ```
+
+1. You'll be prompted to enter the domain credentials. Your device restarts after entering the domain credentials.
+
+1. Sign into your device and follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
