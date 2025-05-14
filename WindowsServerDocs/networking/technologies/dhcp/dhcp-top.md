@@ -73,7 +73,7 @@ DHCP Server in Windows Server includes the following features:
 
 - **DHCP server integration with IPv4 and IPv6**. This feature allows you to assign both IPv4 and IPv6 addresses to clients using DHCP, providing support for both IP addressing standards.
 
-- - **DHCP failover**. This feature allows two DHCP servers to share a single scope, providing redundancy and load balancing.
+- **DHCP failover**. This feature allows two DHCP servers to share a single scope, providing redundancy and load balancing.
 
 - **DHCP server integration with IPAM**. This feature allows you to manage DHCP servers using IP Address Management (IPAM), providing a centralized location for managing IP address assignments and leases.
 
