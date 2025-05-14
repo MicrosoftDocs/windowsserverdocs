@@ -200,8 +200,9 @@ items:
       - name: Command-Line Tools
         href: fsrm/command-line-tools.md
   - name: Folder Redirection and Roaming User Profiles
-    href: folder-redirection/folder-redirection-rup-overview.md
     items:
+    - name: Manage User Data with Folder Redirection and Roaming User Profiles
+      href: folder-redirection/folder-redirection-rup-overview.md
     - name: Folder Redirection using Group Policy
       href: folder-redirection/folder-redirection-using-group-policy.md
     - name: Deploy Roaming User Profiles
@@ -210,12 +211,17 @@ items:
       href: folder-redirection/deploy-folder-redirection.md
     - name: Deploy primary computers
       href: folder-redirection/deploy-primary-computers.md
-    - name: Disable Offline Files on folders
-      href: folder-redirection/disable-offline-files-on-folders.md
-    - name: Enable always offline mode
-      href: folder-redirection/enable-always-offline.md
     - name: Enable optimized folder moving
       href: folder-redirection/enable-optimized-moving.md
+    - name: Offline Files
+      items:
+      - name: Disable Offline Files on folders
+        href: folder-redirection/disable-offline-files-on-folders.md
+      - name: Enable always offline mode
+        href: folder-redirection/enable-always-offline.md
+      - name: Enable Background File Synchronization on Metered Networks
+        href: folder-redirection/enable-background-synchronization.md
+
   - name: iSCSI
     items:
     - name: iSCSI Target Server
