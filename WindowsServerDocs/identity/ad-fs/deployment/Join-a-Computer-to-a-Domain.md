@@ -14,6 +14,8 @@ Joining a server or client device to a domain is an essential step for achieving
 
 ## Prerequisites
 
+:::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
+
 **Server requirements**
 
 Your Windows Server device must have the **Active Directory Domain Services** role installed to use the Active Directory Users and Computers (ADUC) tool. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
@@ -23,6 +25,10 @@ You must be a member of one of the following groups:
 - Account Operators
 - Domain Admins
 - Enterprise Admins
+
+::: zone-end
+
+:::zone pivot="windows-server-2025,windows-client-11"
 
 **Client requirements**
 
@@ -39,12 +45,16 @@ Your client device must have one of the following versions of Windows installed:
 
 The user account must have administrative privileges on the local machine to join a domain.
 
+::: zone-end
+
 > [!NOTE]
 > To keep time synchronized, organizations often use the Windows Time Service or a Network Time Protocol (NTP) server. Within a domain, computers typically sync their clocks with the Domain Controller, which should be aligned with a dependable time source. This process ensures consistent time settings across all devices in the domain, minimizing potential issues with Kerberos authentication.
 
 :::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
 
 ## Prestage a device using ADUC
+
+This step is optional and not mandatory for joining a device to a domain. However, prestaging a device in Active Directory can streamline the process by pre-assigning the computer account to the appropriate organizational unit (OU) and ensuring proper permissions are in place before the device joins the domain.
 
 1. In **Server Manager**, select the **Tools** button from the top right menu.
 
