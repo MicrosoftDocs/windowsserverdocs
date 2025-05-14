@@ -3,30 +3,30 @@ title: Export and import virtual machines
 description: This article shows you how to export and import virtual machines using Hyper-V Manager or Windows PowerShell.
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 02/18/2015
+ms.date: 05/14/2015
 ms.topic: how-to
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 ---
 
-# Export and Import virtual machines
+# Export and import virtual machines
 
 This article shows you how to export and import a virtual machine, which is a quick way to move or copy them. This article also discusses some of the choices to make when doing an export or import.
 
-## Export a Virtual Machine
+## Export a virtual machine
 
 An export gathers all required files into one unit--virtual hard disk files, virtual machine configuration files, and any checkpoint files. You can do this on a virtual machine that is in either a started or stopped state.
 
-### Using Hyper-V Manager
+### [Hyper-V Manager](#tab/hyper-v-manager)
 
 To create a virtual machine export:
 
 1. In Hyper-V Manager, right-click the virtual machine and select **Export**.
 
-2. Choose where to store the exported files, and click **Export**.
+1. Choose where to store the exported files, and click **Export**.
 
 When the export is done, you can see all exported files under the export location.
 
-### Using PowerShell
+### [PowerShell](#tab/powershell)
 
 Open a session as Administrator and run a command like the following, after replacing \<vm name\> and \<path\>:
 
@@ -36,7 +36,9 @@ Export-VM -Name <vm name> -Path <path>
 
 For details, see [Export-VM](/powershell/module/hyper-v/export-vm).
 
-## Import a Virtual Machine
+---
+
+## Import a virtual machine
 
 Importing a virtual machine registers the virtual machine with the Hyper-V host. You can import back into the host, or new host. If you're importing to the same host, you don't need to export the virtual machine first, because Hyper-V tries to recreate the virtual machine from available files. Importing a virtual machine registers it so it can be used on the Hyper-V host.
 
@@ -45,7 +47,7 @@ Importing a virtual machine registers the virtual machine with the Hyper-V host.
 
 The Import Virtual Machine wizard also helps you fix incompatibilities that can exist when moving from one host to another. This is commonly differences in physical hardware, such as memory, virtual switches, and virtual processors.
 
-### Import using Hyper-V Manager
+### [Hyper-V Manager](#tab/hyper-v-manager)
 
 To import a virtual machine:
 
@@ -61,7 +63,7 @@ To import a virtual machine:
 
 1. Select **Finish**.
 
-### Import using PowerShell
+### [PowerShell](#tab/powershell)
 
 Use the **Import-VM** cmdlet, following the example for the type of import you want. For descriptions of the types, see [Import types](#import-types), below.
 
@@ -90,6 +92,8 @@ Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
 ```
 
 For details, see [Import-VM](/powershell/module/hyper-v/import-vm).
+
+---
 
 ### Import types
 
