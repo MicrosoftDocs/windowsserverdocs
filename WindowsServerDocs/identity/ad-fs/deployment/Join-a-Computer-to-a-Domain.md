@@ -5,7 +5,7 @@ ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ms.date: 05/15/2025
-zone_pivot_groups: windows-os-version
+zone_pivot_groups: windows-os-version-plus-client
 ---
 
 # Join a computer to a domain
@@ -54,7 +54,7 @@ The user account must have administrative privileges on the local machine to joi
 
 1. Select the **Actions** tab, select **New**, then select **Computer**.
 
-1. Enter the computer name and configure which user or group the device should belongs to.
+1. Enter the computer name and configure which user or group the device should belong to.
 
 1. Select **OK** This can help prepare for when the client is ready to join the domain.
 
@@ -62,7 +62,7 @@ The user account must have administrative privileges on the local machine to joi
 
 ## Join a device to a domain
 
-Joining a device to a domain can be accomplished through the GUI and command line depending on your preference or the specific requirements of your environment.
+Joining a device to a domain can be done using either graphical user interface (GUI) methods or command-line tools, depending on your preference and the needs of your environment. Both approaches ensure  integration into the domain.
 
 :::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
 
@@ -76,7 +76,7 @@ Joining a device to a domain can be accomplished through the GUI and command lin
 
 1. Provide the credentials needed to join the domain, then select **OK**.
 
-1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+1. After the device successfully joins the domain, a notification confirms the device's domain membership. Select **OK**, and you're prompted to restart your device.
 
 ::: zone-end
 
@@ -96,7 +96,7 @@ Joining a device to a domain can be accomplished through the GUI and command lin
 
 1. Provide the credentials needed to join the domain, then select **OK**.
 
-1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+1. After the device successfully joins the domain, a notification confirms the device's domain membership. Select **OK**, and you're prompted to restart your device.
 
 ::: zone-end
 
@@ -108,7 +108,7 @@ Joining a device to a domain can be accomplished through the GUI and command lin
 
 1. Navigate to **System and Security**, then select **System**.
 
-1. Select **Advanced system settings**, select **Change settings**.
+1. Select **Advanced system settings**, then select **Change settings**.
 
 1. Under the **Computer Name** tab, select **Change**.
 '
@@ -116,7 +116,7 @@ Joining a device to a domain can be accomplished through the GUI and command lin
 
 1. Provide the credentials needed to join the domain, then select **OK**.
 
-1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+1. After the device successfully joins the domain, a notification confirms the device's domain membership. Select **OK**, and you're prompted to restart your device.
 
 ::: zone-end
 
@@ -136,7 +136,7 @@ Joining a device to a domain can be accomplished through the GUI and command lin
 
 1. Provide the credentials needed to join the domain, then select **OK**.
 
-1. Once successful, you're notified of the domain the device is joined to. Select **OK** and then you're prompted to reboot your device.
+1. After the device successfully joins the domain, a notification confirms the device's domain membership. Select **OK**, and you're prompted to restart your device.
 
 ::: zone-end
 
@@ -185,7 +185,7 @@ Adding a device to a domain can be performed through the command prompt or Power
    Restart-Computer
    ```
 
-1. You'll be prompted to enter the domain credentials.
+1. You're prompted to enter the domain credentials.
 
 Your device restarts after entering the domain credentials to join the domain.
 
@@ -193,7 +193,7 @@ Your device restarts after entering the domain credentials to join the domain.
 
 ## Rejoin a disjoined device in a domain
 
-In cases where a client or server device has been disjoined from the domain, you can restore its trust relationship by removing the device from the domain and then rejoining it. This process re-establishes the connection between the device and the domain. The process in leaving a domain is similar to joining one.
+In cases where a client or server device is disjoined from the domain, you can restore its trust relationship by removing the device from the domain and then rejoining it. This process re-establishes the connection between the device and the domain. The process in leaving a domain is similar to joining one.
 
 :::zone pivot="windows-server-2025,windows-server-2022,windows-server-2019,windows-server-2016"
 
@@ -263,6 +263,6 @@ To leave a domain using the *Command line* method, follow these steps:
    Remove-Computer -UnjoinDomainCredential (Get-Credential) -PassThru -Verbose -Restart
    ```
 
-1. You'll be prompted to enter the domain credentials. Your device restarts after entering the domain credentials.
+1. You're prompted to enter the domain credentials. Your device restarts after entering the domain credentials.
 
 1. Sign into your device and follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
