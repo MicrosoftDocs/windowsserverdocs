@@ -12851,7 +12851,7 @@
      "redirect_document_id": false
     },
     {
-     "source_path": "/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
+     "source_path": "WindowsServerDocs/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
      "redirect_url": "/windows-server/identity/ad-ds/manage/join-a-computer-to-a-domain",
       "redirect_document_id": true
     }

@@ -197,7 +197,7 @@ Your device restarts after entering the domain credentials to join the domain.
 
 ---
 
-## Rejoin a disjoined device in a domain
+## Rejoin a disjoined device to a domain
 
 In cases where a client or server device is disjoined from the domain, you can restore its trust relationship by removing the device from the domain and then rejoining it. This process re-establishes the connection between the device and the domain. The process in leaving a domain is similar to joining one.
 
@@ -321,7 +321,7 @@ This error typically occurs when the machine's password isn't synchronized with 
 
    You're prompted to provide the password for the account.
 
-1. Restart your device for changes to take effect. Then rejoin the domain.
+1. Restart your device for changes to take effect. Follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
 
 # [PowerShell](#tab/powershell)
 
@@ -351,4 +351,4 @@ This error typically occurs when the machine's password isn't synchronized with 
    Restart-Computer -Force
    ```
 
-1. After your device reboots, rejoin the domain.
+1. After your device reboots, follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.

@@ -315,7 +315,7 @@
     - name: AD DS Operations
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
     - name: Join a computer to a domain
-      href: ad-ds/manage/join-a-computer-to-a-domain.md
+      href: ad-ds/manage/join-computer-to-domain.md
       items:
       - name: Active Directory Forest Recovery Guide
         items:
@@ -793,8 +793,6 @@
           items:
           - name: 'Checklist: Setting Up a Federation Server Proxy'
             href: ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md
-          - name: Join a computer to a Domain
-            href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
           - name: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network
             href: ./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md
           - name: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
