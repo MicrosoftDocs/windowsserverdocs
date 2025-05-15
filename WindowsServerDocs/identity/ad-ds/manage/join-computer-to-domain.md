@@ -293,7 +293,7 @@ The trust relationship between this workstation and the primary domain failed.
 
 This error typically occurs when the machine's password isn't synchronized with the domain database. It can also happen if the computer account in the domain was deleted or became corrupt. You can resolve the trust relationship issue between the device and the domain using the command line.
 
-# [Command Prompt](#tab/cmd)
+# [Command Prompt](#tab/cmd2)
 
 1. Sign in with the local administrator account.
 
@@ -323,7 +323,7 @@ This error typically occurs when the machine's password isn't synchronized with 
 
 1. Restart your device for changes to take effect. Follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell2)
 
 1. Sign in with the local administrator account.
 
