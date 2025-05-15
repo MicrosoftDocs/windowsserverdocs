@@ -65,7 +65,7 @@ The Protected Users group applies non-configurable settings to TGT expiration fo
 - Maximum lifetime for user ticket
 - Maximum lifetime for user ticket renewal
 
-For Protected Users members, the group automatically sets these lifetime limits to 600 minutes. The user can't change this limit unless they leave the group.
+For Protected Users members, the group automatically sets these lifetime limits to 240 minutes. The user can't change this limit unless they leave the group.
 
 ## How the Protected Users group works
 
