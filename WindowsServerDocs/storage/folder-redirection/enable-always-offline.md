@@ -4,7 +4,7 @@ description: Step-by-step guide to enable Always Offline mode of Offline Files t
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 05/14/2025
+ms.date: 05/15/2025
 #customer intent: As a Windows Server administrator, I want to enable Always Offline mode for faster access to files and lower bandwidth usage, so that users can work offline efficiently even when connected to high-speed networks.
 ---
 
@@ -14,9 +14,9 @@ This article describes how to use the Always Offline mode of Offline Files to pr
 
 ## What does Always Offline do?
 
-Always Offline mode is a specific configuration of Offline Files that allows users to work with files and folders in a redirected folder even when the network connection is unavailable or slow. This mode is particularly useful for mobile users who may frequently switch between different networks or work in environments with unreliable connectivity. Users can switch to Offline mode using the **Work offline** button in Windows Explorer, or the system can automatically switch to Offline mode based on network availability and conditions.
+Always Offline mode is a specific configuration of Offline Files that allows users to work with files and folders in a redirected folder even when the network connection is unavailable or slow. This mode is useful for mobile users who might frequently switch between different networks or work in environments with unreliable connectivity. Users can switch to Offline mode using the **Work offline** button in Windows Explorer, or the system can automatically switch to Offline mode based on network availability and conditions.
 
-Administrators can configure the experience for users of Offline Files to always work offline, even when they are connected through a high-speed network connection.  With Always Offline mode, computers never transition to Online mode when the **Configure slow-link mode** Group Policy setting is configured and the **Latency** threshold parameter is set to 1 millisecond. Changes are synced in the background every 120 minutes, by default, but synchronization is configurable by using the **Configure Background Sync** Group Policy setting.
+Administrators can configure the experience for users of Offline Files to always work offline, even when they're connected through a high-speed network connection. With Always Offline mode, computers never transition to Online mode when the **Configure slow-link mode** Group Policy setting is configured and the **Latency** threshold parameter is set to 1 millisecond. Changes are synced in the background every 120 minutes, by default, but synchronization is configurable by using the **Configure Background Sync** Group Policy setting.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ To enable Always Offline mode, your environment must meet the following prerequi
 
 ## Enable Always Offline mode
 
-To enable Always Offline mode, use Group Policy to enable the **Configure slow-link mode** policy setting and set the latency to **1** (millisecond). Doing so causes client computers to automatically use Always Offline mode.
+To enable Always Offline mode, use Group Policy to enable the **Configure slow-link mode** policy setting and set the latency to **1** (millisecond). Doing so causes client computers to automatically use Always Offline mode. To enable Always Offline mode, follow these steps:
 
 1. Select the **Start** button, type **Group Policy Management**, open **Group Policy Management** from the best match list.
 
@@ -48,26 +48,24 @@ To enable Always Offline mode, use Group Policy to enable the **Configure slow-l
 
 1. In the **Group Policy Management Editor** policy navigation tree, expand **Computer Configuration > Policies > Administrative Templates > Network > Offline Files**.
 
-1. Right-click **Configure slow-link mode**, and then select **Edit**. The **Configure slow-link mode** window will appear.
+1. Right-click **Configure slow-link mode**, and then select **Edit**. The **Configure slow-link mode** window appears.
 
 1. Select **Enabled**.
 
-1. In the **Options** box under **UNC Paths**, select **Show**. The **Show Contents window** will appear.
+1. In the **Options** box under **UNC Paths**, select **Show**. The **Show Contents window** appears.
 
 1. In the **Value name** box, specify the file share for which you want to enable Always Offline mode. For example, to enable Always Offline mode for the Server1 using the file share name Share1, enter `\\Server1\Share1`.
 
 1. To enable Always Offline mode on all file shares, enter `*`.
 
-1. In the **Value** box, enter `Latency=1` to set the latency threshold to one millisecond, and then select **OK**.
+1. In the **Value** box, enter `Latency=1` to set the latency threshold to 1 millisecond, and then select **OK**.
 
 By default, when in Always Offline mode, Windows synchronizes files in the Offline Files cache in the background every two hours. To change this value, use the **Configure Background Sync** policy setting.
 
-To force the GPO to be applied, run the **gpupdate /force** command on the client computers or wait for the next Group Policy refresh interval.
-
 ## Related content
-
-Learn more about Folder Redirection, Offline Files, and Roaming User Profiles in the following articles:
 
 - [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
 
 - [Deploy Folder Redirection with Offline Files](deploy-folder-redirection.md)
+
+- [Enable Background File Synchronization on Metered Networks in Windows and Windows Server](enable-background-synchronization.md)

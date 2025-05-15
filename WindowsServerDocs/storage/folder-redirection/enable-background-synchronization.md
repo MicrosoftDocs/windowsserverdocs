@@ -1,7 +1,7 @@
 ---
 title: Enable Background File Synchronization on Metered Networks in Windows and Windows Server
 description: Step-by-step guide to configured file synchronization on costed networks and optimize synchronization while roaming or near bandwidth limits.
-ms.date: 09/06/2016
+ms.date: 05/15/2025
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
@@ -10,11 +10,17 @@ ms.author: roharwoo
 
 # Enable Background File Synchronization on Metered Networks in Windows and Windows Server
 
-In this article, learn how to configure background file synchronization for Offline Files on costed (metered) networks. Windows and Windows Server support background file synchronization by automatically tracking roaming and bandwidth usage limits while on metered connections. By default, when the user is using a metered connection (such as a 4G mobile network) and is near or over their bandwidth limit or roaming on another provider’s network, Windows switches to Offline mode and disables background synchronization. Users can still manually initiate synchronization, and administrators can can optimize synchronization settings for users who rely on metered connections or frequently roam between networks.
+In this article, learn how to configure background file synchronization for Offline Files on costed (metered) networks. Windows and Windows Server support background file synchronization by automatically tracking roaming and bandwidth usage limits while on metered connections. Users can still manually initiate synchronization, and administrators can optimize synchronization settings for users who rely on metered connections or frequently roam between networks.
 
-Metered network connections usually have round-trip network latencies that are slower than the default 35 millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows, and Windows Server. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
+By default, Windows disables background synchronization and switches to Offline mode in the following situations:
 
-## Prerequisites for Background File Synchronization
+- The user is connected to a metered network, such as a 4G mobile connection.
+- The user is near or over their bandwidth limit.
+- The user is roaming on another provider’s network.
+
+ Metered network connections usually have round-trip network latencies that are slower than the default 35-millisecond latency value for transitioning to Offline (Slow Connection) mode in Windows, and Windows Server. Therefore, these connections usually transition to Offline (Slow Connection) mode automatically.
+
+## Prerequisites
 
 To enable background file synchronization of Offline Files for users on metered networks, ensure your environment meets the following requirements:
 
@@ -27,6 +33,8 @@ To enable background file synchronization of Offline Files for users on metered 
 - A computer with the Group Policy Management Console installed.
 
 ## Enable background file synchronization of Offline Files on costed networks
+
+In Windows and Windows Server, you can enable background file synchronization of Offline Files on costed networks by using the **Enable file synchronization on costed networks** Group Policy setting. This policy setting allows users to synchronize files in the background when they're connected to a metered network.
 
 Follow these steps to configure the **Enable file synchronization on costed networks** policy setting using Group Policy:
 
@@ -48,9 +56,12 @@ Follow these steps to configure the **Enable file synchronization on costed netw
 
 1. select **Enabled**, and then select **OK**.
 
-The **Enable file synchronization on costed networks** policy setting is applied to all users who log on to computers that are in the scope of the GPO and you have now enabled background file synchronization of Offline Files for those users when they are using metered connections.
+To ensure client computers that are using metered network connections properly transition to the Offline (Slow Connection) mode instead of the more bandwidth-intensive Online mode, test the latencies of your metered network connections. To adjust the threshold by using the **Configure slow-link mode** Group Policy setting for your file server, or you can enable the Always Offline mode. To learn more about the Always Offline mode, see [Enable Always Offline mode for faster access to files](enable-always-offline.md).
 
-> [!TIP]
-> To ensure client computers that are using metered network connections properly transition to the Offline (Slow Connection) mode instead of the more bandwidth-intensive Online mode, test the latencies of your metered network connections. To adjust the threshold by using the **Configure slow-link mode** Group Policy setting for your file server, or you can enable the Always Offline mode. To learn more about the Always Offline mode, see [Enable Always Offline mode for faster access to files](enable-always-offline.md).
+## Related content
 
-To force the GPO to be applied, run the **gpupdate /force** command on the client computers or wait for the next Group Policy refresh interval.
+- [Folder Redirection, Offline Files, and Roaming User Profiles overview](folder-redirection-rup-overview.md)
+
+- [Enable Always Offline mode for faster access to files](enable-always-offline.md)
+
+- [Deploy primary computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
