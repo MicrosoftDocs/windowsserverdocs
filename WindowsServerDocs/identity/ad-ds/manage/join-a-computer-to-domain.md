@@ -20,17 +20,15 @@ Joining a server or client device to a domain is an essential step for achieving
 
 Your Windows Server device must have the **Active Directory Domain Services** role installed to use the Active Directory Users and Computers (ADUC) tool. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
-You must be a member of one of the following groups:
-
-- Account Operators
-- Domain Admins
-- Enterprise Admins
+You must be a member of the Administrators group or have administrative privileges on both the local account and domain account.
 
 ::: zone-end
 
-:::zone pivot="windows-server-2025,windows-client-11"
+:::zone pivot="windows-client-11,windows-client-10"
 
 **Client requirements**
+
+The user account must have administrative privileges on the local machine to join a domain.
 
 Your client device must have one of the following versions of Windows installed:
 
@@ -42,8 +40,6 @@ Your client device must have one of the following versions of Windows installed:
 - Pro Education N
 - Pro for Workstations
 - Pro N for Workstations
-
-The user account must have administrative privileges on the local machine to join a domain.
 
 ::: zone-end
 
@@ -182,7 +178,7 @@ Adding a device to a domain can be performed through the command prompt or Power
 
 1. The system prompts you to enter the password for the specified domain user account.
 
-1. Reboot your device to join the domain.
+1. Reboot your device. Once you sign in, you're joined to the domain.
 
 # [PowerShell](#tab/powershell)
 
@@ -286,3 +282,73 @@ To leave a domain using the *command line*, follow these steps:
 1. You're prompted to enter the domain credentials. Your device restarts after entering the domain credentials.
 
 1. Sign into your device and follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
+
+## Repair domain trust relationship
+
+You might encounter the following error when the secure channel between a domain-joined computer and the domain controller is disrupted:
+
+```error
+The trust relationship between this workstation and the primary domain failed.
+```
+
+This error typically occurs when the machine's password isn't synchronized with the domain database. It can also happen if the computer account in the domain was deleted or became corrupt. You can resolve the trust relationship issue between the device and the domain using the command line.
+
+# [Command Prompt](#tab/cmd)
+
+1. Sign in with the local administrator account.
+
+1. Open an elevated command prompt window.
+
+1. Test the secure channel by running the following command replacing `ComputerName` and `YourDomainName` with your values:
+
+   ```cmd
+   netdom verify ComputerName /domain:YourDomainName
+   ```
+
+1. Reset the machine password by running the following command replacing `DomainControllerName` and `Domain\Username` with your values:
+
+   ```cmd
+   netdom resetpwd /server:DomainControllerName /userd:Domain\Username /passwordd:*
+   ```
+
+   You're prompted to provide the password for the account.
+
+1. Run the following command replacing `YourDomainName` and `DomainUsername` with your values to reset the secure channel:
+
+   ```cmd
+   netdom reset /domain:YourDomainName /userd:DomainUsername /passwordd:*
+   ```
+
+   You're prompted to provide the password for the account.
+
+1. Restart your device for changes to take effect. Then rejoin the domain.
+
+# [PowerShell](#tab/powershell)
+
+1. Sign in with the local administrator account.
+
+1. Open an elevated PowerShell window.
+
+1. Test the secure channel by running the following command:
+
+   ```powershell
+      Test-ComputerSecureChannel
+      ```
+
+      If the test returns `True`, the secure channel is intact, and the problem might be elsewhere such as with the Domain Name System (DNS) or other network issue. If `False`, continue with the next steps.
+
+1. Attempt to repair the secure channel directly using the following command and provide the credentials when prompted:
+
+   ```powershell
+   Test-ComputerSecureChannel -Repair -Credential (Get-Credential)
+   ```
+
+1. Run the following command to reset the computer account password and enter the domain credentials when prompted:
+
+   ```powershell
+   $credential = Get-Credential
+   Reset-ComputerMachinePassword -Credential $credential
+   Restart-Computer -Force
+   ```
+
+1. After your device reboots, rejoin the domain.

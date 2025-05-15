@@ -12849,6 +12849,11 @@
      "source_path": "WindowsServerDocs/storage/storage-change-history.md",
      "redirect_url": "/windows-server/storage",
      "redirect_document_id": false
+    },
+    {
+     "source_path": "/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
+     "redirect_url": "/windows-server/identity/ad-ds/manage/join-a-computer-to-a-domain",
+      "redirect_document_id": true
     }
   ]
 }

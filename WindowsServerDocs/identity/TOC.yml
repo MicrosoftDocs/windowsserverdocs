@@ -314,6 +314,8 @@
           href: ad-ds/deploy/RODC/forest-Wide-Updates.md
     - name: AD DS Operations
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
+    - name: Join a computer to a domain
+      href: ad-ds/manage/join-a-computer-to-a-domain.md
       items:
       - name: Active Directory Forest Recovery Guide
         items:
@@ -698,8 +700,6 @@
         - name: Deploying a Federation Server Farm
           href: ad-fs/deployment/Deploying-a-Federation-Server-Farm.md
           items:
-          - name: Join a computer to a domain
-            href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
           - name: Enroll an SSL Certificate for AD FS
             href: ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md
           - name: Install the AD FS Role Service
