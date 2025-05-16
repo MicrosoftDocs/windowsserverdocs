@@ -27,6 +27,7 @@ The following sub-commands are available:
 
 |Sub-command|Description|
 |-----------|-----------|
+|logicaldisk|Displays properties of all the logical disks on this computer.|
 |class|Escapes from the default alias mode of WMIC to access classes in the WMI schema directly.|
 |path|Escapes from the default alias mode of WMIC to access instances in the WMI schema directly.|
 |context|Displays the current values of all global switches.|
@@ -59,6 +60,32 @@ OUTPUT       : STDOUT
 APPEND       : STDOUT
 USER         : N/A
 AGGREGATE    : ON
+```
+
+To display the properties of logical disks on the computer, type:
+
+```cmd
+wmic logicaldisk
+```
+
+Output similar to the following displays (in which thecomputer name has been hidden):
+
+```cmd
+Access  Availability  BlockSize  Caption  Compressed  ConfigManagerErrorCode  ConfigManagerUserConfig  CreationClassName  Description       DeviceID  DriveType  ErrorCleared  ErrorDescription  ErrorMethodology  FileSystem  FreeSpace    InstallDate  LastErrorCode  MaximumComponentLength  MediaType  Name  NumberOfBlocks  PNPDeviceID  PowerManagementCapabilities  PowerManagementSupported  ProviderName  Purpose  QuotasDisabled  QuotasIncomplete  QuotasRebuilding  Size          Status  StatusInfo  SupportsDiskQuotas  SupportsFileBasedCompression  SystemCreationClassName  SystemName       VolumeDirty  VolumeName  VolumeSerialNumber
+0                                C:       FALSE                                                        Win32_LogicalDisk  Local Fixed Disk  C:        3                                                            NTFS        34122387456                              255                     12         C:                                                                                                                                                                   126752911360                      FALSE               TRUE                          Win32_ComputerSystem     TABLET-XXXXXXXX               Local Disk  FE38AFCD
+```
+
+To get the name of the logical disks, type:
+
+```cmd
+wmic logicaldisk get name
+```
+
+Output similar to the following displays:
+
+```cmd
+Name
+C:
 ```
 
 To change the language ID used by the command line to English (locale ID 409), type:
