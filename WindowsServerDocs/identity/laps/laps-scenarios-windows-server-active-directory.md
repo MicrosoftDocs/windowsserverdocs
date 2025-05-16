@@ -79,7 +79,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 > Members of the Domain Admins group already have password query permission by default.
 
 > [!TIP]
-> When a user is granted permission to query a password from Active Directory that doesn't automatically imply that the user has permission to decrypt an encrypted password. Permission to decrypt an encrypted password is configured using the [`ADPasswordEncryptionPrincipal`](laps-management-policy-settings.md##adpasswordencryptionprincipal) policy setting at the time the device stores the password in Active Directory. The default policy setting for `ADPasswordEncryptionPrincipal` is the Domain Admins group.
+> When a user is granted permission to query a password from Active Directory that doesn't automatically imply that the user has permission to decrypt an encrypted password. Permission to decrypt an encrypted password is configured using the [`ADPasswordEncryptionPrincipal`](laps-management-policy-settings.md#adpasswordencryptionprincipal) policy setting at the time the device stores the password in Active Directory. The default policy setting for `ADPasswordEncryptionPrincipal` is the Domain Admins group.
 
 ## Grant password expiration configuration permissions
 
