@@ -67,6 +67,18 @@ Authentication methods supported by Server for NFS include:
 
 By using these management tools and authentication methods, administrators can effectively deploy, configure, and maintain robust NFS solutions within Windows Server environments.
 
+To perform identity mapping, you need to deploy one of the following:
+
+- A Windows domain controller running Active Directory Domain Services (AD DS) and a User Name Mapping service. The User Name Mapping service is installed as part of Server for NFS.
+  
+- A mapping file that contains the identity mapping information. The mapping file is stored on the computer that's running Server for NFS.
+  
+- An RFC 2307-compliant LDAP store, such as Active Directory Lightweight Directory Services (AD LDS), that contains the identity mapping information. The LDAP store is stored on the computer that's running Server for NFS.
+
+- A User Name Mapping service that uses a password file and a group file. These files are stored on the computer that's running the User Name Mapping service.
+
+To learn more about identity mapping, see [NFS Identity Mapping in Windows Server](https://techcommunity.microsoft.com/blog/filecab/nfs-identity-mapping-in-windows-server-2012/424602).
+
 ## Next step
 
 Learn how to [Deploy Network File System (NFS)](deploy-nfs.md).

@@ -18,7 +18,7 @@ NFS Server for Windows Server supports multiple authentication methods, includin
 For the NFS version 4.1 and NFS version 3.0 protocols, we recommend that you use Kerberos (RPCSEC_GSS). There are three options with increasing levels of security protection:
 
 - **Krb5**: Uses the Kerberos version 5 protocol to authenticate users before granting them access to the file share.
-- **Krb5i**: Uses the Kerberos version 5 protocol to authenticate with integrity checking (checksums), which verifies that the data hasn't been altered.
+- **Krb5i**: Uses the Kerberos version 5 protocol to authenticate with integrity checking (checksums), which verifies that the data isn't altered.
 - **Krb5p**: Uses the Kerberos version 5 protocol, which authenticates NFS traffic with encryption for privacy. This option is the most secure Kerberos option.
 
   > [!NOTE]
@@ -29,25 +29,15 @@ For the NFS version 4.1 and NFS version 3.0 protocols, we recommend that you use
 
 To deploy NFS, ensure that you have the following prerequisites:
 
-- One or more computers running Windows Server on which you'll install the two main Services for NFS components: Server for NFS and Client for NFS. You can install these components on the same computer or on different computers.
-
-- To perform identity mapping, you need to deploy one of the following:
-
-  - A Windows domain controller running Active Directory Domain Services (AD DS) and a User Name Mapping service. The User Name Mapping service is installed as part of Server for NFS.
-  
-  - A mapping file that contains the identity mapping information. The mapping file is stored on the computer that's running Server for NFS.
-  
-  - An RFC 2307-compliant LDAP store, such as Active Directory Lightweight Directory Services (AD LDS), that contains the identity mapping information. The LDAP store is stored on the computer that's running Server for NFS.
-
-  - A User Name Mapping service that uses a password file and a group file. These files are stored on the computer that's running the User Name Mapping service.
+- One or more computers running Windows Server on which you install the two main Services for NFS components: Server for NFS and Client for NFS. You can install these components on the same computer or on different computers.
 
 - If you're using a UNIX-based computer for your NFS server or client, it must be compatible with one of the following NFS protocol specifications:
 
-  - NFS Version 4.1 Protocol Specification (as defined in RFC [5661](https://tools.ietf.org/html/rfc5661))
+  - NFS Version 4.1 Protocol Specification, as defined in [RFC5661](https://tools.ietf.org/html/rfc5661)
   
-  - NFS Version 3 Protocol Specification (as defined in RFC [1813](https://tools.ietf.org/html/rfc1813))
+  - NFS Version 3 Protocol Specification, as defined in [RFC1813](https://tools.ietf.org/html/rfc1813)
   
-  - NFS Version 2 Protocol Specification (as defined in RFC [1094](https://tools.ietf.org/html/rfc1094))
+  - NFS Version 2 Protocol Specification, as defined in [RFC1094](https://tools.ietf.org/html/rfc1094)
 
 ### Install Network File System
 
@@ -70,7 +60,7 @@ Here's how to install the DNS Server role using Server Manager from the Windows 
 
 1. On the **Select server roles** page,  expand **File and Storage Services > File and iSCSI Services**, check **File Server**, **File Server Resource Manager**, and **Server for NFS**, then **Next**.
 
-    1. You'll be prompted to add features that are required for Server for NFS, if you're happy with the
+    1. You're prompted to add features that are required for Server for NFS, if you're happy with the
        defaults, select **Add Features**.
 
 1. On the **Select features** page, you can leave the default selections, and then select on the
@@ -94,7 +84,7 @@ Here's how to install the DNS Server role using the
 1. To install the DNS role, run the following command. The installation doesn't require a reboot.
 
    ```powershell
-   Install-WindowsFeature -Name FS-NFS-Service
+   Install-WindowsFeature -Name FS-NFS-Service -IncludeManagementTools
    ```
 
 ---
@@ -133,8 +123,6 @@ Here's how to create an NFS file share using Server Manager from the Windows des
 1. On the **Share Permissions** page, select **Add**. The **Add Permissions** dialog opens.
 
    1. Choose the level of user permissions to grant: **Host**, **Netgroup**, **Client group**, or **All Machines**.
-
-   1. For the selected user level, enter the name for the user(s) to grant permission to the share.
 
    1. Use the drop-down menu to select the preferred **Language encoding**.
 
