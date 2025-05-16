@@ -81,7 +81,7 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 > [!TIP]
 > When a user is granted permission to query a password from Active Directory that doesn't automatically imply that the user has permission to decrypt an encrypted password. Permission to decrypt an encrypted password is configured using the [`ADPasswordEncryptionPrincipal`](laps-management-policy-settings.md#adpasswordencryptionprincipal) policy setting at the time the device stores the password in Active Directory. The default policy setting for `ADPasswordEncryptionPrincipal` is the Domain Admins group.
 
-## Grant password expiration configuration permissions
+## Grant password expiration permissions
 
 Users must be granted permission in order to set the expiration time of passwords stored in Active Directory. When a password is marked as expired in Active Directory, the device will rotate the password at the next processing cycle. Users can use this mechanism to shorten (or extend) the remaining time to the next expected password rotation.
 
