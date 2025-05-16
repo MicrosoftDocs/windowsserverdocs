@@ -2,9 +2,9 @@
 description: "Learn more about: Review the Role of the Federation Server in the Account Partner"
 ms.assetid: d0ba3c0d-869f-4e24-89d7-499da7576f22
 title: Review the Role of the Federation Server in the Account Partner
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
 ---

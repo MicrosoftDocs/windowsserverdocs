@@ -2,10 +2,10 @@
 description: "Learn more about: Appendix F: Securing Domain Admins Groups in Active Directory"
 ms.assetid: 017b88a6-f29b-4787-99b6-b5c8eaf8c3df
 title: Appendix F - Securing Domain Admins Groups in Active Directory
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: best-practice
 ---
 

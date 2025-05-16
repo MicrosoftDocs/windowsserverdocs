@@ -1,6 +1,6 @@
 ---
 title: Cluster affinity
-manager: femila
+manager: tedhudek
 ms.topic: concept-article
 ms.author: jgerend
 author: jasongerend

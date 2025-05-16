@@ -201,7 +201,7 @@ No, it's the same as with regular allocation.
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Fault tolerance in Storage Spaces Direct](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 
 ## Appendix

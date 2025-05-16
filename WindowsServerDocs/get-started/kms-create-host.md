@@ -4,7 +4,7 @@ description: See how to create a Key Management Services (KMS) activation host t
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 04/03/2025
 # customer intent: As an administrator, I want to create a Key Management Services (KMS) host so that I can take advantage of automatic and centralized activation for volume-licensed products in my network.
 ---

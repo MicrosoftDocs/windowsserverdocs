@@ -2,10 +2,10 @@
 description: "Learn more about: Guidance about how to configure protected accounts"
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: Guidance about how to configure protected accounts
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: how-to
 ---
 

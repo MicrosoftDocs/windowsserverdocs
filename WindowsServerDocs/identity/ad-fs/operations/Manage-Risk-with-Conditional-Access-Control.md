@@ -2,9 +2,9 @@
 description: "Learn more about: Manage Risk with Conditional Access Control"
 ms.assetid: a0f7bb11-47a5-47ff-a70c-9e6353382b39
 title: Manage Risk with Conditional Access Control
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---
