@@ -138,7 +138,7 @@ Here's how to create an NFS file share using Server Manager from the Windows des
 
 
 Here's how to create a new NFS share using the
-[New-NfsShare](/powershell/module/dnsserver/new-nfsshare) command.
+[New-NfsShare](/powershell/module/nfs/new-nfsshare) command.
 
 1. Run PowerShell on your computer in an elevated session.
 
