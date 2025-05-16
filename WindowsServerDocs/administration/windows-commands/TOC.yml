@@ -1022,10 +1022,12 @@
       href: mstsc.md
     - name: nbtstat
       href: nbtstat.md
-    - name: netcfg
-      href: netcfg.md
     - name: net print
       href: net-print.md
+    - name: net user
+      href: net-user.md
+    - name: netcfg
+      href: netcfg.md
     - name: netsh
       href: netsh.md
     - name: netstat
