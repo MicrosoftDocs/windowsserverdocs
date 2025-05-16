@@ -2,10 +2,10 @@
 description: "Learn more about: Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design"
 ms.assetid: eca5bbf0-088e-4753-bf49-4d6c1125f689
 title: Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 

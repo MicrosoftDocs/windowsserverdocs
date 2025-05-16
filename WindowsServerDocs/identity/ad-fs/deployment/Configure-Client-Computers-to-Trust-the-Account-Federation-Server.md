@@ -2,11 +2,11 @@
 description: "Learn more about: Configure Client Computers to Trust the Account Federation Server"
 ms.assetid: 4ae26970-e42e-4e69-887a-b16d2f8d0695
 title: Configure Client Computers to Trust the Account Federation Server
-author: billmath
-manager: femila
+author: robinharwood
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
-ms.author: billmath
+ms.author: roharwoo
 ---
 
 # Configure Client Computers to Trust the Account Federation Server
