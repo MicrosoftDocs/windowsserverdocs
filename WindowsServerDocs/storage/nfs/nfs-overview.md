@@ -27,13 +27,15 @@ NFS is available in all supported versions of Windows Server and Windows client 
 | Windows Server (all currently supported versions) | NFSv2, NFSv3, and NFSv4.1 | NFSv2 and NFSv3 |
 | Windows client (all currently supported versions) | N/A | NFSv2 and NFSv3 |
 
-## Practical scenarios
+## Scenarios for using Network File System
 
 Here are some practical scenarios where Network File System (NFS) can be effectively utilized within your organization:
 
 - **Multi-protocol file sharing**: Deploy a Windows Server configured as an NFS file server to provide simultaneous access to shared files and directories using both SMB (Server Message Block) and NFS protocols. This allows seamless collaboration between Windows-based clients and non-Windows clients, such as Linux and UNIX systems, enabling users across different platforms to access and modify shared resources without compatibility issues.
 
 - **Cross-platform file access in mixed environments**: In environments predominantly using non-Windows operating systems, such as Linux or UNIX, a Windows-based NFS file server can provide reliable and efficient file sharing capabilities. This setup allows non-Windows client computers to easily access, store, and manage data on Windows-hosted NFS shares, simplifying data management and improving interoperability across diverse IT infrastructures.
+
+- **Provision file shares in UNIX-based environments**: Deploy Windows file servers in predominantly UNIX-based environments to provide NFS file shares for UNIX-based clients. Use the Unmapped UNIX User Access (UUUA) option to simplify NFS deployment without requiring UNIX-to-Windows account mapping. UUUA creates custom security identifiers (SIDs) for unmapped users while using standard Windows SIDs for mapped accounts, enabling quick provisioning and efficient management of NFS shares.
 
 - **Simplified application migration**: Facilitate the migration of applications and workloads between different operating systems by using NFS file shares accessible through both SMB and NFS protocols. By storing application data on shared file systems, organizations can smoothly transition applications from one platform to another without extensive downtime or complex data migration processes, significantly reducing the complexity and risk associated with cross-platform migrations.
 
