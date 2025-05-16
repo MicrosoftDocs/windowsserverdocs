@@ -100,8 +100,6 @@ To create an NFS file share, perform the following steps.
 
 Here's how to create an NFS file share using Server Manager from the Windows desktop.
 
-### Create an NFS file share with Server Manager
-
 1. Sign in to the server as a member of the local Administrators group.
 
 1. Server Manager starts automatically.
