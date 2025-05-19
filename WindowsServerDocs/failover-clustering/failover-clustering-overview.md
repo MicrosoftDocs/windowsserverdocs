@@ -3,8 +3,8 @@ ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering
 description: "Learn more about: Failover Clustering in Windows Server and Azure Local"
 ms.topic: overview
-author: jasongerend
-ms.author: jgerend
+author: xelu86
+ms.author: alalve
 ms.date: 10/20/2021
 ---
 # Failover Clustering in Windows Server and Azure Local
