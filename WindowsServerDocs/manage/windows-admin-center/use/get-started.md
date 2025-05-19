@@ -2,8 +2,8 @@
 title: Get Started with Windows Admin Center
 description: Get started with Windows Admin Center after you download and install it on a Windows PC.
 ms.topic: get-started
-author: jasongerend
-ms.author: jgerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 09/21/2022
 ---
 

@@ -3,9 +3,9 @@ title: Change a drive letter
 description: Learn how to change or assign a Windows drive letter by using the Change Drive Letter and Paths feature in Disk Management.
 ms.date: 08/21/2024
 ms.topic: how-to
-author: jasongerend
+author: dknappettmsft
 manager: brianlic
-ms.author: jgerend
+ms.author: daknappe
 ---
 
 # Change a drive letter

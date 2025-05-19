@@ -2,8 +2,8 @@
 description: "Learn more about: Block cloning on ReFS"
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
-author: jasongerend
-ms.author: jgerend
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 09/23/2024
 ms.topic: article
 ---
