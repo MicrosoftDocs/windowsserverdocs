@@ -17,6 +17,10 @@ See [Windows Local Administrator Password Solution in Microsoft Entra ID](https:
 
 <a name='enable-laps-in-the-azure-ad-device-settings'></a>
 
+## Review Microsoft Entra ID permissions
+
+Review the membership of the built-in Microsoft Entra roles that, by default, have access to Windows LAPS passwords stored in Microsoft Entra ID. These roles are highly privileged.
+
 ## Enable LAPS in the Microsoft Entra device settings
 
 > [!IMPORTANT]

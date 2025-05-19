@@ -1114,8 +1114,8 @@
         href: laps/laps-scenarios-windows-server-active-directory.md
       - name: Windows LAPS in legacy Microsoft LAPS emulation mode
         href: laps/laps-scenarios-legacy.md
-      - name: Windows LAPS deployment and migration
-        href: laps/laps-scenarios-deployment-migration.md
+      - name: Windows LAPS migration
+        href: laps/laps-scenarios-migration.md
     - name: Manage Windows LAPS
       items:
       - name: Configure Windows LAPS policy settings
