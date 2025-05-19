@@ -137,7 +137,7 @@ The middle circle (yellow) is composed of security principals that are granted p
 The inner circle (red) applies only when password encryption is enabled. The inner circle is composed of groups or users that are granted decryption permissions for encrypted password attributes on computer objects in the directory. Like the permission in the middle circle, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins group.
 
 > [!IMPORTANT]
-> Consider customizing your security layers to match the sensitivity of the managed machines in your organization. For example, it might be acceptable for front-line IT worker devices to be accessible to help desk administrators, but you likely will want to set tighter boundaries for corporate executive laptops.
+> Consider customizing your security layers to match the sensitivity of the managed machines in your organization. For example, it might be acceptable for frontline IT worker devices to be accessible to help desk administrators, but you likely will want to set tighter boundaries for corporate executive laptops.
 
 ### Password encryption
 
@@ -230,7 +230,7 @@ Windows LAPS mitigates this problem by writing a random GUID to the directory at
 This feature is only supported when backing passwords up to Active Directory. Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
-> Windows LAPS rollback detection and mitigation can only work if if the machine still has a valid computer account password and is capable of authenticating to Active Directory. That condition may or may not be true depending on the mismatched state caused by the rollback. If the machine is no longer capable of authenticating, other recovery steps will be required such as resetting the machine account password. The Windows LAPS account on the reverted machine may still be useful if the Windows LAPS password history feature has been enabled.
+> Windows LAPS rollback detection and mitigation can only work if the machine still has a valid computer account password and is capable of authenticating to Active Directory. That condition may or may not be true depending on the mismatched state caused by the rollback. If the machine is no longer capable of authenticating, other recovery steps will be required such as resetting the machine account password. The Windows LAPS account on the reverted machine may still be useful if the Windows LAPS password history feature has been enabled.
 
 > [!IMPORTANT]
 > The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
