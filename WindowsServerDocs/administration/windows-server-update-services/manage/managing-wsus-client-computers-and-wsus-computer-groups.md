@@ -3,8 +3,8 @@ title: Managing WSUS Client computers and WSUS computer Groups
 description: Windows Server Update Service (WSUS) topic - How to manage client computers and groups
 ms.topic: concept-article
 ms.assetid: 4b1ea915-0f9f-4f0e-8913-a1dd460d07ab
-ms.author: jgerend
-author: jasongerend
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017
 ---
