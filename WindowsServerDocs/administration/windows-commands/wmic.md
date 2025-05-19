@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
 ms.author: alalve
 author: xelu86
-ms.date: 10/19/2022
+ms.date: 05/19/2025
 ---
 
 # wmic
@@ -43,7 +43,7 @@ wmic context
 
 Output similar to the following displays:
 
-```cmd
+```output
 NAMESPACE    : root\cimv2
 ROLE         : root\cli
 NODE(S)      : BOBENTERPRISE
@@ -62,17 +62,25 @@ USER         : N/A
 AGGREGATE    : ON
 ```
 
-To display the properties of logical disks on the computer, type:
+To display all properties of all logical disks on the computer, type:
 
 ```cmd
 wmic logicaldisk
 ```
 
-Output similar to the following displays (in which thecomputer name has been hidden):
+Output similar to the following displays:
 
-```cmd
-Access  Availability  BlockSize  Caption  Compressed  ConfigManagerErrorCode  ConfigManagerUserConfig  CreationClassName  Description       DeviceID  DriveType  ErrorCleared  ErrorDescription  ErrorMethodology  FileSystem  FreeSpace    InstallDate  LastErrorCode  MaximumComponentLength  MediaType  Name  NumberOfBlocks  PNPDeviceID  PowerManagementCapabilities  PowerManagementSupported  ProviderName  Purpose  QuotasDisabled  QuotasIncomplete  QuotasRebuilding  Size          Status  StatusInfo  SupportsDiskQuotas  SupportsFileBasedCompression  SystemCreationClassName  SystemName       VolumeDirty  VolumeName  VolumeSerialNumber
-0                                C:       FALSE                                                        Win32_LogicalDisk  Local Fixed Disk  C:        3                                                            NTFS        34122387456                              255                     12         C:                                                                                                                                                                   126752911360                      FALSE               TRUE                          Win32_ComputerSystem     TABLET-XXXXXXXX               Local Disk  FE38AFCD
+```output
+Access                    Description        InstallDate                   PowerManagementSupported   StatusInfo
+Availability              DeviceID           LastErrorCode                 ProviderName               SupportsDiskQuotas
+BlockSize                 DriveType          MaximumComponentLength        Purpose                    SupportsFileBasedCompression
+Caption                   ErrorCleared       MediaType                     QuotasDisabled             SystemCreationClassName
+Compressed                ErrorDescription   Name                          QuotasIncomplete           SystemName
+ConfigManagerErrorCode    ErrorMethodology   NumberOfBlocks                QuotasRebuilding           VolumeDirty
+ConfigManagerUserConfig   FileSystem         PNPDeviceID                   Size                       VolumeName
+CreationClassName         FreeSpace          PowerManagementCapabilities   Status                     VolumeSerialNumber
+
+0   C:   FALSE   Win32_LogicalDisk   Local Fixed Disk   C:   3   NTFS   543237451776   255   12   C:                                                                                                                                              1021771247616   FALSE   TRUE   Win32_ComputerSystem   <TheDeviceName>   <TheVolumeName>   0011AABB
 ```
 
 To get the name of the logical disks, type:
@@ -83,7 +91,7 @@ wmic logicaldisk get name
 
 Output similar to the following displays:
 
-```cmd
+```output
 Name
 C:
 ```
