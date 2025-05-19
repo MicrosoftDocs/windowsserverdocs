@@ -3,9 +3,8 @@ title: Create a User Role for Access Control
 description: Learn how to create a new Access Control user role in the IPAM client console.
 manager: brianlic
 ms.topic: how-to
-ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
-ms.author: jgerend
-author: jasongerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/07/2020
 ---
 # Create a User Role for Access Control

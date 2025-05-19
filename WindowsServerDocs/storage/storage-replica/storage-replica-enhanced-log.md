@@ -1,10 +1,9 @@
 ---
 title: Use Enhanced Log in Storage Replica
 description: Learn how to use Enhanced Log in Storage Replica and about the performance improvements it delivers to your replication groups.
-manager: candyc
-ms.author: jgerend
+author: meaghanlewis
 ms.topic: how-to
-author: jasongerend
+ms.author: mosagie
 ms.date: 5/13/2025
 ---
 

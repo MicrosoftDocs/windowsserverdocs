@@ -12821,9 +12821,9 @@
       "redirect_document_id": true
     },
     {
-     "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
-     "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
+      "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
@@ -12831,28 +12831,33 @@
       "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
-     "redirect_url": "/powershell/module/remoteaccess/",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+      "redirect_url": "/powershell/module/remoteaccess/",
+      "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/manage/windows-admin-center/azure/azure-site-recovery.md",
-     "redirect_url": "/azure/azure-local/manage/azure-site-recovery",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/azure/azure-site-recovery.md",
+      "redirect_url": "/azure/azure-local/manage/azure-site-recovery",
+      "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
-     "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
+      "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+      "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/storage/storage-change-history.md",
-     "redirect_url": "/windows-server/storage",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/storage/storage-change-history.md",
+      "redirect_url": "/windows-server/storage",
+      "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
-     "redirect_url": "/windows-server/identity/ad-ds/manage/join-computer-to-domain",
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/join-computer-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-scenarios-deployment-migration.md",
+      "redirect_url": "/windows-server/identity/laps/laps-scenarios-migration",
       "redirect_document_id": true
     }
   ]

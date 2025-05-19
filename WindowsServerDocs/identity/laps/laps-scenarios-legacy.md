@@ -75,7 +75,7 @@ PS C:\> Get-LapsADPassword -Identity lapsAD2 -AsPlainText
 ComputerName        : LAPSAD2
 DistinguishedName   : CN=LAPSAD2,OU=LapsTestOU,DC=laps,DC=com
 Account             :
-Password            : SV6[y1n3JG+3l8
+Password            : <masked>
 PasswordUpdateTime  :
 ExpirationTimestamp : 7/31/2022 12:43:10 PM
 Source              : LegacyLapsCleartextPassword
@@ -104,4 +104,4 @@ This article doesn't go into detail about managing other aspects of legacy Micro
 
 ## Next steps
 
-- [Get started with Windows LAPS deployment and migration scenarios](laps-scenarios-deployment-migration.md)
+- [Migrate to Windows LAPS from legacy LAPS](laps-scenarios-migration.md)
