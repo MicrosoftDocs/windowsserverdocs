@@ -193,6 +193,32 @@ When Windows is started in safe mode, DSRM mode, or in any other non-normal boot
 
 The Windows LAPS-managed account is exempted when the "Interactive logon: Require Windows Hello for Business or smart card" policy (also known as SCForceOption) is enabled. See [Additional smart card Group Policy settings and registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#additional-smart-card-group-policy-settings-and-registry-keys).
 
+## How a Windows LAPS policy is applied to a new client device
+
+The following sections describe how a Windows LAPS policy is applied to a new client device.
+
+### New OS install scenario with a Windows LAPS policy
+
+Windows LAPS is built into the Windows operating system. It's a Windows baseline security feature and can't be uninstalled. It's important therefore to be aware of the effect that a Windows LAPS policy may have during a new OS install.
+
+The primary factor to be aware of is that Windows LAPS is always "on". As soon as a Windows LAPS policy is applied to the device, Windows LAPS immediately begins to enforce the policy. This behavior can cause disruptions if at some point your OS deployment workflow involves domain-joining a device into an OU with an enabled Windows LAPS policy. If the Windows LAPS policy targets the same local account that the deployment workflow is logged in with, the resultant immediate modification of the local account password will likely break the workflow (for example after a reboot during automatic sign-in).
+
+The first technique to mitigate this issue is to use a clean "staging" Organizational Unit (OU). A staging OU is considered a temporary home for the device's account that applies a bare minimum set of required policies, and shouldn't apply a Windows LAPS policy. Only at the conclusion of the OS deployment workflow is the device's account is moved to its final destination OU. Microsoft recommends the use of a clean staging OU as a generic best practice.
+
+A second technique is to configure the Windows LAPS policy to target a different account than the one used by the OS deployment workflow. As a best practice any local accounts that are unneeded at the end of the OS deployment workflow should be deleted.
+
+### New OS install scenario with a legacy LAPS policy
+
+This scenario has the same basic concerns as [New OS install scenario with a Windows LAPS policy](#new-os-install-scenario-with-a-windows-laps-policy), but has some special issues related to Windows LAPS' support for legacy LAPS emulation mode.
+
+Again, the primary factor to be aware of is that Windows LAPS is always "on". As soon as a legacy LAPS policy is applied to the device - and assuming all [legacy LAPS emulation mode](laps-scenarios-legacy.md) criteria are met - Windows LAPS immediately begins to enforce the policy. This behavior can cause disruptions if at some point your OS deployment workflow involves domain-joining a device into an OU with an enabled legacy LAPS policy. If the legacy LAPS policy targets the same local account that the deployment workflow is logged in with, the resultant immediate modification of the local account password will likely break the workflow (for example after a reboot during automatic sign-in).
+
+The first technique to mitigate this issue is to use a clean "staging" Organizational Unit (OU). A staging OU is considered a temporary home for the device's account that applies a bare minimum set of required policies, and shouldn't apply a legacy LAPS policy. Only at the conclusion of the OS deployment workflow is the device's account is moved to its final destination OU. Microsoft recommends the use of a clean staging OU as a generic best practice.
+
+A second technique is to configure the legacy LAPS policy to target a different account than the one used by the OS deployment workflow. As a best practice any local accounts that are unneeded at the end of the OS deployment workflow should be deleted.
+
+A third technique is to [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) at the beginning of the OS deployment workflow, and enable it (if needed) at the end of the OS deployment workflow.
+
 ## Windows LAPS OS image rollback detection and mitigation
 
 When a live OS image is reverted to an earlier version, the result is often a “torn state” situation where the password stored in the directory no longer matches the password stored locally on the device. For example, the problem might occur when a Hyper-V virtual machine is restored to an earlier snapshot.

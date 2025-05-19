@@ -33,6 +33,18 @@ The following table summarizes the functionality supported in various scenarios:
 
 We strongly recommend that you upgrade to the latest available operating system on clients, servers, and domain controllers in order to take advantage of the latest features and security improvements.
 
+### Prepare Active Directory
+
+Follow these steps before configuring your Active Directory-joined or hybrid-joined devices to back up a managed account's passwords to Active Directory.
+
+> [!NOTE]
+> If you are planning to only backup passwords to Microsoft Entra ID, you do not need to perform any of these steps, including extending the AD schema.
+
+1. If you're using Group Policy Central Store, manually copy the Windows LAPS Group Policy template files to the central store. For more information, see [Configure policy settings for Windows LAPS](laps-management-policy-settings.md#group-policy-object-central-store).
+1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
+1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
+1. Create a new Windows LAPS policy that targets the managed device(s) with the appropriate settings as determined in the previous steps.
+
 ## Update the Windows Server Active Directory schema
 
 Before you can use Windows LAPS, you must update the Windows Server Active Directory schema. You can perform this action by using the `Update-LapsADSchema` cmdlet. It's a one-time operation for the entire forest. You can run the `Update-LapsADSchema` cmdlet locally on a Windows Server 2019 or later domain controller updated with Windows LAPS. But you can also run this cmdlet on a server that's not a domain controller as long as the server supports the Windows LAPS PowerShell module.
