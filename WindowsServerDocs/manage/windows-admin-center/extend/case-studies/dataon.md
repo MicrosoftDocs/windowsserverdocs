@@ -2,8 +2,8 @@
 title: Windows Admin Center SDK Case Study - DataON
 description: Windows Admin Center SDK Case Study - DataON
 ms.topic: article
-author: jasongerend
-ms.author: jgerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 01/11/2019
 ---
 # DataON MUST Extension
