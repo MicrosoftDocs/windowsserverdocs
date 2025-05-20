@@ -2,8 +2,8 @@
 title: Windows Admin Center common troubleshooting steps
 description: Windows Admin Center common troubleshooting steps
 ms.topic: troubleshooting-general
-author: jasongerend
-ms.author: jgerend
+author: xelu86
+ms.author: alalve
 ms.date: 01/15/2021
 ---
 # Troubleshoot Windows Admin Center
