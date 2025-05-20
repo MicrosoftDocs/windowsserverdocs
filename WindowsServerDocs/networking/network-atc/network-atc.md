@@ -11,7 +11,7 @@ ms.author: roharwoo
 
 > Applies to: Windows Server 2025; Azure Local 2311.2 and later
 
-This article guides you through the requirements, best practices, and deployment of Network ATC. Network ATC simplifies the deployment and network configuration management for Windows Server and Azure Local clusters. Network ATC provides an intent-based approach to host network deployment. By specifying one or more intents (management, compute, or storage) for a network adapter, you can automate the deployment of the intended configuration. For more information on Network ATC, including an overview and definitions, please see [Network ATC overview](../concepts/network-atc-overview.md).
+This article guides you through the requirements, best practices, and deployment of Network ATC. Network ATC simplifies the deployment and network configuration management for Windows Server and Azure Local clusters. Network ATC provides an intent-based approach to host network deployment. By specifying one or more intents (management, compute, or storage) for a network adapter, you can automate the deployment of the intended configuration. For more information on Network ATC, including an overview and definitions, please see [Network ATC overview](/azure-local/concepts/network-atc-overview?pivots=windows-server).
 
 If you have feedback or encounter any issues, review the requirements and best practices section, check the Network ATC event log, and work with your Microsoft support team.
 
@@ -27,7 +27,7 @@ Complete the following prerequisites for using Network ATC:
 
   - Asymmetric adapters lead to a failure in deploying any intent. Network ATC will automatically confirm adapter symmetry for all nodes in the cluster before deploying an intent.
 
-  - For more information on adapter symmetry, see [Switch Embedded Teaming (SET)](../concepts/host-network-requirements.md#switch-embedded-teaming-set).
+  - For more information on adapter symmetry, see [Switch Embedded Teaming (SET)](/azure-local/concepts/host-network-requirements#switch-embedded-teaming-set).
 
 - Each physical adapter specified in an intent must use the same name on all nodes in the cluster.
 
@@ -48,10 +48,10 @@ Complete the following prerequisites for using Network ATC:
 
 - Insert each adapter in the same PCI slot(s) in each host. This practice leads to ease in automated naming conventions by imaging systems.
 
-- Configure the physical network (switches) prior to Network ATC including VLANs, MTU, and DCB configuration. For more information, please see [Physical Network Requirements](../concepts/physical-network-requirements.md).
+- Configure the physical network (switches) prior to Network ATC including VLANs, MTU, and DCB configuration. For more information, please see [Physical Network Requirements](/azure-local/concepts/physical-network-requirements).
 
 > [!IMPORTANT]
-> Deploying Network ATC in virtual machines may be used for test and validation purposes only. VM-based deployment requires an override to the default adapter settings to disable the NetworkDirect property. For more information on submission of an override, please see: [Override default network settings](../manage/manage-network-atc.md#update-or-override-network-settings).
+> Deploying Network ATC in virtual machines may be used for test and validation purposes only. VM-based deployment requires an override to the default adapter settings to disable the NetworkDirect property. For more information on submission of an override, please see: [Override default network settings](./manage-network-atc.md#update-or-override-network-settings).
 >
 > Deploying Network ATC in standalone mode may be used for test and validation purposes only.
 
@@ -65,7 +65,7 @@ The `Remove-NetIntent` cmdlet removes an intent from the local node or cluster. 
 
 Network ATC modifies how you deploy host networking, not what you deploy. You can deploy multiple scenarios so long as each scenario is supported by Microsoft. Here are some examples of common deployment options, and the PowerShell commands needed. These aren't the only combinations available but they should give you an idea of the possibilities.
 
-For simplicity we only demonstrate two physical adapters per SET team, however it's possible to add more. For more information, please see [Plan Host Networking](../concepts/host-network-requirements.md).
+For simplicity we only demonstrate two physical adapters per SET team, however it's possible to add more. For more information, please see [Plan Host Networking](/azure-local/concepts/host-network-requirements).
 
 ### Fully converged intent
 
@@ -214,7 +214,7 @@ Network ATC establishes the following priorities and bandwidth reservations. Thi
 |Default|All other traffic types|0|Remainder|
 
 > [!NOTE]
-> Network ATC allows you to override default settings like default bandwidth reservation. For examples, see [Update or override network settings](../manage/manage-network-atc.md#update-or-override-network-settings).
+> Network ATC allows you to override default settings like default bandwidth reservation. For examples, see [Update or override network settings](./manage-network-atc.md#update-or-override-network-settings).
 
 ## Common Error Messages
 
@@ -279,7 +279,7 @@ This message will occur when RoCE RDMA is in use and you have overridden the def
 
 1. Use the default VLANs
 
-    **Solution:** We highly recommend using the Network ATC [Default VLANs](../deploy/network-atc.md#default-vlans)
+    **Solution:** We highly recommend using the Network ATC [Default VLANs](#default-vlans)
 
 1. Use a valid VLAN
 
@@ -287,5 +287,5 @@ This message will occur when RoCE RDMA is in use and you have overridden the def
 
 ## Next steps
 
-- Manage your Network ATC deployment. See [Manage Network ATC](../manage/manage-network-atc.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking).
-- Learn more about [Stretched clusters](../concepts/stretched-clusters.md?pivots=windows-server&context=/windows-server/context/windows-server-failover-clustering).
+- Manage your Network ATC deployment. See [Manage Network ATC](./manage-network-atc.md).
+- Learn more about [Stretched clusters](/azure-local/concepts/stretched-clusters).

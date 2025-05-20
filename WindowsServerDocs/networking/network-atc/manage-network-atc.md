@@ -15,7 +15,7 @@ This article discusses how to manage Network ATC after it has been deployed. Net
 
 ## Add a server node
 
-You can add nodes to a cluster. Each node in the cluster receives the same intent, improving the reliability of the cluster. The new server node must meet all requirements as listed in the Requirements and best practices section of [Host networking with Network ATC](../deploy/network-atc.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking).
+You can add nodes to a cluster. Each node in the cluster receives the same intent, improving the reliability of the cluster. The new server node must meet all requirements as listed in the Requirements and best practices section of [Host networking with Network ATC](network-atc.md).
 
 In this task, you add additional nodes to the cluster and observe how a consistent networking configuration is enforced across all nodes in the cluster.
 
@@ -336,11 +336,11 @@ The tasks to complete following a Network ATC deployment is depending on the Azu
 
 Automatic IP Addressing for Storage Adapters, SMB Bandwidth Limits, and Stretch configurations can now be deployed with Network ATC in Azure Local. For more information, see:
 
-- **Automatic Storage IP Addressing**: [Automatic Storage IP Addressing with Network ATC](../deploy/network-atc.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking#automatic-storage-ip-addressing)
+- **Automatic Storage IP Addressing**: [Automatic Storage IP Addressing with Network ATC](./network-atc.md#automatic-storage-ip-addressing)
 
-- **Cluster Network Settings and SMB Configuration**: [Automatic Storage IP Addressing with Network ATC](../deploy/network-atc.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking#cluster-network-settings)
+- **Cluster Network Settings and SMB Configuration**: [Automatic Storage IP Addressing with Network ATC](./network-atc.md#cluster-network-settings)
 
-- **Stretch cluster configuration**: [Set-up Stretch Clustering with Network ATC](../deploy/create-cluster-powershell.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking#step-54-set-up-stretch-clustering-with-network-atc)
+- **Stretch cluster configuration**: [Set-up Stretch Clustering with Network ATC](/azure-local/deploy/create-cluster-powershell#step-54-set-up-stretch-clustering-with-network-atc)
 
 ## Validate automatic remediation
 
@@ -386,5 +386,5 @@ For more validation examples, see the [Network ATC demo](https://youtu.be/Z8UO6E
 
 ## Next steps
 
-- Learn more about [Network ATC](../concepts/network-atc-overview.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking).
-- Learn more about [Stretched clusters](../concepts/stretched-clusters.md?pivots=windows-server&context=/windows-server/context/windows-server-edge-networking).
+- Learn more about [Network ATC](/azure-local/concepts/network-atc-overview?pivots=azure-local).
+- Learn more about [Stretched clusters](/azure-local/concepts/stretched-clusters).
