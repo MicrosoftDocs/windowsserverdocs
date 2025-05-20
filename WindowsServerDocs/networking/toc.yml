@@ -287,9 +287,9 @@ items:
       href: /azure/azure-local/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
       items:
       - name: Deploy host networking with Network ATC
-        href: /azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        href: /network-atc/network-atc.md
       - name: Manage Network ATC
-        href: /azure/azure-local/manage/manage-network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        href: /network-atc/manage-network-atc.md
     - name: Software Defined Networking (SDN)
       href: sdn/index.yml
       items:
