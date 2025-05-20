@@ -27,19 +27,19 @@ You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN)
 
 ## Server requirements and limits
 
-There are no additional hardware or software requirements for running DFS Management or using DFS Namespaces.
+There are no hardware or software requirements for running DFS Management or using DFS Namespaces.
 
 A namespace server is a domain controller or member server that hosts a namespace. The number of namespaces you can host on a server is determined by the operating system running on the namespace server.
 
 Servers that are running at least Windows Server 2012 can host multiple domain-based namespaces in addition to a single stand-alone namespace.
 
-The following table describes additional factors to consider when choosing servers to host a namespace.
+The following table describes other factors to consider when choosing servers to host a namespace.
 
 | Server Hosting Stand-Alone Namespaces | Server Hosting Domain-Based Namespaces |
 | ---                                   |        ---                                |
 | Must contain an NTFS volume to host the namespace.|Must contain an NTFS volume to host the namespace. |
 | Can be a member server or domain controller.|Must be a member server or domain controller in the domain in which the namespace is configured. (This requirement applies to every namespace server that hosts a given domain-based namespace.) |
-| Can be hosted by a failover cluster to increase the availability of the namespace.|The namespace cannot be a clustered resource in a failover cluster. However, you can locate the namespace on a server that also functions as a node in a failover cluster if you configure the namespace to use only local resources on that server. |
+| Can be hosted by a failover cluster to increase the availability of the namespace.|The namespace can't be a clustered resource in a failover cluster. However, you can locate the namespace on a server that also functions as a node in a failover cluster if you configure the namespace to use only local resources on that server. |
 
 ## Install DFS Namespaces
 
@@ -59,7 +59,7 @@ Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admi
 
     - To install only the DFS Management Tools, on the **Features** page, expand **Remote Server Administration Tools**, **Role Administration Tools**, expand **File Services Tools**, and then select **DFS Management Tools**.
 
-         **DFS Management Tools** installs the DFS Management snap-in, the DFS Namespaces module for Windows PowerShell, and command-line tools, but it does not install any DFS services on the server.
+         **DFS Management Tools** installs the DFS Management snap-in, the DFS Namespaces module for Windows PowerShell, and command-line tools, but it doesn't install any DFS services on the server.
 
 ### [PowerShell](#tab/powershell)
 
@@ -105,12 +105,9 @@ To learn about how to get started with Azure virtual machines, see [Azure virtua
 
 ## Related content
 
-For additional related information, see the following resources.
-
 - [Create a DFS namespace](/windows-server/storage/dfs-namespaces/create-a-dfs-namespace?tabs=dfs-management-console)
-- [DFS Namespace Scalability Considerations](https://techcommunity.microsoft.com/t5/storage-at-microsoft/dfs-namespace-scalability-considerations/ba-p/424485)
-- [DFS Namespaces: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10))
+- [Checklist: Deploy DFS Namespaces](/windows-server/storage/dfs-namespaces/checklist-deploy-dfs-namespaces)
+- [Checklist: Tune a DFS namespace](/windows-server/storage/dfs-namespaces/checklist-tune-a-dfs-namespace)
 - [The File Services and Storage TechNet Forum](/answers/topics/windows-server-storage.html)
 - [File Services Protocols in Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546)
 - [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)
-- [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
