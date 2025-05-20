@@ -1,8 +1,8 @@
 ---
 title: Service Accounts
 description: Windows Server standalone and group managed service accounts in Active Directory.
-author: jasongerend
-ms.author: jgerend
+author: xelu86
+ms.author: alalve
 ms.topic: article
 ms.date: 08/14/2024
 ---

@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
-author: jasongerend
-ms.author: jgerend
-manager: dmoss
+author: xelu86
+ms.author: alalve
 ms.date: 10/16/2018
 ms.topic: article
-ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 ---
 
 # ReFS integrity streams
