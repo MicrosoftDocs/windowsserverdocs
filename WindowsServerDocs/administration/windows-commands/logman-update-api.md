@@ -3,8 +3,8 @@ title: logman update api
 description: Reference article for the logman update api command, which updates the properties of an existing API tracking data collector.
 ms.topic: reference
 ms.assetid: 6f322e52-0f9f-42b1-bd64-8b8f8fe086fc
-ms.author: jgerend
-author: jasongerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
