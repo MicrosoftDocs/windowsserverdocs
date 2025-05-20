@@ -1,12 +1,13 @@
 ---
-title: DFS Namespaces overview
+title: DFS Namespaces overview in Windows Server
 ms.author: mosagie
 manager: daveba
 ms.topic: overview
 author: meaghanlewis
-ms.date: 01/05/2022
+ms.date: 05/14/2025
 description: This article describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
+
 # DFS Namespaces overview
 
 DFS (Distributed File System) Namespaces is a role service in Windows Server that enables you to group shared folders located on different servers into one or more logically structured namespaces. This makes it possible to give users a virtual view of shared folders, where a single path leads to files located on multiple servers, as shown in the following figure:
@@ -22,7 +23,7 @@ Here's a description of the elements that make up a DFS namespace:
 
 This article discusses how to install DFS, what's new, and where to find evaluation and deployment information.
 
-You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](/powershell/module/dfsn/), the **DfsUtil** command, or scripts that call WMI.
+You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](/powershell/module/dfsn/), the **DfsUtil** command, or scripts that call Windows Management Instrumentation (WMI).
 
 ## Server requirements and limits
 
@@ -30,19 +31,7 @@ There are no additional hardware or software requirements for running DFS Manage
 
 A namespace server is a domain controller or member server that hosts a namespace. The number of namespaces you can host on a server is determined by the operating system running on the namespace server.
 
-Servers that are running the following operating systems can host multiple domain-based namespaces in addition to a single stand-alone namespace.
-
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
-- Windows Server 2008 R2 Datacenter and Enterprise Editions
-- Windows Server (Semi-Annual Channel)
-
-Servers that are running the following operating systems can host a single stand-alone namespace:
-
-- Windows Server 2008 R2 Standard
+Servers that are running at least Windows Server 2012 can host multiple domain-based namespaces in addition to a single stand-alone namespace.
 
 The following table describes additional factors to consider when choosing servers to host a namespace.
 
@@ -52,13 +41,13 @@ The following table describes additional factors to consider when choosing serve
 | Can be a member server or domain controller.|Must be a member server or domain controller in the domain in which the namespace is configured. (This requirement applies to every namespace server that hosts a given domain-based namespace.) |
 | Can be hosted by a failover cluster to increase the availability of the namespace.|The namespace cannot be a clustered resource in a failover cluster. However, you can locate the namespace on a server that also functions as a node in a failover cluster if you configure the namespace to use only local resources on that server. |
 
-## Installing DFS Namespaces
+## Install DFS Namespaces
 
 DFS Namespaces and DFS Replication are a part of the File and Storage Services role. The management tools for DFS (DFS Management, the DFS Namespaces module for Windows PowerShell, and command-line tools) are installed separately as part of the Remote Server Administration Tools.
 
 Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admin-center/overview.md), Server Manager, or PowerShell, as described in the next sections.
 
-### To install DFS by using Server Manager
+### [Server Manager](#tab/server-manager)
 
 1. Open Server Manager, click **Manage**, and then click **Add Roles and Features**. The Add Roles and Features Wizard appears.
 
@@ -72,7 +61,7 @@ Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admi
 
          **DFS Management Tools** installs the DFS Management snap-in, the DFS Namespaces module for Windows PowerShell, and command-line tools, but it does not install any DFS services on the server.
 
-### To install DFS by using Windows PowerShell
+### [PowerShell](#tab/powershell)
 
 Open a Windows PowerShell session with elevated user rights, and then type the following command, where <name\> is the role service or feature that you want to install (see the following table for a list of relevant role service or feature names):
 
@@ -103,6 +92,8 @@ To install the DFS Namespaces, and the Distributed File System Tools portions of
 Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 ```
 
+---
+
 ## Interoperability with Azure virtual machines
 
 Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested.
@@ -112,16 +103,14 @@ Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested.
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](/azure/virtual-machines/).
 
-## Additional References
+## Related content
 
 For additional related information, see the following resources.
 
-| Content type        | References |
-| ------------------  | ----------------|
-| **Product evaluation** | [What's New in DFS Namespaces and DFS Replication in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281957(v=ws.11)) |
-| **Deployment**    | [DFS Namespace Scalability Considerations](https://techcommunity.microsoft.com/t5/storage-at-microsoft/dfs-namespace-scalability-considerations/ba-p/424485) |
-| **Operations**    | [DFS Namespaces: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10)) |
-| **Community resources** | [The File Services and Storage TechNet Forum](/answers/topics/windows-server-storage.html) |
-| **Protocols**        | [File Services Protocols in Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) (Deprecated) |
-| **Related technologies** | [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)|
-| **Support** | [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)|
+- [Create a DFS namespace](/windows-server/storage/dfs-namespaces/create-a-dfs-namespace?tabs=dfs-management-console)
+- [DFS Namespace Scalability Considerations](https://techcommunity.microsoft.com/t5/storage-at-microsoft/dfs-namespace-scalability-considerations/ba-p/424485)
+- [DFS Namespaces: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10))
+- [The File Services and Storage TechNet Forum](/answers/topics/windows-server-storage.html)
+- [File Services Protocols in Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546)
+- [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)
+- [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
