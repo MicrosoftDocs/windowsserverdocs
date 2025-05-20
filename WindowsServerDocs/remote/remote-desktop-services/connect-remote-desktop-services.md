@@ -27,7 +27,7 @@ There are many features you can use to enhance your remote experience, such as:
 
 ## How can I connect to Remote Desktop Services?
 
-First, you need to decide whether to use Windows App or the Remote Desktop client to connect to Remote Desktop Services. Windows App replaces the Remote Desktop client, but you can't currently connect to Remote Desktop Services using Windows App from all platforms, so you might still need to use the Remote Desktop client.
+First, you need to decide whether to use Windows App or the Remote Desktop client to connect to Remote Desktop Services. Windows App replaces the Remote Desktop client and it's available for all platforms, but you can't currently connect to Remote Desktop Services using Windows App from all platforms, so you might still need to use the Remote Desktop client.
 
 Here's what platforms you can use to connect to Remote Desktop Services from Windows App and the Remote Desktop client:
 
