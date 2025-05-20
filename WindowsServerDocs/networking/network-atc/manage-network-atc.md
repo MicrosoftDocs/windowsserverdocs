@@ -340,7 +340,7 @@ Automatic IP Addressing for Storage Adapters, SMB Bandwidth Limits, and Stretch 
 
 - **Cluster Network Settings and SMB Configuration**: [Automatic Storage IP Addressing with Network ATC](./network-atc.md#cluster-network-settings)
 
-- **Stretch cluster configuration**: [Set-up Stretch Clustering with Network ATC](/azure-local/deploy/create-cluster-powershell#step-54-set-up-stretch-clustering-with-network-atc)
+- **Stretch cluster configuration**: [Set-up Stretch Clustering with Network ATC](/azure/azure-local/deploy/create-cluster-powershell#step-54-set-up-stretch-clustering-with-network-atc)
 
 ## Validate automatic remediation
 
@@ -386,5 +386,5 @@ For more validation examples, see the [Network ATC demo](https://youtu.be/Z8UO6E
 
 ## Next steps
 
-- Learn more about [Network ATC](/azure-local/concepts/network-atc-overview?pivots=azure-local).
-- Learn more about [Stretched clusters](/azure-local/concepts/stretched-clusters).
+- Learn more about [Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=azure-local).
+- Learn more about [Stretched clusters](/azure/azure-local/concepts/stretched-clusters).
