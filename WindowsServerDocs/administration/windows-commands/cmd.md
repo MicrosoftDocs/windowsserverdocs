@@ -77,16 +77,18 @@ The following table lists valid hexadecimal digits that you can use as the value
   <command1> > <file1.txt>
   ```
   
-- To use multiple commands for `<string>`, separate them by the command separator `&&`. For example:
+- To use multiple commands for `<string>`, you can either separate them by `&&` in which case the subsequent command will execute only if the previous command succeeded, or by `||` in which case the subsequent command will execute only if the previous command failed. In the following example `<command2> || <command3>` will execute if `<command1>` succeeds and `<command3>` will execute if `<command2>` fails:
 
   ```
-  <command1>&&<command2>&&<command3>
+  <command1> && <command2> || <command3>
   ```
+
+  A command is considered successful if it finishes with an `ERRORLEVEL` of 0.
 
 - If the directory path, files, or any information you supply contains spaces, you must use double quotation marks (`"`) around the text, such as `"Computer Name"`. For example:
 
   ```
-  mkdir Test&&mkdir "Test 2"&&move "Test 2" Test
+  mkdir Test && mkdir "Test 2" && move "Test 2" Test
   ```
   
 - You must use quotation marks around the following special characters: & < > [ ] | { } ^ = ; ! ' + , ` ~ [white space].
