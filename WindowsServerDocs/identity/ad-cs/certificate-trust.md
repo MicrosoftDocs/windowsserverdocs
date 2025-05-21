@@ -1,20 +1,19 @@
 ---
-title: Certificates and trust in Windows
-description: Learn how the Microsoft Root Certificate Program works to distribute trusted root certificates automatically across Windows operating systems in disconnected environments.
+title: Certificates and Trust Management in Windows
+description: Learn how the Microsoft Root Certificate Program distributes trusted root certificates in Windows, even in disconnected environments. Discover how to manage certificates effectively.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: overview
-ms.date: 08/22/2023
+ms.topic: concept-article
+ms.date: 05/21/2025
 
 ---
 
 # Certificates and trust in Windows
 
-> 
-
 The Microsoft Root Certificate Program enables distribution of trusted and untrusted root
-certificates within Windows operating systems. For more information about the list of members in
-Windows Root Certificate Program, see
+certificates within Windows operating systems. This article explains how certificates and trust
+lists are managed in Windows, and the benefits of automatic updates for maintaining security. For
+more information about the list of members in Windows Root Certificate Program, see
 [List of Participants - Microsoft Trusted Root Program](/security/trusted-root/participants-list).
 
 Trusted and untrusted root certificates are used by Windows operating systems and applications as a
