@@ -1,10 +1,9 @@
 ---
 title: DFS Namespaces overview in Windows Server
 ms.author: mosagie
-manager: daveba
 ms.topic: overview
 author: meaghanlewis
-ms.date: 05/14/2025
+ms.date: 05/21/2025
 description: This article describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 
@@ -17,7 +16,7 @@ DFS (Distributed File System) Namespaces is a role service in Windows Server tha
 Here's a description of the elements that make up a DFS namespace:
 
 - **Namespace server** - A namespace server hosts a namespace. The namespace server can be a member server or a domain controller.
-- **Namespace root** - The namespace root is the starting point of the namespace. In the previous figure, the name of the root is Public, and the namespace path is \\\\Contoso\\Public. This type of namespace is a domain-based namespace because it begins with a domain name (for example, Contoso) and its metadata is stored in Active Directory Domain Services (AD DS). Although a single namespace server is shown in the previous figure, a domain-based namespace can be hosted on multiple namespace servers to increase the availability of the namespace.
+- **Namespace root** - The namespace root is the starting point of the namespace. In the previous figure, the name of the root is Public, and the namespace path is \\\\Contoso\\Public. This type of namespace is a domain-based namespace because it begins with a domain name, and its metadata is stored in Active Directory Domain Services (AD DS). Although a single namespace server is shown in the previous figure, a domain-based namespace can be hosted on multiple namespace servers to increase the availability of the namespace.
 - **Folder** - Folders without folder targets add structure and hierarchy to the namespace, and folders with folder targets provide users with actual content. When users browse a folder that has folder targets in the namespace, the client computer receives a referral that transparently redirects the client computer to one of the folder targets.
 - **Folder targets** - A folder target is the UNC path of a shared folder or another namespace that is associated with a folder in a namespace. The folder target is where data and content is stored. In the previous figure, the folder named Tools has two folder targets, one in London and one in New York, and the folder named Training Guides has a single folder target in New York. A user who browses to \\\\Contoso\\Public\\Software\\Tools is transparently redirected to the shared folder \\\\LDN-SVR-01\\Tools or \\\\NYC-SVR-01\\Tools, depending on which site the user is currently located in.
 
@@ -63,7 +62,7 @@ Install DFS Namespaces by using [Windows Admin Center](../../manage/windows-admi
 
 ### [PowerShell](#tab/powershell)
 
-Open a Windows PowerShell session with elevated user rights, and then type the following command, where <name\> is the role service or feature that you want to install (see the following table for a list of relevant role service or feature names):
+Open a Windows PowerShell session with elevated user rights, and then type the following command, where <name\> is the role service or feature that you want to install. See the following table for a list of relevant role service or feature names:
 
 ```PowerShell
 Install-WindowsFeature <name>
