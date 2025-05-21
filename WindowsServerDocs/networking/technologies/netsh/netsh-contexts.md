@@ -2,10 +2,11 @@
 title: Netsh Command Syntax, Contexts, and Formatting
 description: Learn about netsh contexts, subcontexts, netsh syntax, and how to run netsh commands on local and remote computers running Windows Server or Windows Client.
 ms.topic: article
-ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 ms.author: alalve
 author: xelu86
-ms.date: 01/15/2025
+ms.date: 05/21/2025
+ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
+no-loc: [-a, -c, -r, -u, -p, -f]
 ---
 
 # Netsh command syntax, contexts, and formatting
@@ -19,7 +20,6 @@ Netsh also provides a scripting feature that allows you to run a group of comman
 ## Syntax
 
 ```
-netsh
 netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *] [Command | -f ScriptFile]
 ```
 
