@@ -4,7 +4,7 @@ description: This article discusses how to create default local Windows Server A
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: article
-ms.date: 05/17/2023
+ms.date: 05/21/2025
 ---
 
 # Active Directory accounts
@@ -97,11 +97,11 @@ Because the Guest account can provide anonymous access, it's a security risk. It
 
 When the Guest account is required, an Administrator on the domain controller is required to enable the Guest account. The Guest account can be enabled without requiring a password, or it can be enabled with a strong password. The Administrator also grants restricted rights and permissions for the Guest account. To help prevent unauthorized access:
 
-- Do *not* grant the Guest account the [Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system) user right. When a computer is shutting down or starting up, it's possible that a Guest user or anyone with local access, such as a malicious user, could gain unauthorized access to the computer.
+- *Don't* grant the Guest account the [Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system) user right. When a computer is shutting down or starting up, it's possible that a Guest user or anyone with local access, such as a malicious user, could gain unauthorized access to the computer.
 
-- Do *not* provide the Guest account with the ability to view the event logs. After the Guest account is enabled, it's a best practice to monitor this account frequently to ensure that other users can't use services and other resources, such as resources that were unintentionally left available by a previous user.
+- *Don't* provide the Guest account with the ability to view the event logs. After the Guest account is enabled, it's a best practice to monitor this account frequently to ensure that other users can't use services and other resources, such as resources that were unintentionally left available by a previous user.
 
-- Do *not* use the Guest account when the server has external network access or access to other computers.
+- *Don't* use the Guest account when the server has external network access or access to other computers.
 
 If you decide to enable the Guest account, be sure to restrict its use and to change the password regularly. As with the Administrator account, you might want to rename the account as an added security precaution.
 
@@ -226,7 +226,7 @@ Each default local account in Active Directory has several account settings that
 |Account is trusted for delegation|Lets a service running under this account to perform operations on behalf of other user accounts on the network. A service running under a user account (also known as a service account) that's trusted for delegation can impersonate a client to gain access to resources, either on the computer where the service is running or on other computers. For example, in a forest that's set to the Windows Server 2003 functional level, this setting is found on the Delegation tab. It's available only for accounts that have been assigned service principal names (SPNs), which are set by using the `setspn` command from Windows Support Tools. This setting is security-sensitive and should be assigned cautiously.|
 |Account is sensitive and can't be delegated|Gives control over a user account, such as for a Guest account or a temporary account. This option can be used if this account can't be assigned for delegation by another account.|
 |Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol Security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES).</div>|
-|Do not require Kerberos preauthentication|Provides support for alternate implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when you're enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
+|Don't require Kerberos preauthentication|Provides support for alternate implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when you're enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
 
 > [!NOTE]
 > DES isn't enabled by default in Windows Server operating systems (starting with Windows Server 2008 R2) or in Windows client operating systems (starting with Windows 7). For these operating systems, computers won't use DES-CBC-MD5 or DES-CBC-CRC cipher suites by default. If your environment requires DES, this setting might affect compatibility with client computers or services and applications in your environment.
