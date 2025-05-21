@@ -275,7 +275,7 @@ Two types of events should be monitored and alerted:
 
 1. Events where an occurrence is a strong indicator of unauthorized or suspicious activity.
 
-2. An accumulation of events above an expected and accepted baseline.
+1. An accumulation of events above an expected and accepted baseline.
 
 An example of the first event is:
 
@@ -341,44 +341,12 @@ Review the following links for additional information about monitoring AD DS:
 
 All Event ID recommendations are accompanied by a criticality rating as follows:
 
-**High:** Event IDs with a high criticality rating should always and immediately be alerted and investigated.
+| Rating | Description |
+|--|--|
+| **High** | Event IDs with a high criticality rating should always and immediately be alerted and investigated. |
+| **Medium** | An Event ID with a medium criticality rating could indicate malicious activity, but it must be accompanied by some other abnormality. An example can include an unusual number occurring in a particular time period, unexpected occurrences, or occurrences on a computer that normally wouldn't be expected to log the event. A medium-criticality event might also be collected as a metric and then compared over time. |
+| **Low** | And Event ID with a low criticality events shouldn't garner attention or cause alerts, unless correlated with medium or high criticality events. |
 
-**Medium:** An Event ID with a medium criticality rating could indicate malicious activity, but it must be accompanied by some other abnormality. For example, this could include an unusual number occurring in a particular time period, unexpected occurrences, or occurrences on a computer that normally wouldn't be expected to log the event. A medium-criticality event might also be collected as a metric and then compared over time.
+These recommendations are meant to provide a baseline guide for an administrator. All recommendations should be thoroughly reviewed before implementing in a production environment. Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) for a list of the recommended events to monitor, their criticality ratings, and an event message summary.
 
-**Low:** And Event ID with a low criticality events shouldn't garner attention or cause alerts, unless correlated with medium or high criticality events.
-
-These recommendations are meant to provide a baseline guide for the administrator. All recommendations should be thoroughly reviewed before implementing in a production environment.
-
-Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) for a list of the recommended events to monitor, their criticality ratings, and an event message summary.
-
-## Advanced Security Audit policy settings
-
-The security audit policy settings found under **Security Settings\\Advanced Audit Policy Configuration** enable organizations to monitor compliance with key business and security requirements by tracking specific activities, such as:
-
-- Modifications made by group administrators to settings or data on servers containing sensitive information (for example, finance servers).
-
-- Access to critical files by employees within designated groups.
-
-- Application of the correct system access control list (SACL) to all files, folders, or registry keys on a computer or file share, providing a verifiable safeguard against unauthorized access.
-
-You can access these audit policy settings through the Local Security Policy snap-in (secpol.msc) on the local computer or by using Group Policy.
-
-Advanced Audit Policy settings provide granular control over which activities are monitored, allowing you to focus on events that are most relevant to your organization. You can exclude auditing for actions that aren't important or that generate unnecessary log volume. Additionally, because these policies can be managed through domain Group Policy Objects, you can easily modify, test, and deploy audit configurations to specific users and groups as needed.
-
-The advanced Audit Policy configurations are as follows:
-
-| **Policy** | **Description** | **Subcategory** |
-|---|---|---|
-| Account Logon | Configuring policy settings in this category can help you document attempts to authenticate account data on a domain controller or on a local Security Accounts Manager (SAM). Unlike Logon and Logoff policy settings and events, which track attempts to access a particular computer, settings and events in this category focus on the account database that is used.| [Audit Credential Validation](dn319049\(v=ws.11\).md)<br><br>[Audit Kerberos Authentication Service](dn319109\(v=ws.11\).md)<br><br>[Audit Kerberos Service Ticket Operations](dn319105\(v=ws.11\).md)<br><br>[Audit Other Logon-Logoff Events](dn311470\(v=ws.11\).md)<br><br> |
-| Account Management | The security audit policy settings in this category can be used to monitor changes to user and computer accounts and groups.| [Audit Application Group Management](dn311463\(v=ws.11\).md)<br><br>[Audit Computer Account Management](dn319065\(v=ws.11\).md)<br><br>[Audit Distribution Group Management](dn319059\(v=ws.11\).md)<br><br>[Audit Other Account Management Events](dn311462\(v=ws.11\).md)<br><br>[Audit Security Group Management](dn311500\(v=ws.11\).md)<br><br>[Audit User Account Management](dn319091\(v=ws.11\).md)<br><br> |
-| Detailed Tracking | Detailed Tracking security policy settings and audit events help monitor the activities of individual applications and users on a computer. These settings provide insight into how the computer is being used. | [Audit DPAPI Activity](dn319104\(v=ws.11\).md)<br><br>[Audit Process Creation](dn319093\(v=ws.11\).md)<br><br>[Audit Process Termination](dn319122\(v=ws.11\).md)<br><br>[Audit RPC Events](dn319083\(v=ws.11\).md)<br><br> |
-| DS Access | DS Access security audit policy settings provide a detailed audit trail of attempts to access and modify objects in Active Directory Domain Services (AD DS). These audit events are logged only on domain controllers.<br> | [Audit Detailed Directory Service Replication](dn311482\(v=ws.11\).md)<br><br>[Audit Directory Service Access](dn311490\(v=ws.11\).md)<br><br>[Audit Directory Service Changes](dn319096\(v=ws.11\).md)<br><br>[Audit Directory Service Replication](dn319121\(v=ws.11\).md)<br> |
-| Logon/Logoff | Logon/Logoff security policy settings and audit events allow you to track sign in attempts on a computer interactively or over a network. These events are useful for tracking user activity and identifying potential attacks on network resources.<br> | [Audit Account Lockout](dn319074\(v=ws.11\).md)<br><br>[Audit IPsec Extended Mode](dn319077\(v=ws.11\).md)<br><br>[Audit IPsec Main Mode](dn319106\(v=ws.11\).md)<br><br>[Audit IPsec Quick Mode](dn319107\(v=ws.11\).md)<br><br>[Audit Logoff](dn319085\(v=ws.11\).md)<br><br>[Audit Logon](dn319080\(v=ws.11\).md)<br><br>[Audit Network Policy Server](dn311469\(v=ws.11\).md)<br><br>[Audit Other Logon-Logoff Events](dn311470\(v=ws.11\).md)<br><br>[Audit Special Logon](dn319088\(v=ws.11\).md)<br> |
-| Object Access | Object Access policy settings and audit events allow you to track attempts to access specific objects or types of objects on a network or computer.<br><br>To audit attempts to access a file, directory, registry key, or any other object, you must enable the appropriate Object Access auditing subcategory for success and/or failure events.<br><br>For example, the File System subcategory needs to be enabled to audit file operations, and the Registry subcategory needs to be enabled to audit registry accesses.<br><br>Proving that these audit policies are in effect to an external auditor is more difficult. There's no easy way to verify that the proper SACLs are set on all inherited objects. To address this issue, see the **Global Object Access** policy. | [Audit Application Generated](dn319094\(v=ws.11\).md)<br><br>[Audit Certification Services](dn319076\(v=ws.11\).md)<br><br>[Audit Detailed File Share](dn319118\(v=ws.11\).md)<br><br>[Audit File Share](dn311489\(v=ws.11\).md)<br><br>[Audit File System](dn319068\(v=ws.11\).md)<br><br>[Audit Filtering Platform Connection](dn311466\(v=ws.11\).md)<br><br>[Audit Filtering Platform Packet Drop](dn311496\(v=ws.11\).md)<br><br>[Audit Handle Manipulation](dn319090\(v=ws.11\).md)<br><br>[Audit Kernel Object](dn319064\(v=ws.11\).md)<br><br>[Audit Other Object Access Events](dn319119\(v=ws.11\).md)<br><br>[Audit Registry](dn311473\(v=ws.11\).md)<br><br>[Audit SAM](dn319052\(v=ws.11\).md)<br> |
-| Policy Change | Policy Change audit events allow you to track changes to important security policies on a local system or network.<br><br>Because policies are typically established by administrators to help secure network resources, monitoring changes or attempts to change these policies can be an important aspect of security management for a network. | [Audit Audit Policy Change](dn319116\(v=ws.11\).md)<br><br>[Audit Authentication Policy Change](dn319066\(v=ws.11\).md)<br><br>[Audit Authorization Policy Change](dn319089\(v=ws.11\).md)<br><br>[Audit Filtering Platform Policy Change](dn319087\(v=ws.11\).md)<br><br>[Audit MPSSVC Rule-Level Policy Change](dn319069\(v=ws.11\).md)<br><br>[Audit Other Policy Change Events](dn311459\(v=ws.11\).md) |
-| Privilege Use | Permissions on a network are granted for users or computers to complete defined tasks. Privilege Use security policy settings and audit events allow you to track the use of certain permissions on one or more systems. | [Audit Non-Sensitive Privilege Use](dn311481\(v=ws.11\).md)<br>[Audit Sensitive Privilege Use](dn319113\(v=ws.11\).md)<br>[Audit Other Privilege Use Events](dn319092\(v=ws.11\).md)<br> |
-| System | System security policy settings and audit events allow you to track system-level changes to a computer that aren't included in other categories. These changes might have potential security implications. | [Audit IPsec Driver](dn319103\(v=ws.11\).md)<br>[Audit Other System Events](dn319050\(v=ws.11\).md)<br><br>[Audit Security State Change](dn311493\(v=ws.11\).md)<br><br>[Audit Security System Extension](dn311491\(v=ws.11\).md)<br>[Audit System Integrity](dn319081\(v=ws.11\).md)<br> |
-| Global Object Access | Global Object Access Auditing policy settings allow administrators to define computer SACLs per object type for the file system or for the registry. The specified SACL is then automatically applied to every object of that type.<br><br>Auditors are able to prove that every resource in the system is protected by an audit policy by viewing the contents of the Global Object Access Auditing policy settings. For example, if auditors see a policy setting called "Track all changes made by group administrators," they know that this policy is in effect.<br><br>Resource SACLs are also useful for diagnostic scenarios. For example, setting the Global Object Access Auditing policy to log all the activity for a specific user can help administrators quickly identify which object in a system is denying a user access. Enabling the policy to track "Access denied" events for the file system or registry aids in pinpointing the source of denied access. | [File System (Global Object Access Auditing)](dn319112\(v=ws.11\).md)<br><br>[Registry (Global Object Access Auditing)](dn311461\(v=ws.11\).md) |
-
-> [!NOTE]
-> When both a file or folder SACL and a Global Object Access Auditing policy are configured on a computer (or both a registry SACL and a Global Object Access Auditing policy), the effective SACL is a combination of the two. An audit event is triggered if an action matches either the file or folder SACL or the Global Object Access Auditing policy.
+## See also
