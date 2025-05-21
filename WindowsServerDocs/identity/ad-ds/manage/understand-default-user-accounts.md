@@ -77,7 +77,7 @@ When Active Directory is installed on the first domain controller in the domain,
 |Default member of|Administrators, Domain Admins, Enterprise Administrators, Domain Users (the Primary Group ID of all user accounts is Domain Users)<br><br>Group Policy Creator Owners, and Schema Admins in Active Directory Domain Users group|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service administrators?|No|
+|Safe to delegate management of this group to nonservice administrators?|No|
 
 ## Guest account
 
@@ -171,7 +171,7 @@ After you reset the KRBTGT password, ensure that event ID 9 in the (Kerberos) Ke
 
 #### KRBTGT account security considerations
 
-It's also a best practice to reset the KRBTGT account password to ensure that a newly restored domain controller doesn't replicate with a compromised domain controller. In this case, in a large forest recovery that's spread across multiple locations, you can't guarantee that all domain controllers are shut down and, if they are shut down, that they can't be rebooted again before all the appropriate recovery steps have been performed. After you reset the KRBTGT account, another domain controller can't replicate this account password by using an old password.
+It's also a best practice to reset the KRBTGT account password to ensure that a newly restored domain controller doesn't replicate with a compromised domain controller. In this case, in a large forest recovery that's spread across multiple locations, you can't guarantee that all domain controllers are shut down and, if they're shut down, that they can't be rebooted again before all the appropriate recovery steps have been performed. After you reset the KRBTGT account, another domain controller can't replicate this account password by using an old password.
 
 An organization suspecting domain compromise of the KRBTGT account should consider the use of professional incident response services. The impact to restore the ownership of the account is domain-wide, labor intensive, and should be undertaken as part of a larger recovery effort.
 
@@ -192,7 +192,7 @@ Because it's impossible to predict the specific errors that will occur for any g
 
 ### Read-only domain controllers and the KRBTGT account
 
-Windows Server 2008 introduced the read-only domain controller (RODC). The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
+The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
 
 After the credentials are cached on the RODC, the RODC can accept that user's sign-in requests until the credentials change. When a TGT is signed with the KRBTGT account of the RODC, the RODC recognizes that it has a cached copy of the credentials. If another domain controller signs the TGT, the RODC forwards requests to a writable domain controller.
 
@@ -257,7 +257,7 @@ Restricting and protecting domain accounts in your domain environment requires y
 
 - Stringently control where and how domain accounts are used.
 
-Member accounts in the Administrators, Domain Admins, and Enterprise Admins groups in a domain or forest are high-value targets for malicious users. To limit any exposure, it's a best practice to strictly limit membership to these administrator groups to the smallest number of accounts. Restricting membership in these groups reduces the possibility that an administrator might unintentionally misuse these credentials and create a vulnerability that malicious users can exploit.
+Member accounts in the Administrators, Domain Admins, and Enterprise Admins groups in a domain or forest are high-value targets for malicious users. To limit any exposure, it's a best practice to strictly limit membership to these administrator groups to the smallest number of accounts. Restricting membership in these groups reduces the possibility that an administrator might unintentionally misuse these credentials creating a vulnerability that malicious users can exploit.
 
 Moreover, it's a best practice to stringently control where and how sensitive domain accounts are used. Restrict the use of Domain Admins accounts and other Administrator accounts to prevent them from being used to sign in to management systems and workstations that are secured at the same level as the managed systems. When Administrator accounts aren't restricted in this manner, each workstation from which a domain administrator signs in provides another location that malicious users can exploit.
 
@@ -281,7 +281,7 @@ Restrict Domain Admins accounts and other sensitive accounts to prevent them fro
 
   - **Ideal**: Create multiple, separate accounts for an administrator who has several job responsibilities that require different trust levels. Set up each Administrator account with different user rights, such as for workstation administration, server administration, and domain administration, to let the administrator sign in to specified workstations, servers, and domain controllers based strictly on their job responsibilities.
 
-- **Standard user account**: Grant standard user rights for standard user tasks, such as email, web browsing, and using line-of-business (LOB) applications. These accounts should not be granted administrator rights.
+- **Standard user account**: Grant standard user rights for standard user tasks, such as email, web browsing, and using line-of-business (LOB) applications. These accounts shouldn't be granted administrator rights.
 
 > [!IMPORTANT]
 > Ensure that sensitive Administrator accounts can't access email or browse the internet as described in the following section.
@@ -299,7 +299,7 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 
 - **Minimum**: Restrict domain administrators from having sign-in access to servers and workstations. Before you start this procedure, identify all OUs in the domain that contain workstations and servers. Any computers in OUs that aren't identified won't restrict administrators with sensitive accounts from signing in to them.
 
-- **Better**: Restrict domain administrators from non-domain controller servers and workstations.
+- **Better**: Restrict domain administrators from nondomain controller servers and workstations.
 
 - **Ideal**: Restrict server administrators from signing in to workstations, in addition to domain administrators.
 
