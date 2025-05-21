@@ -9,10 +9,10 @@ ms.topic: how-to
 
 # Active Directory Forest Recovery - Reset the krbtgt password
 
-Use the following procedure to reset the krbtgt password for the domain. The following procedure applies writeable DCs, but not read-only domain controllers (RODCs).
+Use the following procedure to reset the krbtgt password for the domain. The following procedure applies to writeable DCs, but not read-only domain controllers (RODC).
 
 > [!IMPORTANT]
-> If you plan to recover RODCs online during the forest recovery, don't delete the krbtgt accounts for the RODCs. The krbtgt account for an RODC is listed in the format krbtgt_*number*.
+> If you plan to recover RODC during the forest recovery, don't delete the krbtgt accounts for the RODC. The krbtgt account for an RODC is listed in the format krbtgt_*number*.
 >
 > If you use a customized password filter (such as passfilt.dll) on a DC, then you might receive an error when you try to reset the krbtgt password. For more information, including a workaround, see Microsoft Knowledge Base [article 2549833](https://support.microsoft.com/kb/2549833).
 
@@ -26,9 +26,9 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 1. In **New password**, type a new password, retype the password in **Confirm password**, and then select **OK**. The password that you specify isn't significant because the system generates a strong password automatically independent of the password that you specify.
 
 > [!IMPORTANT]
-> You should perform this operation twice. When resetting the Key Distribution Center Service Account password twice, a 10 hour waiting period is required between resets. 10 hours are the default **Maximum lifetime for user ticket** and **Maximum lifetime for service ticket** policy settings, hence in a case where the Maximum lifetime period has been altered, the minimum waiting period between resets should be greater than the configured value.
+> You should perform this operation twice. You must wait 10 hours between password resets. 10 hours are the default **Maximum lifetime for user ticket** and **Maximum lifetime for service ticket** policy settings, hence in a case where the Maximum lifetime period changes, the minimum waiting period between resets should be greater than the configured value.
 > [!NOTE]
-> The password history value for the krbtgt account is 2, meaning it includes the 2 most recent passwords. By resetting the password twice you effectively clear any old passwords from the history, so there is no way another DC replicates with this DC by using an old password.
+> The password history value for the krbtgt account is 2, meaning it includes the two most recent passwords. By resetting the password twice you effectively clear any old passwords from the history, so there's no way another DC replicates with this DC by using an old password.
 
 ## Next steps
 
