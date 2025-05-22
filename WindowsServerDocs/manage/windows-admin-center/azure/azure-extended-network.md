@@ -19,6 +19,9 @@ Each subnet that you are going to extend requires one pair of appliances. Multip
 > [!NOTE]
 > Extended network for Azure should only be used for machines that cannot have their IP address changed when migrating to Azure. It is always better to change the IP address and connect it to a subnet that wholly exists in Azure, if that is an option.
 
+> [!WARNING]
+> The Azure Extended Network extension (msft.sme.subnet-stretch) is not currently available on the extension feed in Windows Admin Center version 2410. 
+
 ## Planning
 
 To prepare to use extended network for Azure, you must identify which subnet you want to stretch, then perform the following steps:
