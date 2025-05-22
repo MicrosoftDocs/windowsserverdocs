@@ -15,6 +15,9 @@ ms.date: 05/06/2022
 > [!IMPORTANT]
 > Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
 
+> [!IMPORTANT]
+> There are currently several [known issues](#known-issues) impacting connections to Azure Local machines and installation of the Windows Admin Center in the Azure Portal extension on Azure Local machines. These issues are impacting Windows Admin Center in the Azure Portal extension versions 0.49.0.0 and above.
+
 Using Windows Admin Center in the Azure portal you can manage the Azure Local operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
 With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Local cluster in the Azure portal. Azure Local cluster and workload management no longer require you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
@@ -317,6 +320,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 
 ## Known issues
 
+- On extension versions 0.49.0.0 and above, installation of Windows Admin Center in the Azure Portal or connections to Azure Local OS systems may fail. Installation issues may be mitigated by reverting to an earlier version of the extension or setting WDAC to audit mode before and during installation. Connection issues may be fixed by a page refresh.
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
