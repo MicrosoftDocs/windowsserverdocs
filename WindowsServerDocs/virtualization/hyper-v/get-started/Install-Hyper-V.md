@@ -33,7 +33,7 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 ### [PowerShell](#tab/powershell)
 
-To **install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet:
+**To install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet:
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -67,7 +67,7 @@ To **install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/
 
 ### [GUI](#tab/gui)
 
-To **install Hyper-V on Windows Server by using Server Manager**:
+**To install Hyper-V on Windows Server by using Server Manager**:
 
 1. Open **Server Manager** if it's not already open. To start the application, select **Start**, and then search for and select **Server Manager**.
 
@@ -120,7 +120,7 @@ For more information and troubleshooting, see [Windows Hyper-V System Requiremen
 
 ### [PowerShell](#tab/powershell)
 
-To **enable Hyper-V on Windows using PowerShell**:
+#### To enable Hyper-V on Windows using PowerShell
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -139,9 +139,9 @@ To **enable Hyper-V on Windows using PowerShell**:
 
 1. Enter **Y** to have the computer restart to complete the installation.
 
-The Deployment Image Servicing and Management tool (DISM) helps configure Windows and Windows images. Among its many applications, DISM can enable Windows features while the operating system is running.
+#### To enable the Hyper-V role on Windows using DISM
 
-To **enable the Hyper-V role on Windows using DISM**:
+The Deployment Image Servicing and Management tool (DISM) helps configure Windows and Windows images. Among its many applications, DISM can enable Windows features while the operating system is running.
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -161,7 +161,7 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 ### [GUI](#tab/gui)
 
-#### Enable Hyper-V on Windows 11
+#### Windows 11
 
 1. Navigate to the Control Panel. Select **Start**, then search for **Control Panel** to open the application.
 
@@ -175,7 +175,7 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 When the installation completes, you're prompted to restart your computer.
 
-#### Enable Hyper-V on Windows 10
+#### Windows 10
 
 1. Select **Start**, then search for and select **Settings**.
 
