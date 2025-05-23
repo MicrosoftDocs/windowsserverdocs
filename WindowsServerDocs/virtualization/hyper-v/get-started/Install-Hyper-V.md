@@ -29,7 +29,11 @@ Before you install Windows Server or add the Hyper-V role, make sure that:
 
 If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
 
-## Install Hyper-V by using Server Manager
+## Install Hyper-V
+
+### [Server Manager](#tab/server-manager)
+
+To **install Hyper-V on Windows Server by using Server Manager**:
 
 1. Open **Server Manager** if it's not already open. To start the application, select **Start**, and then search for and select **Server Manager**.
 
@@ -55,7 +59,9 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 1. When installation is finished, verify that Hyper-V installed correctly. Open the **All Servers** page in Server Manager and select a server on which you installed Hyper-V. Check the **Roles and Features** tile on the page for the selected server.
 
-## Install Hyper-V by using the Install-WindowsFeature cmdlet
+### [PowerShell](#tab/powershell)
+
+To **install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet:
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -87,6 +93,8 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 > [!NOTE]
 > If you install this role on a server that runs the Server Core installation option of Windows Server and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell is installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
 
+---
+
 ::: zone-end
 
 :::zone pivot="windows"
@@ -108,7 +116,11 @@ Enable Hyper-V to create virtual machines on Windows. Hyper-V can be enabled in 
 
 For more information and troubleshooting, see [Windows Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
 
-## Enable Hyper-V using PowerShell
+## Enable Hyper-V
+
+### [PowerShell](#tab/powershell)
+
+To **enable Hyper-V on Windows using PowerShell**:
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -127,11 +139,11 @@ For more information and troubleshooting, see [Windows Hyper-V System Requiremen
 
 1. Enter **Y** to have the computer restart to complete the installation.
 
-## Enable Hyper-V with CMD and DISM
+### [DISM](#tab/dism)
 
 The Deployment Image Servicing and Management tool (DISM) helps configure Windows and Windows images. Among its many applications, DISM can enable Windows features while the operating system is running.
 
-To enable the Hyper-V role using DISM:
+To **enable the Hyper-V role on Windows using DISM**:
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -149,9 +161,9 @@ To enable the Hyper-V role using DISM:
 
 For more information about DISM, see the [DISM Technical Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
-## Enable the Hyper-V role through Settings
+### [Settings](#tab/settings)
 
-### Enable Hyper-V on Windows 11
+#### Enable Hyper-V on Windows 11
 
 1. Navigate to the Control Panel. Select **Start**, then search for **Control Panel** to open the application.
 
@@ -165,13 +177,15 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 When the installation completes you're prompted to restart your computer.
 
-## Enable Hyper-V on Windows 10
+### Enable Hyper-V on Windows 10
 
 1. Select **Start**, then search for and select **Settings**.
 1. Select **Apps & features**. Then select **Programs and Features**
 1. Select **Turn Windows features on or off**.
 1. Select **Hyper-V** and then select **OK**.
 1. Restart your computer to complete the installation.
+
+---
 
 ::: zone-end
 
