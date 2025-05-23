@@ -31,7 +31,7 @@ whoami /all [/fo <format>] [/nh]
 |:::no-loc text="/groups":::|Displays the user groups to which the current user belongs.|
 |:::no-loc text="/claims":::|Displays the claims for current user, such as claim name, flags, type and values.|
 |:::no-loc text="/priv":::|Displays the security privileges of the current user.|
-|:::no-loc text="/fo"::: \<format>|Specifies the output format. Valid values include:<br><br><li> **table** - Displays output in a table. This is the default value. <li> :::no-loc text="**list**"::: - Displays output in a list. <li> **csv** - Displays output in comma-separated value (CSV) format. </li>|
+|:::no-loc text="/fo"::: \<format>|Specifies the output format. Valid values include:<br><br><li> **table** - Displays output in a table. This is the default value. <li> **:::no-loc text="list":::** - Displays output in a list. <li> **csv** - Displays output in comma-separated value (CSV) format. </li>|
 |:::no-loc text="/all":::|Displays all information in the current access token, including the current user name, security identifiers (SID), privileges, and groups that the current user belongs to.|
 |:::no-loc text="/nh":::|Specifies that the column header shouldn't be displayed in the output. This is valid only for table and CSV formats.|
 |:::no-loc text="/?":::|Displays help at the command prompt.|
