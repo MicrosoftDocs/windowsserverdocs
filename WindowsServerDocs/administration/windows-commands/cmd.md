@@ -10,7 +10,7 @@ ms.date: 05/23/2025
 
 # cmd
 
-Starts a new instance of the command interpreter, Cmd.exe. If used without parameters, `cmd` displays the version and copyright information of the operating system.
+Starts a new instance of the command interpreter, cmd.exe. If used without parameters, `cmd` displays the version and copyright information of the operating system.
 
 > [!NOTE]
 > Users seeking more advanced capabilities are encouraged to explore [PowerShell](/powershell/) for enhanced scripting and automation.
@@ -120,16 +120,13 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   If the previous conditions aren't met, `<string>` is processed by examining the first character to verify whether it's an opening quotation mark. If the first character is an opening quotation mark, it's stripped along with the closing quotation mark. Any text following the closing quotation marks is preserved.
 
-- If you don't specify `/d`, Cmd.exe looks for the following registry subkeys:
+- If you don't specify `/d`, `cmd` looks for the following registry subkeys:
 
   - **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun\REG_SZ**
 
   - **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun\REG_EXPAND_SZ**
 
   If one or both registry subkeys are present, they're executed before all other variables.
-
-  > [!CAUTION]
-  > Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 - You can disable command extensions for a particular process by using `/e:off`. You can enable or disable extensions for all `cmd` command-line options on a computer or user session by setting the following **REG_DWORD** values:
 
@@ -197,7 +194,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
 ## Using environment variables
 
-The `cmd` command-shell environment is defined by variables that determine the behavior of the command shell and the operating system. You can define the behavior of the command-shell environment or the entire operating system environment by using two types of environment variables, system and local. System environment variables define the behavior of the global operating system environment. Local environment variables define the behavior of the environment of the current instance of Cmd.exe.
+The `cmd` command-shell environment is defined by variables that determine the behavior of the command shell and the operating system. You can define the behavior of the command-shell environment or the entire operating system environment by using two types of environment variables, system and local. System environment variables define the behavior of the global operating system environment. Local environment variables define the behavior of the environment of the current instance of `cmd`.
 
 Only users with administrative privileges can change system variables. These variables are most commonly used in logon scripts. Local environment variables are only available when the user for whom they were created is logged on to the computer. Local variables set in the **HKEY_CURRENT_USER** hive are valid only for the current user, but define the behavior of the global operating system environment.
 
@@ -210,7 +207,7 @@ The following list describes the various types of variables in descending order 
 1. All environment variables and paths set in a logon script (if present).
 1. Variables used interactively in a script or batch file.
 
-In the command shell, each instance of `cmd` inherits the environment of its parent application. Therefore, you can change the variables in the new Cmd.exe environment without affecting the environment of the parent application.
+In the command shell, each instance of `cmd` inherits the environment of its parent application. Therefore, you can change the variables in the new `cmd` environment without affecting the environment of the parent application.
 
 You can view the environment variables in your environment by running one of the following commands:
 
