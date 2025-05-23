@@ -31,34 +31,6 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 ## Install Hyper-V
 
-### [Server Manager](#tab/server-manager)
-
-To **install Hyper-V on Windows Server by using Server Manager**:
-
-1. Open **Server Manager** if it's not already open. To start the application, select **Start**, and then search for and select **Server Manager**.
-
-1. In **Server Manager**, on the **Manage** menu, select **Add Roles and Features**.
-
-1. On the **Before you begin** page, verify that your destination server and network environment are prepared for the role and feature you want to install. Select **Next**.
-
-1. On the **Select installation type** page, select **Role-based or feature-based installation**, and then select **Next**.
-
-1. On the **Select destination server** page, select a server from the server pool, and then select **Next**.
-
-1. On the **Select server roles** page, select **Hyper-V**. From the **Add Roles and Features Wizard** page, select **Add Features**, and then select **Next**.
-
-    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](media/add-hyper-v-role.png)
-
-1. On the **Select features** page, select **Next**, and then select **Next** again.
-
-    ![Screenshot of Hyper-V installation settings.](media/hyper-v-settings.png)
-
-1. On the **Create Virtual Switches** page, **Virtual Machine Migration** page, and **Default Stores** page, select the options that suit your specific environment.
-
-1. On the **Confirm installation selections** page, select **Restart the destination server automatically if required**, and then select **Install**.
-
-1. When installation is finished, verify that Hyper-V installed correctly. Open the **All Servers** page in Server Manager and select a server on which you installed Hyper-V. Check the **Roles and Features** tile on the page for the selected server.
-
 ### [PowerShell](#tab/powershell)
 
 To **install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet:
@@ -92,6 +64,34 @@ To **install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/
 
 > [!NOTE]
 > If you install this role on a server that runs the Server Core installation option of Windows Server and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell is installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
+
+### [GUI](#tab/gui)
+
+To **install Hyper-V on Windows Server by using Server Manager**:
+
+1. Open **Server Manager** if it's not already open. To start the application, select **Start**, and then search for and select **Server Manager**.
+
+1. In **Server Manager**, on the **Manage** menu, select **Add Roles and Features**.
+
+1. On the **Before you begin** page, verify that your destination server and network environment are prepared for the role and feature you want to install. Select **Next**.
+
+1. On the **Select installation type** page, select **Role-based or feature-based installation**, and then select **Next**.
+
+1. On the **Select destination server** page, select a server from the server pool, and then select **Next**.
+
+1. On the **Select server roles** page, select **Hyper-V**. From the **Add Roles and Features Wizard** page, select **Add Features**, and then select **Next**.
+
+    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](media/add-hyper-v-role.png)
+
+1. On the **Select features** page, select **Next**, and then select **Next** again.
+
+    ![Screenshot of Hyper-V installation settings.](media/hyper-v-settings.png)
+
+1. On the **Create Virtual Switches** page, **Virtual Machine Migration** page, and **Default Stores** page, select the options that suit your specific environment.
+
+1. On the **Confirm installation selections** page, select **Restart the destination server automatically if required**, and then select **Install**.
+
+1. When installation is finished, verify that Hyper-V installed correctly. Open the **All Servers** page in Server Manager and select a server on which you installed Hyper-V. Check the **Roles and Features** tile on the page for the selected server.
 
 ---
 
@@ -139,8 +139,6 @@ To **enable Hyper-V on Windows using PowerShell**:
 
 1. Enter **Y** to have the computer restart to complete the installation.
 
-### [DISM](#tab/dism)
-
 The Deployment Image Servicing and Management tool (DISM) helps configure Windows and Windows images. Among its many applications, DISM can enable Windows features while the operating system is running.
 
 To **enable the Hyper-V role on Windows using DISM**:
@@ -161,7 +159,7 @@ To **enable the Hyper-V role on Windows using DISM**:
 
 For more information about DISM, see the [DISM Technical Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
-### [Settings](#tab/settings)
+### [GUI](#tab/gui)
 
 #### Enable Hyper-V on Windows 11
 
@@ -177,12 +175,16 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 When the installation completes, you're prompted to restart your computer.
 
-### Enable Hyper-V on Windows 10
+#### Enable Hyper-V on Windows 10
 
 1. Select **Start**, then search for and select **Settings**.
+
 1. Select **Apps & features**. Then select **Programs and Features**
+
 1. Select **Turn Windows features on or off**.
+
 1. Select **Hyper-V** and then select **OK**.
+
 1. To complete the installation, restart your computer.
 
 ---
