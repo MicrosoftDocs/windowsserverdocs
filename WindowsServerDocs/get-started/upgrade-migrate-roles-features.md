@@ -42,7 +42,7 @@ Windows Server Migration Tools enables you to migrate server roles, features, op
 |Active Directory Domain Services|    [Yes](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers)|    [Yes](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers)|    Yes|
 |Active Directory Federation Services|    No|    Yes|    No (new nodes need to be added to the farm)|
 |Active Directory Lightweight Directory Services|    Yes|    Yes|    Yes|
-|Active Directory Rights Management Services|    Yes|    [Yes](/identity/ad-rms/adrms-deploy)|    No|
+|Active Directory Rights Management Services|    Yes|    [Yes](../identity/ad-rms/adrms-deploy)|    No|
 |DHCP Server|    Yes|    [Yes](#dhcp)|    Yes|
 |DNS Server|    Yes|    Yes|    No|
 |Failover Clustering|Yes with [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md) or when the server is removed by the cluster for upgrade and then added to a different cluster.|Yes|Yes for Failover Clusters with Hyper-V VMs or Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).|
@@ -63,7 +63,7 @@ Below you can find links to migration guides for specific Windows Roles and Feat
 
 - [Migrate the Certification Authority](../identity/ad-cs/migrate-certification-authority.md)
 - [Migrate Active Directory Federation Services Role Service](/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2)
-- [Upgrading AD RMS to Windows Server 2016](/identity/ad-rms/adrms-deploy)
+- [Upgrading AD RMS to Windows Server 2016](../identity/ad-rms/adrms-deploy)
 - [Upgrade domain controllers to a newer version of Windows Server](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers)
 - [Active Directory Domain Services and Domain Name System (DNS) Server Migration Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379558(v=ws.10))
 
