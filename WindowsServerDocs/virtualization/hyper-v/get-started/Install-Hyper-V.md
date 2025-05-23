@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 04/21/2025
+ms.date: 05/23/2025
 zone_pivot_groups: windows
 #customer intent: As an IT administrator, I want to install and enable Hyper-V so that I can create and manage virtual machines effectively.
 ---
