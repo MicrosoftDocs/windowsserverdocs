@@ -68,7 +68,7 @@ To **install Hyper-V on Windows Server** by using the [Install-WindowsFeature](/
 1. Right-click Windows PowerShell and select **Run as Administrator**.
 
     >[!IMPORTANT]
-    >You must run PowerShell as an Administrator, or the commands will fail.
+    >You must run PowerShell as an Administrator, or the commands fail.
 
 1. To install Hyper-V on a server you're connected to remotely, run the following command and replace `<computer_name>` with the name of server. If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
 
@@ -127,7 +127,7 @@ To **enable Hyper-V on Windows using PowerShell**:
 1. Right-click Windows PowerShell and select **Run as Administrator**.
 
   >[!IMPORTANT]
-  >You must run PowerShell as an Administrator, or the commands will fail.
+  >You must run PowerShell as an Administrator, or the commands fail.
 
 1. Run the following command:
 
@@ -175,7 +175,7 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 ![Windows programs and features dialogue box](media/enable-hyper-v.png)
 
-When the installation completes you're prompted to restart your computer.
+When the installation completes, you're prompted to restart your computer.
 
 ### Enable Hyper-V on Windows 10
 
@@ -183,7 +183,7 @@ When the installation completes you're prompted to restart your computer.
 1. Select **Apps & features**. Then select **Programs and Features**
 1. Select **Turn Windows features on or off**.
 1. Select **Hyper-V** and then select **OK**.
-1. Restart your computer to complete the installation.
+1. To complete the installation, restart your computer.
 
 ---
 
