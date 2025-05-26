@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 04/21/2025
+ms.date: 05/23/2025
 zone_pivot_groups: windows
 #customer intent: As an IT administrator, I want to install and enable Hyper-V so that I can create and manage virtual machines effectively.
 ---
@@ -29,7 +29,45 @@ Before you install Windows Server or add the Hyper-V role, make sure that:
 
 If you want to install only the management tools, such as Hyper-V Manager, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
 
-## Install Hyper-V by using Server Manager
+## Install Hyper-V
+
+### [PowerShell](#tab/powershell)
+
+**To install Hyper-V on Windows Server using PowerShell:**
+
+1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
+
+1. Right-click Windows PowerShell and select **Run as Administrator**.
+
+    >[!IMPORTANT]
+    >You must run PowerShell as an Administrator, or the commands fail.
+
+1. To install Hyper-V on a server you're connected to remotely, run the following command and replace `<computer_name>` with the name of server. If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
+
+    ```powershell
+    Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart
+    ```
+
+    ![Screenshot of PowerShell window after running the command to install Hyper-V in Windows Server.](media/install-hyper-v-powershell.png)
+
+1. The installation starts. As soon as installation finishes, the computer restarts.
+
+    ![Screenshot of PowerShell window showing the progress to install Hyper-V in Windows Server.](media/install-hyper-v-powershell-progress.png)
+
+1. After the server restarts, you can see that the Hyper-V role is installed by running the following command:
+
+    ```powershell
+    Get-WindowsFeature Hyper-V -ComputerName <computer_name>
+    ```
+
+    If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
+
+> [!NOTE]
+> If you install this role on a server that runs the Server Core installation option of Windows Server and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell is installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
+
+### [GUI](#tab/gui)
+
+**To install Hyper-V on Windows Server by using Server Manager:**
 
 1. Open **Server Manager** if it's not already open. To start the application, select **Start**, and then search for and select **Server Manager**.
 
@@ -55,37 +93,7 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 1. When installation is finished, verify that Hyper-V installed correctly. Open the **All Servers** page in Server Manager and select a server on which you installed Hyper-V. Check the **Roles and Features** tile on the page for the selected server.
 
-## Install Hyper-V by using the Install-WindowsFeature cmdlet
-
-1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
-
-1. Right-click Windows PowerShell and select **Run as Administrator**.
-
-    >[!IMPORTANT]
-    >You must run PowerShell as an Administrator, or the commands will fail.
-
-1. To install Hyper-V on a server you're connected to remotely, run the following command and replace `<computer_name>` with the name of server. If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
-
-    ```powershell
-    Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart
-    ```
-
-    ![Screenshot of PowerShell window after running the command to install Hyper-V in Windows Server.](media/install-hyper-v-powershell.png)
-
-1. The installation starts. As soon as installation finishes, the computer restarts.
-
-    ![Screenshot of PowerShell window showing the progress to install Hyper-V in Windows Server.](media/install-hyper-v-powershell-progress.png)
-
-1. After the server restarts, you can see that the Hyper-V role is installed by running the following command:
-
-    ```powershell
-    Get-WindowsFeature Hyper-V -ComputerName <computer_name>
-    ```
-
-    If you're connected locally to the server, run the command without `-ComputerName <computer_name>`.
-
-> [!NOTE]
-> If you install this role on a server that runs the Server Core installation option of Windows Server and use the parameter `-IncludeManagementTools`, only the Hyper-V Module for Windows PowerShell is installed. You can use the GUI management tool, Hyper-V Manager, on another computer to remotely manage a Hyper-V host that runs on a Server Core installation. For instructions on connecting remotely, see [Remotely manage Hyper-V hosts with Hyper-V Manager](../Manage/Remotely-manage-Hyper-V-hosts.md).
+---
 
 ::: zone-end
 
@@ -108,30 +116,32 @@ Enable Hyper-V to create virtual machines on Windows. Hyper-V can be enabled in 
 
 For more information and troubleshooting, see [Windows Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
 
-## Enable Hyper-V using PowerShell
+## Enable Hyper-V
+
+### [PowerShell](#tab/powershell)
+
+**To enable Hyper-V on Windows using PowerShell:**
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
 1. Right-click Windows PowerShell and select **Run as Administrator**.
 
-  >[!IMPORTANT]
-  >You must run PowerShell as an Administrator, or the commands will fail.
+    >[!IMPORTANT]
+    >You must run PowerShell as an Administrator, or the commands fail.
 
 1. Run the following command:
 
-  ```powershell
-  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-  ```
+    ```powershell
+    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+    ```
 
-  ![Screenshot of PowerShell window after running the command to enable Hyper-V.](media/enable-hyper-v-powershell.png)
+    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](media/enable-hyper-v-powershell.png)
 
 1. Enter **Y** to have the computer restart to complete the installation.
 
-## Enable Hyper-V with CMD and DISM
+**To enable the Hyper-V role on Windows using DISM:**
 
 The Deployment Image Servicing and Management tool (DISM) helps configure Windows and Windows images. Among its many applications, DISM can enable Windows features while the operating system is running.
-
-To enable the Hyper-V role using DISM:
 
 1. On the Windows desktop, select the Start button and type any part of the name **Windows PowerShell**.
 
@@ -149,9 +159,9 @@ To enable the Hyper-V role using DISM:
 
 For more information about DISM, see the [DISM Technical Reference](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management).
 
-## Enable the Hyper-V role through Settings
+### [GUI](#tab/gui)
 
-### Enable Hyper-V on Windows 11
+**To enable Hyper-V on Windows 11:**
 
 1. Navigate to the Control Panel. Select **Start**, then search for **Control Panel** to open the application.
 
@@ -163,15 +173,21 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 ![Windows programs and features dialogue box](media/enable-hyper-v.png)
 
-When the installation completes you're prompted to restart your computer.
+When the installation completes, you're prompted to restart your computer.
 
-## Enable Hyper-V on Windows 10
+**To enable Hyper-V on Windows 10:**
 
 1. Select **Start**, then search for and select **Settings**.
+
 1. Select **Apps & features**. Then select **Programs and Features**
+
 1. Select **Turn Windows features on or off**.
+
 1. Select **Hyper-V** and then select **OK**.
-1. Restart your computer to complete the installation.
+
+1. To complete the installation, restart your computer.
+
+---
 
 ::: zone-end
 
