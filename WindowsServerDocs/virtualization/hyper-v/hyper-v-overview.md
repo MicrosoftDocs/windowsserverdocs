@@ -1,16 +1,16 @@
 ---
-title: Hyper-V Technology Overview
-description: Describes what Hyper-V is, how to get it, key features, and common uses.
+title: Hyper-V technology overview
+description: Describes what Hyper-V is, how to get it, key features, and common uses. This article includes an overview for Hyper-V in Windows and Windows Server.
 ms.topic: overview
 ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 01/15/2025
+ms.date: 05/27/2025
 ms.subservice: core-os
 zone_pivot_groups: windows
 ---
 
-# Hyper-V Technology Overview
+# Hyper-V technology overview
 
 Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need computing resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
 
@@ -74,13 +74,13 @@ Many operating systems run on virtual machines. In general, an operating system 
 
 :::zone pivot="windows-server"
 
-- [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)
+[Supported Windows guest operating systems for Hyper-V on Windows Server](/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows)
 
 ::: zone-end
 
 :::zone pivot="windows"
 
-- [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
+[Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows)
 
 ::: zone-end
 
@@ -140,7 +140,7 @@ Hyper-V on Windows supports many different operating systems in a virtual machin
 
 As a reminder, you need to have a valid license for any operating systems you use in the VMs.
 
-For information about which operating systems are supported as guests in Hyper-V on Windows, see [Supported Windows Guest Operating Systems](/virtualization/hyper-v-on-windows/about/supported-guest-os) and [Supported Linux Guest Operating Systems](/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
+For information about which operating systems are supported as guests in Hyper-V on Windows, see [Supported Windows Guest Operating Systems](/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows) and [Supported Linux Guest Operating Systems](/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
 
 ::: zone-end
 
