@@ -320,7 +320,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 
 ## Known issues
 
-- On extension versions 0.49.0.0 and above, installation of Windows Admin Center in the Azure Portal or connections to Azure Local OS systems may fail. Installation issues may be mitigated by reverting to an earlier version of the extension or setting WDAC to audit mode before and during installation. Connection issues may be fixed by a page refresh.
+- On extension versions 0.49.0.0 and above, installation of Windows Admin Center in the Azure Portal or connections to Azure Local OS systems may fail. Installation issues may be mitigated by reverting to version 0.47.0.0 of the extension. Connection issues may be fixed by a page refresh.
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
