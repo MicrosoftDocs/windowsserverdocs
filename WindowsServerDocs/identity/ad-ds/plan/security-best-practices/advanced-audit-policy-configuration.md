@@ -1,19 +1,15 @@
 ---
-title: Advanced Security Audit Policy Settings
-TOCTitle: Advanced Security Audit Policy Settings
+title: Advanced Audit Policy Configuration settings
+TOCTitle: The Advanced Audit Policy Configuration settings in Group Policy allows admins to specify which security events are audited on Windows systems for tracking activities, security monitoring, and incident detection.
 ms.topic: concept-article
 ms.author: alalve
 author: xelu86
-ms.date: 05/20/2025
+ms.date: 05/29/2025
 ---
 
+# Advanced Audit Policy Configuration
 
-
-
-
-## Advanced Security Audit policy settings
-
-The security audit policy settings found under **Security Settings\\Advanced Audit Policy Configuration** enable organizations to monitor compliance with key business and security requirements by tracking specific activities, such as:
+The Advanced Audit Policy Configuration settings are found under **Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy Configuration\System Audit Policies** in Group Policy. These settings enable organizations to monitor compliance with key business and security requirements by tracking specific activities, such as:
 
 - Modifications made by group administrators to settings or data on servers containing sensitive information (for example, finance servers).
 
@@ -21,9 +17,9 @@ The security audit policy settings found under **Security Settings\\Advanced Aud
 
 - Application of the correct system access control list (SACL) to all files, folders, or registry keys on a computer or file share, providing a verifiable safeguard against unauthorized access.
 
-You can access these audit policy settings through the Local Security Policy snap-in (secpol.msc) on the local computer or by using Group Policy.
+You can access these audit policy settings through the Local Security Policy snap-in (`secpol.msc`) on the local computer or by using Group Policy.
 
-Advanced Audit Policy settings provide granular control over which activities are monitored, allowing you to focus on events that are most relevant to your organization. You can exclude auditing for actions that aren't important or that generate unnecessary log volume. Additionally, because these policies can be managed through domain Group Policy Objects, you can easily modify, test, and deploy audit configurations to specific users and groups as needed.
+These advanced audit policy settings provide granular control over which activities are monitored, allowing you to focus on events that are most relevant to your organization. You can exclude auditing for actions that aren't important or that generate unnecessary log volume. Additionally, because these policies can be managed through domain Group Policy Objects, you can easily modify, test, and deploy audit configurations to specific users and groups as needed.
 
 The advanced Audit Policy configurations are as follows:
 
@@ -97,11 +93,8 @@ The advanced Audit Policy configurations are as follows:
   The **Audit Other Account Logon Events** policy audits events triggered by responses to credential requests for user account logons that aren't standard credential validation or Kerberos ticket requests. Examples can include:
 
   - When you start a new Remote Desktop sessions and session disconnections.
-
   - When you lock and unlock a workstation.
-
   - When you invoke or dismiss a screen saver.
-
   - When a Kerberos replay attack is detected, in which a Kerberos request with identical information was received twice.
 
     > [!NOTE]
@@ -122,8 +115,7 @@ The advanced Audit Policy configurations are as follows:
   | 5632 | A request was made to authenticate to a wireless network. |
   | 5633 | A request was made to authenticate to a wired network. |
 
-  - Event volume: *Varies* depending on system use.
-  - Default: **Not configured**.
+  - Default: **No Auditing**.
 
   </details>
 
@@ -368,7 +360,7 @@ The advanced Audit Policy configurations are as follows:
 
   The **Audit RPC Events** policy determines whether the operating system generates audit events when inbound remote procedure call (RPC) connections are made.
 
-  RPC is a technology for creating distributed client/server programs. RPC is an interprocess communication technique that enables client and server software to communicate. To learn more, see [What Is RPC?](/previous-versions/windows/it-pro/windows-server-2003/cc787851(v=ws.10)).
+  RPC is a technology for creating distributed client/server programs. RPC is an interprocess communication technique that enables client and server software to communicate. To learn more, see [Remote procedure call (RPC)](/windows/win32/rpc/rpc-start-page).
 
   | Event ID | Event message |
   |--|--|
@@ -851,7 +843,7 @@ The advanced Audit Policy configurations are as follows:
   | 4985 | The state of a transaction has changed. |
   | 5051 | A file was virtualized. |
 
-  - Event volume: *Varies* depending on how file system SACLs are configured
+  - Event volume: *Varies* depending on how file system SACLs are configured.
 
   </details>
 
@@ -878,7 +870,7 @@ The advanced Audit Policy configurations are as follows:
   | 5158 | The Windows Filtering Platform has permitted a bind to a local port. |
   | 5159 | The Windows Filtering Platform has blocked a bind to a local port. |
 
-  - Event volume: **High**
+  - Event volume: **High**.
 
   </details>
 
@@ -892,7 +884,7 @@ The advanced Audit Policy configurations are as follows:
   | 5152 | The Windows Filtering Platform blocked a packet. |
   | 5153 | A more restrictive Windows Filtering Platform filter has blocked a packet. |
 
-  - Event volume: **High**
+  - Event volume: **High**.
 
   </details>
 
@@ -910,7 +902,7 @@ The advanced Audit Policy configurations are as follows:
   | 4658 | The handle to an object was closed. |
   | 4690 | An attempt was made to duplicate a handle to an object. |
 
-  - Event volume: *Varies* on how SACLs are configured
+  - Event volume: *Varies* on how SACLs are configured.
 
   </details>
 
@@ -929,7 +921,7 @@ The advanced Audit Policy configurations are as follows:
   | 4661 | A handle to an object was requested. |
   | 4663 | An attempt was made to access an object. |
 
-  - Event volume: **High** if auditing access of global system objects is enabled
+  - Event volume: **High** if auditing access of global system objects is enabled.
 
   </details>
 
@@ -961,7 +953,7 @@ The advanced Audit Policy configurations are as follows:
   | 5889 | An object was deleted from the COM+ Catalog. |
   | 5890 | An object was added to the COM+ Catalog. |
 
-  - Event volume: **Low**
+  - Event volume: **Low**.
 
   </details>
 
@@ -977,7 +969,7 @@ The advanced Audit Policy configurations are as follows:
   | 4657 | A registry value was modified. |
   | 5039 | A registry key was virtualized. |
 
-  - Event volume: *Varies* on how registry SACLs are configured
+  - Event volume: *Varies* on how registry SACLs are configured.
 
   </details>
 
@@ -1018,7 +1010,7 @@ The advanced Audit Policy configurations are as follows:
   | 4661 | A handle to an object was requested. |
   | 4663 | An attempt was made to access an object. |
 
-  - Event volume: **High** on domain controllers
+  - Event volume: **High** on domain controllers.
 
   </details>
 
@@ -1037,7 +1029,7 @@ The advanced Audit Policy configurations are as follows:
   | 4818 | Proposed Central Access Policy does not grant the same access permissions as the current Central Access Policy. |
 
   - Event volume: Potentially **High** on a file server when the proposed policy differs significantly from the current central access policy.
-  - Default: **No Auditing**
+  - Default: **No Auditing**.
 
   </details>
 
@@ -1074,8 +1066,8 @@ The advanced Audit Policy configurations are as follows:
   | 4908 | Special Groups Logon table modified. |
   | 4912 | Per User Audit Policy was changed. |
 
-  - Event volume: **Low**
-  - Default: **Success**
+  - Event volume: **Low**.
+  - Default: **Success**.
 
   </details>
 
@@ -1112,8 +1104,8 @@ The advanced Audit Policy configurations are as follows:
   | 4866 | A trusted forest information entry was removed. |
   | 4867 | A trusted forest information entry was modified. |
 
-  - Event volume: **Low**
-  - Default: **Success**
+  - Event volume: **Low**.
+  - Default: **Success**.
 
   </details>
 
@@ -1133,8 +1125,8 @@ The advanced Audit Policy configurations are as follows:
   | 4707 | A trust to a domain was removed. |
   | 4714 | Encrypted data recovery policy was changed. |
 
-  - Event volume: **Low**
-  - Default: **No Auditing**
+  - Event volume: **Low**.
+  - Default: **No Auditing**.
 
   </details>
 
@@ -1191,8 +1183,8 @@ The advanced Audit Policy configurations are as follows:
   | 5474 | PAStore Engine failed to load directory storage IPsec policy on the computer. |
   | 5477 | PAStore Engine failed to add quick mode filter. |
 
-  - Event volume: **Low**
-  - Default: **No Auditing**
+  - Event volume: **Low**.
+  - Default: **No Auditing**.
 
   </details>
 
@@ -1229,8 +1221,8 @@ The advanced Audit Policy configurations are as follows:
   | 4957 | Windows Firewall did not apply the following rule. |
   | 4958 | Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer. |
 
-  - Event volume: **Low**
-  - Default: **No Auditing**
+  - Event volume: **Low**.
+  - Default: **No Auditing**.
 
   </details>
 
@@ -1261,8 +1253,8 @@ The advanced Audit Policy configurations are as follows:
   | 6144 | Security policy in the group policy objects has been applied successfully. |
   | 6145 | One or more errors occurred while processing security policy in the group policy objects. |
 
-  - Event volume: **Low**
-  - Default: **No Auditing**
+  - Event volume: **Low**.
+  - Default: **No Auditing**.
 
   </details>
 
@@ -1312,7 +1304,7 @@ The advanced Audit Policy configurations are as follows:
   | 4673 | A privileged service was called. |
   | 4674 | An operation was attempted on a privileged object. |
 
-  - Event volume: **Very High**
+  - Event volume: **Very High**.
 
   </details>
 
@@ -1352,7 +1344,7 @@ The advanced Audit Policy configurations are as follows:
   | 4673 | A privileged service was called. |
   | 4674 | An operation was attempted on a privileged object. |
 
-  - Event volume: **High**
+  - Event volume: **High**.
 
   </details>
 
@@ -1388,8 +1380,8 @@ The advanced Audit Policy configurations are as follows:
   | 5484 | IPsec Services has experienced a critical failure and has been shut down. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks. |
   | 5485 | IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem. |
 
-  - Event volume: **Low**
-  - Default: **No Auditing**
+  - Event volume: **Low**.
+  - Default: **No Auditing**.
 
   </details>
 
@@ -1421,28 +1413,129 @@ The advanced Audit Policy configurations are as follows:
   | 5058 | Key file operation. |
   | 5059 | Key migration operation. |
   | 6400 | BranchCache: Received an incorrectly formatted response while discovering availability of content. <br><br> *This event is logged only on computers running supported versions of the Windows operating system.* |
-  | 6401 | BranchCache: Received invalid data from a peer. Data discarded. |
-  | 6402 | BranchCache: The message to the hosted cache offering it data is incorrectly formatted. |
-  | 6403 | BranchCache: The hosted cache sent an incorrectly formatted response to the client. |
-  | 6404 | BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate. |
-  | 6405 | BranchCache: %2 instance(s) of event id %1 occurred. |
-  | 6406 | %1 registered to Windows Firewall to control filtering for the following: %2 |
-  | 6407 | 1% |
-  | 6408 | Registered product %1 failed and Windows Firewall is now controlling the filtering for %2 |
+  | 6401 | BranchCache: Received invalid data from a peer. Data discarded. <sup>1</sup> |
+  | 6402 | BranchCache: The message to the hosted cache offering it data is incorrectly formatted. <sup>1</sup> |
+  | 6403 | BranchCache: The hosted cache sent an incorrectly formatted response to the client. <sup>1</sup> |
+  | 6404 | BranchCache: Hosted cache could not be authenticated using the provisioned SSL certificate. <sup>1</sup> |
+  | 6405 | BranchCache: %2 instance(s) of event id %1 occurred. <sup>1</sup> |
+  | 6406 | %1 registered to Windows Firewall to control filtering for the following: %2 <sup>1</sup> |
+  | 6407 | 1% <sup>1</sup> |
+  | 6408 | Registered product %1 failed and Windows Firewall is now controlling the filtering for %2 <sup>1</sup> |
 
+  > [!NOTE]
+  > <sup>1</sup> This event is logged only on computers running supported versions of the Windows operating system.
 
+  - Event volume: **Low**.
+  - Default: **Success** and **Failure**.
 
-  - Event volume: **Low**
-  - Default: **Success** and **Failure**
+  </details>
 
+  <details>
+  <summary> Expand Audit Security State Change policy
 
+  The **Audit Security State Change** policy determines whether Windows generates audit events for changes in the security state of a system. Changes in the security state of the operating system include:
 
+  - System startup and shutdown.
+  - Change of system time.
+  - System recovery from **CrashOnAuditFail**. This event is logged after a system reboots following **CrashOnAuditFail**. Some auditable activity may not be recorded when a system reboots due to **CrashOnAuditFail**.
 
+  | Event ID | Event message |
+  |--|--|
+  | 4608 | Windows is starting up. |
+  | 4609 | Windows is shutting down. |
+  | 4616 | The system time was changed. |
+  | 4621 | Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded. |
 
+  - Event volume: **Low**.
+  - Default: **Success**.
 
+  </details>
 
+  <details>
+  <summary> Expand Audit Security System Extension policy
+
+  The **Audit Security System Extension** policy determines whether the operating system generates audit events related to security system extensions. Changes to security system extensions in the operating system include the following activities:
+
+  - A security extension code is loaded (such as an authentication, notification, or security package). A security extension code registers with the Local Security Authority and will be used and trusted to authenticate logon attempts, submit logon requests, and be notified of any account or password changes. Examples of this extension code are Security Support Providers, such as Kerberos and NTLM.
+  - A service is installed. An audit log is generated when a service is registered with the Service Control Manager. The audit log contains information about the service name, binary, type, start type, and service account.
+
+  > [!IMPORTANT]
+  > Attempts to install or load security system extensions or services are critical system events that could indicate a security breach.
+
+  | Event ID | Event message |
+  |--|--|
+  | 4610 | An authentication package has been loaded by the Local Security Authority. |
+  | 4611 | A trusted logon process has been registered with the Local Security Authority. |
+  | 4614 | A notification package has been loaded by the Security Account Manager. |
+  | 4622 | A security package has been loaded by the Local Security Authority. |
+  | 4697 | A service was installed in the system. |
+
+  - Event volume: **Low**. Security system extension events are generated more often on a domain controller than on client computers or member servers.
+  - Default: **No Auditing**.
+
+  </details>
+
+  <details>
+  <summary> Expand Audit System Integrity policy
+
+  The **Audit System Integrity** policy determines whether the operating system audits events that violate the integrity of the security subsystem. Activities that violate the integrity of the security subsystem include the following:
+
+  - Audited events are lost due to a failure of the auditing system.
+  - A process uses an invalid local procedure call (LPC) port in an attempt to impersonate a client, reply to a client address space, read to a client address space, or write from a client address space.
+  - A remote procedure call (RPC) integrity violation is detected.
+  - A code integrity violation with an invalid hash value of an executable file is detected.
+  - Cryptographic tasks are performed.
+
+  > [!IMPORTANT]
+  > Violations of security subsystem integrity are critical and could indicate a potential security attack.
+
+  | Event ID | Event message |
+  |--|--|
+  | 4612 | Internal resources allocated for the queuing of audit messages have been exhausted, leading to the loss of some audits. |
+  | 4615 | Invalid use of LPC port. |
+  | 4618 | A monitored security event pattern has occurred. |
+  | 4816 | RPC detected an integrity violation while decrypting an incoming message. |
+  | 5038 | Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error. |
+  | 5056 | A cryptographic self-test was performed. |
+  | 5057 | A cryptographic primitive operation failed. |
+  | 5060 | Verification operation failed. |
+  | 5061 | Cryptographic operation. |
+  | 5062 | A kernel-mode cryptographic self-test was performed. |
+  | 6281 | Code Integrity determined that the page hashes of an image file are not valid. The file could be improperly signed without page hashes or corrupt due to unauthorized modification. The invalid hashes could indicate a potential disk device error. <br><br> *This event is logged only on computers running the supported versions of the Windows operating system.* |
+
+  - Event volume: **Low**.
+  - Default: **Success** and **Failure**.
+
+  </details>
 
 - **Global Object Access**
 
-> [!NOTE]
-> When both a file or folder SACL and a Global Object Access Auditing policy are configured on a computer (or both a registry SACL and a Global Object Access Auditing policy), the effective SACL is a combination of the two. An audit event is triggered if an action matches either the file or folder SACL or the Global Object Access Auditing policy.
+  Global Object Access Auditing policy settings allow administrators to define computer system access control lists (SACLs) per object type for the file system or for the registry. The specified SACL is then automatically applied to every object of that type.
+
+  Auditors will be able to prove that every resource in the system is protected by an audit policy by viewing the contents of the Global Object Access Auditing policy settings. For example, if auditors see a policy setting called "Track all changes made by group administrators," they know that this policy is in effect.
+
+  Resource SACLs are also useful for diagnostic scenarios. For example, setting the Global Object Access Auditing policy to log all the activity for a specific user and enabling the policy to track "Access denied" events for the file system or registry can help administrators quickly identify which object in a system is denying a user access.
+
+  If you select the **Define this policy setting** check box on the policy’s property page then select **Configure**, you can add a user or group to the global SACL. This enables you to define computer system access control lists (SACLs) per object type for the file system. The specified SACL is then automatically applied to every file system object type.
+
+  <details>
+  <summary> Expand File System (Global Object Access Auditing) policy
+
+  The **File System (Global Object Access Auditing)** policy enables you to configure a global system access control list (SACL) on the file system for an entire computer.
+
+  If both a file or folder SACL and a global SACL are configured on a computer, the effective SACL is derived by combining the file or folder SACL and the global SACL. This means that an audit event is generated if an activity matches either the file or folder SACL or the global SACL.
+
+  - Event volume: *Varies* on the effective SACL and the level of user activity.
+
+  </details>
+
+  <details>
+  <summary> Expand Registry (Global Object Access Auditing) policy
+
+  The **Registry (Global Object Access Auditing)** policy enables you to configure a global system access control list (SACL) on the registry of a computer.
+
+  If both a registry SACL and a global SACL are configured on a computer, the effective SACL is derived by combining the registry SACL and the global SACL. This means that an audit event is generated when an activity matches either the registry key SACL or the global SACL.
+
+  - Event volume: *Varies* on the effective SACL and the level of user activity.
+
+  </details>
