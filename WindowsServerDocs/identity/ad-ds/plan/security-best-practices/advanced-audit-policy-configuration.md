@@ -1,6 +1,6 @@
 ---
 title: Advanced Audit Policy Configuration settings
-TOCTitle: The Advanced Audit Policy Configuration settings in Group Policy allows admins to specify which security events are audited on Windows systems for tracking activities, security monitoring, and incident detection.
+description: The Advanced Audit Policy Configuration settings in Group Policy allows admins to specify which security events are audited on Windows systems for tracking activities, security monitoring, and incident detection.
 ms.topic: concept-article
 ms.author: alalve
 author: xelu86
@@ -28,7 +28,7 @@ The advanced Audit Policy configurations are as follows:
   Configuring policy settings in this category can help you document attempts to authenticate account data on a domain controller or on a local Security Accounts Manager (SAM). Unlike Logon and Logoff policy settings and events, which track attempts to access a particular computer, settings and events in this category focus on the account database that is used. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit Credential Validation policy
+  <summary> Expand Audit Credential Validation policy </summary>
 
   The **Audit Credential Validation** policy determines whether the operating system generates audit events on credentials that are submitted for a user account logon request. These events occur on the computer that is authoritative for the credentials as follows:
 
@@ -51,7 +51,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Credential Validation policy
+  <summary> Expand Audit Credential Validation policy </summary>
 
   The **Audit Kerberos Authentication Service** policy controls whether audit events are generated when a Kerberos authentication ticket-granting ticket (TGT) is requested. With this setting enabled, it helps administrators monitor Kerberos sign-in activity and detect potential security issues related to authentication requests.
 
@@ -70,7 +70,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Kerberos Service Ticket Operations policy
+  <summary> Expand Audit Kerberos Service Ticket Operations policy </summary>
 
   The **Audit Kerberos Service Ticket Operations** policy controls whether the operating system logs security audit events when Kerberos service tickets are requested or renewed. Enabling this setting helps administrators monitor and track Kerberos authentication activity within the environment.
 
@@ -88,7 +88,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other Account Logon Events
+  <summary> Expand Audit Other Account Logon Events </summary>
 
   The **Audit Other Account Logon Events** policy audits events triggered by responses to credential requests for user account logons that aren't standard credential validation or Kerberos ticket requests. Examples can include:
 
@@ -124,7 +124,7 @@ The advanced Audit Policy configurations are as follows:
   The security audit policy settings in this category can be used to monitor changes to user and computer accounts and groups. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit Application Group Management policy
+  <summary> Expand Audit Application Group Management policy </summary>
 
   The **Audit Application Group Management** policy controls whether the operating system logs audit events when certain actions are performed. These actions include creating, modifying, or deleting application groups, and changing their membership. Application group management tasks include:
 
@@ -148,7 +148,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Computer Account Management policy
+  <summary> Expand Audit Computer Account Management policy </summary>
 
   The **Audit Computer Account Management** policy controls whether the operating system logs audit events when a computer account is created, modified, or deleted in Active Directory. When you enable this policy, it helps administrators monitor and track changes to computer accounts within a domain. Valuable information for security auditing, compliance, and troubleshooting account management activities is provided by monitoring these events.
 
@@ -163,7 +163,7 @@ The advanced Audit Policy configurations are as follows:
   - Default on Server editions: **Success**.
 
   <details>
-  <summary> Expand Audit Distribution Group Management policy
+  <summary> Expand Audit Distribution Group Management policy </summary>
 
   The **Audit Distribution Group Management** policy determines whether the operating system generates audit events for specific distribution-group management tasks. This subcategory to which this policy belongs is logged only on domain controllers. Tasks for distribution-group management that can be audited include:
 
@@ -196,7 +196,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other Account Management Events policy
+  <summary> Expand Audit Other Account Management Events policy </summary>
 
   The **Audit Other Account Management Events** policy determines whether the operating system generates user account management audit events. Events can be generated for user account management auditing when:
 
@@ -219,7 +219,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Security Group Management policy
+  <summary> Expand Audit Security Group Management policy </summary>
 
   The **Audit Security Group Management** policy determines whether the operating system generates audit events when specific security group management tasks are performed. Tasks for security group management include:
 
@@ -254,7 +254,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit User Account Management
+  <summary> Expand Audit User Account Management </summary>
 
   The **Audit User Account Management** determines whether the operating system generates audit events when specific user account management tasks are performed. Tasks that are audited for user account management include:
 
@@ -296,7 +296,7 @@ The advanced Audit Policy configurations are as follows:
   Detailed Tracking security policy settings and audit events can be used to monitor the activities of individual applications and users on that computer, and to understand how a computer is being used. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit DPAPI Activity policy
+  <summary> Expand Audit DPAPI Activity policy </summary>
 
   The **Audit DPAPI Activity** policy determines whether the operating system generates audit events when encryption or decryption calls are made into the data protection application interface (DPAPI).
 
@@ -314,7 +314,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit PNP Activity policy
+  <summary> Expand Audit PNP Activity policy </summary>
 
   The **Audit PNP Activity** policy audits when an an external plug and play (PnP) device is detected.
 
@@ -327,7 +327,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Process Creation policy
+  <summary> Expand Audit Process Creation policy </summary>
 
   The **Audit Process Creation** policy determines whether the operating system generates audit events when a process is created or starts.
 
@@ -343,7 +343,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Process Termination policy
+  <summary> Expand Audit Process Termination policy </summary>
 
   The **Audit Process Termination** policy determines whether the operating system generates audit events when an attempt is made to end a process.
 
@@ -356,7 +356,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit RPC Events policy
+  <summary> Expand Audit RPC Events policy </summary>
 
   The **Audit RPC Events** policy determines whether the operating system generates audit events when inbound remote procedure call (RPC) connections are made.
 
@@ -372,7 +372,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Token Right Adjustment policy
+  <summary> Expand Audit Token Right Adjustment policy </summary>
 
   The **Audit Token Right Adjustment** policy audits events generated by adjusting the privileges of a token.
 
@@ -390,7 +390,7 @@ The advanced Audit Policy configurations are as follows:
   DS Access security audit policy settings provide a detailed audit trail of attempts to access and modify objects in Active Directory Domain Services (AD DS). These audit events are logged only on domain controllers. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit Detailed Directory Service Replication policy
+  <summary> Expand Audit Detailed Directory Service Replication policy </summary>
 
   The **Audit Detailed Directory Service Replication** policy determines whether the operating system generates audit events that contain detailed tracking information about data that is replicated between domain controllers. This audit subcategory can be useful to diagnose replication issues.
 
@@ -411,7 +411,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Directory Service Access policy
+  <summary> Expand Audit Directory Service Access policy </summary>
 
   The **Audit Directory Service Access** policy determines whether the operating system generates audit events when an Active Directory Domain Services (AD DS) object is accessed. These events are similar to the Directory Service Access events in previous versions of Windows Server operating systems.
 
@@ -429,7 +429,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Directory Service Changes policy
+  <summary> Expand Audit Directory Service Changes policy </summary>
 
   The **Audit Directory Service Changes** policy determines whether the operating system generates audit events when changes are made to objects in Active Directory Domain Services (AD DS). This policy, where appropriate, indicates the old and new values of the changed properties of the objects that were changed. The types of changes that are reported are:
 
@@ -458,7 +458,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Directory Service Replication policy
+  <summary> Expand Audit Directory Service Replication policy </summary>
 
   The **Audit Directory Service Replication** policy determines whether the operating system generates audit events when replication between two domain controllers begins and ends. Events in this subcategory are logged only on domain controllers.
 
@@ -477,7 +477,7 @@ The advanced Audit Policy configurations are as follows:
   Logon/Logoff security policy settings and audit events allow you to track attempts to log on to a computer interactively or over a network. These events are particularly useful for tracking user activity and identifying potential attacks on network resources. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit Audit Account Lockout policy
+  <summary> Expand Audit Audit Account Lockout policy </summary>
 
   The **Audit Account Lockout** policy allows you to audit security events that are generated by a failed attempt to log on to an account that is locked out. If you configure this policy setting, an audit event is generated when an account cannot log on to a computer because the account is locked out. Success audits record successful attempts and failure audits record unsuccessful attempts.
 
@@ -493,7 +493,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit User / Device Claims
+  <summary> Expand Audit User / Device Claims </summary>
 
   The **Audit User / Device Claims** policy allows you to audit user and device claims information in the account’s logon token. Events in this subcategory are generated on the computer on which a logon session is created. For an interactive logon, the security audit event is generated on the computer that the user logged on to. You must enable the Audit Logon subcategory in order to get events from this subcategory.
 
@@ -509,7 +509,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Group Membership policy
+  <summary> Expand Audit Group Membership policy </summary>
 
   The **Audit Group Membership** policy allows you to audit the group membership information in the user's logon token. Events in this subcategory are generated on the computer on which a logon session is created. You must also enable the Audit Logon subcategory.
 
@@ -525,7 +525,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit IPsec Extended Mode policy
+  <summary> Expand Audit IPsec Extended Mode policy </summary>
 
   The **Audit IPsec Extended Mode** policy determines whether the operating system generates audit events for the results of the Internet Key Exchange (IKE) protocol and Authenticated Internet Protocol (AuthIP) during Extended Mode negotiations.
 
@@ -549,7 +549,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit IPsec Main Mode policy
+  <summary> Expand Audit IPsec Main Mode policy </summary>
 
   The **Audit IPsec Main Mode** policy determines whether the operating system generates audit events for the results of the Internet Key Exchange (IKE) protocol and Authenticated Internet Protocol (AuthIP) during Quick Mode negotiations. Like IKE, AuthIP supports Main Mode and Quick Mode negotiation.
 
@@ -573,7 +573,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit IPsec Quick Mode policy
+  <summary> Expand Audit IPsec Quick Mode policy </summary>
 
   The **Audit IPsec Quick Mode** policy determines whether the operating system generates audit events for the results of the Internet Key Exchange (IKE) protocol and Authenticated Internet Protocol (AuthIP) during Quick Mode negotiations. Like IKE, AuthIP supports Main Mode and Quick Mode negotiation.
 
@@ -591,7 +591,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Logoff policy
+  <summary> Expand Audit Logoff policy </summary>
 
   The **Audit Logoff** policy determines whether the operating system generates audit events when logon sessions are terminated. These events occur on the computer that was accessed. In the case of an interactive logon, these events are generated on the computer that was logged on to.
 
@@ -611,7 +611,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Logon policy
+  <summary> Expand Audit Logon policy </summary>
 
   The **Audit Logon** policy determines whether the operating system generates audit events when a user attempts to log on to a computer.
 
@@ -633,7 +633,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Network Policy Server policy
+  <summary> Expand Audit Network Policy Server policy </summary>
 
   The **Audit Network Policy Server** policy determines whether the operating system generates audit events for RADIUS (IAS) and Network Access Protection (NAP) activity on user access requests. These requests are:
 
@@ -664,7 +664,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other Logon/Logoff Events policy
+  <summary> Expand Audit Other Logon/Logoff Events policy </summary>
 
   The **Audit Other Logon/Logoff Events** policy determines whether Windows generates audit events for other logon or logoff events. These other logon or logoff events include:
 
@@ -694,7 +694,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Special Logon policy
+  <summary> Expand Audit Special Logon policy </summary>
 
   The **Audit Special Logon** policy determines whether the operating system generates audit events under special sign on (or log on) circumstances. This security policy setting determines whether the operating system generates audit events when:
 
@@ -717,7 +717,7 @@ The advanced Audit Policy configurations are as follows:
   Object Access policy settings and audit events allow you to track attempts to access specific objects or types of objects on a network or computer. To audit attempts to access a file, directory, registry key, or any other object, you must enable the appropriate Object Access auditing subcategory for success and/or failure events. For example, the File System subcategory needs to be enabled to audit file operations, and the Registry subcategory needs to be enabled to audit registry accesses. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit Application Generated policy
+  <summary> Expand Audit Application Generated policy </summary>
 
   The **Audit Application Generated** policy determines whether the operating system generates audit events when applications attempt to use the Windows Auditing application programming interfaces (APIs).
 
@@ -740,7 +740,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Certification Services policy
+  <summary> Expand Audit Certification Services policy </summary>
 
   The **Audit Certification Services** policy determines whether the operating system generates events when Active Directory Certificate Services (AD CS) operations are performed. Monitoring these operational events is important to ensure that AD CS role services are functioning properly. Examples of AD CS operations include:
 
@@ -795,7 +795,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Detailed File Share policy
+  <summary> Expand Audit Detailed File Share policy </summary>
 
   The **Audit Detailed File Share** policy allows you to audit attempts to access files and folders on a shared folder. The Detailed File Share setting logs an event every time a file or folder is accessed, whereas the File Share setting only records one event for any connection established between a client computer and file share. Detailed File Share audit events include detailed information about the permissions or other criteria used to grant or deny access.
 
@@ -811,7 +811,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit File Share policy
+  <summary> Expand Audit File Share policy </summary>
 
   The **Audit File Share** policy determines whether the operating system generates audit events when a file share is accessed. Audit events are not generated when shares are created, deleted, or when share permissions change. Combined with File System auditing, File Share auditing enables you to track what content was accessed, the source (IP address and port) of the request, and the user account that was used for the access.
 
@@ -831,7 +831,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit File System policy
+  <summary> Expand Audit File System policy </summary>
 
   The **Audit File System** policy determines whether the operating system generates audit events when users attempt to access file system objects. Audit events are generated only for objects that have configured system access control lists (SACLs), and only if the type of access requested (such as Write, Read, or Modify) and the account making the request match the settings in the SACL.
 
@@ -848,7 +848,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Filtering Platform Connection policy
+  <summary> Expand Audit Filtering Platform Connection policy </summary>
 
   The **Audit Filtering Platform Connection** policy determines whether the operating system generates audit events when connections are allowed or blocked by the Windows Filtering Platform. Windows Filtering Platform (WFP) was introduced in Windows Server 2008 and Windows Vista to enable independent software vendors (ISVs) to filter and modify TCP/IP packets, monitor or authorize connections, filter Internet Protocol security (IPsec)-protected traffic, and filter remote procedure calls (RPCs). This security policy enables you to audit the following types of actions:
 
@@ -875,7 +875,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Filtering Platform Packet Drop policy
+  <summary> Expand Audit Filtering Platform Packet Drop policy </summary>
 
   The **Audit Filtering Platform Packet Drop** policy determines whether the operating system generates audit events when packets are dropped by the Windows Filtering Platform. Windows Filtering Platform (WFP) was introduced in Windows Server 2008 and Windows Vista to enable independent software vendors (ISVs) to filter and modify TCP/IP packets, monitor or authorize connections, filter Internet Protocol security (IPsec)-protected traffic, and filter remote procedure calls (RPCs). A high rate of dropped packets may indicate that there have been attempts to gain unauthorized access to computers on your network.
 
@@ -889,7 +889,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Handle Manipulation policy
+  <summary> Expand Audit Handle Manipulation policy </summary>
 
   The **Audit Handle Manipulation** policy determines whether the operating system generates audit events when a handle to an object is opened or closed. Only objects with configured system access control lists (SACLs) generate these events, and only if the attempted handle operation matches the SACL.
 
@@ -907,7 +907,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Kernel Object policy
+  <summary> Expand Audit Kernel Object policy </summary>
 
   The **Audit Kernel Object** policy determines whether the operating system generates audit events when users attempt to access the system kernel, which includes mutexes and semaphores. Only kernel objects with a matching system access control list (SACL) generate security audit events. The audits generated are usually useful only to developers. Typically, kernel objects are given SACLs only if the **AuditBaseObjects** or **AuditBaseDirectories** auditing options are enabled.
 
@@ -926,7 +926,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other Object Access Events policy
+  <summary> Expand Audit Other Object Access Events policy </summary>
 
   The **Audit Other Object Access Events** policy determines whether the operating system generates audit events for the management of Task Scheduler jobs or COM+ objects.
 
@@ -958,7 +958,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Registry policy
+  <summary> Expand Audit Registry policy </summary>
 
   The **Audit Registry** policy determines whether the operating system generates audit events when users attempt to access registry objects. Audit events are generated only for objects that have configured system access control lists (SACLs) specified, and only if the type of access requested (such as Write, Read, or Modify) and the account making the request match the settings in the SACL.
 
@@ -974,7 +974,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Removable Storage policy
+  <summary> Expand Audit Removable Storage policy </summary>
 
   The **Audit Removable Storage** policy determines whether the operating system generates audit events when users attempt to access file system objects on removable storage devices. Audit events are generated for all types of access to any object on removable storage.
 
@@ -989,7 +989,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit SAM policy
+  <summary> Expand Audit SAM policy </summary>
 
   The Audit SAM, which enables you to audit events that are generated by attempts to access Security Account Manager (SAM) objects. The Security Account Manager (SAM) is a database that is present on computers running Windows operating systems that stores user accounts and security descriptors for users on the local computer. SAM objects include the following:
 
@@ -1015,7 +1015,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Central Access Policy Staging policy
+  <summary> Expand Audit Central Access Policy Staging policy </summary>
 
   The **Audit Central Access Policy Staging** policy enables auditing of access attempts where the permissions granted or denied by a proposed central access policy differ from those of the current policy on an object. When this policy is configured, an audit event is generated each time a user accesses an object and the permissions granted by the current central access policy differ from those granted by the proposed policy. Audit events are generated as follows:
 
@@ -1038,7 +1038,7 @@ The advanced Audit Policy configurations are as follows:
   Policy Change audit events allow you to track changes to important security policies on a local system or network. Because policies are typically established by administrators to help secure network resources, monitoring changes or attempts to change these policies can be an important aspect of security management for a network. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit Policy Change policy
+  <summary> Expand Audit Policy Change policy </summary>
 
   The **Audit Audit Policy Change** policy determines whether the operating system generates audit events when changes are made to audit policy. Changes to the audit policy are critical security events. Changes to audit policy that are audited include:
 
@@ -1072,7 +1072,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Authentication Policy Change policy
+  <summary> Expand Audit Authentication Policy Change policy </summary>
 
   The **Audit Authentication Policy Change** policy determines whether the operating system generates audit events when changes are made to authentication policy. This setting is useful for tracking changes in domain-level and forest-level trust and privileges that are granted to user accounts or groups. Changes made to authentication policy include:
 
@@ -1110,7 +1110,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Authorization Policy Change policy
+  <summary> Expand Audit Authorization Policy Change policy </summary>
 
   The **Audit Authorization Policy Change** policy determines whether the operating system generates audit events when specific changes are made to the authorization policy. Authorization policy changes that can be audited include:
 
@@ -1131,7 +1131,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Filtering Platform Policy Change policy
+  <summary> Expand Audit Filtering Platform Policy Change policy </summary>
 
   The **Audit Filtering Platform Policy Change** policy determines whether the operating system generates audit events for certain IPsec and Windows Filtering Platform actions. Windows Filtering Platform (WFP) enables independent software vendors (ISVs) to filter and modify TCP/IP packets, monitor or authorize connections, filter Internet Protocol security (IPsec)-protected traffic, and filter remote procedure calls (RPCs). This security policy setting determines whether the operating system generates audit events for:
 
@@ -1189,7 +1189,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit MPSSVC Rule-Level Policy Change policy
+  <summary> Expand Audit MPSSVC Rule-Level Policy Change policy </summary>
 
   The **Audit MPSSVC Rule-Level Policy Change** policy determines whether the operating system generates audit events when changes are made to policy rules for the Microsoft Protection Service (MPSSVC.exe).
 
@@ -1227,7 +1227,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other Policy Change Events policy
+  <summary> Expand Audit Other Policy Change Events policy </summary>
 
   The **Audit Other Policy Change Events** policy determines whether the operating system generates audit events for security policy changes that are not otherwise audited in the Policy Change category. These other activities in the Policy Change category that can be audited include:
 
@@ -1309,14 +1309,14 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other Privilege Use Events policy
+  <summary> Expand Audit Other Privilege Use Events policy </summary>
 
   The **Audit Other Privilege Use Events** policy isn't used.
 
   </details>
 
   <details>
-  <summary> Expand Audit Sensitive Privilege Use policy
+  <summary> Expand Audit Sensitive Privilege Use policy </summary>
 
   The **Audit Sensitive Privilege Use** policy determines whether the operating system generates audit events when sensitive privileges (user rights) are used. Actions that can be audited include:
 
@@ -1353,7 +1353,7 @@ The advanced Audit Policy configurations are as follows:
   System security policy settings and audit events allow you to track system-level changes to a computer that are not included in other categories and that have potential security implications. This category includes the following subcategories:
 
   <details>
-  <summary> Expand Audit IPsec Driver policy
+  <summary> Expand Audit IPsec Driver policy </summary>
 
   The **Audit IPsec Driver** policy determines whether the operating system generates audit events for the activities of the IPsec driver. The IPsec driver, using the IP Filter List from the active IPsec policy, watches for outbound IP packets that must be secured and inbound IP packets that must be verified and decrypted. This security policy setting reports on the following activities of the IPsec driver:
 
@@ -1386,7 +1386,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Other System Events policy
+  <summary> Expand Audit Other System Events policy </summary>
 
   The **Audit Other System Events** policy determines whether the operating system audits various system events. The system events in this category include:
 
@@ -1431,7 +1431,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Security State Change policy
+  <summary> Expand Audit Security State Change policy </summary>
 
   The **Audit Security State Change** policy determines whether Windows generates audit events for changes in the security state of a system. Changes in the security state of the operating system include:
 
@@ -1452,7 +1452,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit Security System Extension policy
+  <summary> Expand Audit Security System Extension policy </summary>
 
   The **Audit Security System Extension** policy determines whether the operating system generates audit events related to security system extensions. Changes to security system extensions in the operating system include the following activities:
 
@@ -1476,7 +1476,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Audit System Integrity policy
+  <summary> Expand Audit System Integrity policy </summary>
 
   The **Audit System Integrity** policy determines whether the operating system audits events that violate the integrity of the security subsystem. Activities that violate the integrity of the security subsystem include the following:
 
@@ -1519,7 +1519,7 @@ The advanced Audit Policy configurations are as follows:
   If you select the **Define this policy setting** check box on the policy’s property page then select **Configure**, you can add a user or group to the global SACL. This enables you to define computer system access control lists (SACLs) per object type for the file system. The specified SACL is then automatically applied to every file system object type.
 
   <details>
-  <summary> Expand File System (Global Object Access Auditing) policy
+  <summary> Expand File System (Global Object Access Auditing) policy </summary>
 
   The **File System (Global Object Access Auditing)** policy enables you to configure a global system access control list (SACL) on the file system for an entire computer.
 
@@ -1530,7 +1530,7 @@ The advanced Audit Policy configurations are as follows:
   </details>
 
   <details>
-  <summary> Expand Registry (Global Object Access Auditing) policy
+  <summary> Expand Registry (Global Object Access Auditing) policy </summary>
 
   The **Registry (Global Object Access Auditing)** policy enables you to configure a global system access control list (SACL) on the registry of a computer.
 
