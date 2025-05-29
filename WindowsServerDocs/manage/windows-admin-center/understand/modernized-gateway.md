@@ -12,7 +12,7 @@ The modernized gateway is a significant backend upgrade of the Windows Admin Cen
 
 ## What's new
 
-### Upgrade from .NET 4.6.2 to .NET Core
+### Upgrade from .NET 4.6.2 to .NET 6
 
 The biggest upgrade in this release is the backend upgrade from .NET framework 4.6.2 to [.NET 6](/dotnet/core/whats-new/dotnet-6). This upgrade brings enhanced performance, security, and improved cryptography. It also includes support for HTTP/2, reducing latency and enhancing the responsiveness of Windows Admin Center.
 
