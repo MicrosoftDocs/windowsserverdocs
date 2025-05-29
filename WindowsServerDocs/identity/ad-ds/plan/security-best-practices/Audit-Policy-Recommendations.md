@@ -1,18 +1,18 @@
 ---
 title: Audit Policy recommendations
-description: This article provides guidance on Windows audit policy settings, including default configurations, baseline recommendations, and advanced options for both workstations and Windows servers.
+description: This article provides guidance on Windows audit policy settings, baseline recommendations, and advanced options for both workstations and Windows servers.
 ms.topic: best-practice
 author: xelu86
 ms.author: alalve
-ms.date: 05/20/2025
+ms.date: 05/29/2025
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 ---
 
 # Audit Policy recommendations
 
-This article covers the default Windows audit policy settings and Microsoft's baseline and advanced recommendations for both workstations and servers. It provides guidance to help administrators choose appropriate audit policies based on their organization's needs.
+This article covers the Windows audit policy settings and Microsoft's baseline and advanced recommendations for both workstations and servers. It provides guidance to help administrators choose appropriate audit policies based on their organization's needs.
 
-The SCM baseline recommendations shown here, along with the recommended settings to help detect system compromise, are intended only to be a starting baseline guide to administrators. Each organization must make its own decisions regarding the threats they face, their acceptable risk tolerances, and what audit policy categories or subcategories they should enable. For more information about threats, see [Threats and Countermeasures Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125921(v=ws.10)). Administrators without a thoughtful audit policy in place are encouraged to start with the settings recommended here, and then to modify and test before implementing in their production environment.
+The Security Compliance Manager (SCM) baseline recommendations shown here, along with the recommended settings to help detect system compromise, are intended only to be a starting baseline guide to administrators. Each organization must make its own decisions regarding the threats they face, their acceptable risk tolerances, and what audit policy categories or subcategories they should enable. For more information about threats, see [Threats and Countermeasures Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125921(v=ws.10)). Administrators without a thoughtful audit policy in place are encouraged to start with the settings recommended here, and then to modify and test before implementing in their production environment.
 
 The recommendations are for enterprise-class computers, which Microsoft defines as computers that have average security requirements and require a high level of operational functionality. Entities needing higher security requirements should consider more aggressive audit policies.
 
@@ -21,21 +21,9 @@ The recommendations are for enterprise-class computers, which Microsoft defines 
 
 The following baseline audit policy settings are recommended for normal security computers that aren't known to be under active, successful attack by determined adversaries or malware.
 
-## Recommended Audit Policies by Operating System
+## Recommended Audit Policy by operating system
 
-This section contains tables that list the audit setting recommendations that apply to the following operating systems:
-
-- Windows Server 2022
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012
-- Windows Server 2012 R2
-- Windows Server 2008
-- Windows 10
-- Windows 8.1
-- Windows 7
-
-These tables contain the Windows default setting, the baseline recommendations, and the stronger recommendations for these operating systems.
+This section contains tables that list the audit setting recommendations that apply to the Windows operating system (OS) for both client and server. These tables contain the Windows default setting, the baseline recommendations, and stronger recommendations for which OS platform you're running.
 
 **Audit Policy table legend**
 
@@ -47,7 +35,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | DC | Enable on domain controllers |
 | [Blank] | No recommendation |
 
-**Windows 10, Windows 8, and Windows 7 Audit Settings recommendations**
+# [Windows Client](#tab/winclient)
 
 | Audit Policy Category or Subcategory | Windows Default<br>`Success | Failure` | Baseline Recommendation<br>`Success | Failure` | Stronger Recommendation<br>`Success | Failure` |
 | --- | :---: | :---: | :---: |
@@ -96,6 +84,8 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Network Policy Server | `Yes | Yes` |  |  |
 | Audit Other Logon/Logoff Events |  |  |  |
 | Audit Special Logon | `Yes | No` | `Yes | No` | `Yes | Yes` |
+
+<sup>1</sup> Beginning with Windows 10 version 1809, Audit Logon is enabled by default for both Success and Failure. In previous versions of Windows, only Success is enabled by default.
 
 | Audit Policy Category or Subcategory | Windows Default<br>`Success | Failure` | Baseline Recommendation<br>`Success | Failure` | Stronger Recommendation<br>`Success | Failure` |
 | --- | :---: | :---: | :---: |
@@ -150,9 +140,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Security System Extension |  |  |  |
 | Audit System Integrity |  |  |  |
 
-<sup>1</sup> Beginning with Windows 10 version 1809, Audit Logon is enabled by default for both Success and Failure. In previous versions of Windows, only Success is enabled by default.
-
-**Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008 Audit Settings recommendations**
+# [Windows Server](#tab/winserver)
 
 | Audit Policy Category or Subcategory | Windows Default<br>`Success | Failure` | Baseline Recommendation<br>`Success | Failure` | Stronger Recommendation<br>`Success | Failure` |
 | --- | :---: | :---: | :---: |
@@ -255,11 +243,13 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit Security System Extension |  |  |  |
 | Audit System Integrity |  |  |  |
 
+---
+
 ## Set Audit Policy on workstations and servers
 
-All event log management plans should monitor workstations and servers. A common mistake is to only monitor servers or domain controllers. Because malicious hacking often initially occurs on workstations, not monitoring workstations is ignoring the best and earliest source of information.
+Effective event log management requires monitoring both workstations and servers. Focusing solely on servers or domain controllers (DC) is a common oversight, as initial signs of malicious activity often appear on workstations. By including workstations in your monitoring strategy, you gain access to critical early indicators of compromise.
 
-Administrators should thoughtfully review and test any audit policy before implementation in their production environment.
+Before you deploy any audit policy in a production environment, administrators should carefully review, test, and validate the policy to ensure it meets organizational security and operational requirements.
 
 ## Events to monitor
 
@@ -279,23 +269,23 @@ Two types of events should be monitored and alerted:
 
 An example of the first event is:
 
-If Domain Admins are forbidden from logging on to computers that aren't domain controllers, a single occurrence of a Domain Admin member logging on to an end-user workstation should generate an alert and be investigated. This type of alert is easy to generate by using the Audit Special Logon event 4964 (Special groups were assigned to a new logon). Other examples of single instance alerts include:
+If Domain Admins are forbidden from signing into the computers that aren't DCs, a single occurrence of a Domain Admin member logging on to an end-user workstation should generate an alert and be investigated. This type of alert is easy to generate by using the Audit Special Logon event 4964 (Special groups were assigned to a new logon). Other examples of single instance alerts include:
 
 - If *Server A* should never connect to *Server B*, alert when they connect to each other.
 
 - Alert if a standard user account is unexpectedly added to a privileged or sensitive security group.
 
-- If employees in factory location A never work at night, alert when a user logs on at midnight.
+- If employees in factory location *A* never work at night, alert when a user logs on at night.
 
-- Alert if an unauthorized service is installed on a domain controller.
+- Alert if an unauthorized service is installed on a DC.
 
-- Investigate if a regular end-user attempts to directly sign in a SQL Server for which they have no clear reason for doing so.
+- Investigate if a regular end-user attempts to directly sign into a SQL Server for which they have no clear reason for doing so.
 
 - If you have no members in your Domain Admin group, and someone adds themselves there, check it immediately.
 
 An example of the second event is:
 
-An aberrant number of failed logons could indicate a password guessing attack. For an enterprise to provide an alert for an unusually high number of failed logons, they must first understand the normal levels of failed logons within their environment before a malicious security event.
+A high number of failed logon attempts might signal a password guessing attack. To detect this, organizations should first determine what is a normal rate of failed logons in their environment. Then alerts can be triggered when that baseline is exceeded.
 
 For a comprehensive list of events that you should include when you monitor for signs of compromise, see [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md).
 
@@ -309,13 +299,24 @@ The following are the accounts, groups, and attributes that you should monitor t
 
 - Activities that are performed by using privileged accounts (automatically remove account when suspicious activities are completed or the allotted time expired)
 
-- Privileged and VIP accounts in AD DS. Monitor for changes to attributes on the Account tab, such as: cn, name, sAMAccountName, userPrincipalName, or userAccountControl. In addition to monitoring the accounts, restrict who can modify the accounts to as small a set of administrative users as possible.
+- Privileged and VIP accounts in AD DS. Monitor for changes to attributes on the Account tab, such as:
 
-Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) for a list of recommended events to monitor, their criticality ratings, and an event message summary.
+  - cn
+  - name
+  - sAMAccountName
+  - userPrincipalName
+  - userAccountControl
+
+  In addition to monitoring the accounts, restrict who can modify the accounts to as small a set of administrative users as possible. Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) for a list of recommended events to monitor, their criticality ratings, and an event message summary.
 
 - Group servers by the classification of their workloads, which allows you to quickly identify the servers that should be the most closely monitored and most stringently configured
 
-- Changes to the properties and membership of following AD DS groups: Enterprise Admins, Domain Admins, Administrators, and Schema Admins
+- Changes to the properties and membership of following AD DS groups:
+
+  - Administrators
+  - Domain Admins
+  - Enterprise Admins
+  - Schema Admins
 
 - Disabled privileged accounts (such as built-in Administrator accounts in Active Directory and on member systems) for enabling the accounts
 
@@ -347,6 +348,8 @@ All Event ID recommendations are accompanied by a criticality rating as follows:
 | **Medium** | An Event ID with a medium criticality rating could indicate malicious activity, but it must be accompanied by some other abnormality. An example can include an unusual number occurring in a particular time period, unexpected occurrences, or occurrences on a computer that normally wouldn't be expected to log the event. A medium-criticality event might also be collected as a metric and then compared over time. |
 | **Low** | And Event ID with a low criticality events shouldn't garner attention or cause alerts, unless correlated with medium or high criticality events. |
 
-These recommendations are meant to provide a baseline guide for an administrator. All recommendations should be thoroughly reviewed before implementing in a production environment. Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) for a list of the recommended events to monitor, their criticality ratings, and an event message summary.
+These recommendations are meant to provide a baseline guide for an administrator. All recommendations should be thoroughly reviewed before implementing in a production environment.
 
 ## See also
+
+- [Advanced Audit Policy Configuration settings](advanced-audit-policy-configuration.md)
