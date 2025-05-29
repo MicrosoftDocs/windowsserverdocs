@@ -8,7 +8,7 @@ ms.date: 05/29/2025
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 ---
 
-# System Audit Policy recommendations
+# System audit policy recommendations
 
 This article covers the Windows audit policy settings and Microsoft's baseline and advanced recommendations for both workstations and servers. It provides guidance to help administrators choose appropriate audit policies based on their organization's needs.
 
