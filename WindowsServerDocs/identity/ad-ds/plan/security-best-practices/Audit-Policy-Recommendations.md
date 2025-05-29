@@ -1,5 +1,5 @@
 ---
-title: Audit Policy recommendations
+title: System Audit Policy recommendations
 description: This article provides guidance on Windows audit policy settings, baseline recommendations, and advanced options for both workstations and Windows servers.
 ms.topic: best-practice
 author: xelu86
@@ -8,7 +8,7 @@ ms.date: 05/29/2025
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 ---
 
-# Audit Policy recommendations
+# System Audit Policy recommendations
 
 This article covers the Windows audit policy settings and Microsoft's baseline and advanced recommendations for both workstations and servers. It provides guidance to help administrators choose appropriate audit policies based on their organization's needs.
 
@@ -21,11 +21,11 @@ The recommendations are for enterprise-class computers, which Microsoft defines 
 
 The following baseline audit policy settings are recommended for normal security computers that aren't known to be under active, successful attack by determined adversaries or malware.
 
-## Recommended Audit Policy by operating system
+## Recommended System Audit Policy by operating system
 
 This section contains tables that list the audit setting recommendations that apply to the Windows operating system (OS) for both client and server.
 
-**Audit Policy table legend**
+**System Audit Policy table legend**
 
 | **Notation** | **Recommendation** |
 | --- | --- |
@@ -265,9 +265,9 @@ A perfect event ID to generate a security alert should contain the following att
 
 Two types of events should be monitored and alerted:
 
-1. Events where an occurrence is a strong indicator of unauthorized or suspicious activity.
+- Events where an occurrence is a strong indicator of unauthorized or suspicious activity.
 
-1. An accumulation of events above an expected and accepted baseline.
+- An accumulation of events above an expected and accepted baseline.
 
 An example of the first event is:
 
