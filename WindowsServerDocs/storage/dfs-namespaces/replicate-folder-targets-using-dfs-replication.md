@@ -28,4 +28,4 @@ To do so from a Windows PowerShell session, use the [Update-DfsrConfigurationFro
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
--   [DFS Replication](../dfs-replication/dfsr-overview.md)
+-   [DFS Replication](../dfs-replication/dfs-replication-overview.md)
