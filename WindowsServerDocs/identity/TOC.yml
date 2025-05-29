@@ -395,7 +395,9 @@
         - name: Monitoring Active Directory for Signs of compromise
           href: ad-ds/plan/security-best-practices/Monitoring-active-directory-for-Signs-of-compromise.md
         - name: Audit Policy Recommendations
-          href: ad-ds/plan/security-best-practices/audit-policy-Recommendations.md
+          href: ad-ds/plan/security-best-practices/audit-policy-recommendations.md
+        - name: Advanced Audit Policy Configuration settings
+          href: ad-ds/plan/security-best-practices/advanced-audit-policy-configuration.md
         - name: Planning for compromise
           href: ad-ds/plan/security-best-practices/Planning-for-compromise.md
         - name: Maintaining a more Secure Environment
