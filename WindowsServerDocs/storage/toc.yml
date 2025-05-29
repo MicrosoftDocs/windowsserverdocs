@@ -59,8 +59,11 @@ items:
       - name: Using Inherited Permissions with Access-based Enumeration
         href: dfs-namespaces/using-inherited-permissions-with-access-based-enumeration.md
   - name: DFS Replication
-    href: dfs-replication/dfsr-overview.md
     items:
+    - name: Overview of DFS Replication
+      href: dfs-replication/dfs-replication-overview.md
+    - name: Install DFS Replication
+      href: dfs-replication/install-dfs-replication.md
     - name: Migrate SYSVOL replication to DFS Replication
       href: dfs-replication/migrate-sysvol-to-dfsr.md
     - name: Use robocopy to preseed files for DFS Replication
