@@ -1,7 +1,7 @@
 ---
 title: Network File System (NFS) Overview in Windows Server
 description: Learn about Network File System (NFS) in Windows Server, supported versions, and how it enables file sharing across platforms. Discover deployment benefits.
-ms.topic: concept-article
+ms.topic: overview
 ai-usage: ai-assisted
 author: dknappettmsft
 ms.author: daknappe

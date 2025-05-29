@@ -12859,6 +12859,11 @@
       "source_path": "WindowsServerDocs/identity/laps/laps-scenarios-deployment-migration.md",
       "redirect_url": "/windows-server/identity/laps/laps-scenarios-migration",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/dfs-replication/dfsr-overview.md",
+      "redirect_url": "/windows-server/storage/dfs-replication/dfs-replication-overview",
+      "redirect_document_id": true
     }
   ]
 }
