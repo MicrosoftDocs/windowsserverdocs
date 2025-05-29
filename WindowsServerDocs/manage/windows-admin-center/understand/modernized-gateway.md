@@ -12,9 +12,9 @@ The modernized gateway is a significant backend upgrade of the Windows Admin Cen
 
 ## What's new
 
-### Upgrade from .NET 4.6.2 to .NET Core
+### Upgrade from .NET 4.6.2 to .NET 6
 
-The biggest upgrade in this release is the backend upgrade from .NET framework 4.6.2 to [.NET Core](/dotnet/core/whats-new/dotnet-6). This upgrade brings enhanced performance, security, and improved cryptography. It also includes support for HTTP/2, reducing latency and enhancing the responsiveness of Windows Admin Center.
+The biggest upgrade in this release is the backend upgrade from .NET framework 4.6.2 to [.NET 6](/dotnet/core/whats-new/dotnet-6). This upgrade brings enhanced performance, security, and improved cryptography. It also includes support for HTTP/2, reducing latency and enhancing the responsiveness of Windows Admin Center.
 
 ### Updated installer
 
@@ -38,7 +38,7 @@ Previously, Windows Admin Center utilized [Katana](/aspnet/aspnet/overview/owin-
 
 Gateway plug-in extensions are most impacted by the changes to our modernized gateway. Windows Admin Center gateway plug-ins enable API communication from the UI of your tool or solution to a target node. Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plug-ins to be executed on target nodes. The gateway service can be extended to include custom gateway plug-ins that support protocols other than the default ones (PowerShell and WMI).
 
-Because gateway plug-ins communicate with Windows Admin Center’s backend to enable API communication, gateway plug-in code can include components written with the .NET framework version 4.6.2, which won't function with .NET Core. This code needs to be updated to use the .NET Core framework.
+Because gateway plug-ins communicate with Windows Admin Center’s backend to enable API communication, gateway plug-in code can include components written with the .NET framework version 4.6.2, which won't function with .NET 6.
 
 Additionally, we've modified the way plug-ins work with our modernized gateway. Instead of developing a C# class that implements the `IPlugIn` interface from the `Microsoft.ManagementExperience.FeatureInterfaces` namespace to extend the gateway plug-in, extensions will now be written in the form of [ASP.NET MVC controllers](/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs). These controllers have increased flexibility compared to the simple C# class and extensive documentation.
 
