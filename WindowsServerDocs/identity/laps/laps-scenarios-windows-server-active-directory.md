@@ -97,10 +97,10 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 
 Users must be granted permission in order to set the expiration time of passwords stored in Active Directory. When a password is marked as expired in Active Directory, the device will rotate the password at the next processing cycle. Users can use this mechanism to shorten (or extend) the remaining time to the next expected password rotation.
 
-You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADResetExpirationPermission` cmdlet for this purpose as shown in the following code:
+You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADResetPasswordPermission` cmdlet for this purpose as shown in the following code:
 
 ```powershell
-PS C:\> Set-LapsADResetExpirationPermission -Identity NewLAPS -AllowedPrincipals @("laps\LapsPasswordExpirersGroup")
+PS C:\> Set-LapsADResetPasswordPermission -Identity NewLAPS -AllowedPrincipals @("laps\LapsPasswordExpirersGroup")
 ```
 
 ```output
