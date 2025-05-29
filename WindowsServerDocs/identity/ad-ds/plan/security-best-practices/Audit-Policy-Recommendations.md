@@ -23,7 +23,7 @@ The following baseline audit policy settings are recommended for normal security
 
 ## Recommended Audit Policy by operating system
 
-This section contains tables that list the audit setting recommendations that apply to the Windows operating system (OS) for both client and server. These tables contain the Windows default setting, the baseline recommendations, and stronger recommendations for which OS platform you're running.
+This section contains tables that list the audit setting recommendations that apply to the Windows operating system (OS) for both client and server.
 
 **Audit Policy table legend**
 
@@ -34,6 +34,8 @@ This section contains tables that list the audit setting recommendations that ap
 | If | Enable if needed for a specific scenario, or if a role or feature for which auditing is desired is installed on the machine |
 | DC | Enable on domain controllers |
 | [Blank] | No recommendation |
+
+These tables contain the Windows default setting, the baseline recommendations, and stronger recommendations for which OS platform you're running.
 
 # [Windows Client](#tab/winclient)
 
@@ -275,7 +277,7 @@ If Domain Admins are forbidden from signing into the computers that aren't DCs, 
 
 - Alert if a standard user account is unexpectedly added to a privileged or sensitive security group.
 
-- If employees in factory location *A* never work at night, alert when a user logs on at night.
+- If employees in *factory location A* never work at night, alert when a user logs on at night.
 
 - Alert if an unauthorized service is installed on a DC.
 
@@ -302,9 +304,13 @@ The following are the accounts, groups, and attributes that you should monitor t
 - Privileged and VIP accounts in AD DS. Monitor for changes to attributes on the Account tab, such as:
 
   - cn
+
   - name
+
   - sAMAccountName
+
   - userPrincipalName
+
   - userAccountControl
 
   In addition to monitoring the accounts, restrict who can modify the accounts to as small a set of administrative users as possible. Refer to [Appendix L: Events to Monitor](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md) for a list of recommended events to monitor, their criticality ratings, and an event message summary.
@@ -314,8 +320,11 @@ The following are the accounts, groups, and attributes that you should monitor t
 - Changes to the properties and membership of following AD DS groups:
 
   - Administrators
+
   - Domain Admins
+
   - Enterprise Admins
+
   - Schema Admins
 
 - Disabled privileged accounts (such as built-in Administrator accounts in Active Directory and on member systems) for enabling the accounts
