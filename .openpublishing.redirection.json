@@ -12872,7 +12872,12 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md",
-      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-autoenrollment",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
       "redirect_document_id": true
     }
   ]

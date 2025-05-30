@@ -18,7 +18,7 @@ Before configuring certificate auto-enrollment, ensure the following prerequisit
 
 - Active Directory Certificate Services (AD CS) is installed and configured with at least one Enterprise Certification Authority (CA).
 
-- You configured the server certificate template for auto-enrollment. For more information, see [Configure a server certificate template for auto-enrollment](configure-server-certificate-template.md).
+- You configured the server certificate template for auto-enrollment. For more information, see [Configure a server certificate template for auto-enrollment](configure-the-server-certificate-template.md).
 
 - You have a use account that is a member of both the **Enterprise Admins** and the root domain's **Domain Admins** security groups.
 
