@@ -12864,6 +12864,21 @@
       "source_path": "WindowsServerDocs/storage/dfs-replication/dfsr-overview.md",
       "redirect_url": "/windows-server/storage/dfs-replication/dfs-replication-overview",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Refresh-Group-Policy.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-policy/group-policy-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": true
     }
   ]
 }
