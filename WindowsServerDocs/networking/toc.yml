@@ -40,12 +40,8 @@ items:
             href: core-network-guide/cncg/server-certs/copy-the-CA-Certificate-and-CRL-to-the-Virtual-directory.md
           - name: Configure the server certificate template
             href: core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md
-          - name: Configure server certificate autoenrollment
-            href: core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md
-          - name: Refresh group policy
-            href: core-network-guide/cncg/server-certs/Refresh-Group-Policy.md
-          - name: Verify server enrollment of a server certificate
-            href: core-network-guide/cncg/server-certs/verify-Server-Enrollment-of-a-Server-Certificate.md
+          - name: Configure Certificate Auto-Enrollment for NPS
+            href: core-network-guide/cncg/server-certs/configure-server-certificate-autoenrollment.md
       - name: Deploy password-based 802.1X authenticated wireless access
         href: core-network-guide/cncg/wireless/a-deploy-8021X-wireless-access.md
         items:
