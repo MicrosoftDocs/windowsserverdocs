@@ -564,7 +564,7 @@ The following procedure is required only for an enterprise CA. A standalone CA d
 1. Type: `certutil -setcatemplates + <templatelist>` and press ENTER.
 
     > [!NOTE]
-    > Replace **templatelist** with a comma-separated list of the template names that are listed in the catemplates.txt file created during the procedure "To record a CA templates list by using Certutil.exe."
+    > Replace **templatelist** with a comma-separated list of the template names that are listed in the catemplates.txt file created during the procedure "To record a CA templates list by using Certutil.exe." For example, **certutil -setcatemplates +Administrator,User,DomainController**.
 
 ### Grant permissions on AIA and CDP containers
 
