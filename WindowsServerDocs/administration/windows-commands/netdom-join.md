@@ -38,13 +38,13 @@ netdom join machine /Domain:domain [/OU:ou path] [/UserD:user]
 | `/passwordo:<Password>` \| `*` | Specifies the password of the user account specified with the `/usero` parameter. If you specify `*`, you're prompted for the password. |
 | `/passwordm:<Password>` \| `*` | Specifies the password for the pre-created computer account identified by the machine name. If you specify `*` instead of a password, you're prompted for the password. This option must be used with the `/ReadOnly` parameter. |
 | `/readonly` | Joins the domain using a pre-created computer account without writing to a domain controller. This doesn't require a writable domain controller. It must be used with the `/Domain` and `/PasswordM` parameters, and can't be used with the `/OU` parameter. |
-| `/reboot:<seconds>` | Shuts down the computer and automatically reboots after the join operation completes. The *seconds* value is the number of seconds before automatic shutdown. The default is 20 seconds. |
+| `/reboot:<seconds>` | Shuts down the computer and automatically reboots after the join operation completes. The *seconds* value is the number of seconds before automatic shutdown. The default is **20** seconds. |
 | `/securepasswordprompt` | Opens a secure credentials popup for entering credentials. This is useful when specifying smartcard credentials. This option is effective only when the password is entered as `*`. |
 | `help` \| `/?` | Displays help at the command prompt. |
 
 ## Examples
 
-To join the computer **mywksta** to the **devgroup.contoso.com** domain in the Dsys/workstations OU, run the following command:
+To join the computer **mywksta** to the **devgroup.contoso.com** domain in the **Dsys/workstations** OU, run the following command:
 
 ```cmd
 netdom join mywksta /domain:devgroup.contoso.com /OU:"OU=Workstations,OU=Dsys,DC=devgroup,DC=contoso,DC=com"
@@ -55,7 +55,7 @@ Besides adding the computer account to the domain, this command modifies the wor
 To join the computer **mywksta** to the domain **contoso.com**, run the following command:
 
 ```cmd
-netdom join mywksta /domain:contoso.com /userd:AdminUser /passwordd:*
+netdom join mywksta /domain:contoso.com /userd:user01 /passwordd:*
 ```
 
 This command prompts you to enter the password for the domain user "user01" securely.
