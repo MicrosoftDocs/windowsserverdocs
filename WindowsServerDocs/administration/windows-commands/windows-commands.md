@@ -541,7 +541,6 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netdom join](netdom-join.md)
 - [net print](net-print.md)
 - [net user](net-user.md)
-- [netcfg](netcfg.md)
 - [netsh](netsh.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
