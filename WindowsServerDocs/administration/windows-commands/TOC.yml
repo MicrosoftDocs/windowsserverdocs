@@ -1025,13 +1025,17 @@
     - name: net print
       href: net-print.md
     - name: net user
-      href: net-user.md      
+      href: net-user.md
     - name: netcfg
       href: netcfg.md
     - name: netdom add
-      href: netdom-add.md      
+      href: netdom-add.md
     - name: netdom join
       href: netdom-join.md
+    - name: netdom move
+      href: netdom-move.md
+    - name: netdom movent4bdc
+      href: netdom-movent4bdc.md
     - name: netsh
       href: netsh.md
     - name: netstat
