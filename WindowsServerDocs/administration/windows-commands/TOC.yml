@@ -1028,6 +1028,8 @@
       href: net-user.md
     - name: netcfg
       href: netcfg.md
+    - name: netdom add
+      href: netdom-add.md
     - name: netsh
       href: netsh.md
     - name: netstat
