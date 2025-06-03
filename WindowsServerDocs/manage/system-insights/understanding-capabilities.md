@@ -1,27 +1,28 @@
 ---
-title: Understanding capabilities
-description: This topic defines the concept of capabilities in System Insights and introduces the default capabilities available in Windows Server 2019.
+title: System Insights capabilities in Windows Server
+description: Learn about System Insights capabilities in Windows Server, including default capabilities, prediction models, and how they help forecast resource usage. Discover how to optimize your server with these insights.
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-manager: mallikarjun.chadalapaka
-ms.date: 6/05/2018
+ms.date: 06/03/2025
 ---
-# Understanding capabilities
+# System Insights capabilities in Windows Server
 
-This topic defines the concept of capabilities in System Insights and introduces the default capabilities available in Windows Server 2019.
+System Insights capabilities in Windows Server use predictive analytics to help administrators forecast resource usage and optimize server performance. This article explains the default capabilities, prediction models, and how to interpret their results.
 
 This topic also describes the data sources, prediction timelines, and prediction statuses used for the default capabilities.
 
-## Capability overview
-A System Insights capability is a machine learning or statistics model that analyzes system data to help give you increased insight into the functioning of your deployment. System Insights introduces an initial set of default capabilities, and it allows you to add new capabilities dynamically, without needing to update the operating system.
+## Overview of System Insights capabilities
+
+A System Insights capability is a machine learning or statistics model that analyzes system data to give you more insight into your deployment. System Insights includes a set of default capabilities, and you can add new capabilities dynamically without updating the operating system.
 
 >[!NOTE]
->Detailed documentation explaining how to create, add, and update capabilities is available [here](adding-and-developing-capabilities.md), and [the managing capabilities document](managing-capabilities.md) provides more high-level information about this functionality.
+>Detailed documentation explaining how to [create, add, and update capabilities is available](adding-and-developing-capabilities.md), and [the managing capabilities document](managing-capabilities.md) provides more high-level information about this functionality.
 
-Additionally, each capability runs locally on a Windows Server instance, and each capability can be managed individually.
+A System Insights capability is a machine learning or statistics model that analyzes system data to give you more insight into your deployment. System Insights includes a set of default capabilities, and you can add new capabilities dynamically without updating the operating system.
 
 ### Capability outputs
+
 When a capability is invoked, it provides an output to help explain the result of its analysis or prediction. Each output must contain a **Status** and a **Status Description** to describe the prediction, and each result can optionally contain capability-specific data associated with the prediction. The **Status Description** helps provides a contextual explanation for the **Status**, and the capability reports either an **OK**, **Warning**, or **Critical** status. Additionally, a capability can use an **Error** or **None** status if no prediction was made. Together, here are the capability statuses and their basic meanings:
 
 - **Ok** - Everything looks good.
@@ -30,10 +31,11 @@ When a capability is invoked, it provides an output to help explain the result o
 - **Error** - An unknown problem caused the capability to fail.
 - **None** - No prediction was made. This could be due to a lack of data or any other capability-specific reason for not making a prediction.
 
-Additionally, any capability-specific data contained in the result will be placed in a user-accessible JSON file, and the file path [can be found using PowerShell](./managing-capabilities.md#retrieving-capability-results).
+Each capability runs locally on a Windows Server instance, and you can manage each capability individually.
 
-## Default capabilities
-In Windows Server 2019, System Insights introduces four default capabilities focused on capacity forecasting:
+## Default System Insights capabilities
+
+In Windows Server, System Insights introduces four default capabilities focused on capacity forecasting:
 
 - **CPU capacity forecasting** - Forecasts CPU usage.
 - **Networking capacity forecasting** - Forecasts network usage for each network adapter.
@@ -43,12 +45,14 @@ In Windows Server 2019, System Insights introduces four default capabilities foc
 Each capability analyzes past historical data to predict future usage, and **all of the forecasting capabilities are designed to forecast long-term trends rather than short-term behavior**, helping administrators correctly provision hardware and tune their workloads to avoid future resource contention. Because these capabilities focus on long-term usage, these capabilities analyze daily data.
 
 ### Forecasting model
+
 The default capabilities use a forecasting model to predict future usage, and for each prediction, the model is trained locally on your machine's data. This model is designed to help detect longer term trends, and retraining on each Windows Server instance enables the capability to adapt to the specific behavior and nuances of each machine's usage.
 
 >[!NOTE]
 >Determining what type of model to use required testing many models using a dataset containing tens of thousands of machines. After analyzing and tweaking these models, we decided to use an auto-regressive forecasting model, as it produces highly-accurate and visually intuitive predictions while not requiring too much time to train. This model, however, requires three weeks of training data, so each capability uses a basic linear trend until three weeks of data are available.
 
 ### Forecasting timelines
+
 The default capabilities forecast a certain number of days into the future based on the number of days for which data has been collected. The following table shows the prediction timelines of these capabilities:
 
 | Input data size | Forecast length |
@@ -58,22 +62,24 @@ The default capabilities forecast a certain number of days into the future based
 | 180-365 days | 60 days |
 
 ### Forecasting data
-Each capability analyzes daily data to forecast future usage. CPU, networking, and even storage usage, however, can frequently change throughout the day, dynamically adjusting to the workloads on the machine. Because usage isn't constant throughout the day, it's important to properly represent daily usage in a single data point. The table below details the specific data points and how the data is processed:
 
+Each capability analyzes daily data to forecast future usage. CPU, networking, and even storage usage, however, can frequently change throughout the day, dynamically adjusting to the workloads on the machine. Because usage isn't constant throughout the day, it's important to properly represent daily usage in a single data point. The table below details the specific data points and how the data is processed:
 
 | Capability name | Data source(s) | Filtering logic |
 | --------------- | -------------- | ---------------- |
- Volume consumption forecasting          | Volume size                    | Maximum daily usage
- Total storage consumption forecasting   | Sum of volume sizes, sum of disk sizes              | Maximum daily usage
- CPU capacity forecasting                | % Processor Time  | Maximum 2-hour average per day
- Networking capacity forecasting         | Bytes Total/sec         | Maximum 2-hour average per day
+| Volume consumption forecasting        | Volume size                    | Maximum daily  |
+| Total storage consumption forecasting | Sum of volume sizes, sum of disk sizes  | Maximum daily usage |
+| CPU capacity forecasting              | % Processor Time  | Maximum 2-hour average per day |
+| Networking capacity forecasting       | Bytes Total/sec         | Maximum 2-hour average per day |
 
 When evaluating the filtering logic above, it's important to note that each capability seeks to inform administrators when future usage will meaningfully exceed the available capacity – even though CPU momentarily hit 100% utilization, CPU usage may not have caused meaningful performance degradation or resource contention. For CPU and networking, then, there should be sustained high usage rather than momentary spikes. Averaging CPU and networking usage throughout the whole day, however, would lose important usage information, as a few hours of high CPU or networking usage could meaningfully impact the performance of your critical workloads. The maximum 2-hour average during each day avoids these extremes and still produces meaningful data for each capability to analyze.
 
 For volume and total storage usage, however, storage usage can't exceed the available capacity, even momentarily, so the maximum daily usage is used for these capabilities.
 
 ### Forecasting statuses
+
 All System Insights capabilities must output a status associated with each prediction. Each default capability uses the following logic to define each prediction status:
+
 - **OK**: The forecast does not exceed the available capacity.
 - **Warning**: The forecast exceeds the available capacity in the next 30 days.
 - **Critical**: The forecast exceeds the available capacity in the next 7 days.
@@ -83,8 +89,8 @@ All System Insights capabilities must output a status associated with each predi
 >[!NOTE]
 >If a capability forecasts on multiple instances - such as multiple volumes or network adapters - the status reflects the most severe status across all instances. Individual statuses for each volume or network adapter are visible in Windows Admin Center or within the data contained in the output of each capability. For instructions on how to parse the JSON output of the default capabilities, visit [this blog](https://aka.ms/systeminsights-mitigationscripts).
 
+## Related content
 
-## Additional References
 To learn more about System Insights, use the following resources:
 
 - [System Insights overview](overview.md)
