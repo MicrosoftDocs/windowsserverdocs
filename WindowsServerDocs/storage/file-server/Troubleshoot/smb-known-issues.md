@@ -1,6 +1,6 @@
 ---
-title: SMB known issues
-description: List of the SMB known issues.
+title: SMB Common Issues
+description: Common SMB related issues with guidance on troubleshooting and resolving them.
 author: Deland-Han
 manager: dcscontentpm
 ms.topic: troubleshooting-known-issue
@@ -10,7 +10,7 @@ ms.date: 12/25/2019
 
 # SMB known issues
 
-The following topics describe some common troubleshooting issues that can occur when you use Server Message Block (SMB). These topics also provide possible solutions to those issues.
+The following topics describe how to truobleshoot some of the common issues related to SMB (Server Message Block). These topics also provide possible solutions to those issues.
 
 - [TCP three-way handshake failure](tcp-three-way-handshake-fails.md)
 
