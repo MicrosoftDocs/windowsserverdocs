@@ -541,6 +541,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netdom add](netdom-add.md)
   - [netdom computername](netdom-computername.md)
   - [netdom join](netdom-join.md)
+  - [netdom move](netdom-move.md)
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)
