@@ -1022,14 +1022,16 @@
       href: mstsc.md
     - name: nbtstat
       href: nbtstat.md
-    - name: netcfg
-      href: netcfg.md
-    - name: netdom join
-      href: netdom-join.md
     - name: net print
       href: net-print.md
     - name: net user
-      href: net-user.md
+      href: net-user.md      
+    - name: netcfg
+      href: netcfg.md
+    - name: netdom add
+      href: netdom-add.md      
+    - name: netdom join
+      href: netdom-join.md
     - name: netsh
       href: netsh.md
     - name: netstat
