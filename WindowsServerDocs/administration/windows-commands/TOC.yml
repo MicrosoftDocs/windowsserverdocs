@@ -1030,6 +1030,8 @@
       href: netcfg.md
     - name: netdom add
       href: netdom-add.md
+    - name: netdom computername
+      href: netdom-computername.md
     - name: netdom join
       href: netdom-join.md
     - name: netdom move
