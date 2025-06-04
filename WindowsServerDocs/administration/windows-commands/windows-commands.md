@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/03/2025
+ms.date: 06/04/2025
 ---
 
 # Windows Commands
@@ -543,6 +543,9 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netdom join](netdom-join.md)
   - [netdom move](netdom-move.md)
   - [netdom movent4bdc](netdom-movent4bdc.md)
+  - [netdom query](netdom-query.md)
+  - [netdom remove](netdom-remove.md)
+  - [netdom renamecomputer](netdom-renamecomputer.md)
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)
