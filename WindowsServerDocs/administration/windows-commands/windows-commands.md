@@ -543,6 +543,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netdom join](netdom-join.md)
   - [netdom move](netdom-move.md)
   - [netdom movent4bdc](netdom-movent4bdc.md)
+  - [netdom remove](netdom-remove.md)
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)
