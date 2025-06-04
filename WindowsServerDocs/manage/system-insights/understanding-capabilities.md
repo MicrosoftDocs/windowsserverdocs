@@ -1,11 +1,12 @@
 ---
 title: System Insights capabilities in Windows Server
-description: Learn about System Insights capabilities in Windows Server, including default capabilities and prediction models. Optimize your server performance with predictive analytics.
+description: Discover System Insights capabilities in Windows Server, including default capabilities and prediction models. Optimize your server performance with predictive analytics.
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/03/2025
+ms.date: 06/04/2025
 ---
+
 # System Insights capabilities in Windows Server
 
 System Insights capabilities in Windows Server use predictive analytics to help administrators forecast resource usage and optimize server performance. This article explains the default capabilities, prediction models, and how to interpret their results.
@@ -18,10 +19,10 @@ A System Insights capability is a machine learning or statistics model that anal
 
 The four default capabilities available are:
 
-- **CPU capacity forecasting** - Forecasts CPU usage.
-- **Networking capacity forecasting** - Forecasts network usage for each network adapter.
-- **Total storage consumption forecasting** - Forecasts total storage consumption across all local drives.
-- **Volume consumption forecasting** - Forecasts storage consumption for each volume.
+- **CPU capacity forecasting**
+- **Networking capacity forecasting**
+- **Total storage consumption forecasting**
+- **Volume consumption forecasting**
 
 Each capability runs locally on a Windows Server instance, and you can manage each capability individually.
 
