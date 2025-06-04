@@ -1042,6 +1042,8 @@
       href: netdom-query.md
     - name: netdom remove
       href: netdom-remove.md
+    - name: netdom renamecomputer
+      href: netdom-renamecomputer.md
     - name: netsh
       href: netsh.md
     - name: netstat
