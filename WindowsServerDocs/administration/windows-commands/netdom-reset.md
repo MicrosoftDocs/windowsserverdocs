@@ -30,7 +30,7 @@ netdom reset machine [/Domain:domain] [/Server:server]
 |`/usero:<User>`|Specifies the user account to use to make the secure connection with the computer that you want to reset. If not specified, `netdom reset` uses the current user account.|
 |`/passwordo:<Password>` \| `*`|Specifies the password of the user account specified using the `/usero` parameter. If you use the wildcard character (`*`), you're prompted for the password.|
 |`/securepasswordprompt`|Opens a secure credentials popup for entering credentials. This is useful when specifying smartcard credentials. This option is effective only when the password is entered as `*`.|
-|`help` |/ `?`|Displays help at the command prompt.|
+|`help` \| `?`|Displays help at the command prompt.|
 
 ## Examples
 
