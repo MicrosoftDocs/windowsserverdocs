@@ -1036,6 +1036,8 @@
       href: netdom-join.md
     - name: netdom move
       href: netdom-move.md
+    - name: netdom movent4bdc
+      href: netdom-movent4bdc.md
     - name: netdom query
       href: netdom-query.md
     - name: netsh
