@@ -1,5 +1,5 @@
 ---
-title: Netdom renamecomputer
+title: netdom renamecomputer
 description: Netdom renamecomputer is a command-line utility that renames a domain workstation or member server in Windows Server.
 ms.topic: reference
 ms.author: alalve
