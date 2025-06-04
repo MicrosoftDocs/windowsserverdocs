@@ -1042,6 +1042,8 @@
       href: netdom-query.md
     - name: netdom remove
       href: netdom-remove.md
+    - name: netdom reset
+      href: netdom-reset.md
     - name: netsh
       href: netsh.md
     - name: netstat
