@@ -47,7 +47,7 @@ To use Storage Replica and Windows Admin Center together, you need the following
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
-> Currently, you can't use Windows Admin Center on a server to manage Storage Replica.
+> Currently, you can't use Windows Admin Center in the Azure Portal to manage Storage Replica. Windows Admin Center version 2410 and later can be used to manage Storage Replica.
 
 ## Terms
 

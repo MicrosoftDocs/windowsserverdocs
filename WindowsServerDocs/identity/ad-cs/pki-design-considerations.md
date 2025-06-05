@@ -130,7 +130,7 @@ As a CA administrator, you can add, remove, or modify CRL distribution points an
 Consider these guidelines when you configure CDP extension URLs:
 
 - Avoid publishing delta CRLs on offline root CAs. Because you don't revoke many certificates on an offline root CA, a delta CRL is probably not needed.
-- Adjust the default `LDAP://` and `https://` URL locations on the Extensions tab of the certification authority’s Properties Extension tab according to your needs.
+- Adjust the default `LDAP://` and `http://` URL locations on the Extensions tab of the certification authority’s Properties Extension tab according to your needs.
 - Publish a CRL on an HTTP Internet or extranet location so that users and applications outside the organization can perform certificate validation. You can publish the LDAP and HTTP URLs for CDP locations to enable clients to retrieve CRL data with HTTP and LDAP.
 - Remember that Windows clients always retrieve the list of URLs in sequential order until a valid CRL is retrieved.
 - Use HTTP CDP locations to provide accessible CRL locations for clients running non-Windows operating systems.
