@@ -38,7 +38,7 @@ When you run a capability, it provides an output that explains the result of its
 - **Error** - An unknown problem caused the capability to fail.
 - **None** - No prediction was made. This could be due to a lack of data or any other capability-specific reason for not making a prediction.
 
-Any capability-specific data in the result is saved in a user-accessible JSON file. You can find the file path by using PowerShell. For more information, see [retrieving capability results](./managing-capabilities.md#retrieving-capability-results).
+Any capability-specific data in the result is saved in a user-accessible JSON file. You can find the file path by using PowerShell. For more information, see [retrieving capability results](./managing-capabilities.md#retrieve-capability-results).
 
 ## Forecasting model
 
