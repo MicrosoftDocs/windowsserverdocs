@@ -1,10 +1,10 @@
 ---
-title: Overview of Extended Security Updates for Windows Server 2008, 2008 R2, 2012, and 2012 R2
+title: Overview of Extended Security Updates for Windows Server 2012, and 2012 R2
 description: Extended Security Updates for Windows Server help you stay protected after end of support. Learn how to upgrade or migrate to Azure for continued security.
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 05/23/2025
+ms.date: 06/05/2025
 ms.mktglfcycl: manage
 ms.sitesec: library
 ---
