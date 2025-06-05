@@ -1044,6 +1044,10 @@
       href: netdom-remove.md
     - name: netdom renamecomputer
       href: netdom-renamecomputer.md
+    - name: netdom reset
+      href: netdom-reset.md
+    - name: netdom resetpwd
+      href: netdom-resetpwd.md
     - name: netsh
       href: netsh.md
     - name: netstat
