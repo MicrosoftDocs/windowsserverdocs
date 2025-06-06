@@ -28,22 +28,21 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
 | --------- | ----------- |
 | `<name>` | Specifies the file for which to display or modify DACLs. |
 | `<directory>` | Specifies the directory for which to display or modify DACLs. |
-| /t | Performs the operation on all specified files in the current directory and its subdirectories. |
-| /c | Continues the operation despite any file errors. Error messages will still be displayed. |
+| /c | Continues the operation even if file errors occur. Error messages are still shown. |
 | /l | Performs the operation on a symbolic link instead of its destination. |
 | /q | Suppresses success messages. |
-| [/save `<ACLfile>` [/t] [/c] [/l] [/q]] | Stores DACLs for all matching files into an access control list (ACL) file for later use with `/restore`. |
-| [/setowner `<user>` [/t] [/c] [/l] [/q]] | Changes the owner of all matching files to the specified user. |
-| [/findsid `<sid>` [/t] [/c] [/l] [/q]] | Finds all matching files that contain a DACL explicitly mentioning the specified security identifier (SID). |
-| [/verify [/t] [/c] [/l] [/q]] | Finds all files with ACLs that aren't canonical or have lengths inconsistent with access control entry (ACE) counts. |
-| [/reset [/t] [/c] [/l] [/q]] | Replaces ACLs with default inherited ACLs for all matching files. |
-| [/grant[:r] `<sid>`:`<perm>` [...]] | Grants specified user access rights. Permissions replace previously granted explicit permissions. Not adding the **:r** means that permissions are added to any previously granted explicit permissions. |
-| [/deny `<sid>`:`<perm>` [...]] | Explicitly denies specified user access rights. An explicit deny ACE is added for the stated permissions and the same permissions in any explicit grant are removed. |
-| [/remove[:g \| :d]] `<sid>` [...] [/t] [/c] [/l] [/q] | Removes all occurrences of the specified SID from the DACL. This command can also use:<br><ul><li>**:g** - Removes all occurrences of granted rights to the specified SID.</li><li>**:d** - Removes all occurrences of denied rights to the specified SID. |
-| [/setintegritylevel [(CI) (OI)] `<Level>`:`<Policy>` [...]] | Explicitly adds an integrity ACE to all matching files. The level can be specified as:<br><ul><li>**l** - Low</li><li>**m** - Medium</li><li>**h** - High</li></ul><br>Inheritance options for the integrity ACE may precede the level and are applied only to directories. |
-| [/substitute `<sidold>` `<sidnew>` [...]] | Replaces an existing SID (*sidold*) with a new SID (*sidnew*). Requires using with the `<directory>` parameter. |
-| /restore `<ACLfile>` [/c] [/l] [/q] | Applies stored DACLs from `<ACLfile>` to files in the specified directory. Requires using with the `<directory>` parameter. |
-| /inheritancelevel: [e \| d \| r] | Sets the inheritance level, which can be:<br><ul><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Disables inheritance and removes only inherited ACEs</li></ul> |
+| /save `<ACLfile>` | Stores DACLs for all matching files into an access control list (ACL) file for later use with `/restore`. |
+| /setowner `<user>` | Changes the owner of all matching files to the specified user. |
+| /findsid `<sid>` | Finds all matching files that contain a DACL explicitly mentioning the specified security identifier (SID). |
+| /verify | Finds all files with ACLs that aren't canonical or have lengths inconsistent with access control entry (ACE) counts. |
+| /reset | Replaces ACLs with default inherited ACLs for all matching files. |
+| /grant[:r] `<sid>`:`<perm>` | Grants specified user access rights. Permissions replace previously granted explicit permissions. Not adding **:r** means that permissions are added to any previously granted explicit permissions. |
+| /deny `<sid>`:`<perm>` | Explicitly denies specified user access rights. An explicit deny ACE is added for the stated permissions and the same permissions in any explicit grant are removed. |
+| /remove: g \| d `<sid>` | Removes all occurrences of the specified SID from the DACL. This command can also use:<br><br><li>**g** - Removes all occurrences of granted rights to the specified SID</li><li>**d** - Removes all occurrences of denied rights to the specified SID |
+| /setintegritylevel [(CI) (OI)] `<Level>`:`<Policy>` | Explicitly adds an integrity ACE to all matching files. The level can be specified as:<br><br><li>**l** - Low</li><li>**m** - Medium</li><li>**h** - High</li></ul><br>Inheritance options for the integrity ACE may precede the level and are applied only to directories. |
+| /substitute `<sidold>` `<sidnew>` | Replaces an existing SID (*sidold*) with a new SID (*sidnew*). Requires using with the `<directory>` parameter. |
+| /restore `<ACLfile>` /c \| /l \| /q | Applies stored DACLs from `<ACLfile>` to files in the specified directory. Requires using with the `<directory>` parameter. |
+| /inheritancelevel: e \| d \| r | Sets the inheritance level, which can be:<br><br><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Disables inheritance and removes only inherited ACEs</li></ul> |
 
 ## Remarks
 
