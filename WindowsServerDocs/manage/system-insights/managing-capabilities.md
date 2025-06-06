@@ -60,11 +60,11 @@ To disable a capability, use the **Disable-InsightsCapability** cmdlet:
 
 1. You're prompted to confirm the capability you're disabling.
 
-    ![Screenshot of using the Disable-InsightsCapability cmdlet in PowerShell.](media/disable-insights-capability.png)
+    [ ![Screenshot of using the Disable-InsightsCapability cmdlet in PowerShell.](media/disable-insights-capability.png) ](media/disable-insights-capability.png#lightbox)
 
 ### [Windows Admin Center](#tab/windows-admin-center)
 
-These settings can be toggled by selected a capability in Windows Admin Center.
+These settings can be toggled by selecting a capability in Windows Admin Center.
 
 To enable a capability:
 
@@ -96,13 +96,18 @@ Invoking a capability immediately runs the capability to retrieve a prediction, 
 
 1. Confirm that you want to invoke the capability.
 
-    ![Screenshot of using the Invoke-InsightsCapability cmdlet in PowerShell.](media/invoke-insights-capability.png)
+    [ ![Screenshot of using the Invoke-InsightsCapability cmdlet in PowerShell.](media/invoke-insights-capability.png) ](media/invoke-insights-capability.png#lightbox)
 
 ### [Windows Admin Center](#tab/windows-admin-center)
 
 1. Open the **Systems Insights** extension.
+
 1. Select the row of the capability you want to invoke.
+
 1. Select the **Invoke** button in Windows Admin Center.
+
+    [ ![Screenshot showing how to invoke the CPU capacity forecasting capability.](media/invoke-cpu-capacity-forecasting.png.png) ](media/invoke-cpu-capacity-forecasting.png#lightbox)
+
 1. A notification appears and shows the capability was successfully invoked.
 
 ---
