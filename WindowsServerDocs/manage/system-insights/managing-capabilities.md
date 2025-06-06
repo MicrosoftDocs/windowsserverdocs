@@ -73,12 +73,16 @@ To enable a capability:
 1. Select **Enable** in the top menu.
 1. The capability is enabled.
 
+    [ ![Screenshot showing how to enable a capability in Windows Admin Center.](media/enable-capability.png) ](media/enable-capability.png#lightbox)
+
 To disable a capability:
 
 1. Open the **Systems Insights** extension.
 1. Select the name of the capability you want to disable.
 1. Select **Disable** in the top menu of the capability overview page.
 1. The capability is disabled.
+
+    [ ![Screenshot showing how to disable a capability in Windows Admin Center.](media/disable-capability.png) ](media/disable-capability.png#lightbox)
 
 ---
 
@@ -116,7 +120,7 @@ Invoking a capability immediately runs the capability to retrieve a prediction, 
 
 ### [PowerShell](#tab/PowerShell)
 
-Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [understanding capabilities document](understanding-capabilities.md).
+Once a capability is invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [understanding capabilities document](understanding-capabilities.md).
 
 Additionally, you can use the **Get-InsightsCapabilityResult** cmdlet to view the last 30 prediction results and to retrieve the data associated with the prediction:
 
