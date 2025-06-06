@@ -106,7 +106,7 @@ Invoking a capability immediately runs the capability to retrieve a prediction, 
 
 1. Select the **Invoke** button in Windows Admin Center.
 
-    [ ![Screenshot showing how to invoke the CPU capacity forecasting capability.](media/invoke-cpu-capacity-forecasting.png.png) ](media/invoke-cpu-capacity-forecasting.png#lightbox)
+    [ ![Screenshot showing how to invoke the CPU capacity forecasting capability.](media/invoke-cpu-capacity-forecasting.png) ](media/invoke-cpu-capacity-forecasting.png#lightbox)
 
 1. A notification appears and shows the capability was successfully invoked.
 
