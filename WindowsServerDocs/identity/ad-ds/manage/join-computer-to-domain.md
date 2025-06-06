@@ -4,13 +4,16 @@ description: Learn how to add a client computer or server device to a domain in 
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 05/15/2025
+ms.date: 06/06/2025
 zone_pivot_groups: windows-os-version-plus-client
 ---
 
 # Join a computer to a domain
 
 Joining a server or client device to a domain is an essential step for achieving centralized management and improved security within an organization's network. Whether you're configuring a new device or optimizing your network setup, follow this guide for a seamless integration into your domain environment.
+
+> [!IMPORTANT]
+> **KB5020276** is a Microsoft update that strengthens the security of the domain join process. This update introduces enhanced validation and authentication to help prevent unauthorized devices from joining a Windows domain, ensuring that only trusted devices can be added to your network. To learn more, see [KB5020276 - Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
 ## Prerequisites
 
