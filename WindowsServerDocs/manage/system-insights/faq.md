@@ -15,7 +15,7 @@ ms.date: 5/23/2018
 
  Azure Monitor or SCOM can key off the events created by System Insights, as System Insights outputs the result of each prediction to the event log. They can surface these machine-specific predictions across a fleet of Windows Servers, enabling you to have a unified view of these predictions across a group of server instances.
 
- See the channel and event IDs for each prediction [here](./managing-capabilities.md#retrieving-capability-results).
+ See the channel and event IDs for each prediction in [retrieve capability results](./managing-capabilities.md#retrieve-capability-results).
 
 ## How does System Insights relate to Windows ML?
 
