@@ -28,6 +28,7 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
 | --------- | ----------- |
 | `<name>` | Specifies the file for which to display or modify DACLs. |
 | `<directory>` | Specifies the directory for which to display or modify DACLs. |
+| /t | Performs the operation on all specified files in the current directory and its subdirectories. |
 | /c | Continues the operation even if file errors occur. Error messages are still shown. |
 | /l | Performs the operation on a symbolic link instead of its destination. |
 | /q | Suppresses success messages. |
@@ -39,7 +40,7 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
 | /grant[:r] `<sid>`:`<perm>` | Grants specified user access rights. Permissions replace previously granted explicit permissions. Not adding **:r** means that permissions are added to any previously granted explicit permissions. |
 | /deny `<sid>`:`<perm>` | Explicitly denies specified user access rights. An explicit deny ACE is added for the stated permissions and the same permissions in any explicit grant are removed. |
 | /remove: g \| d `<sid>` | Removes all occurrences of the specified SID from the DACL. This command can also use:<br><br><li>**g** - Removes all occurrences of granted rights to the specified SID</li><li>**d** - Removes all occurrences of denied rights to the specified SID |
-| /setintegritylevel [(CI) (OI)] `<Level>`:`<Policy>` | Explicitly adds an integrity ACE to all matching files. The level can be specified as:<br><br><li>**l** - Low</li><li>**m** - Medium</li><li>**h** - High</li></ul><br>Inheritance options for the integrity ACE may precede the level and are applied only to directories. |
+| /setintegritylevel `<perm><level>` | Explicitly adds an integrity ACE to all matching files. The level can be specified as:<br><br><li>**l** - Low</li><li>**m** - Medium</li><li>**h** - High</li></ul><br>Inheritance options for the integrity ACE may precede the level and are applied only to directories. |
 | /substitute `<sidold>` `<sidnew>` | Replaces an existing SID (*sidold*) with a new SID (*sidnew*). Requires using with the `<directory>` parameter. |
 | /restore `<ACLfile>` /c \| /l \| /q | Applies stored DACLs from `<ACLfile>` to files in the specified directory. Requires using with the `<directory>` parameter. |
 | /inheritancelevel: e \| d \| r | Sets the inheritance level, which can be:<br><br><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Disables inheritance and removes only inherited ACEs</li></ul> |
@@ -58,9 +59,9 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
 
   - Inherited grants
 
-- The `<perm>` option is a permission mask that can be specified in one of the following forms:
+- The `<perm>` option is a permission mask that can be specified for basic rights, advanced rights, or inheritance rights:
 
-  - A sequence of simple rights (basic permissions):
+  - A sequence of simple rights (basic permissions) without the need to use parenthesis:
 
     - **N** - No access
     - **F** - Full access
@@ -70,7 +71,7 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
     - **W** - Write-only access
     - **D** - Delete access
 
-  - A comma-separated list in parenthesis of specific rights (advanced permissions):
+  - A comma-separated list of specific rights (advanced permissions) which must use parenthesis:
 
     - **DE** - Delete
     - **RC** - Read control (read permissions)
@@ -93,7 +94,7 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
     - **RA** - Read attributes
     - **WA** - Write attributes
 
-  - Inheritance rights may precede either `<perm>` form:
+  - A sequence of inheritance rights which must use parenthesis:
 
     - **(I)** - Inherit. ACE inherited from the parent container.
     - **(OI)** - Object inherit. Objects in this container inherits this ACE. Applies only to directories.
@@ -121,10 +122,16 @@ To grant the user User1 Delete and Write DAC permissions to a file named Test1, 
 icacls test1 /grant User1:(d,wdac)
 ```
 
-To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file, named Test2, type:
+To grant the user defined by SID S-1-1-0 Delete and Write DAC permissions to a file named TestFile, type:
 
 ```
-icacls test2 /grant *S-1-1-0:(d,wdac)
+icacls TestFile /grant *S-1-1-0:(d,wdac)
+```
+
+To apply a *high* integrity level to a directory and ensure that both its files and subdirectories inherit this level, type:
+
+```
+icacls "myDirectory" /setintegritylevel (CI)(OI)H
 ```
 
 ## Related links
