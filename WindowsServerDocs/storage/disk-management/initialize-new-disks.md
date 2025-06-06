@@ -1,16 +1,13 @@
 ---
 title: Initialize new disks
 description: Learn how to initialize new disks with Disk Management and get them ready to use. Also access links for troubleshooting.
-ms.date: 08/21/2024
+ms.date: 06/06/2025
 ms.topic: how-to
 author: dknappettmsft
-manager: brianlic
 ms.author: daknappe
 ---
 
 # Initialize new disks
-
-> **
 
 If you add a brand new disk to your PC, and it doesn't show up in File Explorer, you might need to [assign a drive letter](change-a-drive-letter.md) for the disk. You might also need to initialize the disk before you use it.
 
@@ -29,7 +26,7 @@ The following steps show how to initialize a new disk by using Disk Management. 
    1. Select and hold (or right-click) **Create and format hard disk partitions**, and then select **Run as administrator** > **Yes**.
 
    If you can't open Disk Management as an administrator, follow these steps:
-   
+
    1. In the search box on the taskbar, enter **Computer Management**.
    1. Select and hold (or right-click) **Computer Management**, and then select **Run as administrator** > **Yes**.
    1. After Computer Management opens, go to **Storage** > **Disk Management**.
@@ -46,7 +43,7 @@ The following steps show how to initialize a new disk by using Disk Management. 
 
    :::image type="content" source="media/initialize-disk.png" alt-text="Screenshot that shows the Initialize Disk dialog box with the GPT partition style selected.":::
 
-1. Select and hold (or right-click) the unallocated space on the drive, and then select **New Simple Volume**. 
+1. Select and hold (or right-click) the unallocated space on the drive, and then select **New Simple Volume**.
 
 1. Select **Next**. Specify the size of the volume, and then select **Next** again.
 
@@ -58,10 +55,10 @@ The following steps show how to initialize a new disk by using Disk Management. 
 
 ## Compare partition styles - GPT and MBR
 
-Disks can be divided into multiple chunks called _partitions_. Each partition, even if there's only one, has to have a partition style: GPT or MBR. Windows uses the partition style to understand how to access the data on the disk. 
+Disks can be divided into multiple chunks called _partitions_. Each partition, even if there's only one, has to have a partition style: GPT or MBR. Windows uses the partition style to understand how to access the data on the disk.
 
-Most PCs use the GUID Partition Table (GPT) disk type for hard drives and SSDs. GPT is more robust and allows for volumes bigger than 2 TB. The older Master Boot Record (MBR) disk type is used by 32-bit PCs, older PCs, and removable drives such as memory cards.
+Most PCs use the GUID Partition Table (GPT) disk type for hard drives and SSDs. GPT is more robust and allows for volumes bigger than 2 TB. The older Master Boot Record (MBR) disk type is used by 32-bit PCs, older PCs, and removable drives such as memory cards. You don't usually have to worry about partition style. Windows automatically uses the appropriate disk type.
 
-You don't usually have to worry about partition style. Windows automatically uses the appropriate disk type.
+To learn more about supported drive capacities, see [Windows support for hard disks that are larger than 2 TB](/troubleshoot/windows-server/backup-and-storage/support-for-hard-disks-exceeding-2-tb).
 
 To convert a disk from MBR to GPT or vice versa, you first have to delete all volumes from the disk, which erases everything on the disk. For more information, see [Convert an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md), or [Convert a GPT disk into an MBR disk](change-a-gpt-disk-into-an-mbr-disk.md).
