@@ -182,7 +182,7 @@ Yes, In the Program Files for Windows Admin Center, we’ve included a PowerShel
 To change the ports your Windows Admin Center instance is using, run the following command:
 
 ```powershell
-Set-WACHttpsPort -Wacport <port> -ServicePortRangeStart <port> -ServicePortRangeEnd <port>
+Set-WACHttpsPorts -Wacport <port> -ServicePortRangeStart <port> -ServicePortRangeEnd <port>
 ```
 
 ### Can I change configuration settings other than port settings after install?
