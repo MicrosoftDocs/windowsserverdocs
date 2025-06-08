@@ -42,7 +42,7 @@ icacls <directory> [/substitute <sidold> <sidnew> [...]] [/restore <aclfile> [/c
 | [/setintegritylevel [(CI)(OI)] \<Level\>:\<Policy\>[...]] | Explicitly adds an integrity ACE to all matching files. The level can be specified as:<ul><li>**l** - Low</li><li>**m**- Medium</li><li>**h** - High</li></ul>Inheritance options for the integrity ACE may precede the level and are applied only to directories. |
 | [/substitute \<sidold\>\<sidnew\> [...]] | Replaces an existing SID (*sidold*) with a new SID (*sidnew*). Requires using with the `<directory>` parameter. |
 | /restore \<ACLfile\> [/c] [/l] [/q] | Applies stored DACLs from `<ACLfile>` to files in the specified directory. Requires using with the `<directory>` parameter. |
-| /inheritancelevel: [e \| d \| r] | Sets the inheritance level, which can be:<ul><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Disables inheritance and removes only inherited ACEs</li></ul> |
+| /inheritance: [e \| d \| r] | Sets the inheritance level, which can be:<ul><li>**e** - Enables inheritance</li><li>**d** - Disables inheritance and copies the ACEs</li><li>**r** - Disables inheritance and removes only inherited ACEs</li></ul> |
 
 ## Remarks
 
