@@ -65,7 +65,7 @@ The equivalent Active Directory Windows PowerShell cmdlet is:
 Enable-ADOptionalFeature
 ```
 
-For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](./introduction-to-active-directory-administrative-center-enhancements--level-100-.md#active-directory-recycle-bin-step-by-step).
+<!--For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](./introduction-to-active-directory-administrative-center-enhancements--level-100-.md#active-directory-recycle-bin-step-by-step).-->
 
 ### Managing Active Directory Recycle Bin using Active Directory Administrative Center
 
@@ -511,6 +511,7 @@ To troubleshoot this issue, use these steps:
 
 1. Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by NLTEST. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or arrive and the domain controller replies but they never reach the client, it's likely there's a firewall in between the computers on the network dropping packets on that port. This firewall may be software or hardware, and may be part of third party endpoint protection (antivirus) software.
 
-## See Also
+<!--## See Also
 
 - [AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)
+-->
