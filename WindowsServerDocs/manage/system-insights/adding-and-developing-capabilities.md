@@ -13,8 +13,8 @@ System Insights enables you to add new predictive capabilities to System Insight
 
 Any new capability can integrate with and extend the existing System Insights infrastructure:
 
-- New capabilities can **specify any performance counter or system event**, which will be collected, persisted locally, and returned to the capability for analysis when the capability is invoked.
-- New capabilities can **use the existing Windows Admin Center and PowerShell management planes**. Not only will new capabilities be discoverable in System Insights, they also benefit from custom schedules and remediation actions.
+- New capabilities can **specify any performance counter or system event**, which are collected, persisted locally, and returned to the capability for analysis when the capability is invoked.
+- New capabilities can **use the existing Windows Admin Center and PowerShell management planes**. Not only are new capabilities be discoverable in System Insights, they also benefit from custom schedules and remediation actions.
 
 ## Manage new capabilities
 
@@ -34,7 +34,7 @@ Use the following resources to help you get started writing your own custom capa
 To learn more about System Insights, use the following resources:
 
 - [System Insights overview](overview.md)
-- [Understanding capabilities](understanding-capabilities.md)
-- [Managing capabilities](managing-capabilities.md)
-- [Adding, removing, and updating capabilities](add-remove-update-capabilities.md)
+- [Understand capabilities](understanding-capabilities.md)
+- [Manage capabilities](managing-capabilities.md)
+- [Add, remove, and update capabilities](add-remove-update-capabilities.md)
 - [System Insights FAQ](faq.md)

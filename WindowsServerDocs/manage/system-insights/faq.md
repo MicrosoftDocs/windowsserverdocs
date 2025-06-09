@@ -28,7 +28,7 @@ Yes. System Insights can independently run on each individual failover cluster n
 
 ## How expensive is it to run the default capabilities?
 
-Each default capability is inexpensive to run. Each capability takes longer to run as you collect more data, but they typically should complete in a just a few seconds.
+Each default capability is inexpensive to run. Each capability takes longer to run as you collect more data, but they typically should complete in a few seconds.
 
 ## Related content
 

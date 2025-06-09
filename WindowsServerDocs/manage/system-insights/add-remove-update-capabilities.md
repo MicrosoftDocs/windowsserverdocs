@@ -9,7 +9,7 @@ ms.date: 06/06/2025
 
 # Add, remove, and update capabilities in System Insights
 
-System Insights enables you to create new capabilities that leverage the existing data collection and management functionality. Once these capabilities are created, however, it's equally important that you also have the platform support to manage the addition, removal, and updates of these capabilities.
+System Insights enables you to create new capabilities that use the existing data collection and management functionality. Once these capabilities are created, however, it's equally important that you also have the platform support to manage the addition, removal, and updates of these capabilities.
 
 This topic describes the high-level functionality to add, remove, and update capabilities in System Insights.
 
@@ -21,11 +21,11 @@ System Insights allows you to add new capabilities anytime using the **Add-Insig
 Add-InsightsCapability -Name Sample capability -Library C:\SampleCapability.dll
 ```
 
-After a capability has been added to System Insights, you can immediately invoke and manage the capability using PowerShell or Windows Admin Center.
+After a capability is added to System Insights, you can immediately invoke and manage the capability using PowerShell or Windows Admin Center.
 
 ## Update a capability
 
-System Insights also enables you to update a capability using the **Update-InsightsCapability** cmdlet.
+System Insights enables you to update a capability using the **Update-InsightsCapability** cmdlet.
 
 ```PowerShell
 Update-InsightsCapability -Name Sample capability -Library C:\SampleCapabilityv2.dll
@@ -35,7 +35,7 @@ Updating a capability allows you to specify a new capability library, which allo
 
 ## Remove a capability
 
-You can also remove capabilities in System Insights using the **Remove-InsightsCapability** cmdlet.
+You can remove capabilities in System Insights using the **Remove-InsightsCapability** cmdlet.
 
 ```PowerShell
 Remove-InsightsCapability -Name Sample capability
@@ -46,8 +46,7 @@ Remove-InsightsCapability -Name Sample capability
 
 Removing a capability permanently deletes the capability and all associated information, including the schedule, any remediation actions, and past prediction results.
 
->[!TIP]
->Consider disabling a capability rather than removing it if you are worried about permanently deleting all information associated with the capability.
+Consider disabling a capability rather than removing it if you're worried about permanently deleting all information associated with the capability.
 
 ## Related content
 

@@ -5,7 +5,7 @@ ms.topic: article
 author: robinharwood
 ms.author: roharwoo
 manager: mallikarjun.chadalapaka
-ms.date: 7/31/2018
+ms.date: 06/09/2025
 ---
 
 # System Insights data sources
@@ -18,7 +18,7 @@ When writing a new capability, you must identify the specific data sources to co
 
 - **Performance counters**: Specify the counter path, name, and instances, and System Insights collects the relevant data reported by these performance counters.
 
-- **System events**: Specify the channel name and event ID, and System Insights will record how many times that event has occurred.
+- **System events**: Specify the channel name and event ID, and System Insights s how many times that event has occurred.
 
 - **Well-known series**: System Insights collects some basic information on your machine for a few, well-defined resources. These series are used for the default capabilities, but they can also be used by any custom capability. These collect the following information:
 
@@ -35,11 +35,11 @@ When writing a new capability, you must identify the specific data sources to co
     - *Properties*: -
     - *Data*: % Processor Time
 
-  - Specify a well-known series, and System Insights will return the data collected by that series.
+  - Specify a well-known series, and System Insights returns the data collected by that series.
 
 ## Retention timelines and collection intervals
 
-The data sources above have different retention timelines and collection intervals. The table below reveals how long and how often each data source is collected:
+Data sources have different retention timelines and collection intervals. The following table reveals how long and how often each data source is collected:
 
 | Data source | Retention timeline | Collection interval |
 | --------------- | --------------- | ----------- |
@@ -77,7 +77,7 @@ System Insights collects all data locally on your C drive (C:). In general, the 
 
 For the default forecasting capabilities, the maximum footprint should be less than 10 MB for most stand-alone machines.
 
-## Additional References
+## Related content
 
 To learn more about System Insights, use the following resources:
 
