@@ -4,7 +4,7 @@ description: Netdom is a command-line utility for administering Active Directory
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/01/2025
+ms.date: 06/09/2025
 ---
 
 # netdom
@@ -46,25 +46,25 @@ You must run the `netdom` command from an elevated command prompt. The `netdom` 
 ## Syntax
 
 ```
-netdom [ ADD | COMPUTERNAME | HELP | JOIN | MOVE | QUERY | REMOVE | MOVENT4BDC | RENAMECOMPUTER | RESET | TRUST | VERIFY | RESETPWD ]
+netdom [ ADD | COMPUTERNAME | HELP | JOIN | MOVE | MOVENT4BDC | QUERY | REMOVE | RENAMECOMPUTER | RESET | RESETPWD | TRUST | VERIFY ]
 ```
 
 ## Commands
 
 | Command | Description |
 |---------|-------------|
-| [netdom add](cc788018(v=ws.11).md) | Adds a workstation or server account to the domain. |
-| [netdom computername](cc835082(v=ws.11).md) | Manages the primary and alternate names for a computer. This command can safely rename Active Directory domain controllers and member servers. |
-| [netdom join](cc788049(v=ws.11).md) | Joins a workstation or member server to a domain. The act of joining a computer to a domain creates an account for the computer on the domain, if it doesn't already exist. |
-| [netdom move](cc788127(v=ws.11).md) | Moves a workstation or member server to a new domain. The act of moving a computer to a new domain creates an account for the computer on the domain, if it doesn't already exist. |
-| [netdom query](cc835089(v=ws.11).md) | Queries the domain for information such as membership and trust. |
-| [netdom remove](cc788074(v=ws.11).md) | Removes a workstation or server from the domain. |
-| [netdom movent4bdc](cc788053(v=ws.11).md) | Renames a Windows NT 4.0 backup domain controller to reflect a domain name change. This can help Windows NT 4.0 domain renaming efforts. |
-| [netdom renamecomputer](cc788029(v=ws.11).md) | Renames a domain computer and its corresponding domain account. Use this command to rename domain workstations and member servers only. To rename domain controllers, use the `netdom computername` command. |
-| [netdom reset](cc788073(v=ws.11).md) | Resets the secure connection between a workstation and a domain controller. |
-| [netdom resetpwd](cc785478(v=ws.11).md) | Resets the computer account password for a domain controller. |
-| [netdom trust](cc835085(v=ws.11).md) | Establishes, verifies, or resets a trust relationship between domains. |
-| [netdom verify](cc785466(v=ws.11).md) | Verifies the secure connection between a workstation and a domain controller. |
+| [netdom add](netdom-add.md) | Adds a workstation or server account to the domain. |
+| [netdom computername](netdom-computername.md) | Manages the primary and alternate names for a computer. This command can safely rename Active Directory domain controllers and member servers. |
+| [netdom join](netdom-join.md) | Joins a workstation or member server to a domain. The act of joining a computer to a domain creates an account for the computer on the domain, if it doesn't already exist. |
+| [netdom move](netdom-move.md) | Moves a workstation or member server to a new domain. The act of moving a computer to a new domain creates an account for the computer on the domain, if it doesn't already exist. |
+| [netdom movent4bdc](netdom-movent4bdc.md) | Renames a Windows NT 4.0 backup domain controller to reflect a domain name change. This can help Windows NT 4.0 domain renaming efforts. |
+| [netdom query](netdom-query.md) | Queries the domain for information such as membership and trust. |
+| [netdom remove](netdom-remove.md) | Removes a workstation or server from the domain. |
+| [netdom renamecomputer](netdom-renamecomputer.md) | Renames a domain computer and its corresponding domain account. Use this command to rename domain workstations and member servers only. To rename domain controllers, use the `netdom computername` command. |
+| [netdom reset](netdom-reset.md) | Resets the secure connection between a workstation and a domain controller. |
+| [netdom resetpwd](netdom-resetpwd.md) | Resets the computer account password for a domain controller. |
+| [netdom trust](netdom-trust.md) | Establishes, verifies, or resets a trust relationship between domains. |
+| [netdom verify](netdom-verify.md) | Verifies the secure connection between a workstation and a domain controller. |
 
 ## Remarks
 
