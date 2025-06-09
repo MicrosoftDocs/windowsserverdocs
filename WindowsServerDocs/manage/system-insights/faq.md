@@ -4,8 +4,7 @@ description: System Insights FAQ
 ms.topic: faq
 author: robinharwood
 ms.author: roharwoo
-manager: mallikarjun.chadalapaka
-ms.date: 5/23/2018
+ms.date: 06/09/2025
 ---
 # System Insights FAQ
 
@@ -25,16 +24,14 @@ System Insights is a feature in Windows Server 2019 that offers local predictive
 
 ## Can I use System Insights for my cluster?
 
-Yes. System Insights can independently run on each individual failover cluster node, and the default behavior of System Insights forecasts usage across local storage, volume, CPU, and networking. **You can also enable forecasting for clustered storage**, so the storage forecasting capabilities predict usage for clustered volumes and storage.
-
-You can manage these settings in Windows Admin Center or PowerShell, and more detailed information about this functionality is available [here](https://blogs.technet.microsoft.com/filecab/2018/10/03/using-system-insights-to-forecast-clustered-storage-usage/).
-
+Yes. System Insights can independently run on each individual failover cluster node, and the default behavior of System Insights forecasts usage across local storage, volume, CPU, and networking. **You can also enable forecasting for clustered storage**, so the storage forecasting capabilities predict usage for clustered volumes and storage. You can manage these settings in Windows Admin Center or PowerShell.
 
 ## How expensive is it to run the default capabilities?
 
-Each default capability is inexpensive to run. Each capability will take longer to run as you collect more data, but they typically should complete in a just a few seconds.
+Each default capability is inexpensive to run. Each capability takes longer to run as you collect more data, but they typically should complete in a few seconds.
 
-## Additional References
+## Related content
+
 To learn more about System Insights, use the following resources:
 
 - [System Insights overview](overview.md)

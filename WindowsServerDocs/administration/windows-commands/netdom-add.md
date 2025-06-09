@@ -4,12 +4,12 @@ description: Netdom add is a command-line utility that adds a workstation or ser
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/03/2025
+ms.date: 06/09/2025
 ---
 
 # netdom add
 
-The `netdom add` command adds a workstation or server account to a domain. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS Tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom add`, you must run the command from an elevated command prompt.
+The `netdom add` command adds a workstation or server account to a domain. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom add`, you must run the command from an elevated command prompt.
 
 ## Syntax
 

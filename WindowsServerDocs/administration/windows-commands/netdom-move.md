@@ -4,7 +4,7 @@ description: Netdom move is a command-line utility moves a workstation or member
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/03/2025
+ms.date: 06/09/2025
 ---
 
 # netdom move
@@ -18,7 +18,7 @@ netdom move machine /Domain:domain [/OU:ou path]
                     [/UserD:user] [/PasswordD:[password | *]]
                     [/UserO:user] [/PasswordO:[password | *]]
                     [/UserF:user] [/PasswordF:[password | *]]
-                    [/REBoot[:Time in seconds]]
+                    [/Reboot[:Time in seconds]]
                     [/SecurePasswordPrompt]
 ```
 
@@ -30,14 +30,14 @@ netdom move machine /Domain:domain [/OU:ou path]
 | Parameter | Description |
 |-----------|-------------|
 | `<machine>` | Specifies the name of the computer that you want to move. |
-| `/domain:<Domain>` | Specifies the domain to which you want to move the account. If you don't specify the parameter, then **netdom move** uses the domain to which the current computer belongs. |
-| `/ou:<OUPath>` | Specifies the organizational unit (OU) under which to create the account. This must be the full RFC 1779 distinguished name of the OU. If you don't specify this parameter, **netdom move** creates the account under the default OU for computer objects for that domain. |
-| `/userd:<User>` | Specifies the user account that makes the connection with the domain that you specify in the **/d** or **/domain** parameter. If you don't specify this parameter, **netdom move** uses the current user account. |
-| `/passwordd:<Password>` \| `*` | Specifies the password of the user account that you specify in the **/ud** or **/userd** parameter. If you specify the value of this parameter as a wildcard character (*), this parameter prompts you for the password. |
-| `/usero:<User>` | Specifies the user account to make the connection with the computer that you want to move. If you don't specify this parameter, **netdom move** uses the current user account. |
-| `/passwordo:<Password>` \| `*` | Specifies the password of the user account that you specify in the **/uo** or **/usero** parameter. If you specify the value of this parameter as a wildcard character (*), this parameter prompts you for the password. |
+| `/domain:<Domain>` | Specifies the domain to which you want to move the account. If you don't specify the parameter, then `netdom move` uses the domain to which the current computer belongs. |
+| `/ou:<OUPath>` | Specifies the organizational unit (OU) under which to create the account. This must be the full [RFC 1779](https://www.rfc-editor.org/rfc/rfc1779) distinguished name of the OU. If you don't specify this parameter, `netdom move` creates the account under the default OU for computer objects for that domain. |
+| `/userd:<User>` | Specifies the user account that makes the connection with the domain that you specify using the `/domain` parameter. If you don't specify this parameter, `netdom move` uses the current user account. |
+| `/passwordd:<Password>` \| `*` | Specifies the password of the user account that you specify using the `/userd` parameter. If you specify the value of this parameter as a wildcard character (`*`), this parameter prompts you for the password. |
+| `/usero:<User>` | Specifies the user account to make the connection with the computer that you want to move. If you don't specify this parameter, `netdom move` uses the current user account. |
+| `/passwordo:<Password>` \| `*` | Specifies the password of the user account that you specify using the `/usero` parameter. If you specify the value of this parameter as a wildcard character (`*`), this parameter prompts you for the password. |
 | `/userf:<User>` | Specifies the user account to make the connection with the computer's former domain (of which the computer was a member before the move). This parameter is used to disable the old computer account. |
-| `/passwordf:<Password>` \| `*` | Specifies the password of the user account that you specify in the **/uf** or **/userf** parameter. If you specify the value of this parameter as a wildcard character (*), this parameter prompts you for the password. |
+| `/passwordf:<Password>` \| `*` | Specifies the password of the user account that you specify using the `/userf` parameter. If you specify the value of this parameter as a wildcard character (`*`), this parameter prompts you for the password. |
 | `/reboot:<seconds>` | Shuts down the computer and automatically reboots after the move operation completes. The *seconds* value is the number of seconds before automatic shutdown. The default is **20** seconds. |
 | `/securepasswordprompt` | Opens a secure credentials popup for entering credentials. This is useful when specifying smartcard credentials. This option is effective only when the password is entered as `*`. |
 | `help` \| `/?` | Displays help at the command prompt. |

@@ -154,16 +154,16 @@ items:
             - name: System Insights
               href: ..\manage\system-insights\overview.md
               items: 
-                - name: Understanding capabilities
+                - name: Understand capabilities
                   href: ..\manage\system-insights\understanding-capabilities.md
-                - name: Managing capabilities
+                - name: Manage capabilities
                   href: ..\manage\system-insights\managing-capabilities.md
-                - name: Adding and developing capabilities
+                - name: Add and develop capabilities
                   href: ..\manage\system-insights\adding-and-developing-capabilities.md
                   items: 
-                    - name: Adding, removing, and updating capabilities
+                    - name: Add, remove, and update capabilities
                       href: ..\manage\system-insights\add-remove-update-capabilities.md
-                    - name: Choosing capability data sources
+                    - name: Choose capability data sources
                       href: ..\manage\system-insights\data-sources.md
                 - name: FAQ
                   href: ..\manage\system-insights\faq.md

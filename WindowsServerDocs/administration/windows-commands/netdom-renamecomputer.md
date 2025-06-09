@@ -4,7 +4,7 @@ description: Netdom renamecomputer is a command-line utility that renames a doma
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/04/2025
+ms.date: 06/09/2025
 ---
 
 # netdom renamecomputer
