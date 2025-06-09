@@ -1,6 +1,6 @@
 ---
 title: Hardware requirements for Windows Server
-description: Lear about the minimum hardware requirements for storage, CPU, network, and memory (RAM) to run Windows Server.
+description: Review the minimum hardware requirements for CPU, memory (RAM), storage, and network needed to install and run Windows Server.
 ms.topic: article
 author: xelu86
 ms.author: alalve
