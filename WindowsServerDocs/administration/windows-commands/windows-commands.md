@@ -537,7 +537,7 @@ To find information about a specific command, in the following A-Z menu, select 
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
-- [netdom](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772217(v=ws.11))
+- [netdom](netdom.md)
   - [netdom add](netdom-add.md)
   - [netdom computername](netdom-computername.md)
   - [netdom join](netdom-join.md)
