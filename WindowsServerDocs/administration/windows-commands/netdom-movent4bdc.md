@@ -4,19 +4,19 @@ description: Netdom movent4bdc is a command-line utility that renames a Windows�
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/03/2025
+ms.date: 06/09/2025
 ---
 
 # netdom movent4bdc
 
 The `netdom movent4bdc` command renames a Windows NT 4.0 backup domain controller (DC). It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom movent4bdc`, you must run the command from an elevated command prompt.
 
-This command is specific to Windows NT 4.0 environments (legacy Windows Server operating systems). To rename your DC using PowerShell, see the [Rename-Computer](/powershell/module/microsoft.powershell.management/rename-computer) cmdlet.
+This command is specific to legacy Windows Server operating systems.
 
 ## Syntax
 
 ```
-netdom movent4bdc machine [/Domain:domain] [/REBoot[:Time in seconds]]
+netdom movent4bdc machine [/Domain:domain] [/Reboot[:Time in seconds]]
 ```
 
 ## Parameters

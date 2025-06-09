@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/04/2025
+ms.date: 06/09/2025
 ---
 
 # Windows Commands
@@ -537,7 +537,7 @@ To find information about a specific command, in the following A-Z menu, select 
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
-- [netdom](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772217(v=ws.11))
+- [netdom](netdom.md)
   - [netdom add](netdom-add.md)
   - [netdom computername](netdom-computername.md)
   - [netdom join](netdom-join.md)
@@ -548,6 +548,8 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netdom renamecomputer](netdom-renamecomputer.md)
   - [netdom reset](netdom-reset.md)
   - [netdom resetpwd](netdom-resetpwd.md)
+  - [netdom trust](netdom-trust.md)
+  - [netdom verify](netdom-verify.md)
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)

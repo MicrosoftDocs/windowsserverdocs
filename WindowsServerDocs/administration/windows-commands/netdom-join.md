@@ -1,10 +1,10 @@
 ---
 title: Netdom join
-description: Netdom is a command-line utility for administering Active Directory (AD) domains, managing computer accounts, and configuring or verifying trust relationships between domains.
+description: Netdom is a command-line utility that joins a workstation or member server to a domain in Windows Server.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/02/2025
+ms.date: 06/09/2025
 ---
 
 # netdom join

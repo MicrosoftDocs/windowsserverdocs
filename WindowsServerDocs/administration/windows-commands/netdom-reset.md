@@ -4,7 +4,7 @@ description: Netdom reset is a command-line utility that resets the secure conne
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 06/04/2025
+ms.date: 06/09/2025
 ---
 
 # netdom reset
