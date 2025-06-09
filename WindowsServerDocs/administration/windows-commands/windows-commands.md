@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/04/2025
+ms.date: 06/09/2025
 ---
 
 # Windows Commands
@@ -549,6 +549,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netdom reset](netdom-reset.md)
   - [netdom resetpwd](netdom-resetpwd.md)
   - [netdom trust](netdom-trust.md)
+  - [netdom verify](netdom-verify.md)
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)

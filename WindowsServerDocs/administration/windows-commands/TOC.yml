@@ -1053,6 +1053,8 @@
         href: netdom-resetpwd.md
       - name: netdom trust
         href: netdom-trust.md
+      - name: netdom verify
+        href: netdom-verify.md
     - name: netsh
       href: netsh.md
     - name: netstat
