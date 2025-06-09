@@ -16,9 +16,9 @@ If you want to change a drive letter assigned to a drive, or you have a drive th
 
 The following steps show how to change the drive letter.
 
-1. Select **Start**, type **Control Panel** and select **Enter**.
-1. Select **System and Security**, select **Windows Tools** (or **Administrative Tools**), then open **Computer Management** with admin privileges.
-1. Select **Disk Management**. Right-click the volume on which you want to change or add a drive letter, then select **Change Drive Letter and Paths**.
+1. Select **Start**, type **Computer Management**, then open **Computer Management** with admin privileges.
+
+1. Under **Storage**, Select **Disk Management**. Right-click the volume on which you want to change or add a drive letter, then select **Change Drive Letter and Paths**.
 
    :::image type="content" source="media/change-drive-letter.png" alt-text="Screenshot showing the Disk Management window with the Change Drive Letter and Paths feature selected.":::
 
