@@ -25,7 +25,7 @@ Before you mount a drive in a folder, make sure that you have the following prer
 
 ## Mount a drive in an empty folder
 
-You can mount a drive in an empty folder using Disk Management or the command line.
+You can mount a drive in an empty folder using Disk Management, the command line, or PowerShell.
 
 Select the method that you prefer to use:
 
@@ -74,13 +74,45 @@ To mount a drive in a folder using the command line, follow these steps:
 
    For example: `assign mount="C:\Demo Drive"`
 
+### (PowerShell)[#tab/powershell]
+
+To mount a drive in an empty folder using PowerShell, follow these steps:
+
+1. In the search box on the taskbar, enter **Windows PowerShell**.
+
+1. Select and hold (or right-click) **Windows PowerShell**, and then select **Run as administrator**.
+
+1. Get the disk number of the drive you want to mount using the `Get-Disk` cmdlet to list all disks and their properties.
+
+   ```PowerShell
+   Get-Disk
+   ```
+
+1. Get the partition number of the drive you want to mount using the `Get-Partition` cmdlet to list all partitions on a specific disk. Specify the disk number you found in the previous step.
+
+   ```PowerShell
+   Get-Partition -DiskNumber <disknumber>
+   ```
+
+   Replace `<disknumber>` with the actual disk number you found in the previous step.
+
+1. Add the mount point folder path using the `Add-PartitionAccessPath` cmdlet. Replace `<disknumber>` and `<partitionnumber>` with the actual disk and partition numbers you found in the previous step.
+
+   ```PowerShell
+   # Variable specifies the path to the empty folder where you want to mount the drive
+   $mount_path = "C:\Demo Drive"
+
+   # Mount the drive in the specified folder
+   Add-PartitionAccessPath -DiskNumber <disknumber> -PartitionNumber <partitionnumber> -AccessPath $mount_path
+   ```
+
 ---
 
 > [!TIP]
 >
-> - To modify a mount point folder path, remove it, and then create a new folder path using the new location. You can't modify the mount point folder path directly.
+> - To modify a mount point folder path, remove it using the step in the following section, and then create a new folder path using the new location. You can't modify the existing mount point folder path.
 >
-> - If you're using Failover Cluster, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors display as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
+> - If you're using Failover Cluster, use **Event Viewer** to check the **System** log for any Cluster service errors or warnings indicating mount point folder path failures. These errors display as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
 
 ## Remove a mount point
 
@@ -111,9 +143,37 @@ To remove a mount point folder path using the command line, follow these steps:
    For example: `select volume 5`
 
 1. At the **DISKPART** prompt, type `remove mount=<path>`, and select **Enter**. Make sure to specify the full path in the command.
-   
+
    For example: `remove mount="C:\Demo Drive"`
 
+### [PowerShell](#tab/powershell)
+
+To remove a mount point folder path using PowerShell, follow these steps:
+
+1. In the search box on the taskbar, enter **Windows PowerShell**.
+
+1. Select and hold (or right-click) **Windows PowerShell**, and then select **Run as administrator**.
+
+1. Get the disk number of the drive you want to remove the mount point from using the `Get-Disk` cmdlet to list all disks and their properties.
+
+   ```PowerShell
+   Get-Disk
+   ```
+
+1. Get the partition number of the drive you want to remove the mount point from using the `Get-Partition` cmdlet to list all partitions on a specific disk. Replace `<disknumber>` with the actual disk number you found in the previous step.
+
+   ```PowerShell
+   Get-Partition -DiskNumber <disknumber>
+   ```
+
+1. Remove the mount point folder path using the `Remove-PartitionAccessPath` cmdlet. Replace `<disknumber>` and `<partitionnumber>` with the actual disk and partition numbers you found in the previous step.
+
+   ```PowerShell
+   # Variable specifies the path to the empty folder where the drive is mounted
+   $mount_path = "C:\Demo Drive"
+
+   # Remove the mount point folder path
+   Remove-PartitionAccessPath -DiskNumber <disknumber> -PartitionNumber <partitionnumber> -AccessPath $mount_path
+   ```
+
 ---
-
-
