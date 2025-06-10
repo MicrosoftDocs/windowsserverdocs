@@ -13,7 +13,7 @@ ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute
 
 Signing a zone with DNSSEC adds several new DNSSEC related resource records. These new resource records can be sent in response to DNS queries for the zone along with the traditional, non-DNSSEC-related resource records. DNS servers must specifically request that DNSSEC records be included in DNS responses. Therefore, servers that don't support DNSSEC receives only traditional resource records in a DNS response.
 
-A signed zone can be a forward or reverse lookup zone, a static, or dynamic zone, and can be Active Directory-integrated or file-backed. If the zone is Active Directory-integrated, private zone signing keys replicate automatically to all primary key master DNS servers through Active Directory replication. Each key master server signs its own copy of the zone when it receives the key. For optimal performance, and to prevent increasing the size of the Active Directory database file, the signed copy of the zone remains in memory for Active Directory-integrated zones. A DNSSEC signed zone is only committed to disk for file-backed zones.
+A signed zone can be a forward or reverse lookup zone, a static, or dynamic zone, and can be Active Directory-integrated or file-backed. If the zone is Active Directory-integrated, private zone signing keys replicate automatically to all primary Key Master DNS servers through Active Directory replication. Each server that functions as Key Master signs its own copy of the zone when it receives the key. For optimal performance, and to prevent increasing the size of the Active Directory database file, the signed copy of the zone remains in memory for Active Directory-integrated zones. A DNSSEC signed zone is only committed to disk for file-backed zones.
 
 In an Active Directory multi-master configuration, zone settings, including DNSSEC parameters, can be modified on any primary authoritative DNS server provided that the Key Master is online. You can't perform zone signing and unsigning or modify DNSSEC parameters of a zone on a secondary DNS server.
 
@@ -92,7 +92,7 @@ The following options are available when selecting the Key Master:
 By default, the local server is selected as the Key Master. You also have the option of choosing a different DNS server from a list of online, primary, authoritative DNS servers that support online DNSSEC signing.
 
 > [!TIP]
-> The signed-in user must have administrative privileges on a DNS server in order for it to be displayed in the allowed list of Key Master servers.
+> The signed-in user must have administrative privileges on a DNS server in order for it to be displayed in the allowed list of server that can function as a Key Master.
 
 Only one DNS server can be the Key Master for a given zone at a given time.
 
