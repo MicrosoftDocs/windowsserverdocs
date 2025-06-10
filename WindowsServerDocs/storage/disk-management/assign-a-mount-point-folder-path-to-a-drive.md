@@ -19,7 +19,7 @@ Before you mount a drive in a folder, make sure that you have the following prer
 
 - You must be a member of the **Backup Operators** or **Administrators** group to mount a drive or remove a mount point.
 
-- **An empty folder** on an NTFS or ReFS drive. You need to create a new empty folder to store the mounted drive. The folder must be on a basic or dynamic NTFS volume.
+- **An empty folder** on an NTFS or ReFS drive. You need to create a new empty folder to store the mounted drive. The folder can be on a basic or dynamic disk.
 
 - **A volume formatted with NTFS or ReFS**. You can mount a drive in a folder only if the volume is formatted with the NTFS or ReFS file system. If the volume is formatted with a different file system, you must first move or back up the files on the volume, and then reformat the volume with the NTFS or ReFS file system.
 
@@ -76,6 +76,12 @@ To mount a drive in a folder using the command line, follow these steps:
 
 ---
 
+> [!TIP]
+>
+> - To modify a mount point folder path, remove it, and then create a new folder path using the new location. You can't modify the mount point folder path directly.
+>
+> - If you're using Failover Cluster, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors display as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
+
 ## Remove a mount point
 
 To remove the mount point so that the drive is no longer accessible through a folder, select the method that you prefer to use:
@@ -110,20 +116,4 @@ To remove a mount point folder path using the command line, follow these steps:
 
 ---
 
-## Considerations
 
-You should consider the following before you assign a mount point folder path to a drive:
-
-- If you're administering a local or remote computer, you can browse NTFS folders on that computer.
-
-- Mount point folder paths are available only on empty folders on basic or dynamic NTFS volumes.
-
-- To modify a mount point folder path, remove it, and then create a new folder path using the new location. You can't modify the mount point folder path directly.
-
-- When assigning a mount point folder path to a drive, use **Event Viewer** to check the system log for any Cluster service errors or warnings indicating mount point folder path failures. These errors display as **ClusSvc** in the **Source** column and **Physical Disk Resource** in the **Category** column.
-
-- You can also create a mounted drive using the [mountvol](/previous-versions/orphan-topics/ws.10/cc772671(v=ws.10)) command.
-
-## See also
-
-- [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))
