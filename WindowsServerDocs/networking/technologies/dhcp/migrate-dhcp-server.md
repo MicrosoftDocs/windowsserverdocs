@@ -205,7 +205,7 @@ Follow the steps in this section to migrate DHCP Server from the source server.
 
 Return to the destination server and follow these steps to complete the migration.
 
-1. Before you use the [**Import-SmigServerSetting**](/powershell/module/servermigration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
+1. Before you use the [**Import-SmigServerSetting**](/powershell/module/microsoft.windows.servermanager.migration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
 
     - You can either use a single command line with all the parameters to import DHCP settings (as when you export data from the source server) or you can use the cmdlet multiple times to import data one parameter at a time.
 
