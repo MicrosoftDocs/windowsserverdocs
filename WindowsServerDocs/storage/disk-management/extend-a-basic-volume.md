@@ -92,8 +92,10 @@ To extend a volume by using PowerShell, follow these steps.
    # Variable specifies the disk drive to extend
    $drive_letter = "C"
 
-   # Script gets the partition sizes, and resizes the volume
+   # Get the partition sizes
    $size = (Get-PartitionSupportedSize -DriveLetter $drive_letter)
+
+   # Resize the partition to the maximum size
    Resize-Partition -DriveLetter $drive_letter -Size $size.SizeMax
    ```
 
