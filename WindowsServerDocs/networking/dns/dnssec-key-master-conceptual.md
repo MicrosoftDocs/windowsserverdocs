@@ -6,7 +6,7 @@ ms.author: orthomas
 ms.topic: conceptual
 ms.date: 04/20/2025
 ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
-# Customer intent: As a DNS administrator, I want to undersatnd the DNSSEC Key Master component so that I can implement DNSSEC.
+# Customer intent: As a DNS administrator, I want to understand the DNSSEC Key Master component so that I can implement DNSSEC.
 ---
 
 # DNSSEC Key Master
