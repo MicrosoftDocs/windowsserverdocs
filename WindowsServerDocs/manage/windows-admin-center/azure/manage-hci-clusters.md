@@ -325,7 +325,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
 - Updates isn’t supported. Users cannot apply updates to Azure Local cluster with CAU (Cluster-Aware Updating).
-- If WDAC is set to Enforced mode, the installation of the AdminCenter extension may be blocked. In that case, please follow the steps below to reinstall it.
+- If Windows Defender Application Control (WDAC) is set to Enforced mode, the installation of the AdminCenter extension may be blocked. In that case, please follow the steps to reinstall it.
     1. Check if WDAC is enforced in the cluster.
 
        ```powershell
