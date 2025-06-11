@@ -59,7 +59,7 @@ To help you navigate the steps, here are terms used by `diskpart`:
 | **list volume** | Displays a list of basic and dynamic volumes on all disks. |
 | **select volume**        | Selects the specified volume, where `volumenumber` is the volume number, and gives it focus. If you don't specify a volume, the **select** command lists the current volume with focus. You can specify the volume by number, drive letter, or mount point folder path. On a basic disk, selecting a volume also gives the corresponding partition focus.|
 | **assign** |  Assigns a drive letter or mount point folder path to the volume with focus. If you don't specify a drive letter or mount point folder path, the next available drive letter is assigned. If the drive letter or mount point folder path is already in use, an error generates.</br> Using the **assign** command, you can change the drive letter associated with a removable drive.</br> You can't assign drive letters to boot volumes, or volumes that contain the paging file. Also, you can't assign a drive letter to an Original Equipment Manufacturer (OEM) partition, EFI system partition, or any GPT partition other than a basic data partition. |
-| **mount=** *path* | Specifies an empty, existing NTFS folder where the mounted drive resides. 
+| **mount=** *path* | Specifies an empty, existing NTFS folder where the mounted drive resides.
 
 To mount a drive in a folder using the command line, follow these steps:
 
@@ -75,7 +75,7 @@ To mount a drive in a folder using the command line, follow these steps:
 
    For example: `assign mount="C:\Demo Drive"`
 
-### (PowerShell)[#tab/powershell]
+### [PowerShell](#tab/powershell)
 
 To mount a drive in an empty folder using PowerShell, follow these steps:
 

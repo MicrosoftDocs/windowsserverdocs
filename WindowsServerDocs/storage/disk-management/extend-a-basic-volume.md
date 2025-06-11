@@ -12,7 +12,7 @@ ms.author: roharwoo
 
 You can add space to an existing volume by extending the volume into available unallocated (empty) space on a disk drive. This article shows you how to extend a basic or dynamic volume by using Disk Management or Windows PowerShell. Also learn about prerequisites, how to view unallocated space, and how to troubleshoot common issues that can prevent you from extending a volume.
 
-You can extend a volume by using Disk Management or Windows PowerShell. You can also use Azure File Sync to extend your volume into the cloud. For more information, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
+You can also use Azure File Sync to extend your volume into the cloud. For more information, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
 
 ## Prerequisites
 
@@ -36,9 +36,7 @@ You can view the space utilization for a disk drive by using Disk Management.
 
 1. Select and hold (or right-click) the **Start** button, and then select **Disk Management**.
 
-   If you can't open Disk Management, follow these steps to open it with administrator permissions: 
-
-   1. In the search box on the taskbar, enter **diskmgmt.msc**. Select and hold (or right-click) **diskmgmt.msc**, and then select **Run as administrator**.
+   If you can't open Disk Management, in the search box on the taskbar, enter **diskmgmt.msc**. Select and hold (or right-click) **diskmgmt.msc**, and then select **Run as administrator**.
 
 1. In the Disk Management window, you can see the disk drives and their partitions. The unallocated space on a disk drive appears as a black bar with the label **Unallocated**.
 
@@ -56,11 +54,7 @@ To extend a volume, you can use either Disk Management or Windows PowerShell. Se
 
 To extend a volume by using Disk Management, follow these steps.
 
-1. Select and hold (or right-click) the **Start** button, and then select **Disk Management**.
-
-   If you can't open Disk Management, in the search box on the taskbar, enter **diskmgmt.msc**. Select and hold (or right-click) **diskmgmt.msc**, and then select **Run as administrator**.
-
-1. Select and hold (or right-click) the volume that you want to extend, and then select **Extend Volume**. The Extend Volume Wizard opens.
+1. In Disk Management, select and hold (or right-click) the volume that you want to extend, and then select **Extend Volume**. The Extend Volume Wizard opens.
 
    If the **Extend Volume** option isn't available, see the following section and [check for volume extension issues](#check-for-volume-extension-issues) to resolve.
 
