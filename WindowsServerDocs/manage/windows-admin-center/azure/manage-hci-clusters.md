@@ -332,7 +332,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
        Get-AsWdacPolicyMode
        ```
 
-    1. Set WDAC in Audit Mode. (This can take two or three minutes to switch mode validate mode has switch with Get-AsWdacPolicyMode before step 3)
+    1. Set WDAC in Audit Mode. It can take two or three minutes to switch mode. Validate the mode switched with the `Get-AsWdacPolicyMode` cmdlet.
 
         ```powershell
         Enable-AsWdacPolicy -Mode Audit
