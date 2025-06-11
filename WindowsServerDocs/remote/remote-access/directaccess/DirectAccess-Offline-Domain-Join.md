@@ -44,7 +44,7 @@ A domain join creates a computer account and establishes a trust relationship be
 
 3.  Gather the required computer certificates, group policies, and group policy objects to be applied to the new client(s).
 
-. The following sections explain operating system requirements and credential requirements for performing a DirectAccess offline domain join using Djoin.exe.
+The following sections explain operating system requirements and credential requirements for performing a DirectAccess offline domain join using Djoin.exe.
 
 ### Operating system requirements
 You can run Djoin.exe for DirectAccess only on computers that run  Windows Server 2016,  Windows Server 2012  or Windows 8. The computer on which you run Djoin.exe to provision computer account data into AD DS must be running  Windows Server 2016, Windows 10,  Windows Server 2012  or Windows 8. The computer that you want to join to the domain must also be running  Windows Server 2016, Windows 10,  Windows Server 2012 , or Windows 8.
