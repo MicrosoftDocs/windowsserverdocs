@@ -7,6 +7,7 @@ author: robinharwood
 ms.author: roharwoo
 #customer intent: As a storage administrator, I want to mount a drive in a folder so that I can access it like a regular folder.
 ---
+
 # Mount a drive in a folder
 
 Mount point folder paths let you use a drive as if it were a regular folder, making storage management more flexible. This article shows you how to assign a mount point folder path to a drive in Windows and Windows Server, using either Disk Management or the command line. Also learn how to remove a mount point and review important considerations before you start.
