@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 # Mount a drive in a folder
 
-Mount point folder paths let you use a drive as if it were a regular folder, making storage management more flexible. This article shows you how to assign a mount point folder path to a drive in Windows and Windows Server, using either Disk Management or the command line. Also learn how to remove a mount point and review important considerations before you start.
+Mount point folder paths let you use a drive as if it were a regular folder, making storage management more flexible. This article shows you how to assign a mount point folder path to a drive in Windows and Windows Server, using either Disk Management, the command line, or PowerShell. Also learn how to remove a mount point and review important considerations before you start.
 
 ## Prerequisites
 
@@ -89,13 +89,11 @@ To mount a drive in an empty folder using PowerShell, follow these steps:
    Get-Disk
    ```
 
-1. Get the partition number of the drive you want to mount using the `Get-Partition` cmdlet to list all partitions on a specific disk. Specify the disk number you found in the previous step.
+1. Get the partition number of the drive you want to mount using the `Get-Partition` cmdlet to list all partitions on a specific disk. Replace `<disknumber>` with the actual disk number you found in the previous step.
 
    ```PowerShell
    Get-Partition -DiskNumber <disknumber>
    ```
-
-   Replace `<disknumber>` with the actual disk number you found in the previous step.
 
 1. Add the mount point folder path using the `Add-PartitionAccessPath` cmdlet. Replace `<disknumber>` and `<partitionnumber>` with the actual disk and partition numbers you found in the previous step.
 
@@ -125,11 +123,9 @@ To remove a mount point folder path using Disk Management, follow these steps:
 
 1. Open Disk Management. In the search box on the taskbar, enter **Computer Management**, and select **Disk Management**
 
-1. Choose the drive mounted to the folder, then choose **Change Drive Letters and Paths**.
+1. Select the **View** menu, and then select **Drive Paths**.
 
-1. Go to **Action** > **All Tasks** > **Change Drive Letter and Paths**.
-
-1. Select the folder from the list, and then choose **Remove**.
+1. Select the drive path from the list, and then choose **Remove**.
 
 ### [Command line](#tab/command-line)
 
