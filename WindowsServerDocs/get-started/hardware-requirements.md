@@ -132,14 +132,14 @@ Secured-core is a set of integrated hardware, firmware, driver, and operating sy
 
 - **DRTM (Dynamic Root of Trust for Measurement)**: This feature is needed to ensure a secure boot process by verifying the integrity of the system's startup environment, protecting against firmware-based attacks.
 
-> [!NOTE]
-> In addition to the specific requirements outlined for Secured-core server, the following features must be enabled on your hardware:
->
-> - TPM 2.0
-> - Secure Boot
-> - Virtualization-based Security (VBS) support, including hardware virtualization extensions
->
-> To learn more, see [What is Secured-core server?](/windows-server/security/secured-core-server).
+  > [!NOTE]
+  > In addition to the specific requirements outlined for Secured-core server, the following features must be enabled on your hardware:
+  >
+  > - TPM 2.0
+  > - Secure Boot
+  > - Virtualization-based Security (VBS) support, including hardware virtualization extensions
+  >
+  > To learn more, see [What is Secured-core server?](/windows-server/security/secured-core-server).
 
 ## Other requirements
 
