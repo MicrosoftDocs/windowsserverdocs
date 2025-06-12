@@ -4,7 +4,7 @@ description: Review the minimum hardware requirements for CPU, memory (RAM), sto
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 06/09/2025
+ms.date: 06/13/2025
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 zone_pivot_groups: windows-os-version
 ---
@@ -124,13 +124,22 @@ A network adapter that supports the Pre-boot Execution Environment (PXE) is usef
 
 ## Secured-Core server requirements
 
-Secured-core is a set of integrated hardware, firmware, driver, and operating system (OS) security features that provide enhanced protection against advanced threats. Secured-core systems deliver security that starts before the OS boots and continues throughout system operation. Secured-core server features are available in Windows Server 2019 and later. To deploy a Secured-core server, your device must meet these additional requirements:
+Secured-core is a set of integrated hardware, firmware, driver, and operating system (OS) security features that provide enhanced protection against advanced threats. Secured-core systems deliver security that starts before the OS boots and continues throughout system operation. Secured-core server features are available in Windows Server 2022 and later. To deploy a Secured-core server, your device must meet these additional requirements:
 
 - **DMA Remapping (IOMMU)**: Support for *Intel VT-d* or *AMD-Vi* is required to ensure secure and efficient management of direct memory access (DMA) by devices, safeguarding against unauthorized memory access.
 
 - **Kernel DMA Protection**: The system must have opt-in capability for Kernel DMA Protection, which helps prevent attacks that exploit external peripherals to gain unauthorized access.
 
 - **DRTM (Dynamic Root of Trust for Measurement)**: This feature is needed to ensure a secure boot process by verifying the integrity of the system's startup environment, protecting against firmware-based attacks.
+
+> [!NOTE]
+> In addition to the specific requirements outlined for Secured-core server, the following features must be enabled on your hardware:
+>
+> - TPM 2.0
+> - Secure Boot
+> - Virtualization-based Security (VBS) support, including hardware virtualization extensions
+>
+> To learn more, see [What is Secured-core server?](/windows-server/security/secured-core-server).
 
 ## Other requirements
 
