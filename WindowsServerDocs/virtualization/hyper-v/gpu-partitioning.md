@@ -5,7 +5,7 @@ author: meaghanlewis
 ms.author: mosagie
 ms.topic: concept-article
 ms.subservice: core-os
-ms.date: 12/31/2024
+ms.date: 06/12/2025
 ---
 
 # GPU partitioning
@@ -26,7 +26,7 @@ For example:
 
 - VDI applications: Distributed edge customers run basic productivity apps, such as Microsoft Office and graphics-heavy visualization workloads in their VDI environments, which require GPU acceleration. For such workloads, you can achieve the required GPU acceleration via DDA or GPU partitioning. With GPU partitioning, you can create multiple partitions and assign each partition to VM hosting a VDI environment. GPU partitioning helps you achieve the desired density and scale the number of supported users by an order of magnitude.
 
-- Inference with ML: Customers in retail stores and manufacturing plants can run inference at the edge, which requires GPU support for their servers. Using GPU on your servers, you can run ML models to get quick results that can be acted on before the data is sent to the cloud. The full data set can optionally be transferred to continue to retrain and improve your ML models. Along with DDA where you assign an entire physical GPU to a VM, GPU partitioning allows you to run multiple inferencing applications in parallel on the same GPU, but in separate physical partitions, thereby utilizing the GPU to the maximum.
+- Inference with ML: Customers in retail stores and manufacturing plants can run inference at the edge, which requires GPU support for their servers. Using GPU on your servers, you can run ML models to get quick results that can be acted on before the data is sent to the cloud. The full data set can optionally be transferred to continue to retrain and improve your ML models. Along with DDA, where you dedicate an entire physical GPU to a VM, GPU partitioning enables you to run multiple inference applications simultaneously on the same GPU, but in separate hardware partitions, maximizing GPU utilization.
 
 ## Supported guest operating systems
 
@@ -51,9 +51,9 @@ The following GPUs support GPU partitioning:
 - NVIDIA L40S
 
 > [!NOTE]
-> The NVIDIA driver doesn't currently support GPU partitioning for live migration.
+> You need to install v18.x or later of the NVIDIA driver to use live migration.
 
-We recommend that you work with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) to plan, order, and set up the systems for your desired workloads with the appropriate configurations and necessary software. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA). Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
+We recommend working with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) when planning your systems. They can help you order and set up the right hardware and software for your workloads. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA). Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
 
 For best performance, we recommend that you create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU, and configuring the same partition count in the GPUs across all the servers in the cluster. For example, in a cluster of two servers with one or more GPUs installed, all the GPUs must have the same make, model, and size. The partition count on each GPU must also match.
 
@@ -69,13 +69,13 @@ Consider the following limitations when using the GPU partitioning feature:
 
 - You can't assign a physical GPU as both [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md) or partitionable GPU. You can either assign it as DDA or as partitionable GPU, but not both.
 
-- You can assign only a single GPU partition to a VM.
+- If you assign more than one GPU partition to a VM, each partition appears as another GPU.
 
 - Partitions are autoassigned to the VMs. You can't choose a specific partition for a specific VM.
 
 - You can partition your GPU using Windows Admin Center or using PowerShell. We recommend that you use Windows Admin Center to configure and assign GPU partitions. Windows Admin Center automatically validates for a homogeneous configuration of the GPUs across all the servers in your cluster. It provides appropriate warnings and errors to take any corrective action needed.
 
-- If using PowerShell to provision GPU partitioning, you must perform the provisioning steps on each server in the cluster. You must manually ensure that the homogeneous configuration is maintained for GPUs across all the servers in your cluster.
+- If using PowerShell to enable GPU partitioning, you must perform the same configuration steps on each server in the cluster. You must manually ensure that the homogeneous configuration is maintained for GPUs across all the servers in your cluster.
 
 - When live migrating a virtual machine with a GPU partition assigned, Hyper-V live migration automatically falls back to using TCP/IP with compression. Migrating a virtual machine has the potential effect of increasing the CPU utilization of a host. In addition, live migrations could take longer than with virtual machines without GPU partitions attached.
 
