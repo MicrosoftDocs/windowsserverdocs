@@ -4,7 +4,7 @@ description: Review the minimum hardware requirements for CPU, memory (RAM), sto
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 06/13/2025
+ms.date: 06/12/2025
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 zone_pivot_groups: windows-os-version
 ---
@@ -61,11 +61,12 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
-> Attempting to install Windows Server in a virtual machine configured with the minimum supported hardware parameters (1 processor core and 512 MB RAM) results in a failed installation.
+> Attempting to install Windows Server in a virtual machine configured with the minimum supported hardware parameters (1 processor core and 1024 MB RAM) results in a failed installation.
 >
 > To prevent this issue, perform one of the following actions:
 >
-> - Allocate 1,280 MB RAM or more to the virtual machine on which you intend to install this release. Once setup is complete, you can change the allocation as little as 1,024 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with addition languages and updates, you might need to allocate more than 1,280 MB RAM in order to complete the installation.
+> - Allocate 1280 MB RAM or more to the virtual machine on which you intend to install this release. Once setup is complete, you can change the allocation as little as 1024 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with addition languages and updates, you might need to allocate more than 1280 MB RAM in order to complete the installation.
+>
 > - Interrupt the boot process of this release on the virtual machine with the keyboard combination `SHIFT+F10`. In the command prompt that opens, use `diskpart.exe` to create and format an installation partition. Run `wpeutil createpagefile /path=C:\pf.sys` (assuming the installation partition you created was C:\\). Then close the command prompt and proceed with the installation.
 
 ::: zone-end
@@ -84,6 +85,7 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 > To prevent this issue, perform one of the following actions:
 >
 > - Allocate 800 MB RAM or more to the virtual machine on which you intend to install this release. Once setup is complete, you can change the allocation as little as 800 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with addition languages and updates, you might need to allocate more than 800 MB RAM in order to complete the installation.
+>
 > - Interrupt the boot process of this release on the virtual machine with the keyboard combination `SHIFT+F10`. In the command prompt that opens, use `diskpart.exe` to create and format an installation partition. Run `wpeutil createpagefile /path=C:\pf.sys` (assuming the installation partition you created was C:\\). Then close the command prompt and proceed with the installation.
 
 ::: zone-end
@@ -103,8 +105,8 @@ The following are the estimated **minimum** disk space requirements for the syst
 >
 > The system partition needs extra space for any of the following circumstances:
 >
-> - If you install the system over a network.
-> - Computers with more than 16 GB of RAM requires more disk space for paging, hibernation, and dump files.
+> - If you install the system over a network
+> - Computers with more than 16 GB of RAM requires more disk space for paging, hibernation, and dump files
 
 # [Network](#tab/network)
 
@@ -122,7 +124,7 @@ A network adapter that supports the Pre-boot Execution Environment (PXE) is usef
 
 ---
 
-## Secured-Core server requirements
+## Secured-core server requirements
 
 Secured-core is a set of integrated hardware, firmware, driver, and operating system (OS) security features that provide enhanced protection against advanced threats. Secured-core systems deliver security that starts before the OS boots and continues throughout system operation. Secured-core server features are available in Windows Server 2022 and later. To deploy a Secured-core server, your device must meet these additional requirements:
 
@@ -163,5 +165,5 @@ The following items are only required for certain features:
 > A TPM chip is required in order to use certain features such as **BitLocker Drive Encryption**. If your computer has a TPM, it must meet these requirements:
 >
 > - Hardware-based TPMs must implement version 2.0 of the TPM specification.
-> - TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor or be capable of being retrieved by the device during the first boot.
+> - TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor, or be capable of being retrieved by the device during the first boot.
 > - TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It's acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.
