@@ -16,7 +16,7 @@ Group Policy application determines which Group Policy Objects (GPOs) are applie
 The scope of a GPO refers to the range of users and computers that the policy settings can be applied to. Understanding the scope helps administrators control where and to whom their policies are applied. Changing the scope of Group Policy objects affects which policy settings apply and those that don't. You change the scope of Group Policy using processing order, filtering, and link options. To determine the scope for a specific user or computer, you can check its distinguished name in AD. The distinguished name uniquely identifies the object and indicates its position within the directory structure. For example:
 
 ```
-CN=Kim Askers,OU=Human Resources, DC=corp,DC=contoso,DC=com
+CN=Kim Askers,OU=Human Resources,DC=corp,DC=contoso,DC=com
 ```
 
 - **CN=Kim Askers**: This part identifies the Common Name (CN) of the object, which is often a person's name if the object represents a user.
@@ -64,13 +64,13 @@ Each of these locations represents a level in the AD hierarchy where Group Polic
 
 ### GPLink attribute
 
-Group Policy linking is possible on AD sites, domains, and organizational units because each of these objects contains a GPLink attribute. Although the GPLink attribute is defined in the AD schema as a single-valued string, Group Policy treats it as if it were multivalued. The Group Policy Management Console (GPMC) stores the GPLink attribute using the following format:
+Group Policy linking is possible on AD sites, domains, and OUs because each of these objects contains a GPLink attribute. Although the GPLink attribute is defined in the AD schema as a single-valued string, Group Policy treats it as if it were multivalued. The Group Policy Management Console (GPMC) stores the GPLink attribute using the following format:
 
 ```
 [distinguishedNameOfGroupPolicyContainer;linkOptions][...][...]
 ```
 
-The `distinguishedNameOfGroupPolicyContainer` token is the unique name of the Group Policy Container (GPC) in AD. Each GPO has two parts: the Group Policy template (stored on the file system), and the Group Policy Container (stored in the domain partition of AD).
+The `distinguishedNameOfGroupPolicyContainer` token is the unique name of the Group Policy Container (GPC) in AD. Each GPO has two parts: the Group Policy template (stored on the file system), and the GPC (stored in the domain partition of AD).
 
 The `linkOptions` token is an integer that specifies the link options for the Group Policy object. You can enable or disable a GPO link, and you can also set it as enforced. The `linkOptions` value is a bitmask, allowing combinations of these settings to control how the GPO is applied. For example:
 
@@ -86,9 +86,9 @@ Although the GPOs are read from left to right, they're applied in reverse order,
 
 For example, suppose you have the following GPOs:
 
-**GPO1**: `[LDAP://{cn=1111aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
-**GPO2**: `[LDAP://{cn=2222aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
-**GPO3**: `[LDAP://{cn=3333aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
+- GPO1: `[LDAP://{cn=1111aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
+- GPO2: `[LDAP://{cn=2222aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
+- GPO3: `[LDAP://{cn=3333aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
 
 The GPLink attribute might look like this:
 
@@ -100,15 +100,15 @@ The GPLink attribute might look like this:
 
 The GPLink order might look like this:
 
-- 1st: `[LDAP://{cn=3333aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (GPO3)
-- 2nd: `[LDAP://{cn=2222aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (GPO2)
-- 3rd: `[LDAP://{cn=1111aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (GPO1)
+- 1st (GPO3): `[LDAP://{cn=3333aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
+- 2nd (GPO2): `[LDAP://{cn=2222aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
+- 3rd (GPO1): `[LDAP://{cn=1111aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
 
 The application order might look like this:
 
-- 1st (applied last, highest precedence): `[LDAP://{cn=1111aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (GPO1)
-- 2nd: `[LDAP://{cn=2222aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (GPO2)
-- 3rd (applied first, lowest precedence): `[LDAP://{cn=3333aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (GPO3)
+- 1st (GPO1): `[LDAP://{cn=1111aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (applied last, highest precedence)
+- 2nd (GPO2): `[LDAP://{cn=2222aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]`
+- 3rd (GPO3): `[LDAP://{cn=3333aaa-0000-1111-22bb-333333cccccc},cn=policies;cn=system;DC=corp;DC=contoso;DC=com;0]` (applied first, lowest precedence)
 
 ### GPO filtering
 
