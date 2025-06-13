@@ -1,23 +1,15 @@
 ﻿---
-title: Protecting against weak cryptographic algorithms
+title: Protect against weak cryptographic algorithms in Windows and Windows Server
 description: Learn how to protect against weak cryptographic algorithms in Windows and Windows Server
 author: robinharwood
-ms.topic: how-to
-ms.author: gswashington
-ms.date: 10/16/2023
+ms.topic: concept-article
+ms.author: roharwoo
+ms.date: 06/13/2025
 ---
 
-# Protecting against weak cryptographic algorithms
+# Protect against weak cryptographic algorithms
 
-A software update is available for all supported versions of Windows and Windows Server that enables deprecation of weak cryptographic algorithms. To use automatic updates from Microsoft as a means to be better protected from weak cryptographic algorithms, this software update must be downloaded and installed on computers that run the supported operating systems.
-
-This software update is built-in to the Windows 8.1 and Windows Server 2012 R2 operating systems.
-
-## What does this software update do?
-
-This software update provides an administrator with greater control over the way RSA keys, hash algorithms, and non-RSA asymmetric key algorithms are blocked. This software update allows an administrator to:
-
-- Define policies to selectively block cryptographic algorithms that override settings provided by the operating system.
+This article describes how to configure cryptographic algorithm blocking policies in Windows and Windows Server. Using policies you can selectively block weak cryptographic algorithms that override settings provided by the operating system. Using these policies, you can:
 
 - Opt-in or opt-out of each policy independently.
 
@@ -25,201 +17,290 @@ This software update provides an administrator with greater control over the way
 
 - Specify a location to which blocked certificates are copied.
 
-- Set policies per algorithm and define hash algorithm policies and asymmetric algorithm policies as described in the following sections.
+- Configure policies for both hash algorithms and asymmetric algorithms.
 
-### Hash algorithm policies
+## Prerequisites
 
-- Define the name of the hash algorithm, such as MD5 or SHA1.
-- Specify if the policy applies to certificates that chain to third-party root CAs, which excludes the enterprise certificates, or to apply the policy to all certificates.
-- Specify a time before which the policy check is disabled (only applicable to code signing certificates used in time-stamped signed binaries).
-- Define the type of certificates to which the policy applies, such as:
-    - All certificates. Note: If the policy is enabled for all certificates, then an administrator cannot allow weak cryptographic algorithms for a specific Enhanced Key Usage (EKU), such as Server Authentication EKU or Code signing EKU.
-    - Certificates that have the Server Authentication EKU.
-    - Certificates that have the Code signing EKU.
-    - Certificates that have the Time Stamping EKU.
-    - Specify whether the policy applies only to signing certificates of binaries downloaded from web or to all binaries.
-    - Specify code signing and time stamping certificates that are not blocked (such as those used in legacy code signing or time-stamping situations); the certificates are identified by using their SHA2 thumbprint.
+To configure cryptographic algorithm blocking policies, you need the following prerequisites:
 
-### Asymmetric algorithm policies
+- Local administrative access to modify registry settings.
 
-- Define the algorithm name and minimum key size, such as RSA, DSA, and ECDSA.
-- Specify if the policy applies to certificates that chain to third-party root CAs, which excludes the enterprise certificates, or if the policy applies to all certificates.
-- Specify a time before which the policy check is disabled (for time-stamped files).
-- Define the type of certificates to which the policy applies, such as:
-    - All certificates. Note: If the policy is enabled for all certificates then an administrator cannot allow weak cryptographic algorithms for a specific EKU, such as Server Authentication EKU or Code signing EKU.
-    - Certificates that have the Server Authentication EKU.
-    - Certificates that have the Code signing EKU.
-    - Certificates that have the Time Stamping EKU.
-    - Specify whether the policy applies only to signing certificates of binaries downloaded from web or to all binaries.
-    - Specify code signing and time stamping certificates that are not blocked (such as those used in legacy code signing or time-stamping situations); the certificates are identified by using their SHA2 thumbprint.
+- (Optional) A designated log directory if enabling logging for weak certificate detection.
 
-## How to configure policies for blocking cryptographic algorithms
+You also need to have the following information ready to configure the policies:
 
-The administrator sets cryptographic algorithm blocking policy in the following registry key:
+- The name of the cryptographic algorithm (e.g., MD5, SHA256, RSA, DSA, ECDSA).
 
-HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CertDllCreateCertificateChainEngine\\Config
+- For asymmetric algorithms, the minimum key size required (e.g., 1024 bits for RSA).
 
-Use the following commands to display, configure, and remove the cryptographic algorithm blocking policy settings:
+- Whether the policy should apply to certificates that chain to third-party root CAs or to all certificates.
 
-- `certutil -getreg chain`
+- The time before which the policy check is disabled (for code signing certificates used in time-stamped signed binaries).
 
-- `certutil -setreg chain`
+- The types of certificates or Enhanced Key Usages (EKUs) the policy applies to, such as:
 
-- `certutil -delreg chain`
+  - All certificates
 
-The registry entries use the following syntax:
+  - Server Authentication EKU
 
-```
+  - Code Signing EKU
+  
+  - Time Stamping EKU
+
+- Whether the policy applies only to binaries downloaded from the web or to all binaries.
+
+- Any exceptions for specific code signing or time stamping certificates, identified by their SHA2 thumbprint.
+
+## Policy syntax
+
+The cryptographic algorithm blocking policy is defined in the Windows registry and set using the _Registry Editor_ or `certutil`. The administrator sets the policy in the following registry key:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config`
+
+Policy are defined using the following syntax:
+
+```cmd
 Weak<CryptoAlg><ConfigType><ValueType>
 ```
 
-The following table lists registry values that can be set to modify default settings for cryptographic algorithm blocking policy. *\<CryptoAlg\>*, *\<ConfigType\>* and *\<ValueType\>* will be present in all names:
+The following table lists values that can be set to modify default settings for cryptographic algorithm blocking policy. `CryptoAlg`, `ConfigType`, and `ValueType` are present in all policy names.
 
-| Configuration Option | | Possible values |
-| ----- | | ----- |
-| CryptoAlg | | Md5; Sha1; Rsa; Dsa; Ecdsa |
-| ConfigType | | **ThirdParty:** Policy is only applied to certificates under third-party roots; **All:** Policy is applied to all certs, even under enterprise roots. |
-| ValueType | | **Flags:** REG_DWORD data type that can be set to disable the hash algorithm or enable a minimum key length. For more information, see the following table.; **MinBitLength:**  REG_DWORD data type that specifies the minimum public key length in bits. **Note:** MinBitLengh is only applicable to key algorithms policy. **AfterTime:** REG_BINARY data type that contains an 8 byte FILETIME. The weak crypto algorithm check is disabled for time stamped files before this time. This configuration value isn’t applicable to timestamp chains. **Sha256Allow:** REG_SZ or REG_MULTI_SZ data type that contains the list of certificate SHA256 thumbprints (ASCII_HEX formatted) identifying weak certificates to be explicitly allowed. Non ASCII_HEX characters in the string are skipped, which allows embedded spaces.|
+For example, `WeakMD5ThirdPartyFlags` or `WeakRSAAllMinBitLength`.
 
-The following REG\_DWORD values can be set as flags in Weak*\<CryptoAlg\>\<ConfigType\>*Flags:
+For each policy, the following values can be set:
 
-- **CERT_CHAIN_ENABLE_WEAK_SETTINGS_FLAG (0x80000000) flag**
-    -  (0x80000000)	If this flag is not set, then all other flags and registry values are ignored for this Weak<CryptoAlg><ConfigType>.
-    - If the administrator sets this flag for its Weak<CryptoAlg><ConfigType>, then, the corresponding settings provided for the operating system are ignored.
-    - If this flag is set in Weak<CryptoAlg>AllFlags:
-        - Then the resultant Weak<CryptoAlg>ThirdPartyFlags will be a combination of the Weak<CryptoAlg>Thirdparty and Weak<CryptoAlg>AllFlags defined. However, logging flags won't be updated. That is, “ThirdPartyFlags |= AllFlags & ~( CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG | CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG);”
-        - Resultant "Weak<CryptoAlg>"ThirdPartyAfterTime" will be earliest ("Weak"<CryptoAlg>"AllAfterTime", "Weak"<CryptoAlg>"ThirdPartyAfterTime"). (Note: Only applicable if "Weak"<CryptoAlg>"AllAfterTime" is defined and nonzero.)
-        - Resultant "Weak"<KeyCryptoAlg>"ThirdPartyMinBitLength" will be largest ("Weak"<KeyCryptoAlg>"AllMinBitLength", "Weak"<KeyCryptoAlg>"ThirdPartyMinBitLength")
+- `CryptoAlg` possible values:
+  - **Md5** - MD5 hash algorithm.
+  - **Sha1** - SHA1 hash algorithm.
+  - **Rsa** - RSA asymmetric algorithm.
+  - **Dsa** - DSA asymmetric algorithm.
+  - **Ecdsa** - ECDSA asymmetric algorithm.
 
-- **CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG (0x00000004) flag**
-    - 	This flag is set to enable the logging of weak certificates to the directory identified by CERT_CHAIN_WEAK_SIGNATURE_LOG_DIR_VALUE_NAME.
+- `ConfigType` possible values:
+  - **ThirdParty** - Policy is only applied to certificates under third-party roots.
+  - **All** - Policy is applied to all certs, even under enterprise roots.
 
-- **CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG (0x00000008) flag**
-        - This flag is set to only log weak certificates to the directory identified by CERT_CHAIN_WEAK_SIGNATURE_LOG_DIR_VALUE_NAME. Weak signature errors are not returned.
+- `ValueType` possible values:
 
-In addition to setting the CERT\_CHAIN\_ENABLE\_WEAK\_SETTINGS\_FLAG flag described in the preceding table, the following flags corresponding to the EKU must be set to disable weak signature or enable weak hash hygiene checks:
+  - **Flags** - `REG_DWORD` data type that can be set to disable the hash algorithm or enable a minimum key length. A breakdown of how to calculate the flags is provided in the next section.
 
-- **CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG (0x00010000) flag**
-    - Disables the algorithm corresponding to that policy for all EKUs.
+  - **MinBitLength** - `REG_DWORD` data type that specifies the minimum public key length in bits. `MinBitLength` is only applicable to key algorithms policy. Specified as a decimal value of the minimum key length in bits. For example, 1024 represents a minimum key length of 1024 bits.
 
-- **CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG (0x00040000)**
-    - Disables the algorithm corresponding to that policy for ServerAuth EKUs for applications that opt into this change using CERT_CHAIN_OPT_IN_WEAK_SIGNATURE.
+  - **AfterTime** - `REG_BINARY` data type that contains an 8-byte FILE. TIME. The weak crypto algorithm check is disabled for time-stamped files before this time. This configuration value isn’t applicable to timestamp chains.
 
-- **CERT_CHAIN_DISABLE_SERVER_AUTH_WEAK_FLAG (0x00100000) flag**
-    - Disables the algorithm corresponding to that policy for ServerAuth EKUs.
+  - **Sha256Allow** - `REG_SZ` or `REG_MULTI_SZ` data type that contains the list of certificate SHA256 thumbprints (ASCII_HEX formatted) identifying weak certificates to be explicitly allowed. Non ASCII_HEX characters in the string are skipped, which allows embedded spaces.
 
-- **CERT_CHAIN_DISABLE_CODE_SIGNING_WEAK_FLAG (0x00400000) flag**
-    - Disables the algorithm corresponding to that policy for code signing EKUs.
+### Value type flags
 
-- **CERT_CHAIN_DISABLE_MOTW_CODE_SIGNING_WEAK_FLAG (0x00800000) flag**
-    - Disables the algorithm corresponding to that policy for code signing EKUs only when the binary is downloaded from the web.
+To define the flags for a cryptographic algorithm blocking policy, you can use the following `REG_DWORD` values. These flags are used to enable or disable specific behaviors for the cryptographic algorithm policies.
 
-- **CERT_CHAIN_DISABLE_TIMESTAMP_WEAK_FLAG (0x04000000) flag**
-    - Disables the algorithm corresponding to that policy for timestamp EKUs.
+You can combine these flags using a bitwise OR operation to create a composite flag value that represents multiple behaviors.
 
-- **CERT_CHAIN_DISABLE_MOTW_TIMESTAMP_WEAK_FLAG (0x08000000) flag**
-    -  (0x08000000)	Disables the algorithm corresponding to that policy for timestamp EKUs only when the binary is downloaded from the web.
+For example, to enable logging and disable the algorithm for all EKUs, you can combine the `CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG` and `CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG` flags. To do this, you would set the flags value to `0x00010004` (which is `0x80000000 | 0x00010000 | 0x00000004`).
 
-## Updating client registry settings through Group Policy
+The following table describes the flags that can be set for cryptographic algorithm blocking policies:
 
-The following procedure shows how to configure the registry settings on all domain-joined machines using GPUpdate. For more details, see [Configure a Registry Item](https://technet.microsoft.com/library/cc753092.aspx).
+#### CERT_CHAIN_ENABLE_WEAK_SETTINGS_FLAG
 
-#### To update client registry settings
+The `CERT_CHAIN_ENABLE_WEAK_SETTINGS_FLAG` flag is used to enable or disable weak cryptographic algorithm settings for a specific cryptographic algorithm policy. This flag is essential for controlling how weak algorithms are handled in the certificate chain building process.
 
-1.  On a domain controller, open Group Policy Management Editor.
+Hexadecimal value: `0x80000000`
 
-    1.  Open MMC, select **File**, click **Add/Remove Snap ins**, and select **Group Policy Management Editor**.
+Here are some examples to illustrate how the `CERT_CHAIN_ENABLE_WEAK_SETTINGS_FLAG` (0x80000000) flag affects policy behavior:
 
-        ![](images/Dn375961.f2209918-76d6-491f-9c2a-da47f8b5cac7(WS.11).jpeg)
+- If this flag is **not set** for a given `Weak<CryptoAlg><ConfigType>Flags` policy, all other flags and registry values for that policy are ignored. For example, if you configure additional flags for `WeakMD5ThirdPartyFlags` but do not set `0x80000000`, those settings will have no effect.
 
-    1.  Select **Add** to start the Group Policy Wizard.
+- When an administrator **sets this flag** for a specific `Weak<CryptoAlg><ConfigType>Flags` policy, the policy settings defined in the registry override the default operating system behavior for that cryptographic algorithm and configuration type.
 
-        ![](images/Dn375961.2273ad1f-d865-46b0-bb19-d3dced74ab1f(WS.11).jpeg)
+- If the flag is set in `Weak<CryptoAlg>AllFlags` policy, the resulting `Weak<CryptoAlg>ThirdPartyFlags` will be a combination of the values defined in both `Weak<CryptoAlg>ThirdPartyFlags` and `Weak<CryptoAlg>AllFlags`, except for logging-related flags, which are not combined. For example, the effective third-party flags are calculated as:  
+    `ThirdPartyFlags |= AllFlags & ~(CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG | CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG);`
 
-    1.  Select **Browse**, click **Default Domain Policy**, select **OK**, and select **Finish**.
+- For time-based and key length settings, the resultant `Weak<CryptoAlg>ThirdPartyAfterTime` will be the earliest value between `Weak<CryptoAlg>AllAfterTime` and `Weak<CryptoAlg>ThirdPartyAfterTime` (if both are defined and nonzero). Similarly, the resultant `Weak<KeyCryptoAlg>ThirdPartyMinBitLength` will be the largest value between `Weak<KeyCryptoAlg>AllMinBitLength` and `Weak<KeyCryptoAlg>ThirdPartyMinBitLength`.
 
-        ![](images/Dn375961.fd9baf0e-7cbf-41a8-89c2-b95614ca99a8(WS.11).jpeg)
+These examples demonstrate how the flag controls whether custom policy settings are applied and how combined values are determined when both "All" and "ThirdParty" configurations are present.
 
-1.  Expand Default Domain Policy|Computer Configuration|Preferences|Windows Settings|Registry.
+#### CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG
 
-    1.  Right-select **Registry**, select **New**, and select **Registry Item**.
+When this flag is set, weak certificates that are identified during the certificate chain building process will be logged to the directory specified by the `CERT_CHAIN_WEAK_SIGNATURE_LOG_DIR_VALUE_NAME` registry value. This allows administrators to review and take action on weak certificates that may pose security risks.
 
-        ![](images/Dn375961.ecfc3c5d-0f60-4ba0-8689-1276d0e44719(WS.11).jpeg)
+Hexadecimal value: `0x00000004`
 
-    1.  In the New Registry Properties, select **Browse** to select the required Key path.
+#### CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG
 
-        ![](images/Dn375961.c08f35f1-1877-4cab-af21-cc2527c6be12(WS.11).jpeg)
+When this flag is set, the certificate chain building process will only any chain building errors returned to the directory specified by the `CERT_CHAIN_WEAK_SIGNATURE_LOG_DIR_VALUE_NAME` registry value. In this mode, weak signature errors are not returned, allowing for an audit-only mode where weak certificates are logged without affecting the chain building process.
 
-    1.  Select the registry path. For example:
+Hexadecimal value: `0x00000008`
 
-        SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CertDllCreateCertificateChainEngine\\Config
+#### CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG
 
-    1.  If the registry value name is already present select the registry value too, for example, **WeakMD5ThirdPartyAfterTime**.
+The `CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for all Enhanced Key Usages (EKUs). This means that the specified cryptographic algorithm will not be used for any certificates, regardless of their EKU.
 
-        ![](images/Dn375961.71d3f7c9-cab8-4fe7-a480-9a8c66f0be63(WS.11).jpeg)
+Hexadecimal value: `0x00010000`
 
-    1.  If the registry entry is new, select the key location, enter the registry value name, select the appropriate value type, and enter required data.
+#### CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG
 
-        ![](images/Dn375961.f0ac1868-9f39-4670-8205-6bc4e0965c1d(WS.11).jpeg)
+The `CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for Server Authentication EKUs, but only for applications that have opted into this change using the `CERT_CHAIN_OPT_IN_WEAK_SIGNATURE` setting. This allows for more granular control over which applications are affected by the weak signature policy.
 
-1.  Select **Apply** and **OK**. If necessary, run gpupdate /force on domain-joined computers to have the policy setting change be applied immediately.
+Hexadecimal value: `0x00040000`
 
-1.  For binary values like **AfterTime**, it is recommended to first apply the value using CertUtil command or in a test computer and then export the values and import them to a domain controller.
+#### CERT_CHAIN_DISABLE_SERVER_AUTH_WEAK_FLAG
 
-    For example, if an administrator needs to apply **WeakMD5ThirdPartyAfterTime**, which is of type REG\_BINARY to a date such as 1/1/2010, the administrator can execute the following CertUtil command on a domain controller. The command updates the registry with the correct binary value. After updating the registry, follow the previous steps to apply to the same value to domain-joined computers using Group Policy.
+The `CERT_CHAIN_DISABLE_SERVER_AUTH_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for Server Authentication EKUs. This means that the specified cryptographic algorithm will not be used for any certificates with Server Authentication EKUs, regardless of whether applications have opted in or not.
 
+Hexadecimal value: `0x00100000`
+
+#### CERT_CHAIN_DISABLE_CODE_SIGNING_WEAK_FLAG
+
+The `CERT_CHAIN_DISABLE_CODE_SIGNING_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for code signing Enhanced Key Usages (EKUs). This means that the specified cryptographic algorithm will not be used for any code signing certificates.
+
+Hexadecimal value: `0x00400000`
+
+#### CERT_CHAIN_DISABLE_MOTW_CODE_SIGNING_WEAK_FLAG
+
+The `CERT_CHAIN_DISABLE_MOTW_CODE_SIGNING_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for code signing EKUs, but only when the binary is downloaded from the web.
+
+Hexadecimal value: `0x00800000`
+
+#### CERT_CHAIN_DISABLE_TIMESTAMP_WEAK_FLAG
+
+The `CERT_CHAIN_DISABLE_TIMESTAMP_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for timestamp Enhanced Key Usages (EKUs). This means that the specified cryptographic algorithm will not be used for any timestamp certificates.
+
+Hexadecimal value: `0x04000000`
+
+#### CERT_CHAIN_DISABLE_MOTW_TIMESTAMP_WEAK_FLAG
+
+The `CERT_CHAIN_DISABLE_MOTW_TIMESTAMP_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for timestamp EKUs, but only when the binary is downloaded from the web.
+
+Hexadecimal value: `0x08000000`
+
+## Configure a cryptographic algorithm blocking policy
+
+To configure a cryptographic algorithm blocking policy, you can use the `certutil` command-line tool or modify the Windows registry directly. Select the method that best suits your needs.
+
+### [Certutil](#tab/certutil)
+
+To configure a cryptographic algorithm blocking policy, you can use the `certutil -setreg chain` command-line tool. This tool allows you to display, configure, and remove cryptographic algorithm blocking policy settings.
+
+To configure a cryptographic algorithm blocking policy follow these steps:
+
+1. Determine the cryptographic algorithm you want to block and the configuration type (e.g., third-party or all) using the flags and values described in the [Policy syntax](#policy-syntax) section. Perform a bitwise OR operation to combine the flags as needed and record the resulting value.
+
+1. Open a command prompt with administrative privileges.
+
+1. To create a new cryptographic algorithm flag-based blocking policy, use the following command:
+
+   ```cmd
+   certutil -setreg chain\<WeakCryptoAlg><ConfigType>Flags <value>
+   ```
+
+   Replace `<WeakCryptoAlg>`, `<ConfigType>`, and `<value>` with the appropriate values for your policy.
+
+   For example, to disable MD5 for all SSL server auth certs under third-party   root CAs, you can use the following commands:
+
+   ```cmd
+   certutil -setreg chain\WeakMD5ThirdPartyFlags 0x80100000
+   ```
+
+1. To create a new asymmetric algorithm blocking policy, use the following command:
+
+   ```cmd
+   certutil -setreg chain\<WeakCryptoAlg><ConfigType>MinBitLength <value>
+   ```
+
+   Replace `<WeakCryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
+
+   For example, to disable RSA 1024 under third-party root CAs, you can use the   following commands:
+
+   ```cmd
+   certutil -setreg chain\WeakRSAThirdPartyMinBitLength 1024
+   ```
+
+1. To create a new time-based policy, use the following command:
+
+   ```cmd
+   certutil -setreg chain\<WeakCryptoAlg><ConfigType>AfterTime <value>
+   ```
+
+   Replace `<WeakCryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
+
+   For example, to disable MD5 for all SSL server auth certs under third-party   root CAs before March 1, 2009, you can use the following commands:
+
+   ```cmd
+   certutil -setreg chain\WeakMD5ThirdPartyAfterTime @03/01/2009
+   ```
+
+### [Registry Editor](#tab/registry)
+
+To configure a cryptographic algorithm blocking policy using the Windows Registry Editor, follow these steps:
+
+1. Determine the cryptographic algorithm you want to block and the configuration type (e.g., third-party or all) using the flags and values described in the [Policy syntax](#policy-syntax) section. Perform a bitwise OR operation to combine the flags as needed and record the resulting value.
+
+1. Open the Registry Editor by typing `regedit` in the Run dialog (Win + R) or in a command prompt with administrative privileges.
+
+1. Navigate to the following registry key:
+
+   ```
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
+   ```
+
+1. To create a new cryptographic algorithm blocking flag-based policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
+
+   `Weak<CryptoAlg><ConfigType>Flags`
+
+   Replace `<CryptoAlg>`, and `<ConfigType>` with the appropriate values for your policy.
+
+   For example, to disable MD5 for all SSL server auth certs under third-party root CAs, create a new DWORD value named `WeakMD5ThirdPartyFlags`.
+
+1. To set the value for the new policy, open the newly created DWORD value and enter the appropriate hexadecimal value. For example, to disable all SSL server auth certs, set the value to `0x80100000`.
+
+1. To create a new asymmetric algorithm blocking policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
+
+   `Weak<CryptoAlg><ConfigType>MinBitLength`
+
+   Replace `<CryptoAlg>`, and `<ConfigType>` with the appropriate values for your policy.
+
+   For example, to disable RSA 1024 under third-party root CAs, create a new DWORD value named `WeakRSAThirdPartyMinBitLength`.
+
+1. To set the value for the new policy, open the newly created DWORD value and enter the appropriate minimum key length in bits using a decimal base value. For example, to disable RSA 1024, set the value to `1024`.
+
+---
+
+### Enable logging
+
+The Weak Crypto framework in Windows provides a mechanism for logging weak cryptographic certificates. This allows administrators to monitor and take action on certificates that are considered weak according to the configured settings.
+
+You can enable logging using the `certutil` command-line tool or by directly modifying the Windows registry. Select the method that best suits your needs.
+
+### [Certutil](#tab/certutil)
+
+To enable logging for weak cryptographic certificates using the `certutil` command-line tool, follow these steps:
+
+1. Create a log directory where the weak certificates will be logged. For example, create a directory at `C:\Log` and ensure it has the correct permissions.
+
+1. To  set the logging directory, use the following command:
+
+   ```cmd
+   certutil -setreg chain\WeakSignatureLogDir c:\log
+   ```
+
+1. To enable logging, set the logging flag for an existing weak crypto policy. Combine the `CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG` (0x00000004) or `CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG` (0x00000008) with the existing flags for the policy. For example, to enable logging for all EKU weak MD5 third-party certs, you can use the following command:
+
+    ```cmd
+    certutil -setreg chain\WeakMD5ThirdPartyFlags 0x80010004
     ```
-    Certutil -setreg chain\WeakMD5ThirdPartyAfterTime  @1/1/2010
-    ```
 
-## Examples
+### [Registry Editor](#tab/registry)
 
-The following example disables MD5 for all SSL server auth certs under third-party root CAs, but allows signed binaries before March 1, 2009 to be accepted. Not applicable to other EKUs. Logging is also enabled, and the message “Setting logging directory section” will appear.
+To enable logging for weak cryptographic certificates using the Windows Registry Editor, follow these steps:
 
-```
-Certutil –setreg chain\Default\WeakMd5ThirdPartyFlags 0x80100004
-Certutil –setreg chain\Default\WeakMd5ThirdPartyAfterTime @03/01/2009
-```
+1. Create a log directory where the weak certificates will be logged. For example, create a directory at `C:\Log` and ensure it has the correct permissions.
 
-The following example disables RSA 1024 for all timestamp certs under third-party root CAs, but allows signed binaries before March, 2013 to be accepted. Not applicable to other EKUs.
+1. Navigate to the following registry key:
 
-```
-Certutil –setreg chain\Default\WeakRSAThirdPartyFlags 0x84000000
-Certutil –setreg chain\Default\WeakRSAThirdPartyMinBitLength 1024
-Certutil –setreg chain\Default\WeakRSAThirdPartyAfterTime @3/1/2013
+   ```
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
+   ```
+1. To enable logging, set the logging flag for an existing weak crypto policy. Combine the `CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG` (0x00000004) or `CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG` (0x00000008) with the existing flags for the policy. For example, to enable logging for all EKU weak MD5 third-party certs, create or modify the DWORD value named `WeakMD5ThirdPartyFlags` and set it the value to hexadecimal value `0x80010004`.
 
-```
+---
 
-### Setting logging directory and enabling logging
-
-Weak Crypto framework provides a mechanism where administrators can set a log directory for all the certs which are considered weak according to settings.
-
-To enable logging, an administrator can set a logging directory either by adding a registry entry or executing certutil command as follows (c:\\Log should be created and with correct permissions) along with weak crypto settings:
-
-```
-Certutil -setreg chain\WeakSignatureLogDir c:\log
-```
-
-Or updating registry directly:
-
-HKLM\\SOFTWARE\\Microsoft\\Cryptography\\OID\\EncodingType 0\\CertDllCreateCertificateChainEngine\\Config\\WeakSignatureLogDir
-
-Update the flags to enable logging CERT\_CHAIN\_ENABLE\_WEAK\_LOGGING\_FLAG (0x00000004), as in the following example, where weak crypto is applied for all EKUs and the weak MD5 third-party certificates are logged to c:\\log.
-
-```
-Certutil -setreg chain\WeakMD5ThirdPartyFlags  0x80010004
-```
-
-### Logging with Audit only Mode
-
-Weak crypto framework also provides a feature for an administrator to have logging only without any chain building errors returned. To set this, users need to include CERT\_CHAIN\_ENABLE\_ONLY\_WEAK\_LOGGING\_FLAG (0x00000008). For example, to enable audit only mode for all EKU weak MD5 Third-party certs:
-
-```
-Certutil -setreg chain\WeakSignatureLogDir c:\log
-```
-
-and
-
-```
-Certutil -setreg chain\WeakMD5ThirdPartyFlags  0x80010008
-```
