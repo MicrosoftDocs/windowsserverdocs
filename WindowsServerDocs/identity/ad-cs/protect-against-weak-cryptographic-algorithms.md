@@ -100,7 +100,8 @@ For example, to enable logging and disable the algorithm for all EKUs, you can c
 
 The following table describes the flags that can be set for cryptographic algorithm blocking policies:
 
-#### CERT_CHAIN_ENABLE_WEAK_SETTINGS_FLAG
+<details>
+<summary>Enable weak cryptographic settings</summary>
 
 The `CERT_CHAIN_ENABLE_WEAK_SETTINGS_FLAG` flag is used to enable or disable weak cryptographic algorithm settings for a specific cryptographic algorithm policy. This flag is essential for controlling how weak algorithms are handled in the certificate chain building process.
 
@@ -119,59 +120,92 @@ Here are some examples to illustrate how the `CERT_CHAIN_ENABLE_WEAK_SETTINGS_FL
 
 These examples demonstrate how the flag controls whether custom policy settings are applied and how combined values are determined when both "All" and "ThirdParty" configurations are present.
 
-#### CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG
+</details>
+
+<details>
+<summary>Enable logging</summary>
 
 When this flag is set, weak certificates that are identified during the certificate chain building process will be logged to the directory specified by the `CERT_CHAIN_WEAK_SIGNATURE_LOG_DIR_VALUE_NAME` registry value. This allows administrators to review and take action on weak certificates that may pose security risks.
 
 Hexadecimal value: `0x00000004`
 
-#### CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG
+</details>
+
+<details>
+
+<summary>Audit only logging</summary>
 
 When this flag is set, the certificate chain building process will only any chain building errors returned to the directory specified by the `CERT_CHAIN_WEAK_SIGNATURE_LOG_DIR_VALUE_NAME` registry value. In this mode, weak signature errors are not returned, allowing for an audit-only mode where weak certificates are logged without affecting the chain building process.
 
 Hexadecimal value: `0x00000008`
 
-#### CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG
+</details>
+
+<details>
+
+<summary>Disable all EKUs</summary>
 
 The `CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for all Enhanced Key Usages (EKUs). This means that the specified cryptographic algorithm will not be used for any certificates, regardless of their EKU.
 
 Hexadecimal value: `0x00010000`
 
-#### CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG
+</details>
+
+<details>
+<summary>Disable Opt-In Server Authuentication EKUs</summary>
+
+CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG
 
 The `CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for Server Authentication EKUs, but only for applications that have opted into this change using the `CERT_CHAIN_OPT_IN_WEAK_SIGNATURE` setting. This allows for more granular control over which applications are affected by the weak signature policy.
 
 Hexadecimal value: `0x00040000`
 
-#### CERT_CHAIN_DISABLE_SERVER_AUTH_WEAK_FLAG
+</details>
+
+<details>
+<summary>Disabled Server Authentication EKUs</summary>
 
 The `CERT_CHAIN_DISABLE_SERVER_AUTH_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for Server Authentication EKUs. This means that the specified cryptographic algorithm will not be used for any certificates with Server Authentication EKUs, regardless of whether applications have opted in or not.
 
 Hexadecimal value: `0x00100000`
 
-#### CERT_CHAIN_DISABLE_CODE_SIGNING_WEAK_FLAG
+</details>
+
+<details>
+<summary>Disable Code Signing EKUs</summary>
 
 The `CERT_CHAIN_DISABLE_CODE_SIGNING_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for code signing Enhanced Key Usages (EKUs). This means that the specified cryptographic algorithm will not be used for any code signing certificates.
 
 Hexadecimal value: `0x00400000`
 
-#### CERT_CHAIN_DISABLE_MOTW_CODE_SIGNING_WEAK_FLAG
+</details>
+
+<details>
+<summary>Disable Code Signing EKUs for binaries downloaded from the web</summary>
 
 The `CERT_CHAIN_DISABLE_MOTW_CODE_SIGNING_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for code signing EKUs, but only when the binary is downloaded from the web.
 
 Hexadecimal value: `0x00800000`
 
-#### CERT_CHAIN_DISABLE_TIMESTAMP_WEAK_FLAG
+</details>
+
+<details>
+<summary>Disable Timestamp EKUs</summary>
 
 The `CERT_CHAIN_DISABLE_TIMESTAMP_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for timestamp Enhanced Key Usages (EKUs). This means that the specified cryptographic algorithm will not be used for any timestamp certificates.
 
 Hexadecimal value: `0x04000000`
 
-#### CERT_CHAIN_DISABLE_MOTW_TIMESTAMP_WEAK_FLAG
+</details>
+
+<details>
+<summary>Disable Timestamp EKUs for binaries downloaded from the web</summary>
 
 The `CERT_CHAIN_DISABLE_MOTW_TIMESTAMP_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for timestamp EKUs, but only when the binary is downloaded from the web.
 
 Hexadecimal value: `0x08000000`
+
+</details>
 
 ## Configure a cryptographic algorithm blocking policy
 
