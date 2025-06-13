@@ -1,20 +1,20 @@
 ---
-description: Demoting domain controllers and domains
+description: Demote domain controllers and domains
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
-title: How to demote domain controllers and domains using Server Manger or PowerShell.
+title: Learn how to demote domain controllers and domains using Server Manager or PowerShell in Windows Server.
 author: meaghanlewis
 ms.author: mosagie
-manager: daveba
-ms.date: 08/23/2024
+ms.date: 06/13/2025
 ms.topic: how-to
-ms.custom: inhenkel
 ---
 
-# Demoting domain controllers and domains
+# Demote domain controllers and domains
 
 This article explains how to remove Active Directory Domain Services (AD DS) using Server Manager or Windows PowerShell.
 
 ## AD DS removal workflow
+
+The following workflow diagram shows the steps to remove AD DS.
 
 ![AD DS removal workflow chart](media/Demoting-Domain-Controllers-and-Domains--Level-200-/adds_demotedomainforest.png)
 
@@ -34,8 +34,7 @@ To learn more about how to demote your DC using PowerShell, see the [Uninstall-A
 
 When using `Uninstall-ADDSDomainController` and `Uninstall-WindowsFeature`, these commands only require the minimum arguments as they each perform a single action. Pressing the **Enter** key during the confirmation phase initiates the irrevocable demotion process and restarts your device.
 
-> [!NOTE]
-> The **Credential** argument is only required if you aren't already signed in as a member of the Enterprise Admins group or the Domain Admins group. The **IncludeManagementTools** argument is only required if you want to remove all of the AD DS management utilities.
+The **Credential** argument is only required if you aren't already signed in as a member of the Enterprise Admins group or the Domain Admins group. The **IncludeManagementTools** argument is only required if you want to remove all of the AD DS management utilities.
 
 ## Demote
 
@@ -51,7 +50,7 @@ There are two methods you can use to remove the AD DS role:
 
    ![Server Manager - All Servers- Remove Roles and Features](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)
 
-The ServerManager cmdlets **Uninstall-WindowsFeature** and **Remove-WindowsFeature** will prevent you from removing the AD DS role until you demote the domain controller.
+The ServerManager cmdlets **Uninstall-WindowsFeature** and **Remove-WindowsFeature** prevent you from removing the AD DS role until you demote the domain controller.
 
 ### Server selection
 
@@ -68,14 +67,14 @@ Clear the **Active Directory Domain Services** check box to demote a domain cont
 - Don't remove any other AD DS-related roles or features - such as DNS, GPMC, or the RSAT tools - if you intend to promote the domain controller again immediately. Removing additional roles and feature increases the time to re-promote, as Server Manager reinstalls these features when you reinstall the role.
 - Remove unneeded AD DS roles and features at your own discretion if you intend to demote the domain controller permanently. This requires clearing the check boxes for those roles and features.
 
-   The full list of AD DS-related roles and features include:
+The full list of AD DS-related roles and features include:
 
-   - Active Directory Module for Windows PowerShell feature
-   - AD DS and AD LDS Tools feature
-   - Active Directory Administrative Center feature
-   - AD DS Snap-ins and Command-line Tools feature
-   - DNS Server
-   - Group Policy Management Console
+- Active Directory Module for Windows PowerShell feature
+- AD DS and AD LDS Tools feature
+- Active Directory Administrative Center feature
+- AD DS Snap-ins and Command-line Tools feature
+- DNS Server
+- Group Policy Management Console
 
 The equivalent ADDSDeployment and ServerManager Windows PowerShell cmdlets are:
 
@@ -97,7 +96,7 @@ You configure demotion options on the **Credentials** page. Provide the credenti
 - Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force the removal of this domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.
 
    > [!WARNING]
-   > Do not select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.
+   > Don't select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.
    >
    > If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For steps, review [Clean Up Server Metadata](ad-ds-metadata-cleanup.md).
 
@@ -119,8 +118,7 @@ The equivalent ADDSDeployment Windows PowerShell arguments are:
 
 The **Warnings** page alerts you to the possible consequences of removing this domain controller. To continue, you must select **Proceed with removal**.
 
-> [!WARNING]
-> If you previously selected **Force the removal of this domain controller** on the **Credentials** page, then the **Warnings** page shows all Flexible Single Master Operations roles hosted by this domain controller. You *must* seize the roles from another domain controller *immediately* after demoting this server. For more information on seizing FSMO roles, see [Seize the Operations Master Role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816779(v=ws.10)).
+If you previously selected **Force the removal of this domain controller** on the **Credentials** page, then the **Warnings** page shows all Flexible Single Master Operations roles hosted by this domain controller. You *must* seize the roles from another domain controller *immediately* after demoting this server. For more information on seizing FSMO roles, see [Seize the Operations Master Role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816779(v=ws.10)).
 
 This page doesn't have an equivalent ADDSDeployment Windows PowerShell argument.
 
@@ -143,7 +141,7 @@ The equivalent ADDSDeployment cmdlet arguments are:
 -DNSDelegationRemovalCredential <PsCredential>
 ```
 
-### New Administrator Password
+### New administrator password
 
 ![Active Directory Domain Services Configuration Wizard - Credentials New Administrator Password](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_NewAdminPwd.png)
 
@@ -162,8 +160,7 @@ For example, you can manually prompt for a password by using the **Read-Host** c
 Uninstall-ADDSDomainController -LocalAdministratorPassword (Read-Host -Prompt "Password:" -AsSecureString)
 ```
 
-> [!WARNING]
-> As the previous two options do not confirm the password, use extreme caution: the password is not visible.
+As the previous two options don't confirm the password, use extreme caution. The password isn't visible.
 
 You can also provide a secure string as a converted clear-text variable, although this is highly discouraged. For example:
 
@@ -171,8 +168,7 @@ You can also provide a secure string as a converted clear-text variable, althoug
 Uninstall-ADDSDomainController -LocalAdministratorPassword (ConvertTo-SecureString "Password1" -AsPlainText -Force)
 ```
 
-> [!WARNING]
-> Providing or storing a clear text password is not recommended. Anyone running this command in a script or looking over your shoulder knows the local administrator password of that computer. With that knowledge, they have access to all of its data and can impersonate the server itself.
+Providing or storing a clear text password isn't recommended. Anyone running this command in a script or looking over your shoulder knows the local administrator password of that computer. With that knowledge, they have access to all of its data and can impersonate the server itself.
 
 ### Confirmation
 
@@ -233,4 +229,4 @@ If you attempt to remove the AD DS role before demoting the server, Windows Powe
 
 ![You're About to be signed off warning after removal of AD DS](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_DemoteSignoff.png)
 
-The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller will automatically reboot after 10 seconds.
+The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller automatically reboots after 10 seconds.
