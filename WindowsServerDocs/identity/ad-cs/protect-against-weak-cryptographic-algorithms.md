@@ -211,7 +211,7 @@ To configure a cryptographic algorithm blocking policy, you can use the `certuti
 
 ### [Certutil](#tab/certutil)
 
-To configure a cryptographic algorithm blocking policy, you can use the `certutil -setreg chain` command-line tool. This tool allows you to display, configure, and remove cryptographic algorithm blocking policy settings. To learn more about the `certutil` command-line tool, see [certutil](../../administration/windows-commands/certutil.md.)
+To configure a cryptographic algorithm blocking policy, you can use the `certutil -setreg chain` command-line tool. This tool allows you to display, configure, and remove cryptographic algorithm blocking policy settings. To learn more about the `certutil` command-line tool, see [certutil](../../administration/windows-commands/certutil.md).
 
 To configure a cryptographic algorithm blocking policy follow these steps:
 
