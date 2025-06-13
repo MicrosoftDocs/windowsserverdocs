@@ -12879,6 +12879,11 @@
       "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md",
       "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-manager/install-or-uninstall-roles-role-services-or-features.md",
+      "redirect_url": "/windows-server/administration/server-manager/add-remove-roles-features",
+      "redirect_document_id": true
     }
   ]
 }
