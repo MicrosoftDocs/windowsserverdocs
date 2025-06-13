@@ -10,8 +10,6 @@ ms.author: daknappe
 
 # Manage disks
 
-> **
-
 This article and the related topics show you how to use Disk Management to manage the disks in a computer. It includes information about how Windows manages the online status of new disks.
 
 ## Online and offline status
