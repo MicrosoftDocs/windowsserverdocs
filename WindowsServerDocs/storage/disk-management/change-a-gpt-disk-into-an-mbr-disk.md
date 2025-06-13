@@ -1,72 +1,114 @@
 ---
-title: Change a GUID partition table (GPT) disk into a Master Boot Record (MBR) disk
-description: Learn how to convert a GUID partition table (GPT) disk into a Master Boot Record (MBR) partition disk by using Windows or the command line.
-ms.date: 08/22/2024
+title: Convert a disk to GPT or MBR
+description: Learn how to convert a disk to GPT or MBR partition scheme (style) using Disk Management and the command line in Windows.
+ms.date: 06/13/2025
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ---
 
-# Convert a GPT disk into an MBR disk
+# Convert a disk to GPT or MBR partition scheme
 
-> **
+Master Boot Record (MBR) disks use the legacy BIOS partitioning scheme (also known as partition style) and supports up to four primary partitions per disk. MBR is limited to disks of 2 TB or smaller and isn't recommended for larger drives. GUID Partition Table (GPT) disks use the modern Unified Extensible Firmware Interface (UEFI), supports more than four partitions, and can manage disks larger than 2 TB.
 
-Master Boot Record (MBR) disks use the standard BIOS partition table. GUID partition table (GPT) disks use the Unified Extensible Firmware Interface (UEFI). MBR disks don't support more than four partitions on each disk. The MBR partition method isn't recommended for disks larger than 2 terabytes (TB).
-
-You can change a disk from GPT to MBR partition format as long as the disk contains no partitions or volumes.
+You can convert a disk's partition style only if it doesn't contain any partitions or volumes. Make sure to delete all existing partitions or volumes before attempting to change the disk's format.
 
 > [!IMPORTANT]
+>
 > - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
-> - You must be a member of the **Backup Operators** or **Administrators** group, at minimum, to convert a disk.
+> - You must be a member of the **Administrators** group (or have equivalent privileges) to convert a disk.
 
-## Use Disk Management to convert a GPT disk
+## Convert a disk
 
-To complete the disk conversion by using Disk Management, follow these steps.
+You can convert your disk using either the Disk Management tool or the command line. Follow these steps for your method of choice.
 
-1. Before conversion, back up or move the data on the GPT disk.
+# [Disk Management](#tab/disk-management)
 
-1. In the search box on the taskbar, enter **Create and format hard disk partitions** to launch Disk Management.
+Before you convert partition styles, back up or move the data off the disk.
 
-1. Delete all partitions and volumes on the GPT disk.
+1. Select **Start**, type **diskmgmt.msc**, then select **Enter**.
 
-   - For each partition or volume, select and hold (or right-click) the item, and select **Delete Partition** or **Delete Volume**.
+1. Right-click on the volume pertaining to your GPT disk.
 
-1. Select and hold (or right-click) the GPT disk to convert to the MBR format, and select **Convert to MBR Disk**.
+1. Select **Delete Volume**, then select **Yes**. Repeat this step for all volumes on the GPT disk.
 
-The process notifies you when the conversion completes.
+1. Right-click on the GPT disk, then select **Convert to MBR Disk**.
 
-## Use the command line to convert a GPT disk
+1. To verify the conversion process, right-click on your disk, select **Properties**, select the **Volumes** tab, and check the partition style information.
 
-To complete the disk conversion from the command line with the *diskpart* disk partition process, follow these steps.
+# [Diskpart](#tab/diskpart)
 
-1. Before conversion, back up or move the data on the GPT disk.
+Before you convert partition styles, back up or move the data off the disk.
 
-1. Open an elevated command prompt: select and hold (or right-click) **Command Prompt**, and select **Run as Administrator**.
+1. Open an elevated command prompt window, type **diskpart**, then select **Enter**.
 
-1. At the prompt, enter `diskpart` to initiate the disk partition process.
-
-1. Prepare the GPT disk for conversion by cleaning (deleting) any partitions or volumes.
+1. Prepare your disk for conversion by cleaning (deleting) any partitions or volumes.
 
    > [!NOTE]
-   > If the GPT disk doesn't have any partitions or volumes, skip to the last step to apply the conversion.
+   > If your disk doesn't have any partitions or volumes, skip to step **6** to convert your disk.
 
-   1. At the **DISKPART** prompt, enter `list disk`. Make a note of the GPT disk number that you want to convert to MBR format.
+   1. Type **list disk** and hit **Enter**. Make a note of the disk number that you want to convert.
 
-   1. At the **DISKPART** prompt, enter `select disk` *`<disk-number>`*, where *`<disk-number>`* is the GPT disk number to convert.
+   1. Type **select disk**, provide the disk number you want to convert, then hit **Enter**.
 
-   1. At the **DISKPART** prompt, enter `clean` to delete all partitions and volumes on the disk.
+   1. Type **clean** to delete all partitions and volumes on the disk.
 
-1. At the **DISKPART** prompt, enter `convert mbr` to convert the GPT disk to the MBR partition format.
+1. To convert GPT to MBR, type **convert mbr**, then hit **Enter**.
 
-The diskpart process notifies you when the conversion completes.
+   To convert MBR to GPT, type **convert gpt**, then hit **Enter**.
 
-### Review diskpart commands
+You're notified when the conversion process completes.
 
-The following table shows a summary of the commands for the diskpart process.
+# [PowerShell](#tab/powershell)
 
-| Command | Description |
-| --- | --- |
-| `list disk` | Displays a list of disks and information about them, such as their size and the amount of available free space. The command also shows whether the disk is a basic or dynamic disk, and whether it uses the GPT or MBR partition format. In the list of results, the disk marked with an asterisk (*) has the current focus for entered commands. |
-| `select disk` *`disk-number`* | Selects the specified disk, where *`disk-number`* is the disk number that you want to select. The command also gives the current focus to the specified disk. |
-| `clean` | Removes all partition or volume sections from the disk that has the current focus. |
-| `convert mbr` | Converts an empty basic disk with the GPT partition format into a basic disk with the MBR partition format. |
+Before you convert partition styles, back up or move the data off the disk.
+
+1. Open an elevated PowerShell window.
+
+1. Prepare your disk for conversion by cleaning (deleting) any partitions or volumes.
+
+   > [!NOTE]
+   > If your disk doesn't have any partitions or volumes, skip to step **3** to convert your disk.
+
+   1. To list all disks, run the following command:
+
+      ```powershell
+      Get-Disk
+      ```
+
+      Note the disk number you want to convert.
+
+   1. To remove all partitions and volumes from the disk, run the following command. Replace `<Disk Number>` with the disk number you noted earlier:
+
+      ```powershell
+      Clear-Disk -Number <Disk Number> -RemoveData -Confirm:$false
+      ```
+
+1. To convert the partitioning style, run the following command:
+
+   For MBR to GPT conversion:
+
+   ```powershell
+   Initialize-Disk -Number <Disk Number> -PartitionStyle GPT
+   ```
+
+   For GPT to MBR conversion:
+
+   ```powershell
+   Initialize-Disk -Number <Disk Number> -PartitionStyle MBR
+   ```
+
+   > [!NOTE]
+   > Once a disk is initialized, you can't convert it to another partition style without first running the `Clear-Disk` cmdlet again.
+
+1. To verify the conversion process, run the following command and check the *Partition Style* column:
+
+   ```powershell
+   Get-Disk
+   ```
+
+---
+
+## See also
+
+- [Change a dynamic disk to a basic disk](change-a-dynamic-disk-back-to-a-basic-disk.md)
