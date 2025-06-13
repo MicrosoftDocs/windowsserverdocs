@@ -7,14 +7,12 @@ audience: Admin
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: wscontent
-author: Teresa-Motiv
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/27/2021
 ---
 
 # Performance Tuning Network Adapters
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Use the information in this topic to tune the performance network adapters for computers that are running Windows Server 2016 and later versions. If your network adapters provide tuning options, you can use these options to optimize network throughput and resource usage.
 
@@ -131,7 +129,7 @@ For example, on a computer that has a 1-Gbps network adapter installed, the wind
 This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). By using these features, Windows-based computers can negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
 
 > [!NOTE]
-> You may experience an issue in which the network device is not compliant with the **TCP window scale option**, as defined in [RFC 1323](https://tools.ietf.org/html/rfc1323) and, therefore, doesn't support the scale factor. In such cases, refer to this [KB 934430, Network connectivity fails when you try to use Windows Vista behind a firewall device](https://support.microsoft.com/help/934430/network-connectivity-fails-when-you-try-to-use-windows-vista-behind-a) or contact the Support team for your network device vendor.
+> You may experience an issue in which the network device is not compliant with the **TCP window scale option**, as defined in [RFC 1323](https://tools.ietf.org/html/rfc1323) and, therefore, doesn't support the scale factor. In such cases, contact the Support team for your network device vendor.
 
 #### Review and configure TCP receive window autotuning level
 

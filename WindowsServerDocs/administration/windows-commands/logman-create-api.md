@@ -3,15 +3,15 @@ title: logman create api
 description: Reference article for the logman create api command, which creates an API-tracing data collector.
 ms.topic: reference
 ms.assetid: 2ecc0a75-2613-464a-8616-c5dc404bb736
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman create api
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates an API tracing data collector.
 

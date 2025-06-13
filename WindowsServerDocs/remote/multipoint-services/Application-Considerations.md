@@ -3,9 +3,9 @@ title: Application Considerations
 description: Compatiblity information for apps on MultiPoint Services
 ms.topic: article
 ms.assetid: 445e6184-4e1e-4f10-ad3c-042f2a6c2f5f
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: evas
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Application Considerations

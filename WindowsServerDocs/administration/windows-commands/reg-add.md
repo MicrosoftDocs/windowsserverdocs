@@ -3,9 +3,9 @@ title: reg add
 description: Reference article for the reg add command, which adds a new subkey or entry to the registry.
 ms.topic: reference
 ms.assetid: d9ad143e-dc10-4e2e-a229-408393c40079
-ms.author: wscontent
+ms.author: alalve
 author: xelu86
-ms.date: 09/19/2023
+ms.date: 01/04/2024
 ---
 
 # reg add
@@ -22,7 +22,7 @@ reg add <keyname> [/v valuename | /ve] [/t datatype] [/s separator] [/d data] [/
 
 | Parameter | Description |
 |--|--|
-| `<keyname>` | Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name (in the format `\\<computername>\`) as part of the *keyname*. Omitting `\\<computername>\` causes the operation to default to the local computer. The *keyname* must include a valid root key. Valid root keys for the local computer are: **HKLM**, **HKCU**, **HKCR**, **HKU**, and **HKCC**. If a remote computer is specified, valid root keys are: **HKLM** and **HKU**. If the registry key name contains a space, enclose the key name in quotes. |
+| `<keyname>` | Specifies the full path of the subkey or entry to be added. To specify a remote computer, include the computer name (in the format `\\<computername>\`) as part of the *keyname*. Omitting `\\<computername>\` causes the operation to default to the local computer. The *keyname* must include a valid root key. Valid root keys for the local computer are: <br><ul><li>**HKCR** (HKEY_CLASSES_ROOT) <li>**HKCU** (HKEY_CURRENT_USER)<li>**HKLM** (HKEY_LOCAL_MACHINE)  <li> **HKU** (HKEY_USERS) <li>**HKCC** (HKEY_CURRENT_CONFIG) </ul></li><br>If a remote computer is specified, valid root keys are: **HKLM** and **HKU**. If the registry key name contains a space, enclose the key name in quotes. |
 | /v `<Valuename>` | Specifies the name of the add registry entry. |
 | /ve | Specifies that the added registry entry has a null value. |
 | /t `<Type>` | Specifies the type for the registry entry. *Type* must be one of the following:<ul><li>REG_SZ</li><li>REG_MULTI_SZ</li><li>REG_DWORD_BIG_ENDIAN</li><li>REG_DWORD</li><li>REG_BINARY</li><li>REG_DWORD_LITTLE_ENDIAN</li><li>REG_LINK</li><li>REG_FULL_RESOURCE_DESCRIPTOR</li><li>REG_EXPAND_SZ</li></ul> |

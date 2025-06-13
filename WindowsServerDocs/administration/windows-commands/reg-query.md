@@ -4,7 +4,7 @@ description: Reference article for the reg query command, which returns a list o
 ms.topic: reference
 ms.assetid: 0e6a0d7c-ed9b-4318-833d-33f265a81f39
 ms.author: alalve
-author: JasonGerend
+author: xelu86
 ms.date: 11/02/2022
 ---
 

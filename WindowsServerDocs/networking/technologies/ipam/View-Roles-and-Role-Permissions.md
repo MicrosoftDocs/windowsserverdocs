@@ -1,16 +1,12 @@
 ---
 title: View Roles and Role Permissions
 description: Learn how to view Access Control user roles in the IPAM client console.
-manager: brianlic
-ms.topic: article
-ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to view Access Control user roles in the IPAM client console.
 

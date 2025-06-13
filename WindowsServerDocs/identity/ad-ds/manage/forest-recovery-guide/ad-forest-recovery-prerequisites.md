@@ -1,15 +1,15 @@
 ---
 title: Active Directory Forest Recovery - Prerequisites  
 description: The following document discusses prerequisites that you should be familiar with before devising a forest recovery plan or attempting a recovery.
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Active Directory Forest Recovery - Prerequisites
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012.
+> 
 
 The following document discusses prerequisites that you should be familiar with
 before devising a forest recovery plan or attempting a recovery.

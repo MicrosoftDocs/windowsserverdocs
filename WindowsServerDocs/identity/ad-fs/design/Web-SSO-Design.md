@@ -2,10 +2,10 @@
 description: "Learn more about: Web SSO Design"
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
 title: Web SSO Design
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

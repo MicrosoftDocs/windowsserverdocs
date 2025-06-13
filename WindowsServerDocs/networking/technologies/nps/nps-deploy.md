@@ -1,17 +1,13 @@
 ---
 title: Deploy Network Policy Server
 description: This topic provides links to Network Policy Server deployment content for Windows Server 2016, and includes links to additional guidance about NPS.
-manager: brianlic
-ms.topic: article
-ms.assetid: 6cfb50e0-7088-4295-97c5-14ff8776cbf8
-ms.author: jgerend
-author: JasonGerend
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # Deploy Network Policy Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for information about deploying Network Policy Server.
 

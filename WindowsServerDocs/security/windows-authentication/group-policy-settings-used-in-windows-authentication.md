@@ -3,14 +3,12 @@ title: Group Policy Settings Used in Windows Authentication
 description: Learn about the use and impact of Group Policy settings in the authentication process.
 ms.topic: article
 ms.assetid: 9e237f89-45b1-4a4e-9b72-11dc7d6a470b
-ms.author: jgerend
-author: JasonGerend
+ms.author: mosagie
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Group Policy Settings Used in Windows Authentication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This reference topic for the IT professional describes the use and impact of Group Policy settings in the authentication process.
 

@@ -1,19 +1,18 @@
 - name: Remote Desktop Services
-  href: welcome-to-rds.md
+  href: index.yml
   items:
   - name: Get started
-    href: rds-get-started.md
     items:
-    - name: What's new in RDS?
-      href: rds-whats-new.md
+    - name: Remote Desktop Services overview
+      href: remote-desktop-services-overview.md
+    - name: Create virtual machines for Remote Desktop
+      href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS
       href: rds-supported-config.md
     - name: Supported security configurations for Windows 10 VDI
       href: rds-vdi-supported-config.md
     - name: Planning poster for Remote Desktop Services
       href: rds-poster.md
-    - name: Remote Desktop Services hosting partners
-      href: rds-hosting-partners.md
   - name: Plan and design
     href: rds-plan-and-design.md
     items:
@@ -55,16 +54,22 @@
         href: rds-roles.md
       - name: Azure services and considerations for desktop hosting
         href: Azure-services-and-considerations-for-desktop-hosting.md
+      - name: Understanding the desktop hosting environment
+        href: Understanding-the-desktop-hosting-environment.md    
+      - name: Tenant on-premises components
+        href: Tenant-on-premises-components.md  
   - name: Build and deploy
     href: rds-build-and-deploy.md
     items:
     - name: Deploy a proof-of-concept RDS environment with ARM and Azure Marketplace
       href: rds-in-azure.md
-    - name: Migrate your Remote Desktop Services deployments to Windows Server 2016
+    - name: Migrate your Remote Desktop Services deployments
       href: migrate-rds-role-services.md
     - name: Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
       href: migrate-rds-cals.md
-    - name: Upgrade your Remote Desktop Services deployments to Windows Server 2016
+    - name: Use certificates in Remote Desktop Services
+      href: remote-desktop-services-certificates.md
+    - name: Upgrade your Remote Desktop Services deployments
       href: upgrade-to-rds.md
       items:
       - name: Upgrade Remote Desktop Session Host servers
@@ -75,8 +80,10 @@
       href: rds-deploy-infrastructure.md
     - name: Create and deploy a Remote Desktop Services collection
       href: rds-create-collection.md
+    - name: Configure the RD Gateway role
+      href: remote-desktop-gateway-role.md
     - name: Set up the Remote Desktop web client for your users
-      href: clients/remote-desktop-web-client-admin.md
+      href: remote-desktop-web-client-admin.md
     - name: Disable Automatic Reconnection
       href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
@@ -88,20 +95,24 @@
       items:
       - name: Activate the license server
         href: rds-activate-license-server.md
+      - name: Reactivate or Deactivate the license server
+        href: remote-desktop-services-reactivate-deactivate-license-server.md
       - name: Install RDS CALs on the license server
         href: rds-install-cals.md
       - name: License RDS session hosts
         href: rds-license-session-hosts.md
       - name: Track the CALs used in your deployment
         href: rds-track-cals.md
+      - name: Use multiple license servers
+        href: use-multiple-remote-desktop-license-servers.md
     - name: Integrate Azure services
       href: rds-integrate-with-azure.md
       items:
       - name: Learn how to use Multi-factor Authentication with RDS
         href: /azure/multi-factor-authentication/nps-extension-remote-desktop-gateway
-      - name: Integrate Azure AD Domain Services with your RDS deployment
+      - name: Integrate Microsoft Entra Domain Services with your RDS deployment
         href: rds-azure-adds.md
-      - name: Publish Remote Desktop with Azure AD Application Proxy
+      - name: Publish Remote Desktop with Microsoft Entra application proxy
         href: /azure/active-directory/application-proxy-publish-remote-desktop
     - name: Extend your RDS environment for high availability
       items:
@@ -134,104 +145,57 @@
     items:
     - name: Manage personal desktop session collections
       href: rds-manage-personal-collection.md
-    - name: Recommended configuration for VDI desktops
-      href: rds-vdi-recommendations.md
-    - name: Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
-      href: rds-vdi-recommendations-2004.md
-    - name: Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role
-      href: rds_vdi-recommendations-1909.md
-    - name: Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
-      href: rds-vdi-recommendations-1803.md
+    - name: Remote Desktop IP Virtualization
+      href: internet-protocol-virtualization.md
     - name: Manage users in your RDS collection
       href: rds-user-management.md
     - name: Customize the RDS title "Work Resources" using PowerShell on Windows Server
       href: rds-work-resources.md
     - name: Diagnose app performance issues with performance counters
       href: rds-rdsh-performance-counters.md
-  - name: Access your Remote Desktop resources
+    - name: Optimizing Windows configuration for VDI desktops
+      href: remote-desktop-services-vdi-optimize-configuration.md 
+  - name: Connect to Remote Desktop Services
     items:
-    - name: Available Remote Desktop clients
-      href: clients/remote-desktop-clients.md
-    - name: Microsoft Store client
+    - name: Connect to Remote Desktop Services
+      href: connect-remote-desktop-services.md
+    - name: Web client and Web Access
       items:
-      - name: Get started with the Microsoft Store client
-        href: clients/windows.md
-      - name: What's new in the Microsoft Store client
-        href: clients/windows-whatsnew.md
-    - name: Android client
+      - name: Remote Desktop Services web client
+        href: remote-desktop-web-client.md
+      - name: What's new in Remote Desktop Services web client
+        href: web-client-whats-new.md
+      - name: Remote Desktop Web Access FAQ
+        href: remote-desktop-web-access-faq.yml
+    - name: Windows App documentation
+      href: /windows-app/
+    - name: Remote Desktop client documentation
+      href: /previous-versions/remote-desktop-client/
+    - name: Advanced information
       items:
-      - name: Get started with the Android client
-        href: clients/remote-desktop-android.md
-      - name: What's new in the Android client
-        href: clients/android-whatsnew.md
-    - name: iOS client
-      items:
-      - name: Get started with the iOS client
-        href: clients/remote-desktop-ios.md
-      - name: What's new in the iOS client
-        href: clients/ios-whatsnew.md
-    - name: macOS client
-      items:
-      - name: Get started with the macOS client
-        href: clients/remote-desktop-mac.md
-      - name: What's new in the macOS client
-        href: clients/mac-whatsnew.md
-    - name: Web client
-      items:
-      - name: Get started with the web client
-        href: clients/remote-desktop-web-client.md
-      - name: What's new in the web client
-        href: clients/web-client-whatsnew.md
+      - name: Compare Remote Desktop client features
+        href: /previous-versions/remote-desktop-client/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services
+      - name: Supported RDP properties
+        href: /azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services
+      - name: Remote Desktop URI scheme
+        href: remote-desktop-uri.md
+  - name: Connect to a remote PC
+    items:
     - name: Setting up your PC for Remote Desktop
       items:
       - name: Supported PCs
-        href: clients/remote-desktop-supported-config.md
+        href: remotepc/remote-desktop-supported-config.md
       - name: Grant Remote Desktop access to your PC
-        href: clients/remote-desktop-allow-access.md
+        href: remotepc/remote-desktop-allow-access.md
       - name: Grant access to your PC from outside your network
-        href: clients/remote-desktop-allow-outside-access.md
+        href: remotepc/remote-desktop-allow-outside-access.md
       - name: Change the RD listening port on your PC
-        href: clients/change-listening-port.md
-      - name: Configure the RD Gateway role
-        href: remote-desktop-gateway-role.md
+        href: remotepc/change-listening-port.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect using single sign-on with Microsoft Entra authentication
+        href: remotepc/remote-desktop-connection-single-sign-on.md
       - name: Uninstall and reinstall Remote Desktop Connection
-        href: clients/uninstall-remote-desktop-connection.md
-    - name: Advanced information
-      items:
-      - name: 'Compare the clients: features'
-        href: clients/remote-desktop-features.md
-      - name: 'Compare the clients: redirections'
-        href: clients/remote-desktop-app-compare.md
-      - name: Supported RDP properties
-        href: clients/rdp-files.md
-      - name: Remote Desktop URI scheme
-        href: clients/remote-desktop-uri.md
-      - name: Remote Desktop client FAQ
-        href: clients/remote-desktop-client-faq.yml
-      - name: Privacy settings for managed apps and desktops
-        href: clients/remote-privacy-settings.md
-    - name: Known issues
-      items:
-      - name: General Remote Desktop connection troubleshooting
-        href: troubleshoot/rdp-error-general-troubleshooting.md
-      - name: Credential limit per app
-        href: troubleshoot/credential-limit.md
-      - name: Clients can't connect and get the "Class not registered" error
-        href: troubleshoot/rdp-error-class-not-registered.md
-      - name: Clients can't connect and see "No licenses available" error
-        href: troubleshoot/rdp-error-no-licenses-available.md
-      - name: User can't authenticate or must authenticate twice
-        href: troubleshoot/cannot-authenticate-or-must-authenticate-twice.md
-      - name: '"Remote Desktop Service is currently busy" error on connecting'
-        href: troubleshoot/remote-desktop-service-currently-busy.md
-      - name: Remote Desktop client disconnects and can't reconnect to the same session
-        href: troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md
-      - name: Remote laptop disconnects from wireless network
-        href: troubleshoot/remote-laptop-disconnects-wireless-network.md
-      - name: Poor performance or application problems during remote desktop connection
-        href: troubleshoot/poor-performance-or-application-problems.md
-      - name: Input method editor issue in RemoteApp scenarios
-        href: troubleshoot/input-method-editor-error.md
-      - name: '"Out of memory" error'
-        href: troubleshoot/out-of-memory-error.md
-
+        href: remotepc/uninstall-remote-desktop-connection.md
+    - name: Remote PC connections FAQ
+      href: remotepc/remote-pc-connections-faq.yml

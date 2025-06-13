@@ -3,8 +3,8 @@ title: label
 description: Reference article for the label command, which creates, changes, or deletes the volume label (that is, the name) of a disk.
 ms.topic: reference
 ms.assetid: bbae8bdd-97d4-4566-9118-7c95aa07645f
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

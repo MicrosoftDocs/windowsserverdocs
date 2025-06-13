@@ -1,15 +1,13 @@
 ---
 title: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
-ms.topic: article
+ms.topic: concept-article
 ms.date: 09/25/2017
-ms.author: wscontent
-author: nirb-ms
+ms.author: alalve
+author: xelu86
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 
@@ -20,7 +18,7 @@ The General Data Protection Regulation, or GDPR, is fundamentally about protecti
 
 Microsoft and our customers are now on a journey to achieve the privacy goals of the GDPR. At Microsoft, we believe privacy is a fundamental right, and we believe that the GDPR is an important step forward for clarifying and enabling individual privacy rights. But we also recognize that the GDPR will require significant changes by organizations all over the world.
 
-We have outlined our commitment to the GDPR and how we are supporting our customers within the [Get GDPR compliant with the Microsoft Cloud](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99) blog post by our Chief Privacy Officer [Brendon Lynch](https://blogs.microsoft.com/on-the-issues/author/brendonlynch/) and the [Earning your trust with contractual commitments to the General Data Protection Regulation](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)” blog post by [Rich Sauer](https://blogs.microsoft.com/on-the-issues/author/rsauer/) - Microsoft Corporate Vice President & Deputy General Counsel.
+We have outlined our commitment to the GDPR and how we are supporting our customers within the [Get GDPR compliant with the Microsoft Cloud](https://blogs.microsoft.com/on-the-issues/2017/02/15/get-gdpr-compliant-with-the-microsoft-cloud/#hv52B68OZTwhUj2c.99) blog post by our Chief Privacy Officer Brendon Lynch and the [Earning your trust with contractual commitments to the General Data Protection Regulation](https://blogs.microsoft.com/on-the-issues/2017/04/17/earning-trust-contractual-commitments-general-data-protection-regulation/#6QbqoGWXCLavGM63.99)” blog post by Rich Sauer - Microsoft Corporate Vice President & Deputy General Counsel.
 
 Although your journey to GDPR-compliance may seem challenging, we're here to help you. For specific information about the GDPR, our commitments and how to begin your journey, please visit the [GDPR section of the Microsoft Trust Center](https://www.microsoft.com/trustcenter/privacy/gdpr).
 
@@ -181,7 +179,7 @@ Imagine this scenario if the DNS admin's credentials were stolen. First, since t
 
 In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](https://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
 
-As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095),
+As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/details.aspx?id=54095),
 
 > “_the tools and techniques criminals use to carry out credential theft and reuse attacks improve, malicious attackers are finding it easier to achieve their goals. Credential theft often relies on operational practices or user credential exposure, so effective mitigations require a holistic approach that addresses people, processes, and technology. In addition, these attacks rely on the attacker stealing credentials after compromising a system to expand or persist access, so organizations must contain breaches rapidly by implementing strategies that prevent attackers from moving freely and undetected in a compromised network._”
 
@@ -335,7 +333,7 @@ ATA is an on-premises product that helps detect identity compromise in an organi
 
 |Attack type |Description |
 |---------|---------|
-|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What Suspicious Activities Can ATA detect?](/advanced-threat-analytics/understand-explore/ata-threats).|
+|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What threats does ATA look for?](/advanced-threat-analytics/ata-threats).|
 |Abnormal behavior |These attacks are detected by using behavioral analysis and use machine learning to identify questionable activities, including:<ul><li>Anomalous logins</li><li>Unknown threats</li><li>Password sharing</li><li>Lateral movement</li></ul>|
 |Security issues and risks |These attacks are detected by looking at current network and system configuration, including:<ul><li>Broken trust</li><li>Weak protocols</li><li>Known protocol vulnerabilities</li></ul>|
 

@@ -1,15 +1,13 @@
 ---
 title: Compression is recommended for replication traffic
 description: Learn what to do when the replication traffic sent across the network from the primary server to the Replica server is uncompressed.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
+ms.author: mosagie
+author: meaghanlewis
+ms.topic: best-practice
 ms.assetid: cf8be6e9-2909-4e4a-bb63-d1e1ebbc6930
 ms.date: 8/16/2016
 ---
 # Compression is recommended for replication traffic
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

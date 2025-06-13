@@ -3,14 +3,14 @@ metadata:
   title: Windows Admin Center frequently asked questions
   description: Get answers about Windows Admin Center (Project Honolulu)
   ms.topic: faq
-  author: nwashburn-ms
-  ms.author: niwashbu
+  ms.author: daknappe
+  author: dknappettmsft
   ms.localizationpriority: medium
   ms.date: 12/02/2019
-  ms.prod: windows-server
+  ms.service: windows-server
 title: Windows Admin Center frequently asked questions
 summary: |
-  > Applies to: Windows Admin Center, Windows Admin Center Preview
+  > 
   
   Here are answers to the most commonly asked questions about Windows Admin Center.
   
@@ -107,7 +107,7 @@ sections:
       - question: |
           How does Windows Admin Center handle security?
         answer: |
-          Traffic from the browser to the Windows Admin Center gateway uses HTTPS. Traffic from the gateway to managed servers is standard PowerShell and WMI over WinRM. We support LAPS (Local Administrator Password Solution), resource-based constrained delegation, gateway access control using AD or Azure AD, and role-based access control for managing target servers.
+          Traffic from the browser to the Windows Admin Center gateway uses HTTPS. Traffic from the gateway to managed servers is standard PowerShell and WMI over WinRM. We support LAPS (Local Administrator Password Solution), resource-based constrained delegation, gateway access control using Active Directory or Microsoft Entra ID, and role-based access control for managing target servers.
 
       - question: |
           Does Windows Admin Center use CredSSP?
@@ -124,7 +124,7 @@ sections:
       - question: |
           Are there any cloud dependencies?
         answer: |
-          Windows Admin Center does not require internet access and does not require Microsoft Azure. Windows Admin Center manages Windows Server and Windows instances anywhere: on physical systems, or in virtual machines on any hypervisor, or running in any cloud. Although integration with various Azure services will be added over time, these will be optional value-added features and not a requirement to use Windows Admin Center.
+          Windows Admin Center does not require internet access and does not require Microsoft Azure. Windows Admin Center manages Windows Server and Windows instances anywhere: on physical systems, or in virtual machines on any hypervisor, or running in any cloud. Although integration with various Azure services will be added over time, these will be optional value-added features and not a requirement to use Windows Admin Center. Connections to Azure based resources **do** require an active and functional internet/network connection, in order to enforce administrative changes and view statuses.
           
       - question: |
           Are there any other dependencies or prerequisites?

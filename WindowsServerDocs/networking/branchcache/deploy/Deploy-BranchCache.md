@@ -1,16 +1,12 @@
 ---
 title: Deploy BranchCache
 description: Learn how to deploy BranchCache in distributed and hosted cache modes.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 ms.date: 01/05/2021
 ---
 # Deploy BranchCache
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following sections provide information about deploying BranchCache in distributed and hosted cache modes.
 

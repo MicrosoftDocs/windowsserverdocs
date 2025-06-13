@@ -2,11 +2,11 @@
 description: "Learn more about: Add a Host (A) Resource Record to Corporate DNS for a Federation Server"
 ms.assetid: 026747c7-4c34-41c7-b7ea-27f9a7f64a35
 title: Add a Host (A) Resource Record to Corporate DNS for a Federation Server
-author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
-ms.author: billmath
+author: robinharwood
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.author: roharwoo
 ---
 
 # Add a Host (A) Resource Record to Corporate DNS for a Federation Server

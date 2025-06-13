@@ -1,21 +1,21 @@
 ---
 title: Security principals
 description: This article discusses security principals for Windows Server accounts and security groups and how they work in Active Directory.
-author: dansimp
-ms.author: dansimp
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: article
 ms.date: 07/21/2022
 ---
 
 # Security principals
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 This reference article describes security principals for Windows accounts and security groups, in addition to security technologies that are related to security principals.
 
 ## What are security principals?
 
-A security principal is any entity that can be authenticated by the operating system, such as a user account, a computer account, or a thread or process that runs in the security context of a user or computer account, or the security groups for these accounts. Security principals have long been a foundation for controlling access to securable resources on Windows computers. Each security principal is represented in the operating system by a unique security identifier (SID).
+A security principal is any entity that can be authenticated by the operating system, such as a user account, a computer account, or the security groups for these accounts. Security principals have long been a foundation for controlling access to securable resources on Windows computers. Each security principal is represented in the operating system by a unique security identifier (SID).
 
 > [!NOTE]
 > This content pertains only to the Windows versions in the "Applies to" list at the beginning of the article.
@@ -43,7 +43,7 @@ Security principals are closely related to the following components and technolo
 
 Security identifiers (SIDs) provide a fundamental building block of the Windows security model. They work with specific components of the authorization and access control technologies in the security infrastructure of the Windows Server operating systems. This helps protect access to network resources and provides a more secure computing environment.
 
-A SID is a value of variable length that's used to uniquely identify a security principal that represents any entity that can be authenticated by the system. These entities include a user account, a computer account, or a thread or process that runs in the security context of a user or computer account. Each security principal is automatically assigned a SID when it's created. The SID is stored in a security database. When a SID is used as the unique identifier for a user or group, it can never be used to identify another user or group.
+A SID is a value of variable length that's used to uniquely identify a security principal that represents any entity that can be authenticated by the system. These entities include a user account, a computer account, or a security group. Each security principal is automatically assigned a SID when it's created. The SID is stored in a security database. When a SID is used as the unique identifier for a user or group, it can never be used to identify another user or group.
 
 Each time a user signs in, the system creates an access token for that user. The access token contains the user’s SID, user rights, and the SIDs for groups that the user belongs to. This token provides the security context for whatever actions the user performs on that computer.
 

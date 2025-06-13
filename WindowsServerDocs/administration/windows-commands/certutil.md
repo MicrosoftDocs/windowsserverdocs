@@ -1,28 +1,27 @@
 ---
 title: certutil
-description: Learn about certutil, a command-line program that displays CA configuration information, configures Certificate Services, and backs up and restores CA components.
-ms.service: 
+description: Learn about certutil, a command-line program that displays CA configuration information, configures Certificate Services, and backs up and restores CA components in Windows.
 ms.topic: reference
 author: xelu86
-ms.author: wscontent
-ms.date: 09/22/2023
+ms.author: alalve
+ms.date: 05/01/2025
 ---
 
 # certutil
 
+> [!CAUTION]
+> `Certutil` isn't recommended to be used in any production code and doesn't provide any guarantees of live site support or application compatibilities. It's a tool utilized by developers and IT administrators to view certificate content information on devices.
+
 Certutil.exe is a command-line program installed as part of Certificate Services. You can use certutil.exe to display certification authority (CA) configuration information, configure Certificate Services, and back up and restore CA components. The program also verifies certificates, key pairs, and certificate chains.
 
-If `certutil` is run on a certification authority without other parameters, it displays the current certification authority configuration. If `certutil` is run on a non-certification authority without other parameters, the command defaults to running the `certutil -dump` command.
-
-> [!IMPORTANT]
-> Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
+If `certutil` is run on a certification authority without other parameters, it displays the current certification authority configuration. If `certutil` is run on a non-certification authority without other parameters, the command defaults to running the `certutil -dump` command. Not all versions of certutil provide all of the parameters and options that this document describes. You can see the choices that your version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
 > [!TIP]
-> To see complete Help for all certutil verbs and options, including ones that are hidden from the `-?` argument, run `certutil -v -uSAGE`. The `uSAGE` switch is case-sensitive.
+> To see complete help for all certutil verbs and options, including ones that are hidden from the `-?` argument, run `certutil -v -uSAGE`. The `uSAGE` switch is case-sensitive.
 
 ## Parameters
 
-### -dump
+### :::no-loc text="-dump":::
 
 Dumps the configuration information or files.
 
@@ -37,7 +36,7 @@ Options:
 [-f] [-user] [-Silent] [-split] [-p Password] [-t Timeout]
 ```
 
-### -dumpPFX
+### :::no-loc text="-dumpPFX":::
 
 Dumps the PFX structure.
 
@@ -51,7 +50,7 @@ Options:
 [-f] [-Silent] [-split] [-p Password] [-csp Provider]
 ```
 
-### -asn
+### :::no-loc text="-asn":::
 
 Parses and displays the contents of a file using Abstract Syntax Notation (ASN.1) syntax. File types include .CER, .DER and PKCS #7 formatted files.
 
@@ -61,7 +60,7 @@ certutil [options] -asn File [type]
 
 - `[type]`: numeric CRYPT_STRING_* decoding type
 
-### -decodehex
+### :::no-loc text="-decodehex":::
 
 Decodes a hexadecimal-encoded file.
 
@@ -77,7 +76,7 @@ Options:
 [-f]
 ```
 
-### -encodehex
+### :::no-loc text="-encodehex":::
 
 Encodes a file in hexadecimal.
 
@@ -93,7 +92,7 @@ Options:
 [-f] [-nocr] [-nocrlf] [-UnicodeText]
 ```
 
-### -decode
+### :::no-loc text="-decode":::
 
 Decodes a Base64-encoded file.
 
@@ -107,7 +106,7 @@ Options:
 [-f]
 ```
 
-### -encode
+### :::no-loc text="-encode":::
 
 Encodes a file to Base64.
 
@@ -121,7 +120,7 @@ Options:
 [-f] [-unicodetext]
 ```
 
-### -deny
+### :::no-loc text="-deny":::
 
 Denies a pending request.
 
@@ -135,7 +134,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -resubmit
+### :::no-loc text="-resubmit":::
 
 Resubmits a pending request.
 
@@ -149,7 +148,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -setattributes
+### :::no-loc text="-setattributes":::
 
 Sets attributes for a pending certificate request.
 
@@ -170,9 +169,9 @@ Options:
 
 #### Remarks
 
-- Names and values must be colon separated, while multiple names and value pairs must be newline separated. For example: `CertificateTemplate:User\nEMail:User@Domain.com` where the `\n` sequence is converted to a newline separator.
+- Names and values must be colon-separated, while multiple names and value pairs must be newline-separated. For example: `CertificateTemplate:User\nEMail:User@Domain.com` where the `\n` sequence is converted to a newline separator.
 
-### -setextension
+### :::no-loc text="-setextension":::
 
 Set an extension for a pending certificate request.
 
@@ -196,10 +195,10 @@ Options:
 
 - If the last parameter is numeric, it's taken as a **Long**.
 - If the last parameter can be parsed as a date, it's taken as a **Date**.
-- If the last parameter starts with `\@`, the rest of the token is taken as the filename with binary data or an ascii-text hex dump.
+- If the last parameter starts with `\@`, the rest of the token is taken as the filename with binary data or an ASCII-text hex dump.
 - If the last parameter is anything else, it's taken as a String.
 
-### -revoke
+### :::no-loc text="-revoke":::
 
 Revokes a certificate.
 
@@ -229,7 +228,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -isvalid
+### :::no-loc text="-isvalid":::
 
 Displays the disposition of the current certificate.
 
@@ -243,7 +242,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -getconfig
+### :::no-loc text="-getconfig":::
 
 Gets the default configuration string.
 
@@ -257,7 +256,7 @@ Options:
 [-idispatch] [-config Machine\CAName]
 ```
 
-### -getconfig2
+### :::no-loc text="-getconfig2":::
 
 Gets the default configuration string via ICertGetConfig.
 
@@ -268,10 +267,10 @@ certutil [options] -getconfig2
 Options:
 
 ```cmd
-[-idispatch] 
+[-idispatch]
 ```
 
-### -getconfig3
+### :::no-loc text="-getconfig3":::
 
 Gets configuration via ICertConfig.
 
@@ -282,10 +281,10 @@ certutil [options] -getconfig3
 Options:
 
 ```cmd
-[-idispatch] 
+[-idispatch]
 ```
 
-### -ping
+### :::no-loc text="-ping":::
 
 Attempts to contact the Active Directory Certificate Services Request interface.
 
@@ -303,7 +302,7 @@ Options:
 [-config Machine\CAName] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
 ```
 
-### -pingadmin
+### :::no-loc text="-pingadmin":::
 
 Attempts to contact the Active Directory Certificate Services Admin interface.
 
@@ -317,7 +316,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -CAInfo
+### :::no-loc text="-CAInfo":::
 
 Displays information about the certification authority.
 
@@ -386,7 +385,7 @@ Options:
 [-f] [-split] [-config Machine\CAName]
 ```
 
-### -CAPropInfo
+### :::no-loc text="-CAPropInfo":::
 
 Displays CA Property Type information.
 
@@ -400,7 +399,7 @@ Options:
 [-idispatch] [-v1] [-admin] [-config Machine\CAName]
 ```
 
-### -ca.cert
+### :::no-loc text="-ca.cert":::
 
 Retrieves the certificate for the certification authority.
 
@@ -419,7 +418,7 @@ Options:
 [-f] [-split] [-config Machine\CAName]
 ```
 
-### -ca.chain
+### :::no-loc text="-ca.chain":::
 
 Retrieves the certificate chain for the certification authority.
 
@@ -438,7 +437,7 @@ Options:
 [-f] [-split] [-config Machine\CAName]
 ```
 
-### -GetCRL
+### :::no-loc text="-GetCRL":::
 
 Gets a certificate revocation list (CRL).
 
@@ -457,7 +456,7 @@ Options:
 [-f] [-split] [-config Machine\CAName]
 ```
 
-### -CRL
+### :::no-loc text="-CRL":::
 
 Publishes new certificate revocation lists (CRLs) or delta CRLs.
 
@@ -477,7 +476,7 @@ Options:
 [-split] [-config Machine\CAName]
 ```
 
-### -shutdown
+### :::no-loc text="-shutdown":::
 
 Shuts down the Active Directory Certificate Services.
 
@@ -491,7 +490,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -installCert
+### :::no-loc text="-installCert":::
 
 Installs a certification authority certificate.
 
@@ -505,7 +504,7 @@ Options:
 [-f] [-silent] [-config Machine\CAName]
 ```
 
-### -renewCert
+### :::no-loc text="-renewCert":::
 
 Renews a certification authority certificate.
 
@@ -521,7 +520,7 @@ Options:
 
 - Use `-f` to ignore an outstanding renewal request, and to generate a new request.
 
-### -schema
+### :::no-loc text="-schema":::
 
 Dumps the schema for the certificate.
 
@@ -542,7 +541,7 @@ Options:
 [-split] [-config Machine\CAName]
 ```
 
-### -view
+### :::no-loc text="-view":::
 
 Dumps the certificate view.
 
@@ -578,7 +577,8 @@ Options:
 - Use `Date[+|-dd:hh]` for date restrictions.
 - Use `now+dd:hh` for a date relative to the current time.
 - Templates contain Extended Key Usages (EKUs), which are object identifiers (OIDs) that describe how the certificate is used. Certificates don't always include template common names or display names, but they always contain the template EKUs. You can extract the EKUs for a specific certificate template from Active Directory and then restrict views based on that extension.
-### -db
+
+### :::no-loc text="-db":::
 
 Dumps the raw database.
 
@@ -592,7 +592,7 @@ Options:
 [-config Machine\CAName] [-restrict RestrictionList] [-out ColumnList]
 ```
 
-### -deleterow
+### :::no-loc text="-deleterow":::
 
 Deletes a row from the server database.
 
@@ -622,9 +622,9 @@ Options:
 - To delete CRLs that expired by January 22, 2001, type: `1/22/2001 crl`
 
 >[!NOTE]
->**Date** expects the format `mm/dd/yyyy` rather then `dd/mm/yyyy`, for example `1/22/2001` rather than `22/1/2001` for January 22, 2001. If your server isn't configured with US regional settings, using the **Date** argument might produce unexpected results.
+>**Date** expects the format `mm/dd/yyyy` rather than `dd/mm/yyyy`, for example `1/22/2001` rather than `22/1/2001` for January 22, 2001. If your server isn't configured with US regional settings, using the **Date** argument might produce unexpected results.
 
-### -backup
+### :::no-loc text="-backup":::
 
 Backs up the Active Directory Certificate Services.
 
@@ -644,7 +644,7 @@ Options:
 [-f] [-config Machine\CAName] [-p Password] [-ProtectTo SAMNameAndSIDList]
 ```
 
-### -backupDB
+### :::no-loc text="-backupDB":::
 
 Backs up the Active Directory Certificate Services database.
 
@@ -664,7 +664,7 @@ Options:
 [-f] [-config Machine\CAName]
 ```
 
-### -backupkey
+### :::no-loc text="-backupkey":::
 
 Backs up the Active Directory Certificate Services certificate and private key.
 
@@ -682,7 +682,7 @@ Options:
 [-f] [-config Machine\CAName] [-p password] [-ProtectTo SAMNameAndSIDList] [-t Timeout]
 ```
 
-### -restore
+### :::no-loc text="-restore":::
 
 Restores the Active Directory Certificate Services.
 
@@ -700,7 +700,7 @@ Options:
 [-f] [-config Machine\CAName] [-p password]
 ```
 
-### -restoredb
+### :::no-loc text="-restoredb":::
 
 Restores the Active Directory Certificate Services database.
 
@@ -718,7 +718,7 @@ Options:
 [-f] [-config Machine\CAName]
 ```
 
-### -restorekey
+### :::no-loc text="-restorekey":::
 
 Restores the Active Directory Certificate Services certificate and private key.
 
@@ -737,7 +737,7 @@ Options:
 [-f] [-config Machine\CAName] [-p password]
 ```
 
-### -exportPFX
+### :::no-loc text="-exportPFX":::
 
 Exports the certificates and private keys. For more information, see the `-store` parameter in this article.
 
@@ -759,7 +759,7 @@ Where:
   - **NoChain** - Doesn't import the certificate chain.
   - **NoRoot** - Doesn't import the root certificate.
 
-### -importPFX
+### :::no-loc text="-importPFX":::
 
 Imports the certificates and private keys. For more information, see the `-store` parameter in this article.
 
@@ -798,7 +798,7 @@ Options:
 
 - Defaults to personal machine store.
 
-### -dynamicfilelist
+### :::no-loc text="-dynamicfilelist":::
 
 Displays a dynamic file list.
 
@@ -812,7 +812,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -databaselocations
+### :::no-loc text="-databaselocations":::
 
 Displays database locations.
 
@@ -826,7 +826,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -hashfile
+### :::no-loc text="-hashfile":::
 
 Generates and displays a cryptographic hash over a file.
 
@@ -834,7 +834,7 @@ Generates and displays a cryptographic hash over a file.
 certutil [options] -hashfile InFile [HashAlgorithm]
 ```
 
-### -store
+### :::no-loc text="-store":::
 
 Dumps the certificate store.
 
@@ -853,7 +853,7 @@ Where:
   - `ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)`
   - `ldap: (AD computer object certificates)`
   - `-user ldap: (AD user object certificates)`
-  
+
 - **CertId** is the certificate or CRL match token. This ID can be a:
 
   - Serial number
@@ -893,7 +893,15 @@ For example:
 - `-user My 26e0aaaf000000000004`
 - `CA .11`
 
-### -enumstore
+> [!NOTE]
+> Performance issues are observed when using the `-store` parameter given these two aspects:
+>
+> 1. When the number of certificates in the store exceeds 10.
+> 1. When a **CertId** is specified, it's used to match all the listed types for every certificate. For example, if a **serial number** is provided, it will also attempt to match all other listed types.
+>
+> If you're concerned about performance issues, PowerShell commands are recommended where it will only match the specified certificate type.
+
+### :::no-loc text="-enumstore":::
 
 Enumerates the certificate stores.
 
@@ -911,7 +919,7 @@ Options:
 [-enterprise] [-user] [-grouppolicy]
 ```
 
-### -addstore
+### :::no-loc text="-addstore":::
 
 Adds a certificate to the store. For more information, see the `-store` parameter in this article.
 
@@ -930,7 +938,7 @@ Options:
 [-f] [-Enterprise] [-user] [-GroupPolicy] [-dc DCName]
 ```
 
-### -delstore
+### :::no-loc text="-delstore":::
 
 Deletes a certificate from the store. For more information, see the `-store` parameter in this article.
 
@@ -949,7 +957,7 @@ Options:
 [-f] [-Enterprise] [-user] [-GroupPolicy] [-Silent] [-dc DCName]
 ```
 
-### -verifystore
+### :::no-loc text="-verifystore":::
 
 Verifies a certificate in the store. For more information, see the `-store` parameter in this article.
 
@@ -968,7 +976,7 @@ Options:
 [-Enterprise] [-user] [-GroupPolicy] [-Silent] [-split] [-dc DCName] [-t Timeout]
 ```
 
-### -repairstore
+### :::no-loc text="-repairstore":::
 
 Repairs a key association or update certificate properties or the key security descriptor. For more information, see the `-store` parameter in this article.
 
@@ -1011,7 +1019,7 @@ Options:
 [-f] [-Enterprise] [-user] [-GroupPolicy] [-Silent] [-split] [-csp Provider]
 ```
 
-### -viewstore
+### :::no-loc text="-viewstore":::
 
 Dumps the certificates store. For more information, see the `-store` parameter in this article.
 
@@ -1035,7 +1043,7 @@ Where:
 
   - Serial number
   - SHA-1 certificate
-  - CRL, CTL or public key hash
+  - CRL, CTL, or public key hash
   - Numeric cert index (0, 1, and so on)
   - Numeric CRL index (.0, .1, and so on)
   - Numeric CTL index (..0, ..1, and so on)
@@ -1071,7 +1079,7 @@ For example:
 - `-user My 26e0aaaf000000000004`
 - `CA .11`
 
-### -viewdelstore
+### :::no-loc text="-viewdelstore":::
 
 Deletes a certificate from the store.
 
@@ -1095,7 +1103,7 @@ Where:
 
   - Serial number
   - SHA-1 certificate
-  - CRL, CTL or public key hash
+  - CRL, CTL, or public key hash
   - Numeric cert index (0, 1, and so on)
   - Numeric CRL index (.0, .1, and so on)
   - Numeric CTL index (..0, ..1, and so on)
@@ -1108,7 +1116,8 @@ Where:
   - Template name or ObjectId
   - EKU or Application Policies ObjectId
   - CRL issuer Common Name.
-Many of these may result in multiple matches.
+
+Many of these might result in multiple matches.
 
 - **OutputFile** is the file used to save the matching certificates.
 
@@ -1130,7 +1139,7 @@ For example:
 - `-user My 26e0aaaf000000000004`
 - `CA .11`
 
-### -UI
+### :::no-loc text="-UI":::
 
 Invokes the certutil interface.
 
@@ -1138,7 +1147,7 @@ Invokes the certutil interface.
 certutil [options] -UI File [import]
 ```
 
-### -TPMInfo
+### :::no-loc text="-TPMInfo":::
 
 Displays Trusted Platform Module Information.
 
@@ -1152,7 +1161,7 @@ Options:
 [-f] [-Silent] [-split]
 ```
 
-### -attest
+### :::no-loc text="-attest":::
 
 Specifies that the certificate request file should be attested.
 
@@ -1166,7 +1175,7 @@ Options:
 [-user] [-Silent] [-split]
 ```
 
-### -getcert
+### :::no-loc text="-getcert":::
 
 Selects a certificate from a selection UI.
 
@@ -1180,7 +1189,7 @@ Options:
 [-Silent] [-split]
 ```
 
-### -ds
+### :::no-loc text="-ds":::
 
 Displays directory service (DS) distinguished names (DNs).
 
@@ -1194,7 +1203,7 @@ Options:
 [-f] [-user] [-split] [-dc DCName]
 ```
 
-### -dsDel
+### :::no-loc text="-dsDel":::
 
 Deletes DS DNs.
 
@@ -1208,7 +1217,7 @@ Options:
 [-user] [-split] [-dc DCName]
 ```
 
-### -dsPublish
+### :::no-loc text="-dsPublish":::
 
 Publishes a certificate or certificate revocation list (CRL) to Active Directory.
 
@@ -1239,7 +1248,7 @@ Options:
 
 - Use `-f` to create a new DS object.
 
-### -dsCert
+### :::no-loc text="-dsCert":::
 
 Displays DS certificates.
 
@@ -1253,49 +1262,49 @@ Options:
 [-Enterprise] [-user] [-config Machine\CAName] [-dc DCName]
 ```
 
-### -dsCRL
+### :::no-loc text="-dsCRL":::
 
 Displays DS CRLs.
 
 ```cmd
 certutil [options] -dsCRL [FullDSDN] | [CRLIndex [OutFile]]
 ```
-  
+
 Options:
 
 ```cmd
 [-idispatch] [-Enterprise] [-user] [-config Machine\CAName] [-dc DCName]
 ```
 
-### -dsDeltaCRL
+### :::no-loc text="-dsDeltaCRL":::
 
 Displays DS delta CRLs.
 
 ```cmd
 certutil [options] -dsDeltaCRL [FullDSDN] | [CRLIndex [OutFile]]
 ```
-  
+
 Options:
 
 ```cmd
 [-Enterprise] [-user] [-config Machine\CAName] [-dc DCName]
 ```
 
-### -dsTemplate
+### :::no-loc text="-dsTemplate":::
 
 Displays DS template attributes.
 
 ```cmd
 certutil [options] -dsTemplate [Template]
 ```
-  
+
 Options:
 
 ```cmd
 [Silent] [-dc DCName]
 ```
 
-### -dsAddTemplate
+### :::no-loc text="-dsAddTemplate":::
 
 Adds DS templates.
 
@@ -1309,7 +1318,7 @@ Options:
 [-dc DCName]
 ```
 
-### -ADTemplate
+### :::no-loc text="-ADTemplate":::
 
 Displays Active Directory templates.
 
@@ -1323,7 +1332,7 @@ Options:
 [-f] [-user] [-ut] [-mt] [-dc DCName]
 ```
 
-### -Template
+### :::no-loc text="-Template":::
 
 Displays the certificate enrollment policy templates.
 
@@ -1339,7 +1348,7 @@ Options:
 [-f] [-user] [-Silent] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
 ```
 
-### -TemplateCAs
+### :::no-loc text="-TemplateCAs":::
 
 Displays the certification authorities (CAs) for a certificate template.
 
@@ -1353,7 +1362,7 @@ Options:
 [-f] [-user] [-dc DCName]
 ```
 
-### -CATemplates
+### :::no-loc text="-CATemplates":::
 
 Displays templates for the Certificate Authority.
 
@@ -1367,7 +1376,7 @@ Options:
 [-f] [-user] [-ut] [-mt] [-config Machine\CAName] [-dc DCName]
 ```
 
-### -SetCATemplates
+### :::no-loc text="-SetCATemplates":::
 
 Sets the certificate templates that the Certificate Authority can issue.
 
@@ -1377,10 +1386,10 @@ certutil [options] -SetCATemplates [+ | -] TemplateList
 
 Where:
 
- - The `+` sign adds certificate templates to the CA's available template list.
- - The `-` sign removes certificate templates from the CA's available template list.
+- The `+` sign adds certificate templates to the CA's available template list.
+- The `-` sign removes certificate templates from the CA's available template list.
 
-### -SetCASites
+### :::no-loc text="-SetCASites":::
 
 Manages site names, including setting, verifying, and deleting Certificate Authority site names.
 
@@ -1408,7 +1417,7 @@ Options:
 > [!NOTE]
 > For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)).
 
-### -enrollmentServerURL
+### :::no-loc text="-enrollmentServerURL":::
 
 Displays, adds, or deletes enrollment server URLs associated with a CA.
 
@@ -1436,7 +1445,7 @@ Options:
 [-config Machine\CAName] [-dc DCName]
 ```
 
-### -ADCA
+### :::no-loc text="-ADCA":::
 
 Displays the Active Directory Certificate Authorities.
 
@@ -1450,7 +1459,7 @@ Options:
 [-f] [-split] [-dc DCName]
 ```
 
-### -CA
+### :::no-loc text="-CA":::
 
 Displays the enrollment policy Certificate Authorities.
 
@@ -1464,20 +1473,21 @@ Options:
 [-f] [-user] [-Silent] [-split] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
 ```
 
-### -Policy
+### :::no-loc text="-Policy":::
 
 Displays the enrollment policy.
 
 ```cmd
 certutil [options] -Policy
 ```
+
 Options:
 
 ```cmd
 [-f] [-user] [-Silent] [-split] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
 ```
 
-### -PolicyCache
+### :::no-loc text="-PolicyCache":::
 
 Displays or deletes enrollment policy cache entries.
 
@@ -1496,7 +1506,7 @@ Options:
 [-f] [-user] [-policyserver URLorID]
 ```
 
-### -CredStore
+### :::no-loc text="-CredStore":::
 
 Displays, adds, or deletes Credential Store entries.
 
@@ -1519,7 +1529,7 @@ Options:
 [-f] [-user] [-Silent] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
 ```
 
-### -InstallDefaultTemplates
+### :::no-loc text="-InstallDefaultTemplates":::
 
 Installs the default certificate templates.
 
@@ -1533,7 +1543,7 @@ Options:
 [-dc DCName]
 ```
 
-### -URL
+### :::no-loc text="-URL":::
 
 Verifies certificate or CRL URLs.
 
@@ -1547,7 +1557,7 @@ Options:
 [-f] [-split]
 ```
 
-### -URLCache
+### :::no-loc text="-URLCache":::
 
 Displays or deletes URL cache entries.
 
@@ -1569,7 +1579,7 @@ Options:
 [-f] [-split]
 ```
 
-### -pulse
+### :::no-loc text="-pulse":::
 
 Pulses an autoenrollment event or NGC task.
 
@@ -1580,7 +1590,7 @@ certutil [options] -pulse [TaskName [SRKThumbprint]]
 Where:
 
 - **TaskName** is the task to trigger.
-  - **Pregen** is the NGC Key pregen task.  
+  - **Pregen** is the NGC Key pregen task.
   - **AIKEnroll** is the NGC AIK certificate enrollment task. (Defaults to the autoenrollment event).
 - **SRKThumbprint** is the thumbprint of the Storage Root Key
 - **Modifiers**:
@@ -1597,7 +1607,7 @@ Options:
 [-user]
 ```
 
-### -MachineInfo
+### :::no-loc text="-MachineInfo":::
 
 Displays information about the Active Directory machine object.
 
@@ -1605,7 +1615,7 @@ Displays information about the Active Directory machine object.
 certutil [options] -MachineInfo DomainName\MachineName$
 ```
 
-### -DCInfo
+### :::no-loc text="-DCInfo":::
 
 Displays information about the domain controller. The default displays DC certificates without verification.
 
@@ -1628,14 +1638,14 @@ Options:
 > [!TIP]
 > The ability to specify an Active Directory Domain Services (AD DS) domain **[Domain]** and to specify a domain controller (**-dc**) was added in Windows Server 2012. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:
 >
-> - If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.
-> - If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.
-> - If a domain is specified, but a domain controller is not specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.
+> - If a domain isn't specified and a specific domain controller isn't specified, this option returns a list of domain controllers to process from the default domain controller.
+> - If a domain isn't specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.
+> - If a domain is specified, but a domain controller isn't specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.
 > - If the domain and domain controller are specified, a list of domain controllers is generated from the targeted domain controller. A report of the certificates for each domain controller in the list is also generated.
 >
-> For example, assume there is a domain named CPANDL with a domain controller named CPANDL-DC1. You can run the following command to a retrieve a list of domain controllers and their certificates from CPANDL-DC1: `certutil -dc cpandl-dc1 -DCInfo cpandl`.
+> For example, assume there's a domain named CPANDL with a domain controller named CPANDL-DC1. You can run the following command to a retrieve a list of domain controllers and their certificates from CPANDL-DC1: `certutil -dc cpandl-dc1 -DCInfo cpandl`.
 
-### -EntInfo
+### :::no-loc text="-EntInfo":::
 
 Displays information about an enterprise Certificate Authority.
 
@@ -1649,7 +1659,7 @@ Options:
 [-f] [-user]
 ```
 
-### -TCAInfo
+### :::no-loc text="-TCAInfo":::
 
 Displays information about the Certificate Authority.
 
@@ -1663,7 +1673,7 @@ Options:
 [-f] [-Enterprise] [-user] [-urlfetch] [-dc DCName] [-t Timeout]
 ```
 
-### -SCInfo
+### :::no-loc text="-SCInfo":::
 
 Displays information about the smart card.
 
@@ -1681,7 +1691,7 @@ Options:
 [-Silent] [-split] [-urlfetch] [-t Timeout]
 ```
 
-### -SCRoots
+### :::no-loc text="-SCRoots":::
 
 Manages smart card root certificates.
 
@@ -1698,7 +1708,7 @@ Options:
 [-f] [-split] [-p Password]
 ```
 
-### -key
+### :::no-loc text="-key":::
 
 Lists the keys stored in a key container.
 
@@ -1709,7 +1719,7 @@ certutil [options] -key [KeyContainerName | -]
 Where:
 
 - **KeyContainerName** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
-- Using the `-` sign refers to using the default key container.  
+- Using the `-` sign refers to using the default key container.
 
 Options:
 
@@ -1717,7 +1727,7 @@ Options:
 [-user] [-Silent] [-split] [-csp Provider] [-Location AlternateStorageLocation]
 ```
 
-### -delkey
+### :::no-loc text="-delkey":::
 
 Deletes the named key container.
 
@@ -1731,7 +1741,7 @@ Options:
 [-user] [-Silent] [-split] [-csp Provider] [-Location AlternateStorageLocation]
 ```
 
-### -DeleteHelloContainer
+### :::no-loc text="-DeleteHelloContainer":::
 
 Deletes the Windows Hello container, removing all associated credentials that are stored on the device, including any WebAuthn and FIDO credentials.
 
@@ -1741,7 +1751,7 @@ Users need to sign out after using this option for it to complete.
 certutil [options] -DeleteHelloContainer
 ```
 
-### -verifykeys
+### :::no-loc text="-verifykeys":::
 
 Verifies a public or private key set.
 
@@ -1765,7 +1775,7 @@ Options:
 - If no arguments are specified, each signing CA certificate is verified against its private key.
 - This operation can only be performed against a local CA or local keys.
 
-### -verify
+### :::no-loc text="-verify":::
 
 Verifies a certificate, certificate revocation list (CRL), or certificate chain.
 
@@ -1809,7 +1819,7 @@ Options:
 - Using **IssuedCertFile** verifies the fields in the file against **CRLfile**.
 - Using **DeltaCRLFile** verifies the fields in the file against **CertFile**.
 
-### -verifyCTL
+### :::no-loc text="-verifyCTL":::
 
 Verifies the AuthRoot or Disallowed Certificates CTL.
 
@@ -1838,7 +1848,7 @@ Options:
 [-f] [-user] [-split]
 ```
 
-### -syncWithWU
+### :::no-loc text="-syncWithWU":::
 
 Syncs certificates with Windows Update.
 
@@ -1895,7 +1905,7 @@ Options:
 [-f] [-Unicode] [-gmt] [-seconds] [-v] [-privatekey] [-pin PIN] [-sid WELL_KNOWN_SID_TYPE]
 ```
 
-### -generateSSTFromWU
+### :::no-loc text="-generateSSTFromWU":::
 
 Generates a store file that is synced with Windows Update.
 
@@ -1913,7 +1923,7 @@ Options:
 [-f] [-split]
 ```
 
-### -generatePinRulesCTL
+### :::no-loc text="-generatePinRulesCTL":::
 
 Generates a Certificate Trust List (CTL) file that contains a list of pinning rules.
 
@@ -1925,7 +1935,7 @@ Where:
 
 - **XMLFile** is the input XML file to be parsed.
 - **CTLFile** is the output CTL file to be generated.
-- **SSTFile** is the optional *.sst* file to be created that contains all of the certificates used for pinning.
+- **SSTFile** is the optional `.sst` file to be created that contains all of the certificates used for pinning.
 - **QueryFilesPrefix** are optional *Domains.csv* and *Keys.csv* files to be created for database query.
   - The **QueryFilesPrefix** string is prepended to each created file.
   - The **Domains.csv** file contains rule name, domain rows.
@@ -1937,7 +1947,7 @@ Options:
 [-f]
 ```
 
-### -downloadOcsp
+### :::no-loc text="-downloadOcsp":::
 
 Downloads the OCSP responses and writes to the directory.
 
@@ -1954,7 +1964,7 @@ Where:
   - **DownloadOnce** - Downloads once and exits.
   - **ReadOcsp** - Reads from OcspDir instead of writing.
 
-### -generateHpkpHeader
+### :::no-loc text="-generateHpkpHeader":::
 
 Generates the HPKP header using certificates in a specified file or directory.
 
@@ -1970,7 +1980,7 @@ Where:
 - **Modifiers** are comma separated list of one or more of the following:
   - **includeSubDomains** - Appends the includeSubDomains.
 
-### -flushCache
+### :::no-loc text="-flushCache":::
 
 Flushes the specified caches in selected process, such as, lsass.exe.
 
@@ -1994,7 +2004,7 @@ Where:
 - **Modifiers** are comma separated list of one or more of the following:
   - **Show** - Shows the caches being flushed. Certutil must be explicitly terminated.
 
-### -addEccCurve
+### :::no-loc text="-addEccCurve":::
 
 Adds an ECC Curve.
 
@@ -2026,7 +2036,7 @@ Options:
 [-f]
 ```
 
-### -deleteEccCurve
+### :::no-loc text="-deleteEccCurve":::
 
 Deletes the ECC Curve.
 
@@ -2045,7 +2055,7 @@ Options:
 [-f]
 ```
 
-### -displayEccCurve
+### :::no-loc text="-displayEccCurve":::
 
 Displays the ECC Curve.
 
@@ -2064,7 +2074,8 @@ Options:
 [-f]
 ```
 
-### -csplist
+### :::no-loc text="-csplist":::
+
 Lists the cryptographic service providers (CSPs) installed on this machine for cryptographic operations.
 
 ```cmd
@@ -2077,7 +2088,8 @@ Options:
 [-user] [-Silent] [-csp Provider]
 ```
 
-### -csptest
+### :::no-loc text="-csptest":::
+
 Tests the CSPs installed on this machine.
 
 ```cmd
@@ -2090,7 +2102,8 @@ Options:
 [-user] [-Silent] [-csp Provider]
 ```
 
-### -CNGConfig
+### :::no-loc text="-CNGConfig":::
+
 Displays CNG cryptographic configuration on this machine.
 
 ```cmd
@@ -2103,7 +2116,7 @@ Options:
 [-Silent]
 ```
 
-### -sign
+### :::no-loc text="-sign":::
 
 Re-signs a certificate revocation list (CRL) or certificate.
 
@@ -2133,7 +2146,7 @@ Where:
       2.5.29.15 = {hex} ; Update Key Usage extension
       _continue_=03 02 01 86
   ```
-  
+
 - **HashAlgorithm** is the name of the hash algorithm. This must only be the text preceded by the `#` sign.
 - **AlternateSignatureAlgorithm** is the alternate signature algorithm specifier.
 
@@ -2152,7 +2165,7 @@ Options:
 - Using the plus sign allows you to use the alternate signature format.
 - If you don't specify **AlternateSignatureAlgorithm**, the signature format in the certificate or CRL is used.
 
-### -vroot
+### :::no-loc text="-vroot":::
 
 Creates or deletes web virtual roots and file shares.
 
@@ -2160,7 +2173,7 @@ Creates or deletes web virtual roots and file shares.
 certutil [options] -vroot [delete]
 ```
 
-### -vocsproot
+### :::no-loc text="-vocsproot":::
 
 Creates or deletes web virtual roots for an OCSP web proxy.
 
@@ -2168,7 +2181,7 @@ Creates or deletes web virtual roots for an OCSP web proxy.
 certutil [options] -vocsproot [delete]
 ```
 
-### -addEnrollmentServer
+### :::no-loc text="-addEnrollmentServer":::
 
 Adds an Enrollment Server application and application pool if necessary for the specified Certificate Authority. This command doesn't install binaries or packages.
 
@@ -2193,7 +2206,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -deleteEnrollmentServer
+### :::no-loc text="-deleteEnrollmentServer":::
 
 Deletes an Enrollment Server application and application pool if necessary for the specified Certificate Authority. This command doesn't install binaries or packages.
 
@@ -2214,7 +2227,7 @@ Options:
 [-config Machine\CAName]
 ```
 
-### -addPolicyServer
+### :::no-loc text="-addPolicyServer":::
 
 Add a Policy Server application and application pool, if necessary. This command doesn't install binaries or packages.
 
@@ -2230,7 +2243,7 @@ Where:
   - **ClientCertificate** uses X.509 Certificate SSL credentials.
 - **KeyBasedRenewal** allows use of policies returned to the client containing keybasedrenewal templates. This option applies only for **UserName** and **ClientCertificate** authentication.
 
-### -deletePolicyServer
+### :::no-loc text="-deletePolicyServer":::
 
 Deletes a Policy Server application and application pool, if necessary. This command doesn't remove binaries or packages.
 
@@ -2246,7 +2259,7 @@ Where:
   - **ClientCertificate** uses X.509 Certificate SSL credentials.
 - **KeyBasedRenewal** allows use of a KeyBasedRenewal policy server.
 
-### -Class
+### :::no-loc text="-Class":::
 
 Displays COM registry information.
 
@@ -2260,7 +2273,7 @@ Options:
 [-f]
 ```
 
-### -7f
+### :::no-loc text="-7f":::
 
 Checks certificate for 0x7f length encodings.
 
@@ -2268,7 +2281,7 @@ Checks certificate for 0x7f length encodings.
 certutil [options] -7f CertFile
 ```
 
-### -oid
+### :::no-loc text="-oid":::
 
 Displays the object identifier or sets a display name.
 
@@ -2299,7 +2312,7 @@ Options:
 [-f]
 ```
 
-### -error
+### :::no-loc text="-error":::
 
 Displays the message text associated with an error code.
 
@@ -2307,7 +2320,7 @@ Displays the message text associated with an error code.
 certutil [options] -error ErrorCode
 ```
 
-### -getsmtpinfo
+### :::no-loc text="-getsmtpinfo":::
 
 Gets Simple Mail Transfer Protocol (SMTP) information.
 
@@ -2315,7 +2328,7 @@ Gets Simple Mail Transfer Protocol (SMTP) information.
 certutil [options] -getsmtpinfo
 ```
 
-### -setsmtpinfo
+### :::no-loc text="-setsmtpinfo":::
 
 Sets SMTP information.
 
@@ -2329,7 +2342,7 @@ Options:
 [-config Machine\CAName] [-p Password]
 ```
 
-### -getreg
+### :::no-loc text="-getreg":::
 
 Displays a registry value.
 
@@ -2349,7 +2362,7 @@ Where:
 - **PolicyServers** uses the Policy Servers registry key.
 - **ProgId** uses the policy or exit module's ProgID (registry subkey name).
 - **RegistryValueName** uses the registry value name (use `Name*` to prefix match).
-- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
+- **value** uses the new numeric, string, or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
 Options:
 
@@ -2382,7 +2395,7 @@ Options:
   - Passport - Software\Policies\Microsoft\PassportForWork
   - MDM - Software\Microsoft\Policies\PassportForWork
 
-### -setreg
+### :::no-loc text="-setreg":::
 
 Sets a registry value.
 
@@ -2402,7 +2415,7 @@ Where:
 - **PolicyServers** uses the Policy Servers registry key.
 - **ProgId** uses the policy or exit module's ProgID (registry subkey name).
 - **RegistryValueName** uses the registry value name (use `Name*` to prefix match).
-- **Value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
+- **Value** uses the new numeric, string, or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
 Options:
 
@@ -2419,7 +2432,7 @@ Options:
 - Use `i64` as a suffix to create a REG_QWORD value.
 - Use `chain\chaincacheresyncfiletime @now` to effectively flush cached CRLs.
 
-### -delreg
+### :::no-loc text="-delreg":::
 
 Deletes a registry value.
 
@@ -2472,7 +2485,7 @@ Options:
   - Passport - Software\Policies\Microsoft\PassportForWork
   - MDM - Software\Microsoft\Policies\PassportForWork
 
-### -importKMS
+### :::no-loc text="-importKMS":::
 
 Imports user keys and certificates into the server database for key archival.
 
@@ -2494,7 +2507,7 @@ Options:
 [-f] [-Silent] [-split] [-config Machine\CAName] [-p Password] [-symkeyalg SymmetricKeyAlgorithm[,KeyLength]]
 ```
 
-### -ImportCert
+### :::no-loc text="-ImportCert":::
 
 Imports a certificate file into the database.
 
@@ -2515,9 +2528,9 @@ Options:
 
 #### Remarks
 
-The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
+The Certificate Authority may also need to be configured to support foreign certificates by running `certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
 
-### -GetKey
+### :::no-loc text="-GetKey":::
 
 Retrieves an archived private key recovery blob, generates a recovery script, or recovers archived keys.
 
@@ -2554,7 +2567,7 @@ Options:
 - For **retrieve**, any extension is truncated and a certificate-specific string and the `.rec` extensions are appended for each key recovery blob. Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 - For **recover**, any extension is truncated and the `.p12` extension is appended. Contains the recovered certificate chains and associated private keys, stored as a PFX file.
 
-### -RecoverKey
+### :::no-loc text="-RecoverKey":::
 
 Recovers an archived private key.
 
@@ -2568,7 +2581,7 @@ Options:
 [-f] [-user] [-Silent] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider] [-t Timeout]
 ```
 
-### -mergePFX
+### :::no-loc text="-mergePFX":::
 
 Merges PFX files.
 
@@ -2596,36 +2609,7 @@ Options:
 - The password specified on the command line must be a comma-separated password list.
 - If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user is prompted for the output file password.
 
-### -convertEPF
-
-Converts a PFX file into an EPF file.
-
-```cmd
-certutil [options] -ConvertEPF PFXInFileList EPFOutFile [cast | cast-] [V3CACertId][,Salt]
-```
-
-Where:
-
-- **PFXInFileList** is a comma-separated list of PFX input files.
-- **EPFOutFile** is the name of the PFX output file.
-- **EPF** is the name of the EPF output file.
-- **cast** uses CAST 64 encryption.
-- **cast-** uses CAST 64 encryption (export).
-- **V3CACertId** is the V3 CA certificate match token. For more information, see the `-store` parameter in this article.
-- **Salt** is the EPF output file salt string.
-
-Options:
-
-```cmd
-[-f] [-Silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
-```
-
-#### Remarks
-
-- The password specified on the command line must be a comma-separated password list.
-- If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user is prompted for the output file password.
-
-### -add-chain
+### :::no-loc text="-add-chain":::
 
 Adds a certificate chain.
 
@@ -2639,7 +2623,7 @@ Options:
 [-f]
 ```
 
-### -add-pre-chain
+### :::no-loc text="-add-pre-chain":::
 
 Adds a pre-certificate chain.
 
@@ -2653,7 +2637,7 @@ Options:
 [-f]
 ```
 
-### -get-sth
+### :::no-loc text="-get-sth":::
 
 Gets a signed tree head.
 
@@ -2667,7 +2651,7 @@ Options:
 [-f]
 ```
 
-### -get-sth-consistency
+### :::no-loc text="-get-sth-consistency":::
 
 Gets signed tree head changes.
 
@@ -2681,7 +2665,7 @@ Options:
 [-f]
 ```
 
-### -get-proof-by-hash
+### :::no-loc text="-get-proof-by-hash":::
 
 Gets proof of a hash from a timestamp server.
 
@@ -2695,7 +2679,7 @@ Options:
 [-f]
 ```
 
-### -get-entries
+### :::no-loc text="-get-entries":::
 
 Retrieves entries from an event log.
 
@@ -2709,7 +2693,7 @@ Options:
 [-f]
 ```
 
-### -get-roots
+### :::no-loc text="-get-roots":::
 
 Retrieves the root certificates from the certificate store.
 
@@ -2723,7 +2707,7 @@ Options:
 [-f]
 ```
 
-### -get-entry-and-proof
+### :::no-loc text="-get-entry-and-proof":::
 
 Retrieves an event log entry and its cryptographic proof.
 
@@ -2737,7 +2721,7 @@ Options:
 [-f]
 ```
 
-### -VerifyCT
+### :::no-loc text="-VerifyCT":::
 
 Verifies a certificate against the Certificate Transparency log.
 
@@ -2751,7 +2735,7 @@ Options:
 [-f]
 ```
 
-### -?
+### :::no-loc text="-?":::
 
 Displays the list of parameters.
 

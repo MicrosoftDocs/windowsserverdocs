@@ -2,15 +2,12 @@
 description: "Learn more about: Data Deduplication Overview"
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
-ms.topic: article
-author: wmgries
-manager: klaasl
-ms.author: wgries
+ms.topic: overview
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/18/2022
 ---
 # Data Deduplication Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 

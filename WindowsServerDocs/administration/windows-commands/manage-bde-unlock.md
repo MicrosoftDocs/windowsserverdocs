@@ -4,7 +4,7 @@ description: Reference article for the manage-bde unlock command, which unlocks 
 ms.topic: reference
 ms.assetid: 7852bf7d-9102-40be-adcb-71e8f4dfde72
 ms.author: alalve
-author: JasonGerend
+author: xelu86
 manager: mtillman
 ms.date: 01/17/2023
 ---

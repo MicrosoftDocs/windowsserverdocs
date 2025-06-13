@@ -2,10 +2,10 @@
 description: "Learn more about: AD FS Requirements for Windows Server"
 ms.assetid: 8ce6e7c4-cf8e-4b55-980c-048fea28d50f
 title: AD FS Requirements for Windows Server
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

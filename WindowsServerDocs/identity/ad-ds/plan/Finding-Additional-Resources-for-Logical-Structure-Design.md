@@ -2,16 +2,14 @@
 description: "Learn more about: Finding Additional Resources for Logical Structure Design"
 ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: Finding Additional Resources for Logical Structure Design
-author: iainfoulds
-ms.author: daveba
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Finding Additional Resources for Logical Structure Design
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can find Additional Resources for Logical Structure Design in the following documentation about Active Directory Domain Services (AD DS):
 

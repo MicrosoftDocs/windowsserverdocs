@@ -1,17 +1,16 @@
 ---
-title: Windows Server servicing channels
-description: Explanation of Windows Server Long-Term Servicing Channel (LTSC) and Annual Channel
-ms.topic: article
+title: Windows Server Servicing Channels
+description: Discover how Windows Server LTSC and Annual Channel differ in release cycles, support, and installation options to meet your organization's needs.
+ms.topic: concept-article
 author: robinharwood
-ms.author: wscontent
-manager: femila
-ms.date: 8/16/2021
-ms.prod: windows-server
+ms.author: roharwoo
+ms.date: 04/25/2025
+#customer intent: As an IT administrator, I want to understand the differences between the Long-Term Servicing Channel (LTSC) and Annual Channel (AC) for Windows Server, so that I can make informed decisions about which channel to use for my organization's needs.
 ---
 
 # Windows Server servicing channels
 
-Beginning in September 2023 Windows Server has two primary release channels available, the Long-Term Servicing Channel and the Annual Channel. The Long-Term Servicing Channel (LTSC) provides a longer term option focuses on providing a traditional lifecycle of quality and security updates, whereas the Annual Channel (AC) provides more frequent releases. The more frequent releases of the AC enable you to take advantage of innovation more quickly with focus on containers and microservices.
+Beginning in September 2023 Windows Server has two primary release channels available, the Long-Term Servicing Channel and the Annual Channel. The Long-Term Servicing Channel (LTSC) provides a longer term option focuses on providing a traditional lifecycle of quality and security updates, whereas the Annual Channel (AC) provides more frequent releases. The more frequent releases of the AC deliver faster innovation, focusing on containers and microservices.
 
 ## Long-Term Servicing Channel (LTSC)
 
@@ -23,7 +22,7 @@ Windows Server Annual Channel for Containers is an operating system to host Wind
 
 Each release in this channel is supported for 24 months from the initial release. This channel can only be installed with the Server Core installation option. The Annual Channel is available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) and loyalty programs such as Visual Studio Subscriptions.
 
-An Annual Channel release isn't an update, it's the next Windows Server release in the Annual Channel. To move to an Annual Channel release you must perform a clean installation.
+An Annual Channel release isn't an update, it's the next Windows Server release in the Annual Channel. To move to an Annual Channel release, you must perform a clean installation.
 
 Releases of Windows Server in the Annual Channel typically occur every 12 months. The 24 month support lifecycle for each release is 18 months of mainstream support, plus 6 months of extended support. To learn more about the lifecycle, see [Windows Server 2022 lifecycle](/lifecycle/products/windows-server-2022). Each release is named based on the release cycle; for example, **version 23H2** is a release in the second half of the year 2023.
 
@@ -51,7 +50,7 @@ Both the Long-Term Servicing Channel and the Annual Channel releases are support
 
 ### Servicing tools
 
-There are many tools with which you can service Windows Server. Each option has its pros and cons, ranging from capabilities and control to simplicity and low administrative requirements. The following are examples of the servicing tools available to manage servicing updates:
+There are many tools with which you can service Windows Server. Each option has its pros and cons, ranging from capabilities and control to simplicity and low administrative requirements. The following are examples of the servicing tools available to manage updates:
 
 - **Windows Update (stand-alone)**: This option is only available for servers that are connected to the Internet and have Windows Update enabled.
 - **Windows Server Update Services (WSUS)** provides extensive control over Windows Server and Windows client updates and is natively available in the Windows Server operating system. You can defer updates, add an approval layer, and choose to deploy them to specific computers or groups of computers whenever ready.
@@ -96,7 +95,7 @@ OSDisplayVersion   : 23H2
 ```
 
 > [!TIP]
-> `OSDisplayVersion` only applies to Windows Server 2022 and later. Annual Channel releases do not apply to Windows Server 2019 and earlier. If you're running Windows Server 2019 or earlier, you're running an LTSC release.
+> `OSDisplayVersion` only applies to Windows Server 2022 and later. Annual Channel releases don't apply to Windows Server 2019 and earlier. If you're running Windows Server 2019 or earlier, you're running an LTSC release.
 
 The following table lists the Windows Server LTSC and AC releases and their corresponding operating system versions.
 
@@ -105,4 +104,4 @@ The following table lists the Windows Server LTSC and AC releases and their corr
 | LTSC | 21H2 |
 | Annual Channel | 23H2 |
 
-The guidance is intended to help identify and differentiate between LTSC and AC for lifecycle and general inventory purposes only. It isn't intended for application compatibility or to represent a specific API surface. App developers should use guidance elsewhere to properly ensure compatibility as components, APIs, and functionality can be added over the life of a system, or not yet be added. To learn more about using programmatically determining the version, see [Operating System Version](/windows/win32/sysinfo/operating-system-version).
+The guidance is intended to help identify and differentiate between LTSC and AC for lifecycle and general inventory purposes only. It isn't intended for application compatibility or to represent a specific API surface. App developers should refer to other guidance to ensure compatibility. Components, APIs, and functionality might be added during a system's lifecycle or might not yet be available. To learn more about using programmatically determining the version, see [Operating System Version](/windows/win32/sysinfo/operating-system-version).

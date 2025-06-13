@@ -2,15 +2,15 @@
 title: Windows Admin Center SDK Case Study - QCT
 description: Windows Admin Center SDK Case Study - QCT
 ms.topic: article
-author: daniellee-msft
-ms.author: jol
+author: xelu86
+ms.author: alalve
 ms.date: 06/14/2019
 ---
 # QCT Management Suite Extension
 
 ## A simple path to server infrastructure management
 
-The QCT Management Suite extension for Windows Admin Center provides a single pane of glass dashboard for monitoring system configurations and managing server health of [QCT Azure Stack HCI certified systems](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-azure-stack-hci-solution/) : [QuantaGrid D52BQ-2U](https://www.qct.io/product/index/Server/rackmount-server/2U-Rackmount-Server/QuantaGrid-D52BQ-2U), [QuantaGrid D52T-1ULH](https://www.qct.io/product/index/Storage/Storage-Server/1U-Storage-Server/QuantaGrid-D52T-1ULH) and [QuantaPlex T21P-4U](https://www.qct.io/product/index/Storage/Storage-Server/4U-Storage-Server).
+The QCT Management Suite extension for Windows Admin Center provides a single pane of glass dashboard for monitoring system configurations and managing server health of [QCT Azure Local certified systems](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-azure-stack-hci-solution/) : [QuantaGrid D52BQ-2U](https://www.qct.io/product/index/Server/rackmount-server/2U-Rackmount-Server/QuantaGrid-D52BQ-2U), [QuantaGrid D52T-1ULH](https://www.qct.io/product/index/Storage/Storage-Server/1U-Storage-Server/QuantaGrid-D52T-1ULH) and [QuantaPlex T21P-4U](https://www.qct.io/product/index/Storage/Storage-Server/4U-Storage-Server).
 
 Driven by customer pain points around existing monitoring and management, QCT provides exclusive, complementary features and functions, which includes an overview of system event logs, monitoring drivers, and hardware component health to enhance the overall management experience.
 
@@ -34,5 +34,5 @@ The QCT Management Suite extends the functionality of Windows Admin Center with 
 ![Screenshot of the S.M.A.R.T information and unhealthy notifications that are included in the QCT extension.](../../media/extend-case-study-qct/T21P_SMART.PNG)
 
 Learn more about the QCT Management Suite for Windows Admin Center:
-- [QCT Management Suite web page](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-server-cloud-ready-appliances/)
+- [QCT Management Suite (Windows Admin Center Extension)](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-2019-server-solution/qct-management-suite-windows-admin-center-extension/)
 - [QCT Management Suite datasheet](https://go.qct.io/wp-content/uploads/2019/04/WAC-data-sheet_v04222019.pdf)

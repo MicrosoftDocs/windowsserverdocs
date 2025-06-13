@@ -1,11 +1,11 @@
 ---
 title: Restart or Shut Down
 description: Learn how to restart or completely shut down a system in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: fc9ce813-6ecb-4422-8f4b-5226386823f3
-author: lizap
+author: dknappettmsft
 manager: dongill
-ms.author: elizapo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Restart or Shut Down

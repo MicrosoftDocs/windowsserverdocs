@@ -1,15 +1,13 @@
 ---
 title: Use RAM that provides error correction
 description: Learn what to do when the RAM in use on this computer is not error-correcting (ECC) RAM.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
+ms.author: mosagie
+author: meaghanlewis
+ms.topic: best-practice
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
 ms.date: 8/16/2016
 ---
 # Use RAM that provides error correction
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 

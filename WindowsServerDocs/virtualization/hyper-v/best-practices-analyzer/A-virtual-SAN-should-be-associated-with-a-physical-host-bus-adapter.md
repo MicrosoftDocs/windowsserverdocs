@@ -1,15 +1,13 @@
 ---
 title: A virtual SAN should be associated with a physical host bus adapter
 description: Learn what to do when a virtual storage area network (SAN) has been configured without an association to a host bus adapter (HBA).
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
+ms.author: mosagie
+author: meaghanlewis
+ms.topic: best-practice
 ms.assetid: 14bca69b-e779-4e90-b5c1-1b015625572f
 ms.date: 8/16/2016
 ---
 # A virtual SAN should be associated with a physical host bus adapter
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

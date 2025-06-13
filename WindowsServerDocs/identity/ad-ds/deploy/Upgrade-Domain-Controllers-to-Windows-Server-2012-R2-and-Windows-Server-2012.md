@@ -1,16 +1,14 @@
 ---
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 description: Learn more about upgrading domain controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.author: daveba
-author: iainfoulds
-ms.date: 05/16/2023
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: upgrade-and-migration-article
 ms.custom: inhenke
 ---
 
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
 
@@ -151,7 +149,7 @@ Beginning with  Windows Server 2008 , domain controllers also have the following
 |--|--|--|--|
 | AllowNT4Crypto | Disabled | Disabled | Third-party Server Message Block (SMB) clients may be incompatible with the secure default settings on domain controllers. In all cases, these settings can be relaxed to allow interoperability, but only at the expense of security. For more information, see [Disable the AllowNT4Crypto setting on all affected domain controllers](/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers) in the Microsoft Knowledge Base (/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers). |
 | DES | Enabled | Disabled | [Article 977321](/troubleshoot/windows-server/windows-security/kdc-event-16-27-des-encryption-disabled) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [Install Service Packs and Hotfixes - Windows Client](/troubleshoot/windows-client/deployment/install-service-packs-hotfixes) (/troubleshoot/windows-client/deployment/install-service-packs-hotfixes) in the Microsoft Knowledge Base as required. |
+| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](/security-updates/securityadvisories/2009/973811) ([https://learn.microsoft.com/security-updates/securityadvisories/2009/973811](/security-updates/securityadvisories/2009/973811)) and [article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [Install Service Packs and Hotfixes - Windows Client](/troubleshoot/windows-client/deployment/install-service-packs-hotfixes) ([https://learn.microsoft.com/previous-versions/troubleshoot/windows-client/install-service-packs-hotfixes](/troubleshoot/windows-client/deployment/install-service-packs-hotfixes)) in the Microsoft Knowledge Base as required. |
 | LMv2 | Enabled | Disabled | [Article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="BKMK_SysReqs"></a>Operating system requirements

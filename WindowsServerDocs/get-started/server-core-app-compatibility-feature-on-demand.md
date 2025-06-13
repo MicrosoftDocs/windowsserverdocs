@@ -1,12 +1,11 @@
 ---
 title: Server Core App Compatibility Feature on Demand in Windows Server
 description: The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package that can be added to Server Core installations of Windows Server installations at any time, beginning with Windows Server 2019.
-ms.topic: conceptual
-author: robinharwood
-ms.author: wscontent
-manager: femila
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
+manager: tedhudek
 ms.date: 03/07/2023
-ms.prod: windows-server
 ---
 
 # Server Core App Compatibility Feature on Demand

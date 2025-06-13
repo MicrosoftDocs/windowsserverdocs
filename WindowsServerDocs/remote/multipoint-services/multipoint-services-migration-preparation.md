@@ -2,15 +2,13 @@
 title: Prepare to migrate to MultiPoint Services
 description: Describes information to gather before you migrate to MultiPoint Services in Windows Server 2016
 ms.date: 07/29/2016
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
-author: lizap
+author: dknappettmsft
 manager: dongill
-ms.author: elizapo
+ms.author: daknappe
 ---
 # Prepare to migrate to MultiPoint Services in Windows Server 2016
-
->Applies to: Windows Server 2016
 
 Use the following information to gather the information you need to migrate the MultiPoint Services role service from a source server running an earlier release of Windows Server 2016 to a destination server running Windows Server 2016 RTM.
 

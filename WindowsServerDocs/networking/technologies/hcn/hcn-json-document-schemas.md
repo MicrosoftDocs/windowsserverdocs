@@ -1,15 +1,13 @@
 ---
 title: Host Compute Network (HCN) JSON document schemas
 description: Information about HCN JSON document schemas.
-ms.author: daschott
-author: daschott
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/05/2018
-ms.topic: article
+ms.topic: reference
 ---
 
 # HCN JSON document schemas
-
->Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN schema
 

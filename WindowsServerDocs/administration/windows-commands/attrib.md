@@ -3,7 +3,7 @@ title: attrib
 description: Reference article for the attrib command that displays, sets, or removes attributes assigned to files or directories.
 ms.topic: reference
 ms.assetid: 5e763ca5-21a2-45d2-b26d-a9c44c99091a
-ms.author: wscontent
+ms.author: alalve
 author: xelu86
 ms.date: 09/22/2023
 ---

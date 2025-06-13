@@ -2,16 +2,14 @@
 description: "Learn more about: Deploy Claims Across Forests (Demonstration Steps)"
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: Deploy Claims Across Forests (Demonstration Steps)
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Deploy Claims Across Forests (Demonstration Steps)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In this topic, we'll cover a basic scenario that explains how to configure claims transformations between trusting and trusted forests. You will learn how claims transformation policy objects can be created and linked to the trust on the trusting forest and the trusted forest. You will then validate the scenario.
 

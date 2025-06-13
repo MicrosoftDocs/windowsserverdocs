@@ -1,16 +1,16 @@
 ---
 title: Install or Uninstall Roles, Role Services, or Features
 description: Learn how to install roles and features to local or remote servers, or offline virtual hard disks (VHDs).
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Install or Uninstall Roles, Role Services, or Features
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 > [!div class="nextstepaction"]
 > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806294" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix Roles and Features related issues.
@@ -26,17 +26,24 @@ For more information about what roles, role services, and features are, see [Rol
 
 This topic contains the following sections.
 
--   [Install roles, role services, and features by using the add Roles and Features Wizard](#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard)
-
--   [Install roles, role services, and features by using Windows PowerShell cmdlets](#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)
-
--   [Remove roles, role services, and features by using the remove Roles and Features Wizard](#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard)
-
--   [Remove roles, role services, and features by using Windows PowerShell cmdlets](#remove-roles-role-services-and-features-by-using-windows-powershell-cmdlets)
-
--   [Install roles and features on multiple servers by running a Windows PowerShell script](#install-roles-and-features-on-multiple-servers-by-running-a-windows-powershell-script)
-
--   [Install .NET Framework 3.5 and other features on-demand](#install-net-framework-35-and-other-features-on-demand)
+- [Install or Uninstall Roles, Role Services, or Features](#install-or-uninstall-roles-role-services-or-features)
+  - [Install roles, role services, and features by using the add Roles and Features Wizard](#install-roles-role-services-and-features-by-using-the-add-roles-and-features-wizard)
+      - [To install roles and features by using the add Roles and Features Wizard](#to-install-roles-and-features-by-using-the-add-roles-and-features-wizard)
+  - [Install roles, role services, and features by using Windows PowerShell cmdlets](#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)
+      - [To install roles and features by using the Install-WindowsFeature cmdlet](#to-install-roles-and-features-by-using-the-install-windowsfeature-cmdlet)
+  - [Remove roles, role services, and features by using the remove Roles and Features Wizard](#remove-roles-role-services-and-features-by-using-the-remove-roles-and-features-wizard)
+      - [To remove roles and features by using the remove Roles and Features Wizard](#to-remove-roles-and-features-by-using-the-remove-roles-and-features-wizard)
+  - [Remove roles, role services, and features by using Windows PowerShell cmdlets](#remove-roles-role-services-and-features-by-using-windows-powershell-cmdlets)
+      - [To remove roles and features by using the Uninstall-WindowsFeature cmdlet](#to-remove-roles-and-features-by-using-the-uninstall-windowsfeature-cmdlet)
+  - [Install roles and features on multiple servers by running a Windows PowerShell script](#install-roles-and-features-on-multiple-servers-by-running-a-windows-powershell-script)
+      - [To install roles and features on multiple servers](#to-install-roles-and-features-on-multiple-servers)
+  - [Install .NET Framework 3.5 and other features on-demand](#install-net-framework-35-and-other-features-on-demand)
+    - [To install .NET Framework 3.5 by running the Install-WindowsFeature cmdlet](#to-install-net-framework-35-by-running-the-install-windowsfeature-cmdlet)
+    - [To install .NET Framework 3.5 by using the add Roles and Features Wizard](#to-install-net-framework-35-by-using-the-add-roles-and-features-wizard)
+    - [To install .NET Framework 3.5 by using DISM](#to-install-net-framework-35-by-using-dism)
+    - [Configure alternate sources for feature files in Group Policy](#configure-alternate-sources-for-feature-files-in-group-policy)
+        - [To configure a default alternate source path in Group Policy](#to-configure-a-default-alternate-source-path-in-group-policy)
+  - [See Also](#see-also)
 
 ## Install roles, role services, and features by using the add Roles and Features Wizard
 In a single session in the add Roles and Features Wizard, you can install roles, role services, and features on the local server, a remote server that has been added to Server Manager, or an offline VHD. For more information about how to add a server to Server Manager to manage, see [Add Servers to Server Manager](add-servers-to-server-manager.md).
@@ -232,7 +239,7 @@ Although you cannot use the add Roles and Features Wizard to install roles, role
 > [!IMPORTANT]
 > All target servers that are specified in your script must be running the release of Windows Server that matches the version of Server Manager you are running on the local computer. For example, if you are running Server Manager on Windows 10, you can install roles, role services, and features on servers that are running Windows Server 2016. If GUI-based management tools are added to the installation, the installation process automatically converts target servers that are running the Server Core installation option of Windows Server to the full installation option (server with a full GUI, also known as running Server Graphical Shell).
 >
-> The script provided in this section is an example of how batch deployment can be performed by using the `Install-WindowsFeature` cmdlet and a Windows PowerShell script. There are other possible scripts and methods of performing batch deployment to multiple servers. To search for or provide other scripts for deploying roles and features, search the [Script Center Repository](https://gallery.technet.microsoft.com/ScriptCenter).
+> The script provided in this section is an example of how batch deployment can be performed by using the `Install-WindowsFeature` cmdlet and a Windows PowerShell script. There are other possible scripts and methods of performing batch deployment to multiple servers. To search for or provide other scripts for deploying roles and features, search the [Script Center Repository](https://devblogs.microsoft.com/scripting/tag/script-center/).
 
 #### To install roles and features on multiple servers
 

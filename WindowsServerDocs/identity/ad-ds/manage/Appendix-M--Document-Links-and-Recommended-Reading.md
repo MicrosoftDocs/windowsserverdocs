@@ -2,16 +2,14 @@
 description: "Learn more about: Appendix M: Document Links and Recommended Reading"
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: Appendix M - Document Links and Recommended Reading
-author: iainfoulds
-ms.author: daveba
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: article
 ---
 
 # Appendix M: Document Links and Recommended Reading
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Appendix M: Document Links and Recommended Reading
 
@@ -44,7 +42,7 @@ The following table contains a list of links to external documents and their URL
 | [Personal Virtual Desktops](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759174(v=ws.11)) | [https://technet.microsoft.com/library/dd759174.aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759174(v=ws.11)) |
 | [Read-Only Domain Controller Planning and Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)) | [https://technet.microsoft.com/library/cc771744(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)) |
 | [Running Domain Controllers in Hyper-V](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10)) | [https://technet.microsoft.com/library/dd363553(v=ws.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10)) |
-| [Hyper-V Security Guide](https://www.microsoft.com/download/details.aspx?id=16650) | [https://www.microsoft.com/download/details.aspx?id=16650](https://www.microsoft.com/download/details.aspx?id=16650) |
+| [Hyper-V Security Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn741280(v=ws.11)) | [/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn741280(v=ws.11)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn741280(v=ws.11)) |
 | [Ask the Directory Services Team](/archive/blogs/askds/managing-rid-pool-depletion) | [https://blogs.technet.com/b/askds/archive/2011/09/12/managing-rid-pool-depletion.aspx](/archive/blogs/askds/managing-rid-pool-depletion) |
 | [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442) | [https://support.microsoft.com/kb/179442](https://support.microsoft.com/kb/179442) |
 | [2009 Verizon Data Breach Report](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) | [http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf](http://www.verizonbusiness.com/resources/security/reports/2009_databreach_rp.pdf) |
@@ -66,13 +64,13 @@ The following table contains a list of links to external documents and their URL
 | [Microsoft Data Classification Toolkit](/previous-versions/tn-archive/hh204743(v=technet.10)) | [https://technet.microsoft.com/library/hh204743.aspx](/previous-versions/tn-archive/hh204743(v=technet.10)) |
 | [Dynamic Access Control](/previous-versions/tn-archive/hh204743(v=technet.10)) | [https://blogs.technet.com/b/windowsserver/archive/2012/05/22/introduction-to-windows-server-2012-dynamic-access-control.aspx](/previous-versions/tn-archive/hh204743(v=technet.10)) |
 | [Absolute Software](https://www.absolute.com/company/press-releases/2009/computrace-by-absolute-software-now-supported-in-firmware-of-getac-computers/) | [https://www.absolute.com/company/press-releases/2009/computrace-by-absolute-software-now-supported-in-firmware-of-getac-computers/](https://www.absolute.com/company/press-releases/2009/computrace-by-absolute-software-now-supported-in-firmware-of-getac-computers/) |
-| [Absolute Manage](https://www.absolute.com/resources/solution-sheets/itam/) | [https://www.absolute.com/resources/solution-sheets/itam/](https://www.absolute.com/resources/solution-sheets/itam/) |
+| [Absolute Manage](https://www.absolute.com/resources/data-sheets/itam) | [https://www.absolute.com/resources/data-sheets/itam](https://www.absolute.com/resources/data-sheets/itam) |
 | [Absolute Manage MDM](https://www.absolute.com/company/press-releases/2012/absolute-manage-the-first-mdm-solution-with-integrated-secure-document-distribution-and-management-for-ipads/?campaignid=983063266&adgroupid=136612784634&feeditemid=&loc_physical_ms=9003653&matchtype=&network=g&device=c&gclid=CjwKCAjwyryUBhBSEiwAGN5OCHt2V4ncG6tH-QxzCEYK-OV4yQhIOyQp-n51UZZjS87_vrK5qPcE-xoCDL8QAvD_BwE&creative=583299092096&keyword=&adposition=&utm_term=&gclid=CjwKCAjwyryUBhBSEiwAGN5OCHt2V4ncG6tH-QxzCEYK-OV4yQhIOyQp-n51UZZjS87_vrK5qPcE-xoCDL8QAvD_BwE) | [https://www.absolute.com/company/press-releases/2012/absolute-manage-the-first-mdm-solution-with-integrated-secure-document-distribution-and-management-for-ipads/?campaignid=983063266&adgroupid=136612784634&feeditemid=&loc_physical_ms=9003653&matchtype=&network=g&device=c&gclid=CjwKCAjwyryUBhBSEiwAGN5OCHt2V4ncG6tH-QxzCEYK-OV4yQhIOyQp-n51UZZjS87_vrK5qPcE-xoCDL8QAvD_BwE&creative=583299092096&keyword=&adposition=&utm_term=&gclid=CjwKCAjwyryUBhBSEiwAGN5OCHt2V4ncG6tH-QxzCEYK-OV4yQhIOyQp-n51UZZjS87_vrK5qPcE-xoCDL8QAvD_BwE](https://www.absolute.com/company/press-releases/2012/absolute-manage-the-first-mdm-solution-with-integrated-secure-document-distribution-and-management-for-ipads/?campaignid=983063266&adgroupid=136612784634&feeditemid=&loc_physical_ms=9003653&matchtype=&network=g&device=c&gclid=CjwKCAjwyryUBhBSEiwAGN5OCHt2V4ncG6tH-QxzCEYK-OV4yQhIOyQp-n51UZZjS87_vrK5qPcE-xoCDL8QAvD_BwE&creative=583299092096&keyword=&adposition=&utm_term=&gclid=CjwKCAjwyryUBhBSEiwAGN5OCHt2V4ncG6tH-QxzCEYK-OV4yQhIOyQp-n51UZZjS87_vrK5qPcE-xoCDL8QAvD_BwE) |
-| [SolarWinds](http://www.solarwinds.com/eminentware-products.aspx) | [http://www.solarwinds.com/eminentware-products.aspx](http://www.solarwinds.com/eminentware-products.aspx) |
-| [EminentWare WSUS Extension Pack](http://solarwinds-marketing.s3.amazonaws.com/solarwinds/Datasheets/EminentWare-WSUS-Extension-Pack-005-Datasheet2.pdf) | [http://solarwinds-marketing.s3.amazonaws.com/solarwinds/Datasheets/EminentWare-WSUS-Extension-Pack-005-Datasheet2.pdf](http://solarwinds-marketing.s3.amazonaws.com/solarwinds/Datasheets/EminentWare-WSUS-Extension-Pack-005-Datasheet2.pdf) |
-| [EminentWare Configuration Manager Extension Pack](http://solarwinds-marketing.s3.amazonaws.com/solarwinds/Datasheets/EminentWare-Extension-Pack-for-CM-Datasheet-006-Revised.pdf) | [http://solarwinds-marketing.s3.amazonaws.com/solarwinds/Datasheets/EminentWare-Extension-Pack-for-CM-Datasheet-006-Revised.pdf](http://solarwinds-marketing.s3.amazonaws.com/solarwinds/Datasheets/EminentWare-Extension-Pack-for-CM-Datasheet-006-Revised.pdf) |
-| [GFI Software](http://www.gfi.com/?adv=952&loc=58&gclid=CLq9y5603rMCFal7QgodMFkAyA) | [http://www.gfi.com/?adv=952&loc=58&gclid=CLq9y5603rMCFal7QgodMFkAyA](http://www.gfi.com/?adv=952&loc=58&gclid=CLq9y5603rMCFal7QgodMFkAyA) |
-| [GFI LanGuard](http://www.gfi.com/network-security-vulnerability-scanner/?adv=952&loc=60&gclid=CP2t-7i03rMCFQuCQgodNkAA7g) | [http://www.gfi.com/network-security-vulnerability-scanner/?adv=952&loc=60&gclid=CP2t-7i03rMCFQuCQgodNkAA7g](http://www.gfi.com/network-security-vulnerability-scanner/?adv=952&loc=60&gclid=CP2t-7i03rMCFQuCQgodNkAA7g) |
+| [SolarWinds](https://www.solarwinds.com/) | [https://www.solarwinds.com/](https://www.solarwinds.com/) |
+| [EminentWare WSUS Extension Pack](https://www.solarwinds.com/assets/solarwinds/swresources/datasheet/eminentware-wsus-extension-pack-005-datasheet2.pdf) | [EminentWare WSUS Extension Pack](https://www.solarwinds.com/assets/solarwinds/swresources/datasheet/eminentware-wsus-extension-pack-005-datasheet2.pdf) |
+| [EminentWare Configuration Manager Extension Pack](https://www.solarwinds.com/assets/solarwinds/swresources/datasheet/eminentware-extension-pack-for-cm-datasheet-006-revised.pdf) | [EminentWare Configuration Manager Extension Pack](https://www.solarwinds.com/assets/solarwinds/swresources/datasheet/eminentware-extension-pack-for-cm-datasheet-006-revised.pdf) |
+| [GFI Software](https://gfi.ai/) | [https://gfi.ai/](https://gfi.ai/) |
+| [GFI LanGuard](https://gfi.ai/products-and-solutions/network-security-solutions/languard) | [https://gfi.ai/products-and-solutions/network-security-solutions/languard](https://gfi.ai/products-and-solutions/network-security-solutions/languard) |
 | [Secunia](http://secunia.com/) | [http://secunia.com/](http://secunia.com/) |
 | [Secunia Corporate Software Inspector (CSI)](http://secunia.com/products/corporate/csi/) | [http://secunia.com/products/corporate/csi/](http://secunia.com/products/corporate/csi/) |
 | [Vulnerability Intelligence Manager](http://secunia.com/vulnerability_intelligence/) | [http://secunia.com/vulnerability_intelligence/](http://secunia.com/vulnerability_intelligence/) |
@@ -133,20 +131,19 @@ The following table contains a list of links to external documents and their URL
 | [AD DS Backup and Recovery Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)) | [https://technet.microsoft.com/library/cc771290(v=ws.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771290(v=ws.10)) |
 | [Windows Configurations for Kerberos Supported Encryption Type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type) | [/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type](/archive/blogs/openspecification/windows-configurations-for-kerberos-supported-encryption-type) |
 | [UAC Processes and Interactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) | [https://technet.microsoft.com/library/dd835561(v=WS.10).aspx#1](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd835561(v=ws.10)) |
-| [EmpowerID](http://www.empowerid.com/products/authorizationservices) | [http://www.empowerid.com/products/authorizationservices](http://www.empowerid.com/products/authorizationservices) |
-| [Role-based access control (RBAC)](http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.security%2Fdoc%2Fsecurity%2Fdomain_rbac.htm) | [http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.security%2Fdoc%2Fsecurity%2Fdomain_rbac.htm](http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.security%2Fdoc%2Fsecurity%2Fdomain_rbac.htm) |
+| [Role-based access control (RBAC)](https://www.ibm.com/docs/en/aix/7.3?topic=control-aix-rbac) | [https://www.ibm.com/docs/en/aix/7.3?topic=control-aix-rbac](https://www.ibm.com/docs/en/aix/7.3?topic=control-aix-rbac) |
 | [The RBAC model](http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html) | [http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html](http://docs.oracle.com/cd/E19082-01/819-3321/6n5i4b7ap/index.html) |
 | [Active Directory-centric access control](http://www.centrify.com/solutions/it-security-access-control.asp) | [http://www.centrify.com/solutions/it-security-access-control.asp](http://www.centrify.com/solutions/it-security-access-control.asp) |
 | [Cyber-Ark's Privileged Identity Management (PIM) Suite](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp) | [http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp](http://www.cyber-ark.com/digital-vault-products/pim-suite/index.asp) |
 | [Quest One](https://www.quest.com/products/gpoadmin/) | [https://www.quest.com/products/gpoadmin/](https://www.quest.com/products/gpoadmin/) |
-| [Enterprise Random Password Manager (ERPM)](http://www.liebsoft.com/Random_Password_Manager/) | [http://www.liebsoft.com/Random_Password_Manager/](http://www.liebsoft.com/Random_Password_Manager/) |
-| [NetIQ Privileged User Manager](https://www.netiq.com/products/privileged-user-manager/) | [https://www.netiq.com/products/privileged-user-manager/](https://www.netiq.com/products/privileged-user-manager/) |
+| [Enterprise Random Password Manager (ERPM)](https://www.beyondtrust.com/blog/entry/bomgar-privileged-identity) | [https://www.beyondtrust.com/blog/entry/bomgar-privileged-identity](https://www.beyondtrust.com/blog/entry/bomgar-privileged-identity) |
+| [NetIQ Privileged User Manager](https://www.opentext.com/products/privileged-access-manager) | [NetIQ Privileged User Manager](https://www.opentext.com/products/privileged-access-manager) |
 | [CA IdentityMinder](https://www.scmagazine.com/feature/sc-awards-2007-time-to-be-counted) | [https://www.scmagazine.com/feature/sc-awards-2007-time-to-be-counted](https://www.scmagazine.com/feature/sc-awards-2007-time-to-be-counted) |
 | [Description of security events in Windows Vista and in Windows Server 2008](/windows/win32/wmisdk/event-security-constants) | [/windows/win32/wmisdk/event-security-constants](/windows/win32/wmisdk/event-security-constants) |
 | [Description of security events in Windows 7 and in Windows Server 2008 R2](/windows/win32/win7appqual/security) | [/windows/win32/win7appqual/security](/windows/win32/win7appqual/security) |
 | [Security Audit Events for Windows 7](https://www.microsoft.com/download/details.aspx?id=21561) | [https://www.microsoft.com/download/details.aspx?id=21561](https://www.microsoft.com/download/details.aspx?id=21561) |
 | [Windows Server 2008 R2 and Windows 8 and Windows Server 2012 Security Event Details](https://www.microsoft.com/download/details.aspx?id=35753) | [https://www.microsoft.com/download/details.aspx?id=35753](https://www.microsoft.com/download/details.aspx?id=35753) |
-| [Georgia Tech's Emerging Cyber Threats for 2013 report](http://www.gtsecuritysummit.com/report.html) | [http://www.gtsecuritysummit.com/report.html](http://www.gtsecuritysummit.com/report.html) |
+| [Georgia Tech's Emerging Cyber Threats for 2013 report](https://journalistsresource.org/economics/emerging-cyber-threats-report-2013/) | [https://journalistsresource.org/economics/emerging-cyber-threats-report-2013/](https://journalistsresource.org/economics/emerging-cyber-threats-report-2013/) |
 | [Microsoft Security Intelligence Report](/azure/defender-for-cloud/threat-intelligence-reports) | [/azure/defender-for-cloud/threat-intelligence-reports](/azure/defender-for-cloud/threat-intelligence-reports) |
 | [Australian Government Defense Signals Directory Top 35 Mitigation Strategies](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm) | [http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm) |
 | [Cloud Computing Security Benefits](/azure/defender-for-cloud/enhanced-security-features-overview) | [/azure/defender-for-cloud/enhanced-security-features-overview](/azure/defender-for-cloud/enhanced-security-features-overview) |
@@ -165,7 +162,7 @@ The following table contains a list of recommended reading that will assist you 
 
 | **Recommended Reading** |
 |--|
-| [Georgia Tech's Emerging Cyber Threats for 2014 Report](http://www.gtsecuritysummit.com/2014Report.pdf) |
+| [Georgia Tech's Emerging Cyber Threats for 2014 Report](https://potsandpansbyccg.com/wp-content/uploads/2013/11/emerging-cyber-threats-report-for-2014.pdf) |
 | [Microsoft Security Intelligence Report](/azure/defender-for-cloud/threat-intelligence-reports) |
 | [Mitigating Pass-the-Hash (PTH) Attacks and Other Credential Theft Techniques](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf) |
 | [Australian Government Defense Signals Directory Top 35 Mitigation Strategies](http://www.dsd.gov.au/infosec/top35mitigationstrategies.htm) |
@@ -180,7 +177,7 @@ The following table contains a list of recommended reading that will assist you 
 | [Active Directory Technical Specification](/openspecs/windows_protocols/ms-adts/d2435927-0999-4c62-8c6d-13ba31a52e1a) - dSHeuristics information |
 | [Error message when nonadministrator users who have been delegated control try to join computers to a Windows Server 2003-based or a Windows Server 2008-based domain controller: "Access is denied"](https://support.microsoft.com/kb/932455) |
 | [Best Practice Guide for Securing Active Directory Installations.doc](https://go.microsoft.com/fwlink/?LinkId=140862) |
-| [Hyper-V Security Guide](https://www.microsoft.com/download/details.aspx?id=16650) |
+| [Hyper-V Security Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn741280(v=ws.11)) |
 | [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378897(v=ws.10)). |
 | [Strict KDC Validation](https://www.microsoft.com/download/details.aspx?id=6382) |
 

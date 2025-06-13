@@ -1,17 +1,15 @@
 ---
 description: "Learn more about: AD Forest Recovery - Adding the GC"
 title: AD Forest Recovery - Adding the GC
-ms.author: daveba
-author: iainfoulds
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: how-to
 ms.custom: 5a291f65-794e-4fc3-996e-094c5845a383, inhenkel
 ---
 
 # Active Directory Forest Recovery - Add the GC
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to add the global catalog to a DC.
 

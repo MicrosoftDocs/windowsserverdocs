@@ -2,11 +2,11 @@
 description: "Learn more about: Create a Rule to Permit All Users"
 ms.assetid: 8c179884-f0d9-4c7a-973d-820119cf3c38
 title: Create a Rule to Permit All Users
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Create a Rule to Permit All Users

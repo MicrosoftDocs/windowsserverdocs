@@ -2,11 +2,11 @@
 description: "Learn more about: When to Use a Send Group Membership as a Claim Rule"
 ms.assetid: af16e847-47c2-461e-9df1-cc352a322043
 title: When to Use a Send Group Membership as a Claim Rule
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # When to Use a Send Group Membership as a Claim Rule

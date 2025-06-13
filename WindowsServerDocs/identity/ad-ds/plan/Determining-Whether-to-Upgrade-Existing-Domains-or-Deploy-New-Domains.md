@@ -2,16 +2,14 @@
 description: "Learn more about: Determining Whether to Upgrade Existing Domains or Deploy New Domains"
 ms.assetid: c20231dd-2b83-4494-9385-1172272e00d6
 title: Determining Whether to Upgrade Existing Domains or Deploy New Domains
-author: iainfoulds
-ms.author: daveba
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Determining Whether to Upgrade Existing Domains or Deploy New Domains
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Each domain in your design will either be a new domain or an existing upgraded domain. Users from existing domains that you do not upgrade must be moved into new domains.
 

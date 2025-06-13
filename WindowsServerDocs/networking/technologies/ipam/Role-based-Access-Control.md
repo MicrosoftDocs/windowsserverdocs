@@ -1,16 +1,12 @@
 ---
 title: Role-based Access Control
 description: Learn how to use role-based access control in IPAM.
-manager: brianlic
 ms.topic: article
-ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
-ms.author: jgerend
-author: JasonGerend
+author: xelu86
+ms.author: alalve
 ms.date: 08/07/2020
 ---
 # Role-based Access Control
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides information about using role-based access control in IPAM.
 

@@ -2,11 +2,11 @@
 description: Learn how to upgrade the farm behavior level for an existing Active Directory Federation Service farm by using Windows Internal Database in Windows Server.
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrade an AD FS farm by using Windows Internal Database in Windows Server
-author: billmath
-manager: amycolannino
+author: robinharwood
+manager: tedhudek
 ms.date: 06/21/2023
-ms.topic: article
-ms.author: wscontent
+ms.topic: upgrade-and-migration-article
+ms.author: roharwoo
 ---
 
 # Upgrade an existing AD FS farm by using Windows Internal Database
@@ -150,7 +150,7 @@ Now that you've updated your FBL, you need to upgrade Web Application Proxy (WAP
 1. Remove old Web Application Proxy servers, keeping only the new servers configured in the previous steps by running the following PowerShell cmdlet:
 
    ```powershell
-   Set-WebApplicationProxyConfiguration -ConnectedServersName "WAPServerName1, WAPServerName2"
+   Set-WebApplicationProxyConfiguration -ConnectedServersName "WAPServerName1", "WAPServerName2"
    ```
 
 1. To upgrade the ConfigurationVersion of the WAP servers, run the following PowerShell command:

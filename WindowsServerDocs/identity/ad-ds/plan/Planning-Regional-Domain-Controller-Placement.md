@@ -2,18 +2,16 @@
 description: "Learn more about: Planning Regional Domain Controller Placement"
 ms.assetid: eb600904-24b8-4488-a278-c1c971dc2f2d
 title: Planning Regional Domain Controller Placement
-ms.author: daveba
-author: iainfoulds
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ms.custom: inhenkel
 
 ---
 
 # Planning Regional Domain Controller Placement
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To ensure cost efficiency, plan to place as few regional domain controllers as possible. First, review the "Geographic Locations and Communication Links" (DSSTOPO_1.doc) worksheet used in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) to determine whether a location is a hub.
 

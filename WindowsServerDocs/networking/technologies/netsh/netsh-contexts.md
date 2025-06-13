@@ -2,15 +2,13 @@
 title: Netsh Command Syntax, Contexts, and Formatting
 description: Learn about netsh contexts, subcontexts, netsh syntax, and how to run netsh commands on local and remote computers running Windows Server or Windows Client.
 ms.topic: article
-ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
-ms.author: wscontent
+ms.author: alalve
 author: xelu86
-ms.date: 10/02/2023
+ms.date: 05/21/2025
+ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 ---
 
 # Netsh command syntax, contexts, and formatting
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 You can use this article to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers.
 
@@ -29,19 +27,19 @@ The following parameters are considered optional.
 
 |Parameter|Description|
 |--|--|
-|-a|Specifies that you're returned to the **netsh** shell after running **AliasFile**.|
+|:::no-loc text="-a":::|Specifies that you're returned to the **netsh** shell after running **AliasFile**.|
 |`AliasFile`|Specifies the name of the text file that contains one or more **netsh** commands.|
-|-c|Specifies that netsh enters the specified **netsh** context.|
+|:::no-loc text="-c":::|Specifies that netsh enters the specified **netsh** context.|
 |`Context`|Specifies the **netsh** context that you want to enter.|
-|-r|Specifies that you want the command to run on a remote computer. The **Remote Registry** service must be running on the remote computer. If it's not running, Windows displays a “Network Path Not Found” error message.|
+|:::no-loc text="-r":::|Specifies that you want the command to run on a remote computer. The **Remote Registry** service must be running on the remote computer. If it's not running, Windows displays a "Network Path Not Found" error message.|
 |`RemoteComputer`|Specifies the remote computer that you want to configure.|
-|-u|Specifies that you want to run the netsh command under a user account.|
+|:::no-loc text="-u":::|Specifies that you want to run the netsh command under a user account.|
 |`DomainName\`|Specifies the domain where the user account is located. The default is the local domain if *DomainName\\* isn't specified.|
 |`UserName`|Specifies the user account name.|
-|-p|Specifies that you want to provide a password for the user account.|
+|:::no-loc text="-p":::|Specifies that you want to provide a password for the user account.|
 |`Password`|Specifies the password for the user account that you specified with **-u** *UserName*.|
 |`Command`|Specifies the **netsh** command that you want to run.|
-|-f|Exits **netsh** after running the script that you designate with *ScriptFile*.|
+|:::no-loc text="-f":::|Exits **netsh** after running the script that you designate with *ScriptFile*.|
 |`ScriptFile`|Specifies the script that you want to run.|
 
 > [!NOTE]
@@ -49,7 +47,7 @@ The following parameters are considered optional.
 
 ## Running netsh commands
 
-To run a netsh command, you must start netsh from the command prompt or PowerShell by typing **netsh** and then pressing ENTER. Next, you can change to the context that contains the command you want to use. The contexts that are available depend on the networking components that you have installed.
+To run a netsh command, you must start netsh from the command prompt or PowerShell by typing **netsh** and then pressing ENTER. Next, you can change to the context that contains the command you want to use. The contexts that are available depend on the networking components that are installed.
 
 For example, if you type **dhcp** in the netsh shell and press ENTER, netsh changes to the DHCP server context. If you don't have the DHCP Server role installed, the following message appears:
 
@@ -65,9 +63,9 @@ Each netsh helper DLL provides an extensive set of features called a *context*, 
 
 For example, Dhcpmon.dll provides netsh with the context and set of commands necessary to configure and manage DHCP servers.
 
-You can obtain a list of netsh contexts by opening either the command prompt or Windows PowerShell, then type **netsh /?** or **netsh help** and press ENTER.
+You can obtain a list of netsh contexts by opening either the command prompt or Windows PowerShell, then type `netsh /?` or `netsh help` and press ENTER.
 
-The following is an example output:
+An example output is as follows:
 
 >    ```
 >    The following commands are available:
@@ -171,7 +169,7 @@ You can use the following formatting legend to interpret and use correct netsh c
 
 ## String values for netsh commands
 
-There are commands that contain parameters for which a string value is required. In the case where a string value contains spaces between characters, it's required that you enclose the string value in double quotation marks.
+There are commands that contain parameters for which a string value is required. In the case where a string value contains spaces between characters, you're required to enclose the string value in double quotation marks.
 
 When setting the **interface** parameter for IPv4 networks with a string value of **Wireless Network Connection** to DHCP, use double quotation marks around the string value. For example:
 

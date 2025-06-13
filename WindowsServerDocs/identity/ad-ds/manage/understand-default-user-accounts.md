@@ -1,15 +1,13 @@
 ---
 title: Active Directory Accounts
 description: This article discusses how to create default local Windows Server Active Directory accounts on a domain controller.
-author: dansimp
-ms.author: dansimp
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: article
-ms.date: 05/17/2023
+ms.date: 05/21/2025
 ---
 
 # Active Directory accounts
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization.
 
@@ -79,7 +77,7 @@ When Active Directory is installed on the first domain controller in the domain,
 |Default member of|Administrators, Domain Admins, Enterprise Administrators, Domain Users (the Primary Group ID of all user accounts is Domain Users)<br><br>Group Policy Creator Owners, and Schema Admins in Active Directory Domain Users group|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service administrators?|No|
+|Safe to delegate management of this group to nonservice administrators?|No|
 
 ## Guest account
 
@@ -99,11 +97,11 @@ Because the Guest account can provide anonymous access, it's a security risk. It
 
 When the Guest account is required, an Administrator on the domain controller is required to enable the Guest account. The Guest account can be enabled without requiring a password, or it can be enabled with a strong password. The Administrator also grants restricted rights and permissions for the Guest account. To help prevent unauthorized access:
 
-- Do *not* grant the Guest account the [Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system) user right. When a computer is shutting down or starting up, it's possible that a Guest user or anyone with local access, such as a malicious user, could gain unauthorized access to the computer.
+- *Don't* grant the Guest account the [Shut down the system](/windows/device-security/security-policy-settings/shut-down-the-system) user right. When a computer is shutting down or starting up, it's possible that a Guest user or anyone with local access, such as a malicious user, could gain unauthorized access to the computer.
 
-- Do *not* provide the Guest account with the ability to view the event logs. After the Guest account is enabled, it's a best practice to monitor this account frequently to ensure that other users can't use services and other resources, such as resources that were unintentionally left available by a previous user.
+- *Don't* provide the Guest account with the ability to view the event logs. After the Guest account is enabled, it's a best practice to monitor this account frequently to ensure that other users can't use services and other resources, such as resources that were unintentionally left available by a previous user.
 
-- Do *not* use the Guest account when the server has external network access or access to other computers.
+- *Don't* use the Guest account when the server has external network access or access to other computers.
 
 If you decide to enable the Guest account, be sure to restrict its use and to change the password regularly. As with the Administrator account, you might want to rename the account as an added security precaution.
 
@@ -173,7 +171,7 @@ After you reset the KRBTGT password, ensure that event ID 9 in the (Kerberos) Ke
 
 #### KRBTGT account security considerations
 
-It's also a best practice to reset the KRBTGT account password to ensure that a newly restored domain controller doesn't replicate with a compromised domain controller. In this case, in a large forest recovery that's spread across multiple locations, you can't guarantee that all domain controllers are shut down and, if they are shut down, that they can't be rebooted again before all the appropriate recovery steps have been performed. After you reset the KRBTGT account, another domain controller can't replicate this account password by using an old password.
+It's also a best practice to reset the KRBTGT account password to ensure that a newly restored domain controller doesn't replicate with a compromised domain controller. In this case, in a large forest recovery that's spread across multiple locations, you can't guarantee that all domain controllers are shut down and, if they're shut down, that they can't be rebooted again before all the appropriate recovery steps have been performed. After you reset the KRBTGT account, another domain controller can't replicate this account password by using an old password.
 
 An organization suspecting domain compromise of the KRBTGT account should consider the use of professional incident response services. The impact to restore the ownership of the account is domain-wide, labor intensive, and should be undertaken as part of a larger recovery effort.
 
@@ -194,7 +192,7 @@ Because it's impossible to predict the specific errors that will occur for any g
 
 ### Read-only domain controllers and the KRBTGT account
 
-Windows Server 2008 introduced the read-only domain controller (RODC). The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
+The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
 
 After the credentials are cached on the RODC, the RODC can accept that user's sign-in requests until the credentials change. When a TGT is signed with the KRBTGT account of the RODC, the RODC recognizes that it has a cached copy of the credentials. If another domain controller signs the TGT, the RODC forwards requests to a writable domain controller.
 
@@ -228,7 +226,7 @@ Each default local account in Active Directory has several account settings that
 |Account is trusted for delegation|Lets a service running under this account to perform operations on behalf of other user accounts on the network. A service running under a user account (also known as a service account) that's trusted for delegation can impersonate a client to gain access to resources, either on the computer where the service is running or on other computers. For example, in a forest that's set to the Windows Server 2003 functional level, this setting is found on the Delegation tab. It's available only for accounts that have been assigned service principal names (SPNs), which are set by using the `setspn` command from Windows Support Tools. This setting is security-sensitive and should be assigned cautiously.|
 |Account is sensitive and can't be delegated|Gives control over a user account, such as for a Guest account or a temporary account. This option can be used if this account can't be assigned for delegation by another account.|
 |Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol Security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES).</div>|
-|Do not require Kerberos preauthentication|Provides support for alternate implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when you're enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
+|Don't require Kerberos preauthentication|Provides support for alternate implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when you're enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
 
 > [!NOTE]
 > DES isn't enabled by default in Windows Server operating systems (starting with Windows Server 2008 R2) or in Windows client operating systems (starting with Windows 7). For these operating systems, computers won't use DES-CBC-MD5 or DES-CBC-CRC cipher suites by default. If your environment requires DES, this setting might affect compatibility with client computers or services and applications in your environment.
@@ -259,7 +257,7 @@ Restricting and protecting domain accounts in your domain environment requires y
 
 - Stringently control where and how domain accounts are used.
 
-Member accounts in the Administrators, Domain Admins, and Enterprise Admins groups in a domain or forest are high-value targets for malicious users. To limit any exposure, it's a best practice to strictly limit membership to these administrator groups to the smallest number of accounts. Restricting membership in these groups reduces the possibility that an administrator might unintentionally misuse these credentials and create a vulnerability that malicious users can exploit.
+Member accounts in the Administrators, Domain Admins, and Enterprise Admins groups in a domain or forest are high-value targets for malicious users. To limit any exposure, it's a best practice to strictly limit membership to these administrator groups to the smallest number of accounts. Restricting membership in these groups reduces the possibility that an administrator might unintentionally misuse these credentials creating a vulnerability that malicious users can exploit.
 
 Moreover, it's a best practice to stringently control where and how sensitive domain accounts are used. Restrict the use of Domain Admins accounts and other Administrator accounts to prevent them from being used to sign in to management systems and workstations that are secured at the same level as the managed systems. When Administrator accounts aren't restricted in this manner, each workstation from which a domain administrator signs in provides another location that malicious users can exploit.
 
@@ -283,7 +281,7 @@ Restrict Domain Admins accounts and other sensitive accounts to prevent them fro
 
   - **Ideal**: Create multiple, separate accounts for an administrator who has several job responsibilities that require different trust levels. Set up each Administrator account with different user rights, such as for workstation administration, server administration, and domain administration, to let the administrator sign in to specified workstations, servers, and domain controllers based strictly on their job responsibilities.
 
-- **Standard user account**: Grant standard user rights for standard user tasks, such as email, web browsing, and using line-of-business (LOB) applications. These accounts should not be granted administrator rights.
+- **Standard user account**: Grant standard user rights for standard user tasks, such as email, web browsing, and using line-of-business (LOB) applications. These accounts shouldn't be granted administrator rights.
 
 > [!IMPORTANT]
 > Ensure that sensitive Administrator accounts can't access email or browse the internet as described in the following section.
@@ -301,7 +299,7 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 
 - **Minimum**: Restrict domain administrators from having sign-in access to servers and workstations. Before you start this procedure, identify all OUs in the domain that contain workstations and servers. Any computers in OUs that aren't identified won't restrict administrators with sensitive accounts from signing in to them.
 
-- **Better**: Restrict domain administrators from non-domain controller servers and workstations.
+- **Better**: Restrict domain administrators from nondomain controller servers and workstations.
 
 - **Ideal**: Restrict server administrators from signing in to workstations, in addition to domain administrators.
 

@@ -1,16 +1,15 @@
 ---
 description: Learn more about planning for compromise
 title: Planning for compromise
-author: iainfoulds
-ms.author: daveba
-ms.date: 05/16/2023
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+
 ms.custom: inhenkel
 ---
 
 # Planning for Compromise
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 

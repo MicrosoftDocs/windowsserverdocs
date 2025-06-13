@@ -4,9 +4,8 @@ description: Reference
 ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
-ms.author: wscontent
-manager: femila
-ms.date: 04/25/2023
+ms.author: roharwoo
+ms.date: 06/09/2025
 ---
 
 # Windows Commands
@@ -56,6 +55,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [add](add.md)
 - [add alias](add-alias.md)
 - [add volume](add-volume.md)
+- [adprep](adprep.md)
 - [append](append.md)
 - [arp](arp.md)
 - [assign](assign.md)
@@ -272,6 +272,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [date](date.md)
 - [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
+- [dcpromo](dcpromo.md)
 - [defrag](defrag.md)
 - [del](del.md)
 - [delete](delete.md)
@@ -304,6 +305,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [dnscmd](dnscmd.md)
 - [doskey](doskey.md)
 - [driverquery](driverquery.md)
+- [dtrace](dtrace.md)
 
 ### E
 
@@ -535,8 +537,21 @@ To find information about a specific command, in the following A-Z menu, select 
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
-- [netdom](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772217(v=ws.11))
+- [netdom](netdom.md)
+  - [netdom add](netdom-add.md)
+  - [netdom computername](netdom-computername.md)
+  - [netdom join](netdom-join.md)
+  - [netdom move](netdom-move.md)
+  - [netdom movent4bdc](netdom-movent4bdc.md)
+  - [netdom query](netdom-query.md)
+  - [netdom remove](netdom-remove.md)
+  - [netdom renamecomputer](netdom-renamecomputer.md)
+  - [netdom reset](netdom-reset.md)
+  - [netdom resetpwd](netdom-resetpwd.md)
+  - [netdom trust](netdom-trust.md)
+  - [netdom verify](netdom-verify.md)
 - [net print](net-print.md)
+- [net user](net-user.md)
 - [netsh](netsh.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
@@ -632,6 +647,14 @@ To find information about a specific command, in the following A-Z menu, select 
 - [recover](recover.md)
 - [recover disk group](recover_1.md)
 - [refsutil](refsutil.md)
+  - [refsutil compression](refsutil-compression.md)
+  - [refsutil dedup](refsutil-dedup.md)
+  - [refsutil fixboot](refsutil-fixboot.md)
+  - [refsutil iometrics](refsutil-iometrics.md)
+  - [refsutil leak](refsutil-leak.md)
+  - [refsutil salvage](refsutil-salvage.md)
+  - [refsutil streamsnapshot](refsutil-streamsnapshot.md)
+  - [refsutil triage](refsutil-triage.md)
 - [reg](reg.md)
   - [reg add](reg-add.md)
   - [reg compare](reg-compare.md)
@@ -710,6 +733,8 @@ To find information about a specific command, in the following A-Z menu, select 
   - [set metadata](set-metadata.md)
   - [set option](set-option.md)
   - [set verbose](set-verbose.md)
+- [setlocal](setlocal.md)
+- [setspn](setspn.md)
 - [setx](setx.md)
 - [sfc](sfc.md)
 - [shadow](shadow.md)

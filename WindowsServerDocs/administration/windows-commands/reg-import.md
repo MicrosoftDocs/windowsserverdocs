@@ -4,7 +4,7 @@ description: Reference article for the reg import command, which copies the cont
 ms.topic: reference
 ms.assetid: 0be103de-08fc-4f02-b590-361782680b3e
 ms.author: alalve
-author: JasonGerend
+author: xelu86
 ms.date: 10/20/2022
 ---
 

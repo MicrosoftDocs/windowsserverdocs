@@ -3,7 +3,7 @@ title: echo
 description: Reference article for the echo command, which displays messages or turns on or off the command echoing feature.
 ms.topic: reference
 ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
-ms.author: wscontent
+ms.author: alalve
 author: xelu86
 ms.date: 10/02/2023
 ---
@@ -42,6 +42,8 @@ echo [on | off]
 - To display an exclamation mark (`!`) in batch scripts, wrap the word or phrase in double quotes followed by a caret before the exclamation mark (`"Hello World^!"`). Alternatively, a double caret (`^^`) can be used without the need for double quotes (`Hello World^^!`).
 
 - To display a pipe (`|`), ampersand (`&`) or redirection character (`<` or `>`) when you're using **echo**, use a caret (`^`) immediately before that character. For example, `^|`, `^&`, `^>`, or `^<`. To display a caret, type two carets in succession (`^^`).
+
+- When inside a block terminated by parentheses (`()`), both opening and closing parentheses must also be escaped using the caret (`^`) immediately before each one. For example, `This is ^(now^) correct` will correctly display `This is (now) correct`.
 
 ### Examples
 
@@ -88,7 +90,7 @@ The following batch file searches the current directory for files with the .txt 
 if not exist *.txt (
 echo This directory contains no text files.
 ) else (
-   echo This directory contains the following text files:
+   echo This directory contains the following text file^(s^):
    echo.
    dir /b *.txt
    )
@@ -103,7 +105,8 @@ This directory contains no text files.
 If .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
 
 ```
-This directory contains the following text files:
+This directory contains the following text file(s):
+
 File1.txt
 File2.txt
 File3.txt

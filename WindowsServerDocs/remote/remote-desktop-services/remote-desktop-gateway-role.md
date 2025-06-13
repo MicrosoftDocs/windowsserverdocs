@@ -1,11 +1,11 @@
 ---
 title: Deploy Remote Desktop Gateway role for Remote Desktop Services
 description: How to deploy the Remote Desktop Gateway role for Remote Desktop Services.
-author: Heidilohr
+ms.author: alalve
 ms.topic: how-to
-ms.date: 02/23/2021
-ms.author: helohr
-manager: femila
+ms.date: 7/3/2024
+author: xelu86
+manager: tedhudek
 ---
 
 # Deploy the Remote Desktop Gateway role

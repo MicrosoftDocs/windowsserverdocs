@@ -2,10 +2,10 @@
 description: "Learn more about: AD FS Development"
 ms.assetid: e9563792-cd73-4a32-b4a1-5bd6a2109016
 title: AD FS Development
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # AD FS Development

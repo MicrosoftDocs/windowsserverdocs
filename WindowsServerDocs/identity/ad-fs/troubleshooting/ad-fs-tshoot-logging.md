@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Active Directory Federation Services with events and logging
 description:  Learn how to use the admin and Tracelog to troubleshoot various Active Directory Federation Services issues.
-author: billmath
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/25/2023
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Active Directory Federation Services with events and logging

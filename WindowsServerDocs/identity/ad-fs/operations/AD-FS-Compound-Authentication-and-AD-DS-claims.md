@@ -1,11 +1,11 @@
 ---
 title: Compound Authentication and Active Directory Domain Services claims in Active Directory Federation Services
 description: The following document discusses compound authentication and AD DS claims in AD FS.
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 # Compound authentication and AD DS claims in AD FS
 Windows Server 2012 enhances Kerberos authentication by introducing compound authentication.  Compound authentication enables a Kerberos Ticket-Granting Service (TGS) request to include two identities:

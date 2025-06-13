@@ -1,34 +1,23 @@
 ---
 title: Plan Your WSUS Deployment
 description: Windows Server Update Service (WSUS) - An overview of the deployment planning process with links to the related articles
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 07/12/2023
+ms.author: roharwoo
+author: robinharwood
+manager: jgerend
+ms.date: 05/02/2025
+# freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
 ---
 # Plan your WSUS deployment
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
-
-|Task|Description|
-|----|--------|
-|[1.1. Review considerations and system requirements](#11-review-considerations-and-system-requirements)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
-|[1.2. Choose a WSUS deployment scenario](#12-choose-a-wsus-deployment-scenario)|Decide which WSUS deployment scenario will be used.|
-|[1.3. Choose a WSUS storage strategy](#13-choose-a-wsus-storage-strategy)|Decide which WSUS storage strategy best fits your deployment.|
-|[1.4. Choose WSUS update languages](#14-choose-wsus-update-languages)|Decide which WSUS update languages will be installed.|
-|[1.5. Plan WSUS computer groups](#15-plan-wsus-computer-groups)|Plan the WSUS computer group approach that you'll use for your deployment.|
-|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](#16-plan-wsus-performance-considerations)|Plan a WSUS design for optimized performance.|
-|[1.7. Plan Automatic Updates settings](#17-plan-automatic-updates-settings)|Plan how you'll configure the automatic updates settings for your scenario.|
+The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements.
 
 ## 1.1. Review considerations and system requirements
 
 ### System Requirements
 
-Hardware and database software requirements are driven by the number of client computers being updated in your organization.  Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
+Hardware and database software requirements are driven by the number of client computers being updated in your organization. Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
 - Server hardware requirements to enable WSUS role are bound to hardware requirements. The minimum hardware requirements for WSUS are:
 
@@ -249,14 +238,14 @@ If you install multiple WSUS servers, you must maintain a separate database for 
 SQL Server, SQL Server Express, and Windows Internal Database provide the same performance characteristics for a single-server configuration, where the database and the WSUS service are located on the same computer. A single-server configuration can support several thousand WSUS client computers.
 
 > [!NOTE]
-> Do not attempt to manage WSUS by accessing the database directly. directly manipulating the database can cause database corruption. The corruption might not be immediately obvious, but it can prevent upgrades to the next version of the product. You can manage WSUS by using the WSUS console or WSUS application programming interfaces (APIs).
+> Do not attempt to manage WSUS by accessing the database directly. Directly manipulating the database can cause database corruption. The corruption might not be immediately obvious, but it can prevent upgrades to the next version of the product. You can manage WSUS by using the WSUS console or WSUS application programming interfaces (APIs).
 
 #### WSUS with Windows Internal Database
 
 By default, the installation wizard creates and uses a Windows Internal Database that is named SUSDB.mdf. This database is located in the %windir%\wid\data\ folder, where %windir% is the local drive on which the WSUS server software is installed.
 
 > [!NOTE]
-> Windows Internal Database (WID) was introduced in Windows Server 2008 .
+> Windows Internal Database (WID) was introduced in Windows Server 2008.
 
 WSUS supports Windows authentication only for the database. You can't use SQL Server authentication with WSUS. If you use Windows Internal Database for the WSUS database, WSUS Setup creates an instance of SQL Server that is named server\Microsoft##WID, where server is the name of the computer. With either database option, WSUS Setup creates a database named SUSDB. The name of this database isn't configurable.
 
@@ -290,7 +279,10 @@ You can select a different update storage solution for each WSUS server that you
 
 Local storage of update files is the default option when you install and configure WSUS. This option can save bandwidth on the corporate connection to the Internet because client computers download updates directly from the local WSUS server.
 
-This option requires that the server has sufficient disk space to store all needed updates. at a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
+This option requires that the server has sufficient disk space to store all needed updates. At a minimum, WSUS requires 20 GB to store updates locally; however, we recommend at least 40 GB. For more information about projecting the amount of disk space required, see [system requirements](#system-requirements) and [UUP considerations](#uup-considerations).
+
+> [!IMPORTANT]
+> Choose a secure folder that only administrators can access for local storage of updates.
 
 #### Remote storage on Microsoft Update servers
 
@@ -402,7 +394,7 @@ Install actions override uninstall actions. Required installs override optional 
 
 #### Priority of Deadlines
 
-Actions that have a deadline override those with no deadline.  Actions with earlier deadlines override those with later deadlines.
+Actions that have a deadline override those with no deadline. Actions with earlier deadlines override those with later deadlines.
 
 ## 1.6. Plan WSUS performance considerations
 
@@ -451,7 +443,7 @@ Not all updates are good candidates for distribution by using express installati
 
 When you deploy large updates (such as service packs), you can avoid saturating the network by using the following practices:
 
-1. Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](/windows/win32/bits/group-policies).
+1. Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, see [Group Policies](/windows/win32/bits/group-policies).
 
 1. Use Internet Information Services (IIS) throttling to limit throttling to one or more web services.
 
@@ -480,3 +472,8 @@ At the scheduled day and time, Automatic Updates installs the update and restart
 If the computer must be restarted, and any user is logged on, a similar countdown dialog box is displayed, which warns the user about the impending restart. You can manipulate computer restarts with Group Policy.
 
 After the new updates are downloaded, Automatic Updates polls the WSUS server for the list of approved packages to confirm that the packages it downloaded are still valid and approved. This means that, if a WSUS administrator removes updates from the list of approved updates while Automatic Updates is downloading updates, only the updates that are still approved are actually installed.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Step 1: Install the WSUS Server Role](../deploy/1-install-the-wsus-server-role.md)

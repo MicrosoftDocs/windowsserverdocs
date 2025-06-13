@@ -4,13 +4,11 @@ description: This topic explains how you can provide DNS services to your hosted
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Internal DNS Service (iDNS) for SDN
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 If you work for a Cloud Service Provider \(CSP\) or Enterprise that is planning to deploy Software Defined Networking \(SDN\) in Windows Server, you can provide DNS services to your hosted tenant workloads by using Internal DNS \(iDNS\), which is integrated with SDN.
 

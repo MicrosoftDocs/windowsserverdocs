@@ -4,7 +4,7 @@ description: Reference article for the expand command, which expands one or more
 ms.topic: reference
 ms.assetid: 66de0488-a0c4-40c2-9b03-e40c107ba343
 ms.author: alalve
-author: JasonGerend
+author: xelu86
 ms.date: 11/01/2022
 ---
 

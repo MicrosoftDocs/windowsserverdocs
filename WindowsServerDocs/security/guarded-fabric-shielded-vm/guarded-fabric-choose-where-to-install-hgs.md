@@ -1,16 +1,14 @@
 ---
 description: "Learn more about: Choose whether to install HGS in its own dedicated forest or in an existing bastion forest"
 title: Choose whether to install HGS in its own new forest or in an existing bastion forest
-ms.topic: article
+ms.topic: concept-article
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs.

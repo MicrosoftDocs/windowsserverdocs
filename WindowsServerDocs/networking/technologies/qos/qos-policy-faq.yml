@@ -3,14 +3,12 @@ metadata:
   title: QoS frequently asked questions
   description: This topic provides answers to questions about Quality of Service (QoS) Policy in Windows Server 2016.
   ms.topic: faq
-  ms.assetid: 74c97a14-b957-4568-b48e-8963a674fdb3
-  manager: brianlic
-  ms.author: jgerend
-  author: JasonGerend
+  ms.author: daknappe
+  author: dknappettmsft
   ms.date: 08/07/2020
 title: QoS Policy Frequently Asked Questions
 summary: |
-  >Applies to: Windows Server 2016
+  >
   
   Following are frequently asked questions – and answers to those questions – for QoS Policy.
   

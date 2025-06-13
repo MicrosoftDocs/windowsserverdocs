@@ -4,9 +4,9 @@ description: Navigation topic for planning user management in MultiPoint Service
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: e392f423-a64b-4825-91ab-334058721c4d
-author: lizap
+author: dknappettmsft
 manager: dongill
-ms.author: elizapo
+ms.author: daknappe
 ---
 # Prepare your MultiPoint Services system for users
 After you install and configure MultiPoint Services, and perform any additional configuration and hardware setups, you are ready to give users access to the system. You will need to plan and create user accounts. In some environments, you also need to configure stations for auto-logon and allow multiple sessions for your shared user accounts. And you need to decide how to set up file sharing for your users. All of these topics are covered in this section.

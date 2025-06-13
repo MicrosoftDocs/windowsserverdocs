@@ -1,17 +1,13 @@
 ---
 title: RADIUS Clients
 description: This topic provides an overview of RADIUS Clients for Network Policy Server in Windows Server 2016.
-manager: brianlic
 ms.topic: article
-ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
-ms.author: jgerend
-author: JasonGerend
+author: xelu86
+ms.author: alalve
 ms.date: 08/07/2020
 ---
 
 # RADIUS Clients
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 A network access server \(NAS\) is a device that provides some level of access to a larger network. A NAS using a RADIUS infrastructure is also a RADIUS client, sending connection requests and accounting messages to a RADIUS server for authentication, authorization, and accounting.
 

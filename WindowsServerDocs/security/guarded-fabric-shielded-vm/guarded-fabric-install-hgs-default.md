@@ -1,16 +1,14 @@
 ---
 description: "Learn more about: Install HGS in a new forest"
 title: Install HGS in a new forest
-ms.topic: article
+ms.topic: install-set-up-deploy
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Install HGS in a new forest
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## Add the HGS server role
 

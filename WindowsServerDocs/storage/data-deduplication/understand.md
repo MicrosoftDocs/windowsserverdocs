@@ -2,15 +2,14 @@
 description: "Learn more about: Understanding Data Deduplication"
 ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: Understanding Data Deduplication
-ms.topic: article
-author: wmgries
+ms.topic: concept-article
+
+author: robinharwood
 manager: klaasl
-ms.author: wgries
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Understanding Data Deduplication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 This document describes how [Data Deduplication](overview.md) works.
 

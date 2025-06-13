@@ -1,16 +1,14 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
-ms.topic: article
+ms.topic: how-to
 manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 

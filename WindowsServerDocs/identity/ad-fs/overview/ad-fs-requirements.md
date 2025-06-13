@@ -2,10 +2,10 @@
 ms.assetid: 28f4a518-1341-4a10-8a4e-5f84625b314b
 title: AD FS 2016 Requirements
 description: Learn about the requirements for installing Active Directory Federation Services (ADFS) for your systems.
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 09/21/2023
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 
@@ -57,7 +57,7 @@ TLS/SSL certificates on the Web Application Proxy must meet the following requir
 
 ### Service Communication Certificate
 
-This certificate isn't required for most AD FS scenarios including Azure AD and Office 365.
+This certificate isn't required for most AD FS scenarios including Microsoft Entra ID and Office 365.
 By default, AD FS configures the TLS/SSL certificate provided upon initial configuration as the service communication certificate.
 
 #### Recommendation for Service Communication Certificate
@@ -151,9 +151,9 @@ If you're using Azure SQL for your AD FS configuration database, size the SQL Se
 
 - Any standard domain account can be used as a service account for AD FS. Group Managed Service Accounts are also supported. The permissions required at runtime are automatically added back when you configure AD FS.
 
-- The User Rights Assignment required for the AD service account is Sign-in as a Service.
+- The User Rights Assignment required for the AD service account is **Log on as a service**.
 
-- The User Rights Assignments required for the `NT Service\adfssrv` and `NT Service\drs` are Generate Security Audits and Sign-in as a Service.
+- The User Rights Assignments required for the `NT Service\adfssrv` and `NT Service\drs` are **Generate security audits** and **Log on as a service**.
 
 - Group managed service accounts require at least one domain controller running Windows Server 2012 or later. The group Managed Service Account gMSA must live under the default `CN=Managed Service Accounts` container.
 

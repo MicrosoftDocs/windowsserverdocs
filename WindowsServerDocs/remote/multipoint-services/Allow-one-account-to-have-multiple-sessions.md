@@ -1,11 +1,11 @@
 ---
 title: Allow one account to have multiple sessions
 description: Let a user access multiple systems at the same time.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f14cf1bd-f176-4de4-b27d-f3d8e6334158
-author: lizap
+author: dknappettmsft
 manager: dongill
-ms.author: elizapo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Allow one account to have multiple sessions

@@ -2,12 +2,12 @@
 description: Learn how to enable and troubleshoot user certificate authentication as an intranet or extranet authentication method in Active Directory Federation Services.
 ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
-author: jenfieldmsft
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
-ms.custom: has-azure-ad-ps-ref
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
+ms.topic: how-to
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Configure AD FS support for user certificate authentication
@@ -26,8 +26,8 @@ There are two main use cases for user certificate authentication:
 - Ensure that the root certificate of the chain of trust for your user certificates is in the NTAuth store in Active Directory.
 - If you're using AD FS in alternate certificate authentication mode, ensure that your AD FS and WAP servers have Secure Sockets Layer (SSL) certificates that contain the AD FS hostname prefixed with "certauth." An example is `certauth.fs.contoso.com`. Also ensure that traffic to this hostname is allowed through the firewall.
 - If you're using certificate authentication from the extranet, ensure that at least one Authority Information Access (AIA) and at least one CRL distribution point (CDP) or Online Certificate Status Protocol (OCSP) location from the list specified in your certificates are accessible from the internet.
-- If you're configuring AD FS for Azure Active Directory (Azure AD) certificate authentication, ensure that you've configured the [Azure AD settings](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules](/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) required for certificate issuer and serial number.
-- If you're using Azure AD certificate authentication for Exchange ActiveSync clients, the client certificate must have the user's routable email address in Exchange Online in either the **Principal Name** value or the **RFC822 Name** value of the **Subject Alternative Name** field. Azure Active Directory maps the RFC822 value to the proxy address attribute in the directory.
+- If you're configuring AD FS for Microsoft Entra certificate authentication, ensure that you've configured the [Microsoft Entra settings](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities) and the [AD FS claim rules](/azure/active-directory/active-directory-certificate-based-authentication-ios#requirements) required for certificate issuer and serial number.
+- If you're using Microsoft Entra certificate authentication for Exchange ActiveSync clients, the client certificate must have the user's routable email address in Exchange Online in either the **Principal Name** value or the **RFC822 Name** value of the **Subject Alternative Name** field. Microsoft Entra ID maps the RFC822 value to the proxy address attribute in the directory.
 
 > [!NOTE]
 > AD FS doesn't support username hints with smart card or certificate-based authentication.
@@ -42,9 +42,9 @@ Optional considerations include:
 - If you need to restrict access based on the type of certificate, you can use the additional properties on the certificate in AD FS issuance authorization rules for the application. Common scenarios are to allow only certificates provisioned by a mobile device management (MDM) provider or to allow only smart card certificates.
 
   > [!IMPORTANT]
-  > Customers who use device code flow for authentication and perform device authentication by using an identity provider other than Azure AD (for example, AD FS) can't enforce device-based access for Azure AD resources. For example, they can't allow only managed devices by using a third-party MDM service.
+  > Customers who use device code flow for authentication and perform device authentication by using an identity provider other than Microsoft Entra ID (for example, AD FS) can't enforce device-based access for Microsoft Entra resources. For example, they can't allow only managed devices by using a third-party MDM service.
   >
-  > To help protect access to corporate resources in Azure AD and prevent any data leakage, configure Azure AD device-based Conditional Access. For example, use **Require device to be marked complaint** to grant control in Azure AD Conditional Access.
+  > To help protect access to corporate resources in Microsoft Entra ID and prevent any data leakage, configure Microsoft Entra device-based Conditional Access. For example, use **Require device to be marked complaint** to grant control in Microsoft Entra Conditional Access.
 
   Configure allowed issuing certificate authorities for client certificates by using the guidance under "Management of trusted issuers for client authentication" in the [Schannel SSP technical overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786429(v=ws.11)).
 
@@ -68,7 +68,7 @@ If certificate trusted issuers aren't configured properly, a common symptom is a
 
 AD FS uses the underlying Windows operating system to prove possession of the user certificate and ensure that it matches a trusted issuer by validating the certificate trust chain. To match the trusted issuer, you need to ensure that all root and intermediate authorities are configured as trusted issuers in the local store for computer certificate authorities.
 
-To validate this automatically, use the [AD FS Diagnostics Analyzer tool](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze). The tool queries all the servers and ensures that the right certificates are provisioned correctly.
+To validate this automatically, use the [AD FS Diagnostics Analyzer tool](/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer). The tool queries all the servers and ensures that the right certificates are provisioned correctly.
 
 1. Download and run the tool.
 1. Upload the results and review for any failures.
@@ -109,7 +109,7 @@ To fix this problem, work with your network engineer to ensure that the load bal
 1. Open an elevated Command Prompt window on the primary AD FS server.
 1. Enter `Netsh http show sslcert`.
 1. Copy the application GUID and certificate hash of the federation service.
-1. Enter `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`.
+1. Enter `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicationGUID}`.
 
 ### Check if the client device has been provisioned with the certificate correctly
 
@@ -126,11 +126,13 @@ In rare cases, a client device is updated to support only a higher version of TL
 
 You can use online SSL tools to check your AD FS and WAP servers and see if they're compatible with the device. For more information on how to control the TLS versions, see [Managing SSL/TLS protocols and cipher suites for AD FS](manage-ssl-protocols-in-ad-fs.md).
 
-### Check if Azure AD PromptLoginBehavior is configured correctly on your federated domain settings
+<a name='check-if-azure-ad-promptloginbehavior-is-configured-correctly-on-your-federated-domain-settings'></a>
 
-Many Office 365 applications send `prompt=login` to Azure AD. Azure AD, by default, converts it to a fresh password login to AD FS. As a result, even if you configured certificate authentication in AD FS, your users see only a password login. To fix this problem:
+### Check if Microsoft Entra PromptLoginBehavior is configured correctly on your federated domain settings
 
-1. Get the federated domain settings by using the `Get-MsolDomainFederationSettings` cmdlet.
+Many Office 365 applications send `prompt=login` to Microsoft Entra ID. Microsoft Entra ID, by default, converts it to a fresh password login to AD FS. As a result, even if you configured certificate authentication in AD FS, your users see only a password login. To fix this problem:
+
+1. Get the federated domain settings by using the `Get-MgDomainFederationConfiguration` cmdlet.
 1. Ensure that the `PromptLoginBehavior` parameter is set to either `Disabled` or `NativeSupport`.
 
 For more information, see [AD FS prompt=login parameter support](ad-fs-prompt-login.md).
@@ -163,4 +165,4 @@ In a rare occurrence, if your CRL lists are very long, they might hit a time-out
 ## Related links
 
 - [Configure alternate hostname binding for AD FS certificate authentication](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
-- [Configure certificate authorities in Azure AD](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities)
+- [Configure certificate authorities in Microsoft Entra ID](/azure/active-directory/active-directory-certificate-based-authentication-get-started#step-2-configure-the-certificate-authorities)

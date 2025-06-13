@@ -4,7 +4,7 @@ description: Reference article for wevtutil, which lets you retrieve information
 ms.topic: reference
 ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822
 ms.author: alalve
-author: JasonGerend
+author: xelu86
 manager: mtillman
 ms.date: 10/26/2022
 ---

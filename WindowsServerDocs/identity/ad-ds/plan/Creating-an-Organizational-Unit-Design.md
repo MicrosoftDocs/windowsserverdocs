@@ -2,16 +2,14 @@
 description: "Learn more about: Creating an Organizational Unit Design"
 ms.assetid: b8df1828-5ead-4c90-b0fe-95c675116b7c
 title: Creating an Organizational Unit Design
-author: iainfoulds
-ms.author: daveba
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Creating an Organizational Unit Design
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Forest owners are responsible for creating organizational unit (OU) designs for their domains. Creating an OU design involves designing the OU structure, assigning the OU owner role, and creating account and resource OUs.
 

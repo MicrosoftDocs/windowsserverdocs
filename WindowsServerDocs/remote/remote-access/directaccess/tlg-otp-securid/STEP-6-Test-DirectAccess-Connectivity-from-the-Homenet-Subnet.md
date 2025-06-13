@@ -1,14 +1,14 @@
 ---
 title: STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 description: Learn how to start to test connectivity from the Homenet subnet.
-ms.topic: article
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/01/2023
 ---
 # STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 The DirectAccess one-time password (OTP) deployment is now complete and you can start to test connectivity from the Homenet subnet.
 

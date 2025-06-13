@@ -3,15 +3,15 @@ title: wdsutil get-namespace
 description: Reference article for wdsutil get-namespace, which displays information about a custom namespace.
 ms.topic: reference
 ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about a custom namespace.
 

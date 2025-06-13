@@ -2,16 +2,14 @@
 description: "Learn more about: Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design"
 ms.assetid: eca5bbf0-088e-4753-bf49-4d6c1125f689
 title: Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
-author: iainfoulds
-ms.author: daveba
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Finding Additional Resources for Windows Server 2008 Active Directory Site Topology Design
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can find the following documentation about Active Directory Domain Services (AD DS) on the Windows Server 2003 and  Windows Server 2008  TechCenter websites:
 

@@ -4,9 +4,9 @@ description: Starting with Windows Server 2016, the console host (the underlying
 ms.date: 05/12/2021
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
-author: dknappettmsft
-ms.author: daknappe
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ---
 # Changes to the Windows Console in Windows Server
 

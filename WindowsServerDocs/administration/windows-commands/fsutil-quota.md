@@ -2,8 +2,8 @@
 title: fsutil quota
 description: Reference article for the fsutil quota command, which manages disk quotas on NTFS volumes to provide more precise control of network-based storage.
 manager: dmoss
-ms.author: toklima
-author: toklima
+ms.author: alalve
+author: xelu86
 ms.assetid: 21225c11-7c72-4ea2-96bd-e63d4beb3be5
 ms.topic: reference
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil quota
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Manages disk quotas on NTFS volumes to provide more precise control of network-based storage.
 

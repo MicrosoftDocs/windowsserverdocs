@@ -3,8 +3,8 @@ title: fc
 description: Reference article for the fc command, which compares two files or sets of files and displays the differences between them.
 ms.topic: reference
 ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -38,6 +38,16 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 | `[<drive1>:][<path1>]<filename1>` | Specifies the location and name of the first file or set of files to compare. *filename1* is required. |
 | `[<drive2>:][<path2>]<filename2>` | Specifies the location and name of the second file or set of files to compare. *filename2* is required. |
 | /? | Displays help at the command prompt. |
+
+### Exit codes
+
+The following table lists each `fc.exe` exit code and a description.
+
+|Exit code|Description|
+|---------|-----------|
+|0|Files are identical.|
+|1|Files are different.|
+|2|An error occurred during comparison.|
 
 #### Remarks
 

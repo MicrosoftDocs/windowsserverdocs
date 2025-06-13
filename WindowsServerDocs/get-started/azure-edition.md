@@ -2,9 +2,9 @@
 title: What is Azure Edition for Windows Server? 
 description: Overview of Azure Edition for Windows Server, including key features and next steps.
 author: robinharwood
+ms.author: roharwoo 
 ms.topic: overview
-ms.date: 05/16/2023
-ms.author: wscontent 
+ms.date: 02/26/2025
 ---
 
 # What is Azure Edition for Windows Server?
@@ -33,10 +33,10 @@ The following table summarizes the key differences:
 | Product updates | With new release | Yearly, with two major updates in the first 3 years |
 | Support | 5 years of mainstream support, plus 5 years of extended support | 5 years of mainstream support, plus 5 years of extended support |
 | Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
-| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure-stack/hci/manage/vm-activate) and cloud customers only |
+| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure/azure-local/manage/vm-activate) and cloud customers only |
 | Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only. Windows Server containers aren't supported. |
 | Operating system environments (OSE) | Physical or virtual | Virtual only |
-| Associated virtualization rights | 2 virtual OSEs for Standard, Unlimited virtual OSEs for Datacenter | None |
+| Associated virtualization rights | 2 virtual OSE for Standard, Unlimited virtual OSEs for Datacenter | None |
 
 Capabilities vary by image, see
 [Getting started with Windows Server Datacenter: Azure Edition](#get-started-with-windows-server-datacenter-azure-edition)
@@ -60,11 +60,8 @@ hotpatching. To learn more, see [Hotpatch for new virtual machines](hotpatch.md)
 
 #### Supported platforms
 
-Hotpatch is supported on the following operating systems for VMs running on Azure and Azure Stack
-HCI:
-
-- Windows Server 2022 Datacenter: Azure Edition Core
-- Windows Server 2022 Datacenter: Azure Edition with Desktop Experience
+To learn more about what operating systems support Hotpatch for VMs running on Azure and Azure Stack
+HCI, see [Supported platforms](/windows-server/get-started/hotpatch#supported-platforms).
 
 > [!NOTE]
 > Hotpatch isn't supported on Windows Server containers base images.
@@ -94,7 +91,7 @@ To learn more, see [SMB over QUIC](/windows-server/storage/file-server/smb-over-
 
 Beginning with Update 1 for Windows Server 2022 Datacenter: Azure Edition, you can compress Storage
 Replica data between source and destination server. The compression results in fewer network packets
-to transfer the same amount of data, allowing for more throughput, and less network utilization.
+to transfer the same amount of data, allowing for more throughputs, and less network utilization.
 Higher data throughput should also result in lowering synchronization time for when you need it
 most, for example in a disaster recovery scenario.
 
@@ -110,23 +107,26 @@ on-premises private IP addresses when migrating to Azure. To learn more, see
 
 ## Get started with Windows Server Datacenter: Azure Edition
 
-To get started using Azure Edition, use your preferred method to create an Azure or Azure Stack HCI
+To get started using Azure Edition, use your preferred method to create an Azure or Azure Local
 VM, and select the _Windows Server Datacenter: Azure Edition_ image that you would like to use.  
 
 > [!IMPORTANT]
 > Some capabilities have specific configuration steps to perform during VM creation, and some
 > capabilities that are in preview have specific opt-in and portal viewing requirements. See the
-> individual capability topics to learn more about using that capability with your VM.
+> individual capability articles to learn more about using that capability with your VM.
 
-To learn more about creating virtual machine using Azure or Azure Stack HCI, see
+> [!CAUTION]
+> Once Windows Server Datacenter: Azure Edition is installed, it isn't possible to switch the OS back to a non-Azure Edition OS. If this occurs, reinstalling the previous OS is required.
+
+To learn more about creating virtual machine using Azure or Azure Local, see
 [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 and
-[Deploy Windows Server Azure Edition VMs in Azure Stack HCI](/azure-stack/hci/manage/windows-server-azure-edition?tabs=hci).
+[Deploy Windows Server Azure Edition VMs in Azure Local](/azure/azure-local/manage/windows-server-azure-edition?tabs=hci).
 
 ## Next steps
 
 - [Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022](editions-comparison-windows-server-2022.md)
 - [Hotpatch for new virtual machines](hotpatch.md)
-- [Enable Hotpatch for Azure Edition virtual machines built from ISO (preview)](enable-hotpatch-azure-edition.md)
+- [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 - [SMB over QUIC](../storage/file-server/smb-over-quic.md)
 - [Extend your on-premises subnets into Azure using extended network for Azure](../manage/windows-admin-center/azure/azure-extended-network.md)

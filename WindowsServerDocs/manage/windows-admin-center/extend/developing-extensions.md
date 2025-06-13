@@ -2,14 +2,12 @@
 title: Develop an extension for Windows Admin Center
 description: Develop an extension for Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 09/19/2018
 ---
 
 # Develop an extension for Windows Admin Center
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center supports three types of extensions - tool extensions, solution extensions and gateway plugins. The SDK contains content and examples to guide you in building the different types of extensions/plugins.
 

@@ -1,26 +1,28 @@
 ---
 title: SMB Compression
-description: Describes the SMB compression feature in Windows Server 2022, Windows 11
+description: Describes the SMB compression features in the Windows Operating System.
 ms.product: windows-server
 ms.topic: article
-author: NedPyle
-ms.author: inhenkel
-ms.date: 08/31/2021
+author: robinharwood
+ms.author: roharwoo
+ms.date: 10/25/2024
 ---
 
 # SMB compression
 
->Applies to: Windows Server 2022, Windows 11
-
-SMB compression allows an administrator, user or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files will consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1 Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100 Gbps ethernet network between two servers with flash storage may be as fast without SMB compression in practice, but will still create less congestion for other applications.
+SMB compression allows an administrator, user, or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1 Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100 Gbps ethernet network between two servers with flash storage may be as fast without SMB compression in practice, but will still create less congestion for other applications.
 
 SMB compression in Windows has the following characteristics:
 
 - Supports compression algorithms XPRESS (LZ77), XPRESS Huffman (LZ77+Huffman), LZNT1, or PATTERN_V1*. XPRESS is used automatically
+- Supports compression algorithm LZ4 on Windows Server 2025
 - Supports SMB signing and SMB encryption
 - Supports SMB over QUIC
 - Supports SMB Multichannel
 - Doesn't support SMB Direct over RDMA
+
+> [!NOTE]
+> Windows 11 and Windows Server 2025 also support compression algorithm LZ4 as defined by [LZ4.org](https://lz4.org). For further information about this compression algorithm, see [LZ4 Compression Documentation](https://github.com/lz4/lz4/blob/dev/doc/lz4_Block_format.md).
 
 For a demonstration of SMB compression, watch this video:
 
@@ -36,7 +38,7 @@ To use SMB compression in a traditional client-file server workload, you need th
 
 ## Configuring SMB compression
 
-You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11 Insider Preview but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 support being a client or server of SMB compression.
+You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11, version 24H2, but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 support being a client or server of SMB compression.
 
 ### Requesting SMB compression on file shares
 
@@ -120,7 +122,7 @@ You can request that SMB compression is attempted for particular files using rob
 
 ### Always require or always reject compression requests
 
-Starting in Windows Server 2022 with update [KB5016693](https://support.microsoft.com/help/5016693) (OS Build 20348.946) and Windows 11 with update [KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918) you can configure an SMB client or SMB server to always request compression and to always reject requests for compression. You can now use Group Policy or PowerShell; in the initial release of Windows 11 and Windows Server 2022, you could only use registry settings to control most of these behaviors and you could not configure an SMB server to always request compression despite its share settings. An SMB client and SMB server refers to the SMB services, not to a Windows edition or SKU. All of these SMB changes take effect immediately without a reboot.
+Starting in Windows Server 2022 with update [KB5016693](https://support.microsoft.com/help/5016693) (OS Build 20348.946) and Windows 11 with update [KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918) you can configure an SMB client or SMB server to always request compression and to always reject requests for compression. You can now use Group Policy or PowerShell; in the initial release of Windows 11 and Windows Server 2022, you could only use registry settings to control most of these behaviors and you could not configure an SMB server to always request compression despite its share settings. An SMB client and SMB server refer to the SMB services, not to a Windows edition or SKU. All of these SMB changes take effect immediately without a reboot.
 
 #### Always attempt compression (SMB client)
 
@@ -211,8 +213,7 @@ compress a file when a client or server requests it, without using compression s
 
 > [!NOTE]
 > In the original release of Windows Server 2022 and Windows 11, SMB compression defaulted to use of an algorithm where it attempted to compress the first 524,288,000 bytes (500 MiB) of a file during transfer and track that at least 104,857,600 bytes (100 MiB) compressed within that
-500 MiB range. If fewer than 100 MiB was compressible, SMB compression stopped trying to compress the rest of the file. If at least 100 MiB compressed, SMB compression attempted to compress the rest of the file. With this behavior change, sampling is now disabled by default and SMB always attempts to compress the entire file when a client or server requests it. 
-
+500 MiB range. If fewer than 100 MiB was compressible, SMB compression stopped trying to compress the rest of the file. If at least 100 MiB compressed, SMB compression attempted to compress the rest of the file. With this behavior change, sampling is now disabled by default and SMB always attempts to compress the entire file when a client or server requests it.
 
 ## Testing SMB compression
 
@@ -237,4 +238,4 @@ To see how well compression is working, you can robocopy the same file to a serv
 
 ## RDMA and SMB Direct
 
-SMB compression doesn't support SMB Direct and RDMA. This means that even if the client requests compression and the server supports it, compression will not be attempted with SMB Direct and RDMA. Support for SMB compression with SMB Direct and RDMA will come after the Windows Server 2022 and Windows 11 public previews.
+SMB compression doesn't support SMB Direct and RDMA. This means that even if the client requests compression and the server supports it, compression won't be attempted with SMB Direct and RDMA. Support for SMB compression with SMB Direct and RDMA will come after the Windows Server 2022 and Windows 11 public previews.

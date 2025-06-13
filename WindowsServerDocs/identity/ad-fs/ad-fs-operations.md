@@ -2,10 +2,10 @@
 description: "Learn more about: AD FS Operations"
 ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # AD FS Operations
@@ -41,7 +41,7 @@ This document contains a list of all of the documentation operations for AD FS.
 ### Policy Configuration
 - [Configure Authentication Policies](../ad-fs/operations/Configure-Authentication-Policies.md)
 - [Configuring Alternate Login ID](../ad-fs/operations/Configuring-Alternate-Login-ID.md)
-- [Configure Azure AD Prompt login behavior to work with AD FS policy](../ad-fs/operations/AD-FS-Prompt-Login.md)
+- [Configure Microsoft Entra prompt login behavior to work with AD FS policy](../ad-fs/operations/AD-FS-Prompt-Login.md)
 
 ### Kerberos & Certificate authentication
 - [Enable AD DS claims & kerberos compound authentication in AD FS](../ad-fs/operations/AD-FS-Compound-Authentication-and-AD-DS-claims.md)
@@ -81,5 +81,3 @@ This document contains a list of all of the documentation operations for AD FS.
 - [Walkthrough Guide: Manage Risk with Conditional Access Control](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [Walkthrough: Workplace Join with a Windows Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 - [Walkthrough: Workplace Join with an iOS Device](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
-
-

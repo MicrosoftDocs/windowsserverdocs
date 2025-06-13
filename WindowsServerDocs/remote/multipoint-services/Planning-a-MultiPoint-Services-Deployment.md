@@ -2,11 +2,11 @@
 title: Planning a MultiPoint Services Deployment
 description: Navigational topic for information for planning your MultiPoint Services deployment
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: dcb9edf1-99d0-490c-a7f8-863b18a80cdf
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: evas
+ms.author: daknappe
 ---
 # Planning a MultiPoint Services Deployment
 MultiPoint Services enables multiple stations to be connected to one computer. Multiple users can then share one computer at the same time. Each station consists of a station hub, monitor, keyboard, and mouse. MultiPoint Services includes the MultiPoint Manager application, which helps you, as an administrative user, to monitor and manage MultiPoint stations, and the MultiPoint Dashboard application, which provides day-to-day administrative functionality.

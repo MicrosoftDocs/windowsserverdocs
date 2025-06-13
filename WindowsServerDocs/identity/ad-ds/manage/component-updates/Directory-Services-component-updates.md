@@ -2,17 +2,15 @@
 description: "Learn more about: Directory Services component updates"
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Directory Services component updates
-author: iainfoulds
-ms.author: daveba
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/16/2023
+ms.date: 05/12/2025
 ms.topic: article
 ms.custom: inhenkel
 ---
 
 # Directory Services component updates
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

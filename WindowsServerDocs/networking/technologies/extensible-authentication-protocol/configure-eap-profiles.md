@@ -1,15 +1,15 @@
 ---
 title: Configure EAP profiles and settings in Windows
 description: This article presents information about different ways to configure Extensible Authentication Protocol (EAP) settings.
-author: samyun
-ms.author: wscontent
-ms.topic: conceptual
+author: robinharwood
+ms.author: roharwoo
+ms.topic: article
 ms.date: 06/19/2023
 ---
 
 # Configure EAP profiles and settings in Windows
 
-> Applies to: Windows Server 2022, Windows 11, Windows 10
+> 
 
 This article presents information about commonly used different ways to configure Extensible Authentication Protocol (EAP) settings. Specifically, it describes configuring EAP profiles using XML and command line tools. It also shows how to configure EAP settings and profiles using various UI in Windows.
 
@@ -167,7 +167,7 @@ This dialog allows you to set the policy name, a description, and the following 
 
 |Setting|XML element|Description|
 |--|--|--|
-|Use Windows Wired Auto Config service for clients|[enableAutoConfig](/windows/win32/nativewifi/lan-policyschema-enableautoconfig-globalflags-element)|If selected, the Windows Wired Auto Config (**dot3svc**) can be used to connect to wired networks without explicit configuration. If unselected, the network specified in this policy is the only network available for connection. |
+|Use Windows Wired Auto Config service for clients|[enableAutoConfig](/windows/win32/nativewifi/lan-policyschema-globalflags-lanpolicy-element#enableautoconfig)|If selected, the Windows Wired Auto Config (**dot3svc**) can be used to connect to wired networks without explicit configuration. If unselected, the network specified in this policy is the only network available for connection. |
 |Don't allow shared user credentials for network authentication|**enableExplicitCreds**|If selected, shared user credentials aren't allowed for network authentication. Credentials must be explicit. |
 |Enable block period (minutes)|**blockPeriod**|Defaulting to 20 minutes, specifies the duration for which automatic authentication attempts will be blocked from occurring after a failed authentication attempt.|
 

@@ -1,16 +1,14 @@
 ---
 title: Remote Desktop Services architecture
 description: Architecture diagrams for RDS
-ms.author: elizapo
-ms.date: 02/10/2017
+ms.author: daknappe
+ms.date: 7/3/2024
 ms.topic: article
 ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
-author: lizap
+author: dknappettmsft
 manager: dongill
 ---
 # Remote Desktop Services architecture
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Below are various configurations for deploying Remote Desktop Services to host Windows apps and desktops for end-users.
 
@@ -35,16 +33,20 @@ Remote Desktop Services has two standard architectures:
 
 Though the standard RDS deployment architectures fit most scenarios, Azure continues to invest in first-party PaaS solutions that drive customer value. Below are some architectures showing how they incorporate with RDS.
 
-### RDS deployment with Azure AD Domain Services
+<a name='rds-deployment-with-azure-ad-domain-services'></a>
 
-The two standard architecture diagrams above are based on a traditional Active Directory (AD) deployed on a Windows Server VM. However, if you don't have a traditional AD and only have an Azure AD tenant—through services like Office365—but still want to leverage RDS, you can use [Azure AD Domain Services](/azure/active-directory-domain-services/active-directory-ds-overview) to create a fully managed domain in your Azure IaaS environment that uses the same users that exist in your Azure AD tenant. This removes the complexity of manually syncing users and managing more virtual machines. Azure AD Domain Services can work in either deployment: basic or highly available.
+### RDS deployment with Microsoft Entra Domain Services
 
-![Azure AD and RDS deployment](./media/aadds-rds.png)
+The two standard architecture diagrams above are based on a traditional Active Directory (AD) deployed on a Windows Server VM. However, if you don't have a traditional AD and only have a Microsoft Entra tenant—through services like Office365—but still want to leverage RDS, you can use [Microsoft Entra Domain Services](/azure/active-directory-domain-services/active-directory-ds-overview) to create a fully managed domain in your Azure IaaS environment that uses the same users that exist in your Microsoft Entra tenant. This removes the complexity of manually syncing users and managing more virtual machines. Microsoft Entra Domain Services can work in either deployment: basic or highly available.
 
-### RDS deployment with Azure AD Application Proxy
+![Microsoft Entra ID and RDS deployment](./media/aadds-rds.png)
 
-The two standard architecture diagrams above use the RD Web/Gateway servers as the Internet-facing entry point into the RDS system. For some environments, administrators would prefer to remove their own servers from the perimeter and instead use technologies that also provide additional security through reverse proxy technologies. The [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started) PaaS role fits nicely with this scenario.
+<a name='rds-deployment-with-azure-ad-application-proxy'></a>
 
-For supported configurations and how to create this setup, see how to [publish Remote Desktop with Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop).
+### RDS deployment with Microsoft Entra application proxy
 
-![RDS with Azure AD Application Proxy](./media/aadappproxy-rds.png)
+The two standard architecture diagrams above use the RD Web/Gateway servers as the Internet-facing entry point into the RDS system. For some environments, administrators would prefer to remove their own servers from the perimeter and instead use technologies that also provide additional security through reverse proxy technologies. The [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started) PaaS role fits nicely with this scenario.
+
+For supported configurations and how to create this setup, see how to [publish Remote Desktop with Microsoft Entra application proxy](/azure/active-directory/application-proxy-publish-remote-desktop).
+
+![RDS with Microsoft Entra application proxy](./media/aadappproxy-rds.png)

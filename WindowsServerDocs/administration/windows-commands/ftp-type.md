@@ -3,15 +3,15 @@ title: ftp type
 description: Reference article for the ftp type command, which sets or displays the file transfer type.
 ms.topic: reference
 ms.assetid: 6e96dcd4-08f8-4e7b-90b7-1e1761fea4c7
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp type
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets or displays the file transfer type. The **ftp** command supports both ASCII (default) and binary image file transfer types:
 

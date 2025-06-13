@@ -1,11 +1,11 @@
 ---
 title: Add or Remove Computers
 description: Learn how to add and remove computers from MultiPoint Services.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 1c37739d-7ab0-4b80-8d05-0330e79fd631
-author: lizap
+author: dknappettmsft
 manager: dongill
-ms.author: elizapo
+ms.author: daknappe
 ms.date: 07/13/2017
 ---
 # Add or Remove Computers

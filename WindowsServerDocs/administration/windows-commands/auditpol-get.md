@@ -3,14 +3,14 @@ title: auditpol get
 description: Reference article for the auditpol get command, which retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
 ms.topic: reference
 ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
-ms.author: jgerend
-author: JasonGerend
+ms.author: mosagie
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol get
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server, 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
 

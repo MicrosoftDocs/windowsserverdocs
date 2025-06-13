@@ -2,14 +2,12 @@
 title: Windows Admin Center related management solutions
 description: How Windows Admin Center compares with and complements other Microsoft monitoring and management solutions/products (Project Honolulu)
 ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
+author: xelu86
+ms.author: alalve
 ms.date: 08/07/2020
 ---
 
 # Windows Admin Center and related management solutions from Microsoft
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 [Windows Admin Center](../overview.md) is the evolution of traditional in-box server management tools for situations where you might have used Remote Desktop (RDP) to connect to a server for troubleshooting or configuration. It's not intended to replace other existing Microsoft management solutions; rather it complements these solutions, as described below.
 

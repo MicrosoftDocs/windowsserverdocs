@@ -3,17 +3,15 @@ title: Hyper-V feature compatibility by generation and guest
 description: Lists the generations and operating systems that are compatible with key Hyper-V features
 ms.topic: article
 ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 12/05/2016
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 10/25/2024
 ---
 # Hyper-V feature compatibility by generation and guest
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 The tables in this article show you the generations and operating systems that are compatible with some of the Hyper-V features, grouped by categories. In general, you'll get the best availability of features with a generation 2 virtual machine that runs the newest operating system.
 
-Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System requirements for Hyper-V on Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:
+Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System requirements for Hyper-V on Windows Server](System-requirements-for-Hyper-V-on-Windows.md). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:
 
 * [Supported Linux and FreeBSD virtual machines](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 * [Supported Windows guest operating systems](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)
@@ -53,16 +51,16 @@ Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
 Hot add/removal of virtual network adapter | 2 | Any supported guest
 Legacy virtual network adapter | 1 | Any supported guest
-Single root input/output virtualization (SR-IOV) | 1 and 2 | 64-bit Windows guests, starting with  Windows Server 2012  and Windows 8.
+Single root input/output virtualization (SR-IOV) | 1 and 2 | 64-bit Windows guests, starting with Windows Server 2012 and Windows 8.
 Virtual machine multi queue (VMMQ) | 1 and 2  | Any supported guest
 
 ## Remote connection experience
 
 Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
-Discrete device assignment (DDA) | 1 and 2 | Windows Server 2016, Windows Server 2012 R2 only with Update 3133690 installed, Windows 10 <br> **Note:** For details on Update 3133690, see [this](https://support.microsoft.com/kb/3133690) support article.
-Enhanced session mode | 1 and 2 | Windows Server 2016, Windows Server 2012 R2, Windows 10, and Windows 8.1, with Remote Desktop Services enabled <br>**Note**: You might need to also configure the host. For details, see [Use local resources on Hyper-V virtual machine with VMConnect](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md).
-RemoteFx | 1 and 2 | Generation 1 on 32-bit and 64-bit Windows versions starting with Windows 8. <br> Generation 2 on 64-bit Windows 10 versions
+Discrete device assignment (DDA) | 1 and 2 | Windows Server 2012 and later, Windows 10 and Windows 11 <br>
+Enhanced session mode | 1 and 2 | Windows Server 2012 R2 and later, and Windows 8.1 and later, with Remote Desktop Services enabled <br>**Note**: You might need to also configure the host. For details, see [Use local resources on Hyper-V virtual machine with VMConnect](./learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md).
+RemoteFx | 1 and 2 | Generation 1 on 32-bit and 64-bit Windows versions starting with Windows 8. <br> Generation 2 on 64-bit Windows 10 and Windows 11 versions
 
 ## Security
 
@@ -75,8 +73,8 @@ Shielded virtual machines | 2 | **Windows**: All supported versions that can run
 
 Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
-Shared virtual hard disks (VHDX only) | 1 and 2  | Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+Shared virtual hard disks (VHDX only) | 1 and 2  | Windows Server 2012 and later
 SMB3 | 1 and 2 | All that support SMB3
-Storage spaces direct | 2 | Windows Server 2016
-Virtual Fibre Channel | 1 and 2 | Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+Storage spaces direct | 2 | Windows Server 2016 and later
+Virtual Fibre Channel | 1 and 2 |  Windows Server 2012 and later
 VHDX format | 1 and 2 | Any supported guest

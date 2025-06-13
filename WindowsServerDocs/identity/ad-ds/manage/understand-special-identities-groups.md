@@ -1,15 +1,15 @@
 ---
 title: Special identity groups
 description: Learn about Windows Server special identity groups that are used for Windows access control.
-author: dansimp
-ms.author: dansimp
+author: meaghanlewis
+ms.author: mosagie
 ms.topic: article
 ms.date: 08/02/2022
 ---
 
 # Special identity groups
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> 
 
 Learn about Windows Server special identity groups (sometimes called *security groups*) that are used for Windows access control.
 
@@ -60,7 +60,7 @@ Default special identity groups in Windows Server are described in the following
 - [Owner Rights](#owner-rights)
 - [Principal Self](#principal-self)
 - [Proxy](#proxy)
-- [Read-only Domain Controller](#read-only-domain-controller)
+- [Read-only Domain Controllers](#read-only-domain-controllers)
 - [Remote Interactive Logon](#remote-interactive-logon)
 - [Restricted](#restricted)
 - [SChannel Authentication](#schannel-authentication)
@@ -193,13 +193,13 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 ### Enterprise Read-only Domain Controllers
 
-This group includes all domain controllers in an Active Directory forest. Domain controllers with enterprise-wide roles and responsibilities have the Enterprise Domain Controllers identity. Except for account passwords, a read-only domain controller (RODC) holds all the Active Directory objects and attributes that a writable domain controller holds. Membership is controlled by the operating system.
+This group includes all Read-only Domain Controllers (RODC) in an Active Directory forest. An Enterprise RODC can replicate a larger subset of the Active Directory database, including the global catalog and read-only domain partitions for all domains in the forest. Membership is controlled by the operating system.
 
 |Attribute|Value|
 | --- | --- |
-|Well-known SID/RID|S-1-5-21-\<RootDomain>|
-|Object class|Foreign Security Principal|
-|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
+|Well-known SID/RID|S-1-5-21-\<RootDomain>-498|
+|Object class|Group|
+|Default location in Active Directory |CN=Users, DC=\<forestRootDomain\>|
 |Default user rights|None|
 
 ### Everyone
@@ -213,7 +213,7 @@ On computers running Windows 2000 and earlier, the Everyone group included the 
 |Well-known SID/RID|S-1-1-0 |
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p> [Act as part of the operating system](/windows/device-security/security-policy-settings/act-as-part-of-the-operating-system): SeTcbPrivilege<p> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
+|Default user rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
 ### Fresh Public Key identity
 
@@ -367,15 +367,15 @@ Identifies a SECURITY_NT_AUTHORITY proxy.
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default user rights|None|
 
-### Read-only Domain Controller
+### Read-only Domain Controllers
 
-This group includes all RODCs in the forest with read-only rights to the Active Directory database. It allows domain controller deployment when physical security is scarce or not guaranteed. Membership is controlled by the operating system.
+This group includes all RODCs in the domain with read-only rights to the Active Directory database. Except for account passwords, a RODC holds all the Active Directory objects and attributes that a writable domain controller holds. It allows domain controller deployment when physical security is scarce or not guaranteed. RODCs are explicit members of this group.
 
 |Attribute|Value|
 | --- | --- |
-|Well-known SID/RID|S-1-5-21-\<domain>|
-|Object class|Foreign Security Principal|
-|Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
+|Well-known SID/RID|S-1-5-21-\<domain>-521|
+|Object class|Group|
+|Default location in Active Directory |CN=Users, DC=\<rootDomain\>|
 |Default user rights|None|
 
 > [!NOTE]

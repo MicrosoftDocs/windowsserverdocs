@@ -3,8 +3,8 @@ title: manage-bde keypackage
 description: Reference article for the manage-bde keypackage command, which generates a key package for a drive.
 ms.topic: reference
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

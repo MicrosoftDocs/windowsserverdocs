@@ -1,11 +1,11 @@
 ---
 title: Build a Custom Authentication Method for AD FS in Windows Server
 description: This scenario describes how to build a custom authentication method for AD FS in Windows Server.
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Build a Custom Authentication Method for AD FS in Windows Server

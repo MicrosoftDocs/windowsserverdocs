@@ -1,16 +1,16 @@
 ---
 title: Get Started with Software Inventory Logging
 description: Describes how to install and start using Software Inventory Logging
-ms.topic: article
+ms.topic: get-started
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
-author: brentfor
-ms.author: brentf
+author: xelu86
+ms.author: alalve
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
  Software Inventory Logging collects Microsoft software inventory data on a per server basis. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system that will be inventoried. No Windows Update is required for Windows Server 2016. Also, if you want to use SIL's capability to forward data to an aggregation server, be sure you have SSL certificates valid for your network.
 
@@ -36,5 +36,5 @@ Software Inventory Logging can assist server administrators in performing the fo
 [Software Inventory Logging Aggregator](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt572043(v=ws.11))<br>
 [Manage Software Inventory Logging](manage-software-inventory-logging.md)<br>
 [Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)<br>
-[Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
+[Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/details.aspx?id=7826&lc=1033)
 [Volume Activation Management Tool](https://blogs.technet.com/b/volume-licensing/)

@@ -2,16 +2,14 @@
 title: Migration from DirectAccess to Always On VPN
 description: Migrating from DirectAccess to Always On VPN requires a specific process to migrate clients, which helps minimize race conditions that arise from performing migration steps out of order.
 manager: dougkim
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/07/2018
 ---
 
 # Migrate to Always On VPN and decommission DirectAccess
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 &#171; [**Previous:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)<br>
 

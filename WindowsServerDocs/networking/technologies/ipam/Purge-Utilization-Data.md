@@ -1,16 +1,12 @@
 ---
 title: Purge Utilization Data
 description: Learn how to delete utilization data from the IPAM database.
-manager: brianlic
-ms.topic: article
-ms.assetid: 45cada9e-69b9-43df-b6f5-6d3942435809
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: alalve
+author: xelu86
 ms.date: 08/07/2020
 ---
 # Purge Utilization Data
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to delete utilization data from the IPAM database.
 

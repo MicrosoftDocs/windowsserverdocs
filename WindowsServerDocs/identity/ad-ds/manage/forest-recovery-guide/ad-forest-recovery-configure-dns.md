@@ -1,16 +1,14 @@
 ---
 description: "Learn more about: AD Forest Recovery - Configuring the DNS Server service"
 title: AD Forest Recovery - Configure DNS Server service
-ms.author: daveba
-author: iainfoulds
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: how-to
 ms.custom: inhenkel
 ---
 # Active Directory Forest Recovery - Configure the DNS Server service
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 If the DNS server role isn't installed on the DC that you restore from backup, you must install and configure the DNS server.
 

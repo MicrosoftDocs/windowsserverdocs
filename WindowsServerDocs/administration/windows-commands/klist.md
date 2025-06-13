@@ -3,8 +3,8 @@ title: klist
 description: Reference article for the klist command, which displays a list of currently cached Kerberos tickets.
 ms.topic: reference
 ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
-ms.author: jgerend
-author: JasonGerend
+ms.author: mosagie
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -118,7 +118,7 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 
   - **purge_bind** - Allows you to remove cached, preferred domain controllers for the domains.
 
-  - **kdcoptions** - For the current list of options and their explanations, see [RFC 4120](http://www.ietf.org/rfc/rfc4120.txt).
+  - **kdcoptions** - For the current list of options and their explanations, see [RFC 4120](https://datatracker.ietf.org/doc/rfc4120/).
 
 ### Examples
 

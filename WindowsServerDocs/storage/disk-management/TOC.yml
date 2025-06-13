@@ -23,9 +23,7 @@
       href: change-a-drive-letter.md
     - name: Assign a mount point folder path to a drive
       href: assign-a-mount-point-folder-path-to-a-drive.md
-    - name: Extend a basic volume
+    - name: Extend a basic or dynamic volume
       href: extend-a-basic-volume.md
     - name: Shrink a basic volume
       href: shrink-a-basic-volume.md
-  - name: Troubleshooting Disk Management
-    href: troubleshooting-disk-management.md

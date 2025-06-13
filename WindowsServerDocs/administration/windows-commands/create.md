@@ -3,8 +3,8 @@ title: create
 description: Reference article for the create command, which creates a partition or shadow partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
 ms.topic: reference
 ms.assetid: b45acde1-8f4f-4ec3-b905-d8188f884af8
-ms.author: jgerend
-author: JasonGerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

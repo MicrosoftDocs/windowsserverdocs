@@ -2,14 +2,12 @@
 title: Settings
 description: Learn about settings in Windows Admin Center (Project Honolulu). User settings let users change their language/region and other preferences. Gateway settings let administrators configure the gateway.
 ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
+author: xelu86
+ms.author: alalve
 ms.date: 04/12/2018
 ---
 
 # Windows Admin Center Settings
-
->Applies to: Windows Admin Center
 
 Windows Admin Center settings consist of user-level and gateway-level settings. A change to a user-level setting only affects the current user's profile, while a change to a gateway-level setting affects all users on that Windows Admin Center gateway.
 
@@ -22,7 +20,7 @@ User-level settings consist of the following sections:
 - Personalization
 - Suggestions
 
-In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Azure AD is configured to be the identity provider, the user can log out of their Azure AD account from this tab.
+In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Microsoft Entra ID is configured to be the identity provider, the user can log out of their Microsoft Entra account from this tab.
 
 In the **Language/Region** tab, users can change the language and region formats displayed by Windows Admin Center.
 

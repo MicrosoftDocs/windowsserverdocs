@@ -2,8 +2,8 @@
 title: Fsutil fsinfo
 description: Reference article for the fsutil fsinfo command, which lists all drives, queries the drive type, queries volume information, queries NTFS-specific volume information, or queries file system statistics.
 manager: dmoss
-ms.author: toklima
-author: toklima
+ms.author: alalve
+author: xelu86
 ms.assetid: 7787a72e-a26b-415f-b700-a32806803478
 ms.topic: reference
 ms.date: 10/16/2017
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil fsinfo
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Lists all drives, queries the drive type, queries volume information, queries NTFS-specific volume information, or queries file system statistics.
 

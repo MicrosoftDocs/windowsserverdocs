@@ -2,10 +2,10 @@
 description: "Learn more about: AD FS Design Guide in Windows Server"
 ms.assetid: a8558c9d-0606-4881-93b2-f2d2716b18e7
 title: AD FS Design Guide in Windows Server 2012 R2
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

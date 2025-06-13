@@ -3,15 +3,15 @@ title: route
 description: Reference article for the route command, which modifies and displays entries in the local IP routing table.
 ms.topic: reference
 ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/05/2022
 ---
 
 # route
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays and modifies the entries in the local IP routing table. If used without parameters, **route** displays help at the command prompt.
 
