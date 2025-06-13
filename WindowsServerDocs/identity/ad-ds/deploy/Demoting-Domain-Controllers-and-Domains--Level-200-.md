@@ -62,9 +62,9 @@ The **Server Selection** dialog enables you to choose from one of the servers pr
 
 ![Remove Roles and Features Wizard - Select roles to remove](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerRoles.png)
 
-Clear the **Active Directory Domain Services** check box to demote a domain controller; if the server is currently a domain controller, this doesn't remove the AD DS role and instead switches to a **Validation Results** dialog with the offer to demote. Otherwise, it removes the binaries like any other role feature.
+Clear the **Active Directory Domain Services** check box to demote a domain controller; if the server is currently a domain controller, this doesn't remove the AD DS role, and instead switches to a **Validation Results** dialog with the offer to demote. Otherwise, it removes the binaries like any other role feature.
 
-- Don't remove any other AD DS-related roles or features - such as DNS, GPMC, or the RSAT tools - if you intend to promote the domain controller again immediately. Removing additional roles and feature increases the time to re-promote, as Server Manager reinstalls these features when you reinstall the role.
+- Don't remove any other AD DS-related roles or features - such as DNS, GPMC, or the RSAT tools - if you intend to promote the domain controller again immediately. Removing other roles and feature increases the time to repromote, as Server Manager reinstalls these features when you reinstall the role.
 - Remove unneeded AD DS roles and features at your own discretion if you intend to demote the domain controller permanently. This requires clearing the check boxes for those roles and features.
 
 The full list of AD DS-related roles and features include:
@@ -93,10 +93,10 @@ Uninstall-WindowsFeature
 
 You configure demotion options on the **Credentials** page. Provide the credentials necessary to perform the demotion from the following list:
 
-- Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force the removal of this domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.
+- Demoting an extra domain controller requires Domain Admin credentials. Selecting **Force the removal of this domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.
 
    > [!WARNING]
-   > Don't select this option unless the domain controller cannot contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all un-replicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.
+   > Don't select this option unless the domain controller can't contact other domain controllers and there is *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. In addition, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft Customer Support cases for AD DS, Exchange, SQL, and other software.
    >
    > If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For steps, review [Clean Up Server Metadata](ad-ds-metadata-cleanup.md).
 
@@ -126,11 +126,11 @@ This page doesn't have an equivalent ADDSDeployment Windows PowerShell argument.
 
 ![Active Directory Domain Services Configuration Wizard - Credentials Remove DNS and Application partitions](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ReviewOptions.png)
 
-The **Removal Options** page appears depending on previously selecting **Last domain controller in the domain** on the **Credentials** page. This page enables you to configure additional removal options. Select **Ignore last DNS server for zone**, **Remove application partitions**, and **Remove DNS Delegation** to enable the **Next** button.
+The **Removal Options** page appears, depending on previously selecting **Last domain controller in the domain** on the **Credentials** page. This page enables you to configure extra removal options. Select **Ignore last DNS server for zone**, **Remove application partitions**, and **Remove DNS Delegation** to enable the **Next** button.
 
-The options only appear if applicable to this domain controller. For instance, if there's no DNS delegation for this server then that checkbox won't display.
+The options only appear if applicable to this domain controller. For instance, if there's no DNS delegation for this server then that checkbox doesn't display.
 
-Select **Change** to specify alternate DNS administrative credentials. Select **View Partitions** to view additional partitions the wizard removes during the demotion. By default, the only additional partitions are Domain DNS and Forest DNS Zones. All other partitions are non-Windows partitions.
+Select **Change** to specify alternate DNS administrative credentials. Select **View Partitions** to view extra partitions the wizard removes during the demotion. By default, the only other partitions are Domain DNS and Forest DNS Zones. All other partitions are non-Windows partitions.
 
 The equivalent ADDSDeployment cmdlet arguments are:
 
@@ -220,7 +220,7 @@ Here's an example of removing the last domain controller in the domain with its 
 
 If you attempt to remove the AD DS role before demoting the server, Windows PowerShell blocks you with an error:
 
-![An uninstallation prerequisite step failed during the removal of AD-Domain-Services, and uninstallation cannot continue. 1. The domain controller needs to be demoted before the Active DirectoryDomain Services Role can be uninstalled.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallError.png)
+![An uninstallation prerequisite step failed during the removal of AD-Domain-Services, and uninstallation can't continue. 1. The domain controller needs to be demoted before the Active DirectoryDomain Services Role can be uninstalled.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallError.png)
 
 > [!IMPORTANT]
 > You must restart the computer after demoting the server before you can remove the AD-Domain-Services role binaries.
