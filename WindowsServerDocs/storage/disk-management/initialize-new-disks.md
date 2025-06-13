@@ -61,4 +61,4 @@ Most PCs use the GUID Partition Table (GPT) disk type for hard drives and SSDs. 
 
 To learn more about supported drive capacities, see [Windows support for hard disks that are larger than 2 TB](/troubleshoot/windows-server/backup-and-storage/support-for-hard-disks-exceeding-2-tb).
 
-To convert a disk from MBR to GPT or vice versa, you first have to delete all volumes from the disk, which erases everything on the disk. For more information, see [Convert an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md), or [Convert a GPT disk into an MBR disk](change-a-gpt-disk-into-an-mbr-disk.md).
+To convert a disk from MBR to GPT or vice versa, you first have to delete all volumes from the disk, which erases everything on the disk. For more information, see [Convert disk partition style](change-disk-partition-scheme.md).
