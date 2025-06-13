@@ -74,8 +74,8 @@ items:
               href: server-manager/configure-remote-management-in-server-manager.md
             - name: Add Servers to Server Manager
               href: server-manager/add-servers-to-server-manager.md
-            - name: Install or Uninstall Roles, Role Services, or Features
-              href: server-manager/install-or-uninstall-roles-role-services-or-features.md
+            - name: Add or remove roles and features
+              href: server-manager/add-remove-roles-features.md
               items: 
                 - name: Configure Features on Demand in Windows Server
                   href: server-manager/configure-features-on-demand-in-windows-server.md
