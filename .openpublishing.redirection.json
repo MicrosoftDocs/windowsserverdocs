@@ -12893,7 +12893,7 @@
     {
       "source_path": "WindowsServerDocs/storage/disk-management/change-a-gpt-disk-into-an-mbr-disk.md",
       "redirect_url": "/windows-server/storage/disk-management/change-disk-partition-scheme",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
