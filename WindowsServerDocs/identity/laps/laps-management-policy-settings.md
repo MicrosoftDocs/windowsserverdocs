@@ -1,15 +1,15 @@
 ---
 title: Configure policy settings for Windows LAPS
-description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS).
+description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS) to enhance security and automate local administrator password management.
 author: jay98014
 ms.author: mosagie
-ms.date: 08/19/2024
-ms.topic: article
+ms.date: 06/13/2025
+ms.topic: concept-article
 ---
 
 # Configure policy settings for Windows LAPS
 
-Windows Local Administrator Password Solution (Windows LAPS) supports various settings that you can control by using policy. Learn about the settings and how to administer them.
+Windows Local Administrator Password Solution (Windows LAPS) lets you configure policy settings to manage local administrator passwords securely and automatically. This article explains each policy setting and how to administer them for improved security and compliance.
 
 ## Supported policy roots
 
