@@ -12884,6 +12884,16 @@
       "source_path": "WindowsServerDocs/administration/server-manager/install-or-uninstall-roles-role-services-or-features.md",
       "redirect_url": "/windows-server/administration/server-manager/add-remove-roles-features",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk.md",
+      "redirect_url": "/windows-server/storage/disk-management/change-disk-partition-scheme",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/change-a-gpt-disk-into-an-mbr-disk.md",
+      "redirect_url": "/windows-server/storage/disk-management/change-disk-partition-scheme",
+      "redirect_document_id": false
     }
   ]
 }
