@@ -16,12 +16,12 @@ Creates, deletes, or lists a volume mount point. You can also link volumes witho
 ## Syntax
 
 ```
-mountvol [<drive>:]<path volumename>
+mountvol [<drive>:]<path> <volumename>
 mountvol [<drive>:]<path> /d
 mountvol [<drive>:]<path> /l
 mountvol [<drive>:]<path> /p
 mountvol /r
-mountvol [/n|/e]
+mountvol [/n | /e]
 mountvol <drive>: /s
 ```
 
