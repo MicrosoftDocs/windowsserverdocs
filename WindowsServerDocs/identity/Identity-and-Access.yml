@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: robinharwood 
   ms.author: roharwoo
-  ms.date: 5/18/2020 
+  ms.date: 06/16/2025
   ms.service: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
@@ -18,20 +18,81 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: About Identity and Access technologies
+
+  - title: Active Directory Domain Services
     linkLists:
-      - linkListType: overview
-        links:
-          - text: Privileged Access Management for Active Directory Domain Services & AD DS
-            url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
-          - text: 'Windows 10 for the enterprise: Ways to use devices for work'
-            url: /azure/active-directory/devices/overview
-          - text: Active Directory Domain Services
-            url: ../identity/ad-ds/get-started/virtual-dc/Active-Directory-Domain-Services-Overview.md
-          - text: Active Directory Federation Services
-            url: Active-Directory-Federation-Services.md
-          - text: Windows Local Administrator Password Solution (LAPS)
-            url: ../identity/laps/laps.md
+    - linkListType: overview
+      links:
+      - text: Active Directory Domain Services overview
+        url: ../identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
+    - linkListType: deploy
+      links:
+      - text: Install Active Directory Domain Services
+        url: ../identity/ad-ds/deploy/install-active-directory-domain-services--level-100-.md
+    - linkListType: concept
+      links:
+      - text: Active Directory Domain Services functional levels
+        url: ../identity/ad-ds/active-directory-functional-levels.md
+      - text: Group Managed Service Accounts
+        url: ../identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
+      - text: Security identifiers
+        url: ../identity/ad-ds/manage/understand-security-identifiers.md
+
+
+  - title: Windows Local Administrator Password Solution
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: What is Windows LAPS?
+        url: ../identity/laps/laps-overview.md
+    - linkListType: get-started
+      links:
+      - text: Get started with Windows LAPS and Windows Server Active Directory
+        url: ../identity/laps/laps-scenarios-windows-server-active-directory.md
+      - text: Get started with Windows LAPS and Microsoft Entra ID
+        url: ../identity/laps/laps-scenarios-azure-active-directory.md
+    - linkListType: how-to-guide
+      links:
+      - text: Configure policy settings for Windows LAPS
+        url: ../identity/laps/laps-management-policy-settings.md
+      - text: Migrate to Windows LAPS from legacy LAPS
+        url: ../identity/laps/laps-scenarios-migration.md
+
+  - title: Active Directory Certificate Services
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: What is Active Directory Certificate Services?
+        url: ../identity/ad-cs/active-directory-certificate-services-overview.md
+      - text: Certification Authority Web Enrollment Role Service
+        url: ../identity/ad-cs/certificate-authority-web-enrollment.md
+    - linkListType: concept
+      links:
+      - text: Certificates and trust in Windows
+        url: ../identity/ad-cs/certificate-trust.md
+    - linkListType: how-to-guide
+      links:
+      - text: Manage certificate templates
+        url: ../identity/ad-cs/manage-certificate-templates.md
+      - text: Renew root CA certificate
+        url: ../identity/ad-cs/renew-root-ca-certificate.md
+      - text: Export a certificate with its private key
+        url: ../identity/ad-cs/export-certificate-private-key.md
+
+  - title: Active Directory Federation Services
+    linkLists:
+    - linkListType: overview
+      links:
+      - text: AD FS Overview
+        url: ../identity/ad-fs/ad-fs-overview.md
+    - linkListType: how-to-guide
+      links:
+      - text: Distribute Certificates to Client Computers by Using Group Policy
+        url: ../identity/ad-fs/deployment/distribute-certificates-to-client-computers-by-using-group-policy.md
+      - text: Manage SSL/TLS protocols and cipher suites for AD FS
+        url: ../identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs.md
+      - text: Configure Microsoft Entra multifactor authentication as authentication provider using AD FS
+        url: ../identity/ad-fs/operations/configure-ad-fs-and-azure-mfa.md
 
   # Card
   - title: Solutions and Scenario Guides
