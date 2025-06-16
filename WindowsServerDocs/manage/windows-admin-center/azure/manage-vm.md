@@ -4,7 +4,7 @@ description: Learn how to use Windows Admin Center in the Azure portal to connec
 ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 07/26/2022
+ms.date: 06/16/2025
 ---
 # Manage a Windows VM using Windows Admin Center in Azure
 
@@ -66,7 +66,7 @@ Learn more about [configuring role assignment for your VM](#configuring-role-ass
 
 To use Windows Admin Center in the Azure portal, we install Windows Admin Center in each Azure VM that you want to use it to manage. The Azure VM has the following requirements:
 
-- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, or Windows 11
+- Windows Server 2016 or newer, Windows 10, or Windows 11
 - At least 3 GiB of memory
 - Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
 
@@ -90,8 +90,7 @@ The management PC or other system that you use to connect to the Azure portal ha
 - The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
 - Access to the virtual network that's connected to the VM (this is more secure than using a public IP address to connect). There are many ways to connect to a virtual network, including by using a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
-
-## Installing in a VM
+## Install in a VM
 
 Before you can use Windows Admin Center in the Azure portal, you must install it in the VM you want to manage. Here's how:
 
@@ -114,7 +113,7 @@ However, we recommend instead using a private IP address to connect with, or at 
 
    Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
-## Using with a VM
+## Use with a VM
 
 After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows:
 
@@ -130,7 +129,7 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 If you see a "Failed to connect" message, ensure your account is a member of the **Windows Admin Center Administrator Login** role on the VM resource.
 
-## Creating an inbound port rule for connecting from specific public IP addresses
+## Create an inbound port rule for connecting from specific public IP addresses
 
 Just like with Remote Desktop, opening an inbound port rule on your VM's public IP address exposes your VM to potential attack from any host on the internet, so we recommend instead accessing the VM using a private IP address.
 
@@ -152,7 +151,7 @@ However, if you need to use a public IP address, you can improve security by lim
 
 You might need to use a non-Microsoft website or app to find the public IP address of the system you're using to connect to the Azure portal.
 
-## Configuring role assignments for the VM
+## Configure role assignments for the VM
 
 Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role.
 
@@ -182,6 +181,7 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 - [Assign Azure roles using Azure PowerShell](/azure/role-based-access-control/role-assignments-powershell).
 
 ## Proxy configuration
+
 If the machine connects through a proxy server to communicate over the internet, review the following requirements to understand the network configuration required.
 
 The Windows Admin Center extension can communicate through a proxy server by using the HTTPS protocol. Use the extensions settings for configuration as described in the following steps. Authenticated proxies are not supported.
@@ -200,7 +200,7 @@ $settings = @{"port" = $wacPort; "proxy" = @{"mode" = "application"; "address" =
 Set-AzVMExtension -ExtensionName AdminCenter -ExtensionType AdminCenter -Publisher Microsoft.AdminCenter -ResourceGroupName <resource-group-name> -VMName <virtual-machine-name> -Location <location> -TypeHandlerVersion "0.0" -settings $settings
 ```
 
-## Updating Windows Admin Center
+## Update Windows Admin Center
 
 We're constantly releasing new versions of Windows Admin Center. For Windows Admin Center to automatically update to the latest version, the Azure Virtual Machine needs a control plane operation to take place. In the event you wish to update sooner, you can run the following commands:
 
@@ -245,7 +245,6 @@ Here are some tips to try in case something isn't working. For general help trou
         Microsoft Certificate and DNS service for Windows Admin Center in the Azure Portal
         ```
 
-
     1. If you allowed all outbound traffic and are still seeing an error from the command above, check that there are no firewall rules blocking connection. If nothing seems wrong, create a support request as our service might be experiencing problems.
 1. Make sure that the Windows Admin Center service is running on your VM.
     1. In the Azure portal, navigate to “Connect” > “RDP” > “Download RDP File”.
@@ -264,6 +263,7 @@ Here are some tips to try in case something isn't working. For general help trou
     1. Ensure that the SmeInboundOpenException rule is enabled for both Private and Public, then try to connect again.
 
 ### You get stuck on the "Windows Admin Center" loading page with the logo
+
 This could occur if your browser blocks third party cookies. Currently, Windows Admin Center requires that you don't block third party cookies, and we're actively working to remove this requirement. In the meantime, please allow third party cookies in your browser.
 
 1. On **Edge**:
