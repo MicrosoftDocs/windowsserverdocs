@@ -1,6 +1,6 @@
 ---
 title: Server Manager
-description: Learn about the management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (rdP) connections to each server.
+description: Server Manager centralizes Windows Server management. Discover how to provision, monitor, and manage servers without Remote Desktop.
 ms.topic: concept-article
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 ms.author: mosagie
@@ -9,13 +9,9 @@ ms.date: 06/16/2025
 ---
 # Server Manager
 
-Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (RDP) connections to each server. Server Manager supports remote, multi-server management, and help increase the number of servers an administrator can manage.
+Server Manager is a centralized management console in Windows Server that enables IT professionals to provision and manage both local and remote Windows-based servers from their desktops. With Server Manager, you can efficiently administer multiple servers without needing physical access or enabling Remote Desktop Protocol (RDP) connections. Server Manager supports remote, multi-server management, and help increase the number of servers an administrator can manage.
 
-Server Manager can be used to manage up to 100 servers, depending on the workloads that the servers are running. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://www.microsoft.com/system-center).
-
-This topic and its subtopics provide information about how to use features in the Server Manager console. This topic contains the following sections.
-
-- [Review initial considerations and system requirements](#review-initial-considerations-and-system-requirements)
+This article provides an overview of Server Manager features, supported tasks, and guidance for managing servers in your environment. This article contains the following sections:
 
 - [Tasks that you can perform in Server Manager](#tasks-that-you-can-perform-in-server-manager)
 
@@ -25,13 +21,9 @@ This topic and its subtopics provide information about how to use features in th
 
 - [Export Server Manager settings to other computers](#export-server-manager-settings-to-other-computers)
 
-## Prerequisites
-
-- Server Manager is installed by default with all editions of Windows Server 2012 and newer. No additional hardware requirements exist for Server Manager.
-
 ## Manage remote computers from a client computer
 
-The Server Manager console is included with [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=404281) for Windows. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
+The Server Manager console is included with [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=404281) for Windows 10 and Windows 11. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
 
 ### Start Server Manager on a client computer
 
@@ -45,10 +37,7 @@ For more information about running Remote Server Administration Tools for Window
 
 ### Configure remote management on servers that you want to manage
 
-> [!IMPORTANT]
-> By default, Server Manager and Windows PowerShell remote management is enabled in Windows Server 2016.
-
-To perform management tasks on remote servers by using Server Manager, remote servers that you want to manage must be configured to allow remote management by using Server Manager and Windows PowerShell. If remote management has been disabled on  Windows Server 2012 R2  or  Windows Server 2012 , and you want to enable it again, perform the following steps.
+To perform management tasks on remote servers by using Server Manager, remote servers that you want to manage must be configured to allow remote management by using Server Manager and Windows PowerShell. If remote management has been disabled on  Windows Server, and you want to enable it again, perform the following steps.
 
 #### Configure Server Manager remote management
 
@@ -66,7 +55,7 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
     - To let this computer be managed remotely by using Server Manager or Windows PowerShell, select **Enable remote management of this server from other computers**.
 
-#### Enable Server Manager remote management on  Windows Server 2012 R2  or  Windows Server 2012  by using Windows PowerShell
+#### Enable Server Manager remote management on Windows Server by using Windows PowerShell
 
 1. Do one of the following.
 
@@ -93,7 +82,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 |----------|----------------------------------|-------------|
 |add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
-|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754923(v=ws.11)).|Yes|No|
+|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server. Learn more about how to [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).|Yes|No|
 |View and make changes to server roles and features that are installed on either local or remote servers. **Note:** In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but cannot add or remove role services.|
 |start management tools such as Windows PowerShell or mmc snap-ins. You can start a Windows PowerShell session targeted at a remote server by right-clicking the server in the **Servers** tile, and then clicking **Windows PowerShell**. You can start mmc snap-ins from the **Tools** menu of the Server Manager console, and then point the mmc toward a remote computer after the snap-in is open.|Yes|Yes|
 |Manage remote servers with different credentials by right-clicking a server in the **Servers** tile, and then clicking **Manage As**. You can use **Manage As** for general server and File and Storage Services management tasks.|Yes|No|
@@ -104,12 +93,9 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 |Restart servers.|Yes|No|
 |Refresh data that is displayed in the Server Manager console about managed servers.|Yes|No|
 
-> [!NOTE]
-> Server Manager cannot be used to add roles and features to servers that are running  Windows Server 2008 R2  or  Windows Server 2008 .
-
 ## Start Server Manager
 
-Server Manager starts automatically by default on servers that are running Windows Server 2016 when a member of the Administrators group logs on to a server. If you close Server Manager, restart it in one of the following ways. This section also contains steps for changing the default behavior, and preventing Server Manager from starting automatically.
+Server Manager starts automatically by default on Windows Server when a member of the Administrators group logs on to a server. If you close Server Manager, restart it in one of the following ways. This section also contains steps for changing the default behavior, and preventing Server Manager from starting automatically.
 
 ### Start Server Manager from the start screen
 
@@ -145,7 +131,7 @@ If an automatic refresh occurs in Server Manager while a managed server is shutt
 
 ## Export Server Manager settings to other computers
 
-In Server Manager, your list of managed servers, changes to Server Manager console settings, and custom groups that you have created are stored in the following two files. You can reuse these settings on other computers that are running the same release of Server Manager (or Windows 10 with Remote Server Administration Tools installed). Remote Server Administration Tools must be running on Windows client-based computers to export Server Manager settings to those computers.
+In Server Manager, your list of managed servers, changes to Server Manager console settings, and custom groups that you have created are stored in the following two files. You can reuse these settings on other computers that are running the same release of Server Manager. Remote Server Administration Tools must be running on Windows client-based computers to export Server Manager settings to those computers.
 
 - %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
