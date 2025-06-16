@@ -26,7 +26,7 @@ In order to configure a cloud witness, the following are required:
 
 - You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription.
 
-- You must have an Azure Standard General Purpose V2 (GPv2) storage account. Only the GPv2 storage account type is supported. This storage account is where a cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration. You can use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters.
+- You must have an Azure Standard [general purpose V2 storage account](/azure/storage/common/storage-account-upgrade) as only this storage account type is supported. This storage account is where a cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration. You can use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters.
 
   - When creating your Azure Storage account, if the cluster you're configuring the cloud witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)** when configuring the **Replication** field. If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)** instead.
 
