@@ -32,9 +32,14 @@ The following table provides a summary comparison of the two types of RDS CAL:
 | Permanent RDS CALs are valid for a random period of 52–89 days before renewal. | Permanent RDS CALs are valid for 60 days before renewal or 90 days before reassignment. |
 | Can't be over-allocated. | Can be over-allocated, in breach of the Remote Desktop licensing agreement. |
 
+Here's an example of when you could use each of the RDS CAL types:
+
+- The per device model would be appropriate in an environment where there are two or more shifts of workers using the same computers to access the session hosts.
+- The per user model would be best for environments where each user has their own dedicated Windows devices to access the session hosts.
+
 There's a licensing grace period of 120 days during which no license server is required. Once the grace period ends, clients must have a valid RDS CAL issued by a license server before they can sign in a remote session.
 
-For example, the per device model would be appropriate in an environment where there are two or more shifts of workers using the same computers to access the session hosts. The per user model would be best for environments where each user has their own dedicated Windows devices to access the session hosts.
+A license server can issue RDS CALs across different Active Directory domains or forests, or in a workgroup environment. However, there are some limitations to consider. For more information, see [Best practices for setting up Remote Desktop licensing across Active Directory domains/forests or workgroups](/troubleshoot/windows-server/remote/set-up-remote-desktop-licensing-across-domains-forests-workgroups).
 
 ### Per device RDS CALs
 
