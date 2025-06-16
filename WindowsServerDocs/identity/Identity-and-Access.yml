@@ -23,11 +23,11 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-      - text: Overview
+      - text: Active Directory Domain Services overview
         url: ../identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
     - linkListType: deploy
       links:
-      - text: Installation
+      - text: Install Active Directory Domain Services
         url: ../identity/ad-ds/deploy/install-active-directory-domain-services--level-100-.md
     - linkListType: concept
       links:
