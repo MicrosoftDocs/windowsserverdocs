@@ -1,7 +1,7 @@
 ---
 title: Convert a disk to GPT or MBR
 description: Learn how to convert a disk to GPT or MBR partition scheme (style) using Disk Management and the command line in Windows.
-ms.date: 06/13/2025
+ms.date: 06/16/2025
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
@@ -28,11 +28,11 @@ Before you convert partition styles, back up or move the data off the disk.
 
 1. Select **Start**, type **diskmgmt.msc**, then select **Enter**.
 
-1. Right-click on the volume pertaining to your GPT disk.
+1. Right-click on the volume pertaining to your disk.
 
-1. Select **Delete Volume**, then select **Yes**. Repeat this step for all volumes on the GPT disk.
+1. Select **Delete Volume**, then select **Yes**. Repeat this step for all volumes on the disk.
 
-1. Right-click on the GPT disk, then select **Convert to MBR Disk**.
+1. Right-click on the disk, then select **Convert to MBR Disk** or **Convert to GPT Disk**.
 
 1. To verify the conversion process, right-click on your disk, select **Properties**, select the **Volumes** tab, and check the partition style information.
 
@@ -40,12 +40,12 @@ Before you convert partition styles, back up or move the data off the disk.
 
 Before you convert partition styles, back up or move the data off the disk.
 
-1. Open an elevated command prompt window, type **diskpart**, then select **Enter**.
+1. Open an elevated command prompt window, type **diskpart**, then hit **Enter**.
 
 1. Prepare your disk for conversion by cleaning (deleting) any partitions or volumes.
 
    > [!NOTE]
-   > If your disk doesn't have any partitions or volumes, skip to step **6** to convert your disk.
+   > If your disk doesn't have any partitions or volumes, skip to step **3** to convert your disk.
 
    1. Type **list disk** and hit **Enter**. Make a note of the disk number that you want to convert.
 
@@ -57,7 +57,7 @@ Before you convert partition styles, back up or move the data off the disk.
 
    To convert MBR to GPT, type **convert gpt**, then hit **Enter**.
 
-You're notified when the conversion process completes.
+You're notified when the conversion process completes. To learn more, see the [diskpart](/windows-server/administration/windows-commands/diskpart) commands reference.
 
 # [PowerShell](#tab/powershell)
 
