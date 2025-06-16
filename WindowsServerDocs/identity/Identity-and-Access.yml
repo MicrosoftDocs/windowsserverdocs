@@ -84,15 +84,15 @@ landingContent:
     - linkListType: overview
       links:
       - text: AD FS Overview
-        url: ../identity/ad-fs/ad-fs-overview
+        url: ../identity/ad-fs/ad-fs-overview.md
     - linkListType: how-to-guide
       links:
       - text: Distribute Certificates to Client Computers by Using Group Policy
-        url: ../identity/ad-fs/deployment/distribute-certificates-to-client-computers-by-using-group-policy
+        url: ../identity/ad-fs/deployment/distribute-certificates-to-client-computers-by-using-group-policy.md
       - text: Manage SSL/TLS protocols and cipher suites for AD FS
-        url: ../identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs
+        url: ../identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs.md
       - text: Configure Microsoft Entra multifactor authentication as authentication provider using AD FS
-        url: ../identity/ad-fs/operations/configure-ad-fs-and-azure-mfa
+        url: ../identity/ad-fs/operations/configure-ad-fs-and-azure-mfa.md
 
   # Card
   - title: Solutions and Scenario Guides
