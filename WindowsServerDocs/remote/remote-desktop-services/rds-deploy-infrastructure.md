@@ -10,7 +10,7 @@ author: meaghanlewis
 
 Use the following steps to deploy the Remote Desktop servers in your environment. You can install the server roles on physical machines or virtual machines, depending on whether you're creating an on-premises, cloud-based, or hybrid environment.
 
-If you're using virtual machines for any of the Remote Desktop Services servers, make sure you have [prepared those virtual machines](rds-prepare-vms.md).
+If you're using virtual machines for any of the Remote Desktop Services servers, make sure you [prepared those virtual machines](rds-prepare-vms.md).
 
 1. Add all the servers you're going to use for Remote Desktop Services to Server Manager:
    1. In Server Manager, click **Manage** > **Add Servers**.
@@ -24,7 +24,7 @@ If you're using virtual machines for any of the Remote Desktop Services servers,
    5. Wait for the deployment to complete successfully.
 3. Add RD License Server:
    1. In Server Manager, click **Remote Desktop Services > Overview > +RD Licensing**.
-   2. Select the virtual machine where the RD license server will be installed (for example, Contoso-Cb1).
+   2. Select the virtual machine on which you want to install the RD license server. For example, Contoso-Cb1.
    3. Click **Next**, and then click **Add**.
 4. Activate the RD License Server and add it to the License Servers group:
    1. In Server Manager, click **Remote Desktop Services > Servers**. Right-click the server with the Remote Desktop Licensing role installed and select **RD Licensing Manager**.
@@ -76,7 +76,7 @@ If you're using virtual machines for any of the Remote Desktop Services servers,
 
    1. In Server Manager, click **Remote Desktop Services > Collections > Tasks > Create Session Collection**.
    2. Enter a collection Name (for example, ContosoDesktop).
-   3. Select an RD Session Host Server (Contoso-Sh1), accept the default user groups (Contoso\Domain Users), and enter the Universal Naming Convention (UNC) Path to the user profile disks created above (\Contoso-Cb1\UserDisks).
+   3. Select an RD Session Host Server (Contoso-Sh1), accept the default user groups (Contoso\Domain Users), and enter the Universal Naming Convention (UNC) Path to the user profile disks created previously (\Contoso-Cb1\UserDisks).
    4. Set a Maximum size, and then click **Create**.
 
-You've now created a basic Remote Desktop Services infrastructure. If you need to create a highly-available deployment, you can add a [connection broker cluster](rds-connection-broker-cluster.md) or a [second RD Session Host server](rds-scale-rdsh-farm.md).
+You now created a basic Remote Desktop Services infrastructure. If you need to create a highly available deployment, you can add a [connection broker cluster](rds-connection-broker-cluster.md) or a [second RD Session Host server](rds-scale-rdsh-farm.md).
