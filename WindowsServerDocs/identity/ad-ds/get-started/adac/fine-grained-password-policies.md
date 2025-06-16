@@ -24,7 +24,7 @@ Before you can create fine grained password policies, you need to complete the f
 
 - You must have either of the following Remote Server Administration Tools (RSAT) installed:
 
-  - Active Directory Administrative Center (ADAC) OR Active Directory module for Windows PowerShell.
+  - Active Directory Administrative Center (ADAC), **or** Active Directory module for Windows PowerShell.
 
 ## Create a fine grained password policy
 
@@ -46,7 +46,7 @@ Here's how to create a fine grained password policy using ADAC:
 
 1. Under **Directly Applies To**, choose **Add**, type the name of the group to which the fine grained password policy, and then choose **OK**.
 
-1. choose **OK** to submit the creation.
+1. Choose **OK** to submit the creation.
 
 ### [PowerShell](#tab/powershell)
 
@@ -137,7 +137,7 @@ Here's how to edit a fine grained password policy using ADAC:
 
 Here's how to use the [Set-ADFineGrainedPasswordPolicy](/powershell/module/activedirectory/set-adfinegrainedpasswordpolicy) cmdlet to modify an existing policy.
 
-1. Open an elevated PowerShell session, right-click on the _Start_ button, choose **Windows PowerShell (Admin)**.
+1. Open an elevated PowerShell session, right-click on the _Start_ button. Choose **Windows PowerShell (Admin)**.
 
 1. To change the password history setting of the `PasswordPolicy` policy, run the following command. Replace `PasswordPolicy` with the desired policy name.
 
