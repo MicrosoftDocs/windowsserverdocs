@@ -347,6 +347,8 @@
         items:
         - name: Group Policy overview
           href: ad-ds/manage/group-policy/group-policy-overview.md
+        - name: Group Policy scope
+          href: ad-ds/manage/group-policy/group-policy-scope.md
         - name: Group Policy preferences
           href: ad-ds/manage/group-policy/group-policy-preferences.md
         - name: Group Policy processing
