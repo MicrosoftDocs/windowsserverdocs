@@ -14,7 +14,7 @@ Certificate auto-enrollment simplifies the process of deploying and managing cer
 
 ## Prerequisites
 
-Before configuring certificate auto-enrollment, ensure the following prerequisites are met:
+Before you begin, ensure the following prerequisites are met:
 
 - Active Directory Certificate Services (AD CS) is installed and configured with at least one Enterprise Certification Authority (CA).
 
