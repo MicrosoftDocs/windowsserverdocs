@@ -9,7 +9,7 @@ ms.date: 06/17/2025
 
 # NTFS overview
 
-New Technology File System (NTFS) is the default file system for modern Windows and Windows Server operating systems. It provides advanced features, including security descriptors, encryption, disk quotas, and support for rich metadata, enhancing both security and data management. Additionally, NTFS seamlessly integrates with Cluster Shared Volumes (CSV), allowing highly available storage that multiple nodes in a failover cluster can access concurrently. This integration ensures continuous data availability and resilience.
+New Technology File System (NTFS) is the default file system for modern Windows-based operating system (OS). It provides advanced features, including security descriptors, encryption, disk quotas, and support for rich metadata, enhancing both security and data management. Additionally, NTFS seamlessly integrates with Cluster Shared Volumes (CSV), allowing highly available storage that multiple nodes in a failover cluster can access concurrently. This integration ensures continuous data availability and resilience.
 
 ## Increased reliability
 
@@ -17,7 +17,7 @@ NTFS enhances reliability by maintaining a transaction-based log file and checkp
 
 NTFS includes a feature called [self-healing NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10)), which automatically detects and repairs minor file system corruption in the background, without requiring the volume to be taken offline. This proactive approach helps maintain data integrity and minimizes disruptions to users and applications.
 
-For more significant file system corruption, the `chkdsk` utility can scan and repair NTFS volumes while keeping them online, minimizing downtime. The only period the volume might be unavailable is during the phase required to restore data consistency. When NTFS is used with Cluster Shared Volumes (CSV), repairs can be performed without any downtime, ensuring continuous availability. To learn more, see [NTFS Health and Chkdsk](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11)).
+For more significant file system corruption, the `chkdsk` utility can scan and repair NTFS volumes while keeping them online, minimizing downtime. The only period the volume might be unavailable is during the phase required to restore data consistency. When NTFS is used with CSV, repairs can be performed without any downtime, ensuring continuous availability. To learn more, see [NTFS Health and Chkdsk](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11)).
 
 ## Increased security
 
@@ -49,7 +49,7 @@ If you try to mount a volume with a cluster size larger than the supported maxim
 
 ## Formatting requirements for large files
 
-To allow proper extension of large `.vhdx` files, there are new recommendations for formatting volumes. When formatting volumes that you use with Data Deduplication or that host large files, such as `.vhdx` files larger than 1 TB, use the `Format-Volume` cmdlet in Windows PowerShell with the following parameters:
+To allow proper extension of large `.vhdx` files, there are new recommendations for formatting volumes. When formatting volumes that you use with Data Deduplication or that host large files, such as `.vhdx` files larger than 1 TB, use the [Format-Volume](/powershell/module/storage/format-volume) cmdlet with the following parameters:
 
 ```powershell
 Format-Volume -DriveLetter <DriveLetter> -FileSystem NTFS -AllocationUnitSize 65536 -UseLargeFRS
@@ -67,8 +67,7 @@ format <DriveLetter> /l /a:64k
 
 NTFS supports long file names and extended-length paths, with the following maximum values:
 
-- **Support for long file names, with backward compatibility**: NTFS supports long file names, storing an 8.3 alias on disk (in Unicode) to provide compatibility with file systems that impose an 8.3 limit on file names and extensions. If needed (for performance reasons), you can selectively disable 8.3 aliasing on individual NTFS volumes in Windows Server 2008 R2, Windows 8, and more recent versions of the Windows operating system.
-  In Windows Server 2008 R2 and later systems, short names are disabled by default when a volume is formatted using the operating system. For application compatibility, short names still are enabled on the system volume.
+- **Support for long file names, with backward compatibility**: NTFS supports long file names, storing an 8.3 alias on disk (in Unicode) to provide compatibility with file systems that impose an 8.3 limit on file names and extensions. If needed, for performance reasons, you can selectively disable 8.3 aliasing on individual NTFS volumes in Windows Server 2008 R2, Windows 8, and more recent versions of the Windows OS. In Windows Server 2008 R2 and later systems, short names are disabled by default when a volume is formatted using the OS. For application compatibility, short names still are enabled on the system volume.
 
 - **Support for extended-length paths**: Many Windows API functions have Unicode versions that allow an extended-length path of approximately 32,767 characters. That total is beyond the 260-character path limit defined by the MAX\_PATH setting. For detailed file name and path format requirements, and guidance for implementing extended-length paths, see [Naming files, paths, and namespaces](/windows/win32/fileio/naming-a-file).
 
