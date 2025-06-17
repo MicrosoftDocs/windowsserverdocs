@@ -11,10 +11,12 @@ ms.author: alalve
 
 Converting a disk between dynamic and basic types allows you to change how storage is managed on your Windows system. Basic disks use primary partitions, extended partitions, and logical drives, making them suitable for most standard configurations. Dynamic disks offer advanced features like spanning, striping, and mirroring volumes, but are now deprecated and not recommended for new deployments. Instead, use basic disks or the newer [Storage Spaces](../storage-spaces/overview.md) technology when you want to pool disks together into larger volumes. If you want to mirror the volume from which Windows boots, you might want to use a hardware RAID controller, such as the one included on many motherboards.
 
+## Prerequisites
+
+You must be a member of the **Administrators** group (or have equivalent privileges) to convert a disk.
+
 > [!IMPORTANT]
->
-> - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
-> - You must be a member of the **Administrators** group (or have equivalent privileges) to convert a disk.
+> Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
 
 ## Convert a disk
 
