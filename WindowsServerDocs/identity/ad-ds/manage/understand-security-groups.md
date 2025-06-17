@@ -112,7 +112,6 @@ The following list provides descriptions of the default groups that are located 
 - [Cloneable Domain Controllers](#cloneable-domain-controllers)
 - [Cryptographic Operators](#cryptographic-operators)
 - [Denied RODC Password Replication](#denied-rodc-password-replication)
-- [Device Owners](#device-owners)
 - [DHCP Administrators](#dhcp-administrators)
 - [DHCP Users](#dhcp-users)
 - [Distributed COM Users](#distributed-com-users)
@@ -363,24 +362,6 @@ This security group includes the following changes since Windows Server 2008:
 |Safe to move out of default container?||
 |Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
-
-### Device Owners
-
-When the Device Owners group has no members, we recommend that you don't change the default configuration for this security group. Changing the default configuration might hinder future scenarios that rely on this group. The Device Owners group currently isn't used in Windows.
-
-The Device Owners group applies to the Windows Server OS in [Default AD security groups](#default-ad-security-groups).
-
-|Attribute|Value|
-|--- |--- |
-|Well-known SID/RID|S-1-5-32-583|
-|Type|Builtin Local|
-|Default container|CN=Builtin, DC=\<domain>, DC=|
-|Default members|None|
-|Default member of|None|
-|Protected by AdminSDHolder?|No|
-|Safe to move out of default container?|You can move the group, but we don't recommend it|
-|Safe to delegate management of this group to non-service admins?|No|
-|Default user rights|[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight<p>[Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p>[Change the time zone](/windows/device-security/security-policy-settings/change-the-time-zone): SeTimeZonePrivilege|
 
 ### DHCP Administrators
 
