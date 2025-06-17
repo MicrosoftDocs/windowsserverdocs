@@ -37,7 +37,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ### To install the AD FS server role via Windows PowerShell
 
-1.  On the computer that you want to configure as a federation server, open the Windows PowerShell command window, and then run the following command: `Install-windowsfeature adfs-federation –IncludeManagementTools`.
+1.  On the computer that you want to configure as a federation server, open the Windows PowerShell command window, and then run the following command: `Install-windowsfeature adfs-federation -IncludeManagementTools`.
 
 ## See Also
 
