@@ -12894,6 +12894,16 @@
       "source_path": "WindowsServerDocs/storage/disk-management/change-a-gpt-disk-into-an-mbr-disk.md",
       "redirect_url": "/windows-server/storage/disk-management/change-disk-partition-scheme",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md",
+      "redirect_url": "/windows-server/storage/disk-management/change-disk-type-dynamic-basic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-template-remote-access-network-policy-server",
+      "redirect_document_id": true
     }
   ]
 }

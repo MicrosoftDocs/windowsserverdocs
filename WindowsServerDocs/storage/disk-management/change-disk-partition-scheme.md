@@ -1,7 +1,7 @@
 ---
 title: Convert a disk to GPT or MBR
 description: Learn how to convert a disk to GPT or MBR partition scheme (style) using Disk Management and the command line in Windows.
-ms.date: 06/16/2025
+ms.date: 06/17/2025
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
@@ -13,10 +13,12 @@ Master Boot Record (MBR) disks use the legacy BIOS partitioning scheme (also kno
 
 You can convert a disk's partition style only if it doesn't contain any partitions or volumes. Make sure to delete all existing partitions or volumes before attempting to change the disk's format.
 
+## Prerequisites
+
+You must be a member of the **Administrators** group (or have equivalent privileges) to convert a disk.
+
 > [!IMPORTANT]
->
-> - Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
-> - You must be a member of the **Administrators** group (or have equivalent privileges) to convert a disk.
+> Before you convert a disk, back up any data on the disk, and close any programs that access the disk.
 
 ## Convert a disk
 
@@ -111,4 +113,4 @@ Before you convert partition styles, back up or move the data off the disk.
 
 ## See also
 
-- [Change a dynamic disk to a basic disk](change-a-dynamic-disk-back-to-a-basic-disk.md)
+- [Convert a disk type to Dynamic or Basic](change-disk-type-dynamic-basic.md)
