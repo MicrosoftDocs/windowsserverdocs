@@ -23,7 +23,7 @@ This article provides an overview of Server Manager features, supported tasks, a
 
 ## Manage remote computers from a client computer
 
-The Server Manager console is included with [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=404281) for Windows 10 and Windows 11. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
+The Server Manager console is included with [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=404281) for Windows 10 and Windows 11. When Remote Server Administration Tools is installed on a client computer, you can't manage the local computer by using Server Manager; Server Manager can't be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
 
 ### Start Server Manager on a client computer
 
@@ -31,7 +31,7 @@ The Server Manager console is included with [Remote Server Administration Tools]
 
 2. On the **start** screen, click **Server Manager**. The **Server Manager** tile is available after you install Remote Server Administration Tools.
 
-3. If neither the **Administrative Tools** nor the **Server Manager** tiles are displayed on the **start** screen after installing Remote Server Administration Tools, and searching for Server Manager on the **start** screen does not display results, verify that the **Show administrative tools** setting is turned on. To view this setting, hover the mouse cursor over the upper right corner of the **start** screen, and then click **Settings**. If **Show administrative tools** is turned off, turn the setting on to display tools that you have installed as part of Remote Server Administration Tools.
+3. If neither the **Administrative Tools** nor the **Server Manager** tiles are displayed on the **start** screen after installing Remote Server Administration Tools, and searching for Server Manager on the **start** screen doesn't display results, verify that the **Show administrative tools** setting is turned on. To view this setting, hover the mouse cursor over the upper right corner of the **start** screen, and then click **Settings**. If **Show administrative tools** is turned off, turn the setting on to display tools that you have installed as part of Remote Server Administration Tools.
 
 For more information about running Remote Server Administration Tools for Windows 10 to manage remote servers, see [Remote Server Administration Tools](/troubleshoot/windows-server/system-management-components/remote-server-administration-tools) on the TechNet Wiki.
 
@@ -51,7 +51,7 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
 3. Do one of the following, and then click **OK**.
 
-    - To prevent this computer from being managed remotely by using Server Manager (or Windows PowerShell if it is installed), clear the **Enable remote management of this server from other computers** check box.
+    - To prevent this computer from being managed remotely by using Server Manager, or Windows PowerShell if it's installed, clear the **Enable remote management of this server from other computers** check box.
 
     - To let this computer be managed remotely by using Server Manager or Windows PowerShell, select **Enable remote management of this server from other computers**.
 
@@ -76,18 +76,18 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
 Server Manager makes server administration more efficient by allowing administrators to do tasks in the following table by using a single tool. Both standard users of a server and members of the Administrators group can perform management tasks in Server Manager, but by default, standard users are prevented from performing some tasks, as shown in the following table.
 
-Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdlet module, [Enable-ServerManagerStandardUserremoting](/powershell/module/servermanager/enable-servermanagerstandarduserremoting) and [Disable-ServerManagerStandardUserremoting](/powershell/module/servermanager/disable-servermanagerstandarduserremoting), to further control standard user access to some additional data. The **Enable-ServerManagerStandardUserremoting** cmdlet can provide one or more standard, non-Administrator users access to event, service, performance counter, and role and feature inventory data.
+Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdlet module, [Enable-ServerManagerStandardUserremoting](/powershell/module/servermanager/enable-servermanagerstandarduserremoting) and [Disable-ServerManagerStandardUserremoting](/powershell/module/servermanager/disable-servermanagerstandarduserremoting), to further control standard user access to some more data. The **Enable-ServerManagerStandardUserremoting** cmdlet can provide one or more standard, non-Administrator users access to event, service, performance counter, and role and feature inventory data.
 
 |Task Description|Administrators (including the built-in Administrator account)|Standard Server Users|
 |----------|----------------------------------|-------------|
 |add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
 |Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server. Learn more about how to [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).|Yes|No|
-|View and make changes to server roles and features that are installed on either local or remote servers. **Note:** In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but cannot add or remove role services.|
+|View and make changes to server roles and features that are installed on either local or remote servers. In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but can't add or remove role services.|
 |start management tools such as Windows PowerShell or mmc snap-ins. You can start a Windows PowerShell session targeted at a remote server by right-clicking the server in the **Servers** tile, and then clicking **Windows PowerShell**. You can start mmc snap-ins from the **Tools** menu of the Server Manager console, and then point the mmc toward a remote computer after the snap-in is open.|Yes|Yes|
 |Manage remote servers with different credentials by right-clicking a server in the **Servers** tile, and then clicking **Manage As**. You can use **Manage As** for general server and File and Storage Services management tasks.|Yes|No|
-|Perform management tasks associated with the operational lifecycle of servers, such as starting or stopping services; and start other tools that allow you to configure a server's network settings, users and groups, and Remote Desktop connections.|Yes|Standard users cannot start or stop services. They can change the local server's name, workgroup, or domain membership and Remote Desktop settings, but are prompted by User Account Control to provide Administrator credentials before they can complete these tasks. They cannot change remote management settings.|
-|Perform management tasks associated with the operational lifecycle of roles that are installed on servers, including scanning roles for compliance with best practices.|Yes|Standard users cannot run Best Practices Analyzer scans.|
+|Perform management tasks associated with the operational lifecycle of servers, such as starting or stopping services; and start other tools that allow you to configure a server's network settings, users and groups, and Remote Desktop connections.|Yes|Standard users can't start or stop services. They can change the local server's name, workgroup, or domain membership and Remote Desktop settings, but are prompted by User Account Control to provide Administrator credentials before they can complete these tasks. They can't change remote management settings.|
+|Perform management tasks associated with the operational lifecycle of roles that are installed on servers, including scanning roles for compliance with best practices.|Yes|Standard users can't run Best Practices Analyzer scans.|
 |Determine server status, identify critical events, and analyze and troubleshoot configuration issues or failures.|Yes|Yes|
 |Customize the events, performance data, services, and Best Practices Analyzer results about which you want to be alerted on the Server Manager dashboard.|Yes|Yes|
 |Restart servers.|Yes|No|
@@ -119,7 +119,7 @@ You can restart a remote server from the **Servers** tile of a role or group pag
 
 Restarting a remote server forces the server to restart, even if users are still logged on to the remote server, and even if programs with unsaved data are still open. This behavior is different from shutting down or restarting the local computer, on which you would be prompted to save unsaved program data, and verify that you wanted to force logged-on users to log off. Be sure that you can force other users to log off of remote servers, and that you can discard unsaved data in programs that are running on the remote servers.
 
-If an automatic refresh occurs in Server Manager while a managed server is shutting down and restarting, refresh and manageability status errors can occur for the managed server, because Server Manager cannot connect to the remote server until it is finished restarting.
+If an automatic refresh occurs in Server Manager while a managed server is shutting down and restarting, refresh and manageability status errors can occur for the managed server, because Server Manager can't connect to the remote server until it is finished restarting.
 
 ### Restart remote servers in Server Manager
 
@@ -138,8 +138,8 @@ In Server Manager, your list of managed servers, changes to Server Manager conso
 - %*appdata*%\Local\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
 
 > [!NOTE]
-> - Manage As (or alternate) credentials for servers in your server pool are not stored in the roaming profile. Server Manager users must add them on each computer from which they want to manage.
-> - The network share roaming profile is not created until a user logs on to the network, and then logs off for the first time. The **Serverlist.xml** file is created at this time.
+> - Manage As (or alternate) credentials for servers in your server pool aren't stored in the roaming profile. Server Manager users must add them on each computer from which they want to manage.
+> - The network share roaming profile isn't created until a user logs on to the network, and then logs off for the first time. The **Serverlist.xml** file is created at this time.
 
 You can export Server Manager settings, make Server Manager settings portable, or use them on other computers in one of the following two ways.
 
