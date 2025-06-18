@@ -47,7 +47,7 @@ This creates a new folder inside the current working directory using the name yo
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
 ``` cmd
-npm install
+npm install --legacy-peer-deps --save radium
 ```
 
 Once this completes, you've set up everything you need to load your new extension into Windows Admin Center.
