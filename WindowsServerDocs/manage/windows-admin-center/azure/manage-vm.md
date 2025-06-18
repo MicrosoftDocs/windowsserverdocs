@@ -4,7 +4,7 @@ description: Learn how to use Windows Admin Center in the Azure portal to connec
 ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 06/16/2025
+ms.date: 06/18/2025
 ---
 # Manage a Windows VM using Windows Admin Center in Azure
 
@@ -81,7 +81,7 @@ The VM also has the following networking requirements, which we step through dur
 Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
 
 > [!NOTE]
-> Inbound connectivity is redirected by another service (i.e. Azure Firewall) isn't supported. You must have inbound connectivity from the Azure portal to one of the direct IP addresses of your VM, as seen on the "Networking" tab of your Azure VM in the Azure portal, on the port Windows Admin Center is installed.
+> Inbound connectivity is redirected by another service (i.e. Azure Firewall) isn't supported. You must have inbound connectivity from the Azure portal to one of the direct IP addresses of your VM, as seen on the Networking tab of your Azure VM in the Azure portal, on the port Windows Admin Center is installed.
 
 ### Management PC requirements
 
@@ -122,7 +122,7 @@ After you install Windows Admin Center in an Azure VM, here's how to connect to 
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
-:::image type="content" source="../../media/manage-vm/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address. "lightbox="../../media/manage-vm/connect-to-vm.png":::
+:::image type="content" source="../../media/manage-vm/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address." lightbox="../../media/manage-vm/connect-to-vm.png":::
 
 If you see a "Failed to connect" message, ensure your account is a member of the **Windows Admin Center Administrator Login** role on the VM resource.
 
@@ -224,12 +224,12 @@ Here are some tips to try in case something isn't working. For general help trou
 1. In a new tab, open `https://<ip_address>:<port>`. If this page loads successfully with a certificate error, create a support request.
 
    If this page doesn't load successfully, there's something wrong with your connection to Windows Admin Center itself. Make sure that you're connected to the correct Vnet and are using the correct IP address before trying further troubleshooting.
-1. If you're using a Public IP address, make sure that the port you selected upon installation is open to the internet. By default, the port is set to 6516. In your virtual machine, navigate to “Networking” > “Add inbound port rule”.
+1. If you're using a Public IP address, make sure that the port you selected upon installation is open to the internet. By default, the port is set to 6516. In your virtual machine, navigate to **Networking** > **Add inbound port rule**.
 1. Make sure that the port can be reached.
-    1. In the Azure portal, navigate to “Networking” and make sure that there are no conflicting rules with a higher priority that could be blocking the Windows Admin Center port
-    1. In the Azure portal, navigate to “Connection troubleshoot” to test that your connection is working and the port can be reached.
+    1. In the Azure portal, navigate to **Networking** and make sure that there are no conflicting rules with a higher priority that could be blocking the Windows Admin Center port
+    1. In the Azure portal, navigate to **Connection troubleshoot** to test that your connection is working and the port can be reached.
 1. Make sure that outbound traffic to Windows Admin Center is allowed on your virtual machine
-    1. In the Azure portal, navigate to “Networking” and “Outbound port rules”.
+    1. In the Azure portal, navigate to **Networking** and **Outbound port rules**.
     1. Create a new port rule for the `Windows Admin Center` and `Azure Active Directory` service tags.
     1. You can test this by running the following command using PowerShell inside of your virtual machine:
 
@@ -243,22 +243,22 @@ Here are some tips to try in case something isn't working. For general help trou
 
     1. If you allowed all outbound traffic and are still seeing an error from the `Invoke-RestMethod` command, check that there are no firewall rules blocking connection. If nothing seems wrong, create a support request as our service might be experiencing problems.
 1. Make sure that the Windows Admin Center service is running on your VM.
-    1. In the Azure portal, navigate to “Connect” > “RDP” > “Download RDP File”.
+    1. In the Azure portal, navigate to **Connect** > **RDP** > **Download RDP File**.
     1. Open the RDP file and sign in with your administrator credentials.
-    1. Open Task Manager (Ctrl+Shift+Esc) and navigate to “Services”.
+    1. Open Task Manager (Ctrl+Shift+Esc) and navigate to **Services**.
     1. Make sure WindowsAdminCenter is Running. If not, start the service.
 1. Check that your installation is in a good state.
-    1. In the Azure portal, navigate to “Connect” > “RDP” > “Download RDP File”.
+    1. In the Azure portal, navigate to **Connect** > **RDP** > **Download RDP File**.
     1. Open the RDP file and sign in with your administrator credentials.
     1. Open a browser and type `https://localhost:<port>` replacing `<port>` with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions later in this article.
-    1. If this doesn’t load, there might be something wrong with your installation. Go back to the Azure portal, navigate to “Extensions”, and uninstall the Admin Center extension. Navigate back to “Windows Admin Center” and reinstall the extension.
+    1. If this doesn’t load, there might be something wrong with your installation. Go back to the Azure portal, navigate to **Extensions**, and uninstall the Admin Center extension. Navigate back to **Windows Admin Center** and reinstall the extension.
 1. Check that the firewall rule is open for SmeInboundOpenException.
-    1. In the Azure portal, navigate to “Connect” > “RDP” > “Download RDP File”.
+    1. In the Azure portal, navigate to **Connect** > **RDP** > **Download RDP File**.
     1. Open the RDP file and sign in with your administrator credentials.
     1. Open the Control Panel and navigate to Control Panel\System and Security\Windows Defender Firewall\Allowed apps.
     1. Ensure that the SmeInboundOpenException rule is enabled for both Private and Public, then try to connect again.
 
-### You get stuck on the "Windows Admin Center" loading page with the logo
+### You get stuck on the Windows Admin Center loading page with the logo
 
 This could occur if your browser blocks third party cookies. Currently, Windows Admin Center requires that you don't block third party cookies, and we're actively working to remove this requirement. In the meantime, allow third party cookies in your browser.
 
@@ -284,7 +284,7 @@ If no other tool is loading, there might be a problem with your network connecti
 
 1. Double-check to make sure that the VM meets the [requirements](#requirements).
 1. Make sure that outbound traffic to Windows Admin Center is allowed on your virtual machine.
-    1. In the Azure portal, navigate to “Networking” and “Outbound port rules”.
+    1. In the Azure portal, navigate to **Networking** and **Outbound port rules**.
     1. Create a new outbound port rule for Windows Admin Center.
     1. Test connectivity by running the following command using PowerShell inside of your virtual machine:
 
