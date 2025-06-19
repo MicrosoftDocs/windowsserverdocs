@@ -80,8 +80,8 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 
 |Task Description|Administrators (including the built-in Administrator account)|Standard Server Users|
 |----------|----------------------------------|-------------|
-|add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
-|create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
+|Add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
+|Create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
 |Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server. Learn more about how to [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).|Yes|No|
 |View and make changes to server roles and features that are installed on either local or remote servers. In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but can't add or remove role services.|
 |start management tools such as Windows PowerShell or mmc snap-ins. You can start a Windows PowerShell session targeted at a remote server by right-clicking the server in the **Servers** tile, and then clicking **Windows PowerShell**. You can start mmc snap-ins from the **Tools** menu of the Server Manager console, and then point the mmc toward a remote computer after the snap-in is open.|Yes|Yes|
