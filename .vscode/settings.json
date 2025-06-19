@@ -7,5 +7,8 @@
         "MD025": {
             "front_matter_title": ""
         }
-    }
+    },
+    "editor.tabSize": 3,
+   "editor.detectIndentation": true,
+   "editor.useTabStops": true
 }
