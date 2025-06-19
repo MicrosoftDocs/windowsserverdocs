@@ -27,12 +27,6 @@ In this section:
 
 - [RHEL/CentOS 8.x Series](#rhelcentos-8x-series)
 
-- [RHEL/CentOS 7.x Series](#rhelcentos-7x-series)
-
-- [RHEL/CentOS 6.x Series](#rhelcentos-6x-series)
-
-- [RHEL/CentOS 5.x Series](#rhelcentos-5x-series)
-
 - [Notes](#notes)
 
 ## Table legend
