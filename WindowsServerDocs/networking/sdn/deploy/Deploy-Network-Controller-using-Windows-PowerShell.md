@@ -81,7 +81,7 @@ To deploy Network Controller using Windows PowerShell, follow these steps:
    $cert = Get-ChildItem Cert:\LocalMachine\My | Where-Object { $_.Subject -imatch <FQQN> }
    ```
 
-  Ensure that you replace `<FQDN>` with the actual subject name of your certificate.
+   Ensure that you replace `<FQDN>` with the actual subject name of your certificate.
 
 1. To create the Network Controller cluster, use the [Install-NetworkControllerCluster](/powershell/module/networkcontroller/install-networkcontrollercluster) command. For example, to configure the cluster with the node objects you created, you can use the following command:
 
