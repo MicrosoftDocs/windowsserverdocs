@@ -1038,7 +1038,7 @@
       items:
       - name: What is the Certification Authority Role Service?
         href: ad-cs/certification-authority-role.md
-      - name: Certification Authority Web Enrollment Role Service
+      - name: Certification Authority Web Enrollment
         href: ad-cs/certificate-authority-web-enrollment.md
       - name: Certificate Enrollment Web Service overview
         href: ad-cs/certificate-enrollment-web-service.md
@@ -1056,14 +1056,24 @@
         href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
-      - name: Configure Certificate Enrollment Web Service
-        href: ad-cs/configure-certificate-enrollment-web-service.md
       - name: Configure Network Device Enrollment Service to use a domain user account
         href: ad-cs/create-domain-user-account-ndes-service-account.md
-      - name: Configure Certificate Enrollment Policy Web Service
-        href: ad-cs/configure-certificate-enrollment-policy-web-service.md
-      - name: Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port
-        href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
+      - name: Certificate Enrollment Web Service
+        items:
+        - name: Configure Certificate Enrollment Web Service
+          href: ad-cs/configure-certificate-enrollment-web-service.md
+        - name: Configure Certificate Enrollment Policy Web Service
+          href: ad-cs/configure-certificate-enrollment-policy-web-service.md
+        - name: Use a custom port for Certificate Enrollment Web Service 
+          href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
+      - name: Certification Authority Web Enrollment
+        items:
+        - name: Request certificates using Web Enrollment
+          href: ad-cs/request-certificate-windows-server.md
+        - name: Retrieve base and delta CRLs
+          href: ad-cs/retrieve-base-and-delta-crl.md
+        - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
+          href: ad-cs/submit-pkcs-certificate-request.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
       - name: Distribute certificates using Group Policy
@@ -1078,12 +1088,6 @@
         href: ad-cs/migrate-certification-authority.md
       - name: Renew root CA certificate
         href: ad-cs/renew-root-ca-certificate.md
-      - name: Request certificates using Web Enrollment
-        href: ad-cs/request-certificate-windows-server.md
-      - name: Retrieve base and delta CRLs
-        href: ad-cs/retrieve-base-and-delta-crl.md
-      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
-        href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
