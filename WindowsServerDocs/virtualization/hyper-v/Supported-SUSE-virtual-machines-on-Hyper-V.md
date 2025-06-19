@@ -9,8 +9,6 @@ ms.date: 09/27/2023
 ---
 # Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 
-> 
-
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 
 The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by SUSE. An example configuration can be viewed in this bulletin: [SUSE YES Certification Bulletin](https://www.suse.com/nbswebapp/yesBulletin.jsp?bulletinNumber=144176).
@@ -28,40 +26,40 @@ SLES12+ is 64-bit only.
 | **Feature** | **Operating system version** | **SLES 15 SP1-SP4** | **SLES 15** | **SLES 12 SP3-SP5** | **SLES 12 SP2** | **SLES 12 SP1** | **SLES 11 SP4** | **SLES 11 SP3** |
 |--|--|--|--|--|--|--|--|--|
 | **Availability** |  | Built-in | Built-in | Built-in | Built-in | Built-in | Built-in | Built-in |
-| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Windows Server 2016 Accurate Time | WS/Hyper-V 2022,2019,2016 | ✔ | ✔ | ✔ | ✔ |  |  |  |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | WS/Hyper-V 2025,2022,2019,2016 | ✔ | ✔ | ✔ | ✔ |  |  |  |
 | **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** |  |  |  |  |  |  |  |  |
-| Jumbo frames | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| VLAN tagging and trunking | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Live migration | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Static IP Injection | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 |
-| vRSS | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
-| TCP Segmentation and Checksum Offloads | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| SR-IOV | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
+| Jumbo frames | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Live migration | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Static IP Injection | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 | ✔Note 1 |
+| vRSS | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| TCP Segmentation and Checksum Offloads | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| SR-IOV | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
 | **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |  |  |  |  |  |  |
-| VHDX resize | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Virtual Fibre Channel | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Live virtual machine backup | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 2,3,8 | ✔Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 |
-| TRIM support | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| SCSI WWN | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
+| VHDX resize | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Virtual Fibre Channel | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Live virtual machine backup | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 2,3,8 | ✔Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 | ✔ Note 2,3,8 |
+| TRIM support | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| SCSI WWN | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
 | **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** |  |  |  |  |  |  |  |  |
-| PAE Kernel Support | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | N/A | N/A | N/A | N/A | N/A | ✔ | ✔ |
-| Configuration of MMIO gap | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 6 | ✔Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 4,5,6 | ✔ Note 4,5,6 |
-| Dynamic Memory - Ballooning | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 4,5,6 | ✔ Note 4,5,6 |
-| Runtime Memory Resize | WS/Hyper-V 2022,2019,2016 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 |  |  |  |
+| PAE Kernel Support | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | N/A | N/A | N/A | N/A | N/A | ✔ | ✔ |
+| Configuration of MMIO gap | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 6 | ✔Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 4,5,6 | ✔ Note 4,5,6 |
+| Dynamic Memory - Ballooning | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 4,5,6 | ✔ Note 4,5,6 |
+| Runtime Memory Resize | WS/Hyper-V 2025,2022,2019,2016 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 | ✔ Note 6 |  |  |  |
 | **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** |  |  |  |  |  |  |  |  |
-| Hyper-V-specific video device | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Hyper-V-specific video device | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** |  |  |  |  |  |  |  |  |
-| Key/value pair | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ Note 7 | ✔ Note 7 |
-| Non-Maskable Interrupt | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| File copy from host to guest | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
-| lsvmbus command | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
-| Hyper-V Sockets | WS/Hyper-V 2022,2019,2016 | ✔ | ✔ | ✔ |  |  |  |  |
-| PCI Passthrough/DDA | WS/Hyper-V 2022,2019,2016 | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| Key/value pair | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ Note 7 | ✔ Note 7 |
+| Non-Maskable Interrupt | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| File copy from host to guest | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |  |
+| lsvmbus command | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ |  |  |  |
+| Hyper-V Sockets | WS/Hyper-V 2025,2022,2019,2016 | ✔ | ✔ | ✔ |  |  |  |  |
+| PCI Passthrough/DDA | WS/Hyper-V 2025,2022,2019,2016 | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
 | **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |  |  |  |  |  |  |  |  |
-| Boot using UEFI | WS/Hyper-V 2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 |  |
-| Secure boot | WS/Hyper-V 2022,2019,2016 | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
+| Boot using UEFI | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 | ✔ Note 9 |  |
+| Secure boot | WS/Hyper-V 2025,2022,2019,2016 | ✔ | ✔ | ✔ | ✔ | ✔ |  |  |
 
 ## Notes
 
