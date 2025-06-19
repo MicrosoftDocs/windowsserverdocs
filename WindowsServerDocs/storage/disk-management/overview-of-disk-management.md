@@ -37,7 +37,7 @@ Windows typically includes three partitions on your main drive, which is usually
 > [!IMPORTANT]
 > Disk Management might show the **EFI System** and **Recovery** partitions as 100 percent _free_. However, these partitions store critical files required for the computer to operate properly. As such, the partitions are usually close to full. The recommended practice is to not modify these partitions in any way.
 
-## Prepare information and resources for tasks
+## Prepare resources for tasks
 
 Some Disk Management tasks require special information about your system like a BitLocker recovery key, or an existing resource such as a restore point. The following articles can help you prepare the information and resources you need to complete the tasks:
 
@@ -47,7 +47,7 @@ Some Disk Management tasks require special information about your system like a 
 - [Find your BitLocker recovery key](https://support.microsoft.com/windows/find-your-bitlocker-recovery-key-6b71ad27-0b89-ea08-f143-056f5ab347d6)
 - [Find lost files after you upgrade to Windows](https://support.microsoft.com/windows/find-lost-files-after-the-upgrade-to-windows-10-or-11-10af49aa-b372-b067-a334-2314401297a9)
 
-## Use other tools for specific tasks
+## Use other tools for tasks
 
 The Disk Management utility supports a wide range of drive tasks, but some tasks can be completed only by using another tool.
 
