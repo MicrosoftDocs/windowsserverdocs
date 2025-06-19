@@ -57,7 +57,7 @@ Here are some common disk management tasks that you need to complete by using ot
 - [Defragment or optimize your data drives in Windows](https://support.microsoft.com/windows/defragment-optimize-your-data-drives-in-windows-54d4fed1-c96e-46db-b843-8c6b34bd27a4)
 - Pool multiple hard drives like a redundant array of independent disks (RAID) with [Storage Spaces in Windows](https://support.microsoft.com/windows/storage-spaces-in-windows-b6c8b540-b8d8-fb8a-e7ab-4a75ba11f9f2)
 
-## Explore troubleshooting options
+## Troubleshoot issues
 
 When a Disk Management task reports an error, or a procedure doesn't work as expected, try one of the following options to resolve the issue:
 
