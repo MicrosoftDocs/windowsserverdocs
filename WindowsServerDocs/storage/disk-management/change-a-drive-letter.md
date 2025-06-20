@@ -15,7 +15,7 @@ This article describes how to manage the drive letter assigned to a drive in Win
 - Change the assigned drive letter for an existing drive
 - Assign a drive letter to a new drive
 
-There's an alternative to changing the drive letter. You can mount the drive in an empty folder so the drive appears as a folder. For more information, see [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md).
+An alternative approach is to change the drive letter. You can mount the drive in an empty folder so the drive appears as a folder. For more information, see [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md).
 
 ## Prerequisites
 
