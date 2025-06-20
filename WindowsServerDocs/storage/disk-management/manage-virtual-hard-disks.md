@@ -21,13 +21,13 @@ To complete the procedures in this article, the following prerequisites must be 
 
 - The user must be a member of the **Backup Operators** or **Administrators** group.
 
-- The user account must have Administrator rights on the server.
+- The user account must have Administrator permissions on the server.
 
 ## Create a VHD
 
 To create a VHD, follow these steps:
 
-1. Open Disk Management. In the **Search** box on the taskbar, enter **Computer Management**, and select **Disk Management**.
+1. Open Disk Management with Administrator permissions. In the **Search** box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
 1. Expand the **Action** menu and select **Create VHD**.
 
@@ -57,7 +57,7 @@ To create a VHD, follow these steps:
 
 To make a VHD available for use (either a disk you created or another existing VHD), follow these steps:
 
-1. Open Disk Management. In the **Search** box on the taskbar, enter **Computer Management**, and select **Disk Management**.
+1. Open Disk Management with Administrator permissions. In the **Search** box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
 1. Expand the **Action** menu and select **Attach VHD**.
 
@@ -71,7 +71,7 @@ When you detach a VHD, you make the disk unavailable. You don't delete the VHD o
 
 Detach a VHD by following these steps:
 
-1. Open Disk Management. In the **Search** box on the taskbar, enter **Computer Management**, and select **Disk Management**.
+1. Open Disk Management with Administrator permissions. In the **Search** box on the taskbar, enter **Computer Management**, and select **Disk Management**.
 
 1. Locate the VHD that you want to attach in the list of disks.
 
