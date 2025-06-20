@@ -11,7 +11,7 @@ ms.author: daknappe
 
 # Overview of Disk Management
 
-Disk Management is a system utility in Windows for advanced storage operations. You can use the utility to see information about each drive on your computer and all partitions in each drive. The utility shows details about the partitions, including statistics and the amount of space allocated or used.
+Disk Management is a system utility in Windows for advanced storage operations. You can use the utility to see information about each drive on your computer and all partitions in each drive. The utility shows partition details, including statistics and the amount of space allocated or used.
 
 Some of the tasks you can complete with Disk Management include:
 
