@@ -65,10 +65,12 @@ Here are some troubleshooting tips to help you manage the drive letter assignmen
    Some possible issues include:
 
    - The selected drive is unallocated and needs to be [initialized](initialize-new-disks.md).
-   - The selected drive isn't accessible, which is the case for **EFI System** partitions and **Recovery** partitions. For more information, see [View drives and partitions](overview-of-disk-management.md#view-drives-and-partitions).
-   - You might not have sufficient permissions to change the assignment.
 
-   Ensure the volume you want to manage is both initialized and accessible, and confirm your Administrator permissions.
+   - The selected drive isn't accessible, which is the case for **EFI System** partitions and **Recovery** partitions. For more information, see [View drives and partitions](overview-of-disk-management.md#view-drives-and-partitions).
+
+   - You have insufficient permissions to change the assignment.
+
+   Ensure the volume you want to manage is initialized and accessible, and confirm your Administrator permissions.
 
 - If the volume is formatted with a drive letter, and you have access to the volume but you're unable to change the assignment, the issue resolution requires assistance beyond the scope of this article. You can contact [Microsoft Support](https://support.microsoft.com/contactus/) or the manufacturer of your computer.
 
