@@ -4,90 +4,82 @@ description: Windows Admin Center common troubleshooting steps
 ms.topic: troubleshooting-general
 author: xelu86
 ms.author: alalve
-ms.date: 01/15/2021
+ms.date: 06/19/2025
 ---
+
 # Troubleshoot Windows Admin Center
 
-> 
+This article describes how to diagnose and resolve issues in Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](known-issues.md).
 
-This article describes how to diagnose and resolve issues in Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](./known-issues.md).
+## Prerequisite
 
-## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
+Windows Admin Center is supported on the following operating systems:
 
-This failure can happen if your default PowerShell module path has been modified or removed. To resolve the issue, make sure that `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules` is the first item in your PSModulePath environment variable. You can achieve this with the following line of PowerShell:
+- For Windows client, your device must be running Windows 10 version 1709 or later (Fall Creators Update).
+
+- For Windows Server, your device must be running Windows Server 2016 or later.
+
+## The Windows Admin Center installer fails to load
+
+```error
+The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded.
+```
+
+This failure can happen if your default PowerShell module path has been modified or removed. To resolve this issue, make sure that `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules` is the first item in your PSModulePath environment variable. You can set this path by running the following command in an elevated PowerShell window:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
 ```
 
-## I get a **This site/page can't be reached** error in my web browser
+## I receive an error in my web browser
 
-### If you've installed Windows Admin Center as an **App on Windows 10**
+```error
+This site/page can't be reached
+```
 
-- Check to make sure Windows Admin Center is running. Look for the Windows Admin Center icon ![Windows Admin Center icon](../media/trayIcon.PNG) in the System tray or **Windows Admin Center Desktop / SmeDesktop.exe** in Task Manager. If not, launch **Windows Admin Center** from the Start menu.
+**If the Windows Admin Center app is installed as a standalone app**:
 
-> [!NOTE]
-> After rebooting, you must launch Windows Admin Center from the Start menu.
+- Check to make sure Windows Admin Center is running in the System tray. You can also open **Task Manager** and check if **Windows Admin Center** is running.
 
-- [Check the Windows version](#check-the-windows-version).
-
-- Make sure you're using either Microsoft Edge or Google Chrome as your web browser.
+- Make sure you're using either Microsoft Edge or Google Chrome as your web browser with the latest updates.
 
 - Did you select the correct certificate on [first launch](../use/get-started.md#open-windows-admin-center-on-a-windows-pc)?
 
-  * Try opening your browser in a private session - if that works, you'll need to clear your cache.
+  Try opening your browser in a private or incognito window. If Windows Admin Center loads successfully, clear your browser cache in your regular session and try again.
 
 - Did you recently upgrade Windows 10 to a new build or version?
 
-  * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings](#configure-trustedhosts).
+  This might've cleared your trusted hosts settings. See the [Configure TrustedHosts list](#configure-trustedhosts-list) section.
 
-### If you've installed Windows Admin Center as a **Gateway on Windows Server**
+**If the Windows Admin Center app is installed as a Gateway on Windows Server**:
 
-- [Check the Windows version](#check-the-windows-version) of the client and server.
+- Make sure you're using either Microsoft Edge or Google Chrome as your web browser with the latest updates.
 
-- Make sure you are using either Microsoft Edge or Google Chrome as your web browser.
+- Open **Task Manager**, select the **Services** tab, make sure that **ServerManagementGateway** or **Windows Admin Center** is running.
 
-- On the server, open Task Manager > Services and make sure **ServerManagementGateway / Windows Admin Center** is running.
+- Test the network connection to the Gateway. Run the following command. Replace `<Port>` and `<Gateway>` with your port number and gateway hostname (or IP address):
 
-    ![Task Manager - Services tab](../media/service-task-manager.png)
+  ```powershell
+  Test-NetConnection -Port <Port> -ComputerName <Gateway> -InformationLevel Detailed
+  ```
 
-- Test the network connection to the Gateway (replace \<values> with the information from your deployment)
+**If the Windows Admin Center app is installed in an Azure Windows Server VM**:
 
-    ```powershell
-    Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
-    ```
+- Verify and update the inbound port rule for HTTPS through the [network security group](/azure/virtual-network/network-security-groups-overview) or firewall settings.
 
-### If you have installed Windows Admin Center in an Azure Windows Server VM
+**Ensure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node**:
 
-- [Check the Windows version](#check-the-windows-version).
-- Did you add an inbound port rule for HTTPS?
-- [Learn more about installing Windows Admin Center in an Azure VM](../azure/azure-integration.md).
+1. Open the run dialog by pressing the **Windows Key** + **R**.
 
-### Check the Windows version
+1. Type `services.msc` and press **Enter**.
 
-To check the Windows version:
+1. In the **Services** window, check if the **WinRM** service is running and set to automatically start.
 
-1. Open the run dialog (Windows Key + R) and launch `winver`.
-
-1. Check the version in the **About Windows** window.
-
-    - If you're using Windows 10 version 1703 or earlier, Windows Admin Center isn't supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Google Chrome.
-
-    - If you're using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug that caused Windows Admin Center to fail. Use a current supported version of Windows to fix this issue.
-
-### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
-
-1. Open the run dialog with WindowsKey + R.
-
-1. Type `services.msc` and press Enter.
-
-1. In the window that opens, look for Windows Remote Management (WinRM), make sure it is running and set to automatically start.
-
-### If you're getting WinRM error messages while managing servers in Windows Admin Center
+## I'm receiving WinRM error messages while managing servers
 
 WinRM doesn't allow credential delegation by default. To allow delegation, the computer needs to have Credential Security Support Provider (CredSSP) enabled temporarily.
 
-If you're receiving WinRM error messages, try using the verification steps in the [Manual troubleshooting](/azure/azure-local/manage/troubleshoot-credssp#manual-troubleshooting) section of [Troubleshoot CredSSP](/azure/azure-local/manage/troubleshoot-credssp) to resolve them.
+If you're receiving WinRM error messages, try the [Manual troubleshooting](/azure/azure-local/manage/troubleshoot-credssp#manual-troubleshooting) section of [Troubleshoot CredSSP](/azure/azure-local/manage/troubleshoot-credssp) to resolve them.
 
 ### Did you upgrade your server from 2016 to 2019?
 
@@ -95,7 +87,7 @@ This may have cleared your trusted hosts settings. [Follow these instructions to
 
 ## I get the message: "Can't connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings."
 
-Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
+Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which isn't supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
 
 ```cmd
 EnableHttp2Cleartext=dword:00000000
@@ -126,7 +118,7 @@ Make sure to select the **Windows Admin Center Client** certificate when prompte
 
 ### What account are you using?
 
-Make sure the credentials you're using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you're using a local user account that is **not the built-in administrator account**, you will need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
+Make sure the credentials you're using are a member of the target server's local administrators group. In some cases, WinRM also requires membership in the Remote Management Users group. If you're using a local user account that is **not the built-in administrator account**, you'll need to enable the policy on the target machine by running the following command in PowerShell or at a Command Prompt as Administrator on the target machine:
 
 ```cmd
 REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
@@ -148,13 +140,13 @@ To connect to a workgroup machine that isn't on the same subnet as the gateway, 
     Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
     ```
 
-### Configure TrustedHosts
+### Configure TrustedHosts list
 
 When installing Windows Admin Center, you're given the option to let Windows Admin Center manage the gateway's TrustedHosts setting. This is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must configure TrustedHosts manually.
 
 **To modify TrustedHosts using PowerShell commands:**
 
-1. Open an Administrator PowerShell session.
+1. Open an elevated PowerShell window.
 2. View your current TrustedHosts setting:
 
     ```powershell
@@ -162,7 +154,7 @@ When installing Windows Admin Center, you're given the option to let Windows Adm
     ```
 
    > [!WARNING]
-   > If the current setting of your TrustedHosts is not empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
+   > If the current setting of your TrustedHosts isn't empty, the commands below will overwrite your setting. We recommend that you save the current setting to a text file with the following command so you can restore it if needed:
    >
    > `Get-Item WSMan:localhost\Client\TrustedHosts | Out-File C:\OldTrustedHosts.txt`
 
@@ -180,7 +172,7 @@ When installing Windows Admin Center, you're given the option to let Windows Adm
    > Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
    > ```
 
-4. When you are done testing, you can issue the following command from an elevated PowerShell session to clear your TrustedHosts setting:
+4. When you're done testing, you can issue the following command from an elevated PowerShell session to clear your TrustedHosts setting:
 
     ```powershell
     Clear-Item WSMan:localhost\Client\TrustedHosts
@@ -203,28 +195,28 @@ netsh http delete urlacl url=https://+:443/
 
 ## Azure features don't work properly in Microsoft Edge
 
-Microsoft Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center. 
+Microsoft Edge has [known issues](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) related to security zones that affect Azure login in Windows Admin Center.
 
-If you are having trouble using Azure features when using Microsoft Edge, perform these steps to add the required URLs:
+If you're having trouble using Azure features when using Microsoft Edge, perform these steps to add the required URLs:
 
 1. Search for **Internet Options** in the Windows Start menu.
 
 1. Go to the **Security** tab.
 
-1. Under the **Trusted sites** option, click on the **Sites** button and add the following URLs in the dialog box that opens:
+1. Under the **Trusted sites** option, select the **Sites** button and add the following URLs in the dialog box that opens:
 
     - Your gateway URL
     - `https://login.microsoftonline.com`
     - `https://login.live.com`
-    
-1. Click **Close** and then click **OK**.
+
+1. Select **Close** and then select **OK**.
 
 1. Update the **Pop-up Blocker** settings in Microsoft Edge:
-    
+
     1. Browse to edge://settings/content/popups?search=pop-up.
-    
+
     1. Under the **Allow** section, add the following URLs:
-    
+
       - Your gateway URL
       - `https://login.microsoftonline.com`
       - `https://login.live.com`
@@ -250,23 +242,23 @@ An HTTP Archive Format (HAR) file is a log of a web browser's interaction with a
 
 To collect a HAR file in Microsoft Edge or Google Chrome, follow these steps:
 
-1. Press **F12** to open Developer Tools window, and then click the **Network** tab.
-2. Select the **Clear** icon to clean up network log.
-3. Click to select the **Preserve Log** check box.
-4. Reproduce the issue.
-5. After reproducing the issue, click on **Export HAR**.
-6. Specify where to save the log and click **Save**.
+1. Press **F12** to open Developer Tools window, then select the **Network** tab.
+1. Select the **Clear** icon to clean up network log.
+1. Select the **Preserve Log** check box.
+1. Reproduce the issue.
+1. After reproducing the issue, select **Export HAR**.
+1. Specify where to save the log and select **Save**.
 
     ![The points users have to click on to collect a HAR file are displayed and highlighted based on the numbered bullets.](../media/collect-har.PNG)
-    
-> [!WARNING] 
+
+> [!WARNING]
 > Before sharing your HAR files with Microsoft, ensure that you remove or obfuscate any sensitive information, like passwords.
 
 ## Provide feedback on issues
 
 Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperience and look for any errors or warnings.
 
-File a bug on [GitHub](https://aka.ms/wacfeedback) that describes your issue.
+File a bug on the [Windows Admin Center](https://aka.ms/wacfeedback) feedback intake that describes your issue.
 
 Include any errors or warning you find in the event log, and the following information:
 
