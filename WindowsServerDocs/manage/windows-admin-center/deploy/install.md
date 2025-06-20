@@ -1,10 +1,10 @@
 ---
 title: Install Windows Admin Center
-description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
+description: Learn how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 ms.topic: install-set-up-deploy
 author: robinharwood
 ms.author: roharwoo
-ms.date: 03/05/2025
+ms.date: 05/28/2025
 zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
@@ -41,7 +41,7 @@ To install Windows Admin Center, you need the following prerequisites:
 
 ::: zone-end
 
-## Installing Windows Admin Center
+## Install Windows Admin Center
 
 To install Windows Admin Center, perform the following steps:
 
@@ -210,7 +210,7 @@ To install Windows Admin Center on your machine running the Windows client, foll
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. Select the Start Menu folder for where setup should place shortcuts. To use the default location, select **Next**. Alternatively, enter a folder name or select **Browse** followed by **Next**.
+1. Select the Start Menu folder for where setup should place shortcuts. To use the default location, select **Next**. Alternatively, enter a folder name, or select **Browse** followed by **Next**.
 
 1. Review the **Ready to install** window, select **Install** to start the installation process.
 
@@ -224,48 +224,3 @@ To install Windows Admin Center on your machine running the Windows client, foll
 You've now installed Windows Admin Center on your machine.
 
 ::: zone-end
-
-## Upgrade to a new version
-
-You can update non-preview versions of Windows Admin Center by using Microsoft Update or a manual installation.
-
-Windows Admin Center preserves your settings when you upgrade to the latest version. Upgrading Insider Preview versions of Windows Admin Center isn't supported, we recommend you do a new installation by installing the latest version of Preview and starting over.
-
-## Update the certificate used by Windows Admin Center
-
-When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. To update this certificate, use the following these steps.
-
-> [!IMPORTANT]
-> When changing your certificate, you need to restart the Windows Admin Center service for the changes to take effect.
-
-1. Sign-in to your machine. If you're on Server core, from the SConfig menu, enter option **15**, then press <kbd>Enter</kbd>
-   to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
-
-1. Import the Windows Admin Center configuration PowerShell module using the following command:
-
-   ```powershell
-   Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.Configuration"
-   ```
-
-1. Apply the new certificate using the following command, making sure to replace `<subject name>` with the subject name of the certificate:
-
-   ```powershell
-   Set-WACCertificateSubjectName -SubjectName "<subject name>"
-   ```
-
-   > [!TIP]
-   > Make sure the certificate uses a unique subject name. Alternatively, you can use the SHA1 thumbprint of the certificate using the **Thumbprint** parameter.
-
-1. Updated the certificate access control list to grant permissions for the _Network Service_ account to access the certificate. Use the following command, replacing `<subject name>` with the subject name of the certificate:
-
-   ```powershell
-   Set-WACCertificateAcl -SubjectName "<subject name>"
-   ```
-
-1. Restart the Windows Admin Center service using the following command:
-
-   ```powershell
-   Restart-Service -Name WindowsAdminCenter
-   ```
-
-You've now updated the certificate used by Windows Admin Center.
