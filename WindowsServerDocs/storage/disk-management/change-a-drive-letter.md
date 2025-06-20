@@ -15,7 +15,7 @@ This article describes how to manage the drive letter assigned to a drive in Win
 - Change the assigned drive letter for an existing drive
 - Assign a drive letter to a new drive
 
-If you prefer, there's an alternate approach to changing the drive letter. You can mount the drive in an empty folder so the drive appears as a folder. For more information, see [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md).
+There's an alternative to changing the drive letter. You can mount the drive in an empty folder so the drive appears as a folder. For more information, see [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ To complete the procedure in this article, the following prerequisites must be m
    > [!IMPORTANT]
    > If you change the drive letter of a drive that contains Windows or apps, the apps might have trouble running or finding the drive. The recommended approach is to not change the drive letter of a drive that contains Windows or apps.
 
-## Change or assign a drive letter with Disk Management
+## Change or assign a drive letter
 
 The following steps show how to change the drive letter:
 
@@ -36,11 +36,11 @@ The following steps show how to change the drive letter:
 
 1. Expand the **Storage** node and select **Disk Management**.
 
-1. Locate the volume for which you want to manage the assigned drive letter. Right-click the volume and select **Change Drive Letter and Paths**:
+1. Locate the volume for which you want to manage the assigned drive letter. Right-click the volume and select **Change Drive Letter and Paths**.
 
    :::image type="content" source="media/change-drive-letter.png" alt-text="Screenshot showing the Disk Management window with the Change Drive Letter and Paths feature selected.":::
 
-   If the **Change Drive Letter and Paths** option is missing or not available, see [Troubleshoot drive](#troubleshoot-volume-and-drive).
+   If the **Change Drive Letter and Paths** option is missing or not available, see [Troubleshoot volume and drive](#troubleshoot-volume-and-drive).
    
 1. Update the drive letter assignment:
 
@@ -50,7 +50,7 @@ The following steps show how to change the drive letter:
 
    :::image type="content" source="media/change-drive-letter2.png" alt-text="Screenshot of the Change Drive Letter and Paths dialog that shows how to select Change or Add for a drive letter assignment.":::
 
-1. Select the **Assign the following drive letter** option, expand the dropdown list, and select the drive letter to apply. Select **OK**:
+1. Select the **Assign the following drive letter** option. Expand the dropdown list, select the drive letter to apply, and select **OK**.
 
    :::image type="content" source="media/change-drive-letter3.png" alt-text="Screenshot of the Change Drive Letter or Path dialog that shows how to assign a new drive letter.":::
 
@@ -60,17 +60,20 @@ The following steps show how to change the drive letter:
 
 Here are some troubleshooting tips to help you manage the drive letter assignment process:
 
-- If the **Change Drive Letter and Paths** option is missing for the volume you want to manage, or the option isn't available (grayed), then the volume isn't ready to receive an assigned drive letter. Some possible issues include:
+- If the **Change Drive Letter and Paths** option is missing for the volume you want to manage, or the option isn't available (grayed), then the volume isn't ready to receive an assigned drive letter.
+
+   Some possible issues include:
 
    - The selected drive is unallocated and needs to be [initialized](initialize-new-disks.md).
-   - The selected drive isn't accessible, which is the case for **EFI System** partitions and **Recovery** partitions.
+   - The selected drive isn't accessible, which is the case for **EFI System** partitions and **Recovery** partitions. For more information, see [View drives and partitions](overview-of-disk-management.md#view-drives-and-partitions).
    - You might not have sufficient permissions to change the assignment.
 
    Ensure the volume you want to manage is both initialized and accessible, and confirm your Administrator permissions.
 
-- If the volume is formatted with a drive letter, and you have access to the volume but you're unable to change the assignment, the issue resolution require assistance beyond the scope of this article. You can contact [Microsoft Support](https://support.microsoft.com/contactus/) or the manufacturer of your computer.
+- If the volume is formatted with a drive letter, and you have access to the volume but you're unable to change the assignment, the issue resolution requires assistance beyond the scope of this article. You can contact [Microsoft Support](https://support.microsoft.com/contactus/) or the manufacturer of your computer.
 
 ## Related content
 
+- [View drives and partitions](overview-of-disk-management.md#view-drives-and-partitions)
 - [Initialize new disks](initialize-new-disks.md)
 - [Mount a drive in a folder](assign-a-mount-point-folder-path-to-a-drive.md)
