@@ -20,23 +20,31 @@ Before you deploy Network Controller, ensure that you have the following prerequ
 
   - For a single-node deployment, you can use a single computer or VM.
   - For a clustered deployment, you need at least three computers or VMs. The recommended number of nodes in a Network Controller cluster is three or more. You can add more nodes to the cluster later if needed.
+  - Don't deploy the Network Controller server role on physical hosts. You must install the Network Controller server role on a Hyper-V VM that is installed on a Hyper-V host.
 
 - A domain user account that has membership in the **Administrators** group or equivalent on the computer or VM where you're installing Network Controller. If the computer or VM upon which you installed Network Controller is joined to a domain, your user account must be a member of **Domain Users**.
 
 - The Network Controller server role and is installed on each VM that you want to add to the Network Controller cluster. You can install the Network Controller server role by using Windows PowerShell or Server Manager. To learn more about how to install roles and features, see [Add or remove roles and features in Windows Server](../../../administration/server-manager/add-remove-roles-features.md).
 
-  >[!IMPORTANT]
-  >Don't deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V VM that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper-V hosts, you must enable the Hyper-V hosts for Software Defined Networking (SDN) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you're enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](/powershell/module/networkcontroller/new-networkcontrollerserver).
+- A DNS record for the Network Controller REST API. The DNS record must resolve to the IP address you assign to the Network Controller REST API. This DNS record is used by clients to connect to the Network Controller REST API.
 
-- (Recommended) A certificate that is used for authentication and encryption of traffic between Network Controller services. The certificate must be provisioned on all of the Network Controller nodes before you run the commands to create the cluster and install the Network Controller application. The certificate must have the following properties:
+- (Recommended) A certificate that is used for authentication and encryption of traffic between Network Controller services. Certificate based authentication is required for non-domain joined deployments. The certificate must have the following properties:
 
   - A trusted certification authority (CA) must issue the certificate.
 
   - The certificate must have the Server Authentication (OID.1.3.6.1.5.5.7.3.1) purpose in Enhanced Key Usage extensions.
 
-  - The certificate subject name must match the DNS name of the node.
+  - The certificate subject name must match:
+
+    - The DNS of the Network Controller VM, if Network Controller is deployed on a single VM.
+
+    - The REST name, if Network Controller is deployed on multiple computers, multiple VMs, or both.
 
   - The certificate must be exported using the Personal Information Exchange (PFX) PKCS #12 format, and must include the private key. Include all certificates in the certificate chain when you export the certificate if possible.
+  
+  - This certificate must be trusted by all the REST clients. The certificate must also be trusted by the Software Load Balancing (SLB) Multiplexer (MUX) and the southbound host computers that are managed by Network Controller.
+
+  - The certificate and private key must be provisioned on all of the Network Controller nodes before you run the commands to create the cluster and install the Network Controller application.
 
 ## Create a Network Controller cluster
 
@@ -87,7 +95,7 @@ To deploy Network Controller using Windows PowerShell, follow these steps:
 
    ```powershell
    $clusterParams = @{
-     Node                        = @($node1, $node2)
+     Node                        = @($nodeObjects)
      ClusterAuthentication       = "Kerberos"
      ManagementSecurityGroup     = "Contoso\NCManagementAdmins"
      DiagnosticLogLocation       = "\\share\Diagnostics"
@@ -103,11 +111,12 @@ To deploy Network Controller using Windows PowerShell, follow these steps:
 
    ```powershell
    $ncParams = @{
-     Node                 = @($node1, $node2)
+     Node                 = @($nodeObjects)
      ClientAuthentication = "Kerberos"
      ClientSecurityGroup  = "Contoso\NCRESTClients"
      ServerCertificate    = $cert
      RESTIPAddress        = "10.0.0.1/24"
+     RESTName             = "networkcontroller.contoso.com"
    }
 
    Install-NetworkController @ncParams
@@ -137,15 +146,15 @@ To add a node to the Network Controller cluster, follow these steps:
    $newNode = New-NetworkControllerNodeObject @newNodeParams
    ```
 
-## Network Controller deployment validation
+## Network Controller validation
 
 Once, you have deployed Network Controller, it's important to validate that the deployment was successful and that the Network Controller services are functioning as expected. You can do this by adding a credential to Network Controller and then retrieving that credential.
 
-If you're using Kerberos as the ClientAuthentication mechanism, membership in the **ClientSecurityGroup** that you created is the minimum required to perform this procedure.
+If you're using Kerberos as the ClientAuthentication mechanism, membership in the `ClientSecurityGroup` that you created is the minimum required to perform this procedure.
 
 To validate your Network Controller deployment, follow these steps:
 
-1. On a client computer, if you're using Kerberos as the ClientAuthentication mechanism, sign in with a user account that is a member of your **ClientSecurityGroup**.
+1. On a client computer, if you're using Kerberos as the ClientAuthentication mechanism, sign in with a user account that is a member of your `ClientSecurityGroup`.
 
 1. Open Windows PowerShell, type the following commands to add a credential to Network Controller, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.
 
@@ -155,33 +164,39 @@ To validate your Network Controller deployment, follow these steps:
    $cred.UserName = Read-Host "Enter username"
    $cred.Value = Read-Host "Enter password" -AsSecureString
 
-   New-NetworkControllerCredential -ConnectionUri https://networkcontroller -Properties $cred -ResourceId "credentialResource01"
+  $credParams = @{
+    ConnectionUri = "https://networkcontroller.contoso.com"
+    Properties    = $cred
+    ResourceId    = "credentialResource01"
+  }
+  New-NetworkControllerCredential @credParams
    ```
 
 1. To retrieve the credential that you added to Network Controller, type the following command, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.
 
    ```powershell
-   Get-NetworkControllerCredential -ConnectionUri https://networkcontroller -ResourceId "credentialResource01"
+   Get-NetworkControllerCredential -ConnectionUri https://networkcontroller.contoso.com -ResourceId "credentialResource01"
    ```
 
 1. Review the command output, which should be similar to the following example output.
 
    ```powershell
    Tags                   :
-   ResourceRef     : /credentials/cred1
+   ResourceRef     : /credentials/credentialResource01
    CreatedTime    : 1/1/0001 12:00:00 AM
-   InstanceId        : e16ffe62-a701-4d31-915e-7234d4bc5a18
-   Etag                  : W/"1ec59631-607f-4d3e-ac78-94b0822f3a9d"
+   InstanceId        : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+   Etag                  : W/"bbbbbbbb-1111-2222-3333-cccccccccccc"
    ResourceMetadata :
-   ResourceId       : cred1
+   ResourceId       : credentialResource01
    Properties       : Microsoft.Windows.NetworkController.CredentialProperties
    ```
 
    > [!NOTE]
    > When you run the **Get-NetworkControllerCredential** command, you can assign the output of the command to a variable by using the dot operator to list the properties of the credentials. For example, $cred.Properties.
 
-## Post-deployment steps for non-Kerberos deployments
+## Next steps
 
-If you aren't using Kerberos with your Network Controller deployment, you must deploy certificates.
+After you have installed Network Controller on VMs on three different Hyper-V hosts, you must add the hosts to Network Controller to enable the SDN Software Load Balancer using the Windows PowerShell command **New-NetworkControllerServer**. To learn more about the Software Load Balancer and how it works with Network Controller, see the following resources:
 
-For more information, see [Post-Deployment Steps for Network Controller](../technologies/network-controller/post-deploy-steps-nc.md).
+- [New-NetworkControllerServer](/powershell/module/networkcontroller/new-networkcontrollerserver).
+- [Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)](../manage/Configure-SLB-and-NAT.md)
