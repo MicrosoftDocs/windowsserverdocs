@@ -1,6 +1,6 @@
 ---
 title: Install Windows Admin Center
-description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
+description: Learn how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
 ms.topic: install-set-up-deploy
 author: robinharwood
 ms.author: roharwoo
@@ -41,7 +41,7 @@ To install Windows Admin Center, you need the following prerequisites:
 
 ::: zone-end
 
-## Installing Windows Admin Center
+## Install Windows Admin Center
 
 To install Windows Admin Center, perform the following steps:
 
@@ -210,7 +210,7 @@ To install Windows Admin Center on your machine running the Windows client, foll
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. Select the Start Menu folder for where setup should place shortcuts. To use the default location, select **Next**. Alternatively, enter a folder name or select **Browse** followed by **Next**.
+1. Select the Start Menu folder for where setup should place shortcuts. To use the default location, select **Next**. Alternatively, enter a folder name, or select **Browse** followed by **Next**.
 
 1. Review the **Ready to install** window, select **Install** to start the installation process.
 
