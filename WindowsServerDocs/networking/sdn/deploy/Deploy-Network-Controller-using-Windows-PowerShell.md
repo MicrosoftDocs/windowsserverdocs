@@ -28,7 +28,7 @@ Before you deploy Network Controller, ensure that you have the following prerequ
 
 - A DNS record for the Network Controller REST API. The DNS record must resolve to the IP address you assign to the Network Controller REST API. This DNS record is used by clients to connect to the Network Controller REST API.
 
-- (Recommended) A certificate that is used for authentication and encryption of traffic between Network Controller services. Certificate based authentication is required for non-domain joined deployments. The certificate must have the following properties:
+- (Recommended) A certificate that is used for authentication and encryption of traffic between Network Controller services. Certificate based authentication is required for nondomain joined deployments. The certificate must have the following properties:
 
   - A trusted certification authority (CA) must issue the certificate.
 
@@ -116,7 +116,6 @@ To deploy Network Controller using Windows PowerShell, follow these steps:
      ClientSecurityGroup  = "Contoso\NCRESTClients"
      ServerCertificate    = $cert
      RESTIPAddress        = "10.0.0.1/24"
-     RESTName             = "networkcontroller.contoso.com"
    }
 
    Install-NetworkController @ncParams
@@ -143,7 +142,7 @@ To add a node to the Network Controller cluster, follow these steps:
      FaultDomain  = "fd:/rack1/host4"
      RestInterface= "Internal"
    }
-   $newNode = New-NetworkControllerNodeObject @newNodeParams
+   Add-NetworkControllerNode @newNodeParams
    ```
 
 ## Network Controller validation
