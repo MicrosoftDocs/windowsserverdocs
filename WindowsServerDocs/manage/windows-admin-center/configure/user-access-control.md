@@ -73,6 +73,23 @@ If you want to give specific Microsoft Entra users or groups gateway user or gat
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
 
+> [!NOTE]
+> Windows Admin Center registration and creation of a new application creates these roles - if the application was made manually the values WACAdmin (Windows Admin Center Administrators) and WACUser (Windows Admin Center Users) need to be used.
+>
+> The App Registration Manifest should have these two roles (example manifest, just the roles and values):
+> ```
+>       {
+> 			"description": "Windows Admin Center administrators can use and configure the site.",
+> 			"displayName": "Windows Admin Center Administrators",
+> 			"value": "WACAdmin"
+> 		},
+> 		{
+> 			"description": "Windows Admin Center users can access and use the site, but not configure the site.",
+> 			"displayName": "Windows Admin Center Users",
+> 			"value": "WACUser"
+> 		}
+> ```
+
 Once you turn on Microsoft Entra authentication, the gateway service restarts and you must refresh your browser. You can update user access for the SME Microsoft Entra application in the Azure portal at any time.
 
 Users will be prompted to sign in using their Microsoft Entra identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
