@@ -168,7 +168,7 @@ Members of this group can remotely query authorization attributes and permission
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Account Operators
@@ -231,7 +231,7 @@ The purpose of this security group is to manage a read-only domain controller (R
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|Yes, especially when delegated to a custom group that uses a granular password policy|
 |Default user rights|None|
 
 ### Backup Operators
@@ -297,7 +297,7 @@ For more information, see [Safely virtualizing Active Directory Domain Services 
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Cryptographic Operators
@@ -313,7 +313,7 @@ Members of this group are authorized to perform cryptographic operations. This s
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Denied RODC Password Replication
@@ -330,8 +330,8 @@ The purpose of this security group is to manage a RODC password replication poli
 |Default members|[Cert Publishers](#cert-publishers)<p>[Domain Admins](#domain-admins)<p>[Domain Controllers](#domain-controllers)<p>[Enterprise Admins](#enterprise-admins)<p>[Group Policy Creator Owners](#group-policy-creator-owners)<p>[Read-only Domain Controllers](#read-only-domain-controllers)<p>[Schema Admins](#schema-admins)|
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
-|Safe to move out of default container?||
-|Safe to delegate management of this group to non-service admins?||
+|Safe to move out of default container?|Yes|
+|Safe to delegate management of this group to non-service admins?|Yes, especially when delegated to a custom group that uses a granular password policy|
 |Default user rights|None|
 
 ### Device Owners
@@ -483,7 +483,7 @@ The Domain Controllers group can include all domain controllers in the domain. N
 |Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|No|
-|Safe to delegate management of this group to non-service admins?|No|
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### Domain Guests
@@ -571,7 +571,7 @@ For more information, see [What Is an RODC?](/previous-versions/windows/it-pro/w
 |Default members|None|
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
-|Safe to move out of default container?||
+|Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
@@ -605,7 +605,7 @@ For information about other features you can use with this security group, see [
 |Default members|[Administrator](understand-default-user-accounts.md#administrator-account)|
 |Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|No|
-|Safe to move out of default container?|No|
+|Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
@@ -663,7 +663,7 @@ For more information, see [Understand built-in user and group accounts in IIS 7]
 |Default members|[IUSR](understand-special-identities-groups.md#iusr)|
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
-|Safe to move out of default container?||
+|Safe to move out of default container?|Can't be moved|
 |Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
@@ -930,7 +930,7 @@ Because you can delegate administration of an RODC to a domain user or security 
 - Administrator role separation
 - A read-only DNS
 
-For more information, see [Understanding Planning and Deployment for Read-Only Domain Controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
+For more information, see [Understanding Planning and Deployment for Read-Only DomDenied RODC Password Replicatioain Controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
 
 |Attribute|Value|
 |--- |--- |
@@ -1001,7 +1001,7 @@ For more information, see the following resources:
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Schema Admins
