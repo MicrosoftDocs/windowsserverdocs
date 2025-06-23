@@ -4,7 +4,7 @@ description: Learn how to use GPUs with clustered virtual machines (VMs) to prov
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: how-to
-ms.date: 04/22/2025
+ms.date: 06/23/2025
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Local.
 ---
@@ -13,10 +13,10 @@ zone_pivot_groups: windows-os
 
 You can include graphics processing units (GPUs) in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration can be provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM, or through GPU Partitioning. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover.
 
-In this article, you will learn how to use GPUs with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
+In this article, you'll learn how to use GPUs with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
 
 > [!TIP]
-> Live migration of virtual machines (VMs) using GPUs provided by DDA isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
+> Live migration of virtual machines (VMs) using GPUs provided by DDA isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure. Looking to use Live Migration in clustered VMs? Consider using GPU partitioning. GPU partitioning allows you to share a fraction of the GPU instead of the entire GPU. To learn more about when to use GPU partition and support for live migration, see [Partition and assign GPUs to a virtual machine](../partition-assign-vm-gpu.md).
 
 ## Prerequisites
 
@@ -185,7 +185,7 @@ Follow these steps to assign an existing VM to a GPU resource pool using PowerSh
    ```
 
    >[!NOTE]
-   > If you want to add more than one GPU to the VM, first verify that the resource pool has more than one assignable GPU available, and then run the previous command again.
+   > To add more than one GPU to the VM, first check that the resource pool contains multiple assignable GPUs. Then, run the previous command again for each GPU you want to add.
 
    You can also remove an assigned GPU from a VM. To do so, in PowerShell, run the following command. Make sure to replace `<vmname>` with the name of the VM that you want to assign to the GPU resource pool.
 
@@ -202,13 +202,13 @@ When you start the VM, the cluster ensures that the VM is placed on a server wit
 ## Fail over a VM with an assigned GPU
 
 :::zone pivot="windows-server"
-To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server will cause the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
+To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server causes the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
 
 To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-virtualization). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
 :::zone pivot="azure-local"
-To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server will cause the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
+To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server causes the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
 
 To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-failover-clustering). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
