@@ -47,7 +47,7 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 1. Connect to the Hyper-V server (**Datacenter-Server-001**) in WAC that you want the VM to be migrated.
 
-1. Go to VM migration tool in the left panel under **Extensions** > **VM Migration**.
+1. Go to the VM migration tool in the left panel under **Extensions** > **VM Migration**.
 
 1. Select **Connect to vCenter**.
 
@@ -67,13 +67,13 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
  
     [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
-1. You see notifications appear with the synchronize progress. Confirm that the VHD file is created in the folder path specified.
+1. You see notifications appear with the progress. Confirm that the VHD file is created in the folder path specified.
 
 1. Wait for the sync to complete 100%.
 
     [![Migrate tab](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
 
-1. Go to **Migrate** tab, select the VM to migrate. Click **Migrate**. Select **Proceed** in the confirmation box. Delta replication is triggered. The virtual machine is briefly turned off during cut-over. The new virtual machine is created on the server **(Datacenter-Server-001)**.
+1. Go to the **Migrate** tab, and select the VM to migrate. Click **Migrate**. Select **Proceed** in the confirmation box. Delta replication is triggered. The virtual machine is briefly turned off during cut-over. The new virtual machine is created on the server **(Datacenter-Server-001)**.
 
     [![Migrate VM dialog](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
 
@@ -83,11 +83,11 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 ## View logs
 
-1. Open your browser settings, navigate to More Tools > Developer Tools. Check the Console tab. Share any error log statements you see there.
+1. Open your browser settings, and navigate to **More Tools** > **Developer Tools**. Check the Console tab.
 
-2. Open Event Viewer, expand Applications and Services Logs in the left pane. Select WindowsAdminCenter, and filter the logs to capture errors. Kindly share those details as well.
+2. Open Event Viewer, expand **Applications and Services Logs** in the left pane. To view errors, select WindowsAdminCenter, and filter the logs.
 
-3. Share the file located at C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt file.
+3. Find the file located at `C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt`.
 
 ## Known limitations
 
@@ -95,6 +95,6 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 - At-scale experience: work-in-progress
 
-- Host networking settings do not persist from eSXI host to Hyper-V host
+- Host networking settings don't persist from eSXI host to Hyper-V host
 
 - VM Tools not uninstalled after VM is migrated. Feature is in roadmap.
