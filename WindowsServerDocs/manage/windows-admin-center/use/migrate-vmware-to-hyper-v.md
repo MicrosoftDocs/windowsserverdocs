@@ -2,49 +2,30 @@
 title: Migrate a VMWare virtual machine to Hyper-V in Windows Admin Center
 description: Learn how to install, configure, and test the Windows Admin Center VM Conversion extension for migrating VMs from vCenter to Hyper-V.
 author: meaghanlewis
-contributors:
 ms.topic: how-to
 ms.date: 06/20/2025
 ms.author: mosagie
 ---
 # Migrate a VMWare virtual machine to Hyper-V in Windows Admin Center
 
-You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V. This article explains how to install and configure the VM Conversion extension, outlines the migration workflow, and provides troubleshooting tips. Before you begin, review the prerequisites and ensure your environment meets the requirements.
+You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VMware vCenter to Hyper-V. This article explains how to install and configure the VM Conversion extension, outlines the migration workflow, and provides troubleshooting tips. Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
 ## Prerequisites
 
-- Install instructions for Power CLI on machine where the WAC gateway is
-  installed using:
+- Hyper-V is installed on WAC gateway.
 
-  - [Install
-    PowerCLI](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli.html)
+- WAC Gateway V2 – GA version.
 
-  - [Install PowerCLI
-    Offline](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli-offline.html)
+- VMWare VCenter version 7.x or above is installed. Keep handy the:
+  - Fully Qualified Domain Name (FQDN) of vCenter endpoint
+  - Login credentials of vCenter
 
-- Install Microsoft Visual C++ Redistributable on machine where WAC
-  gateway is installed using [Latest supported Visual C++
-  Redistributable downloads \| Microsoft
-  Learn](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
-  and [Download Visual C++ Redistributable Packages for Visual Studio
-  2013 from Official Microsoft Download
-  Center](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Fen-us%2Fdownload%2Fdetails.aspx%3Fid%3D40784&data=05%7C02%7CShanmugha.Satheesh%40microsoft.com%7C611a36293a004a6f795108dd58d92dce%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638764412540102080%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=C0ha8JRZvlCEhXmtwysh4mf2uocMLpxrKx9nd6dKU7k%3D&reserved=0).
+- Install either [PowerCLI](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli.html) or [PowerCLI Offline](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli-offline.html)
 
-- Hyper-V should already be installed on WAC gateway
+- Install [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) on machine where WAC
+  gateway is installed.
 
-- WAC Gateway V2 – GA version
-
-- VCenter version: 7.x or above
-
-- Download the VDDK 8.0.3 version from the [VMware Virtual Disk Development Kit (VDDK)](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/)
-  , extract it, and copy the extracted contents to the following
-  directory: *"C:\Program Files\WindowsAdminCenter\Service\VDDK"*
-
-## Things you need to know:
-
-- FQDN of vCenter endpoint
-
-- Login credentials of vCenter
+- Download the latest [VMware Virtual Disk Development Kit (VDDK)](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/), extract it, and copy the extracted contents to the following directory: *"C:\Program Files\WindowsAdminCenter\Service\VDDK"*.
 
 ## Install the extension
 
@@ -56,34 +37,49 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 1. Search for **VM Conversion Extension** in **Available extensions** and click **Install.**
 
-1. Once installed, ensure VM Conversion extension is visible in the WAC under: Connect to standalone server > Left panel > Extensions > VM migration.
+1. Once installed, ensure VM Conversion extension is visible in the WAC under: **Extensions** > **VM Migration**.
 
-<img src="media/vm-migration-tooling--mvp-documentation/image1.png" style="width:6.5005in;height:3.61in" alt="A computer server with blue and white text AI-generated content may be incorrect." />
+## Supported scenario topology
 
-Supported scenario topology
+![A diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
 
-## Test migration workflow
+## Migrate a VM migration using the conversion extension
 
-1. Connect to Hyper-V/Windows server (**Datacenter-Server-001**) in WAC that you want the VM to be migrated.
+1. Connect to the Hyper-V server (**Datacenter-Server-001**) in WAC that you want the VM to be migrated.
 
-1. Go to VM migration tool in left panel.
+1. Go to VM migration tool in the left panel under **Extensions** > **VM Migration**.
 
-1. Connect to vCenter.
+1. Select **Connect to vCenter**.
+
+    [![Connect to vCenter](media/migrate-vmware-to-hyper-v/connect-to-vcenter.png)](media/migrate-vmware-to-hyper-v/connect-to-vcenter.png#lightbox)
+
+1. Enter the vCenter FQDN, vCenter username, and vCenter password.
+
+    [![Configure VMware settings](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
 
 1. Look up the virtual machine that needs to be migrated.
 
 1. Select the Virtual machine (Windows/Linux) to migrate.
 
-1. Click on synchronize. You'll see the synchronize progress in the UX. The VHD file will be created in the folder mentioned in the pop-up box.
+    [![Synchronize tab](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
 
-1. Wait for synchronize to complete 100%
+1. Click on **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
+ 
+    [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
-1. Go to **Migrate** tab, select the VM to migrate. Click migrate. Delta replication will be triggered. Virtual machine will be briefly turned off, during cut-over. New virtual machine will be created on the
-Windows Server **(Datacenter-Server-001)**.
+1. You see notifications appear with the synchronize progress. Confirm that the VHD file is created in the folder path specified.
+
+1. Wait for the sync to complete 100%.
+
+    [![Migrate tab](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
+
+1. Go to **Migrate** tab, select the VM to migrate. Click **Migrate**. Select **Proceed** in the confirmation box. Delta replication is triggered. The virtual machine is briefly turned off during cut-over. The new virtual machine is created on the server **(Datacenter-Server-001)**.
+
+    [![Migrate VM dialog](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
 
 1. Wait for virtual machine migration to complete.
 
-1. Lifecycle management: Manage the migrated virtual machine using VM manager in WAC.
+1. The migrated virtual machine can be managed using the Hyper-V Manager, or in WAC.
 
 ## View logs
 
