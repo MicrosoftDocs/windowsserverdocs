@@ -83,7 +83,7 @@ This curated table of resources is designed to help you understand, plan, deploy
 
 | **Manage** | **Tools and settings** | **Community resources** |
 |--|--|--|
-| [Cluster-Aware Updating](cluster-aware-updating.md) | [Failover Clustering PowerShell Cmdlets](/powershell/module/failoverclusters/) | [Failover Cluster Forum](/windows-server/blog/tag/failover-cluster) |
+| [Cluster-Aware Updating](cluster-aware-updating.md) | [Failover Clustering PowerShell Cmdlets](/powershell/module/failoverclusters/) | [Failover Cluster Forum](https://www.microsoft.com/windows-server/blog/tag/failover-cluster) |
 | [Health Service](health-service-overview.md) | [Cluster Aware Updating PowerShell Cmdlets](/powershell/module/clusterawareupdating/) | [Failover Clustering Blog](https://techcommunity.microsoft.com/category/windows-server/blog/failoverclustering) |
 | [Cluster-domain migration](cluster-domain-migration.md) | | |
 | [Troubleshooting using Windows Error Reporting](troubleshooting-using-wer-reports.md) | | |
