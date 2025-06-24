@@ -14,7 +14,7 @@ Failover clustering is a powerful strategy to ensure high availability and unint
 
 If a failure occurs in one or more nodes, the remaining nodes automatically take over the workload, a process called failover, minimizing disruptions. Additionally, the health of clustered roles is continuously monitored. If any issues are detected, the roles are either restarted or migrated to another node to maintain seamless operation. This proactive approach ensures that services remain consistently available, even if hardware or software failures occur.
 
-Effective networking is vital, utilizing both private networks for internal communications between nodes and public networks for interactions with clients. A notable feature of failover clusters is the Cluster Shared Volume (CSV), which allows multiple nodes to access the same storage concurrently, enabling smooth disk management and coordination.
+Networking is crucial in failover clusters as it ensures seamless communication and data transfer between nodes and clients. Clusters typically use both private networks for internal node communications and public networks for client connections. A notable feature of failover clusters is the Cluster Shared Volume (CSV), which allows multiple nodes to access the same storage concurrently, enabling smooth disk management and coordination.
 
 The cluster's health is continuously monitored through heartbeat signals, which help detect any issues. If a problem arises, the system can automatically initiate a failover to maintain service continuity. To protect sensitive data and meet organizational standards, failover clusters incorporate robust security measures such as encryption to secure data both in transit and at rest. They also use granular access control to manage permissions and access rights effectively.
 
@@ -40,10 +40,6 @@ Failover clustering provides a comprehensive set of functionalities designed to 
 - **Types of Failover Clustering:**
 
   - Failover clustering can be configured in different modes, such as active-active and active-passive. In an active-active cluster, all nodes are simultaneously active and can handle requests, balancing the load among them. Conversely, in an active-passive cluster, only some nodes are active while others remain on standby, ready to take over if an active node fails.
-
-- **Networking considerations:**
-
-  - Networking is crucial in failover clusters as it ensures seamless communication and data transfer between nodes and clients. Clusters typically use both private networks for internal node communications and public networks for client connections. Proper network configuration helps prevent data loss and maintains reliable service delivery even during failovers.
 
 - **Storage configuration:**
 
