@@ -1,7 +1,7 @@
 ---
 title: Change a Drive Letter
 description: Change or assign a Windows drive letter to a drive by using the Change Drive Letter and Paths feature with the Disk Management utility in Windows.
-ms.date: 06/20/2025
+ms.date: 06/24/2025
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
@@ -21,7 +21,7 @@ An alternate approach is to mount the drive in an empty folder so the drive appe
 
 To complete the procedure in this article, the following prerequisites must be met:
 
-- The user must be a member of the **Backup Operators** or **Administrators** group.
+- The user account must be a member of the **Backup Operators** or **Administrators** group.
 
 - A new drive or an existing drive that doesn't store the Windows operating system or any applications.
 
@@ -32,7 +32,7 @@ To complete the procedure in this article, the following prerequisites must be m
 
 The following steps show how to change the drive letter:
 
-1. In Windows **Start**, enter **Computer Management**, and then open **Computer Management** with Administrator permissions.
+1. From the Windows **Start** menu, search for and open Disk Management with Administrator permissions.
 
 1. Expand the **Storage** node and select **Disk Management**.
 

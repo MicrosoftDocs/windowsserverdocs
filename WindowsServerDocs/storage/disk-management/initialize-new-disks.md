@@ -1,7 +1,7 @@
 ---
 title: Initialize New Disks
 description: Initialize new disks with the Disk Management utility in Windows and prepare them for use or get help with troubleshooting.
-ms.date: 06/20/2025
+ms.date: 06/24/2025
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
@@ -18,7 +18,7 @@ This article describes how to initialize a new disk that has no existing data. I
 
 To complete the procedures in this article, the following prerequisites must be met:
 
-- The user must be a member of the **Backup Operators** or **Administrators** group.
+- The user account must be a member of the **Backup Operators** or **Administrators** group.
 
 - A new, uninitialized disk that has no existing data.
 
@@ -31,7 +31,7 @@ To complete the procedures in this article, the following prerequisites must be 
 
 The following steps show how to initialize a new disk with Disk Management. If you prefer to use PowerShell, run the [Initialize-Disk](/powershell/module/storage/initialize-disk) cmdlet.
 
-1. Open Disk Management with Administrator permissions. In the **Search** box on the taskbar, enter **Create and format hard disk partitions**.
+1. Open Disk Management with Administrator permissions. From the Windows **Start** menu, enter **Create and format hard disk partitions**.
 
 1. In the results list, right-click **Create and format hard disk partitions** and select **Run as administrator** > **Yes**.
 
