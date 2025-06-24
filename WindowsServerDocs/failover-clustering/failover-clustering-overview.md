@@ -14,7 +14,7 @@ Failover clustering is a powerful strategy to ensure high availability and unint
 
 If a failure occurs in one or more nodes, the remaining nodes automatically take over the workload, a process called failover, minimizing disruptions. Additionally, the health of clustered roles is continuously monitored. If any issues are detected, the roles are either restarted or migrated to another node to maintain seamless operation. This proactive approach ensures that services remain consistently available, even if hardware or software failures occur.
 
-Networking is crucial in failover clusters as it ensures seamless communication and data transfer between nodes and clients. Clusters typically use both private networks for internal node communications and public networks for client connections. A notable feature of failover clusters is the Cluster Shared Volume (CSV), which allows multiple nodes to access the same storage concurrently, enabling smooth disk management and coordination.
+Networking is a crucial role in failover clusters by enabling reliable communication and efficient data exchange among cluster nodes and with external clients. Clusters often employ dedicated private networks for internal functions such as heartbeat signals and cluster management, while separate public networks handle client access and application data. This network separation enhances performance and security by isolating critical cluster traffic from external disruptions. It also increases fault tolerance, ensuring that internal cluster operations remain uninterrupted and that client connections maintain high availability during failover events.
 
 The cluster's health is continuously monitored through heartbeat signals, which help detect any issues. If a problem arises, the system can automatically initiate a failover to maintain service continuity. To protect sensitive data and meet organizational standards, failover clusters incorporate robust security measures such as encryption to secure data both in transit and at rest. They also use granular access control to manage permissions and access rights effectively.
 
@@ -43,7 +43,7 @@ Failover clustering provides a comprehensive set of functionalities designed to 
 
 - **Storage configuration:**
 
-  - CSVs are an integral part of storage configurations in failover clusters. CSVs enable multiple nodes to access the same storage concurrently without performance loss, streamlining storage management and coordination. They facilitate efficient disk access, allowing nodes to handle storage tasks collaboratively.
+  - A notable feature of failover clusters is the Cluster Shared Volume (CSV), which allows multiple nodes to access the same storage concurrently, enabling smooth disk management and coordination without performance loss. CSVs are an integral part of storage configurations in failover clusters. CSVs facilitate efficient disk access, allowing nodes to handle storage tasks collaboratively.
 
 - **Proactive monitoring and management:**
 
