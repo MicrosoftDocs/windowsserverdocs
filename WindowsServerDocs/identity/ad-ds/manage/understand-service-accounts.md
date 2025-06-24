@@ -1,15 +1,13 @@
 ---
-title: Service Accounts
-description: Windows Server standalone and group managed service accounts in Active Directory.
+title: Service accounts in Windows Server
+description: Learn about standalone, group managed, delegated managed service accounts, and virtual accounts in Windows Server Active Directory.
+ms.topic: conceptual-article
 author: xelu86
 ms.author: alalve
-ms.topic: article
-ms.date: 08/14/2024
+ms.date: 06/24/2025
 ---
 
 # Service accounts
-
-> 
 
 A service account is a user account that's created explicitly to provide a security context for services that are running on Windows Server operating systems. The security context determines the service's ability to access local and network resources. Windows operating systems rely on services to run various features. These services can be configured through the applications, the Services snap-in, or Task Manager, or by using Windows PowerShell.
 
@@ -24,7 +22,7 @@ This article contains information about the following types of service accounts:
 
 Managed service accounts are designed to isolate domain accounts in crucial applications, such as Internet Information Services (IIS). They eliminate the need for an administrator to manually administer the service principal name (SPN) and credentials for the accounts.
 
-One managed service account can be used for services on a single computer. Managed service accounts can't be shared between multiple computers, and they can't be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group-managed service account. For more information, see [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
+One managed service account can be used for services on a single computer. Managed service accounts can't be shared between multiple computers. They also can't be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group-managed service account. For more information, see [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
 
 In addition to the enhanced security that's provided by having individual accounts for critical services, there are four important administrative benefits associated with managed service accounts:
 
@@ -51,7 +49,7 @@ The Microsoft Key Distribution Service (kdssvc.dll) provides the mechanism to se
 
 The addition of a new type of account called delegated Managed Service Account (dMSA) is introduced in Windows Server 2025. This account type enables users to transition from traditional service accounts to machine accounts that have managed and fully randomized keys, while also disabling the original service account passwords. Authentication for dMSA is linked to the device identity, which means that only specified machine identities mapped in AD can access the account. By using dMSA, users can prevent the common issue of credential harvesting using a compromised account that is associated with traditional service accounts.
 
-Users have the option to create a dMSA as a standalone account or replace an existing standard service account with it. If an existing account is replaced by a dMSA, authentication using the old account's password is blocked. Instead, the request is redirected to the Local Security Authority (LSA) for authentication using the dMSA, which will have access to the same resources as the previous account in AD. To learn more, see [Delegated Managed Service Accounts overview](/windows-server/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview).
+Users are able to create a dMSA as a standalone account or replace an existing standard service account with it. If an existing account is replaced by a dMSA, authentication using the old account's password is blocked. Instead, the request is redirected to the Local Security Authority (LSA) for authentication using the dMSA, which has access to the same resources as the previous account in AD. To learn more, see [Delegated Managed Service Accounts overview](/windows-server/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview).
 
 ## Virtual accounts
 
@@ -82,7 +80,7 @@ Service accounts are used to control the service's access to local and network r
 | Supports machine account linked to device identity | No | No | Yes | No |
 | Use for high-security scenarios (prevent credential harvesting) | No | No | Yes | No |
 
-When choosing a service account, it's important to consider factors such as the level of access required by the service, the security policies in place on the server, and the specific needs of the application or service being run.
+When choosing a service account, it's important to consider factors such as the level of access required by the service and the security policies in place on the server. You should also evaluate the specific needs of the application or service being run.
 
 - **sMSA**: Designed for use on a single computer, sMSAs provide a secure, and simplified method for managing SPNs and credentials. They automatically manage passwords and are ideal for isolating domain accounts in critical applications. However, they can't be used across multiple servers or in server clusters.
 
