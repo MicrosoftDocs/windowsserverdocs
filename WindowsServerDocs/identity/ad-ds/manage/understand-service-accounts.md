@@ -1,7 +1,7 @@
 ---
 title: Service accounts in Windows Server
 description: Learn about standalone, group managed, delegated managed service accounts, and virtual accounts in Windows Server Active Directory.
-ms.topic: conceptual-article
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
 ms.date: 06/24/2025
