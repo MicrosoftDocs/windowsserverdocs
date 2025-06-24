@@ -65,6 +65,8 @@ To update the certificate used by Windows Admin Center, you need the following p
 
 <!-- Q: WHAT ARE THE STEPS TO UPDATE THE CERTIFICATE USING THE WAC INSTALLER? -->
 
+---
+
 You've now updated the certificate used by Windows Admin Center.
 
 ## Troubleshooting
