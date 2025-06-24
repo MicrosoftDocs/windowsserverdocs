@@ -13,14 +13,14 @@ The Remote Desktop Gateway (RD Gateway) role enables secure, encrypted connectio
 
 ## Prerequisites
 
-- Your device must have the **Remote Desktop Services** role installed. To learn more, see [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).
+Your device must have the **Remote Desktop Services** role installed. To learn more, see [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).
 
-  - During the installation process, select the **Remote Desktop Gateway** Role service, and proceed with installation.
+- During the installation process, select the **Remote Desktop Gateway** Role service, and proceed with installation.
 
-  > [!NOTE]
-  > For this article, we're using default settings for installing the RD Gateway, progressing through without additional changes. Based on your own organizational needs, during the Role service selection for the Web Server Role (IIS), select the additional services necessary for your environment.
+> [!NOTE]
+> For this article, we're using default settings for installing the RD Gateway, progressing through without additional changes. Based on your own organizational needs, during the Role service selection for the Web Server Role (IIS), select the additional services necessary for your environment.
 
-- You must be a part of the **Administrators** group or have equivalent permissions.
+You must be a part of the **Administrators** group or have equivalent permissions.
 
 ## Configure the RD Gateway role
 
