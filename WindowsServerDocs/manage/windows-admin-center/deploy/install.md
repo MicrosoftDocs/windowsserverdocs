@@ -70,7 +70,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
    >[!NOTE]
    >You must select which Transport Layer Security (TLS) certificate Windows Admin Center should use. If you already have a certificate, it must be installed in the `LocalMachine\My` certificates store. If you're installing Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
 
-1. In the **Automatic updates** window, select your preferred update option, then select **Next**.  
+1. In the **Automatic updates** window, select your preferred update option, then select **Next**.
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
@@ -139,7 +139,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
    >[!NOTE]
    >You must select which Transport Layer Security (TLS) certificate Windows Admin Center should use. If you already have a certificate, it must be installed in the `LocalMachine\My` certificates store. If you're installing Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
 
-1. In the **Automatic updates** window, select your preferred update option, then select **Next**.  
+1. In the **Automatic updates** window, select your preferred update option, then select **Next**.
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
@@ -206,7 +206,7 @@ To install Windows Admin Center on your machine running the Windows client, foll
    >[!NOTE]
    >You must select which Transport Layer Security (TLS) certificate Windows Admin Center should use. If you already have a certificate, it must be installed in the `LocalMachine\My` certificates store. If you're installing Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
 
-1. In the **Automatic updates** window, select your preferred update option, then select **Next**.  
+1. In the **Automatic updates** window, select your preferred update option, then select **Next**.
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
@@ -219,7 +219,7 @@ To install Windows Admin Center on your machine running the Windows client, foll
 1. Sign in as an administrator to start using Windows Admin Center.
 
 >[!NOTE]
-> You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts) instead.
+> You must modify TrustedHosts in a workgroup environment or when you use local administrator credentials in a domain. If you choose to skip this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts-list) instead.
 
 You've now installed Windows Admin Center on your machine.
 
