@@ -244,7 +244,7 @@ Include any errors or warning you find in the event log including the following 
 
 - Platform where Windows Admin Center is **installed** (Windows client or Windows Server).
 
-  - If installed on a Server device, provide the Windows <a href="file:///C:/Windows/System32/winver.exe">version</a> of **the machine running the browser** to access Windows Admin Center:
+  - If installed on a Server device, provide the Windows <a href="C:\Windows\System32\winver.exe">version</a> of **the machine running the browser** to access Windows Admin Center:
   - Are you using the self-signed certificate created by the installer?
   - If you're using your own certificate, does the subject name match the machine?
   - If you're using your own certificate, does it specify an alternate subject name?
@@ -255,7 +255,7 @@ Include any errors or warning you find in the event log including the following 
 
 - Is the machine where Windows Admin Center is **installed** joined to a domain?
 - Is the machine that you're **trying to manage** joined to a domain?
-- Provide the Windows <a href="file:///C:/Windows/System32/winver.exe">version</a> where Windows Admin Center is **installed**:
+- Provide the Windows <a href="C:\Windows\System32\winver.exe">version</a> where Windows Admin Center is **installed**:
 - What browser are you using?
 - If you're using Google Chrome, what is the version?
 
