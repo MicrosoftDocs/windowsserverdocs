@@ -63,7 +63,7 @@ When a Disk Management task reports an error, or a procedure doesn't work as exp
 
 - Review suggestions in the [Troubleshooting Disk Management](troubleshooting-disk-management.md) article.
 - Search the [Microsoft Support Community](https://answers.microsoft.com) site for posts about files, folders, and storage.
-- [Ask a question](https://answers.microsoft.com/newthread?threadtype=Questions) to get input from Microsoft or other community members.
+- [Ask a question](https://answers.microsoft.com) to get input from Microsoft or other community members.
 - [Contact Microsoft Support](https://support.microsoft.com/contactus/) about the issue.
 
 ## Related content
