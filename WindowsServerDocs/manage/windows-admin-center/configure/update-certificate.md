@@ -1,0 +1,94 @@
+---
+title: Update the certificate used by Windows Admin Center
+description: Learn how to update the HTTPS certificate used by Windows Admin Center, including PowerShell commands and steps to apply and activate the new certificate.
+ms.topic: how-to
+author: meaghanlewis
+ms.author: mosagie
+ms.date: 06/23/2025
+---
+# Update the certificate used by Windows Admin Center
+
+When you have Windows Admin Center (WAC) deployed as a service, you must provide a certificate for HTTPS. TLS certificates play a critical role in securing communications between the WAC gateway and connected devices. By encrypting data and authenticating identities, these certificates enhance the integrity and security of the system.
+
+You might want to update the certificate if:
+
+- You have a new CA
+- Your existing private key was disclosed
+- You need to renew your certificate
+
+To update this certificate, follow the guidance in this article.
+
+## Prerequisites
+
+To update the certificate used by Windows Admin Center, you need the following prerequisites:
+
+- A Windows PC or server with Windows Admin Center installed.
+
+- Administrative privileges or equivalent permissions on the machine you're using Windows Admin Center on.
+
+- A TLS certificate that is:
+  - Issued for Server Authentication.
+  - Issued by a certificate authority trusted by the Windows Admin Center machine and clients.
+  - Installed in the local computers certificate store.
+
+## Update the certificate
+
+### [PowerShell](#tab/powershell)
+
+1. Sign-in to your machine. If you're on Server core, from the SConfig menu, enter option **15**, then press Enter to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
+
+1. Import the Windows Admin Center configuration PowerShell module using the following command:
+
+   ```powershell
+   Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.Configuration" 
+   ```
+
+1. Apply the new certificate using the following command, making sure to replace `<subject name>` with the subject name of the certificate. Make sure the certificate uses a unique subject name. Alternatively, you can use the SHA1 thumbprint of the certificate using the **Thumbprint** parameter.
+
+   ```powershell
+   Set-WACCertificateSubjectName -SubjectName "<subject name>" 
+   ```
+
+1. Update the certificate access control list to grant permissions for the _Network Service_ account to access the certificate. Use the following command, replacing `<subject name>` with the subject name of the certificate:
+
+   ```powershell
+   Set-WACCertificateAcl -SubjectName "<subject name>" 
+   ```
+
+1. You must restart the Windows Admin Center service for the changes to take effect. Restart the Windows Admin Center service using the following command:
+
+   ```powershell
+   Restart-Service -Name WindowsAdminCenter 
+   ```
+
+### [Windows Admin Center](#tab/wac)
+
+<!-- Q: WHAT ARE THE STEPS TO UPDATE THE CERTIFICATE USING THE WAC INSTALLER? -->
+
+You've now updated the certificate used by Windows Admin Center.
+
+## Troubleshooting
+
+### Diagnostic processes
+
+-	**Events Viewer**: Utilize the Events Viewer under the WindowsAdminCenter Event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
+ - **Browser errors**: If the WAC service is properly set up but browsers indicate an error, verify the configuration of the TLS certificate and ensure it matches the required setup parameters.
+- **Ajax error**: An Ajax error 500 may appear when attempting to open a connection with an invalid certificate. Ensure the certificate is correctly installed and validated to avoid this issue. 
+ 
+### Common problems
+
+- **Invalid certificate**:
+  - A certificate might be invalid. This will come up as "invalid certificate".
+  - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 cannot be used if invalid certificate is used when communicates to the sub processes.
+  - You should not generate a self-signed certificate because its a security issue
+- **Mismatched DNS name**
+  - The certificate DNS name might be different from the WAC DNS name.
+  - If this is not resolved then WAC might not work or bring errors.
+- **Wrong or inaccurate thumbprint**
+  - Check that the thumbprint is present, correctly registered, and doesn't match with is expected. WAC may not detect the certificate.
+- **Private Key not configured to be accessed by the network service**
+  - HTTPS protocol layer reads private key of certificate to encrypt TLS payload when communicating over HTTPS protocol.
+  - WAC uses Network Service account, so Private Key must be accessible by Network Service. Use certlm.msc tool to select All Tasks menu to open Manage Private Keys... dialog. Make sure NETWORK SERVICE is configured to access the private key.
+- **Network, Policy and Firewall configuration issues**
+  -	If you have restricted TLS communications, then the WAC Gateway might not be able to access
+  -	Might be firewall or GPO

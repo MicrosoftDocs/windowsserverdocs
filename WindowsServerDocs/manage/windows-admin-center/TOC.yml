@@ -43,6 +43,8 @@
       href: configure/use-powershell.md
     - name: Websocket validation
       href: configure/websocket-validation.md
+    - name: Update the certificate
+      href: use/update-certificate.md    
   - name: Use
     items:
     - name: Get started
@@ -63,8 +65,6 @@
       href: use/logging.md
     - name: Manage AWS Machines
       href: use/manage-aws-machines.md
-    - name: Update the certificate
-      href: use/update-certificate.md  
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
