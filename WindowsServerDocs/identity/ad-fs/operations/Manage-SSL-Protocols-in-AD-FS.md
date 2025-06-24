@@ -169,6 +169,7 @@ TLS 1.2 is enabled by default starting with Windows Server 2012. You can use the
 
 > [!WARNING]
 > Disabling TLS 1.2 is not recommended, as it may disrupt the functionality of other components on the server that rely on this protocol. For instance, services such as Microsoft Azure AD Connect (Azure AD Sync) require TLS 1.2 to operate correctly. Disabling it could result in service failures or degraded functionality.
+
 |Path|Value Name|Value Data|
 |----|----------|----------|
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server|Enabled|00000000|
