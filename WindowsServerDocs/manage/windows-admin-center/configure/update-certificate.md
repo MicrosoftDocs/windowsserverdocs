@@ -87,10 +87,11 @@ You've now updated the certificate used by Windows Admin Center.
   - The certificate DNS name might be different from the WAC DNS name.
   - If this is not resolved then WAC might not work or bring errors.
 - **Wrong or inaccurate thumbprint**
-  - Check that the thumbprint is present, correctly registered, and doesn't match with is expected. WAC may not detect the certificate.
+  - Check that the thumbprint is present, correctly registered, and doesn't match what is expected. WAC may not detect the certificate.
 - **Private Key not configured to be accessed by the network service**
   - HTTPS protocol layer reads private key of certificate to encrypt TLS payload when communicating over HTTPS protocol.
-  - WAC uses Network Service account, so Private Key must be accessible by Network Service. Use certlm.msc tool to select All Tasks menu to open Manage Private Keys... dialog. Make sure NETWORK SERVICE is configured to access the private key.
+  - WAC uses Network Service account, so Private Key must be accessible by Network Service. Use certlm.msc tool to select All Tasks menu to open Manage Private Keys... dialog.
+  - Make sure NETWORK SERVICE is configured to access the private key.
 - **Network, Policy and Firewall configuration issues**
   -	If you have restricted TLS communications, then the WAC Gateway might not be able to access
   -	Might be firewall or GPO
