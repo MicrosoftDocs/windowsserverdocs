@@ -4,7 +4,7 @@ description: Learn more about Failover Clustering in Windows Server and Azure Lo
 ms.topic: overview
 author: xelu86
 ms.author: alalve
-ms.date: 06/24/2025
+ms.date: 06/25/2025
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 ---
 
@@ -35,31 +35,27 @@ Failover clustering provides a comprehensive set of functionalities designed to 
 
 - **Cluster nodes and quorum:**
 
-  - Cluster nodes collaborate to maintain what is known as a quorum, which is essentially the minimum number of votes from cluster members required for the cluster to function correctly. This mechanism prevents split-brain scenarios, where split portions of a cluster might try to operate independently, potentially causing inconsistencies. Quorum models, such as Node Majority, Node and Disk Majority, Node and File Share Majority, and No Majority (Disk Only), determine how votes are assigned and counted. For instance, Node Majority assigns each node a vote, while Node and Disk Majority incorporate additional votes from either a disk or a file share.
-
-- **Types of Failover Clustering:**
-
-  - Failover clustering can be configured in different modes, such as active-active and active-passive. In an active-active cluster, all nodes are simultaneously active and can handle requests, balancing the load among them. Conversely, in an active-passive cluster, only some nodes are active while others remain on standby, ready to take over if an active node fails.
+  Cluster nodes collaborate to maintain what is known as a quorum, which is essentially the minimum number of votes from cluster members required for the cluster to function correctly. This mechanism prevents split-brain scenarios, where split portions of a cluster might try to operate independently, potentially causing inconsistencies. Quorum models, such as Node Majority, Node and Disk Majority, Node and File Share Majority, and No Majority (Disk Only), determine how votes are assigned and counted. For instance, Node Majority assigns each node a vote, while Node and Disk Majority incorporate additional votes from either a disk or a file share.
 
 - **Storage configuration:**
 
-  - A notable feature of failover clusters is the Cluster Shared Volume (CSV), which allows multiple nodes to access the same storage concurrently, enabling smooth disk management and coordination without performance loss. CSVs are an integral part of storage configurations in failover clusters. CSVs facilitate efficient disk access, allowing nodes to handle storage tasks collaboratively.
+  A notable feature of failover clusters is the Cluster Shared Volume (CSV), which allows multiple nodes to access the same storage concurrently, enabling smooth disk management and coordination without performance loss. CSVs are an integral part of storage configurations in failover clusters. CSVs facilitate efficient disk access, allowing nodes to handle storage tasks collaboratively.
 
 - **Proactive monitoring and management:**
 
-  - Failover clusters employ heartbeat signals as a means of monitoring the health of nodes and their roles. These signals help detect issues such as node failures or service disruptions. When  such issues are detected, the system can automatically initiate failover procedures, ensuring continuity and minimizing downtime.
+  Failover clusters employ heartbeat signals as a means of monitoring the health of nodes and their roles. These signals help detect issues such as node failures or service disruptions. When  such issues are detected, the system can automatically initiate failover procedures, ensuring continuity and minimizing downtime.
 
 - **Security and compliance:**
 
-  - Security is a vital aspect of failover clusters, incorporating features like encryption and access control to protect data and cluster operations. Clusters help organizations meet compliance requirements for critical applications by ensuring secure data handling and reliable system performance. This makes them suitable for environments requiring stringent data protection and regulatory adherence.
+  Security is a vital aspect of failover clusters, incorporating features like encryption and access control to protect data and cluster operations. Clusters help organizations meet compliance requirements for critical applications by ensuring secure data handling and reliable system performance. This makes them suitable for environments requiring stringent data protection and regulatory adherence.
 
 - **Use cases:**
 
-  - Failover clustering has several practical applications, including disaster recovery, load balancing, and high-performance computing. It supports critical applications by providing high availability, enabling businesses to maintain operations even in adverse conditions. For instance, in disaster recovery scenarios, clusters can quickly restore services by transferring operations to unaffected nodes.
+  Failover clustering has several practical applications, including disaster recovery, load balancing, and high-performance computing. It supports critical applications by providing high availability, enabling businesses to maintain operations even in adverse conditions. For instance, in disaster recovery scenarios, clusters can quickly restore services by transferring operations to unaffected nodes.
 
-    - Failover clustering ensures high availability or continuous availability for critical applications and services (clustered roles) running on physical servers or virtual machines. If a failure occurs, these roles can be quickly moved or restarted on another node, minimizing downtime and maintaining consistent performance and redundancy.
+  - Failover clustering ensures high availability or continuous availability for critical applications and services (clustered roles) running on physical servers or virtual machines. If a failure occurs, these roles can be quickly moved or restarted on another node, minimizing downtime and maintaining consistent performance and redundancy.
 
-    - Applications such as Microsoft SQL Server and Hyper-V virtual machines benefit from failover clustering by experiencing minimal service interruptions, even during hardware or software failures.
+  - Applications such as Microsoft SQL Server and Hyper-V virtual machines benefit from failover clustering by experiencing minimal service interruptions, even during hardware or software failures.
 
 ## Failover Clustering resources
 
