@@ -1,22 +1,24 @@
 ---
 title: SMB security enhancements
-description: Learn about SMB security enhancements, such as encryption and the new signing algorithm, in Windows Server and Azure Local.
-ms.topic: article
+description: Discover how to protect your data with SMB encryption, new signing algorithms, and advanced security features in Windows Server.
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 05/18/2023
+ms.date: 06/25/2025
+ai-usage: ai-assisted
+#customer intent: As an IT admin, I want to enable SMB Encryption on my Windows Server so that I can protect sensitive data from interception.
 ---
 
 # SMB security enhancements
 
-This article explains the SMB security enhancements in Windows Server and Windows.
+The Server Message Block (SMB) protocol is a core component for file sharing and data access in Windows environments. As security threats continue to evolve, Windows Server and Windows introduce enhanced SMB security features to help protect sensitive data from interception and unauthorized access. This article describes the latest SMB security enhancements, including SMB Encryption, new signing algorithms, and advanced configuration options. Use these features to strengthen your organization’s data protection and meet modern security requirements.
 
 ## SMB Encryption
 
-SMB Encryption provides SMB data end-to-end encryption and protects data from eavesdropping occurrences on untrusted networks. You can deploy SMB Encryption with minimal effort, but it might require other costs for specialized hardware or software. It has no requirements for Internet Protocol security (IPsec) or WAN accelerators. SMB Encryption can be configured on a per share basis, for the entire file server, or when mapping drives. 
+SMB Encryption provides SMB data end-to-end encryption and protects data from eavesdropping occurrences on untrusted networks. You can deploy SMB Encryption with minimal effort, but it might require other costs for specialized hardware or software. It has no requirements for Internet Protocol security (IPsec) or WAN accelerators. SMB Encryption can be configured on a per share basis, for the entire file server, or when mapping drives.
 
 > [!NOTE]
-> SMB Encryption does not cover security at rest, which is typically handled by BitLocker Drive Encryption.
+> SMB Encryption doesn't cover security at rest. Typically, BitLocker Drive Encryption handles protection at rest.
 
 You can consider SMB Encryption for any scenario in which sensitive data needs to be protected from interception attacks. Possible scenarios include:
 
@@ -30,7 +32,15 @@ Windows Server 2022 and Windows 11 SMB Direct now support encryption. Previously
 Furthermore, Windows Server failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This support means that when using Storage Spaces Direct and SMB Direct, you can encrypt east-west communications within the cluster itself for higher security.
 
 > [!IMPORTANT]
-> There is a notable performance operating cost with any end-to-end encryption protection when compared to non-encrypted.
+> There's a notable performance operating cost with any end-to-end encryption protection when compared to nonencrypted.
+
+## Prerequisites
+
+Before you enable SMB Encryption, ensure that the following prerequisites are met:
+
+- A supported version of Windows or Windows Server.
+- SMB 3.0 or later is enabled on both the client and server.
+- Administrator privileges or equivalent permissions to the SMB server and client.
 
 ## Enable SMB Encryption
 
@@ -97,7 +107,7 @@ Set-SmbServerConfiguration –RejectUnencryptedAccess $false
 ```
 
 > [!NOTE]
-> We do not recommend allowing unencrypted access when you have deployed encryption. Update the clients to support encryption instead.
+> We don't recommend allowing unencrypted access when you deploy encryption. Update the clients to support encryption instead.
 
 The preauthentication integrity capability described in the next section prevents an interception attack from downgrading a connection from SMB 3.1.1 to SMB 2.x (which would use unencrypted access). However, it doesn't prevent a downgrade to SMB 1.0, which would also result in unencrypted access.
 
