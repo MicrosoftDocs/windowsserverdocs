@@ -5,8 +5,8 @@ description: Find out about the Active Directory Domain Services Configuration W
 author: meaghanlewis
 ms.author: mosagie
 manager: daveba
-ms.date: 04/10/2025
-ms.topic: article
+ms.date: 06/26/2025
+ms.topic: concept-article
 # customer intent: As an administrator, I want to become familiar with the Active Directory Domain Services Configuration Wizard so that I can promote servers to domain controllers and demote servers.
 ---
 
@@ -75,7 +75,7 @@ The following screenshot shows the options that appear when you create a domain:
 
 - For **New domain name**, enter the name of the new domain.
   - For a tree domain, provide a valid, fully qualified root domain name. The name can't be single-labeled, and it must meet DNS domain name requirements.
-  - For a child domain, provide a valid, single-label child domain name. The name must meet DNS domain name requirements.
+  - For a child domain, provide a valid. Single-label child domain name. The name must meet DNS domain name requirements.
 
 - If your current credentials aren't from the domain, the Active Directory Domain Services Configuration Wizard prompts you for domain credentials. Select **Change** to provide domain credentials.
 
@@ -122,7 +122,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
 - When you create a forest, the **Domain Name System (DNS) server** option is selected by default. The first domain controller in the forest must be a global catalog server, and it can't be a read-only domain controller (RODC).
 
-- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a non-blank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
+- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a nonblank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
 
 For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
 
@@ -180,7 +180,7 @@ You can have the Active Directory Domain Services Configuration Wizard create th
 
 Alternatively, you can create these DNS delegation records before you install the DNS server role. To create a zone delegation, open **DNS Manager**, right-click the parent domain, and then select **New Delegation**. Follow the steps in the New Delegation Wizard to create the delegation.
 
-The installation process tries to create the delegation to ensure that computers in other domains can resolve DNS queries for hosts, including domain controllers and member computers, in the DNS subdomain. The delegation records can be automatically created only on Microsoft DNS servers. If the parent DNS domain zone resides on third-party DNS servers such as Berkeley Internet Name Domain (BIND) servers, a warning about the failure to create DNS delegation records appears on the **Prerequisites Check** page. For more information about the warning, see [Known Issues for installing and removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
+The installation process tries to create the delegation to ensure that computers in other domains can resolve DNS queries for hosts, including domain controllers and member computers, in the DNS subdomain. The delegation records can be automatically created only on Microsoft DNS servers. If the parent DNS domain zone resides on non-Microsoft DNS servers such as Berkeley Internet Name Domain (BIND) servers, a warning about the failure to create DNS delegation records appears on the **Prerequisites Check** page. For more information about the warning, see [Known Issues for installing and removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
 
 Delegations between the parent domain and the subdomain being promoted can be created and validated before or after the installation. There's no reason to delay the installation of a new domain controller because you can't create or update the DNS delegation.
 
