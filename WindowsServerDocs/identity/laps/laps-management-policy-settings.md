@@ -27,11 +27,11 @@ Windows LAPS queries all known registry key policy roots, starting at the top an
 Policy settings are never shared or inherited across policy key roots.
 
 > [!TIP]
-> The LAPS Local Configuration key is included in the preceding table for completeness. You can use this key if necessary, but the key primarily is intended to be used for testing and development. No management tools or policy mechanisms target this key.
+> The LAPS Local Configuration key is included in the preceding table for completeness. You can use this key if necessary, but the key is primarily intended to be used for testing and development. No management tools or policy mechanisms target this key.
 
 ## Supported policy settings by BackupDirectory
 
-Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the AD and Microsoft Entra scenarios.
+Windows LAPS supports multiple policy settings that you can administer via various policy management solutions, or even directly via the registry. Some of these settings only apply when backing up passwords to Active Directory, and some settings are common to both the Active Directory and Microsoft Entra scenarios.
 
 The following table specifies which settings apply to devices that have the specified `BackupDirectory` setting:
 
@@ -70,7 +70,7 @@ The template for this new Group Policy object is installed as part of Windows at
 ## Group Policy Object Central Store
 
 > [!IMPORTANT]
-> The Windows LAPS GPO template files are  NOT automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you implemented that approach. Instead you must manually copy the *LAPS.admx* to the GPO central store location. See [Create and Manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+> The Windows LAPS GPO template files aren't automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you implemented that approach. Instead, you must manually copy the *LAPS.admx* to the GPO central store location. See [Create and manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
 ## Windows LAPS CSP
 
@@ -87,7 +87,7 @@ Use this setting to control which directory the password for the managed account
 |Value|Description of setting|
 |--- |--- |
 |0|Disabled (password isn't backed up)|
-|1|Back up the password to Microsoft Entra-only|
+|1|Back up the password to Microsoft Entra only|
 |2|Back up the password to Windows Server Active Directory only|
 
 If not specified, this setting defaults to *0* (Disabled).
@@ -102,7 +102,7 @@ If not specified, this setting defaults to managing the built-in local administr
 > Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
 
 > [!IMPORTANT]
-> You can configure the specified account (built-in or custom) as either enabled or disabled. Windows LAPS manages that account's password in either state. If left in a disabled state however, the account must obviously first be enabled in order to be actually used.
+> You can configure the specified account (built-in or custom) as either enabled or disabled. Windows LAPS manages that account's password in either state. If left in a disabled state, however, the account must first be enabled in order to be used.
 
 > [!IMPORTANT]
 > If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account.
@@ -132,7 +132,7 @@ Use this setting to configure the length of the password of the managed local ad
 If not specified, this setting defaults to 14 characters.
   
 > [!IMPORTANT]
-> Don't configure `PasswordLength` to a value that is incompatible with the managed device's local password policy. This results in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAP event log).
+> Don't configure `PasswordLength` to a value that's incompatible with the managed device's local password policy. Doing so results in Windows LAPS failing to create a new compatible password. (Look for a 10027 event in the Windows LAP event log.)
 
 The `PasswordLength` setting is ignored unless `PasswordComplexity` is configured to one of the password options.
 
@@ -143,7 +143,7 @@ Use this setting to configure the number of words in the passphrase of the manag
 - **Minimum**: 3 words
 - **Maximum**: 10 words
 
-If not specified, this setting defaults to six words.
+If not specified, this setting defaults to 6 words.
 
 The `PassphraseLength` setting is ignored unless `PasswordComplexity` is configured to one of the passphrase options.
 
@@ -168,7 +168,7 @@ If not specified, this setting defaults to *4*.
 > Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4.
 
 > [!IMPORTANT]
-> Don't configure `PasswordComplexity` to a setting that is incompatible with the managed device's local password policy. This results in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAPS event log).
+> Don't configure `PasswordComplexity` to a setting that's incompatible with the managed device's local password policy. Doing so results in Windows LAPS failing to create a new compatible password. (Look for a 10027 event in the Windows LAPS event log.)
 
 ### PasswordExpirationProtectionEnabled
 
@@ -194,11 +194,11 @@ Supported values are either *1* (True) or *0* (False).
 
 Use this setting to configure the name or security identifier (SID) of a user or group that can decrypt the password stored in Active Directory.
 
-This setting is ignored if the password currently is stored in Azure.
+This setting is ignored if the password is currently stored in Azure.
 
-If not specified, only members of the Domain Admins group in the device's domain can decrypt the password.
+If this setting isn't specified, only members of the Domain Admins group in the device's domain can decrypt the password.
 
-If specified, the specified user or group can decrypt the password stored in Active Directory.
+If this setting is specified, the specified user or group can decrypt the password stored in Active Directory.
 
 > [!IMPORTANT]
 > The string stored in this setting is either an SID in string form or the fully qualified name of a user or group. Valid examples include:
@@ -207,7 +207,7 @@ If specified, the specified user or group can decrypt the password stored in Act
 > - `contoso\LAPSAdmins`
 > - `lapsadmins@contoso.com`
 >
-> The principal identified (either by SID or by user or group name) must exist and is resolvable by the device.
+> The principal identified (either by SID or by user or group name) must exist and be resolvable by the device.
 >
 > The data specified in this setting is entered as-is; for example, don't add enclosing quotes or parentheses.
 >
@@ -242,7 +242,7 @@ This setting defaults to *0* (False).
 
 ### PostAuthenticationResetDelay
 
-Use this setting to specify the amount of time (in hours) to wait after an authentication before executing the specified post-authentication actions (see `PostAuthenticationActions`). Supported values are:
+Use this setting to specify the amount of time (in hours) to wait after an authentication before running the specified post-authentication actions (see `PostAuthenticationActions`). Supported values are:
 
 - **Minimum** : 0 hours (setting this value to 0 disables all post-authentication actions)
 - **Maximum**: 24 hours
@@ -282,7 +282,7 @@ This setting defaults to *0* (False).
 
 ### AutomaticAccountManagementTarget
 
-Use this setting to specify whether the built-in Administrator account is automatically managed, or a new custom account.
+Use this setting to specify whether the built-in Administrator account or a new custom account is automatically managed.
 
 |Value|Description of setting|
 |--- |--- |
@@ -361,9 +361,9 @@ All Windows LAPS policy settings have a default value. The default value is appl
 |AutomaticAccountManagementRandomizeName|False|
 
 > [!IMPORTANT]
-> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting isn't configured. In the case where an invalid user or group name is specified, this causes a policy processing failure and the managed account's password isn't backed up.
+> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting isn't configured. When an invalid user or group name is specified, a policy processing failure occurs and the managed account's password isn't backed up.
 
-Keep these defaults in mind when configuring new Windows LAPS features, for example passphrase support. If you configure a policy with a PasswordComplexity value of 6 (long word passphrases) and then apply that policy to an older OS that doesn't support that value, the target OS uses the default value of 4. To avoid this outcome, create two different policies: one for the older OS and one for the newer OS.
+Keep these defaults in mind when configuring new Windows LAPS features, for example, passphrase support. If you configure a policy with a PasswordComplexity value of 6 (long word passphrases) and then apply that policy to an older OS that doesn't support that value, the target OS uses the default value of 4. To avoid this outcome, create two different policies: one for the older OS and one for the newer OS.
 
 ## Related content
 
