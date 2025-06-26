@@ -36,12 +36,12 @@ The underlying Windows PowerShell and layer of operations for the new Recycle Bi
 
 ### Limitations
 
-- Because the Active Directory Administrative Center can only manage domain partitions, it can't restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you can't delete objects from the Schema partition). To restore objects from non-domain partitions, use [Restore-ADObject](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617262(v=technet.10)).
+- Because the Active Directory Administrative Center can only manage domain partitions, it can't restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you can't delete objects from the Schema partition). To restore objects from nondomain partitions, use [Restore-ADObject](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617262(v=technet.10)).
 
-- The Active Directory Administrative Center can't restore sub-trees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU doesn't restore the child objects.
+- The Active Directory Administrative Center can't restore subtrees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU doesn't restore the child objects.
 
   > [!NOTE]
-  > The Active Directory Administrative Center batch restore operation does a "best effort" sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, sub-trees of objects may be restored in a single action. But corner cases, such as a selection that contains partial trees - trees with some of the deleted parent nodes missing - or error cases, such as skipping the child objects when parent restore fails, may not work as expected. For this reason, you should always restore sub-trees of objects as a separate action after you restore the parent objects.
+  > The Active Directory Administrative Center batch restore operation does a "best effort" sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, subtrees of objects can be restored in a single action. But corner cases, such as a selection that contains partial trees - trees with some of the deleted parent nodes missing - or error cases, such as skipping the child objects when parent restore fails, might not work as expected. For this reason, you should always restore subtrees of objects as a separate action after you restore the parent objects.
 
 The Active Directory Recycle Bin requires a Windows Server 2008 R2 Forest Functional Level and you must be a member of the Enterprise Admins group. Once enabled, you can't disable Active Directory Recycle Bin. Active Directory Recycle Bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.
 
@@ -57,7 +57,7 @@ The Active Directory Administrative Center shows the **Enable Recycle Bin Confir
 > The option to enable the Active Directory Recycle Bin is unavailable if:
 >
 > - The forest functional level is less than Windows Server 2008 R2
-> - It is already enabled
+> - It's already enabled
 
 The equivalent Active Directory Windows PowerShell cmdlet is:
 
@@ -83,7 +83,7 @@ The **Deleted Objects** container shows you all the restorable objects in that d
 
 For a deeper explanation of the recycle bin's architecture and processing rules, see [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](/archive/blogs/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting).
 
-The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can raise this limit as high as 100,000 objects by clicking the **Manage** menu, then **Management List Options**.
+The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can raise this limit as high as 100,000 objects by selecting the **Manage** menu, and then selecting **Management List Options**.
 
 ![Screenshot that shows how to raise the limit of the number of objects returned from a container by selecting the Management List Options menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)
 
@@ -95,7 +95,7 @@ Active Directory Administrative Center offers powerful criteria and filtering op
 
 ![Screenshot that shows the filtering options available during a restoration.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)
 
-Rather than writing complex LDAP filters and converting UTC values into dates and times, use the basic and advanced **Filter** menu to list only the relevant objects. If you know the day of deletion, the names of objects, or any other key data, use that to your advantage when filtering. Toggle the advanced filter options by clicking the chevron to the right of the search box.
+Rather than writing complex LDAP filters and converting UTC values into dates and times, use the basic and advanced **Filter** menu to list only the relevant objects. If you know the day of deletion, the names of objects, or any other key data, use that to your advantage when filtering. Toggle the advanced filter options by selecting the chevron to the right of the search box.
 
 The restore operation supports all the standard filter criteria options, the same as any other search. Of the built-in filters, the important ones for restoring objects are typically:
 
@@ -203,7 +203,7 @@ It's possible that over time, the Deleted Objects container will accumulate over
 
 1. Right-click the **Deleted Objects** container and select **Search under this node**.
 1. Select the chevron to expose the **+Add** criteria menu, select **+Add** and add **Last modified between given dates**. The Last Modified time (the **whenChanged** attribute) is a close approximation of the deletion time; in most environments, they're identical. This query performs a server-side search.
-1. Locate the deleted objects to restore by using further display filtering, sorting, and so on in the results, and then restore them normally.
+1. Locate the deleted objects to restore by using further display filtering, sorting, and so on, in the results, and then restore them normally.
 
 ## Configuring and Managing Fine-Grained Password Policies Using Active Directory Administrative Center
 
@@ -223,7 +223,7 @@ Creating a new FGPP or editing an existing one brings up the **Password Settings
 
 ![Screenshot that shows the Password Settings editor for creating or editing Fine-Grained Password Policies.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)
 
-Fill out all required (red asterisk) fields and any optional fields, and then select **Add** to set the users or groups that receive this policy. FGPP overrides default domain policy settings for those specified security principals. In the figure above, a restrictive policy applies only to the built-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high-risk account used only by IT professionals.
+Fill out all required (red asterisk) fields and any optional fields, and then select **Add** to set the users or groups that receive this policy. FGPP overrides default domain policy settings for those specified security principals. In the preceding figure, a restrictive policy applies only to the built-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high-risk account used only by IT professionals.
 
 You also set precedence and to which users and groups the policy applies within a given domain.
 
@@ -295,16 +295,16 @@ The Active Directory Administrative Center's design required minimal code usage 
 
 ## Manage Different Domains in Active Directory Administrative Center
 
-When you open Active Directory Administrative, the domain that you're currently logged on to on this computer (the local domain) appears in the Active Directory Administrative Center navigation pane (the left pane). Depending on the rights of your current set of logon credentials, you can view or manage the Active Directory objects in this local domain.
+When you open Active Directory Administrative, the domain that you're currently logged on to on this computer (the local domain) appears in the Active Directory Administrative Center navigation pane (the left pane). Depending on the rights of your current set of sign-in credentials, you can view or manage the Active Directory objects in this local domain.
 
-You can also use the same set of logon credentials and the same instance of Active Directory Administrative Center to view or manage Active Directory objects in any other domain in the same forest, or a domain in another forest that has an established trust with the local domain. Both one-way trusts and two-way trusts are supported. There's no minimum group membership required to complete this procedure.
+You can also use the same set of sign-in credentials and the same instance of Active Directory Administrative Center to view or manage Active Directory objects in any other domain in the same forest, or a domain in another forest that has an established trust with the local domain. Both one-way trusts and two-way trusts are supported. There's no minimum group membership required to complete this procedure.
 
 > [!NOTE]
-> If there is a one-way trust between Domain **A** and Domain **B** through which users in Domain **A** can access resources in Domain **B** but users in Domain **B** cannot access resources in Domain **A**, if you are running Active Directory Administrative Center on the computer where Domain **A** is your local domain, you can connect to Domain **B** with the current set of logon credentials and in the same instance of Active Directory Administrative Center.
+> If there's a one-way trust between Domain **A** and Domain **B** through which users in Domain **A** can access resources in Domain **B** but users in Domain **B** can't access resources in Domain **A**, if you're running Active Directory Administrative Center on the computer where Domain **A** is your local domain, you can connect to Domain **B** with the current set of sign-in credentials and in the same instance of Active Directory Administrative Center.
 >
-> But if you are running Active Directory Administrative Center on the computer where Domain **B** is your local domain, you cannot connect to Domain **A** with the same set of credentials in the same instance of the Active Directory Administrative Center.
+> But if you're running Active Directory Administrative Center on the computer where Domain **B** is your local domain, you can't connect to Domain **A** with the same set of credentials in the same instance of the Active Directory Administrative Center.
 
-### Windows Server 2012: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of logon credentials
+### Windows Server 2012: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of sign-in credentials
 
 1. To open **Active Directory Administrative Center**, in **Server Manager**, select **Tools**, and then select **Active Directory Administrative Center**.
 
@@ -316,17 +316,17 @@ You can also use the same set of logon credentials and the same instance of Acti
 
 1. When you're successfully connected to the foreign domain, browse through the columns in the **Add Navigation Nodes** window, select the container or containers to add to your Active Directory Administrative Center navigation pane, and then select **OK**.
 
-### Windows Server 2008 R2: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of logon credentials
+### Windows Server 2008 R2: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of sign-in credentials
 
 1. To open **Active Directory Administrative Center**, select **Start**, select **Administrative Tools**, and then select **Active Directory Administrative Center**.
 
    > [!TIP]
-   > Another way to open Active Directory Administrative Center is to click **Start**, click **Run**, and then type **dsac.exe**.
+   > Another way to open Active Directory Administrative Center is to select **Start**, select **Run**, and then type **dsac.exe**.
 
 1. Then open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, and select **Add Navigation Nodes**.
 
    > [!TIP]
-   > Another way to open **Add Navigation Nodes** is to right-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then click **Add Navigation Nodes**.
+   > Another way to open **Add Navigation Nodes** is to right-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then select **Add Navigation Nodes**.
 
 1. In **Add Navigation Nodes**, select **Connect to other domains** as shown in the following illustration.
 
@@ -334,7 +334,7 @@ You can also use the same set of logon credentials and the same instance of Acti
 
 1. When you're successfully connected to the foreign domain, browse through the columns in the **Add Navigation Nodes** window, select the container or containers to add to your Active Directory Administrative Center navigation pane, and then select **OK**.
 
-### Manage a domain using logon credentials that are different from the current set of logon credentials
+### Manage a domain using sign-in credentials that are different from the current set of sign-in credentials
 
 Open Active Directory Administrative Center at the command prompt, type the following command, and then press ENTER:
 
@@ -470,7 +470,7 @@ Setting the Verbose level also shows the .NET stacks for each function, but thes
 - Network communications are blocked to the ADWS service from the computer running the Active Directory Administrative Center.
 
 > [!IMPORTANT]
-> There is also an out-of-band version of the service called the [Active Directory Management Gateway](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391908(v=ws.10)#what-does-the-active-directory-management-gateway-service-do), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.
+> There's also an out-of-band version of the service called the [Active Directory Management Gateway](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391908(v=ws.10)#what-does-the-active-directory-management-gateway-service-do), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.
 
 The following errors are shown when no Active Directory Web Services instances are available:
 
@@ -507,10 +507,10 @@ To troubleshoot this issue, use these steps:
    [Microsoft.ActiveDirectory.WebServices.exe]
    ```
 
-   If listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)". If not listening, validate again that the service is running on this server and restart it. Validate that no other process is already listening on port 9389.
+   If listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)." If not listening, validate again that the service is running on this server and restart it. Validate that no other process is already listening on port 9389.
 
-1. Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by NLTEST. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or arrive and the domain controller replies but they never reach the client, it's likely there's a firewall in between the computers on the network dropping packets on that port. This firewall may be software or hardware, and may be part of third party endpoint protection (antivirus) software.
+1. Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by NLTEST. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or arrive and the domain controller replies but they never reach the client, it's likely there's a firewall in between the computers on the network dropping packets on that port. This firewall can be software or hardware, and can be part of non-Microsoft endpoint protection (antivirus) software.
 
 ## Related content
 
-- [AD Recycle Bin, Fine-Grained Password Policy, and PowerShell History](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11))
+- [Active Directory Recycle Bin, fine-grained password policy, and PowerShell History Viewer](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11))
