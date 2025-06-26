@@ -143,7 +143,7 @@ Use this setting to configure the number of words in the passphrase of the manag
 - **Minimum**: 3 words
 - **Maximum**: 10 words
 
-If not specified, this setting defaults to 6 words.
+If not specified, this setting defaults to six words.
 
 The `PassphraseLength` setting is ignored unless `PasswordComplexity` is configured to one of the passphrase options.
 
@@ -201,7 +201,7 @@ If not specified, only members of the Domain Admins group in the device's domain
 If specified, the specified user or group can decrypt the password stored in Active Directory.
 
 > [!IMPORTANT]
-> The string that's stored in this setting is either an SID in string form or the fully qualified name of a user or group. Valid examples include:
+> The string stored in this setting is either an SID in string form or the fully qualified name of a user or group. Valid examples include:
 >
 > - `S-1-5-21-2127521184-1604012920-1887927527-35197`
 > - `contoso\LAPSAdmins`
@@ -361,9 +361,9 @@ All Windows LAPS policy settings have a default value. The default value is appl
 |AutomaticAccountManagementRandomizeName|False|
 
 > [!IMPORTANT]
-> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting is not configured. In the case where an invalid user or group name is specified, this will cause a policy processing failure and the managed account's password won't be backed up.
+> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting isn't configured. In the case where an invalid user or group name is specified, this causes a policy processing failure and the managed account's password isn't backed up.
 
-Keep these defaults in mind when configuring new Windows LAPS features, for example passphrase support. If you configure a policy with a PasswordComplexity value of 6 (long word passphrases), then apply that policy to an older OS which doesn't support that value, the target OS uses the default value of 4. To avoid this outcome, create two different policies: one for the older OS and one for the newer OS.
+Keep these defaults in mind when configuring new Windows LAPS features, for example passphrase support. If you configure a policy with a PasswordComplexity value of 6 (long word passphrases) and then apply that policy to an older OS that doesn't support that value, the target OS uses the default value of 4. To avoid this outcome, create two different policies: one for the older OS and one for the newer OS.
 
 ## Related content
 
