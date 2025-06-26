@@ -65,8 +65,8 @@ The equivalent Active Directory Windows PowerShell cmdlet is:
 Enable-ADOptionalFeature
 ```
 
-For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](./introduction-to-active-directory-administrative-center-enhancements--level-100-.md#active-directory-recycle-bin-step-by-step).
-
+For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11)#active-directory-recycle-bin).
+ 
 ### Managing Active Directory Recycle Bin using Active Directory Administrative Center
 
 This section uses the example of an existing domain named `corp.contoso.com`. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contains further OUs, users, and groups.
