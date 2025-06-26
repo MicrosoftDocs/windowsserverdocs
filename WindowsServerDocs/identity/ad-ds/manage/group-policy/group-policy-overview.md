@@ -15,7 +15,7 @@ Group Policy enables configuration and settings management of user and computer 
 
 ## What is a Group Policy
 
-Group policy can represent policy settings in the locally in the file system or in Active Directory Domain Services (AD DS). When used with Active Directory (AD), Group Policy settings are contained in a Group Policy Object (GPO). A GPO is a virtual collection of policy settings, security permissions, and scope of management (SOM) that you can apply to users and computers in AD. A GPO consists of two main components: the Group Policy container and the Group Policy template. The Group Policy container is stored in the domain partition of Active Directory, while the Group Policy template is located in the SYSVOL folder on each domain controller (DC).
+Group policy can represent policy settings locally in the file system or in Active Directory Domain Services (AD DS). When used with Active Directory (AD), Group Policy settings are contained in a Group Policy Object (GPO). A GPO is a virtual collection of policy settings, security permissions, and scope of management (SOM) that you can apply to users and computers in AD. A GPO consists of two main components: the Group Policy container and the Group Policy template. The Group Policy container is stored in the domain partition of Active Directory, while the Group Policy template is located in the SYSVOL folder on each domain controller (DC).
 
 
 These components are replicated across DCs via AD replication and either the File Replication Service (FRS) or Distributed File System Replication (DFSR).
