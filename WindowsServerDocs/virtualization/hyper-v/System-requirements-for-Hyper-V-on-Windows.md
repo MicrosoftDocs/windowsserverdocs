@@ -110,7 +110,7 @@ These virtual machines rely on virtualization-based security and are available s
 
 ## Final check
 
-If all OS, hardware, and compatibility requirements are met, you see **Hyper-V** in **Control Panel: Turn Windows features on or off**, and it has 2 options:
+If all OS, hardware, and compatibility requirements are met, you see **Hyper-V** in **Control Panel: Turn Windows features on or off**, and it has two options:
 
 - Hyper-V platform
 - Hyper-V Management Tools
