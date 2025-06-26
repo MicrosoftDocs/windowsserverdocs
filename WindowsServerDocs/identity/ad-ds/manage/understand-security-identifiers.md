@@ -1,10 +1,10 @@
 ---
-title: Security identifiers
+title: Security Identifiers
 description: Become familiar with unique identifiers for Windows Server accounts and groups, such as security identifiers (SIDs). See tables of well-known SIDs.
 author: meaghanlewis
 ms.author: mosagie
-ms.topic: article
-ms.date: 03/21/2025
+ms.topic: concept-article
+ms.date: 06/26/2025
 # customer intent: As an administrator, I want to become familiar with Windows Server security identifiers (SIDs) so that I can protect access to network resources by better using this core part of the Windows security model.
 ---
 
@@ -326,6 +326,6 @@ You might see the following registry keys under AllCachedCapabilities:
 
 The prefix of all capability SIDs is S-1-15-3.
 
-## See also
+## Related content
 
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
