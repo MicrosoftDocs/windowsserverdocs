@@ -3,7 +3,7 @@ title: Configure policy settings for Windows LAPS
 description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS) to enhance security and automate local administrator password management.
 author: jay98014
 ms.author: mosagie
-ms.date: 06/13/2025
+ms.date: 06/26/2025
 ms.topic: concept-article
 ---
 
@@ -70,7 +70,7 @@ The template for this new Group Policy object is installed as part of Windows at
 ## Group Policy Object Central Store
 
 > [!IMPORTANT]
-> The Windows LAPS GPO template files are  NOT automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you have chosen to implement that approach. Instead you must manually copy the *LAPS.admx* to the GPO central store location. See [Create and Manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+> The Windows LAPS GPO template files are  NOT automatically copied to your GPO central store as part of a Windows Update patching operation, assuming you implemented that approach. Instead you must manually copy the *LAPS.admx* to the GPO central store location. See [Create and Manage Central Store](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
 ## Windows LAPS CSP
 
@@ -114,13 +114,13 @@ If not specified, this setting defaults to managing the built-in local administr
 
 This setting controls the maximum password age of the managed local administrator account. Supported values are:
 
-- **Minimum**: 1 day (When the backup directory is configured to be Microsoft Entra ID, the minimum is 7 days.)
+- **Minimum**: One day (When the backup directory is configured to be Microsoft Entra ID, the minimum is seven days.)
 - **Maximum**: 365 days
 
 If not specified, this setting defaults to 30 days.
 
 > [!IMPORTANT]
-> Changes to the `PasswordAgeDays` policy setting have no effect on the expiration time of the current password. Similarly, changes to the `PasswordAgeDays` policy setting won't cause the managed device to initiate a password rotation.
+> Changes to the `PasswordAgeDays` policy setting have no effect on the expiration time of the current password. Similarly, changes to the `PasswordAgeDays` policy setting don't cause the managed device to initiate a password rotation.
 
 ### PasswordLength
 
