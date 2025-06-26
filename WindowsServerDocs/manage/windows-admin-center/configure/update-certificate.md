@@ -8,7 +8,7 @@ ms.date: 06/23/2025
 ---
 # Update the certificate used by Windows Admin Center
 
-When you have Windows Admin Center (WAC) deployed as a service, you must provide a certificate for HTTPS. TLS certificates play a critical role in securing communications between the WAC gateway and connected devices. By encrypting data and authenticating identities, these certificates enhance the integrity and security of the system.
+When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. TLS certificates play a critical role in securing communications between the WAC gateway and connected devices. By encrypting data and authenticating identities, these certificates enhance the integrity and security of the system.
 
 You might want to update the certificate if:
 
@@ -67,31 +67,28 @@ To update the certificate used by Windows Admin Center, you need the following p
 
 ---
 
-You've now updated the certificate used by Windows Admin Center.
-
 ## Troubleshooting
 
-### Diagnostic processes
+There are different tools that you can use to find logs and error messages. The following are the best diagnostig tools to use:
 
--	**Events Viewer**: Utilize the Events Viewer under the WindowsAdminCenter Event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
- - **Browser errors**: If the WAC service is properly set up but browsers indicate an error, verify the configuration of the TLS certificate and ensure it matches the required setup parameters.
-- **Ajax error**: An Ajax error 500 may appear when attempting to open a connection with an invalid certificate. Ensure the certificate is correctly installed and validated to avoid this issue. 
- 
+- **Events Viewer**: Utilize the Events Viewer under the WindowsAdminCenter Event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
+- **Browser errors**: If the WAC service is properly set up but browsers indicate an error, verify the configuration of the TLS certificate and ensure it matches the required setup parameters.
+- **Ajax error**: An Ajax error may appear when attempting to open a connection with an invalid certificate. To avoid this issue, ensure the certificate is correctly installed and validated.
+
 ### Common problems
 
 - **Invalid certificate**:
-  - A certificate might be invalid. This will come up as "invalid certificate".
-  - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 cannot be used if invalid certificate is used when communicates to the sub processes.
-  - You should not generate a self-signed certificate because its a security issue
+  - A certificate might be invalid. This shows as "invalid certificate".
+  - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 can't be used if invalid certificate is used when communicates to the sub processes.
+  - You shouldn't generate a self-signed certificate because it's a security issue.
 - **Mismatched DNS name**
   - The certificate DNS name might be different from the WAC DNS name.
-  - If this is not resolved then WAC might not work or bring errors.
+  - If this isn't resolved then WAC might not work or bring errors.
 - **Wrong or inaccurate thumbprint**
   - Check that the thumbprint is present, correctly registered, and doesn't match what is expected. WAC may not detect the certificate.
 - **Private Key not configured to be accessed by the network service**
   - HTTPS protocol layer reads private key of certificate to encrypt TLS payload when communicating over HTTPS protocol.
-  - WAC uses Network Service account, so Private Key must be accessible by Network Service. Use certlm.msc tool to select All Tasks menu to open Manage Private Keys... dialog.
-  - Make sure NETWORK SERVICE is configured to access the private key.
+  - WAC uses Network Service account, so Private Key must be accessible by Network Service. Use certlm.msc tool to select All Tasks menu to open **Manage Private Keys...** dialog.
+  - Make sure `NETWORK SERVICE` is configured to access the private key.
 - **Network, Policy and Firewall configuration issues**
-  -	If you have restricted TLS communications, then the WAC Gateway might not be able to access
-  -	Might be firewall or GPO
+  -	If you restrict TLS communications, then the WAC Gateway might not be able to access the certificate. This might be firewall or GPO issue.
