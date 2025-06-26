@@ -116,7 +116,7 @@ If all OS, hardware and compatibility requirements are met then you see **Hyper-
 1. Hyper-V Management Tools
 
 > [!NOTE]
-> If you see **Windows Hypervisor Platform** instead of **Hyper-V** in **Control Panel: Turn Windows features on or >off** your system might not be compatible for Hyper-V, then cross check above requirements.
+> If you see **Windows Hypervisor Platform** instead of **Hyper-V** in **Control Panel: Turn Windows features on or >off**, your system might not be compatible with Hyper-V. Check the preceding requirements.
 >If you run **systeminfo** on an existing Hyper-V host, the Hyper-V Requirements section reads:
 >```
 >Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed.
