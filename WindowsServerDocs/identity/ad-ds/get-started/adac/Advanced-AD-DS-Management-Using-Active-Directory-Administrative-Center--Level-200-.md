@@ -45,7 +45,7 @@ The underlying Windows PowerShell and layer of operations for the recycle bin fu
 
 The Active Directory recycle bin requires a Windows Server 2008 R2 forest functional level, and you must be a member of the Enterprise Admins group. After Active Directory recycle bin is enabled, you can't disable it. Active Directory recycle bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.
 
-### Enabling Active Directory recycle bin by using Active Directory Administrative Center
+### Enabling Active Directory recycle bin using Active Directory Administrative Center
 
 To enable the Active Directory recycle bin, open the **Active Directory Administrative Center** and select the name of your forest in the navigation pane. From the **Tasks** pane, select **Enable Recycle Bin**.
 
@@ -69,7 +69,7 @@ For more information about using Windows PowerShell to enable the Active Directo
  
 ### Managing Active Directory recycle bin by using Active Directory Administrative Center
 
-This section uses the example of an existing domain named `corp.contoso.com`. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contain further OUs, users, and groups.
+This section uses the example of an existing domain named `corp.contoso.com`. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department. Each of these child OUs contains further OUs, users, and groups.
 
 ![Screenshot that shows an example of an existing domain.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)
 
@@ -171,7 +171,7 @@ Consider the scenario where an administrator accidentally deletes the Sales OU, 
 
 First, observe the value of the **Last Known Parent** attribute for all the deleted users and how it reads **OU=Sales\0ADEL:*<guid+deleted object's container distinguished name>***:
 
-![Screenshot that highlights the value of the Last known parent attribute.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)
+![Screenshot that highlights the value of the Last Known Parent attribute.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)
 
 Filter on the ambiguous name Sales to return the deleted OU, which you then restore:
 
@@ -185,7 +185,7 @@ Filter on all the Sales users. Hold down **CTRL + A** to select all the deleted 
 
 ![Screenshot that shows the selected objects and the progress as they move from the Deleted Objects container to the Sales OU.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesUndelete.png)
 
-If the **Sales** OU contained child OUs of its own, then you would restore the child OUs first before restoring their children, and so on.
+If the **Sales** OU contained child OUs of its own, you should restore the child OUs first before restoring their children, and so on.
 
 To restore all nested deleted objects by specifying a deleted parent container, see [Appendix B: Restore Multiple, Deleted Active Directory Objects (Sample Script)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379504(v=ws.10)).
 
@@ -197,39 +197,39 @@ Restore-ADObject
 
 The `Restore-ADObject` cmdlet functionality didn't change between Windows Server 2008 R2 and Windows Server 2012.
 
-##### Server-side Filtering
+##### Server-side filtering
 
-It's possible that over time, the Deleted Objects container will accumulate over 20,000 (or even 100,000) objects in medium and large enterprises and have difficulty showing all objects. Since the filter mechanism in Active Directory Administrative Center relies on client-side filtering, it can't show these additional objects. To work around this limitation, use the following steps to perform a server-side search:
+It's possible that over time the Deleted Objects container will accumulate more than 20,000 (or even 100,000) objects in medium and large enterprises and have difficulty showing all objects. Because the filter mechanism in Active Directory Administrative Center relies on client-side filtering, it can't show these additional objects. To work around this limitation, use the following steps to perform a server-side search:
 
 1. Right-click the **Deleted Objects** container and select **Search under this node**.
-1. Select the chevron to expose the **+Add** criteria menu, select **+Add** and add **Last modified between given dates**. The Last Modified time (the **whenChanged** attribute) is a close approximation of the deletion time; in most environments, they're identical. This query performs a server-side search.
+1. Select the chevron to expose the **+Add** criteria menu, select **+Add** and add **Last modified between given dates**. The Last Modified time (the **whenChanged** attribute) is a close approximation of the deletion time. In most environments, they're identical. This query performs a server-side search.
 1. Locate the deleted objects to restore by using further display filtering, sorting, and so on, in the results, and then restore them normally.
 
-## Configuring and Managing Fine-Grained Password Policies Using Active Directory Administrative Center
+## Configuring and managing fine-grained password policies using Active Directory Administrative Center
 
-### Configuring Fine-Grained Password Policies
+### Configuring fine-grained password policies
 
-The Active Directory Administrative Center enables you to create and manage Fine-Grained Password Policy (FGPP) objects. Windows Server 2008 introduced the FGPP feature but Windows Server 2012 has the first graphical management interface for it. You apply Fine-Grained Password Policies at a domain level and it enables overriding the single domain password required by Windows Server 2003. By creating different FGPP with different settings, individual users or groups get differing password policies in a domain.
+The Active Directory Administrative Center enables you to create and manage fine-grained password policy (FGPP) objects. Windows Server 2008 introduced the FGPP feature, but Windows Server 2012 has the first graphical management interface for it. You apply fine-grained password policies at a domain level, and it enables overriding the single domain password required by Windows Server 2003. If you create different FGPP with different settings, individual users or groups get differing password policies in a domain.
 
-For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).
+For information about fine-grained password policies, see [AD DS Fine-Grained Password and Account Lockout Policy Step-by-Step Guide (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).
 
-In the Navigation pane, select **Tree View**, select your domain, select **System**, select **Password Settings Container**, in the Tasks pane, select **New**, then select **Password Settings**.
+In the **Navigation** pane, select **Tree View**, select your domain, select **System**, and then select **Password Settings Container**. In the **Tasks** pane, select **New**, and then select **Password Settings**.
 
 ![Screenshot that shows where you can add new password settings.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)
 
-### Managing Fine-Grained Password Policies
+### Managing fine-grained password policies
 
 Creating a new FGPP or editing an existing one brings up the **Password Settings** editor. From here, you configure all desired password policies, as you would have in Windows Server 2008 or Windows Server 2008 R2, only now with a purpose-built editor.
 
-![Screenshot that shows the Password Settings editor for creating or editing Fine-Grained Password Policies.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)
+![Screenshot that shows the Password Settings editor for creating or editing fine-grained password policies.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)
 
-Fill out all required (red asterisk) fields and any optional fields, and then select **Add** to set the users or groups that receive this policy. FGPP overrides default domain policy settings for those specified security principals. In the preceding figure, a restrictive policy applies only to the built-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high-risk account used only by IT professionals.
+Fill out all required (red asterisk) fields and any optional fields, and then select **Add** to set the users or groups that receive this policy. FGPP overrides default domain policy settings for those specified security principals. In the preceding screenshot, a restrictive policy applies only to the built-in Administrator account, to prevent compromise. The policy is far too complex for standard users to comply with, but is perfect for a high-risk account used only by IT professionals.
 
 You also set precedence and to which users and groups the policy applies within a given domain.
 
 ![Screenshot that shows where you can set precedence and to which users and groups the policy applies within a given domain.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_Precedence.png)
 
-The Active Directory Windows PowerShell cmdlets for Fine-Grained Password Policy are:
+The Active Directory Windows PowerShell cmdlets for fine-grained password policy are:
 
 ```powershell
 Add-ADFineGrainedPasswordPolicySubject
@@ -241,11 +241,11 @@ Remove-ADFineGrainedPasswordPolicySubject
 Set-ADFineGrainedPasswordPolicy
 ```
 
-Fine-Grained Password Policy cmdlet functionality didn't change between the Windows Server 2008 R2 and Windows Server 2012. As a convenience, the following diagram illustrates the associated arguments for cmdlets:
+Fine-grained password policy cmdlet functionality didn't change between Windows Server 2008 R2 and Windows Server 2012. The following diagram illustrates the associated arguments for cmdlets:
 
 ![Illustration that shows the associated arguments for cmdlets.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)
 
-The Active Directory Administrative Center also enables you to locate the resultant set of applied FGPP for a specific user. Right-click any user and select **View resultant password settings...** to open the *Password Settings* page that applies to that user through implicit or explicit assignment:
+The Active Directory Administrative Center also enables you to locate the resultant set of applied FGPP for a specific user. Right-click any user and select **View resultant password settings** to open the **Password Settings** page that applies to that user through implicit or explicit assignment:
 
 ![Screenshot that highlights the View resultant password settings menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)
 
@@ -253,19 +253,19 @@ Examining the **Properties** of any user or group shows the **Directly Associate
 
 ![Screenshot that highlights the Directly Associated Password Settings section. ](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)
 
-Implicit FGPP assignment doesn't display here; for that, you must use the **View resultant password settings...** option.
+Implicit FGPP assignment doesn't display here. For that, you need to use the **View resultant password settings** option.
 
 ## Using the Active Directory Administrative Center Windows PowerShell History Viewer
 
-The future of Windows management is Windows PowerShell. By layering graphical tools on top of a task automation framework, management of the most complex distributed systems becomes consistent and efficient. You need to understand how Windows PowerShell works in order to reach your full potential and maximize your computing investments.
+The future of Windows management is Windows PowerShell. Layering graphical tools on top of a task automation framework makes the management of the most complex distributed systems consistent and efficient. You need to understand how Windows PowerShell works in order to reach your full potential and maximize your computing investments.
 
-The Active Directory Administrative Center now provides a complete history of all the Windows PowerShell cmdlets it runs and their arguments and values. You can copy the cmdlet history elsewhere for study or modification and re-use. You can create Task notes to help isolate what your Active Directory Administrative Center commands resulted in Windows PowerShell. You can also filter the history to find points of interest.
+The Active Directory Administrative Center now provides a complete history of all the Windows PowerShell cmdlets it runs and their arguments and values. You can copy the cmdlet history elsewhere for study or modification and re-use. You can create task notes to help isolate the Windows PowerShell results for your Active Directory Administrative Center commands. You can also filter the history to find points of interest.
 
-The Active Directory Administrative Center Windows PowerShell History Viewer's purpose is for you to learn through practical experience.
+The purpose of the Active Directory Administrative Center Windows PowerShell History Viewer is for you to learn through practical experience.
 
 ![Screenshot that shows the Active Directory Administrative Center Windows PowerShell History Viewer.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)
 
-Select the chevron (arrow) to show Windows PowerShell History Viewer.
+Select the arrow to show Windows PowerShell History Viewer.
 
 ![Screenshot that shows how to show the Windows PowerShell History Viewer.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RaiseViewer.png)
 
@@ -275,40 +275,40 @@ Expand any line item of interest to see all values provided to the cmdlet's argu
 
 ![Screenshot that shows how to expand a line item to see all the values provided to the cmdlet's arguments.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)
 
-Select the **Start Task** menu to create a manual notation before you use Active Directory Administrative Center to create, modify, or delete an object. Type in what you were doing. When done with your change, select **End Task**. The task note groups all of those actions performed into a collapsible note you can use for better understanding.
+Select **Start Task** to create a manual notation before you use Active Directory Administrative Center to create, modify, or delete an object. Type in what you were doing. When done with your change, select **End Task**. The task note groups all of the actions performed into a collapsible note that you can use for better understanding.
 
-For example, to see the Windows PowerShell commands used to change a user's password and remove said user from a group:
+For example, to see the Windows PowerShell commands used to change a user's password and remove the user from a group:
 
 ![Screenshot that highlights how to see the Windows PowerShell commands used to change a user's password and remove the user from a group.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RemoveUser.gif)
 
-Selecting the **Show All** check box also shows the Get-* verb Windows PowerShell cmdlets that only retrieve data.
+Selecting the **Show All** box also shows the Get-* verb Windows PowerShell cmdlets that only retrieve data.
 
-![Advanced AD DS Management](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)
+![Screenshot that shows advanced AD DS management.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)
 
-The history viewer shows the literal commands run by the Active Directory Administrative Center and you might note that some cmdlets appear to run unnecessarily. For example, you can create a new user with:
+The history viewer shows the literal commands run by the Active Directory Administrative Center. You might note that some cmdlets appear to run unnecessarily. For example, you can create a new user with:
 
 ```powershell
 New-ADUser
 ```
 
-The Active Directory Administrative Center's design required minimal code usage and modularity. Therefore, instead of a set of functions that create new users and another set that modify existing users, it minimally does each function and then chains them together with the cmdlets. Keep this in mind when you're learning Active Directory Windows PowerShell. You can also use that as a learning technique, where you see how simply you can use Windows PowerShell to complete a single task.
+The Active Directory Administrative Center design required minimal code usage and modularity. Therefore, instead of a set of functions that create new users and another set that modify existing users, it minimally does each function and then chains them together with the cmdlets. Keep this in mind when you're learning Active Directory Windows PowerShell. You can also use that as a learning technique, where you see how simply you can use Windows PowerShell to complete a single task.
 
-## Manage Different Domains in Active Directory Administrative Center
+## Manage different domains in Active Directory Administrative Center
 
-When you open Active Directory Administrative, the domain that you're currently logged on to on this computer (the local domain) appears in the Active Directory Administrative Center navigation pane (the left pane). Depending on the rights of your current set of sign-in credentials, you can view or manage the Active Directory objects in this local domain.
+When you open Active Directory Administrative Center, the domain that you're currently logged on to on this computer (the local domain) appears in the Active Directory Administrative Center navigation pane (the left pane). Depending on the rights of your current set of sign-in credentials, you can view or manage the Active Directory objects in this local domain.
 
 You can also use the same set of sign-in credentials and the same instance of Active Directory Administrative Center to view or manage Active Directory objects in any other domain in the same forest, or a domain in another forest that has an established trust with the local domain. Both one-way trusts and two-way trusts are supported. There's no minimum group membership required to complete this procedure.
 
 > [!NOTE]
-> If there's a one-way trust between Domain **A** and Domain **B** through which users in Domain **A** can access resources in Domain **B** but users in Domain **B** can't access resources in Domain **A**, if you're running Active Directory Administrative Center on the computer where Domain **A** is your local domain, you can connect to Domain **B** with the current set of sign-in credentials and in the same instance of Active Directory Administrative Center.
+> If there's a one-way trust between domain A and domain B through which users in domain A can access resources in domain B but users in domain B can't access resources in domain A, if you're running Active Directory Administrative Center on the computer where domain A is your local domain, you can connect to domain B with the current set of sign-in credentials and in the same instance of Active Directory Administrative Center.
 >
-> But if you're running Active Directory Administrative Center on the computer where Domain **B** is your local domain, you can't connect to Domain **A** with the same set of credentials in the same instance of the Active Directory Administrative Center.
+> But if you're running Active Directory Administrative Center on the computer where domain B is your local domain, you can't connect to domain **A with the same set of credentials in the same instance of the Active Directory Administrative Center.
 
 ### Windows Server 2012: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of sign-in credentials
 
-1. To open **Active Directory Administrative Center**, in **Server Manager**, select **Tools**, and then select **Active Directory Administrative Center**.
+1. To open Active Directory Administrative Center, in **Server Manager**, select **Tools**, and then select **Active Directory Administrative Center**.
 
-1. To open **Add Navigation Nodes**, select **Manage**, then select **Add Navigation Nodes**.
+1. To open Add Navigation Nodes, select **Manage**, then select **Add Navigation Nodes**.
 
 1. In **Add Navigation Nodes**, select **Connect to other domains**.
 
@@ -318,7 +318,7 @@ You can also use the same set of sign-in credentials and the same instance of Ac
 
 ### Windows Server 2008 R2: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of sign-in credentials
 
-1. To open **Active Directory Administrative Center**, select **Start**, select **Administrative Tools**, and then select **Active Directory Administrative Center**.
+1. To open Active Directory Administrative Center, select **Start**, select **Administrative Tools**, and then select **Active Directory Administrative Center**.
 
    > [!TIP]
    > Another way to open Active Directory Administrative Center is to select **Start**, select **Run**, and then type **dsac.exe**.
@@ -326,7 +326,7 @@ You can also use the same set of sign-in credentials and the same instance of Ac
 1. Then open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, and select **Add Navigation Nodes**.
 
    > [!TIP]
-   > Another way to open **Add Navigation Nodes** is to right-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then select **Add Navigation Nodes**.
+   > Another way to open Add Navigation Nodes is to right-click anywhere in the empty space in the Active Directory Administrative Center navigation pane and then select **Add Navigation Nodes**.
 
 1. In **Add Navigation Nodes**, select **Connect to other domains** as shown in the following illustration.
 
