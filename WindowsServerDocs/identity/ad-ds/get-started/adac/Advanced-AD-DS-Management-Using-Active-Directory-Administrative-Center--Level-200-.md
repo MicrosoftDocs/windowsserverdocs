@@ -9,13 +9,13 @@ ms.topic: concept-article
 ---
 # Advanced AD DS Management using Active Directory Administrative Center (Level 200)
 
-This article covers the updated Active Directory Administrative Center with its new Active Directory Recycle Bin, Fine-grained Password policy, and Windows PowerShell History Viewer in more detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11)).
+This article covers the updated Active Directory Administrative Center with its Active Directory Recycle Bin, fine-grained password policies, and Windows PowerShell History Viewer in detail, including architecture, examples for common tasks, and troubleshooting information. For an introduction, see [Introduction to Active Directory Administrative Center Enhancements &#40;Level 100&#41;](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11)).
 
-## Active Directory Administrative Center Architecture
+## Active Directory Administrative Center architecture
 
-### Active Directory Administrative Center Executables, DLLs
+### Active Directory Administrative Center executables and DLLs
 
-The module and underlying architecture of Active Directory Administrative Center hasn't changed with the new recycle bin, FGPP, and history viewer capabilities.
+The module and underlying architecture of Active Directory Administrative Center hasn't changed with the recycle bin, fine-grained password policies, and history viewer capabilities.
 
 - Microsoft.ActiveDirectory.Management.UI.dll
 - Microsoft.ActiveDirectory.Management.UI.resources.dll
@@ -23,41 +23,41 @@ The module and underlying architecture of Active Directory Administrative Center
 - Microsoft.ActiveDirectory.Management.resources.dll
 - ActiveDirectoryPowerShellResources.dll
 
-The underlying Windows PowerShell and layer of operations for the new Recycle Bin functionality are illustrated below:
+The underlying Windows PowerShell and layer of operations for the recycle bin functionality are illustrated here:
 
-![Illustration that shows the underlying Windows PowerShell and layer of operations for the new Recycle Bin functionality.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)
+![Illustration that shows the underlying Windows PowerShell and layer of operations for the  recycle bin functionality.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)
 
-## Enabling and Managing the Active Directory Recycle Bin Using Active Directory Administrative Center
+## Enabling and managing the Active Directory Recycle bin by using Active Directory Administrative Center
 
 ### Capabilities
 
-- The Windows Server 2012 or newer Active Directory Administrative Center enables you to configure and manage the Active Directory Recycle Bin for any domain partition in a forest. There's no longer a requirement to use Windows PowerShell or Ldp.exe to enable the Active Directory Recycle Bin or restore objects in domain partitions.
+- The Windows Server 2012 or newer Active Directory Administrative Center enables you to configure and manage the Active Directory recycle bin for any domain partition in a forest. There's no longer a requirement to use Windows PowerShell or Ldp.exe to enable the Active Directory recycle bin or restore objects in domain partitions.
 - The Active Directory Administrative Center has advanced filtering criteria, making targeted restoration easier in large environments with many intentionally deleted objects.
 
 ### Limitations
 
-- Because the Active Directory Administrative Center can only manage domain partitions, it can't restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions (you can't delete objects from the Schema partition). To restore objects from nondomain partitions, use [Restore-ADObject](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617262(v=technet.10)).
+- Because the Active Directory Administrative Center can only manage domain partitions, it can't restore deleted objects from the Configuration, Domain DNS, or Forest DNS partitions. (You can't delete objects from the Schema partition.) To restore objects from nondomain partitions, use [Restore-ADObject](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617262(v=technet.10)).
 
 - The Active Directory Administrative Center can't restore subtrees of objects in a single action. For example, if you delete an OU with nested OUs, users, groups, and computers, restoring the base OU doesn't restore the child objects.
 
   > [!NOTE]
-  > The Active Directory Administrative Center batch restore operation does a "best effort" sort of the deleted objects *within the selection only* so parents are ordered before the children for the restore list. In simple test cases, subtrees of objects can be restored in a single action. But corner cases, such as a selection that contains partial trees - trees with some of the deleted parent nodes missing - or error cases, such as skipping the child objects when parent restore fails, might not work as expected. For this reason, you should always restore subtrees of objects as a separate action after you restore the parent objects.
+  > The Active Directory Administrative Center batch restore operation does a "best effort" sort of the deleted objects *within the selection only*, so parents are ordered before the children for the restore list. In simple test cases, subtrees of objects can be restored in a single action. But corner cases, such as a selection that contains partial trees (trees with some of the deleted parent nodes missing) or error cases, such as skipping the child objects when parent restore fails, might not work as expected. For this reason, you should always restore subtrees of objects as a separate action after you restore the parent objects.
 
-The Active Directory Recycle Bin requires a Windows Server 2008 R2 Forest Functional Level and you must be a member of the Enterprise Admins group. Once enabled, you can't disable Active Directory Recycle Bin. Active Directory Recycle Bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.
+The Active Directory recycle bin requires a Windows Server 2008 R2 forest functional level, and you must be a member of the Enterprise Admins group. After Active Directory recycle bin is enabled, you can't disable it. Active Directory recycle bin increases the size of the Active Directory database (NTDS.DIT) on every domain controller in the forest. Disk space used by the recycle bin continues to increase over time as it preserves objects and all their attribute data.
 
-### Enabling Active Directory Recycle Bin using Active Directory Administrative Center
+### Enabling Active Directory recycle bin by using Active Directory Administrative Center
 
-To enable the Active Directory Recycle Bin, open the **Active Directory Administrative Center** and select the name of your forest in the navigation pane. From the **Tasks** pane, select **Enable Recycle Bin**.
+To enable the Active Directory recycle bin, open the **Active Directory Administrative Center** and select the name of your forest in the navigation pane. From the **Tasks** pane, select **Enable Recycle Bin**.
 
-![Screenshot that shows how to enable the Recycle Bin in the Active Directory Administrative Center.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)
+![Screenshot that shows how to enable the recycle bin in the Active Directory Administrative Center.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)
 
-The Active Directory Administrative Center shows the **Enable Recycle Bin Confirmation** dialog. This dialog warns you that enabling the recycle bin is irreversible. Select **OK** to enable the Active Directory Recycle Bin. The Active Directory Administrative Center shows another dialog to remind you that the Active Directory Recycle Bin isn't fully functional until all domain controllers replicate the configuration change.
+The Active Directory Administrative Center shows the **Enable Recycle Bin Confirmation** dialog. This dialog warns you that enabling the recycle bin is irreversible. Select **OK** to enable the Active Directory recycle bin. The Active Directory Administrative Center shows another dialog to remind you that the Active Directory recycle bin isn't fully functional until all domain controllers replicate the configuration change.
 
 > [!IMPORTANT]
-> The option to enable the Active Directory Recycle Bin is unavailable if:
+> The option to enable the Active Directory recycle bin is unavailable if:
 >
-> - The forest functional level is less than Windows Server 2008 R2
-> - It's already enabled
+> - The forest functional level is less than Windows Server 2008 R2.
+> - It's already enabled.
 
 The equivalent Active Directory Windows PowerShell cmdlet is:
 
@@ -65,33 +65,33 @@ The equivalent Active Directory Windows PowerShell cmdlet is:
 Enable-ADOptionalFeature
 ```
 
-For more information about using Windows PowerShell to enable the Active Directory Recycle Bin, see the [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11)#active-directory-recycle-bin).
+For more information about using Windows PowerShell to enable the Active Directory recycle bin, see the [Active Directory recycle bin step-by-step guide](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11)#active-directory-recycle-bin).
  
-### Managing Active Directory Recycle Bin using Active Directory Administrative Center
+### Managing Active Directory recycle bin by using Active Directory Administrative Center
 
-This section uses the example of an existing domain named `corp.contoso.com`. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contains further OUs, users, and groups.
+This section uses the example of an existing domain named `corp.contoso.com`. This domain organizes users into a parent OU named **UserAccounts**. The **UserAccounts** OU contains three child OUs named by department, which each contain further OUs, users, and groups.
 
 ![Screenshot that shows an example of an existing domain.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)
 
-#### Storage and Filtering
+#### Storage and filtering
 
-The Active Directory Recycle Bin preserves all objects deleted in the forest. It saves these objects according to the **msDS-deletedObjectLifetime** attribute, which by default is set to match the **tombstoneLifetime** attribute of the forest. In any forest created using Windows Server 2003 SP1 or later, the value of **tombstoneLifetime** is set to 180 days by default. In any forest upgraded from Windows 2000 or installed with Windows Server 2003 (no service pack), the default tombstoneLifetime attribute is NOT SET and Windows therefore uses the internal default of 60 days. All of this is configurable. You can use the Active Directory Administrative Center to restore any objects deleted from the domain partitions of the forest. You must continue to use the cmdlet `Restore-ADObject` to restore deleted objects from other partitions, such as Configuration. Enabling the Active Directory Recycle Bin makes the **Deleted Objects** container visible under every domain partition in the Active Directory Administrative Center.
+The Active Directory recycle bin preserves all objects deleted in the forest. It saves these objects according to the **msDS-deletedObjectLifetime** attribute, which by default is set to match the **tombstoneLifetime** attribute of the forest. In any forest created using Windows Server 2003 SP1 or later, the value of **tombstoneLifetime** is set to 180 days by default. In any forest upgraded from Windows 2000 or installed with Windows Server 2003 (no service pack), the default **tombstoneLifetime** attribute is not set and Windows therefore uses the internal default of 60 days. All of this is configurable. You can use the Active Directory Administrative Center to restore any objects deleted from the domain partitions of the forest. You must continue to use the cmdlet `Restore-ADObject` to restore deleted objects from other partitions, such as Configuration. Enabling the Active Directory recycle bin makes the **Deleted Objects** container visible under every domain partition in the Active Directory Administrative Center.
 
 ![Screenshot that highlights the Deleted Objects container.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)
 
-The **Deleted Objects** container shows you all the restorable objects in that domain partition. Deleted objects older than **msDS-deletedObjectLifetime** are known as recycled objects. The Active Directory Administrative Center doesn't show recycled objects and you can't restore these objects using Active Directory Administrative Center.
+The **Deleted Objects** container shows all the restorable objects in that domain partition. Deleted objects older than **msDS-deletedObjectLifetime** are known as *recycled objects*. The Active Directory Administrative Center doesn't show recycled objects, and you can't restore these objects by using Active Directory Administrative Center.
 
-For a deeper explanation of the recycle bin's architecture and processing rules, see [The AD Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](/archive/blogs/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting).
+For a deeper explanation of the recycle bin architecture and processing rules, see [The Active Directory Recycle Bin: Understanding, Implementing, Best Practices, and Troubleshooting](/archive/blogs/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting).
 
-The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can raise this limit as high as 100,000 objects by selecting the **Manage** menu, and then selecting **Management List Options**.
+The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can increase this limit as high as 100,000 objects by selecting the **Manage** menu and then selecting **Management List Options**.
 
-![Screenshot that shows how to raise the limit of the number of objects returned from a container by selecting the Management List Options menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)
+![Screenshot that shows how to increase the limit of the number of objects returned from a container by selecting the Management List Options menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)
 
 #### Restoration
 
 ##### Filtering
 
-Active Directory Administrative Center offers powerful criteria and filtering options that you should become familiar with before you need to use them in a real-life restoration. Domains intentionally delete many objects over their lifetime. With a likely deleted object lifetime of 180 days, you can't restore all objects when an accident occurs.
+Active Directory Administrative Center offers powerful criteria and filtering options that you should become familiar with before you need to use them in a real-life restoration. Domains intentionally delete many objects over their lifetime. Because the deleted object lifetime is probably 180 days, you can't restore all objects when an accident occurs.
 
 ![Screenshot that shows the filtering options available during a restoration.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)
 
@@ -99,7 +99,7 @@ Rather than writing complex LDAP filters and converting UTC values into dates an
 
 The restore operation supports all the standard filter criteria options, the same as any other search. Of the built-in filters, the important ones for restoring objects are typically:
 
-- *ANR (ambiguous name resolution - not listed in the menu, but what is used when you type in the **Filter** box)*
+- ANR (ambiguous name resolution - not listed in the menu, but it's used when you type in the **Filter** box)
 - Last modified between given dates
 - Object is user/inetorgperson/computer/group/organization unit
 - Name
@@ -120,15 +120,15 @@ The restore operation supports all the standard filter criteria options, the sam
 - UPN
 - ZIP/Postal code
 
-You can add multiple criteria. For example, you can find all user objects deleted on September 24, 2012 from Chicago, Illinois with a job title of Manager.
+You can add multiple criteria. For example, you can find all user objects deleted on September 24, 2012, from Chicago, Illinois, with a job title of Manager.
 
 You can also add, modify, or reorder the column headers to provide more detail when evaluating which objects to recover.
 
-![Screenshot that shows where to also add, modify, or reorder the column headers to provide more detail when evaluating which objects to recover.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)
+![Screenshot that shows where to add, modify, or reorder the column headers to provide more detail when evaluating which objects to recover.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)
 
-For more information about Ambiguous Name Resolution (ANR), see [ANR Attributes](/windows/win32/adschema/attributes-anr).
+For more information about ANR, see [ANR Attributes](/windows/win32/adschema/attributes-anr).
 
-##### Single Object
+##### Single object
 
 Restoring deleted objects has always been a single operation. The Active Directory Administrative Center makes that operation easier. To restore a deleted object, such as a single user:
 
@@ -140,17 +140,17 @@ The object restores to its original location.
 
 ![Screenshot that highlights the menu used for restoring an object to its original location.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreSingle.gif)
 
-Select **Restore To...** to change the restore location. This is useful if the deleted object's parent container was also deleted but you don't want to restore the parent.
+Select **Restore To** to change the restore location. This option is useful if the deleted object's parent container was also deleted but you don't want to restore the parent.
 
 ![Screenshot that shows where you can restore an object without restoring the parent.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)
 
-##### Multiple Peer Objects
+##### Multiple peer objects
 
-You can restore multiple peer-level objects, such as all the users in an OU. Hold down the CTRL key and select one or more deleted objects you want to restore. Select **Restore** from the Tasks pane. You can also select all displayed objects by holding down the CTRL and A keys, or a range of objects using SHIFT and clicking.
+You can restore multiple peer-level objects, such as all the users in an OU. Hold down the CTRL key and select one or more deleted objects that you want to restore. Select **Restore** from the Tasks pane. You can also select all displayed objects by holding down the CTRL and A keys, or a range of objects by using SHIFT and clicking.
 
 ![Screenshot that shows the restoration of multiple peer-level projects.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)
 
-##### Multiple Parent and Child Objects
+##### Multiple parent and child objects
 
 It's critical to understand the restoration process for a multi-parent-child restoration because the Active Directory Administrative Center can't restore a nested tree of deleted objects with a single action.
 
@@ -165,11 +165,11 @@ You can't restore a child object before restoring its parent. Attempting this re
 The operation could not be performed because the object's parent is either uninstantiated or deleted.
 ```
 
-The **Last Known Parent** attribute shows the parent relationship of each object. The **Last Known Parent** attribute changes from the deleted location to the restored location when you refresh the Active Directory Administrative Center after restoring a parent. Therefore, you can restore that child object when a parent object's location no longer shows the distinguished name of the deleted objects container.
+The **Last Known Parent** attribute shows the parent relationship of each object. The **Last Known Parent** attribute changes from the deleted location to the restored location when you refresh the Active Directory Administrative Center after restoring a parent. Therefore, you can restore that child object when a parent object's location no longer shows the distinguished name of the deleted object's container.
 
 Consider the scenario where an administrator accidentally deletes the Sales OU, which contains child OUs and users.
 
-First, observe the value of the **Last Known Parent** attribute for all the deleted users and how it reads **OU=Sales\0ADEL:*<guid+deleted objects container distinguished name>***:
+First, observe the value of the **Last Known Parent** attribute for all the deleted users and how it reads **OU=Sales\0ADEL:*<guid+deleted object's container distinguished name>***:
 
 ![Screenshot that highlights the value of the Last known parent attribute.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)
 
