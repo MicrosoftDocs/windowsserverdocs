@@ -19,13 +19,13 @@ To upgrade a Storage Spaces Direct cluster to a newer version of Windows Server,
 
 To read more about an upgrade option, select a link:
 
-- [In-place upgrade while VMs are running](#in-place-upgrade-while-vms-are-running) on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded.
+- **In-place upgrade while VMs are running** on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded.
 
-- [Clean OS installation while VMs are running](#clean-os-installation-while-vms-are-running) on each server in the cluster. This option incurs no VM downtime. However, you must wait for storage jobs (mirror repair) to finish after each server is upgraded. You also need to set up each server again, including all its apps and roles. We recommend this option over an in-place upgrade.
+- **Clean OS installation while VMs are running** on each server in the cluster. This option incurs no VM downtime. However, you must wait for storage jobs (mirror repair) to finish after each server is upgraded. You also need to set up each server again, including all its apps and roles. We recommend this option over an in-place upgrade.
 
-- [In-place upgrade while VMs are stopped](#in-place-upgrade-while-vms-are-stopped) on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
+- **In-place upgrade while VMs are stopped** on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
 
-- [Clean OS installation while VMs are stopped](#clean-os-installation-while-vms-are-stopped) on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster. We recommend this option over an in-place upgrade.
+- **Clean OS installation while VMs are stopped** on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster. We recommend this option over an in-place upgrade.
 
 ## Prerequisites and limitations
 
