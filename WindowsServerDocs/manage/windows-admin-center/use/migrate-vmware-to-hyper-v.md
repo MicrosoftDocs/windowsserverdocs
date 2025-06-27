@@ -1,12 +1,12 @@
 ---
-title: Migrate a VMWare virtual machine to Hyper-V in Windows Admin Center
+title: Migrate a VMware virtual machine to Hyper-V in Windows Admin Center
 description: Learn how to install, configure, and test the Windows Admin Center VM Conversion extension for migrating VMs from vCenter to Hyper-V.
 author: meaghanlewis
 ms.topic: how-to
 ms.date: 06/20/2025
 ms.author: mosagie
 ---
-# Migrate a VMWare virtual machine to Hyper-V in Windows Admin Center
+# Migrate a VMware virtual machine to Hyper-V in Windows Admin Center
 
 You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VMware vCenter to Hyper-V. This article explains how to install and configure the VM Conversion extension, outlines the migration workflow, and provides troubleshooting tips. Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
@@ -16,9 +16,10 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 - WAC Gateway V2 – GA version.
 
-- VMWare VCenter version 7.x or above is installed. Keep handy the:
-  - Fully Qualified Domain Name (FQDN) of vCenter endpoint
-  - Login credentials of vCenter
+- VMware VCenter version 7.x or above is installed. Keep the following vCenter information handy:
+  - Fully Qualified Domain Name (FQDN)
+  - Username
+  - Password
 
 - Install either [PowerCLI](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli.html) or [PowerCLI Offline](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli-offline.html)
 
@@ -29,13 +30,13 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 ## Install the extension
 
-1. Download the extension provided in a local folder in WAC machine. (C:\Extension)
+1. Open Windows Admin Center.
 
-1. Open Windows Admin Center and navigate to the "Extensions" section.
+1. Select the **Settings** button in the top-right. In the left pane, select **Extensions**.
 
-1. Add the local directory to Feeds.
+1. The Available Extensions tab lists the extensions on the feed that are available for installation.
 
-1. Search for **VM Conversion Extension** in **Available extensions** and click **Install.**
+1. Search for **VM Conversion Extension** in **Available extensions** and select **Install.**
 
 1. Once installed, ensure VM Conversion extension is visible in the WAC under: **Extensions** > **VM Migration**.
 
@@ -51,7 +52,7 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 1. Select **Connect to vCenter**.
 
-    [![Connect to vCenter](media/migrate-vmware-to-hyper-v/connect-to-vcenter.png)](media/migrate-vmware-to-hyper-v/connect-to-vcenter.png#lightbox)
+    [![Connect to vCenter](media/migrate-vmware-to-hyper-v/connect-to-v-center.png)](media/migrate-vmware-to-hyper-v/connect-to-vcenter.png#lightbox)
 
 1. Enter the vCenter FQDN, vCenter username, and vCenter password.
 
@@ -63,7 +64,7 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
     [![Synchronize tab](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
 
-1. Click on **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
+1. Select on **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
  
     [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
@@ -73,7 +74,7 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
     [![Migrate tab](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
 
-1. Go to the **Migrate** tab, and select the VM to migrate. Click **Migrate**. Select **Proceed** in the confirmation box. Delta replication is triggered. The virtual machine is briefly turned off during cut-over. The new virtual machine is created on the server **(Datacenter-Server-001)**.
+1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**. Select **Proceed** in the confirmation box. Delta replication is triggered. The virtual machine is briefly turned off during cut-over. The new virtual machine is created on the server **(Datacenter-Server-001)**.
 
     [![Migrate VM dialog](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
 
@@ -91,10 +92,10 @@ You can use Windows Admin Center (WAC) to migrate virtual machines (VMs) from VM
 
 ## Known limitations
 
-- Currently only 1-VM migration at a time is supported.
+- Only 1-VM migration at a time is supported.
 
 - At-scale experience: work-in-progress
 
 - Host networking settings don't persist from eSXI host to Hyper-V host
 
-- VM Tools not uninstalled after VM is migrated. Feature is in roadmap.
+- VM Tools aren't uninstalled after the VM is migrated. Feature is in roadmap.
