@@ -302,13 +302,13 @@ You can also use the same set of sign-in credentials and the same instance of Ac
 > [!NOTE]
 > If there's a one-way trust between domain A and domain B through which users in domain A can access resources in domain B but users in domain B can't access resources in domain A, if you're running Active Directory Administrative Center on the computer where domain A is your local domain, you can connect to domain B with the current set of sign-in credentials and in the same instance of Active Directory Administrative Center.
 >
-> But if you're running Active Directory Administrative Center on the computer where domain B is your local domain, you can't connect to domain **A with the same set of credentials in the same instance of the Active Directory Administrative Center.
+> But if you're running Active Directory Administrative Center on the computer where domain B is your local domain, you can't connect to domain A with the same set of credentials in the same instance of the Active Directory Administrative Center.
 
 ### Windows Server 2012: To manage a foreign domain in the selected instance of Active Directory Administrative Center using the current set of sign-in credentials
 
 1. To open Active Directory Administrative Center, in **Server Manager**, select **Tools**, and then select **Active Directory Administrative Center**.
 
-1. To open Add Navigation Nodes, select **Manage**, then select **Add Navigation Nodes**.
+1. To open Add Navigation Nodes, select **Manage**, and then select **Add Navigation Nodes**.
 
 1. In **Add Navigation Nodes**, select **Connect to other domains**.
 
@@ -323,12 +323,12 @@ You can also use the same set of sign-in credentials and the same instance of Ac
    > [!TIP]
    > Another way to open Active Directory Administrative Center is to select **Start**, select **Run**, and then type **dsac.exe**.
 
-1. Then open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, and select **Add Navigation Nodes**.
+1. Then open Add Navigation Nodes, near the top of the Active Directory Administrative Center window, select **Add Navigation Nodes**.
 
    > [!TIP]
    > Another way to open Add Navigation Nodes is to right-click anywhere in the empty space in the Active Directory Administrative Center navigation pane and then select **Add Navigation Nodes**.
 
-1. In **Add Navigation Nodes**, select **Connect to other domains** as shown in the following illustration.
+1. In **Add Navigation Nodes**, select **Connect to other domains**.
 
 1. In **Connect to**, type the name of the foreign domain that you want to manage (for example, `contoso.com`), and then select **OK**.
 
@@ -336,21 +336,19 @@ You can also use the same set of sign-in credentials and the same instance of Ac
 
 ### Manage a domain using sign-in credentials that are different from the current set of sign-in credentials
 
-Open Active Directory Administrative Center at the command prompt, type the following command, and then press ENTER:
+To open Active Directory Administrative Center at the command prompt, type the following command, and then select **Enter**:
 
    ```cmd
    runas /user:<domain\user> dsac
    ```
 
-   Where `<domain\user>` is the set of credentials that you want to open Active Directory Administrative Center with and `dsac` is the Active Directory Administrative Center executable file name.
+   `<domain\user>` is the set of credentials that you want to open Active Directory Administrative Center with, and `dsac` is the Active Directory Administrative Center executable file name.
 
-While Active Directory Administrative Center is open, browse through the navigation pane to view or manage your Active Directory domain.
+When Active Directory Administrative Center is open, browse through the navigation pane to view or manage your Active Directory domain.
 
-## Troubleshooting AD DS Management
+## Troubleshooting AD DS management
 
-Because of its relative newness and lack of usage in existing customer environments, the Active Directory Administrative Center has limited troubleshooting options.
-
-### Troubleshooting Options
+### Troubleshooting options
 
 #### Logging Options
 
@@ -376,13 +374,13 @@ Create the following contents:
 </system.diagnostics>
 ```
 
-The verbosity levels for **DsacLogLevel** are **None**, **Error**, **Warning**, **Info**, and **Verbose**. The output file name is configurable and writes to the same folder as dsac.exe. The output can tell you more about how ADAC is operating, which domain controllers it contacted, what Windows PowerShell commands executed, what the responses were, and further details.
+The verbosity levels for **DsacLogLevel** are **None**, **Error**, **Warning**, **Info**, and **Verbose**. The output file name is configurable and writes to the same folder as dsac.exe. The output can tell you more about how Active Directory Administrative Center is operating, which domain controllers it contacted, what Windows PowerShell commands ran, what the responses were, and further details.
 
-For example, while using the INFO level, which returns all results except the trace-level verbosity:
+For example, when you usie the **Info** level, which returns all results except the trace-level verbosity:
 
-- DSAC.exe starts
-- Logging starts
-- Domain Controller requested to return initial domain information
+- DSAC.exe starts.
+- Logging starts.
+- The domain controller is requested to return initial domain information.
 
    ```
    [12:42:49][TID 3][Info] Command Id, Action, Command, Time, Elapsed Time ms (output), Number objects (output)
@@ -390,8 +388,8 @@ For example, while using the INFO level, which returns all results except the tr
    [12:42:49][TID 3][Info] Get-ADDomainController-Discover:$null-DomainName:"CORP"-ForceDiscover:$null-Service:ADWS-Writable:$null
    ```
 
-- Domain controller DC1 returned from domain Corp
-- PS AD virtual drive loaded
+- Domain controller DC1 returned from domain Corp.
+- PS Active Directory virtual drive loaded.
 
    ```
    [12:42:49][TID 3][Info] 1, Output, Get-ADDomainController, 2012-04-16T12:42:49, 1
@@ -402,7 +400,7 @@ For example, while using the INFO level, which returns all results except the tr
    [12:42:49][TID 3][Info] 3, Invoke, Get-ADRootDSE, 2012-04-16T12:42:49
    ```
 
-- Get domain Root DSE Information
+- Get domain root DSE information.
 
    ```
    [12:42:49][TID 3][Info] Get-ADRootDSE -Server:"dc1.corp.contoso.com"
@@ -410,7 +408,7 @@ For example, while using the INFO level, which returns all results except the tr
    [12:42:49][TID 3][Info] 4, Invoke, Get-ADOptionalFeature, 2012-04-16T12:42:49
    ```
 
-- Get domain AD recycle bin information
+- Get domain Active Directory recycle bin information.
 
    ```
    [12:42:49][TID 3][Info] Get-ADOptionalFeature -LDAPFilter:"(msDS-OptionalFeatureFlags=1)" -Server:"dc1.corp.contoso.com"
@@ -427,7 +425,7 @@ For example, while using the INFO level, which returns all results except the tr
    [12:42:50][TID 3][Info] 8, Invoke, Get-ADForest, 2012-04-16T12:42:50
    ```
 
-- Get AD forest
+- Get Active Directory forest.
 
    ```
    [12:42:50][TID 3][Info] Get-ADForest -Identity:"corp.contoso.com" -Server:"dc1.corp.contoso.com"
@@ -435,7 +433,7 @@ For example, while using the INFO level, which returns all results except the tr
    [12:42:50][TID 3][Info] 9, Invoke, Get-ADObject, 2012-04-16T12:42:50
    ```
 
-- Get Schema information for supported encryption types, FGPP, certain user information
+- Get schema information for supported encryption types, FGPP, and certain user information.
 
    ```
    [12:42:50][TID 3][Info] Get-ADObject
@@ -464,10 +462,10 @@ For example, while using the INFO level, which returns all results except the tr
    -Server:"dc1.corp.contoso.com"
    ```
 
-Setting the Verbose level also shows the .NET stacks for each function, but these don't include enough data to be useful except when troubleshooting the Dsac.exe suffering an access violation or crash. The two likely causes of this issue are:
+Setting the **Verbose** level also shows the .NET stacks for each function, but these don't include enough data to be useful except when you're troubleshooting after the dsac.exe suffers an access violation or crash. The two likely causes of this issue are:
 
-- The ADWS service isn't running on any accessible domain controllers.
-- Network communications are blocked to the ADWS service from the computer running the Active Directory Administrative Center.
+- Active Directory Web Services isn't running on any accessible domain controllers.
+- Network communications are blocked to Active Directory Web Services from the computer running Active Directory Administrative Center.
 
 > [!IMPORTANT]
 > There's also an out-of-band version of the service called the [Active Directory Management Gateway](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391908(v=ws.10)#what-does-the-active-directory-management-gateway-service-do), which runs on Windows Server 2008 SP2 and Windows Server 2003 SP2.
@@ -477,27 +475,27 @@ The following errors are shown when no Active Directory Web Services instances a
 |Error|Operation|
 | --- | --- |
 |"Cannot connect to any domain. Refresh or try again when connection is available"|Shown at start of the Active Directory Administrative Center application|
-|"Cannot find an available server in the *\<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)"|Shown when trying to select a domain node in the Active Directory Administrative Center application|
+|"Cannot find an available server in the *\<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)"|Shown when you try to select a domain node in the Active Directory Administrative Center application|
 
 To troubleshoot this issue, use these steps:
 
-1. Validate the Active Directory Web Services service is started on at least one domain controller in the domain (and preferably all domain controllers in the forest). Ensure that it's set to start automatically on all domain controllers as well.
-1. From the computer running the Active Directory Administrative Center, validate that you can locate a server running ADWS by running these NLTest.exe commands:
+1. Validate that Active Directory Web Services is started on at least one domain controller in the domain (and preferably on all domain controllers in the forest). Ensure that it's set to start automatically on all domain controllers.
+1. From the computer running the Active Directory Administrative Center, validate that you can locate a server running Active Directory Web Services by running these NLTest.exe commands:
 
    ```
    nltest /dsgetdc:<domain NetBIOS name> /ws /force
    nltest /dsgetdc:<domain fully qualified DNS name> /ws /force
    ```
 
-   If those tests fail even though the ADWS service is running, the issue is with name resolution or LDAP and not ADWS or Active Directory Administrative Center. This test fails with error "1355 0x54B ERROR_NO_SUCH_DOMAIN" if ADWS isn't running on any domain controllers though, so double-check before reaching any conclusions.
+   If those tests fail even though Active Directory Web Services is running, the issue is with name resolution or LDAP and not Active Directory Web Services or Active Directory Administrative Center. This test fails with error "1355 0x54B ERROR_NO_SUCH_DOMAIN" if Active Directory Web Services isn't running on any domain controllers though, so double-check before reaching any conclusions.
 
-1. On the domain controller returned by NLTest, dump the listening port list with command:
+1. On the domain controller returned by Nltest, dump the listening port list with this command:
 
    ```
    Netstat -anob > ports.txt
    ```
 
-   Examine the ports.txt file and validate that the ADWS service is listening on port 9389. Example:
+   Examine the ports.txt file and validate that the Active Directory Web Services service is listening on port 9389. For example:
 
    ```
    TCP    0.0.0.0:9389    0.0.0.0:0    LISTENING    1828
@@ -507,9 +505,9 @@ To troubleshoot this issue, use these steps:
    [Microsoft.ActiveDirectory.WebServices.exe]
    ```
 
-   If listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)." If not listening, validate again that the service is running on this server and restart it. Validate that no other process is already listening on port 9389.
+   If the service is listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)." If the service isn't listening, validate again that the it's running on this server and restart it. Validate that no other process is already listening on port 9389.
 
-1. Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by NLTEST. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or arrive and the domain controller replies but they never reach the client, it's likely there's a firewall in between the computers on the network dropping packets on that port. This firewall can be software or hardware, and can be part of non-Microsoft endpoint protection (antivirus) software.
+1. Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by Nltest. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or they arrive and the domain controller replies but they never reach the client, it's likely that there's a firewall in between the computers on the network dropping packets on that port. This firewall can be software or hardware, and can be part of non-Microsoft endpoint protection (antivirus) software.
 
 ## Related content
 
