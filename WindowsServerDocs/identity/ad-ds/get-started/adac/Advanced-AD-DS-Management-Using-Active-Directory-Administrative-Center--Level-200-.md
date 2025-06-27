@@ -505,7 +505,7 @@ To troubleshoot this issue, use these steps:
    [Microsoft.ActiveDirectory.WebServices.exe]
    ```
 
-   If the service is listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)." If the service isn't listening, validate again that the it's running on this server and restart it. Validate that no other process is already listening on port 9389.
+   If the service is listening, validate the Windows Firewall rules and ensure that they allow 9389 TCP inbound. By default, domain controllers enable firewall rule "Active Directory Web Services (TCP-in)." If the service isn't listening, validate again that it's running on this server and restart it. Validate that no other process is already listening on port 9389.
 
 1. Install NetMon or another network capture utility on the computer running Active Directory Administrative Center and on the domain controller returned by Nltest. Gather simultaneous network captures from both computers, where you start Active Directory Administrative Center and see the error before stopping the captures. Validate that the client is able to send to and receive from the domain controller on port TCP 9389. If packets are sent but never arrive, or they arrive and the domain controller replies but they never reach the client, it's likely that there's a firewall in between the computers on the network dropping packets on that port. This firewall can be software or hardware, and can be part of non-Microsoft endpoint protection (antivirus) software.
 
