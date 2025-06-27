@@ -80,5 +80,3 @@
     href: cluster-aware-updating-plug-ins.md
   - name: Cluster-aware updating FAQ
     href: cluster-aware-updating-faq.yml
-  - name: Change history for Failover Clustering topics
-    href: clustering-change-history.md

@@ -1,39 +1,48 @@
 ---
-ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
-title: AD DS Installation and Removal Wizard Page Descriptions
+title: AD DS Configuration Wizard Page Descriptions
 description: Find out about the Active Directory Domain Services Configuration Wizard pages that you use to promote a server to a domain controller and to demote a server.
-author: meaghanlewis
-ms.author: mosagie
-manager: daveba
-ms.date: 06/26/2025
 ms.topic: concept-article
+ai-usage: ai-assisted
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 06/27/2025
 # customer intent: As an administrator, I want to become familiar with the Active Directory Domain Services Configuration Wizard so that I can promote servers to domain controllers and demote servers.
 ---
 
-# Active Directory Domain Services (AD DS) installation and removal wizard page descriptions
+# Active Directory Domain Services (AD DS) configuration wizard page descriptions
 
-In Server Manager, you can use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller and to demote a server. This article describes the controls on the following pages in that wizard.
+The Active Directory Domain Services (AD DS) Configuration Wizard is a tool in Server Manager that enables administrators to promote servers to domain controllers or demote them as needed. This article provides a detailed overview of the wizard's pages, including their controls and options, to help you navigate the installation and removal processes effectively. Whether you're creating a new forest, adding a domain controller to an existing domain, or demoting a domain controller, this guide outlines the steps and considerations for each operation.
 
-- For promoting a server to a domain controller:
-  - [Deployment Configuration](#deployment-configuration)
-  - [Domain Controller Options](#domain-controller-options)
-  - [DNS Options](#dns-options)
-  - [RODC Options](#rodc-options)
-  - [Additional Options](#additional-options)
-  - [Paths](#paths)
-  - [Preparation Options](#preparation-options)
-  - [Review Options](#review-options)
-  - [Prerequisites Check](#prerequisites-check)
-  - [Results](#results)
+## Summary of each page
 
-- For demoting a domain controller:
-  - [Credentials](#credentials)
-  - [Warnings](#warnings)
-  - [Removal Options](#removal-options)
-  - [New Administrator Password](#new-administrator-password)
-  - [Review Options](#review-options-1)
+The tables in this section summarize the pages that you see when you use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller or to demote a domain controller. Select the link for each page to learn more about the options and controls that you see on that page.
 
-## Promote a server to a domain controller
+When you promote a server to a domain controller, you navigate through the following pages:
+
+| Active Directory configuration page | Description |
+|--|--|
+| [Deployment Configuration](#deployment-configuration) | Select the type of deployment operation you want to perform: create a new forest (first domain controller), create a new domain within an existing forest, or add an additional domain controller to an existing domain. This page also validates basic requirements and prompts for domain names. |
+| [Domain Controller Options](#domain-controller-options) | Configure forest and domain functional levels, select domain controller roles including DNS server, Global Catalog, and Read-Only Domain Controller options. Set the Directory Services Restore Mode (DSRM) password required for offline AD DS operations and maintenance. |
+| [DNS Options](#dns-options) | Configure DNS delegation settings when installing the DNS server role. Create delegation records in the parent DNS zone to ensure proper name resolution and authority transfer for the new domain controller's DNS zone. |
+| [RODC Options](#rodc-options) | Set up delegated administrator accounts that can manage the read-only domain controller locally, and configure the Password Replication Policy (PRP) to control which user and computer account passwords can be cached on the RODC for authentication. |
+| [Additional Options](#additional-options) | Specify the NetBIOS domain name for new domains, select a specific domain controller as the replication source, and configure install from media options using backup media created with Windows Server Backup or ntdsutil.exe to reduce installation time. |
+| [Paths](#paths) | Set custom file system locations for the Active Directory database (`ntds.dit`), database transaction logs, and `SYSVOL` shared folder instead of using the default system drive locations for better performance or storage management. |
+| [Preparation Options](#preparation-options) | Provide Enterprise Admins, Schema Admins, or Domain Admins credentials to run required `adprep.exe` commands (`forestprep`, `domainprep`, or `rodcprep`) when the current user account lacks sufficient permissions for schema or domain preparation. |
+| [Review Options](#review-options) | Review and validate all selected configuration settings before starting the installation process. Export the configuration as a Windows PowerShell script for automation or documentation purposes, and make final adjustments if needed. |
+| [Prerequisites Check](#prerequisites-check) | Display comprehensive results of prerequisite validation checks including network connectivity, DNS resolution, permissions verification, and system requirements. Shows any warnings or errors that must be addressed before proceeding. |
+| [Results](#results) | Show the final results and status of the domain controller installation or promotion process, including success confirmation, any post-installation warnings, and options to restart the server to complete the configuration. |
+
+When you demote a domain controller, you navigate through the following pages:
+
+| Active Directory configuration page | Description |
+|--|--|
+| [Credentials](#credentials) | Provide the required credentials for demotion operation, including Domain Admin credentials for additional domain controllers or Enterprise Admins credentials for the last domain controller in a domain. Configure forced removal options if the domain controller cannot contact other domain controllers. |
+| [Warnings](#warnings) | Review warnings about removing critical roles and services hosted by the domain controller, such as DNS server, global catalog, or operations master roles. Acknowledge the impact of removing these roles before proceeding with demotion. |
+| [Removal Options](#removal-options) | Configure DNS zone delegation removal options when the domain controller being demoted hosts DNS zones. Remove the DNS server from zone delegations to prevent DNS resolution issues after demotion. |
+| [New Administrator Password](#new-administrator-password) | Set a new password for the built-in local Administrator account that will be used after demotion when the computer becomes a member server or workgroup computer instead of a domain controller. |
+| [Review Options](#review-options-1) | Review and validate all demotion settings before starting the process. Export the configuration as a Windows PowerShell script for automation purposes and confirm final settings before beginning the domain controller demotion. |
+
+## Pages when promoting a server to a domain controller
 
 The following sections describe the pages that you see when you use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller.
 
@@ -301,7 +310,7 @@ In some cases, the target server fails to restart. If the wizard finishes on a t
 
 If the target server fails to restart in these cases, you must manually restart it. You can't use tools like `shutdown.exe` or Windows PowerShell to restart it. You can use Remote Desktop Services to sign in and remotely shut down the target server.
 
-## Demote a domain controller
+## Pages when demoting a domain controller
 
 The following sections describe the pages that you see when you use the Active Directory Domain Services Configuration Wizard to demote a domain controller.
 
