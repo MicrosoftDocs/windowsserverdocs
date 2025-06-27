@@ -376,7 +376,7 @@ Create the following contents:
 
 The verbosity levels for **DsacLogLevel** are **None**, **Error**, **Warning**, **Info**, and **Verbose**. The output file name is configurable and writes to the same folder as dsac.exe. The output can tell you more about how Active Directory Administrative Center is operating, which domain controllers it contacted, what Windows PowerShell commands ran, what the responses were, and further details.
 
-For example, when you usie the **Info** level, which returns all results except the trace-level verbosity:
+For example, when you use the **Info** level, which returns all results except the trace-level verbosity:
 
 - DSAC.exe starts.
 - Logging starts.
