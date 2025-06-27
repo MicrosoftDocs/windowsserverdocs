@@ -5,14 +5,14 @@ description: Set up usage-based licensing for Windows Server with Pay-as-you-go 
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 06/26/2025
+ms.date: 06/27/2025
 ---
 
 # Configure Windows Server Pay-as-you-go with Azure Arc
 
 Azure Arc's Pay-as-you-go subscription licensing option is an alternative to the conventional perpetual licensing for Windows Server 2025. With Pay-as-you-go, you can deploy a Windows Server device, license it, and only pay for as much as you use. This feature is facilitated through Azure Arc and billed via your Azure subscription. You have the flexibility to disable Pay-as-you-go whenever necessary. Additionally, you can use Pay-as-you-go for free for the first seven days after enabling it as a trial. Windows Server Pay-as-you-go is an Azure service and the detailed usage rights are provided in the [Microsoft Product Terms](https://www.microsoft.com/licensing/terms/welcome/welcomepage).
 
-> [!IMPORTANT]
+> [!CAUTION]
 > If you shut down or deprovision your device, without disabling Pay-as-you-go, billing continues. To avoid unexpected charges, disable Pay-as-you-go using the Azure portal, PowerShell, API, or by removing the device from Azure Arc.
 
 Windows Server Pay-as-you-go shares the same pricing and model as Windows Server licensing on Microsoft Azure, but is designed for devices that are deployed outside of Microsoft Azure. Windows Server Pay-as-you-go with Azure Arc isn't supported on Microsoft Azure, as there are other ways to license Windows Server with Pay-as-you-go with that service.
