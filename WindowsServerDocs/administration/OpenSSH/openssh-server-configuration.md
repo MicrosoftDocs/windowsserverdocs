@@ -1,8 +1,8 @@
 ---
-title: OpenSSH Server configuration for Windows
+title: OpenSSH Server Configuration for Windows
 description: Learn about the Windows-specific configuration options for OpenSSH Server on Windows Server and Windows.
-ms.date: 06/20/2025
-ms.topic: article
+ms.date: 06/30/2025
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ---
@@ -11,15 +11,15 @@ author: robinharwood
 
 This article covers the Windows-specific configuration for OpenSSH Server (sshd).
 
-OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which isn't duplicated in this documentation set.
+OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html). This documentation isn't duplicated in this documentation set.
 
 ## OpenSSH configuration files
 
 OpenSSH has configuration files for both server and client settings. OpenSSH is open-source and was
-added to Windows Server and Windows Client operating systems, starting with Windows Server 2019 and
-Windows 10 (build 1809). As a result, open-source documentation for OpenSSH configuration files
-isn't repeated here. Client configuration files and can be found on the
-[ssh_config manual page](https://man.openbsd.org/ssh_config) and for OpenSSH Server configuration
+added to Windows Server and Windows client operating systems starting with Windows Server 2019 and
+Windows 10 (build 1809). Open-source documentation for OpenSSH configuration files
+isn't repeated here. Client configuration files can be found on the
+[ssh_config manual page](https://man.openbsd.org/ssh_config). OpenSSH server configuration
 files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config).
 
 Open SSH Server (sshd) reads configuration data from _%programdata%\ssh\sshd\_config_ by default, or
