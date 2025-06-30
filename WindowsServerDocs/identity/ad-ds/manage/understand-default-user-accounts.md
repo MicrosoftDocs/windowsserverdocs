@@ -304,7 +304,7 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 - **Ideal**: Restrict server administrators from signing in to workstations, in addition to domain administrators.
 
 > [!NOTE]
-> For this procedure, do *not* link accounts to the OU that contain workstations for administrators that perform administration duties only, and do *not* provide internet or email access.
+> For this procedure, don't link accounts to the OU that contain workstations for administrators that perform administration duties only, and don't provide internet or email access.
 
 #### To restrict domain administrators from workstations (minimum)
 
@@ -356,16 +356,16 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 
 10. Link all other OUs that contain workstations.
 
-    However, do *not* create a link to the Administrative Workstation OU if it's created for administrative workstations that are dedicated to administration duties only and are without internet or email access.
+    However, don't create a link to the Administrative Workstation OU if it's created for administrative workstations that are dedicated to administration duties only and are without internet or email access.
 
     > [!IMPORTANT]
-    > If you later extend this solution, do *not* deny sign-in rights for the Domain Users group. The Domain Users group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
+    > If you later extend this solution, don't deny sign-in rights for the Domain Users group. The Domain Users group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
 
 ### Disable the account delegation right for sensitive Administrator accounts
 
-Although user accounts aren't marked for delegation by default, accounts in an Active Directory domain can be trusted for delegation. This means that a service or a computer that's trusted for delegation can impersonate an account that authenticates to them to access other resources across the network.
+Although user accounts aren't marked for delegation by default, accounts in an Active Directory domain can be trusted for delegation. This means that a service or a computer that's trusted for delegation can impersonate an account that authenticates to it to access other resources across the network.
 
-For sensitive accounts, such as those belonging to members of the Administrators, Domain Admins, or Enterprise Admins groups in Active Directory, delegation can present a substantial risk of rights escalation. For example, if an account in the Domain Admins group is used to sign in to a compromised member server that's trusted for delegation, that server can request access to resources in the context of the Domain Admins account, and escalate the compromise of that member server to a domain compromise.
+For sensitive accounts, such as those belonging to members of the Administrators, Domain Admins, or Enterprise Admins groups in Active Directory, delegation can present a substantial risk of rights escalation. For example, if an account in the Domain Admins group is used to sign in to a compromised member server that's trusted for delegation, that server can request access to resources in the context of the Domain Admins account and escalate the compromise of that member server to a domain compromise.
 
 It's a best practice to configure the user objects for all sensitive accounts in Active Directory by selecting the **Account is sensitive and cannot be delegated** checkbox under **Account options** to prevent the accounts from being delegated. For more information, see [Settings for default local accounts in Active Directory](#settings-for-default-local-accounts-in-active-directory).
 
@@ -385,9 +385,9 @@ One aspect of securing and managing domain controllers is to ensure that the def
 
 Because domain controllers store credential password hashes of all accounts in the domain, they're high-value targets for malicious users. When domain controllers aren't well managed and secured by using restrictions that are strictly enforced, they can be compromised by malicious users. For example, a malicious user could steal sensitive domain administrator credentials from one domain controller, and then use these credentials to attack the domain and forest.
 
-In addition, installed applications and management agents on domain controllers might provide a path for escalating rights that malicious users can use to compromise the management service or administrators of that service. The management tools and services, which your organization uses to manage domain controllers and their administrators, are equally important to the security of the domain controllers and the domain Administrator accounts. Ensure that these services and administrators are fully secured with equal effort.
+In addition, installed applications and management agents on domain controllers might provide a path for escalating rights that malicious users can use to compromise the management service or administrators of that service. The management tools and services that your organization uses to manage domain controllers and their administrators are equally important to the security of the domain controllers and the domain Administrator accounts. Ensure that these services and administrators are fully secured with equal effort.
 
-## See also
+## Related content
 
 - [Security principals](understand-security-principals.md)
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
