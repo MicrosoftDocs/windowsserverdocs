@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 06/30/2026
+ms.date: 06/30/2025
 ---
 
 # Remotely manage Hyper-V hosts with Hyper-V Manager
@@ -131,4 +131,4 @@ add-windowsfeature rsat-hyper-v-tools
 
 ## Related content
 
-[Install Hyper-V](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
+- [Install Hyper-V](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
