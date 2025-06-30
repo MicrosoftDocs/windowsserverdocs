@@ -1,15 +1,15 @@
 ---
-title: "Manage user accounts with Active Directory Users and Computers in Windows Server"
+title: Manage User Accounts with Active Directory Users and Computers in Windows Server
 description: Create, delete, and manage user accounts in Active Directory Users and Computers. Learn how to manage user account properties, group memberships, and passwords.
-ms.date: 03/05/2025
-ms.topic: article
+ms.date: 06/30/2025
+ms.topic: how-to
 author: orin-thomas
 ms.author: orthomas
 ---
 
-# Manage User Accounts in Active Directory Users and Computers
+# Manage user accounts in Active Directory Users and Computers
 
-You can create, delete, and manage security principals, including user accounts, in the Active Directory Users and Computers console. This console is available when the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) Tools component of the Remote Server Administration tools are installed on a Windows Server or client computer. To create, delete, and manage security permissions you need to have the appropriate permissions. By default members of the Domain Admins and Enterprise Admins group can manage user, group, and computer accounts. Members of the Account Operators group are able to create, modify, and delete user accounts but are unable to manage groups or permissions.
+You can create, delete, and manage security principals, including user accounts, in the Active Directory Users and Computers console. This console is available when the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) components of the Remote Server Administration Tools are installed on a Windows Server or client computer. To create, delete, and manage security permissions, you need to have the appropriate permissions. By default, members of the Domain Admins and Enterprise Admins group can manage user, group, and computer accounts. Members of the Account Operators group are able to create, modify, and delete user accounts but are unable to manage groups or permissions.
 
 ## Prerequisites
 
