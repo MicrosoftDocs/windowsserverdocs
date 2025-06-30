@@ -22,15 +22,14 @@ isn't repeated here. Client configuration files can be found on the
 [ssh_config manual page](https://man.openbsd.org/ssh_config). OpenSSH server configuration
 files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config).
 
-Open SSH Server (sshd) reads configuration data from _%programdata%\ssh\sshd\_config_ by default, or
-a different configuration file might be specified by launching `sshd.exe` with the `-f` parameter. If
-the file is absent, sshd generates one with the default configuration when the service is started.
+OpenSSH Server reads configuration data from _%programdata%\ssh\sshd\_config_ by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter. If
+the file is missing, sshd generates one with the default configuration when the service is started.
 
 In Windows, the OpenSSH Client (ssh) reads configuration data from a configuration file in the
 following order:
 
-1. By launching `ssh.exe` with the `-F` parameter, specifying a path to a configuration file and an
-   entry name from that file.
+1. Via `ssh.exe` started with the `-F` parameter, with a path to a configuration file and an
+   entry name from that file specified.
 2. A user's configuration file at _%userprofile%\\.ssh\config_.
 3. The system-wide configuration file at _%programdata%\ssh\ssh\_config_.
 
