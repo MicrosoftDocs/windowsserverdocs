@@ -42,9 +42,9 @@ When you add a user account, the assigned user can sign in to a domain joined co
     - **Full name**: User's full name (required)
     - **User logon name**: User account name (required)
 1. On the second page of the **New Object - User** dialog, provide the following information and then select **Next**:
-    - **Password**: Can be the assigned password or a temporary password that the user changes on their next login.
+    - **Password**: Can be the assigned password or a temporary password that the user changes on their next logon.
     - **Confirm**: A duplicate of the assigned password or temporary password.
-    - **User must change password at next logon**. Select this checkbox if you want to force the user to change the password at their next login. 
+    - **User must change password at next logon**. Select this checkbox if you want to force the user to change the password at their next logon. 
     - **User cannot change password**. Select this checkbox if you want to restrict the user from changing the password. 
     - **Password never expires**. Select this checkbox if you want to exempt the account from password policies. 
     - **Account is disabled**. Select this checkbox if you want to create the account in a disabled state. 
@@ -238,7 +238,7 @@ The **Sessions** tab of the user account properties page allows you to configure
 
 The **Remote Control** tab of the user account properties page allows you to configure Remote Desktop Services remote control settings. This tab includes the following fields:
 
-- **Enable remote control**
+- Enable remote control
 - Require user's permission
 - Level of control (view/interact)
 
