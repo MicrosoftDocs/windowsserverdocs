@@ -9,19 +9,17 @@ ms.author: orthomas
 
 # Manage user accounts in Active Directory Users and Computers
 
-You can create, delete, and manage security principals, including user accounts, in the Active Directory Users and Computers console. This console is available when the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) components of the Remote Server Administration Tools are installed on a Windows Server or client computer. To create, delete, and manage security permissions, you need to have the appropriate permissions. By default, members of the Domain Admins and Enterprise Admins group can manage user, group, and computer accounts. Members of the Account Operators group are able to create, modify, and delete user accounts but are unable to manage groups or permissions.
+You can create, delete, and manage security principals, including user accounts, in the Active Directory Users and Computers console. This console is available when the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) components of the Remote Server Administration Tools are installed on a Windows Server or client computer. To create, delete, and manage security permissions, you need to have the appropriate permissions. By default, members of the Domain Admins and Enterprise Admins group can manage user, group, and computer accounts. Members of the Account Operators group can create, modify, and delete user accounts but are unable to manage groups or permissions.
 
 ## Prerequisites
 
-To manage user accounts in Active Directory Users and Computers, you need to have the following prerequisites:
+- A computer running Windows Server or a Windows client operating system with the AD DS and AD LDS components of the Remote Server Administration Tools installed.
 
-- A computer running Windows Server or Windows client operating system with the Active Directory Domain Services (AD DS) and Active Directory Lightweight Directory Services (AD LDS) Tools component of the Remote Server Administration tools installed.
-
-- The computer must be joined to a domain and the user account you are using must have the appropriate permissions to manage user accounts in that domain.
+- The computer must be joined to a domain and the user account you're using must have the appropriate permissions to manage user accounts in that domain.
 
 ## Managing user accounts
 
-The following sections of this page provide information manage the user accounts on the server:
+The following sections of this article provide information about managing the user accounts on the server:
 
 - [Create a user account](#create-a-user-account)
 - [Manage group memberships](#manage-group-memberships)
@@ -33,76 +31,76 @@ The following sections of this page provide information manage the user accounts
 
 ### Create a user account
 
-When you add a user account, the assigned user can sign in a domain joined computer. You can give the user permission to access network resources such as shared folders, printers, and applications. To create a user account using Active Directory Users and Computers, perform the following steps:
+When you add a user account, the assigned user can sign in to a domain joined computer. You can give the user permission to access network resources such as shared folders, printers, and applications. To create a user account by using Active Directory Users and Computers, perform the following steps:
 
-1. In the Active Directory Users and Computers console, expand the domain tree and select the container or organizational unit that you wish to host the user account.
-1. On the Action menu, select New and then select User.
-1. On the New Object - User dialog provide the following information and choose Next:
-    - First name: User's first name (optional field)
-    - Initials: User's initials (optional field)
-    - Last name: User's last name (optional field)
-    - Full name: User's full name (mandatory field)
-    - User logon name: User account name (mandatory field)
-1. On the second page of the New Object - User dialog, provide the following information and choose Next:
-    - Password: Can be the assigned password or a temporary password that the user changes on next logon
-    - Confirm: A duplicate of the assigned password or temporary password
-    - User must change password at next logon. A checkbox that can be enabled to force the user to change password at next logon. Can be enabled or left blank.
-    - User cannot change password. A checkbox that can be enabled to restrict the user from changing their password. Can be enabled or left blank.
-    - Password never expires. A checkbox that can be enabled to exempt the account from password policies. Can be enabled or left blank.
-    - Account is disabled. A checkbox that allows to you create the account in a disabled state. Can be enabled or left black.
-1. Review the summary page of the New Object - User dialog and choose Finish to create the account.
+1. In the Active Directory Users and Computers console, expand the domain tree and select the container or organizational unit that you want to host the user account.
+1. On the **Action** menu, select **New** and then select **User**.
+1. In the **New Object - User** dialog, provide the following information and then select **Next**:
+    - **First name**: User's first name (optional)
+    - **Initials**: User's initials (optional)
+    - **Last name**: User's last name (optional)
+    - **Full name**: User's full name (required)
+    - **User logon name**: User account name (required)
+1. On the second page of the **New Object - User** dialog, provide the following information and then select **Next**:
+    - **Password**: Can be the assigned password or a temporary password that the user changes on their next sign-in.
+    - **Confirm**: A duplicate of the assigned password or temporary password.
+    - **User must change password at next logon**. Select this checkbox if you want to force the user to change the password at their next sign-in. 
+    - **User cannot change password**. Select this checkbox if you want to restrict the user from changing the password. 
+    - **Password never expires**. Select this checkbox if you want to exempt the account from password policies. 
+    - **Account is disabled**. Select this checkbox if you want to create the account in a disabled state. 
+1. Review the summary page of the **New Object - User** dialog. Select **Finish** to create the account.
 
 ### Manage group memberships
 
 Security permissions, such as those to shared folders, are most often assigned to security groups rather than to individual user accounts. By managing which groups a user is a member of, you often manage the resources to which the user account has access. To manage the group membership of an account, perform the following steps.
 
-1. In the Active Directory Users and Computers console, locate and select the user account you wish to manage the membership of.
-1. From the Action menu, select Properties.
-1. On the users account properties dialog box, select the Member Of tab.
-1. If you want to remove the user account from a group, select the listed group and select Remove and then choose OK to close the user account properties dialog box.
-1. If you want to add the user account to a group, select Add. 
-1. On the Select Groups dialog box, enter the name of the group you wish to add the account to and then select OK. If you're unsure of the group name, use the Advanced button to search the domain for groups and the Check Names button to verify the correct name.
-1. Choose OK to close the user account properties dialog box and apply the changes.
+1. In the Active Directory Users and Computers console, locate and select the user account you want to manage the membership of.
+1. On the **Action** menu, select **Properties**.
+1. In the user's account properties dialog, select the **Member Of** tab.
+1. If you want to remove the user account from a group, select the listed group, select **Remove**, and then select **OK** to close the user account properties dialog.
+1. If you want to add the user account to a group, select **Add**. 
+1. In the **Select Groups** dialog, enter the name of the group you want to add the account to and then select **OK**. If you're unsure of the group name, use the **Advanced** button to search the domain for groups and the **Check Names** button to verify the name.
+1. Select **OK** to close the user account properties dialog and apply the changes.
 
 ### Reset a user password
 
-To reset a user account password using the Active Directory Users and Computers console, perform the following steps:
+To reset a user account password by using the Active Directory Users and Computers console, perform the following steps:
 
-1. In the Active Directory Users and computers console, locate and the user account you wish to reset the password for.
-1. From the Action menu, select Reset Password.
-1. On the Reset Password dialog box, provide the following information and choose OK.
-    - New password: New password for the user
-    - Confirm password: Reenter the same password to confirm
-    - User must change password at next logon. A checkbox that you can enable to force the user to change password the next time they sign on.
-    - Unlock the user account. If the account is locked out due entering incorrect passwords, enable this checkbox to unlock the account.
+1. In the Active Directory Users and computers console, locate the user account you want to reset the password for.
+1. On the **Action** menu, select **Reset Password**.
+1. In the **Reset Password** dialog, provide the following information and then select **OK**.
+    - **New password**: New password for the user.
+    - **Confirm password**: Reenter the same password.
+    - **User must change password at next logon**. Select this checkbox if you want to force the user to change password the next time they sign on.
+    - **Unlock the user account**. If the account is locked out because the user entered too many incorrect passwords, select this checkbox to unlock the account.
 
 ### Disable a user account
 
-To disable a user account using the Active Directory Users and Computers console, perform the following steps:
+To disable a user account by using the Active Directory Users and Computers console, perform the following steps:
 
-1. In the Active Directory Users and computers console, locate and the user account you wish to disable.
-1. From the Action menu, select Disable Account.
-1. On the Active Directory Domain Services dialog, select OK. The account is disabled.
+1. In the Active Directory Users and computers console, locate the user account that you want to disable.
+1. On the **Action** menu, select **Disable Account**.
+1. In the **Active Directory Domain Services** dialog, select **OK**. The account is disabled.
 
-When an account is disabled, a signed on remains signed in but is unable to perform new sign ins.
+When an account is disabled, a signed in user remains signed in but is unable to perform new sign-ins.
 
 ### Enable a user account
 
-To enable a user account using the Active Directory Users and Computers console, perform the following steps:
+To enable a user account by using the Active Directory Users and Computers console, perform the following steps:
 
-1. In the Active Directory Users and computers console, locate and the user account you wish to enable.
-1. From the Action menu, select Enable Account.
-1. On the Active Directory Domain Services dialog, select OK. The account is enabled.
+1. In the Active Directory Users and computers console, locate the user account you want to enable.
+1. On the **Action** menu, select **Enable Account**.
+1. In the **Active Directory Domain Services** dialog, select **OK**. The account is enabled.
 
 ### Remove a user account
 
-Removing an account from Active Directory deletes the account. Best practice is to disable accounts before deleting them in case the account has permissions to resources that can't be accessed using other methods. To delete an account using the Active Directory Users and Computers console, perform the following steps:
+Removing an account from Active Directory deletes the account. The best practice is to disable accounts before deleting them in case the account has permissions to resources that can't be accessed via other methods. To delete an account by using the Active Directory Users and Computers console, perform the following steps:
 
-1. In the Active Directory Users and computers console, locate and the user account you wish to enable.
-1. From the Action menu, select Enable Account.
-1. On the Active Directory Domain Services dialog, select OK. The account is enabled.
+1. In the Active Directory Users and computers console, locate the user account you want to enable.
+1. On the **Action** menu, select **Enable Account**.
+1. In the **Active Directory Domain Services** dialog, select **OK**. The account is enabled.
 
-Deleted accounts can be recovered using Active Directory Recycle Bin if you enable the Active Directory Recycle Bin before account deletion. If Active Directory Recycle Bin isn't enabled, you need to perform an authoritative restore of AD DS using a backup of AD DS that includes the account.
+You can recover deleted accounts by using Active Directory recycle bin if you enable the recycle bin before you delete the account. If Active Directory Recycle Bin isn't enabled, you need to perform an authoritative restore of AD DS using a backup of AD DS that includes the account.
 
 ## User account properties
 
