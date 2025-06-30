@@ -106,41 +106,24 @@ You can recover deleted accounts by using Active Directory recycle bin if you en
 
 The following list includes all tabs on the **User account properties** page, including tabs that are visible only if the **Advanced Features** option is enabled. You can enable this option on the **View** menu of the Active Directory Users and Computers console. This information is stored with the account as attributes of the AD DS account object.
 
-[General](#general)
-
-[Address](#address)
-
-[Account](#account)
-
-[Profile](#profile)
-
-[Telephones](#telephones)
-
-[Organization](#organization)
-
-[Remote Desktop Services Profile](#remote-desktop-services-profile)
-
-[COM+](#com)
-
-[Attribute Editor](#attribute-editor)
-
-[Security](#security)
-
-[Environment](#environment)
-
-[Sessions](#sessions)
-
-[Remote control](#remote-control)
-
-[Published Certificates](#published-certificates)
-
-[Member Of](#member-of)
-
-[Password Replication](#password-replication)
-
-[Dial-in](#dial-in)
-
-[Object](#object)
+- [General](#general)
+- [Address](#address)
+- [Account](#account)
+- [Profile](#profile)
+- [Telephones](#telephones)
+- [Organization](#organization)
+- [Remote Desktop Services Profile](#remote-desktop-services-profile)
+- [COM+](#com)
+- [Attribute Editor](#attribute-editor)
+- [Security](#security)
+- [Environment](#environment)
+- [Sessions](#sessions)
+- [Remote control](#remote-control)
+- [Published Certificates](#published-certificates)
+- [Member Of](#member-of)
+- [Password Replication](#password-replication)
+- [Dial-in](#dial-in)
+- [Object](#object)
 
 ### General
 
