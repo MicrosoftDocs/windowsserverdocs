@@ -93,7 +93,7 @@ The following diagram shows the elements and processes required for smart card l
 
 When a smart card is used instead of a password, a private/public key pair stored on the user's smart card is substituted for the shared secret key, which is derived from the user's password. The private key is stored only on the smart card. The public key can be made available to anyone with whom the owner wants to exchange confidential information.
 
-For more information about the smart card logon process in Windows, see [How smart card sign-in works in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404285(v=ws.10)).
+For more information about the smart card logon process in Windows, see [How smart card logon works in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404285(v=ws.10)).
 
 ## <a name="BKMK_BioLogon"></a>Biometric logon
 A device is used to capture and build a digital characteristic of an artifact, such as a fingerprint. This digital representation is then compared to a sample of the same artifact, and when the two match, authentication can occur. Computers running any of the operating systems designated in the **Applies to** list at the beginning of this article can be configured to accept this form of logon. However, if biometric logon is only configured for local logon, the user needs to present domain credentials when accessing an Active Directory domain.
