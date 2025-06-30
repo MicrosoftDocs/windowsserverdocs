@@ -140,24 +140,24 @@
     href: windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md
   - name: Disabling Per-User Services in Windows
     href: /windows/application-management/per-user-services-in-windows
-  - name: Windows Authentication
+  - name: Windows authentication
     href: windows-authentication/windows-authentication-overview.md
     items:
-    - name: Windows Authentication Technical Overview
+    - name: Windows authentication technical overview
       href: windows-authentication/windows-authentication-technical-overview.md
       items:
-      - name: Windows Authentication Concepts
+      - name: Windows authentication concepts
         href: windows-authentication/windows-authentication-concepts.md
-      - name: Windows Logon Scenarios
+      - name: Windows Logon scenarios
         href: windows-authentication/windows-logon-scenarios.md
-      - name: Windows Authentication Architecture
+      - name: Windows authentication architecture
         href: windows-authentication/windows-authentication-architecture.md
         items:
         - name: Security Support Provider Interface Architecture
           href: windows-authentication/security-support-provider-interface-architecture.md
-        - name: Credentials Processes in Windows Authentication
+        - name: Credentials Processes in Windows authentication
           href: windows-authentication/credentials-processes-in-windows-authentication.md
-      - name: Group Policy Settings Used in Windows Authentication
+      - name: Group Policy Settings Used in Windows authentication
         href: windows-authentication/group-policy-settings-used-in-windows-authentication.md
   - name: Credentials Protection and Management
     href: credentials-protection-and-management/credentials-protection-and-management.md
