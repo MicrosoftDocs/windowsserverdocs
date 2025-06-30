@@ -11,7 +11,7 @@ ms.date: 06/30/2025
 
 Data Deduplication is a Windows Server feature that helps optimize storage by identifying and removing duplicate data without affecting file access or integrity. This article describes how Data Deduplication interoperates with other Windows Server technologies, including supported and unsupported scenarios. Use this information to ensure compatibility and maintain optimal performance when deploying Data Deduplication in your environment.
 
-## Supported
+## Supported scenarios
 
 The following sections describe supported scenarios for Data Deduplication with other Windows Server features and technologies.
 
@@ -87,7 +87,7 @@ Windows Server Backup can back up an optimized volume as-is (that is, without re
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:File  -items:E:\Docs  -recursive
     ```
 
-## Unsupported
+## Unsupported scenarios
 
 The following sections describe scenarios that aren't supported with Data Deduplication.
 
