@@ -147,6 +147,9 @@ If not specified, this setting defaults to 6 words.
 
 The `PassphraseLength` setting is ignored unless `PasswordComplexity` is configured to one of the passphrase options.
 
+> [!IMPORTANT]
+> `PassphraseLength` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+
 ### PasswordComplexity
 
 Use this setting to configure the required password complexity of the managed local administrator account, or to specify that a passphrase is created.
@@ -165,10 +168,13 @@ Use this setting to configure the required password complexity of the managed lo
 If not specified, this setting defaults to *4*.
 
 > [!IMPORTANT]
-> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4.
+> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4 (or a higher value if supported).
 
 > [!IMPORTANT]
 > Don't configure `PasswordComplexity` to a setting that is incompatible with the managed device's local password policy. This results in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAPS event log).
+
+> [!IMPORTANT]
+> `PasswordComplexity` values 5 through 8 are only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### PasswordExpirationProtectionEnabled
 
@@ -280,6 +286,9 @@ Supported values are either *1* (True) or *0* (False).
 
 This setting defaults to *0* (False).
 
+> [!IMPORTANT]
+> `AutomaticAccountManagementEnabled` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+
 ### AutomaticAccountManagementTarget
 
 Use this setting to specify whether the built-in Administrator account is automatically managed, or a new custom account.
@@ -293,6 +302,9 @@ This setting defaults to *1*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
+> [!IMPORTANT]
+> `AutomaticAccountManagementTarget` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+
 ### AutomaticAccountManagementNameOrPrefix
 
 Use this setting to specify the name or the name prefix of the automatically managed account.
@@ -304,6 +316,9 @@ This setting is treated as a name if `AutomaticAccountManagementRandomizeName` i
 This setting is treated as a name prefix if `AutomaticAccountManagementRandomizeName` is *1* (True).
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementNameOrPrefix` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementEnableAccount
 
@@ -317,6 +332,9 @@ Use this setting to enable or disable the automatically managed account.
 This setting defaults to *0*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementEnableAccount` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementRandomizeName
 
@@ -334,6 +352,9 @@ Windows local account names have a maximum length of 20 characters, which means 
 This setting defaults to *0*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementRandomizeName` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ## Windows LAPS default policy values
 
