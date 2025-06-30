@@ -72,7 +72,8 @@ The instances of Winlogon for an interactive logon run in Session 0. Session 0 h
 
 The following diagram shows the credential process for Windows Server 2003, Microsoft Windows 2000 Server, Windows XP, and Microsoft Windows 2000 Professional.
 
-:::image type="content" source="../media/Credentials-Processes-in-Windows-Authentication/AuthN_GINA_Architecture.gif" alt-text="Diagram showing the GINA (Graphical Identification and Authentication) architecture in Windows authentication, illustrating the interaction between user interface components, security subsystem, and authentication processes":::
+:::image type="content" source="../media/Credentials-Processes-in-Windows-Authentication/AuthN_GINA_Architecture.gif" alt-text="Diagram showing the GINA (Graphical Identification and Authentication) architecture in Windows authentication, illustrating the interaction between user interface components, security subsystem, and authentication processes.":::
+
 </details>
 
 ### Credential provider architecture
