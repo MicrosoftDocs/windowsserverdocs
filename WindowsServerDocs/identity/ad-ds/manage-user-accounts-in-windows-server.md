@@ -100,29 +100,46 @@ Removing an account from Active Directory deletes the account. The best practice
 1. On the **Action** menu, select **Enable Account**.
 1. In the **Active Directory Domain Services** dialog, select **OK**. The account is enabled.
 
-You can recover deleted accounts by using Active Directory recycle bin if you enable the recycle bin before you delete the account. If Active Directory Recycle Bin isn't enabled, you need to perform an authoritative restore of AD DS using a backup of AD DS that includes the account.
+You can recover deleted accounts by using Active Directory recycle bin if you enable the recycle bin before you delete the account. If the recycle bin isn't enabled, you need to perform an authoritative restore of AD DS by using a backup of AD DS that includes the account.
 
 ## User account properties
 
-The following list includes all tabs on the User account properties page, including tabs are only visible if the Advanced Features option is enabled. You can enable this option on the View menu of the Active Directory Users and Computers console. This information is stored with the account as attributes of the AD DS account object.
+The following list includes all tabs on the **User account properties** page, including tabs that are visible only if the **Advanced Features** option is enabled. You can enable this option on the **View** menu of the Active Directory Users and Computers console. This information is stored with the account as attributes of the AD DS account object.
 
 [General](#general)
+
 [Address](#address)
+
 [Account](#account)
+
 [Profile](#profile)
+
 [Telephones](#telephones)
+
 [Organization](#organization)
+
 [Remote Desktop Services Profile](#remote-desktop-services-profile)
+
 [COM+](#com)
+
 [Attribute Editor](#attribute-editor)
+
 [Security](#security)
+
 [Environment](#environment)
+
 [Sessions](#sessions)
+
 [Remote control](#remote-control)
+
 [Published Certificates](#published-certificates)
+
 [Member Of](#member-of)
+
 [Password Replication](#password-replication)
+
 [Dial-in](#dial-in)
+
 [Object](#object)
 
 ### General
