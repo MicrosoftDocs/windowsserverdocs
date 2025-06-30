@@ -42,9 +42,9 @@ When you add a user account, the assigned user can sign in to a domain joined co
     - **Full name**: User's full name (required)
     - **User logon name**: User account name (required)
 1. On the second page of the **New Object - User** dialog, provide the following information and then select **Next**:
-    - **Password**: Can be the assigned password or a temporary password that the user changes on their next sign-in.
+    - **Password**: Can be the assigned password or a temporary password that the user changes on their next login.
     - **Confirm**: A duplicate of the assigned password or temporary password.
-    - **User must change password at next logon**. Select this checkbox if you want to force the user to change the password at their next sign-in. 
+    - **User must change password at next logon**. Select this checkbox if you want to force the user to change the password at their next login. 
     - **User cannot change password**. Select this checkbox if you want to restrict the user from changing the password. 
     - **Password never expires**. Select this checkbox if you want to exempt the account from password policies. 
     - **Account is disabled**. Select this checkbox if you want to create the account in a disabled state. 
@@ -71,7 +71,7 @@ To reset a user account password by using the Active Directory Users and Compute
 1. In the **Reset Password** dialog, provide the following information and then select **OK**.
     - **New password**: New password for the user.
     - **Confirm password**: Reenter the same password.
-    - **User must change password at next logon**. Select this checkbox if you want to force the user to change password the next time they sign on.
+    - **User must change password at next logon**. Select this checkbox if you want to force the user to change password the next time they sign in.
     - **Unlock the user account**. If the account is locked out because the user entered too many incorrect passwords, select this checkbox to unlock the account.
 
 ### Disable a user account
@@ -127,7 +127,7 @@ The following list includes all tabs on the **User account properties** page, in
 
 ### General
 
-The General tab of the user account properties page includes the following fields related to the user's name and description:
+The **General** tab of the user account properties page includes the following fields related to the user's name and description:
 
 - First Name
 - Initials
@@ -140,7 +140,7 @@ The General tab of the user account properties page includes the following field
 
 ### Address
 
-The Address tab of the user account properties page allows you to store location information with the account and includes the following fields:
+The **Address** tab of the user account properties page allows you to store location information with the account and includes the following fields:
 
 - Street
 - P.O. Box
@@ -151,7 +151,7 @@ The Address tab of the user account properties page allows you to store location
 
 ### Account
 
-The Account tab of the user account properties page allows you to configure various account settings. These include logon hours, the specific computers that the account can log on to, and the types of encryption the account supports. You can also set whether the account can be delegated and specify if or when the account should expire. This tab includes the following settings:
+The **Account** tab of the user account properties page allows you to configure various account settings. These include logon hours, the specific computers that the account can log on to, and the types of encryption the account supports. You can also set whether the account can be delegated and specify if or when the account should expire. This tab includes the following settings:
 
 - User logon name, including user logon domain
 - User logon name (Pre-Windows 2000)
@@ -173,7 +173,7 @@ The Account tab of the user account properties page allows you to configure vari
 
 ### Profile
 
-The Profile tab of the user account properties page allows you to configure roaming profile information, logon script, and home folder settings. This tab includes the following fields:
+The **Profile** tab of the user account properties page allows you to configure roaming profile information, logon script, and home folder settings. This tab includes the following fields:
 
 - Profile path
 - Logon script
@@ -181,7 +181,7 @@ The Profile tab of the user account properties page allows you to configure roam
 
 ### Telephones
 
-The Telephones tab of the user account properties page allows you to store telephone number information with a user account and includes the following fields:
+The **Telephones** tab of the user account properties page allows you to store telephone number information with a user account. It includes the following fields:
 
 - Home
 - Pager
@@ -192,7 +192,7 @@ The Telephones tab of the user account properties page allows you to store telep
 
 ### Organization
 
-The Organization tab of the user account properties page allows you to store information about a user including job title and department. You can also use this tab to specify a manager and see which user accounts are listed as direct reports. This tab includes the following fields:
+The **Organization** tab of the user account properties page allows you to store information about a user, including job title and department. You can also use this tab to specify a manager and see which user accounts are listed as direct reports. This tab includes the following fields:
 
 - Job Title
 - Department
@@ -202,7 +202,7 @@ The Organization tab of the user account properties page allows you to store inf
 
 ### Remote Desktop Services Profile
 
-The Remote Desktop Service Profile tab of the user account properties page allows you to configure a Remote Desktop Service user profile. This tab includes the following fields:
+The **Remote Desktop Service Profile** tab of the user account properties page allows you to configure a Remote Desktop Service user profile. This tab includes the following settings:
 
 - Remote Desktop Services User Profile Profile Path
 - Remote Desktop Services Home Folder
@@ -210,23 +210,23 @@ The Remote Desktop Service Profile tab of the user account properties page allow
 
 ### COM+
 
-The COM+ tab of the user account properties page allows you to specify which COM+ partition set a user account is associated with.
+The **COM+** tab of the user account properties page allows you to specify which COM+ partition set a user account is associated with.
 
 ### Attribute Editor
 
-The Attribute Editor tab of the user account properties page allows you to edit each account attribute directly. The Attribute Editor also shows attributes that are not exposed through the user properties page interface.
+The **Attribute Editor** tab of the user account properties page allows you to edit each account attribute directly. The Attribute Editor also shows attributes that aren't exposed through the user properties page interface.
 
 ### Security
 
-The Security tab of the user account properties page allows you to see the security permissions that apply to the account. By selecting the Advanced button, you can also configure auditing of the use of these permissions. 
+The **Security** tab of the user account properties page allows you to see the security permissions that apply to the account. By selecting the **Advanced** button, you can also configure auditing of the use of these permissions. 
 
 ### Environment
 
-The Environment tab of the user account properties page allows you to configure specific programs to start at logon to the Remote Desktop Services environment and whether to connect client drives, printers, and the main client printer at logon. 
+The **Environment** tab of the user account properties page allows you to configure specific programs to start at logon to the Remote Desktop Services environment and whether to connect client drives, printers, and the main client printer at logon. 
 
 ### Sessions
 
-The Sessions tab of the user account properties page allows you to configure Remote Desktop Services time-out and reconnection settings. You can configure the following settings on this tab:
+The **Sessions** tab of the user account properties page allows you to configure Remote Desktop Services time-out and reconnection settings. You can configure the following settings on this tab:
 
 - End a disconnected session
 - Active session limit
@@ -236,27 +236,27 @@ The Sessions tab of the user account properties page allows you to configure Rem
 
 ### Remote control
 
-The Remote Control tab of the user account properties page allows you to configure Remote Desktop Services remote control settings. This tab includes the following fields:
+The **Remote Control** tab of the user account properties page allows you to configure Remote Desktop Services remote control settings. This tab includes the following fields:
 
-- Enable remote control
+- **Enable remote control**
 - Require user's permission
 - Level of control (view/interact)
 
 ### Published Certificates
 
-The Published Certificates tab of the user account properties page lists all X509 certificates published for the user account and stored within Active Directory.
+The **Published Certificates** tab of the user account properties page lists all X509 certificates published for the user account and stored in Active Directory.
 
 ### Member Of
 
-The Member Of tab of the user account properties page allows you to manage security group group membership. You can add or remove group membership using this tab of the user account properties page.
+The **Member Of** tab of the user account properties page allows you to add or remove security group membership.
 
 ### Password Replication
 
-The Password Replication tab of the user account properties page allows you to manage whether the user account's password are cached on Read Only Domain Controllers. You can use this tab to specify which Read Only Domain Controllers store cached copies of the user account's password.
+The **Password Replication** tab of the user account properties page allows you to specify which read-only domain controllers store cached copies of the user account's password.
 
 ### Dial-in
 
-The Dial-in tab of the user account properties page allows you to configure the following Network Policy Server Network Access Permissions:
+The **Dial-in** tab of the user account properties page allows you to configure the following Network Policy Server network access permissions:
 
 - Allow access
 - Deny access
@@ -270,4 +270,4 @@ The Dial-in tab of the user account properties page allows you to configure the 
 
 ### Object
 
-The Object tab of the user account properties page allows you to view information about the security principal object and to configure the "Protect object from accidental deletion" setting.
+The **Object** tab of the user account properties page allows you to view information about the security principal object and to configure the **Protect object from accidental deletion** setting.
