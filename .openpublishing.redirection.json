@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/failover-clustering/Upgrade-Option-Same-Hardware.md",
+      "redirect_url": "/previous-versions/windows-server/failover-clustering/Upgrade-Option-Same-Hardware",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "EssentialsDocs/get-started/azure-site-recovery-services-integration.md",
       "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/azure-site-recovery-services-integration",
       "redirect_document_id": false

@@ -54,8 +54,6 @@
     items:
     - name: Cluster operating system rolling upgrades
       href: cluster-operating-system-rolling-upgrade.md
-    - name: Upgrading a failover cluster on the same hardware
-      href: upgrade-option-same-hardware.md
   - name: Deploy a cluster set
     href: cluster-set.md
 - name: Concepts
