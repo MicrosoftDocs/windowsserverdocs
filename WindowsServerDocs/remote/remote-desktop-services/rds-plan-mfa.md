@@ -1,6 +1,6 @@
 ---
-title: Plan Multi-Factor Authentication for Remote Desktop Services
-description: Learn how to plan and deploy Multi-Factor Authentication (MFA) with Remote Desktop Services (RDS) to enhance security and reduce unauthorized access risks.
+title: Plan Multifactor Authentication for Remote Desktop Services
+description: Learn how to plan and deploy Multifactor Authentication (MFA) with Remote Desktop Services (RDS) to enhance security and reduce unauthorized access risks.
 ms.topic: concept-article
 ai-usage: ai-assisted
 ms.author: daknappe
@@ -8,9 +8,9 @@ author: dknappettmsft
 ms.date: 06/30/2025
 ---
 
-# Plan multi-factor authentication for Remote Desktop Services
+# Plan multifactor authentication for Remote Desktop Services
 
-Multi-Factor Authentication (MFA) enhances the security of Remote Desktop Services (RDS) by requiring users to verify their identity through multiple authentication methods. This added layer of protection helps safeguard sensitive resources and reduces the risk of unauthorized access. This article provides an overview of the user experience, architecture components, and security benefits of integrating MFA with RDS, along with planning considerations for deployment.
+Multifactor Authentication (MFA) enhances the security of Remote Desktop Services (RDS) by requiring users to verify their identity through multiple authentication methods. This added layer of protection helps safeguard sensitive resources and reduces the risk of unauthorized access. This article provides an overview of the user experience, architecture components, and security benefits of integrating MFA with RDS, along with planning considerations for deployment.
 
 ## User Experience
 
