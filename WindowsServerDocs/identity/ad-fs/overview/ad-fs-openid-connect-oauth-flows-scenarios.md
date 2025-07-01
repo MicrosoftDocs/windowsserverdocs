@@ -66,15 +66,15 @@ client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 |resource|optional|The URL of your web API.</br>Note – If using MSAL client library, the resource parameter isn't sent. Instead, the resource URL is sent as a part of the scope parameter: `scope = [resource url]//[scope values, for example, openid]`</br>If resource isn't passed here or in scope, AD FS uses a default resource urn:microsoft:userinfo. userinfo resource policies such as MFA, issuance, or authorization policies can't be customized.|
 |response_mode|optional| Specifies the method that should be used to send the resulting token back to your app. Defaults to `fragment`.|
 |state|optional|A value included in the request that is also to be returned in the token response. It can be a string of any content that you want. A randomly generated unique value is typically used for preventing cross-site request forgery attacks. The state is also used to encode information about the user's state in the app before the authentication request occurred, such as the page or view they were on.|
-|prompt|optional|Indicates the type of user interaction that's required. The only valid values at this time are sign-in and none.</br>- `prompt=login` forces the user to enter their credentials on that request, negating single sign-on. </br>- `prompt=none` is the opposite - it ensures that the user isn't presented with any interactive prompt whatsoever. If the request can't be completed silently via single sign-on, AD FS returns an interaction_required error.|
+|prompt|optional|Indicates the type of user interaction that's required. The only valid values at this time are sign-in and none.</br>- `prompt=login` forces the user to enter their credentials on that request, negating single sign-on. </br>- `prompt=none` is the opposite - it ensures that the user isn't presented with any interactive prompt. If the request can't be completed silently via single sign-on, AD FS returns an interaction_required error.|
 |login_hint|optional|Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know their username ahead of time. Often apps use this parameter during reauthentication, having already extracted the username from a previous sign-in by using the `upn` claim from `id_token`.|
-|domain_hint|optional|If included, it skips the domain-based discovery process that the user goes through on the sign-in page, leading to a slightly more streamlined user experience.|
+|domain_hint|optional|If this value is included, the domain-based discovery process that the user goes through on the sign-in page is skipped, leading to a slightly more streamlined user experience.|
 
 At this point, the user is asked to enter their credentials and complete the authentication. After the user authenticates, the AD FS authorization endpoint returns a response to your app at the indicated redirect_uri, using the method specified in the response_mode parameter.
 
 ### Successful response
 
-A successful response using `response_mode=fragment and response_type=id_token+token` looks like this:
+A successful response, when `response_mode=fragment and response_type=id_token+token` is used, looks like this:
 
 ```
 // Line breaks for legibility only
@@ -99,7 +99,7 @@ access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZEstZnl0aEV...
 
 ### Refresh tokens
 
-The implicit grant doesn't provide refresh tokens. Both `id_token`s and `access_token`s expire after a short period of time, so your app must be prepared to refresh these tokens periodically. To refresh either type of token, you can perform the same hidden iframe request as in the previous section, using the `prompt=none` parameter to control the identity platform's behavior. If you want to receive a new `id_token`, be sure to use `response_type=id_token`.
+The implicit grant doesn't provide refresh tokens. Both id_tokens and access_tokens expire after a short period of time, so your app must be prepared to refresh these tokens periodically. To refresh either type of token, you can perform the same hidden iframe request as in the previous section, using the `prompt=none` parameter to control the identity platform's behavior. If you want to receive a new `id_token`, be sure to use `response_type=id_token`.
 
 ## Authorization code grant flow
 
@@ -136,21 +136,21 @@ client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 |client_id|required|The application (client) ID that AD FS assigned to your app.|
 |response_type|required| Must include code for the authorization code flow.|
 |redirect_uri|required|The `redirect_uri` of your app, where authentication responses can be sent and received by your app. It must exactly match one of the redirect_uris you registered in AD FS for the client.|
-|resource|optional|The URL of your web API.</br>Note – If using MSAL client library, then resource parameter isn't sent. Instead the resource url is sent as a part of the scope parameter: `scope = [resource url]//[scope values e.g., openid]`</br>If resource isn't passed here or in scope, AD FS uses a default resource urn:microsoft:userinfo. userinfo resource policies such as MFA, Issuance or authorization policy, can't be customized.|
+|resource|optional|The URL of your web API.</br>Note – If using MSAL client library, the resource parameter isn't sent. Instead, the resource URL is sent as a part of the scope parameter: `scope = [resource url]//[scope values, for example, openid]`</br>If resource isn't passed here or in scope, AD FS uses a default resource urn:microsoft:userinfo. userinfo resource policies such as MFA, issuance, or authorization policies can't be customized.|
 |scope|optional|A space-separated list of scopes.|
 |response_mode|optional|Specifies the method that should be used to send the resulting token back to your app. Can be one of the following methods: </br>- query </br>- fragment </br>- form_post</br>`query` provides the code as a query string parameter on your redirect URI. If you're requesting the code, you can use query, fragment, or form_post. `form_post` executes a POST containing the code to your redirect URI.|
-|state|optional|A value included in the request that is also to be returned in the token response. It can be a string of any content that you wish. A randomly generated unique value is typically used for preventing cross-site request forgery attacks. The value can also encode information about the user's state in the app before the authentication request occurred, such as the page or view they were on.|
-|prompt|optional|Indicates the type of user interaction that is required. The only valid values at this time are sign-in, and none.</br>- `prompt=login` forces the user to enter their credentials on that request, negating single-sign on. </br>- `prompt=none` is the opposite - it ensures that the user isn't presented with any interactive prompt whatsoever. If the request can't be completed silently via single-sign on, AD FS returns an interaction_required error.|
-|login_hint|optional|Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know their username ahead of time. Often apps use this parameter during reauthentication, having already extracted the username from a previous sign-in using the `upn`claim from `id_token`.|
-|domain_hint|optional|If included, it skips the domain-based discovery process that user goes through on the sign-in page, leading to a slightly more streamlined user experience.|
-|code_challenge_method|optional|The method used to encode the code_verifier for the code_challenge parameter. Can be one of the following values: </br>- plain </br>- S256 </br>If excluded, code_challenge is assumed to be plaintext if `code_challenge` is included. AD FS supports both plain and S256. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636).|
-|code_challenge|optional| Used to secure authorization code grants via Proof Key for Code Exchange (PKCE) from a native client. Required if `code_challenge_method` is included. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636)|
+|state|optional|A value included in the request that is also to be returned in the token response. It can be a string of any content that you want. A randomly generated unique value is typically used for preventing cross-site request forgery attacks. The value can also encode information about the user's state in the app before the authentication request occurred, such as the page or view they were on.|
+|prompt|optional|Indicates the type of user interaction that's required. The only valid values at this time are sign-in and none.</br>- `prompt=login` forces the user to enter their credentials on that request, negating single sign-on. </br>- `prompt=none` is the opposite - it ensures that the user isn't presented with any interactive prompt. If the request can't be completed silently via single sign-on, AD FS returns an interaction_required error.|
+|login_hint|optional|Can be used to pre-fill the username/email address field of the sign-in page for the user, if you know their username ahead of time. Often apps use this parameter during reauthentication, having already extracted the username from a previous sign-in by using the `upn`claim from `id_token`.|
+|domain_hint|optional|If this value is included, the domain-based discovery process that user goes through on the sign-in page is skipped, leading to a slightly more streamlined user experience.|
+|code_challenge_method|optional|The method used to encode the code_verifier for the code_challenge parameter. Can be one of the following values: </br>- plain </br>- S256 </br>If this value is excluded, code_challenge is assumed to be plaintext if `code_challenge` is included. AD FS supports both plain and S256. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636).|
+|code_challenge|optional| Used to secure authorization code grants via Proof Key for Code Exchange (PKCE) from a native client. Required if `code_challenge_method` is included. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636).|
 
-At this point, the user is asked to enter their credentials and complete the authentication. Once the user authenticates, the AD FS returns a response to your app at the indicated `redirect_uri`, using the method specified in the `response_mode` parameter.
+At this point, the user is asked to enter their credentials and complete the authentication. After the user authenticates, AD FS returns a response to your app at the indicated `redirect_uri`, using the method specified in the `response_mode` parameter.
 
 ### Successful response
 
-A successful response using response_mode=query looks like:
+A successful response, when response_mode=query is used, looks like this:
 
 ```
 GET https://adfs.contoso.com/common/oauth2/nativeclient?
@@ -160,7 +160,7 @@ code=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...
 
 |Parameter|Description|
 |-----|-----|
-|code|The `authorization_code` that the app requested. The app can use the authorization code to request an access token for the target resource. Authorization_codes are short lived, typically they expire after about 10 minutes.|
+|code|The `authorization_code` that the app requested. The app can use the authorization code to request an access token for the target resource. `authorization_code`s are short lived. They typically expire after about 10 minutes.|
 |state|If a `state` parameter is included in the request, the same value should appear in the response. The app should verify that the state values in the request and response are identical.|
 
 ### Request an access token
@@ -183,16 +183,16 @@ client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 
 |Parameter|Required/optional|Description|
 |-----|-----|-----|
-|client_id|required|The Application (client) ID that the AD FS assigned to your app.|
+|client_id|required|The application (client) ID that AD FS assigned to your app.|
 |grant_type|required|Must be `authorization_code` for the authorization code flow.|
 |code|required|The `authorization_code` that you acquired in the first leg of the flow.|
 |redirect_uri|required|The same `redirect_uri` value that was used to acquire the `authorization_code`.|
-|client_secret|required for web apps|The application secret that you created during app registration in AD FS. You shouldn't use the application secret in a native app because client_secrets can't be reliably stored on devices. It's required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. The client secret must be URL-encoded before being sent. These apps can also use a key based authentication by signing a JWT and adding that as client_assertion parameter.|
-|code_verifier|optional|The same `code_verifier` that was used to obtain the authorization_code. Required if PKCE was used in the authorization code grant request. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636). This option applies to AD FS 2019 and later|
+|client_secret|required for web apps|The application secret that you created during app registration in AD FS. You shouldn't use the application secret in a native app because client_secrets can't be reliably stored on devices. This parameter is required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. The client secret must be URL-encoded before being sent. These apps can also use key-based authentication by signing a JWT and adding that as a client_assertion parameter.|
+|code_verifier|optional|The same `code_verifier` that was used to obtain the authorization_code. Required if PKCE was used in the authorization code grant request. For more information, see the [PKCE RFC](https://tools.ietf.org/html/rfc7636). This option applies to AD FS 2019 and later.|
 
 ### Successful response
 
-A successful token response looks like:
+A successful token response looks like this:
 
 ```
 {
@@ -207,12 +207,12 @@ A successful token response looks like:
 
 |Parameter|Description|
 |-----|-----|
-|access_token|The requested access token. The app can use this token to authenticate to the secured resource (Web API).|
+|access_token|The requested access token. The app can use this token to authenticate to the secured resource (web API).|
 |token_type|Indicates the token type value. The only type that AD FS supports is Bearer.|
 |expires_in|How long the access token is valid (in seconds).|
-|refresh_token|An OAuth 2.0 refresh token. The app can use this token to acquire more access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time.|
+|refresh_token|An OAuth 2.0 refresh token. The app can use this token to acquire more access tokens after the current access token expires. Refresh_tokens are long-lived and can be used to retain access to resources for extended periods of time.|
 |refresh_token_expires_in|How long the refresh token is valid (in seconds).|
-|id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
+|id_token|A JWT. The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
 
 ### Use the access token
 
@@ -222,13 +222,13 @@ Host: https://webapi.com
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...
  ```
 
-### Refresh Token Grant Flow
+### Refresh the token grant flow
 
-Access_tokens are short lived, and you must refresh them after they expire to continue accessing resources. You can do so by submitting another POST request to the `/token` endpoint, this time providing the refresh_token instead of the code. Refresh tokens are valid for all permissions that your client has already received access token for.
+Access_tokens are short lived, and you must refresh them after they expire to continue accessing resources. You can do so by submitting another POST request to the `/token` endpoint, this time providing the refresh_token instead of the code. Refresh tokens are valid for all permissions that your client has already received access tokens for.
 
 Refresh tokens don't have specified lifetimes. Typically, the lifetimes of refresh tokens are relatively long. However, in some cases, refresh tokens expire, are revoked, or lack sufficient privileges for the desired action. Your application needs to expect and handle errors returned by the token issuance endpoint correctly.
 
-Although refresh tokens aren't revoked when used to acquire new access tokens, you're expected to discard the old refresh token. As per the OAuth 2.0 spec says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." AD FS issues refresh token when the new refresh token lifetime is longer than previous refresh token lifetime. To view additional information on AD FS refresh token lifetimes, visit [AD FS Single Sign On Settings](../operations/ad-fs-single-sign-on-settings.md).
+Although refresh tokens aren't revoked when used to acquire new access tokens, you're expected to discard the old refresh token. The OAuth 2.0 specification says: "The authorization server MAY issue a new refresh token, in which case the client MUST discard the old refresh token and replace it with the new refresh token. The authorization server MAY revoke the old refresh token after issuing a new refresh token to the client." AD FS issues refresh tokens when the new refresh token lifetime is longer than previous refresh token lifetime. To view additional information on AD FS refresh token lifetimes, see [AD FS Single Sign-On Settings](../operations/ad-fs-single-sign-on-settings.md).
 
 ```http
 // Line breaks for legibility only
@@ -243,18 +243,18 @@ client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &client_secret=JqQX2PNo9bpM0uEihUPzyrh      // NOTE: Only required for confidential clients (web apps)
 ```
 
-|Parameter|Required/Optional|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
-|client_id|required|The Application (client) ID that the AD FS assigned to your app.|
+|client_id|required|The application (client) ID that AD FS assigned to your app.|
 |grant_type|required|Must be `refresh_token` for this leg of the authorization code flow.|
-|resource|optional|The url of your Web API.</br>Note – If using MSAL client library, then resource parameter isn't sent. Instead the resource url is sent as a part of the scope parameter: `scope = [resource url]//[scope values e.g., openid]`</br>If resource isn't passed here or in scope, AD FS uses a default resource urn:microsoft:userinfo. userinfo resource policies such as MFA, Issuance or authorization policy, can't be customized.|
+|resource|optional|The URL of your web API.</br>Note – If using MSAL client library, the resource parameter isn't sent. Instead, the resource URL is sent as a part of the scope parameter: `scope = [resource url]//[scope values, for example, openid]`</br>If resource isn't passed here or in scope, AD FS uses a default resource urn:microsoft:userinfo. userinfo resource policies such as MFA, issuance, or authorization policies can't be customized.|
 |scope|optional|A space-separated list of scopes.|
 |refresh_token|required|The refresh_token that you acquired in the second leg of the flow.|
-|client_secret|required for web apps| The application secret that you created in the app registration portal for your app. It shouldn't be used in a native app, because client_secrets can't be reliably stored on devices. It's required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. These apps can also use a key based authentication by signing a JWT and adding that as client_assertion parameter.|
+|client_secret|required for web apps| The application secret that you created in the app registration portal for your app. It shouldn't be used in a native app, because client_secrets can't be reliably stored on devices. This parameter is required for web apps and web APIs, which have the ability to store the client_secret securely on the server side. These apps can also use key-based authentication by signing a JWT and adding that as a client_assertion parameter.|
 
 ### Successful response
 
-A successful token response looks like:
+A successful token response looks like this:
 
 ```
 {
@@ -270,36 +270,36 @@ A successful token response looks like:
 |Parameter|Description|
 |-----|-----|
 |access_token|The requested access token. The app can use this token to authenticate to the secured resource, such as a web API.|
-|token_type|Indicates the token type value. The only type that AD FS supports is Bearer|
+|token_type|Indicates the token type value. The only type that AD FS supports is Bearer.|
 |expires_in|How long the access token is valid (in seconds).|
 |scope|The scopes that the access_token is valid for.|
-|refresh_token|An OAuth 2.0 refresh token. The app can use this token to acquire more access tokens after the current access token expires. Refresh_tokens are long-lived, and can be used to retain access to resources for extended periods of time.|
+|refresh_token|An OAuth 2.0 refresh token. The app can use this token to acquire more access tokens after the current access token expires. Refresh_tokens are long-lived and can be used to retain access to resources for extended periods of time.|
 |refresh_token_expires_in|How long the refresh token is valid (in seconds).|
-|id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
+|id_token|A JWT. The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
 
 ### Proof Key for Code Exchange (PKCE) support for OAuth
 
-OAuth public clients using the Authorization Code Grant are vulnerable to authorization code interception attacks, as described in [RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636). To mitigate these attacks, as of Windows Server 2019, AD FS now supports Proof Key for Code Exchange (PKCE) for the OAuth Authorization Code Grant flow.
+OAuth public clients that use the authorization code grant are vulnerable to authorization code interception attacks, as described in [RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636). To mitigate these attacks, as of Windows Server 2019, AD FS supports Proof Key for Code Exchange (PKCE) for the OAuth authorization code grant flow.
 
-The PKCE support specification adds more parameters to the OAuth 2.0 Authorization and access token requests. The following diagram shows a visual outline of the PKCE process when a client contacts AD FS in Windows Server 2019.
+The PKCE support specification adds more parameters to the OAuth 2.0 authorization and access token requests. The following diagram shows an outline of the PKCE process when a client contacts AD FS in Windows Server 2019.
 
 :::image type="content" source="media/adfs-scenarios-for-developers/adfs2019.png" alt-text="Diagram of the PKCE relationship between the client and AD FS 2019.":::
 
-In the section labeled A, the client creates and records a secret named `code_verifier` and derives a transformed version of the secret called `t(code_verifier)`, also known as `code_challenge`. The client then sends the secret in the OAuth 2.0 Authorization Request along with the `t_m` transformation method.
+In the section labeled A, the client creates and records a secret named `code_verifier` and derives a transformed version of the secret called `t(code_verifier)`, also known as `code_challenge`. The client then sends the secret in the OAuth 2.0 authorization request along with the `t_m` transformation method.
 
 In the section labeled B, the authorization endpoint responds as usual, but records the `t(code_verifier)` secret and the transformation method.
 
-In the section labeled C, the client then sends the authorization code in the access token request as usual, but includes the `code_verifier` secret generated in section A.
+In the section labeled C, the client sends the authorization code in the access token request as usual, but includes the `code_verifier` secret generated in section A.
 
-In the section labeled D, AD FS transforms the `code_verifier`secret and compares it to the `t(code_verifier)` secret from Section B. If their values aren't equal, AD FS denies access.
+In the section labeled D, AD FS transforms the `code_verifier`secret and compares it to the `t(code_verifier)` secret from section B. If their values aren't equal, AD FS denies access.
 
-#### How to choose multiple auth providers for the same rule policy in Windows Server 2019
+#### How to choose multiple authentication providers for the same rule policy in Windows Server 2019
 
-AD FS already supports triggering extra authentication based on a claim rule policy (RP). These policies You can set them for a particular RP or at global level. You can set an extra auth policy for a particular RP by opening PowerShell as an administrator and running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet by passing either the **AdditionalAuthenticationRules** or **AdditionalAuthenticationRulesFile** parameter. To set it globally, an admin can use the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet. Setting extra policies lets you use more than one authentication provider for the same application.
+AD FS already supports triggering extra authentication based on a claim rule policy (RP). You can set these policies for a particular RP or at a global level. You can set an extra authentiction policy for a particular RP by opening PowerShell as an administrator and running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet, passing either the **AdditionalAuthenticationRules** or **AdditionalAuthenticationRulesFile** parameter. To set it globally, an admin can use the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet. Setting extra policies lets you use more than one authentication provider for the same application.
 
-Claim rules provide the option to select the authentication provider for additional authentication, which proves beneficial in situations where customers are switching between providers or require a distinct provider for certain applications. As of Windows Server 2019, you can now use claims rules to decide which other authentication provider to invoke for extra authentication. This feature is useful for two scenarios:
+Claim rules provide the option to select the authentication provider for additional authentication, which proves beneficial in situations where customers are switching between providers or require a distinct provider for certain applications. As of Windows Server 2019, you can use claims rules to decide which other authentication provider to invoke for extra authentication. This feature is useful in two scenarios:
 
-- Users are transitioning from one other authentication provider to another. As you onboard users to a newer authentication provider, they can use groups to control which extra authentication provider the service uses.
+- Users are transitioning from one authentication provider to another. As you onboard users to a newer authentication provider, they can use groups to control which extra authentication provider the service uses.
 
 - Users need a specific extra authentication provider for certain applications but also need to use a different method for other applications.
 
@@ -311,9 +311,9 @@ Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == 
 
 To set up this rule, you must issue the claim `http://schemas.microsoft.com/claims/authnmethodsproviders` from other authentication policies. The value of this claim should be the *Name* variable of the authentication provider.
 
-You can also modify this rule configuration to help users transition from one authentication provider to another. For example, let's say that you want to modify one group that you manage to use Azure AD MFA, and one group to use certificates as an extra authentication provider.
+You can also modify this rule configuration to help users transition from one authentication provider to another. For example, let's say that you want to modify one group that you manage to use Microsoft Entra multifactor authentication (MFA) and one group to use certificates as an extra authentication provider.
 
-If you want to track how many people register for Azure AD MFA and certificate authentication, you would run a command like this with the values replaced with ones relevant to your organization:
+If you want to track how many people register for MFA and certificate authentication, you can run a command like this, with the values replaced with values that are relevant to your organization:
 
 ```powershell
 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
@@ -323,7 +323,7 @@ If you want to track how many people register for Azure AD MFA and certificate a
 not exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");’ 
 ```
 
-Next, you can set the first application, called `AppA`, to use Azure AD Multi-Factor Authentication as an extra authentication provider by running this command:
+Next, you can set the first application, called `AppA`, to use MFA as an extra authentication provider by running this command:
 
 ```powershell
 Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
@@ -331,7 +331,7 @@ Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[ty
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
 ```
 
-Finally, you can set the second app, called `AppB`, to use Certificate as an extra auth provider by running this command:
+Finally, you can set the second app, called `AppB`, to use certificates as an extra authentication provider by running this command:
 
 ```powershell
 Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", Value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
@@ -339,9 +339,9 @@ Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[ty
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
 ```
 
-Admins can also make rules to allow more than one extra authentication provider. In this case AD FS shows the issued auth methods providers, and a user can choose any of them. To allow multiple extra authentication providers, they should issue multiple claims using the value `http://schemas.microsoft.com/claims/authnmethodsproviders`.
+Admins can also make rules to allow more than one extra authentication provider. In this case, AD FS shows the issued authentication method providers, and a user can choose any of them. To allow multiple extra authentication providers, they should issue multiple claims by using the value `http://schemas.microsoft.com/claims/authnmethodsproviders`.
 
-If the claim evaluation returns none of the authentication providers, AD FS rolls back and displays a list showing all the extra authentication providers configured by the admin on AD FS. The user must then manually select the appropriate auth provider.
+If the claim evaluation returns none of the authentication providers, AD FS rolls back and displays a list showing all the extra authentication providers configured by the admin on AD FS. The user must then manually select the appropriate authentication provider.
 
 If your preferred authentication provider isn't on the list, you can run the following cmdlet to view all supported providers:
 
@@ -349,27 +349,28 @@ If your preferred authentication provider isn't on the list, you can run the fol
 (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider
 ```
 
-The value you use for the `http://schemas.microsoft.com/claims/authnmethodsproviders` claim should be one of the provider names returned by the list of providers AD FS returned.
+The value you use for the `http://schemas.microsoft.com/claims/authnmethodsproviders` claim should be one of the provider names returned by the list of providers that AD FS returned.
 
-AD FS doesn't support triggering a particular extra authentication provider while the RP is using [Access Control Policies in AD FS Windows Server 2016](../operations/access-control-policies-in-ad-fs.md). When you move an application out of an Access Control policy, AD FS copies the corresponding policy from Access Control Policy to _AdditionalAuthenticationRules_ and _IssuanceAuthorizationRules_. If an admin wants to use a specific authentication provider, they should stop using the Access Control policy and instead modify _AdditionalAuthenticationRules_.
+AD FS doesn't support triggering a particular extra authentication provider while the RP is using [Access Control Policies in AD FS Windows Server 2016](../operations/access-control-policies-in-ad-fs.md). When you move an application out of an access control policy, AD FS copies the corresponding policy from Access Control Policy to _AdditionalAuthenticationRules_ and _IssuanceAuthorizationRules_. If an admin wants to use a specific authentication provider, they should stop using the access control policy and instead modify _AdditionalAuthenticationRules_.
 
 ## On-Behalf-Of flow
 
 > [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on On-Behalf-Of flow in Microsoft Entra ID, see [On-Behalf-Of flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow).
 
-The OAuth 2.0 On-Behalf-Of flow (OBO) serves the use case where an application invokes a service/web API, which in turn needs to call another service/web API. The idea is to propagate the delegated user identity and permissions through the request chain. For the middle-tier service to make authenticated requests to the downstream service, it needs to secure an access token from the AD FS, on behalf of the user.
+The OAuth 2.0 On-Behalf-Of flow (OBO) serves the use case where an application invokes a service/web API, which in turn needs to call another service/web API. The idea is to propagate the delegated user identity and permissions through the request chain. For the middle-tier service to make authenticated requests to the downstream service, it needs to secure an access token from AD FS, on behalf of the user.
 
 ### Protocol diagram
 
-Assume that the user has been authenticated on an application using the OAuth 2.0 authorization code grant flow described in the previous section. At this point, the application has an access token for API A (token A) with the user's claims and consent to access the middle-tier web API (API A). Make sure the client requests for user_impersonation scope in the token. Now, API A needs to make an authenticated request to the downstream web API (API B).
+Assume that a user is authenticated on an application using the OAuth 2.0 authorization code grant flow described in the previous section. At this point, the application has an access token for API A (token A) with the user's claims and consent to access the middle-tier web API (API A). Make sure the client requests user_impersonation scope in the token. Now, API A needs to make an authenticated request to the downstream web API (API B).
 
 The steps that follow constitute the OBO flow and are explained with the help of the following diagram.
 
-![On-Behalf-Of flow](media/adfs-scenarios-for-developers/obo.png)
+![Diagram showing On-Behalf-Of flow.](media/adfs-scenarios-for-developers/obo.png)
 
   1. The client application makes a request to API A with token A.
-  Note: While configuring OBO flow in AD FS, make sure scope `user_impersonation` is selected and client do request `user_impersonation` scope in the request.
+     > [!note]
+     > When you configure OBO flow in AD FS, make sure scope `user_impersonation` is selected and that clients request `user_impersonation` scope in the request.
   1. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS, make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A.
   1. The AD FS token issuance endpoint validates API A's credentials with token A and issues the access token for API B (token B).
   1. Token B is set in the authorization header of the request to API B.
