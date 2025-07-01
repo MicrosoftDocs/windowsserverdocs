@@ -14,7 +14,7 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 - Hyper-V is installed on Windows Admin Center gateway.
 
-- WAC Gateway V2 – GA version.
+- Windows Admin Center Gateway V2 – GA version.
 
 - VMware VCenter version 7.x or above is installed. Keep the following vCenter information handy:
   - Fully Qualified Domain Name (FQDN)
@@ -37,7 +37,7 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 1. Search for **VM Conversion Extension** in **Available extensions** and select **Install.**
 
-1. Once installed, ensure VM Conversion extension is visible in the WAC under: **Extensions** > **VM Migration**.
+1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Migration**.
 
 ## Supported scenario topology
 
@@ -45,7 +45,7 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 ## Migrate a VM migration using the conversion extension
 
-1. Connect to the Hyper-V server (**Datacenter-Server-001**) in WAC that you want the VM to be migrated.
+1. Connect to the Hyper-V server (**Datacenter-Server-001**) in Windows Admin Center that you want the VM to be migrated.
 
 1. Go to the VM migration tool in the left panel under **Extensions** > **VM Migration**.
 
