@@ -12914,6 +12914,16 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-web-access-faq.yml",
       "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Generation-1-virtual-machine-security-settings-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/generation-1-virtual-machine-security-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/generation-2-virtual-machine-security-features",
+      "redirect_document_id": true
     }
   ]
 }
