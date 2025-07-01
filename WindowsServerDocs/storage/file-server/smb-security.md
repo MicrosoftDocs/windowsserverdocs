@@ -1,10 +1,10 @@
 ---
-title: SMB security enhancements
+title: SMB Security Enhancements
 description: Discover how to protect your data with SMB encryption, new signing algorithms, and advanced security features in Windows Server.
-ms.topic: how-to
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/25/2025
+ms.date: 07/01/2025
 ai-usage: ai-assisted
 #customer intent: As an IT admin, I want to enable SMB Encryption on my Windows Server so that I can protect sensitive data from interception.
 ---
@@ -22,7 +22,7 @@ SMB Encryption provides SMB data end-to-end encryption and protects data from ea
 
 You can consider SMB Encryption for any scenario in which sensitive data needs to be protected from interception attacks. Possible scenarios include:
 
-- You move an information worker’s sensitive data by using the SMB protocol. SMB Encryption offers an end-to-end privacy and integrity assurance between the file server and the client. It provides this security regardless of the networks traversed, such as wide area network (WAN) connections maintained by non-Microsoft providers.
+- You move an information worker’s sensitive data by using the SMB protocol. SMB Encryption offers end-to-end privacy and integrity assurance between the file server and the client. It provides this security regardless of the networks traversed, such as wide area network (WAN) connections maintained by non-Microsoft providers.
 - SMB 3.0 enables file servers to provide continuously available storage for server applications, such as SQL Server or Hyper-V. Enabling SMB Encryption provides an opportunity to protect that information from snooping attacks. SMB Encryption is simpler to use than the dedicated hardware solutions that are required for most storage area networks (SANs).
 
 Windows Server 2022 and Windows 11 introduce AES-256-GCM and AES-256-CCM cryptographic suites for SMB 3.1.1 encryption. Windows automatically negotiates this more advanced cipher method when connecting to another computer that supports it. You can also mandate this method through Group Policy. Windows still supports AES-128-GCM and AES-128-CCM. By default, AES-128-GCM is negotiated with SMB 3.1.1, bringing the best balance of security and performance.
