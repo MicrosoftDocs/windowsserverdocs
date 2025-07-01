@@ -4,13 +4,16 @@ description: Learn how to enable Hotpatch for Windows Server 2025 installations 
 ms.author: alalve
 ms.topic: how-to
 author: xelu86
-ms.date: 03/11/2025
+ms.date: 06/27/2025
 ---
 
 # Enable Hotpatch for Azure Arc-enabled servers (preview)
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch is currently in **preview**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
+> - Azure Arc-enabled Hotpatch is currently in **preview**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+>
+> - Azure Arc-enabled Hotpatch for Windows Server 2025 is now available for a monthly subscription fee. To learn more about pricing and when Hotpatch will become charged service, see [Tired of all the restarts? Get hotpatching for Windows Server](https://www.microsoft.com/en-us/windows-server/blog/2025/04/24/tired-of-all-the-restarts-get-hotpatching-for-windows-server/).
 
 Hotpatch allows you to update your Windows Server installation without requiring your users to restart after installation. This feature minimizes downtime spent on updates and keeps your users running their workloads uninterrupted. For more information about how Hotpatch works, see [Hotpatch for Windows Server](hotpatch.md).
 
