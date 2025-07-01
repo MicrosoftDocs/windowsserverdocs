@@ -154,7 +154,7 @@ param(
     [String]$UpdateId,
 
     [Parameter(Mandatory = $true, HelpMessage = "Specifies path to a text file containing a list of update ID's on each line", ParameterSetName = "Multiple")]
-    # Specifies the path to a text file containing a list of update IDs on each line.
+    # Specifies the path to a text file containing update IDs on each line.
     [ValidateNotNullOrEmpty()]
     [String]$UpdateIdFilePath
 )
@@ -238,7 +238,7 @@ Specifies the update ID you want to import to WSUS. This parameter is required i
 - **Required**: true when importing a single updateID specified as a script parameter.
 
 **UpdateIdFilePath**: &lt;string> </br>
-Specifies the path to a text file containing a list of update IDs on each line. This parameter is required if you're importing multiple updates. **UpdateIdFilePath** can't be used with **UpdateId**.
+Specifies the path to a text file containing update IDs on each line. This parameter is required if you're importing multiple updates. **UpdateIdFilePath** can't be used with **UpdateId**.
 
 - **Required**: true when using a text file to import multiple updates.
 
