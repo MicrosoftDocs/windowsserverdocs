@@ -295,7 +295,7 @@ In the section labeled D, AD FS transforms the `code_verifier`secret and compare
 
 #### How to choose multiple authentication providers for the same rule policy in Windows Server 2019
 
-AD FS already supports triggering extra authentication based on a claim rule policy (RP). You can set these policies for a particular RP or at a global level. You can set an extra authentiction policy for a particular RP by opening PowerShell as an administrator and running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet, passing either the **AdditionalAuthenticationRules** or **AdditionalAuthenticationRulesFile** parameter. To set it globally, an admin can use the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet. Setting extra policies lets you use more than one authentication provider for the same application.
+AD FS already supports triggering extra authentication based on a claim rule policy (RP). You can set these policies for a particular RP or at a global level. You can set an extra authentication policy for a particular RP by opening PowerShell as an administrator and running the [Set-AdfsRelyingPartyTrust](/powershell/module/adfs/set-adfsrelyingpartytrust) cmdlet, passing either the **AdditionalAuthenticationRules** or **AdditionalAuthenticationRulesFile** parameter. To set it globally, an admin can use the [Set-AdfsAdditionalAuthenticationRule](/powershell/module/adfs/set-adfsadditionalauthenticationrule) cmdlet. Setting extra policies lets you use more than one authentication provider for the same application.
 
 Claim rules provide the option to select the authentication provider for additional authentication, which proves beneficial in situations where customers are switching between providers or require a distinct provider for certain applications. As of Windows Server 2019, you can use claims rules to decide which other authentication provider to invoke for extra authentication. This feature is useful in two scenarios:
 
@@ -700,7 +700,7 @@ device_code: GMMhmHCXhWEzkobqIHGG_EnNYYsAkukHspeYUk9E8
 
 ### Successful authentication response
 
-A successful token response can include these paramters:
+A successful token response can include these parameters:
 
 |Parameter|Description|
 |-----|-----|
