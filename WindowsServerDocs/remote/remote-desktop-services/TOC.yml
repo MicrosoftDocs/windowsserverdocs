@@ -166,7 +166,7 @@
       - name: What's new in Remote Desktop Services web client
         href: web-client-whats-new.md
       - name: Remote Desktop Web Access FAQ
-        href: remote-desktop-web-access-faq.yml
+        href: /troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting?context=/windows-server/context/windows-server-remote-desktop-services
     - name: Windows App documentation
       href: /windows-app/
     - name: Remote Desktop client documentation
