@@ -42,7 +42,7 @@ When searching for hardware updates or drivers, you can also search for the foll
 You can narrow the scope of your search by adding additional search terms. To search a specific string, use double quotes.
 
 > [!NOTE]
-> The catalog also allows you to download updates directly from the site by using the download button. However, updates downloaded this way are are in `.MSU` format.  WSUS can't import updates in `.MSU` format. This file type is commonly used by the [Windows Update Standalone installer](https://support.microsoft.com//topic/description-of-the-windows-update-standalone-installer-in-windows-799ba3df-ec7e-b05e-ee13-1cdae8f23b19), [DISM](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options), or other updates tools. Some tools require that you extract the files from the `.MSU` before they can be used.
+> The catalog also allows you to download updates directly from the site by using the download button. However, updates downloaded this way are in `.MSU` format. WSUS can't import updates in `.MSU` format. This file type is commonly used by the [Windows Update Standalone installer](https://support.microsoft.com//topic/description-of-the-windows-update-standalone-installer-in-windows-799ba3df-ec7e-b05e-ee13-1cdae8f23b19), [DISM](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options), or other updates tools. Some tools require that you extract the files from the `.MSU` before they can be used.
 
 ## Import updates into WSUS by using PowerShell
 
