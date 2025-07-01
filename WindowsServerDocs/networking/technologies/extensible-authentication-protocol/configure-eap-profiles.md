@@ -161,7 +161,7 @@ This dialog allows you to set some [advanced 802.1X settings](network-access.md#
 
 Right-clicking **Wired Network (IEEE 802.3) Policies** and selecting **Create A New Wired Network Policy for Windows Vista and Later Releases** opens the **New Wired Network Policy Properties** dialog:
 :::image type="content" source="images/group-policy/editor/wired-new-policy.png" alt-text="Screenshot showing the Create A New Wired Network Policy for Windows Vista and Later Releases option in Group Policy Management Editor.":::
-:::Image type="content" source="images/group-policy/editor/wired-new-policy-props.png" alt-text="Screenshot showing the New Wired Network Policy Properties dialog.":::
+:::image type="content" source="images/group-policy/editor/wired-new-policy-props.png" alt-text="Screenshot showing the New Wired Network Policy Properties dialog.":::
 
 This dialog allows you to set the policy name, a description, and the following options:
 
