@@ -12909,6 +12909,11 @@
       "source_path": "WindowsServerDocs/failover-clustering/clustering-change-history.md",
       "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-web-access-faq.yml",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting",
+      "redirect_document_id": false
     }
   ]
 }
