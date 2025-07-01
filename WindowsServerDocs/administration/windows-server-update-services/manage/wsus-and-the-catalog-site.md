@@ -243,7 +243,7 @@ Specifies the path to a text file containing update IDs on each line. This param
 - **Required**: true when using a text file to import multiple updates.
 
 **CommonParameters**: </br>
-Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see [About CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+Verbose, Debug, ErrorAction, ErrorVariable, WarningAction, WarningVariable, OutBuffer, PipelineVariable, and OutVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## Restricting access to hotfixes
 
