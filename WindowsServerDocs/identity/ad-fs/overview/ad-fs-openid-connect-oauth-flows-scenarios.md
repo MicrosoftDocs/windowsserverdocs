@@ -106,7 +106,7 @@ The implicit grant doesn't provide refresh tokens. Both id_tokens and access
 > [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on authorization code grant flow in Microsoft Entra ID, see [Authorization code grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-You can use the OAuth 2.0 authorization code grant in web apps to gain access to protected resources like web APIs. The OAuth 2.0 authorization code flow is described in [section 4.1 of the OAuth 2.0 specification](https://tools.ietf.org/html/rfc6749). It's used to perform authentication and authorization in most app types, including web apps and natively installed apps. The flow enables apps to securely acquire access_tokens that can be used to access resources that trust AD FS.
+You can use the OAuth 2.0 authorization code grant in web apps to gain access to protected resources like web APIs. The OAuth 2.0 authorization code flow is described in [section 4.1 of the OAuth 2.0 specification](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1). It's used to perform authentication and authorization in most app types, including web apps and natively installed apps. The flow enables apps to securely acquire access_tokens that can be used to access resources that trust AD FS.
 
 ### Protocol diagram
 
