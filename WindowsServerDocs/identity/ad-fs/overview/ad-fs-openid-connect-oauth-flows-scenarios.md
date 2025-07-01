@@ -368,38 +368,36 @@ The steps that follow constitute the OBO flow and are explained with the help of
 
 ![Diagram showing On-Behalf-Of flow.](media/adfs-scenarios-for-developers/obo.png)
 
-  1. The client application makes a request to API A with token A.
-     > [!note]
-     > When you configure OBO flow in AD FS, make sure scope `user_impersonation` is selected and that clients request `user_impersonation` scope in the request.
-  1. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. Note: While configuring this flow in AD FS, make sure API A is also registered as a server application with clientID having the same value as the resource ID in API A.
+  1. The client application makes a request to API A with token A. (When you configure OBO flow in AD FS, make sure scope `user_impersonation` is selected and that clients request `user_impersonation` scope in the request.)
+  1. API A authenticates to the AD FS token issuance endpoint and requests a token to access API B. (When you configure this flow in AD FS, make sure API A is also registered as a server application with a client ID that has the same value as the resource ID in API A.)
   1. The AD FS token issuance endpoint validates API A's credentials with token A and issues the access token for API B (token B).
   1. Token B is set in the authorization header of the request to API B.
   1. Data from the secured resource is returned by API B.
 
 ### Service-to-service access token request
 
-To request an access token, make an HTTP POST to the AD FS token endpoint with the following parameters.
+To request an access token, make an HTTP POST to the AD FS token endpoint with the parameters described in the following sections.
 
-### First case: Access token request with a shared secret
+#### First case: Access token request with a shared secret
 
 For a shared secret, a service-to-service access token request contains the following parameters:
 
-|Parameter|Required/Optional|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
 |grant_type|required|The type of token request. For a request using a JWT, the value must be urn:ietf:params:oauth:grant-type:jwt-bearer.|
-|client_id|required|The Client ID that you configure when registering your first Web API as a server app (middle tier app). It should be the same as the resource ID used in the first leg that is, url of the first Web API.|
+|client_id|required|The client ID that you configure when you register your first web API as a server app (middle-tier app). It should be the same as the resource ID used in the first leg, that is, the URL of the first web API.|
 |client_secret|required|The application secret that you created during server app registration in AD FS.|
 |assertion|required|The value of the token used in the request.|
-|requested_token_use|required|Specifies how the request should be processed. In the OBO flow, the value must be set to on_behalf_of|
-|resource|required|The resource ID provided while registering the first Web API as the server app (middle tier App). The resource ID should be the url of second Web API middle tier App calls on behalf of the client.|
-|scope|optional|A space separated list of scopes for the token request.|
+|requested_token_use|required|Specifies how the request should be processed. In the OBO flow, the value must be set to on_behalf_of.|
+|resource|required|The resource ID provided when you register the first web API as the server app (middle-tier App). The resource ID should be the URL of the second web API's middle-tier app calls on behalf of the client.|
+|scope|optional|A space-separated list of scopes for the token request.|
 
-#### Example
+##### Example
 
-The following `HTTP POST` requests an access token and refresh token
+The following `HTTP POST` requests an access token and a refresh token.
 
 ```
-//line breaks for legibility only
+// Line breaks for legibility only
 
 POST /adfs/oauth2/token HTTP/1.1
 Host: adfs.contoso.com
@@ -414,29 +412,29 @@ grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer
 &scope=openid
 ```
 
-### Second case: Access token request with a certificate
+#### Second case: Access token request with a certificate
 
 A service-to-service access token request with a certificate contains the following parameters:
 
-|Parameter|required/Optional|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
 |grant_type|required|The type of token request. For a request using a JWT, the value must be urn:ietf:params:oauth:grant-type:jwt-bearer. |
-|client_id|required|The Client ID that you configure when registering your first Web API as a server app (middle tier app). It should be the same as the resource ID used in the first leg that is, url of the first Web API.|
+|client_id|required|The client ID that you configure when you register your first web API as a server app (middle-tier app). It should be the same as the resource ID used in the first leg, that is, the URL of the first web API.|
 |client_assertion_type|required|The value must be urn:ietf:params:oauth:client-assertion-type:jwt-bearer.|
-|client_assertion|required|An assertion (a JSON web token) that you need to create and sign with the certificate you registered as credentials for your application.|
+|client_assertion|required|An assertion (a JWT) that you need to create and sign with the certificate you registered as credentials for your application.|
 |assertion|required|The value of the token used in the request.|
-|requested_token_use|required|Specifies how the request should be processed. In the OBO flow, the value must be set to on_behalf_of|
-|resource|required|The resource ID provided while registering the first Web API as the server app (middle tier App). The resource ID should be the url of second Web API middle tier App calls on behalf of the client.|
-|scope|optional|A space separated list of scopes for the token request.|
+|requested_token_use|required|Specifies how the request should be processed. In the OBO flow, the value must be set to on_behalf_of.|
+|resource|required|The resource ID provided when you register the first web API as the server app (middle-tier App). The resource ID should be the URL of the second web API's middle-tier app calls on behalf of the client.|
+|scope|optional|A space-separated list of scopes for the token request.|
 
 Notice that the parameters are almost the same. This example is similar to the request by shared secret except that the client_secret parameter is replaced by two parameters: client_assertion_type and client_assertion.
 
-#### Example
+##### Example
 
-The following HTTP POST requests an access token for the Web API with a certificate.
+The following HTTP POST requests an access token for the web API with a certificate.
 
 ```http
-// line breaks for legibility only
+// Line breaks for legibility only
 
 POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
@@ -451,9 +449,9 @@ grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer
 &scope= openid
 ```
 
-### Service to service access token response
+### Service-to-service access token response
 
-A success response is a JSON OAuth 2.0 response with the following parameters.
+A success response is a JSON OAuth 2.0 response that has the following parameters.
 
 |Parameter|Description|
 |-----|-----|
@@ -461,7 +459,7 @@ A success response is a JSON OAuth 2.0 response with the following parameters.
 |scope|The scope of access granted in the token.|
 |expires_in|The length of time, in seconds, that the access token is valid.|
 |access_token|The requested access token. The calling service can use this token to authenticate to the receiving service.|
-|id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
+|id_token|A JWT. The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
 |refresh_token|The refresh token for the requested access token. The calling service can use this token to request another access token after the current access token expires.|
 |Refresh_token_expires_in|The length of time, in seconds, that the refresh token is valid.
 
@@ -481,8 +479,9 @@ The following example shows a success response to a request for an access token 
 }
 ```
 
-Use the access token to access the secured resource
-Now the middle-tier service can use the token acquired in the previous response example to make authenticated requests to the downstream web API, by setting the token in the Authorization header.
+### Use the access token to access the secured resource
+
+Now the middle-tier service can use the token acquired in the previous response example to make authenticated requests to the downstream web API. Set the token in the Authorization header.
 
 #### Example
 
@@ -497,25 +496,25 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFCbmZpRy1tQ…
 > [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on client credentials grant flow in Microsoft Entra ID, see [Client credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow).
 
-You can use the OAuth 2.0 client credentials grant specified in [RFC 6749](https://tools.ietf.org/html/rfc6749#section-4.4), to access web-hosted resources by using the identity of an application. This type of grant is commonly used for server-to-server interactions that must run in the background, without immediate interaction with a user. These types of applications are often referred to as daemons or service accounts.
+You can use the OAuth 2.0 client credentials grant specified in [RFC 6749](https://tools.ietf.org/html/rfc6749#section-4.4) to access web-hosted resources by using the identity of an application. This type of grant is commonly used for server-to-server interactions that must run in the background, without immediate interaction with a user. These types of applications are often referred to as daemons or service accounts.
 
-The OAuth 2.0 client credentials grant flow permits a web service (confidential client) to use its own credentials, instead of impersonating a user, to authenticate when calling another web service. In this scenario, the client is typically a middle-tier web service, a daemon service, or a web site. For a higher level of assurance, the AD FS also allows the calling service to use a certificate (instead of a shared secret) as a credential.
+The OAuth 2.0 client credentials grant flow permits a web service (confidential client) to use its own credentials, instead of impersonating a user, to authenticate when calling another web service. In this scenario, the client is typically a middle-tier web service, a daemon service, or a web site. For a higher level of assurance, AD FS also allows the calling service to use a certificate (instead of a shared secret) as a credential.
 
 ### Protocol diagram
 
 The following diagram shows the client credentials grant flow.
 
-![Client credentials](media/adfs-scenarios-for-developers/credentials.png)
+![Diagram of the client credentials flow.](media/adfs-scenarios-for-developers/credentials.png)
 
 ### Request a token
 
-To get a token by using the client credentials grant, send a `POST` request to the /token AD FS endpoint:
+To get a token by using the client credentials grant, send a `POST` request to the /token AD FS endpoint, as shown in the following sections.
 
-### First case: Access token request with a shared secret
+#### First case: Access token request with a shared secret
 
 ```http
 POST /adfs/oauth2/token HTTP/1.1
-//Line breaks for clarity
+// Line breaks for legibility only
 
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
@@ -525,19 +524,19 @@ client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &grant_type=client_credentials
 ```
 
-|Parameter|Required/Optional|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
-|client_id|required|The Application (client) ID that the AD FS assigned to your app.|
+|client_id|required|The application (client) ID that AD FS assigned to your app.|
 |scope|optional|A space-separated list of scopes that you want the user to consent to.|
 |client_secret|required|The client secret that you generated for your app in the app registration portal. The client secret must be URL-encoded before being sent.|
 |grant_type|required|Must be set to `client_credentials`.|
 
-### Second case: Access token request with a certificate
+#### Second case: Access token request with a certificate
 
 ```http
 POST /adfs/oauth2/token HTTP/1.1
 
-// Line breaks for clarity
+// Line breaks for legibility only
 
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
@@ -548,12 +547,12 @@ Content-Type: application/x-www-form-urlencoded
 &grant_type=client_credentials
 ```
 
-|Parameter|Required/Optional|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
 |client_assertion_type|required|The value must be set to urn:ietf:params:oauth:client-assertion-type:jwt-bearer.|
-|client_assertion|required|An assertion (a JSON web token) that you need to create and sign with the certificate you registered as credentials for your application.|
+|client_assertion|required|An assertion (a JWT) that you need to create and sign with the certificate you registered as credentials for your application.|
 |grant_type|required|Must be set to `client_credentials`.|
-|client_id|optional|The Application (client) ID that the AD FS assigned to your app. It's part of client_assertion, so it isn't required to be passed in here.|
+|client_id|optional|The application (client) ID that AD FS assigned to your app. It's part of client_assertion, so it isn't required here.|
 |scope|optional|A space-separated list of scopes that you want the user to consent to.|
 
 ### Use a token
@@ -566,25 +565,25 @@ Host: https://webapi.com
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...
 ```
 
-## Resource owner password credentials grant flow (Not recommended)
+## Resource owner password credentials grant flow (not recommended)
 
 > [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on resource owner password credentials grant flow in Microsoft Entra ID, see [Resource owner password credentials grant flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth-ropc).
 
-Resource owner password credential (ROPC) grant allows an application to sign in the user by directly handling their password. The ROPC flow requires a high degree of trust and user exposure and you should only use this flow when other, more secure, flows can't be used.
+Resource owner password credential (ROPC) grant allows an application to sign in the user by directly handling their password. The ROPC flow requires a high degree of trust and user exposure. You should use this flow only when you can't use other flows that are more secure.
 
 ### Protocol diagram
 
 The following diagram shows the ROPC flow.
 
-![ROPC flow](media/adfs-scenarios-for-developers/resource.png)
+![Diagram of the ROPC flow.](media/adfs-scenarios-for-developers/resource.png)
 
 ### Authorization request
 
 The ROPC flow is a single request—it sends the client identification and user's credentials to the IDP, and then receives tokens in return. The client must request the user's email address (UPN) and password before doing so. Immediately after a successful request, the client should securely release the user's credentials from memory. It must never save them.
 
 ```https
-// Line breaks and spaces are for legibility only.
+// Line breaks and spaces are for legibility only
 
 POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
@@ -597,9 +596,9 @@ client_id=00001111-aaaa-2222-bbbb-3333cccc4444
 &grant_type=password
 ```
 
-|Parameter|Required/Optional|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
-|client_id|required|Client ID|
+|client_id|required|Client ID.|
 |grant_type|required|Must be set to password.|
 |username|required|The user's email address.|
 |password|required|The user's password.|
@@ -627,31 +626,31 @@ The following example shows a successful token response:
 |scope|If an access token was returned, this parameter lists the scopes the access token is valid for.|
 |expires_in|Number of seconds that the included access token is valid for.|
 |access_token|Issued for the scopes that were requested.|
-|id_token|A JSON Web Token (JWT). The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
+|id_token|A JWT. The app can decode the segments of this token to request information about the user who signed in. The app can cache the values and display them, but it shouldn't rely on them for any authorization or security boundaries.|
 |refresh_token_expires_in|Number of seconds that the included refresh token is valid for.|
 |refresh_token|Issued if the original scope parameter included offline_access.|
 
-You can use the refresh token to acquire new access tokens and refresh tokens using the same flow described in the auth code grant flow section of this article.
+You can use the refresh token to acquire new access tokens and refresh tokens by using the same flow described in the authentication code grant flow section of this article.
 
 ## Device code flow
 
 > [!NOTE]
 > Microsoft highly recommends migrating to Microsoft Entra ID instead of upgrading to a newer AD FS version. For more information on device code flow in Microsoft Entra ID, see [Device code flow in Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-device-code).
 
-Device code grant allows users to sign in to input-constrained devices such as a smart TV, IoT device, or printer. To enable this flow, the device has the user visit a webpage in their browser on another device to sign in. Once the user signs in, the device is able to get access tokens and refresh tokens as needed.
+Device code grant allows users to sign in to input-constrained devices such as a smart TV, IoT device, or printer. To enable this flow, the device has the user visit a webpage in their browser on another device to sign in. After the user signs in, the device is able to get access tokens and refresh tokens as needed.
 
 ### Protocol diagram
 
-The entire device code flow looks similar to the next diagram. We describe each of the steps later in this article.
+The entire device code flow is similar the flow shown in the next diagram. Each of the steps is described later in this article.
 
-![Device code flow](media/adfs-scenarios-for-developers/device.png)
+![Diagram that shows the device code flow.](media/adfs-scenarios-for-developers/device.png)
 
 ### Device authorization request
 
-The client must first check with the authentication server for a device and user code that's used to initiate authentication. The client collects this request from the `/devicecode` endpoint. In this request, the client should also include the permissions it needs to acquire from the user. From the moment this request is sent, the user has only 15 minutes to sign in (the usual value for expires_in), so only make this request when the user has indicated they're ready to sign in.
+The client must first check with the authentication server for a device and user code that's used to initiate authentication. The client collects this request from the `/devicecode` endpoint. In this request, the client should also include the permissions it needs to acquire from the user. From the time this request is sent, the user has only 15 minutes to sign in (the usual value for expires_in), so only make this request when the user has indicated they're ready to sign in.
 
 ```http
-// Line breaks are for legibility only.
+// Line breaks are for legibility only
 
 POST https://adfs.contoso.com/adfs/oauth2/devicecode
 Content-Type: application/x-www-form-urlencoded
@@ -662,7 +661,7 @@ scope=openid
 
 |Parameter|Condition|Description|
 |-----|-----|-----|
-|client_id|required|The Application (client) ID that the AD FS assigned to your app.|
+|client_id|required|The application (client) ID that AD FS assigned to your app.|
 |scope|optional|A space-separated list of scopes.|
 
 ### Device authorization response
@@ -674,14 +673,14 @@ A successful response is a JSON object containing the required information to al
 |device_code|A long string used to verify the session between the client and the authorization server. The client uses this parameter to request the access token from the authorization server.|
 |user_code|A short string shown to the user that's used to identify the session on a secondary device.|
 |verification_uri|The URI the user should go to with the user_code in order to sign in.|
-|verification_uri_complete|The URI the user should go to with the user_code in order to sign in. It's prefilled with user_code so that user doesn't need to enter user_code|
+|verification_uri_complete|The URI that the user should go to with the user_code in order to sign in. It's prefilled with user_code so that the user doesn't need to enter that value.|
 |expires_in|The number of seconds before the device_code and user_code expire.|
 |interval|The number of seconds the client should wait between polling requests.|
-|message|A human-readable string with instructions for the user. It can be localized by including a query parameter in the request of the form ?mkt=xx-XX, filling in the appropriate language culture code.|
+|message|A human-readable string with instructions for the user. You can localize it by including a query parameter in the request in the form ?mkt=xx-XX, filling in the appropriate language culture code.|
 
 ### Authenticating the user
 
-After the client receives the user_code and verification_uri, it displays these details to the user, instructing them to sign in using their mobile phone or PC browser. Additionally, the client can use a QR code or similar mechanism to display the verfication_uri_complete, which takes the step of entering the user_code for the user.
+After the client receives the user_code and verification_uri, it displays these details to the user, instructing them to sign in by using their mobile phone or PC browser. Additionally, the client can use a QR code or similar mechanism to display the verfication_uri_complete, which takes the step of entering the user_code for the user.
 While the user is authenticating at the verification_uri, the client should be polling the `/token` endpoint for the requested token using the device_code.
 
 ```http
@@ -693,25 +692,25 @@ client_id: 00001111-aaaa-2222-bbbb-3333cccc4444
 device_code: GMMhmHCXhWEzkobqIHGG_EnNYYsAkukHspeYUk9E8
 ```
 
-|Parameter|required|Description|
+|Parameter|Required/optional|Description|
 |-----|-----|-----|
-|grant_type|required|Must be urn:ietf:params:oauth:grant-type:device_code|
+|grant_type|required|Must be urn:ietf:params:oauth:grant-type:device_code.|
 |client_id|required|Must match the client_id used in the initial request.|
 |code|required|The device_code returned in the device authorization request.|
 
 ### Successful authentication response
 
-A successful token response looks like:
+A successful token response can include these paramters:
 
 |Parameter|Description|
 |-----|-----|
-|token_type|Always "Bearer".|
+|token_type|Always `Bearer`.|
 |scope|If an access token was returned, it lists the scopes the access token is valid for.|
-|expires_in|Number of seconds before the included access token is valid for.|
+|expires_in|Number of seconds the included access token is valid for.|
 |access_token|Issued for the scopes that were requested.|
 |id_token|Issued if the original scope parameter included the openid scope.|
 |refresh_token|Issued if the original scope parameter included offline_access.|
-|refresh_token_expires_in|Number of seconds before the included refresh token is valid for.|
+|refresh_token_expires_in|Number of seconds the included refresh token is valid for.|
 
 ## Related content
 
