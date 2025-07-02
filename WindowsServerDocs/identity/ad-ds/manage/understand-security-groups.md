@@ -214,9 +214,9 @@ The Administrators group applies to the Windows Server OS in the [Default Active
 > [!NOTE]
 > The Administrators group has built-in capabilities that give its members full control over the system. This group can't be renamed, deleted, or removed. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups. Members of the following groups can modify the Administrators group membership: the default service Administrators, Domain Admins in the domain, and Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This account is considered a service administrator group because its members have full access to the domain controllers in the domain.
 
-This security group includes the following changes since Windows Server 2008:
+This security group has changed in the following ways since Windows Server 2008:
 
-- Default user rights changes: *Allow log on through Terminal Services* existed in Windows Server 2008, and was replaced with [Allow log on through Remote Desktop Services](/windows/device-security/security-policy-settings/allow-log-on-through-remote-desktop-services).
+- Default user rights changes: *Allow log on through Terminal Services* existed in Windows Server 2008. It was replaced with [Allow log on through Remote Desktop Services](/windows/device-security/security-policy-settings/allow-log-on-through-remote-desktop-services).
 
 - [Remove computer from docking station](/windows/device-security/security-policy-settings/remove-computer-from-docking-station) was removed in Windows Server 2012 R2.
 
@@ -306,9 +306,9 @@ The Cert Publishers group applies to the Windows Server OS in [Default Active Di
 
 ### Cloneable Domain Controllers
 
-Members of the Cloneable Domain Controllers group that are domain controllers can be cloned. In Windows Server 2012 R2 and Windows Server 2012, you can deploy domain controllers by copying an existing virtual domain controller. In a virtual environment, you can't repeatedly deploy a server image that's prepared by using *Sysprep.exe*. Promoting the server to a domain controller, and then complete more configuration requirements for deploying each domain controller (including adding the virtual domain controller to this security group), is also not allowed.
+Members of the Cloneable Domain Controllers group that are domain controllers can be cloned. In Windows Server 2012 R2 and Windows Server 2012, you can deploy domain controllers by copying an existing virtual domain controller. In a virtual environment, you can't repeatedly deploy a server image that's prepared by using *Sysprep.exe*. Promoting the server to a domain controller, and then completing more configuration requirements for deploying each domain controller (including adding the virtual domain controller to this security group), is also not allowed.
 
-For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100)
+For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100).
 
 |Attribute|Value|
 |--- |--- |
@@ -328,7 +328,7 @@ Members of this group are authorized to perform cryptographic operations. This s
 
 The Cryptographic Operators group applies to the Windows Server OS in [Default Active Directory security groups](#default-active-directory-security-groups).
 
-This security group was introduced in Windows Vista SP1, and no changes made in subsequent versions.
+This security group was introduced in Windows Vista SP1. No changes were made in subsequent versions.
 
 |Attribute|Value|
 |--- |--- |
@@ -709,7 +709,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 
 ### IIS\_IUSRS
 
-IIS\_IUSRS is a built-in group that's used by Internet Information Services (IIS) beginning with IIS 7. A built-in account and group are guaranteed by the OS to always have a unique SID. IIS 7 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that the new account and group use are never localized. For example, regardless of the language of the Windows OS that you install, the IIS account name is IUSR, and the group name is IIS\_IUSRS.
+IIS\_IUSRS is a built-in group that's used by Internet Information Services (IIS), beginning with IIS 7. A built-in account and group are guaranteed by the OS to always have a unique SID. IIS 7 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that the new account and group use are never localized. For example, regardless of the language of the Windows OS that you install, the IIS account name is IUSR, and the group name is IIS\_IUSRS.
 
 For more information, see [Understand built-in user and group accounts in IIS 7](/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
 
@@ -727,7 +727,7 @@ For more information, see [Understand built-in user and group accounts in IIS 7]
 
 ### Incoming Forest Trust Builders
 
-Members of the Incoming Forest Trust Builders group can create incoming, one-way trusts to this forest. Active Directory provides security across multiple domains or forests through domain and forest trust relationships. Before authentication can occur across trusts, Windows must determine whether the domain requested is by a user, computer, or service has a trust relationship with the logon domain of the requesting account.
+Members of the Incoming Forest Trust Builders group can create incoming, one-way trusts to this forest. Active Directory provides security across multiple domains or forests through domain and forest trust relationships. Before authentication can occur across trusts, Windows must determine whether the domain requested by a user, computer, or service has a trust relationship with the logon domain of the requesting account.
 
 To make this determination, the Windows security system computes a trust path between the domain controller for the server that receives the request and a domain controller in the domain of the requesting account. A secured channel extends to other Active Directory domains through interdomain trust relationships. This secured channel is used to obtain and verify security information, including SIDs for users and groups.
 
@@ -919,7 +919,7 @@ Members of the Protected Users group have extra protection against the compromis
 
 This security group is designed as part of a strategy to effectively protect and manage credentials within the enterprise. Members of this group automatically have nonconfigurable protection applied to their accounts. Membership in the Protected Users group is meant to be restrictive and proactively secure by default. The only way you can modify the protection for an account is to remove the account from the security group.
 
-This domain-related, Global group triggers nonconfigurable protection on devices and host computers, starting with the Windows Server 2012 R2 and Windows 8.1 OSs. It also triggers nonconfigurable protection on domain controllers in domains that have a primary domain controller running Windows Server 2016 or Windows Server 2012 R2. This protection greatly reduces the memory footprint of credentials when users sign in to computers on the network from a noncompromised computer.
+This domain-related Global group triggers nonconfigurable protection on devices and host computers, starting with the Windows Server 2012 R2 and Windows 8.1 OSs. It also triggers nonconfigurable protection on domain controllers in domains that have a primary domain controller running Windows Server 2016 or Windows Server 2012 R2. This protection greatly reduces the memory footprint of credentials when users sign in to computers on the network from a noncompromised computer.
 
 Depending on the account’s domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows:
 
@@ -927,7 +927,7 @@ Depending on the account’s domain functional level, members of the Protected U
 
 - The Kerberos protocol doesn't use the weaker DES or RC4 encryption types in the preauthentication process. The domain must be configured to support at least the AES cipher suite.
 
-- The user’s account can't be delegated with Kerberos constrained or unconstrained delegation. If the user is a member of the Protected Users group, earlier connections to other systems might fail.
+- The user's account can't be delegated with Kerberos constrained or unconstrained delegation. If the user is a member of the Protected Users group, earlier connections to other systems might fail.
 
 - You can change the default Kerberos ticket-granting tickets (TGTs) lifetime setting of four hours by using Authentication Policies and Silos in the Active Directory Administrative Center. In the default setting, the user must authenticate after four hours pass.
 
@@ -1092,7 +1092,7 @@ For more information, see [About WMI](/windows/win32/wmisdk/about-wmi) and [What
 Computers that are members of the Replicator group support file replication in a domain. Windows Server OSs use the File Replication Service (FRS) to replicate system policies and logon scripts that are stored in the System Volume folder (sysvol folder). Each domain controller keeps a copy of the sysvol folder for network clients to access. FRS can also replicate data for the Distributed File System (DFS) and sync the content of each member in a replica set as defined by DFS. FRS can copy and maintain shared files and folders on multiple servers simultaneously. When changes occur, content is synced immediately within sites and on a schedule between sites.
 
 > [!WARNING]
-> In Windows Server 2008 R2, you can't use FRS to replicate DFS folders or custom (non-sysvol) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of sysvol folder shared resource in a domain that uses FRS to replicate the sysvol folder shared resource between domain controllers. However, Windows Server 2008 R2 servers can't use FRS to replicate the contents of any replica set except the sysvol folder shared resource. The DFS Replication service is a replacement for FRS. You can use DFS Replication to replicate the contents of a sysvol folder shared resource, DFS folders, and other custom (non-sysvol) data. You should migrate all non-sysvol FRS replica sets to DFS Replication.
+> In Windows Server 2008 R2, you can't use FRS to replicate DFS folders or custom (non-sysvol) data. A Windows Server 2008 R2 domain controller can still use FRS to replicate the contents of a sysvol folder shared resource in a domain that uses FRS to replicate the sysvol folder shared resource between domain controllers. However, Windows Server 2008 R2 servers can't use FRS to replicate the contents of any replica set except the sysvol folder shared resource. The DFS Replication service is a replacement for FRS. You can use DFS Replication to replicate the contents of a sysvol folder shared resource, DFS folders, and other custom (non-sysvol) data. You should migrate all non-sysvol FRS replica sets to DFS Replication.
 
 For more information, see:
 
@@ -1126,7 +1126,7 @@ The Schema Admins group applies to the Windows Server OS in [Default Active Dire
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-21-\<root domain>-518|
-|Type|Universal (if Domain is in Native-Mode) else Global|
+|Type|Universal if domain is in native mode, otherwise Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|Administrator|
 |Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
@@ -1137,7 +1137,7 @@ The Schema Admins group applies to the Windows Server OS in [Default Active Dire
 
 ### Server Operators
 
-Members of the Server Operators group can administer domain controllers. This group exists only on domain controllers. By default, this group has no members, can't be renamed, deleted, or removed. Members of the Server Operators group can take the following actions:
+Members of the Server Operators group can administer domain controllers. This group exists only on domain controllers. By default, this group has no members. It can't be renamed, deleted, or removed. Members of the Server Operators group can take the following actions:
 
 - Sign in to a server interactively
 - Create and delete network shared resources
@@ -1295,10 +1295,8 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 |Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
-## See also
+## Related content
 
 - [Security principals](understand-security-principals.md)
-
 - [Special identity groups](understand-special-identities-groups.md)
-
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
