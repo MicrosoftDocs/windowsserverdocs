@@ -129,9 +129,9 @@ Get-ADServiceAccount -Identity "<gMSAName>" | Select-Object *
 
 > [!NOTE]
 >
-> - **Group-centric management (`Add-ADGroupMember` / `Remove-ADGroupMember`)**: Use these cmdlets when you want to manage the membership of a specific group. They're best suited for adding or removing multiple users, computers, or other objects to or from a single group efficiently.
+> - **Group-centric management** (`Add-ADGroupMember` / `Remove-ADGroupMember`): Use these cmdlets when you want to manage the membership of a specific group. They're best suited for adding or removing multiple users, computers, or other objects to or from a single group efficiently.
 >
-> - **Principal-centric management (`Add-ADPrincipalGroupMembership` / `Remove-ADPrincipalGroupMembership`)**: Choose these cmdlets when your goal is to manage a specific user or computer's membership across multiple groups. They allow you to add or remove a principal from several groups in a single operation, making it easier to update group affiliations for individual accounts.
+> - **Principal-centric management** (`Add-ADPrincipalGroupMembership` / `Remove-ADPrincipalGroupMembership`): Choose these cmdlets when your goal is to manage a specific user or computer's membership across multiple groups. They allow you to add or remove a principal from several groups in a single operation, making it easier to update group affiliations for individual accounts.
 
 If you use security groups to manage member hosts, add the computer account for the new member host to the security group that contains the gMSA's member hosts. You can do this using one of the following methods:
 
