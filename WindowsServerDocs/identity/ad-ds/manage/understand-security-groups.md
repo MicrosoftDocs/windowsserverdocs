@@ -1,33 +1,33 @@
 ---
-title: Active Directory security groups
+title: Active Directory Security Groups
 description: Learn about Windows Server Active Directory security groups, group scope, and group functions.
 author: Xelu86
 ms.author: alalve
-ms.topic: article
-ms.date: 01/15/2025
+ms.topic: concept-article
+ms.date: 07/02/2025
 ---
 
 # Active Directory security groups
 
-Learn about default Active Directory (AD) security groups, group scope, and group functions.
+Learn about default Active Directory security groups, group scope, and group functions.
 
-## What is a security group in AD?
+## What is a security group in Active Directory?
 
-AD has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that is either a person or a computer. A user account also can be used as a dedicated service account for some applications.
+Active Directory has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that is either a person or a computer. A user account also can be used as a dedicated service account for some applications.
 
 Security groups are a way to collect user accounts, computer accounts, and other groups into manageable units.
 
-In the Windows Server operating system (OS), several built-in accounts, and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In AD, administrative responsibilities are separated into two types of administrators:
+In the Windows Server operating system (OS), several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In Active Directory, administrative responsibilities are separated into two types of administrators:
 
 - **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring AD DS.
 
 - **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations.
 
-## How AD security groups work
+## How Active Directory security groups work
 
 Use groups to collect user accounts, computer accounts, and other groups into manageable units. Working with groups instead of with individual users helps you simplify network maintenance and administration.
 
-AD has two types of groups:
+Active Directory has two types of groups:
 
 - **Security groups**: Use to assign permissions to shared resources.
 
@@ -37,11 +37,11 @@ AD has two types of groups:
 
 Security groups can provide an efficient way to assign access to resources on your network. By using security groups, you can:
 
-- Assign user rights to security groups in AD.
+- Assign user rights to security groups in Active Directory.
 
-    Assign user rights to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when AD is installed to help administrators define a person’s administrative role in the domain.
+    Assign user rights to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when Active Directory is installed to help administrators define a person's administrative role in the domain.
 
-    For example, a user who you add to the Backup Operators group in AD can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
+    For example, a user who you add to the Backup Operators group in Active Directory can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
 
     You can use Group Policy to assign user rights to security groups to delegate specific tasks. For more information about using Group Policy, see [User Rights Assignment](/windows/device-security/security-policy-settings/user-rights-assignment).
 
