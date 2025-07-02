@@ -12909,6 +12909,11 @@
       "source_path": "WindowsServerDocs/failover-clustering/clustering-change-history.md",
       "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts.md",
+      "redirect_document_id": true
     }
   ]
 }

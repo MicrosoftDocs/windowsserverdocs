@@ -34,7 +34,7 @@ With Windows Server, services and service administrators don't need to manage pa
 
 - Same APIs as sMSA, so products that support sMSA support gMSA
 
-- Services that use [Service Control Manager]((/windows/win32/services/services)) to configure logon identity
+- Services that use [Service Control Manager](/windows/win32/services/services) to configure logon identity
 
 - Services that use the Internet Information Services (IIS) manager for [application pools](/iis/manage/configuring-security/application-pool-identities) to configure identity
 
@@ -50,7 +50,7 @@ To manage gMSAs, your device must meet the following requirements:
 
 - Both the domain and forest functional levels should be set to Windows Server 2012 or later to support gMSA features for all devices. To learn more about updating the schema, see [Raise domain and forest functional levels in Active Directory Domain Services](/windows-server/identity/ad-ds/plan/raise-domain-forest-functional-levels).
 
-- A Key Distribution Services (KDS) root key must be created in the domain for secure password management. Verify its creation using the KdsSvc Operational log (Event ID 4004). To learn more about creating the KDS (kdssvc.dll) root key, see [Create the Key Distribution Services KDS Root Key](create-the-key-distribution-services-kds-root-key).
+- A Key Distribution Services (KDS) root key must be created in the domain for secure password management. Verify its creation using the KdsSvc Operational log (Event ID 4004). To learn more about creating the KDS (kdssvc.dll) root key, see [Create the Key Distribution Services KDS Root Key](create-the-key-distribution-services-kds-root-key.md).
 
 > [!TIP]
 > To control which hosts or services can use a gMSA, add their computer accounts to a designated security group (either new or existing) and assign the necessary permissions to this group. Likewise, use a security group to manage access for services running under gMSAs, ensuring the group has all required permissions for service operation and resource access.
@@ -113,7 +113,7 @@ You can also update the gMSA properties using the `Set-ADServiceAccount` cmdlet.
 Set-ADServiceAccount -Identity "<gMSAName>" -DisplayName "<NewDisplayName>"
 ```
 
-For detailed information on how to set other properties for the gMSA, see [Set-ADServiceAccount](/powershell/module/activedirectory/set-adserviceaccount?view=windowsserver2025-ps#examples).
+For detailed information on how to set other properties for the gMSA, see [Set-ADServiceAccount](/powershell/module/activedirectory/set-adserviceaccount#examples).
 
 ## Verify changes to a gMSA
 
@@ -135,13 +135,13 @@ Get-ADServiceAccount -Identity "<gMSAName>" | Select-Object *
 
 If you use security groups to manage member hosts, add the computer account for the new member host to the security group that contains the gMSA's member hosts. You can do this using one of the following methods:
 
-# [ADUC](#tab/aduc))
+# [ADUC](#tab/aduc)
 
 To use the Active Directory Users and Computers (ADUC) snap-in, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) and [Manage User Accounts in Active Directory Users and Computers](/windows-server/identity/ad-ds/manage-user-accounts-in-windows-server).
 
 # [CMD](#tab/cmd)
 
-To use the `dsmod group` command line tool, see [Dsmod group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732423(v=ws.11)) and [Use the Directory Service command-line tools to manage Active Directory objects](/troubleshoot/windows-server/active-directory/directory-service-manage-objects).
+To use the `dsmod group` command line tool, see [Dsmod group](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732423(v=ws.11)) and [Use the Directory Service command-line tools to manage Active Directory objects](/troubleshoot/windows-server/active-directory/directory-service-manage-objects).
 
 # [PowerShell](#tab/powershell)
 
@@ -191,7 +191,7 @@ If using computer accounts, find the existing accounts and then add the new comp
 
 ## Remove member hosts from a security group
 
-# [ADUC](#tab/aduc))
+# [ADUC](#tab/aduc)
 
 To use the ADUC snap-in, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) and [Remove a user account](/windows-server/identity/ad-ds/manage-user-accounts-in-windows-server#remove-a-user-account).
 

@@ -383,7 +383,7 @@
         items:
         - name: Group Managed Service Accounts overview
           href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
-        - name: Manage group Managed Service Accounts
+        - name: Manage Group Managed Service Accounts
           href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts.md
         - name: Create the Key Distribution Services KDS Root Key
           href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
