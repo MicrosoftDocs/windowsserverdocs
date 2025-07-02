@@ -147,11 +147,11 @@ To use the `dsmod group` command line tool, see [Dsmod group](/previous-versions
 
 Open an elevated PowerShell window and follow these steps.
 
-1. Run the following command to add a device to a security group. Replace `<ComputerName>` and `<SecurityGroup>` with your values.
+Run the following command to add a device to a security group. Replace `<ComputerName>` and `<SecurityGroup>` with your values.
 
-   ```powershell
-   Add-ADPrincipalGroupMembership -Identity <ComputerName> -MemberOf <SecurityGroup>
-   ```
+```powershell
+Add-ADPrincipalGroupMembership -Identity <ComputerName> -MemberOf <SecurityGroup>
+```
 
 To learn more about these cmdlets, see [Add-ADPrincipalGroupMembership](/powershell/module/activedirectory/add-adprincipalgroupmembership) and [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember).
 
@@ -203,11 +203,11 @@ To use the `dsrm` command line tool, see [Delete a user account](/troubleshoot/w
 
 Open an elevated PowerShell window and follow these steps.
 
-1. Run the following command to remove a device from a security group. Replace `<ComputerName>` and `<SecurityGroup>` with your values.
+Run the following command to remove a device from a security group. Replace `<ComputerName>` and `<SecurityGroup>` with your values.
 
-   ```powershell
-   Remove-ADPrincipalGroupMembership -Identity <ComputerName> -MemberOf <SecurityGroup> -Confirm:$false
-   ```
+```powershell
+Remove-ADPrincipalGroupMembership -Identity <ComputerName> -MemberOf <SecurityGroup> -Confirm:$false
+```
 
 To learn more about these cmdlets, see [Remove-ADPrincipalGroupMembership](/powershell/module/activedirectory/remove-adprincipalgroupmembership) and [Remove-ADGroupMember](/powershell/module/activedirectory/remove-adgroupmember).
 
