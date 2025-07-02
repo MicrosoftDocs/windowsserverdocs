@@ -749,6 +749,13 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+          ],
+        "no-loc": {
+          "administration/windows-commands/**/*.md": [
+            "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
+          ],
+          "administration/windows-commands/**/*.yml": [
+            "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
           ]
         },
         "feedback_product_url": {
