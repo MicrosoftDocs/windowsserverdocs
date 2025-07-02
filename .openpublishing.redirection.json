@@ -12924,6 +12924,11 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/generation-2-virtual-machine-security-features",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts",
+      "redirect_document_id": false
     }
   ]
 }

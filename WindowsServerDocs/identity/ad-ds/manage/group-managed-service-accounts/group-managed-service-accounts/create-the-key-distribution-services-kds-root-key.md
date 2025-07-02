@@ -34,7 +34,7 @@ Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivale
     > The Effective time parameter can be used to give time for keys to be propagated to all DCs before use. Using Add-KdsRootKey -EffectiveImmediately will add a root key to the target DC which will be used by the KDS service immediately. However, other domain controllers will not be able to use the root key until replication is successful.
 
 KDS root keys are stored in Active Directory in container `CN=Master Root Keys,CN=Group Key Distribution Service,CN=Services,CN=Configuration,DC=<forest name>;`. They have an attribute msKds-DomainID that links to the computer account of the Domain Controller that created the object. When this domain controller is demoted and removed from the domain, the value will refer to the tombstone of the computer account. You can ignore the broken value as it is only used to help the administrator track the object when it's freshly created. You may also change the attribute value and point it to the computer object of another domain controller in your forest.
-   
+
 For test environments with only one DC, you can create a KDS root key and set the start time in the past to avoid the interval wait for key generation by using the following procedure. Validate that a 4004 event has been logged in the KDS event log.
 
 #### To create the KDS root key in a test environment for immediate effectiveness
@@ -53,5 +53,6 @@ For test environments with only one DC, you can create a KDS root key and set th
 
     **Add-KdsRootKey -EffectiveTime ((get-date).addhours(-10))**
 
-## See Also
-[Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)
+## See also
+
+[Manage Group Managed Service Accounts](manage-group-managed-service-accounts.md)

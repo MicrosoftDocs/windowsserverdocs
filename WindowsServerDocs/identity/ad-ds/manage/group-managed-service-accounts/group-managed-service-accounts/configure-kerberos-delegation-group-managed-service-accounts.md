@@ -13,12 +13,12 @@ Normally when working with Kerberos delegation, you just set the Service Princip
 
 But for standalone and group Managed Service Accounts, the **Delegation** tab doesn't appear, even after adding SPNs to these accounts or enabling **View** > **Advanced features**.
 
-To configure delegation for these special accounts, you need to set the correct attributes manually. 
+To configure delegation for these special accounts, you need to set the correct attributes manually.
 There are two attributes that you need to modify for these accounts:
 
 - userAccountControl defines the type of delegation
 - msDS-AllowedToDelegateTo defines where the SPNs for delegation will be added
- 
+
 These attributes can be set in different ways:
 
 - Use PowerShell
@@ -29,7 +29,7 @@ These attributes can be set in different ways:
 The more secure and convenient way is by using PowerShell commands to update those attributes. You don't need to calculate final userAccountControl values when using PowerShell. Here are the commands to enable different types of delegation:
 
 - **Do not trust this computer for delegation**
- 
+
   ```powershell
   Set-ADAccountControl -Identity TestgMSA$ -TrustedForDelegation $false -TrustedToAuthForDelegation $false
   Set-ADServiceAccount -Identity TestgMSA$ -Clear 'msDS-AllowedToDelegateTo'
@@ -58,7 +58,7 @@ The more secure and convenient way is by using PowerShell commands to update tho
 
   Update the Backend Service SPNs in msDS-AllowedToDelegateTo attribute.
 
-## Manually update the userAccountControl value 
+## Manually update the userAccountControl value
 
 Some of the easiest ways to modify attributes are by enabling **View** > **Advanced features** in Active Directory Users and Computers or by using ADSIEdit.msc.
 
@@ -70,12 +70,12 @@ Here are the userAccountControl values that can be added for different types of 
 | Kerberos Constrained Delegation/Trust this computer for delegation to specified services only (Use Kerberos Only) | No Change | No Change | No Change |
  Kerberos Constrained Delegation with Protocol Transition/Trust this computer for delegation to specified services only (Use Any Authentication Protocol) | TRUSTED_TO_AUTH_FOR_DELEGATION | 0x1000000 | 16777216 |
 
-When you manually update the userAccountControl value, make sure the new value is added with the existing value but not replaced. 
+When you manually update the userAccountControl value, make sure the new value is added with the existing value but not replaced.
 For example, consider the current value of UAC is 4096 (Hex 0x1000) which is WORKSTATION_TRUST_ACCOUNT.
 
 ![Screenshot of userAccountControl value 4096](media/user-account-control-4096.png)
 
-To enable **Unconstrained delegation (Not secure)**, you must add the userAccountControl value for TRUSTED_FOR_DELEGATION plus the existing value. 
+To enable **Unconstrained delegation (Not secure)**, you must add the userAccountControl value for TRUSTED_FOR_DELEGATION plus the existing value.
 The UAC value should become 0x81000 (0x1000 + 0x80000) which means WORKSTATION_TRUST_ACCOUNT and TRUSTED_FOR_DELEGATION.
 
 ![Screenshot of userAccountControl value 81000](media/user-account-control-81000.png)
@@ -87,7 +87,4 @@ If you have added some SPNs by mistake or want to remove some SPNs from the dele
 ## Next step
 
 - [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
-- [Getting started with group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)
-
-
-
+- [Manage Group Managed Service Accounts](manage-group-managed-service-accounts.md)
