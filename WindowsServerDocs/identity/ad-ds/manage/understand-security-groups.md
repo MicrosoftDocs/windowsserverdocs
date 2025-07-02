@@ -49,7 +49,7 @@ Security groups can provide an efficient way to assign access to resources on yo
 
     Permissions are different from user rights. Permissions are assigned to a security group for a shared resource. Permissions determine who can access the resource and the level of access, such as Full control or Read. Some permissions that are set on domain objects are automatically assigned to allow various levels of access to default security groups like the Account Operators group or the Domain Admins group.
 
-    Security groups are listed in Discretionary Access Control Lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in AD. The user receives permissions that are defined for that group.
+    Security groups are listed in Discretionary Access Control Lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in Active Directory. The user receives permissions that are defined for that group.
 
 You can use a security group as an email entity. Sending an email message to a security group sends the message to all the members of the group.
 
@@ -59,7 +59,7 @@ You can use distribution groups only to send email to collections of users by us
 
 ### Group scope
 
-Each group has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines where in the network permissions can be granted for the group. AD defines the following three group scopes:
+Each group has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines where in the network permissions can be granted for the group. Active Directory defines the following three group scopes:
 
 - Universal
 
@@ -74,9 +74,9 @@ The following table describes the three group scopes and how they work as securi
 
 |Scope|Possible members|Scope conversion|Can grant permissions|Possible member of|
 |--- |--- |--- |--- |--- |
-|Universal|Accounts from any domain in the same forest<p>Global groups from any domain in the same forest<p>Other Universal groups from any domain in the same forest|Can be converted to Domain Local scope if the group isn't a member of any other Universal group<p>Can be converted to Global scope if the group doesn't contain any other Universal group|On any domain within the same forest or trusting forests|Other Universal groups in the same forest<p>Domain Local groups in the same forest or trusting forests<p>Local groups on computers in the same forest or trusting forests|
-|Global|Accounts from the same domain<p>Other Global groups from the same domain|Can be converted to Universal scope if the group isn't a member of any other Global group|On any domain in the same forest, or trusting domains or forests|Universal groups from any domain in the same forest<p>Other Global groups from the same domain<p>Domain Local groups from any domain in the same forest, or from any trusting domain|
-|Domain Local|Accounts from any domain or any trusted domain<p>Global groups from any domain or any trusted domain<p>Universal groups from any domain in the same forest<p>Other Domain Local groups from the same domain<p>Accounts, Global groups, and Universal groups from other forests and from external domains|Can be converted to Universal scope if the group doesn't contain any other Domain Local group|Within the same domain|Other Domain Local groups from the same domain<p>Local groups on computers in the same domain, excluding built-in groups that have well-known security identifiers (SIDs)|
+|Universal|Accounts from any domain in the same forest.<p>Global groups from any domain in the same forest.<p>Other Universal groups from any domain in the same forest.|Can be converted to Domain Local scope if the group isn't a member of any other Universal group.<p>Can be converted to Global scope if the group doesn't contain any other Universal group.|On any domain within the same forest or trusting forests.|Other Universal groups in the same forest.<p>Domain Local groups in the same forest or trusting forests.<p>Local groups on computers in the same forest or trusting forests.|
+|Global|Accounts from the same domain.<p>Other Global groups from the same domain.|Can be converted to Universal scope if the group isn't a member of any other Global group.|On any domain in the same forest, or trusting domains or forests.|Universal groups from any domain in the same forest.<p>Other Global groups from the same domain.<p>Domain Local groups from any domain in the same forest, or from any trusting domain.|
+|Domain Local|Accounts from any domain or any trusted domain.<p>Global groups from any domain or any trusted domain.<p>Universal groups from any domain in the same forest.<p>Other Domain Local groups from the same domain.<p>Accounts, Global groups, and Universal groups from other forests and from external domains.|Can be converted to Universal scope if the group doesn't contain any other Domain Local group.|Within the same domain.|Other Domain Local groups from the same domain.<p>Local groups on computers in the same domain, excluding built-in groups that have well-known security identifiers (SIDs).|
 
 ### Special identity groups
 
