@@ -1244,7 +1244,7 @@ This security group includes the following changes since Windows Server 2008:
 
 ### Windows Authorization Access
 
-Members of this group have access to the computed token GroupsGlobalAndUniversal attribute on User objects. Some applications have features that read the token-groups-global-and-universal (TGGAU) attribute on user account objects or on computer account objects in Active Directory DS. Some Win32 functions make it easier to read the TGGAU attribute. Applications that read this attribute or that call an API (a *function*) that reads this attribute don't succeed if the calling security context doesn't have access to the attribute. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
+Members of this group have access to the computed token GroupsGlobalAndUniversal attribute on User objects. Some applications have features that read the token-groups-global-and-universal (TGGAU) attribute on user account objects or on computer account objects in AD DS. Some Win32 functions make it easier to read the TGGAU attribute. Applications that read this attribute or that call an API (a *function*) that reads this attribute don't succeed if the calling security context doesn't have access to the attribute. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 The Windows Authorization Access group applies to the Windows Server OS in [Default Active Directory security groups](#default-ad-security-groups).
 
