@@ -184,7 +184,7 @@ The DNS update message format uses a header defining the update operation to be 
 
 - **Update resource records**. Contains the resource records that are to be added or deleted from the zone. One of four operations is performed during the update:  
 
-  - Add resource records to an resource records set.  
+  - Add resource records to a resource records set.  
 
   - Delete a resource records set.  
 
