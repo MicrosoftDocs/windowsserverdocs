@@ -85,10 +85,6 @@ Run the following command through an elevated PowerShell prompt:
 Set-SmbClientConfiguration -EnableInsecureGuestLogons $true -Force
 ```
 
-```powershell
-Set-SmbServerConfiguration -EnableInsecureGuestLogons $true -Force
-```
-
 ---
 
 Both SMB signing, and SMB encryption policies must be disabled in Group Policy in order to use guest logons. Doing so can potentially compromise the security of the client and leave users open to credential theft and relay attacks.
