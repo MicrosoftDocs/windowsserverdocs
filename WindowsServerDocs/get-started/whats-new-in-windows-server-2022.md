@@ -1,10 +1,10 @@
 ---
-title: What's new in Windows Server 2022
-description: Find out what is new in Windows Server 2022.
-ms.topic: article
+title: What's New in Windows Server 2022
+description: Find out what's new in Windows Server 2022.
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 04/08/2025
+ms.date: 07/03/2025
 ---
 
 # What's new in Windows Server 2022
