@@ -85,10 +85,8 @@ Learn more about the latest Azure Local features in
 Windows Server 2022 Datacenter: Azure Edition images are available in the Azure Marketplace for
 Arc-enabled Azure Local, making it easy to try, buy, and deploy using Azure certified images.
 
-Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Local features in
-our
-[What's new in Azure Local](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace)
-article.
+Learn more about the Azure Marketplace integration for Azure Arc-enabled Azure Local features in the
+[What's new in Azure Local](/azure/azure-local/whats-new#azure-arc-vm-changes-and-azure-marketplace) article.
 
 ### Azure Edition (initial release)
 
