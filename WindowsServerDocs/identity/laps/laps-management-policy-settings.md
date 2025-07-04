@@ -1,15 +1,15 @@
 ---
 title: Configure policy settings for Windows LAPS
-description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS).
+description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS) to enhance security and automate local administrator password management.
 author: jay98014
 ms.author: mosagie
-ms.date: 08/19/2024
-ms.topic: article
+ms.date: 06/13/2025
+ms.topic: concept-article
 ---
 
 # Configure policy settings for Windows LAPS
 
-Windows Local Administrator Password Solution (Windows LAPS) supports various settings that you can control by using policy. Learn about the settings and how to administer them.
+Windows Local Administrator Password Solution (Windows LAPS) lets you configure policy settings to manage local administrator passwords securely and automatically. This article explains each policy setting and how to administer them for improved security and compliance.
 
 ## Supported policy roots
 
@@ -102,7 +102,7 @@ If not specified, this setting defaults to managing the built-in local administr
 > Don't specify this setting unless you want to manage an account other than the built-in local administrator account. The local administrator account is automatically identified by its well-known relative identifier (RID).
 
 > [!IMPORTANT]
-> You can configure the specified account (built-in or custom) as either enabled or disabled. Windows LAPS will manage that account's password in either state. If left in a disabled state however, the account must obviously first be enabled in order to be actually used.
+> You can configure the specified account (built-in or custom) as either enabled or disabled. Windows LAPS manages that account's password in either state. If left in a disabled state however, the account must obviously first be enabled in order to be actually used.
 
 > [!IMPORTANT]
 > If you configure Windows LAPS to manage a custom local administrator account, you must ensure that the account is created. Windows LAPS doesn't create the account.
@@ -132,7 +132,7 @@ Use this setting to configure the length of the password of the managed local ad
 If not specified, this setting defaults to 14 characters.
   
 > [!IMPORTANT]
-> Do not configure `PasswordLength` to a value that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAP event log).
+> Don't configure `PasswordLength` to a value that is incompatible with the managed device's local password policy. This results in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAP event log).
 
 The `PasswordLength` setting is ignored unless `PasswordComplexity` is configured to one of the password options.
 
@@ -146,6 +146,9 @@ Use this setting to configure the number of words in the passphrase of the manag
 If not specified, this setting defaults to 6 words.
 
 The `PassphraseLength` setting is ignored unless `PasswordComplexity` is configured to one of the passphrase options.
+
+> [!IMPORTANT]
+> `PassphraseLength` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### PasswordComplexity
 
@@ -165,10 +168,13 @@ Use this setting to configure the required password complexity of the managed lo
 If not specified, this setting defaults to *4*.
 
 > [!IMPORTANT]
-> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4.
+> Windows supports the lower password complexity settings (1, 2, and 3) only for backward compatibility with legacy Microsoft LAPS. We recommend that you always configure this setting to 4 (or a higher value if supported).
 
 > [!IMPORTANT]
-> Do not configure `PasswordComplexity` to a setting that is incompatible with the managed device's local password policy. This will result in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAPS event log).
+> Don't configure `PasswordComplexity` to a setting that is incompatible with the managed device's local password policy. This results in Windows LAPS failing to create a new compatible password (look for a 10027 event in the Windows LAPS event log).
+
+> [!IMPORTANT]
+> `PasswordComplexity` values 5 through 8 are only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### PasswordExpirationProtectionEnabled
 
@@ -209,7 +215,7 @@ If specified, the specified user or group can decrypt the password stored in Act
 >
 > The principal identified (either by SID or by user or group name) must exist and is resolvable by the device.
 >
-> NOTE: the data specified in this setting is entered as-is; for example, do *not* add enclosing quotes or parentheses.
+> The data specified in this setting is entered as-is; for example, don't add enclosing quotes or parentheses.
 >
 > This setting is ignored unless `ADPasswordEncryptionEnabled` is configured to *True* and all other prerequisites are met.
 >
@@ -270,7 +276,7 @@ If not specified, this setting defaults to *3*.
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
 
 > [!IMPORTANT]
-> `PostAuthenticationActions` value 11 is only supported in Windows 11 24H2, Windows Server 2025 and later releases.
+> `PostAuthenticationActions` value 11 is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementEnabled
 
@@ -279,6 +285,9 @@ Use this setting to enable automatic account management.
 Supported values are either *1* (True) or *0* (False).
 
 This setting defaults to *0* (False).
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementEnabled` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementTarget
 
@@ -293,6 +302,9 @@ This setting defaults to *1*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
+> [!IMPORTANT]
+> `AutomaticAccountManagementTarget` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+
 ### AutomaticAccountManagementNameOrPrefix
 
 Use this setting to specify the name or the name prefix of the automatically managed account.
@@ -304,6 +316,9 @@ This setting is treated as a name if `AutomaticAccountManagementRandomizeName` i
 This setting is treated as a name prefix if `AutomaticAccountManagementRandomizeName` is *1* (True).
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementNameOrPrefix` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementEnableAccount
 
@@ -317,6 +332,9 @@ Use this setting to enable or disable the automatically managed account.
 This setting defaults to *0*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementEnableAccount` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementRandomizeName
 
@@ -334,6 +352,9 @@ Windows local account names have a maximum length of 20 characters, which means 
 This setting defaults to *0*.
 
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
+
+> [!IMPORTANT]
+> `AutomaticAccountManagementRandomizeName` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
 
 ## Windows LAPS default policy values
 
@@ -361,7 +382,7 @@ All Windows LAPS policy settings have a default value. The default value is appl
 |AutomaticAccountManagementRandomizeName|False|
 
 > [!IMPORTANT]
-> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting is not configured. In the case where an invalid user or group name is specified, this will cause a policy processing failure and the managed account's password will not be backed up.
+> ADPasswordEncryptionPrincipal is an exception to the misconfigured setting rule. This setting defaults to 'Domain Admins' only when the setting is not configured. In the case where an invalid user or group name is specified, this will cause a policy processing failure and the managed account's password won't be backed up.
 
 Keep these defaults in mind when configuring new Windows LAPS features, for example passphrase support. If you configure a policy with a PasswordComplexity value of 6 (long word passphrases), then apply that policy to an older OS which doesn't support that value, the target OS uses the default value of 4. To avoid this outcome, create two different policies: one for the older OS and one for the newer OS.
 

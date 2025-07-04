@@ -4,7 +4,7 @@ description: This article provides guidance on Windows audit policy settings, ba
 ms.topic: best-practice
 author: xelu86
 ms.author: alalve
-ms.date: 05/29/2025
+ms.date: 06/13/2025
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 ---
 
@@ -12,12 +12,9 @@ ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 
 This article covers the Windows audit policy settings and Microsoft's baseline and advanced recommendations for both workstations and servers. It provides guidance to help administrators choose appropriate audit policies based on their organization's needs.
 
-The Security Compliance Manager (SCM) baseline recommendations shown here, along with the recommended settings to help detect system compromise, are intended only to be a starting baseline guide to administrators. Each organization must make its own decisions regarding the threats they face, their acceptable risk tolerances, and what audit policy categories or subcategories they should enable. For more information about threats, see [Threats and Countermeasures Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125921(v=ws.10)). Administrators without a thoughtful audit policy in place are encouraged to start with the settings recommended here, and then to modify and test before implementing in their production environment.
+The Security Compliance Manager (SCM) baseline recommendations shown here, along with the recommended settings to help detect system compromise, are intended only to be a starting baseline guide to administrators. Each organization must make its own decisions regarding the threats they face, their acceptable risk tolerances, and what audit policy categories or subcategories they should enable. Administrators without a thoughtful audit policy in place are encouraged to start with the settings recommended here, and then to modify and test before implementing in their production environment.
 
 The recommendations are for enterprise-class computers, which Microsoft defines as computers that have average security requirements and require a high level of operational functionality. Entities needing higher security requirements should consider more aggressive audit policies.
-
-> [!NOTE]
-> Microsoft Windows defaults and baseline recommendations were taken from the [Microsoft Security Compliance Manager tool](/previous-versions/tn-archive/cc677002(v=technet.10)).
 
 The following baseline audit policy settings are recommended for normal security computers that aren't known to be under active, successful attack by determined adversaries or malware.
 

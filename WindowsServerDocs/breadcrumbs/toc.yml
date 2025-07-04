@@ -42,6 +42,9 @@ items:
       - name: Remote Desktop Services
         tocHref: /previous-versions/remote-desktop-client/
         topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Remote Desktop Services
+        tocHref: /troubleshoot/windows-server/remote/remote-desktop-services-overview
+        topicHref: /windows-server/remote/remote-desktop-services/
       - name: Security
         tocHref: /windows-server/security/
         topicHref: /windows-server/security/security-and-assurance
