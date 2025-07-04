@@ -54,13 +54,15 @@ Before you begin, ensure that you meet the following prerequisites:
 
 - If you want to add App Compatibility to a custom Windows image (WIM), you need the ISO image file for the version of Windows Server you want to create a custom image for.
 
-## Install App Compatibility on a Server Core installation
+## Install App Compatibility on Server Core
 
 Installing the App Compatibility Feature on Demand involves adding a specialized package to your Server Core installation that provides extra tools and compatibility features normally found in Server with Desktop Experience.
 
 The installation process depends on whether you want to install App Compatibility from Windows Update or an ISO image. You can install the feature directly from Windows Update by running a PowerShell command. For an ISO image, you need to download the relevant Windows Server Languages and Optional Features ISO, mount it locally, and install the feature from that source.
 
 After you install App Compatibility and restart of the server, the command console window frame color changes to a different shade of blue.
+
+Select the relevant tab for your preferred installation method.
 
 # [Windows Update](#tab/windows-update)
 
@@ -73,7 +75,7 @@ To install App Compatibility on a Server Core installation of Windows Server fro
 1. Install the App Compatibility Feature on Demand by running the following command. The command takes several minutes to complete.
 
    ```PowerShell
-   Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0
+   Add-WindowsCapability -Online -Name "ServerCore.AppCompatibility~~~~0.0.1.0"
    ```
 
    The output is similar to the following example:
@@ -84,7 +86,7 @@ To install App Compatibility on a Server Core installation of Windows Server fro
    RestartNeeded : True
    ```
 
-1. Once the command completes, restart the server to apply the changes.
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
 
 # [ISO image](#tab/iso-image)
 
@@ -119,13 +121,13 @@ To install App Compatibility on a Server Core installation of Windows Server fro
    - For Windows Server 2022 and later:
 
       ```PowerShell
-      Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
+      Add-WindowsCapability -Online -Name "ServerCore.AppCompatibility~~~~0.0.1.0" -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
       ```
 
    - For previous versions of Windows Server:
 
       ```PowerShell
-      Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${fodDriveLetter}:\ -LimitAccess
+      Add-WindowsCapability -Online -Name "ServerCore.AppCompatibility~~~~0.0.1.0" -Source ${fodDriveLetter}:\ -LimitAccess
       ```
 
    The output is similar to the following example:
@@ -136,7 +138,7 @@ To install App Compatibility on a Server Core installation of Windows Server fro
    RestartNeeded : True
    ```
 
-1. Once the command completes, restart the server to apply the changes.
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
 
 ---
 
@@ -230,3 +232,81 @@ To add App Compatibility to a custom WIM image, follow these steps. Be sure to c
    ```
 
 You can now install Windows Server using the custom WIM image that has the App Compatibility feature included and it remains in place after an in-place upgrade of Windows Server to a newer version.
+
+## Install Internet Explorer 11 on Server Core
+
+You can install Internet Explorer 11 on a Server Core installation of Windows Server 2022 and previous versions. Internet Explorer requires App Compatibility to be installed first. If you haven't already installed App Compatibility, see the [Install App Compatibility on Server Core](#install-app-compatibility-on-server-core) section. You don't need to install Internet Explorer to add App Compatibility.
+
+> [!TIP]
+> In Windows Server 2022, although you can add Internet Explorer 11 to Server Core installations of Windows Server, [Microsoft Edge](https://www.microsoft.com/edge) should be used instead. Microsoft Edge has [Internet Explorer mode](/deployedge/edge-ie-mode) (IE mode) built in, so you can access legacy Internet Explorer-based websites and applications straight from Microsoft Edge. For more information on the product lifecycle for Internet Explorer, see [Lifecycle FAQ - Internet Explorer and Microsoft Edge](/lifecycle/faq/internet-explorer-microsoft-edge).
+
+Select the relevant tab for your preferred installation method.
+
+# [Windows Update](#tab/windows-update)
+
+To install Internet Explorer 11 on a Server Core installation of Windows Server from Windows Update:
+
+1. Make sure you installed App Compatibility on the Server Core installation of Windows Server.
+
+1. Once again follow the steps in the section [Install App Compatibility on a Server Core installation](#install-app-compatibility-on-server-core), but for step 3, run the following command instead:
+
+   ```PowerShell
+   Add-WindowsCapability -Online -Name "Browser.InternetExplorer~~~~0.0.11.0"
+   ```
+
+   The output is similar to the following example:
+
+   ```output
+   Path          :
+   Online        : True
+   RestartNeeded : True
+   ```
+
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
+
+1. After the server restarts, you can access Internet Explorer 11 by going back to a PowerShell prompt from `SConfig`, then running the following command:
+
+   ```PowerShell
+   & "$env:ProgramFiles\Internet Explorer\iexplore.exe"
+   ```
+
+# [ISO image](#tab/iso-image)
+
+To install Internet Explorer 11 on a Server Core installation of Windows Server from an ISO image:
+
+1. Make sure you installed App Compatibility on the Server Core installation of Windows Server.
+
+1. Once again follow the steps in the section [Install App Compatibility on a Server Core installation](#install-app-compatibility-on-server-core), but for step 6, run the following command instead, depending on the operating system version you're using:
+
+   - For Windows Server 2022:
+
+      ```PowerShell
+      Add-WindowsCapability -Online -Name "Browser.InternetExplorer~~~~0.0.11.0" -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
+      ```
+
+   - For previous versions of Windows Server:
+
+      ```PowerShell
+      Add-WindowsCapability -Online -Name "Browser.InternetExplorer~~~~0.0.11.0" -Source ${fodDriveLetter}:\ -LimitAccess
+      ```
+
+   The output is similar to the following example:
+
+   ```output
+   Path          :
+   Online        : True
+   RestartNeeded : True
+   ```
+
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
+
+1. After the server restarts, you can access Internet Explorer 11 by going back to a PowerShell prompt from `SConfig`, then running the following command:
+
+   ```PowerShell
+   & "$env:ProgramFiles\Internet Explorer\iexplore.exe"
+   ```
+
+---
+
+> [!IMPORTANT]
+> Double-clicking to open locally saved `.htm` files isn't supported. However, you can **right-click** and choose **Open with Internet Explorer**, or you can open it directly from Internet Explorer by selecting **File**, then **Open** and browsing to the file.
