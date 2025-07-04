@@ -1,5 +1,5 @@
 ---
-title: DNSSEC Signing DNS Zones
+title: DNSSEC Sign DNS Zones
 description: Learn how to sign DNS zones in a DNSSEC deployment
 author: orin-thomas
 ms.author: orthomas
@@ -9,7 +9,7 @@ ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute
 # Customer intent: As a DNS administrator, I want to understand how to sign DNS zones in a DNSSEC deployment.
 ---
 
-# DNSSEC Signing DNS Zones
+# DNSSEC Sign DNS Zones
 
 Signing a zone with DNSSEC adds several new DNSSEC related resource records. These new resource records can be sent in response to DNS queries for the zone along with the traditional, non-DNSSEC-related resource records. DNS servers must specifically request that DNSSEC records be included in DNS responses. Therefore, servers that don't support DNSSEC receives only traditional resource records in a DNS response.
 

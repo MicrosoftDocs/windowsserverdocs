@@ -1,5 +1,5 @@
 ---
-title: Name Resolution Policy Table
+title: Configure the Name Resolution Policy Table
 description: Learn about the role of the Name Resolution Policy Table in a DNSSEC deployment
 author: orin-thomas
 ms.author: orthomas
@@ -9,7 +9,7 @@ ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute
 # Customer intent: As a DNS administrator, I want to understand the Name Resolution Policy Table in a DNSSEC deployment.
 ---
 
-# The NRPT
+# Configure the Name Resolution Policy Table
 
 The Name Resolution Policy Table (NRPT) in Windows Server enables you to enforce name resolution policies on security-aware DNS clients. The NRPT contains rules that you can configure to specify DNS settings or special behavior for names or namespaces. The NRPT can be configured using the Group Policy Management Editor under **Computer Configuration\\Policies\\Windows Settings\\Name Resolution Policy**, or with PowerShell. 
 
