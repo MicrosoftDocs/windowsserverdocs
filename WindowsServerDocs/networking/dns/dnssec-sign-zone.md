@@ -183,7 +183,7 @@ To create a Key Signing Key, in the Zone Signing Wizard on the Key Signing Key p
 
 If the zone hasn't been previously signed, the ZSK configuration page requires that you add at least one ZSK.
 
-To create a new Zone Signing Key, on the Zone Singing Key page of the Zone Signing Wizard:
+To create a new Zone Signing Key, on the Zone Signing Key page of the Zone Signing Wizard:
 
 1. Choose **Add**.
 1. Choose **OK** to accept default parameter values for the ZSK, or enter new parameter values, and then choose **OK**.
