@@ -191,7 +191,7 @@ items:
                   - name: Validate and secure DNS responses
                     href: dns/validate-dnssec-responses.md
                   - name: DNSSEC Key Master
-                    href: dns/dnssec-key-master-conceptual.md
+                    href: dns/dnssec-key-master.md
           - name: How-to guides
             items:
               - name: Manage DNS zones
