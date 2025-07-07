@@ -184,7 +184,7 @@ In addition to backing up application data and system state information, shadow 
 
 - Restoring LUNs (LUN resynchronization and LUN swapping).
 
-- Restoring individual files (Shadow Copies for Shared Folders).
+- Restoring individual files (Shadow Copies of Shared Folders).
 
 - Data mining by using transportable shadow copies.
 
@@ -210,11 +210,11 @@ LUN resynchronization is different from LUN swapping. A LUN swap is a fast recov
 > [!WARNING]
 > All of the operations listed are LUN-level operations. If you attempt to recover a specific volume by using LUN resynchronization, you're unwittingly going to revert all the other volumes that are sharing the LUN.
 
-### Restoring individual files (Shadow Copies for Shared Folders)
+### Restoring individual files (Shadow Copies of Shared Folders)
 
-Shadow Copies for Shared Folders uses VSS to provide point-in-time copies of files that are located on a shared network resource, such as a file server. With Shadow Copies for Shared Folders, users can quickly recover deleted or changed files that are stored on the network. Because they can do so without administrator assistance, Shadow Copies for Shared Folders can increase productivity and reduce administrative costs.
+Shadow Copies of Shared Folders uses VSS to provide point-in-time copies of files that are located on a shared network resource, such as a file server. With Shadow Copies of Shared Folders, users can quickly recover deleted or changed files that are stored on the network. Because they can do so without administrator assistance, Shadow Copies of Shared Folders can increase productivity and reduce administrative costs.
 
-For more information, see [Shadow Copies for Shared Folders](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771305(v=ws.10)).
+For more information, see [Shadow Copies of Shared Folders](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771305(v=ws.10)).
 
 ### Data mining by using transportable shadow copies
 
@@ -290,7 +290,7 @@ To exclude specific files from shadow copies, use the following registry key: `F
 >
 > - It can't delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.
 > - It can't delete files from shadow copies for shared folders.
-> - It can delete files from a shadow copy that was created by using the [Diskshadow](../../administration/windows-commands/diskshadow.md) utility, but it can't delete files from a shadow copy that was created by using the [Vssadmin](../../administration/windows-commands/vssadmin.md) utility.
+> - It can delete files from a shadow copy that was created by using the [Diskshadow](../../administration/windows-commands/diskshadow.md) utility, but it can't delete files from a shadow copy that was created by using the [VssAdmin](../../administration/windows-commands/vssadmin.md) utility.
 > - Files are deleted from a shadow copy on a best-effort basis. This means that they aren't guaranteed to be deleted.
 
 For more information, see [Excluding Files from Shadow Copies](/windows/win32/vss/excluding-files-from-shadow-copies).
@@ -410,7 +410,7 @@ For more information, see:
 
 ### MaxShadowCopies
 
-This key specifies the maximum number of client-accessible shadow copies that can be stored on each volume of the computer. Client-accessible shadow copies are used by Shadow Copies for Shared Folders.
+This key specifies the maximum number of client-accessible shadow copies that can be stored on each volume of the computer. Client-accessible shadow copies are used by Shadow Copies of Shared Folders.
 
 For more information, see *MaxShadowCopies* under [Registry Keys for Backup and Restore](/windows/win32/backup/registry-keys-for-backup-and-restore).
 
@@ -433,7 +433,7 @@ The following table lists the minimum supported operating system versions for VS
 | Previous versions of Windows Server | Windows Vista | Windows Server 2003 |
 | Fast recovery using LUN swap | None supported | Windows Server 2003 with SP1 |
 | Multiple imports of hardware shadow copies (This is the ability to import a shadow copy more than once. Only one import operation can be performed at a time.) | None supported | Windows Server 2008 |
-| Shadow Copies for Shared Folders | None supported | Windows Server 2003 |
+| Shadow Copies of Shared Folders | None supported | Windows Server 2003 |
 | Transportable auto-recovered shadow copies | None supported | Windows Server 2008 |
 | Concurrent backup sessions (up to 64) | Windows XP | Windows Server 2003 |
 | Single restore session concurrent with backups | Windows Vista | Windows Server 2003 with SP2 |
