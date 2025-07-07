@@ -114,7 +114,7 @@ Some applications define the size of the TCP receive window. If the application 
 
 For example, on a computer that has a 1 Gbps network adapter installed, the window size should be 64 KB.
 
-This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). Windows-based computers can use these features to negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
+This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). Windows-based computers can use these features to negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior makes the sizes easier to handle for networking devices.
 
 > [!NOTE]
 > You might experience an issue in which the network device isn't compliant with the **TCP window scale option**, as defined in [RFC 1323](https://tools.ietf.org/html/rfc1323) and, therefore, doesn't support the scale factor. In such cases, contact your network device vendor.
