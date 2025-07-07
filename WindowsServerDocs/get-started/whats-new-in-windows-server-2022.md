@@ -204,7 +204,7 @@ Some of the new features are:
 
 - Reduced Windows container image size by up to 40%, which leads to a 30% faster startup time and better performance.
 
-- Applications can now use Microsoft Entra ID with group Managed Service Account (gMSA) [without domain joining the container host](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts). Windows containers now also support Microsoft Distributed Transaction Coordinator (DTC) and Microsoft Message Queuing (MSMQ).
+- Applications can now use Microsoft Entra ID with group Managed Service Account (gMSA) [without domain-joining the container host](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts). Windows containers now also support Microsoft Distributed Transaction Coordinator (DTC) and Microsoft Message Queuing (MSMQ).
 
 - Simple buses can now be assigned to process-isolated Windows Server containers. Applications running in containers that need to communicate over SPI, I2C, GPIO, and UART/COM are now able to do so.
 
@@ -215,8 +215,6 @@ Some of the new features are:
 - Windows Admin Center is updated to make it easy to containerize .NET applications. After the application is in a container, you can host it on Azure Container Registry to then deploy it to other Azure services, including Azure Kubernetes Service.
 
 - With support for Intel Ice Lake processors, Windows Server 2022 supports business-critical and large-scale applications that require up to 48 TB of memory and 2,048 logical cores running on 64 physical sockets. Confidential computing with Intel Secured Guard Extension (SGX) on Intel Ice Lake improves application security by isolating applications from each other with protected memory.
-
-To learn more about the new features, see [What's new for Windows containers in Windows Server 2022](/virtualization/windowscontainers/about/whats-new-ws2022-containers).
 
 ### Other key features
 
@@ -318,7 +316,7 @@ Windows Server 2022 images, including Server Core, Nano Server, and [Server](htt
 
 #### Virtualized time zone
 
-With Windows Server 2022, Windows containers can maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) PowerShell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
+With Windows Server 2022, Windows containers can maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) PowerShell cmdlet. To learn more, see [virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
 
 #### Scalability improvements for overlay networking support
 
