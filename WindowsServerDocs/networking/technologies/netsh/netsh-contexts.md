@@ -63,7 +63,7 @@ Each netsh helper DLL provides an extensive set of features called a *context*, 
 
 For example, dhcpmon.dll provides netsh with the context and set of commands necessary to configure and manage DHCP servers.
 
-You can obtain a list of netsh contexts by opening either the command prompt or Windows PowerShell, typing `netsh /?` or `netsh help` and then selecting **Enter**.
+You can obtain a list of netsh contexts by opening either the command prompt or Windows PowerShell, typing `netsh /?` or `netsh help`, and then selecting **Enter**.
 
 Here's an example output:
 
