@@ -4,7 +4,7 @@ description: Learn how to use Volume Shadow Copy Service to coordinate the actio
 ms.topic: article
 author: xelu86
 ms.author: alalve
-ms.date: 04/09/2025
+ms.date: 07/07/2025
 ---
 
 # Volume Shadow Copy Service (VSS)
