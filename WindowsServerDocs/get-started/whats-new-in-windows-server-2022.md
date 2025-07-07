@@ -359,7 +359,7 @@ HostProcess containers have the following benefits:
 
 - Cluster users no longer need to sign in and individually configure each Windows node for administrative tasks and management of Windows services.
 - You can utilize the container model to deploy management logic to as many clusters as needed.
-- YOu can build HostProcess containers on top of existing Windows Server 2019 or later base images, manage them by using Windows container runtime, and run as any user available in the domain of the host machine.
+- You can build HostProcess containers on top of existing Windows Server 2019 or later base images, manage them by using Windows container runtime, and run as any user available in the domain of the host machine.
 - HostProcess containers provide the best way to manage Windows nodes in Kubernetes.
 
 For more information, see [Windows HostProcess Containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/).
