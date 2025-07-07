@@ -40,7 +40,7 @@ To connect to a remote PC using single sign-on with Microsoft Entra authenticati
    > [!IMPORTANT]
    > We recommend that you [enforce multifactor authentication Conditional Access](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) and configure a periodic reauthentication policy using [Sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime) for added security.
 
-## Connect to a remote PC using single sign-on using single sign-on with Microsoft Entra authentication
+## Connect to a remote PC using single sign-on with Microsoft Entra authentication
 
 Here's how to connect to a remote PC using single sign-on with Microsoft Entra authentication
 
