@@ -27,19 +27,19 @@ The following parameters are optional.
 
 |Parameter|Description|
 |--|--|
-|:::no-loc text="-a":::|Specifies that you want to return to the netsh shell after running `AliasFile`.|
+|:::no-loc text="-a":::|Specifies that you want to return to the netsh shell after running **AliasFile**.|
 |`AliasFile`|Specifies the name of the text file that contains one or more netsh commands.|
 |:::no-loc text="-c":::|Specifies that netsh enters the specified netsh context.|
 |`Context`|Specifies the netsh context that you want to enter.|
 |:::no-loc text="-r":::|Specifies that you want the command to run on a remote computer. The Remote Registry service must be running on the remote computer. If it's not running, Windows displays a "Network Path Not Found" error message.|
 |`RemoteComputer`|Specifies the remote computer that you want to configure.|
 |:::no-loc text="-u":::|Specifies that you want to run the netsh command under a user account.|
-|`DomainName\`|Specifies the domain where the user account is located. The default is the local domain if `DomainName\` isn't specified.|
+|`DomainName\`|Specifies the domain where the user account is located. The default is the local domain if *DomainName\\* isn't specified.|
 |`UserName`|Specifies the user account name.|
 |:::no-loc text="-p":::|Specifies that you want to provide a password for the user account.|
-|`Password`|Specifies the password for the user account that you specified with `-u` *UserName*.|
+|`Password`|Specifies the password for the user account that you specified with **-u** *UserName*.|
 |`Command`|Specifies the netsh command that you want to run.|
-|:::no-loc text="-f":::|Specifies that you want to exit netsh after it runs the script that you designate with `ScriptFile`.|
+|:::no-loc text="-f":::|Specifies that you want to exit netsh after it runs the script that you designate with *ScriptFile*.|
 |`ScriptFile`|Specifies the script that you want to run.|
 
 > [!NOTE]
@@ -160,12 +160,12 @@ netsh interface ipv4 set address "NetLAN1" static <IP_Address> <Subnet_Mask> <Ga
 
 You can use the following formatting legend to interpret and use correct netsh command syntax when you run the command at the netsh shell or in a batch file or script.
 
-- Text in *Italic* is information that you must supply while you type the command. For example, if a command has a parameter named -*UserName*, you must type the actual user name.
-- Text in **Bold** is information that you must type exactly as shown while you type the command.
+- Text in *italic* is information that you must supply when you type the command. For example, if a command has a parameter named -*UserName*, you must type the actual user name.
+- Text in **bold** is information that you must type exactly as shown when you type the command.
 - Text followed by an ellipsis (**...**) is a parameter that can be repeated several times in a command line.
-- Text that is between brackets [&nbsp;] is an optional item.
-- Text that is between braces {&nbsp;} with choices separated by a pipe provides a set of choices from which you must select only one, such as `{enable|disable}`.
-- Text that is formatted with the Courier font is code or program output.
+- Text that's between brackets [&nbsp;] is an optional item.
+- Text that's between braces {&nbsp;} with choices separated by a pipe provides a set of choices from which you must select only one, such as `{enable|disable}`.
+- Text that's formatted with the Courier font is code or program output.
 
 ## String values for netsh commands
 
@@ -193,6 +193,6 @@ netsh interface ipv4>show interfaces
 netsh interface ipv6>show interfaces
 ```
 
-## See also
+## Related content
 
 - [Netsh Command Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754516(v=ws.10))
