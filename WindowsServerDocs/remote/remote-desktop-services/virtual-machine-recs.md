@@ -38,7 +38,7 @@ The following table shows examples of typical workloads:
 
 ## Multi-session recommendations
 
-In a *multi-session* scenario, there's more than one user signed in to a session host virtual machine at any one time. For example, when you use pooled host pools in Azure Virtual Desktop with the Windows 11 Enterprise multi-session operating system (OS), that's a multi-session deployment.
+In a *multi-session* scenario, more than one user is signed in to a session host virtual machine at any given time. For example, when you use pooled host pools in Azure Virtual Desktop with the Windows 11 Enterprise multi-session operating system (OS), that's a multi-session deployment.
 
 The following table lists the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for a standard or larger user workload. If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload.
 
