@@ -3,16 +3,16 @@ title: Migrate a VMware virtual machine to Hyper-V in Windows Admin Center
 description: Learn how to install, configure, and test the Windows Admin Center VM Conversion extension for migrating VMs from vCenter to Hyper-V.
 author: meaghanlewis
 ms.topic: how-to
-ms.date: 07/01/2025
+ms.date: 07/07/2025
 ms.author: mosagie
 ---
 # Migrate a VMware virtual machine to Hyper-V in Windows Admin Center
 
-You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V. 
+You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V with the VM Conversion extension. The VM Conversion extension is a powerful, lightweight solution that allows you to migrate virtual machines with minimal downtime on both Windows and Linux machines.
 
-A powerful, lightweight solution that allows you to migrate virtual machines with minimal downtime on both Windows and Linux machines. This article explains how to install and configure the VM Conversion extension, outlines the migration workflow, and provides troubleshooting tips. Before you begin, review the prerequisites and ensure your environment meets the requirements.
+This article explains how to install and configure the extension, outlines the migration workflow, and provides answers to frequently asked questions. Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
-The VM Migration extension provides the following features:
+The VM Conversion extension provides the following features:
 
 - **Bulk migration support**: Enables selection and migration of up to 10 VMs in a single operation, streamlining the process.
 - **Remote server migration**: Supports migration to Hyper-V servers that aren't locally hosted.
@@ -105,7 +105,11 @@ The following operating systems can use the VM Conversion extension:
 
     [![Migrate tab](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
 
-1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**. Select **Proceed** in the confirmation box. During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
+1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
+
+1. In the Migrate VM window, check the box if you want to **migrate the static IP address** for each VM. Select **Proceed** in the confirmation box to start the migration.
+
+    During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
     [![Migrate VM dialog](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
 
@@ -118,7 +122,7 @@ The following operating systems can use the VM Conversion extension:
 ### Browser console logs
 
 1. Open your browser settings, and navigate to **More Tools** > **Developer Tools**.
-1. Check the Console tab.
+1. Check the **Console** tab.
 1. Look for any error or warning messages and share them as needed.
 
 ### Event viewer logs
@@ -141,11 +145,11 @@ The following operating systems can use the VM Conversion extension:
 
 1. Which VMware versions are supported?
 
-    The tool supports vCenter and ESXi versions 6.x, 7.x, and higher.
+    The tool supports vCenter and ESXi versions 6.x and higher.
 
 1. Does the tool support both Static and DHCP IP addresses?
 
-    Yes. DHCP works automatically; no manual action needed. Static IP: [Maintain static IP addresses during migration (preview)](/azure/azure-local/migrate/migrate-maintain-ip-addresses?tabs=linux) script is provided to manually persist the original static IP on the destination server.
+    Yes. DHCP works automatically; no manual action needed. For Static IP, a script is provided to manually persist the original static IP on the destination server. Learn more about how to [Maintain static IP addresses during migration (preview)](/azure/azure-local/migrate/migrate-maintain-ip-addresses?tabs=linux).
 
 1. How does the tool handle VM boot types?
 
