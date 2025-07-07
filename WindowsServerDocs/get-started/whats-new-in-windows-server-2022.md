@@ -318,7 +318,7 @@ Windows Server 2022 images, including Server Core, Nano Server, and [Server](htt
 
 #### Virtualized time zone
 
-With Windows Server 2022, Windows containers can now maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) PowerShell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
+With Windows Server 2022, Windows containers can maintain a virtualized time zone configuration separate from the host. All configurations the host time zone typically uses are now virtualized and instanced for each container. To configure the container time zone, you can use the [tzutil](/windows-server/administration/windows-commands/tzutil) command utility or the [Set-TimeZone](/powershell/module/microsoft.powershell.management/set-timezone?view=powershell-7.1&preserve-view=true) PowerShell cmdlet. To learn more, see [Virtualized time zone](/virtualization/windowscontainers/manage-containers/virtual-time-zone).
 
 #### Scalability improvements for overlay networking support
 
@@ -326,7 +326,7 @@ Windows Server 2022 aggregates several performance and scale improvements that w
 
 - Fixed the issue that caused port exhaustion when using hundreds of Kubernetes services and pods on the same node.
 - Improved packet forwarding performance in the Hyper-V virtual switch (vSwitch).
-- Increased reliability across Container Networking Interface (CNI) restarts in Kubernetes.
+- Increased reliability across Container Network Interface (CNI) restarts in Kubernetes.
 - Improvements in the Host Networking Service (HNS) control plane and in the data plane used by Windows Server containers and Kubernetes networking.
 
 To learn more about the performance and scalability improvements for overlay networking support, see [Kubernetes Overlay Networking for Windows](https://techcommunity.microsoft.com/t5/networking-blog/introducing-kubernetes-overlay-networking-for-windows/ba-p/363082).
@@ -339,7 +339,7 @@ To learn more, see [DSR in Introduction to Windows support in Kubernetes](https:
 
 #### gMSA improvements
 
-You can use Group Managed Service Accounts (gMSA) with Windows containers to facilitate Active Directory (AD) authentication. When introduced in Windows Server 2019, gMSA required joining the container host to a domain to retrieve the gMSA credentials from Active Directory. In Windows Server 2022, gMSA for containers with a non-domain joined host uses a portable user identity instead of a host identity to retrieve gMSA credentials. Therefore, manually joining Windows worker nodes to a domain is no longer necessary. After authentication, Kubernetes saves the user identity as a secret. gMSA for containers with a non-domain joined host provides the flexibility of creating containers with gMSA without joining the host node to the domain.
+You can use Group Managed Service Accounts (gMSA) with Windows containers to facilitate Active Directory authentication. When introduced in Windows Server 2019, gMSA required joining the container host to a domain to retrieve the gMSA credentials from Active Directory. In Windows Server 2022, gMSA for containers with a non-domain joined host uses a portable user identity instead of a host identity to retrieve gMSA credentials. Therefore, manually joining Windows worker nodes to a domain is no longer necessary. After authentication, Kubernetes saves the user identity as a secret. gMSA for containers with a non-domain joined host provides the flexibility of creating containers with gMSA without joining the host node to the domain.
 
 To learn more about the gMSA improvements, see [Create gMSAs for Windows containers](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts).
 
@@ -353,13 +353,13 @@ The Host Network Service (HNS) now allows you to use more restrictive subnets, s
 
 #### HostProcess containers for node management
 
-HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, users can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. You can use Windows containers for various device plug-in, storage, and networking management scenarios in Kubernetes.
+HostProcess containers are a new container type that runs directly on the host and extends the Windows container model to enable a wider range of Kubernetes cluster management scenarios. With HostProcess containers, you can package and distribute management operations that require host access while retaining versioning and deployment methods provided by containers. You can use Windows containers for various device plug-in, storage, and networking management scenarios in Kubernetes.
 
 HostProcess containers have the following benefits:
 
 - Cluster users no longer need to sign in and individually configure each Windows node for administrative tasks and management of Windows services.
-- Users can utilize the container model to deploy management logic to as many clusters as needed.
-- Users can build HostProcess containers on top of existing Windows Server 2019 or later base images, manage them using Windows container runtime, and run as any user available in the domain of the host machine.
+- You can utilize the container model to deploy management logic to as many clusters as needed.
+- YOu can build HostProcess containers on top of existing Windows Server 2019 or later base images, manage them by using Windows container runtime, and run as any user available in the domain of the host machine.
 - HostProcess containers provide the best way to manage Windows nodes in Kubernetes.
 
 For more information, see [Windows HostProcess Containers](https://kubernetes.io/blog/2021/08/16/windows-hostprocess-containers/).
@@ -372,10 +372,10 @@ Windows Admin Center includes the following enhancements:
 
 - The Containers extension now supports Web Deploy files, which lets you extract the app and its configuration from a running server and then containerize the application.
 - You can validate the image locally and then push that image to Azure Container Registry.
-- Azure Container Registry and Azure Container Instance now have basic management functionality. You can now use the Windows Admin Center UI to create and delete registries, manage images, and start and stop new container instances.
+- Azure Container Registry and Azure Container Instances now have basic management functionality. You can now use the Windows Admin Center UI to create and delete registries, manage images, and start and stop new container instances.
 
-#### Azure Migrate App Containerization tooling
+#### Azure Migrate: App Containerization tool
 
-Azure Migrate App Containerization is an end-to-end solution that containerizes and moves existing web applications to the Azure Kubernetes Service. You can assess existing web servers, create a container image, push the image to the Azure Container Registry, create a Kubernetes deployment, and finally deploy it to the Azure Kubernetes Service.
+Azure Migrate App: Containerization is an end-to-end solution that containerizes and moves existing web applications to the Azure Kubernetes Service. You can assess existing web servers, create a container image, push the image to the Azure Container Registry, create a Kubernetes deployment, and finally deploy it to the Azure Kubernetes Service.
 
-For more information about the Azure Migrate App Containerization tool, see [ASP.NET app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) and [Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes).
+For more information about the Azure Migrate App: Containerization tool, see [ASP.NET app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) and [Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes).
