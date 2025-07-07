@@ -10,22 +10,52 @@ ms.author: mosagie
 
 You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V. This article explains how to install and configure the VM Conversion extension, outlines the migration workflow, and provides troubleshooting tips. Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
+The VM Migration extension provides the following features:
+
+- **Bulk migration support**: Enables selection and migration of up to 10 VMs in a single operation, streamlining the process.
+- **Remote server migration**: Supports migration to Hyper-V servers that are not locally hosted.
+- **Cluster server migration**: Facilitates VM migration to clustered Hyper-V environments for high availability.
+- **Static IP retention**: Automatically preserves the original static IPv4 address post-migration, minimizing manual reconfiguration.
+- **Multi-vCenter connection support**: Allows managing and switching between multiple vCenter instances within the same interface.
+- **Custom sync path selection via file browser**: Offers an easy-to-use file browse option for specifying target disk paths.
+- **Localization support**: Enables multi-language support to enhance usability for global audiences.
+
 ## Prerequisites
 
 - Hyper-V is installed on Windows Admin Center gateway.
 
+- [PowerCLI](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli.html) is installed
+
+- [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on machine where Windows Admin Center gateway is installed. Install the appropriate version based on the OS type of the Windows Admin Center Gateway machine.
+
+- Download the latest [VMware Virtual Disk Development Kit (VDDK)](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/), extract it, and copy the extracted contents to the following directory: *"C:\Program Files\WindowsAdminCenter\Service\VDDK"*.
+
 - Windows Admin Center Gateway V2 – GA version.
 
-- VMware VCenter version 7.x or above is installed. Keep the following vCenter information handy:
+- VMware VCenter version 6.x or above is installed. Keep the following vCenter information handy:
   - Fully Qualified Domain Name (FQDN)
   - Username
   - Password
 
-- Install either [PowerCLI](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli.html) or [PowerCLI Offline](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli-offline.html)
+- Snapshot check. Ensure that the VM to be migrated has no active snapshots. If snapshots exist, initial sync pre-checks will fail.
 
-- Install [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) on machine where Windows Admin Center gateway is installed.
+- Alma Linux VMs. For Alma Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
 
-- Download the latest [VMware Virtual Disk Development Kit (VDDK)](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/), extract it, and copy the extracted contents to the following directory: *"C:\Program Files\WindowsAdminCenter\Service\VDDK"*.
+## OS support matrix
+
+- Windows Server 2025 Standard
+- Windows Server 2022 Standard
+- Alma Linux
+- Ubuntu Desktop 20.04.6 LTS
+- Cent OS
+- Ubuntu Desktop 20.04
+- Red Hat Linux 9.0
+- Windows 2008R2 SP1
+- Windows 2012R2
+- Windows 2016
+- Windows 2022 Azure Edition
+- Ubuntu 24.04
+- Debian 11 and 12
 
 ## Install the extension
 
@@ -37,7 +67,7 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 1. Search for **VM Conversion Extension** in **Available extensions** and select **Install.**
 
-1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Migration**.
+1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion**.
 
 ## Supported scenario topology
 
@@ -47,7 +77,7 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 1. Connect to the Hyper-V server (**Datacenter-Server-001**) in Windows Admin Center that you want the VM to be migrated.
 
-1. Go to the VM migration tool in the left panel under **Extensions** > **VM Migration**.
+1. Go to the VM migration tool in the left panel under **Extensions** > **VM Conversion**.
 
 1. Select **Connect to vCenter**.
 
@@ -59,11 +89,11 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 1. Look up the virtual machine that needs to be migrated.
 
-1. Select the Virtual machine, either Windows or Linux, to migrate.
+1. Select up to 10 virtual machines to migrate.
 
     [![Synchronize tab](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
 
-1. Select on **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
+1. Select **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
  
     [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
@@ -83,18 +113,62 @@ You can use Windows Admin Center to migrate virtual machines (VMs) from VMware v
 
 ## View logs
 
-1. Open your browser settings, and navigate to **More Tools** > **Developer Tools**. Check the Console tab.
+### Browser console logs
 
-2. Open Event Viewer, expand **Applications and Services Logs** in the left pane. To view errors, select **WindowsAdminCenter**, and filter the logs.
+1. Open your browser settings, and navigate to **More Tools** > **Developer Tools**.
+1. Check the Console tab.
+1. Look for any error or warning messages and share them as needed.
 
-3. Find the file located at `C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt`.
+### Event viewer logs
 
-## Known limitations
+1. On the Windows Admin Center server, open **Event Viewer**.
+1. Expand **Applications and Services Logs** in the left pane.
+1. Select **WindowsAdminCenter**.
+1. Filter and review logs for **Errors**, **Warnings**, and **Informational** messages relevant to the VM Conversion extension.
 
-- Only 1-VM migration at a time is supported.
+### VM conversion logs
 
-- At-scale experience: work-in-progress.
+1. Connect to the Windows Admin Center server.
+1. Find the file located at `C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt`.
 
-- Host networking settings don't persist from eSXI host to Hyper-V host.
+## View frequently asked questions
 
-- VM Tools aren't uninstalled after the VM is migrated.
+1. Can I migrate both Windows and Linux virtual machines?
+
+    Yes — the tool supports migration of both Windows and Linux VMs. For Alma Linux, make sure Hyper-V drivers are installed before migration to ensure a smooth boot on the destination server.
+
+1. Which VMware versions are supported?
+
+    The tool supports vCenter and ESXi versions 6.x, 7.x, and above. Host OS and Guest OS support matrices are being refined and will be shared soon.
+
+1. Does the tool support both Static and DHCP IP addresses?
+
+    Yes. DHCP works automatically; no manual action needed. Static IP: [Maintain static IP addresses during migration (preview)](/azure/azure-local/migrate/migrate-maintain-ip-addresses?view=azloc-24113&tabs=linux) script is provided to manually persist the original static IP on the destination server.
+
+1. How does the tool handle VM boot types?
+
+    The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V.**UEFI boot** creates a Generation 2 VM on Hyper-V.
+
+1. What are the current limitations of this migration tool?
+
+    The Resync option (that is capability to do data synchronization between initial replication and delta replication) isn't supported.
+    VMware Tools aren't automatically uninstalled post-migration — remove them manually if needed.
+
+1. What should I know about the source VM before migrating?
+
+    Ensure there are no active snapshots exist for the VM — initial sync will fail otherwise. You have the FQDN and credentials for your vCenter endpoint.
+
+1. Ubuntu Desktop 20.04 or Red Hat Linux 9.0 VMs may fail to boot correctly after migration. How do I fix this?
+
+    Disable the Secure Boot option resolves the issue for these Linux VMs. You can do this using PowerShell:
+`Set-VMFirmware -VMName "<VM Name>" -EnableSecureBoot Off`.
+
+1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
+
+    To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
+    1. RDP into your Windows Server Cluster node.
+    1. Press Windows + R, type cluadmin.msc, and hit Enter. This opens the Failover Cluster Manager.
+    1. In the left pane, expand your cluster and navigate to Roles.
+    1. Follow the detailed steps in this [Setting up highly available file shares in Windows Server 2022](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
+    1. Sometimes, it may take a few minutes for the drive to become ready before it can be added as a network file share. Please wait patiently if that happens.
+    1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
