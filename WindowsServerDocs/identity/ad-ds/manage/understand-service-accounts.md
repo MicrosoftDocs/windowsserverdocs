@@ -1,10 +1,10 @@
 ---
-title: Service accounts in Windows Server
+title: Service Accounts in Windows Server
 description: Learn about standalone, group managed, delegated managed service accounts, and virtual accounts in Windows Server Active Directory.
 ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 06/24/2025
+ms.date: 07/08/2025
 ---
 
 # Service accounts
@@ -22,7 +22,7 @@ This article contains information about the following types of service accounts:
 
 Managed service accounts are designed to isolate domain accounts in crucial applications, such as Internet Information Services (IIS). They eliminate the need for an administrator to manually administer the service principal name (SPN) and credentials for the accounts.
 
-One managed service account can be used for services on a single computer. Managed service accounts can't be shared between multiple computers. They also can't be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group-managed service account. For more information, see [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
+One managed service account can be used for services on a single computer. Managed service accounts can't be shared among multiple computers. They also can't be used in server clusters where a service is replicated on multiple cluster nodes. For this scenario, you must use a group-managed service account. For more information, see [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11)).
 
 In addition to the enhanced security that's provided by having individual accounts for critical services, there are four important administrative benefits associated with managed service accounts:
 
