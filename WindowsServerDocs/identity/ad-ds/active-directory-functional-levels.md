@@ -14,7 +14,7 @@ When you deploy AD DS, set the domain and forest functional levels to the highes
 
 ## Windows Server 2025 functional levels
 
-You can use the following operating systems as domain controllers (DCs) with the Windows Server 2025 forest and domain function level.
+You can use the following operating systems as domain controllers (DCs) with the Windows Server 2025 forest and domain functional level.
 
 - Windows Server 2025
 
@@ -24,14 +24,14 @@ The Windows Server 2025 domain functional level includes all features available 
 
 - Database 32k pages optional feature. To learn more about using the 32k database page size, see [Database 32k pages for Active Directory](/windows-server/identity/ad-ds/32k-pages-optional-feature).
 
-To learn more about these new features, see [What's new in Windows Server 2025](../../get-started/whats-new-windows-server-2025.md).
+To learn more about new features, see [What's new in Windows Server 2025](../../get-started/whats-new-windows-server-2025.md).
 
 > [!NOTE]
 > Windows Server 2019 and Windows Server 2022 use Windows Server 2016 as the most recent functional levels.
 
 ## Windows Server 2016 functional levels
 
-You can use the following operating systems as domain controllers (DCs) with the Windows Server 2016 forest and domain function level.
+You can use the following operating systems as domain controllers (DCs) with the Windows Server 2016 forest and domain functional level.
 
 - Windows Server 2025
 - Windows Server 2022
@@ -39,25 +39,25 @@ You can use the following operating systems as domain controllers (DCs) with the
 - Windows Server 2016
 
 > [!NOTE]
-> Domains must use DFS-R as the engine to replicate SYSVOL. To learn more about migrating to DFSR, see [Streamlined Migration of FRS to DFSR SYSVOL blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). Windows Server 2016 is the last Windows Server release that supports the File Replication Service (FRS). To learn more, see [Windows Server version 1709 no longer supports FRS](/troubleshoot/windows-server/networking/windows-server-version-1709-no-longer-supports-frs) for information on how to work around this issue.
+> Domains must use DFSR as the engine to replicate SYSVOL. To learn more about migrating to DFSR, see [Streamlined Migration of FRS to DFSR SYSVOL](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405). Windows Server 2016 is the last Windows Server release that supports the File Replication Service (FRS). See [Windows Server version 1709 no longer supports FRS](/troubleshoot/windows-server/networking/windows-server-version-1709-no-longer-supports-frs) for information on how to work around this issue.
 
 ### Windows Server 2016 forest and domain functional level features
 
-All default Active Directory features in earlier forest functional levels plus the following features are available:
+All default Active Directory features in earlier forest functional levels are available, plus the following features:
 
 - [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](../whats-new-active-directory-domain-services.md#privileged-access-management)
 
-All default Active Directory features in earlier domain functional levels plus the following features are available:
+All default Active Directory features in earlier domain functional levels are available, plus the following features:
 
-- DCs can support automatic rolling of the New Technology LAN Manager (NTLM) and other password-based secrets on a user account configured to require public key infrastructure (PKI) authentication. This configuration is also known as "Smart card required for interactive logon".
+- DCs can support automatic rolling of the New Technology LAN Manager (NTLM) and other password-based secrets on a user account configured to require public key infrastructure (PKI) authentication. This configuration is also known as *Smart card required for interactive logon*.
 - DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
 - Kerberos clients successfully authenticating with the PKInit Freshness Extension get the fresh public key identity security identifier (SID).
 
-    For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
+    For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md).
 
 ## Windows Server 2012 R2 functional levels
 
-You can use the following operating systems as domain controllers (DCs) with the Windows Server 2012 R2 forest and domain function level.
+You can use the following operating systems as domain controllers (DCs) with the Windows Server 2012 R2 forest and domain functional level.
 
 - Windows Server 2022
 - Windows Server 2019
@@ -70,29 +70,27 @@ All default Active Directory features, all features from the Windows Server 2012
 
 - DC-side protections for Protected Users. When Protected Users authenticate to a Windows Server 2012 R2 domain, they're no longer able to:
 
-  - Authenticate with NTLM authentication
+  - Authenticate with NTLM authentication.
 
-  - Use DES or RC4 cipher suites in Kerberos preauthentication
+  - Use DES or RC4 cipher suites in Kerberos pre-authentication.
 
-  - Be delegated with unconstrained or constrained delegation
+  - Be delegated with unconstrained or constrained delegation.
 
-  - Renew user tickets (TGTs) beyond the initial 4 hour lifetime
+  - Renew user tickets (TGTs) beyond the initial four hour lifetime.
 
-- Authentication Policies
+- Authentication policies
 
   - New forest-based authentication policies can be applied to accounts. The policies can control which hosts an account can sign on from, and apply access control conditions for authentication to services running as an account.
 
-- Authentication Policy Silos
+- Authentication policy silos
 
-  - New forest-based Active Directory object to be used to classify accounts for authentication policies or for authentication isolation. The new object can create a relationship between user, managed service, and computer accounts.
+  - A new forest-based Active Directory object to be used to classify accounts for authentication policies or for authentication isolation. The new object can create a relationship between user, managed service, and computer accounts.
 
-## Functional and domain levels in a previous version of Windows Server
+## Functional and domain levels in previous versions of Windows Server
 
-If you're looking to identify functional levels for a previous version of Windows Server, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754918(v=ws.10)).
+If you want to identify functional levels for a previous version of Windows Server, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754918(v=ws.10)).
 
-## Next steps
-
-To raise the functional level of your domain or forest, you can use the following resources:
+## Related content
 
 - Use the PowerShell command [Set-ADForestMode](/powershell/module/activedirectory/set-adforestmode) to raise the forest functional level.
 
