@@ -1,22 +1,22 @@
 ---
-title: Active Directory Domain Services maximum limits and scalability
+title: Active Directory Domain Services Maximum Limits and Scalability
 description: Recommended limits for creating objects, entries, names, and more in your Active Directory deployment to ensure optimal performance.
 ms.author: alalve
 author: xelu86
 manager: helohr
-ms.date: 08/24/2024
+ms.date: 07/08/2025
 ms.topic: concept-article
 ---
 
 # Active Directory Domain Services maximum limits and scalability
 
-This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind while planning for your Active Directory deployment.
+This article describes the maximum limits for certain aspects of your Active Directory environment that can affect scalability. We recommend you keep these limits in mind when you plan for your Active Directory deployment.
 
 ## Maximum number of objects
 
 Each domain controller in an Active Directory forest can create almost 2.15 billion objects during its lifetime.
 
-Each Active Directory domain controller has a unique identifier specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating under two billion objects, which also include objects the domain controller replicates. This limit applies to the aggregate of all objects from all partitions hosted on the domain controller, including the domain network computer (NC), configuration, schema, and any application directory partitions.
+Each Active Directory domain controller has a unique identifier that's specific to the individual domain controller. These identifiers, which are called Distinguished Name Tags (DNTs), are unique values that aren't replicated or otherwise visible to other domain controllers. The range of values for DNTs is from 0 through 2,147,483,393 (231 minus 255). When you delete an object, no new objects you create afterwards can use the same DNT. Therefore, domain controllers are limited to creating fewer than two billion objects, which also includes objects that the domain controller replicates. This limit applies to the aggregate of all objects from all partitions hosted on the domain controller, including the domain network computer (NC), configuration, schema, and any application directory partitions.
 
 There are possible ways to work around the domain controller lifetime creation limit. For example, you can remove objects from the domain by deleting them permanently. You can also install a new domain controller that replicates the remaining objects from the potential domain controller. However, you must make sure the new domain controller receives the objects through replication, and that you don't promote it using the Install from Media (IFM) option. Domain controllers installed using IFM inherit the DNT values from the domain controller the IFM backup was based on.
 
