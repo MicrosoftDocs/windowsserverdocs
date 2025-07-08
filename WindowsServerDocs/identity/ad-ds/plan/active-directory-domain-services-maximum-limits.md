@@ -83,7 +83,7 @@ This limit is due to the size of the global relative identifier (RID) pool that 
 
 Windows Server begins to prepare an artificial limit for RID issuance when the number of available RIDs reaches 90 percent of the available global RID space. When the number of available RIDs comes within one percent of that limit, domain controllers that request RID pools receive the Directory-Services-SAM warning event 16656 in their System event log.
 
-A partial workaround to the RID limit is creating an extra domain for holding accounts, and then migrating accounts to that new domain. However, you must create any required trust relationships for the new domain before you reach the limit. Creating a trust relationship requires a security principle, also known as a trust user account.
+A partial workaround to the RID limit is creating an extra domain for holding accounts and then migrating accounts to that new domain. However, you must create any required trust relationships for the new domain before you reach the limit. Creating a trust relationship requires a security principle, also known as a trust user account.
 
 >[!NOTE]
 > The Active Directory database doesn't set limits on the number of objects in a container, but it does set limits when you work with many thousands of objects. Microsoft configured these limits to provide a certain level of application or service availability. You can adjust these limits by either reconfiguring Filter Options settings on the View menu or changing the Lightweight Directory Access Protocol (LDAP) policies. For more information, see [KB 315071](/troubleshoot/windows-server/active-directory/view-set-ldap-policy-using-ntdsutil).
@@ -168,7 +168,7 @@ For more information about trust limitations, see [Practical limitations of trus
 
 ## Maximum number of accounts per LDAP transaction
 
-When you write scripts or design applications that perform LDAP transactions, we recommend that you perform no more than 5,000 operations per LDAP transaction. An LDAP transaction is a group of directory operations that are treated as one unit, such as add, delete, and modify. If you perform more than 5,000 operations in one LDAP transaction, you risk running into resource limits and an operational time-out. If you run into that issue, all operations in the transaction are rolled back, causing you to lose any changes made during the transaction. To learn more about the LDAP data structure that commits changes, see [LDAPModA Structure](/windows/win32/api/winldap/ns-winldap-ldapmoda).
+When you write scripts or design applications that perform LDAP transactions, we recommend that you perform no more than 5,000 operations per LDAP transaction. An LDAP transaction is a group of directory operations that are treated as one unit, such as add, delete, and modify. If you perform more than 5,000 operations in one LDAP transaction, you risk running into resource limits and an operational timeout. If you run into that issue, all operations in the transaction are rolled back, causing you to lose any changes made during the transaction. To learn more about the LDAP data structure that commits changes, see [LDAPModA Structure](/windows/win32/api/winldap/ns-winldap-ldapmoda).
 
 ## Recommended maximum number of users in a group
 
@@ -191,13 +191,13 @@ The following table lists the recommended maximum number of domains for each dom
 | Windows Server 2003 | 1,200 |
 | Windows Server 2025 | 3,000 |
 
-The 1,200 limit for Windows Server 2003 is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see “Maximum Database Record Size” in [How the Data Store Works](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)).
+The 1,200 limit for Windows Server 2003 is a limitation of multivalued, nonlinked attributes in Windows Server 2003. For more information, see "Maximum Database Record Size" in [How the Data Store Works](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)).
 
 ## Recommended maximum number of domain controllers in a domain
 
-We recommend that you limit the number of domain controllers you use per domain to 1,200. This limit ensures you can reliably recover your SYSVOL if a disaster happens.
+We recommend that you limit the number of domain controllers that you use per domain to 1,200. This limit ensures that you can reliably recover your SYSVOL if a disaster happens.
 
-If you expect an Active Directory domain in your network to have more than 1,200 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend you review [KB 267855](/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones) for planning purposes.
+If you expect an Active Directory domain in your network to have more than 1,200 domain controllers, and those domain controllers host Active Directory-integrated Domain Name System (DNS) zones, we recommend that you review [KB 267855](/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones) for planning purposes.
 
 ## Recommended maximum Kerberos ticket size
 
@@ -208,11 +208,11 @@ The maximum recommended size for a Kerberos ticket is 48,000 bytes. You can set 
 
 For more information about Kerberos tickets, see [Additional resources for troubleshooting Kerberos](/previous-versions/windows/it-pro/windows-server-2003/cc758921(v=ws.10)).
 
-## Maximum number of non-linked attribute values
+## Maximum number of nonlinked attribute values
 
-The Active Directory database stores non-linked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum limit of non-link attributes for an object that carries only one attribute is 1,200. In Windows Server 2025 forests, you can increase the limit to up to 3,000.
+The Active Directory database stores nonlinked attribute values in a linked directory that must fit on a database page. As a result of this size requirement, the maximum limit of nonlink attributes for an object that carries only one attribute is 1,200. In Windows Server 2025 forests, you can increase the limit to as much as 3,000.
 
-In real-world deployments, errors begin to appear when the object approaches the non-linked attributes limit. The status code for these types of errors is 0x00000b and maps to the string "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
+In real-world deployments, errors begin to appear when the object approaches the nonlinked attributes limit. The status code for these types of errors is 0x00000b and maps to the string "LDAP_ADMIN_LIMIT_EXCEEDED Administration limit on the server has exceeded."
 
 For more information about the limit, see the [AD database details article](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)#maximum-database-record-size), [many DNS records on a single DNS name](/troubleshoot/windows-server/identity/problems-with-dc-ad-integrated-dns-zones), and [Active Directory replication error 8304: The maximum size on an object has been exceeded](/troubleshoot/windows-server/identity/active-directory-replication-error-8304).
 
@@ -220,4 +220,4 @@ For more information about the limit, see the [AD database details article](/pre
 
 To change an attribute with a lot of data, you must store the new and old values in the database transaction. Storing the values lets you roll back the transaction if the database shuts down in the middle of the transaction. The maximum size of a transaction limits the total blob size of attribute value data to 5 MB.
 
-The maximum size of the Active Directory transactions you can perform also affects the limit of how many group members you can have before link-value replication and how many transactions in group membership changes exist.
+The maximum size of the Active Directory transactions that you can perform also affects the limit of how many group members you can have before link-value replication and how many transactions in group membership changes exist.
