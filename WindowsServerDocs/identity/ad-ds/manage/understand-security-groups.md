@@ -572,7 +572,7 @@ For more information, see [What Is an RODC?](/previous-versions/windows/it-pro/w
 |Default member of|None|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|N/A|
 |Default user rights|None|
 
 ### Event Log Readers
@@ -930,7 +930,7 @@ Because you can delegate administration of an RODC to a domain user or security 
 - Administrator role separation
 - A read-only DNS
 
-For more information, see [Understanding Planning and Deployment for Read-Only DomDenied RODC Password Replicatioain Controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
+For more information, see [Understanding Planning and Deployment for Read-Only Domain Controllers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754719(v=ws.10)).
 
 |Attribute|Value|
 |--- |--- |
@@ -941,7 +941,7 @@ For more information, see [Understanding Planning and Deployment for Read-Only D
 |Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|N/A|
 |Default user rights|See [Denied RODC Password Replication](#denied-rodc-password-replication)|
 
 ### Remote Desktop Users
