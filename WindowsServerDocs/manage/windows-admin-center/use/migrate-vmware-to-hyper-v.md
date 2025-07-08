@@ -1,28 +1,31 @@
 ---
-title: Migrate a VMware virtual machine to Hyper-V in Windows Admin Center
+title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center
 description: Learn how to install, configure, and test the Windows Admin Center VM Conversion extension for migrating VMs from vCenter to Hyper-V.
 author: meaghanlewis
 ms.topic: how-to
 ms.date: 07/07/2025
 ms.author: mosagie
 ---
-# Migrate a VMware virtual machine to Hyper-V in Windows Admin Center
+# Migrate VMware virtual machines to Hyper-V in Windows Admin Center
 
-You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V with the VM Conversion extension. The VM Conversion extension is a powerful, lightweight solution that allows you to migrate virtual machines with minimal downtime on both Windows and Linux machines.
+You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V with the **VM Conversion extension**. The VM Conversion extension is a powerful, lightweight solution that allows you to migrate virtual machines with minimal downtime on both Windows and Linux machines.
 
-This article explains how to install and configure the extension, outlines the migration workflow, and provides answers to frequently asked questions. Before you begin, review the prerequisites and ensure your environment meets the requirements.
+This article explains how to install and configure the extension, outlines the migration workflow, and provides answers to frequently asked questions.
 
-The VM Conversion extension provides the following features:
+The VM Conversion extension provides the following key features:
 
-- **Bulk migration support**: Enables selection and migration of up to 10 VMs in a single operation, streamlining the process.
-- **Remote server migration**: Supports migration to Hyper-V servers that aren't locally hosted.
-- **Cluster server migration**: Facilitates VM migration to clustered Hyper-V environments for high availability.
-- **Static IP retention**: Automatically preserves the original static IPv4 address post-migration, minimizing manual reconfiguration.
-- **Multi-vCenter connection support**: Allows managing and switching between multiple vCenter instances within the same interface.
-- **Custom sync path selection via file browser**: Offers an easy-to-use file browse option for specifying target disk paths.
-- **Localization support**: Enables multi-language support to enhance usability for global audiences.
+- **Live migration with minimal downtime**: Leverages VMware CBT for seamless, low-disruption migration.
+- **Windows & Linux VM support**: OS-agnostic migration from vCenter to Hyper-V.
+- **No extra setup**: Built into Windows Admin Center — lightweight and agentless.
+- **Smart auto-discovery**: Instantly detects VMs from connected vCenter environments.
+- **Bulk & cluster-aware migration**: Migrate multiple VMs, including to clustered Hyper-V setups.
+- **Post-migration management** Manage VMs directly within Windows Admin Center.
+
+![A diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
 
 ## Prerequisites
+
+Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
 - Hyper-V is installed on Windows Admin Center gateway.
 
@@ -41,27 +44,23 @@ The VM Conversion extension provides the following features:
 
 - Ensure that the VM to be migrated has no active snapshots. If snapshots exist, initial sync prechecks fail.
 
-- For Alma Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
-
 ## Supported operating systems
 
 The following operating systems can use the VM Conversion extension:
 
-- Windows Server 2025 Standard
-- Windows Server 2022 Standard
-- Alma Linux
-- Ubuntu Desktop 20.04.6 LTS
+- Windows Server 2025, 2022, 2016, 2012 R2
+- Windows Server 2022 Datacenter: Azure Edition
+- Alma Linux*
+- Ubuntu 20.04, 24.04
 - CentOS
-- Ubuntu Desktop 20.04
 - Red Hat Linux 9.0
-- Windows 2008R2 SP1
-- Windows 2012R2
-- Windows 2016
-- Windows 2022 Azure Edition
-- Ubuntu 24.04
-- Debian 11 and 12
+- Debian 11, 12
 
-## Install the extension
+For Alma Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
+
+## Install the VM Conversion extension
+
+Complete the following steps to install the **VM Conversion** extension.
 
 1. Open Windows Admin Center.
 
@@ -73,11 +72,9 @@ The following operating systems can use the VM Conversion extension:
 
 1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion**.
 
-## Supported scenario topology
+## Migrate virtual machines using the VM Conversion extension
 
-![A diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
-
-## Migrate a VM migration using the conversion extension
+Complete the following steps to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
 
 1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
 
@@ -96,7 +93,7 @@ The following operating systems can use the VM Conversion extension:
     [![Synchronize tab](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
 
 1. Select **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
- 
+
     [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
 1. You see notifications appear with the progress for: prechecks, preparing the environment, snapshot creation, and finalizing synchronization. Confirm that the VHD file is created in the folder path specified.
@@ -137,7 +134,7 @@ The following operating systems can use the VM Conversion extension:
 1. Connect to the Windows Admin Center server.
 1. Find the file located at `C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt`.
 
-## View frequently asked questions
+## Frequently asked questions
 
 1. Can I migrate both Windows and Linux virtual machines?
 
