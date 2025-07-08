@@ -464,6 +464,7 @@ Any user that's accessing the system through Terminal Services has the Terminal 
 |Default user rights| [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p> [Increase a process working set](/windows/device-security/security-policy-settings/increase-a-process-working-set): SeIncreaseWorkingSetPrivilege<p>|
 
 ## Related content
+
 - [Active Directory security groups](understand-security-groups.md)
 
 - [Security principals](understand-security-principals.md)
