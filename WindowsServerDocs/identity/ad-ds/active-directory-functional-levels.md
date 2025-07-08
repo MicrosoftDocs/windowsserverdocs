@@ -53,7 +53,7 @@ All default Active Directory features in earlier domain functional levels are av
 - DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
 - Kerberos clients successfully authenticating with the PKInit Freshness Extension get the fresh public key identity security identifier (SID).
 
-    For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md).
+    For more information, see [What's New in Kerberos Authentication](../../get-started/whats-new-in-windows-server-2016.md#kerberos-authentication).
 
 ## Windows Server 2012 R2 functional levels
 
