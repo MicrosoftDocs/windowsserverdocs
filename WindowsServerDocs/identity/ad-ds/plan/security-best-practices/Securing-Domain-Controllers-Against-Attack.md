@@ -1,14 +1,15 @@
 ---
-description: "Learn more about: Securing Domain Controllers Against Attack"
+description: Learn more about securing domain controllers against attack.
 ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: Securing Domain Controllers Against Attack
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 05/30/2024
+ms.date: 07/09/2025
 ms.topic: concept-article
 ms.reviewer: rickys
 ---
-# Securing Domain Controllers Against Attack
+
+# Securing domain controllers against attack
 
 *Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](/security/zero-trust/ten-laws-of-security#immutable-laws-of-security-v2).
 
