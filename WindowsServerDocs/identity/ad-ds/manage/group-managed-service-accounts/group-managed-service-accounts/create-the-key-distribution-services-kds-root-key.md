@@ -6,7 +6,7 @@ ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
 ms.author: mosagie
 author: meaghanlewis
 manager: mtillman
-ms.date: 04/10/2023
+ms.date: 07/09/2025
 ---
 # Create the Key Distribution Services KDS Root Key
 
