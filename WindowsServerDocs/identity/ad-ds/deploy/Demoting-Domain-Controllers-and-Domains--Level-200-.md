@@ -1,25 +1,25 @@
 ---
-description: Demote domain controllers and domains
+description: Learn how to demote domain controllers and domains using Server Manager or PowerShell in Windows Server.
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
-title: Learn how to demote domain controllers and domains using Server Manager or PowerShell in Windows Server.
+title: Demote Domain Controllers and Domains
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 06/13/2025
+ms.date: 07/09/2025
 ms.topic: how-to
 ---
 
 # Demote domain controllers and domains
 
-This article explains how to remove Active Directory Domain Services (AD DS) using Server Manager or Windows PowerShell.
+This article explains how to remove Active Directory Domain Services (AD DS) by using Server Manager or Windows PowerShell.
 
 ## AD DS removal workflow
 
 The following workflow diagram shows the steps to remove AD DS.
 
-![AD DS removal workflow chart](media/Demoting-Domain-Controllers-and-Domains--Level-200-/adds_demotedomainforest.png)
+![Diagram that shows the AD DS removal workflow.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/adds_demotedomainforest.png)
 
 > [!CAUTION]
-> Removing the AD DS roles with Dism.exe or the Windows PowerShell DISM module after promotion to a Domain Controller (DC) isn't supported and prevents the server from booting normally.
+> Removing the AD DS roles with Dism.exe or the Windows PowerShell DISM module after promotion to a domain controller (DC) isn't supported and prevents the server from booting normally.
 >
 > Unlike Server Manager or the ADDSDeployment module for Windows PowerShell, DISM is a native servicing system that has no inherent knowledge of AD DS or its configuration. We don't recommend using Dism.exe or the Windows PowerShell DISM module to uninstall the AD DS role unless the server is no longer a domain controller.
 
