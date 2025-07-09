@@ -44,19 +44,19 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Ensure that the VM to be migrated has no active snapshots. If snapshots exist, initial sync prechecks fail.
 
-## Supported operating systems
+## Supported guest operating systems
 
 The following operating systems can use the VM Conversion extension:
 
-- Windows Server 2025, 2022, 2016, 2012 R2
-- Windows Server 2022 Datacenter: Azure Edition
+- Windows Server 2025, 2022, 2022 Azure Edition, 2016, 2012 R2
+- Windows 10
 - Alma Linux*
 - Ubuntu 20.04, 24.04
 - CentOS
 - Red Hat Linux 9.0
 - Debian 11, 12
 
-For Alma Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
+*For Alma Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
 
 ## Install the VM Conversion extension
 
