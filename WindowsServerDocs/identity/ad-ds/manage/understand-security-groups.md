@@ -157,7 +157,7 @@ The following links lead to descriptions of the default groups that are located 
 
 ### Access Control Assistance Operators
 
-Members of this group can remotely query authorization attributes and permissions for resources on the computer.
+Members of this group can remotely query authorization attributes and permissions for resources on the computer. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -220,7 +220,7 @@ Members of the Administrators group have complete and unrestricted access to the
 
 ### Allowed RODC Password Replication
 
-The purpose of this security group is to manage a read-only domain controller (RODC) password replication policy. This group has no members by default. As a result, new RODCs don't cache user credentials. The [Denied RODC Password Replication](#denied-rodc-password-replication) group contains various high-privilege accounts and security groups. The Denied RODC Password Replication group supersedes the Allowed RODC Password Replication group.
+The purpose of this security group is to manage a read-only domain controller (RODC) password replication policy. This group has no members by default. As a result, new RODCs don't cache user credentials. The [Denied RODC Password Replication](#denied-rodc-password-replication) group contains various high-privilege accounts and security groups. The Denied RODC Password Replication group supersedes the Allowed RODC Password Replication group. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -252,7 +252,7 @@ Members of the Backup Operators group can back up and restore all files on a com
 
 ### Certificate Service DCOM Access
 
-Members of this group can connect to certification authorities in the enterprise.
+Members of this group can connect to certification authorities in the enterprise. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -268,7 +268,7 @@ Members of this group can connect to certification authorities in the enterprise
 
 ### Cert Publishers
 
-Members of the Cert Publishers group are authorized to publish certificates for user objects in AD.
+Members of the Cert Publishers group are authorized to publish certificates for user objects in AD. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -284,7 +284,7 @@ Members of the Cert Publishers group are authorized to publish certificates for 
 
 ### Cloneable Domain Controllers
 
-Members of the Cloneable Domain Controllers group that are domain controllers can be cloned. In Windows Server 2012 R2 and Windows Server 2012, you can deploy domain controllers by copying an existing virtual domain controller. In a virtual environment, you can't repeatedly deploy a server image that's prepared by using the `Sysprep.exe` tool. Promoting the server to a domain controller, and then completing more configuration requirements for deploying each domain controller (including adding the virtual domain controller to this security group), is also not allowed.
+Members of the Cloneable Domain Controllers group that are domain controllers can be cloned. In Windows Server 2012 R2 and Windows Server 2012, you can deploy domain controllers by copying an existing virtual domain controller. In a virtual environment, you can't repeatedly deploy a server image that's prepared by using the `Sysprep.exe` tool. Promoting the server to a domain controller, and then completing more configuration requirements for deploying each domain controller (including adding the virtual domain controller to this security group), is also not allowed. This group can't be renamed, deleted, or removed.
 
 For more information, see [Safely virtualizing Active Directory Domain Services (AD DS)](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100).
 
@@ -302,7 +302,7 @@ For more information, see [Safely virtualizing Active Directory Domain Services 
 
 ### Cryptographic Operators
 
-Members of this group are authorized to perform cryptographic operations. This security group configures Windows Firewall for IPsec in Common Criteria mode.
+Members of this group are authorized to perform cryptographic operations. This security group configures Windows Firewall for IPsec in Common Criteria mode. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -384,7 +384,7 @@ Members of the DHCP Users group can see which scopes are active or inactive, inc
 
 ### Distributed COM Users
 
-Members of the Distributed COM Users group can launch, activate, and use Distributed Component Object Model (DCOM) objects on the computer. Microsoft Component Object Model (COM) is a platform-independent, distributed, object-oriented system for creating binary software components that can interact. When you use DCOM objects, you can distribute your applications across locations that make the most sense to you and to the applications. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master role, which is also called the *flexible single master operations (FSMO)* role.
+Members of the Distributed COM Users group can launch, activate, and use Distributed Component Object Model (DCOM) objects on the computer. Microsoft Component Object Model (COM) is a platform-independent, distributed, object-oriented system for creating binary software components that can interact. When you use DCOM objects, you can distribute your applications across locations that make the most sense to you and to the applications. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master role, which is also called the *flexible single master operations (FSMO)* role. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -433,7 +433,7 @@ For more information about security and DNS, see [DNSSEC in Windows Server 2012]
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Domain Admins
@@ -482,7 +482,7 @@ The Domain Controllers group can include all domain controllers in the domain. N
 |Default members|Computer accounts for all domain controllers of the domain|
 |Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
-|Safe to move out of default container?|No|
+|Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
@@ -577,7 +577,7 @@ For more information, see [What Is an RODC?](/previous-versions/windows/it-pro/w
 
 ### Event Log Readers
 
-Members of this group can read event logs from local computers. The group is created when the server is promoted to a domain controller.
+Members of this group can read event logs from local computers. The group is created when the server is promoted to a domain controller. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -588,7 +588,7 @@ Members of this group can read event logs from local computers. The group is cre
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Group Policy Creator Owners
@@ -618,6 +618,8 @@ When a member of the Guests group signs out, the entire profile is deleted. The 
 > [!NOTE]
 > A Guest account is a default member of the Guests security group. People who don't have an actual account in the domain can use the Guest account. A user whose account is disabled (but not deleted) can also use the Guest account. The Guest account doesn't require a password. You can set rights and permissions for the Guest account as in any user account. By default, the Guest account is a member of the built-in Guests group and of the Domain Guests Global group, which allows a user to sign in to a domain. The Guest account is disabled by default, and we recommend that it stay disabled.
 
+This group can't be renamed, deleted, or removed.
+
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-546|
@@ -632,7 +634,7 @@ When a member of the Guests group signs out, the entire profile is deleted. The 
 
 ### Hyper-V Administrators
 
-Members of the Hyper-V Administrators group have complete and unrestricted access to all the features in Hyper-V. Adding members to this group helps reduce the number of members required in the Administrators group and further separates access.
+Members of the Hyper-V Administrators group have complete and unrestricted access to all the features in Hyper-V. Adding members to this group helps reduce the number of members required in the Administrators group and further separates access. This group can't be renamed, deleted, or removed.
 
 > [!NOTE]
 > Before Windows Server 2012, the Administrators group membership controlled and had access to Hyper-V features.
@@ -646,7 +648,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|Hyper-V Administrators services should not be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### IIS\_IUSRS
@@ -664,7 +666,7 @@ For more information, see [Understand built-in user and group accounts in IIS 7]
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Incoming Forest Trust Builders
@@ -787,7 +789,7 @@ This group appears as an SID until the domain controller is made the primary dom
 
 Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers that run Windows NT 4.0 and earlier. By default, the special identity group Everyone is a member of this group. Add users to this group only if they run Windows NT 4.0 or earlier.
 
-This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -868,7 +870,7 @@ Computers that are members of the RAS and IAS Servers group, when properly confi
 
 ### RDS Endpoint Servers
 
-Servers that are members of the RDS Endpoint Servers group can run virtual machines and host sessions where user programs of the RemoteApp feature and personal virtual desktops run. You must populate this group on servers that run Remote Desktop Connection Broker (RD Connection Broker). Session Host servers and Remote Desktop Virtualization Host (RD Virtualization Host) servers used in the deployment must be in this group.
+Servers that are members of the RDS Endpoint Servers group can run virtual machines and host sessions where user programs of the RemoteApp feature and personal virtual desktops run. You must populate this group on servers that run Remote Desktop Connection Broker (RD Connection Broker). Session Host servers and Remote Desktop Virtualization Host (RD Virtualization Host) servers used in the deployment must be in this group. This group can't be renamed, deleted, or removed.
 
 For information about Remote Desktop Services (RDS), see [Remote Desktop Services overview in Windows Server](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
@@ -881,12 +883,12 @@ For information about Remote Desktop Services (RDS), see [Remote Desktop Service
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|RDS Endpoint Servers services should not be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### RDS Management Servers
 
-You can use servers that are members of the RDS Management Servers group to complete routine administrative actions on servers that run RDS. You must populate this group on all servers in an RDS deployment. The servers that run the RDS Central Management service must be included in this group.
+You can use servers that are members of the RDS Management Servers group to complete routine administrative actions on servers that run RDS. You must populate this group on all servers in an RDS deployment. The servers that run the RDS Central Management service must be included in this group. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -897,12 +899,12 @@ You can use servers that are members of the RDS Management Servers group to comp
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|RDS Management Servers services should not be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### RDS Remote Access Servers
 
-Servers in the RDS Remote Access Servers group provide users with access to the RemoteApp feature's programs and personal virtual desktops. In internet-facing deployments, these servers typically are deployed in an edge network. You must populate this group on servers that run RD Connection Broker. Remote Desktop Gateway (RD Gateway) servers and Remote Desktop Web Access (RD Web Access) servers that are used in the deployment must be in this group.
+Servers in the RDS Remote Access Servers group provide users with access to the RemoteApp feature's programs and personal virtual desktops. In internet-facing deployments, these servers typically are deployed in an edge network. You must populate this group on servers that run RD Connection Broker. Remote Desktop Gateway (RD Gateway) servers and Remote Desktop Web Access (RD Web Access) servers that are used in the deployment must be in this group. This group can't be renamed, deleted, or removed.
 
 For more information, see [Remote Desktop Services overview in Windows Server](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview).
 
@@ -915,7 +917,7 @@ For more information, see [Remote Desktop Services overview in Windows Server](/
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|RDS Remote Access Servers services should not be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### Read-only Domain Controllers
@@ -966,6 +968,8 @@ Members of the Remote Management Users group can access Windows Management Instr
 
 Use the Remote Management Users group to allow users to manage servers through the Server Manager console. Use the [WinRMRemoteWMIUsers\_\_](#winrmremotewmiusers__) group to allow users to remotely run Windows PowerShell commands.
 
+This group can't be renamed, deleted, or removed.
+
 For more information, see [About WMI](/windows/win32/wmisdk/about-wmi) and [What's new in MI?](/previous-versions/windows/desktop/wmi_v2/what-s-new-in-mi).
 
 |Attribute|Value|
@@ -991,6 +995,8 @@ For more information, see the following resources:
 
 - [File Replication Service (FRS) is deprecated in Windows Server 2008 R2 (Windows)](/windows/win32/win7appqual/file-replication-service--frs--is-deprecated-in-windows-server-2008-r2)
 - [DFS namespaces and DFS Replication overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11))
+
+This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
