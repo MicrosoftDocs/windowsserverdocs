@@ -63,7 +63,7 @@ You can use tools to create an initial security configuration baseline for domai
 
 ### RDP restrictions
 
-Group Policy Objects that link to all domain controller OUs in a forest should be configured to allow RDP connections only from authorized users and systems like jump servers. Control can be achieved through a combination of user rights settings and Windows Defender Firewall with Advanced Security configuration. These controls can be implemented with GPOs so that the policy is consistently applied. If policy is bypassed, the next Group Policy refresh returns the system to its proper configuration.
+Group Policy Objects that link to all domain controller OUs in a forest should be configured to allow RDP connections only from authorized users and systems like jump servers. Control can be achieved through a combination of user rights settings and Windows Firewall with Advanced Security configuration. These controls can be implemented with GPOs so that the policy is consistently applied. If policy is bypassed, the next Group Policy refresh returns the system to its proper configuration.
 
 ### Patch and configuration management for domain controllers
 
@@ -89,4 +89,4 @@ Perimeter firewalls should be configured to block outbound connections from doma
 
 ### Preventing web browsing from domain controllers
 
-You can use a combination of AppLocker configuration, "black hole" proxy configuration, and Windows Defender Firewall with Advanced Security configuration to prevent domain controllers from accessing the Internet and to prevent the use of web browsers on domain controllers.
+You can use a combination of AppLocker configuration, "black hole" proxy configuration, and Windows Firewall with Advanced Security configuration to prevent domain controllers from accessing the Internet and to prevent the use of web browsers on domain controllers.
