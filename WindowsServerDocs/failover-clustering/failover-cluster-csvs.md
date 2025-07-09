@@ -175,7 +175,7 @@ In Windows Server 2012 R2 and later, you can view the state of a CSV on a per no
 ## See also
 
 - [Failover Clustering overview](failover-clustering-overview.md)
-- [Manage Cluster Shared Volumes](failover-cluster-manage-csvs.md)
+- [Manage Cluster Shared Volumes](failover-cluster-manage-cluster-shared-volumes.md)
 - [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [Understanding the state of your Cluster Shared Volumes](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-state-of-your-cluster-shared-volumes/ba-p/371889)
 - [Cluster Shared Volume Diagnostics](https://techcommunity.microsoft.com/t5/failover-clustering/cluster-shared-volume-diagnostics/ba-p/371908)

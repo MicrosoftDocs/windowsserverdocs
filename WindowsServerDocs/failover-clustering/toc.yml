@@ -75,7 +75,7 @@
   - name: Cluster Shared Volume (CSV) overview
     href: failover-cluster-csvs.md
   - name: Manage Cluster Shared Volumes
-    href: failover-cluster-manage-csvs.md
+    href: failover-cluster-manage-cluster-shared-volumes.md
   - name: Using guest VM clusters
     href: ../storage/storage-spaces/storage-spaces-direct-in-vm.md
   - name: Plug-ins
