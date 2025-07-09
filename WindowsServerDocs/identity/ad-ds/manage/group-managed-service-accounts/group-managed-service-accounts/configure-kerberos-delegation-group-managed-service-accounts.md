@@ -1,12 +1,13 @@
 ---
-title: Configuring Kerberos delegation for group Managed Service Accounts
-description: Explains how to configure Kerberos delegation for group Managed Service Accounts
+title: Configuring Kerberos Delegation for Group Managed Service Accounts
+description: Explains how to configure Kerberos delegation for group Managed Service Accounts.
 ms.topic: how-to
 ms.author: mosagie
 author: meaghanlewis
 manager: tedhudek
-ms.date: 04/15/2021
+ms.date: 07/09/2025
 ---
+
 # Configuring Kerberos delegation for group Managed Service Accounts
 
 Normally when working with Kerberos delegation, you just set the Service Principal Name (SPN) either with setspn.exe command or manually with the attribute editor in Active Directory Users and Computers. Additionally, enabling **View** > **Advanced features** in Active Directory Users and Computers adds another way to configure Kerberos delegation from the **Delegation** tab of a user or a computer account.
