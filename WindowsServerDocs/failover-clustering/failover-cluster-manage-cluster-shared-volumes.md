@@ -150,9 +150,13 @@ There are multiple methods to back up data stored on CSVs in a failover cluster.
 Be sure to carefully review what data your backup application backs up and restores, which CSV features it supports, and the resource requirements for the application on each cluster node. You should consider the following factors when you select a backup application and backup schedule for your CSVs:
 
 - You might need to provide administrative credentials when backing up a failover cluster.
+
 - Volume-level backup of a CSV volume can be run from any node that connects to the CSV volume.
+
 - Your backup application can use software snapshots or hardware snapshots. Depending on the ability of your backup application to support them, backups can use application-consistent and crash-consistent Volume Shadow Copy Service (VSS) snapshots.
+
 - If you're backing up CSV that have multiple running virtual machines (VM), you should generally choose a management operating system-based backup method. If your backup application supports it, multiple virtual machines can be backed up simultaneously.
+
 - CSVs support backup operations using Windows Server Backup. However, Windows Server Backup is a basic solution and may not meet the needs of larger clusters. It doesn't support application-consistent backups for VMs on CSVs, providing only crash-consistent volume-level backups. When you restore a crash-consistent backup, the VM is in the same state as if it had crashed at the time of backup. Although backing up a VM on a CSV volume completes successfully, an error event is logged to indicate that application-consistent backup isn't supported.
 
 > [!WARNING]
@@ -161,3 +165,7 @@ Be sure to carefully review what data your backup application backs up and resto
 ## See also
 
 - [Cluster Shared Volumes overview](failover-cluster-csvs.md)
+
+- [Understanding the state of your Cluster Shared Volumes](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-state-of-your-cluster-shared-volumes/ba-p/371889)
+
+- [Cluster Shared Volume Diagnostics](https://techcommunity.microsoft.com/t5/failover-clustering/cluster-shared-volume-diagnostics/ba-p/371908)

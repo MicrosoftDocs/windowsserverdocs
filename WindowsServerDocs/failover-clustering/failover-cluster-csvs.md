@@ -33,7 +33,7 @@ Windows Server 2012 R2 introduced additional functionality, such as:
 
 - Enhanced interoperability that includes support for ReFS and deduplication.
 
-For information about using data deduplication on CSVs for Virtual Desktop Infrastructure (VDI) scenarios, see blog posts [Deploying Data Deduplication for VDI storage in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deploying-data-deduplication-for-vdi-storage-in-windows-server/ba-p/424777) and [Extending Data Deduplication to new workloads in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/extending-data-deduplication-to-new-workloads-in-windows-server/ba-p/424787). To learn more about other functionalities, see [What's New in Failover Clustering](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)).
+For information about using data deduplication on CSVs for Virtual Desktop Infrastructure (VDI) scenarios, see blog posts [Deploying Data Deduplication for VDI storage in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deploying-data-deduplication-for-vdi-storage-in-windows-server/ba-p/424777) and [Extending Data Deduplication to new workloads in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/extending-data-deduplication-to-new-workloads-in-windows-server/ba-p/424787).
 
 ## Requirements and considerations for using CSV in a failover cluster
 
@@ -175,7 +175,9 @@ In Windows Server 2012 R2 and later, you can view the state of a CSV on a per no
 ## See also
 
 - [Failover Clustering overview](failover-clustering-overview.md)
+
+- [What's New in Failover Clustering](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11))
+
 - [Manage Cluster Shared Volumes](failover-cluster-manage-cluster-shared-volumes.md)
+
 - [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
-- [Understanding the state of your Cluster Shared Volumes](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-state-of-your-cluster-shared-volumes/ba-p/371889)
-- [Cluster Shared Volume Diagnostics](https://techcommunity.microsoft.com/t5/failover-clustering/cluster-shared-volume-diagnostics/ba-p/371908)
