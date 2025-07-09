@@ -147,7 +147,7 @@ The equivalent ADDSDeployment cmdlet arguments are:
 
 The **New Administrator Password** page requires you to provide a password for the built-in local computer's Administrator account after the demotion completes and the computer becomes a domain member server or workgroup computer.
 
-The **Uninstall-ADDSDomainController** cmdlet and arguments use the same defaults as Server Manager if not specified.
+The **Uninstall-ADDSDomainController** cmdlet and arguments use the same defaults as Server Manager, if the values aren't specified.
 
 The **LocalAdministratorPassword** argument is special:
 
