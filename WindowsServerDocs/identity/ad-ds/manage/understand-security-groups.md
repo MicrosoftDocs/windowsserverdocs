@@ -204,7 +204,7 @@ This group can't be renamed, deleted, or removed.
 Members of the Administrators group have complete and unrestricted access to the computer. If the computer is promoted to a domain controller, members of the Administrators group have unrestricted access to the domain.
 
 > [!NOTE]
-> The Administrators group has built-in capabilities that give its members full control over the system. This group can't be renamed, deleted, or removed. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups. Members of the following groups can modify the Administrators group membership: the default service Administrators, Domain Admins in the domain, and Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This group is considered a service administrator group because its members have full access to the domain controllers in the domain.
+> The Administrators group has built-in capabilities that give its members full control over the system. This group can't be renamed, deleted, or removed. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups. Members of the following groups can modify the Administrators group membership: the default service Administrators, Domain Admins in the domain, and Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This group is considered to be a service administrator group because its members have full access to the domain controllers in the domain.
 
 |Attribute|Value|
 |--- |--- |
@@ -236,7 +236,7 @@ The purpose of this security group is to manage a read-only domain controller (R
 
 ### Backup Operators
 
-Members of the Backup Operators group can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can sign in to and shut down the computer. This group can't be renamed, deleted, or removed. By default, this built-in group has no members, and it can perform backup and restore operations on domain controllers. Members of the following groups can modify Backup Operators group membership: default service administrators, Domain Admins in the domain, and Enterprise Admins. Members of the Backup Operators group can't modify the membership of any administrative groups. Although members of this group can't change server settings or modify the configuration of the directory, they do have the permissions needed to replace files (including OS files) on domain controllers. Because members of this group can replace files on domain controllers, they're considered service administrators.
+Members of the Backup Operators group can back up and restore all files on a computer, regardless of the permissions that protect those files. Backup Operators also can sign in to and shut down the computer. This group can't be renamed, deleted, or removed. By default, this built-in group has no members, and it can perform backup and restore operations on domain controllers. Members of the following groups can modify Backup Operators group membership: default service administrators, Domain Admins in the domain, and Enterprise Admins. Members of the Backup Operators group can't modify the membership of any administrative groups. Although members of this group can't change server settings or modify the configuration of the directory, they do have the permissions needed to replace files (including OS files) on domain controllers. Because members of this group can replace files on domain controllers, they're considered to be service administrators.
 
 |Attribute|Value|
 |--- |--- |
@@ -440,7 +440,7 @@ For more information about security and DNS, see [DNSSEC in Windows Server 2012]
 
 Members of the Domain Admins security group are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that join a domain, including the domain controllers. The Domain Admins group is the default owner of any object that's created in AD for the domain by any member of the group. If members of the group create other objects, such as files, the default owner is the Administrators group.
 
-The Domain Admins group controls access to all domain controllers in a domain, and it can modify the membership of all administrative accounts in the domain. Members of the service administrator groups in its domain (Administrators and Domain Admins) and members of the Enterprise Admins group can modify Domain Admins membership. This group is considered a service administrator account because its members have full access to the domain controllers in a domain.
+The Domain Admins group controls access to all domain controllers in a domain, and it can modify the membership of all administrative accounts in the domain. Members of the service administrator groups in its domain (Administrators and Domain Admins) and members of the Enterprise Admins group can modify Domain Admins membership. This group is considered to be a service administrator account because its members have full access to the domain controllers in a domain.
 
 |Attribute|Value|
 |--- |--- |
@@ -525,7 +525,7 @@ krbtgt|
 
 The Enterprise Admins group exists only in the root domain of an AD forest of domains. The group is a Universal group if the domain is in native mode. The group is a Global group if the domain is in mixed mode. Members of this group are authorized to make forest-wide changes in AD, like adding child domains.
 
-By default, the only member of the group is the Administrator account for the forest root domain. This group is automatically added to the Administrators group in every domain in the forest, and it provides complete access to configuring all domain controllers. Members in this group can modify the membership of all administrative groups. Members of the default service administrator groups in the root domain can modify Enterprise Admins membership. This group is considered a service administrator account.
+By default, the only member of the group is the Administrator account for the forest root domain. This group is automatically added to the Administrators group in every domain in the forest, and it provides complete access to configuring all domain controllers. Members in this group can modify the membership of all administrative groups. Members of the default service administrator groups in the root domain can modify Enterprise Admins membership. This group is considered to be a service administrator account.
 
 |Attribute|Value|
 |--- |--- |
@@ -648,7 +648,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?|Hyper-V Administrators services should not be used on domain controllers. The group should be empty.|
+|Safe to delegate management of this group to non-service admins?|Hyper-V Administrators services shouldn't be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### IIS\_IUSRS
@@ -883,7 +883,7 @@ For information about Remote Desktop Services (RDS), see [Remote Desktop Service
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?|RDS Endpoint Servers services should not be used on domain controllers. The group should be empty.|
+|Safe to delegate management of this group to non-service admins?|RDS Endpoint Servers services shouldn't be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### RDS Management Servers
@@ -899,7 +899,7 @@ You can use servers that are members of the RDS Management Servers group to comp
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?|RDS Management Servers services should not be used on domain controllers. The group should be empty.|
+|Safe to delegate management of this group to non-service admins?|RDS Management Servers services shouldn't be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### RDS Remote Access Servers
@@ -917,12 +917,12 @@ For more information, see [Remote Desktop Services overview in Windows Server](/
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?|RDS Remote Access Servers services should not be used on domain controllers. The group should be empty.|
+|Safe to delegate management of this group to non-service admins?|RDS Remote Access Servers services shouldn't be used on domain controllers. The group should be empty.|
 |Default user rights|None|
 
 ### Read-only Domain Controllers
 
-This group is composed of the RODCs in the domain. An RODC makes it possible for organizations to easily deploy a domain controller in scenarios in which physical security can't be guaranteed. An example scenario is a branch office location or local storage of all domain passwords that's considered a primary threat, like in an extranet or application-facing role.
+This group is composed of the RODCs in the domain. An RODC makes it possible for organizations to easily deploy a domain controller in scenarios in which physical security can't be guaranteed. An example scenario is a branch office location or local storage of all domain passwords that's considered to be a primary threat, like in an extranet or application-facing role.
 
 Because you can delegate administration of an RODC to a domain user or security group, an RODC is well suited for a site that shouldn't have a user who's a member of the Domain Admins group. An RODC has the following functionality:
 
@@ -1016,7 +1016,7 @@ Members of the Schema Admins group can modify the AD schema. This group exists o
 
 By default, the only member of the group is the Administrator account for the forest root domain. This group has full administrative access to the schema.
 
-Any of the service administrator groups in the root domain can modify the membership of this group. This group is considered a service administrator account because its members can modify the schema, which governs the structure and content of the entire directory.
+Any of the service administrator groups in the root domain can modify the membership of this group. This group is considered to be a service administrator account because its members can modify the schema, which governs the structure and content of the entire directory.
 
 For more information, see [What is the Active Directory schema?](/previous-versions/windows/it-pro/windows-server-2003/cc784826(v=ws.10))
 
@@ -1043,7 +1043,7 @@ Members of the Server Operators group can administer domain controllers. This gr
 - Format the hard disk drive of the device
 - Shut down the device
 
-By default, this built-in group has no members. This group has access to server configuration options on domain controllers. Its membership is controlled through the service administrator groups Administrators and Domain Admins in the domain, and by the Enterprise Admins group in the forest root domain. Members in this group can't change any administrative group memberships. This group is considered a service administrator account because its members have physical access to domain controllers. Members of this group can perform maintenance tasks like backup and restore, and they can change binaries that are installed on the domain controllers. For the group's default user rights, see the following table.
+By default, this built-in group has no members. This group has access to server configuration options on domain controllers. Its membership is controlled through the service administrator groups Administrators and Domain Admins in the domain, and by the Enterprise Admins group in the forest root domain. Members in this group can't change any administrative group memberships. This group is considered to be a service administrator account because its members have physical access to domain controllers. Members of this group can perform maintenance tasks like backup and restore, and they can change binaries that are installed on the domain controllers. For the group's default user rights, see the following table.
 
 |Attribute|Value|
 |--- |--- |
