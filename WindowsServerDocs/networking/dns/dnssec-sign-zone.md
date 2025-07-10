@@ -105,7 +105,7 @@ To begin signing a zone, select your preferred method:
 
 ### [DNS Manager](#tab/dns-manager)
 
-DNS Manager in Windows Server provides a [Zone Signing Wizard](#zone-signing-wizard) and [Unsign zone wizard](#unsign-zone-wizard) to greatly simplify the process of applying or removing DNSSEC from a zone. After a zone is signed, you can also view and edit several properties and values using the [DNSSEC properties page](#dnssec-properties-page).
+To sign a DNS zone using DNS Manager, follow these steps:
 
 1. Open DNS Manager on a primary, authoritative DNS server.
 
@@ -132,7 +132,7 @@ DNS Manager in Windows Server provides a [Zone Signing Wizard](#zone-signing-wiz
    | Key length (bits) | Select one of the values from the dropdown menu. The default value is 2048 bits. <br/><br/> The key length must be in the range of 1024 - 4096 bits in increments of 64 bits. <br/><br/> For ECDSA keys, the key length is fixed at 256 bits or 384 bits. |
    | Key storage provider | Select one of the following options: <br/><br/> - Microsoft Software Key Storage Provider (default)<br/><br/> - Microsoft Passport Key Storage Provider<br/><br/> - Microsoft Platform Crypto Provider<br/><br/> - Microsoft Smart Card Key Storage Provider<br/><br/> If you intend to distribute the keys using Active Directory Domain Services, you must choose **Microsoft Software Key Storage Provider**. |
    | DNSKEY RRSET signature validity period (hours) | Select one of the following options: <br/><br/> - 168 hours (default)<br/><br/> - 6 - 720 hours<br/><br/> |
-   | Replicate this private key to all DNS servers authoritative for this zone | Check the box to enable this option (default). This option is enabled by default. If you disable this option, the private key is only stored on the Key Master server. |
+   | Replicate this private key to all DNS servers authoritative for this zone | Check the box to enable this option (default). This option is enabled by default. If you disable this option, the private key is only stored on the Key Master. |
    | Enable Key Rollover | Check the box to enable automatic rollover (default). <br/><br/> Enter the desired values - Rollover frequency (days): 755 days (default)<br/><br/> - Delay the first rollover by (days): 0 days (default)<br/><br/> |
 
    > [!TIP]
@@ -195,7 +195,7 @@ To sign a zone, follow these steps:
 
 1. Open Windows PowerShell with administrative privileges on a primary, authoritative DNS server.
 
-1. To create a signed zone, you first need to sign the zone using the default parameters. Use the following command, replacing <ZoneName> with the name of your zone and <ComputerName> with the name of your DNS server:
+1. To create a signed zone, you first need to sign the zone using the default parameters. Use the following command, replacing `<ZoneName>` with the name of your zone and `<ComputerName>` with the name of your DNS server:
 
    ```powershell
    Invoke-DnsServerZoneSign -ZoneName <ZoneName> -ComputerName <ComputerName> -SignWithDefault -PassThru -Verbose -Force
