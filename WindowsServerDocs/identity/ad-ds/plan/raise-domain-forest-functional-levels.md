@@ -109,7 +109,7 @@ To raise the domain or forest functional level by using the Active Directory Dom
 
 1. When prompted, select **OK** to confirm the change.
 
-1. After the domain functional level is raised, raise the forest functional level. In the console tree, right-click **Active Directory Domains and Trusts** , and then select **Raise Forest Functional Level**.
+1. After the domain functional level is raised, raise the forest functional level. In the console tree, right-click **Active Directory Domains and Trusts**, and then select **Raise Forest Functional Level**.
 
 1. In **Select an available forest functional level**, select the value and then select **Raise**.
 
