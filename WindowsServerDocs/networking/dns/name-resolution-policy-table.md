@@ -76,7 +76,47 @@ To configure the NRPT, you need to have the following prerequisites.
 - You must have the Group Policy Management console feature installed the computer where you want to configure the NRPT using Group Policy.
 - You must have rights to create or edit an existing Group Policy Object (GPO) in the domain where you want to configure the NRPT.
 
-## View NRPT policy
+## Configure the NRPT
+
+Use the following procedures to configure the Name Resolution Policy Table (NRPT). The examples that are provided demonstrate how to add a rule in an existing Group Policy Object (GPO) that requires DNSSEC validation for a namespace (zone).
+
+You can configure the NRPT using either the Group Policy Management Console or Windows PowerShell. Select the method that best suits your environment and administrative preferences.
+
+### [Group Policy Management Console](#tab/gpmc)
+
+To configure the NRPT rules using the Group Policy Management Console (GPMC), follow these steps.
+
+1. Sign in to a computer with the Group Policy Management feature installed.
+1. Open the **Group Policy Management** console by selecting **Tools** on the Server Manager menu, and then selecting **Group Policy Management**.
+1. Navigate to the Group Policy Object (GPO) that you want to configure in the Group Policy Management Console tree. Right-click the GPO, and then select **Edit**.
+1. In the Group Policy Management Editor tree, navigate to **Computer Configuration > Policies > Windows Settings > Name Resolution Policy**.
+1. To create a new rule, under **Create Rules**, select the part of the namespace to which the rule applies from the drop-down list. For example, choose **Suffix** to create a rule that applies to all names that end in the text that you provide.
+1. Select the type of namespace from the drop-down list and enter the namespace to which the rule applies. For example, to apply a rule to all devices in the `secure.contoso.com` DNS namespace, choose **Suffix** and type `secure.contoso.com`.
+1. Enable DNSSEC validation by selecting the **Enable DNSSEC in this rule** check box, and then select the **Require DNS clients to check that name and address data has been validated by the DNS server** check box.
+1. Select **Create** at the bottom of this section of the NRPT to create the rule.
+1. Scroll down to view the configured rules in the **Name Resolution Policy Table** section, and verify that the new rule is displayed.
+
+#### [Windows PowerShell](#tab/powershell)
+
+To configure the NRPT rules using Windows PowerShell, you can use the `Add-DnsClientNrptRule` cmdlet. This cmdlet allows you to add a DNSSEC rule to an existing Group Policy Object (GPO).
+
+1. Open a PowerShell session with administrative privileges.
+
+1. Create a new NRPT rule by using the `Add-DnsClientNrptRule` cmdlet. You need to specify the GPO name, namespace, and DNSSEC validation settings. The following example demonstrates how to add a rule that requires DNSSEC validation. Replace `<GpoName>` with the name of your GPO and `<NameSpace>` with the namespace you want to configure.
+
+  ```powershell
+  Add-DnsClientNrptRule -GpoName <GpoName> -NameSpace <NameSpace> -DnsSecEnable -DnsSecValidationRequired
+  ```
+
+1. To validate that the NRPT rule was successfully configured, you can use the `Get-DnsClientNrptRule` cmdlet. This cmdlet retrieves the NRPT rules for a specified GPO. The following example shows how to check the NRPT settings for a specific GPO.
+
+  ```powershell
+  Get-DnsClientNrptRule -GpoName <GpoName>
+  ```
+
+---
+
+## View the current NRPT policy
 
 You can use the [Get-DnsClientNrptPolicy](/powershell/module/dnsclient/get-dnsclientnrptpolicy) cmdlet to view NRPT policies. See the following example.
 
@@ -119,43 +159,3 @@ NameEncoding                     :
 ```
 
 The **Get-DnsClientNrptPolicy** cmdlet gets policy that applies to the local computer. In this example, the output indicates that DNSSEC validation is required for `*.secure.contoso.com`, and isn't required for `*.contoso.com`.
-
-## Configure the NRPT
-
-Use the following procedures to configure the Name Resolution Policy Table (NRPT). The examples that are provided demonstrate how to add a rule in an existing Group Policy Object (GPO) that requires DNSSEC validation for a namespace (zone).
-
-You can configure the NRPT using either the Group Policy Management Console or Windows PowerShell. Select the method that best suits your environment and administrative preferences.
-
-### [Group Policy Management Console](#tab/gpmc)
-
-To configure the NRPT rules using the Group Policy Management Console (GPMC), follow these steps.
-
-1. Sign in to a computer with the Group Policy Management feature installed.
-1. Open the **Group Policy Management** console by selecting **Tools** on the Server Manager menu, and then selecting **Group Policy Management**.
-1. Navigate to the Group Policy Object (GPO) that you want to configure in the Group Policy Management Console tree. Right-click the GPO, and then select **Edit**.
-1. In the Group Policy Management Editor tree, navigate to **Computer Configuration > Policies > Windows Settings > Name Resolution Policy**.
-1. To create a new rule, under **Create Rules**, select the part of the namespace to which the rule applies from the drop-down list. For example, choose **Suffix** to create a rule that applies to all names that end in the text that you provide.
-1. Select the type of namespace from the drop-down list and enter the namespace to which the rule applies. For example, to apply a rule to all devices in the `secure.contoso.com` DNS namespace, choose **Suffix** and type `secure.contoso.com`.
-1. Enable DNSSEC validation by selecting the **Enable DNSSEC in this rule** check box, and then select the **Require DNS clients to check that name and address data has been validated by the DNS server** check box.
-1. Select **Create** at the bottom of this section of the NRPT to create the rule.
-1. Scroll down to view the configured rules in the **Name Resolution Policy Table** section, and verify that the new rule is displayed.
-
-#### [Windows PowerShell](#tab/powershell)
-
-To configure the NRPT rules using Windows PowerShell, you can use the `Add-DnsClientNrptRule` cmdlet. This cmdlet allows you to add a DNSSEC rule to an existing Group Policy Object (GPO).
-
-1. Open a PowerShell session with administrative privileges.
-
-1. Create a new NRPT rule by using the `Add-DnsClientNrptRule` cmdlet. You need to specify the GPO name, namespace, and DNSSEC validation settings. The following example demonstrates how to add a rule that requires DNSSEC validation. Replace `<GpoName>` with the name of your GPO and `<NameSpace>` with the namespace you want to configure.
-
-  ```powershell
-  Add-DnsClientNrptRule -GpoName <GpoName> -NameSpace <NameSpace> -DnsSecEnable -DnsSecValidationRequired
-  ```
-
-1. To validate that the NRPT rule was successfully configured, you can use the `Get-DnsClientNrptRule` cmdlet. This cmdlet retrieves the NRPT rules for a specified GPO. The following example shows how to check the NRPT settings for a specific GPO.
-
-  ```powershell
-  Get-DnsClientNrptRule -GpoName <GpoName>
-  ```
-
----
