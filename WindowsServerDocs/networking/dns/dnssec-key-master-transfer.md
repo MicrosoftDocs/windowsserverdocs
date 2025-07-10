@@ -76,7 +76,7 @@ To move the Key Master role using DNS Manager, follow these steps:
 
 1. Choose a DNS server from the list for the new Key Master, and then select **OK**.
 
-1. Select **Yes** in the dialog box that appears in order to move the Key Master role to the DNS server that was chosen. If you select **No**, the operation is cancelled, and the Key Master  remains unchanged.
+1. Select **Yes** in the dialog box that appears in order to move the Key Master role to the DNS server that was chosen. If you select **No**, the operation is canceled, and the Key Master  remains unchanged.
 
 1. Confirm that **The Key Master for the zone `<zone name>` has been updated successfully** is displayed, and then select **OK**.
 
@@ -120,7 +120,7 @@ To seize the Key Master role using DNS Manager
 
 1. An alert is displayed indicating that DNSSEC settings for the zone couldn't be loaded from the Key Master, select **Yes**.
 
-   :::image type="content" source="../media/dnssec-key-master-transfer/offline.jpeg" alt-text="Screenshot of DNS Manager showing an alert dialog box that indicates DNSSEC settings for the zone couldn't be loaded from the Key Master.":::
+   :::image type="content" source="../media/dnssec-key-master-transfer/offline.png" alt-text="Screenshot of DNS Manager showing an alert dialog box that indicates DNSSEC settings for the zone couldn't be loaded from the Key Master.":::
 
    > [!CAUTION]
    > If you don't see an alert, verify that the Key Master is offline. If the Key Master is online, and you still wish to move the Key Master role, see the section [Transfer an online Key Master](#transfer-an-online-key-master). Don't seize the Key Master role.
@@ -131,9 +131,9 @@ To seize the Key Master role using DNS Manager
 
 1. Choose a DNS server from the list for the new Key Master, and select **OK**.
 
-1. Select **Yes** in the dialog box that appears to move the Key Master role to the DNS server that was chosen. If you select **No**, the operation is cancelled and the Key Master remains unchanged.
+1. Select **Yes** in the dialog box that appears to move the Key Master role to the DNS server that was chosen. If you select **No**, the operation is canceled and the Key Master remains unchanged.
 
-1. If you see a dialog box warning that the Key Master can't be contacted to transfer private key material, meaning the current DNS server doesn't have access to signing keys. In this s[Transfer without access to the signing keys](#transfer-without-access-to-the-signing-keys).
+1. If you see a dialog box warning that the Key Master can't be contacted to transfer private key material, the current DNS server doesn't have access to signing keys. To learn more about this scenario, see the section [Transfer without access to the signing keys](#transfer-without-access-to-the-signing-keys).
 
 1. Confirm that **The Key Master for the zone `<zone name>` has been updated successfully** is displayed, and then select **OK**.
 
