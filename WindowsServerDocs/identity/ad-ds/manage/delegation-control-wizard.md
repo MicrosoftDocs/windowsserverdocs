@@ -3,12 +3,12 @@ description: Learn how to delegate administrative control in Active Directory Do
 title: Delegation of Control in Active Directory Domain Services on Windows Server
 ms.author: orthomas
 author: orin-thomas
-ms.date: 07/15/2024
+ms.date: 07/09/2025
 ms.topic: how-to
 #customer intent: As an Active Directory administrator, I want to delegate administrative control to users or groups so that I can assign a range of administrative tasks to the appropriate users and groups.
 ---
 
-# Delegation of Control in Active Directory Domain Services
+# Delegation of control in Active Directory Domain Services
 
 > 
 
