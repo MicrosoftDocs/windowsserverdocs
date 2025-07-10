@@ -89,7 +89,7 @@ You can also perform this operation using Windows PowerShell with the **Reset-Dn
 1. To reset the Key Master role, run the following command in PowerShell, replacing `<NameOfZone>` with the name of your DNS zone and `<ServerName>` with the name of the DNS server you want to set as the new Key Master. The cmdlet prompts the user for confirmation before it transfers the role unless you use the `-Force` switch.
 
    ```powershell
-   Reset-DnsServerZoneKeyMasterRole -ZoneName <NameOfZone> | Select KeyMasterServer <ServerName> -force
+   Reset-DnsServerZoneKeyMasterRole -ZoneName <NameOfZone> -KeyMasterServer <ServerName> -force
    ```
 
 1. To verify the Key Master role transferred successfully, run the following command in PowerShell, replacing `<NameOfZone>` with the name of your DNS zone.
