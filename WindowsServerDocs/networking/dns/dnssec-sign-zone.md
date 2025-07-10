@@ -6,6 +6,7 @@ author: orin-thomas
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 07/09/2025
+ai-usage: ai-assisted
 ms.custom:
   - template-how-to, team=cloud_advocates
   - ai-gen-docs-bap

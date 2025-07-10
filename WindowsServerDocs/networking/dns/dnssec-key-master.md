@@ -6,6 +6,7 @@ ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 07/08/2025
 ms.custom: template-how-to, team=cloud_advocates
+ai-usage: ai-assisted
 # Customer intent: As a DNS administrator, I want to understand the DNSSEC Key Master component so that I can implement DNSSEC.
 ---
 

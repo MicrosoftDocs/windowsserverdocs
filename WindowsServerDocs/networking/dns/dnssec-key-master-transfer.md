@@ -12,6 +12,7 @@ ms.custom:
   - ai-gen-title
   - ai-seo-date:07/04/2025
   - ai-gen-description
+ai-usage: ai-assisted
 ---
 
 # Transfer Key Master role
