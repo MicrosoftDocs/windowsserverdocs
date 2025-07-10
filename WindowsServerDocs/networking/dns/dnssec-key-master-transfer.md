@@ -17,9 +17,11 @@ ai-usage: ai-assisted
 
 # Transfer Key Master role
 
+This article explains how to transfer the DNSSEC Key Master role between authoritative DNS servers in Windows DNS Server environments. Learn about online transfers (when the current Key Master is available) and disaster recovery scenarios (when the current Key Master is offline).
+
 The DNSSEC Key Master role is critical for maintaining DNS security in your Windows DNS environment. The Key Master is the DNS server responsible for key generation and key management for a DNSSEC-signed zone. When you use default settings to sign a zone, DNSSEC selects the local server as Key Master. You also have the option of choosing a different DNS server from a list of servers that support online DNSSEC signing. Only one DNS server can be the Key Master for a given zone at a given time.
 
-This article explains how to transfer the DNSSEC Key Master role between authoritative DNS servers in Windows DNS Server environments. Learn about online transfers (when the current Key Master is available) and disaster recovery scenarios (when the current Key Master is offline).
+The Key Master generates all keys for the zone, and is responsible for distribution of private keys and zone signing information. The Key Master is also responsible for performing all zone signing key (ZSK) and key signing key (KSK) rollovers and for polling child zones to keep signed delegations up-to-date. You can transfer the Key Master role to a different authoritative name server after zone signing. You can perform this transfer if current Key Master is online or as part of a disaster recovery scenario if the current Key Master is offline.
 
 ## Prerequisites
 
@@ -32,33 +34,15 @@ In order to transfer the Key master role, your environment must meet the followi
 - You must have administrative privileges on the DNS server where you want to transfer the Key Master role.
 - (Optional) You must have Domain Admins group rights or be a member of a group with equivalent permissions in order for it to appear on the list of available Key Masters.
 
-You can transfer the Key Master role to a different authoritative name server after zone signing. You can perform this transfer if current Key Master is online or as part of a disaster recovery scenario if the current Key Master is offline.
-
-You can't transfer the Key Master role if a zone is file-backed because these zones have only one primary, authoritative DNS server.
-
-!TODO: File based (only one primary) can be signed, but can't transfer Key Master role. If a signed zone is file-backed and isn't a domain integrated zone, you should consider extra security precautions to protect the Key Master from attack and to protect private key material from becoming compromised.
-
 > [!IMPORTANT]
-> If a zone is Active Directory-integrated, the Key Master is a domain controller and can benefit by enhanced security considerations that are used with domain controllers. If the zone is file-backed, the Key Master might not be also a domain controller. In this scenario, it's recommended to take other security precautions to protect the Key Master from attack and to protect private key material from becoming compromised. For security reasons, a Key Master that isn't a domain controller should only have the DNS Server role installed in order to limit its attack surface.
-
-The name of the Key Master is displayed in DNS Manager when you select **Forward Lookup Zones** or **Reverse Lookup Zones**, and is displayed on the **Key Master** tab of the DNSSEC properties page. You can also use the **Get-DnsServerDnsSecZoneSetting** Windows PowerShell cmdlet to view the Key Master. See the following example:
-
-``` powershell
-    PS C:\> Get-DnsServerDnsSecZoneSetting -ZoneName secure.contoso.com | Select KeyMasterServer
-
-    KeyMasterServer
-    ---------------
-    DC1.contoso.com
-```
-
-The Key Master generates all keys for the zone, and is responsible for distribution of private keys and zone signing information. The Key Master is also responsible for performing all zone signing key (ZSK) and key signing key (KSK) rollovers and for polling child zones to keep signed delegations up-to-date.
-
-> [!NOTE]
-> An unsigned zone can also be assigned a Key Master. All zones that are signed have a Key Master setting, whether they're currently signed or not. A zone that has never been signed usually doesn't have a Key Master. However, you can assign a Key Master in advance using Windows PowerShell to prepare for zone signing.
+> You can't transfer the Key Master role if a zone is file-based because these zones have only one primary, authoritative DNS server. In this scenario, it's recommended to take other security precautions to protect the Key Master from attack and to protect private key material from becoming compromised or lost. For security reasons, a Key Master that isn't a domain controller should only have the DNS Server role installed in order to limit its attack surface.
 
 ## Transfer an online Key Master
 
 If the Key Master is online, you can perform a successful transfer the Key Master role to another DNS server. Another qualifying DNS server must be available on the network.
+
+> [!NOTE]
+> An unsigned zone can also be assigned a Key Master. All zones that are signed have a Key Master setting, whether they're currently signed or not. A zone that has never been signed usually doesn't have a Key Master. However, you can assign a Key Master in advance using Windows PowerShell to prepare for zone signing.
 
 You can transfer the Key Master role to another DNS server using DNS Manager or Windows PowerShell. Select your preferred method.
 
