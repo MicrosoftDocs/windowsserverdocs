@@ -12,16 +12,16 @@ ms.topic: how-to
 
 > 
 
-Delegation of Control means you can assign a range of administrative tasks to different users and groups. You can assign basic administrative tasks to regular users or groups, and leave domain-wide and forest-wide administration to members of the Domain Admins and Enterprise Admins groups. By delegating administration, you can allow groups within your organization to take more control of their local resources. You also help secure your Active Directory environment accidental or malicious damage by limiting the membership of administrator groups.
+Delegation of control means you can assign a range of administrative tasks to different users and groups. You can assign basic administrative tasks to regular users or groups, and leave domain-wide and forest-wide administration to members of the Domain Admins and Enterprise Admins groups. By delegating administration, you can allow groups within your organization to take more control of their local resources. You also help secure your Active Directory environment against accidental or malicious damage by limiting the membership of administrator groups.
 
 You can delegate administrative control to any level of a domain tree by creating organizational units within a domain and delegating administrative control for specific organizational units to particular users or groups. To decide what organizational units you want to create, and which organizational units should contain accounts or shared resources, consider the structure of your organization.
 
-Active Directory defines specific permissions and user rights that can be used for delegating or restricting administrative control. Using a combination of organizational units, groups, and permissions, you can define the most appropriate administrative scope for a particular person, which could be an entire domain, all organizational units within a domain, or a single organizational unit.
+Active Directory defines specific permissions and user rights that can be used for delegating or restricting administrative control. By using a combination of organizational units, groups, and permissions, you can define the most appropriate administrative scope for a particular person. This scope could be an entire domain, all organizational units within a domain, or a single organizational unit.
 
-Administrative control can be assigned to a user or group using the _Delegation of Control Wizard_. You can use the Delegation of Control Wizard to delegate the following tasks:
+You can assign administrative control to a user or group by using the _Delegation of Control Wizard_. You can use the Delegation of Control Wizard to delegate the following tasks:
 
 - Create, delete, and manage user accounts
-- Reset user passwords and force password change at next logon
+- Reset user passwords and force password change at next sign-in
 - Read all user information
 - Modify the membership of a group
 - Join a computer to a domain
