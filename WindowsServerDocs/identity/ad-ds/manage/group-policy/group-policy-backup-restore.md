@@ -1,16 +1,16 @@
 ---
-title: Backup and restore Group Policy in Windows
-description: Learn how to backup, restore, migrate, and copy group policy objects using the Group Policy Management Console in Windows.
+title: Backup and Restore Group Policy in Windows
+description: Learn how to back up, restore, migrate, and copy Group Policy Objects by using the Group Policy Management Console in Windows.
 author: Orin-Thomas
 ms.topic: how-to
 ms.author: orthomas
 contributor: orthomas
-ms.date: 04/16/2024
+ms.date: 07/10/2025
 ---
 
-# Backup, restore, migrate, and copy Group Policy Objects
+# Back up, restore, migrate, and copy Group Policy Objects
 
-In this article, learn how to back up, restore, migrate, and copy existing Group Policy Objects (GPOs) using the Group Policy Management Console (GPMC). These capabilities are important for maintaining your Group Policy deployments from an error or disaster. They help you avoid having to manually recreate lost or damaged GPOs and then repeat the planning, testing, and deployment phases. Part of your ongoing Group Policy operations plan should include regular backups of all GPOs.
+This article describes how to back up, restore, migrate, and copy existing Group Policy Objects (GPOs) by using the Group Policy Management Console (GPMC). These capabilities are important for maintaining your Group Policy deployments from an error or disaster. They help you avoid having to manually recreate lost or damaged GPOs and then repeat the planning, testing, and deployment phases. Part of your ongoing Group Policy operations plan should include regular backups of all GPOs.
 
 You can also copy and import GPOs, both from the same domain and across domains. You can use the GPMC to migrate an existing GPO, for example, from an existing domain into a newly deployed domain. You can either copy GPOs or import policy settings from one GPO into another GPO. Importing GPOs allows you to transfer policy settings from a backed-up GPO into an existing GPO, and is especially useful in situations where a trust relationship isn't present between the source and destination domains. If you want to reuse existing GPOs, copying also allows you to conveniently move GPOs from one production environment to another.
 
