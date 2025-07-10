@@ -2,10 +2,10 @@
 title: DNSSEC Key Master
 description: Understand the role of the Key Master in DNSSEC deployments, including key management, server requirements, and transfer scenarios.
 author: orin-thomas
-ms.author: orthomas
+ms.author: roharwoo
 ms.topic: concept-article
-ms.date: 06/16/2025
-ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
+ms.date: 07/08/2025
+ms.custom: template-how-to, team=cloud_advocates
 # Customer intent: As a DNS administrator, I want to understand the DNSSEC Key Master component so that I can implement DNSSEC.
 ---
 
@@ -31,18 +31,27 @@ You can't transfer the Key Master role if a zone is file-backed, because these z
 
 ## Find the current Key Master
 
-The name of the Key Master displays in the DNS Manager when you select **Forward Lookup Zones** or **Reverse Lookup Zones**. It also displays on the **Key Master** tab of the DNSSEC properties page. You can also run the `Get-DnsServerDnsSecZoneSetting` cmdlet in PowerShell to view the Key Master, as shown in the following example:
+The name of the Key Master displays in the DNS Manager when you select **Forward Lookup Zones** or **Reverse Lookup Zones**. It also displays on the **Key Master** tab of the DNSSEC properties page. You can also run the `Get-DnsServerDnsSecZoneSetting` cmdlet in PowerShell to view the Key Master. The following example shows how to find the Key Master for a zone named `secure.contoso.com`:
 
 ```powershell
     Get-DnsServerDnsSecZoneSetting -ZoneName secure.contoso.com | Select KeyMasterServer 
 ```
 
-## Zone assignment
+## Signing keys
 
 The Key Master generates all keys for the DNS zone, and is responsible for distribution of private keys and zone signing information. The Key Master is also responsible for performing all zone signing key (ZSK) and key signing key (KSK) rollovers and for polling child zones to keep signed delegations up-to-date.
 
-> [!NOTE]
-> You can also assign a Key Master to an unsigned zone. All zones that are signed have a Key Master setting, whether they are currently signed or not. A zone that has not been signed usually lacks a Key Master. You can assign a Key Master in advance using PowerShell to prepare for zone signing.
+You can also assign a Key Master to an unsigned zone. All zones that are signed have a Key Master setting, whether they're currently signed or not. A zone that hasn't been signed usually lacks a Key Master. You can assign a Key Master in advance using PowerShell to prepare for zone signing.
+
+To perform its role, the Key Master must have access to private key for a DNSSEC-signed zone. The private key can be stored in several ways:
+
+- **Active Directory**: If the Key Master is a domain controller, it can store private key material in Active Directory. This is the most secure option and allows for easy replication and access by other DNS servers in the domain.
+
+- **Certificate store**: If the Key Master is not a domain controller, it can store private key material in the local certificate store. This requires careful management to ensure the private keys are secure and accessible.
+
+- **Hardware Security Module (HSM)**: For high-security environments, private keys can be stored in an HSM. This provides strong protection against key compromise but requires additional configuration and management.
+
+To learn more about how to create signing keys, see [DNSSEC Sign DNS Zones](dnssec-sign-zone.md).
 
 ## Related content
 
