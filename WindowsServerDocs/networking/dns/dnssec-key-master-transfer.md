@@ -88,7 +88,7 @@ The procedure immediately changes the Key Master. You don't need to wait for Act
 
 ---
 
-## Transfer an off-line Key Master (Seizing the Key Master role)
+## Transfer an offline Key Master (Seizing the Key Master role)
 
 The server designated as the Key Master must remain online and highly available to ensure uninterrupted service for key signing operations. If the Key Master goes offline and you can't bring it back online easily, you can transfer the Key Master role to another DNS server. This process is called *seizing* the Key Master role. Don't seize the Key Master role and transfer it offline unless it's unavoidable, such as in a disaster recovery scenario.
 
@@ -147,7 +147,7 @@ The procedure will immediately change the Key Master. You don't need to wait for
 
 ### Transfer without access to the signing keys
 
-The Key Master must have access to private key material for a DNSSEC-signed zone. If the current Key Master is offline, other DNS servers might have access to private key material if it's stored in a shared location such as Active Directory. If private key material isn't stored in Active Directory, and the new Key Master can't access the private keys for a zone in any other way, you must take extra steps. First, you must generate new keys. Then, you need to re-sign the zone using these new keys. After re-signing the zone with new keys, all trust anchors will need updating because the exist ones will become invalid.
+The Key Master must have access to private key material for a DNSSEC-signed zone. If the current Key Master is offline, other DNS servers might have access to private key material if it's stored in a shared location such as Active Directory. If private key material isn't stored in Active Directory, and the new Key Master can't access the private keys for a zone in any other way, you must take extra steps. First, you must generate new keys. Then, you need to re-sign the zone using these new keys. After re-signing the zone with new keys, all trust anchors will need to be updated because the existing ones will become invalid.
 
 To avoid a situation where the Key Master is offline and you can't access private key material, it's recommended to store private key material in Active Directory. This way, if the Key Master goes offline, you can seize the Key Master role on another DNS server that has access to the private key material. When signing the zone, use the **Replicate this private key to all DNS servers authoritative for this zone** option in the Key Signing Key (KSK) settings. This option ensures that the private key material is replicated to all DNS servers that are authoritative for the zone, making it available for use by any of these servers.
 
