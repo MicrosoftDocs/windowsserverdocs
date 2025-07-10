@@ -65,7 +65,7 @@ The following table shows cryptographic algorithms and compatible NSEC methods.
 
 You must have at least one (1) KSK and one (1) ZSK. You can have up to three (3) KSKs and three (3) ZSKs that use the same cryptographic algorithm, and you have multiple cryptographic algorithms.
 
-To support automatic key rollover, an another signing key is generated for each ZSK and KSK that is added to the zone. For automatic KSK rollover, only the double signature rollover method is supported. For automatic ZSK rollover, only the prepublish rollover method is supported.
+To support automatic key rollover, another signing key is generated for each ZSK and KSK that is added to the zone. For automatic KSK rollover, only the double signature rollover method is supported. For automatic ZSK rollover, only the prepublish rollover method is supported.
 
 Typically, a zone is signed with a single ZSK and a single KSK. You might use more than one key to sign a zone under the following circumstances:
 
