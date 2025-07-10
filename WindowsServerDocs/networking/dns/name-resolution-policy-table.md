@@ -39,7 +39,7 @@ The following table shows the options that you can use to configure the namespac
 
 NRPT rules can be configured in a local, site, domain, or organizational unit (OU)-linked Group Policy Object (GPO). Normal Group Policy processing rules apply. Beginning with the local GPO, site-linked GPOs, domain-linked GPOs, and finally organizational unit-linked GPOs. An example of the processing order is shown in the following diagram.
 
-:::image type="content" source="../media/name-resolution-policy-table/processing-order.svg" alt-text="Diagram that shows the processing order of NRPT rules in Group Policy, including local, site-linked, domain-linked, and organizational unit-linked GPOs.":::
+:::image type="content" source="../media/name-resolution-policy-table/processing-order.png" alt-text="Diagram that shows the processing order of NRPT rules in Group Policy, including local, site-linked, domain-linked, and organizational unit-linked GPOs.":::
 
 If NRPT rules are present in multiple GPOs that apply to the same user or computer, the rules are merged, with more discrete rules taking precedence over more general rules. For example, a rule that applies to a child namespace takes precedence over a rule for the parent namespace, as shown in the following table.
 
