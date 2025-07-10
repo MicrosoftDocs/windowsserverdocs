@@ -1,6 +1,6 @@
 ---
 title: Active Directory Forest Recovery - Procedures
-description: This section contains procedures related to the forest recovery process. 
+description: View a list of procedures that are used in backing up and restoring domain controllers and Active Directory.
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 07/09/2025
