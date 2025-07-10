@@ -174,7 +174,7 @@ The following items can contain UNC paths, which might need to be updated to new
 - Folder redirection Group Policy settings
 - Software installation Group Policy settings
 
-References to scripts (such as for logon and startup scripts) that are stored outside the source GPO. The script itself isn't copied as part of the GPO copy or import operation, unless the script is stored inside the source GPO.
+References to scripts (such as for sign-in and startup scripts) that are stored outside the source GPO. The script itself isn't copied as part of the GPO copy or import operation, unless the script is stored inside the source GPO.
 
 To create a migration table that maps an example UNC path, perform the following steps:
 
