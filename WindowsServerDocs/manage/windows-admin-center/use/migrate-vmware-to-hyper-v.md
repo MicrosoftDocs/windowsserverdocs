@@ -1,12 +1,16 @@
 ---
-title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center
+title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)
 description: Learn how to install, configure, and test the Windows Admin Center VM Conversion extension for migrating VMs from vCenter to Hyper-V.
 author: meaghanlewis
 ms.topic: how-to
 ms.date: 07/07/2025
 ms.author: mosagie
 ---
-# Migrate VMware virtual machines to Hyper-V in Windows Admin Center
+# Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
+
+> [!IMPORTANT]
+> Windows Server assistant is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V with the **VM Conversion extension**. The VM Conversion extension is a powerful, lightweight solution that allows you to migrate virtual machines with minimal downtime on both Windows and Linux machines.
 
