@@ -7,7 +7,7 @@ ms.date: 07/09/2025
 ms.topic: how-to
 ---
 
-# Active Directory forest recovery - Procedures
+# Active Directory forest recovery - procedures
 
 
 This section contains procedures related to the forest recovery process.
