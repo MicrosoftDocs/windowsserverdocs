@@ -9,7 +9,6 @@ ms.topic: troubleshooting
 
 # Active Directory forest recovery guide
 
-> 
 
 This guide contains recommendations for recovering an Active Directory forest if a forest-wide failure renders all domain controllers (DCs) in
 the forest incapable of functioning normally. The steps it contains serve as a template for your forest recovery plan, which you can customize for your environment. These steps apply to DCs that run Microsoft Windows Server 2022, 2019, 2016, 2012 R2, and 2012 operating systems.
