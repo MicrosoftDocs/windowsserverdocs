@@ -9,7 +9,7 @@ ms.date: 07/11/2025
 
 # AIA URL retrieval in Windows
 
-The Authority Information Access (AIA) extension in X.509 certificates specifies a URL where the issuing Certificate Authority (CA) certificate can be obtained. If a system is unable to build a complete certificate trust chain using only the certificates in its local store, it might attempt to download missing intermediate certificates from the network using the AIA URL. By automating the retrieval of missing certificates, AIA minimizes the manual effort required to update local certificate stores.
+The Authority Information Access (AIA) extension in X.509 certificates specifies a URL where the issuing Certificate Authority (CA) certificate can be obtained. If a system is unable to build a complete certificate trust chain using only the certificates in its local store, it might attempt to download missing intermediate certificates from the network using the AIA URL. AIA automates the retrieval of missing certificates and minimizes the manual effort required to update local certificate stores.
 
 The automatic retrieval helps complete the trust chain but can introduce security risks if not properly managed. To enhance security, ensure that your certificate stores are properly configured and contain only certificates from trusted CAs. You can further strengthen your environment by disabling AIA retrieval system-wide. This forces Windows APIs to build certificate chains exclusively from certificates already present in the local store, reducing the risk of inadvertently trusting unverified or malicious certificates retrieved from external sources. Adopting this defense-in-depth strategy helps safeguard your systems against unauthorized or unexpected certificate trust paths.
 
@@ -35,7 +35,7 @@ To disable AIA retrieval system-wide in your environment, follow one of these me
 
 1. Navigate to **Computer Configuration\Windows Settings\Security Settings\Public Key Policies** and open **Certificate Path Validation Settings**.
 
-1. Select the **Network Retrieval** tab, check **Define these policy settings**, uncheck **Allow issuer certificate (AIA) retrieval during path validation**, then select **OK**.
+1. Select the **Network Retrieval** tab. Select **Define these policy settings**, uncheck **Allow issuer certificate (AIA) retrieval during path validation**, then select **OK**.
 
 If you need to enable AIA retrieval, uncheck **Define these policy settings** and then select **OK**.
 
@@ -45,11 +45,11 @@ If you need to enable AIA retrieval, uncheck **Define these policy settings** an
 
    *Alternatively*, in **Server Manager**, select **Tools**, then select **Registry Editor**.
 
-1. Navigate to and expand **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates**.
+1. Navigate to the following path and expand it **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates**.
 
-If this is the *first time* editing the AIA setting, the **ChainEngine\Config** folder and entries must be manually created.
+If it's the *first time* you're editing the AIA setting, the **ChainEngine\Config** folder and entries must be manually created.
 
-1. Right-click on **SystemCertificates**, select **New** > **Key**, type **ChainEngine**, then press **Enter**.
+1. Right-click on **SystemCertificates**. Select **New** > **Key**, type **ChainEngine**, then press **Enter**.
 
 1. Right-click on **ChainEngine** select **New** > **Key**, type **Config**, then press **Enter**.
 
@@ -57,15 +57,15 @@ If this is the *first time* editing the AIA setting, the **ChainEngine\Config** 
 
 1. Open **Options**, in the **Value data** field, type **2**, then press **Enter**.
 
-If you have *previously* edited the AIA setting, these entries are readily available.
+If you *previously* edited the AIA setting, these entries are readily available.
 
 1. While in **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config**, open **Options**, in the **Value data** field, type **2**, then press **Enter**.
 
 If you need to enable AIA retrieval, set the **Options** DWORD value to **0**.
 
-# [Powershell](#tab/powershell)
+# [PowerShell](#tab/powershell)
 
-Open Powershell in an elevated window and perform the following steps:
+Open PowerShell in an elevated window and perform the following steps:
 
 1. Run the following command to add the registry path and entries to disable AIA retrieval if it **doesn't** exist:
 
