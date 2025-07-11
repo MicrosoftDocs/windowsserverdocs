@@ -9,7 +9,6 @@ ms.topic: how-to
 
 # Active Directory forest recovery - Procedures
 
-> 
 
 This section contains procedures related to the forest recovery process.
 
