@@ -25,7 +25,7 @@ Best practices for managing your CAs include:
 
 To make changes to the AIA, you must be a member of the **Administrators**, **Domain Admins**, or **Enterprise Admins** security group.
 
-## Manage AIA
+## Manage AIA retrieval
 
 To disable AIA retrieval system-wide in your environment, follow one of these methods:
 
@@ -37,7 +37,7 @@ To disable AIA retrieval system-wide in your environment, follow one of these me
 
 1. Select the **Network Retrieval** tab. Select **Define these policy settings**, uncheck **Allow issuer certificate (AIA) retrieval during path validation**, then select **OK**.
 
-If you need to enable AIA retrieval, uncheck **Define these policy settings** and then select **OK**.
+If you need to reenable AIA retrieval, uncheck **Define these policy settings** and then select **OK**.
 
 # [Registry Editor](#tab/registry)
 
@@ -53,15 +53,13 @@ If it's the *first time* you're editing the AIA setting, the **ChainEngine\Confi
 
 1. Right-click on **ChainEngine** select **New** > **Key**, type **Config**, then press **Enter**.
 
-1. Right-click on **ChainEngine** select **New** > **DWORD**, type **Options**, then press **Enter**.
+1. Right-click on **Config** select **New** > **DWORD**, type **Options**, then press **Enter**.
 
 1. Open **Options**, in the **Value data** field, type **2**, then press **Enter**.
 
-If you *previously* edited the AIA setting, these entries are readily available.
+If you *previously* edited the AIA setting, these entries are already present. While in **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config**, set the **Options** value to **2**.
 
-1. While in **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config**, open **Options**, in the **Value data** field, type **2**, then press **Enter**.
-
-If you need to enable AIA retrieval, set the **Options** DWORD value to **0**.
+If you need to reenable AIA retrieval, set the **Options** DWORD value to **0**.
 
 # [PowerShell](#tab/powershell)
 
@@ -69,28 +67,28 @@ Open PowerShell in an elevated window and perform the following steps:
 
 1. Run the following command to add the registry path and entries to disable AIA retrieval if it **doesn't** exist:
 
-```powershell
-$registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
+   ```powershell
+   $registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
 
-New-Item -Path $registryPath -Force | Out-Null
-New-ItemProperty -Path $registryPath -Name "Options" -PropertyType DWORD -Value 2 -Force | Out-Null
-```
+   New-Item -Path $registryPath -Force | Out-Null
+   New-ItemProperty -Path $registryPath -Name "Options" -PropertyType DWORD -Value 2 -Force | Out-Null
+   ```
 
 1. Run the following command if the registry path and entries **does** exist to disable AIA retrieval:
 
-```powershell
-$registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
+   ```powershell
+   $registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
 
-New-ItemProperty -Path $registryPath -Name "Options" -PropertyType DWORD -Value 2 -Force | Out-Null
-```
+   New-ItemProperty -Path $registryPath -Name "Options" -PropertyType DWORD -Value 2 -Force | Out-Null
+   ```
 
 1. Run the following command if you need to reenable AIA retrieval:
 
-```powershell
-$registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
+   ```powershell
+   $registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
 
-Set-ItemProperty -Path $registryPath -Name "Options" -Value 0 -Force | Out-Null
-```
+   Set-ItemProperty -Path $registryPath -Name "Options" -Value 0 -Force | Out-Null
+   ```
 
 ---
 
