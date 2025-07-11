@@ -59,7 +59,7 @@ If it's the *first time* you're editing the AIA setting, the **ChainEngine\Confi
 
 If you *previously* edited the AIA setting, these entries are already present. While in **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config**, set the **Options** value to **2**.
 
-If you need to reenable AIA retrieval, set the **Options** DWORD value to **0**.
+If you need to reenable AIA retrieval, set the **Options** value to **0**.
 
 # [PowerShell](#tab/powershell)
 
