@@ -201,7 +201,7 @@ When the **Demotion** page appears, the domain controller configuration begins a
 
 ![Screenshot that shows an example of Uninstall-ADDSDomainController.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
 
-![Screenshot that shows an exmaple of Uninstall-WindowsFeature.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)
+![Screenshot that shows an example of Uninstall-WindowsFeature.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)
 
 To accept the reboot prompt automatically, use the **-force** or **-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **-norebootoncompletion:$false** argument.
 
