@@ -1,11 +1,9 @@
 ---
 title: Run Best Practices Analyzer Scans and Manage Scan Results_1
 description: Learn how to run Best Practices Analyzer (BPA) scans either from Server Manager, by using the BPA GUI, or by using cmdlets in Windows PowerShell and learn how to manage the scan results.
-ms.topic: article
-ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-ms.author: roharwoo
-author: robinharwood
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/25/2023
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results

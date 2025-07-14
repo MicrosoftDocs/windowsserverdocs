@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot AD FS
 description: Learn about the strategies and tools that you can use to diagnose and troubleshoot various aspects of Active Directory Federation Services.
-author: billmath
+author: robinharwood
 ms.author: roharwoo
-manager: amycolannino
+manager: tedhudek
 ms.date: 05/19/2023
-ms.topic: article
+ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot AD FS

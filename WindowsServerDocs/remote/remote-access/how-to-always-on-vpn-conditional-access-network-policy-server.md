@@ -1,10 +1,10 @@
 ---
 title: Configure VPN conditional access on the Network Policy Server (NPS) on Windows Server
 description: Learn how to configure VPN conditional access on the Network Policy Server (NPS)
-ms.topic: article
+ms.topic: how-to
 ms.date: 05/04/2023
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 
 ---
 

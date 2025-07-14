@@ -1,11 +1,9 @@
 ---
 title: Manage Resources in Multiple Active Directory Forests
 description: Learn how to use IPAM to manage domain controllers, DHCP servers, and DNS servers in multiple Active Directory forests.
-manager: brianlic
 ms.topic: article
-ms.assetid: 82f8f382-246e-4164-8306-437f7a019e0f
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Manage Resources in Multiple Active Directory Forests

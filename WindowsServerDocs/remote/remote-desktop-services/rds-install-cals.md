@@ -1,31 +1,47 @@
 ---
-title: Install RDS client access licenses
-description: Learn how to install CALs for RD clients.
-ms.topic: article
-author: robinharwood
-ms.author: roharwoo
-ms.date: 7/3/2024
-manager: dongill
+title: Install Remote Desktop Services client access licenses
+description: Learn how to install Remote Desktop Services client access licenses (CALs), ready to license your session hosts.
+ms.topic: how-to
+ai-usage: ai-assisted
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 05/29/2025
 ---
-# Install RDS client access licenses on the Remote Desktop license server
 
-Use the following information to install Remote Desktop Services client access licenses (CALs) on the license server. Once the CALs are installed, the license server will issue them to users as appropriate. Be sure to [activate your license server](./rds-activate-license-server.md) first before continuing with the following steps.
+# Install Remote Desktop Services client access licenses
 
-> [!NOTE]
-> You need Internet connectivity on the computer running Remote Desktop Licensing Manager but not on the computer running the license server.
+Remote Desktop Services (RDS) client access licenses (CALs) are required for users to connect to your Remote Desktop environment and in compliance with licensing requirements. This article provides instructions for installing RDS CALs on your license server. Once the CALs are installed and you configure your RDS deployment to use the license server, licenses are issued to users as appropriate.
 
-1. On the license server (usually the first RD Connection Broker), open the Remote Desktop Licensing Manager.
+## Prerequisites
 
-1. Right-click the license server, and then select **Install licenses**.
+Before you begin, ensure you meet the following prerequisites:
 
-1. Select **Next** on the welcome page.
+- A Remote Desktop license server installed and activated. For activation instructions, see [Activate the Remote Desktop Services license server](./rds-activate-license-server.md).
 
-1. Select the program you purchased your RDS CALs from, and then select **Next**. If you are a service provider, select **Service Provider License Agreement**.
+- Internet connectivity on a computer running Remote Desktop Licensing Manager to activate the licenses. The license server itself doesn't require internet connectivity.
 
-1. Enter the information for your license program. In most cases, this will be the license code or an agreement number, but this varies depending on the license program you're using.
+- A user account that's an administrator on the Remote Desktop license server to install licenses.
+
+- The license code or agreement number provided when you purchased your Remote Desktop Services CALs.
+
+## Install the client access licenses
+
+1. Open the Remote Desktop Licensing Manager.
+
+1. Right-click the name of the license server, then select **Install licenses**.
+
+1. On the welcome page, select **Next** .
+
+1. Select the program you purchased your RDS CALs from, then select **Next**. If you're a service provider, select **Service Provider License Agreement**.
+
+1. Enter the information for your license program. In most cases, you need to enter the license code or an agreement number, but it can vary depending on the license program you're using.
 
 1. Select **Next**.
 
-1. Select the product version, license type, and number of licenses for your environment, and then select **Next**. The license manager contacts the Microsoft Clearinghouse to validate and retrieve your licenses.
+1. Select the product version, license type, and number of licenses for your environment, then select **Next**. The license manager contacts the Microsoft Clearinghouse to validate and retrieve your licenses.
 
-1.  Select **Finish** to complete the process.
+1. Select **Finish** to complete the process.
+
+## Next step
+
+After you install the RDS CALs, you need to configure your RDS deployment to use the license server. For more information, see [License Remote Desktop session hosts](rds-license-session-hosts.md).

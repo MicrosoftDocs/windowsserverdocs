@@ -2,11 +2,11 @@
 description: "Learn more about: Deploying AD FS in the Account Partner Organization"
 ms.assetid: 9aaca9c5-ce44-495c-aad6-61aede87a83f
 title: Deploying AD FS in the Account Partner Organization
-author: billmath
-ms.author: billmath
-manager: amycolannino
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Deploying AD FS in the Account Partner Organization

@@ -2,7 +2,7 @@
 title: Edit Quota Template Properties
 description: This article describes how to edit quota template properties to extend changes to quotas created from the original quota template
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

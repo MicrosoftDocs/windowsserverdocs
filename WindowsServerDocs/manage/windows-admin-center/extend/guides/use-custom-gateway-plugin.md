@@ -1,9 +1,9 @@
 ---
 title: Use a custom gateway plugin in your tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu) - use a custom gateway plugin in your tool extension
-ms.topic: article
-author: robinharwood
-ms.author: roharwoo
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/18/2018
 ---
 

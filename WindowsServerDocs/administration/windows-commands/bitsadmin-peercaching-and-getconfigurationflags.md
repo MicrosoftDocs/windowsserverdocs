@@ -3,8 +3,8 @@ title: bitsadmin peercaching and getconfigurationflags
 description: Reference article for the bitsadmin peercaching and getconfigurationflags command, which gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers.
 ms.topic: reference
 ms.assetid: 124ddc15-3444-4bd5-96e5-c6bfabe4f9c2
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

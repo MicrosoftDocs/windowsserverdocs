@@ -2,8 +2,8 @@
 title: pktmon filter add
 description: Reference article for the pktmon filter add command.
 ms.topic: reference
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/24/2021
 ---
 

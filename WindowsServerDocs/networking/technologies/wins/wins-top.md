@@ -4,8 +4,8 @@ description: This topic provides information about decommissioning WINS and usin
 manager: brianlic
 ms.topic: article
 ms.assetid: 32eabe7d-1130-4001-a79a-8ddb31993e5b
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 08/07/2020
 ---
 

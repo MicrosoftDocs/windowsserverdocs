@@ -2,10 +2,10 @@
 title: Configure AD FS and Microsoft Entra multifactor authentication
 description: Learn more about configuring Microsoft Entra multifactor authentication as authentication provider using AD FS.
 ms.author: roharwoo
-author: billmath
-manager: amycolannino
+author: robinharwood
+manager: tedhudek
 ms.date: 03/13/2024
-ms.topic: article
+ms.topic: how-to
 ms.custom: has-azure-ad-ps-ref
 ---
 
@@ -15,7 +15,7 @@ The information in this article applies to Windows 2016 and later.
 
 If your organization is federated with Microsoft Entra ID, you can use Microsoft Entra multifactor authentication to secure Active Directory Federation Services (AD FS) resources, both on-premises and in the cloud. Microsoft Entra multifactor authentication enables you to eliminate passwords and provide a more secure way to authenticate. With AD FS, you can configure Microsoft Entra multifactor authentication for primary authentication or use it as an extra authentication provider.
 
-Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Microsoft Entra multifactor authentication adapter integrates directly with Microsoft Entra ID and doesn't require an on premises Azure Multi-Factor Authentication Server. The Microsoft Entra multifactor authentication adapter is built into Windows Server 2016. No other installation is required.
+Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Microsoft Entra multifactor authentication adapter integrates directly with Microsoft Entra ID and doesn't require an on premises Azure Multifactor Authentication Server. The Microsoft Entra multifactor authentication adapter is built into Windows Server 2016. No other installation is required.
 
 <a name='register-users-for-azure-ad-multi-factor-authentication-by-using-ad-fs'></a>
 
@@ -78,8 +78,8 @@ The following prerequisites are required when you use Microsoft Entra multifacto
       - `https://login.microsoftonline.com`
 - Your on-premises environment must be [federated with Microsoft Entra ID](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs).
 - [Microsoft Azure Active Directory module for Windows PowerShell](/powershell/module/azuread/).
-- Global administrator permissions on your instance of Microsoft Entra ID to configure it by using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
+- You'll need either an account that has the [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role on your instance of Microsoft Entra ID to configure it by using PowerShell.
 
 [!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 

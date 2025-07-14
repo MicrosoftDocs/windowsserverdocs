@@ -1,10 +1,10 @@
 ---
 title: Manage users in your RDS collection
 description: Learn how to manage users in Remote Desktop Services.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
-author: christianmontoya
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 7/3/2024
 manager: scottman
 ---

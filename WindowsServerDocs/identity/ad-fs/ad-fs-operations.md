@@ -2,10 +2,10 @@
 description: "Learn more about: AD FS Operations"
 ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: AD FS Operations
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 # AD FS Operations

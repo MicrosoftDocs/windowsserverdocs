@@ -2,8 +2,8 @@
 title: Event Logging in Windows Admin Center
 description: Learn about event logging in Windows Admin Center.
 ms.topic: article
-author: robinharwood
 ms.author: roharwoo
+author: robinharwood
 ms.date: 06/18/2018
 ---
 
@@ -13,7 +13,7 @@ Windows Admin Center writes event logs that show the management activities perfo
 
 ## Management activities
 
-Windows Admin Center provides insight into the management activities performed on the servers in your environment by logging actions to the **Microsoft-ServerManagementExperience** event channel in the event log of the managed server. `EventID` is `4000`, and `Source` is `SMEGateway`.
+Windows Admin Center provides insight into the management activities performed on the servers in your environment by logging actions to the **WindowsAdminCenter** event channel in the event log of the managed server. `EventID` is `4000`, and `Source` is `SMEGateway`.
 
 Windows Admin Center logs only actions on the managed server. Events aren't logged if a user accesses a server for read-only purposes.
 
@@ -33,6 +33,6 @@ Logged events include the following information:
 
 ## Gateway usage
 
-Windows Admin Center logs gateway activity to the event channel on the gateway computer to help you troubleshoot issues and view metrics on usage. These events are also logged to the **Microsoft-ServerManagementExperience** event channel.
+Windows Admin Center logs gateway activity to the event channel on the gateway computer to help you troubleshoot issues and view metrics on usage. These events are also logged to the **WindowsAdminCenter** event channel.
 
 [Learn more about troubleshooting Windows Admin Center](../support/troubleshooting.md).

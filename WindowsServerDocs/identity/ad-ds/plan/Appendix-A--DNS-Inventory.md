@@ -2,10 +2,10 @@
 description: "Learn more about: Appendix A: DNS Inventory"
 ms.assetid: f3506489-f695-4d7d-b27a-ec714843c002
 title: Appendix A - DNS Inventory
-ms.author: justinha
-author: iainfoulds
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 08/07/2018
+ms.date: 05/12/2025
 ms.topic: article
 ---
 

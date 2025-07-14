@@ -2,8 +2,8 @@
 title: Configure VPN protocols in Routing and Remote Access on Windows Server
 description: Learn how to configure VPN protocols in Routing and Remote Access on Windows Server using 
 ms.topic: how-to
-author: robinharwood
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/07/2024
 #customer intent: As a VPN administrator, I want to configure VPN protocols in Windows Server so that I can restrict which protocol can be used for VPN connections.
 ---

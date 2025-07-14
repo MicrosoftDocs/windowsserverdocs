@@ -246,15 +246,15 @@
         href: remote-access/get-started-install-ras-as-vpn.md
     - name: Tutorials
       items:
-      - name: Deploy Always on VPN
+      - name: Deploy Always On VPN
         items:
-        - name: 1- Set up infrastructure for Always On VPN
+        - name: 1- Deploy Always On VPN infrastructure
           href: remote-access/tutorial-aovpn-deploy-setup.md
         - name: 2- Configure Always On VPN certificates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md
-        - name: 3- Deploy Always On VPN profile for Windows clients
+        - name: 3- Create Always On VPN connection
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
-      - name: Migrate from Direct Access to Always on VPN
+      - name: Migrate from Direct Access to Always On VPN
         items:
         - name: Overview of DirectAccess to Always On VPN migration
           href: remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md
@@ -426,7 +426,7 @@
           href: remote-access/how-to-aovpn-client-intune.md
         - name: Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager
           href: remote-access/how-to-aovpn-client-config-mgr.md
-        - name: Configure Always on VPN Conditional Access using Microsoft Entra ID
+        - name: Configure Always On VPN Conditional Access using Microsoft Entra ID
           href: remote-access/how-to-aovpn-conditional-access.md
         - name: Configure Always On VPN Conditional Access using NPS
           href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
@@ -484,10 +484,8 @@
         href: remote-access/directaccess/directAccess-Known-Issues.md      
     - name: Reference
       items:
-      - name: BGP Windows PowerShell Command reference
-        href: remote-access/bgp/BGP-Windows-powershell-Command-Reference.md
       - name: Remote Access PowerShell Command reference
-        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps&preserve-view=true?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        href: /powershell/module/remoteaccess/?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
       - name: Windows VPN technical guide
         href: /windows/security/identity-protection/vpn/vpn-guide?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
     - name: Resources

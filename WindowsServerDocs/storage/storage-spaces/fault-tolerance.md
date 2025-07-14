@@ -3,7 +3,7 @@ title: Fault tolerance and storage efficiency on Azure Stack HCI and Windows Ser
 description: A discussion of resiliency options in Storage Spaces Direct including mirroring and parity.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 04/17/2023
 ---
 
@@ -204,4 +204,3 @@ For further reading on subjects mentioned in this article, see the following:
 - [Erasure Coding in Azure by Microsoft Research](https://www.microsoft.com/research/publication/erasure-coding-in-windows-azure-storage/)
 - [Local Reconstruction Codes and Accelerating Parity Volumes](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
 - [Volumes in the Storage Management API](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
-- [Capacity Calculator PREVIEW for Storage Spaces Direct](https://aka.ms/s2dcalc)

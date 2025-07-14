@@ -3,8 +3,8 @@ title: bootcfg dbg1394
 description: Reference article for the bootcfg dbg1394 command, which configures 1394 port debugging for a specified operating system entry
 ms.topic: reference
 ms.assetid: 35724697-90dd-4dbe-85b0-337fbd369dcc
-ms.author: roharwoo
-author: robinharwood
+ms.author: mosagie
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

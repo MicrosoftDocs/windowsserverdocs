@@ -2,9 +2,9 @@
 title: Windows LAPS passwords and passphrases
 description: Documents password and passphrase details for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: justinha
-ms.date: 12/25/2023
-ms.topic: conceptual
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Windows LAPS passwords and passphrases
@@ -19,13 +19,13 @@ The primary purpose of Windows LAPS is regularly rotate the password of a local 
 
 Windows LAPS supports five different complexity settings that can be used to generate random passwords. The PasswordComplexity policy setting is used to choose which character sets are used when creating a password.
 
-|PasswordComplexity setting|Description|Character sets|
-|---|---|---|
-|1|Large letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"|
-|2|Large letters + small letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"|
-|3|Large letters + small letters + numbers|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"|
-|4|Large letters + small letters + numbers + specials|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"<br/><br/>",.-+;!#&@{}[]$/()%"|
-|5|Large letters + small letters + numbers (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|
+|PasswordComplexity setting|Description|Character sets|Example|
+|---|---|---|---|
+|1|Large letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"|"OZKTIQHCKHRWOX"|
+|2|Large letters + small letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"|"fOiMbhmcVFHzmI"|
+|3|Large letters + small letters + numbers|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"|"logqQVGs53R4vY"|
+|4|Large letters + small letters + numbers + specials|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"<br/><br/>",.-+;!#&@{}[]$/()%"|"P5QWg43.1lA}ra"|
+|5|Large letters + small letters + numbers (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|"vnJ!!?MTb5=U7Y"|
 
 When a complexity setting with multiple character sets is chosen, Windows LAPS ensures that the resultant password contains at least one character randomly chosen from each character set.
 
@@ -45,17 +45,13 @@ Password complexity setting five is equivalent to password complexity setting fo
 
 Windows LAPS supports three different complexity settings that can be used to generate random passphrases. The PasswordComplexity policy setting is used to choose which word lists are used when creating a passphrase:
 
-|PasswordComplexity setting|Description|Number of words in list|
-|---|---|---|
-|6|Long words|7776|
-|7|Short words|1276|
-|8|Short words with unique prefixes|1276|
+|PasswordComplexity setting|Description|Number of words in list|Example|
+|---|---|---|---|
+|6|Long words|7776|"SedimentWaffleEpilogueArrivalWorseningRecent"|
+|7|Short words|1276|"CauseGraveBossFilthHashCleft"|
+|8|Short words with unique prefixes|1276|"GongDazzlerNumbingAdmitMowerEvidence"|
 
 The length of passphrases is controlled using the PassphraseLength policy setting. Passphrases created by Windows LAPS default to six words in length, and can be configured to be anywhere from three to 10 terms in length. The first character of each word is always capitalized for improved readability. No punctuation or other dividing characters are used between words.
-
-Example of a passphrase created with six words taken from the "Long words" list:
-
-`SkiingProduceIdentifyStarlitOctaneDistress`
 
 Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Microsoft made slight modifications to the original word lists; all changes are detailed in the downloadable lists.
 

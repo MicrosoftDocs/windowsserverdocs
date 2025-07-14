@@ -1,11 +1,11 @@
 ---
 title: Deploying the Host Guardian Service
 description: "Learn more about: Deploying the Host Guardian Service"
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 310b63d9-5ac7-4961-98ef-103af45d706a
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 01/14/2020
 ---
 

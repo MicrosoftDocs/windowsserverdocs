@@ -2,11 +2,11 @@
 description: "Learn more about: Configuring Partner Organizations"
 ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: Configuring Partner Organizations
-author: billmath
-manager: amycolannino
+author: robinharwood
+manager: tedhudek
 ms.date: 02/13/2024
-ms.topic: article
-ms.author: billmath
+ms.topic: concept-article
+ms.author: roharwoo
 ---
 
 # Configuring Partner Organizations

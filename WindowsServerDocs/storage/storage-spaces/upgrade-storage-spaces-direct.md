@@ -1,10 +1,10 @@
 ---
 title: Upgrade a Storage Spaces Direct cluster
 description: Learn how to upgrade a Storage Spaces Direct cluster to a newer version of Windows Server, either while VMs are running or while they're stopped.
-author: robhindman
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 01/24/2025
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ---
 
 # Upgrade a Storage Spaces Direct cluster

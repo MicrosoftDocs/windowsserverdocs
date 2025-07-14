@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
-ms.topic: article
+ms.topic: best-practice
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 10/25/2024
 ---
 

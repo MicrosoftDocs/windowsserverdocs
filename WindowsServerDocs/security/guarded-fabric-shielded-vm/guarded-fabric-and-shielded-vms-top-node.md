@@ -4,8 +4,8 @@ description: "Learn more about: Guarded fabric and shielded VMs"
 ms.topic: article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 08/29/2018
 ---
 

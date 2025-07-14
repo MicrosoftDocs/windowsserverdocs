@@ -2,11 +2,11 @@
 description: "Learn more about: Finding Additional Resources for Logical Structure Design"
 ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: Finding Additional Resources for Logical Structure Design
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Finding Additional Resources for Logical Structure Design

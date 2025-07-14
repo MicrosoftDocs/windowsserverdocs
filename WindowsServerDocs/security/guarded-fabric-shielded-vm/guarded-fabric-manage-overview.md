@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: Managing a Guarded Fabric"
 title: Managing a Guarded Fabric
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: aee13964-d1d9-471a-bef3-3c76280b9a15
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 12/10/2020
 ---
 # Managing a Guarded Fabric

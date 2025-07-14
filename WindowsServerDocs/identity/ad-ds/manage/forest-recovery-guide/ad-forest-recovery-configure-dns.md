@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: AD Forest Recovery - Configuring the DNS Server service"
 title: AD Forest Recovery - Configure DNS Server service
-ms.author: justinha
-author: iainfoulds
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: how-to
 ms.custom: inhenkel
 ---
 # Active Directory Forest Recovery - Configure the DNS Server service

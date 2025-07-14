@@ -2,8 +2,8 @@
 title: tapicfg install
 description: Reference article for the tapicfg install command, which creates a TAPI application directory partition.
 ms.topic: reference
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 09/29/2020
 ---

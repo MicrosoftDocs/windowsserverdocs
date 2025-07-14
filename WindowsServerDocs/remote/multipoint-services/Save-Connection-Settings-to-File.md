@@ -1,11 +1,11 @@
 ---
 title: Save Connection Settings to File
 description: Learn how to create connection files to use to connect from one computer to another in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 93814c41-60ba-4154-8283-f5d7baf790c0
-author: robinharwood
+author: dknappettmsft
 manager: dongill
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Save Connection Settings to File

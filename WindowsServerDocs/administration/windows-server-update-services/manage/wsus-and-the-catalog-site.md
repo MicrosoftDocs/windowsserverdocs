@@ -6,11 +6,11 @@ ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: roharwoo
 author: robinharwood
 manager: mtillman
-ms.date: 08/08/2023
+ms.date: 04/30/2025
 ---
 # WSUS and the Microsoft Update Catalog
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The [Microsoft Update Catalog](https://catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to **Import Updates** from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates into WSUS. This article provides information about the catalog, the import script, and how to use the script.
 
@@ -74,7 +74,7 @@ Use the below instructions to import updates into WSUS:
     .\ImportUpdateToWSUS.ps1 -WsusServer WSUSServer.contoso.com -PortNumber 8531 -UseSsl -UpdateIdFilePath C:\temp\UpdateIDs.txt
     ```
 
-1. The update files for updates that are imported are downloaded based on your **Update files** settings. For instance, if you use the option to **Download update files to this serer only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3 Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
+1. The update files for updates that are imported are downloaded based on your **Update files** settings. For instance, if you use the option to **Download update files to this server only when updates are approved**, the update files are downloaded when the update is approved. For more information about options for storing updates, see section [1.3 Choose a WSUS storage strategy](../plan/plan-your-wsus-deployment.md#13-choose-a-wsus-storage-strategy).
 
 ## PowerShell script to import updates into WSUS
 
@@ -270,3 +270,29 @@ The catalog includes updates that support multiple languages.
 > Match the languages supported by the WSUS server with the languages supported by the imported updates.
 
 If the WSUS server doesn't support all the languages included in the update, the update won't be deployed to client computers. If an update supporting multiple languages has been downloaded to the WSUS server but not yet deployed to client computers, and an administrator deselects one of the languages included in the update, the update won't be deployed to the clients.
+
+## Troubleshooting
+
+The “.NOTES” section of the script can be used for troubleshooting issues which may occur when running the script.
+
+- If you get an error, try enabling Transport Layer Security (TLS) 1.2. For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
+- You can use the following command to automate the process of adding a registry value related to the use of strong crypto. Manually restart the Windows Server Update Services service and World Wide Web Publishing service after adding the registry value.
+
+    ```command
+    reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /V SchUseStrongCrypto /T REG_DWORD /D 1
+    ```
+
+- Run this PowerShell script to automate the process of adding a registry value related to the use of strong crypto and restart the Windows Server Update Services service and World Wide Web Publishing service:
+
+    ```powershell
+    $registryPath = "HKLM:\Software\Microsoft\.NETFramework\v4.0.30319"
+    $Name = "SchUseStrongCrypto"
+    $value = "1"
+    if (!(Test-Path $registryPath)) {
+       New-Item -Path $registryPath -Force | Out-Null
+    }
+    New-ItemProperty -Path $registryPath -Name $name -Value $value -PropertyType DWORD -Force | Out-Null
+    Restart-Service WsusService, w3svc
+    ```
+
+- Activity and/or errors related to importing updates can be found in **%ProgramFiles%\Update Services\LogFiles\SoftwareDistribution.log** of the WSUS server where updates are being imported.

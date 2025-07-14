@@ -4,9 +4,9 @@ description: Navigational topic for administration information for MultiPoint Se
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: 8fce1bcf-5459-43a2-957e-c1bc1749bca2
-author: evaseydl
+author: dknappettmsft
 manager: scottman
-ms.author: roharwoo
+ms.author: daknappe
 ---
 # System administration in MultiPoint Services
 Before you start using your MultiPoint Services system, it's a good idea to do some basic system administration.

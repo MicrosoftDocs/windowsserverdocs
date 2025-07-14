@@ -1,288 +1,312 @@
 ---
-title: Server Core App Compatibility Feature on Demand in Windows Server
-description: The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package that can be added to Server Core installations of Windows Server installations at any time, beginning with Windows Server 2019.
-ms.topic: conceptual
-author: robinharwood
-ms.author: roharwoo
-manager: femila
-ms.date: 03/07/2023
+title: Install Server Core App Compatibility Feature on Demand
+description: Learn how to install the Server Core App Compatibility Feature on Demand to enhance app compatibility in Windows Server.
+ms.topic: how-to
+ai-usage: ai-assisted
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 07/01/2025
 ---
 
-# Server Core App Compatibility Feature on Demand
+# Install Server Core App Compatibility Feature on Demand
 
-The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package that can be added to Server Core installations of Windows Server installations at any time, beginning with Windows Server 2019.
+The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package designed to enhance the compatibility of Server Core installations in Windows Server. Starting with Windows Server 2019, you can install this feature at any time to improve app compatibility and provide extra tools for daily tasks. This article explains the benefits of App Compatibility, outlines its installation process, and provides instructions for adding it to a server or a custom Windows image.
 
 For more information on other Features on Demand, see [Features On Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
-## Why install the App Compatibility FOD?
+## Why install App Compatibility
 
-The App Compatibility Feature on Demand for Server Core improves app compatibility by including a subset of binaries and packages from the Server with Desktop Experience installation option. This optional package is available on a separate ISO, or from Windows Update, but can only be added to Server Core installations and images.
+App Compatibility for Server Core improves app compatibility by including a subset of binaries and packages from the Server with Desktop Experience installation option. This optional package is available from Windows Update or on a separate ISO, but it can only be added to Server Core installations and images.
 
-The two primary values the App Compatibility FOD provides are:
+The two primary benefits App Compatibility provides are:
 
-- Increases the compatibility of Server Core for server applications already in market or deployed.
-- Assists with providing OS components and increased app compatibility of software tools used in acute troubleshooting and debugging scenarios.
+- Increased compatibility of Server Core for server applications.
 
-Operating system components that are available as part of the Server Core App Compatibility FOD include:
+- Adding OS components not normally included with Server Core that can help with administration tasks and compatibility for software tools used in acute troubleshooting and debugging scenarios.
 
-- Microsoft Management Console (mmc.exe)
+The operating system components that are available as part of the App Compatibility include:
 
-- Event Viewer (Eventvwr.msc)
+| Component | Filename | First available |
+|--|--|--|
+| Device Manager | `devmgmt.msc` | Windows Server 2019 |
+| Disk Management | `diskmgmt.msc` | Windows Server 2019 |
+| Event Viewer | `eventvwr.msc` | Windows Server 2019 |
+| Failover Cluster Manager | `cluadmin.msc` | Windows Server 2019 |
+| File Explorer | `explorer.exe` | Windows Server 2019 |
+| Hyper-V Manager | `virtmgmt.msc` | Windows Server 2022 |
+| Microsoft Management Console | `mmc.exe` | Windows Server 2019 |
+| Performance Monitor | `perfmon.exe` | Windows Server 2019 |
+| Resource Monitor | `resmon.exe` | Windows Server 2019 |
+| Task Scheduler | `taskschd.msc` | Windows Server 2022 |
+| Windows PowerShell Integrated Scripting Environment (ISE) | `powershell_ise.exe` | Windows Server 2019 |
 
-- Performance Monitor (PerfMon.exe)
+## Prerequisites
 
-- Resource Monitor (Resmon.exe)
+Before you begin, ensure that you meet the following prerequisites:
 
-- Device Manager (Devmgmt.msc)
+- App Compatibility can only be installed on Server Core installations of Windows Server. Don't attempt to add App Compatibility to the Server with Desktop Experience installation option.
 
-- File Explorer (Explorer.exe)
+- You need to be signed in with an administrator account on the Server Core computer that you want to add the App Compatibility FOD to.
 
-- Windows PowerShell (Powershell_ISE.exe)
+- The following Windows Server features require extra configuration:
+  - Failover Cluster Manager (`cluadmin.msc`) requires the Failover Clustering Windows Server feature to be installed first.
+  - IIS Management Console (`Web-Mgmt-Console`) relies on App Compatibility to be installed, as it requires the Microsoft Management Console (`mmc.exe`) to run.
 
-- Disk Management (Diskmgmt.msc)
+- If you want to add App Compatibility to a custom Windows image (WIM), you need the ISO image file for the version of Windows Server you want to create a custom image for.
 
-- Failover Cluster Manager (CluAdmin.msc)
+## Install App Compatibility on Server Core
 
-  > [!NOTE]
-  > Failover Cluster Manager requires adding the Failover Clustering Windows Server feature first, which can be done by running the following command from an an elevated PowerShell session:
-  >
-  > ```PowerShell
-  > Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
-  > ```
+Installing the App Compatibility Feature on Demand involves adding a specialized package to your Server Core installation that provides extra tools and compatibility features normally found in Server with Desktop Experience.
 
-Beginning with Windows Server 2022, the following components are also available (when using the same version of the App Compatibility FOD):
+The installation process depends on whether you want to install App Compatibility from Windows Update or an ISO image. You can install the feature directly from Windows Update by running a PowerShell command. For an ISO image, you need to download the relevant Windows Server Languages and Optional Features ISO, mount it locally, and install the feature from that source.
 
-- Hyper-V Manager (virtmgmt.msc)
+After you install App Compatibility and restart of the server, the command console window frame color changes to a different shade of blue.
 
-- Task Scheduler (taskschd.msc)
+Select the relevant tab for your preferred installation method.
 
-## Installing the App Compatibility Feature on Demand
+# [Windows Update](#tab/windows-update)
+
+To install App Compatibility on a Server Core installation of Windows Server from Windows Update:
+
+1. Sign in to the server with an administrator account.
+
+1. In `SConfig`, use option **15** to exit `SConfig` to PowerShell.
+
+1. Install the App Compatibility Feature on Demand by running the following command. The command takes several minutes to complete.
+
+   ```PowerShell
+   Add-WindowsCapability -Online -Name "ServerCore.AppCompatibility~~~~0.0.1.0"
+   ```
+
+   The output is similar to the following example:
+
+   ```output
+   Path          :
+   Online        : True
+   RestartNeeded : True
+   ```
+
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
+
+# [ISO image](#tab/iso-image)
+
+To install App Compatibility on a Server Core installation of Windows Server from an ISO image:
+
+1. Sign in to a server with an administrator account.
+
+1. In `SConfig`, use option **15** to exit `SConfig` to PowerShell.
+
+1. Download the ISO image file that contains Features on Demand for the version of Windows Server you installed. Save the ISO image to a folder on the server.
+
+   - [Windows Server 2025](https://go.microsoft.com/fwlink/?linkid=2273506)
+   - [Windows Server 2022](https://go.microsoft.com/fwlink/?linkid=2195333)
+   - [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2195335)
+
+1. Mount the ISO image by running the following command. Be sure to replace `<ISO Path>` with the full file path of your ISO. Alternatively, you can mount the ISO from your hypervisor.
+
+   ```powershell
+   $fodPath = '<ISO Path>'
+
+   $fodMount = Mount-DiskImage -ImagePath "$fodPath"
+   ```
+
+1. Run the following command to get the drive letter that the FOD ISO is mounted to:
+
+    ```PowerShell
+    $fodDriveLetter = ($fodMount | Get-Volume).DriveLetter
+    ```
+
+1. Run the following command, depending on the operating system version you're using:
+
+   - For Windows Server 2022 and later:
+
+      ```PowerShell
+      Add-WindowsCapability -Online -Name "ServerCore.AppCompatibility~~~~0.0.1.0" -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
+      ```
+
+   - For previous versions of Windows Server:
+
+      ```PowerShell
+      Add-WindowsCapability -Online -Name "ServerCore.AppCompatibility~~~~0.0.1.0" -Source ${fodDriveLetter}:\ -LimitAccess
+      ```
+
+   The output is similar to the following example:
+
+   ```output
+   Path          :
+   Online        : True
+   RestartNeeded : True
+   ```
+
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
+
+---
 
 > [!IMPORTANT]
 >
-> - The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to the Server with Desktop Experience installation option.
-> - For servers running Windows Server 2022, ensure you have installed the [2022-01 Cumulative Update Preview for Microsoft server operating system version 21H2 for x64-based Systems (KB5009608)](https://support.microsoft.com/topic/january-25-2022-kb5009608-os-build-20348-502-preview-54285445-4a79-4bc1-9c9c-fbe7299e1c29) or later cumulative update before you install the App Compatibility FOD. You can verify this by checking that the operating system build number is 20348.502 or greater. Prior to this, if you tried to connect to the server using Remote Desktop Protocol (RDP), you could be presented with a black screen and disconnected.
+> If you do an in-place upgrade of Windows Server to a newer version, App Compatibility doesn't remain in place. You need to install it again after the upgrade. Alternatively, you can add App Compatibility to a custom Windows image (WIM) that you use to install Windows Server. Adding App Compatibility to a custom image ensures that it's present after the upgrade completes. For more information, see [Add App Compatibility to a custom WIM image](#add-app-compatibility-to-a-custom-wim-image) section.
 
-### Connected to the internet
+## Add App Compatibility to a custom WIM image
 
-1. If the server can connect to Windows Update, run the following command from an elevated PowerShell session, then restart Windows Server after the command finishes running:
+If you add App Compatibility to a custom Windows image (WIM) and use that image to install Windows Server, App Compatibility is automatically installed during the installation process. It remains in place after an in-place upgrade of Windows Server to a newer version.
 
-    ```PowerShell
-    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0
-    ```
+To add App Compatibility to a custom WIM image, follow these steps. Be sure to change `<values>` with your own.
 
-### Disconnected from the internet
+1. Download the ISO image file that contains Features on Demand for the version of Windows Server you want to create a custom image. Save the ISO image to a folder to the same folder where you have the Windows Server ISO image file. The ISO image is available for the following versions of Windows Server:
 
-1. If the server can't connect to Windows Update, instead download the Windows Server Languages and Optional Features ISO image file, and copy the ISO to a shared folder on your local network:
+   - [Windows Server 2025](https://go.microsoft.com/fwlink/?linkid=2273506)
+   - [Windows Server 2022](https://go.microsoft.com/fwlink/?linkid=2195333)
+   - [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2195335)
 
-   - If you have a volume license, you can download the Windows Server Languages and Optional Features ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
-
-    > [!NOTE]
-    > The Languages and Optional Features ISO image file is new for Windows Server 2022. Previous versions of Windows Server use the Features on Demand (FOD) ISO.
-
-1. Sign in with an administrator account on the Server Core computer that is connected to your local network and that you want to add the App Compatibility FOD to.
-
-#### Mount the FOD ISO
-
-1. Use `New-PSDrive` from PowerShell, `net use` from Command Prompt, or some other method, to connect to the location of the FOD ISO. For example, in an elevated PowerShell session run the following command:
+1. Mount both the Languages and Optional Features ISO and the Windows Server ISO by running the following commands in an elevated PowerShell session:
 
     ```PowerShell
-    $credential = Get-Credential
-
-    New-PSDrive -Name FODShare -PSProvider FileSystem -Root "\\server\share" -Credential $credential
-    ```
-
-1. Copy the FOD ISO to a local folder of your choosing (the copy operation may take some time). Edit the following variables with your folder location and ISO filename, and run the following commands, for example:
-
-    ```PowerShell
-    $isoFolder = "C:\SetupFiles\WindowsServer\ISOs"
-    $fodIsoFilename = "FOD_ISO_filename.iso"
-
-    New-Item -ItemType Directory -Path $isoFolder
-    Copy-Item -Path "FODShare:\$fodIsoFilename" -Destination $isoFolder -Verbose
-    ```
-
-1. Mount the FOD ISO by using the following command:
-
-    ```PowerShell
-    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\$fodIsoFilename"
-    ```
-
-1. Run the following command to get the drive letter that the FOD ISO has been mounted to:
-
-    ```PowerShell
-    $fodDriveLetter = ($fodIso | Get-Volume).DriveLetter
-    ```
-
-1. Run the following command (depending on the operating system version):
-
-    For Windows Server 2022:
-
-    ```PowerShell
-    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
-    ```
-
-    For previous versions of Windows Server:
-
-    ```PowerShell
-    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${fodDriveLetter}:\ -LimitAccess
-    ```
-
-1. After the progress bar completes, restart the operating system.
-
-## Optionally add Internet Explorer 11 to Server Core
-
- >[!NOTE]
- > The Server Core App Compatibility FOD is required for the addition of Internet Explorer 11, but Internet Explorer 11 is not required to add the Server Core App Compatibility FOD.
-
- >[!NOTE]
- >Starting with Windows Server 2022, although Internet Explorer 11 can be added to Server Core installations of Windows Server, [Microsoft Edge](https://www.microsoft.com/edge) should be used instead. Microsoft Edge has [Internet Explorer mode](/deployedge/edge-ie-mode) ("IE mode") built in, so you can access legacy Internet Explorer-based websites and applications straight from Microsoft Edge. Please see [here](/lifecycle/faq/internet-explorer-microsoft-edge) for information on the lifecycle policy for Internet Explorer.
-
-1. Sign in as Administrator on the Server Core computer that already has the App Compatibility FOD added and the FOD optional package ISO copied locally.
-
-1. Mount the FOD ISO by using the following command. This step assumes that you've already copied the FOD ISO locally. If not, complete steps 1 and 2 from [Mount the FOD ISO](#mount-the-fod-iso). The commands follow on from these two steps. Edit the variables with your folder location and ISO filename, and run the following commands, for example:
-
-    ```PowerShell
-    $isoFolder = "C:\SetupFiles\WindowsServer\ISOs"
-    $fodIsoFilename = "FOD_ISO_filename.iso"
-
-    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\$fodIsoFilename"
-    ```
-
-1. Run the following command to get the drive letter that the FOD ISO has been mounted to:
-
-    ```PowerShell
-    $fodDriveLetter = ($fodIso | Get-Volume).DriveLetter
-    ```
-
-1. Run the following commands (depending on your operating system version), using the `$packagePath` variable as the path to the Internet Explorer .cab file:
-
-    For Windows Server 2022:
-
-    ```PowerShell
-    $packagePath = "${fodDriveLetter}:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-
-    Add-WindowsPackage -Online -PackagePath $packagePath
-    ```
-
-    For previous versions of Windows Server:
-
-    ```PowerShell
-    $packagePath = "${fodDriveLetter}:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-
-    Add-WindowsPackage -Online -PackagePath $packagePath
-    ```
-
-1. After the progress bar completes, restart the operating system.
-
-## Release notes and suggestions
-
-> [!IMPORTANT]
->
-> - Packages installed using FoD won't remain in place after an in-place upgrade to a newer Windows Server version. You will have to install them again after the upgrade. 
-> - Alternatively, you can add FoD packages to your upgrade media. Adding packages to your upgrade media ensures that the new version of any FoD package are present after the upgrade completes. For more info, see the [Adding capabilities and optional packages to an offline WIM Server Core image](#adding-to-an-offline-wim-server-core-image) section.
-
-- After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
-
-- If you choose to also install the Internet Explorer 11 optional package, double-clicking to open locally saved .htm files isn't supported. However, you can **right-click** and choose **Open with Internet Explorer**, or you can open it directly from Internet Explorer **File** -> **Open**.
-
-- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it's necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD. Use the PowerShell cmdlet [**Install-WindowsFeature**](/powershell/module/servermanager/install-windowsfeature) to add IIS Management Console:
-
-    ```PowerShell
-    Install-WindowsFeature -Name Web-Mgmt-Console
-    ```
-
-- As a general point of guidance, when installing applications on Server Core (with or without these optional packages) it's sometimes necessary to use silent install options and instructions.
-
-## Adding to an offline WIM Server Core image
-
-1. Download both the Languages and Optional Features ISO and the Windows Server ISO image files to a local folder on a Windows computer. You can complete these steps on a  Windows desktop PC, it doesn't need to be running Windows Server with the Server Core installation option.
-
-   - If you have a volume license, you can download the Windows Server Languages and Optional Features ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
-
-    > [!NOTE]
-    > The Languages and Optional Features ISO image file is new for Windows Server 2022. Previous versions of Windows Server use the Features on Demand (FOD) ISO.
-
-1. Mount both the Languages and Optional Features ISO and the Windows Server ISO by running the following commands in an elevated PowerShell session. Edit the variables  with your folder location and ISO filename, and run the following commands, for example::
-
-    ```PowerShell
-    $isoFolder = "C:\SetupFiles\WindowsServer\ISOs"
-    $fodIsoFilename = "FOD_ISO_filename.iso"
-    $wsIsoFilename = "Windows_Server_ISO_filename.iso"
+    $isoFolder = "<ISO folder path>"
+    $fodIsoFilename = "<FOD_ISO_filename.iso>"
+    $wsIsoFilename = "<Windows_Server_ISO_filename.iso>"
 
     $fodIso = Mount-DiskImage -ImagePath "$isoFolder\$fodIsoFilename"
     $wsIso = Mount-DiskImage -ImagePath "$isoFolder\$wsIsoFilename"
     ```
 
-1. Run the following command to get the drive letters that the FOD ISO and Windows Server ISO have been mounted to:
+1. Run the following command to get the drive letters that the FOD ISO and Windows Server ISO are mounted to:
 
     ```PowerShell
     $fodDriveLetter = ($fodIso | Get-Volume).DriveLetter
     $wsDriveLetter = ($wsIso | Get-Volume).DriveLetter
     ```
 
-1. Copy the contents of the Windows Server ISO file to a local folder, for example, **C:\SetupFiles\WindowsServer\Files**. The copy operation may take some time:
+1. Copy the contents of the Windows Server ISO image to a local folder, for example, **C:\SetupFiles\WindowsServer\Files**, by running the following commands. The copy operation might take some time.
 
     ```powershell
-    $wsFiles = "C:\SetupFiles\WindowsServer\Files"
+    $wsFiles = "<Windows Server files path>"
     New-Item -ItemType Directory -Path $wsFiles
 
     Copy-Item -Path ${wsDriveLetter}:\* -Destination $wsFiles -Recurse
     ```
 
-1. Get the image name you want to modify within the install.wim file by using the following command. Add your path to the install.wim file to the `$installWimPath` variable, located inside the **sources** folder of the Windows Server ISO file. Note the names of the images available in this install.wim file from the output.
+1. Get the image name you want to modify within the `install.wim` file by running the following command. The `install.wim` file is located inside the **sources** folder of the Windows Server ISO image. The names of the images available in this `install.wim` file are in the output.
 
     ```PowerShell
-    $installWimPath = "C:\SetupFiles\WindowsServer\Files\sources\install.wim"
+    $installWimPath = "<Windows Server Files Path>\sources\install.wim"
 
     Get-WindowsImage -ImagePath $installWimPath
     ```
 
-1. Mount the install.wim file in a new folder by using the following command replacing the sample variable values with your own, and reusing the `$installWimPath` variable from the previous command.
+1. Mount the `install.wim` file in a new folder by running the following command:
 
    - `$wimImageName` - Enter the name of the image you want to mount from the output of the previous command. The example here uses **Windows Server 2022 Datacenter**.
    - `$wimMountFolder` - Specify an empty folder to use when accessing the contents of the install.wim file.
 
     ```PowerShell
-    $wimImageName = "Windows Server 2022 Datacenter"
-    $wimMountFolder = "C:\SetupFiles\WindowsServer\WIM"
+    $wimImageName = "<Image name, for example Windows Server 2022 Datacenter>"
+    $wimMountFolder = "<WIM folder path>"
 
     New-Item -ItemType Directory -Path $wimMountFolder
     Set-ItemProperty -Path $installWimPath -Name IsReadOnly -Value $false
     Mount-WindowsImage -ImagePath $installWimPath -Name $wimImageName -Path $wimMountFolder
-   ```
+    ```
 
-1. Add the capabilities and packages you want to the mounted install.wim image by using the following commands (depending on the version), replacing the sample variable values with your own.
+1. Add the capabilities and packages you want to the mounted `install.wim` image by running the following commands (depending on the version), replacing the sample variable values with your own.
 
-   - `$capabilityName` - Specify the name of the capability to install (in this case, the **AppCompatibility** capability).
-   - `$packagePath` - Specify the path to the package to install (in this case, to the **Internet Explorer** cab file).
+   - For Windows Server 2022 and later:
 
-   For Windows Server 2022:
+      ```PowerShell
+      $capabilityName = "ServerCore.AppCompatibility~~~~0.0.1.0"
 
-   ```PowerShell
-   $capabilityName = "ServerCore.AppCompatibility~~~~0.0.1.0"
-   $packagePath = "${fodDriveLetter}:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+      Add-WindowsCapability -Path $wimMountFolder -Name $capabilityName -Source "${fodDriveLetter}:\LanguagesAndOptionalFeatures" -LimitAccess
+      ```
 
-   Add-WindowsCapability -Path $wimMountFolder -Name $capabilityName -Source "${fodDriveLetter}:\LanguagesAndOptionalFeatures" -LimitAccess
-   Add-WindowsPackage -Path $wimMountFolder -PackagePath $packagePath
-   ```
+   - For previous versions of Windows Server:
 
-   For previous versions of Windows Server:
+      ```PowerShell
+      $capabilityName = "ServerCore.AppCompatibility~~~~0.0.1.0"
+   
+      Add-WindowsCapability -Path $wimMountFolder -Name $capabilityName -Source "${fodDriveLetter}:\" -LimitAccess
+      ```
 
-   ```PowerShell
-   $capabilityName = "ServerCore.AppCompatibility~~~~0.0.1.0"
-   $packagePath = "${fodDriveLetter}:\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-
-   Add-WindowsCapability -Path $wimMountFolder -Name $capabilityName -Source "${fodDriveLetter}:\" -LimitAccess
-   Add-WindowsPackage -Path $wimMountFolder -PackagePath $packagePath
-   ```
-
-1. Dismount and commit changes to the install.wim file by using the following command, which uses the `$wimMountFolder` variable from previous commands:
+1. Dismount and commit changes to the `install.wim` file by running the following command:
 
    ```PowerShell
    Dismount-WindowsImage -Path $wimMountFolder -Save
    ```
 
-You can now upgrade your server by running setup.exe from the folder you created for the Windows Server installation files, in this example: **C:\SetupFiles\WindowsServer\Files**. This folder now contains the Windows Server installation files with the extra capabilities and optional packages included.
+You can now install Windows Server using the custom WIM image that has the App Compatibility feature included and it remains in place after an in-place upgrade of Windows Server to a newer version.
+
+## Install Internet Explorer 11 on Server Core
+
+You can install Internet Explorer 11 on a Server Core installation of Windows Server 2022 and previous versions. Internet Explorer requires App Compatibility to be installed first. If you haven't already installed App Compatibility, see the [Install App Compatibility on Server Core](#install-app-compatibility-on-server-core) section. You don't need to install Internet Explorer to add App Compatibility.
+
+> [!TIP]
+> In Windows Server 2022, although you can add Internet Explorer 11 to Server Core installations of Windows Server, [Microsoft Edge](https://www.microsoft.com/edge) should be used instead. Microsoft Edge has [Internet Explorer mode](/deployedge/edge-ie-mode) (IE mode) built in, so you can access legacy Internet Explorer-based websites and applications straight from Microsoft Edge. For more information on the product lifecycle for Internet Explorer, see [Lifecycle FAQ - Internet Explorer and Microsoft Edge](/lifecycle/faq/internet-explorer-microsoft-edge).
+
+Select the relevant tab for your preferred installation method.
+
+# [Windows Update](#tab/windows-update)
+
+To install Internet Explorer 11 on a Server Core installation of Windows Server from Windows Update:
+
+1. Make sure you installed App Compatibility on the Server Core installation of Windows Server.
+
+1. Once again follow the steps in the section [Install App Compatibility on a Server Core installation](#install-app-compatibility-on-server-core), but for step 3, run the following command instead:
+
+   ```PowerShell
+   Add-WindowsCapability -Online -Name "Browser.InternetExplorer~~~~0.0.11.0"
+   ```
+
+   The output is similar to the following example:
+
+   ```output
+   Path          :
+   Online        : True
+   RestartNeeded : True
+   ```
+
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
+
+1. After the server restarts, you can access Internet Explorer 11 by going back to a PowerShell prompt from `SConfig`, then running the following command:
+
+   ```PowerShell
+   & "$env:ProgramFiles\Internet Explorer\iexplore.exe"
+   ```
+
+# [ISO image](#tab/iso-image)
+
+To install Internet Explorer 11 on a Server Core installation of Windows Server from an ISO image:
+
+1. Make sure you installed App Compatibility on the Server Core installation of Windows Server.
+
+1. Once again follow the steps in the section [Install App Compatibility on a Server Core installation](#install-app-compatibility-on-server-core), but for step 6, run the following command instead, depending on the operating system version you're using:
+
+   - For Windows Server 2022:
+
+      ```PowerShell
+      Add-WindowsCapability -Online -Name "Browser.InternetExplorer~~~~0.0.11.0" -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
+      ```
+
+   - For previous versions of Windows Server:
+
+      ```PowerShell
+      Add-WindowsCapability -Online -Name "Browser.InternetExplorer~~~~0.0.11.0" -Source ${fodDriveLetter}:\ -LimitAccess
+      ```
+
+   The output is similar to the following example:
+
+   ```output
+   Path          :
+   Online        : True
+   RestartNeeded : True
+   ```
+
+1. Once the command completes, restart the server to apply the changes, then install the latest operating system updates.
+
+1. After the server restarts, you can access Internet Explorer 11 by going back to a PowerShell prompt from `SConfig`, then running the following command:
+
+   ```PowerShell
+   & "$env:ProgramFiles\Internet Explorer\iexplore.exe"
+   ```
+
+---
+
+> [!IMPORTANT]
+> Double-clicking to open locally saved `.htm` files isn't supported. However, you can **right-click** and choose **Open with Internet Explorer**, or you can open it directly from Internet Explorer by selecting **File**, then **Open** and browsing to the file.

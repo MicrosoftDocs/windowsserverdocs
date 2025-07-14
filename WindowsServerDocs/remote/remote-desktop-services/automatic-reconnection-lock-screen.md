@@ -1,8 +1,8 @@
 ---
 title: Disable Automatic Reconnection in Remote Desktop Service for Windows Server
 description: Learn about the Remote Desktop Services Automatic Reconnection feature, lock screen security, and how to disable Automatic Reconnection.
-author: robinharwood
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.reviewer: spatnaik
 ms.topic: how-to
 ms.date: 7/3/2024

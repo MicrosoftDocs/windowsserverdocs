@@ -1,10 +1,10 @@
 ---
 title: AD Forest Recovery - Verify Replication
 description: Learn more about resources to verify replication.
-ms.topic: article
-ms.author: justinha
-author: iainfoulds
-ms.date: 06/21/2023
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
 ms.custom: inhenkel
 ---
 

@@ -2,8 +2,8 @@
 title: Hotpatch for Windows Server
 description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
-ms.topic: conceptual
-ms.date: 03/04/2025
+ms.topic: concept-article
+ms.date: 06/27/2025
 ms.author: roharwoo
 ---
 
@@ -45,7 +45,7 @@ For more information about the available images, see [Windows Server](https://ak
 ### Azure Arc-connected machines
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch isn't currently charged and is in a free trial period. To learn more about pricing and when Hotpatch will become charged service, see [Azure Arc pricing](https://azure.microsoft.com/pricing/details/azure-arc/core-control-plane/).
+> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available for a monthly subscription fee. To learn more about pricing and when Hotpatch will become charged service, see [Tired of all the restarts? Get hotpatching for Windows Server](https://www.microsoft.com/en-us/windows-server/blog/2025/04/24/tired-of-all-the-restarts-get-hotpatching-for-windows-server/).
 
 Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 
@@ -146,10 +146,12 @@ Hotpatch updates don't support automatic rollback. If you experience an issue du
 
 ## Next steps
 
+- [Enable Hotpatch for Azure Arc-enabled servers](enable-hotpatch-azure-arc-enabled-servers.md)
+
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
 
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 
 - [Azure Update Management](/azure/automation/update-management/overview)
 
-- [Enable Hotpatch for Azure Arc-enabled servers](enable-hotpatch-azure-arc-enabled-servers.md)
+- [How to preview Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895)

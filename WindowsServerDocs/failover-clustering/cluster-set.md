@@ -1,10 +1,10 @@
 ---
 title: Deploy a cluster set for Windows Server Failover Clusters
 description: Learn how to deploy a cluster set
-author: robinharwood
+author: meaghanlewis
 ms.topic: how-to
 ms.date: 09/08/2022
-ms.author: roharwoo
+ms.author: mosagie
 ms.reviewer: stevenek
 ---
 

@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: Scenario: Implement Retention of Information on File Servers"
 title: Scenario Implement Retention of Information on File Servers
-author: robinharwood
-ms.author: roharwoo
-manager: femila
+author: xelu86
+ms.author: alalve
+manager: tedhudek
 ms.date: 04/01/2022
-ms.topic: conceptual
+ms.topic: solution-overview
 ---
 
 # Scenario: Implement Retention of Information on File Servers

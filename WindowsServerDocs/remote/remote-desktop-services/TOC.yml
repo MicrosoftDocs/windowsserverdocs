@@ -83,7 +83,7 @@
     - name: Configure the RD Gateway role
       href: remote-desktop-gateway-role.md
     - name: Set up the Remote Desktop web client for your users
-      href: clients/remote-desktop-web-client-admin.md
+      href: remote-desktop-web-client-admin.md
     - name: Disable Automatic Reconnection
       href: automatic-reconnection-lock-screen.md
     - name: Set up email discovery for your users
@@ -155,71 +155,47 @@
       href: rds-rdsh-performance-counters.md
     - name: Optimizing Windows configuration for VDI desktops
       href: remote-desktop-services-vdi-optimize-configuration.md 
-  - name: Access your Remote Desktop resources
+  - name: Connect to Remote Desktop Services
     items:
-    - name: Available Remote Desktop clients
-      href: clients/remote-desktop-clients.md
-    - name: Microsoft Store client
+    - name: Connect to Remote Desktop Services
+      href: connect-remote-desktop-services.md
+    - name: Web client and Web Access
       items:
-      - name: Get started with the Microsoft Store client
-        href: clients/windows.md
-      - name: What's new in the Microsoft Store client
-        href: clients/windows-whatsnew.md
-    - name: Android client
-      items:
-      - name: Get started with the Android client
-        href: clients/remote-desktop-android.md
-      - name: What's new in the Android client
-        href: clients/android-whatsnew.md
-    - name: iOS client
-      items:
-      - name: Get started with the iOS client
-        href: clients/remote-desktop-ios.md
-      - name: What's new in the iOS client
-        href: clients/ios-whatsnew.md
-    - name: macOS client
-      items:
-      - name: Get started with the macOS client
-        href: clients/remote-desktop-mac.md
-      - name: What's new in the macOS client
-        href: clients/mac-whatsnew.md
-    - name: Web client
-      items:
-      - name: Get started with the web client
-        href: clients/remote-desktop-web-client.md
-      - name: What's new in the web client
-        href: clients/web-client-whatsnew.md
-    - name: Remote Desktop Connection client for Windows (MSTSC)
-      items:
-      - name: Connect using single sign-on with Microsoft Entra authentication
-        href: clients/remote-desktop-connection-single-sign-on.md
-      - name: Uninstall and reinstall Remote Desktop Connection
-        href: clients/uninstall-remote-desktop-connection.md
-    - name: Setting up your PC for Remote Desktop
-      items:
-      - name: Supported PCs
-        href: clients/remote-desktop-supported-config.md
-      - name: Grant Remote Desktop access to your PC
-        href: clients/remote-desktop-allow-access.md
-      - name: Grant access to your PC from outside your network
-        href: clients/remote-desktop-allow-outside-access.md
-      - name: Change the RD listening port on your PC
-        href: clients/change-listening-port.md
+      - name: Remote Desktop Services web client
+        href: remote-desktop-web-client.md
+      - name: What's new in Remote Desktop Services web client
+        href: web-client-whats-new.md
+      - name: Remote Desktop Web Access FAQ
+        href: /troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting?context=/windows-server/context/windows-server-remote-desktop-services
+    - name: Windows App documentation
+      href: /windows-app/
+    - name: Remote Desktop client documentation
+      href: /previous-versions/remote-desktop-client/
     - name: Advanced information
       items:
-      - name: Compare Remote Desktop app features
-        href: /azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services
+      - name: Compare Remote Desktop client features
+        href: /previous-versions/remote-desktop-client/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services
       - name: Supported RDP properties
         href: /azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services
       - name: Remote Desktop URI scheme
-        href: clients/remote-desktop-uri.md
-      - name: Remote Desktop client FAQ
-        href: clients/remote-desktop-client-faq.yml
-      - name: Privacy settings for managed apps and desktops
-        href: clients/remote-privacy-settings.md
-      - name: Remote Desktop Web Access FAQ
-        href: remote-desktop-web-access-faq.yml 
-    - name: Known issues
+        href: remote-desktop-uri.md
+  - name: Connect to a remote PC
+    items:
+    - name: Setting up your PC for Remote Desktop
       items:
-      - name: Clients can't connect and see "No licenses available" error
-        href: troubleshoot/rdp-error-no-licenses-available.md
+      - name: Supported PCs
+        href: remotepc/remote-desktop-supported-config.md
+      - name: Enable Remote Desktop access to your PC
+        href: remotepc/remote-desktop-allow-access.md
+      - name: Grant access to your PC from outside your network
+        href: remotepc/remote-desktop-allow-outside-access.md
+      - name: Change the listening port on your PC
+        href: remotepc/change-listening-port.md
+    - name: Remote Desktop Connection client for Windows (MSTSC)
+      items:
+      - name: Connect using single sign-on with Microsoft Entra authentication
+        href: remotepc/remote-desktop-connection-single-sign-on.md
+      - name: Uninstall and reinstall Remote Desktop Connection
+        href: remotepc/uninstall-remote-desktop-connection.md
+    - name: Remote PC connections FAQ
+      href: remotepc/remote-pc-connections-faq.yml

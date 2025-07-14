@@ -3,7 +3,7 @@ title: Storage controllers should be enabled in virtual machines to provide acce
 description: Learn what to do when one or more storage controllers may be disabled in a virtual machine.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 532548a1-8ffe-4b5b-902e-ed2f0819012b
 ms.date: 8/16/2016
 ---

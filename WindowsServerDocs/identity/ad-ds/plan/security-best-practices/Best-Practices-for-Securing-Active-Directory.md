@@ -1,15 +1,14 @@
 ---
-description: "Learn more about: Best Practices for Securing Active Directory"
+description: Learn more about best practices for securing Active Directory.
 ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
-title: Best Practices for Securing Active Directory
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 10/11/2023
-ms.topic: article
+title: Best practices for securing Active Directory
+author: meaghanlewis
+ms.author: mosagie
+ms.date: 05/21/2025
+ms.topic: best-practice
 ---
 
-# Best Practices for Securing Active Directory
+# Best practices for securing Active Directory
 
 Attacks against computing infrastructure have increased over the last decade in all parts of the world. We live in an age of cyber-warfare, cybercrime, and hacktivism. As a result, organizations of all sizes all over the world have had to deal with information leaks, theft of intellectual property (IP), denial-of-service (DDoS) attacks, or even destroyed infrastructure.
 
@@ -178,24 +177,24 @@ Each measure is also categorized based on whether it's tactical, strategic, prev
 
 ## Related content
 
-- [Avenues to Compromise](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md)
+- [Avenues to compromise](../../../ad-ds/plan/security-best-practices/Avenues-to-Compromise.md)
 
-- [Attractive Accounts for Credential Theft](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md)
+- [Attractive accounts for credential theft](../../../ad-ds/plan/security-best-practices/Attractive-Accounts-for-Credential-Theft.md)
 
-- [Reducing the Active Directory Attack Surface](../../../ad-ds/plan/security-best-practices/Reducing-the-Active-Directory-Attack-Surface.md)
+- [Reducing the Active Directory attack surface](../../../ad-ds/plan/security-best-practices/Reducing-the-Active-Directory-Attack-Surface.md)
 
-- [Implementing Least-Privilege Administrative Models](../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md)
+- [Implementing least-privilege administrative models](../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md)
 
-- [Implementing Secure Administrative Hosts](../../../ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md)
+- [Implementing secure administrative hosts](../../../ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md)
 
-- [Securing Domain Controllers Against Attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md)
+- [Securing domain controllers against attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md)
 
-- [Monitoring Active Directory for Signs of Compromise](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)
+- [Monitoring Active Directory for signs of compromise](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)
 
-- [Audit Policy Recommendations](../../../ad-ds/plan/security-best-practices/Audit-Policy-Recommendations.md)
+- [Audit policy recommendations](../../../ad-ds/plan/security-best-practices/Audit-Policy-Recommendations.md)
 
-- [Planning for Compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)
+- [Planning for compromise](../../../ad-ds/plan/security-best-practices/Planning-for-Compromise.md)
 
-- [Maintaining a More Secure Environment](../../../ad-ds/plan/security-best-practices/Maintaining-a-More-Secure-Environment.md)
+- [Maintaining a more secure environment](../../../ad-ds/plan/security-best-practices/Maintaining-a-More-Secure-Environment.md)
 
 - [Appendices](../../../ad-ds/plan/security-best-practices/Appendices.md)

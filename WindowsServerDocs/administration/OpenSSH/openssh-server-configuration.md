@@ -1,10 +1,10 @@
 ---
 title: OpenSSH Server configuration for Windows
 description: Learn about the Windows-specific configuration options for OpenSSH Server on Windows Server and Windows.
-ms.date: 08/15/2024
-ms.topic: conceptual
+ms.date: 06/20/2025
+ms.topic: article
 ms.author: roharwoo
-author: maertendmsft
+author: robinharwood
 ---
 
 # OpenSSH Server configuration for Windows Server and Windows
@@ -44,14 +44,14 @@ To set the default command shell, first confirm that the OpenSSH installation fo
 For Windows, the default installation folder is _%systemdrive%\Windows\System32\openssh_.
 The following command shows the current path setting, and adds the default OpenSSH installation folder to it.
 
-Command shell | Command to use
-------------- | --------------
-Command | `path`
-PowerShell | `$env:path`
+| Command shell | Command to use |
+|------------- | --------------|
+| Command | `path` |
+| PowerShell | `$env:path` |
 
 Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH` in the string value `DefaultShell`.
 
-As an example, the following elevated PowerShell command sets the default shell to be `powershell.exe`:
+As an example, the following elevated PowerShell command sets the default shell to be `powershell.exe` for OpenSSH Server (setting this path doesn't apply to OpenSSH Client):
 
 ```powershell
 New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force

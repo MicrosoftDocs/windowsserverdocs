@@ -469,5 +469,3 @@ Following are three examples of the **show urlacl** command.
 - show urlacl url=https://+:80/MyUri
 - show urlacl url=<https://www.contoso.com:80/MyUri>
 - show urlacl
-
----

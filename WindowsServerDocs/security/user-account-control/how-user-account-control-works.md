@@ -1,10 +1,10 @@
 ---
 title: How User Account Control Works
 description: Learn about User Account Control (UAC) and how it helps prevent malicious programs from damaging a computer and helps organizations deploy a better-managed desktop.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
-ms.author: roharwoo
-author: robinharwood
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/12/2016
 ---

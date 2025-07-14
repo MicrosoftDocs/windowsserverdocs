@@ -2,8 +2,8 @@
 title: vssadmin list shadows
 description: A description of the vssadmin list shadows command, which lists all existing shadow copies of a specified volume.
 ms.topic: reference
-author: robinharwood
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/18/2018
 ---
 

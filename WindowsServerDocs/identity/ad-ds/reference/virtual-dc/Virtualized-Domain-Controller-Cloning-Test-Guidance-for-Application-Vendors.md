@@ -2,10 +2,10 @@
 description: "Learn more about: Virtualized Domain Controller Cloning Test Guidance for Application Vendors"
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: Virtualized Domain Controller Cloning Test Guidance for Application Vendors
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: article
 ---
 

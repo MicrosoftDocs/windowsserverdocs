@@ -1,16 +1,14 @@
 ---
 description: Learn how to create, view, edit, and delete fine grained password policies in Active Directory Domain Services on Windows Server.
 title: Configure fine grained password policies for Active Directory Domain Services in Windows Server
-ms.author: orthomas
+ms.author: mosagie
 author: orin-thomas
-ms.date: 07/15/2024
+ms.date: 06/16/2025
 ms.topic: how-to
 #customer intent: As an Active Directory administrator, I want to configure fine grained password policies so that I can apply different password and account lockout policies to different sets of users in a domain.
 ---
 
 # Configure fine grained password policies for Active Directory Domain Services
-
-> 
 
 Fine Grained Password Policies provide you with a way to define different password and account lockout policies for different sets of users in a domain. You can use fine grained password policies to specify multiple password policies within a single domain. You can also apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users.
 
@@ -20,17 +18,13 @@ Fine-grained password policies apply only to global security groups and user obj
 
 Before you can create fine grained password policies, you need to complete the following prerequisites.
 
-- The domain functional level must be Windows Server 2008 or higher.
+- The domain functional level must be Windows Server 2012 or higher.
 
 - You must be a member of the Domain Admins group.
 
 - You must have either of the following Remote Server Administration Tools (RSAT) installed:
 
-  - Active Directory Administrative Center (ADAC)
-
-    OR
-
-  - Active Directory module for Windows PowerShell.
+  - Active Directory Administrative Center (ADAC), **or** Active Directory module for Windows PowerShell.
 
 ## Create a fine grained password policy
 
@@ -52,7 +46,7 @@ Here's how to create a fine grained password policy using ADAC:
 
 1. Under **Directly Applies To**, choose **Add**, type the name of the group to which the fine grained password policy, and then choose **OK**.
 
-1. choose **OK** to submit the creation.
+1. Choose **OK** to submit the creation.
 
 ### [PowerShell](#tab/powershell)
 
@@ -143,7 +137,7 @@ Here's how to edit a fine grained password policy using ADAC:
 
 Here's how to use the [Set-ADFineGrainedPasswordPolicy](/powershell/module/activedirectory/set-adfinegrainedpasswordpolicy) cmdlet to modify an existing policy.
 
-1. Open an elevated PowerShell session, right-click on the _Start_ button, choose **Windows PowerShell (Admin)**.
+1. Open an elevated PowerShell session, right-click on the _Start_ button. Choose **Windows PowerShell (Admin)**.
 
 1. To change the password history setting of the `PasswordPolicy` policy, run the following command. Replace `PasswordPolicy` with the desired policy name.
 
@@ -194,6 +188,5 @@ Here's how to use the [Remove-ADFineGrainedPasswordPolicy](/powershell/module/ac
    ```powershell
    Remove-ADFineGrainedPasswordPolicy PasswordPolicy
    ```
-
 
 ---

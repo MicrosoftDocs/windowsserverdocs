@@ -2,9 +2,9 @@
 title: Upgrade and conversion options for Windows Server
 description: Perform an in-place upgrade (feature update) or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.author: roharwoo
-author: robhindman
+author: robinharwood
 ms.date: 10/10/2024
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
 ---
 
 # Upgrade and conversion options for Windows Server

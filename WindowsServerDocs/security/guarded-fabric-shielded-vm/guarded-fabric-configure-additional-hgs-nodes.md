@@ -1,11 +1,11 @@
 ---
 title: Configure additional HGS nodes
 description: "Learn more about: Configure additional HGS nodes"
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 01/14/2020
 ---
 

@@ -2,10 +2,10 @@
 description: "Learn more about: AD FS OpenID Connect/OAuth flows and Application Scenarios"
 ms.assetid: 8a64545b-16bd-4c13-a664-cdf4c6ff6ea0
 title: AD FS OpenID Connect/OAuth flows and Application Scenarios
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 06/05/2024
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 04/08/2025
 ms.topic: article
 ---
 

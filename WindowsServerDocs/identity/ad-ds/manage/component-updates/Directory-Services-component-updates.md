@@ -2,10 +2,10 @@
 description: "Learn more about: Directory Services component updates"
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Directory Services component updates
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/16/2023
+ms.date: 05/12/2025
 ms.topic: article
 ms.custom: inhenkel
 ---

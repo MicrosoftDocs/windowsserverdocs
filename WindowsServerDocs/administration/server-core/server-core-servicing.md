@@ -3,9 +3,9 @@ title: Configure Windows Server Core Windows Update
 description: Learn how to configure Windows Server Core in updating the operating system automatically and manually through the command line.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
+author: xelu86
 ms.author: alalve
-ms.date: 02/13/2025
+ms.date: 03/10/2025
 ms.topic: how-to
 ---
 
@@ -25,21 +25,27 @@ Configuring Windows Update settings on a Windows Server Core installation can be
 
 ## View the installed updates
 
-Before you add a new update to Server Core, check that the latest Windows updates are installed by running one of the three commands:
+Before you add a new update to Server Core, check that the latest Windows updates are installed by running one of the following commands:
 
+```powershell
+Get-Hotfix | Sort-Object InstalledOn
 ```
-Get-Hotfix
 
+```powershell
+Get-ComputerInfo -Property OsHotFixes
+```
+
+```cmd
 systeminfo
+```
 
+```cmd
 wmic qfe list
 ```
 
-There might be a short delay running `systeminfo` as the tool inspects your system.
-
 ## Configure Windows updates via SConfig
 
-Depending on which version of Windows Server Core you're running, the SConfig menu loads once you sign in. If the SConfig menu doesn't appear, run `sconfig` and select **Enter**. Once the menu loads, perform the following steps to configure your settings:
+Beginning with Windows Server 2002, the SConfig menu loads once you sign in. If the SConfig menu doesn't appear, run `sconfig` and select **Enter**. Once the menu loads, perform the following steps to configure your settings:
 
 1. Type **5**, select **Enter**. Select one of these options, then select **Enter**.
 
@@ -56,6 +62,9 @@ Depending on which version of Windows Server Core you're running, the SConfig me
 ## Configure Windows updates via command line
 
 # [Command Prompt](#tab/cmd)
+
+> [!TIP]
+> VBScript is deprecated. VBScript remains available as a feature on demand (FoD) and is preinstalled in Windows Server 2025, however consider using PowerShell or the SConfig menu to configure Windows Update settings. To learn more about the deprecation of VBScript, see [https://techcommunity.microsoft.com/blog/windows-itpro-blog/vbscript-deprecation-timelines-and-next-steps/4148301](https://techcommunity.microsoft.com/blog/windows-itpro-blog/vbscript-deprecation-timelines-and-next-steps/4148301).
 
 To verify the current Windows Update setting, run the following command:
 
@@ -115,14 +124,57 @@ Depending on the updates that are installed, you might need to restart the compu
 
 ## Manually apply a Windows Server update
 
-Download the `.msu` update file and run the following command to install the update:
+To remove the Latest Cumulative Update (LCU) after installing the combined Servicing Stack Updates (SSU) and LCU package, use the `Remove-WindowsPackage` cmdlet or the `Dism /Remove-Package` command line option with the LCU package name as the argument. You can find the package name by using this command: DISM /online /get-packages.
 
-```
-wusa <update>.msu /quiet
+Download the `.msu` update file and pick your preferred method to install the update.
+
+### [PowerShell](#tab/update-powershell)
+
+From an elevated PowerShell prompt, run the following command:
+
+```powershell
+Add-WindowsPackage -Online -Path "<folder_path>" -PackagePath "\<update_file>.msu" -PreventPending
 ```
 
-To manually uninstall an update, run the following command:
+The `-PreventPending` parameter skips the installation of the package if the package or Windows image has pending online actions.
 
+To manually uninstall an update, first determine the update name by running the following command:
+
+```powershell
+Get-WindowsPackage -online -PackageName "*KB<NUM>*"
 ```
-wusa /uninstall <update>.msu /quiet
+
+Then, run the following command to uninstall the update:
+
+```powershell
+Remove-WindowsPackage -Online -PackageName "<package_name>"
 ```
+
+### [Dism](#tab/update-dism)
+
+From an elevated prompt, run the following command:
+
+```cmd
+Dism /Online /Add-Package /PackagePath:"<update_file>.msu" /PreventPending
+```
+
+The `/PreventPending` option skips the installation of the package if the package or Windows image has pending online actions.
+
+To manually uninstall an update, first determine the update name by running the following command:
+
+```cmd
+Dism /Online /Get-Packages
+```
+
+Then, run the following command to uninstall the update:
+
+```cmd
+Dism /Online /Remove-Package /PackageName:<package_name>
+```
+
+
+---
+
+## Update with Azure Update Manager
+
+You can also update your Windows Server Core installation using [Azure Update Manager](/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure portal.

@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: Planning a Guarded Fabric"
 title: Planning a guarded fabric and shielded VMs
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill
-author: robinharwood
-ms.author: roharwoo
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 12/10/2020
 ---
 

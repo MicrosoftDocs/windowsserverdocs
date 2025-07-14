@@ -1,8 +1,8 @@
 ---
 title: Performance tuning for file servers
 description: Performance tuning for file servers running Windows Server
-ms.topic: article
-author: robinharwood
+ms.topic: best-practice
+author: xelu86
 ms.author: alalve
 ms.date: 02/24/2025
 audience: Admin

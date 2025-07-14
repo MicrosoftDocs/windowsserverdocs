@@ -2,11 +2,11 @@
 description: "Learn more about: Designing the Logical Structure"
 ms.assetid: 9ad81367-f3fe-4b2e-bd7c-5900b2b9f77f
 title: Designing the Logical Structure
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Designing the Logical Structure

@@ -2,11 +2,11 @@
 description: "Learn more about: Configure Corporate DNS for the Federation Service and DRS"
 ms.assetid: aca4a4fa-b12c-4eed-a499-f9aedb7d2fd6
 title: Configure Corporate DNS for the Federation Service and DRS
-author: billmath
-ms.author: billmath
-manager: amycolannino
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure Corporate DNS for the Federation Service and DRS

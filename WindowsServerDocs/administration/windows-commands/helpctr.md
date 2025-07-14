@@ -2,10 +2,8 @@
 title: helpctr
 description: Reference article for the helpctr command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.topic: reference
-ms.assetid: d19ff7dc-57fb-49b2-aad7-b6b040f3fb49
-ms.author: roharwoo
-author: robinharwood
-manager: mtillman
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 10/16/2017
 ---
 
