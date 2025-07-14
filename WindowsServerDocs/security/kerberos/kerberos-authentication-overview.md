@@ -5,8 +5,7 @@ ms.topic: concept-article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
-ms.date: 04/17/2025
+ms.date: 07/14/2025
 ---
 # Kerberos authentication overview in Windows Server
 
@@ -39,6 +38,10 @@ Before Kerberos, NTLM authentication could be used, which requires an applicatio
 ### Mutual authentication
 
 By using the Kerberos protocol, a party at either end of a network connection can verify that the party on the other end is the entity it claims to be. NTLM does not enable clients to verify a server's identity or enable one server to verify the identity of another. NTLM authentication was designed for a network environment in which servers were assumed to be genuine. The Kerberos protocol makes no such assumption.
+
+## Encryption types
+
+Beginning with Windows Server 2025, Kerberos no longer honors the legacy registry key `REG_DWORD SupportedEncryptionTypes` found in the path **HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Lsa\Kerberos\Parameters**. Microsoft recommends using group policy instead. To learn more about the group policy settings, see [Network security: Configure encryption types allowed for Kerberos](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos).
 
 ## Related content
 
