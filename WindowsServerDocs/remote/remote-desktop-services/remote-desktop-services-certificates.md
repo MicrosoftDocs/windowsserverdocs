@@ -1,24 +1,25 @@
 ---
 title: Use certificates in Remote Desktop Services
 description: How to create and use authentication certificates for Remote Desktop Services.
-author: xelu86
-ms.date: 08/05/2024
 ms.topic: how-to
+author: xelu86
 ms.author: alalve
+ms.date: 07/14/2025
 ---
+
 # Use certificates in Remote Desktop Services
 
-You can use certificates to secure connections to your Remote Desktop Services (RDS) deployment and between RDS server roles. RDS uses Secure Socket Layer (SSL) or Transport Layer Security (TLS) to encrypt connections to the RDS Web, Connection Broker and Gateway role services.
+You can use certificates to secure connections to your Remote Desktop Services (RDS) deployment and between RDS server roles. RDS uses Secure Socket Layer (SSL) or Transport Layer Security (TLS) to encrypt connections to the RDS Web, Connection Broker, and Gateway role services.
 
 Certificates prevent man-in-the-middle attacks, where a bad actor intercepts traffic between the Remote Desktop Protocol (RDP) server and client to steal confidential information or deny access to credentials, by verifying that the server sending information to the client is authentic. When this trust relationship is set up, the client considers the connection secure and can accept data going to and from the server.
 
 ## Prerequisites
 
-The following things are required to use certificates in RDS:
+The following are required to use certificates in RDS:
 
-- A computer or computers with the RDS role configured. To learn more, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md).
+- A computer or computers where the RDS role is configured. To learn more, see [Install or uninstall roles, role services, or features](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md).
 
-- An account with administrator rights or equivalent to the RDS server(s).
+- An account with administrator rights or equivalent to one or more RDS servers.
 
 - A server certificate that meets the following requirements:
 
@@ -28,7 +29,7 @@ The following things are required to use certificates in RDS:
 
   - Issued for Key Usage (OID 2.5.29.15).
 
-  - Issued by a certificate authority trusted by the RDS server(s) and clients.
+  - Issued by a certificate authority trusted by one or more RDS servers and clients.
 
   - Issued with an exportable private key.
 
@@ -68,7 +69,7 @@ To configure Remote Desktop to use specific certificates:
 
 1. Open an elevated PowerShell session.
 
-1. Run the following script for the RD certificate you plan to use for your session where it will prompt you for the password and location for the exported certificate. Replace `<PathToPFXFile>` with the full file path including the `.pfx` file.
+1. Run the following script for the RD certificate you plan to use for your session where it prompts you for the password and location for the exported certificate. Replace `<PathToPFXFile>` with the full file path including the `.pfx` file.
 
   ```powershell
   $password = Read-Host -AsSecureString -Prompt "Enter Password"
