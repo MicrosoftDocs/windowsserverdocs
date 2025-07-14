@@ -4,7 +4,7 @@ description: Learn how to enable Hotpatch for Windows Server 2025 installations 
 ms.author: alalve
 ms.topic: how-to
 author: xelu86
-ms.date: 06/27/2025
+ms.date: 07/14/2025
 ---
 
 # Enable Hotpatch for Azure Arc-enabled servers
@@ -20,7 +20,7 @@ Windows Server 2025 features the ability to enable Hotpatch for Azure Arc-enable
 
 Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, you need to satisfy the following requirements.
 
-- A server must be running a _released_ version of Windows Server 2025 (build 26100.1742 or later). Preview versions or [Windows Server Insiders](/windows-server/get-started/get-started-with-windows-server-insiders-preview) builds aren't supported because hotpatches aren't created for prerelease operating systems.
+- A server must be running Windows Server 2025 (build 26100.1742 or later). Preview versions or [Windows Server Insiders](/windows-server/get-started/get-started-with-windows-server-insiders-preview) builds aren't supported because hotpatches aren't created for prerelease operating systems.
 
 - The machine should be running one of the following editions of Windows Server.
 
@@ -40,7 +40,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 ## Check and enable Virtual Secure Mode if necessary
 
-When you [enable Hotpatch using the Azure portal](#enable-hotpatch-preview-on-windows-server-2025), it checks whether [Virtual Secure Mode](/virtualization/hyper-v-on-windows/tlfs/vsm) (VSM) is running on the machine. If VSM isn't running, enabling hotpatch fails, and you'll have to enable VSM.
+When you [enable Hotpatch using the Azure portal](#enable-hotpatch-on-windows-server-2025), it checks whether [Virtual Secure Mode](/virtualization/hyper-v-on-windows/tlfs/vsm) (VSM) is running on the machine. If VSM isn't running, enabling hotpatch fails, and you'll have to enable VSM.
 
 Alternatively, you can check the VSM status manually before enabling Hotpatch. VSM might be already enabled if you previously configured other features that (like Hotpatch) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
 
@@ -72,7 +72,7 @@ for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\
 
 ---
 
-If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
+If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch on Windows Server 2025](#enable-hotpatch-on-windows-server-2025).
 
 If the output isn't `2`, you need to enable VSM.<br /><br />
 
@@ -120,7 +120,7 @@ If the output isn't `2`, you need to enable VSM.<br /><br />
 
 </details>
 
-## Enable Hotpatch preview on Windows Server 2025
+## Enable Hotpatch on Windows Server 2025
 
 1. Connect the machine to Azure Arc, if it wasn't Arc-enabled previously.
 
@@ -132,7 +132,7 @@ If the output isn't `2`, you need to enable VSM.<br /><br />
 
 1. Wait about 10 minutes for the changes to apply. If the update stays stuck on the _Pending_ status, proceed to [troubleshooting Azure Arc agent](/azure/azure-arc/servers/troubleshoot-agent-onboard).
 
-## Using Hotpatch preview on Windows Server 2025
+## Using Hotpatch on Windows Server 2025
 
 Whenever a Hotpatch is available from Windows Update, you should receive a prompt to install it. Since these updates aren't released every month, you might need to wait until the next Hotpatch is published.
 

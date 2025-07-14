@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server
 description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
 ms.topic: concept-article
-ms.date: 06/27/2025
+ms.date: 07/14/2025
 ms.author: roharwoo
 ---
 
@@ -27,7 +27,6 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 
 >[!NOTE]
 >Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
-
 
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
@@ -56,7 +55,7 @@ Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you e
 ## How Hotpatch works
 
 Hotpatch first establishes a baseline with the current Cumulative Update for Windows Server. Every three months, the baseline periodically refreshes with the latest Cumulative Update. You then receive Hotpatch releases for the next two months after the Cumulative Update. For example, if January is
-a Cumulative Update, February and March would have Hotpatch releases. For more information about the Hotpatch release schedule, see [Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8).
+a Cumulative Update, February and March would have Hotpatch releases. For more information about the Hotpatch release schedule, see the [Windows Server Hotpatch Calendar](/windows/release-health/windows-server-release-info#windows-server-hotpatch-calendar).
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
 
@@ -153,5 +152,3 @@ Hotpatch updates don't support automatic rollback. If you experience an issue du
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 
 - [Azure Update Management](/azure/automation/update-management/overview)
-
-- [How to preview Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895)
