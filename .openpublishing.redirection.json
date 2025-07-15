@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "WindowsServerDocs/failover-clustering/Upgrade-Option-Same-Hardware.md",
-      "redirect_url": "/previous-versions/windows-server/failover-clustering/Upgrade-Option-Same-Hardware",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/failover-clustering/Upgrade-Option-Same-Hardware",
       "redirect_document_id": false
     },
     {
