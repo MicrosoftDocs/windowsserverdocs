@@ -43,82 +43,105 @@
       "recommendations": true
       },
       "fileMetadata": {
-         "ms.service": {
-            "failover-clustering/**/*.md": "windows-server",
-            "failover-clustering/**/*.yml": "windows-server",
-            "remote/**/*.md": "windows-server",
-            "remote/**/*.yml": "windows-server",
-            "EssentialsDocs/**/*.md": "windows-server",
-            "EssentialsDocs/**/*.yml": "windows-server",
-            "storage/**/*.md": "windows-server",
-            "storage/**/*.yml": "windows-server",
-            "troubleshoot/**/*.md": "windows-server",
-            "troubleshoot/**/*.yml": "windows-server",
-            "get-started/**/*.md": "windows-server",
-            "get-started/**/*.yml": "windows-server",
-            "get-started-19/**/*.md": "windows-server",
-            "get-started-19/**/*.yml": "windows-server",
-            "manage/**/*.md": "windows-server",
-            "manage/**/*.yml": "windows-server",
-            "identity/**/*.md": "windows-server",
-            "identity/**/*.yml": "windows-server",
-            "security/**/*.md": "windows-server",
-            "security/**/*.yml": "windows-server",
-            "administration/**/*.md": "windows-server",
-            "administration/**/*.yml": "windows-server",
-            "virtualization/**/*.md": "windows-server",
-            "virtualization/**/*.yml": "windows-server",
-            "networking/**/*.md": "windows-server",
-            "networking/**/*.yml": "windows-server",
-            "upgrade/**/*.md": "windows-server",
-            "upgrade/**/*.yml": "windows-server",
-            "windows-server-licensing/**/*.md": "windows-server",
-            "windows-server-licensing/**/*.yml": "windows-server"
-         },
-         "ms.subservice": {
-            "storage/storage-spaces/**/*.md": "storage-spaces",
-            "storage/storage-spaces/**/*.yml": "storage-spaces",
-            "failover-clustering/**/*.md": "failover-clustering",
-            "failover-clustering/**/*.yml": "failover-clustering",
-            "remote/remote-desktop-services/**/*.md": "remote-desktop-services",
-            "remote/remote-desktop-services/**/*.yml": "remote-desktop-services",
-            "remote/**/*.md": "remote",
-            "remote/**/*.yml": "remote",
-            "identity/ad-fs/**/*.md": "ad-fs",
-            "identity/ad-fs/**/*.yml": "ad-fs",
-            "EssentialsDocs/**/*.md": "essentials",
-            "EssentialsDocs/**/*.yml": "essentials",
-            "storage/**/*.md": "storage",
-            "storage/**/*.yml": "storage",
-            "troubleshoot/**/*.md": "troubleshoot",
-            "troubleshoot/**/*.yml": "troubleshoot",
-            "get-started/**/*.md": "getting-started",
-            "get-started/**/*.yml": "getting-started",
-            "get-started-19/**/*.md": "getting-started",
-            "get-started-19/**/*.yml": "getting-started",
-            "manage/**/*.md": "manage",
-            "manage/**/*.yml": "manage",
-            "identity/**/*.md": "security",
-            "identity/**/*.yml": "security",
-            "security/**/*.md": "security",
-            "security/**/*.yml": "security",
-            "administration/windows-commands/**/*.md": "windows-commands",
-            "administration/windows-commands/**/*.yml": "windows-commands",
-            "administration/**/*.md": "administration",
-            "administration/**/*.yml": "administration",
-            "manage/windows-admin-center/**/*.md": "windows-admin-center",
-            "manage/windows-admin-center/**/*.yml": "windows-admin-center",
-            "identity/ad-ds/**/*.md": "ad-ds",
-            "identity/ad-ds/**/*.yml": "ad-ds",
-            "administration/windows-server-update-services/**/*.md": "wsus",
-            "administration/windows-server-update-services/**/*.yml": "wsus",
-            "virtualization/**/*.md": "hyper-v",
-            "virtualization/**/*.yml": "hyper-v",
-            "networking/**/*.md": "networking",
-            "networking/**/*.yml": "networking"
-         },
+        "ms.service": {
+          "failover-clustering/**/*.md": "windows-server",
+          "failover-clustering/**/*.yml": "windows-server",
+          "remote/**/*.md": "windows-server",
+          "remote/**/*.yml": "windows-server",
+          "EssentialsDocs/**/*.md": "windows-server",
+          "EssentialsDocs/**/*.yml": "windows-server",
+          "storage/**/*.md": "windows-server",
+          "storage/**/*.yml": "windows-server",
+          "troubleshoot/**/*.md": "windows-server",
+          "troubleshoot/**/*.yml": "windows-server",
+          "get-started/**/*.md": "windows-server",
+          "get-started/**/*.yml": "windows-server",
+          "get-started-19/**/*.md": "windows-server",
+          "get-started-19/**/*.yml": "windows-server",
+          "manage/**/*.md": "windows-server",
+          "manage/**/*.yml": "windows-server",
+          "identity/**/*.md": "windows-server",
+          "identity/**/*.yml": "windows-server",
+          "security/**/*.md": "windows-server",
+          "security/**/*.yml": "windows-server",
+          "administration/**/*.md": "windows-server",
+          "administration/**/*.yml": "windows-server",
+          "virtualization/**/*.md": "windows-server",
+          "virtualization/**/*.yml": "windows-server",
+          "networking/**/*.md": "windows-server",
+          "networking/**/*.yml": "windows-server",
+          "upgrade/**/*.md": "windows-server",
+          "upgrade/**/*.yml": "windows-server",
+          "windows-server-licensing/**/*.md": "windows-server",
+          "windows-server-licensing/**/*.yml": "windows-server"
+        },
+        "ms.subservice": {
+          "storage/storage-spaces/**/*.md": "storage-spaces",
+          "storage/storage-spaces/**/*.yml": "storage-spaces",
+          "failover-clustering/**/*.md": "failover-clustering",
+          "failover-clustering/**/*.yml": "failover-clustering",
+          "remote/remote-desktop-services/**/*.md": "remote-desktop-services",
+          "remote/remote-desktop-services/**/*.yml": "remote-desktop-services",
+          "remote/**/*.md": "remote",
+          "remote/**/*.yml": "remote",
+          "identity/ad-fs/**/*.md": "ad-fs",
+          "identity/ad-fs/**/*.yml": "ad-fs",
+          "EssentialsDocs/**/*.md": "essentials",
+          "EssentialsDocs/**/*.yml": "essentials",
+          "storage/**/*.md": "storage",
+          "storage/**/*.yml": "storage",
+          "troubleshoot/**/*.md": "troubleshoot",
+          "troubleshoot/**/*.yml": "troubleshoot",
+          "get-started/**/*.md": "getting-started",
+          "get-started/**/*.yml": "getting-started",
+          "get-started-19/**/*.md": "getting-started",
+          "get-started-19/**/*.yml": "getting-started",
+          "manage/**/*.md": "manage",
+          "manage/**/*.yml": "manage",
+          "identity/**/*.md": "security",
+          "identity/**/*.yml": "security",
+          "security/**/*.md": "security",
+          "security/**/*.yml": "security",
+          "administration/windows-commands/**/*.md": "windows-commands",
+          "administration/windows-commands/**/*.yml": "windows-commands",
+          "administration/**/*.md": "administration",
+          "administration/**/*.yml": "administration",
+          "manage/windows-admin-center/**/*.md": "windows-admin-center",
+          "manage/windows-admin-center/**/*.yml": "windows-admin-center",
+          "identity/ad-ds/**/*.md": "ad-ds",
+          "identity/ad-ds/**/*.yml": "ad-ds",
+          "administration/windows-server-update-services/**/*.md": "wsus",
+          "administration/windows-server-update-services/**/*.yml": "wsus",
+          "virtualization/**/*.md": "hyper-v",
+          "virtualization/**/*.yml": "hyper-v",
+          "networking/**/*.md": "networking",
+          "networking/**/*.yml": "networking"
+        },
+        "ms.update-cycle": {
+          "**/*.md": "1095-days",
+          "**/*.yml": "1095-days",
+          "get-started/**/*.md": "365-days",
+          "get-started/**/*.yml": "365-days",
+          "manage/windows-admin-center/**/*.md": "365-days",
+          "manage/windows-admin-center/**/*.yml": "365-days"
+        },
+        "ms.author": {
+          "security/tls/*.md": "roharwoo"
+        },
         "author": {
           "security/tls/*.md": "Andrei-Popov"
+        },
+        "no-loc": {
+          "administration/windows-commands/**/*.md": [
+            "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
+          ],
+          "administration/windows-commands/**/*.yml": [
+            "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
+          ]
+        },
+        "feedback_product_url": {
+          "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
+          "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
         },
         "appliesto": {
           "administration/**/*.md": [
@@ -755,29 +778,11 @@
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
             "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
           ]
-        },
-        "no-loc": {
-          "administration/windows-commands/**/*.md": [
-            "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
-          ],
-          "administration/windows-commands/**/*.yml": [
-            "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
-          ]
-        },
-        "feedback_product_url": {
-          "manage/windows-admin-center/*.md": "https://aka.ms/wacfeedback",
-          "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
-        },
-        "ms.author": {
-          "security/tls/*.md": "roharwoo"
-        },
-        "ms.prod": {
         }
-        },
+      },
     "template": [
       "docs.html"
     ],
-
     "rules": {
       "sensitive-language-sl": {
         "exclude": [
@@ -785,7 +790,6 @@
         ]
       }
     },
-
     "dest": "windows-server"
   }
 }
