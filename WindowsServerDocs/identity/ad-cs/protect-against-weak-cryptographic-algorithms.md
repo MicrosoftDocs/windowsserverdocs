@@ -1,5 +1,5 @@
 ﻿---
-title: Disable weak cryptographic algorithms in Windows and Windows Server
+title: Disable weak cryptographic algorithms in certificate validation on Windows and Windows Server
 description: Enhance Windows security by disabling weak crypto algorithms including MD5, SHA1, and RSA 1024-bit keys through comprehensive policy configuration and logging setup.
 #customer intent: As a Windows administrator, I want to disable weak cryptographic algorithms like MD5 and SHA1 so that I can improve my organization's security posture and prevent certificates with weak signatures from being accepted.
 author: robinharwood
@@ -13,9 +13,11 @@ ms.custom:
 ai-usage: ai-assisted
 ---
 
-# Disable weak cryptographic algorithms
+# Disable weak cryptographic algorithms in certificate validation
 
-This article describes how to disable weak cryptographic algorithm using policies in Windows and Windows Server. Windows and Windows Server support configurable policies that allow administrators to disable weak cryptographic algorithms to strengthen security. These policies help prevent the acceptance of certificates that use outdated cryptographic methods like MD5 and SHA1 hashing algorithms or RSA keys shorter than recommended lengths. Using these policies, you can:
+This article describes how to disable weak cryptographic algorithms using policies on Windows and Windows Server. These policies only apply to X.509 certificate validation - when Windows checks digital certificates for SSL/TLS connections, code signing, and other security scenarios.
+
+You can configure Windows to reject certificates that use outdated algorithms like MD5 and SHA1, or RSA keys that are too short to be secure. This helps protect your environment from certificates that could easily be compromised or forged. Using these policies, you can:
 
 - Opt-in or opt-out of each policy independently.
 
@@ -261,7 +263,7 @@ To configure a weak cryptographic algorithm policy follow these steps:
 
    Replace `<CryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
 
-   For example, to disable MD5 for all SSL server auth certs under third-party   root CAs before March 1, 2009, you can use the following commands:
+   For example, to disable MD5 for all SSL server auth certs under third-party root CAs before March 1, 2009, you can use the following commands:
 
    ```cmd
    certutil -setreg chain\WeakMD5ThirdPartyAfterTime @03/01/2009
@@ -319,7 +321,63 @@ To configure a weak cryptographic algorithm policy using the Windows Registry Ed
 
 ---
 
-### Enable logging
+## View configured policies
+
+To view the currently configured weak cryptographic algorithm policies, you can use the `certutil` command-line tool or the Windows Registry Editor. Select the method that best suits your needs.
+
+### [Certutil](#tab/certutil)
+
+To view the currently configured weak cryptographic algorithm policies using the `certutil` command-line tool, follow these steps:
+
+1. Open a command prompt with administrative privileges.
+
+1. To see the default operating system behavior for weak cryptographic algorithms, run the following command:
+
+   ```cmd
+   certutil -getreg chain\default
+   ```
+
+1. To view the currently configured weak cryptographic algorithm policies, run the following command:
+
+   ```cmd
+   certutil -getreg chain\Weak<CryptoAlg><ConfigType>Flags
+   ```
+
+   Replace `<CryptoAlg>` and `<ConfigType>` with the appropriate values for your policy.
+
+   For example, to view the MD5 third-party flags, you can use the following command:
+
+   ```cmd
+   certutil -getreg chain\WeakMD5ThirdPartyFlags
+   ```
+
+1. To view all configured weak cryptographic algorithm policies, you can run the following command:
+
+   ```cmd
+   certutil -getreg chain
+   ```
+
+### [Registry Editor](#tab/registry)
+
+To view the currently configured weak cryptographic algorithm policies using the Windows Registry Editor, follow these steps:
+
+1. Open the Registry Editor by typing `regedit` in the Run dialog (Win + R) or in a command prompt with administrative privileges.
+
+1. Navigate to the following registry key:
+
+   ```cmd
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
+   ```
+
+1. To view the currently configured weak cryptographic algorithm policies, look for values that match the naming convention `Weak<CryptoAlg><ConfigType>Flags`, `Weak<CryptoAlg><ConfigType>MinBitLength`, or `Weak<CryptoAlg><ConfigType>AfterTime`.
+
+   For example, to view the MD5 third-party flags, look for a value named `WeakMD5ThirdPartyFlags`.
+
+1. To view the default operating system behavior for weak cryptographic algorithms, look for the `Default` key under the `Config` key.
+
+---
+
+## Enable logging
 
 The _Weak Crypto_ framework in Windows provides a mechanism for logging weak cryptographic certificates. This allows administrators to monitor and take action on certificates that are considered weak according to the configured settings.
 
