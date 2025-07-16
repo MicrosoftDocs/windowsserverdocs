@@ -33,11 +33,13 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Hyper-V is installed on Windows Admin Center gateway.
 
-- [PowerCLI](https://techdocs.broadcom.com/us/en/vmware-cis/vcf/power-cli/latest/powercli/installing-vmware-vsphere-powercli/install-powercli.html) is installed
+- [PowerCLI] is installed. Install using the PowerShell command: `Install-Module VMware.PowerCLI`
 
 - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on machine with the Windows Admin Center gateway.
 
-- [VMware Virtual Disk Development Kit (VDDK)](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/) is downloaded. Extract it, and copy the extracted contents to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
+- [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) is installed.
+
+- [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/) is downloaded. Extract it, and copy the extracted contents to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
 
 - Windows Admin Center Gateway V2 – GA version.
 
@@ -60,7 +62,7 @@ The following operating systems can use the VM Conversion extension:
 - Red Hat Linux 9.0
 - Debian 11, 12
 
-*For Alma Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
+*For Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
 
 ## Install the VM Conversion extension
 
@@ -92,7 +94,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     [![Configure VMware settings](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
 
-1. In the virtual machine list, select up to 10 virtual machines to migrate.
+1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
     [![Synchronize tab](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
 
@@ -100,7 +102,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
-1. You see notifications appear with the progress for: prechecks, preparing the environment, snapshot creation, and finalizing synchronization. Confirm that the VHD file is created in the folder path specified.
+1. You see notifications appear with the progress for: prechecks, preparing the environment, snapshot creation, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
 
 1. Wait for the sync to complete 100%.
 
@@ -150,7 +152,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Does the tool support both Static and DHCP IP addresses?
 
-    Yes. DHCP works automatically; no manual action needed. For Static IP, a script is provided to manually persist the original static IP on the destination server. Learn more about how to [Maintain static IP addresses during migration (preview)](/azure/azure-local/migrate/migrate-maintain-ip-addresses?tabs=linux).
+    Yes. DHCP and Static IP addresses works automatically; no manual action needed. For Static IP configuration of linux vms; Hyper-V drivers should be pre-installed using [Install Linux Integration Services (LIS) on Hyper-V VM](https://poweradm.com/install-linux-integration-services-hyper-v/).
 
 1. How does the tool handle VM boot types?
 
@@ -164,11 +166,6 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     Ensure there are no active snapshots exist for the VM — the initial sync fails otherwise. You have the FQDN and credentials for your vCenter endpoint.
 
-1. Ubuntu Desktop 20.04 or Red Hat Linux 9.0 VMs may fail to boot correctly after migration. How can I get the VM to boot correctly after migration?
-
-    Disable the Secure Boot option resolves the issue for these Linux VMs. You can do this using PowerShell:
-`Set-VMFirmware -VMName "<VM Name>" -EnableSecureBoot Off`.
-
 1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
 
     To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
@@ -178,3 +175,11 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     1. Follow the detailed steps in this [Setting up highly available file shares in Windows Server 2022](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
     1. Sometimes, it may take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
     1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
+
+1. Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
+
+    The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied — not the full allocated size.
+
+    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it may cause storage management issues later.
+
+    After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage: `Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed`.
