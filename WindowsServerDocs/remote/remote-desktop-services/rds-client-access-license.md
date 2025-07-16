@@ -47,7 +47,7 @@ When you use the per device model, a temporary license is issued the first time 
 
 The next time that device connects, as long as the license server is activated and there are available RDS CALs, the license server upgrades the temporary RDS CAL token to a full RDS CAL token and issues a permanent per device RDS CAL. If no RDS CAL tokens are available, the temporary RDS CAL token continues to function for 90 days.
 
-Every time the client device connects to the session host, it presents its RDS CAL certificate to the server. The server checks not only whether the client device has a valid certificate, but also the expiration date of that certificate. If the expiration date of the certificate is within seven days of the current date, the session host connects to the license server to renew the license for another random period of 52 to 89 days.
+Every time the client device connects to the session host, it presents its RDS CAL to the server. The server checks not only whether the client device has a valid RDS CAL, but also its expiration date. If the expiration date of the RDS CAL is within seven days of the current date, the session host connects to the license server to renew the license for another random period of 52 to 89 days.
 
 ### Per user RDS CALs
 
