@@ -1078,8 +1078,8 @@
         href: ad-cs/request-certificate-windows-server.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
-      - name: Protect against weak cryptographic algorithms
-        href: ad-cs/protect-against-weak-cryptographic-algorithms.md
+      - name: Disable weak cryptographic algorithms in certificate validation
+        href: ad-cs/disable-weak-cryptographic-algorithms.md
       - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
         href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
