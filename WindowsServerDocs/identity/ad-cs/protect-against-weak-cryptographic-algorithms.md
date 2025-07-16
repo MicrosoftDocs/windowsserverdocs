@@ -1,59 +1,33 @@
 ﻿---
-title: Protect against weak cryptographic algorithms in Windows and Windows Server
-description: Learn how to protect against weak cryptographic algorithms in Windows and Windows Server
+title: Disable weak cryptographic algorithms in Windows and Windows Server
+description: Enhance Windows security by disabling weak crypto algorithms including MD5, SHA1, and RSA 1024-bit keys through comprehensive policy configuration and logging setup.
+#customer intent: As a Windows administrator, I want to disable weak cryptographic algorithms like MD5 and SHA1 so that I can improve my organization's security posture and prevent certificates with weak signatures from being accepted.
 author: robinharwood
-ms.topic: concept-article
+ms.topic: how-to
 ms.author: roharwoo
-ms.date: 06/13/2025
+ms.date: 07/16/2025
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-description
+  - ai-seo-date:07/16/2025
+ai-usage: ai-assisted
 ---
 
-# Protect against weak cryptographic algorithms
+# Disable weak cryptographic algorithms
 
-This article describes how to configure cryptographic algorithm blocking policies in Windows and Windows Server. Using policies you can selectively block weak cryptographic algorithms that override settings provided by the operating system. Using these policies, you can:
+This article describes how to disable weak cryptographic algorithm using policies in Windows and Windows Server. Windows and Windows Server support configurable policies that allow administrators to disable weak cryptographic algorithms to strengthen security. These policies help prevent the acceptance of certificates that use outdated cryptographic methods like MD5 and SHA1 hashing algorithms or RSA keys shorter than recommended lengths. Using these policies, you can:
 
 - Opt-in or opt-out of each policy independently.
 
 - Enable logging per policy (independent of other policies). Logging is off by default.
 
-- Specify a location to which blocked certificates are copied.
+- Specify a location to which disabled certificates are copied.
 
 - Configure policies for both hash algorithms and asymmetric algorithms.
 
-## Prerequisites
-
-To configure cryptographic algorithm blocking policies, you need the following prerequisites:
-
-- Local administrative access to modify registry settings.
-
-- (Optional) A designated log directory if enabling logging for weak certificate detection.
-
-You also need to have the following information ready to configure the policies:
-
-- The name of the cryptographic algorithm (e.g., MD5, SHA256, RSA, DSA, ECDSA).
-
-- For asymmetric algorithms, the minimum key size required (e.g., 1024 bits for RSA).
-
-- Whether the policy should apply to certificates that chain to third-party root CAs or to all certificates.
-
-- The time before which the policy check is disabled (for code signing certificates used in time-stamped signed binaries).
-
-- The types of certificates or Enhanced Key Usages (EKUs) the policy applies to, such as:
-
-  - All certificates
-
-  - Server Authentication EKU
-
-  - Code Signing EKU
-  
-  - Time Stamping EKU
-
-- Whether the policy applies only to binaries downloaded from the web or to all binaries.
-
-- Any exceptions for specific code signing or time stamping certificates, identified by their SHA2 thumbprint.
-
 ## Policy syntax
 
-The cryptographic algorithm blocking policy is defined in the Windows registry and set using the _Registry Editor_ or `certutil`. The administrator sets the policy in the following registry key:
+The cryptographic algorithm policy is defined in the Windows registry and set using the _Registry Editor_ or `certutil`. The administrator sets the policy in the following registry key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config`
 
@@ -61,7 +35,7 @@ Policy are defined using the following syntax:
 
 `Weak<CryptoAlg><ConfigType><ValueType>`
 
-The following table lists values that can be set to modify default settings for cryptographic algorithm blocking policy. `CryptoAlg`, `ConfigType`, and `ValueType` are present in all policy names.
+`CryptoAlg`, `ConfigType`, and `ValueType` are present in all policy names.
 
 For example, `WeakMD5ThirdPartyFlags` or `WeakRSAAllMinBitLength`.
 
@@ -90,13 +64,13 @@ For each policy, the following values can be set:
 
 ### Value type flags
 
-To define the flags for a cryptographic algorithm blocking policy, you can use the following `REG_DWORD` values. These flags are used to enable or disable specific behaviors for the cryptographic algorithm policies.
+To define the flags for a weak cryptographic algorithm policy, you can use the following `REG_DWORD` values. These flags are used to enable or disable specific behaviors for the cryptographic algorithm policies.
 
 You can combine these flags using a bitwise OR operation to create a composite flag value that represents multiple behaviors.
 
 For example, to enable logging and disable the algorithm for all EKUs, you can combine the `CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG` and `CERT_CHAIN_DISABLE_ALL_EKU_WEAK_FLAG` flags. To do this, you would set the flags value to `0x80010004` (which is `0x80000000 | 0x00010000 | 0x00000004`).
 
-Expand the following sections to see a description of the flags that can be set for cryptographic algorithm blocking policies:
+Expand the following sections to see a description of the flags that can be set for weak cryptographic algorithm policies:
 
 <details>
 <summary>Enable weak cryptographic settings</summary>
@@ -205,27 +179,59 @@ Hexadecimal value: `0x08000000`
 
 </details>
 
-## Configure a cryptographic algorithm blocking policy
+## Prerequisites
 
-To configure a cryptographic algorithm blocking policy, you can use the `certutil` command-line tool or modify the Windows registry directly. Select the method that best suits your needs.
+To configure weak cryptographic algorithm policies, you need the following prerequisites:
+
+- Local administrative access to modify registry settings.
+
+- (Optional) A designated log directory if enabling logging for weak certificate detection.
+
+You also need to have the following information ready to configure the policies:
+
+- The name of the cryptographic algorithm (e.g., MD5, SHA256, RSA, DSA, ECDSA).
+
+- For asymmetric algorithms, the minimum key size required (e.g., 1024 bits for RSA).
+
+- Whether the policy should apply to certificates that chain to third-party root CAs or to all certificates.
+
+- The time before which the policy check is disabled (for code signing certificates used in time-stamped signed binaries).
+
+- The types of certificates or Enhanced Key Usages (EKUs) the policy applies to, such as:
+
+  - All certificates
+
+  - Server Authentication EKU
+
+  - Code Signing EKU
+  
+  - Time Stamping EKU
+
+- Whether the policy applies only to binaries downloaded from the web or to all binaries.
+
+- Any exceptions for specific code signing or time stamping certificates, identified by their SHA2 thumbprint.
+
+## Configure a weak cryptographic algorithm policy
+
+To configure a weak cryptographic algorithm policy, you can use the `certutil` command-line tool or modify the Windows registry directly. Select the method that best suits your needs.
 
 ### [Certutil](#tab/certutil)
 
-To configure a cryptographic algorithm blocking policy, you can use the `certutil -setreg chain` command-line tool. This tool allows you to display, configure, and remove cryptographic algorithm blocking policy settings. To learn more about the `certutil` command-line tool, see [certutil](../../administration/windows-commands/certutil.md).
+To configure a weak cryptographic algorithm policy, you can use the `certutil -setreg chain` command-line tool. This tool allows you to display, configure, and remove weak cryptographic algorithm policy settings. To learn more about the `certutil` command-line tool, see [certutil](../../administration/windows-commands/certutil.md).
 
-To configure a cryptographic algorithm blocking policy follow these steps:
+To configure a weak cryptographic algorithm policy follow these steps:
 
-1. Determine the cryptographic algorithm you want to block and the configuration type (e.g., third-party or all) using the flags and values described in the [Policy syntax](#policy-syntax) section. Perform a bitwise OR operation to combine the flags as needed and record the resulting value.
+1. Determine the cryptographic algorithm you want to disable and the configuration type (e.g., third-party or all) using the flags and values described in the [Policy syntax](#policy-syntax) section. Perform a bitwise OR operation to combine the flags as needed and record the resulting value.
 
 1. Open a command prompt with administrative privileges.
 
-1. To create a new cryptographic algorithm flag-based blocking policy, use the following command:
+1. To create a new weak cryptographic algorithm flag-based policy, use the following command:
 
    ```cmd
-   certutil -setreg chain\<WeakCryptoAlg><ConfigType>Flags <value>
+   certutil -setreg chain\Weak<CryptoAlg><ConfigType>Flags <value>
    ```
 
-   Replace `<WeakCryptoAlg>`, `<ConfigType>`, and `<value>` with the appropriate values for your policy.
+   Replace `<CryptoAlg>`, `<ConfigType>`, and `<value>` with the appropriate values for your policy.
 
    For example, to disable MD5 for all SSL server auth certs under third-party   root CAs, you can use the following commands:
 
@@ -233,13 +239,13 @@ To configure a cryptographic algorithm blocking policy follow these steps:
    certutil -setreg chain\WeakMD5ThirdPartyFlags 0x80100000
    ```
 
-1. To create a new asymmetric algorithm blocking policy, use the following command:
+1. To create a new asymmetric algorithm policy, use the following command:
 
    ```cmd
-   certutil -setreg chain\<WeakCryptoAlg><ConfigType>MinBitLength <value>
+   certutil -setreg chain\Weak<CryptoAlg><ConfigType>MinBitLength <value>
    ```
 
-   Replace `<WeakCryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
+   Replace `<CryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
 
    For example, to disable RSA 1024 under third-party root CAs, you can use the   following commands:
 
@@ -250,10 +256,10 @@ To configure a cryptographic algorithm blocking policy follow these steps:
 1. To create a new time-based policy, use the following command:
 
    ```cmd
-   certutil -setreg chain\<WeakCryptoAlg><ConfigType>AfterTime <value>
+   certutil -setreg chain\Weak<CryptoAlg><ConfigType>AfterTime <value>
    ```
 
-   Replace `<WeakCryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
+   Replace `<CryptoAlg>`, `<ConfigType>`, and `<value>` with   the appropriate values for your policy.
 
    For example, to disable MD5 for all SSL server auth certs under third-party   root CAs before March 1, 2009, you can use the following commands:
 
@@ -263,9 +269,9 @@ To configure a cryptographic algorithm blocking policy follow these steps:
 
 ### [Registry Editor](#tab/registry)
 
-To configure a cryptographic algorithm blocking policy using the Windows Registry Editor, follow these steps:
+To configure a weak cryptographic algorithm policy using the Windows Registry Editor, follow these steps:
 
-1. Determine the cryptographic algorithm you want to block and the configuration type (e.g., third-party or all) using the flags and values described in the [Policy syntax](#policy-syntax) section. Perform a bitwise OR operation to combine the flags as needed and record the resulting value.
+1. Determine the cryptographic algorithm you want to disable and the configuration type (e.g., third-party or all) using the flags and values described in the [Policy syntax](#policy-syntax) section. Perform a bitwise OR operation to combine the flags as needed and record the resulting value.
 
 1. Open the Registry Editor by typing `regedit` in the Run dialog (Win + R) or in a command prompt with administrative privileges.
 
@@ -273,7 +279,7 @@ To configure a cryptographic algorithm blocking policy using the Windows Registr
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config`
 
-1. To create a new cryptographic algorithm blocking flag-based policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
+1. To create a new weak cryptographic algorithm flag-based policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
 
    `Weak<CryptoAlg><ConfigType>Flags`
 
@@ -283,7 +289,7 @@ To configure a cryptographic algorithm blocking policy using the Windows Registr
 
 1. To set the value for the new policy, open the newly created DWORD value and enter the appropriate hexadecimal value. For example, to disable all SSL server auth certs, set the value to `0x80100000`.
 
-1. To create a new asymmetric algorithm blocking policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
+1. To create a new asymmetric algorithm policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
 
    `Weak<CryptoAlg><ConfigType>MinBitLength`
 
@@ -315,7 +321,7 @@ To configure a cryptographic algorithm blocking policy using the Windows Registr
 
 ### Enable logging
 
-The Weak Crypto framework in Windows provides a mechanism for logging weak cryptographic certificates. This allows administrators to monitor and take action on certificates that are considered weak according to the configured settings.
+The _Weak Crypto_ framework in Windows provides a mechanism for logging weak cryptographic certificates. This allows administrators to monitor and take action on certificates that are considered weak according to the configured settings.
 
 You can enable logging using the `certutil` command-line tool or by directly modifying the Windows registry. Select the method that best suits your needs.
 
