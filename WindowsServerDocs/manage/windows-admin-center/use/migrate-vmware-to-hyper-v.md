@@ -1,9 +1,9 @@
 ---
 title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)
-description: Learn how to install, configure, and test the Windows Admin Center VM Conversion extension for migrating VMs from vCenter to Hyper-V.
+description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
 author: meaghanlewis
 ms.topic: how-to
-ms.date: 07/07/2025
+ms.date: 07/16/2025
 ms.author: mosagie
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
@@ -12,20 +12,20 @@ ms.author: mosagie
 > Windows Server assistant is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-You can use Windows Admin Center to migrate virtual machines (VMs) from VMware vCenter to Hyper-V with the **VM Conversion extension**. The VM Conversion extension is a powerful, lightweight solution that allows you to migrate virtual machines with minimal downtime on both Windows and Linux machines.
+You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight solution enables seamless migration with minimal downtime for both Windows and Linux VMs.
 
-This article explains how to install and configure the extension, outlines the migration workflow, and provides answers to frequently asked questions.
+In this article, you learn how to install and configure the extension, follow the migration workflow, and find answers to common questions.
 
 The VM Conversion extension provides the following key features:
 
-- **Live migration with minimal downtime**: Leverages VMware CBT for seamless, low-disruption migration.
+- **Live migration with minimal downtime**: Uses VMware CBT for seamless, low-disruption migration.
 - **Windows & Linux VM support**: OS-agnostic migration from vCenter to Hyper-V.
-- **No extra setup**: Built into Windows Admin Center — lightweight and agentless.
+- **No extra setup**: Built into Windows Admin Center—lightweight and agentless.
 - **Smart auto-discovery**: Instantly detects VMs from connected vCenter environments.
 - **Bulk & cluster-aware migration**: Migrate multiple VMs, including to clustered Hyper-V setups.
 - **Post-migration management** Manage VMs directly within Windows Admin Center.
 
-![A diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
+![Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Hyper-V is installed on Windows Admin Center gateway.
 
-- [PowerCLI] is installed. Install using the PowerShell command: `Install-Module VMware.PowerCLI`
+- PowerCLI is installed. Install using the PowerShell command: `Install-Module VMware.PowerCLI`
 
 - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on machine with the Windows Admin Center gateway.
 
@@ -64,7 +64,7 @@ The following operating systems can use the VM Conversion extension:
 
 *For Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
 
-## Install the VM Conversion extension
+## Install the VM Conversion extension in Windows Admin Center
 
 Complete the following steps to install the **VM Conversion** extension.
 
@@ -88,25 +88,25 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Select **Connect to vCenter**.
 
-    [![Connect to vCenter](media/migrate-vmware-to-hyper-v/connect-to-v-center.png)](media/migrate-vmware-to-hyper-v/connect-to-v-center.png#lightbox)
+    [![Screenshot of the connect to vCenter option.](media/migrate-vmware-to-hyper-v/connect-to-v-center.png)](media/migrate-vmware-to-hyper-v/connect-to-v-center.png#lightbox)
 
 1. Enter the vCenter FQDN, vCenter username, and vCenter password.
 
-    [![Configure VMware settings](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
+    [![Screenshot showing how to configure VMware settings.](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
 
 1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
-    [![Synchronize tab](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
+    [![Screenshot of the synchronize tab.](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
 
 1. Select **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
 
-    [![Synchronize VM dialog](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
+    [![Screenshot of the synchronize VM dialog.](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
 
 1. You see notifications appear with the progress for: prechecks, preparing the environment, snapshot creation, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
 
 1. Wait for the sync to complete 100%.
 
-    [![Migrate tab](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
+    [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
@@ -114,7 +114,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
-    [![Migrate VM dialog](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
+    [![Screenshot of the migrate VM dialog.](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
 
 1. Wait for virtual machine migration to complete. After the VM is migrated, the migration status shows **Destination VM created. Migration completed (100%).**
 
@@ -152,7 +152,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Does the tool support both Static and DHCP IP addresses?
 
-    Yes. DHCP and Static IP addresses works automatically; no manual action needed. For Static IP configuration of linux vms; Hyper-V drivers should be pre-installed using [Install Linux Integration Services (LIS) on Hyper-V VM](https://poweradm.com/install-linux-integration-services-hyper-v/).
+    Yes. DHCP and Static IP addresses works automatically; no manual action needed. For Static IP configuration of linux vms; Hyper-V drivers should be preinstalled using [Install Linux Integration Services (LIS) on Hyper-V VM](https://poweradm.com/install-linux-integration-services-hyper-v/).
 
 1. How does the tool handle VM boot types?
 
@@ -164,7 +164,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. What should I know about the source VM before migrating?
 
-    Ensure there are no active snapshots exist for the VM — the initial sync fails otherwise. You have the FQDN and credentials for your vCenter endpoint.
+    Ensure there are no active snapshots exist for the VM—the initial sync fails otherwise. You have the FQDN and credentials for your vCenter endpoint.
 
 1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
 
@@ -178,7 +178,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
 
-    The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied — not the full allocated size.
+    The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied—not the full allocated size.
 
     During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it may cause storage management issues later.
 
