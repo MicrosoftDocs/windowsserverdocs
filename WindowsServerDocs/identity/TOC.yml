@@ -1088,6 +1088,14 @@
         href: ad-cs/migrate-certification-authority.md
       - name: Renew root CA certificate
         href: ad-cs/renew-root-ca-certificate.md
+      - name: Request certificates using Web Enrollment
+        href: ad-cs/request-certificate-windows-server.md
+      - name: Retrieve base and delta CRLs
+        href: ad-cs/retrieve-base-and-delta-crl.md
+      - name: Disable weak cryptographic algorithms in certificate validation
+        href: ad-cs/disable-weak-cryptographic-algorithms.md
+      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
+        href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies
