@@ -39,8 +39,8 @@ items:
           - name: Copy the CA certificate and CRL to the virtual directory
             href: core-network-guide/cncg/server-certs/copy-the-CA-Certificate-and-CRL-to-the-Virtual-directory.md
           - name: Configure the server certificate template
-            href: core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md
-          - name: Configure Certificate Auto-Enrollment for NPS
+            href: core-network-guide/cncg/server-certs/configure-server-certificate-template-remote-access-network-policy-server.md
+          - name: Configure certificate auto-enrollment for NPS
             href: core-network-guide/cncg/server-certs/configure-server-certificate-autoenrollment.md
       - name: Deploy password-based 802.1X authenticated wireless access
         href: core-network-guide/cncg/wireless/a-deploy-8021X-wireless-access.md
@@ -148,7 +148,6 @@ items:
   - name: DirectAccess
     href: ../remote/remote-access/directaccess/directaccess.md
   - name: Domain Name System (DNS)
-    href: dns/dns-overview.md
     items:
     - name: Overview
       href: dns/dns-overview.md
@@ -166,9 +165,11 @@ items:
       - name: DNS zones
         href: dns/zone-types.md
       - name: DNS architecture
-        href: dns/dns-architecture.md  
+        href: dns/dns-architecture.md
       - name: Network Ports
         href: dns/network-ports.md
+      - name: Message formats
+        href: dns/message-formats.md
       - name: DNS processes
         items:
         - name: Queries and lookups

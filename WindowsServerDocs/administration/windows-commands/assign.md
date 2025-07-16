@@ -1,5 +1,6 @@
 ---
 title: assign
+no-loc: [assign]
 description: Reference article for the assign command, which assigns a drive letter or mount point to the volume with focus.
 ms.topic: reference
 ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1

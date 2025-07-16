@@ -133,10 +133,10 @@
           href: hyper-v/manage/live-migration-workgroup-cluster.md  
     - name: Learn more
       items:
-      - name: Generation 1 virtual machine security settings
-        href: hyper-v/learn-more\Generation-1-virtual-machine-security-settings-for-Hyper-V.md
-      - name: Generation 2 virtual machine security settings for Hyper-V
-        href: hyper-v\learn-more\Generation-2-virtual-machine-security-settings-for-Hyper-V.md
+      - name: Generation 1 VM security features
+        href: hyper-v/generation-1-virtual-machine-security-features.md
+      - name: Generation 2 VM security features
+        href: hyper-v/generation-2-virtual-machine-security-features.md
       - name: Hyper-V Virtual Machine Connection
         href: hyper-v/learn-more\hyper-v-virtual-machine-connect.md
       - name: Use local resources on Hyper-V virtual machine with VMConnect
