@@ -31,7 +31,9 @@ You can configure Windows to reject certificates that use outdated algorithms li
 
 The cryptographic algorithm policy is defined in the Windows registry and set using the _Registry Editor_ or `certutil`. The administrator sets the policy in the following registry key:
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config`
+```reg
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
+```
 
 Policies are defined using the following syntax:
 
@@ -60,7 +62,7 @@ For each policy, the following values can be set:
 
   - **MinBitLength** - `REG_DWORD` data type that specifies the minimum public key length in bits. `MinBitLength` is only applicable to key algorithms policy. Specified as a decimal value of the minimum key length in bits. For example, 1024 represents a minimum key length of 1,024 bits.
 
-  - **AfterTime** - `REG_BINARY` data type that contains an 8-byte FILE. TIME. The weak crypto algorithm check is disabled for time-stamped files before this time. This configuration value isn’t applicable to timestamp chains.
+  - **AfterTime** - `REG_BINARY` data type that contains an 8-byte FILETIME. The weak crypto algorithm check is disabled for time-stamped files before this time. This configuration value isn’t applicable to timestamp chains.
 
   - **Sha256Allow** - `REG_SZ` or `REG_MULTI_SZ` data type that contains the list of certificate SHA256 thumbprints (ASCII_HEX formatted) identifying weak certificates to be explicitly allowed. Non ASCII_HEX characters in the string are skipped, which allows embedded spaces.
 
@@ -127,8 +129,6 @@ Hexadecimal value: `0x00010000`
 
 <details>
 <summary>Disable Opt-In Server Authentication EKUs</summary>
-
-CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG
 
 The `CERT_CHAIN_DISABLE_OPT_IN_SERVER_AUTH_WEAK_FLAG` flag is used to disable the algorithm corresponding to the policy for Server Authentication EKUs, but only for applications that opt into this change using the `CERT_CHAIN_OPT_IN_WEAK_SIGNATURE` setting. The weak signature policy enables administrators to exercise more granular control over the applications affected.
 
@@ -279,7 +279,9 @@ To configure a weak cryptographic algorithm policy using the Windows Registry Ed
 
 1. Navigate to the following registry key:
 
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config`
+   ```reg
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
+   ```
 
 1. To create a new weak cryptographic algorithm flag-based policy, right-click on the `Config` key, select **New**, and then select **DWORD (32-bit) Value**. Name the new value using the following syntax:
 
@@ -365,7 +367,7 @@ To view the currently configured weak cryptographic algorithm policies using the
 
 1. Navigate to the following registry key:
 
-   ```cmd
+   ```reg
    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
    ```
 
@@ -409,7 +411,9 @@ To enable logging for weak cryptographic certificates using the Windows Registry
 
 1. Navigate to the following registry key:
 
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config`
+   ```reg
+   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\OID\EncodingType 0\CertDllCreateCertificateChainEngine\Config
+   ```
 
 1. To enable logging, set the logging flag for an existing weak crypto policy. Combine the `CERT_CHAIN_ENABLE_WEAK_LOGGING_FLAG` (0x00000004) or `CERT_CHAIN_ENABLE_ONLY_WEAK_LOGGING_FLAG` (0x00000008) with the existing flags for the policy. For example, to enable logging for all EKU weak MD5 third-party certs, create or modify the DWORD value named `WeakMD5ThirdPartyFlags` and set it the value to hexadecimal value `0x80010004`.
 
