@@ -42,7 +42,7 @@ The following table describes the permissions required for these accounts.
 
 The following diagram illustrates the use and creation of computer accounts (AD objects) that are described in the previous subsection. These accounts come into play when an administrator runs the Create Cluster Wizard and then runs the High Availability Wizard (to configure a clustered service or application).
 
-![A workflow of the failover cluster creation of computer accounts.](media/configure-ad-accounts/failover-cluster-workflow-account-creation.gif)
+![An animation of a workflow of the failover cluster creation of computer accounts.](media/configure-ad-accounts/failover-cluster-workflow-account-creation.gif)
 
 This diagram shows a single administrator running both the Create Cluster Wizard and the High Availability Wizard. However, this could be two different administrators using two different user accounts, if both accounts had sufficient permissions. The permissions are described in more detail in Requirements related to failover clusters, AD domains, and accounts, later in this guide.
 
@@ -50,7 +50,7 @@ This diagram shows a single administrator running both the Create Cluster Wizard
 
 The following diagram illustrates how problems can result if the cluster name account (one of the accounts required by the cluster) is changed after it's automatically created by the Create Cluster Wizard.
 
-![A workflow of the failover cluster creation encountering an issue due to a deleted computer account or account with incorrect permissions.](media/configure-ad-accounts/failover-cluster-workflow-account-creation-error.gif)
+![An animation of a workflow of the failover cluster creation encountering an issue due to a deleted computer account or account with incorrect permissions.](media/configure-ad-accounts/failover-cluster-workflow-account-creation-error.gif)
 
 If the type of problem shown in the diagram occurs, a certain event ID (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [Active Directory Permissions for Cluster Accounts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756188(v=ws.10)).
 
