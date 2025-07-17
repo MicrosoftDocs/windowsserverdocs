@@ -68,7 +68,7 @@ As described in the preceding three sections, certain requirements must be met b
 
   - The account must have administrative permissions on the servers that become cluster nodes. The simplest way to provide this is to create a domain user account, and then add that account to the local Administrators group on each of the servers that become cluster nodes. The account (or the group that the account is a member of) must be given the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain. For more information, see [Steps for configuring the account for the person who installs the cluster](configure-failover-cluster-accounts.md#configure-the-cluster-account).
 
-  - If your organization chooses to prestage the CNO (computer account with the same name as the cluster), the prestaged cluster name account must give "Full Control" permission to the account of the person who installs the cluster.
+  - If your organization chooses to prestage the CNO (computer account with the same name as the cluster), the prestaged cluster name account must give "Full Control" permission to the account of the person who installs the cluster. For other important details about how to prestage the cluster name account, see [Steps for prestaging the cluster name account](configure-failover-cluster-accounts.md#prestage-the-cluster-name-account).
 
 ## Planning ahead for password resets and other account maintenance
 
