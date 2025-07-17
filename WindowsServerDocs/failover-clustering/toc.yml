@@ -18,10 +18,12 @@
   items:
   - name: Failover clusters in AD DS
     items:
+    - name: Failover cluster accounts overview
+      href: failover-cluster-accounts-overview.md
+    - name: Configure failover cluster accounts
+      href: configure-failover-cluster-accounts.md
     - name: Prestage a cluster in AD DS
       href: prestage-cluster-adds.md
-    - name: Configuring cluster accounts in Active Directory
-      href: configure-ad-accounts.md
   - name: Health Service
     items:
     - name: Health Service reports
