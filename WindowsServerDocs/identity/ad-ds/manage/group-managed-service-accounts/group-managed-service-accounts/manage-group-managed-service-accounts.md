@@ -93,13 +93,7 @@ To create a gMSA using PowerShell, follow these steps in an elevated PowerShell 
    > [!IMPORTANT]
    > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
 
-1. On each computer that uses the gMSA, run the following command to install the gMSA on the target device. Replace `<gMSAName>` with the name of the gMSA you created.
-
-   ```powershell
-   Install-ADServiceAccount -Identity <gMSAName>
-   ```
-
-1. Run the following command to verify the gMSA installation was performed on the target device.
+1. Run the following command to verify see if the target device has access to retrieve the gMSA password.
 
    ```powershell
    Test-ADServiceAccount -Identity <gMSAName>
