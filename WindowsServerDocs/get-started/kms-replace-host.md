@@ -191,48 +191,6 @@ Once client devices are sending activation requests to the new host, you can saf
 
 Performing these actions must be done in an elevated command prompt or PowerShell window. To further troubleshoot other issues, see [Guidelines for troubleshooting the Key Management Service (KMS)](/windows-server/get-started/activation-troubleshoot-kms-general).
 
-# [Command Prompt](#tab/cmd1)
-
-If client machines aren't connecting to the new KMS host, verify if they're still connected through the old KMS host by running the following command:
-
-```cmd
-cscript %windir%\system32\slmgr.vbs /dlv
-```
-
-If it’s not pointing to the new KMS host, remove it from the client by running the following command. This command outputs detailed activation information. The entry label **KMS machine name** shows the KMS host that the client is currently using:
-
-```cmd
-cscript %windir%\system32\slmgr.vbs /ckms
-```
-
-To update the KMS host on your client devices, run the following command:
-
-```cmd
-cscript %windir%\system32\slmgr.vbs /skms
-```
-
-# [PowerShell](#tab/powershell1)
-
-If client machines aren't connecting to the new KMS host, verify if they're still connected through the old KMS host by running the following command:
-
-```powershell
-cscript $env:windir\system32\slmgr.vbs /dlv
-```
-
-If it’s not pointing to the new KMS host, remove it from the client by running the following command. This command outputs detailed activation information. The entry label **KMS machine name from DNS** shows the KMS host that the client is currently using:
-
-```powershell
-cscript $env:windir\system32\slmgr.vbs /ckms
-```
-
-To update the KMS host on your client devices, run the following command:
-
-```powershell
-cscript $env:windir\system32\slmgr.vbs /skms
-```
-
----
-
 ## See also
 
 - [Key Management Services (KMS) activation planning](/windows-server/get-started/kms-activation-planning)
