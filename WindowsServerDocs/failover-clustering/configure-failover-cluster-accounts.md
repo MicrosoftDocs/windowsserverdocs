@@ -66,7 +66,7 @@ If organizational policies require you to prestage the cluster name account, fol
 
 1. Right-click the account that you created, then select **Disable Account**. If prompted to confirm your choice, select **Yes**, then select **OK**.
 
-   Disabling the account ensures that the **Create Cluster Wizard** can verify the account isn't already assigned to another computer or cluster in the domain before proceeding.
+   Disabling the account ensures that the Create Cluster Wizard can verify the account isn't already assigned to another computer or cluster in the domain before proceeding.
 
 1. Select the **View** tab, make sure that **Advanced Features** is selected. If not, select it.
 
@@ -94,7 +94,7 @@ If you're using the same account to create the cluster and perform this procedur
 
 ## Prestage an account for a clustered service or application (optional)
 
-For most scenarios, it's easier to let the **High Availability Wizard** automatically create and configure the account during setup. If your organization's policies require prestaging, follow these steps.
+For most scenarios, it's easier to let the High Availability Wizard automatically create and configure the account during setup. If your organization's policies require prestaging, follow these steps.
 
 Make sure that you know the name of the cluster and the name that the clustered service or application will have.
 
