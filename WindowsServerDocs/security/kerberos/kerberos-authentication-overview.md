@@ -5,7 +5,7 @@ ms.topic: concept-article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 07/14/2025
+ms.date: 07/17/2025
 ---
 # Kerberos authentication overview in Windows Server
 
@@ -33,7 +33,7 @@ The implementation of the Kerberos V5 protocol by Microsoft is based on standard
 
 ### More efficient authentication to servers
 
-Before Kerberos, NTLM authentication could be used, which requires an application server to connect to a domain controller to authenticate every client computer or service. With the Kerberos protocol, renewable session tickets replace pass-through authentication. The server is not required to go to a domain controller,unless it needs to validate a Privilege Attribute Certificate (PAC). Instead, the server can authenticate the client computer by examining credentials presented by the client. Client computers can obtain credentials for a particular server once and then reuse those credentials throughout a network logon session.
+Before Kerberos, NTLM authentication could be used, which requires an application server to connect to a domain controller to authenticate every client computer or service. With the Kerberos protocol, renewable session tickets replace pass-through authentication. The server is not required to go to a domain controller, unless it needs to validate a Privilege Attribute Certificate (PAC). Instead, the server can authenticate the client computer by examining credentials presented by the client. Client computers can obtain credentials for a particular server once and then reuse those credentials throughout a network logon session.
 
 ### Mutual authentication
 
@@ -41,7 +41,7 @@ By using the Kerberos protocol, a party at either end of a network connection ca
 
 ## Encryption types
 
-Beginning with Windows Server 2025, Kerberos no longer honors the legacy registry key `REG_DWORD SupportedEncryptionTypes` found in the path **HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Lsa\Kerberos\Parameters**. Microsoft recommends using group policy instead. To learn more about the group policy settings, see [Network security: Configure encryption types allowed for Kerberos](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos).
+Beginning with Windows Server 2025, Kerberos no longer honors the legacy registry key `REG_DWORD SupportedEncryptionTypes` found in the path **HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Lsa\Kerberos\Parameters**. Microsoft recommends using group policy instead. To learn more about the group policy settings, see [Network security: Configure encryption types allowed for Kerberos](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos).
 
 ## Related content
 
