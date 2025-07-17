@@ -4,7 +4,7 @@ description: Learn how to replace your Key Management Services (KMS) host in Win
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 04/30/2025
+ms.date: 07/17/2025
 ---
 
 # Replace a KMS host
@@ -19,12 +19,12 @@ Before proceeding with your installation and licensing tasks, review the followi
 
 > [!NOTE]
 >
-> - **Client Activation Threshold**: KMS requires at least **25** unique activation requests from the client OS within the last 30 days to begin activating them.
-> - **Server Activation Threshold**: KMS requires at least **5** unique activation requests from the server OS within the last 30 days to begin activating them.
+> - **KMS Count client activation threshold**: KMS requires at least **25** unique activation requests from the client or server OS to begin activating the client OS.
+> - **KMS Count server activation threshold**: KMS requires at least **5** unique activation requests from the server or client OS to begin activating the server OS.
 
 ## Prerequisites
 
-- The **Volume Activation Services** role must be installed on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+- The **Volume Activation Services** role must be installed on the device that will act as the new KMS host. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
   *Alternatively*, you can run the following PowerShell command:
 
@@ -45,9 +45,9 @@ Before proceeding with your installation and licensing tasks, review the followi
 
 - Your OS must have the latest Windows updates installed before configuring your device as a KMS host.
 
-## Manage a KMS host
+## Verify existing KMS hosts
 
-When a KMS host is deployed, network administrators can streamline the activation process for all client machines, reducing the need for individual product keys while bolstering compliance. This process involves installing the appropriate KMS host key, configuring services for automatic client discovery through DNS, and implementing secure communication channels via firewall rules. Performing these actions can be done in an elevated command prompt or PowerShell window.
+Before you migrate to a new KMS host, it's recommended to inventory your environment to identify all existing KMS hosts. This helps ensure there aren't unauthorized or unnecessary KMS hosts present. Unapproved KMS hosts might appear if a CSVLK was used to activate a device that shouldn't serve as a KMS host. Only authorized servers should be activated with a CSVLK and configured as KMS hosts. Performing these actions can be done in an elevated command prompt or PowerShell window.
 
 ## Retrieve a KMS host
 
@@ -93,6 +93,12 @@ Resolve-DnsName -Name _vlmcs._tcp.mydomain.com -Type SRV -Server 8.8.8.8
 
 ---
 
+If you discover unauthorized KMS hosts, you can revert them to KMS clients by running the following command and then restart the device. Replace `<GVLK>` with your Generic Volume License Key (GVLK):
+
+```
+slmgr.vbs /ipk <GVLK>
+```
+
 ## Verify KMS host product activation
 
 To verify which products the current KMS host is activating and ensure the new KMS host activates the same Windows OS and Microsoft Office clients, run the following command:
@@ -113,7 +119,7 @@ Before configuring your environment as a KMS host, start with a clean installati
 
 # [Windows OS KMS host](#tab/winoshost)
 
-After preparing the host OS, the next step is to configure it to serve as a KMS host. Review the steps outlined in [How to create a Key Management Services (KMS) activation host](/windows-server/get-started/kms-create-host).
+After preparing the host OS, the next step is to configure it to serve as a KMS host.
 
 # [Microsoft Office KMS host](#tab/officehost)
 
@@ -166,71 +172,20 @@ When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, wh
 
 ## Register a KMS host
 
-Once the KMS host is configured for the Windows OS and Microsoft Office, there are two options available to perform KMS host registration.
+After configuring the KMS host for Windows OS and Microsoft Office, it might automatically register with DNS if your domain permissions allow. If manual registration is required, follow the steps in [Manually create DNS records](/windows-server/get-started/kms-create-host#manually-create-dns-records).
 
-# [Without DNS](#tab/nodns)
+After registering the new KMS host in DNS, you can remove the old KMS host from DNS. Client devices will begin sending activation requests to the new KMS host, though it may take some time for the activation count to reach the required minimum thresholds. To confirm successful migration, review the event log on the new KMS host (**Event Viewer** > **Application and Services Log** > **Key Management Service**). You can also run the following command and review the output:
 
-If you choose not to register the KMS host in your domain, you must manually configure a test device to send activation requests to the new KMS host.
+```
+slmgr.vbs /dlv.
+```
 
-1. Run one of the following commands with elevation where "domain.com" is the FQDN or IP address:
-
-   ```cmd
-   cscript %windir%\system32\slmgr.vbs /skms:mydomain.com:1688
-   ```
-
-   ```powershell
-   cscript $env:windir\system32\slmgr.vbs /skms:mydomain.com:1688
-   ```
-
-1. Run one of the following commands to initiate an activation request:
-
-   ```cmd
-   cscript %windir%\system32\slmgr.vbs /ato
-   ```
-
-   ```powershell
-   cscript $env:windir\system32\slmgr.vbs /ato
-   ```
-
-If you receive an "insufficient count" error, it verifies that basic network connectivity exists between the client and the KMS host.
-
-# [With DNS](#tab/withdns)
-
-Register the new KMS host in DNS to enable automatic discovery by client machines. This approach also facilitates a faster increase in the activation count. To register the new KMS host in DNS, follow these steps:
-
-1. Manually create the appropriate service (SRV) records. To learn more, see [Manually create DNS records](/windows-server/get-started/kms-create-host#manually-create-dns-records).
-1. Verify that the new SRV record is published by using `nslookup` as described in [Retrieve a KMS host](#retrieve-a-kms-host).
-1. On the client machines, ensure that any previous manual settings (if any) are cleared so that the client can automatically locate the KMS host via DNS. Then run one of the following commands with elevation:
-
-   ```cmd
-   cscript %windir%\system32\slmgr.vbs /ato
-   ```
-
-   ```powershell
-   cscript $env:windir\system32\slmgr.vbs /ato
-   ```
-
-Check which devices are sending activation requests to the new KMS host:
-
-1. Right-click **Start**, then select **Event Viewer**.
-1. Expand **Applications and Services Logs**, then select **Key Management Service** to view the baseline.
-1. Run one of the following commands on the test machine to verify the KMS client details:
-
-   ```cmd
-   cscript %windir%\system32\slmgr.vbs /dlv
-   ```
-
-   ```powershell
-   cscript $env:windir\system32\slmgr.vbs /dlv
-   ```
-
-1. Return to the **Key Management Service** event log and review the entries **KMS machine name from DNS** and **KMS machine IP address** to confirm that the client is communicating with the new KMS host.
-1. Once you verify the new KMS host is activating client machines successfully, remove the old KMS host from DNS.
-
----
+Once client devices are sending activation requests to the new host, you can safely remove the old KMS host from DNS.
 
 > [!NOTE]
-> It's important to completely shut down the old KMS host to prevent any confusion and ensure that client devices only contact the new KMS host.
+>
+> - It's advisable to completely shut down and reimage the old KMS host to ensure that client devices transition to the new KMS host.
+> - If a device was configured for a specific KMS host using `slmgr.vbs /skms`, executing `slmgr.vbs /ckms` clears that configuration and allows the devices to automatically detect the new KMS host.
 
 ## Troubleshoot KMS activation
 
