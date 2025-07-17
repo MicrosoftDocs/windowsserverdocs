@@ -62,7 +62,7 @@ If organizational policies require you to prestage the cluster name account, fol
 
 1. In the left pane, right-click **Computers**, then select **New** > **Computer**.
 
-1. Enter the name you intend to use for the failover cluster. This is the cluster name that is entered in the **Create Cluster Wizard**, select **OK**.
+1. Enter the name you intend to use for the failover cluster. This is the cluster name that is entered in the Create Cluster Wizard, select **OK**.
 
 1. Right-click the account that you created, then select **Disable Account**. If prompted to confirm your choice, select **Yes**, then select **OK**.
 
