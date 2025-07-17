@@ -13,17 +13,18 @@ ms.date: 07/17/2025
 In this article, you'll learn about the various tools and solutions available to manage Windows Server effectively. Windows Server has many tools that let administrators connect applications, networks, and web services into an infrastructure.
 
 Watch the following video to get an overview of the Windows Server management tools and learn how to choose the right solution for your organization's needs.
+</br></br>
 
 > [!VIDEO 21d7b936-7942-456c-af48-8eedd36f04de]
 
-## Management tools overview
+## Management tools
 
 The primary tools for managing your Windows Server infrastructure are:
 
-- [Windows Admin Center](#windows-admin-center)
-- [Local management tools](#local-management-tools)
-- [Azure Arc](#azure-arc)
-- [System Center](#system-center)
+- Windows Admin Center
+- Local management tools
+- Azure Arc
+- System Center
 
 You're probably already familiar with some of these tools, like the Windows Server Microsoft Management Console (MMC). However, it's important to be familiar with all the management tools Windows Server offers so you can choose which one is right for your organization.
 
