@@ -133,10 +133,7 @@
       },
       "no-loc": {
         "administration/windows-commands/**/*.md": [
-          "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
-        ],
-        "administration/windows-commands/**/*.yml": [
-          "[auditpol backup, auditpol clear, attributes, attributes volume, attributes disk, attrib, auditpol get, attach vdisk, atmadm, arp]"
+          "[append, arp, break, call, cipher, clip, manage-bde status, manage-bde on, mount]"
         ]
       },
       "feedback_product_url": {
