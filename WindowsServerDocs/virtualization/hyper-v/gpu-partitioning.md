@@ -5,7 +5,7 @@ author: meaghanlewis
 ms.author: mosagie
 ms.topic: concept-article
 ms.subservice: core-os
-ms.date: 06/12/2025
+ms.date: 07/18/2025
 ---
 
 # GPU partitioning
@@ -14,7 +14,9 @@ GPU partitioning allows you to share a physical GPU device with multiple virtual
 
 The GPU partitioning feature uses the [Single Root IO Virtualization (SR-IOV) interface](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-), which provides a hardware-backed security boundary with predictable performance for each VM. Each VM can access only the GPU resources dedicated to them and the secure hardware partitioning prevents unauthorized access by other VMs.
 
-Windows Server introduces live migration with GPU partitioning. There are specific requirements to use GPU partitioning live migration. Aside from recommended live migration best practices, your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
+Beginning with Windows Server 2025, live migration is supported with GPU partitioning, enabling greater flexibility for managing virtual machines. To utilize live migration with GPU partitioning, ensure your setup meets the requirements outlined in this article. Live migration allows you to move VMs between hosts without downtime, which is essential for maintenance and load balancing in a production environment.
+
+This feature allows planned VM migrations while maintaining GPU resource allocation, ensuring minimal downtime and consistent performance.
 
 GPU partitioning is designed for standalone servers. You can live migrate VMs between standalone nodes for planned downtime; however, for customers that require clustering for unplanned downtime, you must use Windows Server 2025 Datacenter.
 
@@ -28,7 +30,20 @@ For example:
 
 - Inference with ML: Customers in retail stores and manufacturing plants can run inference at the edge, which requires GPU support for their servers. Using GPU on your servers, you can run ML models to get quick results that can be acted on before the data is sent to the cloud. The full data set can optionally be transferred to continue to retrain and improve your ML models. Along with DDA, where you dedicate an entire physical GPU to a VM, GPU partitioning enables you to run multiple inference applications simultaneously on the same GPU, but in separate hardware partitions, maximizing GPU utilization.
 
-## Supported guest operating systems
+## Requirements
+
+To use GPU partitioning with live migration, you need to have a supported CPU, operating system, and GPU. The following sections describe the requirements.
+
+### CPU requirements
+
+Your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
+
+Examples of processors that support IOMMU DMA bit tracking include:
+
+- AMD EPYC 7002 and later (Milan)
+- 4th Gen Intel Xeon SP (Sapphire Rapids)
+
+### Supported guest operating systems
 
 GPU partitioning on Windows Server 2025 and later supports these guest operating systems:
 
@@ -37,7 +52,7 @@ GPU partitioning on Windows Server 2025 and later supports these guest operating
 - Windows Server 2019 or later
 - Linux Ubuntu 18.04 LTS, Linux Ubuntu 20.04 LTS​, Linux Ubuntu 22.04 LTS
 
-## Supported GPUs
+### Supported GPUs
 
 The following GPUs support GPU partitioning:
 
@@ -50,10 +65,9 @@ The following GPUs support GPU partitioning:
 - NVIDIA L40
 - NVIDIA L40S
 
-> [!NOTE]
-> You need to install v18.x or later of the NVIDIA driver to use live migration.
+To use live migration with GPU partitioning, you must use the driver included in the NVIDIA vGPU Software v18.x or later. The NVIDIA driver provides the necessary support for GPU partitioning and live migration capabilities.
 
-We recommend working with your Original Equipment Manufacturer (OEM) partners and GPU Independent Hardware Vendors (IHVs) when planning your systems. They can help you order and set up the right hardware and software for your workloads. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA). Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
+We recommend working with your Original Equipment Manufacturer (OEM) partners to plan and order systems tailored to your workloads. Additionally, consult GPU Independent Hardware Vendors (IHVs) to ensure you have the appropriate configurations and necessary software for your setup. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA). Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
 
 For best performance, we recommend that you create a homogeneous configuration for GPUs across all the servers in your cluster. A homogeneous configuration consists of installing the same make and model of the GPU, and configuring the same partition count in the GPUs across all the servers in the cluster. For example, in a cluster of two servers with one or more GPUs installed, all the GPUs must have the same make, model, and size. The partition count on each GPU must also match.
 
