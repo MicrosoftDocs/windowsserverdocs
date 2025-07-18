@@ -274,7 +274,7 @@ To install Internet Explorer 11 on a Server Core installation of Windows Server 
 
 To install Internet Explorer 11 on a Server Core installation of Windows Server from an ISO image:
 
-1. Make sure you installed Application Compatibility on the Server Core installation of Windows Server.
+1. Make sure you installed the Application Compatibility Feature on Demand on the Server Core installation of Windows Server.
 
 1. Once again follow the steps in the section [Install the Application Compatibility Feature on Demand](#install-the-application-compatibility-feature-on-demand-on-server-core), but for step 6, run the following command instead, depending on the operating system version you're using:
 
