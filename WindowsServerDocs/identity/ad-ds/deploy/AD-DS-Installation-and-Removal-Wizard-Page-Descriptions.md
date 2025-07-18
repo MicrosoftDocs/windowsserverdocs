@@ -5,13 +5,18 @@ ms.topic: concept-article
 ai-usage: ai-assisted
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 06/27/2025
+ms.date: 07/17/2025
 # customer intent: As an administrator, I want to become familiar with the Active Directory Domain Services Configuration Wizard so that I can promote servers to domain controllers and demote servers.
 ---
 
 # Active Directory Domain Services (AD DS) configuration wizard page descriptions
 
 The Active Directory Domain Services (AD DS) Configuration Wizard is a tool in Server Manager that enables administrators to promote servers to domain controllers or demote them as needed. This article provides a detailed overview of the wizard's pages, including their controls and options, to help you navigate the installation and removal processes effectively. Whether you're creating a new forest, adding a domain controller to an existing domain, or demoting a domain controller, this guide outlines the steps and considerations for each operation.
+
+Watch the following video to get an overview of promoting and demoting domain controllers using the AD DS Configuration Wizard:
+</br></br>
+
+> [!VIDEO ec343800-59ae-43c3-a031-83d8647034a6]
 
 ## Summary of each page
 
