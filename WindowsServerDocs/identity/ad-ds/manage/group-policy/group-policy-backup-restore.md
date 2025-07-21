@@ -1,29 +1,29 @@
 ---
-title: Backup and restore Group Policy in Windows
-description: Learn how to backup, restore, migrate, and copy group policy objects using the Group Policy Management Console in Windows.
+title: Back Up and Restore Group Policy in Windows
+description: Learn how to back up, restore, migrate, and copy Group Policy Objects by using the Group Policy Management Console in Windows.
 author: Orin-Thomas
 ms.topic: how-to
 ms.author: orthomas
 contributor: orthomas
-ms.date: 04/16/2024
+ms.date: 07/10/2025
 ---
 
-# Backup, restore, migrate, and copy Group Policy Objects
+# Back up, restore, migrate, and copy Group Policy Objects
 
-In this article, learn how to back up, restore, migrate, and copy existing Group Policy Objects (GPOs) using the Group Policy Management Console (GPMC). These capabilities are important for maintaining your Group Policy deployments from an error or disaster. They help you avoid having to manually recreate lost or damaged GPOs and then repeat the planning, testing, and deployment phases. Part of your ongoing Group Policy operations plan should include regular backups of all GPOs.
+This article describes how to back up, restore, migrate, and copy existing Group Policy Objects (GPOs) by using the Group Policy Management Console (GPMC). These capabilities are important for protecting your Group Policy deployments against errors or disasters. They help you avoid having to manually recreate lost or damaged GPOs and repeat the planning, testing, and deployment phases. Part of your ongoing Group Policy operations plan should include regular backups of all GPOs.
 
-You can also copy and import GPOs, both from the same domain and across domains. You can use the GPMC to migrate an existing GPO, for example, from an existing domain into a newly deployed domain. You can either copy GPOs or import policy settings from one GPO into another GPO. Importing GPOs allows you to transfer policy settings from a backed-up GPO into an existing GPO, and is especially useful in situations where a trust relationship isn't present between the source and destination domains. If you want to reuse existing GPOs, copying also allows you to conveniently move GPOs from one production environment to another.
+You can also copy and import GPOs, both from the same domain and across domains. You can use the GPMC to migrate an existing GPO, for example, from an existing domain into a newly deployed domain. You can either copy GPOs or import policy settings from one GPO into another GPO. Importing GPOs allows you to transfer policy settings from a backed-up GPO into an existing GPO and is especially useful in situations where a trust relationship isn't present between the source and destination domains. If you want to reuse existing GPOs, copying also allows you to conveniently move GPOs from one production environment to another.
 
 ## Back up GPOs and view GPO backups
 
-The backup operation backs up a production GPO to the file system. The location of the backup can be any folder to which you have write access. After backing up GPOs, you must use the GPMC to display and manipulate the contents of your backup folder, either by using the GPMC or programmatically by using a script. After the GPOs are backed up, use the GPMC to process archived GPOs by using the import and restore operations.
+The backup operation backs up a production GPO to the file system. The location of the backup can be any folder to which you have write access. After backing up GPOs, you must use the GPMC to display and manipulate the contents of your backup folder, either by using the GPMC directly or programmatically by using a script. After the GPOs are backed up, use the GPMC to process archived GPOs by using the import and restore operations.
 
 > [!CAUTION]
 > Don't interact with archived GPOs directly through the file system.
 
 You can back up multiple instances of the same GPO to the same location because the GPMC uniquely identifies each backup instance. This mechanism allows you to pick the instance of the archived GPO with which you want to work. For example, you can choose to display only the most recent backups when viewing the contents of a backup folder through the GPMC.
 
-### Backup all GPOs in a domain
+### Back up all GPOs in a domain
 
 To back up all GPOs in a domain, perform the following steps:
 
@@ -33,11 +33,11 @@ To back up all GPOs in a domain, perform the following steps:
 
 1. Right-click **Group Policy Objects**, and then select **Back Up All**.
 
-1. In the **Back Up Group Policy Object** dialog box, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
+1. In the **Back Up Group Policy Object** dialog, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
 
 1. After the backup operation completes, a summary will list how many GPOs were successfully backed up and any GPOs that weren't backed up. Select **OK** to return to the GPMC.
 
-### Backup a specific GPO
+### Back up a specific GPO
 
 To back up a specific GPO, perform the following steps:
 
@@ -45,7 +45,7 @@ To back up a specific GPO, perform the following steps:
 
 1. Right-click the GPO you want to back up, and then select **Back Up**.
 
-1. In the **Backup Group Policy Object** dialog box, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
+1. In the **Backup Group Policy Object** dialog, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
 
 1. After the backup operation completes, a summary will list how many GPOs were successfully backed up and any GPOs that weren't backed up. Select **OK** to return to the GPMC.
 
@@ -57,13 +57,13 @@ To view a list of backed up GPOs, perform the following steps:
 
 1. Right-click **Group Policy Objects**, and the select **Manage Backups**.
 
-1. In the **Manage Backups** dialog box, enter the path to the location where you stored the GPO backups that you want to view. Alternatively, you can select **Browse**, locate the folder that contains the GPO backups, and then select **OK**.
+1. In the **Manage Backups** dialog, enter the path to the location where you stored the GPO backups that you want to view. Alternatively, you can select **Browse**, locate the folder that contains the GPO backups, and then select **OK**.
 
-1. To specify that only the most recent version of the GPOs are displayed in the **Backed up GPOs** list, check the **Show only the latest version of each GPO** check box. Select **Close**.
+1. To specify that only the most recent version of the GPOs are displayed in the **Backed up GPOs** list, select the **Show only the latest version of each GPO** checkbox. Select **Close**.
 
 ## Restore GPOs
 
-You can also restore GPOs. This operation restores a backed-up GPO to the same domain from which it was backed up. You can't restore a GPO from a backup into a domain that is different from the GPO’s original domain. To restore a previous version of an existing GPO, perform the following steps:
+You can also restore GPOs. This operation restores a backed-up GPO to the same domain from which it was backed up. You can't restore a GPO from a backup into a domain that's different from the GPO’s original domain. To restore a previous version of an existing GPO, perform the following steps:
 
 1. In the GPMC console tree, expand Group Policy Objects in the forest or domain that contains the GPOs that you want to restore.
 
@@ -71,9 +71,9 @@ You can also restore GPOs. This operation restores a backed-up GPO to the same d
 
 1. Select **Next** to get started.
 
-1. Enter the path to the location where the GPO backups are located, then select **Next**.
+1. Enter the path to the location where the GPO backups are located, and then select **Next**.
 
-1. Select the backed-up GPO that you want to restore, then select **Next**.
+1. Select the backed-up GPO that you want to restore, and then select **Next**.
 
 1. Select **Finish** to restore the GPO.
 
@@ -83,13 +83,13 @@ To restore a deleted GPO, perform the following steps:
 
 1. Right-click **Group Policy Objects**, and then select **Manage Backups**.
 
-1. In the **Manage Backups** dialog box, select Browse, and then locate the file that contains your backed-up GPOs.
+1. In the **Manage Backups** dialog, select **Browse**, and then locate the file that contains your backed-up GPOs.
 
-1. In the Backed up GPOs list, select the GPO that you want to restore, and then select **Restore**.
+1. In the **Backed up GPOs** list, select the GPO that you want to restore, and then select **Restore**.
 
 1. When you're prompted to confirm the restore operation, select **OK**.
 
-1. After the restore operation completes, a summary will state whether the restore succeeded. Select **OK**, then select **Close**.
+1. After the restore operation completes, a summary will state whether the restore succeeded. Select **OK**, and then select **Close**.
 
 ## Copy GPOs
 
@@ -101,9 +101,9 @@ A copy operation copies an existing, current GPO to the desired destination doma
 
 When copying GPOs, you can also copy the Discretionary Access Control List (DACL) on the GPO, in addition to the policy settings within the GPO. This is useful for ensuring that the new GPO that is created as part of the copy operation has the same security filtering and delegation options as the original GPO.
 
-Importing a GPO allows you to transfer policy settings from a backed-up GPO to an existing GPO. Importing a GPO transfers only the GPO settings; it doesn't modify the existing security filtering or links on the destination GPO. Importing a GPO is useful for migrating GPOs across untrusted environments, because you only need access to the backed-up GPO, not the production GPO. Because an import operation only modifies policy settings, Edit permissions on the destination GPO are sufficient to perform the operation.
+Importing a GPO allows you to transfer policy settings from a backed-up GPO to an existing GPO. Importing a GPO transfers only the GPO settings. It doesn't modify the existing security filtering or links on the destination GPO. Importing a GPO is useful for migrating GPOs across untrusted environments, because you only need access to the backed-up GPO, not the production GPO. Because an import operation only modifies policy settings, edit permissions on the destination GPO are sufficient to perform the operation.
 
-When copying or importing a GPO, you can specify a migration table. If the GPO contains security principals or UNC paths that might need to be updated when they're copied to the target domain. You use the Migration Table Editor (MTE) to create and edit migration tables. Migration tables are described in the next section, Using migration tables.
+When copying or importing a GPO, you can specify a migration table if the GPO contains security principals or UNC paths that might need to be updated when they're copied to the target domain. You use the Migration Table Editor (MTE) to create and edit migration tables. Migration tables are described later in this article.
 
 To copy a GPO, perform the following steps:
 
@@ -115,7 +115,7 @@ To copy a GPO, perform the following steps:
 
    - To place the copy of the GPO in the same domain as the source GPO, right-click **Group Policy Objects**, and then select **Paste**.
    - To place the copy of the GPO in a different domain (either in the same or a different forest), expand the destination domain, right-click **Group Policy Objects**, and then select **Paste**.
-   - If you're copying within a domain, select **Use the default permissions for new GPOs** or P**reserve the existing permissions**, and then select **OK**.
+   - If you're copying within a domain, select **Use the default permissions for new GPOs** or **Preserve the existing permissions**, and then select **OK**.
 
 1. If you're copying to or from another domain, follow the instructions in the wizard that opens, and then select **Finish**.
 
@@ -127,19 +127,19 @@ To import policy settings from a backed-up GPO into another GPO, perform the fol
 
 1. Right-click the GPO that you want to import policy settings, and then select **Import Settings**.
 
-1. In the **Import Settings Wizard** dialog box, select **Next** to get started.
+1. In the **Import Settings Wizard** dialog, select **Next** to get started.
 
 1. Select **Next**, or optionally, select **Backup**.
 
-    1. _Optional:_ In the **Backup Group Policy Object** dialog box, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
+    1. _Optional:_ In the **Backup Group Policy Object** dialog, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
 
     1. After the backup operation completes, a summary will list how many GPOs were successfully backed up and any GPOs that weren't backed up. Select **OK** to return to the **Import Settings Wizard**, then select **Next**.
 
 1. Enter the path to the location where the GPO backups are located, then select **Next**.
 
-1. Select the backed-up GPO that you want to import, then select **Next**.
+1. Select the backed-up GPO that you want to import, and then select **Next**.
 
-1. Review the scan results, then select **Next**.
+1. Review the scan results, and then select **Next**.
 
 1. Select **Finish** to import the GPO.
 
@@ -149,7 +149,7 @@ To import policy settings from a backed-up GPO into another GPO, perform the fol
 
 Because some data in a GPO is domain-specific and might not be valid when copied directly to another domain, the GPMC provides migration tables. A migration table is a simple table that specifies a mapping between a source value and a destination value.
 
-A migration table converts, during the copy or import operation, the references in a GPO to new references that work in the target domain. You can use migration tables to update security principals and UNC paths to new values as part of the import or copy operation. Migration tables are stored with the file name extension `.migtable`, and are actually XML files. You don't need to know XML to create or edit migration tables; the GPMC provides the Migration Table Editor (MTE) for manipulating migration tables.
+A migration table converts, during the copy or import operation, the references in a GPO to new references that work in the target domain. You can use migration tables to update security principals and UNC paths to new values as part of the import or copy operation. Migration tables are stored with the file name extension `.migtable` and are actually XML files. You don't need to know XML to create or edit migration tables. The GPMC provides the Migration Table Editor (MTE) for manipulating migration tables.
 
 A migration table consists of one or more mapping entries. Each mapping entry consists of a source type, source reference, and destination reference. If you specify a migration table when performing an import or copy operation, each reference to the source entry is replaced with the destination entry when the policy settings are written into the destination GPO. Before you use a migration table, ensure that the destination references specified in the migration table already exist.
 
@@ -182,37 +182,37 @@ To create a migration table that maps an example UNC path, perform the following
 
 1. Right-click **Group Policy Objects**, and then select **Open Migration Tables Editor**.
 
-1. From the menu select **Tools**, then **Populate from GPO**.
+1. From the menu, select **Tools** and then **Populate from GPO**.
 
-1. In the **Select GPO** dialog box, select the GPO that contains the UNC path that you want to map, then select **OK**.
+1. In the **Select GPO** dialog, select the GPO that contains the UNC path that you want to map, and then select **OK**.
 
 1. Enter the new destination value for the UNC path.
 
-1. From the menu select **File**, then **Save As**.
+1. From the menu, select **File** and then **Save As**.
 
-1. Browse to a location you want to use. Enter a name for the migration table, then select **Save**.
+1. Browse to a location you want to use. Enter a name for the migration table, and then select **Save**.
 
 To use a migration table during a copy or import operation, perform the following steps:
 
 1. In the GPMC console tree, expand **Group Policy Objects** in the forest and domain containing the GPO into which you want to import policy settings.
 
-1. Right-click the GPO that you want to import policy settings, and then select **Import Settings**.
+1. Right-click the GPO into which you want to import policy settings, and then select **Import Settings**.
 
-1. In the **Import Settings Wizard** dialog box, select **Next** to get started.
+1. In the **Import Settings Wizard** dialog, select **Next** to get started.
 
 1. Select **Next**, or optionally, select **Backup**.
 
-    1. _Optional:_ In the **Backup Group Policy Object** dialog box, enter the path to the location where you want to store the GPO backups and enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
+    1. _Optional:_ In the **Backup Group Policy Object** dialog, enter the path to the location where you want to store the GPO backups and then enter a description. Alternatively, you can select **Browse**, locate the folder in which you want to store the GPO backups, and then select **OK**. Select **Back Up**.
 
-    1. After the backup operation completes, a summary will list how many GPOs were successfully backed up and any GPOs that weren't backed up. Select **OK** to return to the **Import Settings Wizard**, then select **Next**.
+    1. After the backup operation completes, a summary will list how many GPOs were successfully backed up and any GPOs that weren't backed up. Select **OK** to return to the **Import Settings Wizard**, and then select **Next**.
 
-1. Enter the path to the location where the GPO backups are located, then select **Next**.
+1. Enter the path to the location where the GPO backups are located, and then select **Next**.
 
-1. Select the backed-up GPO that you want to import, then select **Next**.
+1. Select the backed-up GPO that you want to import, and then select **Next**.
 
-1. Review the scan results, then select **Next**.
+1. Review the scan results, and then select **Next**.
 
-1. Select **Using this migration table to map them in the destination GPO**, then select **Browse** to locate the migration table you want to use. Select **Next**.
+1. Select **Using this migration table to map them in the destination GPO**, and then select **Browse** to locate the migration table you want to use. Select **Next**.
 
 1. Select **Finish** to import the GPO.
 
