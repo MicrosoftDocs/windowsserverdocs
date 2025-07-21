@@ -21,7 +21,7 @@ Active Directory defines specific permissions and user rights that can be used f
 You can assign administrative control to a user or group by using the _Delegation of Control Wizard_. You can use the Delegation of Control Wizard to delegate the following tasks:
 
 - Create, delete, and manage user accounts
-- Reset user passwords and force password change at next sign-in
+- Reset user passwords and force password change at next logon
 - Read all user information
 - Modify the membership of a group
 - Join a computer to a domain
