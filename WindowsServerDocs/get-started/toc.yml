@@ -101,7 +101,7 @@ items:
       href: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Enable Azure Edition Hotpatch from ISO
       href: enable-hotpatch-azure-edition.md
-    - name: Enable Hotpatch for Azure Arc-enabled servers (preview)
+    - name: Enable Hotpatch for Azure Arc-enabled servers
       href: enable-hotpatch-azure-arc-enabled-servers.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
