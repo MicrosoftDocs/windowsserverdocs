@@ -12,9 +12,11 @@ ms.author: mosagie
 > Windows Server assistant is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight solution enables seamless migration with minimal downtime for both Windows and Linux VMs.
+You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The convestion tool is easy and fast to setup, at no cost to customers.
 
 In this article, you learn how to install and configure the extension, follow the migration workflow, and find answers to common questions.
+
+## Feature overview
 
 The VM Conversion extension provides the following key features:
 
@@ -31,24 +33,36 @@ The VM Conversion extension provides the following key features:
 
 Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
-- Install PowerCLI. Install using the PowerShell command: `Install-Module -Name VMware.PowerCLI`
+### Windows Admin Center Gateway prerequisites
+
+- Install PowerCLI.
+  - Install using the PowerShell command: `Install-Module -Name VMware.PowerCLI`
 
 - Install:
-  - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on machine with the Windows Admin Center Gateway.
-  - [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) is installed.
+  - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist)
+  - [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
 
-- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK* on the Windows Admin Center Gateway machine.
+- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
 
-- Ensure that the Hyper-V role is installed on the Windows Admin Center Gateway machine.
+- Ensure that the Hyper-V role is installed
 
-- Use Windows Admin Center Gateway V2 – GA version.
+- Use Windows Admin Center Gateway V2 – version `2410` build number `2.4.12.10`
 
-- VMware VCenter version 6.x or higher is installed. Keep the following vCenter information at hand:
+### vCenter or ESXI host prerequisites
+
+- Ensure that the VM to be migrated has no active snapshots. If snapshots exist, initial sync prechecks fail.
+
+### Windows Server host prerequisites
+
+None.
+
+## Supported vCenter versions
+
+- The extension supports VMware VCenter version 6.x or 7.x.
+- To connect to vCenter from the extension, keep the following vCenter information at hand:
   - Fully Qualified Domain Name (FQDN)
   - Username
   - Password
-
-- Ensure that the VM to be migrated has no active snapshots. If snapshots exist, initial sync prechecks fail.
 
 ## Supported guest operating systems
 
@@ -148,7 +162,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Which VMware versions are supported?
 
-    The tool supports vCenter and ESXi versions 6.x and higher.
+    The tool supports vCenter and ESXi versions 6.x and 7.x.
 
 1. Does the tool support both Static and DHCP IP addresses?
 
@@ -183,3 +197,19 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it may cause storage management issues later.
 
     After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage: `Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed`.
+
+1. Is VMWare to Azure Local migration supported?
+
+    No. Migration to Azure Local isn't supported by this tool. Use Azure Migrate to migrate virtual machines to Azure Local.
+
+1. How is static IP supported?
+
+    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's then persisted on the target Hyper-V host post cutover phase.
+
+1. Does the tool support virtual machines running on a virtual storage area network (vSAN)?
+
+    The tool doesn't support virtual machines running on vSAN?
+
+1. Is this tool available in Windows Admin Center on portal?
+
+    No. The conversion tool is only available in Windows Admin Center on-premise.
