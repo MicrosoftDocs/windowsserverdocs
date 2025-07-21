@@ -19,7 +19,7 @@ Windows Server 2022 Datacenter: Azure Edition helps you use the benefits of the 
 up to date while minimizing downtime. This section describes some of the new features in Windows
 Server 2022 Datacenter: Azure Edition. Learn more about how Azure Automanage for Windows Server
 brings these new capabilities to Windows Server Azure Edition in the [Azure Automanage for
-Windows Server services](/azure/automanage/automanage-windows-server-services-overview) article.
+Windows Server services](azure-edition.md) article.
 
 Windows Server 2022 Datacenter: Azure Edition builds on Datacenter Edition to deliver a VM-only
 operating system that helps to use the benefits of the cloud, with advanced features like SMB over QUIC,
@@ -29,7 +29,7 @@ Compare the
 [differences in the editions in Windows Server 2022](../get-started/editions-comparison-windows-server-2022.md).
 You can also learn more about how Azure Automanage for Windows Server brings these new capabilities
 to Windows Server Azure Edition in the
-[Azure Automanage for Windows Server services](/azure/automanage/automanage-windows-server-services-overview)
+[Azure Automanage for Windows Server services](azure-edition.md)
 article.
 
 ### April 2023
