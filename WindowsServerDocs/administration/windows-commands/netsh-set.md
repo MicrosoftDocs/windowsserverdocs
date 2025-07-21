@@ -1,0 +1,38 @@
+---
+title: netsh set
+description: Reference article for the netsh command, which is a command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer.
+ms.topic: reference
+ms.author: alalve
+author: xelu86
+ms.date: 07/21/2025
+---
+
+# netsh set
+
+The `netsh set` command allows administrators to specify the target machine for subsequent network configuration tasks, enabling operations on either local or remote systems.
+
+## Syntax
+
+```
+netsh set machine [name=]<string> [user=][[DomainName\]UserName] [pwd=][Password | *]
+```
+
+### Parameters
+
+| Parameter | Description |
+|--|--|
+| `<name>` | Specifies the device name or network address of the machine on which you want to perform actions. |
+| `<user>` | Provides the username credentials required to authenticate and connect to the remote machine. If your network uses a domain, specify the username in the format `DomainName\UserName`. |
+| `<pwd>` | Supplies the password associated with the specified user account. If you enter an asterisk (`*`) instead of a password, you'll be prompted to input the password interactively for added security. |
+
+## Examples
+
+To specify a target machine using its IP address in a domain environment where the password is prompted, run the following command:
+
+```cmd
+netsh set machine name=192.168.1.10 user=DOMAIN\Admin pwd=*
+```
+
+## See also
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
