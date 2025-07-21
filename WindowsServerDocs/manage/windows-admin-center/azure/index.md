@@ -156,7 +156,7 @@ These are the Azure services that provide functionality to clusters as a whole:
 You can use Windows Admin Center to manage your Azure VMs as well as on-premises machines. By configuring your Windows Admin Center gateway to connect to your Azure VNet, you can manage virtual machines in Azure using the consistent, simplified tools that Windows Admin Center provides.
 For more info, see [Configure Windows Admin Center to manage VMs in Azure](manage-azure-vms.md).
 
-- **Add an layer of security to Windows Admin Center by adding [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/) authentication**
+- **Add an layer of security to Windows Admin Center by adding [Microsoft Entra ID](https://www.microsoft.com/security/business/identity-access/microsoft-entra-id) authentication**
 You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Microsoft Entra identities to access the gateway. Microsoft Entra authentication also lets you take advantage of Microsoft Entra ID’s security features like conditional access and multifactor authentication.
 For more info, see [Configure Microsoft Entra authentication for Windows Admin Center](../configure/user-access-control.md#azure-active-directory).
 

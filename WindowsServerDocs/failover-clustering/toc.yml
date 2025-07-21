@@ -18,10 +18,12 @@
   items:
   - name: Failover clusters in AD DS
     items:
+    - name: Failover cluster accounts overview
+      href: failover-cluster-accounts-overview.md
+    - name: Configure failover cluster accounts
+      href: configure-failover-cluster-accounts.md
     - name: Prestage a cluster in AD DS
       href: prestage-cluster-adds.md
-    - name: Configuring cluster accounts in Active Directory
-      href: configure-ad-accounts.md
   - name: Health Service
     items:
     - name: Health Service reports
@@ -72,8 +74,10 @@
     href: /azure/azure-local/manage/vm-load-balancing?context=/windows-server/context/windows-server-failover-clustering
   - name: Cluster affinity
     href: cluster-affinity.md
-  - name: Use Cluster Shared Volumes (CSVs)
+  - name: Cluster Shared Volumes overview
     href: failover-cluster-csvs.md
+  - name: Manage Cluster Shared Volumes
+    href: failover-cluster-manage-cluster-shared-volumes.md
   - name: Using guest VM clusters
     href: ../storage/storage-spaces/storage-spaces-direct-in-vm.md
   - name: Plug-ins
