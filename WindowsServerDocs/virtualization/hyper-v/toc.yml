@@ -137,8 +137,12 @@
       href: manage/configure-multiple-csv-for-vm-replication.md  
     - name: Enable Intel Performance Monitoring Hardware
       href: manage/Performance-Monitoring-Hardware.md
-    - name: Enable processor compatibility mode
-      href: manage/dynamic-processor-compatibility-mode.md
+    - name: Processor compatibility mode
+      items:
+      - name: Processor compatibility for VMs
+        href: processor-compatibility-mode.md
+      - name: Configure processor compatibility mode
+        href: configure-processor-compatibility-mode.md
     - name: Move VMs with live migration
       href: manage/Live-migration-overview.md
       items:
