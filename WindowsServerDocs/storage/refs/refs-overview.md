@@ -4,7 +4,6 @@ title: Resilient File System (ReFS) overview
 ms.author: roharwoo
 manager: candyc
 ms.topic: overview
-
 author: robinharwood
 ms.date: 10/28/2022
 ---
@@ -119,26 +118,26 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 
 | Feature | ReFS | NTFS |
 |--|--|--|
-| BitLocker encryption | Yes | Yes |
-| Data Deduplication | Yes<sup>1</sup> | Yes |
-| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> <sup>3</sup> | Yes |
-| Junctions/Soft links | Yes | Yes |
-| Hard links | Yes<sup>4</sup> | Yes |
-| Failover cluster support | Yes | Yes |
-| Access-control lists | Yes | Yes |
-| USN journal | Yes | Yes |
-| Changes notifications | Yes | Yes |
-| Junction points | Yes | Yes |
-| Mount points | Yes | Yes |
-| Reparse points | Yes | Yes |
-| Volume snapshots | Yes | Yes |
-| File IDs | Yes | Yes |
-| Oplocks | Yes | Yes |
-| Sparse files | Yes | Yes |
-| Named streams | Yes | Yes |
-| Thin Provisioning | Yes<sup>5</sup> | Yes |
-| Trim/Unmap | Yes<sup>5</sup> | Yes |
-| Page file support | Yes<sup>6</sup> | Yes |
+| BitLocker encryption | ✅ | ✅ |
+| Data Deduplication | ✅<sup>1</sup> | ✅ |
+| Cluster Shared Volume (CSV) support | ✅<sup>2</sup> <sup>3</sup> | ✅ |
+| Junctions/Soft links | ✅ | ✅ |
+| Hard links | ✅<sup>4</sup> | ✅ |
+| Failover cluster support | ✅ | ✅ |
+| Access-control lists | ✅ | ✅ |
+| USN journal | ✅ | ✅ |
+| Changes notifications | ✅ | ✅ |
+| Junction points | ✅ | ✅ |
+| Mount points | ✅ | ✅ |
+| Reparse points | ✅ | ✅ |
+| Volume snapshots | ✅ | ✅ |
+| File IDs | ✅ | ✅ |
+| Oplocks | ✅ | ✅ |
+| Sparse files | ✅ | ✅ |
+| Named streams | ✅ | ✅ |
+| Thin Provisioning | ✅<sup>5</sup> | ✅ |
+| Trim/Unmap | ✅<sup>5</sup> | ✅ |
+| Page file support | ✅<sup>6</sup> | ✅ |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
@@ -151,10 +150,13 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 
 | Functionality | ReFS | NTFS |
 |--|--|--|
-| Block clone | Yes | No |
-| Sparse VDL | Yes | No |
-| Mirror-accelerated parity | Yes (on Storage Spaces Direct) | No |
-| File-level snapshots | Yes<sup>1</sup> | No |
+| Block clone | ✅ | ❌ |
+| Block system compression | ✅ | ❌ |
+| Sparse VDL | ✅ | ❌ |
+| Mirror-accelerated parity | ✅ (on Storage Spaces Direct) | ❌ |
+| File-level snapshots | ✅<sup>1</sup> | ❌ |
+| File system encryption (2025) | ✅ | ✅ |
+| Extended attributes | ✅ | ✅ |
 
 1. Available on Windows Server 2022 and later.
 
@@ -162,16 +164,16 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 
 | Functionality | ReFS | NTFS |
 |--|--|--|
-| File system compression | No | Yes |
-| File system encryption | No | Yes |
-| Transactions | No | Yes |
-| Object IDs | No | Yes |
-| Offloaded Data Transfer (ODX) | No | Yes |
-| Short names | No | Yes |
-| Extended attributes | No | Yes |
-| Disk quotas | No | Yes |
-| Bootable | No | Yes |
-| Supported on removable media | No | Yes |
+| File system compression | ❌ | ✅ |
+| File system encryption | ❌ | ✅ |
+| Transactions | ❌ | ✅ |
+| Object IDs | ❌ | ✅ |
+| Offloaded Data Transfer (ODX) | ❌ | ✅ |
+| Short names | ❌ (common/well known shortnames simulated through simlinks) | ✅ |
+| Extended attributes | ❌ | ✅ |
+| Disk quotas | ❌ | ✅ |
+| Supported on removable media | ❌ | ✅ |
+| Bootable | ❌ | ✅ |
 
 ## Additional References
 
