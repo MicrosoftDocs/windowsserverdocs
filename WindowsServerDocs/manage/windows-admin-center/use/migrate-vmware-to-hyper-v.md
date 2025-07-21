@@ -3,7 +3,7 @@ title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Previ
 description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
 author: meaghanlewis
 ms.topic: how-to
-ms.date: 07/16/2025
+ms.date: 07/21/2025
 ms.author: mosagie
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
@@ -31,17 +31,17 @@ The VM Conversion extension provides the following key features:
 
 Before you begin, review the prerequisites and ensure your environment meets the requirements.
 
-- Hyper-V is installed on Windows Admin Center gateway.
+- Install PowerCLI. Install using the PowerShell command: `Install-Module -Name VMware.PowerCLI`
 
-- PowerCLI is installed. Install using the PowerShell command: `Install-Module VMware.PowerCLI`
+- Install:
+  - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on machine with the Windows Admin Center Gateway.
+  - [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) is installed.
 
-- [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) is installed on machine with the Windows Admin Center gateway.
+- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK* on the Windows Admin Center Gateway machine.
 
-- [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) is installed.
+- Ensure that the Hyper-V role is installed on the Windows Admin Center Gateway machine.
 
-- [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/) is downloaded. Extract it, and copy the extracted contents to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
-
-- Windows Admin Center Gateway V2 – GA version.
+- Use Windows Admin Center Gateway V2 – GA version.
 
 - VMware VCenter version 6.x or higher is installed. Keep the following vCenter information at hand:
   - Fully Qualified Domain Name (FQDN)
@@ -144,7 +144,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Can I migrate both Windows and Linux virtual machines?
 
-    Yes—the tool supports migration of both Windows and Linux VMs. For Alma Linux, make sure Hyper-V drivers are installed before migration to ensure a smooth boot on the destination server.
+    Yes—the tool supports migration of both Windows and Linux VMs. For Linux, make sure Hyper-V drivers are installed before migration to ensure a smooth boot on the destination server.
 
 1. Which VMware versions are supported?
 
