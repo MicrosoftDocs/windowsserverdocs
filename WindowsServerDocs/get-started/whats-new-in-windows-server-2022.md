@@ -1,7 +1,7 @@
 ---
 title: What's New in Windows Server 2022
 description: Find out what's new in Windows Server 2022.
-ms.topic: concept-article
+ms.topic: whats-new
 author: xelu86
 ms.author: alalve
 ms.date: 07/03/2025
