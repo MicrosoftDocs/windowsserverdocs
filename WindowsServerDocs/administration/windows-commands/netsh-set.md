@@ -9,7 +9,7 @@ ms.date: 07/21/2025
 
 # netsh set
 
-The `netsh set` command allows administrators to specify the target machine for subsequent network configuration tasks, enabling operations on either local or remote systems.
+The `netsh set` command allows administrators to specify the target machine for subsequent network configuration tasks, enabling operations on either local or remote systems. If a machine name isn't specified, the local machine is used. A username and password can't be used to connect to the local machine.
 
 ## Syntax
 
