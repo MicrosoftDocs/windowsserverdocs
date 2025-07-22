@@ -138,9 +138,6 @@ Registry path: `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 To specify a minimum supported range of Diffie-Hellman key bit length for the TLS client, create a `ClientMinKeyBitLength` entry. After you create the entry, change the DWORD value to the desired bit length. If not configured, 1024 bits is the minimum.
 
-To specify the Diffie-Helman key bit length for the TLS server default, create a `ServerMinKeyBitLength` entry. This entry does not exist in the registry by default. After you have created the entry, change the DWORD value to the desired bit length. If not configured, 2048 bits will be the default.
-
-
 # [RSA](#tab/rsa)
 
 Added in Windows 10, version 1507, and Windows Server 2016.
