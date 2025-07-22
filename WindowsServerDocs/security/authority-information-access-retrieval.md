@@ -4,7 +4,7 @@ description: Learn how to manage Authority Information Access (AIA) URL retrieva
 ms.topic: how-to
 ms.author: alalve
 author: xelu86
-ms.date: 07/24/2025
+ms.date: 07/22/2025
 ---
 
 # AIA URL retrieval in Windows
