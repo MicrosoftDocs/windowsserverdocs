@@ -168,6 +168,7 @@ Contact application and storage array vendors for support details on Fiber Chann
 | Disk quotas | ❌ | ✅ |
 | Supported on removable media | ❌ | ✅ |
 | Bootable | ❌ | ✅ |
+| Shrinking | ❌ | ✅ |
 
 1. Short names aren't officially supported, many short names are simulated through symlinks.
 
