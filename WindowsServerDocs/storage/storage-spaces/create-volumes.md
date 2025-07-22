@@ -9,8 +9,6 @@ ms.date: 07/22/2025
 
 # Create volumes on Azure Stack HCI and Windows Server clusters
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This article describes how to create volumes on a cluster by using Windows Admin Center and Windows PowerShell, how to work with files on the volumes, and how to enable deduplication, integrity checksums, or BitLocker encryption on volumes. To learn how to create volumes and set up replication for stretched clusters, see [Create stretched volumes](/azure/azure-local/manage/create-stretched-volumes).
 
 > [!TIP]
@@ -32,11 +30,11 @@ To create a two-way or three-way mirror volume using Windows Admin Center:
 
    :::image type="content" source="media/create-volumes/create-mirror-volume.png" alt-text="You can use Windows Admin Center to create a two-way or three-way mirror volume." lightbox="media/create-volumes/create-mirror-volume.png":::
 
-Depending on the size, creating the volume can take a few minutes. Notifications in the upper-right will let you know when the volume is created. The new volume will then appear in the Inventory list.
+Depending on the size, creating the volume can take a few minutes. Notifications in the upper-right let you know when the volume is created. The new volume appears in the Inventory list.
 
 ## Create a mirror-accelerated parity volume
 
-Mirror-accelerated parity (MAP) reduces the footprint of the volume on the HDD. For example, a three-way mirror volume would mean that for every 10 terabytes of size, you will need 30 terabytes as a footprint. To reduce the overhead in footprint, create a volume with mirror-accelerated parity. This reduces the footprint from 30 terabytes to just 22 terabytes, even with only 4 servers, by mirroring the most active 20 percent of data and using parity, which is more space efficient, to store the rest. You can adjust this ratio of parity and mirror to make the performance versus capacity tradeoff that's right for your workload. For example, 90 percent parity and 10 percent mirror yields less performance but streamlines the footprint even further.
+Mirror-accelerated parity (MAP) reduces the footprint of the volume on the HDD. For example, a three-way mirror volume would mean that for every 10 terabytes of size, you need 30 terabytes as a footprint. To reduce the overhead in footprint, create a volume with mirror-accelerated parity. This reduces the footprint from 30 terabytes to just 22 terabytes, even with only 4 servers, by mirroring the most active 20 percent of data and using parity, which is more space efficient, to store the rest. You can adjust this ratio of parity and mirror to make the performance versus capacity tradeoff that's right for your workload. For example, 90 percent parity and 10 percent mirror yields less performance but streamlines the footprint even further.
 
   >[!NOTE]
   >Mirror-accelerated parity volumes require Resilient File System (ReFS).
@@ -68,7 +66,7 @@ To open a volume and add files to the volume in Windows Admin Center:
 
 ## Use ReFS deduplication
 
-Deduplication is managed per volume. Deduplication uses a post-processing model, which means that you won't see savings until it runs. When it does, it'll work over all files, even those that were there from before.
+Deduplication is managed per volume. Deduplication uses a post-processing model, which means that you won't see savings until it runs. When it does, it works over all files, even files that were there from before.
 
 To learn more, see [Enable volume encryption, deduplication,](volume-encryption-deduplication.md)
 
@@ -84,11 +82,11 @@ The **New-Volume** cmdlet has four parameters you need to provide:
 - **Size:** The size of the volume, for example *"10TB"*
 
    > [!NOTE]
-   > Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is expected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" will create a volume of approximately 1,000,000,000,000 bytes.
+   > Windows, including PowerShell, counts using binary (base-2) numbers, whereas drives are often labeled using decimal (base-10) numbers. This explains why a "one terabyte" drive, defined as 1,000,000,000,000 bytes, appears in Windows as about "909 GB". This is expected. When creating volumes using **New-Volume**, you should specify the **Size** parameter in binary (base-2) numbers. For example, specifying "909GB" or "0.909495TB" creates a volume of approximately 1,000,000,000,000 bytes.
 
 ### Example: With 1 to 3 servers
 
-To make things easier, if your deployment has only one or two servers, Storage Spaces Direct will automatically use two-way mirroring for resiliency. If your deployment has only three servers, it will automatically use three-way mirroring.
+To make things easier, if your deployment has only one or two servers, Storage Spaces Direct automatically uses two-way mirroring for resiliency. If your deployment has only three servers, it automatically uses three-way mirroring.
 
 ```PowerShell
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
@@ -111,11 +109,9 @@ In deployments with three types of drives, one volume can span the SSD and HDD t
 
 To help you create such volumes, Azure Stack HCI provides default tier templates called **MirrorOn*MediaType*** and **NestedMirrorOn*MediaType*** (for performance), and **ParityOn*MediaType*** and **NestedParityOn*MediaType*** (for capacity), where *MediaType* is HDD or SSD. The templates represent storage tiers based on media types and encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and dual parity on the slower capacity drives (if applicable).
 
-   > [!NOTE]
-   > Storage Bus Layer (SBL) cache is not supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) is the only supported storage type for single server.
+- Storage Bus Layer (SBL) cache isn't supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) is the only supported storage type for single server.
 
-   > [!NOTE]
-   > On Storage Spaces Direct clusters running on earlier versions of Windows Server 2016, the default tier templates were simply called **Performance** and **Capacity**.
+- On Storage Spaces Direct clusters running on earlier versions of Windows Server 2016, the default tier templates are called **Performance** and **Capacity**.
 
 You can see the storage tiers by running the **Get-StorageTier** cmdlet on any server in the cluster.
 
@@ -134,7 +130,7 @@ NestedMirrorOnHDD Mirror                                     3
 MirrorOnHDD       Mirror                                     1
 ```
 
-To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume which mixes three-way mirroring and dual parity in 30:70 proportions.
+To create tiered volumes, reference these tier templates using the **StorageTierFriendlyNames** and **StorageTierSizes** parameters of the **New-Volume** cmdlet. For example, the following cmdlet creates one volume that mixes three-way mirroring and dual parity in 30:70 proportions.
 
 ```PowerShell
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames MirrorOnHDD, Capacity -StorageTierSizes 300GB, 700GB
