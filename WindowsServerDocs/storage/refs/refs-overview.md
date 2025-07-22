@@ -117,11 +117,11 @@ Contact application and storage array vendors for support details on Fiber Chann
 | Block system compression | ✅ | ✅ |
 | Data Deduplication | ✅<sup>1</sup> | ✅ |
 | Extended attributes | ✅ | ✅ |
-| Cluster Shared Volume (CSV) support | ✅<sup>2</sup> <sup>3</sup> | ✅ |
+| Cluster Shared Volume (CSV) support | ✅<sup>2</sup> | ✅ |
 | Junctions/Soft links | ✅ | ✅ |
-| Hard links | ✅<sup>4</sup> | ✅ |
+| Hard links | ✅ | ✅ |
 | Failover cluster support | ✅ | ✅ |
-| File system encryption | ✅<sup>5</sup> | ✅ |
+| File system encryption | ✅<sup>3</sup> | ✅ |
 | Access-control lists | ✅ | ✅ |
 | USN journal | ✅ | ✅ |
 | Changes notifications | ✅ | ✅ |
@@ -133,17 +133,14 @@ Contact application and storage array vendors for support details on Fiber Chann
 | Oplocks | ✅ | ✅ |
 | Sparse files | ✅ | ✅ |
 | Named streams | ✅ | ✅ |
-| Thin Provisioning | ✅<sup>6</sup> | ✅ |
-| Trim/Unmap | ✅<sup>6</sup> | ✅ |
-| Page file support | ✅<sup>7</sup> | ✅ |
+| Thin Provisioning | ✅<sup>4</sup> | ✅ |
+| Trim/Unmap | ✅<sup>4</sup> | ✅ |
+| Page file support | ✅ | ✅ |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
-2. Available on Windows Server 2012 R2 and later.
-3. CSV won't use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D), or SAN.
-4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions
-5. Available on Windows Server 2025.
-6. Storage Spaces only.
-7. Available on ReFS 3.7 and later.
+2. CSV won't use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D), or SAN.
+3. Available on Windows Server 2025.
+4. Storage Spaces only.
 
 #### Features only available with ReFS
 
@@ -168,7 +165,7 @@ Contact application and storage array vendors for support details on Fiber Chann
 | Supported on removable media | ❌ | ✅ |
 | Bootable | ❌ | ✅ |
 
-1. Although short names aren't officially supported, many short names are simulated through symlinks.
+1. Short names aren't officially supported, many short names are simulated through symlinks.
 
 ## Related content
 
