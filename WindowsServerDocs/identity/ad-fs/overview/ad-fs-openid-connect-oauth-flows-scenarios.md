@@ -17,7 +17,6 @@ Applies to Active Directory Federation Services (AD FS) 2019 and later
 |-----|-----|-----|-----|
 |Single-page app | [Sample using MSAL](https://github.com/Azure-Samples/ms-identity-javascript-v2)|[Implicit](#implicit-grant-flow)|Public|
 |Web app that signs in users | |[Authorization code](#authorization-code-grant-flow)|Public, Confidential|
-
 |Native app calls web API | [Sample using MSAL](../development/msal/adfs-msal-native-app-web-api.md)|[Authorization code](#authorization-code-grant-flow)|Public|
 |Web app calls web API | [Sample using MSAL](../development/msal/adfs-msal-web-app-web-api.md)|[Authorization code](#authorization-code-grant-flow)|Confidential|
 |PKCE implementation | | [Authorization code](#authorization-code-grant-flow) | Public|
