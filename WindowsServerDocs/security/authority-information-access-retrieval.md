@@ -4,7 +4,7 @@ description: Learn how to manage Authority Information Access (AIA) URL retrieva
 ms.topic: how-to
 ms.author: alalve
 author: xelu86
-ms.date: 07/11/2025
+ms.date: 07/24/2025
 ---
 
 # AIA URL retrieval in Windows
@@ -99,12 +99,17 @@ By default, AIA is enabled on your device. AIA retrieval is triggered by the **C
 ```powershell
 $registryPath = "HKLM:\Software\Policies\Microsoft\SystemCertificates\ChainEngine\Config"
 $propertyName = "Options"
-
-$value = (Get-ItemProperty -Path $registryPath -Name $propertyName -ErrorAction SilentlyContinue).$propertyName
-
-switch ($value) {
-    0 { "AIA is Enabled" }
-    2 { "AIA is Disabled" }
+ 
+try {
+    $regCheck = (Get-ItemProperty -Path $registryPath -Name $propertyName -ErrorAction Stop).$propertyName
+ 
+    switch ($value) {
+        0 { "AIA is Enabled" }
+        2 { "AIA is Disabled" }
+        default { "Unexpected value: $regCheck" }
+    }
+} catch {
+    "AIA has not been set"
 }
 ```
 
