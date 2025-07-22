@@ -37,13 +37,13 @@ In addition to providing resiliency improvements, ReFS has features for performa
 
   Once these tiers are configured, ReFS uses them to deliver fast storage for hot data and capacity-efficient storage for cold data:
   
-  - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real time.
+  - All writes occur in the performance tier, and large chunks of data that remain in the performance tier are efficiently moved to the capacity tier in real time.
 
   - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
   - For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
 
-- **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
+- **Accelerated VM operations** - ReFS improves the performance of virtualized workloads:
   - [Block cloning](./block-cloning.md) - block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
   - Sparse VDL - sparse VDL allows ReFS to zero files rapidly, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds.
 
@@ -60,7 +60,7 @@ Microsoft has developed NTFS specifically for general-purpose use with a wide ra
 For customers specially requiring the availability, resiliency, and/or scale that ReFS provides, Microsoft supports ReFS for use with the following configurations and scenarios:
 
 > [!IMPORTANT]
-> If you plan to use ReFS for Cluster Shared Volumes (CSVs), please see [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs.md) for important information.
+> If you plan to use ReFS for Cluster Shared Volumes (CSVs), see [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs.md) for important information.
 
 ### Storage Spaces Direct
 
@@ -109,19 +109,19 @@ Contact application and storage array vendors for support details on Fiber Chann
 
 ### Functionality
 
-#### The following features are available with ReFS and NTFS:
+#### Features available with ReFS and NTFS
 
 | Feature | ReFS | NTFS |
 |--|--|--|
 | BitLocker encryption | ✅ | ✅ |
-| Block system compression | ✅ | ✅ | (should I remove file system compression then?)
+| Block system compression | ✅ | ✅ |
 | Data Deduplication | ✅<sup>1</sup> | ✅ |
 | Extended attributes | ✅ | ✅ |
 | Cluster Shared Volume (CSV) support | ✅<sup>2</sup> <sup>3</sup> | ✅ |
 | Junctions/Soft links | ✅ | ✅ |
 | Hard links | ✅<sup>4</sup> | ✅ |
 | Failover cluster support | ✅ | ✅ |
-| File system encryption | ✅<sup>5</sup> | ✅ | (ReFS supports in WS2025. remove this)
+| File system encryption | ✅<sup>5</sup> | ✅ |
 | Access-control lists | ✅ | ✅ |
 | USN journal | ✅ | ✅ |
 | Changes notifications | ✅ | ✅ |
@@ -139,13 +139,13 @@ Contact application and storage array vendors for support details on Fiber Chann
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
-3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
+3. CSV won't use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D), or SAN.
 4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions
 5. Available on Windows Server 2025.
 6. Storage Spaces only.
 7. Available on ReFS 3.7 and later.
 
-#### The following features are only available with ReFS:
+#### Features only available with ReFS
 
 | Functionality | ReFS | NTFS |
 |--|--|--|
@@ -156,17 +156,19 @@ Contact application and storage array vendors for support details on Fiber Chann
 
 1. Available on Windows Server 2022 and later.
 
-#### The following features are unavailable on ReFS:
+#### Features unavailable on ReFS
 
 | Functionality | ReFS | NTFS |
 |--|--|--|
 | Transactions | ❌ | ✅ |
 | Object IDs | ❌ | ✅ |
 | Offloaded Data Transfer (ODX) | ❌ | ✅ |
-| Short names | ❌ (many short names are simulated through symlinks) | ✅ |
+| Short names | ❌<sup>1</sup> | ✅ |
 | Disk quotas | ❌ | ✅ |
 | Supported on removable media | ❌ | ✅ |
 | Bootable | ❌ | ✅ |
+
+1. Although short names aren't officially supported, many short names are simulated through symlinks.
 
 ## Related content
 
