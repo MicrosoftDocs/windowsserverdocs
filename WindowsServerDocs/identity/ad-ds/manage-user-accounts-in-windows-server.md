@@ -97,8 +97,8 @@ To enable a user account by using the Active Directory Users and Computers conso
 Removing an account from Active Directory deletes the account. The best practice is to disable accounts before deleting them in case the account has permissions to resources that can't be accessed via other methods. To delete an account by using the Active Directory Users and Computers console, perform the following steps:
 
 1. In the Active Directory Users and computers console, locate the user account you want to enable.
-1. On the **Action** menu, select **Enable Account**.
-1. In the **Active Directory Domain Services** dialog, select **OK**. The account is enabled.
+1. On the **Action** menu, select **Delete**.
+1. In the **Active Directory Domain Services** dialog, select **OK**. The account is removed.
 
 You can recover deleted accounts by using Active Directory recycle bin if you enable the recycle bin before you delete the account. If the recycle bin isn't enabled, you need to perform an authoritative restore of AD DS by using a backup of AD DS that includes the account.
 

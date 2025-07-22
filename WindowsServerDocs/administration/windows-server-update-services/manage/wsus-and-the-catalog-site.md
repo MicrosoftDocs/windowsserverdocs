@@ -10,7 +10,6 @@ ms.date: 07/01/2025
 ---
 # WSUS and the Microsoft Update Catalog
 
-> Applies to: Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The [Microsoft Update Catalog](https://catalog.update.microsoft.com) is a service that provides a listing of updates that can be distributed over a corporate network. You can use the catalog for finding information about Microsoft software updates, drivers, and hotfixes. WSUS currently includes an option to import updates from the Microsoft Update Catalog. However, the **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update or multiple updates into WSUS. This article provides information about the catalog, the import script, and how to use the script.
 
