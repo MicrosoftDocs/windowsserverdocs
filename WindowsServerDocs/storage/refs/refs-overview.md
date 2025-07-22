@@ -8,9 +8,13 @@ ms.date: 07/22/2025
 ---
 # Resilient File System (ReFS) overview
 
-The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity with resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
+The Resilient File System (ReFS) is a modern file system developed by Microsoft to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity with resiliency to corruption. ReFS seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
+
+This overview explains how ReFS helps protect data from corruption, supports large-scale storage environments, and integrates with key Windows Server technologies. Use this guide to understand ReFS benefits, deployment scenarios, and feature comparisons with NTFS.
 
 ## Key benefits
+
+Learn about the key benefits that ReFS provides, including: resiliency, performance, and scalability.
 
 ### Resiliency
 
@@ -44,8 +48,8 @@ In addition to providing resiliency improvements, ReFS has features for performa
   - For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
 
 - **Accelerated VM operations** - ReFS improves the performance of virtualized workloads:
-  - [Block cloning](./block-cloning.md) - block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
-  - Sparse VDL - sparse VDL allows ReFS to zero files rapidly, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds.
+  - [Block cloning](./block-cloning.md) - Block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
+  - Sparse VDL - Sparse VDL allows ReFS to zero files rapidly, reducing the time needed to create fixed VHDs from 10s of minutes to mere seconds.
 
 - **Variable cluster sizes** - ReFS supports both 4K and 64K cluster sizes. 4K is the recommended cluster size for most deployments, but 64K clusters are appropriate for large, sequential IO workloads.
 
@@ -139,7 +143,7 @@ Contact application and storage array vendors for support details on Fiber Chann
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. CSV won't use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D), or SAN.
-3. Available on Windows Server 2025.
+3. Available on Windows Server 2025 only.
 4. Storage Spaces only.
 
 #### Features only available with ReFS
