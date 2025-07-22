@@ -56,8 +56,6 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 - When you update Windows Admin Center, you must reinstall your extensions.
 
-- If you add an extension feed that is inaccessible, no warning or error message appears.
-
 ## Partner extension issues
 
 Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. APIs such as NodeExtensionInstall only work when the user is a gateway administrator; it doesn't support non-admin use.
