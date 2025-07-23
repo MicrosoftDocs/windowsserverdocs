@@ -1055,8 +1055,10 @@
         href: netdom-trust.md
       - name: netdom verify
         href: netdom-verify.md
-    - name: netsh
+    - name: Network Shell (Netsh)
       href: netsh.md
+    - name: Netsh example batch file
+      href: netsh-wins.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin
