@@ -195,6 +195,8 @@ netsh interface ipv4>show interfaces
 netsh interface ipv6>show interfaces
 ```
 
-## Related links
+## See also
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Example netsh batch file](netsh-batch.md)
