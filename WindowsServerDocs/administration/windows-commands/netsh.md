@@ -9,13 +9,11 @@ ms.date: 07/23/2025
 
 # Network shell (netsh)
 
-Network shell (netsh) is a command-line utility that allows you to configure and display the status of various network communications server roles and components after they're installed on computers running Windows Server.
+Network shell (netsh) is a versatile and comprehensive command-line utility for configuring, managing, and monitoring network components and server roles on Windows and Windows Server systems. With `netsh`, you can view and modify network settings, automate tasks, and troubleshoot network issues locally or remotely.
 
-Some client technologies, such as Dynamic Host Configuration Protocol (DHCP) client and BranchCache, also provide netsh commands that allow you to configure client computers that are running Windows 10.
+In many scenarios, the netsh commands offer equivalent functionality to the Microsoft Management Console (MMC) snap-ins for managing networking server roles and features. This allows administrators to perform configuration and management tasks either through the graphical MMC interface or by using command-line automation.
 
-In most cases, netsh commands provide the same functionality that is available when you use the Microsoft Management Console (MMC) snap-in for each networking server role or networking feature. For example, you can configure Network Policy Server (NPS) by using either the NPS MMC snap-in or the netsh commands in the `netsh nps` context.
-
-In addition, there are netsh commands for network technologies, such as for IPv6, network bridge, and Remote Procedure Call (RPC), that aren't available in Windows Server as an MMC snap-in.
+For example, you can configure Network Policy Server (NPS) by using either the NPS MMC snap-in or the netsh commands in the `netsh nps` context. In addition, there are netsh commands for network technologies, such as for IPv6, network bridge, and Remote Procedure Call (RPC), that aren't available in Windows Server as an MMC snap-in.
 
 > [!IMPORTANT]
 > It's recommended that you use Windows PowerShell to manage networking technologies in Windows and Windows Server rather than `netsh`.
@@ -194,6 +192,47 @@ netsh interface ipv4>show interfaces
 ```
 netsh interface ipv6>show interfaces
 ```
+
+## Using netsh in batch files
+
+A batch file is a plain text file that contains a series of commands to be executed by the Windows Command Prompt (CMD). Batch files have a `.bat` or `.cmd` extension. They're used to automate repetitive tasks, manage system configurations, and run sequences of commands without user intervention. Batch files are especially useful for tasks that involve multiple command-line instructions.
+
+A batch script would be useful in the following scenarios:
+
+- **Bulk network configuration**: If you need to configure network settings for multiple computers, a batch file can streamline the process by automating the setup. Bulk configurations are helpful in enterprise environments or for IT professionals managing multiple machines.
+
+- **Network reconfiguration**: Users switching between different network environments can use batch files to quickly change settings like IP addresses and DNS servers without manual intervention.
+
+- **Backup and restore settings**: You can create a batch script to backup network settings before making changes, and another to restore them if needed.
+
+The following is an example batch file:
+
+```batch
+@echo off
+echo Configuring network settings...
+
+REM Set the IP address, subnet mask, and default gateway
+netsh interface ip set address name="Ethernet" static 192.168.1.100 255.255.255.0 192.168.1.1
+
+REM Set the DNS server address
+netsh interface ip set dns name="Ethernet" static 8.8.8.8
+
+REM Add a secondary DNS server
+netsh interface ip add dns name="Ethernet" 8.8.4.4 index=2
+
+REM Enable the firewall
+netsh advfirewall set allprofiles state on
+
+echo Network settings configured successfully.
+pause
+```
+
+Here's a brief explanation of what this script does:
+
+- It sets a static IP address, subnet mask, and default gateway for the network interface named "Ethernet".
+- Configures the primary DNS server to be used.
+- Adds a secondary (fallback) DNS server.
+- Enables the Windows Firewall with Advanced Security for all profiles.
 
 ## See also
 

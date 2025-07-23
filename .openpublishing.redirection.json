@@ -12952,7 +12952,7 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-wins.md",
-      "redirect_url": "/windows-server/administration/windows-commands/netsh-batch",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
       "redirect_document_id": false
     }
   ]
