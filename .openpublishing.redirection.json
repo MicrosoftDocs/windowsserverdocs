@@ -12939,6 +12939,21 @@
       "source_path": "WindowsServerDocs/failover-clustering/configure-ad-accounts.md",
       "redirect_url": "/windows-server/failover-clustering/configure-failover-cluster-accounts",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-contexts.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-wins.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
     }
   ]
 }
