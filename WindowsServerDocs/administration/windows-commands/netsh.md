@@ -183,21 +183,31 @@ Alternatively, for network interfaces, the index number can be used in place of 
 netsh interface ipv4>set address name=15 dhcp
 ```
 
-To find the name or index of the connected interfaces, you must be in the IPv4 or IPv6 interface subcontext and type `show interfaces`. For example:
+To find the name or index of the connected interfaces and if, you're *already* in the interface subcontext, you'll know which level of the shell you're in by the `>` placement. Select your interface type and type `show interfaces` to view detailed information, for example:
 
 ```
-netsh interface ipv4>show interfaces
+netsh interface> ipv4 show interfaces
 ```
 
 ```
-netsh interface ipv6>show interfaces
+netsh interface> ipv6 show interfaces
+```
+
+If you aren't in the interface subcontext, you can run the full command for either interface, for example:
+
+```
+netsh interface ipv4 show interfaces
+```
+
+```
+netsh interface ipv6 show interfaces
 ```
 
 ## Using netsh in batch files
 
 A batch file is a plain text file that contains a series of commands to be executed by the Windows Command Prompt (CMD). Batch files have a `.bat` or `.cmd` extension. They're used to automate repetitive tasks, manage system configurations, and run sequences of commands without user intervention. Batch files are especially useful for tasks that involve multiple command-line instructions.
 
-A batch script would be useful in the following scenarios:
+A batch script would be useful in these scenarios:
 
 - **Bulk network configuration**: If you need to configure network settings for multiple computers, a batch file can streamline the process by automating the setup. Bulk configurations are helpful in enterprise environments or for IT professionals managing multiple machines.
 
@@ -237,5 +247,3 @@ Here's a brief explanation of what this script does:
 ## See also
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-
-- [Example netsh batch file](netsh-batch.md)
