@@ -132,7 +132,7 @@
         "security/tls/*.md": "Andrei-Popov"
       },
       "no-loc": {
-        "administration/windows-commands/**/*.md": [
+        "administration/windows-commands/**/*.yml": [
           "[append, arp, break, call, cipher, clip, manage-bde status, manage-bde on, mount]"
         ]
       },
