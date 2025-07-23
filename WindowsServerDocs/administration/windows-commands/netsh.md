@@ -56,13 +56,13 @@ Running `netsh` commands can be performed using an elevated command prompt or Po
 
 For example, if you type `netsh`, you're taken directly into the network shell. Once here, if you type `dhcp` and press **Enter**, you're taken into the context menu for `dhcpclient` commands.
 
-### Command contexts
+## Command contexts
 
 Netsh interacts with other operating system components by using dynamic-link library (DLL) files. Each netsh helper DLL provides an extensive set of features called a *context*, which is a group of commands that's specific to a networking server role or feature. These contexts extend the functionality of netsh by providing configuration and monitoring support for one or more services, utilities, or protocols.
 
 For example, dhcpmon.dll provides netsh with the context and set of commands necessary to configure and manage DHCP servers.
 
-You can obtain a list of netsh contexts by running `netsh ?` or `netsh help` and pressing **Enter**.
+The `>` placement let's you know which context or subcontext you're in. You can obtain a list of netsh contexts by running `netsh ?` or `netsh help` and pressing **Enter** for any of the available commands.
 
 Here's an example output:
 
@@ -174,16 +174,16 @@ There are commands that contain parameters for which a string value is required.
 When setting the `interface` parameter for IPv4 networks with a string value of **Wireless Network Connection** to DHCP, use double quotation marks around the string value. For example:
 
 ```
-netsh interface ipv4>set address name="Wireless Network Connection" dhcp
+netsh interface ipv4> set address name="Wireless Network Connection" dhcp
 ```
 
 Alternatively, for network interfaces, the index number can be used in place of the name associated to it. For example:
 
 ```
-netsh interface ipv4>set address name=15 dhcp
+netsh interface ipv4> set address name=15 dhcp
 ```
 
-To find the name or index of the connected interfaces and if, you're *already* in the interface subcontext, you'll know which level of the shell you're in by the `>` placement. Select your interface type and type `show interfaces` to view detailed information, for example:
+To find the name or index of the connected interfaces in the interface subcontext, select your interface type and type `show interfaces` to view detailed information. For example:
 
 ```
 netsh interface> ipv4 show interfaces
@@ -193,7 +193,7 @@ netsh interface> ipv4 show interfaces
 netsh interface> ipv6 show interfaces
 ```
 
-If you aren't in the interface subcontext, you can run the full command for either interface, for example:
+If you aren't in the interface subcontext, you can run the *full* command for either interface. For example:
 
 ```
 netsh interface ipv4 show interfaces
@@ -215,7 +215,7 @@ A batch script would be useful in these scenarios:
 
 - **Backup and restore settings**: You can create a batch script to backup network settings before making changes, and another to restore them if needed.
 
-The following is an example batch file:
+Here's an example batch file. The lines beginning with "rem" are comments that let users know what action the commands perform:
 
 ```batch
 @echo off
