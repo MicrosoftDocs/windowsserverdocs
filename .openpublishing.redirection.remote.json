@@ -879,6 +879,11 @@
       "source_path": "WindowsServerDocs/remote/remote-server-administration-tools.md",
       "redirect_url": "/windows-server/administration/install-remote-server-administration-tools",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/virtual-machine-recs.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/session-host-virtual-machine-sizing-guidelines",
+      "redirect_document_id": true
     }
   ]
 }
