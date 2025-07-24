@@ -6,8 +6,6 @@ summary: Windows Server builds connected app, network, and web service infrastru
 metadata:
   title: Windows Server 
   description: Windows Server builds connected app, network, and web service infrastructure from workgroup to data center, bridging on-premises with Azure.
-  ms.service: service or ms.prod: product #Required; use either service or product per approved list. 
-  ms.subservice: subservice or ms.technology: technology # Optional; Remove if not applicable.
   ms.topic: landing-page 
   author: robinharwood
   ms.author: roharwoo
