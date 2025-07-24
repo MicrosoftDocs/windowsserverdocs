@@ -119,7 +119,7 @@ items:
           href: common-troubleshooting-procedures-kms-dns.md
         - name: Rebuild the Tokens.dat file
           href: activation-rebuild-tokens-dat-file.md
-  - name: Hybrid (Azure Arc enabled servers)
+  - name: Azure Arc enabled servers
     items:
     - name: Azure Connected Machine agent deployment options
       href: /azure/azure-arc/servers/deployment-options?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json

@@ -91,7 +91,7 @@ landingContent:
             url: activation-troubleshooting-guide.md
 
   # Card
-  - title: Hybrid (Azure Arc enabled servers)
+  - title: Azure Arc enabled servers
     linkLists:
       - linkListType: concept
         links:
