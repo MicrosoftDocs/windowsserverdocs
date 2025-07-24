@@ -9,20 +9,20 @@ ms.date: 09/21/2022
 
 # Get started with Windows Admin Center
 
+Windows Admin Center enables you to manage servers, clusters, Windows PCs, and Azure virtual machines (VMs) directly from your Windows computer by using a web browser.
+
 This article describes how to get started with Windows Admin Center after you [download](https://www.microsoft.com/evalcenter/download-windows-admin-center) and [install](../../windows-admin-center/deploy/install.md) it on a Windows PC. To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
 
 ## Open Windows Admin Center on a Windows PC
 
-Windows Admin Center enables you to manage servers, clusters, Windows PCs, and Azure virtual machines (VMs) directly from your Windows 10 computer by using a web browser.
-
 > [!IMPORTANT]
-> You must be a member of the local administrators group to use Windows Admin Center on Windows 10.
+> You must be a member of the local administrators group to use Windows Admin Center on Windows.
 
 Follow these steps to open Windows Admin Center on a Windows PC:
 
-1. On the **Start** menu, select **Windows Admin Center**. Or enter **Windows Admin Center** on the search bar and then select it from the search results.
+1. On the **Start** menu, select **Windows Admin Center (v2)**. Or enter **Windows Admin Center (v2)** on the search bar and then select it from the search results.
 
-   Windows Admin Center opens in your default browser with the URL `https://localhost:6516/`. Alternatively, you can start it from your desired browser by entering `https://localhost:6516/`.
+   Windows Admin Center (v2) opens in your default browser with the URL `https://localhost:6516/`. Alternatively, you can start it from your desired browser by entering `https://localhost:6516/`.
 
 1. A prompt for selecting a certificate for authentication appears.
 
@@ -40,7 +40,7 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
 1. (First time only:) A pop-up window confirms that your Windows Admin Center version is successfully installed. It also provides information on what's new in this release. Close the window to proceed.
 
-   :::image type="content" source="../media/successful-install-message.png" alt-text="Screenshot of the message that shows successful installation of Windows Admin Center.":::
+   :::image type="content" source="../media/get-started/successfully-installed.png" alt-text="Screenshot of the message that shows successful installation of Windows Admin Center.":::
 
    The **All connections** page shows your Windows 10 computer name in the list of connections. You're now ready to add connections to Windows Admin Center.
 
