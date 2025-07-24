@@ -455,7 +455,7 @@ items:
     - name: Example of Go generated code
       href: technologies/hcn/example-go.md
   - name: Hyper-V Virtual Switch
-    href: ../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md
+    href: ../virtualization/hyper-v/virtual-switch.md
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:

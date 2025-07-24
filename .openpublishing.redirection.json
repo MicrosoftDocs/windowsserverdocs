@@ -1526,11 +1526,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/compute/hyper-v/System-requirements-for-Hyper-V-on-Windows.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows",
       "redirect_document_id": true
@@ -8882,8 +8877,8 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-switch",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md",
@@ -12493,6 +12488,11 @@
     {
       "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-wins.md",
       "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/system-requirements-for-hyper-v-on-windows.md",
+      "redirect_url": "/windows-server/hyper-v/host-hardware-requirements",
       "redirect_document_id": false
     }
   ]
