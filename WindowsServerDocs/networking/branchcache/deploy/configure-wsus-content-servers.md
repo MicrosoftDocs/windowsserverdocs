@@ -4,8 +4,8 @@ description: Learn how to configure Windows Server Update Services (WSUS) Conten
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 9724aa8d-e4ae-404c-bee6-cef1534cd3ca
-ms.author: jgerend
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # Configure Windows Server Update Services (WSUS) Content Servers

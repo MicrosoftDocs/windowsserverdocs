@@ -2,11 +2,11 @@
 description: "Learn more about: Install a New Windows Server 2012 Active Directory Forest (Level 200)"
 ms.assetid: b3d6fb87-c4d4-451c-b3de-a53d2402d295
 title: Install a New Windows Server 2012 Active Directory Forest (Level 200)
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: install-set-up-deploy
 ---
 
 # Install a New Windows Server 2012 Active Directory Forest (Level 200)

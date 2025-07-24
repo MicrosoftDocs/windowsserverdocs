@@ -1,10 +1,8 @@
 ---
 title: Configure Network Policy Server Accounting
 description: This topic provides information about text file and SQL Server logging for Network Policy Server in Windows Server 2016.
-manager: dougkim
-ms.topic: article
-ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: jgerend
+ms.topic: how-to
+ms.author: roharwoo
 author: robinharwood
 ms.date: 05/25/2018
 ---

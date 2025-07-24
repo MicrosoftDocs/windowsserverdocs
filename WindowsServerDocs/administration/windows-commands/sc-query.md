@@ -4,7 +4,7 @@ description: Reference article for the sc.exe query command, which obtains and d
 ms.topic: reference
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

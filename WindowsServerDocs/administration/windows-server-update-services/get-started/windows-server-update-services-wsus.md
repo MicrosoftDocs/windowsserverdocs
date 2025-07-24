@@ -2,15 +2,18 @@
 title: Windows Server Update Services (WSUS) Overview
 description: See an overview of the Windows Server Update Service (WSUS) Server role, including its features, applications, and support for Unified Update Platform (UUP).
 ms.topic: overview
-ms.author: jgerend
-author: robinharwood
-ms.date: 04/03/2025
+ms.author: mosagie
+author: meaghanlewis
+ms.date: 05/02/2025
 # customer intent: As an administrator, I want to become familiar with Windows Server Update Service (WSUS) Server role features for distributing updates to computers on my network so that I can maintain operational efficiency, overcome security vulnerabilities, and maintain the stability of my production environment.
 ---
 
 # Windows Server Update Services (WSUS) overview
 
 Windows Server Update Services (WSUS) provides a way for IT administrators to deploy the latest Microsoft product updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This article provides an overview of this server role and more information about how to deploy and maintain WSUS.
+
+> [!NOTE]
+> WSUS is deprecated and is no longer adding new features. However, it continues to be supported for production deployments, and receives security and quality updates as per the product lifecycle. For more info, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
 
 ## WSUS Server role description
 

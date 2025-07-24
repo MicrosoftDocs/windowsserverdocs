@@ -1,7 +1,7 @@
 ---
 title: DNS Aging and Scavenging in Windows Server
 description: Learn about DNS aging and scavenging in Windows Server, including prerequisites, terminology, and the aging and scavenging process for a sample record.
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/06/2025

@@ -4,7 +4,7 @@ description: Reference article for the retain command, which prepares an existin
 ms.topic: reference
 ms.assetid: eeab0aef-2ba5-441a-a10d-bbef6f0d7e3e
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

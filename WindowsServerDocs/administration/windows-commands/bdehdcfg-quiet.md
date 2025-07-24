@@ -4,7 +4,7 @@ description: Reference article for the bdehdcfg quiet command, which tells bdehd
 ms.topic: reference
 ms.assetid: 7f75b702-890b-4ff9-805c-edf5cadd8822
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

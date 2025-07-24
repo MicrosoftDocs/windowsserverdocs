@@ -4,7 +4,7 @@ description: Reference article for the ftp mput command, which copies local file
 ms.topic: reference
 ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,56 +1,72 @@
 ---
 title: Enable Remote Desktop on your PC
 description: Learn how to use Remote Desktop to connect to and control your PC from a remote device.
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
-author: robinharwood
-manager: dongill
-ms.author: jgerend
-ms.date: 08/19/2024
+author: xelu86
+ms.author: alalve
+ms.date: 06/18/2025
 ---
 
 # Enable Remote Desktop on your PC
 
-You can use Remote Desktop to connect to and control your PC from a remote device by using Windows App or the Microsoft Remote Desktop client. When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk.
+You can use Remote Desktop to connect to and control your PC from a remote device by using Windows App or the Microsoft Remote Desktop client. When you allow remote connections to your PC, you can use another device to connect to your PC and have access to all of your apps, files, and network resources as if you were sitting at your desk. If you only need to use your PC locally, there's no need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC, making it accessible to devices on your local network. Only enable Remote Desktop on trusted networks, such as your home network, and avoid enabling it on devices that require strict access controls. When Remote Desktop is enabled, members of the Administrators group and any users you specify can connect remotely. Make sure all accounts with remote access have strong, unique passwords to help protect your PC.
 
 > [!NOTE]
-> You can use Remote Desktop to connect to Professional and Enterprise SKUs of Windows. You can't connect to computers running a Home edition, such as Windows 10 Home.
+> You can use Remote Desktop to connect to computers running Windows Professional, Enterprise, Education editions, and Windows Server editions. These editions can act as hosts for incoming Remote Desktop connections. However, Windows Home editions can't serve as Remote Desktop hosts, though they can be used as clients to connect to other systems that support Remote Desktop hosting.
 
-To connect to a remote PC, that computer must be turned on, it must have a network connection, Remote Desktop must be enabled, you must have network access to the remote computer (this could be through the Internet), and you must have permission to connect. For permission to connect, you must be on the list of users. Before you start a connection, it's a good idea to look up the name of the computer you're connecting to and to make sure Remote Desktop connections are allowed through its firewall.
+If you need to connect to your PC from outside of the network your PC is running on, you can use port forwarding or set up a VPN. To learn more, see [Allow access to your PC from outside your PC's network](remote-desktop-allow-outside-access.md).
 
-If you need to connect to your PC from outside of the network your PC is running on, you can use port forwarding or set up a VPN. For more information, see [Allow access to your PC from outside your PC's network](remote-desktop-allow-outside-access.md).
+## Prerequisites
 
-## How to enable Remote Desktop
+You must be a member of the **Administrators** group or have administrative privileges to change this system setting.
 
-The simplest way to allow access to your PC from a remote device is by using the Remote Desktop options under Settings. Since this functionality was added in the Windows 10 Fall Creators update (1709), a separate downloadable app is also available that provides similar functionality for earlier versions of Windows.
+To connect to a remote PC, ensure the following requirements are met:
 
-### Windows 11 and Windows 10 Fall Creator Update (1709) or later
+- The remote PC is powered on and connected to the network.
+- Remote Desktop is enabled on the remote PC.
+- You have network access to the remote PC (locally or via the Internet).
+- Your user account is permitted to connect (the account is in the list of allowed users).
+- Remote Desktop connections are allowed through the remote PC’s firewall.
+
+## Enable Remote Desktop
 
 You can configure your PC for remote access with a few easy steps.
 
-1. On the device you want to connect to, select **Start**  and then choose the **Settings** icon on the left.
-2. Select the **System** group followed by the [**Remote Desktop**](ms-settings:remotedesktop) item.
-3. Use the slider to enable Remote Desktop.
-4. It's also recommended to keep the PC awake and discoverable to facilitate connections. Select **Show settings** to enable.
-5. As needed, add users who can connect remotely by clicking **Select users that can remotely access this PC**. Members of the Administrators group automatically have access.
-6. Make note of the name of this PC under **How to connect to this PC**. You'll need this to configure the clients.
+1. Select **Start**, select **Settings**, then select **System**.
+1. Select **Remote Desktop**, toggle the option **Enable Remote Desktop** to **On**.
+1. Select **Confirm** on the pop-up dialog box to enable Remote Desktop.
 
-## Connect from a client device
+By default, the **Make my PC discoverable on private networks to enable automatic connection from a remote device** checkbox is checked.
 
-To use Remote Desktop to connect to the remote PC you set up, type *Remote Desktop Connection* on your local PC, and then select **Remote Desktop Connection**. Enter the name of the remote PC, then select **Connect**.
+You can also configure other user accounts to have remote access to your device by following these steps:
 
-On your Mac, iOS, or Android device, open the Remote Desktop app (available for free from the app stores). Add the name of the remote PC, and then wait for the connection to complete.
+1. While in the Remote Desktop settings, select **Select users that can remotely access this PC**.
 
-## Should I enable Remote Desktop?
+   In later releases of Windows and Windows Server, select **Remote Desktop users**.
 
-If you only want to access your PC when you are physically using it, you don't need to enable Remote Desktop. Enabling Remote Desktop opens a port on your PC that is visible to your local network. You should only enable Remote Desktop in trusted networks, such as your home. You also don't want to enable Remote Desktop on any PC where access is tightly controlled.
+1. Select **Add**, type the username, then select **OK**. More than one account can be added at a time.
 
-Be aware that when you enable access to Remote Desktop, you're granting anyone in the Administrators group, as well as any additional users you select, the ability to remotely access their accounts on the computer.
+## Remote connect to a device
 
-You should ensure that every account that has access to your PC is configured with a strong password.
+To open the **Remote Desktop Connection** app, follow these steps:
+
+1. On your local PC, select **Start**, type **Remote Desktop Connection** and open the app.
+1. In the **Remote Desktop Connection** window, enter the computer name or IP address of the remote PC you want to connect to.
+1. Select **Connect**, provide the credentials, then select **OK**.
+
+You can also connect to a device using the Windows App. To learn more, see [Get started with Windows App to connect to devices and apps](/windows-app/get-started-connect-devices-desktops-apps).
 
 ## Why allow connections only with Network Level Authentication?
 
-If you want to restrict who can access your PC, choose to allow access only with Network Level Authentication (NLA). When you enable this option, users have to authenticate themselves to the network before they can connect to your PC. Allowing connections only from computers running Remote Desktop with NLA is a more secure authentication method that can help protect your computer from malicious users and software. To learn more about NLA and Remote Desktop, check out [Configure NLA for RDS Connections](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732713(v=ws.11)).
+Network Level Authentication (NLA) adds an extra layer of security to Remote Desktop connections. With NLA enabled, users must authenticate themselves before a remote session is established, reducing the risk of unauthorized access and helping to protect your PC from malicious users and software. Enabling NLA is recommended for most environments, as it ensures only trusted users and devices can connect. However, if you need to connect from older devices or clients that don't support NLA, you might need to disable this option temporarily. For best security, keep NLA enabled whenever possible.
 
-If you're remotely connecting to a PC on your home network from outside of that network, don't select this option.
+To learn more, see [Configure NLA for RDS Connections](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732713(v=ws.11)).
+
+## See also
+
+- [Remote Desktop Services overview in Windows Server](/windows-server/remote/remote-desktop-services/remote-desktop-services-overview)
+
+- [Troubleshoot Remote Desktop connections to an Azure virtual machine](/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-connection)
+
+- [Troubleshoot authentication errors when you use RDP to connect to Azure VM](/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)

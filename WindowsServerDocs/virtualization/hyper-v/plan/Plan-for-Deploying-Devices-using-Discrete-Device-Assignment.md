@@ -1,7 +1,7 @@
 ---
 title: Deploy devices by using Discrete Device Assignment
 description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 02/19/2025

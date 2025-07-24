@@ -4,7 +4,7 @@ description: Reference article for the wdsutil get-allimages command, which retr
 ms.topic: reference
 ms.assetid: 19de3720-4315-415a-8dc6-486caa0b2100
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

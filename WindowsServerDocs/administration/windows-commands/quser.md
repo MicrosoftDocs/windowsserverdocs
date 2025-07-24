@@ -4,7 +4,7 @@ description: Reference article for the quser command, which displays information
 ms.topic: reference
 ms.assetid: 8056204f-ed11-4c91-bb1d-c799283a48a4
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the netsh command, which is a command-line sc
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 04/25/2025
+ms.date: 07/24/2025
 ---
 
 # netsh advfirewall

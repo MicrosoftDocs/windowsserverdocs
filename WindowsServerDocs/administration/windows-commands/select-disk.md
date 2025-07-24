@@ -4,7 +4,7 @@ description: Reference article for the select disk command, which selects the sp
 ms.topic: reference
 ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

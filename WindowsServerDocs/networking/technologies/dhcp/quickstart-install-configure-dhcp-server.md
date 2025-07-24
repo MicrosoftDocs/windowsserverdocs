@@ -1,22 +1,18 @@
 ---
 title: Install and configure DHCP Server on Windows Server
-description: Get started installing a Windows Server DHCP server to automatically provide IP addresses and DHCP options to clients connected to one or more subnets on your network.
+description: Install a Windows Server DHCP server to automatically provide IP addresses and DHCP options to clients connected to one or more subnets on your network.
 ms.topic: quickstart
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
-ms.date: 08/11/2023
+ms.date: 04/17/2025
+#customer intent: As a network administrator, I want to install and configure a DHCP server so that I can manage IP address allocation efficiently.
 ---
 
 # Quickstart: Install and configure DHCP Server
 
-> 
-
-This quickstart shows you how to install a Dynamic Host Configuration Protocol (DHCP) server on
-Windows Server. You'll install the DHCP Server role, authorize the server in your Active Directory
-domain, and configure a scope to automatically assign DHCP IP addresses and options to IPv4 DHCP
-clients.
+In this quickstart, you install a Dynamic Host Configuration Protocol (DHCP) server on Windows Server. First, you need to install the DHCP Server role, then authorize the server in your Active Directory domain, and then configure a scope to automatically assign DHCP IP addresses and options to IPv4 DHCP clients.
 
 ## Prerequisites
 
@@ -31,7 +27,9 @@ Before you can install your DHCP server, you must meet the following prerequisit
 
 Installing the DHCP Server involves adding the DHCP Server role to an existing Windows Server server.
 
-To install the DHCP Server role as a standalone server, perform the following steps:
+### Install the DHCP Server role
+
+Install the DHCP Server role as a standalone server either using PowerShell, or Server Manager. Select your method, and follow the steps in that section to install the role.
 
 #### [PowerShell](#tab/powershell)
 
@@ -130,9 +128,9 @@ To authorize the DHCP server using Active Directory:
 
 ### Configure an IPv4 scope
 
-After you have successfully authorized your DHCP Server, you can proceed to create a new DHCP scope.
-Scopes are used to indicate the range of IP addresses for your DHCP server and its clients. To learn
-more about planning your scope ranges, see [DHCP scopes](dhcp-scopes.md)for guidance.
+After you have successfully authorized your DHCP Server, you can proceed to create a new DHCP scope. Scopes are used to indicate the range of IP addresses for your DHCP server and its clients.
+
+To learn more about planning your scope ranges, see [DHCP scopes](dhcp-scopes.md)for guidance.
 
 To create a new IPv4 DHCP scope, select the relevant method and follow the steps.
 
@@ -183,7 +181,7 @@ Here's how to create a new DHCP scope using the DHCP console.
 
 ---
 
-### Managing scope options
+### Manage scope options
 
 After configuring your new scope, you can manage scope options using either the DHCP console or PowerShell.
 
@@ -212,7 +210,7 @@ To modify scope options in the DHCP console:
 
 ---
 
-### Managing reservations
+### Manage reservations
 
 With client reservations, you can reserve an IP address for permanent use by a DHCP client. Reservations are stored using a network interface card's (NIC) MAC address and ensure that the DHCP server exclusively leases a specific IP address to a specific MAC address.
 
@@ -232,7 +230,7 @@ To create a new reservation for a specific scope, right-click the **Reservations
 
 ---
 
-### Managing exclusions
+### Manage exclusions
 
 Here's how to manage exclusion ranges in DHCP server.
 
@@ -257,7 +255,7 @@ To manage exclusions using the DHCP console:
 
 ---
 
-## Next steps
+## Related content
 
 - [DHCP Basics](../../../troubleshoot/dynamic-host-configuration-protocol-basics.md)
 - [DHCP Subnet selection options](dhcp-subnet-options.md)

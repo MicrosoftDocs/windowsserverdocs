@@ -1,10 +1,10 @@
 ---
 title: WSUS Messages and Troubleshooting Tips
 description: Windows Server Update Service (WSUS) article - Troubleshoot using WSUS messages
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
-ms.author: jgerend
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 03/07/2023
 ---

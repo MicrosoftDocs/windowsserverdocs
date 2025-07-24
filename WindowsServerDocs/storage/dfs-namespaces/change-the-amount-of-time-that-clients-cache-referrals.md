@@ -2,7 +2,7 @@
 title: Change the Amount of Time that Clients Cache Referrals
 description: This article describes how to change the amount of time that clients cache referrals
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

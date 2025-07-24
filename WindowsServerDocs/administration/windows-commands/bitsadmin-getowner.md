@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getowner command, which retriev
 ms.topic: reference
 ms.assetid: 5203f84c-a879-4f31-ae3e-7ea74bd63ca5
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

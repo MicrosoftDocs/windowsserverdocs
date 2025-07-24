@@ -1,10 +1,10 @@
 ---
-title: Special identity groups
+title: Special Identity Groups
 description: Learn about Windows Server special identity groups that are used for Windows access control.
-author: dansimp
+author: meaghanlewis
 ms.author: mosagie
 ms.topic: article
-ms.date: 08/02/2022
+ms.date: 07/08/2025
 ---
 
 # Special identity groups
@@ -23,7 +23,7 @@ Special identity groups are similar to the Active Directory security groups that
 
 ## How special identity groups work in Windows Server
 
-If a server is running one of the versions of the Windows Server operating system shown in **Applies to** at the beginning of this article, the server has several special identity groups. These special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances.
+If a server is running one of the versions of the Windows Server operating system shown in **Applies to** at the beginning of this article, the server has several special identity groups. These special identity groups don't have specific memberships that you can modify, but they can represent different users at different times, depending on the circumstances.
 
 Although you can assign rights and permissions for specific resources to a special identity group, you can't view or modify the membership of a special identity group. Group scopes don't apply to special identity groups. Users are automatically assigned to special identity groups when they sign in or access a specific resource.
 
@@ -31,7 +31,7 @@ For information about Active Directory security groups and group scopes, see [Ac
 
 ## Default special identity groups
 
-Default special identity groups in Windows Server are described in the following list:
+The following sections describe the default special identity groups in Windows Server.
 
 - [Anonymous Logon](#anonymous-logon)
 - [Attested key property](#attested-key-property)
@@ -94,7 +94,7 @@ A security identifier (SID) that means the key trust object had the attestation 
 
 ### Authenticated Users
 
-Any user who accesses the system through a sign-in process has the Authenticated Users identity. This identity allows access to shared resources within the domain, such as files in a shared folder that should be accessible to all the workers in the organization. Membership is controlled by the operating system.
+Any user who accesses the system through a sign-in process has the Authenticated Users identity. This identity allows access to shared resources within the domain, such as files in a shared folder that should be accessible to all the employees in the organization. Membership is controlled by the operating system.
 
 |Attribute|Value|
 | --- | --- |
@@ -123,7 +123,7 @@ Any user or process that accesses the system as a batch job or through the batch
 |Well-known SID/RID|S-1-5-3|
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| none|
+|Default user rights| None|
 
 ### Console logon
 
@@ -147,7 +147,7 @@ A placeholder SID is created in an inheritable access control entry (ACE). When 
 |Well-known SID/RID|S-1-3-1|
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| none|
+|Default user rights| None|
 
 ### Creator Owner
 
@@ -158,7 +158,7 @@ The person who created a file or directory is a member of this special identity 
 |Well-known SID/RID|S-1-3-0 |
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| none|
+|Default user rights| None|
 
 ### Dialup
 
@@ -169,7 +169,7 @@ Any user who accesses the system through a dial-up connection has the Dialup ide
 |Well-known SID/RID|S-1-5-1|
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| none|
+|Default user rights| None|
 
 ### Digest Authentication
 
@@ -178,7 +178,7 @@ Any user who accesses the system through a dial-up connection has the Dialup ide
 |Well-known SID/RID|S-1-5-64-21|
 |Object class|Foreign Security Principal|
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
-|Default user rights| none|
+|Default user rights| None|
 
 ### Enterprise Domain Controllers
 
@@ -206,7 +206,7 @@ This group includes all Read-only Domain Controllers (RODC) in an Active Directo
 
 All interactive, network, dial-up, and authenticated users are members of the Everyone group. This special identity group gives wide access to system resources. When a user logs on to the network, the user is automatically added to the Everyone group. Membership is controlled by the operating system.
 
-On computers running Windows 2000 and earlier, the Everyone group included the Anonymous Logon group as a default member. Beginning in Windows Server 2003, the Everyone group contains only Authenticated Users and Guest. The group no longer includes Anonymous Logon by default. To change the Everyone group setting to include the Anonymous Logon group, in Registry Editor, go to the **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** key and set the value of the **everyoneincludesanonymous** DWORD to **1**.
+On computers running Windows 2000 and earlier, the Everyone group includes the Anonymous Logon group as a default member. Beginning in Windows Server 2003, the Everyone group contains only Authenticated Users and Guest. The group no longer includes Anonymous Logon by default. To change the Everyone group setting to include the Anonymous Logon group, in the Registry Editor, go to the **Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** key and set the value of the **everyoneincludesanonymous** DWORD to **1**.
 
 |Attribute|Value|
 | --- | --- |
@@ -394,7 +394,7 @@ This identity represents all users who are currently logged on to a computer by 
 
 ### Restricted
 
-Users and computers with restricted capabilities have the Restricted identity. This identity group is used by a process that's running in a restricted security context, such as running an application with the RunAs service. When code runs at the Restricted security level, the Restricted SID is added to the user’s access token.
+Users and computers with restricted capabilities have the Restricted identity. This identity group is used by a process that's running in a restricted security context, such as when you run an application with the RunAs service. When code runs at the Restricted security level, the Restricted SID is added to the user’s access token.
 
 |Attribute|Value|
 | --- | --- |
@@ -463,7 +463,7 @@ Any user that's accessing the system through Terminal Services has the Terminal 
 |Default location in Active Directory |CN=WellKnown Security Principals, CN=Configuration, DC=\<forestRootDomain\>|
 |Default user rights| [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p> [Increase a process working set](/windows/device-security/security-policy-settings/increase-a-process-working-set): SeIncreaseWorkingSetPrivilege<p>|
 
-## See also
+## Related content
 
 - [Active Directory security groups](understand-security-groups.md)
 

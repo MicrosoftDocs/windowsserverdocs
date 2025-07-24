@@ -2,10 +2,10 @@
 title: Use Remote Access Monitoring and Accounting
 description: Learn how to leverage the monitoring capabilities of Remote Access by using the DirectAccess management console and the corresponding Windows PowerShell cmdlets.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Use Remote Access Monitoring and Accounting

@@ -2,7 +2,7 @@
 title: Pktmon support for Microsoft Network Monitor (Netmon)
 description: Describes how to install and configure Microsoft Network Monitor (Netmon) to read Pktmon-generated ETL files.
 ms.topic: how-to
-author: khdownie
+author: robinharwood
 ms.author: roharwoo
 ms.date: 10/27/2021
 ---

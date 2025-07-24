@@ -2,7 +2,7 @@
 title: Express updates for Windows Server 2016 re-enabled for November 2018 update
 description: Provides information about Express Updates in Windows Server 2016
 ms.topic: article
-author: robinharwood
+author: xelu86
 ms.author: alalve
 ms.date: 08/07/2020
 ---

@@ -1,8 +1,8 @@
 ---
 title: Use multiple Remote Desktop license servers
 description: Learn how to use multiple Remote Desktop (RD) license servers so that they communicate with one another.
-ms.topic: article
-author: meaghanlewis
+ms.topic: how-to
+author: dknappettmsft
 ms.author: daknappe
 ms.date: 9/9/2024
 ---

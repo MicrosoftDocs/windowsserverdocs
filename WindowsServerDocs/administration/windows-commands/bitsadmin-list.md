@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin list command, which lists the t
 ms.topic: reference
 ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

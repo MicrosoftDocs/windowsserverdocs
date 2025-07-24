@@ -4,7 +4,7 @@ description: Reference article for the Diskraid command-line tool, which enables
 ms.topic: reference
 ms.assetid: 20aef1e5-7641-47cf-b4eb-cda117f65b6e
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

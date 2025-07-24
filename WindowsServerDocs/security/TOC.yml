@@ -10,7 +10,9 @@
   - name: Configure Secured-core Server
     href: configure-secured-core-server.md
   - name: Kernel Mode Hardware-enforced Stack Protection
-    href: kernel-mode-hardware-stack-protection.md  
+    href: kernel-mode-hardware-stack-protection.md
+  - name: Authority Information Access (AIA) retrieval
+    href: authority-information-access-retrieval.md
   - name: OSConfig
     items:
     - name: OSConfig overview
@@ -140,24 +142,24 @@
     href: windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md
   - name: Disabling Per-User Services in Windows
     href: /windows/application-management/per-user-services-in-windows
-  - name: Windows Authentication
+  - name: Windows authentication
     href: windows-authentication/windows-authentication-overview.md
     items:
-    - name: Windows Authentication Technical Overview
+    - name: Windows authentication technical overview
       href: windows-authentication/windows-authentication-technical-overview.md
       items:
-      - name: Windows Authentication Concepts
+      - name: Windows authentication concepts
         href: windows-authentication/windows-authentication-concepts.md
-      - name: Windows Logon Scenarios
+      - name: Windows Logon scenarios
         href: windows-authentication/windows-logon-scenarios.md
-      - name: Windows Authentication Architecture
+      - name: Windows authentication architecture
         href: windows-authentication/windows-authentication-architecture.md
         items:
         - name: Security Support Provider Interface Architecture
           href: windows-authentication/security-support-provider-interface-architecture.md
-        - name: Credentials Processes in Windows Authentication
+        - name: Credentials Processes in Windows authentication
           href: windows-authentication/credentials-processes-in-windows-authentication.md
-      - name: Group Policy Settings Used in Windows Authentication
+      - name: Group Policy Settings Used in Windows authentication
         href: windows-authentication/group-policy-settings-used-in-windows-authentication.md
   - name: Credentials Protection and Management
     href: credentials-protection-and-management/credentials-protection-and-management.md
@@ -172,7 +174,7 @@
          href: /windows/security/identity-protection/credential-guard/how-it-works?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
        - name: Configure Credential Guard
          href: /windows/security/identity-protection/credential-guard/configure?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
-       - name: Additional mitigations 
+       - name: Additional mitigations
          href: /windows/security/identity-protection/credential-guard/additional-mitigations?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
        - name: Considerations and known issues
          href: /windows/security/identity-protection/credential-guard/considerations-known-issues?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json

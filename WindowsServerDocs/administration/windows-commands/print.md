@@ -4,7 +4,7 @@ description: Reference article for the print command, which sends a text file to
 ms.topic: reference
 ms.assetid: aa2325d5-a993-4ed3-b996-255165452db8
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

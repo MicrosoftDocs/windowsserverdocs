@@ -1,11 +1,11 @@
 ---
 title: How QoS Policy Works
 description: Learn about how QoS policy works.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
-ms.author: jgerend
-author: robinharwood
+ms.author: alalve
+author: xelu86
 ms.date: 08/07/2020
 ---
 

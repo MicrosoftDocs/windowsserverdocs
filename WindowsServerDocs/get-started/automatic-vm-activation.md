@@ -1,23 +1,19 @@
 ---
 title: Automatic Virtual Machine Activation in Windows Server
-description: Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purchase mechanism, helping to ensure that Windows products are used in accordance with the Product Use Rights and Microsoft Software License Terms.
-ms.topic: conceptual
+description: Learn about Automatic Virtual Machine Activation (AVMA) and how to enable seamless activation of Windows Server virtual machines on licensed Hyper-V hosts.
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 09/30/2024
+ms.date: 07/14/2025
 ---
 
 # Automatic Virtual Machine Activation in Windows Server
 
-Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purchase mechanism, helping to ensure that Windows products are used in accordance with the Product Use Rights and Microsoft Software License Terms.
-
-AVMA lets you activate Windows Server virtual machines (VM) on a Windows Server Hyper-V host that is properly activated, even in disconnected environments. AVMA binds the VM activation to the licensed virtualization host and activates the VM when it starts up. When you use AVMA, you can get real-time reporting on usage and historical data on the license state of the VM. Reporting and tracking data is available on the virtualization host.
+Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purchase mechanism, helping to ensure that Windows products are used in accordance with the Product Use Rights and Microsoft Software License Terms. AVMA lets you activate Windows Server virtual machines (VM) on a Windows Server Hyper-V host that is properly activated, even in disconnected environments. AVMA binds the VM activation to the licensed virtualization host and activates the VM when it starts up. When you use AVMA, you can get real-time reporting on usage and historical data on the license state of the VM. Reporting and tracking data is available on the virtualization host.
 
 ## Practical applications
 
-On virtualization hosts, AVMA offers several benefits.
-
-Server data center managers can use AVMA to do the following tasks:
+On virtualization hosts, AVMA offers several benefits. Server data center managers can use AVMA to do the following tasks:
 
 - Activate VMs in remote locations.
 - Activate VMs with or without an internet connection.
@@ -27,7 +23,7 @@ Service Provider License Agreement (SPLA) partners and other hosting providers d
 
 ## System requirements
 
-For a virtualization server host to run guest VMs, you must activate it. To do so, obtain keys through the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) or your OEM provider.
+To run guest VMs on a virtualization server host, you must activate the host. You can obtain host activation keys from the [Microsoft 365 admin center](https://admin.microsoft.com/adminportal#/homepage) or your OEM provider.
 
 > [!NOTE]
 > In a failover cluster, each virtualization server host in the cluster must be activated for guest VMs to stay activated, regardless of which server they run on.
@@ -43,7 +39,7 @@ AVMA requires a Windows Server Datacenter edition with the Hyper-V server host r
 | Windows Server 2012 R2 | | | | | X |
 
 > [!NOTE]
-> AVMA does not work with other server virtualization technologies.
+> AVMA doesn't work with other server virtualization technologies.
 
 ## How to implement AVMA
 
@@ -54,13 +50,13 @@ To activate VMs with AVMA, you use a generic AVMA key (detailed in [AVMA keys](#
 1. [Create a virtual machine](../virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v.md) and install a supported Windows Server operating system on it.
 
    > [!IMPORTANT]
-   > The [Data Exchange integration service](../virtualization/hyper-v/manage/Manage-Hyper-V-integration-services.md) (also known as Key-Value Pair Exchange) must be enabled in the VM settings for AVMA to work. It is enabled by default for new VMs.
+   > The [Data Exchange integration service](../virtualization/hyper-v/manage/Manage-Hyper-V-integration-services.md) (also known as Key-Value Pair Exchange) must be enabled in the VM settings for AVMA to work. It's enabled by default for new VMs.
 
 1. After installing Windows Server on the VM, install the AVMA key on the VM. From PowerShell or an elevated command prompt, run the following command:
 
-    ```powershell
-    slmgr /ipk <AVMA_key>
-    ```
+   ```
+   slmgr /ipk <AVMA_key>
+   ```
 
 The VM automatically activates, providing that the virtualization host itself is activated.
 
@@ -131,13 +127,10 @@ The Key-Value Pair (KVP) exchange between the virtualization host and the VM pro
 
 For more information about KVP, see [Data Exchange: Using key-value pairs to share information between the host and guest on Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn798287(v=ws.11)).
 
-> [!NOTE]
-> KVP data is not secured. It can be modified and is not monitored for changes.
-
 > [!IMPORTANT]
-> KVP data should be removed if the AVMA key is replaced with another product key (retail, OEM, or volume licensing key).
+> KVP data isn't secured. It can be modified and isn't monitored for changes. KVP data should be removed if the AVMA key is replaced with another product key (retail, OEM, or volume licensing key).
 
-Since the AVMA activation process is transparent, error messages aren't displayed. However, AVMA requests are also logged on the virtualization host in Event Viewer in the Application log with Event ID 12310, and on the VM with Event ID 12309. The following events are captured on the VMs:
+Since the AVMA activation process is transparent, error messages aren't displayed. However, AVMA requests are also logged on the virtualization host in Event Viewer in the Application log with Event ID **12310**, and on the VM with Event ID **12309**. The following events are captured on the VMs:
 
 | Notification | Description |
 |--|--|

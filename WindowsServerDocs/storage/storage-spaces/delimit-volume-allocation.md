@@ -2,8 +2,8 @@
 description: "Learn more about: Delimit the allocation of volumes in Storage Spaces Direct"
 title: Delimit the allocation of volumes in Storage Spaces Direct
 manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.topic: how-to
+author: robinharwood
 ms.author: roharwoo
 ms.date: 03/29/2018
 ---
@@ -201,7 +201,7 @@ No, it's the same as with regular allocation.
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Fault tolerance in Storage Spaces Direct](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 
 ## Appendix

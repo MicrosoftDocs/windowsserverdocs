@@ -1,7 +1,7 @@
 ---
 title: Upgrade Windows Admin Center extensions to Angular 11
 description: Guide on how to upgrade existing Windows Admin Center extensions to Angular 11
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/01/2021

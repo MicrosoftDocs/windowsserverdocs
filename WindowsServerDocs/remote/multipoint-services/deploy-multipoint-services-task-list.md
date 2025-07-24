@@ -4,7 +4,7 @@ description: Lists all the tasks involved in deploying MultiPoint Services, alon
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: e08c5784-5b3e-4028-86c1-96deaee41f09
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

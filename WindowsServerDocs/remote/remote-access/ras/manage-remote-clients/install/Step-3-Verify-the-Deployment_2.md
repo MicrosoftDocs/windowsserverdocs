@@ -1,9 +1,9 @@
 ---
 title: Step 3 Verify the Deployment
 description: Learn how to verify that you've correctly configured your deployment for remote management of DirectAccess clients.
-ms.topic: article
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Verify the Deployment

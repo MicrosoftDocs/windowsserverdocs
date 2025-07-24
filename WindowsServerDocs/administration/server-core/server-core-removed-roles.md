@@ -3,10 +3,10 @@ title: Roles, Role Services, and Features not in Windows Server - Server Core
 description: Learn about the roles and features not included in the Server Core installation option for Windows Server.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
+author: xelu86
 ms.author: alalve
 ms.date: 02/23/2018
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 

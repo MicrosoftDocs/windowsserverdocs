@@ -1,11 +1,9 @@
 ---
 title: Network Subsystem Performance Tuning
 description: Learn about the network subsystem and for links to other topics in this guide.
-ms.topic: article
-ms.assetid: 45217fce-bfb9-47e8-9814-88ffdb3c7b7d
-manager: dcscontentpm
-ms.author: jgerend
-author: Teresa-Motiv
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/27/2021
 ---
 

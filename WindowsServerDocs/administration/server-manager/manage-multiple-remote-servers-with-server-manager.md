@@ -1,11 +1,9 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
 description: Learn how to use features in the Server Manager console to manage multiple, remote servers.
-ms.topic: article
-ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
-ms.author: jgerend
+ms.topic: how-to
+ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage Multiple, remote Servers with Server Manager

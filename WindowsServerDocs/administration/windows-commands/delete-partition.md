@@ -4,7 +4,7 @@ description: Reference article for the delete partition command, which deletes t
 ms.topic: reference
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

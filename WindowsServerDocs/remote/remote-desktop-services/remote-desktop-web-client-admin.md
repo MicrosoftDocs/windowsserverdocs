@@ -1,7 +1,7 @@
 ---
 title: Set up Remote Desktop web client for users
 description: Learn how to configure and manage the Remote Desktop web client for user access to remote apps and desktops.
-ms.topic: article
+ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ms.date: 04/15/2025

@@ -2,7 +2,7 @@
 title: Use DNS Policy for Application Load Balancing With Geo-Location Awareness
 description: Learn how to configure DNS policy to load balance an application with geo-location awareness.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
 ms.author: roharwoo
 author: robinharwood

@@ -54,7 +54,7 @@ landingContent:
           - text: DFS Namespaces
             url: dfs-namespaces/dfs-overview.md
           - text: DFS Replication
-            url: dfs-replication/dfsr-overview.md
+            url: dfs-replication/dfs-replication-overview.md
           - text: File Server Resource Manager
             url: fsrm/fsrm-overview.md
           - text: iSCSI Target Server

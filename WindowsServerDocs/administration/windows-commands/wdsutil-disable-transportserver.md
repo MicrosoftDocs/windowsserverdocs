@@ -4,7 +4,7 @@ description: Reference article for the wdsutil disable-transportserver command, 
 ms.topic: reference
 ms.assetid: a009706b-8e89-486b-8e3d-512cd9f4de74
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

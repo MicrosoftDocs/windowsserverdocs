@@ -2,13 +2,11 @@
 title: Configure App Control policies in Windows Server
 description: Learn how to configure App Control for Business through OSConfig PowerShell commands to harden security by implementing custom security policies.
 ms.topic: how-to
-ms.product: windows-server
 ms.author: alalve
 author: xelu86
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
-ms.date: 10/31/2024
+ms.date: 05/20/2025
 ---
-
 
 # Configure App Control for Business by using OSConfig
 
@@ -28,19 +26,19 @@ Because App Control is a component of Windows Server 2025, deployment of its pol
 > - Identifying file and policy event activities by using various dashboards, charts, filters, and export capabilities. These features help you analyze and troubleshoot the effects and the status of your App Control policies.
 > - Refining your App Control policies by exporting the workbook data and ingesting it in the Microsoft App Control Wizard.
 >
-> To begin using the Azure Monitor workbook for App Control for Business, see [How to get insights into App Control for Business (WDAC) events](https://github.com/microsoft/AzureMonitorCommunity/tree/master/Scenarios/How%20to%20get%20insights%20into%20App%20Control%20(WDAC)%20events#how-to-get-insights-into-app-control-for-business-wdac-events).
+> To begin using the Azure Monitor workbook for App Control for Business, see [How to get insights into App Control for Business (WDAC) events](https://aka.ms/appcontrolworkbook).
 
 ## Prerequisites
 
 - You must be running a production-signed Windows Server 2025 build on your device. This requirement ensures compliance with the App Control for Business policies.
 
   > [!CAUTION]
-  > Flight-signed binaries are not permitted. Failure to comply with this requirement results in the inability to start your device.
+  > Flight-signed binaries aren't permitted. Failure to comply with this requirement results in the inability to start your device.
 - The OSConfig PowerShell module must be installed on your server device. See [Install the OSConfig PowerShell module](osconfig-how-to-configure-security-baselines.md#install-the-osconfig-powershell-module) for details.
 - You must be running Windows 10 version 1909 or later on your client device, and have the [App Control Wizard](https://webapp-wdac-wizard.azurewebsites.net/) installed.
 
 > [!NOTE]
-> If the client device doesn't have .NET Desktop Runtime 8.0 or later installed, the App Control Wizard will prompt you to download and install this application.
+> If the client device doesn't have .NET Desktop Runtime 8.0 or later installed, the App Control Wizard prompts you to download and install this application.
 
 ## Manage default policies
 
@@ -109,7 +107,7 @@ After you remove a policy, there should be no output when you run `citool -lp | 
 
 To view captured events after you apply the App Control policy, choose any third-party application that you want to run on your device. If you set the App Control policy in audit mode, check if the operating system emitted event ID **3076** for any third-party applications. If you set the policy in enforcement mode, check if the operating system emitted event ID **3077**.
 
-The system detects attempts by the third-party application to access restricted content and takes measures to block access. To view and export these event logs, follow these steps:
+The system detects attempts by the third-party application to access restricted content and takes measures to block access. To view and export these event logs, see the following steps:
 
 # [View](#tab/view)
 
@@ -149,27 +147,27 @@ To create supplemental App Control policies, follow these steps:
 After the supplemental policy is generated, copy the XML file to your server and run the following script:
 
 ```powershell
-$policyPath = "<Path to the XML policy file>" 
+$policyPath = "<Path to the XML policy file>"
 
-# Reset GUID (best practice)  
+# Reset GUID (best practice)
 
-Set-CIPolicyIdInfo -FilePath $policyPath -ResetPolicyID 
+Set-CIPolicyIdInfo -FilePath $policyPath -ResetPolicyID
 
-# Set policy version (VersionEx in the XML file)  
+# Set policy version (VersionEx in the XML file)
 
-$policyVersion = "1.0.0.1" 
+$policyVersion = "1.0.0.1"
 
-Set-CIPolicyVersion -FilePath $policyPath -Version $policyVersion 
+Set-CIPolicyVersion -FilePath $policyPath -Version $policyVersion
 
-# Set policy info (PolicyName and PolicyID in the XML file)  
+# Set policy info (PolicyName and PolicyID in the XML file)
 
-Set-CIPolicyIdInfo -FilePath $policyPath -PolicyID "<App name>-Policy_$policyVersion" -PolicyName "<App name>-Policy" # E.g. Set-CIPolicyIdInfo -FilePath $policyPath -PolicyID "Chrome-Policy_$policyVersion" -PolicyName "Chrome-Policy" 
+Set-CIPolicyIdInfo -FilePath $policyPath -PolicyID "<App name>-Policy_$policyVersion" -PolicyName "<App name>-Policy" # E.g. Set-CIPolicyIdInfo -FilePath $policyPath -PolicyID "Chrome-Policy_$policyVersion" -PolicyName "Chrome-Policy"
 
-$base = "{9214D8EE-9B0F-4972-9073-A04E917D7989}" 
+$base = "{9214D8EE-9B0F-4972-9073-A04E917D7989}"
 
-Set-CIPolicyIdInfo -FilePath $policyPath -SupplementsBasePolicyID $base 
+Set-CIPolicyIdInfo -FilePath $policyPath -SupplementsBasePolicyID $base
 
-#Set the new policy into the system  
+#Set the new policy into the system
 
 Set-OSConfigDesiredConfiguration -Scenario AppControl -Name Policies -Value $policyPath
 ```

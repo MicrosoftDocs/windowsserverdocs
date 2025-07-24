@@ -4,7 +4,7 @@ description: Reference article for the wdsutil disable-server command, which dis
 ms.topic: reference
 ms.assetid: b69fcfe0-b744-4794-bc75-2c9218c0ba66
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

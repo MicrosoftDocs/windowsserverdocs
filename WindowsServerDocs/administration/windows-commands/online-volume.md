@@ -3,7 +3,7 @@ title: online volume
 description: Reference article for the online volume command, which takes the offline volume to the online state.
 ms.topic: reference
 ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
-ms.author: jgerend
+ms.author: roharwoo
 author: robinharwood
 manager: mtillman
 ms.date: 10/16/2017

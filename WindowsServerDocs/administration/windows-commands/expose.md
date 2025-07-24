@@ -4,7 +4,7 @@ description: Reference article for the expose command, which exposes a persisten
 ms.topic: reference
 ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

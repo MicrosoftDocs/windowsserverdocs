@@ -4,7 +4,7 @@ description: Reference article for the create partition extended command, which 
 ms.topic: reference
 ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Use the netsh interface portproxy commands to act as proxies betwee
 ms.topic: article
 manager: dougkim
 ms.author: alalve
-author: robinharwood
+author: xelu86
 ms.date: 10/27/2021
 ---
 

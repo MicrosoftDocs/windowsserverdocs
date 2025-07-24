@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getminretrydelay command, which
 ms.topic: reference
 ms.assetid: 54f0abab-c129-40ed-a603-50f464d26011
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

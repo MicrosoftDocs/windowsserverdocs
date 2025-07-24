@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin nowrap command, which truncates
 ms.topic: reference
 ms.assetid: 85a47b90-783a-41e4-96f2-81f26ae8ca93
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the edit command, which starts the MS-DOS Edi
 ms.topic: reference
 ms.assetid: 4e0ff2e8-3518-47c1-8c69-5e93f895fa0e
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

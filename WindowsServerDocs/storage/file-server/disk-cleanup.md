@@ -4,7 +4,7 @@ description: Learn how to use command-line options to configure the Disk Cleanup
 ms.reviewer: cosmosdarwin
 author: xelu86
 ms.author: alalve
-ms.topic: article
+ms.topic: how-to
 ms.date: 01/15/2025
 ---
 

@@ -315,6 +315,148 @@
     - name: AD DS Operations
       href: ad-ds/manage/component-updates/AD-DS-Operations.md
       items:
+      - name: Active Directory Domain Services component updates
+        href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
+        items:
+        - name: Identity component updates
+          href: ad-ds/manage/component-updates/Identity-component-updates.md
+          items:
+          - name: SPN and UPN uniqueness
+            href: ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md
+          - name: How to configure SPN
+            href: ad-ds/manage/how-to-configure-spn.md
+          - name: Winlogon Automatic Restart Sign-On (ARSO)
+            href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
+          - name: TPM key attestation
+            href: ad-ds/manage/component-updates/TPM-Key-attestation.md
+          - name: CA backup and restore Windows PowerShell cmdlets
+            href: ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-powershell-cmdlets.md
+          - name: Command-line process auditing
+            href: ad-ds/manage/component-updates/Command-line-process-auditing.md
+        - name: Directory services component updates
+          href: ad-ds/manage/component-updates/directory-Services-component-updates.md
+      - name: Join a computer to a domain
+        href: ad-ds/manage/join-computer-to-domain.md
+      - name: Active Directory accounts
+        href: ad-ds/manage/understand-default-user-accounts.md
+      - name: Manage user accounts
+        href: ad-ds/manage-user-accounts-in-windows-server.md
+      - name: Active Directory security groups
+        href: ad-ds/manage/understand-security-groups.md
+      - name: Group Policy management
+        items:
+        - name: Group Policy overview
+          href: ad-ds/manage/group-policy/group-policy-overview.md
+        - name: Group Policy scope
+          href: ad-ds/manage/group-policy/group-policy-scope.md
+        - name: Group Policy preferences
+          href: ad-ds/manage/group-policy/group-policy-preferences.md
+        - name: Group Policy processing
+          href: ad-ds/manage/group-policy/group-policy-processing.md
+        - name: Group Policy modeling and results
+          href: ad-ds/manage/group-policy/group-policy-modeling-results.md
+        - name: Group Policy Management Console
+          href: ad-ds/manage/group-policy/group-policy-management-console.md
+        - name: Backup and restore Group Policy in Windows
+          href: ad-ds/manage/group-policy/group-policy-backup-restore.md
+      - name: Security principals
+        href: ad-ds/manage/understand-security-principals.md
+      - name: Security identifiers
+        href: ad-ds/manage/understand-security-identifiers.md
+      - name: Special identities
+        href: ad-ds/manage/understand-special-identities-groups.md
+      - name: Service accounts
+        href: ad-ds/manage/understand-service-accounts.md
+      - name: Microsoft accounts
+        href: ad-ds/manage/understand-microsoft-accounts.md
+      - name: Delegated Managed Service Accounts
+        items:
+        - name: Delegated Managed Service Accounts overview
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
+        - name: Setting up Delegated Managed Service Accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
+        - name: Delegated Managed Service Accounts FAQ
+          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-faq.yml
+        - name: Credential Guard protected machine accounts
+          href: ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts.md
+      - name: Group Managed Service Accounts
+        items:
+        - name: Group Managed Service Accounts overview
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
+        - name: Manage Group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts.md
+        - name: Create the Key Distribution Services KDS Root Key
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+        - name: Configuring Kerberos delegation for group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
+      - name: Delegation of Control in Active Directory Domain Services
+        href: ad-ds/manage/delegation-control-wizard.md
+      - name: Best Practices for Securing Active Directory
+        href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
+        items:
+        - name: Avenues to compromise
+          href: ad-ds/plan/security-best-practices/Avenues-to-compromise.md
+        - name: Attractive Accounts for Credential Theft
+          href: ad-ds/plan/security-best-practices/attractive-Accounts-for-Credential-Theft.md
+        - name: Reducing the Active Directory attack Surface
+          href: ad-ds/plan/security-best-practices/Reducing-the-active-directory-attack-Surface.md
+        - name: Implementing Least-Privilege Administrative models
+          href: ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-models.md
+        - name: Implementing Secure Administrative Hosts
+          href: ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md
+        - name: Securing Domain Controllers Against attack
+          href: ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-attack.md
+        - name: Monitoring Active Directory for Signs of compromise
+          href: ad-ds/plan/security-best-practices/Monitoring-active-directory-for-Signs-of-compromise.md
+        - name: Audit Policy Recommendations
+          href: ad-ds/plan/security-best-practices/audit-policy-recommendations.md
+        - name: Advanced Audit Policy Configuration settings
+          href: ad-ds/plan/security-best-practices/advanced-audit-policy-configuration.md
+        - name: Planning for compromise
+          href: ad-ds/plan/security-best-practices/Planning-for-compromise.md
+        - name: Maintaining a more Secure Environment
+          href: ad-ds/plan/security-best-practices/Maintaining-a-more-Secure-Environment.md
+        - name: Appendices
+          href: ad-ds/plan/security-best-practices/appendices.md
+        - name: 'Appendix B: Privileged Accounts and Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-B--Privileged-Accounts-and-Groups-in-active-directory.md
+        - name: 'Appendix C: Protected Accounts and Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-C--Protected-Accounts-and-Groups-in-active-directory.md
+        - name: 'Appendix D: Securing Built-In Administrator Accounts in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-D--Securing-Built-In-Administrator-Accounts-in-active-directory.md
+        - name: 'Appendix E: Securing Enterprise Admins Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-E--Securing-Enterprise-Admins-Groups-in-active-directory.md
+        - name: 'Appendix F: Securing Domain Admins Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-F--Securing-Domain-Admins-Groups-in-active-directory.md
+        - name: 'Appendix G: Securing Administrators Groups in Active Directory'
+          href: ad-ds/plan/security-best-practices/appendix-G--Securing-Administrators-Groups-in-active-directory.md
+        - name: 'Appendix H: Securing Local Administrator Accounts and Groups'
+          href: ad-ds/plan/security-best-practices/appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md
+        - name: 'Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory'
+          href: ad-ds/manage/component-updates/appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-active-directory.md
+        - name: 'Appendix L: Events to Monitor'
+          href: ad-ds/plan/appendix-L--Events-to-Monitor.md
+        - name: 'Appendix M: Document Links and Recommended Reading'
+          href: ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md
+      - name: Configure protected accounts
+        href: ad-ds/manage/how-to-configure-protected-accounts.md
+      - name: Active Directory Replication and Topology Management Using Windows PowerShell
+        href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
+        items:
+        - name: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
+          href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
+        - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
+          href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
+      - name: Flexible Single Master Operations roles
+        href: ad-ds/manage/understand-fsmo-roles.md
+      - name: Transfer FSMO roles
+        href: ad-ds/manage/manage-fsmo-roles.md
+      - name: Managing RID issuance
+        href: ad-ds/manage/Managing-RID-Issuance.md
+      - name: Raise domain and forest functional levels
+        href: ad-ds/plan/raise-domain-forest-functional-levels.md
+      - name: DC locator
+        href: ad-ds/manage/dc-locator.md
       - name: Active Directory Forest Recovery Guide
         items:
         - name: Introduction
@@ -375,146 +517,12 @@
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup.md
         - name: Clean up metadata of removed domain controllers
           href: ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleaning-metadata-of-removed-dcs.md
-      - name: Best Practices for Securing Active Directory
-        href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
-        items:
-        - name: Avenues to compromise
-          href: ad-ds/plan/security-best-practices/Avenues-to-compromise.md
-        - name: Attractive Accounts for Credential Theft
-          href: ad-ds/plan/security-best-practices/attractive-Accounts-for-Credential-Theft.md
-        - name: Reducing the Active Directory attack Surface
-          href: ad-ds/plan/security-best-practices/Reducing-the-active-directory-attack-Surface.md
-        - name: Implementing Least-Privilege Administrative models
-          href: ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-models.md
-        - name: Implementing Secure Administrative Hosts
-          href: ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md
-        - name: Securing Domain Controllers Against attack
-          href: ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-attack.md
-        - name: Monitoring Active Directory for Signs of compromise
-          href: ad-ds/plan/security-best-practices/Monitoring-active-directory-for-Signs-of-compromise.md
-        - name: Audit Policy Recommendations
-          href: ad-ds/plan/security-best-practices/audit-policy-Recommendations.md
-        - name: Planning for compromise
-          href: ad-ds/plan/security-best-practices/Planning-for-compromise.md
-        - name: Maintaining a more Secure Environment
-          href: ad-ds/plan/security-best-practices/Maintaining-a-more-Secure-Environment.md
-        - name: Appendices
-          href: ad-ds/plan/security-best-practices/appendices.md
-        - name: 'Appendix B: Privileged Accounts and Groups in Active Directory'
-          href: ad-ds/plan/security-best-practices/appendix-B--Privileged-Accounts-and-Groups-in-active-directory.md
-        - name: 'Appendix C: Protected Accounts and Groups in Active Directory'
-          href: ad-ds/plan/security-best-practices/appendix-C--Protected-Accounts-and-Groups-in-active-directory.md
-        - name: 'Appendix D: Securing Built-In Administrator Accounts in Active Directory'
-          href: ad-ds/plan/security-best-practices/appendix-D--Securing-Built-In-Administrator-Accounts-in-active-directory.md
-        - name: 'Appendix E: Securing Enterprise Admins Groups in Active Directory'
-          href: ad-ds/plan/security-best-practices/appendix-E--Securing-Enterprise-Admins-Groups-in-active-directory.md
-        - name: 'Appendix F: Securing Domain Admins Groups in Active Directory'
-          href: ad-ds/plan/security-best-practices/appendix-F--Securing-Domain-Admins-Groups-in-active-directory.md
-        - name: 'Appendix G: Securing Administrators Groups in Active Directory'
-          href: ad-ds/plan/security-best-practices/appendix-G--Securing-Administrators-Groups-in-active-directory.md
-        - name: 'Appendix H: Securing Local Administrator Accounts and Groups'
-          href: ad-ds/plan/security-best-practices/appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md
-        - name: 'Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory'
-          href: ad-ds/manage/component-updates/appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-active-directory.md
-        - name: 'Appendix L: Events to Monitor'
-          href: ad-ds/plan/appendix-L--Events-to-Monitor.md
-        - name: 'Appendix M: Document Links and Recommended Reading'
-          href: ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md
-      - name: Active Directory Replication and Topology Management Using Windows PowerShell
-        href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
-        items:
-        - name: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
-          href: ad-ds/manage/powershell/Introduction-to-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-100-.md
-        - name: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-          href: ad-ds/manage/powershell/Advanced-active-directory-Replication-and-Topology-Management-Using-Windows-powershell--Level-200-.md
-      - name: Flexible Single Master Operations roles
-        href: ad-ds/manage/understand-fsmo-roles.md
-      - name: Transfer FSMO roles
-        href: ad-ds/manage/manage-fsmo-roles.md
-      - name: Managing RID issuance
-        href: ad-ds/manage/Managing-RID-Issuance.md
-      - name: Raise domain and forest functional levels
-        href: ad-ds/plan/raise-domain-forest-functional-levels.md
-      - name: Active Directory Domain Services component updates
-        href: ad-ds/manage/component-updates/active-directory-Domain-Services-component-Updates.md
-        items:
-        - name: Identity component updates
-          href: ad-ds/manage/component-updates/Identity-component-updates.md
-          items:
-          - name: SPN and UPN uniqueness
-            href: ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md
-          - name: How to configure SPN
-            href: ad-ds/manage/how-to-configure-spn.md
-          - name: Winlogon Automatic Restart Sign-On (ARSO)
-            href: ad-ds/manage/component-updates/winlogon-automatic-restart-sign-on--arso-.md
-          - name: TPM key attestation
-            href: ad-ds/manage/component-updates/TPM-Key-attestation.md
-          - name: CA backup and restore Windows PowerShell cmdlets
-            href: ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-powershell-cmdlets.md
-          - name: Command-line process auditing
-            href: ad-ds/manage/component-updates/Command-line-process-auditing.md
-        - name: Directory services component updates
-          href: ad-ds/manage/component-updates/directory-Services-component-updates.md
-      - name: Group Policy management
-        items:
-        - name: Group Policy overview
-          href: ad-ds/manage/group-policy/group-policy-overview.md
-        - name: Group Policy processing
-          href: ad-ds/manage/group-policy/group-policy-processing.md
-        - name: Group Policy modeling and results
-          href: ad-ds/manage/group-policy/group-policy-modeling-results.md
-        - name: Group Policy Management Console
-          href: ad-ds/manage/group-policy/group-policy-management-console.md
-        - name: Backup and restore Group Policy in Windows
-          href: ad-ds/manage/group-policy/group-policy-backup-restore.md
-      - name: Active Directory accounts
-        href: ad-ds/manage/understand-default-user-accounts.md
-      - name: Manage user accounts
-        href: ad-ds/manage-user-accounts-in-windows-server.md
-      - name: Special identities
-        href: ad-ds/manage/understand-special-identities-groups.md
-      - name: Active Directory security groups
-        href: ad-ds/manage/understand-security-groups.md
-      - name: Delegated Managed Service Accounts
-        items:
-        - name: Delegated Managed Service Accounts overview
-          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md
-        - name: Setting up Delegated Managed Service Accounts
-          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md
-        - name: Delegated Managed Service Accounts FAQ
-          href: ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-faq.yml
-        - name: Credential Guard protected machine accounts
-          href: ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts.md
-      - name: Group Managed Service Accounts
-        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
-        items:
-        - name: Get started with group Managed Service Accounts
-          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
-          items:
-          - name: Create the Key Distribution Services KDS Root Key
-            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
-          - name: Configuring Kerberos delegation for group Managed Service Accounts
-            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
-      - name: Service accounts
-        href: ad-ds/manage/understand-service-accounts.md
-      - name: Microsoft accounts
-        href: ad-ds/manage/understand-microsoft-accounts.md
-      - name: Security principals
-        href: ad-ds/manage/understand-security-principals.md
-      - name: Security identifiers
-        href: ad-ds/manage/understand-security-identifiers.md
-      - name: Delegation of Control in Active Directory Domain Services
-        href: ad-ds/manage/delegation-control-wizard.md
-      - name: Configure protected accounts
-        href: ad-ds/manage/how-to-configure-protected-accounts.md
-      - name: How LDAP server cookies are handled
-        href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
-      - name: DC locator
-        href: ad-ds/manage/dc-locator.md
       - name: Enable Database 32k pages optional feature
         href: ad-ds/enable-32K-pages-optional-feature.md
       - name: Replication Priority Boost
         href: ad-ds/manage/replication-priority-boost.md
+      - name: How LDAP server cookies are handled
+        href: ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md
       - name: Monitoring
         items:
         - name: LSA performance counters
@@ -698,8 +706,6 @@
         - name: Deploying a Federation Server Farm
           href: ad-fs/deployment/Deploying-a-Federation-Server-Farm.md
           items:
-          - name: Join a computer to a domain
-            href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
           - name: Enroll an SSL Certificate for AD FS
             href: ad-fs/deployment/Enroll-an-SSL-Certificate-for-AD-FS.md
           - name: Install the AD FS Role Service
@@ -793,8 +799,6 @@
           items:
           - name: 'Checklist: Setting Up a Federation Server Proxy'
             href: ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md
-          - name: Join a computer to a Domain
-            href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
           - name: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network
             href: ./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md
           - name: Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients
@@ -1034,7 +1038,7 @@
       items:
       - name: What is the Certification Authority Role Service?
         href: ad-cs/certification-authority-role.md
-      - name: Certification Authority Web Enrollment Role Service
+      - name: Certification Authority Web Enrollment
         href: ad-cs/certificate-authority-web-enrollment.md
       - name: Certificate Enrollment Web Service overview
         href: ad-cs/certificate-enrollment-web-service.md
@@ -1052,14 +1056,24 @@
         href: ad-cs/pki-design-considerations.md
     - name: How-to guides
       items:
-      - name: Configure Certificate Enrollment Web Service
-        href: ad-cs/configure-certificate-enrollment-web-service.md
       - name: Configure Network Device Enrollment Service to use a domain user account
         href: ad-cs/create-domain-user-account-ndes-service-account.md
-      - name: Configure Certificate Enrollment Policy Web Service
-        href: ad-cs/configure-certificate-enrollment-policy-web-service.md
-      - name: Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port
-        href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
+      - name: Certificate Enrollment Web Service
+        items:
+        - name: Configure Certificate Enrollment Web Service
+          href: ad-cs/configure-certificate-enrollment-web-service.md
+        - name: Configure Certificate Enrollment Policy Web Service
+          href: ad-cs/configure-certificate-enrollment-policy-web-service.md
+        - name: Use a custom port for Certificate Enrollment Web Service
+          href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
+      - name: Certification Authority Web Enrollment
+        items:
+        - name: Request certificates using Web Enrollment
+          href: ad-cs/request-certificate-windows-server.md
+        - name: Retrieve base and delta CRLs
+          href: ad-cs/retrieve-base-and-delta-crl.md
+        - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
+          href: ad-cs/submit-pkcs-certificate-request.md
       - name: Configure trusted roots and disallowed certificates
         href: ad-cs/configure-trusted-roots-disallowed-certificates.md
       - name: Distribute certificates using Group Policy
@@ -1070,12 +1084,16 @@
         href: ad-cs/install-policy-module-network-device-enrollment-service.md
       - name: Manage certificate templates
         href: ad-cs/manage-certificate-templates.md
+      - name: Migrate the Certification Authority
+        href: ad-cs/migrate-certification-authority.md
       - name: Renew root CA certificate
         href: ad-cs/renew-root-ca-certificate.md
       - name: Request certificates using Web Enrollment
         href: ad-cs/request-certificate-windows-server.md
       - name: Retrieve base and delta CRLs
         href: ad-cs/retrieve-base-and-delta-crl.md
+      - name: Disable weak cryptographic algorithms in certificate validation
+        href: ad-cs/disable-weak-cryptographic-algorithms.md
       - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
         href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
@@ -1114,8 +1132,8 @@
         href: laps/laps-scenarios-windows-server-active-directory.md
       - name: Windows LAPS in legacy Microsoft LAPS emulation mode
         href: laps/laps-scenarios-legacy.md
-      - name: Windows LAPS deployment and migration
-        href: laps/laps-scenarios-deployment-migration.md
+      - name: Windows LAPS migration
+        href: laps/laps-scenarios-migration.md
     - name: Manage Windows LAPS
       items:
       - name: Configure Windows LAPS policy settings

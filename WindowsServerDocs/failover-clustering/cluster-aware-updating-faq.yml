@@ -3,16 +3,13 @@ metadata:
   ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
   title: Cluster-Aware Updating - Frequently Asked Questions
   ms.topic: faq
-  manager: lizross
-  ms.author: jgerend
-  author: robinharwood
+  author: meaghanlewis
+  ms.author: mosagie
   ms.date: 10/21/2021
   description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
   ms.service: windows-server
 title: "Cluster-Aware Updating: Frequently Asked Questions"
-summary: |
-  > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Local, versions 23H2 and 22H2
-  
+summary: |  
   [Cluster-Aware Updating](cluster-aware-updating.md) \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.
   
 

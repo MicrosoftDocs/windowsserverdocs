@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Deploy guarded hosts"
 title: Deploy guarded hosts
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

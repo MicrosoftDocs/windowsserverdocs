@@ -4,7 +4,7 @@ description: Reference article for the convert command, which converts a disk fr
 ms.topic: reference
 ms.assetid: ae151297-af21-4701-bd69-21d775518e03
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

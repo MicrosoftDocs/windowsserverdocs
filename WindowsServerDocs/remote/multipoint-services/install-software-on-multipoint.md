@@ -2,9 +2,9 @@
 title: Install software on your MultiPoint Services system
 description: Learn how to install software for users in MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: d4fb5b8b-2d57-40bb-afc7-7cfefc2ae232
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ms.author: daknappe
 ---

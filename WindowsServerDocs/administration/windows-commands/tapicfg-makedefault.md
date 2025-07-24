@@ -3,7 +3,7 @@ title: tapicfg makedefault
 description: Reference article for the tapicfg makedefault command, which sets the default TAPI application directory partition for the domain.
 ms.topic: reference
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 09/29/2020
 ---
