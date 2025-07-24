@@ -556,6 +556,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh add](netsh-add.md)
   - [netsh advfirewall](netsh-advfirewall.md)
   - [netsh branchcache](netsh-branchcache.md)
+  - [netsh delete](netsh-delete.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)

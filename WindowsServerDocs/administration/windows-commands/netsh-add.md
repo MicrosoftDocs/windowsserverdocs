@@ -28,5 +28,5 @@ netsh add helper [file]
 To add a helper DLL located at **C:\dlls\HelperDLL.dll**, run the following command:
 
 ```cmd
-netsh add helper C:\Helpers\HelperDLL.dll
+netsh add helper C:\dlls\HelperDLL.dll
 ```
