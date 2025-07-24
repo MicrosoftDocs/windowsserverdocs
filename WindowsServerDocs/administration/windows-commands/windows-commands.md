@@ -553,6 +553,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)
+  - [netsh add](netsh-add.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
