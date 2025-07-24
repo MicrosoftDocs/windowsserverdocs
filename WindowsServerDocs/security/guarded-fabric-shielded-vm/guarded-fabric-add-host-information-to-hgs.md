@@ -4,7 +4,7 @@ title: Add host information to the HGS configuration
 ms.topic: concept-article
 ms.assetid: 0d1d19b6-820a-4b3f-9b97-6386dd544a64
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

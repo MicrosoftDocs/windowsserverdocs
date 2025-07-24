@@ -3,7 +3,7 @@ title: fsutil 8dot3name
 description: Reference article for the fsutil 8dot3name command, which queries or changes the settings for short name (8dot3 name) behavior.
 manager: dmoss
 ms.author: alalve
-author: toklima
+author: xelu86
 ms.assetid: a0c6dbfe-d898-496d-9356-825f7fbd90ec
 ms.topic: reference
 ms.date: 11/22/2022

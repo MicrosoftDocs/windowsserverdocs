@@ -1,20 +1,19 @@
 ---
-description: Learn how to migrate SYSVOL replication to DFS Replication by creating a new domain name or by upgrading an existing domain.
-title: Migrate SYSVOL replication to DFS Replication
-ms.date: 04/25/2023
-author: robinharwood
-manager: elizapo
+title: Migrate SYSVOL replication from FRS to DFS Replication
+description: Learn how to migrate SYSVOL replication from File Replication Service (FRS) to Distributed File System Replication (DFSR). Follow this step-by-step guide to ensure a smooth transition and improve your Active Directory reliability.
+author: dknappettmsft
 ms.author: daknappe
 ms.topic: upgrade-and-migration-article
+ms.date: 05/14/2025
 ---
 
-# Migrate SYSVOL replication to DFS Replication
+# Migrate SYSVOL replication from File Replication Service (FRS) to Distributed File System Replication (DFSR)
 
->**
+Active Directory domain controllers use a special shared folder named `SYSVOL` to replicate sign-in scripts and Group Policy object files to other domain controllers. Windows 2000 Server and Windows Server 2003 used the File Replication Service (FRS) to replicate the `SYSVOL` folder and its contents. Current versions of Windows Server use the newer Distributed File System Replication (DFS Replication) service, which was introduced in Windows Server 2008, for domains that use the Windows Server 2008 domain functional level or later. Windows Server 2008 uses FRS for domains that run older domain functional levels.
 
-Domain controllers use a special shared folder named SYSVOL to replicate sign-in scripts and Group Policy object files to other domain controllers. Windows 2000 Server and Windows Server 2003 use the File Replication Service (FRS) to replicate SYSVOL. Windows Server 2008 uses the newer Distributed File System Replication (DFS Replication) service for domains that use the Windows Server 2008 domain functional level. Windows Server 2008 uses FRS for domains that run older domain functional levels.
+If you're running a domain that uses FRS, you can migrate the replication of the `SYSVOL` folder to use DFS Replication. This migration is a one-way process. After you migrate to DFS Replication, you can't revert to FRS.
 
-To use DFS Replication to replicate the SYSVOL folder, you can create a new domain that uses the Windows Server 2008 domain functional level. You can also use the procedure described in this article to upgrade an existing domain and migrate replication to DFS Replication.
+This article provides a guide to help you migrate the `SYSVOL` folder from FRS to DFS Replication. The migration process is complex and requires careful planning and execution. The guide includes information about the migration process, prerequisites, and procedures.
 
 ## Prerequisites
 
@@ -28,9 +27,9 @@ This article assumes you have a basic knowledge of Active Directory Domain Servi
 
 To download a printable version of this guide, go to [SYSVOL Replication Migration Guide: FRS to DFS Replication](https://go.microsoft.com/fwlink/?LinkId=150375).
 
-## Migration topics
+## Migration articles
 
-The SYSVOL migration guide provides topics that describe a range of concepts and procedures from the use of FRS to the use DFS. Use the following list to access articles about migrating the SYSVOL folder to use DFS Replication.
+The SYSVOL migration guide provides articles that describe a range of concepts and procedures from the use of FRS to the use DFS. Use the following list to access articles about migrating the SYSVOL folder to use DFS Replication.
 
 ### Concepts
 
@@ -45,9 +44,9 @@ Review these concepts about SYSVOL migration states for a basic understanding of
 Follow these SYSVOL migration procedures for a basic understanding of the migration states.
 
 - [SYSVOL migration procedure](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd639860(v=ws.10))
-- [Migrating to the Prepared state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641193(v=ws.10))
-- [Migrating to the Redirected state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641340(v=ws.10))
-- [Migrating to the Eliminated state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640254(v=ws.10))
+- [Migrate to the Prepared state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641193(v=ws.10))
+- [Migrate to the Redirected state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd641340(v=ws.10))
+- [Migrate to the Eliminated state](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd640254(v=ws.10))
 
 ### Troubleshooting
 

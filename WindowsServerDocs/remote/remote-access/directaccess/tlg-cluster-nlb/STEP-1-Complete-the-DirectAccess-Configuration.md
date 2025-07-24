@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 1 Complete the DirectAccess in a Cluster with Windows NLB Configuration

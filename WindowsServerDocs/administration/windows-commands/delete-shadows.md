@@ -4,7 +4,7 @@ description: Reference article for the delete shadows command, which deletes sha
 ms.topic: reference
 ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

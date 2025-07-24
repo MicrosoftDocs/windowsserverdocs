@@ -4,7 +4,7 @@ description: Find links to articles for the Windows Authentication Technical Ove
 ms.topic: concept-article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---

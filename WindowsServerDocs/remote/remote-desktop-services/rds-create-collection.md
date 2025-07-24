@@ -5,7 +5,7 @@ ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: how-to
 ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60
-author: robinharwood
+author: dknappettmsft
 manager: dongill
 ---
 # Create a Remote Desktop Services collection for desktops and apps to run

@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Remote Access Server

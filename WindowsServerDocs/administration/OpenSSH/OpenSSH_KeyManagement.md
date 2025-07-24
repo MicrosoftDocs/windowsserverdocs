@@ -1,16 +1,16 @@
 ---
-title: Key-based authentication in OpenSSH for Windows
+title: Key-Based Authentication in OpenSSH for Windows
 description: Find out about OpenSSH Server key-based authentication, generation, and deployment for Windows. See how to use built-in Windows tools or PowerShell to manage keys.
-ms.date: 03/11/2025
-ms.topic: article
+ms.date: 06/30/2025
+ms.topic: concept-article
 ms.author: roharwoo
-author: maertendmsft
+author: robinharwood
 # customer intent: As an administrator, I want to become familiar with OpenSSH Server key-based authentication so that I can improve the security of cross-domain work.
 ---
 
 # Key-based authentication in OpenSSH for Windows
 
-Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When you work across domains, such as between on-premises and cloud-hosted systems, this type of authentication becomes vulnerable to brute force intrusions.
+Most authentication in Windows environments is done with a username/password pair, which works well for systems that share a common domain. When you work across domains, such as between on-premises and cloud-hosted systems, this type of authentication becomes vulnerable to brute force intrusions.
 
 By comparison, Linux environments commonly use public/private key pairs to drive authentication that doesn't require the use of guessable passwords. OpenSSH includes tools to help support key-based authentication, specifically:
 
@@ -18,17 +18,17 @@ By comparison, Linux environments commonly use public/private key pairs to drive
 * __ssh-agent__ and __ssh-add__ for securely storing private keys.
 * __scp__ and __sftp__ to securely copy public key files during initial use of a server.
 
-This document provides an overview of how to use these tools on Windows to begin using key-based authentication with Secure Shell (SSH). If you're unfamiliar with SSH key management, we strongly recommend you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf), titled _Security of Interactive and Automated Access Management Using Secure Shell (SSH)_.
+This document provides an overview of how to use these tools on Windows to begin using key-based authentication with Secure Shell (SSH). If you're not familiar with SSH key management, we strongly recommend that you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf), titled _Security of Interactive and Automated Access Management Using Secure Shell (SSH)_.
 
 ## Key pairs
 
 Key pairs refer to the public and private key files that are used by certain authentication protocols.
 
-SSH public key authentication uses asymmetric cryptographic algorithms to generate two key files—one _private_ and the other _public_. Each private key file is the equivalent of a password, and should stay protected under all circumstances. If someone acquires your private key, they can sign in as you to any SSH server you have access to. The public key is what is placed on the SSH server, and can be shared without compromising the private key.
+SSH public key authentication uses asymmetric cryptographic algorithms to generate two key files—one _private_ and the other _public_. Each private key file is the equivalent of a password and should stay protected under all circumstances. If someone acquires your private key, they can sign in as you to any SSH server you have access to. The public key is what is placed on the SSH server and can be shared without compromising the private key.
 
 The SSH server and client can use key-based authentication to compare the public key for a user name provided against the private key. If the server-side public key can't be validated against the client-side private key, authentication fails.
 
-Multifactor authentication can be implemented with key pairs by entering a passphrase when the key pair is generated. For more information, see [User key generation](#user-key-generation). The user is prompted for the passphrase during authentication. The passphrase combined with the presence of the private key is used on the SSH client to authenticate the user.
+You can implement multifactor authentication with key pairs by entering a passphrase when you generate the key pair. For more information, see [User key generation](#user-key-generation). The user is prompted for the passphrase during authentication. The passphrase combined with the presence of the private key is used on the SSH client to authenticate the user.
 
 > [!IMPORTANT]
 > A remote session opened via key-based authentication doesn't have associated user credentials. As a result, the session isn't capable of outbound authentication as the user. This behavior is by design.
@@ -54,7 +54,7 @@ Because there's no user associated with the `sshd` service, the host keys are st
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. You can use `ssh-keygen.exe` to generate key files, and you can specify the following key-generation algorithms:
+To use key-based authentication, you first need to generate public/private key pairs for your client. You can use `ssh-keygen.exe` to generate key files. You can specify the following key-generation algorithms:
 
 * Digital Signature Algorithm (DSA)
 * Rivest–Shamir–Adleman (RSA)
@@ -69,7 +69,7 @@ To generate key files by using the ECDSA algorithm, run the following command in
 ssh-keygen -t ecdsa
 ```
 
-The output from the command should look like the following lines except that `username` is replaced with your username:
+The output from the command should look like the following lines, except that `username` is replaced with your username:
 
 ```Output
 Generating public/private ecdsa key pair.
@@ -134,7 +134,7 @@ After you add the key to the `ssh-agent` service on your client, the `ssh-agent`
 > [!IMPORTANT]
 > We recommend that you back up your private key to a secure location and then delete it
 > from the local system _after_ you add it to the `ssh-agent` service. The private key can't be retrieved from
-> the agent when a strong algorithm is used, such as ECDSA in this example. If you lose
+> the agent when a strong algorithm, such as ECDSA in this example, is used. If you lose
 > access to the private key, you have to create a new key pair and update the public key on all
 > systems you interact with.
 

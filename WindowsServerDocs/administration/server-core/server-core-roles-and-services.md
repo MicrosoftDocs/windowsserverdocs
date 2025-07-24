@@ -3,7 +3,7 @@ title: Roles, Role Services, and Features included in Windows Server - Server Co
 description: Learn about what roles and features are included in Windows Server Server Core.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
+author: xelu86
 ms.author: alalve
 ms.date: 03/12/2025
 ms.topic: article

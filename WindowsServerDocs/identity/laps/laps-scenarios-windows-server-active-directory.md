@@ -23,7 +23,7 @@ When your domain uses a DFL of 2016 or later, you can enable Windows LAPS passwo
 
 It's fine to use Windows Server 2016 and earlier supported operating systems on your domain controllers as long as you're aware of these limitations.
 
-The following table summarizes the functionality that's supported in various scenarios:
+The following table summarizes the functionality supported in various scenarios:
 
 |Domain details|Clear-text password storage supported|Encrypted password storage supported (for domain-joined clients) |DSRM account management supported (for domain controllers)|
 |--- |--- |--- |--- |
@@ -32,6 +32,18 @@ The following table summarizes the functionality that's supported in various sce
 |2016 DFL with only Windows Server 2019 and later domain controllers|Yes|Yes|Yes|
 
 We strongly recommend that you upgrade to the latest available operating system on clients, servers, and domain controllers in order to take advantage of the latest features and security improvements.
+
+### Prepare Active Directory
+
+Follow these steps before configuring your Active Directory-joined or hybrid-joined devices to back up a managed account's passwords to Active Directory.
+
+> [!NOTE]
+> If you are planning to only backup passwords to Microsoft Entra ID, you do not need to perform any of these steps, including extending the AD schema.
+
+1. If you're using Group Policy Central Store, manually copy the Windows LAPS Group Policy template files to the central store. For more information, see [Configure policy settings for Windows LAPS](laps-management-policy-settings.md#group-policy-object-central-store).
+1. Analyze, determine, and configure the appropriate AD permissions for password expiration and password retrieval. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
+1. Analyze and determine the appropriate authorized groups for decrypting passwords. See [Windows Server Active Directory passwords](laps-concepts-overview.md#windows-server-active-directory-passwords).
+1. Create a new Windows LAPS policy that targets the managed device(s) with the appropriate settings as determined in the previous steps.
 
 ## Update the Windows Server Active Directory schema
 
@@ -46,7 +58,7 @@ PS C:\> Update-LapsADSchema
 
 ## Grant the managed device permission to update its password
 
-When you use Windows LAPS to manage a password on a device, that managed device needs to be granted permission to update its password. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADComputerSelfPermission` cmdlet for this purpose, as shown in the following code:
+When you use Windows LAPS to manage a password on a device, that managed device needs to be granted permission to update its password. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADComputerSelfPermission` cmdlet for this purpose as shown in the following code:
 
 ```powershell
 PS C:\> Set-LapsADComputerSelfPermission -Identity NewLaps
@@ -59,13 +71,55 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 ```
 
 > [!TIP]
-> If you prefer to set the inheritable permissions on the root of the domain, you can specify the entire domain root by using the distinguished name (DN) input format. For example, use the `-Identity` parameter with an argument of `DC=laps,DC=com`.
+> If you prefer to set the inheritable permissions on the root of the domain, you can specify the entire domain root by using the distinguished name (DN) input format. For example, you can use the `-Identity` parameter with an argument of `DC=laps,DC=com`.
+
+## Grant password query permissions
+
+Users must be granted permission in order to query the passwords from Active Directory. You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADReadPasswordPermission` cmdlet for this purpose as shown in the following code:
+
+```powershell
+PS C:\> Set-LapsADReadPasswordPermission -Identity NewLAPS -AllowedPrincipals @("laps\LapsPasswordReadersGroup")
+```
+
+```output
+Name    DistinguishedName
+----    -----------------
+NewLAPS OU=NewLAPS,DC=laps,DC=com
+```
+
+> [!TIP]
+> Members of the Domain Admins group already have password query permission by default.
+
+> [!TIP]
+> When a user is granted permission to query a password from Active Directory that doesn't automatically imply that the user has permission to decrypt an encrypted password. Permission to decrypt an encrypted password is configured using the [`ADPasswordEncryptionPrincipal`](laps-management-policy-settings.md#adpasswordencryptionprincipal) policy setting at the time the device stores the password in Active Directory. The default policy setting for `ADPasswordEncryptionPrincipal` is the Domain Admins group.
+
+## Grant password expiration permissions
+
+Users must be granted permission in order to set the expiration time of passwords stored in Active Directory. When a password is marked as expired in Active Directory, the device will rotate the password at the next processing cycle. Users can use this mechanism to shorten (or extend) the remaining time to the next expected password rotation.
+
+You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADResetPasswordPermission` cmdlet for this purpose as shown in the following code:
+
+```powershell
+PS C:\> Set-LapsADResetPasswordPermission -Identity NewLAPS -AllowedPrincipals @("laps\LapsPasswordExpirersGroup")
+```
+
+```output
+Name    DistinguishedName
+----    -----------------
+NewLAPS OU=NewLAPS,DC=laps,DC=com
+```
+
+> [!TIP]
+> Members of the Domain Admins group already have password expiration permission by default.
+
+> [!TIP]
+> The `Set-LapsADPasswordExpirationTime` cmdlet can be used to set the password expiration time for a given device in Active Directory, once permissions are granted.
 
 ## Query extended rights permissions
 
 Some users or groups might have the extended rights permission on the OU of the managed device. This situation is problematic, because users who have this permission can read confidential attributes, and all the Windows LAPS password attributes are marked as confidential.
 
-You can use the `Find-LapsADExtendedRights` cmdlet to see who has this permission, as shown in the following code:
+You can use the `Find-LapsADExtendedRights` cmdlet to see who has this permission as shown in the following code:
 
 ```powershell
 PS C:\> Find-LapsADExtendedRights -Identity newlaps
@@ -138,13 +192,15 @@ AuthorizedDecryptor : LAPS\Domain Admins
 
 In this output, the `Source` line indicates that password encryption is enabled. Password encryption requires that your domain is configured for a Windows Server 2016 or later DFL.
 
+If you're denied access to query the password, you can adjust the password read permissions. See [Grant password query permissions](#grant-password-query-permissions).
+
 ## Rotate a password
 
 Windows LAPS reads the password expiration time from Windows Server Active Directory during each policy processing cycle. If the password is expired, a new password is generated and stored immediately.
 
 In some situations, you might want to rotate the password early, for instance, after a security breach or during impromptu testing. To manually force a password rotation, you can use the `Reset-LapsPassword` cmdlet.
 
-You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time that's stored in Windows Server Active Directory. The following code sets the expiration time to the current time:
+You can use the `Set-LapsADPasswordExpirationTime` cmdlet to set the scheduled password expiration time stored in Windows Server Active Directory. The following code sets the expiration time to the current time:
 
 ```powershell
 PS C:\> Set-LapsADPasswordExpirationTime -Identity lapsAD2

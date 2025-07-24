@@ -2,8 +2,8 @@
 title: What's new with the Windows Admin Center Azure extension
 description: This article has release notes for the Windows Admin Center agent for Windows Admin Center in Azure.
 ms.topic: overview
-author: jasongerend
-ms.author: jgerend
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/23/2023
 ---
 

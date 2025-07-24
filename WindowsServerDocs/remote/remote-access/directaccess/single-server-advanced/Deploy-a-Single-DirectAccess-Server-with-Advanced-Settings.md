@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings

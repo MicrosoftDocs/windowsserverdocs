@@ -3,22 +3,19 @@ title: Deploy roaming user profiles
 description: Learn how to deploy roaming user profiles so that users receive the same operating system and application settings on multiple computers.
 TOCTitle: Deploy roaming user profiles
 ms.topic: install-set-up-deploy
-author: robinharwood
-manager: brianlic
-ms.date: 03/21/2023
+author: meaghanlewis
+ms.date: 05/21/2025
 ms.author: mosagie
 ---
 
 # Deploy roaming user profiles
-
->**
 
 This article describes how to use Windows Server to deploy [roaming user profiles](folder-redirection-rup-overview.md) to Windows client computers. A roaming user profile redirects user profiles to a *file share* so that users receive the same operating system and application settings on multiple computers.
 
 For a list of recent changes to this article, see the [Change history](#change-history) section.
 
 > [!IMPORTANT]
->  User customizations to the Start menu are lost after an OS in-place upgrade in the following configuration:
+> User customizations to the Start menu are lost after an OS in-place upgrade in the following configuration:
 > - Users are configured for a roaming profile
 > - Users are allowed to make changes to Start
 >
@@ -51,7 +48,6 @@ To use roaming user profiles across multiple versions of Windows, you should tak
 - Configure Windows to maintain separate profile versions for each operating system version. This helps prevent undesirable and unpredictable issues such as profile corruption.
 - Use folder redirection to store user files such as documents and pictures outside of user profiles. This enables the same files to be available to users across operating system versions. It also keeps profiles small and sign-ins quick.
 - Allocate sufficient storage for roaming user profiles. If you support two operating system versions, profiles double in number, and thus total space consumed, because a separate profile is maintained for each operating system version.
-- Don't use roaming user profiles across computers running Windows Vista/Windows Server 2008 and Windows 7/Windows Server 2008 R2. Roaming between these operating system versions isn't supported due to incompatibilities in their profile versions.
 - Inform your users that changes made on one operating system version don't roam to another operating system version.
 - When moving your environment to a version of Windows that uses a different profile version (such as from Windows 10 to Windows 10 version 1607, see [Appendix B: Profile version reference information](#appendix-b-profile-version-reference-information) for a list), users receive a new, empty roaming user profile. You can minimize the effect of getting a new profile by using folder redirection to redirect common folders. There isn't a supported method of migrating roaming user profiles from one profile version to another.
 

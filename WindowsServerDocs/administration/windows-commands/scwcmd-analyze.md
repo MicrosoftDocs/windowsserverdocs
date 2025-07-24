@@ -4,7 +4,7 @@ description: Reference article for the scwcmd analyze command, which determines 
 ms.topic: reference
 ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

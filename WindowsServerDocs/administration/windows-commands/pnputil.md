@@ -4,7 +4,7 @@ description: Reference article for the pnputil command, which adds driver packag
 ms.topic: reference
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 07/11/2018
 ---

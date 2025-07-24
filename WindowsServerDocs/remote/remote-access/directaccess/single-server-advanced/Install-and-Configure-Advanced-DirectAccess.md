@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Install and Configure Advanced DirectAccess

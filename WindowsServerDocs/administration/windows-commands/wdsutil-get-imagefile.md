@@ -4,7 +4,7 @@ description: Reference article for get-ImageFile, which retrieves information ab
 ms.topic: reference
 ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,7 +1,7 @@
 ---
 title: What is Server Core?
 description: Learn about the Server Core installation option in Windows Server
-author: pronichkin
+author: xelu86
 ms.author: alalve
 ms.date: 01/15/2025
 ms.topic: concept-article

@@ -4,7 +4,7 @@ description: Describes the system key utility (Syskey), which protects the Secur
 ms.topic: concept-article
 ms.assetid: 398fcb59-906c-4cbc-8a7d-a9750632477a
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: 
 ms.date: 3/17/2021
 ---

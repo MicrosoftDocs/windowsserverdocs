@@ -2,8 +2,8 @@
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: troubleshooting-known-issue
-author: jasongerend
-ms.author: jgerend
+author: xelu86
+ms.author: alalve
 ms.date: 06/05/2024
 ---
 # Windows Admin Center known issues

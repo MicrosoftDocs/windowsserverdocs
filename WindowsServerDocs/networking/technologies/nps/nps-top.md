@@ -1,22 +1,17 @@
 ---
-title: Network Policy Server (NPS) Overview
+title: Network Policy Server (NPS) overview
 description: Learn about using Network Policy Server (NPS) in Windows Server to manage network access authentication, authorization, and accounting.
-manager: dougkim
 ms.topic: overview
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: alalve
 author: xelu86
-ms.date: 04/18/2025
+ms.date: 05/05/2025
 # customer intent: As an administrator, I want to become familiar with Network Policy Server (NPS) in Windows Server so that I can centrally configure and manage network access authentication, authorization, and accounting.
 ---
 
-# Network Policy Server (NPS) overview
+# Network Policy Server overview
 
-This article provides an overview of Network Policy Server (NPS) in Windows Server.
-
-You can use NPS to create and enforce organization-wide network access policies for connection request authentication and authorization. You can also configure NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy. When you use NPS as a RADIUS proxy, NPS forwards connection requests to a remote NPS RADIUS server or other RADIUS servers. You can use the proxy configuration to load-balance connection requests and forward them to the correct domain for authentication and authorization.
-
-NPS is installed when you install the Network Policy and Access Services (NPAS) role in Windows Server.
+This article provides an overview of the Network Policy Server (NPS) in Windows Server. You can use NPS to create and enforce organization-wide network access policies for connection request authentication and authorization. You can also configure NPS as a Remote Authentication Dial-In User Service (RADIUS) proxy. When you use NPS as a RADIUS proxy, NPS forwards connection requests to a remote NPS RADIUS server or other RADIUS servers. You can use the proxy configuration to load-balance connection requests and forward them to the correct domain for authentication and authorization. NPS is installed when you install the Network Policy and Access Services (NPAS) role in Windows Server.
 
 ## NPS features
 
@@ -30,10 +25,11 @@ You can use NPS to centrally configure and manage network access authentication,
   For more information, see [RADIUS server](#radius-server).
 
 - **RADIUS proxy**. When you use NPS as a RADIUS proxy, you configure connection request policies that tell NPS:
-  - Which connection requests to forward to other RADIUS servers.
-  - To which RADIUS servers you want to forward connection requests.
-  
-  You can also configure NPS to forward accounting data to be logged by one or more computers in a remote RADIUS server group. To configure NPS as a RADIUS proxy server, see the following resources:
+  - Specify which connection requests should be forwarded to other RADIUS servers.
+    - Define the target RADIUS servers to which these connection requests are forwarded.
+
+  Additionally, you can configure NPS to forward accounting data for logging purposes to one or more computers within a remote RADIUS server group. To configure NPS as a RADIUS proxy server, see the following resources:
+
   - [RADIUS proxy](#radius-proxy)
   - [Configure connection request policies](nps-crp-configure.md)
 
@@ -101,8 +97,9 @@ You can use NPS as a RADIUS proxy in the following cases:
 - You're a service provider who offers outsourced dial-up, VPN, or wireless network access services to multiple customers. Your network-attached storage (NAS) systems send connection requests to the NPS RADIUS proxy. Based on the realm portion of the user name in the connection request, the NPS RADIUS proxy forwards the connection request to a RADIUS server. The customer maintains that server, which can authenticate and authorize the connection attempt.
 
 - You want to provide authentication and authorization for user accounts that aren't members of either of the following domains:
-  - The domain in which the NPS deployment is a member
-  - A domain that has a two-way trust with the domain in which the NPS deployment is a member
+
+  - The domain where the NPS deployment is a member.
+  - A domain that has a two-way trust with the domain in which the NPS deployment is a member.
 
   Examples of user accounts include accounts in untrusted domains, one-way trusted domains, and other forests. Instead of configuring your access servers to send their connection requests to an NPS RADIUS server, you can configure them to send their connection requests to an NPS RADIUS proxy. The NPS RADIUS proxy uses the realm name portion of the user name and forwards the request to an NPS RADIUS server in the correct domain or forest. Connection attempts for user accounts in one domain or forest can be authenticated for NAS systems in another domain or forest.
 

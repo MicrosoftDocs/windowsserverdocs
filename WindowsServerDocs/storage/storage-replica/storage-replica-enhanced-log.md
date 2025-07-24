@@ -1,19 +1,15 @@
 ---
 title: Use Enhanced Log in Storage Replica
 description: Learn how to use Enhanced Log in Storage Replica and about the performance improvements it delivers to your replication groups.
-manager: candyc
-ms.author: jgerend
+author: meaghanlewis
 ms.topic: how-to
-author: robinharwood
-ms.date: 10/25/2024
+ms.author: mosagie
+ms.date: 5/13/2025
 ---
 
 # Use Enhanced Log in Storage Replica
 
-Storage Replica in Windows Server uses a general-purpose logging service to replicate I/O to the secondary volume in any replication group. Beginning in Azure Local 23H2, users can opt in to a more performant logging service called *Enhanced Log*. To differentiate this redesigned logging service, we refer to the original logging service as *Traditional Log*.
-
-> [!NOTE]
-> Enhanced Log is generally available with Azure Local 23H2 and is available in Windows Server 2025.
+Storage Replica in Windows Server uses a general-purpose logging service to replicate I/O to the secondary volume in any replication group. Beginning in Windows Server 2025, users can opt in to a higher performance logging service called *Enhanced Log*. To differentiate this redesigned logging service, we refer to the original logging service as *Traditional Log*.
 
 ## Enhanced Log vs. Traditional Log
 
@@ -84,5 +80,5 @@ You can use `-LogType FileBased` to deploy the Storage Replica partnership by us
 * [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known issues](storage-replica-known-issues.md)
 * [Storage Replica: FAQ](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+* [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

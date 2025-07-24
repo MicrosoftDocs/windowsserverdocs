@@ -4,7 +4,7 @@ description: DCDiag is used to diagnose Active Directory domain controller healt
 ms.topic: reference
 ms.date: 11/14/2023
 ms.author: alalve
-author: orthomas
+author: xelu86
 ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
 ms.contributor: nedpyle
 ---

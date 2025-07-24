@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin monitor command, which monitors
 ms.topic: reference
 ms.assetid: 2c424d27-e011-49c2-b579-a2c235467c39
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

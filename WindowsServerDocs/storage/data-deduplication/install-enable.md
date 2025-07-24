@@ -2,9 +2,8 @@
 ms.assetid: 07d6b251-c492-4d9f-bcc4-031023695b24
 title: Installing and enabling Data Deduplication
 ms.topic: install-set-up-deploy
-author: wmgries
-manager: klaasl
-ms.author: jgerend
+author: xelu86
+ms.author: alalve
 ms.date: 02/18/2022
 description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---

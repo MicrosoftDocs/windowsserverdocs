@@ -4,7 +4,7 @@ description: Reference article for the ftp recv command, which copies a remote f
 ms.topic: reference
 ms.assetid: f249ce61-247d-421b-9b93-48bce5108800
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Reference article for the netsh branchcache command in Windows, whi
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 05/02/2025
+ms.date: 07/24/2025
 ---
 
 # netsh branchcache
@@ -52,7 +52,7 @@ netsh branchcache smb set [latency=]<number>
 | flush | Clears or deletes the local cache of content that BranchCache stores on your device. |
 | help *or* ? | Displays help information for the given command. |
 | importkey `<FilePath>\<FileName>` `<Passphrase>` | Imports a key for the BranchCache service to use to protect content information. The key must be previously exported using the `exportkey` command. If the service is currently running, this command restarts it in order to begin using the new key. |
-| reset | Restarts the BranchCache service and clears both the content cache on the client side and any locally stored publication data. This command resets configuration settings to their default settings.
+| reset | Restarts the BranchCache service and clears both the content cache on the client side and any locally stored publication data. This command resets configuration settings to their default settings. |
 | set [cachesize \| publicationcachesize] [size=]{DEFAULT\|`<number>`} [[percent=]{`TRUE`\|`FALSE`}] | cachesize - Sets the size of the local cache. <br><br> publicationcachesize - Sets the size of the local publication cache. <br><br> size - Indicates the cache size as a percentage or an exact `<number>` of bytes. If set to `default`, the default configuration is restored. <br><br> percent - Specifies whether the size value is interpreted as a percentage of the hard disk size or in the exact `<number>` of bytes. This parameter is ignored if the size value is set to `default`. <br><br> `True` - Indicates the size is a percentage of the size of the hard disk. <br> `False` - Indicates the size is an exact number of bytes (default option). |
 | set key [[passphrase=]\<Passphrase>] | key - Generates a new content information key. <br><br> A passphrase is used to generate the key. If a passphrase isn't provided, a random key is generated. If two keys generated using the same passphrase, they're identical. A passphrase can be used to duplicate the same key on another device. |
 | set [localcache \| publicationcache] [directory=]{DEFAULT\|\<File Path>} | localcache - Sets the location of the local cache. <br><br> publicationcache - Sets the location of the local publication cache. <br><br> directory - Is the path to the directory in which the local cache or publication cache should be stored. When set to `default`, it restores the default cache location. This service is restarted, if necessary, in order to complete the change. Any existing cache files are moved to the new location. |

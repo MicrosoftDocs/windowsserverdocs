@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getfilestransferred command, wh
 ms.topic: reference
 ms.assetid: e282815c-938b-4ac0-a09d-9baafb656dcb
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

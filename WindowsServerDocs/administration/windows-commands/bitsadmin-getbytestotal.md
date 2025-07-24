@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getbytestotal command, which Re
 ms.topic: reference
 ms.assetid: 784e0bfa-7b09-4262-9104-adbc9beb479b
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

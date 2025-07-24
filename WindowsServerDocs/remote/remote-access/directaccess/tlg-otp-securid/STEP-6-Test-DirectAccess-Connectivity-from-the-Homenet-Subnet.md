@@ -3,7 +3,7 @@ title: STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 description: Learn how to start to test connectivity from the Homenet subnet.
 ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 04/01/2023
 ---
 # STEP 6 Test DirectAccess Connectivity from the Homenet Subnet

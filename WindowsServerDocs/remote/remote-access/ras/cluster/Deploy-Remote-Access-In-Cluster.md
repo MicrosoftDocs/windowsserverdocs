@@ -4,7 +4,7 @@ description: Learn about the enterprise scenario for deploying multiple Remote A
 manager: dougkim
 ms.topic: install-set-up-deploy
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Cluster

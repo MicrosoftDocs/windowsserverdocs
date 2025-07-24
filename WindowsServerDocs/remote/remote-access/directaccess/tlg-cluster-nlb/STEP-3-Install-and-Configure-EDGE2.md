@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: how-to
 ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 3 Install and Configure EDGE2
