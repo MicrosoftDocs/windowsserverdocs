@@ -1,11 +1,11 @@
 ---
-title: SMB over QUIC in Windows
-description: Describes the SMB over QUIC feature in Windows Server and Windows client.
-ms.topic: article
-author: NedPyle
+title: SMB over QUIC
+description: Learn about SMB over QUIC, a secure alternative to TCP for file sharing in Windows and Windows Server that enables encrypted access to file servers over untrusted networks.
+ms.topic: how-to
+author: xelu86
 ms.author: alalve
 ms.contributor: inhenkel
-ms.date: 12/04/2024
+ms.date: 07/24/2025
 ---
 
 # SMB over QUIC
@@ -158,7 +158,7 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 1. To enable SMB over QUIC using the certificate thumbprint of the matched certificate, run the following command. Make sure to replace `<server FQDN>` with the fully qualified domain name of the SMB over QUIC server.
 
    ```powershell
-   New-SmbServerCertificateMapping -Name <server FQDN> -ThumbPrint $serverCert.Thumbprint -Storename My 
+   New-SmbServerCertificateMapping -Name <server FQDN> -ThumbPrint $serverCert.Thumbprint -Storename My
    ```
 
 ---
@@ -174,7 +174,7 @@ If you want to apply control to SMB over client, you can use Client Access Contr
    ```cmd
    REM Automatically tries TCP then QUIC
    NET USE * \\fsedge1.contoso.com\sales
-   
+
    REM Tries only QUIC
    NET USE * \\fsedge1.contoso.com\sales /TRANSPORT:QUIC
    ```
@@ -201,9 +201,6 @@ Set-SmbClientConfiguration -EnableSMBQUIC $false
 ```
 
 SMB over QUIC can be enabled on either the server or client by setting `$false` to `$true`.
-
-> [!NOTE]
-> If a client attempts to connect to a server over QUIC and SMB over QUIC is disabled, the client attempts to connect to the server over TCP. This is assuming the server is not in the exception list.
 
 Admins can now specify an SMB over QUIC server exception list on the client. A client can connect to a server when SMB over QUIC is disabled on the client as long as the server IP address, NetBIOS name or FQDN is in the exception list. To learn more, see [Enable exceptions to NTLM blocking](/windows-server/storage/file-server/smb-ntlm-blocking?tabs=group-policy#enable-exceptions-to-ntlm-blocking). A server exception list can be created by running the following command:
 
@@ -308,9 +305,9 @@ By default, a Windows client device won't have access to an Active Directory dom
 
     This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy knows to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS on port 443 and user credentials aren't directly exposed on the client-file server network.
 
-1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.  
+1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.
 1. Ensure that edge firewalls allow HTTPS on port 443 inbound to the file server.
-1. Apply the group policy and restart the Windows client device.  
+1. Apply the group policy and restart the Windows client device.
 
 ---
 

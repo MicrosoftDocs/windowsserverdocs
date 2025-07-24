@@ -4,7 +4,7 @@ description: Reference article for the Remote Desktop Services (RDS) command-lin
 ms.topic: reference
 ms.assetid: 2f371848-5c48-470c-908c-afbc95d3a805
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -2,11 +2,11 @@
 description: "Learn more about: Deploy Access-Denied Assistance (Demonstration Steps)"
 ms.assetid: b035e9f8-517f-432a-8dfb-40bfc215bee5
 title: Deploy Access-Denied Assistance (Demonstration Steps)
-author: billmath
+author: xelu86
 ms.author: alalve
-manager: femila
+manager: tedhudek
 ms.date: 06/06/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Deploy Access-Denied Assistance (Demonstration Steps)

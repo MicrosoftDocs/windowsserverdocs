@@ -4,7 +4,7 @@ description: Learn about the use and impact of Group Policy settings in the auth
 ms.topic: article
 ms.assetid: 9e237f89-45b1-4a4e-9b72-11dc7d6a470b
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---

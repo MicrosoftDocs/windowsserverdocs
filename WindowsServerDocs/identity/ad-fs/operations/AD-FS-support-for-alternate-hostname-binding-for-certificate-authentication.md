@@ -1,11 +1,11 @@
 ---
 title: AD FS hostname binding certificate authentication
 description: Learn how AD FS supports alternate hostname binding for certificate authentication in Windows Server, including certificates without a SAN.
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 05/24/2024
+ms.topic: how-to
 ---
 
 # Alternate hostname binding for certificate authentication in AD FS on Windows Server

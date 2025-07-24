@@ -2,10 +2,10 @@
 description: "Learn more about: Event ID 2088: DNS lookup failure occurred with replication success"
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: Event ID 2088 - DNS lookup failure occurred with replication success
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: article
 ---
 

@@ -2,7 +2,7 @@
 title: Apply a quota to a volume or folder
 description: This article describes how to apply a storage quota to a volume or folder
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: checklist
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

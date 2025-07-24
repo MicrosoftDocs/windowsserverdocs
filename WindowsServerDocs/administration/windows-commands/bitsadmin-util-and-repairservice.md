@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin util and repairservice command,
 ms.topic: reference
 ms.assetid: 2ac7baeb-4340-4186-bfcb-66478195378d
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

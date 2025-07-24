@@ -2,9 +2,9 @@
 title: Troubleshooting DNS Servers
 description: This article introduces how to troubleshoot DNS issue from server-side.
 manager: dcscontentpm
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.author: delhan
-ms.date: 8/8/2019
+ms.date: 06/20/2025
 author: Deland-Han
 ---
 
@@ -26,10 +26,13 @@ This article discusses how to troubleshoot issues on DNS servers.
    ```cmd
    nslookup <name> <IP address of the DNS server>
    ```
+
    For example:
+
    ```cmd
    nslookup app1 10.0.0.1
    ```
+
    If you get a failure or time-out response, see [Checking for recursion problems](#checking-for-recursion-problems).
 
 4. Flush the resolver cache. To do this, run the following command in an administrative Command Prompt window:
@@ -37,10 +40,15 @@ This article discusses how to troubleshoot issues on DNS servers.
    ```cmd
    dnscmd /clearcache
    ```
+
    Or, in an administrative PowerShell window, run the following cmdlet:
+
    ```powershell
    Clear-DnsServerCache
    ```
+
+   > [!NOTE]
+   > If the server is functioning as a DNS client (for example, when it needs to resolve names for its own operations), use `Clear-DnsClientCache` to clear the local DNS client cache. If you are troubleshooting issues related to the server's role as a DNS server (serving DNS records to other clients), use `Clear-DnsServerCache` to clear the server's authoritative cache and prevent it from providing outdated DNS information.
 
 5. Repeat step 3.
 

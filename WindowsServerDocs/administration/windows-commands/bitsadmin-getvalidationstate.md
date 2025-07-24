@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin getvalidationstate command, whi
 ms.topic: reference
 ms.assetid: 6ada3f1f-9967-4262-9d22-ed641e23f516
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

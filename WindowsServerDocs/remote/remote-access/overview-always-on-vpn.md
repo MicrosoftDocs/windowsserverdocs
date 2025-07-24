@@ -1,13 +1,13 @@
 ---
 title: About Always On VPN for Windows Server Remote Access
 description: Learn about Always On VPN benefits over standard Windows VPN solutions. Key areas in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
-ms.topic: article
+ms.topic: concept-article
 ms.author: daknappe
-author: robinharwood
-ms.date: 04/28/2023
+author: dknappettmsft
+ms.date: 05/07/2025
 ---
 
-# About Always On VPN
+# Always On VPN Overview
 
 Always On VPN allows you to:
 
@@ -147,6 +147,22 @@ The following are more options for high availability.
 **Server resilience and load balancing.** In environments that require high availability or support large numbers of requests, you can increase the performance and resiliency of Remote Access by configuring [load balancing between Network Policy Servers (NPS)](/windows-server/networking/technologies/nps/nps-manage-proxy-lb) and by [enabling Remote Access server clustering](ras/cluster/deploy-remote-access-in-cluster.md).
 
 **Geographic site resilience.** For IP-based geolocation, you can use Global Traffic Manager with DNS in Windows Server. For more robust geographic load balancing, you can use Global Server Load Balancing solutions, such as [Microsoft Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview).
+
+## Always On VPN connection process
+
+The process is composed of the following steps:
+
+1. The Windows VPN client uses a public DNS server to perform a name resolution query for the IP address of the VPN gateway.
+
+1. The VPN client uses the IP address returned by DNS to send a connection request to the VPN gateway.
+
+1. The VPN server is also configured as a Remote Authentication Dial-In User Service (RADIUS) Client; the VPN RADIUS Client sends the connection request to the NPS server for connection request processing.
+
+1. The NPS server processes the connection request, including performing authorization and authentication, and determines whether to allow or deny the connection request.
+
+1. The NPS server forwards an Access-Accept or Access-Deny response to the VPN server.
+
+1. The connection is initiated or terminated based on the response that the VPN server received from the NPS server.
 
 ## Next steps
 

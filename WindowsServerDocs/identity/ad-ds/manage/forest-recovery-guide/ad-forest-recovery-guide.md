@@ -1,19 +1,17 @@
 ---
 title: Active Directory Forest Recovery Guide 
-description: This guide contains best-practice recommendations for recovering an Active Directory forest if forest-wide failure renders all domain controllers (DCs) in the forest incapable of functioning normally. The steps it contains serve as a template for your forest recovery plan, which you can customize for your particular environment. These steps apply to DCs that run Microsoft Windows Server 2022, 2019, 2016, 2012 R2 and 2012 operating systems.
+description: This guide contains recommendations for recovering an Active Directory forest if a forest-wide failure renders all DCs in the forest incapable of functioning normally.
 ms.author: mosagie
-author: robinharwood
-ms.date: 06/21/2023
-ms.topic: article
+author: meaghanlewis
+ms.date: 07/09/2025
+ms.topic: troubleshooting
 ---
 
-# Active Directory Forest Recovery Guide
+# Active Directory forest recovery guide
 
-> 
 
-This guide contains best-practice recommendations for recovering an Active Directory forest if forest-wide failure renders all domain controllers (DCs) in
-the forest incapable of functioning normally. The steps it contains serve as a template for your forest recovery plan, which you can customize for your
-particular environment. These steps apply to DCs that run Microsoft Windows Server 2022, 2019, 2016, 2012 R2 and 2012 operating systems.
+This guide contains recommendations for recovering an Active Directory forest if a forest-wide failure renders all domain controllers (DCs) in
+the forest incapable of functioning normally. The steps it contains serve as a template for your forest recovery plan, which you can customize for your environment. These steps apply to DCs that run Microsoft Windows Server 2022, 2019, 2016, 2012 R2, and 2012 operating systems.
 
 ## Steps outlined in this guide
 
@@ -21,4 +19,4 @@ particular environment. These steps apply to DCs that run Microsoft Windows Serv
 
 ## Legacy guidance
 
-Older operating system guidance is found in the [Windows Server archive](/previous-versions/windows/).
+You can find guidance for older operating systems in the [Windows Server archive](/previous-versions/windows/).

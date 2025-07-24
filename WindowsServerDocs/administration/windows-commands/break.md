@@ -4,7 +4,7 @@ description: Reference article for the break command, which breaks the mirrored 
 ms.topic: reference
 ms.assetid: ffc4901c-457b-46a6-a671-3052355f8a3c
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

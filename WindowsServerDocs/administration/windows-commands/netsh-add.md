@@ -4,7 +4,7 @@ description: Reference article for the netsh add command which adds a helper dll
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 05/06/2025
+ms.date: 07/24/2025
 ---
 
 # netsh add

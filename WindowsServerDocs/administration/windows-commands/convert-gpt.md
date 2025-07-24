@@ -4,7 +4,7 @@ description: Reference article for the convert gpt command, which converts an em
 ms.topic: reference
 ms.assetid: b3b1b747-0a7a-4be2-8487-2c4be16ee190
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

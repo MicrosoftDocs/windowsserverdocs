@@ -2,7 +2,7 @@
 title: Wireless Access Deployment Overview
 description: Learn about wireless access deployment components that are required to deploy 802.1X authenticated wireless access with PEAP-MS-CHAP v2.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
 author: robinharwood
 ms.author: roharwoo

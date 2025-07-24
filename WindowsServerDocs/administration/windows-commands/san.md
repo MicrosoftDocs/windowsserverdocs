@@ -3,7 +3,7 @@ title: san
 description: Reference article for the san command that displays or sets the storage area network (SAN) policy for the operating system.
 ms.topic: reference
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 04/01/2023
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: DHCP scopes in Windows Server
 description: Learn about how scopes work in DHCP server and how to design IP address ranges.
-ms.topic: conceptual
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.custom: template-concept, team=cloud_advocates

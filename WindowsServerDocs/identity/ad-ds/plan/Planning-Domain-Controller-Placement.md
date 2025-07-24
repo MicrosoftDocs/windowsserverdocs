@@ -2,11 +2,11 @@
 description: "Learn more about: Planning Domain Controller Placement"
 ms.assetid: 692bd2af-deee-44cf-9af9-f364677e267f
 title: Planning Domain Controller Placement
-author: iainfoulds
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ms.custom: inhenkel
 ---
 

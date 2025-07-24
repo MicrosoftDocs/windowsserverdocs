@@ -4,7 +4,7 @@ description: Reference article for the rescan command, which locates new disks a
 ms.topic: reference
 ms.assetid: 87d7f7a1-104c-4a5d-b4ec-7d532263888c
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -2,11 +2,11 @@
 description: "Learn more about: Install the AD FS Role Service"
 ms.assetid: c28a1b8b-5bec-4eed-8c95-a1a29cfc957c
 title: Install the AD FS Role Service
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
+ms.date: 02/13/2024
+ms.topic: install-set-up-deploy
 ---
 
 # Install the AD FS Role Service
@@ -37,7 +37,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ### To install the AD FS server role via Windows PowerShell
 
-1.  On the computer that you want to configure as a federation server, open the Windows PowerShell command window, and then run the following command: `Install-windowsfeature adfs-federation –IncludeManagementTools`.
+1.  On the computer that you want to configure as a federation server, open the Windows PowerShell command window, and then run the following command: `Install-windowsfeature adfs-federation -IncludeManagementTools`.
 
 ## See Also
 

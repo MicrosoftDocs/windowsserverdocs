@@ -3,7 +3,7 @@ title: Choose drives for Azure Stack HCI and Windows Server clusters
 description: How to choose drives for Azure Stack HCI and Windows Server clusters to meet performance and capacity requirements.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/10/2025
 ---
 

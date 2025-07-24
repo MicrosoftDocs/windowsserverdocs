@@ -102,9 +102,9 @@ Entra-based monitoring and reporting solutions are available when you back up pa
 
 > [!IMPORTANT]
 > The [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated as of Windows 11 23H2 and later. Installation of the legacy Microsoft LAPS Microsoft Installer (MSI) package is blocked on newer OS versions, and Microsoft no longer considers code changes for the legacy Microsoft LAPS product.
-> 
+>
 > Use Windows LAPS for managing local administrator account passwords. Windows LAPS is available on Windows Server 2019 and later, and on supported Windows 10 and Windows 11 clients.
-> 
+>
 > Microsoft will continue to support the legacy Microsoft LAPS product on older versions of Windows (earlier than Windows 11 23H2) on which it was previously supported. That support will end upon the normal end of support for those OS versions.
 
 ## Windows LAPS vs. legacy Microsoft LAPS

@@ -3,7 +3,7 @@ title: Avoid enabling storage Quality of Service when using a differencing virtu
 description: Learn what to do when a differencing virtual hard disk with the parent and child virtual hard disks on different volumes has storage Quality of Service enabled.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: aa9ed408-65cf-40dc-aad2-118b54c70179
 ms.date: 8/16/2016
 ---

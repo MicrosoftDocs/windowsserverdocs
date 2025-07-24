@@ -4,7 +4,7 @@ description: Reference article for the telnet send command, which sends telnet c
 ms.topic: reference
 ms.assetid: 7c217abc-1182-466e-914c-1ff16755021b
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

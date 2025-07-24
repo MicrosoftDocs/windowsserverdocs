@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Create a host key and add it to HGS"
 title: Create a host key and add it to HGS
-ms.topic: article
+ms.topic: how-to
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

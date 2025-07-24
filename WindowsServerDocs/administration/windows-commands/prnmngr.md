@@ -4,7 +4,7 @@ description: Reference article for the prnmngr command, which adds, deletes, and
 ms.topic: reference
 ms.assetid: 39eee1a8-4b41-4c9f-941e-486495135eb8
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 07/11/2018
 ---

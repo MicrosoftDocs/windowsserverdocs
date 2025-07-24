@@ -4,7 +4,7 @@ description: Reference article for the ftp remotehelp command, which displays he
 ms.topic: reference
 ms.assetid: ef23adf3-ead4-44c8-ac1d-c8a6f4b2bf73
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

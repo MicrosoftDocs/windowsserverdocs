@@ -4,7 +4,7 @@ description: Reference article for the secedit generaterollback command, which a
 ms.topic: reference
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

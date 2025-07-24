@@ -4,7 +4,7 @@ description: Learn about the Windows authentication protocols that are used with
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
 ---

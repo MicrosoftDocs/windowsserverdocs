@@ -4,7 +4,7 @@ description: Reference article for the tcmsetup command, which sets up and disab
 ms.topic: reference
 ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/16/2017
 ---

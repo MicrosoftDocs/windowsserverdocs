@@ -1,7 +1,7 @@
 ---
 title: Secure SMB Traffic in Windows Server
 description: How to secure SMB Traffic in Windows
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024

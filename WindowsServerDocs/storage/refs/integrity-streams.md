@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
-author: gawatu
-ms.author: jgerend
-manager: dmoss
+author: xelu86
+ms.author: alalve
 ms.date: 10/16/2018
 ms.topic: article
-ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
 ---
 
 # ReFS integrity streams
@@ -90,4 +88,4 @@ PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 
 -   [ReFS overview](refs-overview.md)
 -   [ReFS block cloning](block-cloning.md)
--   [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+-   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)

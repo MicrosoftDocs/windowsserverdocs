@@ -4,7 +4,7 @@ description: Reference article for wdsutil get-namespace, which displays informa
 ms.topic: reference
 ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

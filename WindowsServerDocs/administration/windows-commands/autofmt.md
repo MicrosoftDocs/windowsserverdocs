@@ -4,7 +4,7 @@ description: Reference article for the autofmt command, which formats a drive or
 ms.topic: reference
 ms.assetid: 81f9abac-f927-41d8-8667-f056db4cb2af
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

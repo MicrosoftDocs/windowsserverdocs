@@ -3,7 +3,7 @@ title: How to configure best practices assessment for Arc-enabled Windows server
 description: Learn how to deploy the best Practices Assessment tool to evaluate your servers by identifying and providing guidance on areas for improvement for Arc-enabled Windows servers and Azure VMs.
 ms.topic: how-to
 ms.author: alalve
-author: trungtran
+author: xelu86
 ms.date: 10/31/2024
 ---
 

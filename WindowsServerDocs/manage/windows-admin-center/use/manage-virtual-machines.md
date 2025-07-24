@@ -1,9 +1,9 @@
 ---
 title: Manage Virtual Machines with Windows Admin Center
 description: Lean how to manage Hyper-V hosts and virtual machines by using Windows Admin Center.
-ms.topic: article
-author: robinharwood
-ms.author: jgerend
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/28/2022
 ---
 

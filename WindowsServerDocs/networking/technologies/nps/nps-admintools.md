@@ -1,11 +1,9 @@
 ---
 title: Network Policy Server Management with Administration Tools
 description: You can use this topic to learn about the tools that you can use to manage Network Policy Server in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: jgerend
-author: robinharwood
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools

@@ -2,8 +2,8 @@
 title: Windows Admin Center SDK Case Study - Lenovo
 description: Windows Admin Center SDK Case Study - Lenovo
 ms.topic: article
-author: daniellee-msft
-ms.author: jgerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 1/7/2019
 ---
 # Lenovo XClarity Integrator Extension

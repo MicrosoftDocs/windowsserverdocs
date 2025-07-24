@@ -3,8 +3,8 @@ ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
 ms.author: roharwoo
 manager: dongill
-ms.topic: article
-author: cosmosdarwin
+ms.topic: how-to
+author: robinharwood
 ms.date: 11/06/2017
 description: How to add servers or drives to a Storage Spaces Direct cluster
 ---

@@ -4,7 +4,7 @@ title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
-author: nirb-ms
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

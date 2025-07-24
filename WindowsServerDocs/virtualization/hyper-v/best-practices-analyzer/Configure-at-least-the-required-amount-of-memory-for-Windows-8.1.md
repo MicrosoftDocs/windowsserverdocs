@@ -3,7 +3,7 @@ title: Configure at least the required amount of memory for a virtual machine ru
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows 8.1.
 ms.author: mosagie
 author: meaghanlewis
-ms.topic: article
+ms.topic: how-to
 ms.assetid: d43a62f5-75ff-4b50-9687-3e58f42c0f4f
 ms.date: 8/16/2016
 ---

@@ -4,7 +4,7 @@ description: Reference article for the ftp glob command, which toggles allowing 
 ms.topic: reference
 ms.assetid: 111494f9-0083-4f48-9d35-46366debafae
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

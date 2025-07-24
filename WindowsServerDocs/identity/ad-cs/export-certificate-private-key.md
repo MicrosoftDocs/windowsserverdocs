@@ -1,10 +1,10 @@
 ---
-title: Export a certificate with its private key
+title: Export a certificate with its private key in Windows Server
 description: Learn how to export a certificate with its private key.
 ms.topic: how-to
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
-ms.date: 02/16/2024
+ms.date: 5/14/2025
 ---
 
 # Export a certificate with its private key
@@ -17,7 +17,7 @@ Before you begin, you need:
 
 - A certificate installed with the private key to a certificate store of the local computer.
 
-- An Active Directory domain with an account that is a member of the **Domain Admins** or **Enterprise Admins** domain security group. For more information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
+- An Active Directory domain with an account that is a member of the **Domain Admins** or **Enterprise Admins** domain security group. For more information about using the appropriate accounts and group memberships, see [Active Directory security groups](/windows-server/identity/ad-ds/manage/understand-security-groups).
 
 ## Export a certificate from the Windows certificate stores with the private key
 

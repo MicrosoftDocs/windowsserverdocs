@@ -1,11 +1,11 @@
 ---
 title: Choosing a Network Adapter
 description: Learn how to learn some of the features of network adapters that might affect your purchasing choices.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: dcscontentpm
-ms.author: jgerend
-author: Teresa-Motiv
+ms.author: alalve
+author: xelu86
 ms.date: 10/27/2021
 ---
 

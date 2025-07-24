@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin setpeercachingflags command, wh
 ms.topic: reference
 ms.assetid: 3f54a127-fb68-49a5-b843-664ec833df67
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

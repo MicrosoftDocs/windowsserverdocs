@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Install trusted TPM root certificates"
 title: Install trusted TPM root certificates
-ms.topic: article
+ms.topic: install-set-up-deploy
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 06/27/2019
 ---

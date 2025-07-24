@@ -2,11 +2,11 @@
 description: "Learn more about: Configuring a Computer for Troubleshooting"
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
-ms.author: justinha
-author: iainfoulds
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: troubleshooting-general
 ---
 # Configuring a Computer for Troubleshooting
 

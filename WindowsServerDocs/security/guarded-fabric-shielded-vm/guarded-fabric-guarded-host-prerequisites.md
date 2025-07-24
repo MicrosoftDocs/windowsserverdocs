@@ -3,7 +3,7 @@ description: "Learn more about: Prerequisites for guarded hosts"
 title: Guarded host prerequisites
 ms.topic: article
 manager: dongill
-author: robinharwood
+author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
 ---

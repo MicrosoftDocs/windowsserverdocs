@@ -5,8 +5,8 @@ ms.service: windows-server
 ms.subservice: remote-desktop-services
 author: meaghanlewis
 ms.author: mosagie
-ms.topic: article
-manager: femila
+ms.topic: concept-article
+manager: tedhudek
 ms.date: 7/3/2024
 ---
 

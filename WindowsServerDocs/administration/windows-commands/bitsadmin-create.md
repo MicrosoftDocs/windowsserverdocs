@@ -4,7 +4,7 @@ description: Reference article for the bitsadmin create command, which creates a
 ms.topic: reference
 ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
 ms.author: mosagie
-author: robinharwood
+author: meaghanlewis
 manager: mtillman
 ms.date: 10/16/2017
 ---

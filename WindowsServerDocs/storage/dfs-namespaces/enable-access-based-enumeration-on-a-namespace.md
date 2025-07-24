@@ -2,7 +2,7 @@
 title: Enable Access-based Enumeration on a Namespace
 description: This article describes how to enable access-based enumeration on a namespace.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

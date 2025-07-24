@@ -4,7 +4,7 @@ description: Reference article for dfsdiag testsites, which checks the configura
 ms.topic: reference
 ms.assetid: 39a0d415-7eb7-4a26-861b-7ff00c45dcda
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

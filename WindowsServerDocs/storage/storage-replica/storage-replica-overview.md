@@ -2,9 +2,9 @@
 title: Storage Replica Overview
 description: Get an overview of Storage Replica in Windows Server.
 manager: siroy
-ms.author: jgerend
+ms.author: mosagie
 ms.topic: how-to
-author: robinharwood
+author: meaghanlewis
 ms.date: 10/04/2022
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
@@ -216,5 +216,5 @@ For a list of new features in Storage Replica in Windows Server 2019, see [What'
 * [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica known issues](storage-replica-known-issues.md)
 * [Storage Replica FAQ](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+* [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

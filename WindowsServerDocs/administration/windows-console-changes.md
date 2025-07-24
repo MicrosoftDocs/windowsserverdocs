@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ---
 # Changes to the Windows Console in Windows Server
 

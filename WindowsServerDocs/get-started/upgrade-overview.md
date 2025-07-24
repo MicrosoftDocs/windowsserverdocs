@@ -2,9 +2,9 @@
 title: Overview of Windows Server upgrades | Microsoft Docs
 description: General Windows Server upgrade information, along with what to think through before you do the actual upgrade.
 ms.topic: how-to
-author: RobHindman
+author: xelu86
 ms.author: alalve
-ms.date: 03/03/2025
+ms.date: 05/23/2025
 ---
 
 # Overview of Windows Server upgrades
@@ -64,13 +64,19 @@ In this table you can see the supported upgrade paths, based on the version you'
 | Windows   Server 2022 | - | - | - | - | Yes |
 | Windows   Server 2025 | - | - | - | - | Yes |
 
-You can upgrade from an evaluation version to a retail version, from an older retail version to a newer one, or from a volume-licensed edition to a retail edition. For more information about upgrade options other
+You can upgrade in several ways:
+
+- From an evaluation version to a retail version.
+- From an older retail version to a newer retail version.
+- From a volume-licensed edition to a retail edition.
+
+For more information about upgrade options other
 than in-place upgrade, see
 [Upgrade and conversion options for Windows Server](../get-started/upgrade-conversion-options.md).
 
 > [!IMPORTANT]
-> Support for [Windows Server 2008](/lifecycle/products/windows-server-2008) and
-> [Windows Server 2008 R2](/lifecycle/products/windows-server-2008-r2) has ended. We recommend you
+> Support for [Windows Server 2012](/lifecycle/products/windows-server-2012) and
+> [Windows Server 2012 R2](/lifecycle/products/windows-server-2012-r2) has ended. We recommend you
 > update your version of Windows Server to a more recent version as soon as possible. Learn more
 > about [Extended Security Updates (ESU)](extended-security-updates-overview.md) as a last resort.
 

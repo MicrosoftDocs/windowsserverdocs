@@ -4,7 +4,7 @@ description: Reference article for the cscript command, which starts a script so
 ms.topic: reference
 ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
 ms.author: alalve
-author: robinharwood
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

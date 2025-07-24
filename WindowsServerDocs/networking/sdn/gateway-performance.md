@@ -4,7 +4,7 @@ title: SDN gateway performance
 manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 09/18/2023
 ---
 

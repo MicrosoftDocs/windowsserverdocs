@@ -2,10 +2,10 @@
 title: Step 1 Plan the Advanced DirectAccess Infrastructure
 description: Learn how to plan the infrastructure that is required for the deployment.
 manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Advanced DirectAccess Infrastructure

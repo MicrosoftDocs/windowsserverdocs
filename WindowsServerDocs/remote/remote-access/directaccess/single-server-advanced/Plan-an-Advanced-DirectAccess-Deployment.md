@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Plan an Advanced DirectAccess Deployment

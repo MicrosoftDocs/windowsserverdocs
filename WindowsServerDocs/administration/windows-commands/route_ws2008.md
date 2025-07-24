@@ -4,7 +4,7 @@ description: Reference article for the route command, which modifies and display
 ms.topic: reference
 ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/05/2022
 ---

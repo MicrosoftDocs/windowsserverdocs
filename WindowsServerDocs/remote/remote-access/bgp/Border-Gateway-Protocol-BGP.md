@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Border Gateway Protocol (BGP)

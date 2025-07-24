@@ -1,9 +1,9 @@
 ---
 title: Configure Disk Protection in MultiPoint Services
 description: Learn how to set up disk protection for MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: bd9bf5b9-e481-499b-9c15-7ee5a4f470c4
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ms.date: 08/04/2016

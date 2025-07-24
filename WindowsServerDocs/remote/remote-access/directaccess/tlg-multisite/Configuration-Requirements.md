@@ -5,7 +5,7 @@ manager: brianlic
 ms.topic: article
 ms.assetid: aaabdf3b-d926-48d9-9d01-358668da88ba
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Configuration Requirements

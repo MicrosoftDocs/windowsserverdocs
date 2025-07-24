@@ -4,8 +4,8 @@ description: Learn how to keep file and printer sharing ports open for Server Me
 ms.date: 03/20/2023
 author: robinharwood
 manager: elizapo
-ms.author: jgerend
-ms.topic: conceptual
+ms.author: roharwoo
+ms.topic: troubleshooting-problem-resolution
 ---
 
 # SMB: File and printer sharing ports should be open

@@ -1,8 +1,8 @@
 ---
 title: Scale-Out File Server for application data overview for Windows Server
 description: How to plan for and deploy a Scale-Out File Server. This allows sharing the same folder from multiple nodes of the same cluster for file-based server application storage availability.
-ms.topic: article
-author: robinharwood
+ms.topic: overview
+author: xelu86
 ms.author: alalve
 ms.date: 02/06/2025
 ---

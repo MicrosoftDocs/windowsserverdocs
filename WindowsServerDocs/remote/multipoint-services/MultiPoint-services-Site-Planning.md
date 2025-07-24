@@ -4,7 +4,7 @@ description: Planning information for MultiPoint Services deployments in Windows
 ms.date: 07/22/2016
 ms.topic: article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
-author: evaseydl
+author: dknappettmsft
 manager: scottman
 ms.author: daknappe
 ---

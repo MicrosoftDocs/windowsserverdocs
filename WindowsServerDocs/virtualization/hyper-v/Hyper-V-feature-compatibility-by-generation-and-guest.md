@@ -5,7 +5,7 @@ ms.topic: article
 ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 10/25/2024
+ms.date: 06/19/2025
 ---
 # Hyper-V feature compatibility by generation and guest
 
@@ -34,6 +34,7 @@ Hot add/removal of memory | 1 and 2 | Windows Server 2016, Windows 10
 Virtual NUMA | 1 and 2 | Any supported guest
 
 ## Development and test
+
 Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
 COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging). | Any supported guest
