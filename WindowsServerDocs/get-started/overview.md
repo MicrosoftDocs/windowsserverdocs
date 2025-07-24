@@ -13,7 +13,7 @@ ms.author: roharwoo
 > [!TIP]
 > Already familiar with Windows Server? Jump to [What's new in Windows Server 2025](whats-new-windows-server-2025.md) to learn about the latest features and enhancements.
 
-Windows Server is Microsoft's enterprise server platform that enables organizations to run and secure applications, services, and workloads across on-premises, hybrid, and cloud environments. In this article, you'll learn about Windows Server capabilities, deployment options, and key features that help you modernize your infrastructure while maintaining security and performance.
+Windows Server is Microsoft's enterprise server platform that enables organizations to run and secure applications, services, and workloads across on-premises, hybrid, and cloud environments.
 
 Whether you're running a small business or managing enterprise infrastructure, Windows Server provides the foundation for secure, scalable, and high-performance computing that grows with your organization. Built on decades of Windows innovation, it serves as the backbone for millions of organizations worldwide, powering everything from file servers and web applications to complex enterprise workloads and AI-driven solutions.
 
@@ -68,6 +68,8 @@ Windows Server gives you the flexibility to choose where your applications and d
 
 :::image type="content" source="media/overview/deploy.png" alt-text="A diagram showing three deployment options for Windows Server: cloud deployment with Azure VMs, on-premises datacenter deployment, and hybrid edge deployment with Azure Arc connectivity.":::
 
+Deploy Windows Server:
+
 - **☁️ In the cloud**
 
    Deploy Windows Server virtual machines in Azure for maximum scalability and global reach. Perfect for new applications, development environments, or when you need to scale quickly.
@@ -87,36 +89,6 @@ Windows Server gives you the flexibility to choose where your applications and d
    Keep sensitive workloads on-premises for compliance, performance, or cost reasons while gaining cloud management, monitoring, and services through Azure Arc. Perfect for organizations that need cloud benefits without full cloud commitment or data residency concerns."
 
    **Best for**: Gradual cloud adoption, distributed locations, edge computing scenarios, and using existing investments while gaining cloud capabilities.
-
-## Where can you deploy Windows Server?
-
-:::row:::
-:::column span="1":::
-**☁️ In the cloud**
-
-Deploy Windows Server virtual machines in Azure for maximum scalability and global reach. Perfect for new applications, development environments, or when you need to scale quickly.
-
-**Best for**: New projects, variable workloads, global applications, and disaster recovery scenarios.
-:::column-end:::
-
-:::column span="1":::
-**🏢 In your datacenter**
-
-Upgrade your existing infrastructure to Windows Server for complete control over your environment. Ideal when you have specific compliance requirements, existing hardware investments, or need air-gapped environments.
-
-**Best for**: Regulated industries, existing infrastructure, specialized hardware requirements, and complete data control.
-:::column-end:::
-
-:::column span="1":::
-**🌐 Hybrid at the edge**
-
-Extend your datacenter to Azure with Azure Arc while keeping workloads running locally. Get the best of both worlds - local performance with cloud management and services.
-
-Keep sensitive workloads on-premises for compliance, performance, or cost reasons while gaining cloud management, monitoring, and services through Azure Arc. Perfect for organizations that need cloud benefits without full cloud commitment or data residency concerns."
-
-**Best for**: Gradual cloud adoption, distributed locations, edge computing scenarios, and using existing investments while gaining cloud capabilities.
-:::column-end:::
-:::row-end:::
 
 ## Editions
 
