@@ -4,12 +4,14 @@ description: Learn about Windows Server capabilities, deployment options, and ke
 ms.topic: overview
 ms.date: 07/22/2025
 ai-usage: ai-generated
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # What is Windows Server?
 
 > [!TIP]
-> Already familiar with Windows Server? Jump to [What's new in Windows Server 2025](whats-new-in-windows-server-2025.md) to learn about the latest features and enhancements.
+> Already familiar with Windows Server? Jump to [What's new in Windows Server 2025](whats-new-windows-server-2025.md) to learn about the latest features and enhancements.
 
 Windows Server is Microsoft's enterprise server platform that enables organizations to run applications, services, and workloads across on-premises, hybrid, and cloud environments. Windows Server 2025 delivers innovation and security anywhere you need it - **in the cloud, in your datacenter, or hybrid at the edge**.
 
@@ -58,7 +60,7 @@ Leaps ahead in scalability, performance, storage, and capabilities to support AI
 - **Massive scale**: Support for up to 240-TB RAM and 2,048 virtual processors per VM for the most demanding workloads
 - **Storage optimization**: Enhanced ReFS with optimized deduplication and compression for software-defined storage
 
-For complete details on new features, see [What's new in Windows Server 2025](whats-new-in-windows-server-2025.md).
+For complete details on new features, see [What's new in Windows Server 2025](whats-new-windows-server-2025.md).
 
 ## Where can you deploy Windows Server?
 
