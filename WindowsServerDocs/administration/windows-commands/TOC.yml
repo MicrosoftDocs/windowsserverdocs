@@ -1055,7 +1055,7 @@
         href: netdom-trust.md
       - name: netdom verify
         href: netdom-verify.md
-    - name: netsh
+    - name: network shell (netsh)
       href: netsh.md
     - name: netstat
       href: netstat.md
