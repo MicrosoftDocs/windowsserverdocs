@@ -13,7 +13,7 @@ ms.author: roharwoo
 > [!TIP]
 > Already familiar with Windows Server? Jump to [What's new in Windows Server 2025](whats-new-windows-server-2025.md) to learn about the latest features and enhancements.
 
-Windows Server is Microsoft's enterprise server platform that enables organizations to run applications, services, and workloads across on-premises, hybrid, and cloud environments. Windows Server 2025 delivers innovation and security anywhere you need it - **in the cloud, in your datacenter, or hybrid at the edge**.
+Windows Server is Microsoft's enterprise server platform that enables organizations to run and secure applications, services, and workloads across on-premises, hybrid, and cloud environments. In this article, you'll learn about Windows Server capabilities, deployment options, and key features that help you modernize your infrastructure while maintaining security and performance.
 
 Whether you're running a small business or managing enterprise infrastructure, Windows Server provides the foundation for secure, scalable, and high-performance computing that grows with your organization. Built on decades of Windows innovation, it serves as the backbone for millions of organizations worldwide, powering everything from file servers and web applications to complex enterprise workloads and AI-driven solutions.
 
@@ -27,38 +27,38 @@ Windows Server delivers comprehensive capabilities that help organizations moder
 
 Use Windows Server for:
 
-- **Mixed environments**: Unified management of Windows, Linux, and container workloads
-- **Enterprise integration**: Seamless integration with SQL Server, System Center, Exchange,  SharePoint, Project, and existing Windows infrastructure  
-- **Commercial support**: Enterprise-grade support with an active tech community
-- **Compliance scenarios**: Built-in features for regulated industries (healthcare, finance, government)
+- **Mixed environments**: Unified management of Windows, Linux, and container workloads.
+- **Enterprise integration**: Seamless integration with SQL Server, System Center, Exchange,  SharePoint, Project, and existing Windows infrastructure.
+- **Commercial support**: Enterprise-grade support with an active tech community.
+- **Compliance scenarios**: Built-in features for regulated industries (healthcare, finance, government).
 - **Flexible licensing**: Choose between pay-as-you-go, perpetual, or subscription-based licensing.
 
-Windows Server 2025 builds on this foundation with new features that enhance security, performance, and cloud integration. The following sections highlight some of the key benefits and features of Windows Server.
+Windows Server builds on this foundation with new features that enhance security, performance, and cloud integration. The following sections highlight some of the key benefits and features of Windows Server.
 
 ### Advanced, multi-layered security
 
 Improved protections against ever-evolving threats, multilayered safeguards, and improved resilience.
 
-- **Advanced identity protection**: Enterprise directory services (Active Directory) that provide centralized authentication, authorization, and policy management across Windows, Linux, and Mac systems
-- **Virtualization-based security**: Enhanced Hyper-V security with VBS enclaves and key protection for confidential computing
-- **Secure networking**: TLS 1.3 encryption, SMB over QUIC, and advanced micro-segmentation to prevent lateral attack spread
+- **Advanced identity protection**: Enterprise directory services (Active Directory) that provide centralized authentication, authorization, and policy management across Windows, Linux, and Mac systems.
+- **Virtualization-based security**: Enhanced Hyper-V security with VBS enclaves and key protection for confidential computing.
+- **Secure networking**: TLS 1.3 encryption, SMB over QUIC, and advanced micro-segmentation to prevent lateral attack spread.
 
 ### Cloud agility anywhere
 
 Get the power of Azure delivered to your edge and hybrid cloud environment with Azure Arc. Deploy with complete flexibility - in the cloud, in your datacenter, or hybrid at the edge.
 
-- **Deployment flexibility**: Consistent Windows Server experience whether you deploy on-premises, hybrid, or in Azure with unified management
-- **Hotpatching**: Apply security updates without reboots - reducing from 12 required reboots per year to just 4 for enhanced productivity
+- **Deployment flexibility**: Consistent Windows Server experience whether you deploy on-premises, hybrid, or in Azure with unified management.
+- **Hotpatching**: Apply security updates without reboots - reducing from 12 required reboots per year to just 4 for enhanced productivity.
 - **Azure Arc integration**: Azure Arc extends Azure's management capabilities to your on-premises servers, giving you cloud-style governance, security policies, and monitoring without moving your data whether they're in Azure, your datacenter, or other clouds.
-- **Pay-as-you-go licensing**: Flexible, subscription-based pricing for more virtual machines with Azure Arc connectivity
+- **Pay-as-you-go licensing**: Flexible, subscription-based pricing with Azure Arc.
 
 ### High-performance, future-ready infrastructure
 
 Leaps ahead in scalability, performance, storage, and capabilities to support AI and ML.
 
-- **AI and ML ready**: GPU partitioning across VMs with live migration support and enhanced performance for AI workloads and edge inferencing
-- **Massive scale**: Support for up to 240-TB RAM and 2,048 virtual processors per VM for the most demanding workloads
-- **Storage optimization**: Enhanced ReFS with optimized deduplication and compression for software-defined storage
+- **AI and ML ready**: GPU partitioning across VMs with live migration support and enhanced performance for AI workloads and edge inferencing.
+- **Massive scale**: Use Hyper-V to virtualize your workloads with support for up to 240-TB RAM and 2,048 virtual processors per VM for the most demanding workloads.
+- **Storage optimization**: Enhanced ReFS with optimized deduplication and compression for software-defined storage.
 
 For complete details on new features, see [What's new in Windows Server 2025](whats-new-windows-server-2025.md).
 
@@ -76,7 +76,7 @@ Windows Server gives you the flexibility to choose where your applications and d
 
 - **🏢 In your datacenter**
 
-   Upgrade your existing infrastructure to Windows Server 2025 for complete control over your environment. Ideal when you have specific compliance requirements, existing hardware investments, or need air-gapped environments.
+   Upgrade your existing infrastructure to Windows Server for complete control over your environment. Ideal when you have specific compliance requirements, existing hardware investments, or need air-gapped environments.
 
    **Best for**: Regulated industries, existing infrastructure, specialized hardware requirements, and complete data control.
 
@@ -88,6 +88,36 @@ Windows Server gives you the flexibility to choose where your applications and d
 
    **Best for**: Gradual cloud adoption, distributed locations, edge computing scenarios, and using existing investments while gaining cloud capabilities.
 
+## Where can you deploy Windows Server?
+
+:::row:::
+:::column span="1":::
+**☁️ In the cloud**
+
+Deploy Windows Server virtual machines in Azure for maximum scalability and global reach. Perfect for new applications, development environments, or when you need to scale quickly.
+
+**Best for**: New projects, variable workloads, global applications, and disaster recovery scenarios.
+:::column-end:::
+
+:::column span="1":::
+**🏢 In your datacenter**
+
+Upgrade your existing infrastructure to Windows Server for complete control over your environment. Ideal when you have specific compliance requirements, existing hardware investments, or need air-gapped environments.
+
+**Best for**: Regulated industries, existing infrastructure, specialized hardware requirements, and complete data control.
+:::column-end:::
+
+:::column span="1":::
+**🌐 Hybrid at the edge**
+
+Extend your datacenter to Azure with Azure Arc while keeping workloads running locally. Get the best of both worlds - local performance with cloud management and services.
+
+Keep sensitive workloads on-premises for compliance, performance, or cost reasons while gaining cloud management, monitoring, and services through Azure Arc. Perfect for organizations that need cloud benefits without full cloud commitment or data residency concerns."
+
+**Best for**: Gradual cloud adoption, distributed locations, edge computing scenarios, and using existing investments while gaining cloud capabilities.
+:::column-end:::
+:::row-end:::
+
 ## Editions
 
 Windows Server offers two editions designed for different scales and virtualization needs:
@@ -98,7 +128,10 @@ Windows Server offers two editions designed for different scales and virtualizat
 | **Virtualization rights** | 2 virtual machines plus one Hyper-V host per license | Unlimited virtual machines plus one Hyper-V host per license |
 | **Best for** | Small to medium deployments, specific workloads, cost-conscious environments | Large datacenters, cloud deployments, extensive virtualization |
 
-Both editions include the same features and capabilities - the difference is in virtualization rights and licensing costs. For detailed comparison and licensing guidance, see [Windows Server editions comparison](editions-comparison.md).
+Both editions include many of the same features and capibilites. For a detailed comparison, see:
+
+- [Comparison of Windows Server editions](editions-comparison.md)
+- [Comparison of locks and limits in Windows Server](locks-limits.md)
 
 ## Deployment approaches
 
