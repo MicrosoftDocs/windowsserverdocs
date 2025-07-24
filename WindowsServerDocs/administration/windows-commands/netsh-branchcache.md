@@ -95,16 +95,10 @@ netsh branchcache flush
 
 **help**
 
-To display help for the BranchCache command, type the following command:
-
-```cmd
-netsh branchcache help
-```
-
 To display help for a specific BranchCache command, such as exportkey, type the following command:
 
 ```cmd
-netsh branchcache help exportkey
+netsh branchcache exportkey help
 ```
 
 > [!NOTE]
@@ -173,3 +167,9 @@ To set the latency threshold to `80` milliseconds, type the following command:
 ```cmd
 netsh branchcache smb set latency=80
 ```
+
+## See also
+
+- [BranchCache](/windows-server/networking/branchcache/branchcache)
+
+- [BranchCache PowerShell module](/powershell/module/branchcache)
