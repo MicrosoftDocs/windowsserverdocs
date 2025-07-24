@@ -554,6 +554,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [net user](net-user.md)
 - [netsh](netsh.md)
   - [netsh add](netsh-add.md)
+  - [netsh advfirewall](netsh-advfirewall.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
