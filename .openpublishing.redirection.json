@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/failover-clustering/Upgrade-Option-Same-Hardware.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/failover-clustering/Upgrade-Option-Same-Hardware",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "EssentialsDocs/get-started/azure-site-recovery-services-integration.md",
       "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/azure-site-recovery-services-integration",
       "redirect_document_id": false
@@ -12821,29 +12826,134 @@
       "redirect_document_id": true
     },
     {
-     "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
-     "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
-     "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
-      "redirect_url": "/windows-server/failover-clustering/recover-failover-cluster-without-quorum",
+      "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
+      "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
       "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
-     "redirect_url": "/powershell/module/remoteaccess/",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/manage/windows-admin-center/azure/azure-site-recovery.md",
-     "redirect_url": "/azure/azure-local/manage/azure-site-recovery",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+      "redirect_url": "/powershell/module/remoteaccess/",
+      "redirect_document_id": false
     },
     {
-     "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
-     "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
-     "redirect_document_id": false
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/azure/azure-site-recovery.md",
+      "redirect_url": "/azure/azure-local/manage/azure-site-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
+      "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-change-history.md",
+      "redirect_url": "/windows-server/storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/join-computer-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-scenarios-deployment-migration.md",
+      "redirect_url": "/windows-server/identity/laps/laps-scenarios-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/dfs-replication/dfsr-overview.md",
+      "redirect_url": "/windows-server/storage/dfs-replication/dfs-replication-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Refresh-Group-Policy.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-policy/group-policy-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-manager/install-or-uninstall-roles-role-services-or-features.md",
+      "redirect_url": "/windows-server/administration/server-manager/add-remove-roles-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk.md",
+      "redirect_url": "/windows-server/storage/disk-management/change-disk-partition-scheme",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/change-a-gpt-disk-into-an-mbr-disk.md",
+      "redirect_url": "/windows-server/storage/disk-management/change-disk-partition-scheme",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md",
+      "redirect_url": "/windows-server/storage/disk-management/change-disk-type-dynamic-basic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-template-remote-access-network-policy-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/clustering-change-history.md",
+      "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-web-access-faq.yml",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Generation-1-virtual-machine-security-settings-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/generation-1-virtual-machine-security-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/generation-2-virtual-machine-security-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/configure-ad-accounts.md",
+      "redirect_url": "/windows-server/failover-clustering/configure-failover-cluster-accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-contexts.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-wins.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
     }
   ]
 }

@@ -78,4 +78,4 @@ To deploy Storage Spaces Direct in a virtual machine guest cluster, see the foll
 
 - [Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
-- [Additional Storage Spaces Direct Overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Additional Storage Spaces Direct Overview](storage-spaces-direct-overview.md)

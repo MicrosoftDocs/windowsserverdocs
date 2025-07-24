@@ -2,10 +2,10 @@
 description: "Learn more about: Understanding the Active Directory Logical Model"
 ms.assetid: 62708b2e-4090-4cf7-8ae6-a557f31f561f
 title: Understanding the Active Directory Logical Model
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: netsh delete
-description: Reference article for the netsh delete command which removes a helper dll.
+description: Reference article for the netsh delete command that removes a helper dll.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 05/08/2025
+ms.date: 07/24/2025
 ---
 
 # netsh delete
@@ -25,8 +25,8 @@ netsh delete helper [file]
 
 ## Example
 
-To remove a helper DLL located at "C:\Helpers\HelperDLL.dll", run the following command:
+To remove a helper DLL located at **C:\dlls\HelperDLL.dll**, run the following command:
 
 ```cmd
-netsh delete helper C:\Helpers\HelperDLL.dll
+netsh delete helper C:\dlls\HelperDLL.dll
 ```

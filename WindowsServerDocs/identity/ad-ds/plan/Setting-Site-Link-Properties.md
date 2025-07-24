@@ -2,10 +2,10 @@
 description: "Learn more about: Setting Site Link Properties"
 ms.assetid: de054ac2-a386-43ec-a537-c0de21549741
 title: Setting Site Link Properties
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 

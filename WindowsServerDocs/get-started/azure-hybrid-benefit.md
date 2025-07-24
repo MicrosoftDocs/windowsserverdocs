@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Local and Azure Kubernetes Service (AKS) on Azure Local and Windows Server at no extra cost.
-ms.date: 03/10/2025
+ms.date: 07/15/2025
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
@@ -40,7 +40,7 @@ Azure Hybrid Benefit includes the following cost savings:
 
 To evaluate your potential cost savings, you can use these resources:
 
-- **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
+- **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
 
 - **Azure Local:** [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/).  
 
@@ -65,7 +65,7 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Number of licenses
 
-You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You may also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each processor license is equivalent to 16 core licenses.
+You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You might also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each processor license is equivalent to 16 core licenses.
 
 #### Use rights
 
@@ -93,7 +93,7 @@ If you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number 
 
 If you already have Windows Server VMs running with Azure Hybrid Benefit, perform an inventory to see how many units you're running, and check this number against your Software Assurance or subscription licenses. You can contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
 
-To see and count all VMs that are deployed with Azure Hybrid Benefit in an Azure subscription, [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) using the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
+To see and count all VMs that are deployed with Azure Hybrid Benefit in an Azure subscription, [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription).
 
 You can also look at your Microsoft Azure bill to determine how many VMs with Azure Hybrid Benefit for Windows Server you're running. You can find information about the number of instances with the benefit under **Additional Info**:
 

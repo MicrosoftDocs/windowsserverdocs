@@ -4,8 +4,8 @@ description: You can use this topic to configure the ports that Network Policy S
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 70569958-d7a7-474e-a817-6b7b5134784a
-ms.author: jgerend
-author: jasongerend
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 08/07/2020
 ---
 

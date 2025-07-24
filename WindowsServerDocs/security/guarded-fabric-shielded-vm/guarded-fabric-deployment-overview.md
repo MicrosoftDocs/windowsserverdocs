@@ -4,9 +4,9 @@ title: Quick start for guarded fabric deployment
 ms.topic: article
 ms.assetid: e060e052-39a0-4154-90bb-b97cc6dde68e
 manager: dongill
-author: justinha
-ms.author: justinha
-ms.date: 01/30/2019
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
 ---
 
 # Quick start for guarded fabric deployment

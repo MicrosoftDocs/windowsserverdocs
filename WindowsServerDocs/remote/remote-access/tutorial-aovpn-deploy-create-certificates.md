@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Configure Certificate Authority templates for Always On VPN"
+title: "Tutorial: Configure Certificate Authority Templates for Always On VPN"
 description: Learn how to create certificate templates and enroll and validate certificates for users, VPN server, and NPS server to use with Always On VPN connections.
 ms.topic: tutorial
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
@@ -8,9 +8,11 @@ author: dknappettmsft
 ms.date: 05/08/2025
 ---
 
-# Tutorial: Configure Certificate Authority Templates for Always On VPN
+# Tutorial: Configure Certificate Authority templates for Always On VPN
 
-This tutorial continues the series to deploy Always On VPN. Previously in the series, you [deployed a sample infrastructure](tutorial-aovpn-deploy-setup.md). Next, you need to configure the Certificate Authority (CA) templates for the Always On VPN deployment. The CA templates are used to issue certificates to the VPN server, NPS server, and users. The certificates are used to authenticate the VPN server and NPS server to clients, and to authenticate users to the VPN server.
+This tutorial shows you how to configure the Certificate Authority (CA) templates for the Always On VPN deployment. It continues the series to deploy Always On VPN in a sample environment. Previously in the series, you [deployed a sample infrastructure](tutorial-aovpn-deploy-setup.md).
+
+The CA templates are used to issue certificates to the VPN server, NPS server, and users. The certificates are used to authenticate the VPN server and NPS server to clients, and to authenticate users to the VPN server.
 
 In this tutorial, you:
 
@@ -39,7 +41,7 @@ To complete the steps in this tutorial, you need:
 
 - To complete all the steps in the previous tutorial: [Deploy Always On VPN Infrastructure](tutorial-aovpn-deploy-setup.md).
 
-- A Windows client device to connect to Always On VPN that is joined to the Active Directory domain.
+- A Windows client device running a supported version of Windows to connect to Always On VPN that is joined to the Active Directory domain.
 
 ## Create the user authentication template
 
@@ -273,4 +275,4 @@ To validate the NPS certificate:
 Now you created the certificate templates and enrolled the certificates, you can configure a Windows client device to use the Always On VPN connection.
 
 > [!div class="nextstepaction"]
-> [Tutorial: Configure an Always On VPN profile for Windows client devices](tutorial-aovpn-deploy-configure-client.md)
+> [Tutorial: Create an Always On VPN connection for Windows client devices](tutorial-aovpn-deploy-configure-client.md)

@@ -2,9 +2,9 @@
 description: "Learn more about: Deploying Legacy AD FS in the Resource Partner Organization"
 ms.assetid: 41d6b897-1e72-4522-aad6-eece1154a154
 title: Deploying Legacy AD FS in the Resource Partner Organization
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article
 ---

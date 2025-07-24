@@ -167,8 +167,8 @@ Write-Host 'TLS 1.1 has been disabled.'
 
 TLS 1.2 is enabled by default starting with Windows Server 2012. You can use the following registry keys and their values to disable TLS 1.2.
 
-> [!NOTE]
-> It's not recommended to disable TLS 1.2.
+> [!WARNING]
+> Disabling TLS 1.2 is not recommended, as it may disrupt the functionality of other components on the server that rely on this protocol. For instance, services such as Microsoft Azure AD Connect (Azure AD Sync) require TLS 1.2 to operate correctly. Disabling it could result in service failures or degraded functionality.
 
 |Path|Value Name|Value Data|
 |----|----------|----------|

@@ -1,9 +1,9 @@
 ---
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 description: Learn more about upgrading domain controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.author: justinha
-author: justinha
-ms.date: 05/16/2023
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
 ms.topic: upgrade-and-migration-article
 ms.custom: inhenke
 ---
