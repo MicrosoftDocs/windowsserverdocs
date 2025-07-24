@@ -20,21 +20,25 @@ items:
         href: whats-new-in-windows-server-2016.md
     - name: Windows Server Insiders Preview
       href: get-started-with-windows-server-insiders-preview.md
-    - name: Editions feature comparison
-      href: editions-comparison.md
-    - name: Hardware requirements
-      href: hardware-requirements.md
-    - name: Features removed or no longer developed in Windows Server
-      href: removed-deprecated-features-windows-server.md
-    - name: Azure Edition
-      href: azure-edition.md
-    - name: Windows Server Pay-as-you-go
-      href: windows-server-pay-as-you-go.md
-    - name: Windows Server Annual Channel for Containers
-      href: annual-channel-for-containers.md
-    - name: Locks and limits
-      href: locks-limits.md
-    - name: Release information
+    - name: Editions & Licensing
+      items:
+      - name: Editions feature comparison
+        href: editions-comparison.md
+      - name: Azure Edition
+        href: azure-edition.md
+      - name: Windows Server Pay-as-you-go
+        href: windows-server-pay-as-you-go.md
+      - name: Windows Server Annual Channel for Containers
+        href: annual-channel-for-containers.md
+    - name: System Requirements & Limits
+      items:
+      - name: Hardware requirements
+        href: hardware-requirements.md
+      - name: Locks and limits
+        href: locks-limits.md
+      - name: Features removed or no longer developed in Windows Server
+        href: removed-deprecated-features-windows-server.md
+    - name: Release Information
       href: /windows/release-health/windows-server-release-info?context=/windows-server/context/windows-server-get-started
       items:
       - name: Windows Server 2025
