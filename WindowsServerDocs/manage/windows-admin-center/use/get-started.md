@@ -4,30 +4,32 @@ description: Get started with Windows Admin Center after you download and instal
 ms.topic: get-started
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 09/21/2022
+ms.date: 07/24/2025
 ---
 
 # Get started with Windows Admin Center
 
-Windows Admin Center enables you to manage servers, clusters, Windows PCs, and Azure virtual machines (VMs) directly from your Windows computer by using a web browser.
+Windows Admin Center is a browser-based management tool that simplifies the administration of servers, clusters, Windows PCs, and Azure virtual machines.
 
 This article describes how to get started with Windows Admin Center after you [download](https://www.microsoft.com/evalcenter/download-windows-admin-center) and [install](../../windows-admin-center/deploy/install.md) it on a Windows PC. To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
 
 ## Open Windows Admin Center on a Windows PC
 
 > [!IMPORTANT]
-> You must be a member of the local administrators group to use Windows Admin Center on Windows.
+> You must be a member of the local administrators group to use Windows Admin Center.
 
 Follow these steps to open Windows Admin Center on a Windows PC:
 
 1. On the **Start** menu, select **Windows Admin Center (v2)**. Or enter **Windows Admin Center (v2)** on the search bar and then select it from the search results.
 
-   Windows Admin Center (v2) opens in your default browser with the URL `https://localhost:6516/`. Alternatively, you can start it from your desired browser by entering `https://localhost:6516/`.
+   If you're using Windows client operating systems, your default browser opens with the URL: `https://localhost:6600/`.
+
+   If you're using Windows Server operating systems, remote access is configured using port 443.
 
 1. A prompt for selecting a certificate for authentication appears.
 
    > [!NOTE]
-   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), you're asked to sign in to the Windows Admin Center gateway instead of selecting a certificate. This step does not apply.
+   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), you're asked to sign in to the Windows Admin Center gateway instead of selecting a certificate. This step doesn't apply.
 
    Select the certificate labeled **Windows Admin Center Client**, and then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
 
@@ -85,16 +87,16 @@ To add connections to Windows Admin Center:
 
    ### [Import a list](#tab/import-a-list)
 
-   You can add multiple resources at once by bulk importing from a .txt or .csv file. The label for this tab appears as **Import clusters** when you're bulk importing multiple clusters.
+   You can add multiple resources at once by bulk importing from a .txt or .csv file. The label for this tab appears as **Import clusters** when you bulk import multiple clusters.
 
-   1. Select the **Import a list** tab. Or select **Import clusters** for bulk importing clusters.
+   1. Select the **Import a list** tab. Or select **Import clusters** to bulk import clusters.
 
    1. Under **Import source**, select the **Select a file** button to browse and select the file to import. Or drag and drop the file. The file can be a .txt or .csv file that contains a comma, or a new line-separated list of resources that you want to add.
 
       :::image type="content" source="../media/launch/use-get-started-7.png" alt-text="Screenshot of the page for adding resources when the tab for importing a list is selected." lightbox="../media/launch/use-get-started-7.png":::
 
    > [!NOTE]
-   > The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains additional information beyond the server names. It's not compatible with this import method.
+   > The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains extra information beyond the server names. It's not compatible with this import method.
 
    ### [Search Active Directory](#tab/search-active-directory)
 
@@ -134,7 +136,7 @@ If you installed Windows Admin Center on Windows Server, additional configuratio
 ### Authenticate by specifying credentials
 
 1. In **All connections**, select a resource from the list.
-1. Select **Manage as** to specify the credentials that you'll use to authenticate to the managed node.
+1. Select **Manage as** to specify your credentials to authenticate to the managed node.
 
    :::image type="content" source="../media/launch/use-get-started-9.png" alt-text="Screenshot of the page for all connections with the command for using specific credentials for management.":::
 
@@ -154,7 +156,7 @@ You can use tags to identify and filter related resources in your connection lis
 
 ### Edit tags
 
-You can add tags to a connection while you're adding a new connection. Or you can add or edit them later for one or more connections on the **All connections** page.
+You can add tags to a connection while you add a new connection. Or you can add or edit them later. For one or more connections on the **All connections** page.
 
 To add or edit a tag:
 
