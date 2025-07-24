@@ -12939,6 +12939,11 @@
       "source_path": "WindowsServerDocs/failover-clustering/configure-ad-accounts.md",
       "redirect_url": "/windows-server/failover-clustering/configure-failover-cluster-accounts",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/get-started-with-windows-server.md",
+      "redirect_url": "/windows-server/get-started/overview",
+      "redirect_document_id": false
     }
   ]
 }

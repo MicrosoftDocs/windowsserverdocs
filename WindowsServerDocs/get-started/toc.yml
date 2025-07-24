@@ -2,15 +2,13 @@ items:
 - name: Get started
   expanded: true
   items:
-  - name: Get started with Windows Server
-    href: get-started-with-windows-server.md
+  - name: What is Windows Server?
+    href: overview.md
   - name: Windows Server Insiders Preview
     href: get-started-with-windows-server-insiders-preview.md
   - name: Overview
     expanded: true
     items:
-    - name: What is Windows Server?
-      href: overview.md
     - name: What's new in Windows Server
       items:
       - name: Windows Server 2025
