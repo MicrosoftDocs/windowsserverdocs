@@ -1,6 +1,6 @@
 ---
 title: netsh add
-description: Reference article for the netsh add command which adds a helper dll.
+description: Reference article for the netsh add command that adds a helper dll.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
@@ -21,11 +21,11 @@ netsh add helper [file]
 
 | Command | Description |
 |--|--|
-| helper | Installs a helper DLL file. |
+| helper | Adds a helper DLL file. |
 
 ## Example
 
-To install a helper DLL located at "C:\Helpers\HelperDLL.dll", run the following command:
+To add a helper DLL located at **C:\dlls\HelperDLL.dll**, run the following command:
 
 ```cmd
 netsh add helper C:\Helpers\HelperDLL.dll
