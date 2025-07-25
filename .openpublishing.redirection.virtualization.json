@@ -454,6 +454,11 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/generation-2-virtual-machine-security-features",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/index.yml",
+      "redirect_url": "/windows-server/virtualization/virtualization",
+      "redirect_document_id": true
     }
   ]
 }
