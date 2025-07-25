@@ -361,11 +361,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/virtualization/hyper-v/index.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-on-windows-server",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/virtualization/nano-server/Getting-Started-with-Nano-Server.md",
       "redirect_url": "/windows-server/get-started/getting-started-with-nano-server",
       "redirect_document_id": false
@@ -456,8 +451,43 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/virtualization/index.yml",
-      "redirect_url": "/windows-server/virtualization/virtualization",
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/create-security-policies-extended-port-access-control-lists",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-machine-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/use-local-resources-virtual-machine-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-switch",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/hyper-v-overview.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/host-hardware-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/virtualization.yml",
+      "redirect_url": "/windows-server/virtualization/",
       "redirect_document_id": true
     }
   ]
