@@ -2,8 +2,8 @@
 ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
 title: Deploying Work Folders
 ms.topic: install-set-up-deploy
-author: jasongerend
-ms.author: jgerend
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 6/24/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---

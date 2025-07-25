@@ -3,16 +3,16 @@ description: "Learn more about: Data Deduplication Overview"
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
 ms.topic: overview
-author: jasongerend
-manager: klaasl
-ms.author: jgerend
-ms.date: 02/18/2022
+ms.author: roharwoo
+author: robinharwood
+ms.date: 06/20/2025
 ---
+
 # Data Deduplication Overview
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
-Data Deduplication, often called Dedup for short, is a feature that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
+Data Deduplication, often called "dedupe" for short, is a feature that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
 
 > [!Important]
 > [KB4025334](https://support.microsoft.com/kb/4025334) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016 and Windows Server 2019.

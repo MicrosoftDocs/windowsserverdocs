@@ -2,8 +2,8 @@
 title: AD FS troubleshooting - certificates
 description: This article describes typical certificate problems.
 ms.topic: troubleshooting-general
-author: billmath
-ms.author: billmath
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/08/2025
 ---
 

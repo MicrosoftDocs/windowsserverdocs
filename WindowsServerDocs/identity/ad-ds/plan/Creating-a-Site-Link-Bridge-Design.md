@@ -2,10 +2,10 @@
 description: "Learn more about: Creating a Site Link Bridge Design"
 ms.assetid: 64142026-07b5-4601-840a-c8dcf6ab9814
 title: Creating a Site Link Bridge Design
-ms.author: justinha
-author: justinha
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 02/14/2023
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 

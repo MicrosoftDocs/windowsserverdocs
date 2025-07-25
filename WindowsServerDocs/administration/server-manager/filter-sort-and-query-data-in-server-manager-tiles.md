@@ -2,10 +2,8 @@
 title: Filter, sort, and query Data in Server Manager Tiles
 description: Learn how to use tiles in Server Manager to filter and sort data, and create and save custom queries.
 ms.topic: article
-ms.assetid: 8786f791-73e5-4c75-8d12-46e88a196976
-ms.author: jgerend
-author: jasongerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # Filter, sort, and query Data in Server Manager Tiles

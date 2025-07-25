@@ -1022,12 +1022,52 @@
       href: mstsc.md
     - name: nbtstat
       href: nbtstat.md
-    - name: netcfg
-      href: netcfg.md
     - name: net print
       href: net-print.md
-    - name: netsh
+    - name: net user
+      href: net-user.md
+    - name: netcfg
+      href: netcfg.md
+    - name: netdom
+      href: netdom.md
+      items:
+      - name: netdom add
+        href: netdom-add.md
+      - name: netdom computername
+        href: netdom-computername.md
+      - name: netdom join
+        href: netdom-join.md
+      - name: netdom move
+        href: netdom-move.md
+      - name: netdom movent4bdc
+        href: netdom-movent4bdc.md
+      - name: netdom query
+        href: netdom-query.md
+      - name: netdom remove
+        href: netdom-remove.md
+      - name: netdom renamecomputer
+        href: netdom-renamecomputer.md
+      - name: netdom reset
+        href: netdom-reset.md
+      - name: netdom resetpwd
+        href: netdom-resetpwd.md
+      - name: netdom trust
+        href: netdom-trust.md
+      - name: netdom verify
+        href: netdom-verify.md
+    - name: network shell (netsh)
       href: netsh.md
+      items:
+      - name: netsh add
+        href: netsh-add.md
+      - name: netsh advfirewall
+        href: netsh-advfirewall.md
+      - name: netsh branchcache
+        href: netsh-branchcache.md
+      - name: netsh delete
+        href: netsh-delete.md
+      - name: netsh dump
+        href: netsh-dump.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

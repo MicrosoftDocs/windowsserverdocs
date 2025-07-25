@@ -1,10 +1,10 @@
 ---
 title: netsh dump
-description: Reference article for the netsh dump command which removes a helper dll.
+description: Reference article for the netsh dump command that allows exporting network configuration settings to a text file.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 05/08/2025
+ms.date: 07/25/2025
 ---
 
 # netsh dump
@@ -25,7 +25,7 @@ netsh dump
 
 ## Example
 
-To export your network configuration settings to a file named "netsh_config.txt" and save it in `C:\NetConfig`, run the following command:
+To export your network configuration settings to a file named "netsh_config.txt" and save it in **C:\NetConfig**, run the following command:
 
 ```cmd
 netsh dump > "C:\NetConfig\netsh_config.txt"

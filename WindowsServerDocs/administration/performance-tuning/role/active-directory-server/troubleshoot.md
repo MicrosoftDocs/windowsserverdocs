@@ -2,8 +2,8 @@
 title: Troubleshoot Active Directory Domain Services performance
 description: Resources and guidance to help with troubleshooting in Active Directory performance tuning.
 ms.topic: troubleshooting-general
-ms.author: jgerend
-author: jasongerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 01/03/2023
 ---
 

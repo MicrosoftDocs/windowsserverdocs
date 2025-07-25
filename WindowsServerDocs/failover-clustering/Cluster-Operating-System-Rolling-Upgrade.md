@@ -3,8 +3,8 @@ title: Upgrade the OS of a Windows Server failover cluster by performing a clust
 description: Manually upgrade the operating system of a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling OS upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
 # customer intent: As an IT professional, I want to learn how to upgrade the OS of a Windows Server failover cluster by manually performing a cluster OS rolling upgrade.
 ms.topic: how-to
-author: jasongerend
-ms.author: jgerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 3/19/2025
 ---
 

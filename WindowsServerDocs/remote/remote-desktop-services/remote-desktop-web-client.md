@@ -81,14 +81,12 @@ To select alternative keyboard layout or language:
 1. Before you connect to the remote session, go to the web client **Settings** panel.
 1. In **Select Remote Keyboard Layout** section, expand the drop-down menu and select the keyboard you want to use in the remote session.
 
-   Azure Virtual Desktop (AVD) web client setting options:
-
    * Auto: This configuration sends KeyCodes on key press, which means the local key is directly sent to the remote machine. For this option, the local machine keyboard layout is important and should match the layout on all the hops taken to the remote machine.
    * Remote: This configuration sends Scan Codes to the remote machine. For this option, the local machine keyboard layout isn't as important, but the keyboard layout on all other hops taken to the remote machine should match the selected layout.
    * Language specific: If you select a specific language and the language pack is installed on the remote machine, that language will automatically be selected on new Windows sessions only. For example, if you use English UK, you can select it from the drop-down. Make sure to sign out of ALL the Windows user sessions you're trying to connect to. When you open a new session, all the hops should automatically default to using the English UK layout.
 
      > [!NOTE]
-     > There's a known issue when using KeyCodes for PowerShell. By selecting a mode on AVD Web Client that uses Scan Codes (either Remote or English UK for example), PowerShell should work as expected.
+     > There's a known issue when using KeyCodes for PowerShell. By selecting a mode on that uses Scan Codes (either Remote or English UK for example), PowerShell should work as expected.
 
 1. If you're using either an IME-based keyboard or a keyboard with alternate layout, select either **Remote** OR pick any of the languages from the list.
 1. Connect to the remote session.
