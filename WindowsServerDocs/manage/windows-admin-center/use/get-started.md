@@ -22,23 +22,15 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
 1. On the **Start** menu, select **Windows Admin Center (v2)**. Or enter **Windows Admin Center (v2)** on the search bar and then select it from the search results.
 
-   If you're using Windows client operating systems, your default browser opens with the URL: `https://localhost:6600/`.
+   Your default browser opens with the sign in screen for Windows Admin Center.
 
-   If you're using Windows Server operating systems, remote access is configured using port 443.
+   - Windows client operating systems are configured for local access using port 6600.
+
+   - Windows Server operating systems are configured for remote access using port 443.
+
+1. Sign in to Windows Admin Center using your administrator credentials.
 
 1. A prompt for selecting a certificate for authentication appears.
-
-   > [!NOTE]
-   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), you're asked to sign in to the Windows Admin Center gateway instead of selecting a certificate. This step doesn't apply.
-
-   Select the certificate labeled **Windows Admin Center Client**, and then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
-
-   > [!IMPORTANT]
-   > Be sure to select **Windows Admin Center Client** and not any other certificate. If you select any other certificate, the following error message appears:
-   >
-   > "You are not authorized to view this page. If you recently updated Windows Admin Center, you may need to restart your browser, and then refresh the page."
-   >
-   > If you continue to get the same error even after restarting your browser and refreshing the page, try clearing the browser cache or switching to another browser. If none of these troubleshooting steps resolve the issue, you might need to uninstall and reinstall Windows Admin Center, and then restart it.
 
 1. (First time only:) A pop-up window confirms that your Windows Admin Center version is successfully installed. It also provides information on what's new in this release. Close the window to proceed.
 
@@ -48,12 +40,9 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
 ## Add connections to Windows Admin Center
 
-You can add connections as managed nodes to Windows Admin Center from the **All connections** page. **All connections** is the default page that appears when you open Windows Admin Center. On this page, you can either add existing resources as connections or create new resources. The resources that you add appear in the connection list.
+To add or create an Azure VM, you must first register Windows Admin Center with Azure. You can add connections as managed nodes to Windows Admin Center from the **All connections** page. **All connections** is the default page that appears when you open Windows Admin Center. On this page, you can either add existing resources as connections or create new resources. The resources that you add appear in the connection list.
 
 The types of resources that you can add from the **All connections** page are servers, Windows PCs, clusters, and Azure VMs. The resources that you can create are clusters and Azure VMs.
-
-> [!NOTE]
-> To add or create an Azure VM, you must first register Windows Admin Center with Azure.
 
 To add connections to Windows Admin Center:
 
