@@ -2,10 +2,10 @@
 description: "Learn more about: Appendix C: Protected Accounts and Groups in Active Directory"
 ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Appendix C - Protected Accounts and Groups in Active Directory
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 01/30/2024
+ms.date: 05/12/2025
 ms.topic: best-practice
 ms.custom: inhenkel, orthomas
 ---

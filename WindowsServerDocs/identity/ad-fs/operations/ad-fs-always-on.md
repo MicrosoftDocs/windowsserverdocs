@@ -1,9 +1,9 @@
 ---
 title: Setting up an AD FS Deployment with AlwaysOn Availability Groups
 description: "Learn more about: Setting up an AD FS Deployment with AlwaysOn Availability Groups"
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---
@@ -84,7 +84,7 @@ This guide will walk through the following
 
 This deployment guide will show a two node farm with two SQL servers as an example.
 To deploy AD FS follow the initial links below to install the AD FS Role Service. To configure for an AoA group, there will be additional steps for the role.
--	[Join a Computer to a Domain](../deployment/join-a-computer-to-a-domain.md)
+-	[Join a Computer to a Domain](../../ad-ds/manage/join-computer-to-domain.md)
 -	[Enroll an SSL Certificate for AD FS](../deployment/enroll-an-ssl-certificate-for-ad-fs.md)
 -	[Install the AD FS Role Service](../deployment/install-the-ad-fs-role-service.md)
 

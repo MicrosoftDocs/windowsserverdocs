@@ -2,8 +2,8 @@
 title: Windows Server Update Services (WSUS) Overview
 description: See an overview of the Windows Server Update Service (WSUS) Server role, including its features, applications, and support for Unified Update Platform (UUP).
 ms.topic: overview
-ms.author: jgerend
-author: jasongerend
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 05/02/2025
 # customer intent: As an administrator, I want to become familiar with Windows Server Update Service (WSUS) Server role features for distributing updates to computers on my network so that I can maintain operational efficiency, overcome security vulnerabilities, and maintain the stability of my production environment.
 ---

@@ -1,10 +1,10 @@
 ---
 title: netsh exec
-description: Reference article for the netsh exec command which runs a script file containing a series of netsh commands to automate network configuration tasks.
+description: Reference article for the netsh exec command that runs a script file containing a series of netsh commands to automate network configuration tasks.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 05/08/2025
+ms.date: 07/25/2025
 ---
 
 # netsh exec
@@ -25,7 +25,7 @@ netsh exec <ScriptFile>
 
 ## Example
 
-To load and run your script from the location `C:\NetshScripts\network_script.txt`, run the following command:
+To load and run your script from the location **C:\NetshScripts\network_script.txt**, run the following command:
 
 ```cmd
 netsh exec "C:\NetshScripts\network_script.txt"

@@ -4,8 +4,8 @@ description: This topic provides best practices for deploying and managing Netwo
 manager: brianlic
 ms.topic: best-practice
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: jgerend
-author: jasongerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 12/08/2020
 ---
 

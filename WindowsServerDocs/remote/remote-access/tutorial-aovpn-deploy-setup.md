@@ -8,9 +8,9 @@ author: dknappettmsft
 ms.date: 05/07/2025
 ---
 
-# Tutorial: Deploy Always On VPN Infrastructure
+# Tutorial: Deploy Always On VPN infrastructure
 
-Always On VPN is a remote access solution in Windows Server that provides seamless and secure connectivity for remote users to corporate networks. It supports advanced authentication methods and integrates with existing infrastructure, offering a modern alternative to traditional VPN solutions.
+Always On VPN is a remote access solution in Windows Server that provides seamless and secure connectivity for remote users to corporate networks. It supports advanced authentication methods and integrates with existing infrastructure, offering a modern alternative to traditional VPN solutions. This tutorial begins the series to deploy Always On VPN in a sample environment.
 
 In this tutorial, you learn how to deploy a sample infrastructure for Always On VPN connections for remote domain-joined Windows client computers. To create a sample infrastructure, you:
 
@@ -30,7 +30,7 @@ To learn more about Always On VPN, including supported integrations, security an
 
 To complete the steps in this tutorial, you need to meet the following prerequisites:
 
-- Three servers (physical or virtual) with a supported version Windows Server installed on them. These servers are the domain controller, NPS server, and VPN server.
+- Three servers (physical or virtual) running a supported version Windows Server. These servers are the domain controller, NPS server, and VPN server.
 
 - The server you use for the NPS server needs two physical network adapters installed: one to connect to the internet, and one to connect to the network where the domain controller is located.
 

@@ -2,8 +2,8 @@
 title: What's new in Windows Server 2019
 description: This article describes some of the new features in Windows Server 2019.
 ms.topic: whats-new
-author: jasongerend
-ms.author: jgerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 07/31/2024
 ---
 

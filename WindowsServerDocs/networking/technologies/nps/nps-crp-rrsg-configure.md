@@ -4,8 +4,8 @@ description: This topic provides information on how to configure Remote RADIUS S
 manager: brianlic
 ms.topic: how-to
 ms.assetid: ca125e57-249c-4d97-85d1-2929cbf871f1
-ms.author: jgerend
-author: jasongerend
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 08/07/2020
 ---
 
