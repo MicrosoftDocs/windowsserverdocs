@@ -1068,6 +1068,8 @@
         href: netsh-delete.md
       - name: netsh dump
         href: netsh-dump.md
+      - name: netsh exec
+        href: netsh-exec.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin
