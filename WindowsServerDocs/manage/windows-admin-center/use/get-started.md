@@ -36,7 +36,7 @@ Follow these steps to open Windows Admin Center on a Windows PC:
 
    :::image type="content" source="../media/get-started/successfully-installed.png" alt-text="Screenshot of the message that shows successful installation of Windows Admin Center.":::
 
-   The **All connections** page shows your Windows 10 computer name in the list of connections. You're now ready to add connections to Windows Admin Center.
+   The **All connections** page shows your Windows computer name in the list of connections. You're now ready to add connections to Windows Admin Center.
 
 ## Add connections to Windows Admin Center
 
@@ -137,7 +137,7 @@ You can apply the credentials to all connections, which will cache them for that
 
 ### Authenticate by Local Administrator Password Solution
 
-If your environment uses [Local Administrator Password Solution (LAPS)](/previous-versions/mt227395(v=msdn.10)), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. If you use this scenario, you can [provide feedback](https://aka.ms/WACFeedback).
+If your environment uses [Local Administrator Password Solution (LAPS)](/previous-versions/mt227395(v=msdn.10)), and you have Windows Admin Center installed on your Windows PC, you can use LAPS credentials to authenticate with the managed node. If you use this scenario, you can [provide feedback](https://aka.ms/WACFeedback).
 
 ## Use tags to organize your connections
 
