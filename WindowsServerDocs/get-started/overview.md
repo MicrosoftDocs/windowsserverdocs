@@ -2,7 +2,7 @@
 title: What is Windows Server?
 description: Learn about Windows Server capabilities, deployment options, and key features that help you modernize your infrastructure while maintaining security and performance.
 ms.topic: overview
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ai-usage: ai-generated
 author: robinharwood
 ms.author: roharwoo
@@ -19,7 +19,7 @@ Whether you're running a small business or managing enterprise infrastructure, W
 
 </br>
 
-> [!VIDEO https://www.youtube.com/embed/tuQSY6gDeK4]
+> [!VIDEO 715f723f-0644-4b9d-b7df-6e708da43242]
 
 ## Why choose Windows Server?
 
