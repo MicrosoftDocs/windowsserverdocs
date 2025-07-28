@@ -8,7 +8,7 @@ ms.date: 07/25/2025
 ms.topic: concept-article
 ---
 
-# How the Windows Time Service Works
+# How the Windows Time Service works
 
 Although the Windows Time service isn't an exact implementation of the Network Time Protocol (NTP), it uses the complex suite of algorithms that is defined in the NTP specifications to ensure that clocks on computers throughout a network are as accurate as possible. Ideally, all computer clocks in an AD DS domain are synchronized with the time of an authoritative computer. Many factors can affect time synchronization on a network. The following factors often affect the accuracy of synchronization in AD DS:
 
@@ -49,10 +49,10 @@ The Service Control Manager is responsible for starting and stopping the Windows
 
 The time synchronization process involves the following steps:
 
-- Input providers request and receive time samples from configured NTP time sources.
-- These time samples are then passed to the Windows Time Service Manager, which collects all the samples and passes them to the clock discipline subcomponent.
-- The clock discipline subcomponent applies the NTP algorithms which results in the selection of the best time sample.
-- The clock discipline subcomponent adjusts the time of the system clock to the most accurate time by either adjusting the clock rate or directly changing the time.
+1. Input providers request and receive time samples from configured NTP time sources.
+1. These time samples are then passed to the Windows Time Service Manager, which collects all the samples and passes them to the clock discipline subcomponent.
+1. The clock discipline subcomponent applies the NTP algorithms which results in the selection of the best time sample.
+1. The clock discipline subcomponent adjusts the time of the system clock to the most accurate time by either adjusting the clock rate or directly changing the time.
 
 If a computer has been designated as a time server, it can send the time on to any computer requesting time synchronization at any point in this process.
 
@@ -129,7 +129,7 @@ To establish a computer running Windows Server as authoritative, the computer mu
 After you have established a Windows Server network, you can configure the Windows Time service to use one of the following options for synchronization:
 
 - Domain hierarchy-based synchronization
-- A manually-specified synchronization source
+- A manually specified synchronization source
 - All available synchronization mechanisms
 - No synchronization.
 
@@ -182,9 +182,8 @@ The following table lists the queries that a domain controller makes to find a t
 | 5            | Local domain controller  | Out-of-site| Only synchronizes with a reliable time source.                                                            |
 | 6            | Local PDC emulator       | Out-of-site| Does not apply. A domain controller does not attempt to synchronize with itself.                          |
 
-**Note**
-
-- A computer never synchronizes with itself. If the computer attempting synchronization is the local PDC emulator, it does not attempt Queries 3 or 6.
+> [!NOTE]
+> A computer never synchronizes with itself. If the computer attempting synchronization is the local PDC emulator, it does not attempt Queries 3 or 6.
 
 
 Each query returns a list of domain controllers that can be used as a time source. Windows Time assigns each domain controller that is queried a score based on the reliability and location of the domain controller. The following table lists the scores assigned by Windows Time to each type of domain controller.
@@ -205,12 +204,12 @@ When the Windows Time service determines that it has identified the domain contr
 If the root of the time service is not configured to synchronize with an external source, the internal hardware clock of the computer governs the time.
 
 
-### Manually-Specified Synchronization
+### Manually Specified Synchronization
 
-Manually-specified synchronization enables you to designate a single peer or list of peers from which a computer obtains time. If the computer is not a member of a domain, it must be manually configured to synchronize with a specified time source. A computer that is a member of a domain is configured by default to synchronize from the domain hierarchy, manually-specified synchronization is most useful for the forest root of the domain or for computers that are not joined to a domain. Manually specifying an external NTP server to synchronize with the authoritative computer for your domain provides reliable time. However, configuring the authoritative computer for your domain to synchronize with a hardware clock is actually a better solution for providing the most accurate, secure time to your domain.
+Manually specified synchronization enables you to designate a single peer or list of peers from which a computer obtains time. If the computer is not a member of a domain, it must be manually configured to synchronize with a specified time source. A computer that is a member of a domain is configured by default to synchronize from the domain hierarchy, manually specified synchronization is most useful for the forest root of the domain or for computers that are not joined to a domain. Manually specifying an external NTP server to synchronize with the authoritative computer for your domain provides reliable time. However, configuring the authoritative computer for your domain to synchronize with a hardware clock is actually a better solution for providing the most accurate, secure time to your domain.
 
 
-Manually-specified time sources are not authenticated unless a specific time provider is written for them, and they are therefore vulnerable to attackers. Also, if a computer synchronizes with a manually-specified source rather than its authenticating domain controller, the two computers might be out of synchronization, causing Kerberos authentication to fail. This might cause other actions requiring network authentication to fail, such as printing or file sharing. If only the forest root is configured to synchronize with an external source, all other computers within the forest remain synchronized with each other, making replay attacks difficult.
+Manually specified time sources are not authenticated unless a specific time provider is written for them, and they are therefore vulnerable to attackers. Also, if a computer synchronizes with a manually specified source rather than its authenticating domain controller, the two computers might be out of synchronization, causing Kerberos authentication to fail. This might cause other actions requiring network authentication to fail, such as printing or file sharing. If only the forest root is configured to synchronize with an external source, all other computers within the forest remain synchronized with each other, making replay attacks difficult.
 
 
 ### All Available Synchronization Mechanisms
