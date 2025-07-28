@@ -2,10 +2,10 @@
 description: "Learn more about: Mapping Your Requirements to an AD DS Deployment Strategy"
 ms.assetid: ce3be131-06ad-41dc-a26b-1168fa68c8ed
 title: Mapping Your Requirements to an AD DS Deployment Strategy
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: concept-article
 ---
 

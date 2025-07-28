@@ -2,10 +2,10 @@
 description: "Learn more about: AD DS Design Requirements"
 ms.assetid: f6e76ef0-2217-4cdb-980f-22a780a85ebb
 title: AD DS Design Requirements
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: article
 ---
 

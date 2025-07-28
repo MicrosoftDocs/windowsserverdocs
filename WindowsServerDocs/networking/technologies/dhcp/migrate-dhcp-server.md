@@ -8,7 +8,7 @@ ms.date: 03/24/2025
 #customer intent: As an IT administrator, I want to migrate a DHCP server to Windows Server so that I can ensure seamless network configuration and management.
 ---
 
-# Migrate DHCP server to Windows Server
+# Migrate a DHCP server installation to another Windows Server
 
 DHCP server migration involves moving the settings for your existing DHCP server to a new DHCP server on the network. The goal of this server migration is to install the DHCP server role on the Windows Server operating system so that it provides DHCP leases on a network without any perceptible change to DHCP client computers.
 
@@ -205,7 +205,7 @@ Follow the steps in this section to migrate DHCP Server from the source server.
 
 Return to the destination server and follow these steps to complete the migration.
 
-1. Before you use the [**Import-SmigServerSetting**](/powershell/module/servermigration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
+1. Before you use the [**Import-SmigServerSetting**](/powershell/module/microsoft.windows.servermanager.migration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
 
     - You can either use a single command line with all the parameters to import DHCP settings (as when you export data from the source server) or you can use the cmdlet multiple times to import data one parameter at a time.
 

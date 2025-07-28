@@ -16,7 +16,7 @@ You'll configure these computers and storage in a cluster-to-cluster configurati
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.
 >
-> This guide doesn't cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage).
+> This guide doesn't cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md).
 
 This walkthrough uses the following environment as an example:
 
@@ -380,4 +380,4 @@ Now you'll manage and operate your cluster-to-cluster replication. You can perfo
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
--   [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+-   [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)

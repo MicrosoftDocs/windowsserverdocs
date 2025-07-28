@@ -4,7 +4,7 @@ description: Gives considerations such as supported boot methods and other featu
 ms.topic: concept-article
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 06/20/2024
+ms.date: 06/18/2025
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
@@ -63,22 +63,14 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 | Windows Server 2016 |&#10004;|&#10004;|
 | Windows Server 2012 R2 |&#10004;|&#10004;|
 | Windows Server 2012 |&#10004;|&#10004;|
-| Windows Server 2008 R2 |&#10004;| &#10006;|
-| Windows Server 2008 |&#10004;| &#10006;|
 | Windows 11 |&#10006;|&#10004;|
 | Windows 10 |&#10004;|&#10004;|
-| Windows 8.1 |&#10004;|&#10004;|
-| Windows 8 |&#10004;|&#10004;|
-| Windows 7 |&#10004;| &#10006;|
 
 The following table shows which 32-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
 |32-bit versions of Windows|Generation 1|Generation 2|
 |-------------------------------|----------------|----------------|
 |Windows 10|&#10004;| &#10006;|
-|Windows 8.1|&#10004;| &#10006;|
-|Windows 8|&#10004;| &#10006;|
-|Windows 7|&#10004;| &#10006;|
 
 ### CentOS and Red Hat Enterprise Linux guest operating system support
 
@@ -86,10 +78,9 @@ The following table shows which versions of Red Hat Enterprise Linux (RHEL) and 
 
 |Operating system versions|Generation 1|Generation 2|
 |-----------------------------|----------------|----------------|
+|RHEL/CentOS 10.x series|&#10004;|&#10004;|
+|RHEL/CentOS 9.x series|&#10004;|&#10004;|
 |RHEL/CentOS 8.x series|&#10004;|&#10004;|
-|RHEL/CentOS 7.x series|&#10004;|&#10004;|
-|RHEL/CentOS 6.x series|&#10004;|&#10004;<br />**Note:** Only supported on Windows Server 2016 and above.|
-|RHEL/CentOS 5.x series|&#10004;| &#10006;|
 
 For more information, see [CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).
 
@@ -99,10 +90,9 @@ The following table shows which versions of Debian you can use as a guest operat
 
 |Operating system versions|Generation 1|Generation 2|
 |-----------------------------|----------------|----------------|
-|Debian 10.x (buster) series|&#10004;|&#10004;|
-|Debian 9.x (stretch) series|&#10004;|&#10004;|
-|Debian 8.x (jessie) series|&#10004;|&#10004;|
-|Debian 7.x (wheezy) series|&#10004;| &#10006;|
+|Debian 12.x (Bookworm) series|&#10004;|&#10004;|
+|Debian 11.x (Bullseye) series|&#10004;|&#10004;|
+|Debian 10.x (Buster) series|&#10004;|&#10004;|
 
 For more information, see [Debian virtual machines on Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).
 
@@ -112,12 +102,9 @@ The following table shows which versions of FreeBSD you can use as a guest opera
 
 |Operating system versions|Generation 1|Generation 2|
 |-----------------------------|----------------|----------------|
-|FreeBSD 12 to 12.1|&#10004;| &#10004;|
-|FreeBSD 11.1 to 11.3|&#10004;| &#10004;|
-|FreeBSD 11|&#10004;| &#10006;|
-|FreeBSD 10 to 10.3|&#10004;| &#10006;|
-|FreeBSD 9.1 and 9.3|&#10004;| &#10006;|
-|FreeBSD 8.4|&#10004;| &#10006;|
+|FreeBSD 13.0 to 13.5|&#10004;| &#10004;|
+|FreeBSD 12.0 to 12.4|&#10004;| &#10004;|
+|FreeBSD 11.0 to 11.4|&#10004;| &#10004;|
 
 For more information, see [FreeBSD virtual machines on Hyper-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).
 
@@ -127,9 +114,8 @@ The following table shows which versions of Red Hat Compatible Kernel Series you
 
 |Red Hat Compatible Kernel Series versions|Generation 1|Generation 2|
 |---------------------------------------------|----------------|----------------|
+|Oracle Linux 9.x series|&#10004;|&#10004;|
 |Oracle Linux 8.x series|&#10004;|&#10004;|
-|Oracle Linux 7.x series|&#10004;|&#10004;|
-|Oracle Linux 6.x series|&#10004;| &#10006;|
 
 The following table shows which versions of Unbreakable Enterprise Kernel you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
@@ -160,11 +146,12 @@ The following table shows which versions of Ubuntu you can use as a guest operat
 
 |Operating system versions|Generation 1|Generation 2|
 |-----------------------------|----------------|----------------|
+|Ubuntu 24.04|&#10004;|&#10004;|
+|Ubuntu 22.04|&#10004;|&#10004;|
 |Ubuntu 20.04|&#10004;|&#10004;|
 |Ubuntu 18.04|&#10004;|&#10004;|
 |Ubuntu 16.04|&#10004;|&#10004;|
 |Ubuntu 14.04|&#10004;|&#10004;|
-|Ubuntu 12.04|&#10004;| &#10006;|
 
 For more information, see [Ubuntu virtual machines on Hyper-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).
 
@@ -205,11 +192,11 @@ The following table compares the devices available between generation 1 and gene
 
 Here are some more tips about using the different generations of virtual machines.
 
-### Creating VMs with more than 64 logical CPUs
+### Create VMs with more than 64 logical CPUs
 
 Hyper-V manager might fail to create a new generation 1 VM on a system with more than 64 logical CPUs. Hyper-V manager doesn’t let you specify the number of virtual processors at VM creation time. For hosts with more than 64 logical processors, specify the number of virtual processors at VM creation using Windows Admin Center, PowerShell, or another tool.
 
-### Uploading a virtual hard drive to Azure
+### Upload a virtual hard drive to Azure
 
 Virtual hard drives created on generation 1 and generation 2 VMs can be uploaded to Azure as long as they use the VHD file format. The virtual hard drive must have a fixed (not dynamically expanding) sized disk. See [Generation 2 VMs on Azure](/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
@@ -260,7 +247,7 @@ To add a COM port:
 > [!NOTE]
 > Configured COM ports aren't listed in the settings of a virtual machine in Hyper-V Manager.
 
-## See Also
+## Related content
 
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)

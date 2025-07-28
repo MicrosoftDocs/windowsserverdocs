@@ -26,7 +26,7 @@ For more information, see [Supported Linux and FreeBSD virtual machines for Hype
 
 ## System requirements
 
-Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
+Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../host-hardware-requirements.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings. If the same capabilities are required for SR-IOV support and in the BIOS, you might need to set "Enable SR-IOV." Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 

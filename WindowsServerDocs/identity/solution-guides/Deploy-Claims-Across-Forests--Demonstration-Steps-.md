@@ -2,9 +2,9 @@
 description: "Learn more about: Deploy Claims Across Forests (Demonstration Steps)"
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: Deploy Claims Across Forests (Demonstration Steps)
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

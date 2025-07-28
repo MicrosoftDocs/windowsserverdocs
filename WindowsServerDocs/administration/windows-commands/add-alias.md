@@ -1,5 +1,6 @@
 ---
 title: add alias
+no-loc: [add alias]
 description: Reference article for the add alias command, which adds aliases to the alias environment.
 ms.topic: reference
 ms.assetid: 5fe12f5d-11e9-4f3d-b7f9-40b26c8685e5

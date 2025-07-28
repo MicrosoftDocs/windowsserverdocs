@@ -4,7 +4,7 @@ description: Discover how Windows Server LTSC and Annual Channel differ in relea
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 04/25/2025
+ms.date: 06/25/2025
 #customer intent: As an IT administrator, I want to understand the differences between the Long-Term Servicing Channel (LTSC) and Annual Channel (AC) for Windows Server, so that I can make informed decisions about which channel to use for my organization's needs.
 ---
 
