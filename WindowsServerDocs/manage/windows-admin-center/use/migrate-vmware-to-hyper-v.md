@@ -9,7 +9,7 @@ ms.author: mosagie
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
-> Windows Server assistant is currently in PREVIEW.
+> The VM Conversion extension is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The convestion tool is easy and fast to setup, at no cost to customers.
@@ -50,11 +50,39 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 ### vCenter or ESXI host prerequisites
 
-- Ensure that the VM to be migrated has no active snapshots. If snapshots exist, initial sync prechecks fail.
+None.
 
 ### Windows Server host prerequisites
 
 None.
+
+### Synchronization prechecks
+
+1. No active snapshots exist on the virtual machine.​
+
+1. VMware PowerCLI is installed on the WAC Gateway machine.​
+
+1. Microsoft Visual C++ Redistributables (versions 2013 and latest) are installed on the WAC Gateway machine.​
+
+1. VDDK package is present at:​ `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the WAC Gateway machine.​
+
+1. Target disk path for synchronization is valid.​
+
+1. Destination Hyper-V host has sufficient memory and disk space.​
+
+1. Change Block Tracking (CBT) is supported on the VM.
+
+### Migration prerechecks
+
+1. Destination Hyper-V host has sufficient vCPU availability.​
+
+1. No existing virtual machine with the same name on the destination Hyper-V host.​
+
+1. Hyper-V role is enabled on the target Hyper-V host.​
+
+1. Synchronized .vhdx file exists and has not been accidentally removed.​
+
+1. No active snaapshots on the virtual machine.​
 
 ## Supported vCenter versions
 
@@ -68,15 +96,24 @@ None.
 
 The following operating systems can use the VM Conversion extension:
 
-- Windows Server 2025, 2022, 2022 Azure Edition, 2016, 2012 R2
+Windows operating systems:
+
+- Windows Server 2025, 2022, 2022 Azure Edition, 2019, 2016, 2012 R2
 - Windows 10
+
+RHEL-based operating systems:
+
 - Alma Linux*
-- Ubuntu 20.04, 24.04
 - CentOS
 - Red Hat Linux 9.0
+
+Debian-based operating systems:
+
+- Ubuntu Linux
+- Ubuntu 20.04, 24.04
 - Debian 11, 12
 
-*For Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
+*For Linux guests, [Hyper-V drivers must be installed](https://www.microsoft.com/download/details.aspx?id=55106&msockid=15b6b5ffb158644112aea6d8b0e26503) before initiating migration. This is essential to ensure successful post-migration boot.
 
 ## Install the VM Conversion extension in Windows Admin Center
 
@@ -92,9 +129,9 @@ Complete the following steps to install the **VM Conversion** extension.
 
 1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion**.
 
-## Migrate virtual machines using the VM Conversion extension
+## Synchronize virtual machines using the VM Conversion extension
 
-Complete the following steps to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
+Complete the following steps to synchronize VMware virtual machines to Hyper-V in Windows Admin Center.
 
 1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
 
@@ -121,6 +158,10 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 1. Wait for the sync to complete 100%.
 
     [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
+
+## Migrate virtual machines using the VM Conversion extension
+
+Complete the following steps to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
@@ -213,3 +254,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 1. Is this tool available in Windows Admin Center on portal?
 
     No. The conversion tool is only available in Windows Admin Center on-premise.
+
+## Known issues
+
+## Future roadmap
