@@ -67,6 +67,7 @@ netsh dnsclient show [global | state]
 | show encryption `server=<IP address>` | Displays the encrypted DNS server settings from the list of statically configured secure resolvers. If no server is specified, information for all encrypted DNS servers is shown. <br><br> **server** - Specifies the encrypted DNS server by IP address. |
 | show `<global>` | Displays all configured DNS global settings. |
 | show `<state>` | Displays the current configuration and status of the DNS client. |
+| help or ? | Provides help for the list of commands available in the `netsh dnsclient` context. |
 
 ## Examples
 
