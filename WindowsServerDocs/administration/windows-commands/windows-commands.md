@@ -557,6 +557,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh advfirewall](netsh-advfirewall.md)
   - [netsh branchcache](netsh-branchcache.md)
   - [netsh delete](netsh-delete.md)
+  - [netsh dhcpclient](netsh-dhcpclient.md)
   - [netsh dnsclient](netsh-dnsclient.md)
   - [netsh dump](netsh-dump.md)
   - [netsh exec](netsh-exec.md)
