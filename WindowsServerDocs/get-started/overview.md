@@ -86,7 +86,7 @@ Deploy Windows Server:
 
    Extend your datacenter to Azure with Azure Arc while keeping workloads running locally. Get the best of both worlds - local performance with cloud management and services.
 
-   Keep sensitive workloads on-premises for compliance, performance, or cost reasons while gaining cloud management, monitoring, and services through Azure Arc. Perfect for organizations that need cloud benefits without full cloud commitment or data residency concerns."
+   Keep sensitive workloads on-premises for compliance, performance, or cost reasons while gaining cloud management, monitoring, and services through Azure Arc. Perfect for organizations that need cloud benefits without full cloud commitment or data residency concerns.
 
    **Best for**: Gradual cloud adoption, distributed locations, edge computing scenarios, and using existing investments while gaining cloud capabilities.
 
@@ -122,7 +122,7 @@ For detailed step-by-step guidance on each approach, see [Installation, upgrade,
 
 When installing Windows Server, choose between two options based on how you plan to manage your server:
 
-| Installation Option | Server Core (Recommended) | Server with Desktop Experience |
+| Installation Option | Server Core | Server with Desktop Experience |
 |-------------------|---------------------------|-------------------------------|
 | **Description** | Minimal installation without graphical interface. Managed via PowerShell, SConfig, or remote tools. Offers smaller footprint, reduced attack surface, and better performance. | Full installation with standard Windows desktop and all GUI management tools. Provides familiar interface and local graphical management. |
 | **Best For** | Most server workloads, especially when using remote management | Servers requiring local GUI access or desktop-dependent applications |
