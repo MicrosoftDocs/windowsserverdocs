@@ -4,7 +4,7 @@ title: Windows Server get started documentation # < 60 chars
 summary: Windows Server builds connected app, network, and web service infrastructure from workgroup to data center, bridging on-premises with Azure.  # < 160 chars
 
 metadata:
-  title: Windows Server 
+  title: Windows Server Get Started
   description: Windows Server builds connected app, network, and web service infrastructure from workgroup to data center, bridging on-premises with Azure.
   ms.topic: landing-page 
   author: robinharwood
