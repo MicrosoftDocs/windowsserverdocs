@@ -1066,6 +1066,8 @@
         href: netsh-branchcache.md
       - name: netsh delete
         href: netsh-delete.md
+      - name: netsh dnsclient
+        href: netsh-dnsclient.md
       - name: netsh dump
         href: netsh-dump.md
       - name: netsh exec
