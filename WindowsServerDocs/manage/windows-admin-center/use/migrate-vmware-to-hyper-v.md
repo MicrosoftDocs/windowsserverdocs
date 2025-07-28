@@ -12,7 +12,7 @@ ms.author: mosagie
 > The VM Conversion extension is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The convestion tool is easy and fast to setup, at no cost to customers.
+You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
 In this article, you learn how to install and configure the extension, follow the synchronization and migration workflow, and find answers to common questions.
 
@@ -20,31 +20,31 @@ In this article, you learn how to install and configure the extension, follow th
 
 The **VM Conversion extension** provides the following key features:
 
-- **Bulk migration**: The tool support a batch of 10 virtual machines migration at-a-time. This enables admins to group virtual machines based on:
+- **Bulk migration**: Supports a batch of 10 virtual machines migration at-a-time. This enables admins to group virtual machines based on:
 
-  - **Application dependency** – virtual machines that are part of same application stack or service.
-  - **Cluster dependency** – virtual machines that needs to be distributed on nodes within same cluster.
+  - **Application dependency** – virtual machines that are part of the same application stack or service.
+  - **Cluster dependency** – virtual machines that need to be distributed on nodes within same cluster.
   - **Business boundaries** – virtual machines servicing different business within a company. For example, test machines and pre-production machines.
   - **Rack dependency** – virtual machines running on hosts on a rack.
 
-- **Cluster-aware migration**: The tool supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
+- **Cluster-aware migration**: Supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
 
-- **Static IP configurations**: The tool persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This reduces post-migration tasks and enables seamless network continuity.
+- **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This reduces post-migration tasks and enables seamless network continuity.
 
-- ​**Secure Boot and UEFI template configuration** for enhanced security and compliance.​
+- ​**Secure Boot and UEFI template configuration**: Provides enhanced security and compliance.​
   - Integrated osType across the migration flow for accurate secure boot and UEFI setup.​
   - Secure boot settings are dynamically configured based on OS, either Windows or Linux.​
-  - Added error handling for unsupported OS types and Gen-specific behavior.
+  - Added error handling for unsupported OS types.
 
-- **Localization support** : Improves user experience using this tool in different languages.
+- **Localization support**: Improves user experience using this tool in different languages.
 
 - **Multiple vCenter connections**: Users can add multiple vCenter endpoints in order to switch between vCenters.
 ​
 - **Multi-disk support**: Ensures all attached virtual disks are migrated and synchronized for virtual machines running complex workloads.​
 
-- **Prechecks**: To catch failures early in replication, and migration phases.​
+- **Prechecks**: Catches failures early in replication, and migration phases.​
 
-- **Cleanup**: Automatically removes VMware Tools from Windows VMs post-migration.
+- **Cleanup**: Removes VMware Tools from Windows VMs post-migration.
 
 ![Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
 
@@ -114,11 +114,11 @@ Prechecks are run before the synchronization and migrations steps to see whether
 
 1. No active snapshots exist on the virtual machine.​
 
-1. VMware PowerCLI is installed on the Windows Admin Center Gateway Gateway machine.​
+1. VMware PowerCLI is installed on the Windows Admin Center Gateway machine.​
 
-1. Microsoft Visual C++ Redistributables (versions 2013 and latest) are installed on the Windows Admin Center Gateway Gateway machine.​
+1. Microsoft Visual C++ Redistributable packages (versions 2013 and latest) are installed on the Windows Admin Center Gateway machine.​
 
-1. VDDK package is present at:​ `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the Windows Admin Center Gateway Gateway machine.​
+1. VDDK package is present at:​ `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the Windows Admin Center Gateway machine.​
 
 1. Target disk path for synchronization is valid.​
 
@@ -282,7 +282,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ### Migrated VM disks are created as dynamically expanding (thin) VHDX files rather than fixed-size disks
 
-**Mitigation**: After migration, convert them to fixed to ensure predictable storage usage and prevents overcommitment. Convert to fixed-size disks using the PowerShell command:​
+**Mitigation**: After migration, convert them to fixed-size to ensure predictable storage usage and prevents overcommitment. Convert to fixed-size disks using the PowerShell command:​
 
 ```powershell
 Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fixed​
@@ -292,7 +292,7 @@ Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fi
 
 **Mitigation**: Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure from the Microsoft Download Center.​
 
-​### VMware Tools are not automatically uninstalled for Linux VMs after migration.
+### VMware Tools aren't automatically uninstalled for Linux VMs after migration
 
 **Mitigation**: Uninstall them manually if no longer needed.​
 
@@ -310,8 +310,8 @@ The following features aren't available in this preview, but might be available 
 
 - **Azure Arc enablement** of migrated virtual machines.​
 
-- **Migration support for vSAN-based infrastructures**
+- **Migration support for vSAN-based infrastructures**.
 
 - **Networking enhancements** including VLAN tagging.​
 
-- **Improved bulk migration with queuing support**
+- **Improved bulk migration with queuing support**.
