@@ -3,7 +3,7 @@ title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Previ
 description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
 author: meaghanlewis
 ms.topic: how-to
-ms.date: 07/21/2025
+ms.date: 07/28/2025
 ms.author: mosagie
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
@@ -14,18 +14,37 @@ ms.author: mosagie
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The convestion tool is easy and fast to setup, at no cost to customers.
 
-In this article, you learn how to install and configure the extension, follow the migration workflow, and find answers to common questions.
+In this article, you learn how to install and configure the extension, follow the synchronization and migration workflow, and find answers to common questions.
 
 ## Feature overview
 
-The VM Conversion extension provides the following key features:
+The **VM Conversion extension** provides the following key features:
 
-- **Live migration with minimal downtime**: Uses VMware CBT for seamless, low-disruption migration.
-- **Windows & Linux VM support**: OS-agnostic migration from vCenter to Hyper-V.
-- **No extra setup**: Built into Windows Admin Center—lightweight and agentless.
-- **Smart auto-discovery**: Instantly detects VMs from connected vCenter environments.
-- **Bulk & cluster-aware migration**: Migrate multiple VMs, including to clustered Hyper-V setups.
-- **Post-migration management** Manage VMs directly within Windows Admin Center.
+- **Bulk migration**: The tool support a batch of 10 virtual machines migration at-a-time. This enables admins to group virtual machines based on:
+
+  - **Application dependency** – virtual machines that are part of same application stack or service.
+  - **Cluster dependency** – virtual machines that needs to be distributed on nodes within same cluster.
+  - **Business boundaries** – virtual machines servicing different business within a company. For example, test machines and pre-production machines.
+  - **Rack dependency** – virtual machines running on hosts on a rack.
+
+- **Cluster-aware migration**: The tool supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
+
+- **Static IP configurations**: The tool persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This reduces post-migration tasks and enables seamless network continuity.
+
+- ​**Secure Boot and UEFI template configuration** for enhanced security and compliance.​
+  - Integrated osType across the migration flow for accurate secure boot and UEFI setup.​
+  - Secure boot settings are dynamically configured based on OS, either Windows or Linux.​
+  - Added error handling for unsupported OS types and Gen-specific behavior.
+
+- **Localization support** : Improves user experience using this tool in different languages.
+
+- **Multiple vCenter connections**: Users can add multiple vCenter endpoints in order to switch between vCenters.
+​
+- **Multi-disk support**: Ensures all attached virtual disks are migrated and synchronized for virtual machines running complex workloads.​
+
+- **Prechecks**: To catch failures early in replication, and migration phases.​
+
+- **Cleanup**: Automatically removes VMware Tools from Windows VMs post-migration.
 
 ![Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
 
@@ -44,7 +63,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
 
-- Ensure that the Hyper-V role is installed
+- Ensure that the Hyper-V role is installed. This is typically already enabled.
 
 - Use Windows Admin Center Gateway V2 – version `2410` build number `2.4.12.10`
 
@@ -55,34 +74,6 @@ None.
 ### Windows Server host prerequisites
 
 None.
-
-### Synchronization prechecks
-
-1. No active snapshots exist on the virtual machine.​
-
-1. VMware PowerCLI is installed on the WAC Gateway machine.​
-
-1. Microsoft Visual C++ Redistributables (versions 2013 and latest) are installed on the WAC Gateway machine.​
-
-1. VDDK package is present at:​ `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the WAC Gateway machine.​
-
-1. Target disk path for synchronization is valid.​
-
-1. Destination Hyper-V host has sufficient memory and disk space.​
-
-1. Change Block Tracking (CBT) is supported on the VM.
-
-### Migration prerechecks
-
-1. Destination Hyper-V host has sufficient vCPU availability.​
-
-1. No existing virtual machine with the same name on the destination Hyper-V host.​
-
-1. Hyper-V role is enabled on the target Hyper-V host.​
-
-1. Synchronized .vhdx file exists and has not been accidentally removed.​
-
-1. No active snaapshots on the virtual machine.​
 
 ## Supported vCenter versions
 
@@ -115,6 +106,38 @@ Debian-based operating systems:
 
 *For Linux guests, [Hyper-V drivers must be installed](https://www.microsoft.com/download/details.aspx?id=55106&msockid=15b6b5ffb158644112aea6d8b0e26503) before initiating migration. This is essential to ensure successful post-migration boot.
 
+## Prechecks
+
+Prechecks are run before the synchronization and migrations steps to see whether the virtual machines can be successfully migrated.
+
+### Synchronization prechecks
+
+1. No active snapshots exist on the virtual machine.​
+
+1. VMware PowerCLI is installed on the Windows Admin Center Gateway Gateway machine.​
+
+1. Microsoft Visual C++ Redistributables (versions 2013 and latest) are installed on the Windows Admin Center Gateway Gateway machine.​
+
+1. VDDK package is present at:​ `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the Windows Admin Center Gateway Gateway machine.​
+
+1. Target disk path for synchronization is valid.​
+
+1. Destination Hyper-V host has sufficient memory and disk space.​
+
+1. Change Block Tracking (CBT) is supported on the VM.
+
+### Migration prerechecks
+
+1. Destination Hyper-V host has sufficient vCPU availability.​
+
+1. No existing virtual machine with the same name on the destination Hyper-V host.​
+
+1. Hyper-V role is enabled on the target Hyper-V host.​
+
+1. Synchronized `.vhdx` file exists.​
+
+1. No active snapshots on the virtual machine.​
+
 ## Install the VM Conversion extension in Windows Admin Center
 
 Complete the following steps to install the **VM Conversion** extension.
@@ -131,11 +154,11 @@ Complete the following steps to install the **VM Conversion** extension.
 
 ## Synchronize virtual machines using the VM Conversion extension
 
-Complete the following steps to synchronize VMware virtual machines to Hyper-V in Windows Admin Center.
+Complete the following steps to synchronize VMware virtual machines in Windows Admin Center.
 
 1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
 
-1. Go to the VM migration tool in the left panel under **Extensions** > **VM Conversion**.
+1. Go to the VM Conversion extension in the left panel under **Extensions** > **VM Conversion**.
 
 1. Select **Connect to vCenter**.
 
@@ -199,7 +222,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Can I migrate both Windows and Linux virtual machines?
 
-    Yes—the tool supports migration of both Windows and Linux VMs. For Linux, make sure Hyper-V drivers are installed before migration to ensure a smooth boot on the destination server.
+    Yes, the tool supports migration of both Windows and Linux VMs. For Linux, make sure Hyper-V drivers are installed before migration to ensure a smooth boot on the destination server.
 
 1. Which VMware versions are supported?
 
@@ -207,7 +230,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Does the tool support both Static and DHCP IP addresses?
 
-    Yes. DHCP and Static IP addresses works automatically; no manual action needed. For Static IP configuration of linux vms; Hyper-V drivers should be preinstalled using [Install Linux Integration Services (LIS) on Hyper-V VM](https://poweradm.com/install-linux-integration-services-hyper-v/).
+    Yes, DHCP and Static IP addresses works automatically. For Static IP configuration of linux vms; Hyper-V drivers should be preinstalled using [Install Linux Integration Services (LIS) on Hyper-V VM](https://poweradm.com/install-linux-integration-services-hyper-v/).
 
 1. How does the tool handle VM boot types?
 
@@ -241,7 +264,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Is VMWare to Azure Local migration supported?
 
-    No. Migration to Azure Local isn't supported by this tool. Use Azure Migrate to migrate virtual machines to Azure Local.
+    No, migration to Azure Local isn't supported by this tool. Use Azure Migrate to migrate virtual machines to Azure Local.
 
 1. How is static IP supported?
 
@@ -249,12 +272,46 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Does the tool support virtual machines running on a virtual storage area network (vSAN)?
 
-    The tool doesn't support virtual machines running on vSAN?
+    No, the tool doesn't support virtual machines running on vSAN?
 
 1. Is this tool available in Windows Admin Center on portal?
 
-    No. The conversion tool is only available in Windows Admin Center on-premise.
+    No, the conversion tool is only available in Windows Admin Center on-premise.
 
 ## Known issues
 
+### Migrated VM disks are created as dynamically expanding (thin) VHDX files rather than fixed-size disks
+
+**Mitigation**: After migration, convert them to fixed to ensure predictable storage usage and prevents overcommitment. Convert to fixed-size disks using the PowerShell command:​
+
+```powershell
+Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fixed​
+```
+
+### Hyper-V drivers must be installed on Linux machines before starting migration
+
+**Mitigation**: Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure from the Microsoft Download Center.​
+
+​### VMware Tools are not automatically uninstalled for Linux VMs after migration.
+
+**Mitigation**: Uninstall them manually if no longer needed.​
+
+### BIOS serial number and UUID migration
+
+**Mitigation**: [Update VM BIOS UUID and Serial Number](https://microsoftapc-my.sharepoint.com/:t:/g/personal/pmiddha_microsoft_com/Edpcw1mLospJuiPPMpPNGp8BMxYpWTVdQ_5OEQyfk3mlCw?e=zLOGjj)
+
 ## Future roadmap
+
+The following features aren't available in this preview, but might be available in future releases:
+
+- **Resync support**: The ability to synchronize data between initial and delta replication.
+
+- **Cancel, Pause, and Resume**: options during synchronization.
+
+- **Azure Arc enablement** of migrated virtual machines.​
+
+- **Migration support for vSAN-based infrastructures**
+
+- **Networking enhancements** including VLAN tagging.​
+
+- **Improved bulk migration with queuing support**
