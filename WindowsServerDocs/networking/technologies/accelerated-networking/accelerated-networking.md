@@ -191,7 +191,7 @@ You might encounter the following error messages while using this feature.
 
 ## See also
 
-- [Hyper-V overview](../../../virtualization/hyper-v/hyper-v-overview.md)
+- [Hyper-V overview](../../../virtualization/hyper-v/overview.md)
 
 - [What are Azure Arc-enabled servers?](/azure/azure-arc/servers/overview)
 

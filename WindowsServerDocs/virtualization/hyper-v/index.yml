@@ -1,0 +1,61 @@
+### YamlMime:Landing
+
+title: Hyper-V documentation # < 60 chars
+summary: Hyper-V in Windows Server enables you to run Windows and Linux virtual machines at scale, providing flexibility and maximizing resources. # < 160 chars
+
+metadata:
+  title: Hyper-V documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Hyper-V in Windows Server enables you to run Windows and Linux virtual machines at scale, providing flexibility and maximizing resources. # Required; article description that is displayed in search results. < 160 chars.
+  ms.topic: landing-page # Required
+  author: dknappettmsft #Required; your GitHub user alias, with correct capitalization.
+  ms.author: daknappe #Required; microsoft alias of author; optional team alias.
+  ms.service: windows-server
+  ms.subservice: hyper-v
+  ms.date: 07/24/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card
+  - title: Hyper-V on Windows
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Hyper-V on Windows overview
+            url: overview.md
+      - linkListType: get-started
+        links:
+          - text: Install Hyper-V
+            url: get-started/Install-Hyper-V.md
+          - text: Create a Virtual Machine
+            url: get-started/create-a-virtual-machine-in-hyper-v.md
+
+  # Card
+  - title: Hyper-V on Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Hyper-V overview
+            url: overview.md
+          - text: System requirements for Hyper-V
+            url: host-hardware-requirements.md
+          - text: Supported Windows guest operating systems
+            url: Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md  
+      - linkListType: get-started
+        links:
+          - text: Install the Hyper-V role
+            url: get-started/Install-the-Hyper-V-role-on-Windows-Server.md
+          - text: Hyper-V Virtual Switch
+            url: virtual-switch.md
+          - text: Create a virtual machine
+            url: get-started/create-a-virtual-machine-in-Hyper-V.md
+
+  # Card
+  - title: Use a guarded fabric to provide a secure environment for VMs
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Guarded Fabric and Shielded VMs
+            url: ../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md

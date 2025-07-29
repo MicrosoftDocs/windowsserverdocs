@@ -4,7 +4,7 @@ description: The netsh set command targets local or remote devices to perform ne
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 07/21/2025
+ms.date: 07/29/2025
 ---
 
 # netsh set
@@ -17,7 +17,7 @@ The `netsh set` command allows administrators to specify the target machine for 
 netsh set machine [name=]<string> [user=][[DomainName\]UserName] [pwd=][Password | *]
 ```
 
-### Parameters
+## Parameters
 
 | Parameter | Description |
 |--|--|
