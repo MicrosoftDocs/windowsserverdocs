@@ -564,6 +564,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh lan](netsh-lan.md)
   - [netsh namespace](netsh-namespace.md)
   - [netsh set](netsh-set.md)
+  - [netsh show](netsh-show.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
