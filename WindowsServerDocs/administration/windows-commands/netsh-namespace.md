@@ -4,7 +4,7 @@ description: The netsh namespace command retrieves namespace policies in Windows
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 07/22/2025
+ms.date: 07/29/2025
 ---
 
 # netsh namespace

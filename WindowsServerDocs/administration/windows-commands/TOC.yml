@@ -1055,8 +1055,29 @@
         href: netdom-trust.md
       - name: netdom verify
         href: netdom-verify.md
-    - name: netsh
+    - name: network shell (netsh)
       href: netsh.md
+      items:
+      - name: netsh add
+        href: netsh-add.md
+      - name: netsh advfirewall
+        href: netsh-advfirewall.md
+      - name: netsh branchcache
+        href: netsh-branchcache.md
+      - name: netsh delete
+        href: netsh-delete.md
+      - name: netsh dhcpclient
+        href: netsh-dhcpclient.md
+      - name: netsh dnsclient
+        href: netsh-dnsclient.md
+      - name: netsh dump
+        href: netsh-dump.md
+      - name: netsh exec
+        href: netsh-exec.md
+      - name: netsh lan
+        href: netsh-lan.md
+      - name: netsh namespace
+        href: netsh-namespace.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

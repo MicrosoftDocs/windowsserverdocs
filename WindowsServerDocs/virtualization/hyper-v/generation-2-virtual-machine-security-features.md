@@ -43,7 +43,7 @@ Hyper-V Generation 2 virtual machines offer robust encryption capabilities that 
 
 The virtualized TPM (vTPM) feature represents a significant advancement in VM security architecture. By adding a vTPM to your Generation 2 virtual machine, you enable the guest operating system to use hardware-based security functions similar to those functions available on physical machines. This virtualized security chip allows the guest OS to encrypt the entire virtual machine disk using BitLocker Drive Encryption, creating an extra layer of protection against unauthorized access. The vTPM can also support other security technologies that need a TPM, making it an essential component for enterprise environments that require strict compliance with security standards and regulations.
 
-You can migrate a virtual machine with virtual TPM enabled to any host that runs a supported version of Windows Server or Windows. If you migrate it to another host, you might not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) and [System requirements for Hyper-V on Windows Server](System-requirements-for-Hyper-V-on-Windows.md).
+You can migrate a virtual machine with virtual TPM enabled to any host that runs a supported version of Windows Server or Windows. If you migrate it to another host, you might not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) and [System requirements for Hyper-V on Windows Server](host-hardware-requirements.md).
 
 ## Security Policy in Hyper-V Manager
 
@@ -58,5 +58,5 @@ You can run the shielded virtual machine locally without setting up a Host Guard
 For more information, see the following articles:
 
 - [Security and Assurance in Windows Server](../../security/Security-and-Assurance.yml).
-- [Should I create a generation 1 or 2 virtual machine in Hyper-V?](./plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
+- [Should I create a generation 1 or 2 virtual machine in Hyper-V?](plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 - [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)

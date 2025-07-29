@@ -48,4 +48,4 @@ If the virtual machine needs to use more VLANs, do one of the following:
 
 ## See also
 
-[Hyper-V Virtual Switch](../../hyper-v-virtual-switch/hyper-v-virtual-switch.md)
+[Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md)

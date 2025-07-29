@@ -104,4 +104,4 @@ You may want to use the computer's local resources to:
 
 - [Hyper-V Virtual Machine Connection](/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect)
 
-- [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
+- [Should I create a generation 1 or 2 virtual machine in Hyper-V?](plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)

@@ -199,7 +199,7 @@ items:
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
       - name: Enable DNS Logging and Diagnostics
-        href: dns/dns-logging-and-diagnostics.md 
+        href: dns/dns-logging-and-diagnostics.md
     - name: Tutorials
       items:
       - name: DNS policy
@@ -254,7 +254,7 @@ items:
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
       - name: Migrate DHCP server to Windows Server
-        href: technologies/dhcp/migrate-dhcp-server.md  
+        href: technologies/dhcp/migrate-dhcp-server.md
     - name: DHCP failover
       items:
       - name: DHCP failover overview
@@ -264,11 +264,11 @@ items:
       - name: Migrate existing DHCP failover deployments
         href: technologies/dhcp/migrate-existing-dhcp-failover.md
       - name: Migrate to DHCP failover
-        href: technologies/dhcp/migrate-to-dhcp-failover.md   
+        href: technologies/dhcp/migrate-to-dhcp-failover.md
       - name: Replicate DHCP failover settings
-        href: technologies/dhcp/replicate-dhcp-failover.md  
+        href: technologies/dhcp/replicate-dhcp-failover.md
       - name: DHCP failover events
-        href: technologies/dhcp/dhcp-failover-events.md  
+        href: technologies/dhcp/dhcp-failover-events.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
@@ -277,7 +277,7 @@ items:
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
       - name: DHCP server events
-        href: technologies/dhcp/dhcp-server-events.md  
+        href: technologies/dhcp/dhcp-server-events.md
   - name: Edge networking
     items:
     - name: Network ATC
@@ -455,7 +455,7 @@ items:
     - name: Example of Go generated code
       href: technologies/hcn/example-go.md
   - name: Hyper-V Virtual Switch
-    href: ../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md
+    href: ../virtualization/hyper-v/virtual-switch.md
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:
@@ -607,12 +607,7 @@ items:
       - name: Manage NPS templates
         href: technologies/nps/nps-manage-templates.md
   - name: Network Shell (Netsh)
-    href: technologies/netsh/netsh.md
     items:
-    - name: Netsh command syntax, contexts, and formatting
-      href: technologies/netsh/netsh-contexts.md
-    - name: Network Shell (Netsh) example batch file
-      href: technologies/netsh/netsh-wins.md
     - name: Netsh bridge
       href: technologies/netsh/netsh-bridge.md
     - name: Netsh http commands
@@ -688,5 +683,5 @@ items:
         href: windows-time-service/How-the-Windows-Time-Service-Works.md
       - name: Windows Time service tools and settings
         href: windows-time-service/Windows-Time-Service-Tools-and-Settings.md
-  - name: Wireless networking 
+  - name: Wireless networking
     href: technologies/wlan/wireless-networking.md

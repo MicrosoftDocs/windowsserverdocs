@@ -16,7 +16,7 @@ This article shows you how to create and configure your virtual switch using Hyp
 :::zone pivot="windows-server"
 
 When you first install the Hyper-V role on Windows Server, you can optionally create a virtual switch at the same time. To learn more about virtual switches, see
-[Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+[Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md).
 
 For more information about how you can set up your networking infrastructure with Windows Server, review the [Networking](../../../networking/index.yml) documentation.
 
