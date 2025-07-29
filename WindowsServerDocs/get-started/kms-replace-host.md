@@ -4,7 +4,7 @@ description: Learn how to replace your Key Management Services (KMS) host in Win
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 07/17/2025
+ms.date: 07/29/2025
 ---
 
 # Replace a KMS host
@@ -13,9 +13,9 @@ This article outlines the steps and best practices for migrating the Key Managem
 
 Before proceeding with your installation and licensing tasks, review the following details regarding your new KMS host:
 
-- Ensure you have access to your new KMS host key for Windows and Office through the Microsoft 365 Admin Center. KMS host keys have a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
+- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office which are obtained through the Microsoft 365 Admin Center. The CSVLK have a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
 
-- If you're unable to find your KMS host key, [contact support](https://learn.microsoft.com/licensing/contact-us) for licensing assistance.
+- If you're unable to find your CSVLK, [contact support](https://learn.microsoft.com/licensing/contact-us) for licensing assistance.
 
 > [!NOTE]
 >
@@ -38,12 +38,12 @@ Before proceeding with your installation and licensing tasks, review the followi
   - Domain Admins
   - Enterprise Admins
 
-- Licenses must be valid and accessible from your organization's licensing portal or the Microsoft 365 Admin Center. Ensure you have the appropriate KMS host keys for the products you're activating, such as:
+- The CSVLK must be valid and accessible from your organization's licensing portal or the Microsoft 365 Admin Center. Ensure you have the appropriate CSVLK for the products you're activating, such as:
 
-  - Microsoft Windows OS license key
-  - Microsoft Office license key
+  - Microsoft Windows OS CSVLK
+  - Microsoft Office CSVLK
 
-- Your OS must have the latest Windows updates installed before configuring your device as a KMS host.
+- Your OS must have the latest Windows updates installed before configuring your device as a KMS host. To learn more, see [KMS host required updates](/windows-server/get-started/kms-activation-planning#kms-host-required-updates).
 
 ## Verify existing KMS hosts
 
@@ -93,7 +93,7 @@ Resolve-DnsName -Name _vlmcs._tcp.mydomain.com -Type SRV -Server 8.8.8.8
 
 ---
 
-If you discover unauthorized KMS hosts, you can revert them to KMS clients by running the following command and then restart the device. Replace `<GVLK>` with your Generic Volume License Key (GVLK):
+If you discover unauthorized KMS hosts, you can revert them to KMS clients by running the following command in an elevated window and then restart the device. Replace the Generic Volume License Key ([GVLK](/windows-server/get-started/kms-client-activation-keys#generic-volume-license-keys)) with your GVLK:
 
 ```
 slmgr.vbs /ipk <GVLK>
@@ -111,7 +111,7 @@ cscript %windir%\system32\slmgr.vbs /dlv All
 cscript $env:windir\system32\slmgr.vbs /dlv All
 ```
 
-Check the output to determine whether the KMS host is processing activation requests for the Windows OS, Microsoft Office, or both. The partial product keys displayed can help you match these KMS host keys (CSVLK) with your records. Additionally, review the KMS Host Event log to identify which clients are sending activation requests to this KMS host.
+Check the output to determine whether the KMS host is processing activation requests for the Windows OS, Microsoft Office, or both. The partial product keys displayed can help you match these KMS host keys (CSVLK) with your records. Additionally, review the [KMS Host Event log](/windows-server/get-started/activation-troubleshoot-kms-general#useful-kms-host-events) to identify which clients are sending activation requests to this KMS host.
 
 ## Prepare the KMS host
 
@@ -119,7 +119,7 @@ Before configuring your environment as a KMS host, start with a clean installati
 
 # [Windows OS KMS host](#tab/winoshost)
 
-After preparing the host OS, the next step is to configure it to serve as a KMS host.
+After preparing the host OS, the next step is to configure it to serve as a KMS host. See [Create a Key Management Services (KMS) activation host](/windows-server/get-started/kms-create-host).
 
 # [Microsoft Office KMS host](#tab/officehost)
 
@@ -177,7 +177,7 @@ After configuring the KMS host for Windows OS and Microsoft Office, it might aut
 After registering the new KMS host in DNS, you can remove the old KMS host from DNS. Client devices will begin sending activation requests to the new KMS host, though it may take some time for the activation count to reach the required minimum thresholds. To confirm successful migration, review the event log on the new KMS host (**Event Viewer** > **Application and Services Log** > **Key Management Service**). You can also run the following command and review the output:
 
 ```
-slmgr.vbs /dlv.
+slmgr.vbs /dlv
 ```
 
 Once client devices are sending activation requests to the new host, you can safely remove the old KMS host from DNS.
