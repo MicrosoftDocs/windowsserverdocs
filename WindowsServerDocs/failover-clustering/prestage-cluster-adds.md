@@ -34,12 +34,9 @@ As a best practice, create an OU for the cluster objects. If an OU already exist
 
 1. On a computer with the AD DS Tools from Remote Server Administration Tools, or on a domain controller, open **Active Directory Users and Computers**. To do this on a server, start Server Manager, then on the **Tools** menu, select **Active Directory Users and Computers**.
 
-
 1. To create an OU for the cluster computer objects, right-click the domain name or an existing OU, point to **New**, then select **Organizational Unit**. In the **Name** box, enter the name of the OU, then select **OK**.
 
-
 1. In the console tree, right-click the OU where you want to create the CNO, point to **New**, then select **Computer**.
-
 
 1. In the **Computer name** box, enter the name that will be used for the failover cluster, and then select **OK**.
 
