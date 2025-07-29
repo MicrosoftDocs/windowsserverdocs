@@ -193,6 +193,9 @@ To modify TrustedHosts using PowerShell, run the following commands in an elevat
    Set-Item WSMan:\localhost\Client\TrustedHosts -Value $oldTrustedHosts
    ```
 
+### Can I use Windows Admin Center with workgroup clusters?
+At this time we do not recommend using Windows Admin Center to manage workgroup clusters. As an alternative, PowerShell can be used for workgroup cluster management.
+
 ## I previously had Windows Admin Center installed, and now nothing else can use the same TCP/IP port
 
 Run these two commands in an elevated command shell window:
