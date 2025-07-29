@@ -4,7 +4,7 @@ description: The netsh wcn command configures, manages, and troubleshoots Wirele
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 07/22/2025
+ms.date: 07/29/2025
 ---
 
 # netsh wcn
@@ -15,11 +15,11 @@ The `netsh wcn` command allows administrators to configure and manage Wireless C
 
 ```
 netsh wcn [dump] [enroll] [query] [help] [?]
-netsh wcn enroll [enrolleeUUID =] <string> [password =] <string> [profile =] <string> [interface =] <string> [type =] (auto | ethernet | 802dot11)
-netsh wcn query [SSID =] <string> [interface =] <string>
+netsh wcn enroll [enrolleeUUID=] <string> [password=] <string> [profile=] <string> [interface=] <string> [type=] (auto | ethernet | 802dot11)
+netsh wcn query [SSID=] <string> [interface=] <string>
 ```
 
-### Parameters
+## Parameters
 
 | Parameter | Description |
 |--|--|

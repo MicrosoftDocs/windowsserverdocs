@@ -70,7 +70,7 @@ The following screenshot shows the options that appear when you create a forest:
   - It must use allowed Domain Name System (DNS) domain naming conventions. For more information about DNS domain naming conventions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou).
   - You can specify an internationalized domain name (IDN).
 
-- The name of any Active Directory forest that you create must be different than your external DNS name. For example, if your internet DNS URL is `https://example-domain.com`, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, such as `corp.example-domain.com`.
+- The name of any Active Directory forest that you create must be different from your external DNS name. For example, if your internet DNS URL is `https://example-domain.com`, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, for example, `corp.example-domain.com`.
 
 - You must be a member of Administrators group on the server that you want to create a forest on.
 
@@ -103,7 +103,7 @@ The following screenshot shows you the options that appear when you add a new do
 
 - For **Domain**, select **Select** to go to the domain, or enter a valid domain name.
 
-- If needed, Server Manager prompts you for valid credentials. Installing an additional domain controller requires membership in the Domain Admins group.
+- As needed, Server Manager prompts you for valid credentials. Installing an additional domain controller requires membership in the Domain Admins group.
 
   Also, installing the first domain controller that runs Windows Server in a forest requires credentials that include group memberships in both the Enterprise Admins and Schema Admins groups. The Active Directory Domain Services Configuration Wizard prompts you later if your current credentials don't have adequate permissions or group memberships.
 
@@ -121,7 +121,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
 - The default values of the forest and domain functional levels depend on your Windows Server version.
 
-  Starting with the Windows Server 2012 version, the domain functional level offers the following settings in the key distribution center (KDC) administrative template policy **KDC support for claims, compound authentication, and Kerberos armoring**:
+  Starting with Windows Server 2012, the domain functional level offers the following settings in the key distribution center (KDC) administrative template policy **KDC support for claims, compound authentication, and Kerberos armoring**:
 
   - Always provide claims
   - Fail unarmored authentication requests
@@ -136,7 +136,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
 - When you create a forest, the **Domain Name System (DNS) server** option is selected by default. The first domain controller in the forest must be a global catalog server, and it can't be a read-only domain controller (RODC).
 
-- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a non-blank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
+- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a nonblank password. Always choose a strong, complex password or, preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
 
 For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
 
@@ -194,7 +194,7 @@ You can have the Active Directory Domain Services Configuration Wizard create th
 
 Alternatively, you can create these DNS delegation records before you install the DNS server role. To create a zone delegation, open **DNS Manager**, right-click the parent domain, and then select **New Delegation**. Follow the steps in the New Delegation Wizard to create the delegation.
 
-The installation process tries to create the delegation to ensure that computers in other domains can resolve DNS queries for hosts, including domain controllers and member computers, in the DNS subdomain. The delegation records can be automatically created only on Microsoft DNS servers. If the parent DNS domain zone resides on third-party DNS servers such as Berkeley Internet Name Domain (BIND) servers, a warning about the failure to create DNS delegation records appears on the **Prerequisites Check** page. For more information about the warning, see [Known Issues for installing and removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
+The installation process tries to create the delegation to ensure that computers in other domains can resolve DNS queries for hosts, including domain controllers and member computers, in the DNS subdomain. The delegation records can be automatically created only on Microsoft DNS servers. If the parent DNS domain zone resides on non-Microsoft DNS servers such as Berkeley Internet Name Domain (BIND) servers, a warning about the failure to create DNS delegation records appears on the **Prerequisites Check** page. For more information about the warning, see [Known Issues for installing and removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
 
 Delegations between the parent domain and the subdomain being promoted can be created and validated before or after the installation. There's no reason to delay the installation of a new domain controller because you can't create or update the DNS delegation.
 
@@ -313,7 +313,7 @@ You can also restart the target server from this page after the wizard finishes.
 
 In some cases, the target server fails to restart. If the wizard finishes on a target server that isn't joined to the domain before the installation, the system state of the target server can make the server unreachable on the network. The system state can also prevent you from having permissions to manage the remote server.
 
-If the target server fails to restart in these cases, you must manually restart it. You can't use tools, such as `shutdown.exe` or Windows PowerShell, to restart it. You can use Remote Desktop Services to sign in and remotely shut down the target server.
+If the target server fails to restart in these cases, you must manually restart it. You can't use tools like `shutdown.exe` or Windows PowerShell to restart it. You can use Remote Desktop Services to sign in and remotely shut down the target server.
 
 ## Pages when demoting a domain controller
 
@@ -330,7 +330,7 @@ On this page, you configure demotion options. The following credentials are need
 - Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.
 
   > [!IMPORTANT]
-  > Don't select the **Force the removal of this domain controller** option unless the domain controller can't contact other domain controllers and there's *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. Also, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft support cases for AD DS, Microsoft Exchange, SQL Server, and other software. If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For instructions, see [Clean up server metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)).
+  > Don't select the **Force the removal of this domain controller** option unless the domain controller can't contact other domain controllers and there's *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. Also, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft support cases for AD DS, Microsoft Exchange, SQL Server, and other software. If you forcibly demote a domain controller, you must manually perform metadata cleanup immediately. For instructions, see [Clean up server metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)).
 
 - Demoting the last domain controller in a domain requires Enterprise Admins group membership, because this action removes the domain itself. If the domain is the last one in the forest, this action also removes the forest. Server Manager informs you if the current domain controller is the last domain controller in the domain. Select **Last domain controller in the domain** to confirm the domain controller is the last domain controller in the domain.
 
