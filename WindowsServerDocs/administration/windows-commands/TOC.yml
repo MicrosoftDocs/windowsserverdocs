@@ -1076,6 +1076,8 @@
         href: netsh-exec.md
       - name: netsh lan
         href: netsh-lan.md
+      - name: netsh namespace
+        href: netsh-namespace.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

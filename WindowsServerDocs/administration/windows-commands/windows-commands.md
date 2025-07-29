@@ -562,6 +562,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh dump](netsh-dump.md)
   - [netsh exec](netsh-exec.md)
   - [netsh lan](netsh-lan.md)
+  - [netsh namespace](netsh-namespace.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
