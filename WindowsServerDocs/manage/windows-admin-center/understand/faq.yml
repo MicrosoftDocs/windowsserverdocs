@@ -21,7 +21,7 @@ sections:
       - question: |
           What is Windows Admin Center?
         answer: |
-          Windows Admin Center is a lightweight, browser-based GUI platform and toolset for IT Admins to manage Windows Server and Windows 10. It's the evolution of familiar in-box administrative tools, such as Server Manager and Microsoft Management Console (MMC) into a modernized, simplified, integrated, and secure experience.
+          Windows Admin Center is a lightweight, browser-based GUI platform and toolset for IT Admins to manage Windows Server and Windows client. It's the evolution of familiar in-box administrative tools, such as Server Manager and Microsoft Management Console (MMC) into a modernized, simplified, integrated, and secure experience.
 
       - question: |
           Can I use Windows Admin Center in production environments?
@@ -33,12 +33,12 @@ sections:
       - question: |
           How much does it cost to use Windows Admin Center?
         answer: |
-          Windows Admin Center has no additional cost beyond Windows. You can use Windows Admin Center (available as a separate download) with valid licenses of Windows Server or Windows 10 at no additional cost - it's licensed under a Windows Supplemental EULA.
+          Windows Admin Center has no additional cost beyond Windows. You can use Windows Admin Center (available as a separate download) with valid licenses of Windows Server or Windows client at no additional cost - it's licensed under a Windows Supplemental EULA.
 
       - question: |
           What versions of Windows Server can I manage with Windows Admin Center?
         answer: |
-          Windows Admin Center is optimized for Windows Server 2019 to enable key themes in the Windows Server 2019 release: hybrid cloud scenarios and hyper-converged infrastructure management in particular. Although Windows Admin Center will work best with Windows Server 2019, it supports managing a variety of versions that customers already use: Windows Server 2012 and newer are fully supported. There is also limited functionality for managing Windows Server 2008 R2.
+          Windows Admin Center is optimized for Windows Server 2025. Although Windows Admin Center will work best with Windows Server 2025, it supports managing a variety of versions that customers already use: Windows Server 2016 and newer are fully supported. There is also limited functionality for managing Windows Server 2012.
           
       - question: |
           Is Windows Admin Center a complete replacement for all traditional in-box and RSAT tools?
@@ -77,7 +77,7 @@ sections:
       - question: |
           Can Windows Admin Center be used to manage the free Microsoft Hyper-V Server?
         answer: |
-          Yes. Windows Admin Center can be used to manage Microsoft Hyper-V Server 2016 and Microsoft Hyper-V Server 2012 R2.
+          Yes. Windows Admin Center can be used to manage Microsoft Hyper-V Server 2019 and Microsoft Hyper-V Server 2016.
 
       - question: |
           Can I deploy Windows Admin Center on a Windows 10 computer?
@@ -102,7 +102,7 @@ sections:
       - question: |
           Which web browsers are supported by Windows Admin Center?
         answer: |
-          The latest versions of Microsoft Edge (Windows 10, version 1709 or later), Google Chrome, and [Microsoft Edge Insider](https://microsoftedgeinsider.com) are tested and supported on Windows 10. [View browser specific known issues](../support/known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
+          The latest versions of Microsoft Edge (Windows 10, version 1709 or later), Google Chrome, and [Microsoft Edge Insider](https://microsoftedgeinsider.com) are tested and supported on Windows 10 and later. [View browser specific known issues](../support/known-issues.md#browser-specific-issues). Other modern web browsers or other platforms are not currently part of our test matrix and are therefore not *officially* supported.
           
       - question: |
           How does Windows Admin Center handle security?
