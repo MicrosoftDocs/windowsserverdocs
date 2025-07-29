@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/09/2025
+ms.date: 07/29/2025
 ---
 
 # Windows Commands
@@ -565,6 +565,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh namespace](netsh-namespace.md)
   - [netsh set](netsh-set.md)
   - [netsh show](netsh-show.md)
+  - [netsh wcn](netsh-wcn.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
