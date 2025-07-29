@@ -299,19 +299,3 @@ Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fi
 ### BIOS serial number and UUID migration
 
 **Mitigation**: [Update VM BIOS UUID and Serial Number](https://microsoftapc-my.sharepoint.com/:t:/g/personal/pmiddha_microsoft_com/Edpcw1mLospJuiPPMpPNGp8BMxYpWTVdQ_5OEQyfk3mlCw?e=zLOGjj)
-
-## Future roadmap
-
-The following features aren't available in this preview, but might be available in future releases:
-
-- **Resync support**: The ability to synchronize data between initial and delta replication.
-
-- **Cancel, Pause, and Resume**: options during synchronization.
-
-- **Azure Arc enablement** of migrated virtual machines.​
-
-- **Migration support for vSAN-based infrastructures**.
-
-- **Networking enhancements** including VLAN tagging.​
-
-- **Improved bulk migration with queuing support**.
