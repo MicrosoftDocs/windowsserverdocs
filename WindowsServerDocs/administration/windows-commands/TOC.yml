@@ -1080,6 +1080,10 @@
         href: netsh-namespace.md
       - name: netsh set
         href: netsh-set.md
+      - name: netsh show
+        href: netsh-show.md
+      - name: netsh wcn
+        href: netsh-wcn.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin
