@@ -59,7 +59,7 @@ For more secure environments:
 
 - **Use hardware with a Trusted Platform Module (TPM) 2.0 chip to set up a guarded fabric.**
 
-    For more information, see [System requirements for Hyper-V on Windows Server 2016](../system-requirements-for-hyper-v-on-windows.md).
+    For more information, see [System requirements for Hyper-V on Windows Server 2016](../host-hardware-requirements.md).
 
 ## Secure virtual machines
 - **Create generation 2 virtual machines for supported guest operating systems.**

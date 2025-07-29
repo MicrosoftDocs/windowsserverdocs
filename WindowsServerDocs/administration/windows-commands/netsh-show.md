@@ -1,10 +1,10 @@
 ---
 title: netsh show
-description: The netsh show command displays the alias and DLL helper modules available within the netsh context in Windows.
+description: The netsh show command displays the alias and DLL helper modules available within the netsh in Windows.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 07/22/2025
+ms.date: 07/29/2025
 ---
 
 # netsh show
@@ -26,13 +26,13 @@ netsh show <alias> <helper>
 
 ## Examples
 
-To see the aliases used within your `netsh` environment, run the following command:
+To see the aliases used within your environment, run the following command:
 
 ```cmd
 netsh show alias
 ```
 
-To see a list of the DLL helper files used within your `netsh` environment, run the following command:
+To see a list of the DLL helper files used within your environment, run the following command:
 
 ```cmd
 netsh show helper

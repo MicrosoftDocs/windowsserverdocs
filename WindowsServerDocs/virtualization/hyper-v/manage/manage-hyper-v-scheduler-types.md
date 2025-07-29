@@ -33,7 +33,7 @@ For the purposes of this article, the descriptions of SMT and how it's used by H
 
 ### Understand how Hyper-V virtualizes processors
 
-Before you consider hypervisor scheduler types, you should understand Hyper-V architecture. For a detailed summary of how this architecture works, see [Hyper-V Technology overview](../hyper-v-overview.md). For now, keep the following concepts in mind:
+Before you consider hypervisor scheduler types, you should understand Hyper-V architecture. For a detailed summary of how this architecture works, see [Hyper-V Technology overview](../overview.md). For now, keep the following concepts in mind:
 
 - Hyper-V creates and manages VM partitions, allocating and sharing compute resources across them, under control of the hypervisor. Partitions provide strong isolation boundaries between all guest VMs and between guest VMs and the root partition.
 

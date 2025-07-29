@@ -10,7 +10,9 @@
   - name: Configure Secured-core Server
     href: configure-secured-core-server.md
   - name: Kernel Mode Hardware-enforced Stack Protection
-    href: kernel-mode-hardware-stack-protection.md  
+    href: kernel-mode-hardware-stack-protection.md
+  - name: Authority Information Access (AIA) retrieval
+    href: authority-information-access-retrieval.md
   - name: OSConfig
     items:
     - name: OSConfig overview
@@ -172,7 +174,7 @@
          href: /windows/security/identity-protection/credential-guard/how-it-works?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
        - name: Configure Credential Guard
          href: /windows/security/identity-protection/credential-guard/configure?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
-       - name: Additional mitigations 
+       - name: Additional mitigations
          href: /windows/security/identity-protection/credential-guard/additional-mitigations?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
        - name: Considerations and known issues
          href: /windows/security/identity-protection/credential-guard/considerations-known-issues?toc=/windows-server/security/toc.json&bc=/windows-server/breadcrumbs/toc.json
