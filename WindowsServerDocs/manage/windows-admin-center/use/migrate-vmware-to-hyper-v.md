@@ -65,7 +65,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Ensure that the Hyper-V role is installed. This is typically already enabled.
 
-- Use Windows Admin Center Gateway V2 – version `2410` build number `2.4.12.10`
+- [Use Windows Admin Center Gateway V2](https://aka.ms/downloadWAC) – version `2410` build number `2.4.12.10`
 
 ### vCenter or ESXI host prerequisites
 
@@ -94,7 +94,7 @@ Windows operating systems:
 
 RHEL-based operating systems:
 
-- Alma Linux*
+- Alma Linux
 - CentOS
 - Red Hat Linux 9.0
 
@@ -104,7 +104,7 @@ Debian-based operating systems:
 - Ubuntu 20.04, 24.04
 - Debian 11, 12
 
-*For Linux guests, [Hyper-V drivers must be installed](https://www.microsoft.com/download/details.aspx?id=55106&msockid=15b6b5ffb158644112aea6d8b0e26503) before initiating migration. This is essential to ensure successful post-migration boot.
+For Linux guests, [Hyper-V drivers must be installed](https://www.microsoft.com/download/details.aspx?id=55106) before initiating migration. This is essential to ensure successful post-migration boot.
 
 ## Prechecks
 
@@ -298,4 +298,4 @@ Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fi
 
 ### BIOS serial number and UUID migration
 
-**Mitigation**: [Update VM BIOS UUID and Serial Number](https://microsoftapc-my.sharepoint.com/:t:/g/personal/pmiddha_microsoft_com/Edpcw1mLospJuiPPMpPNGp8BMxYpWTVdQ_5OEQyfk3mlCw?e=zLOGjj)
+**Mitigation**: Update VM BIOS UUID and Serial Number.
