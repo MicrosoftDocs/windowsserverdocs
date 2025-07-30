@@ -4,7 +4,7 @@ description: Learn how to replace your Key Management Services (KMS) host in Win
 ms.topic: how-to
 author: xelu86
 ms.author: alalve
-ms.date: 07/29/2025
+ms.date: 07/30/2025
 ---
 
 # Replace a KMS host
@@ -13,18 +13,13 @@ This article outlines the steps and best practices for migrating the Key Managem
 
 Before proceeding with your installation and licensing tasks, review the following details regarding your new KMS host:
 
-- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office which are obtained through the Microsoft 365 Admin Center. The CSVLK have a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
+- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office, which are obtained through the Microsoft 365 Admin Center. The CSVLK has a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
 
 - If you're unable to find your CSVLK, [contact support](https://learn.microsoft.com/licensing/contact-us) for licensing assistance.
 
-> [!NOTE]
->
-> - **KMS Count client activation threshold**: KMS requires at least **25** unique activation requests from the client or server OS to begin activating the client OS.
-> - **KMS Count server activation threshold**: KMS requires at least **5** unique activation requests from the server or client OS to begin activating the server OS.
-
 ## Prerequisites
 
-- The **Volume Activation Services** role must be installed on the device that will act as the new KMS host. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
+- The **Volume Activation Services** role must be installed on the device that acts as the new KMS host. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
   *Alternatively*, you can run the following PowerShell command:
 
@@ -119,7 +114,7 @@ Before configuring your environment as a KMS host, start with a clean installati
 
 # [Windows OS KMS host](#tab/winoshost)
 
-After preparing the host OS, the next step is to configure it to serve as a KMS host. See [Create a Key Management Services (KMS) activation host](/windows-server/get-started/kms-create-host).
+After you prepare the host OS, the next step is to configure it to serve as a KMS host. See [Create a Key Management Services (KMS) activation host](/windows-server/get-started/kms-create-host).
 
 # [Microsoft Office KMS host](#tab/officehost)
 
@@ -172,9 +167,16 @@ When the connection succeeds, the entry **TcpTestSucceeded** equals **True**, wh
 
 ## Register a KMS host
 
-After configuring the KMS host for Windows OS and Microsoft Office, it might automatically register with DNS if your domain permissions allow. If manual registration is required, follow the steps in [Manually create DNS records](/windows-server/get-started/kms-create-host#manually-create-dns-records).
+After you configure the KMS host for Windows OS and Microsoft Office, it might automatically register with DNS if your domain permissions allow. If manual registration is required, follow the steps in [Manually create DNS records](/windows-server/get-started/kms-create-host#manually-create-dns-records).
 
-After registering the new KMS host in DNS, you can remove the old KMS host from DNS. Client devices will begin sending activation requests to the new KMS host, though it may take some time for the activation count to reach the required minimum thresholds. To confirm successful migration, review the event log on the new KMS host (**Event Viewer** > **Application and Services Log** > **Key Management Service**). You can also run the following command and review the output:
+After registering the new KMS host in DNS, you can remove the old KMS host from DNS. Client devices begin sending activation requests to the new KMS host, though it might take some time for the activation count to reach the required minimum thresholds.
+
+> [!NOTE]
+>
+> - **KMS Count client activation threshold**: KMS requires at least **25** unique activation requests from the client or server OS to begin activating the client OS.
+> - **KMS Count server activation threshold**: KMS requires at least **5** unique activation requests from the server or client OS to begin activating the server OS.
+
+To confirm successful migration, review the *Event Log* on the new KMS host (**Event Viewer** > **Application and Services Log** > **Key Management Service**). You can also run the following command and review the output:
 
 ```
 slmgr.vbs /dlv
@@ -184,7 +186,8 @@ Once client devices are sending activation requests to the new host, you can saf
 
 > [!NOTE]
 >
-> - It's advisable to completely shut down and reimage the old KMS host to ensure that client devices transition to the new KMS host.
+> - To remove the KMS host functionality from old KMS host, install your GVLK and restart your device.
+> - Best practice is to completely shut down the old KMS host to ensure that client devices transition to the new KMS host.
 > - If a device was configured for a specific KMS host using `slmgr.vbs /skms`, executing `slmgr.vbs /ckms` clears that configuration and allows the devices to automatically detect the new KMS host.
 
 ## Troubleshoot KMS activation
