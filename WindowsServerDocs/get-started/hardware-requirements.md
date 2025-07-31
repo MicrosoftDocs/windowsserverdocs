@@ -1,10 +1,10 @@
 ---
-title: Hardware requirements for Windows Server
+title: Hardware Requirements for Windows Server
 description: Review the minimum hardware requirements for CPU, memory (RAM), storage, and network needed to install and run Windows Server.
-ms.topic: article
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 06/12/2025
+ms.date: 07/02/2025
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 zone_pivot_groups: windows-os-version
 ---
@@ -26,7 +26,7 @@ Processor performance depends not only on the clock frequency of the processor, 
 
 **Minimum**:
 
-- 1.4 GHz 64-bit processor
+- 1.4-GHz 64-bit processor
 
 - Compatible with x64 instruction set
 
@@ -61,11 +61,11 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
-> Attempting to install Windows Server in a virtual machine configured with the minimum supported hardware parameters (1 processor core and 1024 MB RAM) results in a failed installation.
+> Attempting to install Windows Server on a virtual machine configured with the minimum supported hardware parameters (1 processor core and 1,024 MB RAM) results in a failed installation.
 >
 > To prevent this issue, perform one of the following actions:
 >
-> - Allocate 1280 MB RAM or more to the virtual machine on which you intend to install this release. Once setup is complete, you can change the allocation as little as 1024 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with addition languages and updates, you might need to allocate more than 1280 MB RAM in order to complete the installation.
+> - Allocate 1,280 MB RAM or more to the virtual machine on which you intend to install this release. After setup is complete, you can change the allocation to as little as 1,024 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with additional languages and updates, you might need to allocate more than 1,280 MB RAM in order to complete the installation.
 >
 > - Interrupt the boot process of this release on the virtual machine with the keyboard combination `SHIFT+F10`. In the command prompt that opens, use `diskpart.exe` to create and format an installation partition. Run `wpeutil createpagefile /path=C:\pf.sys` (assuming the installation partition you created was C:\\). Then close the command prompt and proceed with the installation.
 
@@ -80,11 +80,11 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 - ECC (Error Correcting Code) type or similar technology for physical host deployments
 
 > [!IMPORTANT]
-> Attempting to install Windows Server in a virtual machine configured with the minimum supported hardware parameters (1 processor core and 512 MB RAM) results in a failed installation.
+> Attempting to install Windows Server on a virtual machine configured with the minimum supported hardware parameters (1 processor core and 512 MB RAM) results in a failed installation.
 >
 > To prevent this issue, perform one of the following actions:
 >
-> - Allocate 800 MB RAM or more to the virtual machine on which you intend to install this release. Once setup is complete, you can change the allocation as little as 800 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with addition languages and updates, you might need to allocate more than 800 MB RAM in order to complete the installation.
+> - Allocate 800 MB RAM or more to the virtual machine on which you intend to install this release. After setup is complete, you can change the allocation to as little as 800 MB RAM, depending on the actual server configuration. If you've modified the boot image for the setup with additional languages and updates, you might need to allocate more than 800 MB RAM in order to complete the installation.
 >
 > - Interrupt the boot process of this release on the virtual machine with the keyboard combination `SHIFT+F10`. In the command prompt that opens, use `diskpart.exe` to create and format an installation partition. Run `wpeutil createpagefile /path=C:\pf.sys` (assuming the installation partition you created was C:\\). Then close the command prompt and proceed with the installation.
 
@@ -92,7 +92,7 @@ The following are the estimated Random Access Memory (RAM) requirements for this
 
 # [Storage](#tab/storage)
 
-Computers that run Windows Server must include a storage adapter that is compliant with the PCI Express architecture specification. Servers classified as hard disk drives must not use Parallel Advanced Technology Attachment (PATA) for persistent storage devices. Windows Server also doesn't allow PATA, Advanced Technology Attachment (ATA), Integrated Drive Electronics (IDE), and Enhanced Integrated Drive Electronic (EIDE) for boot, page, or data drives.
+Computers that run Windows Server must include a storage adapter that's compliant with the PCI Express architecture specification. Servers classified as hard disk drives must not use Parallel Advanced Technology Attachment (PATA) for persistent storage devices. Windows Server also doesn't allow PATA, Advanced Technology Attachment (ATA), Integrated Drive Electronics (IDE), and Enhanced Integrated Drive Electronic (EIDE) for boot, page, or data drives.
 
 The following are the estimated **minimum** disk space requirements for the system partition.
 
@@ -106,7 +106,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 > The system partition needs extra space for any of the following circumstances:
 >
 > - If you install the system over a network
-> - Computers with more than 16 GB of RAM requires more disk space for paging, hibernation, and dump files
+> - Computers with more than 16 GB of RAM require more disk space for paging, hibernation, and dump files
 
 # [Network](#tab/network)
 
@@ -114,13 +114,13 @@ Network adapters used should include these features.
 
 **Minimum**:
 
-- An Ethernet adapter that can achieve a throughput of at least 1 gigabit per second
+- An Ethernet adapter that can achieve a throughput of at least 1 gigabit per second.
 
-- Compliant with the PCI Express architecture specification
+- Compliant with the PCI Express architecture specification.
 
 A network adapter that supports network debugging (KDNet) is useful, but not a minimum requirement.
 
-A network adapter that supports the Pre-boot Execution Environment (PXE) is useful, but not a minimum requirement.
+A network adapter that supports the Preboot Execution Environment (PXE) is useful, but not a minimum requirement.
 
 ---
 
@@ -145,25 +145,25 @@ Secured-core is a set of integrated hardware, firmware, driver, and operating sy
 
 ## Other requirements
 
-There are other hardware requirements to consider depending on your scenario:
+There are other hardware requirements to consider, depending on your scenario:
 
 - DVD drive (if you intend to install the OS from DVD media)
 
-The following items are only required for certain features:
+The following items are required only for certain features:
 
-- UEFI 2.3.1c-based system and firmware that supports secure boot
+- UEFI 2.3.1c-based system and firmware that supports secure boot.
 
-- Trusted Platform Module (TPM)
+- Trusted Platform Module (TPM).
 
-- Integrated or dedicated graphics and monitor capable of Super VGA (1024 x 768) or higher-resolution
+- Integrated or dedicated graphics and monitor capable of Super VGA (1024 x 768) or higher-resolution.
 
-- Keyboard and mouse (or other compatible pointing device)
+- Keyboard and mouse (or other compatible pointing device).
 
-- Internet access (fees might apply)
+- Internet access. (Fees might apply.)
 
 > [!NOTE]
-> A TPM chip is required in order to use certain features such as **BitLocker Drive Encryption**. If your computer has a TPM, it must meet these requirements:
+> A TPM chip is required in order to use certain features, such as **BitLocker Drive Encryption**. If your computer has a TPM, it must meet these requirements:
 >
 > - Hardware-based TPMs must implement version 2.0 of the TPM specification.
-> - TPMs that implement version 2.0 must have an EK certificate that is either pre-provisioned to the TPM by the hardware vendor, or be capable of being retrieved by the device during the first boot.
+> - TPMs that implement version 2.0 must have an EK certificate that's either pre-provisioned to the TPM by the hardware vendor or capable of being retrieved by the device during the first boot.
 > - TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It's acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.

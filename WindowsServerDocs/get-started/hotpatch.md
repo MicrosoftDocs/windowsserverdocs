@@ -3,7 +3,7 @@ title: Hotpatch for Windows Server
 description: 'Learn how Hotpatch for Windows Server works and how to enable it'
 author: robinharwood
 ms.topic: concept-article
-ms.date: 06/27/2025
+ms.date: 07/14/2025
 ms.author: roharwoo
 ---
 
@@ -28,7 +28,6 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 >[!NOTE]
 >Windows Server container base images, custom images, or any other combination of publisher, offer, and SKU aren't supported.
 
-
 | Publisher               | OS Offer      |  SKU               |
 |-------------------------|---------------|--------------------|
 | MicrosoftWindowsServer  | WindowsServer | 2022-Datacenter-Azure-Edition-Core |
@@ -42,13 +41,10 @@ The following table lists the exact combinations of publisher, OS offer, and SKU
 
 For more information about the available images, see [Windows Server](https://aka.ms/hotpatchondesktopnewimage) on Azure Marketplace.
 
-### Azure Arc-connected machines (preview)
+### Azure Arc-connected machines
 
 > [!IMPORTANT]
->
-> - Azure Arc-enabled Hotpatch is currently in PREVIEW. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
-> - Azure Arc-enabled Hotpatch for Windows Server 2025 is now available for a monthly subscription fee. To learn more about pricing and when Hotpatch will become charged service, see [Tired of all the restarts? Get hotpatching for Windows Server](https://www.microsoft.com/en-us/windows-server/blog/2025/04/24/tired-of-all-the-restarts-get-hotpatching-for-windows-server/).
+> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available for a monthly subscription fee. To learn more about pricing, see [Tired of all the restarts? Get hotpatching for Windows Server](https://www.microsoft.com/en-us/windows-server/blog/2025/04/24/tired-of-all-the-restarts-get-hotpatching-for-windows-server/).
 
 Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 
@@ -59,7 +55,7 @@ Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you e
 ## How Hotpatch works
 
 Hotpatch first establishes a baseline with the current Cumulative Update for Windows Server. Every three months, the baseline periodically refreshes with the latest Cumulative Update. You then receive Hotpatch releases for the next two months after the Cumulative Update. For example, if January is
-a Cumulative Update, February and March would have Hotpatch releases. For more information about the Hotpatch release schedule, see [Release notes for Hotpatch in Azure Automanage for Windows Server 2022](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8).
+a Cumulative Update, February and March would have Hotpatch releases. For more information about the Hotpatch release schedule, see the [Windows Server Hotpatch Calendar](/windows/release-health/windows-server-release-info#windows-server-hotpatch-calendar).
 
 There are two types of baselines: **Planned baselines** and **Unplanned baselines**.
 
@@ -89,7 +85,7 @@ The following patches currently aren't included in the Hotpatch program and requ
 
 ## Patch orchestration process
 
-Hotpatch is an extension of Windows Update and typical management processes. However, the kinds of tools Hotpatch uses for patch management
+Hotpatch is an extension of Windows Update and typical management processes. However, the tools for patch management
 vary depending on which platform you're using.
 
 ### Azure
@@ -105,7 +101,7 @@ vary depending on which platform you're using.
 - Azure monitors VM health through platform health signals to detect patching failures.
 
 > [!NOTE]
-> You can't create Azure Virtual Machine Scale Sets with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features are supported by Uniform orchestration for scale sets, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
+> You can't create Azure Virtual Machine Scale Sets with Uniform orchestration on Azure Edition images with Hotpatch. To learn more about which features Uniform orchestration for scale sets supports, see [A comparison of Flexible, Uniform, and availability sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes).
 
 ### Azure Local
 
@@ -139,7 +135,7 @@ In the **Recommended updates** page, you can see the Hotpatch status of your VM 
 
 Patches outside of those two categories aren't automatically installed, and are instead displayed in the **Update compliance** tab as a list of available patches. You can also check the **Update history** tab to view patch installation details for update deployments on your VM from the past 30 days.
 
-Automatic VM Guest Patching regularly runs assessments of available patches, which you can view in the **Updates** tab. You can manually start an assessment by selecting the **Assess Now** button. You can also install patches on-demand by selecting the **Install updates now** button. This option lets you choose whether to install all updates under specific patch classifications or select individual updates to include or exclude by providing a list of knowledge base articles. However, keep in mind that patches you install manually don't follow availability-first principles and might require you to restart your VM.
+Automatic VM Guest Patching regularly runs assessments of available patches, which you can view in the **Updates** tab. You can manually start an assessment by selecting the **Assess Now** button. You can also install patches on-demand by selecting the **Install updates now** button. This option lets you choose whether to install all updates under specific patch classifications. You can also select individual updates to include or exclude by providing a list of knowledge base articles. However, keep in mind that patches you install manually don't follow availability-first principles and might require you to restart your VM.
 
 You can also view installed patches by running the [Get-HotFix](/powershell/module/microsoft.powershell.management/get-hotfix) cmdlet in PowerShell or by viewing the **Settings** menu in Desktop Experience.
 
@@ -149,10 +145,10 @@ Hotpatch updates don't support automatic rollback. If you experience an issue du
 
 ## Next steps
 
+- [Enable Hotpatch for Azure Arc-enabled servers](enable-hotpatch-azure-arc-enabled-servers.md)
+
 - [Automatic VM Guest Patching](/azure/virtual-machines/automatic-vm-guest-patching)
 
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 
 - [Azure Update Management](/azure/automation/update-management/overview)
-
-- [How to preview Azure Arc-connected Hotpatching for Windows Server 2025](https://techcommunity.microsoft.com/t5/windows-server-news-and-best/how-to-preview-azure-arc-connected-hotpatching-for-windows/ba-p/4246895)
