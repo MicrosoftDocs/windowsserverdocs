@@ -4,7 +4,7 @@ description: Plan how you can retain information on file servers.
 ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-manager: femila
+manager: tedhudek
 ms.date: 04/01/2022
 ---
 

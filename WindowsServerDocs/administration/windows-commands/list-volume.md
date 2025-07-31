@@ -2,8 +2,8 @@
 title: list volume
 description: Reference article for the list volume command, which displays a list of basic and dynamic volumes on all disks.
 ms.topic: reference
-ms.author: jgerend
-author: jasongerend
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/16/2017
 ---

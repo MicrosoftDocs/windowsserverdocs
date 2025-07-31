@@ -14,7 +14,7 @@ This article describes some of the new features in Windows Server 2016 that are 
 
 ## Compute
 
-The [Virtualization area](../virtualization/virtualization.yml) includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
+The [Virtualization area](../virtualization/index.yml) includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
 
 ### General
 
@@ -36,7 +36,7 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - Hyper-V is now compatible with Connected Standby. When you install the Hyper-V role on a computer that uses the Always On/Always Connected (AOAC) power model, you can now configure it to use the Connected Standby power state.
 
-- Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see [Discrete device assignment](../virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows.md#discrete-device-assignment) and [Discrete Device Assignment - Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262).
+- Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see [Discrete device assignment](../virtualization/hyper-v/host-hardware-requirements.md#discrete-device-assignment) and [Discrete Device Assignment - Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262).
 
 - Hyper-V now supports BitLocker drive encryption for operating system (OS) disks in generation 1 VMs. This protection method replaces virtual Trusted Platform Modules (TPMs), which are only available in generation 2 VMs. To decrypt the disk and start the VM, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the VM's guardians. Key storage requires a version 8 VM. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 
@@ -242,7 +242,7 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - New features for Hyper-V:
 
-  - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+  - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v/virtual-switch.md).
 
   - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more information, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 

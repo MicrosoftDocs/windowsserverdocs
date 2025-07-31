@@ -2,8 +2,8 @@
 title: Modify root navigation behavior
 description: Develop a solution extension Windows Admin Center SDK - modify root navigation behavior
 ms.topic: how-to
-author: jasongerend
-ms.author: jgerend
+author: xelu86
+ms.author: alalve
 ms.date: 04/01/2023
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to set up delegated Managed Service Accounts (dMSA) in Wi
 ms.topic: how-to
 ms.author: alalve
 author: mariamgewida
-ms.date: 10/25/2024
+ms.date: 05/30/2025
 ---
 
 # Setting up delegated Managed Service Accounts
@@ -16,21 +16,27 @@ Setting up a dMSA is currently only available on devices running Windows Server 
 ## Prerequisites
 
 - The **Active Directory Domain Services** role must be installed on your device or on any device if using remote management tools. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
-- Once the role is installed, your device must be promoted to a Domain Controller (DC). In **Server Manager**, the flag icon displays a new notification, select **Promote this server to a domain controller**, then complete the necessary steps.
+
+- Once the role is installed, your device must be promoted to a Domain Controller (DC). In **Server Manager**, the flag icon displays a new notification. Select **Promote this server to a domain controller**, then complete the necessary steps.
+
+- You must be a member of the **Domain Admins** or **Enterprise Admins** group, or have equivalent AD permissions, to create or migrate to a dMSA.
+
+- Ensure that a two-way forest trust is established between the relevant AD forests to support authentication for cross-domain and cross-forest scenarios with dMSA.
+
 - The **KDS root key** must be generated on the DC before a dMSA is created or migrated. Run `Get-KdsRootKey` in PowerShell to verify if the key is available. If the key is unavailable, it can be added by running `Add-KdsRootKey –EffectiveTime ((get-date).addhours(-10))`.
 
-> [!NOTE]
-> In order to use the dMSA as a standalone Managed Service Account (MSA) or to supersede a legacy service account, the following command needs to be ran on the client device:
->
-> ```powershell
-> $params = @{
->  Path = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters"
->  Name = "DelegatedMSAEnabled"
->  Value = 1
->  Type = "DWORD"
-> }
-> Set-ItemProperty @params
-> ```
+  > [!NOTE]
+  > In order to use the dMSA as a standalone Managed Service Account (MSA) or to supersede a legacy service account, the following command needs to be ran on the client device:
+  >
+  > ```powershell
+  > $params = @{
+  >  Path = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters"
+  >  Name = "DelegatedMSAEnabled"
+  >  Value = 1
+  >  Type = "DWORD"
+  > }
+  > Set-ItemProperty @params
+  > ```
 
 ## Create a standalone dMSA
 
@@ -66,7 +72,7 @@ The following instructions allow users to create a new dMSA without migrating fr
     Properties = "msDS-DelegatedMSAState"
    }
    Get-ADServiceAccount @params
-   ```  
+   ```
 
    To set this value to **3**, run:
 

@@ -1,33 +1,33 @@
 ---
-title: Active Directory security groups
+title: Active Directory Security Groups
 description: Become familiar with Windows Server Active Directory security groups, group scope, and group functions. See information on groups, such as members and rights.
 author: Xelu86
 ms.author: alalve
-ms.topic: article
-ms.date: 03/17/2025
+ms.topic: concept-article
+ms.date: 07/02/2025
 # customer intent: As an administrator, I want to become familiar with Windows Server Active Directory security groups so that I can simplify network maintenance and administration by organizing user accounts, computer accounts, and other groups into manageable units.
 ---
 
 # Active Directory security groups
 
-This article discusses default Active Directory (AD) security groups, group scope, and group functions.
+This article discusses default Active Directory security groups, group scope, and group functions.
 
-## What is a security group in AD?
+## What is a security group in Active Directory?
 
-AD has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that's either a person or a computer. A user account also can be used as a dedicated service account for some applications.
+Active Directory has two forms of common security principals: user accounts and computer accounts. These accounts represent a physical entity that's either a person or a computer. A user account also can be used as a dedicated service account for some applications.
 
 Security groups are a way to collect user accounts, computer accounts, and other groups into manageable units.
 
-In the Windows Server operating system (OS), several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In AD, administrative responsibilities are separated into two types of administrators:
+In the Windows Server operating system (OS), several built-in accounts and security groups are preconfigured with the appropriate rights and permissions to perform specific tasks. In Active Directory, administrative responsibilities are separated into two types of administrators:
 
 - **Service administrators**: Responsible for maintaining and delivering Active Directory Domain Services (AD DS), including managing domain controllers and configuring AD DS
 - **Data administrators**: Responsible for maintaining the data that's stored in AD DS and on domain member servers and workstations
 
-## How AD security groups work
+## How Active Directory security groups work
 
 You can use groups to collect user accounts, computer accounts, and other groups into manageable units. Working with groups instead of with individual users helps you simplify network maintenance and administration.
 
-AD has two types of groups:
+Active Directory has two types of groups:
 
 - **Security groups**: Used to assign permissions to shared resources.
 - **Distribution groups**: Used to create email distribution lists.
@@ -36,11 +36,11 @@ AD has two types of groups:
 
 Security groups can provide an efficient way to assign access to resources on your network. By using security groups, you can:
 
-- Assign user rights to security groups in AD.
+- Assign user rights to security groups in Active Directory.
 
-  You can assign user rights to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when AD is installed to help administrators define a person's administrative role in the domain.
+  You can assign user rights to a security group to determine what members of that group can do within the scope of a domain or forest. User rights are automatically assigned to some security groups when Active Directory is installed to help administrators define a person's administrative role in the domain.
 
-  For example, a user who you add to the Backup Operators group in AD can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
+  For example, a user who you add to the Backup Operators group in Active Directory can back up and restore files and directories that are located on each domain controller in the domain. The user can complete these actions because, by default, the user rights *Backup files and directories* and *Restore files and directories* are automatically assigned to the Backup Operators group. Therefore, members of this group inherit the user rights that are assigned to that group.
 
   You can use Group Policy to assign user rights to security groups to delegate specific tasks. For more information about using Group Policy, see [User Rights Assignment](/windows/device-security/security-policy-settings/user-rights-assignment).
 
@@ -48,7 +48,7 @@ Security groups can provide an efficient way to assign access to resources on yo
 
   Permissions are different from user rights. Permissions are assigned to a security group for a shared resource. Permissions determine who can access the resource and the level of access, such as Full control or Read. Some permissions that are set on domain objects are automatically assigned to allow various levels of access to default security groups like the Account Operators group or the Domain Admins group.
 
-  Security groups are listed in discretionary access control lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in AD. The user receives permissions that are defined for that group.
+  Security groups are listed in discretionary access control lists (DACLs) that define permissions on resources and objects. When administrators assign permissions for resources like file shares or printers, they should assign those permissions to a security group instead of to individual users. The permissions are assigned once to the group instead of multiple times to each individual user. Each account that's added to a group receives the rights that are assigned to that group in Active Directory. The user receives permissions that are defined for that group.
 
 You can use a security group as an email entity. Sending an email message to a security group sends the message to all the members of the group.
 
@@ -58,7 +58,7 @@ You can use distribution groups only to send email to collections of users by us
 
 ### Group scope
 
-Each group has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines the areas of the network where permissions can be granted for the group. AD defines the following three group scopes:
+Each group has a scope that identifies the extent to which the group is applied in the domain tree or forest. The scope of a group defines the areas of the network where permissions can be granted for the group. Active Directory defines the following three group scopes:
 
 - Universal
 - Global
@@ -71,25 +71,25 @@ The following table describes the three group scopes and how they work as securi
 
 |Scope|Possible members|Scope conversion|Can grant permissions|Possible member of|
 |--- |--- |--- |--- |--- |
-|Universal|Accounts from any domain in the same forest<br><br>Global groups from any domain in the same forest<br><br>Other Universal groups from any domain in the same forest|Can be converted to Domain Local scope if the group isn't a member of any other Universal group<br><br>Can be converted to Global scope if the group doesn't contain any other Universal group|On any domain within the same forest or trusting forests|Other Universal groups in the same forest<br><br>Domain Local groups in the same forest or trusting forests<br><br>Local groups on computers in the same forest or trusting forests|
-|Global|Accounts from the same domain<br><br>Other Global groups from the same domain|Can be converted to Universal scope if the group isn't a member of any other Global group|On any domain in the same forest, or trusting domains or forests|Universal groups from any domain in the same forest<br><br>Other Global groups from the same domain<br><br>Domain Local groups from any domain in the same forest, or from any trusting domain|
-|Domain Local|Accounts from any domain or any trusted domain<br><br>Global groups from any domain or any trusted domain<br><br>Universal groups from any domain in the same forest<br><br>Other Domain Local groups from the same domain<br><br>Accounts, Global groups, and Universal groups from other forests and from external domains|Can be converted to Universal scope if the group doesn't contain any other Domain Local group|Within the same domain|Other Domain Local groups from the same domain<br><br>Local groups on computers in the same domain, excluding built-in groups that have well-known security identifiers (SIDs)|
+|Universal|Accounts from any domain in the same forest<p>Global groups from any domain in the same forest<p>Other Universal groups from any domain in the same forest|Can be converted to Domain Local scope if the group isn't a member of any other Universal group<p>Can be converted to Global scope if the group doesn't contain any other Universal group|On any domain within the same forest or trusting forests|Other Universal groups in the same forest<p>Domain Local groups in the same forest or trusting forests<p>Local groups on computers in the same forest or trusting forests|
+|Global|Accounts from the same domain<p>Other Global groups from the same domain|Can be converted to Universal scope if the group isn't a member of any other Global group|On any domain in the same forest, or trusting domains or forests|Universal groups from any domain in the same forest<p>Other Global groups from the same domain<p>Domain Local groups from any domain in the same forest, or from any trusting domain|
+|Domain Local|Accounts from any domain or any trusted domain<p>Global groups from any domain or any trusted domain<p>Universal groups from any domain in the same forest<p>Other Domain Local groups from the same domain<p>Accounts, Global groups, and Universal groups from other forests and from external domains|Can be converted to Universal scope if the group doesn't contain any other Domain Local group|Within the same domain|Other Domain Local groups from the same domain<p>Local groups on computers in the same domain, excluding built-in groups that have well-known security identifiers (SIDs)|
 
 ### Special identity groups
 
-A special identity group is where certain special identities are grouped together. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
+A special identity group is where certain special identities are grouped together. Special identity groups don't have specific memberships that you can modify, but they can represent different users at different times depending on the circumstances. These groups include Creator Owner, Batch, and Authenticated User.
 
 For more information, see [Special identity groups](understand-special-identities-groups.md).
 
 ## Default security groups
 
-Default groups like the Domain Admins group are security groups that are created automatically when you create an AD domain. You can use these predefined groups to help control access to shared resources and to delegate specific domain-wide administrative roles.
+Default groups like the Domain Admins group are security groups that are created automatically when you create an Active Directory domain. These predefined groups can help you control access to shared resources and delegate specific domain-wide administrative roles.
 
 Many default groups are automatically assigned a set of user rights. These rights authorize members of the group to perform specific actions in a domain, like signing in to a local system or backing up files and folders. For example, a member of the Backup Operators group can perform backup operations for all domain controllers in the domain.
 
 When you add a user to a group, the user receives all the user rights that are assigned to the group, including all the permissions that are assigned to the group for any shared resources.
 
-Default groups are located in the Builtin container or the Users container in the AD Users and Computers tool. The Builtin container includes groups that are defined with the Domain Local scope. The Users container includes groups that are defined with Global scope and groups that are defined with Domain Local scope. You can move groups that are located in these containers to other groups or organizational units within the domain. But you can't move them to other domains.
+Default groups are located in the Builtin container or the Users container in the Active Directory Users and Computers tool. The Builtin container includes groups that are defined with the Domain Local scope. The Users container includes groups that are defined with Global scope and groups that are defined with Domain Local scope. You can move groups that are located in these containers to other groups or organizational units within the domain. But you can't move them to other domains.
 
 Some of the administrative groups that are listed in this article and all members of these groups are protected by a background process that periodically checks for and applies a specific security descriptor. This descriptor is a data structure that contains security information that's associated with a protected object. This process ensures that any successful unauthorized attempt to modify the security descriptor on one of the administrative accounts or groups is overwritten with the protected settings.
 
@@ -97,9 +97,9 @@ The security descriptor is present on the AdminSDHolder object. If you want to m
 
 Each default security group has a unique identifier that consists of multiple components. Among those components is a relative ID (RID), which is unique within the group's domain.
 
-### Default AD security groups
+### Default Active Directory security groups
 
-The following links lead to descriptions of the default groups that are located in the Builtin container or the Users container in AD.
+The following links lead to descriptions of the default groups that are located in the Builtin container or the Users container in Active Directory.
 
 - [Access Control Assistance Operators](#access-control-assistance-operators)
 - [Account Operators](#account-operators)
@@ -268,7 +268,7 @@ Members of this group can connect to certification authorities in the enterprise
 
 ### Cert Publishers
 
-Members of the Cert Publishers group are authorized to publish certificates for user objects in AD. This group can't be renamed, deleted, or removed.
+Members of the Cert Publishers group are authorized to publish certificates for user objects in Active Directory. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -438,7 +438,7 @@ For more information about security and DNS, see [DNSSEC in Windows Server 2012]
 
 ### Domain Admins
 
-Members of the Domain Admins security group are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that join a domain, including the domain controllers. The Domain Admins group is the default owner of any object that's created in AD for the domain by any member of the group. If members of the group create other objects, such as files, the default owner is the Administrators group.
+Members of the Domain Admins security group are authorized to administer the domain. By default, the Domain Admins group is a member of the Administrators group on all computers that join a domain, including the domain controllers. The Domain Admins group is the default owner of any object that's created in Active Directory for the domain by any member of the group. If members of the group create other objects, such as files, the default owner is the Administrators group.
 
 The Domain Admins group controls access to all domain controllers in a domain, and it can modify the membership of all administrative accounts in the domain. Members of the service administrator groups in its domain (Administrators and Domain Admins) and members of the Enterprise Admins group can modify Domain Admins membership. This group is considered to be a service administrator account because its members have full access to the domain controllers in a domain.
 
@@ -513,8 +513,7 @@ You can use this group to represent all users in the domain. For example, if you
 |Well-known SID/RID|S-1-5-21-\<domain>-513|
 |Type|Global|
 |Default container|CN=Users, DC=\<domain>, DC=|
-|Default members|[Administrator](understand-default-user-accounts.md#administrator-account)
-krbtgt|
+|Default members|[Administrator](understand-default-user-accounts.md#administrator-account)|
 |Default member of|[Users](#users)|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
@@ -523,7 +522,7 @@ krbtgt|
 
 ### Enterprise Admins
 
-The Enterprise Admins group exists only in the root domain of an AD forest of domains. The group is a Universal group if the domain is in native mode. The group is a Global group if the domain is in mixed mode. Members of this group are authorized to make forest-wide changes in AD, like adding child domains.
+The Enterprise Admins group exists only in the root domain of an Active Directory forest of domains. The group is a Universal group if the domain is in native mode. The group is a Global group if the domain is in mixed mode. Members of this group are authorized to make forest-wide changes in Active Directory, like adding child domains.
 
 By default, the only member of the group is the Administrator account for the forest root domain. This group is automatically added to the Administrators group in every domain in the forest, and it provides complete access to configuring all domain controllers. Members in this group can modify the membership of all administrative groups. Members of the default service administrator groups in the root domain can modify Enterprise Admins membership. This group is considered to be a service administrator account.
 
@@ -557,7 +556,7 @@ Members of this group can perform administrative actions on key objects within t
 
 ### Enterprise Read-only Domain Controllers
 
-Members of this group are RODCs in the enterprise. Except for account passwords, an RODC holds all the AD objects and attributes that a writable domain controller holds. However, changes can't be made to the database that's stored on the RODC. Changes must be made on a writable domain controller and then replicated to the RODC.
+Members of this group are RODCs in the enterprise. Except for account passwords, an RODC holds all the Active Directory objects and attributes that a writable domain controller holds. However, changes can't be made to the database that's stored on the RODC. Changes must be made on a writable domain controller and then replicated to the RODC.
 
 RODCs address some of the issues that are commonly found in branch offices. These locations might not have a domain controller, or they might have a writable domain controller but not the physical security, network bandwidth, or local expertise to support it.
 
@@ -653,7 +652,7 @@ Members of the Hyper-V Administrators group have complete and unrestricted acces
 
 ### IIS\_IUSRS
 
-IIS\_IUSRS is a built-in group that's used by Internet Information Services (IIS) beginning with IIS 7. The OS ensures that each built-in account and group have a unique SID. IIS 7 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that the new account and group use are never localized. For example, regardless of the language of the Windows OS that you install, the IIS account name is IUSR, and the group name is IIS\_IUSRS.
+IIS\_IUSRS is a built-in group that's used by Internet Information Services (IIS), beginning with IIS 7. The OS ensures that each built-in account and group have a unique SID. IIS 7 replaces the IUSR\_MachineName account and the IIS\_WPG group with the IIS\_IUSRS group to ensure that the actual names that the new account and group use are never localized. For example, regardless of the language of the Windows OS that you install, the IIS account name is IUSR, and the group name is IIS\_IUSRS.
 
 For more information, see [Understand built-in user and group accounts in IIS 7](/iis/get-started/planning-for-security/understanding-built-in-user-and-group-accounts-in-iis).
 
@@ -671,9 +670,9 @@ For more information, see [Understand built-in user and group accounts in IIS 7]
 
 ### Incoming Forest Trust Builders
 
-Members of the Incoming Forest Trust Builders group can create incoming, one-way trusts to a forest. AD provides security across multiple domains or forests through domain and forest trust relationships. Before authentication can occur across trusts, Windows must determine whether the domain requested is by a user, computer, or service that has a trust relationship with the sign-in domain of the requesting account.
+Members of the Incoming Forest Trust Builders group can create incoming, one-way trusts to a forest. Active Directory provides security across multiple domains or forests through domain and forest trust relationships. Before authentication can occur across trusts, Windows must determine whether the domain requested is by a user, computer, or service that has a trust relationship with the sign-in domain of the requesting account.
 
-To make this determination, the Windows security system computes a trust path between the domain controller for the server that receives the request and a domain controller in the domain of the requesting account. A secured channel extends to other AD domains through interdomain trust relationships. This secured channel is used to obtain and verify security information, including SIDs for users and groups.
+To make this determination, the Windows security system computes a trust path between the domain controller for the server that receives the request and a domain controller in the domain of the requesting account. A secured channel extends to other Active Directory domains through interdomain trust relationships. This secured channel is used to obtain and verify security information, including SIDs for users and groups.
 
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
@@ -789,7 +788,10 @@ This group appears as an SID until the domain controller is made the primary dom
 
 Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers that run Windows NT 4.0 and earlier. By default, the special identity group Everyone is a member of this group. Add users to this group only if they run Windows NT 4.0 or earlier.
 
-This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
+> [!WARNING]
+> This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
+
+This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -805,7 +807,7 @@ This group appears as an SID until the domain controller is made the primary dom
 
 ### Print Operators
 
-Members of this group can manage, create, share, and delete printers that are connected to domain controllers in the domain. They also can manage AD printer objects in the domain. Members of this group can locally sign in to and shut down domain controllers in the domain.
+Members of this group can manage, create, share, and delete printers that are connected to domain controllers in the domain. They also can manage Active Directory printer objects in the domain. Members of this group can locally sign in to and shut down domain controllers in the domain.
 
 This group has no default members. Because members of this group can load and unload device drivers on all domain controllers in the domain, add users with caution. This group can't be renamed, deleted, or removed.
 
@@ -829,14 +831,14 @@ Members of the Protected Users group have extra protection against the compromis
 
 This security group is designed as part of a strategy to effectively protect and manage credentials within the enterprise. Members of this group automatically have nonconfigurable protection applied to their accounts. Membership in the Protected Users group is meant to be restrictive and proactively secure by default. The only way you can modify the protection for an account is to remove the account from the security group.
 
-This domain-related, Global group triggers nonconfigurable protection on devices and host computers, starting with Windows Server 2012 R2 and Windows 8.1. It also triggers nonconfigurable protection on domain controllers in domains that have a primary domain controller that runs Windows Server 2012 R2 or later. This protection greatly reduces the memory footprint of credentials when users sign in to computers on the network from a noncompromised computer.
+This domain-related Global group triggers nonconfigurable protection on devices and host computers, starting with Windows Server 2012 R2 and Windows 8.1. It also triggers nonconfigurable protection on domain controllers in domains that have a primary domain controller that runs Windows Server 2012 R2 or later. This protection greatly reduces the memory footprint of credentials when users sign in to computers on the network from a noncompromised computer.
 
 Depending on the account's domain functional level, members of the Protected Users group are further protected due to behavior changes in the authentication methods that are supported in Windows:
 
 - Members of the Protected Users group can't authenticate by using the following Security Support Providers (SSPs): New Technology LAN Manager (NTLM), Digest Authentication, or Credential Security Support Provider (CredSSP). Passwords aren't cached on a device running Windows 10 or Windows 8.1. The device fails to authenticate to a domain when the account is a member of the Protected Users group.
 - The Kerberos protocol doesn't use the weaker Data Encryption Standard (DES) or Rivest Cipher 4 (RC4) encryption types in the preauthentication process. The domain must be configured to support at least the Advanced Encryption Standard (AES) cipher suite.
 - The user's account can't be delegated with Kerberos constrained or unconstrained delegation. If the user is a member of the Protected Users group, earlier connections to other systems might fail.
-- You can change the default Kerberos ticket-granting tickets (TGTs) lifetime setting of four hours by using authentication policies and silos in the AD Administrative Center. In the default setting, the user must authenticate after four hours pass.
+- You can change the default Kerberos ticket-granting tickets (TGTs) lifetime setting of four hours by using authentication policies and silos in the Active Directory Administrative Center. In the default setting, the user must authenticate after four hours pass.
 
 This group was introduced in Windows Server 2012 R2. For more information about how this group works, see [Protected Users security group](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466518(v=ws.11)).
 
@@ -1012,7 +1014,7 @@ This group can't be renamed, deleted, or removed.
 
 ### Schema Admins
 
-Members of the Schema Admins group can modify the AD schema. This group exists only in the root domain of an AD forest of domains. This group is a Universal group if the domain is in native mode. This group is a Global group if the domain is in mixed mode.
+Members of the Schema Admins group can modify the Active Directory schema. This group exists only in the root domain of an Active Directory forest of domains. This group is a Universal group if the domain is in native mode. This group is a Global group if the domain is in mixed mode.
 
 By default, the only member of the group is the Administrator account for the forest root domain. This group has full administrative access to the schema.
 
@@ -1091,7 +1093,7 @@ Membership of the System Managed Accounts group is system managed. This group in
 
 ### Terminal Server License Servers
 
-Members of the Terminal Server License Servers group can update user accounts in AD with information about license issuance. The group is used to track and report Terminal Server Per User Client Access License (TS Per User CAL) usage. A TS Per User CAL gives one user the right to access an instance of Terminal Server from an unlimited number of client computers or devices. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
+Members of the Terminal Server License Servers group can update user accounts in Active Directory with information about license issuance. The group is used to track and report Terminal Server Per User Client Access License (TS Per User CAL) usage. A TS Per User CAL gives one user the right to access an instance of Terminal Server from an unlimited number of client computers or devices. This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 For more information about this security group, see [Terminal Services License Server security group configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc775331(v=ws.10)).
 
@@ -1167,7 +1169,7 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 |Safe to delegate management of this group to non-service admins?||
 |Default user rights|None|
 
-## See also
+## Related content
 
 - [Security principals](understand-security-principals.md)
 - [Special identity groups](understand-special-identities-groups.md)

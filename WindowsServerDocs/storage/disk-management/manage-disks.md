@@ -3,14 +3,12 @@ title: Manage disks
 description: Learn how to manage disks in a computer using Disk Management and discover whether a disk is online or offline and how to bring it online.
 ms.date: 03/08/2023
 ms.topic: how-to
-author: jasongerend
+author: dknappettmsft
 manager: brianlic
-ms.author: jgerend
+ms.author: daknappe
 ---
 
 # Manage disks
-
-> **
 
 This article and the related topics show you how to use Disk Management to manage the disks in a computer. It includes information about how Windows manages the online status of new disks.
 
@@ -33,6 +31,5 @@ To bring a disk online or take it offline, follow these steps.
 - [Initialize new disks](initialize-new-disks.md)
 - [Move disks to another computer](move-disks-to-another-computer.md)
 - [Change a dynamic disk back to a basic disk](change-a-dynamic-disk-back-to-a-basic-disk.md)
-- [Covert an MBR disk into a GPT disk](change-an-mbr-disk-into-a-gpt-disk.md)
-- [Convert a GPT disk into an MBR disk](change-a-gpt-disk-into-an-mbr-disk.md)
+- [Convert disk partition style](change-disk-partition-scheme.md)
 - [Manage Virtual Hard Disks](manage-virtual-hard-disks.md)

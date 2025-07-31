@@ -2,9 +2,9 @@
 description: "Learn more about: Deploy Encryption of Office Files (Demonstration Steps)"
 ms.assetid: 2c76e81a-c2eb-439f-a89f-7d3d70790244
 title: Deploy Encryption of Office Files (Demonstration Steps)
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---
