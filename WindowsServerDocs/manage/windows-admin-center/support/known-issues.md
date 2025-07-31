@@ -5,6 +5,7 @@ ms.topic: troubleshooting-known-issue
 author: xelu86
 ms.author: alalve
 ms.date: 06/05/2024
+ms.custom: sfi-image-nochange
 ---
 # Windows Admin Center known issues
 

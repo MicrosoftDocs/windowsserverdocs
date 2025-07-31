@@ -6,6 +6,7 @@ author: andreipo
 ms.author: mosagie
 ms.contributor: alalve 
 ms.date: 04/17/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Manage Transport Layer Security (TLS)

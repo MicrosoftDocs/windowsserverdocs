@@ -5,6 +5,7 @@ author: xelu86
 ms.author: alalve
 ms.date: 08/31/2020
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 # How cutover works in Storage Migration Service
 

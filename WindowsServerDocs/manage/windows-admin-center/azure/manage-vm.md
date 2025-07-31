@@ -5,6 +5,7 @@ ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 06/18/2025
+ms.custom: sfi-image-nochange
 ---
 # Manage a Windows VM using Windows Admin Center in Azure
 

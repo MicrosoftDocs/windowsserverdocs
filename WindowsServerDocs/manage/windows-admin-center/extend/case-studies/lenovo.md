@@ -5,6 +5,7 @@ ms.topic: article
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 1/7/2019
+ms.custom: sfi-image-nochange
 ---
 # Lenovo XClarity Integrator Extension
 

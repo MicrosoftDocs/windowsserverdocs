@@ -7,6 +7,7 @@ ms.author: mosagie
 author: meaghanlewis
 manager: mtillman
 ms.date: 07/25/2018
+ms.custom: sfi-image-nochange
 ---
 
 # Migrating the WSUS Database from WID to SQL

@@ -6,6 +6,7 @@ author: xelu86
 ms.author: alalve
 ms.contributor: inhenkel
 ms.date: 07/24/2025
+ms.custom: sfi-image-nochange
 ---
 
 # SMB over QUIC

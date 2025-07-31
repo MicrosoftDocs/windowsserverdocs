@@ -6,6 +6,7 @@ ms.author: mosagie
 author: meaghanlewis
 manager: tedhudek
 ms.date: 07/09/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Configuring Kerberos delegation for group Managed Service Accounts

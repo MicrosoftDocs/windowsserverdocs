@@ -7,7 +7,9 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
-ms.custom: inhenkel
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Access Control Policies in Windows Server 2016 AD FS

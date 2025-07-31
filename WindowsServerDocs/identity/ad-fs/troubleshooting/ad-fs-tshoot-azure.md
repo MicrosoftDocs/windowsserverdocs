@@ -6,7 +6,10 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: troubleshooting-general
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom:
+  - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
+  - sfi-image-nochange
 ---
 
 # AD FS troubleshooting: Microsoft Entra ID

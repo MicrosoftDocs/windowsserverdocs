@@ -5,6 +5,7 @@ author: meaghanlewis
 ms.author: mosagie
 ms.topic: concept-article
 ms.date: 06/30/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Active Directory accounts

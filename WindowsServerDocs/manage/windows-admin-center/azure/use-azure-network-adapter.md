@@ -5,8 +5,10 @@ ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ms.date: 07/14/2020
-ms.custom: team=cloud_advocates
 ms.contributors: thmaure-08202021
+ms.custom:
+  - team=cloud_advocates
+  - sfi-image-nochange
 ---
 
 # Use Azure Network Adapter to connect a server to an Azure Virtual Network

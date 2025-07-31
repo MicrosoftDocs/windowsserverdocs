@@ -6,6 +6,7 @@ ms.assetid: 66b7c568-67b7-4ac9-a479-a5a3b8a66142
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 06/30/2025
+ms.custom: sfi-image-nochange
 ---
 # Windows logon scenarios
 

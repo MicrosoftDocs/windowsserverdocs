@@ -7,7 +7,9 @@ ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
 ms.topic: install-set-up-deploy
-ms.custom: inhenkel
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)

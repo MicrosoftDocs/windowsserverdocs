@@ -5,6 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 04/08/2025
 ms.topic: article
+ms.custom: sfi-image-nochange
 ---
 # AD FS paginated sign-in
 

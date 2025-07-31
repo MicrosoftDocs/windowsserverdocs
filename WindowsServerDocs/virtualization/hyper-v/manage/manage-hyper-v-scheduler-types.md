@@ -6,6 +6,7 @@ author: meaghanlewis
 ms.topic: how-to
 ms.date: 04/02/2025
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
+ms.custom: sfi-image-nochange
 # customer intent: As an administrator, I want to become familiar with the scheduler types that are available in the Hyper-V hypervisor so that I can optimize the security and performance of virtualization hosts.
 ---
 
