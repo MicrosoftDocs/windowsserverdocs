@@ -190,7 +190,7 @@ items:
           href: dns/dnssec-overview.md
         - name: Validate and secure DNS responses
           href: dns/validate-dnssec-responses.md
-        - name: DNSSEC Key Master
+        - name: Key Master
           href: dns/dnssec-key-master.md
     - name: How-to guides
       items:
@@ -204,9 +204,9 @@ items:
         href: dns/dns-logging-and-diagnostics.md
       - name: DNSSEC
         items:
-        - name: DNSSEC Key Master Transfer
+        - name: Transfer the DNSSEC Key Master Role
           href: dns/dnssec-key-master-transfer.md
-        - name: DNSSEC Sign DNS Zones
+        - name: Sign DNS Zones
           href: dns/dnssec-sign-zone.md
       - name: Configure the Name Resolution Policy Table
         href: dns/name-resolution-policy-table.md

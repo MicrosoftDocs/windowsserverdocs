@@ -17,11 +17,15 @@ ai-usage: ai-assisted
 
 # Transfer Key Master role
 
-This article explains how to transfer the DNSSEC Key Master role between authoritative DNS servers in Windows DNS Server environments. Learn about online transfers (when the current Key Master is available) and disaster recovery scenarios (when the current Key Master is offline).
+This article explains how to transfer the DNSSEC Key Master role between authoritative DNS servers in Windows DNS Server environments. The DNSSEC Key Master is the DNS server responsible for key generation and management for a DNSSEC-signed zone. For a complete understanding of the Key Master role, its requirements, and key management concepts, see [DNSSEC Key Master](dnssec-key-master.md).
 
-The DNSSEC Key Master role is critical for maintaining DNS security in your Windows DNS environment. The Key Master is the DNS server responsible for key generation and key management for a DNSSEC-signed zone. When you use default settings to sign a zone, DNSSEC selects the local server as Key Master. You also have the option of choosing a different DNS server from a list of servers that support online DNSSEC signing. Only one DNS server can be the Key Master for a given zone at a given time.
+You might want to transfer in the following scenarios:
 
-The Key Master generates all keys for the zone, and is responsible for distribution of private keys and zone signing information. The Key Master is also responsible for performing all zone signing key (ZSK) and key signing key (KSK) rollovers and for polling child zones to keep signed delegations up-to-date. You can transfer the Key Master role to a different authoritative name server after zone signing. You can perform this transfer if current Key Master is online or as part of a disaster recovery scenario if the current Key Master is offline.
+- You want to change the Key Master to a different authoritative DNS server for load balancing or administrative purposes.
+- You are performing maintenance on the current Key Master and need to temporarily transfer the role to another server.
+- You are migrating to a new DNS server and want to transfer the Key Master role as part of the migration process.
+
+If the current Key Master is offline and you need to maintain DNSSEC signing operations, you'll need to seize the Key Master role to ensure continuity of service.
 
 ## Prerequisites
 
@@ -37,12 +41,43 @@ In order to transfer the Key master role, your environment must meet the followi
 > [!IMPORTANT]
 > You can't transfer the Key Master role if a zone is file-based because these zones have only one primary, authoritative DNS server. In this scenario, it's recommended to take other security precautions to protect the Key Master from attack and to protect private key material from becoming compromised or lost. For security reasons, a Key Master that isn't a domain controller should only have the DNS Server role installed in order to limit its attack surface.
 
-## Transfer an online Key Master
+## Find the current Key Master
 
-If the Key Master is online, you can perform a successful transfer the Key Master role to another DNS server. Another qualifying DNS server must be available on the network.
+To find the current Key Master for a DNS zone, you can use DNS Manager or Windows PowerShell. Select your preferred method.
 
-> [!NOTE]
-> An unsigned zone can also be assigned a Key Master. All zones that are signed have a Key Master setting, whether they're currently signed or not. A zone that has never been signed usually doesn't have a Key Master. However, you can assign a Key Master in advance using Windows PowerShell to prepare for zone signing.
+### [DNS Manager](#tab/dns-manager)
+
+To find the Key Master using DNS Manager, follow these steps:
+
+1. Open DNS Manager on a primary, authoritative DNS server or connect to a primary, authoritative DNS server from another location using DNS Manager.
+1. In the console tree, expand **Forward Lookup Zones** or **Reverse Lookup Zones**.
+1. Right-click the zone for which you want to find the Key Master, expand **DNSSEC**, then select **Properties**.
+1. The name of the Key Master displays in the **Key Master** field is displayed on the **Key Master** tab of the DNSSEC properties page.
+
+   :::image type="content" source="../media/dnssec-key-master-transfer/key-master.png" alt-text="Screenshot of DNS Manager showing the Key Master field in the Key Master tab of the DNSSEC properties page.":::
+
+   > [!NOTE]
+   > The Key Master is automatically selected when using default zone signing settings, unless specified otherwise.
+
+### [Windows PowerShell](#tab/windows-powershell)
+
+You can also find the Key Master using the [Get-DnsServerDnsSecZoneSetting](/powershell/module/dnsserver/get-dnsserverdnsseczonesetting) cmdlet in PowerShell. Run the following command, replacing `<NameOfZone>` with the name of your DNS zone:
+
+```powershell
+Get-DnsServerDnsSecZoneSetting -ZoneName <NameOfZone> | Select KeyMasterServer
+```
+
+The name of the Key Master displays in the DNS Manager when you select **Forward Lookup Zones** or **Reverse Lookup Zones**. It also displays on the **Key Master** tab of the DNSSEC properties page. You can also run the `Get-DnsServerDnsSecZoneSetting` cmdlet in PowerShell to view the Key Master. The following example shows how to find the Key Master for a zone named `secure.contoso.com`:
+
+```powershell
+Get-DnsServerDnsSecZoneSetting -ZoneName secure.contoso.com | Select KeyMasterServer 
+```
+
+## Transfer the Key Master
+
+When the Key Master is online, you can transfer the Key Master role to another DNS server. This process requires another qualifying DNS server to be available on the network.
+
+An unsigned zone can also be assigned a Key Master. All zones that are signed have a Key Master setting, whether they're currently signed or not. A zone that has never been signed usually doesn't have a Key Master. However, you can assign a Key Master in advance using Windows PowerShell to prepare for zone signing.
 
 You can transfer the Key Master role to another DNS server using DNS Manager or Windows PowerShell. Select your preferred method.
 
@@ -68,7 +103,7 @@ The procedure immediately changes the Key Master. You don't need to wait for Act
 
 ### [Windows PowerShell](#tab/windows-powershell)
 
-You can also perform this operation using Windows PowerShell with the **Reset-DnsServerZoneKeyMasterRole** cmdlet.
+You can also perform this operation using Windows PowerShell with the [Reset-DnsServerZoneKeyMasterRole](/powershell/module/dnsserver/reset-dnsserverzonekeymasterrole) cmdlet.
 
 1. To reset the Key Master role, run the following command in PowerShell, replacing `<NameOfZone>` with the name of your DNS zone and `<ServerName>` with the name of the DNS server you want to set as the new Key Master. The cmdlet prompts the user for confirmation before it transfers the role unless you use the `-Force` switch.
 
@@ -88,9 +123,9 @@ The procedure immediately changes the Key Master. You don't need to wait for Act
 
 ---
 
-## Transfer an offline Key Master (Seizing the Key Master role)
+## Seizing the Key Master role (offline transfer)
 
-The server designated as the Key Master must remain online and highly available to ensure uninterrupted service for key signing operations. If the Key Master goes offline and you can't bring it back online easily, you can transfer the Key Master role to another DNS server. This process is called *seizing* the Key Master role. Don't seize the Key Master role and transfer it offline unless it's unavoidable, such as in a disaster recovery scenario.
+If the Key Master goes offline and you can't bring it back online easily, you can transfer the Key Master role to another DNS server. This process is called *seizing* the Key Master role. Don't seize the Key Master role and transfer it offline unless it's unavoidable, such as in a disaster recovery scenario.
 
 You can seize the Key Master role using DNS Manager or Windows PowerShell. Select your preferred method.
 
@@ -107,7 +142,7 @@ To seize the Key Master role using DNS Manager
    :::image type="content" source="../media/dnssec-key-master-transfer/offline.png" alt-text="Screenshot of DNS Manager showing an alert dialog box that indicates DNSSEC settings for the zone couldn't be loaded from the Key Master.":::
 
    > [!CAUTION]
-   > If you don't see an alert, verify that the Key Master is offline. If the Key Master is online, and you still wish to move the Key Master role, see the section [Transfer an online Key Master](#transfer-an-online-key-master). Don't seize the Key Master role.
+   > If you don't see an alert, verify that the Key Master is offline. If the Key Master is online, and you still wish to move the Key Master role, see the section [Transfer an online Key Master](#transfer-the-key-master). Don't seize the Key Master role.
 
 1. On the **Key Master** tab, select **Use the following DNS server as the Key Master**.
 
@@ -125,7 +160,7 @@ The procedure will immediately change the Key Master. You don't need to wait for
 
 ### [Windows PowerShell](#tab/windows-powershell)
 
-To seize the Key Master role using Windows PowerShell
+To seize the Key Master role using the [Reset-DnsServerZoneKeyMasterRole](/powershell/module/dnsserver/reset-dnsserverzonekeymasterrole) cmdlet in PowerShell, follow these steps:
 
 1. Open an elevated Windows PowerShell prompt on a primary, authoritative DNS server.
 
@@ -147,24 +182,24 @@ The procedure will immediately change the Key Master. You don't need to wait for
 
 ### Transfer without access to the signing keys
 
-The Key Master must have access to private key material for a DNSSEC-signed zone. If the current Key Master is offline, other DNS servers might have access to private key material if it's stored in a shared location such as Active Directory. If private key material isn't stored in Active Directory, and the new Key Master can't access the private keys for a zone in any other way, you must take extra steps. First, you must generate new keys. Then, you need to re-sign the zone using these new keys. After re-signing the zone with new keys, all trust anchors will need to be updated because the existing ones will become invalid.
+If the current Key Master is offline and the new Key Master can't access the private keys, you must generate new keys and re-sign the zone. For detailed information about private key storage options, see [Signing keys](dnssec-key-master.md#signing-keys).
 
 To avoid a situation where the Key Master is offline and you can't access private key material, it's recommended to store private key material in Active Directory. This way, if the Key Master goes offline, you can seize the Key Master role on another DNS server that has access to the private key material. When signing the zone, use the **Replicate this private key to all DNS servers authoritative for this zone** option in the Key Signing Key (KSK) settings. This option ensures that the private key material is replicated to all DNS servers that are authoritative for the zone, making it available for use by any of these servers.
 
 If you don't want to store private key material in Active Directory, you can also provide access to private key material using a certificate or hardware storage module (HSM) device. To learn more about options for storing private key material, see [Signing keys](dnssec-key-master.md#signing-keys).
 
-If private key material isn't stored in Active Directory or an external device, run the following command in PowerShell to store this material in a certificate on the local computer.
-
-```powershell
-New-SelfSignedCertificate `
-  -DnsName "YourDNSName" `
-  -CertStoreLocation "Cert:\LocalMachine\MS-DNSSEC" `
-  -KeyExportPolicy Exportable
-```
-
 After you've seized the Key Master role, perform the following steps:
 
-1. Resign the zone using the new keys. To learn more about resigning the zone, see [Sign DNS Zones with DNSSEC](dnssec-sign-zone.md).
+1. If private key material isn't stored in Active Directory or an external device, run the [New-SelfSignedCertificate](/powershell/module/pki/new-selfsignedcertificate) command in PowerShell to store this material in a certificate on the local computer.
+
+   ```powershell
+   New-SelfSignedCertificate `
+     -DnsName "YourDNSName" `
+     -CertStoreLocation "Cert:\LocalMachine\MS-DNSSEC" `
+     -KeyExportPolicy Exportable
+   ```
+
+1. Re-sign the zone using the new keys. To learn more about re-signing the zone, see [Sign DNS Zones with DNSSEC](dnssec-sign-zone.md).
 
 1. If the zone has trust anchors, you must also replace them. To learn more about distributing trust anchors, see [Distribute Trust Anchors in Active Directory](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593678(v=ws.11)).
 
@@ -172,4 +207,5 @@ If the original Key Master becomes available before the zone is re-signed, you c
 
 ## Related content
 
+- Learn more about the [DNSSEC Key Master](dnssec-key-master.md)
 - [Overview of DNSSEC](dnssec-overview.md)
