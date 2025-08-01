@@ -49,7 +49,7 @@ Two Hyper\-V hosts are configured to support the test scenario in the following 
 - The Hyper\-V hosts are configured in a failover cluster over the intranet network.
 
 >[!NOTE]
->For more information, see [Hyper-V Virtual Switch](../../../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md).
+>For more information, see [Hyper-V Virtual Switch](../../../virtualization/hyper-v/virtual-switch.md).
 
 ### VM Configuration
 

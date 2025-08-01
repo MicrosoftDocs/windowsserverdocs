@@ -1,19 +1,17 @@
 ---
-title: Deploying a two-node clustered file server
-description: This article describes creating a two-node file server cluster
+title: Deploy a two-node clustered file server
+description: Deploy a highly available file server with a two-node failover cluster. Step-by-step instructions help you configure, validate, and manage your cluster.
 manager: tedhudek
 ms.topic: install-set-up-deploy
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 10/16/2023
+ms.date: 07/29/2025
 ---
-# Deploying a two-node clustered file server
-
-
+# Deploy a two-node clustered file server
 
 A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers, called *nodes*, are connected by both physical cables and software. If one of the cluster nodes fails, another node begins to provide service, which is a process known as *failover*. Because of this process, users experience minimal disruptions in service. For more information about how to use failover clusters in Azure Local, see [Create an Azure Local cluster using Windows Admin Center](/azure/azure-local/deploy/create-cluster?context=/windows-server/context/windows-server-failover-clustering).
 
-This guide describes how to install and configure a general purpose file server failover cluster with two nodes. With these instructions, you can learn about failover clusters and familiarize yourself with the Failover Cluster Management snap-in interface in Windows Server 2019 or Windows Server 2016.
+This guide describes how to install and configure a general purpose file server failover cluster with two nodes. With these instructions, you can learn about failover clusters and familiarize yourself with the Failover Cluster Management snap-in interface in Windows Server.
 
 ## How two-node file server clusters work
 
@@ -74,7 +72,7 @@ If you're using an internet Small Computer Systems Interface (iSCSI), each clust
 
 ### Storage
 
-You must use shared storage that's certified for Windows Server 2016 or Windows Server 2019.
+You must use shared storage that's certified for Windows Server.
 
 For a two-node failover cluster, the storage should contain at least two separate volumes (LUNs) if you're using a witness disk for quorum. The witness disk is a disk in the cluster storage that's designated to hold a copy of the cluster configuration database.
 
@@ -130,11 +128,11 @@ The following list describes shared folder configuration functionality integrate
 
 When deploying a storage area network (SAN) with a failover cluster, you must follow these guidelines:
 
-- Use the [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx) site to confirm the vendor's storage, including drivers, firmware, and software, are certified for Windows Server 2016 or Windows Server 2019.
+- Use the [Windows Server Catalog](https://www.windowsservercatalog.com/default.aspx) site to confirm the vendor's storage, including drivers, firmware, and software, are certified for Windows Server.
 
 - Isolate storage devices, one cluster per device. Servers from different clusters must not be able to access the same storage devices. In most cases, you should isolate a LUN you use for one set of cluster servers from all other servers by using LUN masking or zoning.
 
-- Consider using multipath I/O software. In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software. This configuration provides the highest level of redundancy and availability. However, you must base your multipath solution on Microsoft Multipath I/O (MPIO). Your storage hardware vendor can also supply an MPIO device-specific module (DSM) for your hardware, although Windows Server 2016 and Windows Server 2019 include one or more DSMs as part of the operating system.
+- Consider using multipath I/O software. In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software. This configuration provides the highest level of redundancy and availability. However, you must base your multipath solution on Microsoft Multipath I/O (MPIO). Your storage hardware vendor can also supply an MPIO device-specific module (DSM) for your hardware, although Windows Server includes one or more DSMs as part of the operating system.
 
 ## Install a two-node file server cluster
 
@@ -186,7 +184,7 @@ To connect the cluster servers to the networks and storage:
 
 ### Step 2: Install the file server role and failover cluster feature
 
-Next, you need to install the file server role and failover cluster feature. Both servers must be running either Windows Server 2016 or Windows Server 2019.
+Next, you need to install the file server role and failover cluster feature.
 
 #### [Server Manager](#tab/server-manager)
 

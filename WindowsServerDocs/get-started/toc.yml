@@ -11,7 +11,7 @@ items:
     - name: What's new in Windows Server
       items:
       - name: Windows Server 2025
-        href: whats-new-windows-server-2025.md  
+        href: whats-new-windows-server-2025.md
       - name: Windows Server 2022
         href: whats-new-in-windows-server-2022.md
       - name: Windows Server 2019
@@ -45,13 +45,13 @@ items:
         items:
         - name: Known issues and notifications
           href: /windows/release-health/status-windows-server-2025?context=/windows-server/context/windows-server-get-started
-        - name: Resolved issues 
+        - name: Resolved issues
           href: /windows/release-health/resolved-issues-windows-server-2025?context=/windows-server/context/windows-server-get-started
       - name: Windows Server 2022
         items:
         - name: Known issues and notifications
           href: /windows/release-health/status-windows-server-2022?context=/windows-server/context/windows-server-get-started
-        - name: Resolved issues 
+        - name: Resolved issues
           href: /windows/release-health/resolved-issues-windows-server-2022?context=/windows-server/context/windows-server-get-started
   - name: Plan
     items:
@@ -101,8 +101,10 @@ items:
       href: automatic-vm-activation.md
     - name: KMS activation planning
       href: kms-activation-planning.md
-    - name: Create KMS host
+    - name: Create a KMS host
       href: kms-create-host.md
+    - name: Replace a KMS host
+      href: kms-replace-host.md
     - name: KMS client activation
       href: kms-client-activation-keys.md
     - name: Troubleshooting
