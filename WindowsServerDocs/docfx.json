@@ -787,7 +787,10 @@
     "rules": {
       "sensitive-language-sl": {
         "exclude": [
-          "administration/windows-commands/dnscmd.md"
+          "administration/windows-commands/dnscmd.md",
+          "networking/dns/dnssec-key-master.md",
+          "networking/dns/transfer-dnssec-key-master.md",
+          "networking/dns/sign-dnssec-zone.md"
         ]
       }
     },

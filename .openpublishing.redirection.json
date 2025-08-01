@@ -12476,6 +12476,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/get-started-with-windows-server.md",
+      "redirect_url": "/windows-server/get-started/overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh.md",
       "redirect_url": "/windows-server/administration/windows-commands/netsh",
       "redirect_document_id": false
