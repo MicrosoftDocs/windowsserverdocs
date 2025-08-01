@@ -92,7 +92,7 @@ To perform its role, the Key Master must have access to private key for a DNSSEC
 
   **Best for:** High-security environments where you need strong protection against key exfiltration and compromise.
 
-To learn more about how to create signing keys 2, see [DNSSEC Sign DNS Zones](dnssec-sign-zone.md).
+To learn more about how to create signing keys, see [DNSSEC Sign DNS Zones](dnssec-sign-zone.md).
 
 ## Related content
 

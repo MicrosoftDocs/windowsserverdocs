@@ -789,8 +789,8 @@
         "exclude": [
           "administration/windows-commands/dnscmd.md",
           "networking/dns/dnssec-key-master.md",
-          "networking/dns/dnssec-key-master-transfer.md",
-          "networking/dns/dnssec-sign-zone.md"
+          "networking/dns/transfer-dnssec-key-master.md",
+          "networking/dns/sign-dnssec-zone.md"
         ]
       }
     },
