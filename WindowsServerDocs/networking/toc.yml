@@ -205,9 +205,9 @@ items:
       - name: DNSSEC
         items:
         - name: Transfer the DNSSEC Key Master Role
-          href: dns/dnssec-key-master-transfer.md
+          href: dns/transfer-dnssec-key-master.md
         - name: Sign DNS Zones
-          href: dns/dnssec-sign-zone.md
+          href: dns/sign-dnssec-zone.md
       - name: Configure the Name Resolution Policy Table
         href: dns/name-resolution-policy-table.md
     - name: Tutorials
