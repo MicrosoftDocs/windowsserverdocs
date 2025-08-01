@@ -5,7 +5,7 @@ description: Configure the Name Resolution Policy Table (NRPT) in Windows Server
 author: orin-thomas
 ms.author: orthomas
 ms.topic: how-to
-ms.date: 07/10/2025
+ms.date: 08/01/2025
 ai-usage: ai-assisted
 ms.custom:
   - template-how-to, team=cloud_advocates

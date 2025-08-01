@@ -4,7 +4,7 @@ description: Understand the role of the Key Master in DNSSEC deployments, includ
 author: orin-thomas
 ms.author: roharwoo
 ms.topic: concept-article
-ms.date: 07/08/2025
+ms.date: 08/01/2025
 ms.custom: template-how-to, team=cloud_advocates
 ai-usage: ai-assisted
 # Customer intent: As a DNS administrator, I want to understand the DNSSEC Key Master component so that I can implement DNSSEC.
@@ -33,7 +33,7 @@ The Key Master must meet specific requirements to function correctly.
 
 For all types of zones, the Key Master must be a primary, authoritative server for the zone that's also capable of online zone signing.
 
-Active Directory integrated zones and file-backed zones have some exceptions, these are described in the following sections.
+Active Directory integrated zones and file-backed zones have some exceptions. These exceptions are described in the following sections.
 
 ### Active Directory integrated zones
 
@@ -42,7 +42,7 @@ In an Active Directory integrated zone where there are multiple authoritative pr
 - You can transfer the Key Master role to a different authoritative name server after signing a DNS zone.
 - You can transfer the Key Master role if the current Key Master is online. If the current Key Master is offline, you can also transfer the role as part of a disaster recovery process.
 - One authoritative server can be the Key Master for multiple zones.
-- Different authoritative servers can be Key Masters for different zones.
+- Different authoritative servers can be the Key Master for different zones.
 
 ### File-backed zones
 
@@ -74,21 +74,21 @@ The Key Master generates all keys for the DNS zone, and is responsible for distr
 
 ### Unsigned zones
 
-You can also assign a Key Master to an unsigned zone. All zones have a Key Master setting, whether they're currently signed or not. A zone that hasn't been signed usually lacks a Key Master. You can assign a Key Master in advance using PowerShell to prepare for zone signing.
+You can also assign a Key Master to an unsigned zone. All zones have a Key Master setting, whether they're currently signed or not. A zone that isn't signed also lacks a Key Master. You can assign a Key Master in advance using PowerShell to prepare for zone signing.
 
 ### Private key storage
 
 To perform its role, the Key Master must have access to private key for a DNSSEC-signed zone. The private key can be stored in several ways:
 
-- **Active Directory**: If the Key Master is a domain controller, it can store private key material in Active Directory. This is the most secure option and allows for easy replication and access by other DNS servers in the domain.
+- **Active Directory**: If the Key Master is a domain controller, it can store private key material in Active Directory. Using Active Directory is the most secure option and allows for easy replication and access by other DNS servers in the domain.
 
   **Best for:** Environments where DNS is Active Directory integrated, as it provides strong security and easy access to private keys.
 
-- **Certificate store**: If the Key Master is not a domain controller, it can store private key material in the local certificate store. This requires careful management to ensure the private keys are secure and accessible.
+- **Certificate store**: If the Key Master isn't a domain controller, it can store private key material in the local certificate store. Using a certificate store requires careful management to ensure the private keys are secure and accessible.
 
   **Best for:** Workgroup and standalone environments where you need to manage private keys locally.
 
-- **Hardware Security Module (HSM)**: For high-security environments, private keys can be stored in an HSM. This provides strong protection against key compromise but requires additional configuration and management.
+- **Hardware Security Module (HSM)**: For high-security environments, private keys can be stored in an HSM. HSMs provides strong protection against key compromise but requires extra configuration and management.
 
   **Best for:** High-security environments where you need strong protection against key exfiltration and compromise.
 

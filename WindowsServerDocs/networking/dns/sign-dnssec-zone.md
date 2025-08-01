@@ -5,7 +5,7 @@ description: Protect DNS zones from tampering with DNSSEC signing. Learn to conf
 author: orin-thomas
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 07/09/2025
+ms.date: 08/01/2025
 ai-usage: ai-assisted
 ms.custom:
   - template-how-to, team=cloud_advocates
