@@ -220,39 +220,15 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ## Frequently asked questions
 
-1. Can I migrate both Windows and Linux virtual machines?
-
-    Yes, the tool supports migration of both Windows and Linux VMs. For Linux, make sure Hyper-V drivers are installed before migration to ensure a smooth boot on the destination server.
-
-1. Which VMware versions are supported?
-
-    The tool supports vCenter and ESXi versions 6.x and 7.x.
-
 1. Does the tool support both Static and DHCP IP addresses?
 
-    Yes, DHCP and Static IP addresses works automatically. For Static IP configuration of linux vms; Hyper-V drivers should be preinstalled using [Install Linux Integration Services (LIS) on Hyper-V VM](https://poweradm.com/install-linux-integration-services-hyper-v/).
+    Yes, both DHCP and Static IP addresses are supported.
+
+    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's then persisted on the target Hyper-V host post cutover phase.
 
 1. How does the tool handle VM boot types?
 
     The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V.**UEFI boot** creates a Generation 2 VM on Hyper-V.
-
-1. What are the current limitations of this migration tool?
-
-    The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported. VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
-
-1. What should I know about the source VM before migrating?
-
-    Ensure there are no active snapshots exist for the VM—the initial sync fails otherwise. You have the FQDN and credentials for your vCenter endpoint.
-
-1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
-
-    To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
-    1. RDP into your Windows Server Cluster node.
-    1. Press Windows + R, type cluadmin.msc, and hit Enter. This opens the Failover Cluster Manager.
-    1. In the left pane, expand your cluster and navigate to Roles.
-    1. Follow the detailed steps in this [Setting up highly available file shares in Windows Server 2022](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
-    1. Sometimes, it may take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
-    1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
 
 1. Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
 
@@ -262,19 +238,29 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage: `Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed`.
 
+1. What are the current limitations of this migration tool?
+
+    The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported. VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
+
+1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
+
+    To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
+    1. RDP into your Windows Server Cluster node.
+    1. Press Windows + R, type cluadmin.msc, and hit Enter. This opens the Failover Cluster Manager.
+    1. In the left pane, expand your cluster and navigate to Roles.
+    1. Follow the steps to [set up highly available file shares in Windows Server](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
+    1. It can take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
+    1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
+
 1. Is VMWare to Azure Local migration supported?
 
-    No, migration to Azure Local isn't supported by this tool. Use Azure Migrate to migrate virtual machines to Azure Local.
-
-1. How is static IP supported?
-
-    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's then persisted on the target Hyper-V host post cutover phase.
+    No, migration to Azure Local isn't supported by this tool. Use [Azure Migrate to migrate virtual machines to Azure Local](/azure/azure-local/migrate/migration-azure-migrate-vmware-overview?view=azloc-2507).
 
 1. Does the tool support virtual machines running on a virtual storage area network (vSAN)?
 
     No, the tool doesn't support virtual machines running on vSAN?
 
-1. Is this tool available in Windows Admin Center on portal?
+1. Is this tool available in Windows Admin Center in the Azure portal?
 
     No, the conversion tool is only available in Windows Admin Center on-premise.
 
