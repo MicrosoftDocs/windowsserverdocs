@@ -100,7 +100,7 @@ Windows Server offers two editions designed for different scales and virtualizat
 | **Virtualization rights** | 2 virtual machines plus one Hyper-V host per license | Unlimited virtual machines plus one Hyper-V host per license |
 | **Best for** | Small to medium deployments, specific workloads, cost-conscious environments | Large datacenters, cloud deployments, extensive virtualization |
 
-Both editions include many of the same features and capibilites. For a detailed comparison, see:
+Both editions include many of the same features and capabilites. For a detailed comparison, see:
 
 - [Comparison of Windows Server editions](editions-comparison.md)
 - [Comparison of locks and limits in Windows Server](locks-limits.md)
