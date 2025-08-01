@@ -15,7 +15,7 @@ ms.custom:
   - ai-gen-description
 ---
 
-# Sign DNS Zones with DNSSEC
+# Sign DNS zones with DNSSEC
 
 DNSSEC (Domain Name System Security Extensions) protects DNS zones from tampering and ensures data integrity by adding cryptographic signatures to DNS records. This article guides DNS administrators through the process of signing DNS zones with DNSSEC on Windows Server.
 
