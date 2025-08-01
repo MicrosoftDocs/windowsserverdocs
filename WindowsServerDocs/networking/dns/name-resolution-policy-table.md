@@ -3,7 +3,7 @@ title: Configure DNSSEC rules using the Name Resolution Policy Table in Windows
 description: Configure the Name Resolution Policy Table (NRPT) in Windows Server and Windows client for DNSSEC deployment. Learn to enforce DNS security policies using Group Policy or PowerShell commands.
 #customer intent: As a system administrator, I want to require DNSSEC validation for specific namespaces so that I can ensure secure name resolution for critical domains
 author: orin-thomas
-ms.author: orthomas
+ms.author: roharwood
 ms.topic: how-to
 ms.date: 08/01/2025
 ai-usage: ai-assisted
