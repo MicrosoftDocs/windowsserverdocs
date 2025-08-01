@@ -62,7 +62,7 @@ When you sign a zone with DNSSEC, the Key Master plays a central role in the pro
 
 The Key Master handles the signing process differently depending on your zone type:
 
-- **Active Directory-integrated zones**: Private signing keys automatically replicate to all primary DNS servers through Active Directory replication. Each Key Master server signs its own copy of the zone in memory for optimal performance.
+- **Active Directory-integrated zones**: Private signing keys automatically replicate to all primary DNS servers through Active Directory replication. Each Key Master signs its own copy of the zone in memory for optimal performance.
 
 - **File-backed zones**: The signed zone is committed to disk on the single primary DNS server serving as the Key Master. Signing keys are stored in the local certificate store or a Hardware Security Module (HSM) if configured.
 

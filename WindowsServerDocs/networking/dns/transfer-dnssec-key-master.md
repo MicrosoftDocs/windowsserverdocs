@@ -73,6 +73,8 @@ The name of the Key Master displays in the DNS Manager when you select **Forward
 Get-DnsServerDnsSecZoneSetting -ZoneName secure.contoso.com | Select KeyMasterServer 
 ```
 
+---
+
 ## Transfer the Key Master
 
 When the Key Master is online, you can transfer the Key Master role to another DNS server. This process requires another qualifying DNS server to be available on the network.
