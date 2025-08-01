@@ -50,14 +50,12 @@ To find the current Key Master for a DNS zone, you can use DNS Manager or Window
 To find the Key Master using DNS Manager, follow these steps:
 
 1. Open DNS Manager on a primary, authoritative DNS server or connect to a primary, authoritative DNS server from another location using DNS Manager.
+
 1. In the console tree, expand **Forward Lookup Zones** or **Reverse Lookup Zones**.
+
 1. Right-click the zone for which you want to find the Key Master, expand **DNSSEC**, then select **Properties**.
+
 1. The name of the Key Master displays in the **Key Master** field is displayed on the **Key Master** tab of the DNSSEC properties page.
-
-   :::image type="content" source="../media/dnssec-key-master-transfer/key-master.png" alt-text="Screenshot of DNS Manager showing the Key Master field in the Key Master tab of the DNSSEC properties page.":::
-
-   > [!NOTE]
-   > The Key Master is automatically selected when using default zone signing settings, unless specified otherwise.
 
 ### [Windows PowerShell](#tab/windows-powershell)
 
@@ -201,7 +199,7 @@ After you've seized the Key Master role, perform the following steps:
      -KeyExportPolicy Exportable
    ```
 
-1. Re-sign the zone using the new keys. To learn more about re-signing the zone, see [Sign DNS Zones with DNSSEC](dnssec-sign-zone.md).
+1. Re-sign the zone using the new keys. To learn more about re-signing the zone, see [Sign DNS Zones with DNSSEC](sign-dnssec-zone.md).
 
 1. If the zone has trust anchors, you must also replace them. To learn more about distributing trust anchors, see [Distribute Trust Anchors in Active Directory](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn593678(v=ws.11)).
 

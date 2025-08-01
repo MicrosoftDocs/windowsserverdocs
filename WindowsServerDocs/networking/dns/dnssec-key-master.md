@@ -66,7 +66,7 @@ The Key Master handles the signing process differently depending on your zone ty
 
 - **File-backed zones**: The signed zone is committed to disk on the single primary DNS server serving as the Key Master. Signing keys are stored in the local certificate store or a Hardware Security Module (HSM) if configured.
 
-For detailed steps on how to sign DNS zones with DNSSEC, see [DNSSEC Sign DNS Zones](dnssec-sign-zone.md).
+For detailed steps on how to sign DNS zones with DNSSEC, see [DNSSEC Sign DNS Zones](sign-dnssec-zone.md).
 
 ## Signing keys
 
@@ -92,7 +92,7 @@ To perform its role, the Key Master must have access to private key for a DNSSEC
 
   **Best for:** High-security environments where you need strong protection against key exfiltration and compromise.
 
-To learn more about how to create signing keys, see [DNSSEC Sign DNS Zones](dnssec-sign-zone.md).
+To learn more about how to create signing keys, see [DNSSEC Sign DNS Zones](sign-dnssec-zone.md).
 
 ## Related content
 
