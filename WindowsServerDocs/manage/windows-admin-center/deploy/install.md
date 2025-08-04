@@ -9,15 +9,15 @@ zone_pivot_groups: windows-admin-center-os
 ---
 # Install Windows Admin Center
 
-This topic describes how to install Windows Admin Center on a Windows client machine or on a Windows Server 2025 remote server so that multiple users can access Windows Admin Center using a web browser.
+This article explains how to install Windows Admin Center on a Windows PC or a Windows Server remote server so multiple users can use Windows Admin Center in a web browser.
 
 > [!TIP]
 > New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../overview.md) or [Download now](../overview.md).
+> [Learn more about Windows Admin Center](../overview.md) or [download now](../overview.md).
 
 ## Determine your installation type
 
-Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a virtual machine in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Review the [installation options](../plan/installation-options.md), which include the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a virtual machine in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
 ## Prerequisites
 
@@ -25,19 +25,19 @@ To install Windows Admin Center, you need the following prerequisites:
 
 - A Windows PC or server to install Windows Admin Center on.
 
-- Administrative privileges or equivalent permissions on the machine you're installing Windows Admin Center on.
+- Admin privileges or equivalent permissions on the machine you're installing Windows Admin Center on.
 
-- Optional: An SSL certificate used for _Server Authentication (1.3.6.1.5.5.7.3.1)_. You can use a self-signed certificate for testing, but you should always use a certificate from a trusted certificate authority for production environments. If you don't have a certificate, you can use the Windows Admin Center installer to generate a self-signed certificate. The certificate is valid for 60 days.
+- Optional: An SSL certificate for _Server Authentication (1.3.6.1.5.5.7.3.1)_. Use a self-signed certificate for testing, but always use a certificate from a trusted certificate authority for production environments. If you don't have a certificate, use the Windows Admin Center installer to generate a self-signed certificate. The certificate is valid for 60 days.
 
 :::zone pivot="windows-server-2022,windows-client"
 
-- Download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine you want to install Windows Admin Center on.
+- Download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine where you want to install Windows Admin Center.
 
 ::: zone-end
 
 :::zone pivot="windows-server-2025"
 
-- If you're using the Server Core experience, download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine you want to install Windows Admin Center on.
+- If you're using the Server Core experience, download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine where you want to install Windows Admin Center.
 
 ::: zone-end
 
@@ -84,12 +84,9 @@ You've now installed Windows Admin Center on your machine.
 
 ### [Server Core](#tab/server-core)
 
-To install Windows Admin Center on your machine running the Windows Server Core experience or using PowerShell, follow these steps:
-
-1. Sign-in to your machine. If you're on Server core, from the SConfig menu, enter option **15**, then press <kbd>Enter</kbd>
-   to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
-
-1. Download the Windows Admin Center installer
+To install Windows Admin Center on your machine1. Sign in to your machine. If you're on Server Core, from the SConfig menu, enter option **15**, then press <kbd>Enter</kbd>
+   to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.. 1. Download the Windows Admin Center installer
+   and copy it to your machine using the following PowerShell command:in Center installer
    and copy it to your computer using the following PowerShell command:
 
    ```powershell
@@ -106,7 +103,7 @@ To install Windows Admin Center on your machine running the Windows Server Core 
    Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
    ```
 
-1. You may also need to start the Windows Admin Center service using the following command:
+1. You might also need to start the Windows Admin Center service using the following command:
 
    ```powershell
    Start-Service -Name WindowsAdminCenter
