@@ -107,7 +107,7 @@ In deployments with three types of drives, one volume can span the SSD and HDD t
 
 To help you create such volumes, Azure Stack HCI provides default tier templates called **MirrorOn*MediaType*** and **NestedMirrorOn*MediaType*** (for performance), and **ParityOn*MediaType*** and **NestedParityOn*MediaType*** (for capacity), where *MediaType* is HDD or SSD. The templates represent storage tiers based on media types and encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and dual parity on the slower capacity drives (if applicable).
 
-- Storage Bus Layer (SBL) cache isn't supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) is the only supported storage type for single server.
+- Storage Bus Layer (SBL) cache isn't supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) are the only supported storage type for single server.
 
 - On Storage Spaces Direct clusters running on earlier versions of Windows Server 2016, the default tier templates are called **Performance** and **Capacity**.
 
@@ -192,7 +192,7 @@ Nested resiliency only applies to two-server clusters running Azure Stack HCI or
 
 ## Related content
 
-For related topics and other storage management tasks, see also:
+For related content and other storage management tasks, see:
 
 - [Storage Spaces Direct overview](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 - [Manage volumes](manage-volumes.md)
