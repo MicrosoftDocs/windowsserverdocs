@@ -28,8 +28,6 @@ To create a two-way or three-way mirror volume using Windows Admin Center:
 1. Under **More options,** you can use the checkboxes to turn on deduplication, integrity checksums, or encryption.
 1. Select **Create**.
 
-   :::image type="content" source="media/create-volumes/create-mirror-volume.png" alt-text="You can use Windows Admin Center to create a two-way or three-way mirror volume." lightbox="media/create-volumes/create-mirror-volume.png":::
-
 Depending on the size, creating the volume can take a few minutes. Notifications in the upper-right let you know when the volume is created. The new volume appears in the Inventory list.
 
 ## Create a mirror-accelerated parity volume
