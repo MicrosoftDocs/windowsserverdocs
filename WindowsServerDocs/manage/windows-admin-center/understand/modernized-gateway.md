@@ -50,7 +50,7 @@ With our modernized gateway, we’ve made changes to our installer to offer more
 
 When running the installer, you're presented with three different installation modes: express localhost setup, express remote setup, and custom setup.
 
-![Screenshot of modernized gateway installer with three installation modes](../media/modernized-gateway-installer.png)
+![Screenshot of modernized gateway installer with three installation modes](../media/windows-admin-center-v2-installer.png)
 
 If you would like to configuration options for internal and external network ports, endpoint FQDN, WinRM over HTTPS, and more, continue to the [Custom setup](#custom-setup) section. If you're okay with the defaults, continue to the [Express setup options](#express-setup-options) section.
 
