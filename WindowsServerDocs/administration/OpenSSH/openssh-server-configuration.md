@@ -128,8 +128,8 @@ SCP with chroot by implementing a custom shell that allows only SCP and SFTP.
 
 ### GSSAPIAuthentication
 
-The `GSSAPIAuthentication` configuration argument specifies whether GSSAPI-based user authentication is allowed. The
-default is no.
+The `GSSAPIAuthentication` configuration argument specifies whether GSSAPI (Kerberos) based user authentication is allowed. The
+default for `GSSAPIAuthentication` is no.
 
 GSSAPI authentication also requires the use of the `-K` switch specifying the hostname when you use
 the OpenSSH Client. Alternatively, you can create a corresponding entry in the SSH client
@@ -149,7 +149,7 @@ Host SERVER01.contoso.com
 ```
 
 > [!IMPORTANT]
-> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 xxxx.
+> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 (May 2021 Update).
 
 ### HostKey
 
