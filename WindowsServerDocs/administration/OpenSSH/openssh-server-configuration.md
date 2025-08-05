@@ -23,7 +23,7 @@ isn't repeated here. Client configuration files can be found on the
 [ssh_config manual page](https://man.openbsd.org/ssh_config). OpenSSH server configuration
 files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config).
 
-OpenSSH Server reads configuration data from `%programdata%\ssh\sshd\_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter. If
+OpenSSH Server reads configuration data from `%programdata%\ssh\sshd_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter. If
 the file is missing, sshd generates one with the default configuration when the service is started.
 
 In Windows, the OpenSSH Client (ssh) reads configuration data from a configuration file in the
@@ -66,7 +66,7 @@ New-ItemProperty @NewItemPropertyParams
 
 ## Windows configurations in sshd_config
 
-In Windows, sshd reads configuration data from `%programdata%\ssh\sshd\_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter.
+In Windows, sshd reads configuration data from `%programdata%\ssh\sshd_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter.
 If the file is missing, sshd generates one with the default configuration when the service is started.
 
 The following sections describe Windows-specific configuration settings that are possible via entries in sshd_config.
@@ -101,7 +101,7 @@ DenyUsers contoso\*
 AllowGroups contoso\sshusers contoso\serveroperators
 ```
 
-The following example allows the user named `localuser` to sign in from the host 192.168.2.23 and allows members of the group `sshusers`.
+The following example allows the user `localuser` to sign in from the host 192.168.2.23 and allows members of the group `sshusers`.
 
 ```sshd_config
 AllowUsers localuser@192.168.2.23
@@ -160,7 +160,7 @@ Host SERVER01.contoso.com
 ```
 
 > [!IMPORTANT]
-> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 ([May 2021 Update](http://support.microsoft.com/help/5003173)).
+> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 ([May 2021 Update](https://support.microsoft.com/help/5003173)).
 
 ### HostKey
 
@@ -193,7 +193,7 @@ any other value, including the default value, AUTH directs logging to ETW. For m
 ### Configuration arguments
 
 The following configuration argument is available starting in Windows Server 2022, Windows 11, and
-Windows 10 ([May 2021 Update](http://support.microsoft.com/help/5003173)):
+Windows 10 ([May 2021 Update](https://support.microsoft.com/help/5003173)):
 
 - `GSSAPIAuthentication`
 
