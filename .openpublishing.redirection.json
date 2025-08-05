@@ -51,31 +51,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/licensing/Additional-Software.md",
-      "redirect_url": "/legal/windows-server/Additional-Software",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/licensing/WinServer2016expiry.md",
-      "redirect_url": "/legal/windows-server/WinServer2016expiry",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/licensing/WinServer2016licenseterms.md",
-      "redirect_url": "/legal/windows-server/WinServer2016licenseterms",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/licensing/system-insights-capabilities-eula.md",
-      "redirect_url": "/legal/windows-server/system-insights-capabilities-eula",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/licensing/system-insights-eula.md",
-      "redirect_url": "/legal/windows-server/system-insights-eula",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
       "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
       "redirect_document_id": false

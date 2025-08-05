@@ -2624,6 +2624,31 @@
       "source_path": "WindowsServerDocs/windows-server-2022/get-started/vm-activation.md",
       "redirect_url": "/windows-server/get-started/automatic-vm-activation",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/Additional-Software.md",
+      "redirect_url": "/legal/windows-server/Additional-Software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/WinServer2016expiry.md",
+      "redirect_url": "/legal/windows-server/WinServer2016expiry",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/WinServer2016licenseterms.md",
+      "redirect_url": "/legal/windows-server/WinServer2016licenseterms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/system-insights-capabilities-eula.md",
+      "redirect_url": "/legal/windows-server/system-insights-capabilities-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/system-insights-eula.md",
+      "redirect_url": "/legal/windows-server/system-insights-eula",
+      "redirect_document_id": false
     }
   ]
 }
