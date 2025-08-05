@@ -33,6 +33,9 @@ You can implement multifactor authentication with key pairs by entering a passph
 > [!IMPORTANT]
 > A remote session opened via key-based authentication doesn't have associated user credentials. As a result, the session isn't capable of outbound authentication as the user. This behavior is by design.
 
+> [!NOTE]
+> Windows OpenSSH does not support the AuthorizedKeysCommand andAuthorizedKeysCommandUser directives. This means you cannot dynamically fetch SSH keys from Active Directory using these directives as you might on Linux system
+
 ## Host key generation
 
 Public keys have specific access control list (ACL) requirements that, on Windows, equate to only allowing access to administrators and the System user. The first time the `sshd` service is used, the key pair for the host is automatically generated.
