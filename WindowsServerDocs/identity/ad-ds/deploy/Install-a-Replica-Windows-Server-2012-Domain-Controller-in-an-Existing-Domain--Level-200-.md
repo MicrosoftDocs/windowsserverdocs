@@ -7,6 +7,7 @@ ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
 ms.topic: install-set-up-deploy
+ms.custom: sfi-image-nochange
 ---
 
 # Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)

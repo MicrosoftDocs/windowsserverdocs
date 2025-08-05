@@ -6,6 +6,7 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
 # AD FS troubleshooting: Claims rules syntax

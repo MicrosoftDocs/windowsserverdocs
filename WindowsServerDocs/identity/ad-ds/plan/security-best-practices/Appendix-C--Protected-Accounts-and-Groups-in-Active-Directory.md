@@ -7,7 +7,10 @@ ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
-ms.custom: inhenkel, orthomas
+ms.custom:
+  - inhenkel
+  - orthomas
+  - sfi-image-nochange
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory
 

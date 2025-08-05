@@ -5,6 +5,7 @@ ms.topic: article
 author: xelu86
 ms.author: alalve
 ms.date: 05/23/2018
+ms.custom: sfi-image-nochange
 ---
 # Fujitsu ServerView Health and RAID extensions
 

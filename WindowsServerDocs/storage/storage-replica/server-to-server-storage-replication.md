@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: alalve
 author: xelu86
 ms.date: 04/16/2025
+ms.custom: sfi-image-nochange
 ---
 # Set up server-to-server storage replication by using Storage Replica
 

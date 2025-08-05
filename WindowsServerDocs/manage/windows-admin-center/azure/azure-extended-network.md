@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 12/17/2019
+ms.custom: sfi-image-nochange
 ---
 
 # Extend your on-premises subnets into Azure using extended network for Azure

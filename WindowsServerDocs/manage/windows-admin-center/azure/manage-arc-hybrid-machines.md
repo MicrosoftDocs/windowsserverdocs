@@ -5,7 +5,9 @@ ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 10/30/2024
-ms.custom: references_regions
+ms.custom:
+  - references_regions
+  - sfi-image-nochange
 ---
 
 # Manage Azure Arc-enabled Servers using Windows Admin Center in Azure

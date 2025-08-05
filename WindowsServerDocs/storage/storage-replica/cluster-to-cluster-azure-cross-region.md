@@ -6,6 +6,7 @@ author: robinharwood
 ms.date: 02/18/2025
 ms.topic: how-to
 manager: mchad
+ms.custom: sfi-image-nochange
 ---
 # Set up cluster-to-cluster storage replication across Azure regions by using Storage Replica
 

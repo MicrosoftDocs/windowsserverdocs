@@ -5,6 +5,7 @@ author: jay98014
 ms.author: mosagie
 ms.date: 06/26/2025
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 
 # Configure policy settings for Windows LAPS

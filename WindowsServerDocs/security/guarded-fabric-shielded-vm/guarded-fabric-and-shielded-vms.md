@@ -6,6 +6,7 @@ manager: dongill
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 02/16/2023
+ms.custom: sfi-image-nochange
 ---
 
 # Guarded fabric and shielded VMs overview

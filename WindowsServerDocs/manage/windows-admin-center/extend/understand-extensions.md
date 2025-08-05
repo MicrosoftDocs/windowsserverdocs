@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/18/2018
+ms.custom: sfi-image-nochange
 ---
 # Understanding Windows Admin Center Extensions
 

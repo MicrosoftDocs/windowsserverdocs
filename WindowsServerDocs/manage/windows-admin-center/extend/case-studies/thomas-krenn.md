@@ -5,6 +5,7 @@ ms.topic: article
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 06/24/2019
+ms.custom: sfi-image-nochange
 ---
 # Thomas-Krenn.AG Extension
 

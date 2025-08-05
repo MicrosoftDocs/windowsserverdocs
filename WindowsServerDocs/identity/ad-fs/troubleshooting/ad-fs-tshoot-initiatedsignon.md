@@ -5,6 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 05/19/2023
 ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshoot AD FS IdP-initiated sign-in

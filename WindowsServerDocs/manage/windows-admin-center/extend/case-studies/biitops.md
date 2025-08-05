@@ -5,6 +5,7 @@ ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 06/2/2019
+ms.custom: sfi-image-nochange
 ---
 # BiitOps
 BiitOps provides operational insights and data to help management and IT Operations make informed decisions.

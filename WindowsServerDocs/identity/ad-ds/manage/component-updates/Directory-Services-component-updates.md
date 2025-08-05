@@ -7,7 +7,9 @@ ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
 ms.topic: article
-ms.custom: inhenkel
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Directory Services component updates

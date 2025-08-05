@@ -5,6 +5,7 @@ ms.topic: article
 author: xelu86
 ms.author: alalve
 ms.date: 06/14/2019
+ms.custom: sfi-image-nochange
 ---
 # QCT Management Suite Extension
 

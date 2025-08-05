@@ -5,6 +5,7 @@ ms.author: mosagie
 author: meaghanlewis
 ms.date: 06/21/2023
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Active Directory Forest Recovery - Perform an authoritative synchronization of DFSR-replicated SYSVOL

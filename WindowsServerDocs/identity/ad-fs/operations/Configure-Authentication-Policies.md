@@ -7,6 +7,7 @@ manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ms.author: roharwoo
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Authentication Policies
