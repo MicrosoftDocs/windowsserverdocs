@@ -1,0 +1,69 @@
+{
+  "redirections": [
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Attach-additional-stations-to-your-MultiPoint-services-computer.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-attach-additional-stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Collect-hardware-and-device-drivers-needed-for-the-installation.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-hardware-device-drivers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Example-scenarios--MultiPoint-Services-user-accounts.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-users-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Hardware-Requirements-and-Performance-Recommendations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/hardware-and-performance-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Important-Information-about-Software-License-Compliance.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-software-license-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Install-Server-Backup-on-your-MultiPoint-services-computer.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-server-backup-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Install-software-on-your-MultiPoint-services-system.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-software-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Join-the-MultiPoint-services-computer-to-a-domain--optional-.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/join-multipoint-services-to-a-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Limit-users--access-to-the-server-in-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/limit-user-access-to-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/manage-client-access-licenses-with-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/manage-client-access-licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Selecting-Hardware-for-Your-MultiPoint-services-System.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/select-hardware-mps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-the-date--time--and-time-zone.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/set-the-date-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Task-Lists--Deploying-Windows-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/deploy-multipoint-services-task-list",
+      "redirect_document_id": false
+    }
+  ]
+}
