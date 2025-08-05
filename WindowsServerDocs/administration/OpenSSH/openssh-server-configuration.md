@@ -153,7 +153,7 @@ Host SERVER01.contoso.com
 ```
 
 > [!IMPORTANT]
-> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 ([May 2021 Update](http://support.microsoft.com/help/5003173)).
+> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 ([May 2021 Update](https://support.microsoft.com/help/5003173)).
 
 ### HostKey
 
@@ -186,7 +186,7 @@ any other value, including the default value, AUTH directs logging to ETW. For m
 ### Configuration arguments
 
 The following configuration argument is available starting in Windows Server 2022, Windows 11, and
-Windows 10 ([May 2021 Update](http://support.microsoft.com/help/5003173)):
+Windows 10 ([May 2021 Update](https://support.microsoft.com/help/5003173)):
 
 - `GSSAPIAuthentication`
 
