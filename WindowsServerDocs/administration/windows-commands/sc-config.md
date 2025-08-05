@@ -7,6 +7,7 @@ ms.author: daknappe
 author: dknappettmsft
 manager: mtillman
 ms.date: 06/05/2018
+ms.custom: sfi-ropc-nochange
 ---
 
 # sc.exe config

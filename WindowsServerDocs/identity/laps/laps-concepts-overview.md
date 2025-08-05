@@ -5,6 +5,7 @@ author: jay98014
 ms.author: roharwoo
 ms.date: 05/12/2025
 ms.topic: concept-article
+ms.custom: sfi-image-nochange, sfi-ga-nochange
 ---
 
 # Key concepts in Windows LAPS

@@ -7,6 +7,7 @@ manager: tedhudek
 ms.date: 06/13/2023
 ms.topic: how-to
 ms.contributor: billmath
+ms.custom: sfi-image-nochange
 ---
 
 # Obtain and configure TS and TD certificates for AD FS

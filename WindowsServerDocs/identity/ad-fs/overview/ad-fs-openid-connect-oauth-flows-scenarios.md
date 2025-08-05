@@ -7,6 +7,9 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 07/01/2025
 ms.topic: concept-article
+ms.custom:
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 
 # AD FS OpenID Connect/OAuth flows and application scenarios

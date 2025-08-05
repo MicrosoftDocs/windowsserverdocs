@@ -5,6 +5,7 @@ author: jay98014
 ms.author: roharwoo
 ms.date: 05/12/2025
 ms.topic: get-started
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Windows LAPS in legacy Microsoft LAPS emulation mode

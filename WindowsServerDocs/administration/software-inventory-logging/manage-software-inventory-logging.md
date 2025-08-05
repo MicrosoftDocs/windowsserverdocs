@@ -7,6 +7,7 @@ author: xelu86
 ms.author: alalve
 manager: mtillman
 ms.date: 10/16/2017
+ms.custom: sfi-image-nochange
 ---
 # Manage Software Inventory Logging
 

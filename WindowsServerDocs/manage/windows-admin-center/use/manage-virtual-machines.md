@@ -5,6 +5,7 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 01/28/2022
+ms.custom: sfi-image-nochange
 ---
 
 # Manage virtual machines by using Windows Admin Center

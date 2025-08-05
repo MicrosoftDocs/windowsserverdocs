@@ -7,6 +7,9 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
+ms.custom:
+  - sfi-image-nochange
+  - sfi-ropc-nochange
 ---
 
 # Legacy AD FS Federation Server Farm Using SQL Server

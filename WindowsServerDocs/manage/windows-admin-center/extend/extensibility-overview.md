@@ -5,6 +5,7 @@ ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 09/17/2018
+ms.custom: sfi-image-nochange
 ---
 # Extensions for Windows Admin Center
 

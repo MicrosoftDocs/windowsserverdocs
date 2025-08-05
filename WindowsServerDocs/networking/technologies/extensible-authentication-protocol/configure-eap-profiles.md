@@ -5,6 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 07/01/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Configure EAP profiles and settings in Windows

@@ -6,6 +6,7 @@ ai-usage: ai-assisted
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 07/02/2025
+ms.custom: sfi-ropc-nochange
 ---
 
 # Configure the Remote Desktop Connection Broker for high availability

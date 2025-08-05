@@ -5,6 +5,7 @@ ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ms.date: 03/15/2023
+ms.custom: sfi-image-nochange
 ---
 
 # Manage a hyper-converged infrastructure by using Windows Admin Center

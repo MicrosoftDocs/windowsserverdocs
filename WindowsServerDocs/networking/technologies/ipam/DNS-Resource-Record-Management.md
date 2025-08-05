@@ -5,6 +5,7 @@ ms.topic: article
 author: xelu86
 ms.author: alalve
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # DNS Resource Record Management
 

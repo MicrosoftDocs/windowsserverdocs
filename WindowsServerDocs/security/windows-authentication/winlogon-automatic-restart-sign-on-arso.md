@@ -7,6 +7,7 @@ ms.author: mosagie
 author: meaghanlewis
 manager: mtillman
 ms.date: 10/12/2016
+ms.custom: sfi-image-nochange
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
 

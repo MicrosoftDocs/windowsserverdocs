@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # View DNS Resource Records for a DNS Zone
 

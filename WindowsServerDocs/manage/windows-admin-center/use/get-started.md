@@ -5,6 +5,7 @@ ms.topic: get-started
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 07/24/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Windows Admin Center

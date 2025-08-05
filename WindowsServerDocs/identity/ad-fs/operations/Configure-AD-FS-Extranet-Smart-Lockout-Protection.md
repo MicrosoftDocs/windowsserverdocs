@@ -7,6 +7,7 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 06/16/2023
 ms.topic: how-to
+ms.custom: sfi-ropc-nochange
 ---
 
 # AD FS Extranet Lockout and Extranet Smart Lockout Overview

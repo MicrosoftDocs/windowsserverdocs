@@ -7,6 +7,7 @@ manager: dongill
 author: robinharwood
 ms.author: roharwoo
 ms.date: 05/12/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Quick start for guarded fabric deployment

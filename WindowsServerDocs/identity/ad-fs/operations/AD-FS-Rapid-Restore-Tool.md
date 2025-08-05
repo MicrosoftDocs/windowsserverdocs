@@ -6,8 +6,10 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: article
-ms.custom: inhenkel
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
+ms.custom:
+  - inhenkel
+  - sfi-ropc-nochange
 ---
 
 # Active Directory Federation Services Rapid Restore tool

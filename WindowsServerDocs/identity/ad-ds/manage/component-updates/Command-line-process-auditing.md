@@ -7,7 +7,9 @@ ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
-ms.custom: inhenkel
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Command line process auditing

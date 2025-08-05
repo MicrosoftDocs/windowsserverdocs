@@ -7,6 +7,7 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
+ms.custom: sfi-ropc-nochange
 ---
 
 # Configuring Alternate Login ID

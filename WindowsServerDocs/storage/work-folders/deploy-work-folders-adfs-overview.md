@@ -7,6 +7,7 @@ manager: klaasl
 ms.author: alalve
 author: xelu86
 ms.date: 4/5/2017
+ms.custom: sfi-image-nochange
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Overview
 
