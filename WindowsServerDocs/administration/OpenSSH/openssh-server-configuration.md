@@ -23,7 +23,7 @@ isn't repeated here. Client configuration files can be found on the
 [ssh_config manual page](https://man.openbsd.org/ssh_config). OpenSSH server configuration
 files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config).
 
-OpenSSH Server reads configuration data from `%programdata%\ssh\sshd\_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter. If
+OpenSSH Server reads configuration data from `%programdata%\ssh\sshd_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter. If
 the file is missing, sshd generates one with the default configuration when the service is started.
 
 In Windows, the OpenSSH Client (ssh) reads configuration data from a configuration file in the
@@ -59,7 +59,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 
 ## Windows configurations in sshd_config
 
-In Windows, sshd reads configuration data from `%programdata%\ssh\sshd\_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter.
+In Windows, sshd reads configuration data from `%programdata%\ssh\sshd_config` by default. You can specify a different configuration file by running `sshd.exe` with the `-f` parameter.
 If the file is missing, sshd generates one with the default configuration when the service is started.
 
 The following sections describe Windows-specific configuration settings that are possible via entries in sshd_config.
@@ -94,7 +94,7 @@ DenyUsers contoso\*
 AllowGroups contoso\sshusers contoso\serveroperators
 ```
 
-The following example allows the user named `localuser` to sign in from the host 192.168.2.23 and allows members of the group `sshusers`.
+The following example allows the user `localuser` to sign in from the host 192.168.2.23 and allows members of the group `sshusers`.
 
 ```sshd_config
 AllowUsers localuser@192.168.2.23
