@@ -54,7 +54,14 @@ You can configure the default ssh shell in the Windows registry by adding the fu
 The following example elevated PowerShell command sets the default shell to be `powershell.exe` for OpenSSH Server. (Setting this path doesn't apply to OpenSSH Client.)
 
 ```powershell
-New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
+$NewItemPropertyParams = @{
+    Path         = "HKLM:\SOFTWARE\OpenSSH"
+    Name         = "DefaultShell"
+    Value        = "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
+    PropertyType = "String"
+    Force        = $true
+}
+New-ItemProperty @NewItemPropertyParams
 ```
 
 ## Windows configurations in sshd_config
