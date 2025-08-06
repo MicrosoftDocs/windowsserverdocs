@@ -19,11 +19,7 @@ When a computer account is already created in AD, and a different user needs to 
 
 ## Scenario 2: A computer account exists and another user needs to reuse it for domain join
 
-When you perform the offline domain join process (`djoin /requestODJ`), the join doesn't require any permissions on the computer account in AD. This method is recommended because it minimizes required AD privileges and reduces potential issues.
-
-An example of when a user domain joins a device with a precreated computer account, for **Admin01** is an administrator at `contoso.com` with **Create Computer Account** permissions on `OU=Workstations,DC=Contoso,DC=com`. Admin1 creates a computer account in the Workstations OU called NewPC1 and Admin2 needs to join this computer to the domain during the build process. Alternatively, Admin3 may be troubleshooting a technical problem and needs to unjoin and rejoin a computer to the domain.
-
-Another common scenario involves domain joining a device with a precreated computer account. For example, **Admin01** at `contoso.com` has the **Create Computer Account** permissions on `OU=Workstations,DC=Contoso,DC=com`. **Admin01** creates a computer account in the Workstations OU called **NewPC1** and **Admin02** needs to join this computer to the domain during the build process. In cases where troubleshooting is necessary, such as when **Admin03** needs to unjoin and rejoin a computer, the preexisting account eases this process. When an account with the name **NewPC1$** exists in AD, an [Ldap_modify()](/windows/win32/api/winldap/nf-winldap-ldap_modify) operation is executed using the credentials of the user handling the join, like \<Admin02@contoso.com>.
+When you perform the offline domain join process (`djoin /requestODJ`), the join doesn't require any permissions on the computer account in AD. This method is recommended because it minimizes required AD privileges and reduces potential issues. Another common scenario involves domain joining a device with a precreated computer account. For example, **Admin01** at `contoso.com` has the **Create Computer Account** permissions on `OU=Workstations,DC=Contoso,DC=com`. **Admin01** creates a computer account in the Workstations OU called **NewPC1** and **Admin02** needs to join this computer to the domain during the build process. In cases where troubleshooting is necessary, such as when **Admin03** needs to unjoin and rejoin a computer, the preexisting account eases this process. When an account with the name **NewPC1$** exists in AD, an [Ldap_modify()](/windows/win32/api/winldap/nf-winldap-ldap_modify) operation is executed using the credentials of the user handling the join, like \<Admin02@contoso.com>.
 
 When you reuse an existing computer account for domain join, the following attributes may be updated on the computer object as needed:
 
@@ -37,7 +33,7 @@ To successfully reuse an existing computer account during domain join, ensure th
 
 - **Trusted Ownership:** The computer account owner (Admin01) must either be a member of the Administrators group (directly or via nested membership), or the user performing the domain join (Admin01) must be the account owner. If [KB5020276 - Netjoin: Domain join hardening changes](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-0bfa1baf-9c7a-4b6b-8c5a-6f7c6b6b6b6b) is installed, the owner (Admin01) or a group that includes *Admin01* must be listed as a trusted owner in the `ComputerAccountReuseAllowlist` Group Policy Object (GPO) as described in the KB.
 
-  Security Descriptor of the computer account:
+  The *Security Descriptor* of the computer account:
 
   ```
   Security Descriptor:SD Revision: 1
