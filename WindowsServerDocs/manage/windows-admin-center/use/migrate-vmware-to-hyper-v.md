@@ -106,11 +106,37 @@ Debian-based operating systems:
 
 For Linux guests, [Hyper-V drivers must be installed](https://www.microsoft.com/download/details.aspx?id=55106) before initiating migration. This is essential to ensure successful post-migration boot.
 
-## Prechecks
+## Install the VM Conversion extension in Windows Admin Center
 
-Prechecks are run before the synchronization and migrations steps to see whether the virtual machines can be successfully migrated.
+Complete the following steps to install the **VM Conversion** extension.
+
+1. Open Windows Admin Center.
+
+1. Select the **Settings** button in the top-right. In the left pane, select **Extensions**.
+
+1. The Available Extensions tab lists the extensions on the feed that are available for installation.
+
+1. Search for **VM Conversion Extension** in **Available extensions** and select **Install.**
+
+1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion**.
+
+## Connect to vCenter
+
+When you first visit the extension, you need to connect your vSphere client endpoint.
+
+1. Select **Connect to vCenter**.
+
+    [![Screenshot of the connect to vCenter option.](media/migrate-vmware-to-hyper-v/connect-to-v-center.png)](media/migrate-vmware-to-hyper-v/connect-to-v-center.png#lightbox)
+
+1. Enter the vCenter FQDN, vCenter username, and vCenter password.
+
+    [![Screenshot showing how to configure VMware settings.](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
+
+## Synchronize virtual machines using the VM Conversion extension
 
 ### Synchronization prechecks
+
+A set of prechecks are run before the synchronization begins. Confirm you have all the following steps complete before continuing on with the steps to synchronize virtual machines:
 
 1. No active snapshots exist on the virtual machine.​
 
@@ -126,7 +152,33 @@ Prechecks are run before the synchronization and migrations steps to see whether
 
 1. Change Block Tracking (CBT) is supported on the VM.
 
+### Synchronize virtual machines
+
+Complete the following steps to synchronize VMware virtual machines in Windows Admin Center.
+
+1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
+
+1. Go to the VM Conversion extension in the left panel under **Extensions** > **VM Conversion**.
+
+1. In the virtual machine list, select up to 10 virtual machines to synchronize.
+
+    [![Screenshot of the synchronize tab.](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png)](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png#lightbox)
+
+1. In the Synchronize VM window, enter in the **Path to store data**. Select **Synchronize**.
+
+    [![Screenshot of the synchronize VM dialog.](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png)](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png#lightbox)
+
+1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
+
+    [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png)](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png#lightbox)
+
+1. Wait for the sync to complete.
+
+## Migrate virtual machines using the VM Conversion extension
+
 ### Migration prerechecks
+
+A set of prechecks are run before the migration begins. Confirm you have all the following steps complete before continuing on with the steps to migrate virtual machines:
 
 1. Destination Hyper-V host has sufficient vCPU availability.​
 
@@ -138,51 +190,7 @@ Prechecks are run before the synchronization and migrations steps to see whether
 
 1. No active snapshots on the virtual machine.​
 
-## Install the VM Conversion extension in Windows Admin Center
-
-Complete the following steps to install the **VM Conversion** extension.
-
-1. Open Windows Admin Center.
-
-1. Select the **Settings** button in the top-right. In the left pane, select **Extensions**.
-
-1. The Available Extensions tab lists the extensions on the feed that are available for installation.
-
-1. Search for **VM Conversion Extension** in **Available extensions** and select **Install.**
-
-1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion**.
-
-## Synchronize virtual machines using the VM Conversion extension
-
-Complete the following steps to synchronize VMware virtual machines in Windows Admin Center.
-
-1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
-
-1. Go to the VM Conversion extension in the left panel under **Extensions** > **VM Conversion**.
-
-1. Select **Connect to vCenter**.
-
-    [![Screenshot of the connect to vCenter option.](media/migrate-vmware-to-hyper-v/connect-to-v-center.png)](media/migrate-vmware-to-hyper-v/connect-to-v-center.png#lightbox)
-
-1. Enter the vCenter FQDN, vCenter username, and vCenter password.
-
-    [![Screenshot showing how to configure VMware settings.](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
-
-1. In the virtual machine list, select up to 10 virtual machines to synchronize.
-
-    [![Screenshot of the synchronize tab.](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png)](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png#lightbox)
-
-1. Select **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
-
-    [![Screenshot of the synchronize VM dialog.](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png)](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png#lightbox)
-
-1. You see notifications appear with the progress for: prechecks, preparing the environment, snapshot creation, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
-
-    [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png)](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png#lightbox)
-
-1. Wait for the sync to complete 100%.
-
-## Migrate virtual machines using the VM Conversion extension
+## Migrate virtual machines
 
 Complete the following steps to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
 
@@ -192,11 +200,11 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. In the Migrate VM window, select **Proceed** to start the migration.
 
-    During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
-
     [![Screenshot of the migrate VM dialog confirmation.](media/migrate-vmware-to-hyper-v/confirm-migration.png)](media/migrate-vmware-to-hyper-v/confirm-migration.png#lightbox)
 
-1. Wait for virtual machine migration to complete. After the VM is migrated, the migration status shows **Destination VM created. Migration completed (100%).**
+    During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
+
+1. Wait for virtual machine migration to complete.
 
     [![Screenshot of the progress of virtual machine migration.](media/migrate-vmware-to-hyper-v/migration-in-progress.png)](media/migrate-vmware-to-hyper-v/migration-in-progress.png#lightbox)
 
@@ -288,4 +296,4 @@ Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fi
 
 ### BIOS serial number and UUID migration
 
-**Mitigation**: Update VM BIOS UUID and Serial Number.
+**Mitigation**: Update the VM BIOS UUID and Serial Number.
