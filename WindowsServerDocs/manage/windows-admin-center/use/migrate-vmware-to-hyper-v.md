@@ -75,7 +75,7 @@ None.
 
 None.
 
-## Supported vCenter versions
+### Supported vCenter versions
 
 - The extension supports VMware VCenter version 6.x or 7.x.
 - To connect to vCenter from the extension, keep the following vCenter information at hand:
@@ -83,7 +83,7 @@ None.
   - Username
   - Password
 
-## Supported guest operating systems
+### Supported guest operating systems
 
 The following operating systems can use the VM Conversion extension:
 
@@ -190,7 +190,7 @@ A set of prechecks are run before the migration begins. Confirm you have all the
 
 1. No active snapshots on the virtual machine.​
 
-## Migrate virtual machines
+### Migrate virtual machines
 
 Complete the following steps to migrate VMware virtual machines to Hyper-V in Windows Admin Center.
 
