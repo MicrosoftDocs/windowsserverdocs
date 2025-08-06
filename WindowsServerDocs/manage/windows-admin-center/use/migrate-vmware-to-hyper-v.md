@@ -3,7 +3,7 @@ title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Previ
 description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
 author: meaghanlewis
 ms.topic: how-to
-ms.date: 07/28/2025
+ms.date: 08/06/2025
 ms.author: mosagie
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
@@ -24,7 +24,7 @@ The **VM Conversion extension** provides the following key features:
 
   - **Application dependency** – virtual machines that are part of the same application stack or service.
   - **Cluster dependency** – virtual machines that need to be distributed on nodes within same cluster.
-  - **Business boundaries** – virtual machines servicing different business within a company. For example, test machines and pre-production machines.
+  - **Business boundaries** – virtual machines servicing different business within a company. For example, test machines and preproduction machines.
   - **Rack dependency** – virtual machines running on hosts on a rack.
 
 - **Cluster-aware migration**: Supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
@@ -240,19 +240,19 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. How does the tool handle VM boot types?
 
-    The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V.**UEFI boot** creates a Generation 2 VM on Hyper-V.
+    The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V. **UEFI boot** creates a Generation 2 VM on Hyper-V.
 
 1. Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
 
     The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied—not the full allocated size.
 
-    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it may cause storage management issues later.
+    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it might cause storage management issues later.
 
-    After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage: `Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed`.
+    After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage using the PowerShell command:
 
-1. What are the current limitations of this migration tool?
-
-    The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported. VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
+    ```powershell
+    Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed
+    ```
 
 1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
 
@@ -264,9 +264,9 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     1. It can take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
     1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
 
-1. Is VMWare to Azure Local migration supported?
+1. Is VMware to Azure Local migration supported?
 
-    No, migration to Azure Local isn't supported by this tool. Use [Azure Migrate to migrate virtual machines to Azure Local](/azure/azure-local/migrate/migration-azure-migrate-vmware-overview?view=azloc-2507).
+    No, the tool doesn't support migration to Azure Local. Use [Azure Migrate to migrate virtual machines to Azure Local](/azure/azure-local/migrate/migration-azure-migrate-vmware-overview).
 
 1. Does the tool support virtual machines running on a virtual storage area network (vSAN)?
 
@@ -276,24 +276,10 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     No, the conversion tool is only available in Windows Admin Center on-premise.
 
-## Known issues
+1. What are the current limitations of this migration tool?
 
-### Migrated VM disks are created as dynamically expanding (thin) VHDX files rather than fixed-size disks
+    The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported.
 
-**Mitigation**: After migration, convert them to fixed-size to ensure predictable storage usage and prevents overcommitment. Convert to fixed-size disks using the PowerShell command:​
+    VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
 
-```powershell
-Convert-VHD -Path "<path>.vhdx" -DestinationPath "<path>_Fixed.vhdx" -VHDType Fixed​
-```
-
-### Hyper-V drivers must be installed on Linux machines before starting migration
-
-**Mitigation**: Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure from the Microsoft Download Center.​
-
-### VMware Tools aren't automatically uninstalled for Linux VMs after migration
-
-**Mitigation**: Uninstall them manually if no longer needed.​
-
-### BIOS serial number and UUID migration
-
-**Mitigation**: Update the VM BIOS UUID and Serial Number.
+    Hyper-V drivers must be installed on Linux machines before starting migration. Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure.​
