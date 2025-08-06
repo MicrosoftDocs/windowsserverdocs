@@ -170,17 +170,17 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
-    [![Screenshot of the synchronize tab.](media/migrate-vmware-to-hyper-v/synchronize-tab.png)](media/migrate-vmware-to-hyper-v/synchronize-tab.png#lightbox)
+    [![Screenshot of the synchronize tab.](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png)](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png#lightbox)
 
 1. Select **Synchronize**. In the Synchronize VM window, enter in the **path to store data**. Select **Synchronize**.
 
-    [![Screenshot of the synchronize VM dialog.](media/migrate-vmware-to-hyper-v/synchronize-dialog.png)](media/migrate-vmware-to-hyper-v/synchronize-dialog.png#lightbox)
+    [![Screenshot of the synchronize VM dialog.](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png)](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png#lightbox)
 
 1. You see notifications appear with the progress for: prechecks, preparing the environment, snapshot creation, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
 
-1. Wait for the sync to complete 100%.
+    [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png)](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png#lightbox)
 
-    [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/migrate-tab.png)](media/migrate-vmware-to-hyper-v/migrate-tab.png#lightbox)
+1. Wait for the sync to complete 100%.
 
 ## Migrate virtual machines using the VM Conversion extension
 
@@ -188,13 +188,17 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
-1. In the Migrate VM window, check the box if you want to **migrate the static IP address** for each VM. Select **Proceed** in the confirmation box to start the migration.
+    [![Screenshot of the migrate tab and virtual machines selected to migrate.](media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png)](media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png#lightbox)
+
+1. In the Migrate VM window, select **Proceed** to start the migration.
 
     During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
-    [![Screenshot of the migrate VM dialog.](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png)](media/migrate-vmware-to-hyper-v/migrate-vm-dialog.png#lightbox)
+    [![Screenshot of the migrate VM dialog confirmation.](media/migrate-vmware-to-hyper-v/confirm-migration.png)](media/migrate-vmware-to-hyper-v/confirm-migration.png#lightbox)
 
 1. Wait for virtual machine migration to complete. After the VM is migrated, the migration status shows **Destination VM created. Migration completed (100%).**
+
+    [![Screenshot of the progress of virtual machine migration.](media/migrate-vmware-to-hyper-v/migration-in-progress.png)](media/migrate-vmware-to-hyper-v/migration-in-progress.png#lightbox)
 
 1. The migrated virtual machine can be managed using the Hyper-V Manager, or in Windows Admin Center.
 
