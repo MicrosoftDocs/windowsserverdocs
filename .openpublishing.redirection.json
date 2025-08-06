@@ -1,43 +1,13 @@
 {
   "redirections": [
     {
-      "source_path": "WindowsServerDocs/windows-insider/index.md",
-      "redirect_url": "/windows-insider/at-work/",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs//administration/windows-commands/rem_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/rem",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
-      "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/windows-server.md",
       "redirect_url": "/windows-server/index",
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/azure-stack-hci/index.md",
-      "redirect_url": "/azure-stack/operator/azure-stack-hci-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "HyperVServerDocs/index.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-server-2016",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/technologies/hpn/hpn-insider-preview.md",
-      "redirect_url": "/windows-server//networking/what-s-new-in-networking",
       "redirect_document_id": false
     },
     {
@@ -49,71 +19,6 @@
       "source_path": "WindowsServerDocs/sddc.md",
       "redirect_url": "/azure/azure-local/overview/",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/upgrade/upgrade-overview.md",
-      "redirect_url": "/windows-server/get-started/upgrade-overview",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/upgrade/upgrade-2008r2-to-2012r2.md",
-      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/upgrade/upgrade-2012r2-to-2019.md",
-      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/upgrade/upgrade-2012-to-2016.md",
-      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/upgrade/upgrade-2016-to-2019.md",
-      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/windows-server-troubleshooting.md",
-      "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/troubleshooting-cluster-event-id-1135.md",
-      "redirect_url": "/troubleshoot/windows-server/high-availability/troubleshoot-cluster-event-id-1135",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/problem-nodes-failover-cluster.md",
-      "redirect_url": "/troubleshoot/windows-server/high-availability/problem-nodes-failover-cluster",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/nodes-failover-cluster-vmware.md",
-      "redirect_url": "/troubleshoot/windows-server/high-availability/nodes-failover-cluster-vmware",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/iaas-sql-failover-cluster.md",
-      "redirect_url": "/troubleshoot/windows-server/high-availability/iaas-sql-failover-cluster-network-thresholds",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/general-guidance-to-troubleshoot-dhcp.md",
-      "redirect_url": "/troubleshoot/windows-server/networking/general-guidance-troubleshoot-dhcp",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/troubleshoot/troubleshoot-problems-on-dhcp-client.md",
-      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-problems-dhcp-client",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/hyperconverged/index.yml",
-      "redirect_url": "/windows-server/",
-      "redirect_document_id": true
     }
   ]
 }
