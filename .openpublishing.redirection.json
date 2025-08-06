@@ -1,26 +1,6 @@
 {
   "redirections": [
     {
-      "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
-      "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/securing-privileged-access/securing-privileged-access-reference-material.md",
-      "redirect_url": "/security/compass/privileged-access-access-model",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/securing-privileged-access/securing-privileged-access.md",
-      "redirect_url": "/security/compass/overview",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/securing-privileged-access/privileged-access-workstations.md",
-      "redirect_url": "/security/compass/privileged-access-devices",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/windows-insider/index.md",
       "redirect_url": "/windows-insider/at-work/",
       "redirect_document_id": false
@@ -29,31 +9,6 @@
       "source_path": "WindowsServerDocs//administration/windows-commands/rem_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/rem",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Troubleshooting-Web-Application-Proxy",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
-      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
@@ -121,18 +76,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/identity/Active-Directory-Federation-Services.md",
-      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-overview",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "WindowsServerDocs/troubleshoot/windows-server-troubleshooting.md",
       "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/software-restriction-policies/troubleshoot-software-restriction-policies.md",
-      "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
       "redirect_document_id": false
     },
     {
@@ -166,29 +111,8 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/identity/whats-new-active-directory-domain-services.md",
-      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/What-s-new-in-Active-Directory-Domain-Services.md",
-      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "WindowsServerDocs/hyperconverged/index.yml",
       "redirect_url": "/windows-server/",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
-      "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "WindowsServerDocs/compute/hyper-v/system-requirements-for-hyper-v-on-windows.md",
-      "redirect_url": "/windows-server/hyper-v/host-hardware-requirements",
-      "redirect_document_id": false
     }
-  ]
 }

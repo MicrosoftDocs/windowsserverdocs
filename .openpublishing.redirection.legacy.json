@@ -2649,6 +2649,12 @@
       "source_path": "WindowsServerDocs/licensing/system-insights-eula.md",
       "redirect_url": "/legal/windows-server/system-insights-eula",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/system-requirements-for-hyper-v-on-windows.md",
+      "redirect_url": "/windows-server/hyper-v/host-hardware-requirements",
+      "redirect_document_id": false
     }
+  ]
   ]
 }
