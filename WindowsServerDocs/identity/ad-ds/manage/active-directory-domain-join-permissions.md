@@ -1,7 +1,7 @@
 ---
 title: Active Directory domain join permissions in Windows Server
 description: This article describes the permissions required in Active Directory to successfully join computers to a Windows Server domain using a new computer account or an existing account.
-ms.topic: overview
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
 ms.date: 08/06/2025
