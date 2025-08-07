@@ -1,7 +1,7 @@
 ---
 title: Network-Related Performance Counters
 description: Learn about the counters that are relevant to managing network performance.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm
 ms.author: mosagie

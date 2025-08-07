@@ -1,7 +1,7 @@
 ---
 title: BranchCache Network Shell and Windows PowerShell Commands
 description: This topic provides links to Network Shell and Windows PowerShell command reference resources for BranchCache in Windows Server 2016
-ms.topic: article
+ms.topic: reference
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 12/08/2020

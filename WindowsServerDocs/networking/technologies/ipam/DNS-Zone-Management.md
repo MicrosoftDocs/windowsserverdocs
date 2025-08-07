@@ -1,7 +1,7 @@
 ---
 title: DNS Zone Management
 description: Learn how to manage DNS zones by using the IPAM client console.
-ms.topic: article
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
