@@ -4,7 +4,7 @@ description:  This article describes AD FS Help Diagnostics Analyzer and how it 
 author: robinharwood
 ms.author: roharwoo
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.custom: sfi-image-nochange
 ---
 

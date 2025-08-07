@@ -4,7 +4,7 @@ description: This article describes new sign-in experience for AD FS.
 author: robinharwood
 ms.author: roharwoo
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.custom: sfi-image-nochange
 ---
 # AD FS paginated sign-in

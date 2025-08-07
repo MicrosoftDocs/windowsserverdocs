@@ -3,7 +3,7 @@ title: Special Identity Groups
 description: Learn about Windows Server special identity groups that are used for Windows access control.
 author: meaghanlewis
 ms.author: mosagie
-ms.topic: article
+ms.topic: concept-article
 ms.date: 07/08/2025
 ---
 
