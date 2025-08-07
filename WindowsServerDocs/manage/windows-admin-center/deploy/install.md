@@ -56,7 +56,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
     Express setup determines your network access and port selection based on your operating system. Express setup doesn't allow for configuration of extra features.
 
-    Custom setup allows you to configure: network access, port numbers, TLS certificate type and thumbprint, fully qualified domin name of the endpoint, trusted hosts mode, and WinRM over HTTPS.
+    Custom setup allows you to configure: network access, port numbers, TLS certificate type and thumbprint, fully qualified domain name of the endpoint, trusted hosts mode, and WinRM over HTTPS.
 
     Select **Next**.
 
@@ -70,7 +70,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. In the **Send diagnostic data to Microsoft** window, select your preference, then select **Next**.
 
-1. Review the **Ready to install** window, select **Install** to start the installation process.
+1. Review the **Ready to install** window, and then select **Install** to start the installation process.
 
 1. After the installation process finishes, check the box to **Start Windows Admin Center**, then select **Finish**.
 
