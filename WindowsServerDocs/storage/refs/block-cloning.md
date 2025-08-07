@@ -5,7 +5,7 @@ title: Block cloning on ReFS
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 09/23/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 # Block cloning on ReFS
 
