@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center Case Studies
 description: Windows Admin Center Case Studies (Project Honolulu)
-ms.topic: article
+ms.topic: example-scenario
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/18/2018

@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center SDK Case Study - BiitOps
 description: Windows Admin Center SDK Case Study - BiitOps
-ms.topic: article
+ms.topic: case-study
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 06/2/2019

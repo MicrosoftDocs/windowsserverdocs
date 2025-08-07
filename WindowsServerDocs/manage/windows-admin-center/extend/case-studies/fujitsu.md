@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center SDK Case Study - Fujitsu
 description: Windows Admin Center SDK Case Study - Fujitsu
-ms.topic: article
+ms.topic: case-study
 author: xelu86
 ms.author: alalve
 ms.date: 05/23/2018
