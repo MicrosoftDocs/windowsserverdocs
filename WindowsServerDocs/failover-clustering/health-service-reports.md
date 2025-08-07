@@ -3,7 +3,7 @@ description: "Learn more about: Health Service reports"
 title: Health Service reports
 manager: eldenc
 ms.author: alalve
-ms.topic: article
+ms.topic: how-to
 author: xelu86
 ms.date: 10/05/2017
 ---
