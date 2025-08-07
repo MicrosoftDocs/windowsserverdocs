@@ -1,7 +1,7 @@
 ---
 title: Keyboard Shortcuts for Server Manager
 description: Learn about the new keyboard shortcuts and access keys for Server Manager in Windows Server 2012 and newer releases of Windows Server.
-ms.topic: article
+ms.topic: feature-guide
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017
