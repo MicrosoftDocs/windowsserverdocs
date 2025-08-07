@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop client - supported configuration
 description: Learn which PCs you can and can't access by using supported configurations for Remote Desktop clients.
-ms.topic: article
+ms.topic: feature-availability
 ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44
 author: xelu86
 manager: dongill
