@@ -49,7 +49,7 @@ If you encounter an issue not described on this page, let us know at the [Window
 - You can access and use Windows Admin Center tool application programming interfaces (APIs) through other methods during an active session of Windows Admin Center if you have access to that session. The actions you take using these APIs only affect the machine you installed Windows Admin Center on, also known as the gateway machine. They don't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
 - Some APIs used by Windows Admin Center, including the DeploymentShare API, require the user to be a local administrator. Network share creation operations cannot be performed by a standard Windows user by default. Windows Admin Center cannot elevate a standard user account to administrator. Adding the user to the "Gateway administrators" group in Settings only changes the permissions the user has within the gateway, not on the system.
-   - You may not run into this issue on modernized gateway builds of Windows Admin Center. By default, modernized gateway builds utilize a form login to access the gateway, which does not have the local administrator restriction. Existing versions of Windows Admin Center utilize NTLM/Kerberos, which obtains a token limited to the localhost environment. NTLM/Kerberos login is also available on modernized gateway builds.
+  - You may not run into this issue on modernized gateway builds of Windows Admin Center. By default, modernized gateway builds utilize a form login to access the gateway, which does not have the local administrator restriction. Existing versions of Windows Admin Center utilize NTLM/Kerberos, which obtains a token limited to the localhost environment. NTLM/Kerberos login is also available on modernized gateway builds.
 
 - Windows Admin Center does not support authenticating guest users of Microsoft Entra ID tenants. As a result, guest users of Microsoft Entra ID tenants will no longer be able to connect their Windows Admin Center instance to Azure or use Azure services like Azure Arc, Azure Site Recovery, Azure File Sync, etc. 
 
@@ -58,6 +58,17 @@ If you encounter an issue not described on this page, let us know at the [Window
 - When you update Windows Admin Center, you must reinstall your extensions.
 
 - If you add an extension feed that is inaccessible, no warning or error message appears.
+
+### Extensions not supported
+
+Even with an added extension feed, the following extensions currently don't work with the modernized gateway build `2410`:
+
+- Dell OpenManage
+- Lenovo XClarity Integrator
+- Fujitsu ServerView RAID
+- Fujitsu Software Infrastructure Manager (ISM)
+- Fujitsu ServerView Health
+- Pure Storage FlashArray
 
 ## Partner extension issues
 
@@ -186,6 +197,8 @@ Windows Admin Center doesn't currently support uploading or downloading files ov
 - PowerShell in Server Manager doesn't support the Ctrl+C shortcut to copy content to the clipboard. To copy content, highlight the text, right-click it, then select **Copy**.
 
 - When you make the Windows Admin Center window smaller, the terminal content adjusts to fit the new window size. When you return the window to its original size, the content might not return to its original state. You can restore the text by using the `Clear-Host` command, or disconnect and reconnect using the button above the terminal.
+
+- The account for the PowerShell session in version `2410` always defaults to the user signed into the Windows Admin Center gateway, even if different management credentials were specified when remoting to a connection.
 
 ### Registry Editor
 

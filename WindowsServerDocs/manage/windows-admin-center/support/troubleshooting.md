@@ -31,6 +31,10 @@ This failure can happen if your default PowerShell module path has been modified
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
 ```
 
+## The Windows Admin Center gateway installation failed
+
+If your installation fails, or Windows Admin Center fails to open after install, try uninstalling and reinstalling. This issue can happen if you have an older version of a modernized gateway build installed, and you're trying to update to a newer version.
+
 ## I receive an error in my web browser
 
 ```error

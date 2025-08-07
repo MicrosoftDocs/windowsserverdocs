@@ -1,16 +1,15 @@
 ### YamlMime:FAQ
 metadata:
   title: Windows Admin Center frequently asked questions
-  description: Get answers about Windows Admin Center (Project Honolulu)
+  description: Get answers about Windows Admin Center.
   ms.topic: faq
   ms.author: daknappe
   author: dknappettmsft
   ms.localizationpriority: medium
-  ms.date: 12/02/2019
+  ms.date: 08/07/2025
   ms.service: windows-server
 title: Windows Admin Center frequently asked questions
 summary: |
-  > 
   
   Here are answers to the most commonly asked questions about Windows Admin Center.
   
@@ -39,7 +38,36 @@ sections:
           What versions of Windows Server can I manage with Windows Admin Center?
         answer: |
           Windows Admin Center is optimized for Windows Server 2025. Although Windows Admin Center works best with Windows Server 2025, it supports managing several versions that customers already use: Windows Server 2016 and newer are fully supported. There's also limited functionality for managing Windows Server 2012.
-          
+
+      - question: |
+          Can you install the Windows Admin Center modernized gateway (version 2410) when you already have an older build of Windows Admin Center installed?
+        answer: |
+          Yes, you can install the Windows Admin Center modernized gateway alongside a legacy gateway build as long as you don't choose the same ports for both installations.
+      
+      - question: |
+          Can I change the ports my Windows Admin Center modernized gateway is using after install?
+        answer: |
+          Yes, In the Program Files for Windows Admin Center, we've included a PowerShell module called `Microsoft.WindowsAdminCenter.Configuration.psm1`. This module allows you to modify your WAC configuration after installation and can be found in the **PowerShellModules** folder of your installation (`C:\Program Files\WindowsAdminCenter\PowerShellModules\` by default).
+          To change the ports your Windows Admin Center instance is using, run the following command:
+          ```powershell
+          Set-WACHttpsPort -Wacport <port> -ServicePortRangeStart <port> -ServicePortRangeEnd <port>
+          ```
+      
+      - question: |
+          Are there any known issues with the Windows Admin Center modernized gateway (version 2410)?
+        answer: |
+          Yes, there are some known issues with the modernized gateway. For a list of known issues, see our [known issues page](../support/known-issues.md)
+      
+      - question: |
+          Can I change configuration settings other than port settings after install?
+        answer: |
+          Yes, you can use the PowerShell module `Microsoft.WindowsAdminCenter.Configuration.psm1` to change your configuration settings. It can be found in the **PowerShellModules** folder of your installation.
+      
+      - question: |
+          Are all the features from the 2311 release available in the 2410 release?
+        answer: |
+          Yes, all the features from the 2311 release are available in the 2410 release. The 2410 release is a modernized gateway that includes a new user interface and experience, but it retains all the functionality of the previous version. [Read more about the 2311 release of Windows Admin Center.](https://aka.ms/wac2311)       
+
       - question: |
           Is Windows Admin Center a complete replacement for all traditional in-box and RSAT tools?
         answer: |
@@ -68,9 +96,9 @@ sections:
           
           Windows Admin Center also provides these solutions:
           
-          * Computer Management – Provides a subset of the Server Manager features for managing Windows 10 or 11 client PCs
-          * Failover Cluster Manager – Provides support for ongoing management of failover clusters and cluster resources
-          * Hyper-Converged Cluster Manager – Provides an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring.
+          * Computer Management provides a subset of the Server Manager features for managing Windows 10 or 11 client PCs
+          * Failover Cluster Manager provides support for ongoing management of failover clusters and cluster resources
+          * Hyper-Converged Cluster Manager provides an all-new experience tailored for Storage Spaces Direct and Hyper-V. It features the Dashboard and emphasizes charts and alerts for monitoring.
           
           Windows Admin Center is complementary to and doesn't replace Remote Server Administration Tools since roles such as Active Directory, DHCP, DNS, IIS don't yet have equivalent management capabilities in Windows Admin Center.
           
