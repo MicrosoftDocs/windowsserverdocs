@@ -53,7 +53,7 @@ Because of the known issues described here, some customers might choose to build
 
 ## Upgrade
 
-The following section describe the four upgrade options in detail. Each section includes step-by-step instructions for performing the upgrade. Select your preferred upgrade option.
+The following section describes the four upgrade options in detail. Each section includes step-by-step instructions for performing the upgrade. Select your preferred upgrade option.
 
 ### [In-place upgrade while VMs are running](#tab/in-place-upgrade-while-vms-are-running)
 
