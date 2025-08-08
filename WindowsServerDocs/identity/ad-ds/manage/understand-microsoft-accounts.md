@@ -3,7 +3,7 @@ title: Microsoft accounts
 description: Learn how to create and manage a local or domain Microsoft account. 
 author: meaghanlewis
 ms.author: mosagie
-ms.topic: article
+ms.topic: concept-article
 ms.date: 08/02/2022
 ---
 

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # Create an Access Policy
 

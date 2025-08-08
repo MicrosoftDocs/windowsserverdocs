@@ -5,6 +5,7 @@ ms.topic: troubleshooting
 ms.date: 05/07/2025
 author: xelu86
 ms.author: alalve
+ms.custom: sfi-image-nochange
 ---
 
 # Guidelines for troubleshooting the Key Management Service (KMS)

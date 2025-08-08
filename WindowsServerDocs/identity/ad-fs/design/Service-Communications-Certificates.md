@@ -4,7 +4,7 @@ title: Service Communications Certificates
 author: robinharwood
 ms.author: roharwoo
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Service communications certificates

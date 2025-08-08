@@ -3,7 +3,7 @@ description: "Learn more about: Performance history for Storage Spaces Direct"
 title: Performance history for Storage Spaces Direct
 ms.author: roharwoo
 manager: eldenc
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.date: 10/25/2024
 ---

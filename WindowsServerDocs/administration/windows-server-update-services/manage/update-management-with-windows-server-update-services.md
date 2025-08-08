@@ -1,7 +1,7 @@
 ---
 title: Update Management with Windows Server Update Services
 description: Windows Server Update Service (WSUS) topic - An overview of Update Management with links to the related topics
-ms.topic: article
+ms.topic: overview
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

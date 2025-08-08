@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: xelu86
 ms.author: alalve

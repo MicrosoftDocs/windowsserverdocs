@@ -7,6 +7,7 @@ ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
+ms.custom: sfi-image-nochange
 ---
 
 # Appendix D: Securing Built-in Administrator Accounts in Active Directory

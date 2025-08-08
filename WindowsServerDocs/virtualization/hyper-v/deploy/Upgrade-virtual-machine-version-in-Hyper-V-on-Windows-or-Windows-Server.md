@@ -5,7 +5,7 @@ ms.topic: upgrade-and-migration-article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: meaghanlewis
 ms.author: mosagie
-ms.date: 01/20/2025
+ms.date: 06/30/2025
 ---
 # Upgrade virtual machine version in Hyper-V on Windows or Windows Server
 
@@ -139,6 +139,11 @@ The following table shows the minimum virtual machine configuration version requ
 |Feature|Minimum VM configuration version|
 |---|---|
 |GPU partitioning|12.0|
+|Support for ARM64 in Windows 11|11.0|
+|Dynamic processor compatibility mode|10.0|
+|Nested virtualization for AMD processors|9.3|
+|vNUMA topology improvements|9.2|
+|AMD topology improvements|9.1|
 |Allow additional processor features for Perfmon|9.0|
 |Automatically expose [simultaneous multithreading](../manage/manage-hyper-v-scheduler-types.md#background) configuration for VMs running on hosts using the [Core Scheduler](../manage/manage-hyper-v-scheduler-types.md#consider-impacts-on-security-and-performance)|9.0|
 |Hibernation support|9.0|

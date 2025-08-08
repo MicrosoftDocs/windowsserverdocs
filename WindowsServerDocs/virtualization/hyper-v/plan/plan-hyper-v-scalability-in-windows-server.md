@@ -1,7 +1,7 @@
 ---
 title: Plan for Hyper-V scalability in Windows Server
 description: Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory, and how many virtual processors, in Windows Server.
-ms.topic: article
+ms.topic: limits-and-quotas
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/25/2024

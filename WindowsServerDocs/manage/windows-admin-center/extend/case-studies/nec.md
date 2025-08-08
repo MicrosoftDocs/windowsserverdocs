@@ -1,10 +1,11 @@
 ---
 title: Windows Admin Center SDK Case Study - NEC
 description: Windows Admin Center SDK Case Study - NEC
-ms.topic: article
+ms.topic: partner-tools
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 04/01/2019
+ms.custom: sfi-image-nochange
 ---
 # NEC ESMPRO Extension
 

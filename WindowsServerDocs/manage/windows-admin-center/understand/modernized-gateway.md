@@ -5,6 +5,7 @@ ms.topic: concept-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 05/28/2025
+ms.custom: sfi-image-nochange
 ---
 # Windows Admin Center modernized gateway
 

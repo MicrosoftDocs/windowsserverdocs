@@ -7,6 +7,7 @@ ms.author: roharwoo
 author: robinharwood
 manager: grcusanz
 ms.date: 10/28/2021
+ms.custom: sfi-ropc-nochange
 ---
 # Deploy Network Controller using Windows PowerShell
 

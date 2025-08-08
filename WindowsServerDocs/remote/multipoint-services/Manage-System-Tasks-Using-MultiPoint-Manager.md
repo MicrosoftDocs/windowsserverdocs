@@ -1,7 +1,7 @@
 ---
 title: Manage System Tasks Using MultiPoint Manager
 description: Overview of management tasks in MultiPoint Manager
-ms.topic: article
+ms.topic: overview
 ms.assetid: efb34298-391c-4435-afdf-1a749f1ce224
 author: dknappettmsft
 manager: dongill

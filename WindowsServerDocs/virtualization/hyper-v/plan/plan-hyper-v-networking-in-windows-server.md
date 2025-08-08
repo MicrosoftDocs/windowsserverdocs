@@ -1,7 +1,7 @@
 ---
 title: Plan for Hyper-V networking in Windows Server
 description: Describes what's needed for basic networking in Windows Server Hyper-V and gives links to instructions.
-ms.topic: article
+ms.topic: concept-article
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 02/19/2025
@@ -18,7 +18,7 @@ The easiest way to establish basic networking is to create a virtual switch when
 
 To handle different types of networking, you can add virtual switches and virtual network adapters. All switches are part of the Hyper-V host, but each virtual network adapter belongs to only one virtual machine.
 
-The virtual switch is a software-based layer-2 Ethernet network switch. It provides built-in features for monitoring, controlling, and segmenting traffic, as well as security, and diagnostics. You can add to the set of built-in features by installing plug-ins, also called *extensions*. These are available from independent software vendors. For more information about the switch and extensions, see [Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+The virtual switch is a software-based layer-2 Ethernet network switch. It provides built-in features for monitoring, controlling, and segmenting traffic, as well as security, and diagnostics. You can add to the set of built-in features by installing plug-ins, also called *extensions*. These are available from independent software vendors. For more information about the switch and extensions, see [Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md).
 
 ### Switch and network adapter choices
 

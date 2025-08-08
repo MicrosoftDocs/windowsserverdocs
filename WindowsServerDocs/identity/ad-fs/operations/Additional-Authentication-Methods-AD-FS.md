@@ -5,6 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 02/13/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Configure third party authentication providers as primary authentication in AD FS 2019

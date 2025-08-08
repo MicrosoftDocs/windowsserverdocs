@@ -1,10 +1,10 @@
 ---
-title: Session host virtual machine sizing guidelines for Azure Virtual Desktop and Remote Desktop Services
+title: Session Host Virtual Machine Sizing Guidelines for Azure Virtual Desktop and Remote Desktop Services
 description: Learn about sizing for session host virtual machines based on different workload types when used with Azure Virtual Desktop or Remote Desktop Services.
-ms.topic: article
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 04/15/2025
+ms.date: 07/07/2025
 ---
 
 # Session host virtual machine sizing guidelines
@@ -26,7 +26,7 @@ The following table describes each workload. *Example users* are the types of us
 
 ## Single-session recommendations
 
-*Single-session* scenarios are when there's only one user signed in to a session host VM at any one time. For example, if you use personal host pools in Azure Virtual Desktop, you're using a single-session scenario. For VM sizing recommendations for single-session scenarios, we recommend you use at least two physical CPU cores per VM, typically four vCPUs with hyper-threading. If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload. VM sizing for single-session VMs usually align with physical device guidelines.
+In a *single-session* scenario, only one user is signed in to a session host VM at any one time. For example, if you use personal host pools in Azure Virtual Desktop, you're using a single-session scenario. For VM sizing recommendations for single-session scenarios, we recommend you use at least two physical CPU cores per VM, typically four vCPUs with hyper-threading. If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload. VM sizing for single-session VMs usually align with physical device guidelines.
 
 The following table shows examples of typical workloads:
 
@@ -38,9 +38,9 @@ The following table shows examples of typical workloads:
 
 ## Multi-session recommendations
 
-*Multi-session* scenarios are when there's more than one user signed in to a session host virtual machine at any one time. For example, when you use pooled host pools in Azure Virtual Desktop with the Windows 11 Enterprise multi-session operating system (OS), that's a multi-session deployment.
+In a *multi-session* scenario, more than one user is signed in to a session host virtual machine at any given time. For example, when you use pooled host pools in Azure Virtual Desktop with the Windows 11 Enterprise multi-session operating system (OS), that's a multi-session deployment.
 
-The following table lists the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for standard or larger user workload. If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload.
+The following table lists the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for a standard or larger user workload. If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload.
 
 | Workload type | Maximum users per vCPU | Minimum vCPU/RAM/OS storage | Example Azure instances | Minimum profile storage |
 | --- | --- | --- | --- | --- |
@@ -53,19 +53,19 @@ For multi-session workloads, you should limit VM size to between 4 vCPUs and 24 
 
 - All VMs should have more than two cores. The UI components in Windows rely on the use of at least two parallel threads for some of the heavier rendering operations. For multi-session scenarios, having multiple users on a two-core VM leads to the UI and apps becoming unstable, which lowers the quality of user experience. Four cores are the lowest recommended number of cores that a stable multi-session VM should have.
 
-- VMs shouldn't have more than 32 cores. As the number of cores increase, the system's synchronization overhead also increases. For most workloads, at around 16 cores, the return on investment gets lower, with most of the extra capacity offset by synchronization overhead. User experience is better with two 16-core VMs instead of one 32-core one.
+- VMs shouldn't have more than 32 cores. As the number of cores increases, the system's synchronization overhead also increases. For most workloads, at around 16 cores, the return on investment gets lower, with most of the extra capacity offset by synchronization overhead. User experience is better with two 16-core VMs instead of one 32-core VM.
 
-The recommended range between 4 and 24 cores generally provides better capacity returns for your users as you increase the number of cores. For example, if you have 12 users sign in at the same time to a VM with four cores, the ratio is three users per core. Meanwhile, on a VM with 8 cores and 14 users, the ratio is 1.75 users per core. In this scenario, the latter configuration with a ratio of 1.75 offers greater burst capacity for your applications that have short-term CPU demand.
+The recommended range between 4 and 24 cores generally provides better capacity returns for your users as you increase the number of cores. For example, if you have 12 users sign in at the same time to a VM that has four cores, the ratio is three users per core. On a VM with 8 cores and 14 users, the ratio is 1.75 users per core. In this scenario, the latter configuration with a ratio of 1.75 offers greater burst capacity for your applications that have short-term CPU demand.
 
 This recommendation is true at a larger scale. For scenarios with 20 or more users connected to a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to sign in within 10 minutes of each other on the same session host with 16 cores, two 8-core VMs would handle the workload better. You can also use breadth-first load balancing to evenly distribute users across different VMs instead of depth-first load balancing, where you can only use a new session host after the existing one is full of users.
 
-It's also better to use a large number of smaller VMs instead of a few large VMs. It's easier to shut down VMs that need to be updated or aren't currently in use. With larger VMs, you're more likely to have at least one user signed in at any time, which prevents you from shutting down the VM. When you have many smaller VMs, it's more likely you have some VMs without active users. You can safely shut down these unused VMs to conserve resources, either manually or automatically by using autoscale in Azure Virtual Desktop. Conserving resources makes your deployment more resilient, easier to maintain, and less expensive.
+It's also better to use a large number of smaller VMs instead of a few large VMs. It's easier to shut down VMs that need to be updated or aren't currently in use. With larger VMs, you're more likely to have at least one user signed in at any given time, which prevents you from shutting down the VM. When you have many smaller VMs, it's more likely you have some VMs without active users. You can safely shut down these unused VMs to conserve resources, either manually or automatically by using autoscale in Azure Virtual Desktop. Conserving resources makes your deployment more resilient, easier to maintain, and less expensive.
 
 ## General virtual machine recommendations
 
-In order to run your chosen OS in Azure, you must use a Premium SSD storage for production workloads that require a service level agreement (SLA). For more information, see the [Service Level Agreements (SLA) for Online Services](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
+To run your chosen OS in Azure, you must use Premium SSD storage for production workloads that require a service level agreement (SLA). For more information, see [Service Level Agreements (SLA) for Online Services](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
 
-Graphics processing units (GPUs) are a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations. Azure has several graphics acceleration deployment options and multiple available GPU VM sizes. Learn more at [GPU optimized virtual machine sizes](/azure/virtual-machines/windows/sizes-gpu). For more general information about graphics acceleration in Remote Desktop Services, see [Remote Desktop Services - GPU acceleration](rds-graphics-virtualization.md)
+Graphics processing units (GPUs) are a good choice for users who regularly use graphics-intensive programs for video rendering, 3D design, and simulations. Azure has several graphics acceleration deployment options and multiple GPU VM sizes. Learn more at [GPU optimized virtual machine sizes](/azure/virtual-machines/windows/sizes-gpu). For more general information about graphics acceleration in Remote Desktop Services, see [Remote Desktop Services - GPU acceleration](rds-graphics-virtualization.md)
 
 [B-series burstable VMs](/azure/virtual-machines/windows/b-series-burstable) in Azure are a good choice for users who don't always need maximum CPU performance. For more information, see [Sizes for Windows virtual machines in Azure](/azure/virtual-machines/windows/sizes) and the pricing information on the [Virtual Machine series](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
 

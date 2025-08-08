@@ -6,7 +6,9 @@ author: robinharwood
 manager: tedhudek
 ms.date: 03/13/2024
 ms.topic: how-to
-ms.custom: has-azure-ad-ps-ref
+ms.custom:
+  - has-azure-ad-ps-ref
+  - sfi-image-nochange
 ---
 
 # Configure Microsoft Entra multifactor authentication as authentication provider using AD FS

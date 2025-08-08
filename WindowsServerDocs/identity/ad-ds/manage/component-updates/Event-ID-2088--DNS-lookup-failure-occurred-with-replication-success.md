@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: troubleshooting-error-codes
 ---
 
 # Event ID 2088: DNS lookup failure occurred with replication success

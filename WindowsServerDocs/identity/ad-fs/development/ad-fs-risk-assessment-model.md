@@ -6,6 +6,7 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Build Plug-ins with AD FS 2019 Risk Assessment Model

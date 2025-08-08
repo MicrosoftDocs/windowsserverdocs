@@ -5,6 +5,7 @@ ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 05/06/2022
+ms.custom: sfi-image-nochange
 ---
 # Manage Azure Local clusters using Windows Admin Center in Azure (preview)
 

@@ -6,6 +6,7 @@ author: meaghanlewis
 ms.topic: how-to
 ms.date: 04/02/2025
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
+ms.custom: sfi-image-nochange
 # customer intent: As an administrator, I want to become familiar with the scheduler types that are available in the Hyper-V hypervisor so that I can optimize the security and performance of virtualization hosts.
 ---
 
@@ -33,7 +34,7 @@ For the purposes of this article, the descriptions of SMT and how it's used by H
 
 ### Understand how Hyper-V virtualizes processors
 
-Before you consider hypervisor scheduler types, you should understand Hyper-V architecture. For a detailed summary of how this architecture works, see [Hyper-V Technology overview](../hyper-v-overview.md). For now, keep the following concepts in mind:
+Before you consider hypervisor scheduler types, you should understand Hyper-V architecture. For a detailed summary of how this architecture works, see [Hyper-V Technology overview](../overview.md). For now, keep the following concepts in mind:
 
 - Hyper-V creates and manages VM partitions, allocating and sharing compute resources across them, under control of the hypervisor. Partitions provide strong isolation boundaries between all guest VMs and between guest VMs and the root partition.
 
