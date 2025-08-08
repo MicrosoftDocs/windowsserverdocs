@@ -2,7 +2,7 @@
 title: Network Considerations and User Accounts
 description: Provides planning information for different network and user scenarios with MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: ef4859fc-b7ae-4827-ab9c-b1dc07ab6c16
 author: dknappettmsft
 manager: scottman
