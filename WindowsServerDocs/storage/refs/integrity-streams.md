@@ -4,7 +4,7 @@ title: ReFS integrity streams
 author: xelu86
 ms.author: alalve
 ms.date: 10/16/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # ReFS integrity streams

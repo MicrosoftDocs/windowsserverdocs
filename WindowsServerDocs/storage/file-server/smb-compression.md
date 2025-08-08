@@ -2,7 +2,7 @@
 title: SMB Compression
 description: Describes the SMB compression features in the Windows Operating System.
 ms.product: windows-server
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024

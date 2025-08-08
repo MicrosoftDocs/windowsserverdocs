@@ -4,7 +4,7 @@ title: Storage-class Memory (NVDIMM-N) Health Management in Windows
 description: "Learn more about: Storage-class Memory (NVDIMM-N) Health Management in Windows"
 ms.author: roharwoo
 manager: dongill
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.date: 06/25/2019
 ---
