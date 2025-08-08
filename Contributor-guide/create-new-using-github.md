@@ -5,6 +5,7 @@ author: eross-msft
 ms.author: roharwoo
 ms.date: 05/02/2019
 ms.custom: sfi-image-nochange
+ms.topic: contributor-guide
 ---
 
 # Create new Windows Server articles using GitHub and Visual Studio Code
