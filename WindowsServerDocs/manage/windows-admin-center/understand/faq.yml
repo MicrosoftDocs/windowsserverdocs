@@ -47,6 +47,7 @@ sections:
         answer: |
           Yes, In the Program Files for Windows Admin Center, we've included a PowerShell module called `Microsoft.WindowsAdminCenter.Configuration.psm1`. This module allows you to modify your WAC configuration after installation and can be found in the **PowerShellModules** folder of your installation (`C:\Program Files\WindowsAdminCenter\PowerShellModules\` by default).
           To change the ports your Windows Admin Center instance is using, run the following command:
+          
           ```powershell
           Set-WACHttpsPort -Wacport <port> -ServicePortRangeStart <port> -ServicePortRangeEnd <port>
           ```
@@ -106,14 +107,14 @@ sections:
           Yes. Windows Admin Center can be used to manage Microsoft Hyper-V Server 2019 and Microsoft Hyper-V Server 2016.
 
       - question: |
-          Can I deploy Windows Admin Center on a Windows 10 computer?
+          Can I deploy Windows Admin Center on a Windows computer?
         answer: |
-          Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later), running in desktop mode. Windows Admin Center can also be installed on a server with Windows Server 2016 or greater in gateway mode, and then accessed via a web browser from a Windows 10 computer. [Learn more about installation options](../plan/installation-options.md).
+          Yes, Windows Admin Center can be installed on Windows 10 (version 1709 or later), and Windows 11. Windows Admin Center can also be installed on a server with Windows Server 2016 or greater in gateway mode, and then accessed via a web browser from a Windows 10 computer. [Learn more about installation options](../plan/installation-options.md).
           
       - question: |
           I heard that Windows Admin Center uses PowerShell under the hood, can I see the actual scripts that it uses?
         answer: |
-          Yes! the [Showscript feature](../use/get-started.md#view-powershell-scripts-used-in-windows-admin-center) was added in Windows Admin Center Preview 1806, and is now included in the GA channel.
+          Yes! [View PowerShell scripts used in Windows Admin Center](../use/get-started.md#view-powershell-scripts-used-in-windows-admin-center).
           
       - question: |
           Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
@@ -175,7 +176,7 @@ sections:
       - question: |
           Can Windows Admin Center replace System Center Virtual Machine Manager (SCVMM)?
         answer: |
-          Windows Admin Center and SCVMM are complementary; Windows Admin Center is intended to replace the traditional Microsoft Management Console (MMC) snap ins and the server admin experience. Windows Admin Center isn't intended to replace the monitoring aspects of SCVMM. [Read more about Windows Admin Center and System Center](related-management.md#system-center).
+          Windows Admin Center and SCVMM are complementary; Windows Admin Center is intended to replace the traditional Microsoft Management Console (MMC) snap-ins and the server admin experience. Windows Admin Center isn't intended to replace the monitoring aspects of SCVMM. [Read more about Windows Admin Center and System Center](related-management.md#system-center).
           
       - question: |
           What is Windows Admin Center Preview, which version is right for me?
