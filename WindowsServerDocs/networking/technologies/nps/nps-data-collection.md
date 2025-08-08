@@ -5,7 +5,7 @@ author: meaghanlewis
 ms.author: mosagie
 ms.reviewer: 
 ms.custom: it-pro
-ms.topic: article
+ms.topic: concept-article
 ms.date: 05/29/2024
 
 ---

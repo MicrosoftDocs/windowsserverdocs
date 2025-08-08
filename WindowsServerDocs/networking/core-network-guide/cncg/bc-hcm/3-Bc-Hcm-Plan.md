@@ -2,7 +2,7 @@
 title: BranchCache Hosted Cache Mode Deployment Planning
 description: Learn how to plan your deployment of BranchCache in Hosted Cache mode.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: bc44a7db-f7a5-4e95-9d95-ab8d334e885f
 ms.author: roharwoo
 author: robinharwood

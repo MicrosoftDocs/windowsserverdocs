@@ -1,7 +1,7 @@
 ---
 title: QoS Policy Error and Event Messages
 description: This topic provides a list of error and event messages for Quality of Service (QoS) Policy in Windows Server 2016.
-ms.topic: article
+ms.topic: error-reference
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

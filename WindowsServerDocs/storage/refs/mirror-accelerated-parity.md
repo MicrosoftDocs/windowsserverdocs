@@ -3,7 +3,7 @@ description: "Learn more about: Mirror-accelerated parity"
 title: Mirror-accelerated parity
 ms.author: daknappe
 manager: masriniv
-ms.topic: article
+ms.topic: concept-article
 author: dknappettmsft
 ms.date: 10/17/2018
 ms.assetid:

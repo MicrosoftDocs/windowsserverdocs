@@ -1,7 +1,7 @@
 ---
 title: Plan Network Policy Server
 description: This topic provides links to information about planning Network Policy Server RADIUS server deployment planning in Windows Server 2016.
-ms.topic: article
+ms.topic: overview
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

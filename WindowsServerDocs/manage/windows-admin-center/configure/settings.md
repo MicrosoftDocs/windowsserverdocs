@@ -1,7 +1,7 @@
 ---
 title: Settings
 description: Learn about settings in Windows Admin Center (Project Honolulu). User settings let users change their language/region and other preferences. Gateway settings let administrators configure the gateway.
-ms.topic: article
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
 ms.date: 04/12/2018

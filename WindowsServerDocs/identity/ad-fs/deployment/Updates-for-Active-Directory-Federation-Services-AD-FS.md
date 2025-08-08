@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: error-reference
 ---
 # Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)
 

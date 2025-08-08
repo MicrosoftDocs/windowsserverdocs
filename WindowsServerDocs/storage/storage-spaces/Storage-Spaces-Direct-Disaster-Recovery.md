@@ -1,7 +1,7 @@
 ---
 title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
 manager: tedhudek
-ms.topic: article
+ms.topic: example-scenario
 ms.author: roharwoo
 author: robinharwood
 ms.date: 03/29/2018

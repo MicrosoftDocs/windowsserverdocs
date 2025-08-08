@@ -3,7 +3,7 @@ description: "Learn more about: Performance history for network adapters"
 title: Performance history for network adapters
 ms.author: roharwoo
 manager: eldenc
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.date: 02/02/2018
 ---

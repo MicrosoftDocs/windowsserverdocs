@@ -6,7 +6,7 @@ ms.author: roharwoo
 author: robinharwood
 manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # AD DS Operations

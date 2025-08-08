@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Prerequisites for guarded hosts"
 title: Guarded host prerequisites
-ms.topic: article
+ms.topic: concept-article
 manager: dongill
 author: meaghanlewis
 ms.author: mosagie

@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Shielded VMs  for tenants - Deploying a shielded VM by using Windows Azure Pack"
 title: Shielded VMs  for tenants - Deploying a shielded VM by using Windows Azure Pack
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 095315e4-c4a7-4b80-91d8-528119b62c4c
 manager: dongill
 author: meaghanlewis

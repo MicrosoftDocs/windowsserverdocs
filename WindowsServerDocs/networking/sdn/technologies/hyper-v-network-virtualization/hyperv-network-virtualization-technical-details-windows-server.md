@@ -2,7 +2,7 @@
 title: Hyper-V Network Virtualization Technical Details in Windows Server
 description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server
 manager: grcusanz
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: roharwoo
 author: robinharwood

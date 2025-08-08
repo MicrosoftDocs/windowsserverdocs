@@ -5,7 +5,7 @@ title: Manually Configure a Service Account for a Federation Server Farm
 author: robinharwood
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.author: roharwoo
 ---
 

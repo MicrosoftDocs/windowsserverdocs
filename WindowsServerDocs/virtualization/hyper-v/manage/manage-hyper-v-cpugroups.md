@@ -4,7 +4,7 @@ description: Using VM CPU Groups
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 06/18/2018
-ms.topic: article
+ms.topic: how-to
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
 ---
 

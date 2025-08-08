@@ -6,7 +6,7 @@ ms.author: daknappe
 author: dknappettmsft
 manager: tedhudek
 ms.date: 07/13/2016
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Web Application Proxy in Windows Server
