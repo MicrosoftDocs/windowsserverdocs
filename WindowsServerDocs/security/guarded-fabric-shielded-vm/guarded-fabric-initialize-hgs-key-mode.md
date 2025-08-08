@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Initialize HGS using host key attestation"
 title: Initialize HGS using host key attestation
-ms.topic: article
+ms.topic: how-to
 manager: dongill
 author: meaghanlewis
 ms.author: mosagie
