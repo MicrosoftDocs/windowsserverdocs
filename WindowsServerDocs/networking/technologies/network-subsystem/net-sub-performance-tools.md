@@ -1,7 +1,7 @@
 ---
 title: Performance Tools for Network Workloads
 description: Learn about performance tools including the Client to Server Traffic tool and TCP/IP Window Size. 
-ms.topic: article
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/27/2021

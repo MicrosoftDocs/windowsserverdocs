@@ -5,7 +5,7 @@ description: The W32Time service provides network clock synchronization for comp
 author: xelu86
 ms.author: alalve
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: reference
 ---
 
 # Windows Time Service Technical Reference

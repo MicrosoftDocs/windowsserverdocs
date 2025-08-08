@@ -5,7 +5,7 @@ title: Windows Time Service
 author: xelu86
 ms.author: alalve
 ms.date: 05/08/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Time Service
