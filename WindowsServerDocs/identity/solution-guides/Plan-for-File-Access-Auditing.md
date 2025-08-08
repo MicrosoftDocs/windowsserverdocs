@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Plan for File Access Auditing

@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: fb09e37e-5d1c-428a-a2ca-2f01a0ba2992
 ---
 

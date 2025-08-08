@@ -5,7 +5,7 @@ author: robinharwood
 manager: tedhudek
 ms.reviewer: andandyMSFT
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: best-practice
 ms.author: roharwoo
 ---
 

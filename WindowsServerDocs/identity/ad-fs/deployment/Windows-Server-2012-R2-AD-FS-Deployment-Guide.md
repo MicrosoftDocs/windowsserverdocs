@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 01/20/2023
-ms.topic: article
+ms.topic: install-set-up-deploy
 ---
 
 # Windows Server AD FS deployment guide

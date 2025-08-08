@@ -1,7 +1,7 @@
 ---
 title: Software Restriction Policies
 description: Learn about Software Restriction Policies (SRP) in Windows Server 2012 and Windows 8 and find links to technical information about SRP beginning with Windows Server 2003.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
 ms.author: roharwoo
 author: robinharwood

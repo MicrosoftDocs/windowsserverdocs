@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.custom: it-pro, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 

@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: concept-article
 ms.custom:
   - inhenkel
   - sfi-image-nochange
