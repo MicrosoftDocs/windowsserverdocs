@@ -16,7 +16,7 @@ Windows Admin Center shows extensions available from the specified NuGet feed. B
 
 1. Select the **Settings** button in the top-right > In the left pane, select **Extensions**.
 1. The **Available Extensions** tab lists the extensions on the feed that are available for installation.
-1. Select on an extension to view the extension description, version, publisher and other information in the **Details** pane.
+1. Select on an extension to view the extension description, version, publisher, and other information in the **Details** pane.
 1. Select **Install** to install an extension. If the gateway must run in elevated mode to make this change, you're presented with a User Account Control (UAC) elevation prompt. After installation is complete, your browser automatically refreshes and Windows Admin Center reloads with the new extension installed. If the extension you're trying to install is an update to a previously installed extension, you can select the **Update to latest** button to install the update. You can also go to the **Installed Extensions** tab to view installed extensions and see if an update is available in the **Status** column.
 
 ## Installing extensions from a different feed
@@ -29,7 +29,7 @@ Windows Admin Center supports multiple feeds and you can view and manage package
    - Access to the file must be granted to NTAuthority\Network Service
    - The file path can't include the C:\Users folder
    - The packages on the file share must be signed, unless [your operation mode is set to "Development"](/windows-server/manage/windows-admin-center/extend/prepare-development-environment#install-prerequisites)
-1. Select **Add**. If the gateway must run in elevated mode to make this change, you're presented with a UAC elevation prompt. This prompt will only be presented if you are running Windows Admin Center in desktop mode.
+1. Select **Add**. If the gateway must run in elevated mode to make this change, you're presented with a UAC elevation prompt. This prompt will only be presented if you're running Windows Admin Center in desktop mode.
 
 The **Available Extensions** list shows extensions from all registered feeds. You can check which feed each extension is from using the **Package Feed** column.
 
@@ -53,18 +53,18 @@ If Windows Admin Center is installed on a computer that isn't connected to the i
 
    You may need to create a Microsoft account and sign-in to view the extension packages.
 
-1. Select on the name of the package you want to install to view the package details page.
-1. Select on the **Download** link in the top navigation bar of the package details page and download the .nupkg file for the extension.
+1. Select the name of the package you want to install to view the package details page.
+1. Select the **Download** link in the top navigation bar of the package details page and download the `.nupkg` file for the extension.
 1. Repeat steps 2 and 3 for all the packages you want to download.
 1. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer on which Windows Admin Center is installed.
 1. [Follow the instructions to install extensions from a different feed](#installing-extensions-from-a-different-feed).
 
 ### Downloading packages with a PowerShell script
 
-There are cripts available on the Internet for downloading NuGet packages from a NuGet feed. We'll use the [script provided by Jon Galloway](https://weblogs.asp.net/jongalloway/downloading-a-local-nuget-repository-with-powershell), Senior Program Manager at Microsoft.
+There are scripts available on the Internet for downloading NuGet packages from a NuGet feed. We use the [script provided by Jon Galloway](https://weblogs.asp.net/jongalloway/downloading-a-local-nuget-repository-with-powershell), Senior Program Manager at Microsoft.
 
 1. As described in the [blog post](https://weblogs.asp.net/jongalloway/downloading-a-local-nuget-repository-with-powershell), install the script as a NuGet package, or copy and paste the script into the PowerShell ISE.
-1. Edit the first line of the script to your NuGet feed's v2 URL. If you are downloading packages from the Windows Admin Center official feed, use the following URL:
+1. Edit the first line of the script to your NuGet feed's v2 URL. If you're downloading packages from the Windows Admin Center official feed, use the following URL:
 
     ```powershell
     $feedUrlBase = "https://aka.ms/sme-extension-feed"
