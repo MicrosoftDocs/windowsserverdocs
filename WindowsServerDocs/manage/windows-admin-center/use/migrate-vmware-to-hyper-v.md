@@ -9,8 +9,8 @@ ms.author: mosagie
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
-> Windows Server assistant is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> The VM Conversion extension is currently in PREVIEW.
+> This information relates to a prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight solution enables seamless migration with minimal downtime for both Windows and Linux VMs.
 
@@ -62,7 +62,7 @@ The following operating systems can use the VM Conversion extension:
 - Red Hat Linux 9.0
 - Debian 11, 12
 
-*For Linux guests, Hyper-V drivers must be installed before initiating migration. This is essential to ensure successful post-migration boot.
+*For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
 ## Install the VM Conversion extension in Windows Admin Center
 
@@ -170,16 +170,16 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
     1. RDP into your Windows Server Cluster node.
-    1. Press Windows + R, type cluadmin.msc, and hit Enter. This opens the Failover Cluster Manager.
+    1. Press Windows + R, type cluadmin.msc, and hit Enter. This action opens the Failover Cluster Manager.
     1. In the left pane, expand your cluster and navigate to Roles.
     1. Follow the detailed steps in this [Setting up highly available file shares in Windows Server 2022](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
-    1. Sometimes, it may take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
+    1. Sometimes, it might take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
     1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
 
 1. Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
 
     The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied—not the full allocated size.
 
-    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it may cause storage management issues later.
+    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While using a dynamic VHDX is space-efficient, it can cause storage management issues later if you don't perform any capacity planning.
 
     After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage: `Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed`.
