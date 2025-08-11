@@ -38,9 +38,9 @@ sections:
           Windows Admin Center is optimized for Windows Server 2025. Although Windows Admin Center works best with Windows Server 2025, it supports managing several versions that customers already use: Windows Server 2016 and newer are fully supported. There's also limited functionality for managing Windows Server 2012.
 
       - question: |
-          Can you install the Windows Admin Center modernized gateway (version 2410) when you already have an older build of Windows Admin Center installed?
+          Can you install Windows Admin Center version 2410 when you already have an older build of Windows Admin Center installed?
         answer: |
-          Yes, you can install the Windows Admin Center modernized gateway alongside a legacy gateway build as long as you don't choose the same ports for both installations.
+          Yes, you can install Windows Admin Center 2410 alongside a legacy gateway build as long as you don't choose the same ports for both installations.
       
       - question: |
           Can I change the ports my Windows Admin Center modernized gateway is using after install?
@@ -53,7 +53,7 @@ sections:
           ```
       
       - question: |
-          Are there any known issues with the Windows Admin Center modernized gateway (version 2410)?
+          Are there any known issues with Windows Admin Center version 2410?
         answer: |
           Yes, there are some known issues with the modernized gateway. For a list of known issues, see our [known issues page](../support/known-issues.md)
       

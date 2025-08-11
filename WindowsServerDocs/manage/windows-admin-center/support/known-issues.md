@@ -61,7 +61,7 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 ### Extensions not supported
 
-Even with an added extension feed, the following extensions currently don't work with the modernized gateway build `2410`:
+Even with an added extension feed, the following extensions currently don't work with the modernized gateway build 2410:
 
 - Dell OpenManage
 - Lenovo XClarity Integrator
@@ -198,7 +198,7 @@ Windows Admin Center doesn't currently support uploading or downloading files ov
 
 - When you make the Windows Admin Center window smaller, the terminal content adjusts to fit the new window size. When you return the window to its original size, the content might not return to its original state. You can restore the text by using the `Clear-Host` command, or disconnect and reconnect using the button above the terminal.
 
-- The account for the PowerShell session in version `2410` always defaults to the user signed into the Windows Admin Center gateway, even if different management credentials were specified when remoting to a connection.
+- The account for the PowerShell session in version 2410 always defaults to the user signed into the Windows Admin Center gateway, even if different management credentials were specified when remoting to a connection.
 
 ### Registry Editor
 

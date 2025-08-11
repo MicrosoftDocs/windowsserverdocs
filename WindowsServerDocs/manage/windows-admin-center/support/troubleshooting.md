@@ -11,7 +11,7 @@ ms.date: 06/24/2025
 
 This article describes how to diagnose and resolve issues in Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](known-issues.md).
 
-## Prerequisite
+## Prerequisites
 
 Windows Admin Center is supported on the following operating systems:
 

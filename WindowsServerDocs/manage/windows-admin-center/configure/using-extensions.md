@@ -83,17 +83,17 @@ Windows Admin Center Preview includes a PowerShell module to manage your gateway
 
 ## Gateway plug-in extensions
 
-Gateway plug-in extensions are most impacted by the changes to our modernized gateway. Windows Admin Center gateway plug-ins enable API communication from the UI of your tool or solution to a target node. Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plug-ins to be executed on target nodes. The gateway service can be extended to include custom gateway plug-ins that support protocols other than the default ones (PowerShell and WMI).
+Windows Admin Center gateway plug-in extensions are most impacted by the changes to our modernized gateway. Windows Admin Center gateway plug-ins enable API communication from the UI of your tool or solution to a target node. Windows Admin Center hosts a gateway service that relays commands and scripts from gateway plug-ins to be executed on target nodes. The gateway service can be extended to include custom gateway plug-ins that support protocols other than the default ones (PowerShell and WMI).
 
 Because gateway plug-ins communicate with Windows Admin Center’s backend to enable API communication, gateway plug-in code can include components written with the .NET framework version 4.6.2, which won't function with .NET 8.
 
-Additionally, we've modified the way plug-ins work with our modernized gateway. Instead of developing a C# class that implements the `IPlugIn` interface from the `Microsoft.ManagementExperience.FeatureInterfaces` namespace to extend the gateway plug-in, extensions will now be written in the form of [ASP.NET MVC controllers](/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs). These controllers have increased flexibility compared to the simple C# class and extensive documentation.
+Additionally, we've modified the way plug-ins work with version 2410. Instead of developing a C# class that implements the `IPlugIn` interface from the `Microsoft.ManagementExperience.FeatureInterfaces` namespace to extend the gateway plug-in, extensions will now be written in the form of [ASP.NET MVC controllers](/aspnet/mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs). These controllers have increased flexibility compared to the simple C# class and extensive documentation.
 
 [View our developer documentation](../extend/develop-gateway-plugin.md) to learn more about gateway plug-in development in Windows Admin Center.
 
 ## Gateway extensions not supported
 
-The extension feed for the modernized gateway isn't configured. Extensions not included in the Windows Admin Center installer, including external partner extensions, aren't available unless you add an extension feed.
+The extension feed for the Windows Admin Center gateway isn't configured. Extensions not included in the Windows Admin Center installer, including external partner extensions, aren't available unless you add an extension feed.
 
 The following extensions are available upon install of the modernized gateway build:
 
