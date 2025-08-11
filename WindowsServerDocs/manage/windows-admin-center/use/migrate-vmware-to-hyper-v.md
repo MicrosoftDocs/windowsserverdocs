@@ -287,9 +287,13 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     BIOS-level identifiers are required to be updated in VM identity synchronization, and migration.
 
     <details>
-    <summary>To update the BIOS GUID, expand this section and use the script.</summary>
+    <summary>Expand this section and use the script provided to update the BIOS GUID.</summary>
 
-    To update the BIOS GUID for a Hyper-V virtual machine, extract the following script into a `.ps1` file, and replace your own virtual machine information where necessary:
+    To update the BIOS GUID for a Hyper-V virtual machine:
+
+    1. Extract the following script into a `.ps1` file.
+    1. Define values for the parameters VMName and BiosGUID.
+    1. Run the script in PowerShell as an administrator.
 
     ```powershell
     <#
@@ -297,15 +301,15 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     Updates the BIOS GUID of a specified Hyper-V virtual machine.
     
     .DESCRIPTION
-    This script stops a specified Hyper-V virtual machine, updates its BIOS GUID using CIM (Common Information Model) and WMIv2 (root\virtualization\v2), and then restarts the VM. It handles both synchronous and asynchronous operations triggered by the Hyper-V Management Service.
+    This script stops a specified Hyper-V virtual machine, updates its BIOS GUID using CIM (Common Information Model), and WMIv2 (root\virtualization\v2), and then restarts the VM. It handles both synchronous and asynchronous operations triggered by the Hyper-V Management Service.
     
-    It is particularly useful in scenarios such as VM identity synchronization, VM migration, or reconfiguration where BIOS-level identifiers are required to be updated.
+    It's particularly useful in scenarios such as VM identity synchronization, VM migration, or reconfiguration where BIOS-level identifiers are required to be updated.
     
     .PARAMETER VMName
     The name of the Hyper-V virtual machine whose BIOS GUID is to be updated.
     
     .PARAMETER BiosGuid
-    The new BIOS GUID to assign to the virtual machine. The script will automatically format the GUID with braces if not provided.
+    The new BIOS GUID to assign to the virtual machine. The script automatically formats the GUID with braces if not provided.
     
     .EXAMPLE
     .\Update-VMBiosInfo.ps1 -VMName "Contoso" -BiosGuid "{423A2700-F96D-561B-B421-C3088111A97B}"
