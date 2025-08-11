@@ -1,3 +1,4 @@
+items:
 - name: Hyper-V
   href: index.yml
   items:
@@ -6,6 +7,8 @@
     items:
     - name: Hyper-V overview
       href: overview.md
+    - name: Features and terminology
+      href: features-terminology.md
   - name: Plan
     expanded: true
     items:
@@ -37,8 +40,6 @@
           href: Supported-Ubuntu-virtual-machines-on-Hyper-V.md
         - name: FreeBSD VMs
           href: Supported-FreeBSD-virtual-machines-on-Hyper-V.md
-        - name: Feature Descriptions for Linux and FreeBSD VMs
-          href: Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md
         - name: Best Practices for running Linux
           href: Best-Practices-for-running-Linux-on-Hyper-V.md
         - name: Best practices for running FreeBSD
@@ -137,8 +138,12 @@
       href: manage/configure-multiple-csv-for-vm-replication.md  
     - name: Enable Intel Performance Monitoring Hardware
       href: manage/Performance-Monitoring-Hardware.md
-    - name: Enable processor compatibility mode
-      href: manage/dynamic-processor-compatibility-mode.md
+    - name: Processor compatibility mode
+      items:
+      - name: Processor compatibility for VMs
+        href: processor-compatibility-mode.md
+      - name: Configure processor compatibility mode
+        href: configure-processor-compatibility-mode.md
     - name: Move VMs with live migration
       href: manage/Live-migration-overview.md
       items:
