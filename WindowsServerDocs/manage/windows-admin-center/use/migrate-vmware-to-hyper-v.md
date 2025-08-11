@@ -283,3 +283,137 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
 
     Hyper-V drivers must be installed on Linux machines before starting migration. Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure.​
+
+    BIOS-level identifiers are required to be updated in VM identity synchronization, and migration.
+
+    <details>
+    <summary>To update the BIOS GUID, expand this section and use the script.</summary>
+
+    To update the BIOS GUID for a Hyper-V virtual machine, extract the following script into a `.ps1` file, and replace your own virtual machine information where necessary:
+
+    ```powershell
+    <#
+    .SYNOPSIS
+    Updates the BIOS GUID of a specified Hyper-V virtual machine.
+    
+    .DESCRIPTION
+    This script stops a specified Hyper-V virtual machine, updates its BIOS GUID using CIM (Common Information Model) and WMIv2 (root\virtualization\v2), and then restarts the VM. It handles both synchronous and asynchronous operations triggered by the Hyper-V Management Service.
+    
+    It is particularly useful in scenarios such as VM identity synchronization, VM migration, or reconfiguration where BIOS-level identifiers are required to be updated.
+    
+    .PARAMETER VMName
+    The name of the Hyper-V virtual machine whose BIOS GUID is to be updated.
+    
+    .PARAMETER BiosGuid
+    The new BIOS GUID to assign to the virtual machine. The script will automatically format the GUID with braces if not provided.
+    
+    .EXAMPLE
+    .\Update-VMBiosInfo.ps1 -VMName "Contoso" -BiosGuid "{423A2700-F96D-561B-B421-C3088111A97B}"
+    
+    This command updates the BIOS GUID of the virtual machine named "Contoso" to the specified GUID.
+    
+    .NOTES
+    Author: MICROSOFT Corporation
+    Version: 1.0
+    Date: 2025-08-07
+    Requirements:
+    - Run with administrator privileges
+    - Requires Hyper-V and access to the root\virtualization\v2 namespace
+    - Tested on Windows Server 2019/2022 and Windows 10/11 with Hyper-V enabled
+    
+    .RETURNS
+    Outputs success messages and job details. Throws descriptive errors in case of failure.
+    
+    .LINK
+    https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
+    
+    #>
+    
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$VMName,
+    
+        [Parameter(Mandatory = $true)]
+        [string]$BiosGuid
+    )
+    
+    # Helper function to serialize
+    function ConvertTo-CimEmbeddedString {
+        [CmdletBinding()]
+        param(
+            [Parameter(ValueFromPipeline)]
+            [Microsoft.Management.Infrastructure.CimInstance]$CimInstance
+        )
+    
+        if ($null -eq $CimInstance) {
+            return ""
+        }
+    
+        $cimSerializer = [Microsoft.Management.Infrastructure.Serialization.CimSerializer]::Create()
+        $serializedObj = $cimSerializer.Serialize($CimInstance, [Microsoft.Management.Infrastructure.Serialization.InstanceSerializationOptions]::None)
+    
+        return [System.Text.Encoding]::Unicode.GetString($serializedObj)
+    }
+    
+    # Stop VM
+    Write-Output "Stopping VM '$VMName'..."
+    Stop-VM -Name $VMName -Force
+    
+    # Retrieve the VM's system settings data using its name
+    $vmSettingsData = Get-CimInstance -Namespace "root\virtualization\v2" -Query "select * from Msvm_VirtualSystemSettingData where ElementName = '$VMName'" -ErrorAction Stop
+    
+    # Ensure BIOS GUID has { } format
+    if (-not ($BiosGuid.StartsWith("{") -and $BiosGuid.EndsWith("}"))) {
+        $BiosGuid = "{$BiosGuid}"
+    }
+    # Set the BIOS GUID
+    $vmSettingsData.BIOSGUID = $BiosGuid
+    
+    # Get the Virtual System Management Service object
+    $vmms = Get-CimInstance -Namespace root\virtualization\v2 -Class Msvm_VirtualSystemManagementService -ErrorAction Stop
+    
+    # Apply the updated system settings using ModifySystemSettings
+    $result = $vmms | Invoke-CimMethod -Name "ModifySystemSettings" -Arguments @{
+        "SystemSettings" = ($vmSettingsData | ConvertTo-CimEmbeddedString)
+    } -ErrorAction Stop
+    
+    # Check the return value to determine if the operation succeeded
+    if ($result.ReturnValue -eq 0) {
+        # Success: operation completed synchronously
+        Write-Host "BIOS GUID successfully updated for VM: $VMName (synchronous)"
+    }
+    elseif ($result.ReturnValue -eq 4096) {
+    
+        # 4096 indicates the method started an asynchronous job
+        $jobPath = $result.Job
+        Write-Host "BIOS GUID update started asynchronously for VM: $VMName (job path: $jobPath)"
+        # Get the job object using its path
+        $job = Microsoft.PowerShell.Management\Get-CimInstance -CimInstance $jobPath
+    
+        # Poll the job state until it is no longer Running (4) or Starting (3)
+        while ($job.JobState -eq 3 -or $job.JobState -eq 4) {
+            Start-Sleep -Seconds 1
+            $job = Microsoft.PowerShell.Management\Get-CimInstance -CimInstance $jobPath
+        }
+    
+        # If job completes successfully
+        if ($job.JobState -eq 7) {
+            Write-Host "BIOS GUID updated successfully for VM: $VMName (asynchronous job completed)"
+        }
+        else {
+            # Job failed or did not complete properly
+            throw "Async job failed. JobState: $($job.JobState), ErrorDescription: $($job.ErrorDescription)"
+        }
+    }
+    else {
+        # Any other return value indicates a failure
+        throw "ModifySystemSettings failed with ReturnValue: $($result.ReturnValue)"
+    }
+    
+    Write-Output "BIOS GUID successfully updated for VM: $VMName"
+    # Start the VM again
+    Write-Output "Starting VM '$VMName'..."
+    Start-VM -Name $VMName
+    ```
+
+    </details>
