@@ -33,17 +33,17 @@ netsh wfp set options netevents=<on|off> keywords=<none|bcast|mcast|bcast+mcast>
 
 ```
 netsh wfp show appid file=<path>
-      boottimepolicy file=<path|->
-      filters file=<path|-> protocol=<ipprotocol> localaddr=<ipaddress> remoteaddr=<ipaddress> localport=<port>
-              appid=<path> userid=<user> dir=<in|out> verbose=<on|off>
-      ikeevents file=<path|-> remoteaddr=<ipaddress>
-      netevents file=<path|-> protocol=<ipprotocol> localaddr=<ipaddress> remoteaddr=<ipaddress> localport=<port>
-                remoteport=<port> appid=<path> userid=<user> timewindow=<seconds>
-      options optionsfor=<netevents|keywords|txnwatchdog>
-      security type=<callout|engine|filter|ikesadb|ipsecsadb|layer|netevents|provider|providercontext|sublayer>
-               guid=<guid>
-      state file=<path|->
-      sysports file=<path|->
+               boottimepolicy file=<path|->
+               filters file=<path|-> protocol=<ipprotocol> localaddr=<ipaddress> remoteaddr=<ipaddress> localport=<port>
+                       appid=<path> userid=<user> dir=<in|out> verbose=<on|off>
+               ikeevents file=<path|-> remoteaddr=<ipaddress>
+               netevents file=<path|-> protocol=<ipprotocol> localaddr=<ipaddress> remoteaddr=<ipaddress> localport=<port>
+                         remoteport=<port> appid=<path> userid=<user> timewindow=<seconds>
+               options optionsfor=<netevents|keywords|txnwatchdog>
+               security type=<callout|engine|filter|ikesadb|ipsecsadb|layer|netevents|provider|providercontext|sublayer>
+                        guid=<guid>
+               state file=<path|->
+               sysports file=<path|->
 ```
 
 ## Parameters
