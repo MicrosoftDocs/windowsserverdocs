@@ -494,6 +494,11 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/processor-compatibility-mode",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/features-terminology",
+      "redirect_document_id": true
     }
   ]
 }
