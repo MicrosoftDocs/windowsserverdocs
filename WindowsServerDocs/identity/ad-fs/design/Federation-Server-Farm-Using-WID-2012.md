@@ -6,7 +6,8 @@ author: xelu86
 ms.author: alalve
 manager: tedhudek
 ms.date: 11/03/2022
-ms.topic: article
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 
 # Federation Server Farm Using WID

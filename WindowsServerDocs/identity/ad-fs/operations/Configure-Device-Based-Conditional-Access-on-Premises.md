@@ -7,6 +7,7 @@ ms.author: roharwoo
 manager: tedhudek
 ms.date: 03/18/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 

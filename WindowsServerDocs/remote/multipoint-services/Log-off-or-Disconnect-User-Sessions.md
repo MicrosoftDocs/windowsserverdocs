@@ -1,7 +1,7 @@
 ---
 title: Log off or Disconnect User Sessions
 description: Learn how to manually log off a user
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 3e9bbcdc-e33b-481e-8b46-787a4f6d58bc
 author: dknappettmsft
 manager: dongill

@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: alalve
 author: xelu86
 ms.date: 05/06/2025
+ms.custom: sfi-image-nochange
 ---
 
 # License Remote Desktop session hosts

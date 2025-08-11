@@ -1,7 +1,7 @@
 ---
 title: Guarded fabric and shielded VMs
 description: "Learn more about: Guarded fabric and shielded VMs"
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
 author: meaghanlewis

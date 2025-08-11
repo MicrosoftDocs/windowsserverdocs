@@ -1,7 +1,7 @@
 ---
 title: Quality of Service (QoS) Policy
 description: Learn how to use QoS Policy as a central point of network bandwidth management across your entire Active Directory infrastructure by creating QoS profiles, whose settings are distributed with Group Policy.
-ms.topic: article
+ms.topic: concept-article
 author: xelu86
 ms.author: alalve
 ms.date: 08/07/2020

@@ -5,6 +5,7 @@ ms.topic: concept-article
 author: xelu86
 ms.author: alalve
 ms.date: 05/31/2019
+ms.custom: sfi-image-nochange
 ---
 # Connecting Windows Server to Azure hybrid services
 

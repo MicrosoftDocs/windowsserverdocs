@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity"
 title: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 15ded82c-f70f-4efb-9e26-2731127931af
 manager: dongill
 author: meaghanlewis

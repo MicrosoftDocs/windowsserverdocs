@@ -1,7 +1,7 @@
 ---
 title: Manage User Accounts
 description: Navigational overview for managing MultiPoint Services user accounts
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 761b5a8f-fe32-4bd8-aac0-a2aaa7a97dc5
 author: dknappettmsft
 manager: dongill

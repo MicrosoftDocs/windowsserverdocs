@@ -5,6 +5,7 @@ ms.topic: how-to
 author: xelu86
 ms.author: alalve
 ms.date: 10/25/2024
+ms.custom: sfi-image-nochange
 
 ---
 

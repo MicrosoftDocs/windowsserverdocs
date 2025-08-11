@@ -5,7 +5,7 @@ ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
-ms.date: 06/09/2025
+ms.date: 07/29/2025
 ---
 
 # Windows Commands
@@ -553,6 +553,20 @@ To find information about a specific command, in the following A-Z menu, select 
 - [net print](net-print.md)
 - [net user](net-user.md)
 - [netsh](netsh.md)
+  - [netsh add](netsh-add.md)
+  - [netsh advfirewall](netsh-advfirewall.md)
+  - [netsh branchcache](netsh-branchcache.md)
+  - [netsh delete](netsh-delete.md)
+  - [netsh dhcpclient](netsh-dhcpclient.md)
+  - [netsh dnsclient](netsh-dnsclient.md)
+  - [netsh dump](netsh-dump.md)
+  - [netsh exec](netsh-exec.md)
+  - [netsh ipsec](netsh-ipsec.md)
+  - [netsh lan](netsh-lan.md)
+  - [netsh namespace](netsh-namespace.md)
+  - [netsh set](netsh-set.md)
+  - [netsh show](netsh-show.md)
+  - [netsh wcn](netsh-wcn.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)

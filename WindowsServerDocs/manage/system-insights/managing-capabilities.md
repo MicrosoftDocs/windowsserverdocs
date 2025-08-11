@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 06/04/2025
+ms.custom: sfi-image-nochange
 ---
 # Manage System Insights capabilities in Windows Admin Center
 

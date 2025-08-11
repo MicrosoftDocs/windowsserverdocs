@@ -3,7 +3,7 @@ title: Plan for GPU acceleration in Windows Server
 description: Learn about the different Hyper-V technologies for GPU acceleration, including DDA and GPU partitioning.
 author: meaghanlewis
 ms.author: mosagie
-ms.topic: article
+ms.topic: concept-article
 ms.date: 10/25/2024
 ---
 

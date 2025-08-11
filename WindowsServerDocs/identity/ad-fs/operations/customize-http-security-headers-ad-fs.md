@@ -7,6 +7,7 @@ manager: tedhudek
 ms.reviewer: akgoel23
 ms.date: 06/14/2023
 ms.topic: how-to
+ms.custom: sfi-ropc-nochange
 ---
 
 # Customize HTTP security response headers with AD FS 2019

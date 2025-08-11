@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 10/22/2021
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Walkthrough Guide: Manage Risk with Conditional Access Control

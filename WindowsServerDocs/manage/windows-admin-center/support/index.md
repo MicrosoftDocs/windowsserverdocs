@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center support policy
 description: Learn about how often to install the latest version of Windows Admin Center to stay current and supported.
-ms.topic: article
+ms.topic: lifecycle
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 04/12/2019

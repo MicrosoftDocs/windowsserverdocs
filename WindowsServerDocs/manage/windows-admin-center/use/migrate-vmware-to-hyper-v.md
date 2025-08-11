@@ -10,7 +10,7 @@ ms.author: mosagie
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> This information relates to a prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
@@ -31,18 +31,18 @@ The **VM Conversion extension** provides the following key features:
 
 - **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This reduces post-migration tasks and enables seamless network continuity.
 
-- ​**Secure Boot and UEFI template configuration**: Provides enhanced security and compliance.​
-  - Integrated osType across the migration flow for accurate secure boot and UEFI setup.​
-  - Secure boot settings are dynamically configured based on OS, either Windows or Linux.​
+- **Secure Boot and UEFI template configuration**: Provides enhanced security and compliance.
+  - Integrated osType across the migration flow for accurate secure boot and UEFI setup.
+  - Secure boot settings are dynamically configured based on OS, either Windows or Linux.
   - Added error handling for unsupported OS types.
 
 - **Localization support**: Improves user experience using this tool in different languages.
 
 - **Multiple vCenter connections**: Users can add multiple vCenter endpoints in order to switch between vCenters.
-​
+
 - **Multi-disk support**: Ensures all attached virtual disks are migrated and synchronized for virtual machines running complex workloads.​
 
-- **Prechecks**: Catches failures early in replication, and migration phases.​
+- **Prechecks**: Catches failures early in replication, and migration phases.
 
 - **Cleanup**: Removes VMware Tools from Windows VMs post-migration.
 
@@ -104,7 +104,7 @@ Debian-based operating systems:
 - Ubuntu 20.04, 24.04
 - Debian 11, 12
 
-For Linux guests, [Hyper-V drivers must be installed](https://www.microsoft.com/download/details.aspx?id=55106) before initiating migration. This is essential to ensure successful post-migration boot.
+*For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
 ## Install the VM Conversion extension in Windows Admin Center
 
@@ -138,17 +138,17 @@ When you first visit the extension, you need to connect your vSphere client endp
 
 A set of prechecks are run before the synchronization begins. Confirm you have all the following steps complete before continuing on with the steps to synchronize virtual machines:
 
-1. No active snapshots exist on the virtual machine.​
+1. No active snapshots exist on the virtual machine.
 
-1. VMware PowerCLI is installed on the Windows Admin Center Gateway machine.​
+1. VMware PowerCLI is installed on the Windows Admin Center Gateway machine.
 
-1. Microsoft Visual C++ Redistributable packages (versions 2013 and latest) are installed on the Windows Admin Center Gateway machine.​
+1. Microsoft Visual C++ Redistributable packages (versions 2013 and latest) are installed on the Windows Admin Center Gateway machine.
 
-1. VDDK package is present at:​ `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the Windows Admin Center Gateway machine.​
+1. VDDK package is present at: `C:\Program Files\WindowsAdminCenter\Service\VDDK` on the Windows Admin Center Gateway machine.
 
-1. Target disk path for synchronization is valid.​
+1. Target disk path for synchronization is valid.
 
-1. Destination Hyper-V host has sufficient memory and disk space.​
+1. Destination Hyper-V host has sufficient memory and disk space.
 
 1. Change Block Tracking (CBT) is supported on the VM.
 
@@ -180,15 +180,15 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 A set of prechecks are run before the migration begins. Confirm you have all the following steps complete before continuing on with the steps to migrate virtual machines:
 
-1. Destination Hyper-V host has sufficient vCPU availability.​
+1. Destination Hyper-V host has sufficient vCPU availability.
 
-1. No existing virtual machine with the same name on the destination Hyper-V host.​
+1. No existing virtual machine with the same name on the destination Hyper-V host.
 
-1. Hyper-V role is enabled on the target Hyper-V host.​
+1. Hyper-V role is enabled on the target Hyper-V host.
 
-1. Synchronized `.vhdx` file exists.​
+1. Synchronized `.vhdx` file exists.
 
-1. No active snapshots on the virtual machine.​
+1. No active snapshots on the virtual machine.
 
 ### Migrate virtual machines
 
@@ -258,7 +258,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
     1. RDP into your Windows Server Cluster node.
-    1. Press Windows + R, type cluadmin.msc, and hit Enter. This opens the Failover Cluster Manager.
+    1. Press Windows + R, type cluadmin.msc, and hit Enter. This action opens the Failover Cluster Manager.
     1. In the left pane, expand your cluster and navigate to Roles.
     1. Follow the steps to [set up highly available file shares in Windows Server](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
     1. It can take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.

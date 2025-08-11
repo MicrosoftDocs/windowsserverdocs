@@ -7,6 +7,7 @@ ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/28/2021
+ms.custom: sfi-image-nochange
 ---
 # RAS Gateway High Availability
 

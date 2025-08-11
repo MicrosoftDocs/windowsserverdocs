@@ -6,6 +6,7 @@ ms.author: mosagie
 author: meaghanlewis
 ms.date: 06/26/2025
 ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 # Advanced AD DS Management using Active Directory Administrative Center (Level 200)
 

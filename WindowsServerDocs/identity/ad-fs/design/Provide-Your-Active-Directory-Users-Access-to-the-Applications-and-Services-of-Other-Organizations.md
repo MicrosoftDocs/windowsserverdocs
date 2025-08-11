@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Provide Your Active Directory Users Access to the Applications and Services of Other Organizations
