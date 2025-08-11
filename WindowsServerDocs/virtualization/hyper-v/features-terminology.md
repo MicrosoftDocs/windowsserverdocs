@@ -16,7 +16,7 @@ Hyper-V has many features and terms that are specific to virtualization. This ar
 
 Hyper-V supports two generations of virtual machines that determine available features and virtual hardware:
 
-- **Generation 1** virtual machines use legacy BIOS firmware and help with compatibility with legacy applications requiring older hardware support, including 32-bit systems, legacy hardware emulation, such as IDE controllers and virtual floppy disk files.
+- **Generation 1** virtual machines use legacy BIOS firmware and provide compatibility with legacy applications that require older hardware support, including 32-bit systems and legacy hardware emulation such as IDE controllers and virtual floppy disk files.
 
 - **Generation 2** virtual machines use modern UEFI firmware and offer enhanced security features like Secure Boot and vTPM, improved performance, SCSI boot support, and hot add/remove capabilities for network adapters and memory. Generation 2 virtual machines are recommended for most workloads.
 
@@ -50,7 +50,7 @@ Hyper-V provides several memory management features to optimize resource utiliza
 
 ### Dynamic memory
 
-Hyper-V hosts can dynamically to adjust the amount of memory allocated to a virtual machine based on its current workload while it's in operation, based on maximum, minimum, and startup values. Dynamically increasing or decreasing memory allocation as needed helps optimize resource utilization by ensuring that virtual machines have the right amount of memory for their workloads without wasting resources.
+Hyper-V hosts can dynamically adjust the amount of memory allocated to a virtual machine based on its current workload while it's in operation, based on maximum, minimum, and startup values. Dynamically increasing or decreasing memory allocation as needed helps optimize resource utilization by ensuring that virtual machines have the right amount of memory for their workloads without wasting resources.
 
 The operating system of the virtual machine must support dynamic memory, and it must be enabled in the virtual machine settings. All supported Windows Server and Windows operating systems support dynamic memory, as do many Linux distributions.
 
@@ -102,7 +102,7 @@ Hyper-V supports a wide range of storage architectures to accommodate various st
 
 - Storage area networks (SANs) for high-performance storage solutions that provide block-level access to virtual machine files.
 
-- Storage Spaces Direct for building highly available and scalable storage solutions using local disks across multiple servers. Storage Spaces Direct is part of Windows Server enables you to create a software-defined storage solution that provides redundancy, performance, and scalability, with hyperconverged or disaggregated storage architectures.
+- Storage Spaces Direct for building highly available and scalable storage solutions using local disks across multiple servers. Storage Spaces Direct is part of Windows Server and enables you to create a software-defined storage solution that provides redundancy, performance, and scalability, with hyperconverged or disaggregated storage architectures.
 
 - Network-attached storage (NAS) for shared storage across multiple Hyper-V hosts, enabling high availability and failover clustering.
 
