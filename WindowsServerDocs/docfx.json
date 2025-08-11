@@ -131,11 +131,6 @@
       "author": {
         "security/tls/*.md": "Andrei-Popov"
       },
-      "no-loc": {
-        "administration/windows-commands/**/*.yml": [
-          "[append, arp, break, call, cipher, clip, manage-bde status, manage-bde on, mount]"
-        ]
-      },
       "feedback_product_url": {
         "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"
       },
