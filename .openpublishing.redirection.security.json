@@ -204,6 +204,11 @@
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
       "redirect_url": "/windows-server/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831451(v=ws.11)",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/security-and-assurance-old.md",
+      "redirect_url": "/windows-server/security/security-and-assurance",
+      "redirect_document_id": false
     }
   ]
 }
