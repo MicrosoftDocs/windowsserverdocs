@@ -49,7 +49,7 @@ metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498.
 
 2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \<source DC name>" or "ping \<source DC name>".
 
-3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on <https://www.microsoft.com/dns>
+3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using `DCDIAG.EXE`. For more information, see [Dcdiag](/windows-server/administration/windows-commands/dcdiag).
 
 dcdiag /test:dns
 
