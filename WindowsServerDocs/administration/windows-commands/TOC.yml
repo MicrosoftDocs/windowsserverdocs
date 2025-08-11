@@ -1086,6 +1086,8 @@
         href: netsh-show.md
       - name: netsh wcn
         href: netsh-wcn.md
+      - name: netsh wfp
+        href: netsh-wfp.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin
