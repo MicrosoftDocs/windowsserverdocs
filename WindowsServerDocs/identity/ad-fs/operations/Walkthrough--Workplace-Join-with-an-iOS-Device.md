@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Walkthrough: Workplace Join with an iOS Device

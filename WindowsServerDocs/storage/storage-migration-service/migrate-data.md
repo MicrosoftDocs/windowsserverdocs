@@ -5,6 +5,7 @@ author: xelu86
 ms.author: alalve
 ms.date: 06/25/2024
 ms.topic: upgrade-and-migration-article
+ms.custom: sfi-image-nochange
 ---
 
 # Use Storage Migration Service to migrate a server

@@ -5,6 +5,7 @@ ms.author: mosagie
 author: meaghanlewis
 ms.date: 05/21/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Active Directory Forest Recovery - Reset the krbtgt password

@@ -3,7 +3,7 @@ description: "Learn more about: Performance history for servers"
 title: Performance history for servers
 ms.author: roharwoo
 manager: eldenc
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.date: 02/05/2018
 ---

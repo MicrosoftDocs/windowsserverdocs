@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: troubleshooting-error-codes
 ms.custom: inhenkel
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper

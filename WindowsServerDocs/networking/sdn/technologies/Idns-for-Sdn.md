@@ -7,6 +7,7 @@ ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/28/2021
+ms.custom: sfi-ropc-nochange
 ---
 # Internal DNS Service (iDNS) for SDN
 

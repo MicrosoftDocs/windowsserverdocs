@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: troubleshooting-error-codes
 ---
 
 # Replication error 1396 Logon Failure The target account name is incorrect

@@ -1,10 +1,10 @@
 ---
 title: net user
-description: Reference article for the net user command which adds, deletes, modifies, and displays user account information.
+description: Reference article for the net user command, which adds, deletes, modifies, and displays user account information.
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-ms.date: 05/16/2025
+ms.date: 08/06/2025
 ---
 
 # net user
@@ -29,8 +29,8 @@ net user username [/active: {yes | no}]
 | `<Password>` | Assigns or changes a password for the user's account. Type an asterisk (`*`) to produce a prompt for the password. The password isn't displayed when the user types it at the password prompt. |
 | `<Options>` | Specifies a command-line option. Refer to the next table for descriptions of the command-line option syntax. |
 | `/domain` | Performs the operation on the domain controller in the computer's primary domain. |
-| `/add` | Adds a new user account. Adding `/domain` deletes the account from the domain. |
-| `/delete` | Deletes the specified user account. Adding `/domain` deletes the account from the domain. |
+| `/add` | Adds a new user account. When combined with `/domain`, it specifies that the account should be created on the domain instead of the local machine. |
+| `/delete` | Deletes the specified user account. When combined with `/domain`, it deletes the account from the domain rather than the local machine. |
 | `/times:{<Day>[-<Day>][,<Day>[-<Day>]],<Time>[-<Time>][,<Time>[-<Time>]][;] \| all}` | Specifies the days and times when users are permitted to sign into the computer. <br><br> `<Time>` must be in one-hour increments. <br><br> `<Day>` can be spelled out or abbreviated (`M, T, W, Th, F, Sa, Su`). Hours can be specified in either 12-hour (with AM/PM or A.M./P.M.) or 24-hour format. <br><br> Use **all** to allow sign in at any time, or leave blank to prevent sign in entirely. Separate days and times with commas, and separate multiple day/time entries with semicolons (for example: **M,4AM-5PM;T,1PM-3PM**). Don't include spaces in the time designations. |
 | `/active:{yes \| no}` | Enables or disables the user account. If the user account isn't active, the user can't access resources on the computer. The default is **yes**. |
 | ? | Displays the command help information. |

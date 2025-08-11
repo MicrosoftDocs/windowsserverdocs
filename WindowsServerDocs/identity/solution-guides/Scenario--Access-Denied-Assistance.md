@@ -6,7 +6,7 @@ author: xelu86
 ms.author: alalve
 manager: tedhudek
 ms.date: 06/06/2023
-ms.topic: article
+ms.topic: example-scenario
 ---
 
 # Scenario: Access-Denied Assistance

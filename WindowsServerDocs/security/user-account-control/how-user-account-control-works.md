@@ -7,6 +7,7 @@ ms.author: alalve
 author: xelu86
 manager: mtillman
 ms.date: 10/12/2016
+ms.custom: sfi-image-nochange
 ---
 # How User Account Control Works
 

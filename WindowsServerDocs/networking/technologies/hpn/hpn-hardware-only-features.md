@@ -1,7 +1,7 @@
 ---
 title: High-performance networking
 description: Learn about high-performance networking and how hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: roharwoo

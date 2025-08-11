@@ -1,7 +1,7 @@
 ---
 title: QoS Policy Scenarios
 description: This topic provides Quality of Service (QoS) Policy scenarios, which demonstrate how to use Group Policy to prioritize the network traffic of specific applications and services in Windows Server 2016.
-ms.topic: article
+ms.topic: example-scenario
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
 ms.author: daknappe

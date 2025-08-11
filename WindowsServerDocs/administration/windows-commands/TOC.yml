@@ -1028,8 +1028,66 @@
       href: net-user.md
     - name: netcfg
       href: netcfg.md
-    - name: netsh
+    - name: netdom
+      href: netdom.md
+      items:
+      - name: netdom add
+        href: netdom-add.md
+      - name: netdom computername
+        href: netdom-computername.md
+      - name: netdom join
+        href: netdom-join.md
+      - name: netdom move
+        href: netdom-move.md
+      - name: netdom movent4bdc
+        href: netdom-movent4bdc.md
+      - name: netdom query
+        href: netdom-query.md
+      - name: netdom remove
+        href: netdom-remove.md
+      - name: netdom renamecomputer
+        href: netdom-renamecomputer.md
+      - name: netdom reset
+        href: netdom-reset.md
+      - name: netdom resetpwd
+        href: netdom-resetpwd.md
+      - name: netdom trust
+        href: netdom-trust.md
+      - name: netdom verify
+        href: netdom-verify.md
+    - name: network shell (netsh)
       href: netsh.md
+      items:
+      - name: netsh add
+        href: netsh-add.md
+      - name: netsh advfirewall
+        href: netsh-advfirewall.md
+      - name: netsh branchcache
+        href: netsh-branchcache.md
+      - name: netsh delete
+        href: netsh-delete.md
+      - name: netsh dhcpclient
+        href: netsh-dhcpclient.md
+      - name: netsh dnsclient
+        href: netsh-dnsclient.md
+      - name: netsh dump
+        href: netsh-dump.md
+      - name: netsh exec
+        href: netsh-exec.md
+      - name: netsh ipsec
+        href: netsh-ipsec.md
+      - name: netsh lan
+        href: netsh-lan.md
+      - name: netsh namespace
+        href: netsh-namespace.md
+      - name: netsh set
+        href: netsh-set.md
+      - name: netsh show
+        href: netsh-show.md
+      - name: netsh wcn
+        href: netsh-wcn.md
+      - name: netsh wfp
+        href: netsh-wfp.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

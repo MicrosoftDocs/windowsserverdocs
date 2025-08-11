@@ -4,6 +4,7 @@ description: How to make quick edits to the existing Windows Server documentatio
 author: eross-msft
 ms.author: roharwoo
 ms.date: 07/02/2020
+ms.topic: contributor-guide
 ---
 
 # Update existing Windows Server and Azure Local articles using a web browser and GitHub

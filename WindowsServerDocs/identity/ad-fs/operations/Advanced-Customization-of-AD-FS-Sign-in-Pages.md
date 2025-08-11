@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 882abec8-0189-4f73-99c5-792987168080
 ---
 

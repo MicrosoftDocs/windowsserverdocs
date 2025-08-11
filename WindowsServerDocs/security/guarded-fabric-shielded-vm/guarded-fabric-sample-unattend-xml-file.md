@@ -7,6 +7,7 @@ manager: dongill
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018
+ms.custom: sfi-image-nochange
 ---
 
 # Create OS specialization answer file

@@ -5,7 +5,7 @@ description: Describes the recommended way to decommission Active Directory Fede
 author: robinharwood
 ms.author: roharwoo
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: best-practice
 ---
 
 # Active Directory Federation Services (AD FS) decommission guide 

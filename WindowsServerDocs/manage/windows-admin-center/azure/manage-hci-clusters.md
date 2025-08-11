@@ -5,6 +5,7 @@ ms.topic: overview
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 05/06/2022
+ms.custom: sfi-image-nochange
 ---
 # Manage Azure Local clusters using Windows Admin Center in Azure (preview)
 
@@ -325,6 +326,35 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
 - Updates isn’t supported. Users cannot apply updates to Azure Local cluster with CAU (Cluster-Aware Updating).
+- If Windows Defender Application Control (WDAC) is set to Enforced mode, the installation of the AdminCenter extension may be blocked. In that case, please follow the steps to reinstall it.
+    1. Check if WDAC is enforced in the cluster.
+
+       ```powershell
+       Get-AsWdacPolicyMode
+       ```
+
+    1. Set WDAC in Audit Mode. It can take two or three minutes to switch mode. Validate the mode switched with the `Get-AsWdacPolicyMode` cmdlet.
+
+        ```powershell
+        Enable-AsWdacPolicy -Mode Audit
+        ```
+
+    1. In all nodes, restart the extension service.
+
+       ```powershell
+       Restart-Service ExtensionService
+       ```
+
+    1. From Azure Portal, open each of the nodes, and uninstall the AdminCenter extension from: Settings > Extensions.
+
+    1. Once extension is removed from all nodes, retry installing the extension from the Azure Local Cluster > Settings > Windows Admin Center (preview).
+
+    1. If WAC extension works again, restore the AsWdacPolicy setting.
+
+       ```powershell
+       Enable-AsWdacPolicy -Mode Enforced
+       ```
+
 
 ## Frequently asked questions
 

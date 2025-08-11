@@ -5,6 +5,7 @@ ms.author: roharwoo
 ms.topic: troubleshooting-general
 author: robinharwood
 ms.date: 06/06/2023
+ms.custom: sfi-image-nochange
 ---
 
 # Troubleshoot Storage Spaces Direct

@@ -1,7 +1,7 @@
 ---
 title: Manage IPAM
 description: Learn about administration and troubleshooting information for the IP Address Management (IPAM) feature in  Windows Server 2016.
-ms.topic: article
+ms.topic: concept-article
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/07/2020

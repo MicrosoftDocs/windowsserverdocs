@@ -4,7 +4,7 @@ description: Learn how to configure user access control and permissions using Ac
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 10/18/2021
+ms.date: 06/26/2025
 ---
 # Configure User Access Control and Permissions
 

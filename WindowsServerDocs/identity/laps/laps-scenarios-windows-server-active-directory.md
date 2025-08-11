@@ -5,6 +5,7 @@ author: jay98014
 ms.author: mosagie
 ms.date: 04/11/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 # customer intent: As an administrator, I want to see how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory so that I can manage and back up administrator passwords.
 ---
 
@@ -97,10 +98,10 @@ NewLAPS OU=NewLAPS,DC=laps,DC=com
 
 Users must be granted permission in order to set the expiration time of passwords stored in Active Directory. When a password is marked as expired in Active Directory, the device will rotate the password at the next processing cycle. Users can use this mechanism to shorten (or extend) the remaining time to the next expected password rotation.
 
-You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADResetExpirationPermission` cmdlet for this purpose as shown in the following code:
+You can perform this action by setting inheritable permissions on the organizational unit (OU) that contains the device. You can use the `Set-LapsADResetPasswordPermission` cmdlet for this purpose as shown in the following code:
 
 ```powershell
-PS C:\> Set-LapsADResetExpirationPermission -Identity NewLAPS -AllowedPrincipals @("laps\LapsPasswordExpirersGroup")
+PS C:\> Set-LapsADResetPasswordPermission -Identity NewLAPS -AllowedPrincipals @("laps\LapsPasswordExpirersGroup")
 ```
 
 ```output

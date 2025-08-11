@@ -2,7 +2,7 @@
 title: Manage tenant workloads
 description: Learn about the documentation that allows you to manage tenant workloads by adding tenant virtual machines (VMs), using network virtual appliances, configuring software load balancing, and more.
 manager: grcusanz
-ms.topic: article
+ms.topic: overview
 ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219
 ms.author: roharwoo
 author: robinharwood

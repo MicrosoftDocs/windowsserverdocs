@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: alalve
 author: xelu86
 ms.date: 04/16/2025
+ms.custom: sfi-image-nochange
 ---
 # Set up server-to-server storage replication by using Storage Replica
 
@@ -47,7 +48,7 @@ To use Storage Replica and Windows Admin Center together, you need the following
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
-> Currently, you can't use Windows Admin Center on a server to manage Storage Replica.
+> Currently, you can't use Windows Admin Center in the Azure Portal to manage Storage Replica. Windows Admin Center version 2410 and later can be used to manage Storage Replica.
 
 ## Terms
 
