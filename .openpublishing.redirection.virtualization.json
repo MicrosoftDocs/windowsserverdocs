@@ -499,6 +499,21 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/features-terminology",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/checkpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/checkpoints",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/powershell-direct",
+      "redirect_document_id": true
     }
   ]
 }

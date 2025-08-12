@@ -39,7 +39,7 @@ With built-in support for Network Device Interface Specification \(NDIS\) filter
 
 In the following illustration, a VM has a virtual NIC that is connected to the Hyper-V Virtual Switch through a switch port.
 
-![Virtual Switch connections](../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)
+![Virtual Switch connections](./media/Vswitch_01.jpg)
 
 Hyper-V Virtual Switch capabilities provide you with more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious VMs.
 
