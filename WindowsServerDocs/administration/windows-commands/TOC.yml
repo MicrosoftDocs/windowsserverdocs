@@ -1088,6 +1088,8 @@
         href: netsh-wcn.md
       - name: netsh wfp
         href: netsh-wfp.md
+      - name: netsh winsock
+        href: netsh-winsock.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

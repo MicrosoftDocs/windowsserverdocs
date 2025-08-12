@@ -568,6 +568,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh show](netsh-show.md)
   - [netsh wcn](netsh-wcn.md)
   - [netsh wfp](netsh-wfp.md)
+  - [netsh winsock](netsh-winsock.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
