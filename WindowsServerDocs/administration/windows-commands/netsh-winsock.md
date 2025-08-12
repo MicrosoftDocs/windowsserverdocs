@@ -36,6 +36,7 @@ netsh winsock show <autotuning> <catalog>
 | winsock `reset` | Resets the Winsock catalog to a clean state, removing any custom LSPs to resolve network problems caused by corrupted Winsock settings. It doesn't affect Winsock Name Space Provider entries. |
 | winsock `set autotuning` | This command toggles Winsock send autotuning, which enables dynamic send buffering to improve overall network throughput. Options are `on` or `off`. |
 | winsock `show` | `autotuning` - Displays whether Winsock send autotuning is currently enabled or disabled. <br><br> `catalog` - Displays the contents of the Winsock catalog, listing all registered Winsock LSPs and namespace providers. |
+| `help` *or* `?` | Displays a list of commands and their descriptions in the current context. |
 
 ## Examples
 
