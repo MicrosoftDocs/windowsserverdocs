@@ -4,7 +4,7 @@ description: Overview of Network shell (netsh), a command-line utility for displ
 ms.topic: overview
 ms.author: alalve
 author: xelu86
-ms.date: 07/23/2025
+ms.date: 08/12/2025
 ---
 
 # Network shell (netsh)
@@ -21,29 +21,20 @@ For example, you can configure Network Policy Server (NPS) by using either the N
 ## Example syntax
 
 ```
-netsh [-a <Aliasfile>][-c <Context>][-r <Remotecomputer>][-u [<domainname>\<username>][-p <Password> | [{<NetshCommand> | -f <scriptfile>}]
+netsh [-a <Aliasfile>] [-c <Context>] [-r <RemoteMachine>] [-u <DomainName>\<Username>] [-p <Password> | *] [Command> | -f <ScriptFile>]
 ```
 
 The following parameters are optional.
 
 | Parameter | Description |
 | --------- | ----------- |
-|:::no-loc text="-a":::|Specifies that you want to return to the netsh shell after running `AliasFile`.|
-|`AliasFile`|Specifies the name of the text file that contains one or more netsh commands.|
-|:::no-loc text="-c":::|Specifies that netsh enters the specified netsh context.|
-|`Context`|Specifies the netsh context that you want to enter.|
-|:::no-loc text="-r":::|Specifies that you want the command to run on a remote computer. The Remote Registry service must be running on the remote computer. If it's not running, Windows displays a "Network Path Not Found" error message.|
-|`RemoteComputer`|Specifies the remote computer that you want to configure.|
-|:::no-loc text="-u":::|Specifies that you want to run the netsh command under a user account.|
-|`DomainName\`|Specifies the domain where the user account is located. The default is the local domain if *DomainName\\* isn't specified.|
-|`UserName`|Specifies the user account name.|
-|:::no-loc text="-p":::|Specifies that you want to provide a password for the user account.|
-|`Password`|Specifies the password for the user account that you specified with `-u` *UserName*.|
-|`Command`|Specifies the netsh command that you want to run.|
-|:::no-loc text="-f":::|Specifies that you want to exit netsh after it runs the script that you designate with *ScriptFile*.|
-|`ScriptFile`|Specifies the script that you want to run.|
-
-If you specify `-r` followed by another command, netsh runs the command on the remote computer and then returns to the command prompt. If you specify `-r` without another command, netsh opens in remote mode. The process is similar to using `set machine` at the netsh command shell. When you use `-r`, you set the target computer for the current instance of netsh only.
+|:::no-loc text="-a":::|Specifies that you want to return to the netsh shell after running an alias file. An alias file is the text file that contains one or more netsh commands.|
+|:::no-loc text="-c":::|Enters the specified netsh context. The context represents a specific set of available commands related to a particular feature or function.|
+|:::no-loc text="-r":::|Specifies that you want the command to run on a remote computer using its computer name, a fully qualified domain name (FQDN), or IP address. The Remote Registry service must be running on the remote computer. If it's not running, Windows displays a "Network Path Not Found" error message. <br><br> If you specify `-r` followed by another command, netsh runs the command on the remote computer and then returns to the command prompt. If you specify `-r` without another command, netsh opens in remote mode. The process is similar to using `set machine` at the netsh command shell. When you use `-r`, you set the target computer for the current instance of netsh only.|
+|:::no-loc text="-u":::|Specifies that you want to run the netsh command under a specific user account using `DomainName\Username` format.|
+|:::no-loc text="-p":::|Specifies that you want to provide a password for the user account. If `*` is used, this specifies you want to securely enter the password.|
+|:::no-loc text="Command":::| This is the netsh command that you want to run.|
+|:::no-loc text="-f":::|Specifies that you want to exit netsh after executing the commands from the script file you provide.|
 
 If your string value contains spaces between characters, you must enclose the string value in quotation marks. For example, `-r "contoso remote device"`. After you exit and reenter `netsh`, the target computer is reset as the local computer. You can run netsh commands on a remote computer by specifying a computer name stored in WINS, a UNC name, an internet name to be resolved by the DNS server, or an IP address.
 
