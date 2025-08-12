@@ -4564,6 +4564,11 @@
       "source_path": "WindowsServerDocs/manage/windows-admin-center/azure/azure-site-recovery.md",
       "redirect_url": "/azure/azure-local/manage/azure-site-recovery",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/understand/modernized-gateway.md",
+      "redirect_url": "/windows-server/manage/windows-admin-center/understand/what-is",
+      "redirect_document_id": false
     }
   ]
 }
