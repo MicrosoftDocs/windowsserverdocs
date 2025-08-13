@@ -61,6 +61,8 @@
       href: use/logging.md
     - name: Manage AWS Machines
       href: use/manage-aws-machines.md
+    - name: Migrate VMware virtual machines to Hyper-V
+      href: use/migrate-vmware-to-hyper-v.md  
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
