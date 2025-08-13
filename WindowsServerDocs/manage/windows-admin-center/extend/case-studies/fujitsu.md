@@ -1,10 +1,11 @@
 ---
 title: Windows Admin Center SDK Case Study - Fujitsu
 description: Windows Admin Center SDK Case Study - Fujitsu
-ms.topic: article
-author: jasongerend
-ms.author: jgerend
+ms.topic: partner-tools
+author: xelu86
+ms.author: alalve
 ms.date: 05/23/2018
+ms.custom: sfi-image-nochange
 ---
 # Fujitsu ServerView Health and RAID extensions
 

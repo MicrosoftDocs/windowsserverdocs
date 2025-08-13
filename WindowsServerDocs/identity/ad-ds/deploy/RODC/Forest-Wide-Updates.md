@@ -1,10 +1,10 @@
 ---
 description: Learn more about Forest-Wide Updates
 title: Active Directory Forest-Wide Updates
-author: justinha
-ms.author: justinha
-ms.topic: article
-ms.date: 04/01/2023
+author: robinharwood
+ms.author: roharwoo
+ms.topic: concept-article
+ms.date: 05/12/2025
 ---
 # Forest-Wide Updates
 

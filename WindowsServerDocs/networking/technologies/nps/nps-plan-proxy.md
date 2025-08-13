@@ -2,10 +2,10 @@
 title: Plan NPS as a RADIUS proxy
 description: This topic provides information about Network Policy Server RADIUS proxy deployment planning in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: ca77d64a-065b-4bf2-8252-3e75f71b7734
-ms.author: jgerend
-author: jasongerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 

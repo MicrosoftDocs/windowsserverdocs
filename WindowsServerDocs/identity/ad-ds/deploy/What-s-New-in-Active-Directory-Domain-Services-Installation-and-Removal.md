@@ -2,10 +2,10 @@
 description: "Learn more about: What's New in Active Directory Domain Services Installation and Removal"
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What's New in Active Directory Domain Services Installation and Removal
-ms.author: justinha
-author: justinha
+ms.author: roharwoo
+author: robinharwood
 manager: daveba
-ms.date: 05/16/2023
+ms.date: 05/12/2025
 ms.topic: whats-new
 ms.custom: inhenkel
 ---

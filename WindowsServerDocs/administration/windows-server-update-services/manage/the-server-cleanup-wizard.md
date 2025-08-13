@@ -1,9 +1,9 @@
 ---
 title: Server Cleanup wizard
 description: Windows Server Update Service (WSUS) article - How to use the Server Cleanup wizard to manage disk space.
-ms.topic: article
-ms.author: jgerend
-author: jasongerend
+ms.topic: how-to
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 05/10/2023
 ---
 # Server cleanup wizard

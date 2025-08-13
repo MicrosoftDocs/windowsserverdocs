@@ -2,10 +2,10 @@
 description: "Learn more about: Disjoint Namespace"
 ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: Disjoint Namespace
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 05/12/2025
 ms.topic: concept-article
 
 ---

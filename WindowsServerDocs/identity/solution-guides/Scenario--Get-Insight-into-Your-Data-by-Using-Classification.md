@@ -2,11 +2,11 @@
 description: "Learn more about: Scenario: Get Insight into Your Data by Using Classification"
 ms.assetid: ad3f0480-99f7-428a-ab33-6d165a440840
 title: Scenario Get Insight into Your Data by Using Classification
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: example-scenario
 ---
 
 # Scenario: Get Insight into Your Data by Using Classification

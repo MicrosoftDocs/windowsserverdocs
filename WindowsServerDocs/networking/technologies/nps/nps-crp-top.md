@@ -2,10 +2,10 @@
 title: Connection Request Processing
 description: This topic provides an overview of Network Policy Server connection request processing in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 849d661a-42c1-4f93-b669-6009d52aad39
-ms.author: jgerend
-author: jasongerend
+ms.author: alalve
+author: xelu86
 ms.date: 08/07/2020
 ---
 

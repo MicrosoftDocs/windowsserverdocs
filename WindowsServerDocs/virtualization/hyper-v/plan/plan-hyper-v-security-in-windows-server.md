@@ -1,7 +1,7 @@
 ---
 title: Plan for Hyper-V security in Windows Server
 description: Provides a list of security considerations for Hyper-V hosts and virtual machines
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
 ms.author: mosagie
 author: meaghanlewis
@@ -59,7 +59,7 @@ For more secure environments:
 
 - **Use hardware with a Trusted Platform Module (TPM) 2.0 chip to set up a guarded fabric.**
 
-    For more information, see [System requirements for Hyper-V on Windows Server 2016](../system-requirements-for-hyper-v-on-windows.md).
+    For more information, see [System requirements for Hyper-V on Windows Server 2016](../host-hardware-requirements.md).
 
 ## Secure virtual machines
 - **Create generation 2 virtual machines for supported guest operating systems.**

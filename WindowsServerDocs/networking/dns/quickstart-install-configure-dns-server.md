@@ -1,20 +1,18 @@
 ---
-title: Install and configure DNS Server on Windows Server
-description: Learn how to install and configure a DNS server on Windows Server using PowerShell or Server Manager. 
+title: Install and Configure DNS Server on Windows Server
+description: Learn how to install and configure a DNS server on Windows Server using PowerShell or Server Manager. Manage DNS zones and queries effectively.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: quickstart
-ms.date: 08/16/2024
+ms.date: 06/11/2025
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
+#customer intent: As a DNS administrator, I want to install and configure a DNS server on Windows Server so that I can manage DNS zones and queries effectively.
 ---
 
 # Quickstart: Install and configure DNS Server on Windows Server
 
-> 
-
-This quickstart shows you how to install and configure a DNS Server on Windows Server. You'll
-install the DNS Server role to host DNS zone data, forward DNS queries to DNS root hint name servers, or optionally to an upstream name server.
+Domain Name System (DNS) is essential for translating domain names into IP addresses, enabling network connectivity and resource access. This quickstart guides you through installing and configuring the DNS Server role on Windows Server. Learn how to set up DNS zones, manage queries, and configure server options using PowerShell or Server Manager. You can also find information on how to forward DNS queries to DNS root hint name servers, or optionally to an upstream name server.
 
 ## Prerequisites
 
@@ -25,7 +23,7 @@ prerequisites:
 - A static IP.
 - An account that is a member of the Administrators group, or equivalent.
 
-## Installing DNS Server
+## Install DNS Server
 
 Installing a Domain Name System (DNS) server involves adding the DNS Server role to an existing
 Windows Server server.
@@ -70,7 +68,7 @@ Here's how to install the DNS Server role using Server Manager from the Windows 
 1. On the **Select server roles** page, select the **DNS Server** checkbox, and then select on the
    **Next** button.
 
-    1. You'll be prompted to add features that are required for DNS Server, if you're happy with the
+    1. You're prompted to add features that are required for DNS Server, if you're happy with the
        defaults, select **Add Features**.
 
 1. On the **Select features** page, you can leave the default selections, and then select on the
@@ -86,9 +84,9 @@ Here's how to install the DNS Server role using Server Manager from the Windows 
 
 ---
 
-## Configuring DNS Server
+## Configure DNS Server
 
-Now you've installed the DNS Server role, you can configure the server.
+Now you can continue to configure the server.
 
 ### Configure interfaces
 
@@ -124,7 +122,7 @@ Here's how to configure the interface used to listen for DNS requests using the
 
 Here's how to configure the interface used to listen for DNS requests using the DNS Manager console.
 
-1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+1. From the Windows desktop, open the **Start** menu. Select **Windows Administrative Tools > DNS**.
 
 1. Select and hold (or right-click) your server, and then select **Properties**.
 
@@ -192,7 +190,7 @@ Here's how to update a DNS root hint name server using the
 
 Here's how to root hints using the DNS Manager console.
 
-1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+1. From the Windows desktop, open the **Start** menu. Select **Windows Administrative Tools > DNS**.
 
 1. Select and hold (or right-click) your server, and then select **Properties**.
 
@@ -215,7 +213,7 @@ traffic to the DNS root servers. You can add forwarders using the GUI or by usin
 `Set-DNSServerForwarder` PowerShell cmdlet.
 
 > [!NOTE]
-> DNS root hints will not be used unless your forwarders fail to respond.
+> DNS root hints aren't used unless your forwarders fail to respond.
 
 ### [PowerShell](#tab/powershell)
 
@@ -237,13 +235,13 @@ Here's how to install the DNS server role using the
 
 Here's how to configure DNS forwarders using the DNS Manager console.
 
-1. From the Windows desktop, open the **Start** menu, select **Windows Administrative Tools > DNS**.
+1. From the Windows desktop, open the **Start** menu. Select **Windows Administrative Tools > DNS**.
 
 1. Select and hold (or right-click) your server, and then select **Properties**.
 
 1. Select the **Forwarders** tab, then select **Edit**.
 
-1. Enter the IP address of the DNS server to forward requests to. Repeat this step as many times as
+1. Enter the IP address of the DNS server for forwarding requests to. Repeat this step as many times as
    you need.
 
 1. Select **OK**.
@@ -251,7 +249,7 @@ Here's how to configure DNS forwarders using the DNS Manager console.
 1. Review the DNS server in the list, select **OK** or **Apply** to complete your configuration.
 
 ---
-## Removing the DNS Server role
+## Remove the DNS Server role
 
 To remove the DNS Server role, perform the following steps.
 
@@ -276,19 +274,19 @@ Here's how to uninstall the DNS server role using Server Manager from the Window
 1. On the **Select destination server** page, select the server that you want to remove the DNS
    server role service from, then select **Next**.
 1. From the list, clear the **DNS Server** checkbox.
-      1. You'll be prompted to remove features that require DNS Server, select **Remove Features**,
+      1. You're prompted to remove features that require DNS Server, select **Remove Features**,
          then **Next** to continue.
 1. On the **Remove features** page, you can leave the default selections, and then select the
    **Next** button.
 1. On the **Confirm removal selections** page, review the selected roles and features, and then
    select **Remove**.
 1. Once the role and feature is removed, select **Close**.
-1. Restart your computer to complete the uninstall.
+1. Restart your computer completing the uninstall.
 
 ---
 > [!IMPORTANT]
 >
-> When removing the DNS server role service from a Windows Server computer, be aware of the following:
+> When removing the DNS server role service from a Windows Server computer, be aware of the following points:
 >
 > - For a DNS server that hosts AD DS-integrated zones, these zones are saved or deleted
 >   according to their storage type. The zone data isn't deleted unless the DNS server that you

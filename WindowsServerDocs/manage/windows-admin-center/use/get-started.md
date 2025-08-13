@@ -2,56 +2,48 @@
 title: Get Started with Windows Admin Center
 description: Get started with Windows Admin Center after you download and install it on a Windows PC.
 ms.topic: get-started
-author: jasongerend
-ms.author: jgerend
-ms.date: 09/21/2022
+author: meaghanlewis
+ms.author: mosagie
+ms.date: 07/24/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Windows Admin Center
+
+Windows Admin Center is a browser-based management tool that simplifies the administration of servers, clusters, Windows PCs, and Azure virtual machines.
 
 This article describes how to get started with Windows Admin Center after you [download](https://www.microsoft.com/evalcenter/download-windows-admin-center) and [install](../../windows-admin-center/deploy/install.md) it on a Windows PC. To learn more about Windows Admin Center, see [Windows Admin Center overview](../overview.md).
 
 ## Open Windows Admin Center on a Windows PC
 
-Windows Admin Center enables you to manage servers, clusters, Windows PCs, and Azure virtual machines (VMs) directly from your Windows 10 computer by using a web browser.
-
 > [!IMPORTANT]
-> You must be a member of the local administrators group to use Windows Admin Center on Windows 10.
+> You must be a member of the local administrators group to use Windows Admin Center.
 
 Follow these steps to open Windows Admin Center on a Windows PC:
 
-1. On the **Start** menu, select **Windows Admin Center**. Or enter **Windows Admin Center** on the search bar and then select it from the search results.
+1. On the **Start** menu, select **Windows Admin Center (v2)**. Or enter **Windows Admin Center (v2)** on the search bar and then select it from the search results.
 
-   Windows Admin Center opens in your default browser with the URL `https://localhost:6516/`. Alternatively, you can start it from your desired browser by entering `https://localhost:6516/`.
+   Your default browser opens with the sign in screen for Windows Admin Center.
+
+   - Windows client operating systems are configured for local access using port 6600.
+
+   - Windows Server operating systems are configured for remote access using port 443.
+
+1. Sign in to Windows Admin Center using your administrator credentials.
 
 1. A prompt for selecting a certificate for authentication appears.
 
-   > [!NOTE]
-   > In the [modernized gateway build of Windows Admin Center](../understand/modernized-gateway.md), you're asked to sign in to the Windows Admin Center gateway instead of selecting a certificate. This step does not apply.
-
-   Select the certificate labeled **Windows Admin Center Client**, and then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
-
-   > [!IMPORTANT]
-   > Be sure to select **Windows Admin Center Client** and not any other certificate. If you select any other certificate, the following error message appears:
-   >
-   > "You are not authorized to view this page. If you recently updated Windows Admin Center, you may need to restart your browser, and then refresh the page."
-   >
-   > If you continue to get the same error even after restarting your browser and refreshing the page, try clearing the browser cache or switching to another browser. If none of these troubleshooting steps resolve the issue, you might need to uninstall and reinstall Windows Admin Center, and then restart it.
-
 1. (First time only:) A pop-up window confirms that your Windows Admin Center version is successfully installed. It also provides information on what's new in this release. Close the window to proceed.
 
-   :::image type="content" source="../media/successful-install-message.png" alt-text="Screenshot of the message that shows successful installation of Windows Admin Center.":::
+   :::image type="content" source="../media/get-started/successfully-installed.png" alt-text="Screenshot of the message that shows successful installation of Windows Admin Center.":::
 
-   The **All connections** page shows your Windows 10 computer name in the list of connections. You're now ready to add connections to Windows Admin Center.
+   The **All connections** page shows your Windows computer name in the list of connections. You're now ready to add connections to Windows Admin Center.
 
 ## Add connections to Windows Admin Center
 
-You can add connections as managed nodes to Windows Admin Center from the **All connections** page. **All connections** is the default page that appears when you open Windows Admin Center. On this page, you can either add existing resources as connections or create new resources. The resources that you add appear in the connection list.
+To add or create an Azure VM, you must first register Windows Admin Center with Azure. You can add connections as managed nodes to Windows Admin Center from the **All connections** page. **All connections** is the default page that appears when you open Windows Admin Center. On this page, you can either add existing resources as connections or create new resources. The resources that you add appear in the connection list.
 
 The types of resources that you can add from the **All connections** page are servers, Windows PCs, clusters, and Azure VMs. The resources that you can create are clusters and Azure VMs.
-
-> [!NOTE]
-> To add or create an Azure VM, you must first register Windows Admin Center with Azure.
 
 To add connections to Windows Admin Center:
 
@@ -85,16 +77,16 @@ To add connections to Windows Admin Center:
 
    ### [Import a list](#tab/import-a-list)
 
-   You can add multiple resources at once by bulk importing from a .txt or .csv file. The label for this tab appears as **Import clusters** when you're bulk importing multiple clusters.
+   You can add multiple resources at once by bulk importing from a .txt or .csv file. The label for this tab appears as **Import clusters** when you bulk import multiple clusters.
 
-   1. Select the **Import a list** tab. Or select **Import clusters** for bulk importing clusters.
+   1. Select the **Import a list** tab. Or select **Import clusters** to bulk import clusters.
 
    1. Under **Import source**, select the **Select a file** button to browse and select the file to import. Or drag and drop the file. The file can be a .txt or .csv file that contains a comma, or a new line-separated list of resources that you want to add.
 
       :::image type="content" source="../media/launch/use-get-started-7.png" alt-text="Screenshot of the page for adding resources when the tab for importing a list is selected." lightbox="../media/launch/use-get-started-7.png":::
 
    > [!NOTE]
-   > The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains additional information beyond the server names. It's not compatible with this import method.
+   > The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains extra information beyond the server names. It's not compatible with this import method.
 
    ### [Search Active Directory](#tab/search-active-directory)
 
@@ -134,7 +126,7 @@ If you installed Windows Admin Center on Windows Server, additional configuratio
 ### Authenticate by specifying credentials
 
 1. In **All connections**, select a resource from the list.
-1. Select **Manage as** to specify the credentials that you'll use to authenticate to the managed node.
+1. Select **Manage as** to specify your credentials to authenticate to the managed node.
 
    :::image type="content" source="../media/launch/use-get-started-9.png" alt-text="Screenshot of the page for all connections with the command for using specific credentials for management.":::
 
@@ -146,7 +138,7 @@ You can apply the credentials to all connections, which will cache them for that
 
 ### Authenticate by Local Administrator Password Solution
 
-If your environment uses [Local Administrator Password Solution (LAPS)](/previous-versions/mt227395(v=msdn.10)), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. If you use this scenario, you can [provide feedback](https://aka.ms/WACFeedback).
+If your environment uses [Local Administrator Password Solution (LAPS)](/previous-versions/mt227395(v=msdn.10)), and you have Windows Admin Center installed on your Windows PC, you can use LAPS credentials to authenticate with the managed node. If you use this scenario, you can [provide feedback](https://aka.ms/WACFeedback).
 
 ## Use tags to organize your connections
 
@@ -154,7 +146,7 @@ You can use tags to identify and filter related resources in your connection lis
 
 ### Edit tags
 
-You can add tags to a connection while you're adding a new connection. Or you can add or edit them later for one or more connections on the **All connections** page.
+You can add tags to a connection while you add a new connection. Or you can add or edit them later. For one or more connections on the **All connections** page.
 
 To add or edit a tag:
 

@@ -1,11 +1,11 @@
 ---
 description: "Learn more about: AD FS Decommission"
 title: AD FS Decommission Reference
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 ---
 # AD FS Decommission
 

@@ -1,17 +1,17 @@
 ---
 title: Hyper-V feature compatibility by generation and guest
 description: Lists the generations and operating systems that are compatible with key Hyper-V features
-ms.topic: article
+ms.topic: feature-availability
 ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 10/25/2024
+ms.date: 06/19/2025
 ---
 # Hyper-V feature compatibility by generation and guest
 
 The tables in this article show you the generations and operating systems that are compatible with some of the Hyper-V features, grouped by categories. In general, you'll get the best availability of features with a generation 2 virtual machine that runs the newest operating system.
 
-Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System requirements for Hyper-V on Windows Server](System-requirements-for-Hyper-V-on-Windows.md). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:
+Keep in mind that some features rely on hardware or other infrastructure. For hardware details, see [System requirements for Hyper-V on Windows Server](host-hardware-requirements.md). In some cases, a feature can be used with any supported guest operating system. For details on which operating systems are supported, see:
 
 * [Supported Linux and FreeBSD virtual machines](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 * [Supported Windows guest operating systems](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)
@@ -34,9 +34,10 @@ Hot add/removal of memory | 1 and 2 | Windows Server 2016, Windows 10
 Virtual NUMA | 1 and 2 | Any supported guest
 
 ## Development and test
+
 Feature  | Generation | Guest operating system
 ------------- | ------------- | -----------
-COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging). | Any supported guest
+COM/Serial ports | 1 and 2 <br>**Note:** For generation 2, use Windows PowerShell to configure. For details, see [Add a COM port for kernel debugging](plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging). | Any supported guest
 
 ## Mobility
 

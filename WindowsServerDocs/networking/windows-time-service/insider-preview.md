@@ -4,7 +4,7 @@ description: New Windows Time Service features in Windows Server 2019
 author: xelu86
 ms.author: alalve
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Insider preview

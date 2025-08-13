@@ -1,0 +1,109 @@
+### YamlMime:Landing
+
+title: Windows Server get started documentation # < 60 chars
+summary: Windows Server builds connected app, network, and web service infrastructure from workgroup to data center, bridging on-premises with Azure.  # < 160 chars
+
+metadata:
+  title: Windows Server Get Started
+  description: Windows Server builds connected app, network, and web service infrastructure from workgroup to data center, bridging on-premises with Azure.
+  ms.topic: landing-page 
+  author: robinharwood
+  ms.author: roharwoo
+  ms.date: 07/24/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card 
+  - title: Overview
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Windows Server?
+            url: overview.md
+          - text: What's new in Windows Server 2025
+            url: whats-new-windows-server-2025.md
+          - text: Windows Server Insiders Preview
+            url: get-started-with-windows-server-insiders-preview.md
+      - linkListType: concept
+        links:
+          - text: Editions feature comparison
+            url: editions-comparison.md
+          - text: Hardware requirements
+            url: hardware-requirements.md
+          - text: Features removed or no longer developed in Windows Server
+            url: removed-deprecated-features-windows-server.md
+
+  # Card 
+  - title: Plan
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Install, upgrade, or migrate
+            url: install-upgrade-migrate.md
+          - text: Server Core vs Server with Desktop Experience
+            url: install-options-server-core-desktop-experience.md
+          - text: Servicing channels comparison
+            url: servicing-channels-comparison.md
+      - linkListType: concept
+        links:
+          - text: Microsoft server applications compatibility
+            url: application-compatibility.md
+          - text: Azure Hybrid Benefit for Windows Server
+            url: azure-hybrid-benefit.md
+
+  # Card
+  - title: Install & upgrade
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Install Windows Server from installation media
+            url: install-windows-server.md
+          - text: Upgrade Windows Server
+            url: upgrade-overview.md
+          - text: Perform an in-place upgrade
+            url: perform-in-place-upgrade.md
+      - linkListType: how-to-guide
+        links:
+          - text: Upgrade and conversion options
+            url: upgrade-conversion-options.md
+          - text: Install Server Core App Compatibility
+            url: server-core-app-compatibility-feature-on-demand.md
+
+  # Card
+  - title: Activation
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Automatic VM Activation
+            url: automatic-vm-activation.md
+          - text: KMS activation planning
+            url: kms-activation-planning.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create KMS host
+            url: kms-create-host.md
+          - text: KMS client activation
+            url: kms-client-activation-keys.md
+          - text: Troubleshooting Windows volume activation
+            url: activation-troubleshooting-guide.md
+
+  # Card
+  - title: Azure Arc enabled servers
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Azure Connected Machine agent deployment options
+            url: /azure/azure-arc/servers/deployment-options?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - linkListType: how-to-guide
+        links:
+          - text: Connect Windows Server to Azure Arc
+            url: /azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Get Extended Security Updates
+            url: extended-security-updates-deploy.md
+          - text: Deliver Extended Security Updates with Azure Arc
+            url: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Enable Hotpatch for Azure Arc-enabled servers
+            url: enable-hotpatch-azure-arc-enabled-servers.md

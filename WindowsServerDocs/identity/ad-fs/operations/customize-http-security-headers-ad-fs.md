@@ -3,10 +3,11 @@ title: Customize HTTP security response headers with AD FS
 description: Learn how to customize security headers to protect against security vulnerabilities with AD FS 2019.
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.reviewer: akgoel23
 ms.date: 06/14/2023
 ms.topic: how-to
+ms.custom: sfi-ropc-nochange
 ---
 
 # Customize HTTP security response headers with AD FS 2019

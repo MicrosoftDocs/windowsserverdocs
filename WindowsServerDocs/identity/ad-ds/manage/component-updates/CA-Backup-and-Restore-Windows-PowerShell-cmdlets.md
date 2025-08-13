@@ -5,8 +5,10 @@ title: CA Backup and Restore Windows PowerShell cmdlets
 author: xelu86
 ms.author: alalve
 ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+ms.topic: how-to
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # CA Backup and Restore Windows PowerShell cmdlets

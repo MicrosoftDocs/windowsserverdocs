@@ -4,9 +4,10 @@ title: Configure AD FS Extranet Smart Lockout Protection
 description: Learn more about AD FS Extranet Lockout and Extranet Smart Lockout to protect your users from experiencing extranet account lockout from malicious activity.
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 06/16/2023
 ms.topic: how-to
+ms.custom: sfi-ropc-nochange
 ---
 
 # AD FS Extranet Lockout and Extranet Smart Lockout Overview

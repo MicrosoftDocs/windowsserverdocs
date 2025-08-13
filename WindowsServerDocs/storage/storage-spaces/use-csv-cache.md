@@ -41,7 +41,7 @@ The CSV in-memory read cache is available in Azure Stack HCI, Windows Server 201
 
 ### Configure the cache using Windows Admin Center
 
-To configure the cache using Windows Admin Center, do the following: 
+To configure the cache using Windows Admin Center, do the following:
 
 1. In Windows Admin Center, connect to a cluster, and then select **Settings** from the **Tools** pane on the left.
 1. Select **In-memory cache** under **Storage** on the **Settings** pane.
@@ -81,4 +81,4 @@ Get-ClusterSharedVolume | ForEach {
 For related information, see also:
 
 - [Understand the storage pool cache](./cache.md)
-- [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional)
+- [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-manage-cluster-shared-volumes.md#enable-the-csv-cache-for-read-intensive-workloads-optional)

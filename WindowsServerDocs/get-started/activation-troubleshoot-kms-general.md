@@ -1,10 +1,11 @@
 ---
 title: Guidelines for troubleshooting KMS
-description: Provides information about the KMS service, and suggests tools and approaches for troubleshooting activation issues
+description: This guide provides information about the KMS service, and suggests tools and approaches for troubleshooting activation issues in Windows Server.
 ms.topic: troubleshooting
 ms.date: 08/13/2025
 author: xelu86
 ms.author: alalve
+ms.custom: sfi-image-nochange
 ---
 
 # Guidelines for troubleshooting the Key Management Service (KMS)
@@ -46,6 +47,22 @@ Here are some variables you should pay attention to in the output while troubles
 - The *Description* shows you which key is currently installed. Use this field to verify whether the key that first activated the service was the correct one for the KMS clients you've deployed.
 
 - The *License Status* shows the status of the KMS host system. The value should be **Licensed**. Any other value means you should reactivate the host.
+
+- The *Current Count* displays a count between **0** and **50**. The count is cumulative between OSs and indicates the number of valid systems that have tried to activate within a **30-day** period.
+
+  If the count is **0**, either the service was recently activated or no valid clients are connected to the KMS host.
+
+  The count doesn't increase above **50**, no matter how many valid systems exist in the environment. The count is set to cache only twice the maximum license policy returned by a KMS client. The maximum policy set by the Windows client OS requires a count of **25** or higher from the KMS host to activate itself. Therefore, the highest count the KMS host can have are either **50** or 2 x 25. In environments that contain only Windows Server KMS clients, the maximum count on the KMS host is **10**. This limit is because the threshold for Windows Server editions is **5** (2 x 5 or 10).
+
+  A common issue related to the count happens when the environment has an activated KMS host and enough clients, but the count doesn't increase beyond one. When this issue happens, it means the deployed client image wasn't configured correctly, so the systems don't have unique Client Machine IDs (CMIDs). For more information, see the following articles:
+
+  - [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](/troubleshoot/windows-client/licensing-and-activation/kms-current-count-not-increase).
+
+  - [KMS Host Client Count not Increasing Due to Duplicate CMIDs](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids).
+
+  Another reason why the count might not be increasing is that there are too many KMS hosts in the environment and the count is distributed over all of them.
+
+- **Listening on Port**. Communication with KMS uses anonymous RPC. By default, the clients use the 1688 TCP port to connect to the KMS host. Make sure that this port is open between your KMS clients and the KMS host. You can change or configure the port on the KMS host. During their communication, the KMS host sends the port designation to the KMS clients. If you change the port on a KMS client, the port designation is overwritten when that client contacts the host.
 
 - The *Current Count* displays a count between **0** and **50**. The count is cumulative between OSs and indicates the number of valid systems that have tried to activate within a **30-day** period.
 
@@ -131,23 +148,30 @@ The event details include the following information:
 
 - The *Minimum count needed to activate*, which reports that the count from the KMS host must be **5** in order for the client to activate. That means that this OS is a Windows Server OS, although this variable alone doesn't indicate which edition the client is using. If your clients aren't activating, make sure that the host's count allows the client to activate.
 
-- The *Client Machine ID (CMID)*, which is a unique value on each system. If this value isn't unique, it's because the image wasn't correctly configured for distribution using sysprep. To learn more about generalizing your computers, see [Sysprep (Generalize) a Windows installation](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation). When you encounter this issue, the KMS host count doesn't increase even though there are enough clients in the environment.
+- The *CMID*, which is a unique value on each system. If this value isn't unique, it's because the image wasn't correctly configured for distribution using sysprep. To learn more about generalizing your computers, see [Sysprep (Generalize) a Windows installation](/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation). When you encounter this issue, the KMS host count doesn't increase even though there are enough clients in the environment.
 
 - The *License State and Time to State Expiration*, which is the current license state of the client. This variable can help you tell whether a client is trying to activate for the first time or if it's trying to reactivate. The time entry can also tell you how long the client remains in that state if nothing else changes.
 
 If you're troubleshooting a client and can't find a corresponding event ID 12290 on the KMS host, then the client isn't connecting to the KMS host. Reasons why the event ID 12290 entry is missing can include:
 
 - A network outage is encountered.
+
 - The host isn't resolving or isn't registered in DNS.
+
 - The firewall is blocking TCP 1688.
-  - The port could also be blocked in other places within the environment, including on the KMS host system itself. By default, the KMS host has a firewall exception for KMS, but this exception isn't automatically enabled. You have to enable the exception manually.
+
+  - The port could also be blocked in other places within the environment, including on the KMS host system itself. By default, the KMS host has a firewall exception for KMS, but this exception isn't automatically enabled. To add this exception, run the following command in an elevated PowerShell window:
+
+    ```powershell
+    New-NetFirewallRule -DisplayName "KMS Host Activation" -Direction Inbound -Protocol TCP -LocalPort 1688 -Action Allow
+    New-NetFirewallRule -DisplayName "KMS Host RPC" -Direction Inbound -Protocol TCP -LocalPort 135 -Action Allow
+    ```
+
 - The event log is full.
 
 **Event ID 12293**:
 
 Another relevant event to look for on your KMS host is *Event ID 12293*. This event indicates that the host didn't publish the required records in DNS. This scenario can potentially cause failures, and you should make sure the event isn't there after you set up your host and before you deploy clients. For more information about DNS issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
-
----
 
 ## KMS client renewal requirements
 
@@ -170,6 +194,7 @@ For any reason, if the renewal requirement isn't met, you're prompted with a toa
   - **The KMS host is decommissioned**: The IT administrator must configure the KMS client version with the KMS Server. Refer to [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt).
 
   - **Listening on a different port**: Communication with the KMS uses anonymous RPC. By default, clients use TCP port 1688 to connect to the KMS host. Ensure this port is open between your KMS clients and the KMS host. You can  configure the port on the KMS host through the Windows Defender Firewall with Advanced Security.
+
 
   - **Verify DNS Configuration**: By default, the KMS clients use the automatic discovery process to query DNS for a list of servers. To learn more, see [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns).
 

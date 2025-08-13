@@ -2,11 +2,11 @@
 description: "Learn more about: Review the Role of the Federation Server Proxy in the Resource Partner"
 ms.assetid: 14aa112d-ae31-4181-97e4-92623b5c9270
 title: Review the Role of the Federation Server Proxy in the Resource Partner
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Review the Role of the Federation Server Proxy in the Resource Partner

@@ -1,10 +1,11 @@
 ---
 title: AD FS Troubleshooting - Fiddler
 description:  This document introduces the Fiddler tool, including guidance on installing and configuring Fiddler to troubleshoot AD FS claims issues
-author: billmath
-ms.author: billmath
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
 ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
 # AD FS Troubleshooting - Fiddler

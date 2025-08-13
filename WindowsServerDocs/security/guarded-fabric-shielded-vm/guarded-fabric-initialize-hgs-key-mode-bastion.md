@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using key mode in an existing bastion forest"
 title: Initialize the HGS cluster using key mode in a bastion forest
-ms.topic: article
+ms.topic: how-to
 manager: dongill
 author: meaghanlewis
 ms.author: mosagie

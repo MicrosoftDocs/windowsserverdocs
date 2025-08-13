@@ -6,7 +6,7 @@ ms.sitesec: library
 author: xelu86
 ms.author: alalve
 ms.date: 03/12/2025
-ms.topic: article
+ms.topic: feature-guide
 ---
 
 # Roles, Role Services, and Features included in Windows Server - Server Core

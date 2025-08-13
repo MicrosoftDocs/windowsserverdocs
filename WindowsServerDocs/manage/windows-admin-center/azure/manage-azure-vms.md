@@ -1,9 +1,9 @@
 ---
 title: Manage Azure IaaS virtual machines
 description: Managing Azure IaaS VMs with Windows Admin Center
-ms.topic: article
-author: jasongerend
-ms.author: jgerend
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/18/2021
 ---
 # Manage Azure virtual machines with Windows Admin Center

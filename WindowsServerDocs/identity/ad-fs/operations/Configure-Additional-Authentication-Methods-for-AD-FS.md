@@ -2,11 +2,11 @@
 description: "Learn more about: Configure Additional Authentication Methods for AD FS"
 ms.assetid: ddfbbda3-30ca-4537-af12-667efc6f63ff
 title: Configure Additional Authentication Methods for AD FS
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure Additional Authentication Methods for AD FS
@@ -48,7 +48,7 @@ Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentic
 |SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/)|
-|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://www.thalesdocs.com/sta/Content/STA/SEdocs/AuthADFS.htm)|
+|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html)|
 |Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona multifactor authentication](https://www.trusona.com/solution-overview/)|
 
 ## Custom Authentication Method for AD FS in Windows Server
@@ -58,3 +58,4 @@ We now provide instructions for building your own custom authentication method f
 ## See Also
 
 [Manage Risk with Additional multifactor authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+

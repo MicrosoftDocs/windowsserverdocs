@@ -2,11 +2,11 @@
 description: "Learn more about: Active Directory Domain Services Virtualization"
 ms.assetid: 2f536fb8-16e5-471d-bafc-21b96197efb8
 title: Active Directory Domain Services Virtualization
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Active Directory Domain Services Virtualization

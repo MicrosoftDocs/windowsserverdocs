@@ -2,10 +2,10 @@
 title: Access Permission
 description: This topic provides an overview of network policy access permission for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: d6d1ca5e-bde0-4509-9e14-dc3fa9ff447e
-ms.author: jgerend
-author: jasongerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 

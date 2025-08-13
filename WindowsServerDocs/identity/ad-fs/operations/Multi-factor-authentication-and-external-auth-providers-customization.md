@@ -1,11 +1,12 @@
 ---
-manager: femila
+manager: tedhudek
 description: Learn more about multi-factor authentication and external authentication providers customization.
 title: Multi-factor authentication and external authentication providers customization
-ms.topic: article
-author: billmath
-ms.author: billmath
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/08/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Multi-factor authentication and external authentication providers customization

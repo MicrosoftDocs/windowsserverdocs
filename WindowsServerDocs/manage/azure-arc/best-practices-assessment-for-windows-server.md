@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: alalve
 author: xelu86
 ms.date: 10/31/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Best Practices Assessment for Arc-enabled Windows servers

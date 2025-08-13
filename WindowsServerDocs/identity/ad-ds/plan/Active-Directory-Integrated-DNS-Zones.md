@@ -2,11 +2,11 @@
 description: "Learn more about: Active Directory-Integrated DNS Zones"
 ms.assetid: 39c0126d-af5e-4dcb-88c1-aa38f888e973
 title: Active Directory-Integrated DNS Zones
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Active Directory-Integrated DNS Zones

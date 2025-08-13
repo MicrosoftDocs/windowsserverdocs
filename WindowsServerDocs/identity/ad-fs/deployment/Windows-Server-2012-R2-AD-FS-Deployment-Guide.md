@@ -4,9 +4,9 @@ ms.assetid: 38816b32-84bd-4b19-9ab8-a05ec838a156
 title: Windows Server AD FS Deployment Guide
 author: robinharwood
 ms.author: roharwoo
-manager: femila
+manager: tedhudek
 ms.date: 01/20/2023
-ms.topic: article
+ms.topic: install-set-up-deploy
 ---
 
 # Windows Server AD FS deployment guide

@@ -2,10 +2,10 @@
 title: NPS Templates
 description: This topic provides an overview of Network Policy Server Templates in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: fdfc0df1-21c7-492c-9fad-38fe9c7d935a
-ms.author: jgerend
-author: jasongerend
+ms.author: alalve
+author: xelu86
 ms.date: 08/07/2020
 ---
 

@@ -2,10 +2,10 @@
 title: Realm Names
 description: This topic provides an overview of using realm names in Network Policy Server connection request processing in Windows Server 2016.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: jgerend
-author: jasongerend
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 08/07/2020
 ---
 

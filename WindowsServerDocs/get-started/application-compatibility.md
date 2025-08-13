@@ -1,7 +1,7 @@
 ---
 title: Microsoft server applications compatibility for Windows Server
 description: Learn about the compatibility of Microsoft server applications on Windows Server.
-ms.topic: article
+ms.topic: feature-availability
 ms.author: roharwoo
 author: robinharwood
 ms.date: 01/13/2025

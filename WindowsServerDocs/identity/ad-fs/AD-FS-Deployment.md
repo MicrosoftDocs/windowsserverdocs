@@ -2,11 +2,11 @@
 description: "Learn more about: AD FS Deployment"
 ms.assetid: d31006b1-c468-4196-be5a-9b293622e710
 title: AD FS 2016 Deployment
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: install-set-up-deploy
 ---
 # AD FS Deployment
 

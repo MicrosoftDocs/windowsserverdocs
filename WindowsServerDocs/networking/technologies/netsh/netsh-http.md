@@ -1,10 +1,10 @@
 ---
 title: Netsh Commands for Hypertext Transfer Protocol (HTTP)
 description: Use netsh http to query and configure HTTP.sys settings and parameters.
-ms.topic: article
+ms.topic: reference
 manager: dougkim
-ms.author: jgerend
-author: jasongerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/27/2021
 ---
 
@@ -469,5 +469,3 @@ Following are three examples of the **show urlacl** command.
 - show urlacl url=https://+:80/MyUri
 - show urlacl url=<https://www.contoso.com:80/MyUri>
 - show urlacl
-
----

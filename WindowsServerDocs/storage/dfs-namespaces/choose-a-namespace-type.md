@@ -2,7 +2,7 @@
 title: Choose a Namespace Type
 description: This article describes how to choose a namespace type.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 manager: brianlic
 ms.author: roharwoo

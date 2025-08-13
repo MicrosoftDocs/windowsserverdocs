@@ -3,8 +3,8 @@ title: msdt
 description: Reference article for the msdt command, which invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
 ms.topic: reference
 ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
-ms.author: jgerend
-author: jasongerend
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 01/31/2023
 ---

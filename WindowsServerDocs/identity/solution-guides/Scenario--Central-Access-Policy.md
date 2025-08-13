@@ -2,11 +2,11 @@
 description: "Learn more about: Scenario: Central Access Policy"
 ms.assetid: 7f285c9f-c3e8-4aae-9ff4-a9123815114e
 title: Scenario Central Access Policy
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: example-scenario
 ---
 
 # Scenario: Central Access Policy

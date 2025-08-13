@@ -1,10 +1,15 @@
 ---
-title: What is Azure Edition for Windows Server? 
-description: Overview of Azure Edition for Windows Server, including key features and next steps.
+title: What is Azure Edition for Windows Server?
+description: Discover Azure Edition features including hotpatch, SMB over QUIC, and annual product updates for Azure virtualization.
+#customer intent: As an IT administrator, I want to understand what Windows Server Datacenter: Azure Edition is and how it differs from other Windows Server editions, so that I can determine if it's the right solution for my cloud infrastructure needs.
 author: robinharwood
-ms.author: roharwoo 
+ms.author: roharwoo
 ms.topic: overview
-ms.date: 02/26/2025
+ms.date: 08/13/2025
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-description
+  - ai-seo-date:08/13/2025
 ---
 
 # What is Azure Edition for Windows Server?
@@ -33,7 +38,7 @@ The following table summarizes the key differences:
 | Product updates | With new release | Yearly, with two major updates in the first 3 years |
 | Support | 5 years of mainstream support, plus 5 years of extended support | 5 years of mainstream support, plus 5 years of extended support |
 | Servicing channels | Long-Term Servicing Channel | Long-Term Servicing Channel |
-| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure/azure-local/manage/vm-activate) and cloud customers only |
+| Who can use it? | All customers through all channels | Software Assurance, [Windows Server subscription](/azure/azure-local/manage/vm-activate), and cloud customers only |
 | Installation options | Server Core, Server with Desktop Experience, [Nano Server container image](/virtualization/windowscontainers/manage-containers/container-base-images) | Server Core and Server with Desktop Experience only. Windows Server containers aren't supported. |
 | Operating system environments (OSE) | Physical or virtual | Virtual only |
 | Associated virtualization rights | 2 virtual OSE for Standard, Unlimited virtual OSEs for Datacenter | None |
@@ -44,7 +49,7 @@ for more detail.
 
 > [!TIP]
 > For more information, see the
-> [Microsoft Software Licensing Terms](https://www.microsoft.com/useterms/). The licensing terms may
+> [Microsoft Software Licensing Terms](https://www.microsoft.com/useterms/). The licensing terms might
 > vary based on the distribution channel, for example, a Commercial Licensing program, Retail,
 > Original Equipment Manufacturer (OEM), and so on.
 
@@ -116,12 +121,12 @@ VM, and select the _Windows Server Datacenter: Azure Edition_ image that you wou
 > individual capability articles to learn more about using that capability with your VM.
 
 > [!CAUTION]
-> Once Windows Server Datacenter: Azure Edition is installed, it isn't possible to switch the OS back to a non-Azure Edition OS. If this occurs, reinstalling the previous OS is required.
+> Once Windows Server Datacenter: Azure Edition is installed it isn't possible to switch the OS back to a non-Azure Edition OS. If you didn't mean to install Azure Edition, reinstalling the previous OS is required to switch back.
 
 To learn more about creating virtual machine using Azure or Azure Local, see
 [Create a Windows virtual machine in the Azure portal](/azure/virtual-machines/windows/quick-create-portal)
 and
-[Deploy Windows Server Azure Edition VMs in Azure Local](/azure/azure-local/manage/windows-server-azure-edition?tabs=hci).
+[Deploy Windows Server Azure Edition VMs in Azure Local](/azure/azure-local/manage/windows-server-azure-edition-23h2).
 
 ## Next steps
 

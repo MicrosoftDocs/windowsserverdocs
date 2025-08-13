@@ -2,10 +2,10 @@
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Advanced Data Deduplication settings
 description: "Learn more about: Advanced Data Deduplication settings"
-ms.topic: article
-author: jasongerend
+ms.topic: concept-article
+author: robinharwood
 manager: klaasl
-ms.author: jgerend
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Advanced Data Deduplication settings

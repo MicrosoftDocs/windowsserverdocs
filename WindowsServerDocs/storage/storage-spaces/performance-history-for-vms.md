@@ -3,7 +3,7 @@ description: "Learn more about: Performance history for virtual machines"
 title: Performance history for virtual machines
 ms.author: roharwoo
 manager: eldenc
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.date: 09/07/2018
 ---

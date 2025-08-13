@@ -3,9 +3,10 @@ description: An overview of the syntax and structure of DCPROMO answer files.
 title: DCPROMO answer file syntax
 ms.author: alalve
 author: xelu86
-manager: femila
+manager: tedhudek
 ms.date: 04/25/2024
 ms.topic: reference
+ms.custom: sfi-ropc-nochange
 ---
 
 # DCPROMO answer file syntax

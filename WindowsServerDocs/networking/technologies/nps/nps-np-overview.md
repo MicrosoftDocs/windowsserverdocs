@@ -2,10 +2,10 @@
 title: Network Policies
 description: This topic provides an overview of network policies for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
 manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
-ms.author: jgerend
-author: jasongerend
+ms.author: alalve
+author: xelu86
 ms.date: 08/07/2020
 ---
 

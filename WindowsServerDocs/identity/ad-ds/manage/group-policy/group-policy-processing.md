@@ -3,30 +3,30 @@ title: Group Policy processing for Windows
 description: Learn about how Group Policy processing works in Active Directory Domain Services on Windows Server and Windows client computers.
 author: Orin-Thomas
 ms.topic: concept-article
-ms.author: alalve
-contributor: orthomas
-ms.date: 04/16/2024
+ms.author: orthomas
+contributor: alalve
+ms.date: 06/16/2025
 ---
 
-# Group Policy Processing
+# Group Policy processing
 
-By default, Group Policy is inherited and cumulative, and it affects all computers and users in an Active Directory container and its children. Computer-related policy settings override user-related policy settings.
+By default, Group Policy is inherited and cumulative, and it affects all computers and users in an Active Directory (AD) container and its children. Computer-related policy settings override user-related policy settings.
 
 Group Policy Objects (GPO) are processed in the following order:
 
 1. The local GPO is applied.
 1. GPOs linked to sites are applied.
 1. GPOs linked to domains are applied.
-1. GPOs linked to organizational units are applied. For nested organizational units (OUs), GPOs linked to parent organizational units are applied before GPOs linked to child organizational units are applied.
+1. GPOs linked to organizational units (OUs) are applied. In a nested OU structure, GPOs linked to parent OUs are applied first, followed by GPOs linked to the child OUs.
 
 > [!TIP]
-> The order in which GPOs are processed is significant because when policy is applied, it overwrites policy that was applied earlier.
+> The sequence of GPO processing is crucial because each subsequent policy application can override settings applied by earlier policies.
 
-The default inheritance method is to evaluate Group Policy starting with the highest parent Active Directory container. The Active Directory container closest to the computer or user overrides Group Policy set in a higher-level Active Directory container. Inheritance is ignored when you set the enforced option for that GPO link or when the block inheritance setting is applied. Local Group Policy is processed before domain-based policies. Policy settings from GPOs linked to Active Directory containers override local policy settings.
+The default inheritance method is to evaluate Group Policy starting with the highest parent AD container. The AD container closest to the computer or user overrides Group Policy set in a higher-level AD container. Inheritance is ignored when you set the enforced option for that GPO link or when the block inheritance setting is applied. Local Group Policy is processed before domain-based policies. Policy settings from GPOs linked to AD containers override local policy settings.
 
-You can link more than one GPO to an Active Directory container. The GPO link with the lowest link order in the Group Policy Object Links list has precedence by default.
+You can link more than one GPO to an AD container. The GPO link with the lowest link order in the Group Policy Object Links list has precedence by default.
 
-## How Group Policy works
+## How Group Policy processing works
 
 Group Policy for computer settings is applied when the computer starts. Group Policy is applied at log on for users. This initial processing of policy can also be referred to as a foreground policy application.
 
@@ -44,18 +44,28 @@ During a policy refresh, by default, a client-side extension reapplies policy se
 
 ## Enforced GPOs
 
-Determine if there are any policy settings that must always be enforced for particular groups of users or computers. Create GPOs that contain these policy settings, link them to the appropriate site, domain, or OU, and designate these links as enforced. By setting this option, you enforce a higher-level GPO’s policy settings by preventing GPOs in lower-level Active Directory containers from overriding them. For example, if you define a specific GPO at the domain level and set the enforced option, the policies that the GPO contains apply to all OUs under that domain. GPOs linked to the lower-level OUs can't override that enforced domain Group Policy. If multiple GPOs are linked at the same site, domain, or OU and have the enforced option set, the highest GPO link set to enforced takes precedence.
+Determine if there are any policy settings that must always be enforced for particular groups of users or computers. Create GPOs that contain these policy settings, link them to the appropriate site, domain, or OU, and designate these links as enforced. By setting this option, you enforce a higher-level GPO’s policy settings by preventing GPOs in lower-level AD containers from overriding them. For example, if you define a specific GPO at the domain level and set the enforced option, the policies that the GPO contains apply to all OUs under that domain. GPOs linked to the lower-level OUs can't override that enforced domain Group Policy. If multiple GPOs are linked at the same site, domain, or OU and have the enforced option set, the highest GPO link set to enforced takes precedence.
 
 ## Block Inheritance
 
-You can use the block inheritance option at the OU level to stop settings applied at the local, site, domain, and higher OU levels. Block inheritance stops parent inheritance from influencing the configuration of computers or users within the OU. While blocked inheritance stops settings that would normally apply to computers and users within an OU, this setting doesn't block settings applied through GPOs linked with the enforced option. Enforced is a link property, and block policy inheritance is a container property. Enforced takes precedence over block policy inheritance.
+In the Group Policy Management Console (GPMC), Block Policy Inheritance, or Block Inheritance, refers to a feature that influences the Group Policy processing order. Each domain and OU in AD has a **GPOptions** attribute, which can be configured to block inheritance. This stops policy settings applied at the local, site, domain, and higher OU levels from affecting computers or users within the OU. However, while blocked inheritance prevents most settings from applying to an OU, it doesn't affect settings applied through GPOs with the enforced option. Enforced is a link property and takes precedence over block policy inheritance, a container property.
 
-In addition, you can disable policy settings on the GPO itself in four other ways.
+Policy settings linked to a domain typically apply to all computers and users within the domain, regardless of their parent OU. Using GPMC, you can block inheritance on a domain or OU to stop normal Group Policy settings from applying. Blocking inheritance at the domain level stops settings from GPOs linked to an AD site from applying to the domain, while blocking at the OU level prevents settings from GPOs linked to sites and domains from affecting those OUs.
 
-- A GPO can be disabled
+In addition to blocking inheritance:
+
+- A GPO itself can be entirely disabled
 - A GPO can have its computer settings disabled
-- Its user settings disabled
-- All of its settings disabled
+- A GPO can have its user settings disabled
+- A GPO can have all of its settings disabled
+
+## Group Policy Preference client-side extensions
+
+Group Policy Preference client-side extensions have their own unique processing methods. Within a single GPO, you can configure one or more preference items for a specific Group Policy Preference extension to process. For instance, a single GPO can contain multiple [Drive Map Preference](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581924(v=ws.11)) items.
+
+During Group Policy processing, the infrastructure cycles through a series of extensions. For each extension, it provides essential information, including a list of GPOs with changes and GPOs no longer applicable to the user or computer. The infrastructure also shares context-specific details, such as whether the network connection is considered slow. The Group Policy Preference extension uses information about the changed and out-of-scope GPOs to process its settings.
+
+Client-side extensions process preference items sequentially, from the top to the bottom of the list. The outcome of processing each preference item depends on its configured action, and item-level targeting might prevent an item from applying. The extension processes each item until it either completes the list or stops due to configuration settings like **Stop processing items in this extension if an error occurs on this item** or **Apply once and do not reapply**. Once all preference items are processed, control returns to the Group Policy service.
 
 ## Group Policy Filtering
 
@@ -67,11 +77,13 @@ WMI allows you to use a WMI query to filter the application of group policy. Whe
 
 ## Loopback processing mode
 
-Loopback processing mode applies the user configuration settings of Group Policy Objects assigned to the computer regardless of who logs on. Loopback processing will either merge or replace the user settings from the GPOs assigned to the user. This policy setting is appropriate in certain closely managed environments with special-use computers, such as classrooms, public kiosks, and reception areas. For example, you might want to enable this policy setting for a specific server, where you must modify the user setting based on the computer that is being used. Enabling the loopback processing mode policy setting directs the system to apply the same user policy settings for any user who signs in the computer, based on the policy applied to the computer.
+Loopback processing mode applies the user configuration settings of Group Policy Objects assigned to the computer regardless of who logs on. Loopback processing will either merge or replace the user settings from the GPOs assigned to the user. This policy setting is appropriate in certain closely managed environments with special-use computers, such as classrooms, public kiosks, and reception areas.
+
+For instance, you might enable this policy setting on a specific server to adjust user settings based on the computer being utilized. When you enable the loopback processing mode policy setting, the system applies user policy settings based on the computer's configuration, regardless of who signs in. This ensures consistent user policy settings for all users on the computer, as defined by the computer's GPOs.
 
 By enabling the loopback processing policy setting in a GPO, you can configure user policy settings based on the computer that they sign in. Without loopback processing, GPOs applying a computer object will only process the computer configuration settings. GPOs applied to users will only process user configuration settings.  When you enable the loopback processing mode policy setting, you must ensure that both the Computer Configuration and User Configuration settings in the GPO are enabled. Those policy settings are applied regardless of which user logs on.
 
-You can configure the loopback policy setting by using the Group Policy Management Console to edit the GPO and enabling the **Configure user Group Policy loopback processing mode** policy setting under **Computer Configuration\Policies\Administrative Templates\System\Group Policy**. Two options are available:
+You can configure the loopback policy setting by using the GPMC to edit the GPO and enabling the **Configure user Group Policy loopback processing mode** policy setting under **Computer Configuration\Policies\Administrative Templates\System\Group Policy**. Two options are available:
 
 - Merge mode: In this mode, the list of GPOs for the user is gathered during the logon process. Then, the list of GPOs for the computer is gathered. Next, the list of GPOs for the computer is added to the end of the GPOs for the user. As a result, the computer’s GPOs have higher precedence than the user’s GPOs. If the policy settings conflict, the user policy settings in the computer's GPOs are applied rather than the user's normal policy settings.
 
@@ -83,9 +95,9 @@ The primary mechanisms for refreshing Group Policy are at startup and logon. Gro
 
 Domain controllers check for computer policy changes every five minutes. This polling frequency can be changed by using one of these policy settings, Group Policy Refresh Interval for Computers, Group Policy Refresh Interval for Domain Controllers, or Group Policy refresh Interval for Users. Shortening the frequency between refreshes isn't recommended because of the potential increase in network traffic and more load placed on the domain controllers.
 
-Components of a GPO are stored in both Active Directory and on the SYSVOL folder of domain controllers. Replication of a GPO to other domain controllers occurs by two independent mechanisms:
+Components of a GPO are stored in both AD and on the SYSVOL folder of domain controllers. Replication of a GPO to other domain controllers occurs by two independent mechanisms:
 
-- Active Directory’s built-in replication system controls the replication of Active Directory. By default, replication typically takes less than a minute between domain controllers within the same site. This process can be slower if your network is slower than a LAN.
+- The built-in replication system controls the replication of AD. By default, replication typically takes less than a minute between domain controllers within the same site. This process can be slower if your network is slower than a LAN.
 
 - Distributed File System Replication (DFSR) controls the replication of the SYSVOL folder. Within sites, replication occurs every 15 minutes. If the domain controllers are in different sites, the replication process occurs at set intervals based on site topology and schedule, the lowest interval is 15 minutes.
 
@@ -97,7 +109,7 @@ If necessary, you can trigger a Group Policy refresh manually in the following w
 
 - Use the `Invoke-GPUpdate` PowerShell cmdlet. You can use this cmdlet to trigger a refresh of the local computer or to trigger a refresh of a remote computer.
 
-- Use the Group Policy Management Console to trigger a group policy refresh at the OU level by right clicking on the OU and selecting **Group Policy Update**.
+- Use the GPMC to trigger a group policy refresh at the OU level by right clicking on the OU and selecting **Group Policy Update**.
 
 ## Optimize GPO processing
 

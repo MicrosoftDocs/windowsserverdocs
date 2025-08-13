@@ -2,9 +2,9 @@
 description: "Learn more about: Planning Federation Server Placement"
 ms.assetid: 2e751308-1c86-4d4f-88e4-6a78d3ca4696
 title: Planning Federation Server Placement
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
+manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article
 ---

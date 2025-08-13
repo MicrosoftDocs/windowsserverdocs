@@ -2,10 +2,12 @@
 title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
-author: jasongerend
-ms.author: jgerend
+author: meaghanlewis
+ms.author: mosagie
 ms.date: 10/30/2024
-ms.custom: references_regions
+ms.custom:
+  - references_regions
+  - sfi-image-nochange
 ---
 
 # Manage Azure Arc-enabled Servers using Windows Admin Center in Azure

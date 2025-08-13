@@ -2,11 +2,11 @@
 description: "Learn more about: TPM Key Attestation"
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
-author: justinha
-ms.author: justinha
+author: robinharwood
+ms.author: roharwoo
 manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
+ms.date: 05/12/2025
+ms.topic: concept-article
 ms.custom: inhenkel
 ---
 

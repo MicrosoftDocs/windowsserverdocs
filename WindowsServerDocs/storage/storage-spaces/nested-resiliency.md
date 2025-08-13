@@ -2,7 +2,7 @@
 description: "Learn about nested resiliency for Storage Spaces Direct"
 title: Nested resiliency for Storage Spaces Direct
 ms.author: roharwoo
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
 ms.date: 11/25/2024
 ---
