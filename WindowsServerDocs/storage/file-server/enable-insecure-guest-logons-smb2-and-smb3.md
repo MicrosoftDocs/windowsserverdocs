@@ -4,14 +4,14 @@ description: This article describes how to enable guest logons policy in SMB2 an
 ms.topic: how-to
 ms.author: alalve
 author: xelu86
-ms.date: 10/25/2024
+ms.date: 08/13/2025
 ---
 
 # How to enable insecure guest logons in SMB2 and SMB3
 
 This article describes Server Message Block (SMB) insecure guest logon default behaviors, why you might enable guest access, and how to enable it for the SMB client using Group Policy and PowerShell.
 
-Since Windows 2000, Windows disabled inbound guest access and prevented SMB2 and SMB3 client guest authentication since Windows 10. However, guest credentials may still be required when connecting to a third-party device that doesn't support a username and password. The recommendation is to upgrade or replace any third-party software or devices that only support guest authentication.
+Since Windows 2000, Windows disabled inbound guest access and prevented SMB2 and SMB3 client guest authentication since Windows 10. However, guest credentials might still be required when connecting to a third-party device that doesn't support a username and password. The recommendation is to upgrade or replace any third-party software or devices that only support guest authentication.
 
 ## Default behaviors
 
@@ -37,7 +37,7 @@ SMB2 and SMB3 have the following behavior for different versions of Windows:
 
 ## Reason for enabling guest logons
 
-Enabling guest logons may be necessary where a user needs to access a resource on a server but the server doesn't provide user accounts, only guest access.
+Enabling guest logons might be necessary where a user needs to access a resource on a server but the server doesn't provide user accounts, only guest access.
 
 > [!CAUTION]
 > It's important to note that enabling guest logons can pose a security threat as it permits:
@@ -46,7 +46,7 @@ Enabling guest logons may be necessary where a user needs to access a resource o
 > - Execution of malicious code such as ransomware through the guest logon.
 > - Guest logons are vulnerable to adversary-in-the-middle attacks that can expose sensitive data on the network.
 >
-> As a result, it's recommended to enable guest logons only in specific situations where they are required. Windows disables insecure guest logons by default. We recommend that you don't enable insecure guest logons.
+> As a result, the recommendation is to enable guest logons only in specific situations where required. Windows disables insecure guest logons by default. We recommend that you don't enable insecure guest logons.
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ Before you can begin modifying insecure guest logons for the SMB client, you nee
 - SMB client running on one of the following operating systems:
 
   - Windows 10 or later.
-  
+
   - Windows Server 2019 or later.
 
 If you're planning on to enable auditing for insecure guest logons, the SMB client must be running on one of the following operating systems.
