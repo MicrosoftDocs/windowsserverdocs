@@ -46,7 +46,7 @@ The **VM Conversion extension** provides the following key features:
 
 - **Cleanup**: Removes VMware Tools from Windows VMs post-migration.
 
-![Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center](media/migrate-vmware-to-hyper-v/supported-scenario-topology.png)
+:::image type="content" source="media/migrate-vmware-to-hyper-v/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center":::
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - [Use Windows Admin Center Gateway V2](https://aka.ms/downloadWAC) – version `2410` build number `2.4.12.10`
 
-### vCenter or ESXI host prerequisites
+### vCenter or ESXi host prerequisites
 
 None.
 
@@ -92,19 +92,19 @@ Windows operating systems:
 - Windows Server 2025, 2022, 2022 Azure Edition, 2019, 2016, 2012 R2
 - Windows 10
 
-RHEL-based operating systems:
-
-- Alma Linux
-- CentOS
-- Red Hat Linux 9.0
-
 Debian-based operating systems:
 
 - Ubuntu Linux
 - Ubuntu 20.04, 24.04
 - Debian 11, 12
 
-*For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
+RHEL-based operating systems:
+
+- Alma Linux
+- CentOS
+- Red Hat Linux 9.0
+
+For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
 ## Install the VM Conversion extension in Windows Admin Center
 
@@ -126,11 +126,11 @@ When you first visit the extension, you need to connect your vSphere client endp
 
 1. Select **Connect to vCenter**.
 
-    [![Screenshot of the connect to vCenter option.](media/migrate-vmware-to-hyper-v/connect-to-v-center.png)](media/migrate-vmware-to-hyper-v/connect-to-v-center.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/connect-to-v-center.png" alt-text="Screenshot of the connect to vCenter option." lightbox="media/migrate-vmware-to-hyper-v/connect-to-v-center.png":::
 
 1. Enter the vCenter FQDN, vCenter username, and vCenter password.
 
-    [![Screenshot showing how to configure VMware settings.](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png)](media/migrate-vmware-to-hyper-v/configure-vmware-settings.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/migrate-vmware-to-hyper-v/configure-vmware-settings.png":::
 
 ## Synchronize virtual machines using the VM Conversion extension
 
@@ -162,21 +162,21 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
-    [![Screenshot of the synchronize tab.](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png)](media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png" alt-text="Screenshot of the synchronize tab." lightbox="media/migrate-vmware-to-hyper-v/bulk-vm-selection-for-synchronization.png":::
 
 1. In the Synchronize VM window, enter in the **Path to store data**. Select **Synchronize**.
 
-    [![Screenshot of the synchronize VM dialog.](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png)](media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png" alt-text="Screenshot of the synchronize VM dialog." lightbox="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png":::
 
 1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
 
-    [![Screenshot of the migrate tab.](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png)](media/migrate-vmware-to-hyper-v/synchronization-in-progress.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png" alt-text="Screenshot of the migrate tab." lightbox="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png":::
 
 1. Wait for the sync to complete.
 
 ## Migrate virtual machines using the VM Conversion extension
 
-### Migration prerechecks
+### Migration prechecks
 
 A set of prechecks are run before the migration begins. Confirm you have all the following steps complete before continuing on with the steps to migrate virtual machines:
 
@@ -196,17 +196,17 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Go to the **Migrate** tab, and select the VM to migrate. Select **Migrate**.
 
-    [![Screenshot of the migrate tab and virtual machines selected to migrate.](media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png)](media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png" alt-text="Screenshot of the migrate tab and virtual machines selected to migrate." lightbox="media/migrate-vmware-to-hyper-v/vm-selection-for-migration.png":::
 
 1. In the Migrate VM window, select **Proceed** to start the migration.
 
-    [![Screenshot of the migrate VM dialog confirmation.](media/migrate-vmware-to-hyper-v/confirm-migration.png)](media/migrate-vmware-to-hyper-v/confirm-migration.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/confirm-migration.png" alt-text="Screenshot of the migrate VM dialog confirmation." lightbox="media/migrate-vmware-to-hyper-v/confirm-migration.png":::
 
     During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
 1. Wait for virtual machine migration to complete.
 
-    [![Screenshot of the progress of virtual machine migration.](media/migrate-vmware-to-hyper-v/migration-in-progress.png)](media/migrate-vmware-to-hyper-v/migration-in-progress.png#lightbox)
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/migration-in-progress.png" alt-text="Screenshot of the progress of virtual machine migration." lightbox="media/migrate-vmware-to-hyper-v/migration-in-progress.png":::
 
 1. The migrated virtual machine can be managed using the Hyper-V Manager, or in Windows Admin Center.
 
@@ -232,17 +232,17 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ## Frequently asked questions
 
-1. Does the tool support both Static and DHCP IP addresses?
+- Does the tool support both Static and DHCP IP addresses?
 
     Yes, both DHCP and Static IP addresses are supported.
 
     Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's then persisted on the target Hyper-V host post cutover phase.
 
-1. How does the tool handle VM boot types?
+- How does the tool handle VM boot types?
 
     The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V. **UEFI boot** creates a Generation 2 VM on Hyper-V.
 
-1. Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
+- Why are migrated VM disks showing as Dynamic instead of Static (Fixed)?
 
     The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied—not the full allocated size.
 
@@ -254,7 +254,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed
     ```
 
-1. How to Create Network Shares on a Windows Server Cluster for Clustering Support?
+- How to Create Network Shares on a Windows Server Cluster for Clustering Support?
 
     To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
     1. RDP into your Windows Server Cluster node.
@@ -264,19 +264,19 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     1. It can take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
     1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
 
-1. Is VMware to Azure Local migration supported?
+- Is VMware to Azure Local migration supported?
 
     No, the tool doesn't support migration to Azure Local. Use [Azure Migrate to migrate virtual machines to Azure Local](/azure/azure-local/migrate/migration-azure-migrate-vmware-overview).
 
-1. Does the tool support virtual machines running on a virtual storage area network (vSAN)?
+- Does the tool support virtual machines running on a virtual storage area network (vSAN)?
 
     No, the tool doesn't support virtual machines running on vSAN?
 
-1. Is this tool available in Windows Admin Center in the Azure portal?
+- Is this tool available in Windows Admin Center in the Azure portal?
 
-    No, the conversion tool is only available in Windows Admin Center on-premise.
+    No, the conversion tool is only available in Windows Admin Center on-premises.
 
-1. What are the current limitations of this migration tool?
+- What are the current limitations of this migration tool?
 
     The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported.
 
@@ -329,7 +329,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     Outputs success messages and job details. Throws descriptive errors in case of failure.
     
     .LINK
-    https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/
+    https://learn.microsoft.com/windows-server/virtualization/hyper-v/
     
     #>
     
