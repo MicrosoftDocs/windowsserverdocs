@@ -64,22 +64,6 @@ Here are some variables you should pay attention to in the output while troubles
 
 - **Listening on Port**. Communication with KMS uses anonymous RPC. By default, the clients use the 1688 TCP port to connect to the KMS host. Make sure that this port is open between your KMS clients and the KMS host. You can change or configure the port on the KMS host. During their communication, the KMS host sends the port designation to the KMS clients. If you change the port on a KMS client, the port designation is overwritten when that client contacts the host.
 
-- The *Current Count* displays a count between **0** and **50**. The count is cumulative between OSs and indicates the number of valid systems that have tried to activate within a **30-day** period.
-
-  If the count is **0**, either the service was recently activated or no valid clients are connected to the KMS host.
-
-  The count doesn't increase above **50**, no matter how many valid systems exist in the environment. The count is set to cache only twice the maximum license policy returned by a KMS client. The maximum policy set by the Windows client OS requires a count of **25** or higher from the KMS host to activate itself. Therefore, the highest count the KMS host can have are either **50** or 2 x 25. In environments that contain only Windows Server KMS clients, the maximum count on the KMS host is **10**. This limit is because the threshold for Windows Server editions is **5** (2 x 5 or 10).
-
-  A common issue related to the count happens when the environment has an activated KMS host and enough clients, but the count doesn't increase beyond one. When this issue happens, it means the deployed client image wasn't configured correctly, so the systems don't have unique Client Machine IDs (CMIDs). For more information, see the following articles:
-
-  - [The KMS current count doesn't increase when you add new Windows Vista or Windows 7-based client computers to the network](/troubleshoot/windows-client/licensing-and-activation/kms-current-count-not-increase).
-
-  - [KMS Host Client Count not Increasing Due to Duplicate CMIDs](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids).
-
-  Another reason why the count might not be increasing is that there are too many KMS hosts in the environment and the count is distributed over all of them.
-
-- **Listening on Port**. Communication with KMS uses anonymous RPC. By default, the clients use the 1688 TCP port to connect to the KMS host. Make sure that this port is open between your KMS clients and the KMS host. You can change or configure the port on the KMS host. During their communication, the KMS host sends the port designation to the KMS clients. If you change the port on a KMS client, the port designation is overwritten when that client contacts the host.
-
 We often get asked about the *cumulative requests* section of the `slmgr.vbs /dlv` output. Generally, this data isn't helpful for troubleshooting. The KMS host keeps an ongoing record of the state of each KMS client that tries to activate or reactivate. Failed requests indicate the KMS host doesn't support certain KMS clients. For example, if a Windows 7 KMS client tries to activate against a KMS host that was activated by using a Windows Vista KMS key, the activation fails.
 
 The *Requests with License Status* lines describe all possible license states, both past and present. From a troubleshooting perspective, this data is relevant only if the count isn't increasing as expected. In that case, you should see the number of failed requests increasing. To resolve this issue, you should check the product key that was used to first activate the KMS host system. Also, notice that the cumulative request values reset only if you reinstall the KMS host system.
@@ -172,6 +156,8 @@ If you're troubleshooting a client and can't find a corresponding event ID 12290
 **Event ID 12293**:
 
 Another relevant event to look for on your KMS host is *Event ID 12293*. This event indicates that the host didn't publish the required records in DNS. This scenario can potentially cause failures, and you should make sure the event isn't there after you set up your host and before you deploy clients. For more information about DNS issues, see [Common troubleshooting procedures for KMS and DNS issues](common-troubleshooting-procedures-kms-dns.md).
+
+---
 
 ## KMS client renewal requirements
 
