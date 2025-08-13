@@ -25,31 +25,31 @@ SMB signing requirements can involve both outbound signing, which covers traffic
 
 Although all versions of Windows and Windows Server support SMB signing, a third-party might opt to disable or not support it. If you try to connect to a remote share on a third-party SMB server that doesn't allow SMB signing, you might encounter one of the following error messages:
 
-  ```error
-  0xc000a000
-  -1073700864
-  STATUS_INVALID_SIGNATURE
-  The cryptographic signature is invalid.
-  ```
+```error
+0xc000a000
+-1073700864
+STATUS_INVALID_SIGNATURE
+The cryptographic signature is invalid.
+```
 
-  To resolve this issue, adjust the settings on your third-party SMB server to allow (enable) SMB signing.
+To resolve this issue, adjust the settings on your third-party SMB server to allow (enable) SMB signing.
 
 When you try to connect to third-party devices that use guest accounts to simplify access, you might receive one of these error messages:
 
-  ```error
-  You can't access this shared folder because your organization's security policies block
-  unauthenticated guest access. These policies help protect your PC from unsafe or malicious
-  devices on the network.
-  ```
+```error
+You can't access this shared folder because your organization's security policies block
+unauthenticated guest access. These policies help protect your PC from unsafe or malicious
+devices on the network.
+```
 
-  ```error
-  Error code: 0x80070035
-  The network path was not found.
-  ```
+```error
+Error code: 0x80070035
+The network path was not found.
+```
 
-  ```error
-  System error 3227320323 has occurred.
-  ```
+```error
+System error 3227320323 has occurred.
+```
 
 Disabling SMB signing might be necessary if you're unable to disable guest usage for your third-party. However, this means that you're using guest access and preventing your client from ensuring signing to a trusted device.
 
