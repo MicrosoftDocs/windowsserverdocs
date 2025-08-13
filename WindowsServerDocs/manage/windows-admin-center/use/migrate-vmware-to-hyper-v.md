@@ -46,7 +46,7 @@ The **VM Conversion extension** provides the following key features:
 
 - **Cleanup**: Removes VMware Tools from Windows VMs post-migration.
 
-:::image type="content" source="media/migrate-vmware-to-hyper-v/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center":::
+:::image type="content" source="media/migrate-vmware-to-hyper-v/supported-scenario-topology.png" alt-text="Diagram showing the supported scenario topology for VM migration from VMware vCenter to Hyper-V through Windows Admin Center.":::
 
 ## Prerequisites
 
