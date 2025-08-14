@@ -200,7 +200,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. In the Migrate VM window, select **Proceed** to start the migration.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/confirm-migration.png" alt-text="Screenshot of the dialof confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v/confirm-migration.png":::
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v/confirm-migration.png":::
 
     During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
