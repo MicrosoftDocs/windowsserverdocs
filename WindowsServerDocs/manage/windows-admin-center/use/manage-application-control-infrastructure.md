@@ -9,7 +9,9 @@ ms.date: 08/14/2025
 
 # WDAC enforced infrastructure in Windows Admin Center
 
-Windows Defender Application Control (WDAC) enhances security by restricting which applications and code can run on your systems, including kernel-level code. WDAC policies can block unsigned scripts, `.msi` installers, and enforce [ConstrainedLanguage](/powershell/module/microsoft.powershell.core/about/about_language_modes) mode in Windows PowerShell. To successfully install and manage Windows Admin Center in WDAC-enforced environments, additional configuration steps are required. When you connect to your WDAC-enforced server, client, or cluster, Windows Admin Center displays the enforcement status on the **Overview** page under the **PowerShell Language Mode** field. If the value is **Constrained**, WDAC enforcement is active. Initial connections to WDAC-enforced clusters might take several minutes, but subsequent connections are typically faster.
+Windows Defender Application Control (WDAC) enhances security by restricting which applications and code can run on your systems, including kernel-level code. WDAC policies can block unsigned scripts, `.msi` installers, and enforce [ConstrainedLanguage](/powershell/module/microsoft.powershell.core/about/about_language_modes) mode in Windows PowerShell.
+
+To successfully install and manage Windows Admin Center in WDAC-enforced environments, additional configuration steps are required. When you connect to your WDAC-enforced server, client, or cluster, Windows Admin Center displays the enforcement status on the **Overview** page under the **PowerShell Language Mode** field. If the value is **Constrained**, WDAC enforcement is active. Initial connections to WDAC-enforced clusters might take several minutes, but subsequent connections are typically faster.
 
 > [!NOTE]
 > If you modify the WDAC enforcement status of your managed nodes, wait at least ~30 seconds before using Windows Admin Center to allow the change to be reflected accurately.
@@ -101,9 +103,9 @@ The default PowerShell [execution policy](/powershell/module/microsoft.powershel
 
 If you get a "Module not found" or "failed to connect" error, perform one the following actions:
 
-- **Verify Module Transfer**: To check whether Windows Admin Center successfully transferred files to your managed node, navigate to the `%PROGRAMFILES%\WindowsPowerShell\Modules` directory on the managed node. Confirm the presence of modules named `Microsoft.SME.*`. If these modules are absent, attempt to reconnect to your server or cluster through Windows Admin Center.
+- **Verify module transfer**: To check whether Windows Admin Center successfully transferred files to your managed node, navigate to the `%PROGRAMFILES%\WindowsPowerShell\Modules` directory on the managed node. Confirm the presence of modules named `Microsoft.SME.*`. If these modules are absent, attempt to reconnect to your server or cluster through Windows Admin Center.
 
-- **Port Access Verification**: Ensure that the machine hosting Windows Admin Center has access to TCP port 445 on the managed node. This port is essential for SMB communication, which Windows Admin Center relies on for file transfers and management tasks.
+- **Port access verification**: Ensure that the machine hosting Windows Admin Center has access to TCP port 445 on the managed node. This port is essential for SMB communication, which Windows Admin Center relies on for file transfers and management tasks.
 
 ## Related content
 
