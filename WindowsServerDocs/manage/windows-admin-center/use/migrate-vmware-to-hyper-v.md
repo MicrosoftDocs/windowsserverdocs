@@ -3,7 +3,7 @@ title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Previ
 description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
 author: meaghanlewis
 ms.topic: how-to
-ms.date: 08/06/2025
+ms.date: 08/13/2025
 ms.author: mosagie
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
@@ -238,6 +238,8 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's then persisted on the target Hyper-V host post cutover phase.
 
+    Static IP addresses for Linux VMs aren't migrated automatically during conversion. Follow the steps to [maintain static IP addresses during migration](/azure/azure-local/migrate/migrate-maintain-ip-addresses).
+
 - How does the tool handle VM boot types?
 
     The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V. **UEFI boot** creates a Generation 2 VM on Hyper-V.
@@ -276,24 +278,37 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     No, the conversion tool is only available in Windows Admin Center on-premises.
 
+- How is memory configured during virtual machine migration?
+
+    During migration, memory is configured as static, even if the source virtual machine is set to use dynamic memory. This is a design choice to ensure migration stability and compatibility between VMware and Hyper-V memory management.
+
+    To re-enable dynamic memory of change RAM parameters after migration:
+
+    1. Open **Windows Admin Center**.
+    1. Navigate to the **Virtual machines** extension.
+    1. Power off the migrated virtual machine.
+    1. Select **Settings**.
+    1. Update the required memory parameters: Startup memory, Enable dynamic memory, Minimum memory, Maximum memory, and Memory buffer.
+    1. Save changes and **power on** the virtual machine.
+
 - What are the current limitations of this migration tool?
 
-    The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported.
+  - The Resync option provides the capability to do data synchronization between initial replication and delta replication. The Resync option isn't supported.
 
-    VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
+  - VMware Tools aren't automatically uninstalled post-migration—remove them manually if needed.
 
-    Hyper-V drivers must be installed on Linux machines before starting migration. Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure.​
+  - Hyper-V drivers must be installed on Linux machines before starting migration. Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure.​
 
-    BIOS-level identifiers are required to be updated in VM identity synchronization, and migration.
+  - During virtual machine conversion, the BIOS GUID on the destination virtual machine won't match the source virtual machine unless it's manually updated. This might affect virtual machine identity synchronization, or licensing checks that rely on consistent BIOS-level identifiers. BIOS-level identifiers must be updated in virtual machine identity synchronization, and migration.
 
     <details>
-    <summary>Expand this section and use the script provided to update the BIOS GUID.</summary>
+    <summary>Expand this section and use the script provided to update the BIOS GUID on the migrated Hyper-V virtual machine.</summary>
 
     To update the BIOS GUID for a Hyper-V virtual machine:
 
-    1. Extract the following script into a `.ps1` file.
-    1. Define values for the parameters VMName and BiosGUID.
-    1. Run the script in PowerShell as an administrator.
+    1. Extract the following script into a file named `Update-VMBiosInfo.ps1`.
+    1. Open PowerShell as Administrator.
+    1. Run the script with the required parameters: `.\Update-VMBiosInfo.ps1 -VMName "VM Name" -BiosGuid "New BIOS GUID"`
 
     ```powershell
     <#
