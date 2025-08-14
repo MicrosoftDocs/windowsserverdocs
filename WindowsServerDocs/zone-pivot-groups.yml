@@ -56,6 +56,10 @@ groups:
     title: Windows Server 2022
   - id: windows-server-2019
     title: Windows Server 2019
+  - id: windows-11
+    title: Windows 11
+  - id: windows-10
+    title: Windows 10
 - id : windows-admin-center-os
   title: Version
   prompt: "Choose your product version:"
