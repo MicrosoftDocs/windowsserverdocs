@@ -166,11 +166,11 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 1. In the Synchronize VM window, enter in the **Path to store data**. Select **Synchronize**.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png" alt-text="Screenshot of the synchronize VM dialog." lightbox="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png":::
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png":::
 
 1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png" alt-text="Screenshot of the migrate tab." lightbox="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png":::
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png":::
 
 1. Wait for the sync to complete.
 
@@ -200,7 +200,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. In the Migrate VM window, select **Proceed** to start the migration.
 
-    :::image type="content" source="media/migrate-vmware-to-hyper-v/confirm-migration.png" alt-text="Screenshot of the migrate VM dialog confirmation." lightbox="media/migrate-vmware-to-hyper-v/confirm-migration.png":::
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/confirm-migration.png" alt-text="Screenshot of the dialog confirming that the migration can start." lightbox="media/migrate-vmware-to-hyper-v/confirm-migration.png":::
 
     During the migration, the following steps are performed: run migration prechecks, ensure sufficient disk space, perform delta replication, power off source VM, execute final delta sync, and import VM into Hyper-V.
 
@@ -236,7 +236,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     Yes, both DHCP and Static IP addresses are supported.
 
-    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's then persisted on the target Hyper-V host post cutover phase.
+    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's persisted on the target Hyper-V host post cutover phase.
 
     Static IP addresses for Linux VMs aren't migrated automatically during conversion. Follow the steps to [maintain static IP addresses during migration](/azure/azure-local/migrate/migrate-maintain-ip-addresses).
 
@@ -435,4 +435,9 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     Start-VM -Name $VMName
     ```
 
+    >[!NOTE]
+    >This process updates only the BIOS GUID. The BIOS Serial Number isn't updated because VMware and Hyper-V use different formats:
+    >- VMware BIOS Serial Number: UUID format (8-4-4-4-12) → 503a4411-be04-bd40-98ac-ffa42335cc22
+    >- Hyper-V BIOS Serial Number: Custom format (4-4-4-4-4-4-2) → 3123-9812-5797-4305-8770-5953-62
+    >If licensing in your environment depends on a combination of BIOS GUID and BIOS Serial Number, the source, and destination values won't match, even if the BIOS GUID is manually updated.
     </details>
