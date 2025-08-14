@@ -435,4 +435,9 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     Start-VM -Name $VMName
     ```
 
+    >[!NOTE]
+    >This process updates only the BIOS GUID. The BIOS Serial Number isn't updated because VMware and Hyper-V use different formats:
+    >- VMware BIOS Serial Number: UUID format (8-4-4-4-12) → 503a4411-be04-bd40-98ac-ffa42335cc22
+    >- Hyper-V BIOS Serial Number: Custom format (4-4-4-4-4-4-2) → 3123-9812-5797-4305-8770-5953-62
+    >If licensing in your environment depends on a combination of BIOS GUID and BIOS Serial Number, the source and destination values won't match exactly, even if the BIOS GUID is manually updated.
     </details>
