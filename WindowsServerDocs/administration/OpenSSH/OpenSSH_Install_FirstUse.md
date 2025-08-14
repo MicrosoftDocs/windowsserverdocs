@@ -37,7 +37,7 @@ To validate your environment, open an elevated PowerShell session and do the fol
 
 - Run `$PSVersionTable.PSVersion`. Verify your major version is at least 5, and your minor version at least 1. Learn more about [installing PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows).
 
-- Run the following command. The output shows `True` when you're a member of the built-in Administrators group.
+- To check when you're an administrator, run the following command. The output shows `True` when you're a member of the built-in Administrators group.
 
   ```powershell
   (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
@@ -94,21 +94,21 @@ To enable SSHD using PowerShell:
 
 :::zone-end
 
-::: zone pivot="windows-server-2022,windows-server-2019"
+::: zone pivot="windows-11"
 
-## Install OpenSSH for Windows Server
+## Install OpenSSH
 
 ### [GUI](#tab/gui)
 
 To install the OpenSSH components on Windows Server devices:
 
-1. Open **Settings**, select **System**, then select **Optional Features** (also referred to as **Manage optional features**).
+1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional Features**.
 
-1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
+1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Views features**, then:
 
-    - Search for **OpenSSH Client**, then select **Install**
+    - Search for and select **OpenSSH Client**, select **Next**, then **Install**
 
-    - Search for **OpenSSH Server**, then select **Install**
+    - Search for and select **OpenSSH Server**, select **Next**, then **Install**
 
 1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
 
@@ -182,88 +182,21 @@ To install OpenSSH using PowerShell:
 ---
 ::: zone-end
 
-::: zone pivot="windows-10"
+::: zone pivot="windows-server-2022,windows-server-2019,windows-10"
 
-## Install OpenSSH for Windows 10
+## Install OpenSSH
 
 ### [GUI](#tab/gui)
 
-To install the OpenSSH components on Windows 10 devices:
+To install the OpenSSH components on Windows Server devices:
 
-1. Open **Settings**, select **System**, then select **Optional Features**.
+1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional Features** (also referred to as **Manage optional features**).
 
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
-    - Find **OpenSSH Client**, then select **Install**
+    - Search for **OpenSSH Client**, then select **Install**
 
-    - Find **OpenSSH Server**, then select **Install**
-
-1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
-
-1. In the details pane, double-click **OpenSSH SSH Server**.
-
-1. On the **General** tab, from the **Startup type** drop-down menu, select **Automatic** and then select **Ok**.
-
-1. To start the service, select **Start**.
-
-> [!NOTE]
-> Installing OpenSSH Server creates and enables a firewall rule named `OpenSSH-Server-In-TCP`. This rule allows inbound SSH traffic on port 22. If this rule isn't enabled and this port isn't open, connections are refused or reset.
-
-### [PowerShell](#tab/powershell)
-
-To install OpenSSH using PowerShell on Windows 10:
-
-1. Run PowerShell as an administrator.
-
-1. Run the following cmdlet to check if OpenSSH capabilities are available:
-
-    ```powershell
-    Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
-    ```
-
-1. Install the components as needed:
-
-    ```powershell
-    # Install the OpenSSH Client
-    Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
-
-    # Install the OpenSSH Server
-    Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
-    ```
-
-1. Start and configure the SSH server:
-
-    ```powershell
-    # Start the sshd service
-    Start-Service sshd
-
-    # OPTIONAL but recommended
-    Set-Service -Name sshd -StartupType 'Automatic'
-
-    # Confirm the firewall rule
-    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
-        New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
-    }
-    ```
-
----
-::: zone-end
-
-::: zone pivot="windows-11"
-
-## Install OpenSSH for Windows 11
-
-### [GUI](#tab/gui)
-
-To install the OpenSSH components on Windows 11 devices:
-
-1. Open **Settings**, select **System**, then select **Optional Features**.
-
-1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **View Features**, then:
-
-    - Search for **OpenSSH Client**, select **Next**, then select **Install**
-
-    - Search for **OpenSSH Server**, select **Next**, then select **Install**
+    - Search for **OpenSSH Server**, then select **Install**
 
 1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Service** app or press <kbd>ENTER</kbd>.)
 
@@ -278,17 +211,27 @@ To install the OpenSSH components on Windows 11 devices:
 
 ### [PowerShell](#tab/powershell)
 
-To install OpenSSH using PowerShell on Windows 11:
+To install OpenSSH using PowerShell:
 
-1. Run PowerShell as an administrator.
+1. Run PowerShell as an Administrator.
 
-1. Run the following cmdlet to check if OpenSSH capabilities are available:
+1. Run the following cmdlet to make sure that OpenSSH is available:
 
     ```powershell
     Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
     ```
 
-1. Install the components as needed:
+    The command should return the following output if neither are already installed:
+
+    ```powershell
+    Name  : OpenSSH.Client~~~~0.0.1.0
+    State : NotPresent
+
+    Name  : OpenSSH.Server~~~~0.0.1.0
+    State : NotPresent
+    ```
+
+1. After that, run the following cmdlets to install the server or client components as needed:
 
     ```powershell
     # Install the OpenSSH Client
@@ -298,18 +241,29 @@ To install OpenSSH using PowerShell on Windows 11:
     Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
     ```
 
-1. Start and configure the SSH server:
+    Both commands should return the following output:
+
+    ```powershell
+    Path          :
+    Online        : True
+    RestartNeeded : False
+    ```
+
+1. To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right-click, then select **Run as an administrator**), then run the following commands to start the `sshd service`:
 
     ```powershell
     # Start the sshd service
     Start-Service sshd
 
-    # OPTIONAL but recommended
+    # OPTIONAL but recommended:
     Set-Service -Name sshd -StartupType 'Automatic'
 
-    # Confirm the firewall rule
+    # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
     if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+        Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
         New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+    } else {
+        Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
     }
     ```
 
