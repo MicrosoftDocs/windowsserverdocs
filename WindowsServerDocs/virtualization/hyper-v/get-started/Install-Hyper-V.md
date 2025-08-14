@@ -48,11 +48,11 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
     Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart
     ```
 
-    ![Screenshot of PowerShell window after running the command to install Hyper-V in Windows Server.](media/install-hyper-v-powershell.png)
+    ![Screenshot of PowerShell window after running the command to install Hyper-V in Windows Server.](./media/install-hyper-v-powershell.png)
 
 1. The installation starts. As soon as installation finishes, the computer restarts.
 
-    ![Screenshot of PowerShell window showing the progress to install Hyper-V in Windows Server.](media/install-hyper-v-powershell-progress.png)
+    ![Screenshot of PowerShell window showing the progress to install Hyper-V in Windows Server.](./media/install-hyper-v-powershell-progress.png)
 
 1. After the server restarts, you can see that the Hyper-V role is installed by running the following command:
 
@@ -81,11 +81,11 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 1. On the **Select server roles** page, select **Hyper-V**. From the **Add Roles and Features Wizard** page, select **Add Features**, and then select **Next**.
 
-    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](media/add-hyper-v-role.png)
+    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](./media/add-hyper-v-role.png)
 
 1. On the **Select features** page, select **Next**, and then select **Next** again.
 
-    ![Screenshot of Hyper-V installation settings.](media/hyper-v-settings.png)
+    ![Screenshot of Hyper-V installation settings.](./media/hyper-v-settings.png)
 
 1. On the **Create Virtual Switches** page, **Virtual Machine Migration** page, and **Default Stores** page, select the options that suit your specific environment.
 
@@ -135,7 +135,7 @@ For more information and troubleshooting, see [Windows Hyper-V System Requiremen
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
     ```
 
-    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](media/enable-hyper-v-powershell.png)
+    ![Screenshot of PowerShell window after running the command to enable Hyper-V.](./media/enable-hyper-v-powershell.png)
 
 1. Enter **Y** to have the computer restart to complete the installation.
 
@@ -153,7 +153,7 @@ The Deployment Image Servicing and Management tool (DISM) helps configure Window
     DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
     ```
 
-    ![Console window showing Hyper-V being enabled.](media/enable-hyper-v-dism.png)
+    ![Console window showing Hyper-V being enabled.](./media/enable-hyper-v-dism.png)
 
 1. You see that the feature is enabled and that "The operation completed successfully."
 
@@ -171,7 +171,7 @@ For more information about DISM, see the [DISM Technical Reference](/windows-har
 
 1. Select **Hyper-V** and then select **OK**.
 
-![Windows programs and features dialogue box](media/enable-hyper-v.png)
+![Windows programs and features dialogue box](./media/enable-hyper-v.png)
 
 When the installation completes, you're prompted to restart your computer.
 

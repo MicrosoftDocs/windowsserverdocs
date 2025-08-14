@@ -27,23 +27,23 @@ To choose a local resource:
 
 1. Select **Show options**.
 
-    ![Screenshot that calls out Show options on the bottom left of the dialog box.](media/HyperV-VMConnect-DisplayConfig.png)
+    ![Screenshot that calls out Show options on the bottom left of the dialog box.](./media/HyperV-VMConnect-DisplayConfig.png)
 
 1. Select **Local resources**.
 
-    ![Screenshot that calls out the Local resources tab.](media/HyperV-VMConnect-DisplayConfig-LocalResources.png)
+    ![Screenshot that calls out the Local resources tab.](./media/HyperV-VMConnect-DisplayConfig-LocalResources.png)
 
 1. Select **More**.
 
-    ![Screenshot that calls out the More button.](media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)
+    ![Screenshot that calls out the More button.](./media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)
 
 1. Select the drive that you want to use on the virtual machine and click **Ok**.
 
-    ![Screenshot that shows the local resources and drives that you can select.](media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)
+    ![Screenshot that shows the local resources and drives that you can select.](./media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)
 
 1. Select **Save my settings for future connections to this virtual machine**.
 
-    ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)
+    ![Screenshot that calls out the checkbox to select for this option.](./media/HyperV-VMConnect-SaveSettings.png)
 
 1. Select **Connect**.
 

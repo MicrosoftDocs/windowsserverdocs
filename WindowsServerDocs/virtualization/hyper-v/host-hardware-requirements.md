@@ -60,7 +60,7 @@ Systeminfo.exe
 
 Scroll to the Hyper-V requirements section to review the report. If all listed Hyper-V requirements have a value of **Yes**, your system can run the Hyper-V role. If any item returns **No**, check the requirements listed in this document and make adjustments where possible.
 
-![Screenshot of the Administrator Command Prompt screen with a focus on the output for the Hyper V requirements section.](media/system-info-upd.png)
+![Screenshot of the Administrator Command Prompt screen with a focus on the output for the Hyper V requirements section.](./media/system-info-upd.png)
 
 ## Requirements for specific features
 
