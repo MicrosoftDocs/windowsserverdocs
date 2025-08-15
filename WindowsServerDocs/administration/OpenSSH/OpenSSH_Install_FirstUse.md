@@ -349,7 +349,7 @@ To disable SSHD using PowerShell:
 
 ::: zone pivot="windows-11"
 
-## Uninstall OpenSSH for Windows
+## Uninstall OpenSSH
 
 ### [GUI](#tab/gui)
 
@@ -396,7 +396,7 @@ To uninstall the OpenSSH components using PowerShell, follow these steps.
 
 ::: zone pivot="windows-server-2022,windows-server-2019,windows-10"
 
-## Uninstall OpenSSH for Windows
+## Uninstall OpenSSH
 
 ### [GUI](#tab/gui)
 
