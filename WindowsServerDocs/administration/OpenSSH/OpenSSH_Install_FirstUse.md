@@ -357,7 +357,7 @@ To uninstall OpenSSH using Windows Settings:
 
 1. Select **Start**, type _Optional Features_ in the search box, then select **Optional feature**.
 
-1. Scan the list to see if the OpenSSH is installed.:
+1. Scan the list to see if the OpenSSH is installed:
 
     - Search for and select **OpenSSH Client**, then select **Remove**
 
