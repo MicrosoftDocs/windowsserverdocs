@@ -1,5 +1,5 @@
 ---
-title: Get started with OpenSSH for Windows
+title: Get started with OpenSSH Server for Windows
 description: Learn how to install and connect to remote machines using the OpenSSH Client and Server for Windows.
 ms.date: 08/14/2025
 ms.topic: quickstart
@@ -45,7 +45,7 @@ To validate your environment, open an elevated PowerShell session and do the fol
 
 :::zone pivot="windows-server-2025"
 
-## Enable OpenSSH
+## Enable OpenSSH Server
 
 Beginning with Windows Server 2025, OpenSSH is now installed by default. You can also enable or disable the `sshd` service in Server Manager.
 
@@ -96,7 +96,7 @@ To enable SSHD using PowerShell:
 
 ::: zone pivot="windows-11"
 
-## Install OpenSSH
+## Install OpenSSH Server & Client
 
 ### [GUI](#tab/gui)
 
@@ -184,7 +184,7 @@ To install OpenSSH using PowerShell:
 
 ::: zone pivot="windows-server-2022,windows-server-2019,windows-10"
 
-## Install OpenSSH
+## Install OpenSSH Server & Client
 
 ### [GUI](#tab/gui)
 
@@ -298,7 +298,7 @@ domain\username@SERVERNAME C:\Users\username>
 
 :::zone pivot="windows-server-2025"
 
-## Disable OpenSSH
+## Disable OpenSSH Server
 
 You can disable the `sshd` service in Server Manager.
 
@@ -349,7 +349,7 @@ To disable SSHD using PowerShell:
 
 ::: zone pivot="windows-11"
 
-## Uninstall OpenSSH
+## Uninstall OpenSSH Server & Client
 
 ### [GUI](#tab/gui)
 
@@ -396,7 +396,7 @@ To uninstall the OpenSSH components using PowerShell, follow these steps.
 
 ::: zone pivot="windows-server-2022,windows-server-2019,windows-10"
 
-## Uninstall OpenSSH
+## Uninstall OpenSSH Server & Client
 
 ### [GUI](#tab/gui)
 
