@@ -115,7 +115,9 @@
         "virtualization/**/*.md": "hyper-v",
         "virtualization/**/*.yml": "hyper-v",
         "networking/**/*.md": "networking",
-        "networking/**/*.yml": "networking"
+        "networking/**/*.yml": "networking",
+        "networking/sdn/**/*.md": "",
+        "networking/sdn/**/*.yml": ""
       },
       "ms.update-cycle": {
         "**/*.md": "1095-days",
