@@ -102,7 +102,7 @@ To enable SSHD using PowerShell:
 
 To install the OpenSSH components on Windows Server devices:
 
-1. Select **Start**, type _Optional Features*_ in the search box, then select **Add an optional feature**.
+1. Select **Start**, type _Optional Features_ in the search box, then select **Add an optional feature**.
 
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Views features**, then:
 
@@ -190,7 +190,7 @@ To install OpenSSH using PowerShell:
 
 To install the OpenSSH components on Windows Server devices:
 
-1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional Features** (also referred to as **Manage optional features**).
+1. Select **Start**, type _Optional Features_ in the search box, then select **Optional Features** (also referred to as **Manage optional features**).
 
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
@@ -355,7 +355,7 @@ To disable SSHD using PowerShell:
 
 To uninstall OpenSSH using Windows Settings:
 
-1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional feature**.
+1. Select **Start**, type _Optional Features_ in the search box, then select **Optional feature**.
 
 1. Scan the list to see if the OpenSSH is installed.:
 
@@ -402,7 +402,7 @@ To uninstall the OpenSSH components using PowerShell, follow these steps.
 
 To uninstall OpenSSH using Windows Settings:
 
-1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional features** (also referred to as **Manage optional features** or **See optional feature history**).
+1. Select **Start**, type _Optional Features_ in the search box, then select **Optional features** (also referred to as **Manage optional features** or **See optional feature history**).
 
 1. In the list, select **OpenSSH Client** or **OpenSSH Server**.
 
