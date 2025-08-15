@@ -25,11 +25,11 @@ To set up nonclustered hosts for live migration, you need:
 
 ## Consider options for authentication and networking
 
-Decide how you want to set up the following:
+Decide how you want to set up authentication, performance, and networking options.
 
 - **Authentication**: Which protocol do you use to authenticate live migration traffic between the source and destination server? The protocol you choose determines whether you need to sign in to the source server before starting a live migration:
 
-  - Kerberos lets you avoid signing in to the server, but requires you to set up constrained delegation. See below for instructions.
+  - Kerberos lets you avoid signing in to the server, but requires you to setup constrained delegation. See the following details for instructions.
   - CredSSP lets you avoid setting up constrained delegation, but requires you to sign in to the source server. You can do this through a local console session, a Remote Desktop session, or a remote Windows PowerShell session.
 
       CredSSP requires you to sign in for situations that aren't always obvious. For example, if you sign in to TestServer01 to move a virtual machine to TestServer02, and then want to move the virtual machine back to TestServer01, you need to sign in to TestServer02 before you try to move the virtual machine back to TestServer01. If you don't, the authentication attempt fails, an error occurs, and you see the following message:
@@ -51,7 +51,7 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
 
 ### Use the Users and Computers snap-in to set up constrained delegation
 
-1. Open the Active Directory Users and Computers snap-in. (In Server Manager, select the server if it's not selected, then select **Tools** > **Active Directory Users and Computers**.)
+1. Open the Active Directory Users and Computers snap-in. In Server Manager, select the server if it's not selected, then select **Tools** > **Active Directory Users and Computers**.
 
 1. In the navigation pane in **Active Directory Users and Computers**, select the domain and then double-click the **Computers** folder.
 
@@ -65,11 +65,11 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
 
 1. In **Add Services**, select **Users or Computers**.
 
-1. From **Select Users or Computers**, type the name of the destination server. Click **Check Names** to verify it, and then click **OK**.
+1. From **Select Users or Computers**, type the name of the destination server. Select **Check Names** to verify it, and then select **OK**.
 
 1. From **Add Services**, in the list of available services, do the following and then select **OK**:
 
-    - To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, as well as if you want to move only a virtual machine's storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.
+    - To move virtual machine storage, select **cifs**. This is required if you want to move the storage along with the virtual machine, and if you want to move only a virtual machine's storage. If the server is configured to use SMB storage for Hyper-V, this should already be selected.
 
     - To move virtual machines, select **Microsoft Virtual System Migration Service**.
 
@@ -77,14 +77,14 @@ If you have decided to use Kerberos to authenticate live migration traffic, conf
 
 1. In the **Computers** folder, select the computer account of the destination server and repeat the process. In the **Select Users or Computers** dialog box, make sure to specify the name of the source server.
 
-The configuration changes take effect after both of the following:
+The configuration changes take effect after:
 
 - The changes replicate to the domain controllers that the servers running Hyper-V are logged into.
 - The domain controller issues a new Kerberos ticket.
 
 ## Step 2: Set up the source and destination computers for live migration
 
-This step covers options for authentication and networking. For better security, select specific networks for live migration traffic, as discussed earlier. You'll also choose a performance option.
+This step covers options for authentication and networking. For better security, select specific networks for live migration traffic, as discussed earlier. You also choose a performance option in this step.
 
 ### Use Hyper-V Manager to set up the source and destination computers for live migration
 
@@ -98,8 +98,8 @@ This step covers options for authentication and networking. For better security,
 
 1. Under **Simultaneous live migrations**, enter a different number if you don't want to use the default of 2.
 
-1. Under **Incoming live migrations**, if you want to use specific network connections to accept live migration traffic, click **Add** to type the IP addr1. To set Kerberos and performance options, expand **Live Migrations** and select **Advanced Features**.
-    - If you've set up constrained delegation, under **Authentication protocol**, select **Kerberos**.
+1. Under **Incoming live migrations**, if you want to use specific network connections to accept live migration traffic, select **Add** to type the IP addr1. To set Kerberos and performance options, expand **Live Migrations** and select **Advanced Features**.
+    - If you set up constrained delegation, under **Authentication protocol**, select **Kerberos**.
     - Under **Performance options**, review the details and select a different option if it fits your environment.ce options**, review the details and choose a different option if it's appropriate for your environment.
 
 1. Select **OK**.
@@ -135,7 +135,7 @@ This table describes how the performance options work.
 | Option | Description |
 |--------|-------------|
 | TCP/IP | Copies the memory of the virtual machine to the destination server over a TCP/IP connection. |
-| Compression | Compresses the memory content of the virtual machine before copying it to the destination server over a TCP/IP connection. **Note:** This is the **default** setting. |
+| Compression | Compresses the memory content of the virtual machine before copying it to the destination server over a TCP/IP connection. Compression is the **default** setting. |
 | SMB | Copies the memory of the virtual machine to the destination server over an SMB 3.0 connection.<br>- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) enabled.<br>- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is set up.<br>For more information, see [Improve Performance of a File Server with SMB Direct](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11)). |
 
 ## Next steps
