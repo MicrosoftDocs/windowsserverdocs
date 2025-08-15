@@ -2,8 +2,6 @@
 description: "Learn more about: Stand-Alone Federation Server Using WID"
 ms.assetid: 33b80a3f-67f3-4da7-ac4a-7fd2232fbd5d
 title: Stand-Alone Federation Server Using WID
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: concept-article

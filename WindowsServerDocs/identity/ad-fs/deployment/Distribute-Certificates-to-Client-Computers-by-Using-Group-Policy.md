@@ -2,11 +2,9 @@
 description: "Learn more about: Distribute Certificates to Client Computers by Using Group Policy"
 ms.assetid: cf32926a-2083-408b-a264-2cad179ed18a
 title: Distribute Certificates to Client Computers by Using Group Policy
-author: robinharwood
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
-ms.author: roharwoo
 ---
 
 # Distribute Certificates to Client Computers by Using Group Policy

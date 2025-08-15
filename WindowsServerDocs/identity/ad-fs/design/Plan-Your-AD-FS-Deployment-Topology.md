@@ -2,8 +2,6 @@
 description: "Learn more about: Plan Your AD FS Deployment Topology"
 ms.assetid: 5c8c6cc0-0d22-4f27-a111-0aa90db7d6c8
 title: Plan Your AD FS Deployment Topology
-author: xelu86
-ms.author: alalve
 manager: tedhudek
 ms.date: 11/04/2022
 ms.topic: concept-article

@@ -2,8 +2,6 @@
 description: "Learn more about: When to Create a Federation Server Farm"
 ms.assetid: 02580b2f-a339-4470-947c-d700b2d55f3f
 title: When to Create a Federation Server Farm
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: concept-article

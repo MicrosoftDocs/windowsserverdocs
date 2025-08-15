@@ -1,8 +1,6 @@
 ---
 title: Advanced customization of AD FS sign-in pages
 description: Learn how to make advanced customizations of the Active Directory Federation Services (ADFS) sign-in pages in Windows Server.
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: how-to
