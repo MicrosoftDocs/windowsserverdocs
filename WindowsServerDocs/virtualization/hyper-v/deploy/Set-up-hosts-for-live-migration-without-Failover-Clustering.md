@@ -9,7 +9,7 @@ ms.date: 08/14/2025
 ---
 # Set up hosts for live migration without Failover Clustering
 
-This article explains how to set up hosts that aren't clustered so you can do live migrations between them. Follow these instructions if you didn't set up live migration when you installed Hyper-V, or if you want to change the settings. To set up clustered hosts, use tools for Failover Clustering.
+Live migration lets you move running virtual machines between servers with minimal downtime. This article shows you how to set up nonclustered hosts for live migration in Hyper-V, including authentication options, network configuration, and security best practices. Use these steps if you didn’t configure live migration during Hyper-V installation, or need to update your settings.
 
 ## Requirements for setting up live migration
 
@@ -29,7 +29,7 @@ Decide how you want to set up authentication, performance, and networking option
 
 - **Authentication**: Which protocol do you use to authenticate live migration traffic between the source and destination server? The protocol you choose determines whether you need to sign in to the source server before starting a live migration:
 
-  - Kerberos lets you avoid signing in to the server, but requires you to setup constrained delegation. See the following details for instructions.
+  - Kerberos lets you avoid signing in to the server, but requires you to set up constrained delegation. See the following details for instructions.
   - CredSSP lets you avoid setting up constrained delegation, but requires you to sign in to the source server. You can do this through a local console session, a Remote Desktop session, or a remote Windows PowerShell session.
 
       CredSSP requires you to sign in for situations that aren't always obvious. For example, if you sign in to TestServer01 to move a virtual machine to TestServer02, and then want to move the virtual machine back to TestServer01, you need to sign in to TestServer02 before you try to move the virtual machine back to TestServer01. If you don't, the authentication attempt fails, an error occurs, and you see the following message:
@@ -47,11 +47,11 @@ Starting with Windows Server 2025, [Credential Guard is enabled by default](/win
 
 ## Step 1: Configure constrained delegation (optional)
 
-If you have decided to use Kerberos to authenticate live migration traffic, configure constrained delegation using an account that is a member of the Domain Administrators group.
+If you decide to use Kerberos to authenticate live migration traffic, configure constrained delegation using an account that is a member of the Domain Administrators group.
 
 ### Use the Users and Computers snap-in to set up constrained delegation
 
-1. Open the Active Directory Users and Computers snap-in. In Server Manager, select the server if it's not selected, then select **Tools** > **Active Directory Users and Computers**.
+1. Open the Active Directory Users and Computers snap-in. In Server Manager, select the server, then select **Tools** > **Active Directory Users and Computers**.
 
 1. In the navigation pane in **Active Directory Users and Computers**, select the domain and then double-click the **Computers** folder.
 
