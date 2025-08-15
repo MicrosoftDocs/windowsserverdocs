@@ -402,7 +402,7 @@ To uninstall the OpenSSH components using PowerShell, follow these steps.
 
 To uninstall OpenSSH using Windows Settings:
 
-1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional features** (also referred to as **Manage optional features**).
+1. Select **Start**, type _Optional Features*_ in the search box, then select **Optional features** (also referred to as **Manage optional features** or **See optional feature history**).
 
 1. In the list, select **OpenSSH Client** or **OpenSSH Server**.
 
