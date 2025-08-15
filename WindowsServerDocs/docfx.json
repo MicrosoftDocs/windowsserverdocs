@@ -115,7 +115,9 @@
         "virtualization/**/*.md": "hyper-v",
         "virtualization/**/*.yml": "hyper-v",
         "networking/**/*.md": "networking",
-        "networking/**/*.yml": "networking"
+        "networking/**/*.yml": "networking",
+        "networking/sdn/**/*.md": "",
+        "networking/sdn/**/*.yml": ""
       },
       "ms.update-cycle": {
         "**/*.md": "1095-days",
@@ -126,10 +128,14 @@
         "manage/windows-admin-center/**/*.yml": "365-days"
       },
       "ms.author": {
-        "security/tls/*.md": "roharwoo"
+        "security/tls/*.md": "roharwoo",
+        "identity/ad-fs/**/*.md": "justinha",
+        "identity/ad-fs/**/*.yml": "justinha"
       },
       "author": {
-        "security/tls/*.md": "Andrei-Popov"
+        "security/tls/*.md": "Andrei-Popov",
+        "identity/ad-fs/**/*.md": "justinha",
+        "identity/ad-fs/**/*.yml": "justinha"
       },
       "feedback_product_url": {
         "manage/windows-admin-center/**/*.md": "https://aka.ms/wacfeedback"

@@ -2,11 +2,9 @@
 description: "Learn more about: Checklist: Configuring the Account Partner Organization"
 ms.assetid: 826974ea-3635-40df-aa37-77dd12a363c8
 title: Checklist - Configuring the Account Partner Organization
-author: robinharwood
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: checklist
-ms.author: roharwoo
 ---
 
 # Checklist: Configuring the Account Partner Organization

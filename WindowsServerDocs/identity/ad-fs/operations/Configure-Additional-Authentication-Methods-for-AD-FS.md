@@ -2,8 +2,6 @@
 description: "Learn more about: Configure Additional Authentication Methods for AD FS"
 ms.assetid: ddfbbda3-30ca-4537-af12-667efc6f63ff
 title: Configure Additional Authentication Methods for AD FS
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: how-to
