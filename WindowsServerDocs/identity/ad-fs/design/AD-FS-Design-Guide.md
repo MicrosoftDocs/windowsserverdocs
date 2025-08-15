@@ -1,8 +1,6 @@
 ---
 title: AD FS design guide
 description: "Learn how to design for Active Directory Federation Services (AD FS) in Windows Server 2012 R2 and Windows Server 2012."
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: concept-article

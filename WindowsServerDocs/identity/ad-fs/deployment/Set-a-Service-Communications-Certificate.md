@@ -2,11 +2,9 @@
 description: "Learn more about: Set a Service Communications Certificate"
 ms.assetid: 638c89bd-87e6-484b-9d2e-8ae2a74227e5
 title: Set a Service Communications Certificate
-author: robinharwood
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
-ms.author: roharwoo
 ---
 
 # Set a Service Communications Certificate

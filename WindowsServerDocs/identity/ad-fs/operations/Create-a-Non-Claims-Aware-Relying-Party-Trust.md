@@ -2,8 +2,6 @@
 description: "Learn more about: Create a Non-Claims-Aware Relying Party Trust"
 ms.assetid: 7b7ae389-5032-44f7-9c0a-94398c3e4d88
 title: Create a Non-Claims Aware Relying Party Trust
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to

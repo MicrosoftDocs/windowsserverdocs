@@ -2,8 +2,6 @@
 description: "Learn more about: Certificate Requirements for Federation Server Proxies"
 ms.assetid: dc24adb7-385d-4a92-ab81-78ba73df0118
 title: Certificate Requirements for Federation Server Proxies
-author: robinharwood
-ms.author: roharwoo
 manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: concept-article
