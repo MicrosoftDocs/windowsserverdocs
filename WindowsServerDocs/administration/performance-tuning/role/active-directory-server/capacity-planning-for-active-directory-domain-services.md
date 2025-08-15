@@ -3,9 +3,8 @@ title: Capacity planning for Active Directory Domain Services
 description: Provides a detailed discussion of the factors to consider during capacity planning for Active Directory Domain Services.
 ms.topic: best-practice
 ms.author: roharwoo
-ms.contributor: 
 author: robinharwood
-ms.date: 08/24/2024
+ms.date: 08/15/2025
 ---
 
 # Capacity planning for Active Directory Domain Services
@@ -686,7 +685,7 @@ There are also other areas in the system that are much slower than the logical p
 
 - If you add processors to a system running at 90% utilization that's disk-bound, it probably won't significantly improve performance. If you look more closely at the system, there are lots of threads that aren't even getting onto the processor because they're waiting for I/O operations to complete.
 - Resolving disk-bound issues can mean that threads previously stuck in waiting state stop being stuck, creating more competition for CPU time. As a result, the 90% utilization will go to 100%. You need to tune both components in order to bring utilization back down to manageable levels.
-  
+
   > [!NOTE]
   > The `Processor Information(*)\% Processor Utility` counter can exceed 100% with systems that have a Turbo mode. Turbo mode lets the CPU exceed the rated processor speed for short periods. If you need more information, look at the CPU manufacturers' documentation and counter descriptions.
 
@@ -724,20 +723,20 @@ To adjust estimates for different processors, we recommend you use the SPECint_r
 1. Enter **CPU2006** and select **Search**.
 1. In the drop-down menu for **Available Configurations**, select **All SPEC CPU2006**.
 1. In the **Search Form Request** field, select **Simple**, then select **Go!**.
-1. Under **Simple Request**, enter the search criteria for your target processor. For example, if you're looking for an ES-2630 processor, in the drop-down menu, select **Processor**, then enter the processor name in the search field. When finished, select **Execute Simple Fetch**.
+1. Under **Simple Request**, enter the search criteria for your target processor. For example, if you're looking for an E5-2630 processor, in the drop-down menu, select **Processor**, then enter the processor name in the search field. When finished, select **Execute Simple Fetch**.
 1. Look for your server and processor configuration in the search results. If the search engine doesn't return an exact match, look for the closest match possible.
 1. Record the values in the **Result** and **# Cores** columns.
 1. Determine the modifier by using this equation:
-   
+
    ((*Target platform per-core score value*) × (*MHz per-core of baseline platform*)) ÷ ((*Baseline per-core score value*) × (*MHz per-core of target platform*))
 
-   For example, here's how you'd find the modifier for an ES-2630 processor:
+   For example, here's how you'd find the modifier for an E5-2630 processor:
 
    (35.83 × 2000) ÷ (33.75 × 2300) = 0.92
 
 1. Multiply the number of processors you estimate you need by this modifier.
 
-   For the ES-2630 processor example, 0.92 × 10.3 = 10.35 processors.
+   For the E5-2630 processor example, 0.92 × 10.3 = 10.35 processors.
 
 ## Appendix C: How the operating system interacts with storage
 
@@ -836,7 +835,7 @@ Therefore, we can assume a 32 bit PCI bus operating at 33 Mhz can transfer 133 M
 >[!NOTE]
 >This equation's result represents the theoretical limit of transferred data. In reality, most systems only reach about 50% of maximum limit. In certain burst scenarios, the system can reach 75% of the limit for short periods.
 
-A 66 MHz 64-bit PCI bus can support a theoretical maximum of 528 MBps based on this equation: 
+A 66 MHz 64-bit PCI bus can support a theoretical maximum of 528 MBps based on this equation:
 
 64 bits ÷ 8 bits per byte × 66 Mhz = 528 MBps
 
