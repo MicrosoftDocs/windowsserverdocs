@@ -4,7 +4,7 @@ description: This article describes the permissions required in Active Directory
 ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 08/15/2025
+ms.date: 08/18/2025
 ---
 
 # Active Directory domain join permissions
@@ -13,7 +13,11 @@ This article describes the permissions required in Active Directory (AD) for suc
 
 ## Scenario 1: A computer account doesn't exist and needs to be created
 
+**Permissions needed to join a domain without pre-created computer accounts:**
+
 This scenario applies when users join their own computers to the domain without prior provisioning of computer accounts. During domain join, if the computer account with the name you're joining doesn't exist in AD, the system creates it using an [Ldap_Add()](/windows/win32/api/winldap/nf-winldap-ldap_add) operation, performed with the provided user credentials. To learn more, see [NetJoinDomain function (lmjoin.h)](/windows/win32/api/lmjoin/nf-lmjoin-netjoindomain). The user joining the computer must either have the **Add workstations to domain** user right (also known as `SeMachineAccountPrivilege`, managed by `Ms-Ds-Machine-Account-Quota`), or permission to create computer objects in the organizational unit (OU) or container where the account is created. Because of the vulnerabilities described in [Add workstations to domain](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/add-workstations-to-domain), Microsoft doesn't recommend using this option.
+
+**Permissions required to pre-create computer accounts:**
 
 When a computer account already exists in AD, and a different user needs to join the computer to the domain using that account, the process typically involves a delegated administrator or service account that pre-provisions computer accounts. This setup enables another user to perform the domain join by reusing the existing account. Lets say **Admin01** creates the computer account and **Admin02** performs the join. In this example, **Admin01** must be delegated the **Create Computer Accounts** permission using *Create Child* [ACTRL_DS_CREATE_CHILD](/windows/win32/SecAuthZ/directory-services-access-rights) on the relevant OU or container.
 
