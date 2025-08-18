@@ -13,7 +13,7 @@ This article describes the permissions required in Active Directory (AD) for suc
 
 ## Scenario 1: A computer account doesn't exist and needs to be created
 
-**Permissions needed to join a domain without pre-created computer accounts:**
+**Permissions required to join a domain without pre-created computer accounts:**
 
 This scenario applies when users join their own computers to the domain without prior provisioning of computer accounts. During domain join, if the computer account with the name you're joining doesn't exist in AD, the system creates it using an [Ldap_Add()](/windows/win32/api/winldap/nf-winldap-ldap_add) operation, performed with the provided user credentials. To learn more, see [NetJoinDomain function (lmjoin.h)](/windows/win32/api/lmjoin/nf-lmjoin-netjoindomain). The user joining the computer must either have the **Add workstations to domain** user right (also known as `SeMachineAccountPrivilege`, managed by `Ms-Ds-Machine-Account-Quota`), or permission to create computer objects in the organizational unit (OU) or container where the account is created. Because of the vulnerabilities described in [Add workstations to domain](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/add-workstations-to-domain), Microsoft doesn't recommend using this option.
 
