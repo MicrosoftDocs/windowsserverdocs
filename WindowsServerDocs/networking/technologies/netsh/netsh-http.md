@@ -67,12 +67,12 @@ Following are four examples of the **add iplisten** command.
 
 ## add sslcert
 
-Adds a new SSL server certificate binding and corresponding client certificate policies for an IP address and port.
+Adds a new SSL server certificate binding and corresponding client certificate policies for an IP address and port or hostname and port.  If the hostnameport option is used, the sslctlstorename must be specified.
 
 **Syntax**
 
 ```powershell
-add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]
+add sslcert [ ipport= ] IPAddress:port [ hostnameport= ] hostname:port [ certhash= ] CertHash [ appid= ] GUID [ [ certstorename= ] CertStoreName [ verifyclientcertrevocation= ] enable | disable [verifyrevocationwithcachedclientcertonly= ] enable | disable [ usagecheck= ] enable | disable [ revocationfreshnesstime= ] U-Int [ urlretrievaltimeout= ] U-Int [sslctlidentifier= ] SSLCTIdentifier [ sslctlstorename= ] SLCtStoreName [ dsmapperusage= ] enable | disable [ clientcertnegotiation= ] enable | disable ] ]
 ```
 
 **Parameters**
@@ -81,6 +81,8 @@ add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ 
 |Parameter|Description|Requirement|
 |-|-|
 |                  **ipport**                  |                       Specifies the IP address and port for the binding. A colon character (:) is used as a delimiter between the IP address and the port number.                        | Required |
+|                  **hostnameport**                  |                       Specifies the hostname and port for the binding. A colon character (:) is used as a delimiter between the hostname and the port number.                        | Required |
+
 |                 **certhash**                 |                                     Specifies the SHA hash of the certificate. This hash is 20 bytes long and is specified as a hexadecimal string.                                      | Required |
 |                  **appid**                   |                                                                  Specifies the GUID to identify the owning application.                                                                  | Required |
 |              **certstorename**               |                                  Specifies the store name for the certificate. Defaults to MY. Certificate must be stored in the local machine context.                                  | Optional |
@@ -102,6 +104,8 @@ Following is an example of the **add sslcert** command.
 
 add sslcert ipport=1.1.1.1:443 certhash=0102030405060708090A0B0C0D0E0F1011121314
 appid={00112233-4455-6677-8899- AABBCCDDEEFF}
+add sslcert hostnameport=server.domain.com:443 certhash=0102030405060708090A0B0C0D0E0F1011121314
+appid={00112233-4455-6677-8899- AABBCCDDEEFF} certstorename=MY
 
 ---
 
@@ -233,12 +237,12 @@ Following are four examples of the **delete iplisten** command.
 
 
 Deletes SSL server certificate bindings and corresponding client certificate
-policies for an IP address and port.
+policies for an IP address and port or hostname and port.
 
 **Syntax**
 
 ```powershell
-delete sslcert [ ipport= ] IPAddress:port
+delete sslcert [ ipport= ] IPAddress:port [ hostnameport= ] hostname:port
 ```
 
 **Parameters**
@@ -246,6 +250,7 @@ delete sslcert [ ipport= ] IPAddress:port
 |Parameter|Description|Requirement|
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings get deleted. A colon character (:) is used as a delimiter between the IP address and the port number. | Required |
+| **hostnameport** | Specifies the hostname and port for which the SSL certificate bindings get deleted. A colon character (:) is used as a delimiter between the hostname and the port number. | Required |
 
 ---
 
@@ -257,6 +262,7 @@ Following are three examples of the **delete sslcert** command.
 - delete sslcert ipport=1.1.1.1:443
 - delete sslcert ipport=0.0.0.0:443
 - delete sslcert ipport=[::]:443
+- delete sslcert hostnameport=server.domain.com:443
 
 ---
 
