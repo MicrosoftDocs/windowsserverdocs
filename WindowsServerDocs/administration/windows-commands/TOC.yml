@@ -1092,6 +1092,8 @@
         href: netsh-wcn.md
       - name: netsh wfp
         href: netsh-wfp.md
+      - name: netsh winhttp
+        href: netsh-winhttp.md
       - name: netsh winsock
         href: netsh-winsock.md
     - name: netstat
