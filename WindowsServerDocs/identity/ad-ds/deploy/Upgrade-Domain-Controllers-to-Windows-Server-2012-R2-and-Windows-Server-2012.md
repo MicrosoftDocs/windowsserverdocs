@@ -10,7 +10,7 @@ ms.custom: inhenke
 
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
-This article provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
+This article provides background information about Active Directory Domain Services in Windows Server 2012 R2 and Windows Server 2012 and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
 
 ## <a name="BKMK_UpgradeWorkflow"></a>Domain controller upgrade steps
 
@@ -22,7 +22,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 1. Check connectivity to the target server from the computer where you plan to run the installation.
 1. Check for availability of necessary operation master roles:
 
-   - To install the first DC that runs  Windows Server 2012  in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.
+   - To install the first DC that runs Windows Server 2012 in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.
    - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master.
    - To install or remove a domain in an existing forest, you need connectivity to the domain naming master.
    - Any domain controller installation also requires connectivity to the RID master.
@@ -139,11 +139,11 @@ There are some changes related to AD DS:
 - **Deprecation of Adprep32.exe**
    - There's only one version of Adprep.exe and it can be run as needed on 64-bit servers that run Windows Server 2008 or later. It can be run remotely, and must be run remotely if that targeted operations master role is hosted on a 32-bit operating system or Windows Server 2003.
 - **Deprecation of Dcpromo.exe**
-   - Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
+   - Dcpromo is deprecated although in Windows Server 2012 only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
 - **LMHash is disabled on user accounts**
   - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps described in the page [How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases](/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
 
-Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
+Beginning with Windows Server 2008, domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
 
 | Encryption type or policy | Windows Server 2008 default | Windows Server 2012 and Windows Server 2008 R2 default | Comment |
 |--|--|--|--|
@@ -154,7 +154,7 @@ Beginning with  Windows Server 2008 , domain controllers also have the following
 
 ## <a name="BKMK_SysReqs"></a>Operating system requirements
 
-The minimum system requirements for  Windows Server 2012  are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
+The minimum system requirements for Windows Server 2012 are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
 
 | Requirement | Value |
 | ---------- | ----- |
@@ -166,7 +166,7 @@ The minimum system requirements for  Windows Server 2012  are listed in the foll
 
 ### <a name="BKMK_DiskSpaceDCWin8"></a>Disk space requirements for upgrading domain controllers
 
-This section covers disk space requirements only for upgrading domain controllers from  Windows Server 2008  or  Windows Server 2008 R2 . For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008R2).
+This section covers disk space requirements only for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2. For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008R2).
 
 Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you'll be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](../../../administration/performance-tuning/role/active-directory-server/capacity-planning-for-active-directory-domain-services.md).
 
@@ -189,7 +189,7 @@ The following Windows client and Windows Server operating systems are supported 
 
 ## <a name="BKMK_UpgradePaths"></a>Supported in-place upgrade paths
 
-Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Server 2008 R2 can be upgraded to  Windows Server 2012 . You can't upgrade domain controllers that run Windows Server 2003 or 32-bit versions of Windows Server 2008. To replace them, install domain controllers that run a later version of Windows Server in the domain, and then remove the domain controllers that Windows Server 2003.
+Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Server 2008 R2 can be upgraded to Windows Server 2012. You can't upgrade domain controllers that run Windows Server 2003 or 32-bit versions of Windows Server 2008. To replace them, install domain controllers that run a later version of Windows Server in the domain, and then remove the domain controllers that Windows Server 2003.
 
 | If you're running these editions | You can upgrade to these editions |
 |--|--|
@@ -206,7 +206,7 @@ Due to a known issue, you can't upgrade a domain controller that runs a Server C
 
 ## <a name="BKMK_FunctionalLevels"></a>Functional level features and requirements
 
-Windows Server 2012  requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs  Windows Server 2012  to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. This means that domain controllers that run Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003 can operate in the same forest, but domain controllers that run Windows 2000 Server aren't supported and will block installation of a domain controller that runs Windows Server 2012. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked.
+Windows Server 2012 requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs Windows Server 2012 to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. This means that domain controllers that run Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003 can operate in the same forest, but domain controllers that run Windows 2000 Server aren't supported and will block installation of a domain controller that runs Windows Server 2012. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked.
 
 Windows 2000 domain controllers must be removed prior to adding Windows Server 2012 domain controllers to your forest. In this case, consider the following workflow:
 
