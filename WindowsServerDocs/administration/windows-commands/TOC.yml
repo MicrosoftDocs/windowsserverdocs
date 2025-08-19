@@ -1074,6 +1074,8 @@
         href: netsh-dump.md
       - name: netsh exec
         href: netsh-exec.md
+      - name: netsh http
+        href: netsh-http.md
       - name: netsh ipsec
         href: netsh-ipsec.md
       - name: netsh lan
