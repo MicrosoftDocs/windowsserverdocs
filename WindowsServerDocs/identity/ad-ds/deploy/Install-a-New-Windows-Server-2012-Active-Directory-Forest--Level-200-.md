@@ -145,7 +145,7 @@ The computer you are running Server Manager on pools itself automatically. To in
 ![Screenshot that shows how to access the Add Roles and Features menu option.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ManageAddRoles.png)
 
 #### Installation Type
-![Screenshot that shows the Installation Type page in teh Add Roles and Features Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectInstallationType.png)
+![Screenshot that shows the Installation Type page in the Add Roles and Features Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectInstallationType.png)
 
 The **Installation Type** dialog provides an option that does not support Active Directory Domain Services: the **Remote Desktop Services scenario based-installation**. That option only allows Remote Desktop Service in a multi-server distributed workload. If you select it, AD DS cannot install.
 
@@ -376,7 +376,7 @@ Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools
 
 For example:
 
-![Screenshot of a terminal window that shows where to provide the the -IncludeManagementTools argument.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallWinFeature.png)
+![Screenshot of a terminal window that shows where to provide the -IncludeManagementTools argument.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallWinFeature.png)
 
 To list all features and roles with their installation status, use **Get-WindowsFeature** without arguments. Specify **-ComputerName** argument for the installation status from a remote server.
 

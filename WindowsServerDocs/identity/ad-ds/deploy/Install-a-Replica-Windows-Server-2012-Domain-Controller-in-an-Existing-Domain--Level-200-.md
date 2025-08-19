@@ -311,7 +311,7 @@ For example:
 > For more information on how the installation and Adprep process works, see the [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).
 
 ### Results
-![Screenshot of the Results page that includes the the success or failure message for the promotion and any important administrative information.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)
+![Screenshot of the Results page that includes the success or failure message for the promotion and any important administrative information.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)
 
 The **Results** page shows the success or failure of the promotion and any important administrative information. If successful, the domain controller will automatically reboot after 10 seconds.
 
