@@ -620,8 +620,6 @@ items:
     items:
     - name: Netsh bridge
       href: technologies/netsh/netsh-bridge.md
-    - name: Netsh http commands
-      href: technologies/netsh/netsh-http.md
     - name: Netsh interface portproxy commands
       href: technologies/netsh/netsh-interface-portproxy.md
     - name: Netsh mbn commands
