@@ -561,6 +561,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh dnsclient](netsh-dnsclient.md)
   - [netsh dump](netsh-dump.md)
   - [netsh exec](netsh-exec.md)
+  - [netsh http](netsh-http.md)
   - [netsh ipsec](netsh-ipsec.md)
   - [netsh lan](netsh-lan.md)
   - [netsh namespace](netsh-namespace.md)
