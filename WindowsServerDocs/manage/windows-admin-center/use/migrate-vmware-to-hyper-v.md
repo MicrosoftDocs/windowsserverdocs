@@ -106,7 +106,7 @@ RHEL-based operating systems:
 
 For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
-## Install the VM Conversion extension in Windows Admin Center
+## Install the VM Conversion (Preview) extension in Windows Admin Center
 
 Complete the following steps to install the **VM Conversion** extension.
 
@@ -116,9 +116,11 @@ Complete the following steps to install the **VM Conversion** extension.
 
 1. The Available Extensions tab lists the extensions on the feed that are available for installation.
 
-1. Search for **VM Conversion Extension** in **Available extensions** and select **Install.**
+1. Search for **VM Conversion (Preview)** in **Available extensions** and select **Install.**
 
-1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion**.
+    :::image type="content" source="media/migrate-vmware-to-hyper-v/vm-conversion-available-extensions.png" alt-text="Screenshot of the VM Conversion (Preview) extension in the list of all Available extensions." lightbox="media/migrate-vmware-to-hyper-v/vm-conversion-available-extensions.png":::
+
+1. Once installed, ensure VM Conversion extension is visible in the Windows Admin Center under: **Extensions** > **VM Conversion (Preview)**.
 
 ## Connect to vCenter
 
@@ -132,7 +134,7 @@ When you first visit the extension, you need to connect your vSphere client endp
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v/configure-vmware-settings.png" alt-text="Screenshot showing how to configure VMware settings." lightbox="media/migrate-vmware-to-hyper-v/configure-vmware-settings.png":::
 
-## Synchronize virtual machines using the VM Conversion extension
+## Synchronize virtual machines using the VM Conversion (Preview) extension
 
 ### Synchronization prechecks
 
@@ -158,7 +160,7 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 1. Connect to the Hyper-V server in Windows Admin Center that you want the VM to be migrated.
 
-1. Go to the VM Conversion extension in the left panel under **Extensions** > **VM Conversion**.
+1. Go to the VM Conversion extension in the left panel under **Extensions** > **VM Conversion (Preview)**.
 
 1. In the virtual machine list, select up to 10 virtual machines to synchronize.
 
@@ -174,7 +176,7 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
 1. Wait for the sync to complete.
 
-## Migrate virtual machines using the VM Conversion extension
+## Migrate virtual machines using the VM Conversion (Preview) extension
 
 ### Migration prechecks
 
