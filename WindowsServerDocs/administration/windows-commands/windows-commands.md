@@ -566,6 +566,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh lan](netsh-lan.md)
   - [netsh namespace](netsh-namespace.md)
   - [netsh netio](netsh-netio.md)
+  - [netsh rpc](netsh-rpc.md)
   - [netsh set](netsh-set.md)
   - [netsh show](netsh-show.md)
   - [netsh wcn](netsh-wcn.md)
