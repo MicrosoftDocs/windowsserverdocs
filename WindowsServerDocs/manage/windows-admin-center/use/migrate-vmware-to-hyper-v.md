@@ -210,7 +210,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. The migrated virtual machine can be managed using the Hyper-V Manager, or in Windows Admin Center.
 
-Note: Migration requires the user to remain signed in with an active browser session. Closing the session may interrupt the process and cause it to stop progressing.
+Note: Migration requires the user to stay signed in with an active browser session. If the session is closed or times out, the migration may pause or stop progressing.
 
 ## View logs
 
