@@ -259,17 +259,6 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     ```powershell
     Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed
     ```
-
-- How to Create Network Shares on a Windows Server Cluster for Clustering Support?
-
-    To create a network share on a clustered Windows Server (for VM synchronization or migration scenarios), follow these steps:
-    1. RDP into your Windows Server Cluster node.
-    1. Press Windows + R, type cluadmin.msc, and hit Enter. This action opens the Failover Cluster Manager.
-    1. In the left pane, expand your cluster and navigate to Roles.
-    1. Follow the steps to [set up highly available file shares in Windows Server](https://4sysops.com/archives/setting-up-highly-available-file-shares-in-windows-server-2022/)
-    1. It can take a few minutes for the drive to become ready before it can be added as a network file share. Wait patiently if that happens.
-    1. Once configured, the network share folder is ready for use in VM synchronization and migration workflows.
-
 - Is VMware to Azure Local migration supported?
 
     No, the tool doesn't support migration to Azure Local. Use [Azure Migrate to migrate virtual machines to Azure Local](/azure/azure-local/migrate/migration-azure-migrate-vmware-overview).
