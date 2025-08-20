@@ -47,7 +47,7 @@ To update the certificate used by Windows Admin Center, you need the following p
    Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.Configuration" 
    ```
 
-1. Apply the new certificate using the following command, making sure to replace `<subject name>` with the subject name of the certificate. Make sure the certificate uses a unique subject name. The subject name can be found in the `LocalMachine\My\` certificate store on your computer.
+1. Apply the new certificate using the subject name of the certificate. Make sure the certificate uses a unique subject name. The subject name can be found in the `LocalMachine\My\` certificate store on your computer.
 
     ```powershell
     Get-ChildItem -Path Cert:\LocalMachine\My
@@ -83,11 +83,13 @@ To update the certificate used by Windows Admin Center, you need the following p
   
   1. Select the **Use the pre-installed TLS certificate** radio button, then select **Next**.
 
-      :::image type="content" source="../media/select-pre-installed-tls-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+      :::image type="content" source="../media/select-pre-installed-tls-certificate.png" alt-text="Screenshot of the Select TLS certificate screen.":::
 
-    1. Provide the thumbprint of your certificate. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
+  1. Provide the thumbprint of your certificate. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
 
-    1. Complete the wizard and start Windows Admin Center.
+      :::image type="content" source="../media/select-thumbprint-tls-cetificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+
+  1. Complete the wizard and start Windows Admin Center.
 
 ---
 
