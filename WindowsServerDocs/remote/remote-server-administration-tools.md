@@ -1,20 +1,24 @@
 ---
-title: Remote Server Administration Tools in Windows
-description: 
+title: Remote Server Administration Tools (RSAT) in Windows
+description: Learn about the available Remote Server Administration Tools and how to install, enable, and use RSAT on Windows Server and Windows 10 or 11 clients
+#customer intent: As an IT administrator, I want to manage Windows Server roles and features remotely from my Windows PC, so that I can efficiently administer servers without direct access.
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 08/18/2025
+ms.date: 08/20/2025
 zone_pivot_groups: windows-os-version-plus-client
-#customer intent: As an IT administrator, I want to manage Windows Server roles and features remotely from my Windows PC, so that I can efficiently administer servers without direct access.
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-gen-description
+  - ai-seo-date:08/20/2025
 ---
-# Remote Server Administration Tools in Windows
+# Remote Server Administration Tools (RSAT) in Windows
 
 Remote Server Administration Tools (RSAT) for Windows Server are a collection of utilities that enable IT administrators to remotely manage roles and features on Windows Server systems from a Windows client computer. This article provides an overview of the Remote Server Administration Tools (RSAT) for Windows. The article also shows you how to use them to manage Windows Server roles and features from a Windows Server or Windows client computer.
 
 The method to install the RSATs varies depending on your platform. Make sure to select your platform from the buttons at the start of the article.
 
-## What are Remote Server Administration Tools (RSAT)?
+## What are Remote Server Administration Tools?
 
  RSAT includes tools such as Server Manager, Microsoft Management Console (MMC) snap-ins, Windows PowerShell modules, and command-line utilities, allowing administrators to efficiently perform server management tasks without needing direct access to the server itself. These tools streamline remote administration, making it easier to configure, monitor, and troubleshoot Windows Server environments from virtually anywhere.
 
@@ -65,9 +69,9 @@ To use Remote Server Administration Tools, you need the following prerequisites:
 
 - A computer running one of the following operating systems:
 
-  - Windows 10 (version 1809 or later) Pro or Enterprise editions only
+  - Windows 10 (October 2018 Cumulative Update or later) Pro or Enterprise editions only
 
-  - Windows 11 Pro or Enterprise editions only
+  - Windows 11 Enterprise editions only
 
   - Any supported version of Windows Server
 
