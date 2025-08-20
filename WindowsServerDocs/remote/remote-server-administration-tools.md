@@ -139,7 +139,7 @@ To install Remote Server Administration Tools using the Install-WindowsFeature P
 
 :::zone-end
 
-::: zone pivot="windows-11"
+::: zone pivot="windows-client-11"
 
 ### Install RSAT as Feature on Demand
 
@@ -249,7 +249,7 @@ To install RSAT Windows Features using PowerShell, follow these steps:
 
 ::: zone-end
 
-::: zone pivot="windows-10"
+::: zone pivot="windows-client-10"
 
 ### Install RSAT as Feature on Demand
 
