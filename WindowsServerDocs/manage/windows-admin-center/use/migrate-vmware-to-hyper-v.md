@@ -210,6 +210,10 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. The migrated virtual machine can be managed using the Hyper-V Manager, or in Windows Admin Center.
 
+    > [!NOTE]
+    > Migration requires the user to stay signed in with an active browser session. If the session is closed or times out, the
+    > migration may pause or stop progressing.
+
 ## View logs
 
 ### Browser console logs
@@ -277,7 +281,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 - Is this tool available in Windows Admin Center in the Azure portal?
 
     No, the conversion tool is only available in Windows Admin Center on-premises.
-
+  
 - How is memory configured during virtual machine migration?
 
     During migration, memory is configured as static, even if the source virtual machine is set to use dynamic memory. This is a design choice to ensure migration stability and compatibility between VMware and Hyper-V memory management.
