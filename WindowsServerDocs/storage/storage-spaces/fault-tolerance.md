@@ -1,5 +1,5 @@
 ---
-title: Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters
+title: Fault tolerance and storage efficiency on Azure Local and Windows Server clusters
 description: A discussion of resiliency options in Storage Spaces Direct including mirroring and parity.
 author: robinharwood
 ms.author: roharwoo
@@ -7,7 +7,7 @@ ms.topic: concept-article
 ms.date: 04/17/2023
 ---
 
-# Fault tolerance and storage efficiency on Azure Stack HCI and Windows Server clusters
+# Fault tolerance and storage efficiency on Azure Local and Windows Server clusters
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
 

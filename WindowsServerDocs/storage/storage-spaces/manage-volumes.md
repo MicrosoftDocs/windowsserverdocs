@@ -1,6 +1,6 @@
 ---
-title: Manage volumes in Azure Stack HCI and Windows Server
-description: How to manage volumes in Azure Stack HCI and Windows Server by using Windows Admin Center or PowerShell.
+title: Manage volumes in Azure Local and Windows Server
+description: How to manage volumes in Azure Local and Windows Server by using Windows Admin Center or PowerShell.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
@@ -8,11 +8,11 @@ ms.reviewer: jgerend
 ms.date: 02/11/2025
 ---
 
-# Manage volumes in Azure Stack HCI and Windows Server
+# Manage volumes in Azure Local and Windows Server
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This article describes how to expand, move, or delete volumes in Azure Stack HCI and Windows Server by using either Windows Admin Center or PowerShell.
+This article describes how to expand, move, or delete volumes in Azure Local and Windows Server by using either Windows Admin Center or PowerShell.
 
 ## Prerequisites
 

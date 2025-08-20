@@ -1,13 +1,13 @@
 ---
-title: Plan volumes on Azure Stack HCI and Windows Server clusters
-description: How to plan storage volumes on Azure Stack HCI and Windows Server clusters.
+title: Plan volumes on Azure Local and Windows Server clusters
+description: How to plan storage volumes on Azure Local and Windows Server clusters.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 02/11/2025
 ---
 
-# Plan volumes on Azure Stack HCI and Windows Server clusters
+# Plan volumes on Azure Local and Windows Server clusters
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
 
@@ -18,7 +18,7 @@ This article provides guidance for how to plan cluster volumes to meet the perfo
 
 ## Review: What are volumes
 
-Volumes are where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of [Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview), the software-defined storage technology behind Azure Stack HCI and Windows Server.
+Volumes are where you put the files your workloads need, such as VHD or VHDX files for Hyper-V virtual machines. Volumes combine the drives in the storage pool to introduce the fault tolerance, scalability, and performance benefits of [Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview), the software-defined storage technology behind Azure Local and Windows Server.
 
    >[!NOTE]
    > We use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully.
@@ -116,7 +116,7 @@ In deployments with all three types of drives, only the fastest drives (NVMe) pr
 
 ## Choosing the size of volumes
 
-We recommend limiting the size of each volume to 64 TB in Azure Stack HCI.
+We recommend limiting the size of each volume to 64 TB in Azure Local.
 
    > [!TIP]
    > If you use a backup solution that relies on the Volume Shadow Copy service (VSS) and the Volsnap software provider—as is common with file server workloads—limiting the volume size to 10 TB will improve performance and reliability. Backup solutions that use the newer Hyper-V RCT API and/or ReFS block cloning and/or the native SQL backup APIs perform well up to 32 TB and beyond.

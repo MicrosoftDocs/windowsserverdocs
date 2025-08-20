@@ -1,6 +1,6 @@
 ---
-title: Adjust storage repair speed in Azure Stack HCI and Windows Server clusters
-description: How to adjust storage repair speed in Azure Stack HCI and Windows Server clusters by using Windows Admin Center or PowerShell.
+title: Adjust storage repair speed in Azure Local and Windows Server clusters
+description: How to adjust storage repair speed in Azure Local and Windows Server clusters by using Windows Admin Center or PowerShell.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
@@ -8,7 +8,7 @@ ms.reviewer: tinawu
 ms.date: 06/05/2023
 ---
 
-# Adjustable storage repair speed in Azure Stack HCI and Windows Server
+# Adjustable storage repair speed in Azure Local and Windows Server
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022
 
@@ -61,4 +61,4 @@ Set-StorageSubSystem -FriendlyName <name of cluster subsystem> -VirtualDiskRepai
 
 For more information, see also:
 
-- [Taking an Azure Stack HCI server offline for maintenance](/azure-stack/hci/manage/maintain-servers)
+- [Taking an Azure Local server offline for maintenance](/previous-versions/azure/azure-local/manage/maintain-servers)

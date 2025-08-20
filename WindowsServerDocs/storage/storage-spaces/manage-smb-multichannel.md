@@ -27,7 +27,7 @@ SMB Multichannel provides the following capabilities:
 
 Because SMB Multichannel is enabled by default, you do not have to install additional roles, role services, or features. The SMB client automatically detects and uses multiple network connections when the configuration is identified. However, SMB Multichannel has the following requirements:
 
-- At least two computers that run Azure Stack HCI, Windows Server, or Windows 10 operating system.
+- At least two computers that run Azure Local, Windows Server, or Windows 10 operating system.
 
 - At least one of the following configurations:
 
@@ -57,11 +57,11 @@ When SMB is deployed with SMB Multichannel, SMB creates multiple TCP/IP connecti
 
 ### NIC teaming
 
-Azure Stack HCI and Windows Server support the ability to combine multiple network adapters into one network adapter by using a feature called NIC teaming. Although a team always provides fault tolerance, when SMB is deployed without SMB Multichannel, SMB creates only one TCP/IP connection per team. This configuration leads to limitations in both the number of CPU cores that are engaged and the maximum use of the team bandwidth.
+Azure Local and Windows Server support the ability to combine multiple network adapters into one network adapter by using a feature called NIC teaming. Although a team always provides fault tolerance, when SMB is deployed without SMB Multichannel, SMB creates only one TCP/IP connection per team. This configuration leads to limitations in both the number of CPU cores that are engaged and the maximum use of the team bandwidth.
 
 When SMB is deployed with SMB Multichannel, SMB creates multiple TCP/IP connections for a single session to achieve a better balance across CPU cores and better use of the available bandwidth. NIC teaming continues to offer the failover capability, which works faster than using SMB Multichannel by itself. We also recommend NIC teaming because it offers failover capabilities to other workloads that do not rely on SMB, because those workloads cannot benefit from the failover capabilities of SMB Multichannel.
 
-If you’re using a dedicated set of network adapters for Storage Spaces Direct traffic, as is sometimes done with Azure Stack HCI, teaming these storage network adapters is strictly optional—it doesn’t provide any significant benefits or drawbacks.
+If you’re using a dedicated set of network adapters for Storage Spaces Direct traffic, as is sometimes done with Azure Local, teaming these storage network adapters is strictly optional—it doesn’t provide any significant benefits or drawbacks.
 
 >[!IMPORTANT]
 >On Windows Server 2012 R2 and earlier, do not use NIC teaming if you intend to use the RDMA capabilities of the network adapters. On these operating systems, a team of RDMA-capable network adapters is always reported as non-RDMA capable because teaming disables the RDMA capability of the network adapter.

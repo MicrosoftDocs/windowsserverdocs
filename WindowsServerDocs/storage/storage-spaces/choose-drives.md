@@ -1,13 +1,13 @@
 ---
-title: Choose drives for Azure Stack HCI and Windows Server clusters
-description: How to choose drives for Azure Stack HCI and Windows Server clusters to meet performance and capacity requirements.
+title: Choose drives for Azure Local and Windows Server clusters
+description: How to choose drives for Azure Local and Windows Server clusters to meet performance and capacity requirements.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 02/10/2025
 ---
 
-# Choose drives for Azure Stack HCI and Windows Server clusters
+# Choose drives for Azure Local and Windows Server clusters
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
 
@@ -15,7 +15,7 @@ This article provides guidance on how to choose drives to meet your performance 
 
 ## Drive types
 
-Storage Spaces Direct, the underlying storage virtualization technology behind Azure Stack HCI and Windows Server currently works with four types of drives:
+Storage Spaces Direct, the underlying storage virtualization technology behind Azure Local and Windows Server currently works with four types of drives:
 
 | Type of drive | Description |
 |----------------------|--------------------------|

@@ -11,13 +11,13 @@ ms.date: 11/25/2024
 
 >Applies to: Azure Stack HCI, versions 22H2 and later; Windows Server 2022 and Windows Server 2019
 
-Nested resiliency is a capability of [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) in Azure Stack HCI and Windows Server. It enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, so users, apps, and virtual machines continue to run without disruption. This article explains how nested resiliency works, provides step-by-step instructions to get started, and answers the most frequently asked questions.
+Nested resiliency is a capability of [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) in Azure Local and Windows Server. It enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, so users, apps, and virtual machines continue to run without disruption. This article explains how nested resiliency works, provides step-by-step instructions to get started, and answers the most frequently asked questions.
 
 ## Before you begin
 
 **Consider nested resiliency if:**
 
-- Your cluster runs one of these operating systems: Azure Stack HCI, version 22H2 or later, Windows Server 2019 or later; **and**
+- Your cluster runs one of these operating systems: Azure Local, version 22H2 or later, Windows Server 2019 or later; **and**
 - Your cluster has exactly two server nodes.
 
 **You can't use nested resiliency if:**
@@ -45,7 +45,7 @@ RAID 5+1 is an established form of distributed storage resiliency that provides 
 
 ### Resiliency options
 
-Storage Spaces Direct in Azure Stack HCI and Windows Server offers two resiliency options implemented in software, without the need for specialized RAID hardware:
+Storage Spaces Direct in Azure Local and Windows Server offers two resiliency options implemented in software, without the need for specialized RAID hardware:
 
 - **Nested two-way mirror.** Within each server, local resiliency is provided by two-way mirroring, and then further resiliency is provided by two-way mirroring between the two servers. It's essentially a four-way mirror, with two copies on each server that are located on different physical disks. Nested two-way mirroring provides uncompromising performance: writes go to all copies and reads come from any copy.
 
@@ -86,7 +86,7 @@ Find answers to frequently asked questions about nested resiliency.
 
 ### Can I convert an existing volume between two-way mirror and nested resiliency?
 
-No, volumes can't be converted between resiliency types. For new deployments on Azure Stack HCI, Windows Server 2022, or Windows Server 2019, decide ahead of time which resiliency type best fits your needs. If you're upgrading from Windows Server 2016, you can create new volumes with nested resiliency, migrate your data, and then delete the older volumes.
+No, volumes can't be converted between resiliency types. For new deployments on Azure Local, Windows Server 2022, or Windows Server 2019, decide ahead of time which resiliency type best fits your needs. If you're upgrading from Windows Server 2016, you can create new volumes with nested resiliency, migrate your data, and then delete the older volumes.
 
 ### Can I use nested resiliency with multiple types of capacity drives?
 

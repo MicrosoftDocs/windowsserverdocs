@@ -1,6 +1,6 @@
 ---
 title: Understand and deploy persistent memory 
-description: This article provides details on what persistent memory is and how to deploy it as storage in Azure Stack HCI and Windows Server.
+description: This article provides details on what persistent memory is and how to deploy it as storage in Azure Local and Windows Server.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
@@ -11,17 +11,17 @@ ms.date: 04/17/2023
 
 > Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
-Persistent memory (or PMem) is a new type of memory technology that retains its content through power cycles and can be used as top-tier storage, which is why you may hear people refer to PMem as "storage-class memory" or SCM. This article provides background on persistent memory and explains how to deploy it as the top storage tier in Azure Stack HCI and Windows Server.
+Persistent memory (or PMem) is a new type of memory technology that retains its content through power cycles and can be used as top-tier storage, which is why you may hear people refer to PMem as "storage-class memory" or SCM. This article provides background on persistent memory and explains how to deploy it as the top storage tier in Azure Local and Windows Server.
 
 ## What is persistent memory?
 
 Persistent memory is a type of non-volatile media that fits in a standard DIMM (memory) slot. It's slower than DRAM, but provides higher throughput than SSD and NVMe. Compared to DRAM, persistent memory modules come in much larger capacities and are less expensive per GB, however they are still more expensive than NVMe. Memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, or system crash. This means that you can use persistent memory modules as ultra-fast, persistent storage.
 
-Azure Stack HCI and Windows Server 2019 support using persistent memory as either a cache or a capacity drive. However, given the pricing model, persistent memory provides the most value as either a cache or as a small amount of dedicated storage for memory mapping data. In most cases, persistent memory drives are automatically used as cache drives, and anything slower is used as capacity drives. For more information about how to set up cache and capacity drives, see [Understanding the storage pool cache](cache.md) and [Plan volumes](plan-volumes.md).
+Azure Local and Windows Server 2019 support using persistent memory as either a cache or a capacity drive. However, given the pricing model, persistent memory provides the most value as either a cache or as a small amount of dedicated storage for memory mapping data. In most cases, persistent memory drives are automatically used as cache drives, and anything slower is used as capacity drives. For more information about how to set up cache and capacity drives, see [Understanding the storage pool cache](cache.md) and [Plan volumes](plan-volumes.md).
 
 ## Persistent memory concepts
 
-This section describes the basic concepts you'll need to understand in order to deploy persistent memory in Windows Server and Azure Stack HCI environments to reduce I/O bottlenecks and improve performance.
+This section describes the basic concepts you'll need to understand in order to deploy persistent memory in Windows Server and Azure Local environments to reduce I/O bottlenecks and improve performance.
 
 ### Access methods
 
@@ -31,7 +31,7 @@ There are two methods for accessing persistent memory. They are:
 - **Direct access (DAX)**, which operates like memory to get the lowest latency. You can only use DAX in combination with NTFS. **If you don't use DAX correctly, there is potential for data loss.** We strongly recommend that you use DAX with [Block translation table (BTT)](#block-translation-table) turned on to mitigate the risk of torn writes. To learn more, see [Understand and configure DAX](/windows-server/storage/storage-spaces/persistent-memory-direct-access).
 
 > [!WARNING]
-> DAX isn't supported on Azure Stack HCI environments. Azure Stack HCI only supports block access, with BTT turned on.
+> DAX isn't supported on Azure Local environments. Azure Local only supports block access, with BTT turned on.
 
 ### Regions
 
@@ -49,7 +49,7 @@ In block access mode, we recommend using BTT because all data uses block semanti
 
 ## Supported hardware
 
-The following table shows supported persistent memory hardware for Azure Stack HCI and Windows Server. Persistent memory is fully supported in Windows Server 2019, including Storage Spaces Direct.
+The following table shows supported persistent memory hardware for Azure Local and Windows Server. Persistent memory is fully supported in Windows Server 2019, including Storage Spaces Direct.
 
 | Persistent Memory Technology                                      | Windows Server 2016 | Azure Stack HCI v20H2/Windows Server 2019 |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
