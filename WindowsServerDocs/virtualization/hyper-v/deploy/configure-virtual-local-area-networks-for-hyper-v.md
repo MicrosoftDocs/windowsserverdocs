@@ -5,20 +5,20 @@ ms.topic: how-to
 ms.assetid: 8510a709-001c-4eee-b6d6-c451e8a8a836
 ms.author: mosagie
 author: meaghanlewis
-ms.date: 08/13/2024
+ms.date: 08/18/2025
 ---
 # Configure virtual local area networks for Hyper-V
 
 Virtual local area networks (VLANs) offer one way to isolate network traffic. VLANs are configured in switches and routers that support 802.1q. If you configure multiple VLANs and want communication to occur between them, you need to configure the network devices to allow that.
 
-You need the following to configure VLANs:
+To set up VLANs, make sure you have:
 
 - A physical network adapter and driver that supports 802.1q VLAN tagging.
 - A physical network switch that supports 802.1q VLAN tagging.
 
-On the host, you configure the virtual switch to allow network traffic on the physical switch port. This is for the VLAN IDs that you want to use internally with virtual machines. Next, you configure the virtual machine to specify the VLAN that the virtual machine uses for all network communications.
+On the host, set up the virtual switch to let network traffic on the physical switch port for the VLAN IDs you use with virtual machines. Then, set up the virtual machine to specify the VLAN it uses for all network communications.
 
-## To allow a virtual switch to use a VLAN
+## Allow a virtual switch to use a VLAN
 
 1. In Hyper-V Manager, select **Virtual Switch Manager** from the **Actions** pane on the right.
 
@@ -30,7 +30,7 @@ On the host, you configure the virtual switch to allow network traffic on the ph
 
 All traffic that goes through the physical network adapter connected to the virtual switch is tagged with the VLAN ID you set on the virtual switch and virtual machines.
 
-## To allow a virtual machine to use a VLAN
+## Allow a virtual machine to use a VLAN
 
 1. In Hyper-V Manager, under **Virtual Machines**, right-click the appropriate virtual machine and select **Settings**. Or, select the machine and then select **Settings** under the machine name in the right pane.
 
@@ -46,6 +46,6 @@ If the virtual machine needs to use more VLANs, do one of the following:
 
 - Configure the virtual network adapter in trunk mode by using the [Set-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan) cmdlet.
 
-## See also
+## Related content
 
-[Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md)
+[Hyper-V virtual switch](../../hyper-v/virtual-switch.md)

@@ -1084,6 +1084,8 @@
         href: netsh-namespace.md
       - name: netsh netio
         href: netsh-netio.md
+      - name: netsh rpc
+        href: netsh-rpc.md
       - name: netsh set
         href: netsh-set.md
       - name: netsh show
