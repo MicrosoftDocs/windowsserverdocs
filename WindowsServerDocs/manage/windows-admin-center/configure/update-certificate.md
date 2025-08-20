@@ -83,9 +83,11 @@ To update the certificate used by Windows Admin Center, you need the following p
 
   1. Provide the thumbprint of your certificate.
 
-      :::image type="content" source="select-thumbprint-tls-cetificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+      :::image type="content" source="../media/select-thumbprint-tls-cetificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
 
   1. Complete the wizard and start Windows Admin Center.
+
+---
 
 ## Troubleshooting
 
