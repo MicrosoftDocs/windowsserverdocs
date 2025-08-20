@@ -1,116 +1,365 @@
 ---
-title: Remote Server Administration Tools
-description: Top level topic for Remote Server Administration Tools
+title: Remote Server Administration Tools in Windows
+description: 
 ms.topic: how-to
-ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
-ms.date: 09/09/2020
+ms.date: 08/18/2025
+zone_pivot_groups: windows-os-version-plus-client
+#customer intent: As an IT administrator, I want to manage Windows Server roles and features remotely from my Windows PC, so that I can efficiently administer servers without direct access.
 ---
-# Remote Server Administration Tools
+# Remote Server Administration Tools in Windows
 
-This topic supports Remote Server Administration Tools for Windows 10.
+Remote Server Administration Tools (RSAT) for Windows Server are a collection of utilities that enable IT administrators to remotely manage roles and features on Windows Server systems from a Windows client computer. This article provides an overview of the Remote Server Administration Tools (RSAT) for Windows. The article also shows you how to use them to manage Windows Server roles and features from a Windows Server or Windows client computer.
 
-> [!IMPORTANT]
-> Starting with Windows 10 October 2018 Update, RSAT is included as a set of **Features on Demand** in Windows 10 itself. See **When to use which RSAT version** below for installation instructions.
+The method to install the RSATs varies depending on your platform. Make sure to select your platform from the buttons at the start of the article.
 
-RSAT lets IT admins manage Windows Server roles and features from a Windows 10 PC.
+## What are Remote Server Administration Tools (RSAT)?
 
-Remote Server Administration Tools includes Server Manager, Microsoft Management Console (mmc) snap-ins, consoles, Windows PowerShell cmdlets and providers, and some command-line tools for managing roles and features that run on Windows Server.
+ RSAT includes tools such as Server Manager, Microsoft Management Console (MMC) snap-ins, Windows PowerShell modules, and command-line utilities, allowing administrators to efficiently perform server management tasks without needing direct access to the server itself. These tools streamline remote administration, making it easier to configure, monitor, and troubleshoot Windows Server environments from virtually anywhere.
 
-Remote Server Administration Tools includes Windows PowerShell cmdlet modules that can be used to manage roles and features that are running on Remote servers. Although Windows PowerShell remote management is enabled by default on Windows Server 2016, it is not enabled by default on Windows 10. To run cmdlets that are part of Remote Server Administration Tools against a Remote server, run `Enable-PSremoting` in a Windows PowerShell session that has been opened with elevated user rights (that is, Run as Administrator) on your Windows client computer after installing Remote Server Administration Tools.
+### Available tools
 
-## <a name="BKMK_Thresh"></a>Remote Server Administration Tools for Windows 10
-Use Remote Server Administration Tools for Windows 10 to manage specific technologies on computers that are running Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and in limited cases,  Windows Server 2012 , or  Windows Server 2008 R2 .
+You can use the following RSATs from either a Windows Server or Windows client machine. The following table shows you which tools are available to each platform.
 
-Remote Server Administration Tools for Windows 10 includes support for remote management of computers that are running the Server Core installation option or the Minimal Server Interface configuration of Windows Server 2016,  Windows Server 2012 R2 , and in limited cases, the Server Core installation options of Windows Server 2012. However, Remote Server Administration Tools for Windows 10 cannot be installed on any versions of the Windows Server operating system.
+| RSAT Tool Name | Description | Windows Server | Windows client (Feature on Demand) | Windows client (DISM) |
+|--|--|:-:|:-:|:-:|
+| **Feature Administration Tools** | | | | |
+| BitLocker Drive Encryption Administration Utilities | Manage BitLocker Drive Encryption on remote servers. | ✅ | ✅ | ✅ |
+| BITS Server Extensions Tools | Administer Background Intelligent Transfer Service extensions. | ✅ | ❌ | ❌ |
+| DataCenterBridging LLDP Tools | Configure Data Center Bridging and LLDP settings. | ✅ | ✅ | ✅ |
+| Failover Clustering Tools | Manage and configure failover clusters. | ✅ | ✅ | ✅ |
+| IP Address Management (IPAM) Client | Administer IP address infrastructure using IPAM. | ✅ | ✅ | ✅ |
+| Network Load Balancing Tools | Configure and manage network load balancing clusters. | ✅ | ✅ | ✅ |
+| Shielded VM Tools | Manage Shielded Virtual Machines. | ✅ | ❌ | ❌ |
+| SNMP Tools | Administer SNMP services and settings. | ✅ | ❌ | ❌ |
+| Storage Migration Service Tools | Manage storage migration services. | ✅ | ✅ | ✅ |
+| Storage Replica Module for Windows PowerShell | Configure and manage storage replication. | ✅ | ✅ | ✅ |
+| System Insights Module for Windows PowerShell | Access predictive analytics for Windows Server. | ✅ | ✅ | ✅ |
+| WINS Server Tools | Manage Windows Internet Name Service (WINS) servers. | ✅ | ❌ | ❌ |
+| **Role Administration Tools** | | | | |
+| AD DS and AD LDS Tools | Manage Active Directory Domain Services and Lightweight Directory Services. | ✅ | ✅ | ✅ |
+| Hyper-V Management Tools | Manage Hyper-V hosts and virtual machines. | ✅ | ❌ | ✅ |
+| Remote Desktop Services Tools | Manage Remote Desktop Session Host, Gateway, and other RDS roles. | ✅ | ✅ | ✅ |
+| Windows Server Update Services Tools | Administer WSUS servers and manage updates for Windows systems. | ✅ | ✅ | ✅ |
+| Active Directory Certificate Services Tools | Manage AD Certificate Services and related components. | ✅ | ✅ | ✅ |
+| Active Directory Rights Management Services Tools | Administer AD Rights Management Services. | ✅ | ❌ | ❌ |
+| DHCP Server Tools | Administer and configure DHCP servers and scopes. | ✅ | ✅ | ✅ |
+| DNS Server Tools | Manage DNS servers, zones, and records. | ✅ | ✅ | ✅ |
+| Fax Server Tools | Manage fax server roles and settings. | ✅ | ❌ | ❌ |
+| File Services Tools | Administer shared folders, quotas, and file server resources. | ✅ | ✅<sup>1</sup> | ✅<sup>1</sup> |
+| Network Controller Management Tools | Manage network controllers in Windows Server. | ✅ | ✅ | ✅ |
+| Network Policy and Access Services Tools | Administer network policies and access services. | ✅ | ❌ | ❌ |
+| Print and Document Services Tools | Administer print servers and printers. | ✅ | ❌ | ❌ |
+| Remote Access Management Tools | Manage remote access roles and VPN services. | ✅ | ✅ | ✅ |
+| Volume Activation Tools | Configure and manage volume activation services. | ✅ | ✅ | ✅ |
+| Windows Deployment Services Tools | Manage Windows Deployment Services for network-based OS installations. | ✅ | ❌ | ❌ |
 
-### Tools available in this release
-For a list of the tools available in Remote Server Administration Tools for Windows 10, see the table in [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems).
+1. Tools for managing Services for NFS on local and remote computers can be added as a Windows Optional Feature using DISM.
 
-### System requirements
-Remote Server Administration Tools for Windows 10 can be installed only on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1, or other system-on-chip devices.
+To learn more about the available Features on Demand RSAT, see the [list of RSAT tools available via **Features on Demand**](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat).
 
-Remote Server Administration Tools for Windows 10 runs on both x86-based and x64-based editions of Windows 10.
+## Prerequisites
 
-> [!IMPORTANT]
-> Remote Server Administration Tools for Windows 10 should not be installed on a computer that is running administration tools packs for Windows 8.1, Windows 8,  Windows Server 2008 R2,  Windows Server 2008, Windows Server 2003 or Windows 2000 Server. Remove all older versions of Administration Tools Pack or Remote Server Administration Tools, including earlier prerelease versions, and releases of the tools for different languages or locales from the computer before you install Remote Server Administration Tools for Windows 10.
+To use Remote Server Administration Tools, you need the following prerequisites:
 
-To use this release of Server Manager to access and manage Remote servers that are running  Windows Server 2012 R2 ,  Windows Server 2012 , or  Windows Server 2008 R2 , you must install several updates to make the older Windows Server operating systems manageable by using Server Manager. For detailed information about how to prepare  Windows Server 2012 R2,  Windows Server 2012, and  Windows Server 2008 R2 for management by using Server Manager in Remote Server Administration Tools for Windows 10, see [Manage Multiple, Remote Servers with Server Manager](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831456(v=ws.11)).
+- A computer running one of the following operating systems:
 
-Windows PowerShell and Server Manager remote management must be enabled on remote servers to manage them by using tools that are part of Remote Server Administration Tools for Windows 10. Remote management is enabled by default on servers that are running Windows Server 2016,  Windows Server 2012 R2, and  Windows Server 2012. For more information about how to enable remote management if it has been disabled, see [Manage multiple, remote servers with Server Manager](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831456(v=ws.11)).
+  - Windows 10 (version 1809 or later) Pro or Enterprise editions only
 
-## Install, uninstall and turn off/on RSAT tools
+  - Windows 11 Pro or Enterprise editions only
 
-### Use Features on Demand (FoD) to install specific RSAT tools on Windows 10 October 2018 Update, or later.
+  - Any supported version of Windows Server
 
-Starting with Windows 10 October 2018 Update, RSAT is included as a set of **Features on Demand** right from Windows 10. Now, instead of downloading an RSAT package you can just go to **Manage optional features** in **Settings** and click **Add a feature** to see the list of available RSAT tools. Select and install the specific RSAT tools you need. To see installation progress, click the **Back** button to view status on the **Manage optional features** page.
+- Administrative privileges on the computer where RSAT is installed.
 
-See the [list of RSAT tools available via **Features on Demand**](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to installing via the graphical **Settings** app, you can also install specific RSAT tools via command line or automation using [**DISM /Add-Capability**](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
+- Administrative privileges on the remote Windows Server systems for the service you want to manage.
 
-One benefit of Features on Demand is that installed features persist across Windows 10 version upgrades.
+- Network connectivity to the remote Windows Server systems you want to manage.
 
-#### To uninstall specific RSAT tools on Windows 10 October 2018 Update or later (after installing with FoD)
+## Install Remote Server Administration Tools
 
-On Windows 10, open the **Settings** app, go to **Manage optional features**, select and uninstall the specific RSAT tools you wish to remove. Note that in some cases, you will need to manually uninstall dependencies. Specifically, if RSAT tool A is needed by RSAT tool B, then choosing to uninstall RSAT tool A will fail if RSAT tool B is still installed. In this case, uninstall RSAT tool B first, and then uninstall RSAT tool A. Also note that in some cases, uninstalling an RSAT tool may appear to succeed even though the tool is still installed. In this case, restarting the PC will complete the removal of the tool.
+:::zone pivot="windows-server-2025,windows-server-2022, windows-server-2019, windows-server-2016"
 
-See the [list of RSAT tools including dependencies](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). In addition to uninstalling via the graphical Settings app, you can also uninstall specific RSAT tools via command line or automation using [**DISM /Remove-Capability**](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
+To install Remote Server Administration Tools on Windows Server, select your preferred method:
 
-### When to use which RSAT version
+### [Server Manager](#tab/server-manager)
 
-If you have a version of Windows 10 prior to the October 2018 Update (1809), you will not be able to use **Features on Demand**. You will need to download and install the RSAT package.
+To install RSATs using Server Manager follow these steps:
 
-- **Install RSAT FODs directly from Windows 10, as outlined above**:
-When installing on Windows 10 October 2018 Update (1809) or later, for managing Windows Server 2019 or previous versions.
+1. Sign in to the Windows Server computer with an account that has administrative privileges.
 
-- **Download and install WS_1803 RSAT package, as outlined below**:
-When installing on Windows 10 April 2018 Update (1803) or earlier, for managing Windows Server, version 1803 or Windows Server, version 1709.
+1. Open **Server Manager** from the Start menu or taskbar.
 
-- **Download and install WS2016 RSAT package, as outlined below**:
-When installing on Windows 10 April 2018 Update (1803) or earlier, for managing Windows Server 2016 or previous versions.
+1. In Server Manager, select on **Manage** in the top right corner.
 
-#### <a name="BKMK_installthresh"></a>Download the RSAT package to install Remote Server Administration Tools for Windows 10
+1. Select **Add Roles and Features** from the dropdown menu.
 
-1.  Download the Remote Server Administration Tools for Windows 10 package from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=404281). You can either run the installer from the Download Center website, or save the download package to a local computer or share.
+1. In the **Add Roles and Features Wizard**, select **Next** until you reach the **Features** section.
 
-    > [!IMPORTANT]
-    > You can only install Remote Server Administration Tools for Windows 10 on computers that are running Windows 10. Remote Server Administration Tools cannot be installed on computers that are running Windows RT 8.1 or other system-on-chip devices.
+1. In the **Select features** section, scroll down to find the **Remote Server Administration Tools** category.
 
-2.  If you save the download package to a local computer or share, double-click the installer program, **WindowsTH-KB2693643-x64.msu** or **WindowsTH-KB2693643-x86.msu**, depending on the architecture of the computer on which you want to install the tools.
+1. Expand the **Remote Server Administration Tools** category to see the available tools.
 
-3.  When you are prompted by the **Windows Update Standalone Installer** dialog box to install the update, click **Yes**.
+1. Select the specific tools you want to install by checking the corresponding checkboxes.
 
-4.  Read and accept the license terms. Click **I accept**.
+1. Select **Next** and then select **Install** to begin the installation process.
 
-5.  Installation requires a few minutes to finish.
+1. Wait for the installation to complete, then select **Close**.
 
-##### To uninstall Remote Server Administration Tools for Windows 10 after RSAT package install)
+1. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting ** **Windows Tools** from the Start menu.
 
-1. On the desktop, click **Start**, click **All Apps**, click **Windows System**, and then click **Control Panel**.
+### [Windows PowerShell](#tab/windows-powershell)
 
-2. Under **Programs**, click **Uninstall a program**.
+To install Remote Server Administration Tools using the Install-WindowsFeature PowerShell cmdlet, follow these steps:
 
-3. Click **View installed updates**.
+1. Sign in to the Windows Server computer with an account that has administrative privileges.
+1. Open **Windows PowerShell** with administrative privileges (Run as Administrator).
+1. To review the tools available for installation, run the following command and take note of the specific tools you want to install:
 
-4. Right-click **Update for Microsoft Windows (KB2693643)**, and then click **Uninstall**.
+   ```powershell
+   Get-WindowsFeature -Name RSAT*
+   ```
 
-5. When you are asked if you are sure you want to uninstall the update, click **Yes**.
-   S
-   ##### To turn off specific tools (after RSAT package install)
+1. Install the desired RSAT tools by running the following command, replacing `<FeatureName>` with the specific feature names you want to install. You can specify multiple features by separating them with commas.
 
-6. On the desktop, click **Start**, click **All Apps**, click **Windows System**, and then click **Control Panel**.
+   ```powershell
+   Install-WindowsFeature -Name <FeatureName> -IncludeAllSubFeature
+   ```
 
-7. Click **Programs**, and then in **Programs and Features** click **Turn Windows features on or off**.
+   For example, to install the Active Directory Domain Services tools, you would run:
 
-8. In the **Windows Features** dialog box, expand **Remote Server Administration Tools**, and then expand either **Role Administration Tools** or **Feature Administration Tools**.
+   ```powershell
+   Install-WindowsFeature -Name RSAT-AD-Tools -IncludeAllSubFeature
+   ```
 
-9. Clear the check boxes for any tools that you want to turn off.
+1. After the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
 
-   > [!NOTE]
-   > If you turn off Server Manager, the computer must be restarted, and tools that were accessible from the **Tools** menu of Server Manager must be opened from the **Administrative Tools** folder.
+---
 
-10. When you are finished turning off tools that you do not want to use, click **OK**.
+:::zone-end
+
+::: zone pivot="windows-11"
+
+### Install RSAT as Feature on Demand
+
+Some RSAT tools are available as **Features on Demand** (FoD), review the [Available tools](#available-tools) to see which tools are available as Features on Demand (FoD).
+
+To install Remote Server Administration Tools on Windows client, select your preferred method:
+
+### [Desktop experience](#tab/desktop-experience)
+
+To install RSAT using the desktop experience:
+
+1. Sign in to the Windows client computer with an account that has administrative privileges.
+
+1. Select **Start**, type _Optional Features_ in the search box, then select **Add an optional feature**.
+
+1. Scan the list to see if the tool you need is already installed. If not, at the top of the page, select **Views features**, then:
+
+    - Search for and select the tool you want to install, select **Next**, then **Install**
+
+    - Search for and select the tool you want to install, select **Next**, then **Install**
+
+1. Review the installation progress. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
+
+### [PowerShell](#tab/powershell)
+
+To install Remote Server Administration Tools using PowerShell, follow these steps:
+
+1. Run PowerShell as an Administrator.
+
+1. Run the following cmdlet to make sure that OpenSSH is available:
+
+   ```powershell
+   Get-WindowsCapability -Online | Where-Object Name -like 'RSAT*'
+   ```
+
+   The command should return the following output if neither are already installed:
+
+   ```powershell
+   Name  : Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+   State : NotPresent
+   ```
+
+1. After that, run the following cmdlets to the tool you need, replacing `<FeatureName>` with the specific feature names you want to install. You can specify multiple features by separating them with commas:
+
+    ```powershell
+    # Install the Active Directory Domain Services tools
+    Add-WindowsCapability -Online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+    ```
+
+    Both commands should return the following output:
+
+    ```powershell
+    Path          :
+    Online        : True
+    RestartNeeded : False
+    ```
+
+---
+
+### Install RSAT as a Windows Feature
+
+To install RSAT using the Windows Features dialog, select your preferred method:
+
+### [Desktop experience](#tab/desktop-experience)
+
+To install RSAT using the desktop experience:
+
+1. Select **Start**, type _Windows Features_ in the search box, then select **Turn Windows features on or off**.
+
+1. In the **Windows Features** dialog box, search for tool you want to install, such as **Hyper-V Management Tools**, and check the box next to it. You may need to expand the category to see the specific tool.
+
+1. Select **OK** to install the selected RSAT tools.
+
+1. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
+
+### [PowerShell](#tab/powershell)
+
+To install RSAT Windows Features using PowerShell, follow these steps:
+
+1. Run PowerShell as an Administrator.
+
+1. Run the following cmdlet to make sure that RSAT is available. If you prefer, you can replace `*Tools*` with the specific feature name you want to install:
+
+   ```powershell
+   Get-WindowsOptionalFeature -Online -FeatureName *tools* | FT FeatureName,DisplayName,Description,State
+   ```
+
+   The command should return the following output if neither are already installed:
+
+   ```powershell
+   FeatureName                  DisplayName                                 Description
+   -----------                  -----------                                 -----------
+   IIS-WebServerManagementTools Web Management Tools                        Install Web management console and tools
+   IIS-ManagementScriptingTools IIS Management Scripts and Tools            Manage a local Web server with IIS configur...
+   Microsoft-Hyper-V-Tools-All  Hyper-V Management Tools                    Includes GUI and command-line tools for man...
+   ```
+
+1. Install the desired RSAT tools by running the following command, replacing `<FeatureName>` with the specific feature names you want to install. Using the `-All` switch enables the parent and all of its default dependencies if required by the feature.
+
+   ```powershell
+   Enable-WindowsOptionalFeature -Online -FeatureName <FeatureName> -All
+   ```
+
+1. After the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
+
+---
+
+::: zone-end
+
+::: zone pivot="windows-10"
+
+### Install RSAT as Feature on Demand
+
+Some RSAT tools are available as **Features on Demand** (FoD), review the [Available tools](#available-tools) to see which tools are available as Features on Demand (FoD).
+
+To install Remote Server Administration Tools on Windows client, select your preferred method:
+
+### [Desktop experience](#tab/desktop-experience)
+
+To install RSAT using the desktop experience:
+
+1. Sign in to the Windows client computer with an account that has administrative privileges.
+
+1. Select **Start**, type _Optional Features_ in the search box, then select **Optional Features** (also referred to as **Manage optional features**).
+
+1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
+
+    - Search for the tool you want to install, then select **Install**
+
+    - Search for the tool you want to install, then select **Install**
+
+1. Review the installation progress. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
+
+### [PowerShell](#tab/powershell)
+
+
+To install Remote Server Administration Tools using PowerShell, follow these steps:
+
+1. Run PowerShell as an Administrator.
+
+1. Run the following cmdlet to make sure that OpenSSH is available:
+
+   ```powershell
+   Get-WindowsCapability -Online | Where-Object Name -like 'RSAT*'
+   ```
+
+   The command should return the following output if neither are already installed:
+
+   ```powershell
+   Name  : Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+   State : NotPresent
+   ```
+
+1. After that, run the following cmdlets to the tool you need, replacing `<FeatureName>` with the specific feature names you want to install. You can specify multiple features by separating them with commas:
+
+    ```powershell
+    # Install the Active Directory Domain Services tools
+    Add-WindowsCapability -Online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
+    ```
+
+    Both commands should return the following output:
+
+    ```powershell
+    Path          :
+    Online        : True
+    RestartNeeded : False
+    ```
+
+---
+
+### Install RSAT as a Windows Feature
+
+To install RSAT using the Windows Features dialog, select your preferred method:
+
+### [Desktop experience](#tab/desktop-experience)
+
+To install RSAT using the desktop experience:
+
+1. Select **Start**, type _Windows Features_ in the search box, then select **Turn Windows features on or off**.
+
+1. In the **Windows Features** dialog box, search for tool you want to install, such as **Hyper-V Management Tools**, and check the box next to it. You may need to expand the category to see the specific tool.
+
+1. Select **OK** to install the selected RSAT tools.
+
+1. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
+
+### [PowerShell](#tab/powershell)
+
+To install RSAT Windows Features using PowerShell, follow these steps:
+
+1. Run PowerShell as an Administrator.
+
+1. Run the following cmdlet to make sure that RSAT is available. If you prefer, you can replace `*Tools*` with the specific feature name you want to install:
+
+   ```powershell
+   Get-WindowsOptionalFeature -Online -FeatureName *tools* | FT FeatureName,DisplayName,Description,State
+   ```
+
+   The command should return the following output if neither are already installed:
+
+   ```powershell
+   FeatureName                  DisplayName                                 Description
+   -----------                  -----------                                 -----------
+   IIS-WebServerManagementTools Web Management Tools                        Install Web management console and tools
+   IIS-ManagementScriptingTools IIS Management Scripts and Tools            Manage a local Web server with IIS configur...
+   Microsoft-Hyper-V-Tools-All  Hyper-V Management Tools                    Includes GUI and command-line tools for man...
+   ```
+
+1. Install the desired RSAT tools by running the following command, replacing `<FeatureName>` with the specific feature names you want to install. Using the `-All` switch enables the parent and all of its default dependencies if required by the feature.
+
+   ```powershell
+   Enable-WindowsOptionalFeature -Online -FeatureName <FeatureName> -All
+   ```
+
+1. After the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
+
+---
+
+:::zone-end
+
 
 ### Run Remote Server Administration Tools
 
