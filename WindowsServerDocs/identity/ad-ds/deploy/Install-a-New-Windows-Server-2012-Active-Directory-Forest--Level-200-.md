@@ -145,7 +145,7 @@ The computer you are running Server Manager on pools itself automatically. To in
 ![Screenshot that shows how to access the Add Roles and Features menu option.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ManageAddRoles.png)
 
 #### Installation Type
-![Screenshot that shows the Installation Type page in teh Add Roles and Features Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectInstallationType.png)
+![Screenshot that shows the Installation Type page in the Add Roles and Features Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_SelectInstallationType.png)
 
 The **Installation Type** dialog provides an option that does not support Active Directory Domain Services: the **Remote Desktop Services scenario based-installation**. That option only allows Remote Desktop Service in a multi-server distributed workload. If you select it, AD DS cannot install.
 
@@ -243,7 +243,7 @@ A new forest does not need new credentials for the domain's Administrator accoun
 #### Domain Controller Options
 ![Screenshot that shows the Domain Controller Options in the Active Directory Domain Services Configuration Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_DCOptions_Forest.gif)
 
-The **Domain Controller Options** enables you to configure the **forest functional level** and **domain functional level** for the new forest root domain. By default, these settings are  Windows Server 2012  in a new forest root domain. The  Windows Server 2012  forest functional level does not provide any new functionality over the Windows Server 2008 R2 forest functional level. The  Windows Server 2012  domain functional level is required only in order to implement the new Kerberos settings "always provide claims" and "Fail unarmored authentication requests." A primary use for functional levels in  Windows Server 2012  is to restrict participation in the domain to domain controllers that meet minimum-allowed operating system requirements. In other words, you can specify  Windows Server 2012  domain functional level only domain controllers that run  Windows Server 2012  can host the domain.  Windows Server 2012  implements a new domain controller flag called **DS_WIN8_REQUIRED** in the **DSGetDcName** function of NetLogon that exclusively locates  Windows Server 2012  domain controllers. This allows you the flexibility of a more homogeneous or heterogeneous forest in terms of which operating systems are permitted to be run on domain controllers.
+The **Domain Controller Options** enables you to configure the **forest functional level** and **domain functional level** for the new forest root domain. By default, these settings are Windows Server 2012 in a new forest root domain. The Windows Server 2012 forest functional level does not provide any new functionality over the Windows Server 2008 R2 forest functional level. The Windows Server 2012 domain functional level is required only in order to implement the new Kerberos settings "always provide claims" and "Fail unarmored authentication requests." A primary use for functional levels in Windows Server 2012 is to restrict participation in the domain to domain controllers that meet minimum-allowed operating system requirements. In other words, you can specify Windows Server 2012 domain functional level only domain controllers that run Windows Server 2012 can host the domain. Windows Server 2012 implements a new domain controller flag called **DS_WIN8_REQUIRED** in the **DSGetDcName** function of NetLogon that exclusively locates Windows Server 2012 domain controllers. This allows you the flexibility of a more homogeneous or heterogeneous forest in terms of which operating systems are permitted to be run on domain controllers.
 
 For more information about domain controller Location, review [Directory Service Functions](/windows/win32/ad/directory-service-functions).
 
@@ -376,7 +376,7 @@ Install-WindowsFeature -name AD-Domain-Services -IncludeManagementTools
 
 For example:
 
-![Screenshot of a terminal window that shows where to provide the the -IncludeManagementTools argument.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallWinFeature.png)
+![Screenshot of a terminal window that shows where to provide the -IncludeManagementTools argument.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallWinFeature.png)
 
 To list all features and roles with their installation status, use **Get-WindowsFeature** without arguments. Specify **-ComputerName** argument for the installation status from a remote server.
 
