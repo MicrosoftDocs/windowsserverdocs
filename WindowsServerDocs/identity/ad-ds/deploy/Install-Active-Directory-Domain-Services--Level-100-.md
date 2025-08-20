@@ -12,7 +12,7 @@ ms.date: 04/18/2025
 
 # Install Active Directory Domain Services
 
-This topic explains how to install Active Directory Domain Services (AD DS) in  Windows Server by using any of the following methods:
+This topic explains how to install Active Directory Domain Services (AD DS) in Windows Server by using any of the following methods:
 
 - Windows PowerShell
 
@@ -33,8 +33,8 @@ The following credentials are required to run Adprep.exe and install AD DS.
     > [!NOTE]
     > If you don't run adprep.exe command separately and you're installing the first domain controller that runs Windows Server in an existing domain or forest, you're prompted to supply credentials to run Adprep commands. The credential requirements are as follows:
     >
-    > To introduce the first  Windows Server domain controller in the forest, you need to supply credentials for a member of Enterprise Admins group, the Schema Admins group, and the Domain Admins group in the domain that hosts the schema master.
-    > To introduce the first  Windows Server domain controller in a domain, you need to supply credentials for a member of the Domain Admins group.
+    > To introduce the first Windows Server domain controller in the forest, you need to supply credentials for a member of Enterprise Admins group, the Schema Admins group, and the Domain Admins group in the domain that hosts the schema master.
+    > To introduce the first Windows Server domain controller in a domain, you need to supply credentials for a member of the Domain Admins group.
     > To introduce the first read-only domain controller (RODC) in the forest, you need to supply credentials for a member of the Enterprise Admins group.
 
 ## Install AD DS by Using Windows PowerShell
@@ -151,7 +151,7 @@ Use the cmdlet [Install-ADDSDomain](/powershell/module/addsdeployment/install-ad
 For example, to use credentials of **corp\EnterpriseAdmin1** to create a new child domain named **child**, with parent domain named **corp.contoso.com**, install DNS server, create a DNS delegation in the **corp.contoso.com** domain, set domain functional level to **Windows Server 2025**, make the domain controller a global catalog server in a site named **Houston**, use **DC1.corp.contoso.com** as the replication source domain controller, install the Active Directory database and SYSVOL on the D:\ drive, install the log files on the E:\ drive, and be prompted to provide the Directory Services Restore Mode password, but not prompted to confirm the command, type:
 
 ```powershell
-Install-ADDSDomain -SafeModeAdministratorPassword -Credential (get-credential corp\EnterpriseAdmin1) -NewDomainName child -ParentDomainName corp.contoso.com -InstallDNS -CreateDNSDelegation -DomainMode Win2025 -ReplicationSourceDC DC1.corp.contoso.com -SiteName Houston -DatabasePath "d:\NTDS" "SYSVOLPath "d:\SYSVOL" -LogPath "e:\Logs" -Confirm:$False
+Install-ADDSDomain -SafeModeAdministratorPassword -Credential (get-credential corp\EnterpriseAdmin1) -NewDomainName child -ParentDomainName corp.contoso.com -InstallDNS -CreateDNSDelegation -DomainMode Win2025 -ReplicationSourceDC DC1.corp.contoso.com -SiteName Houston -DatabasePath "d:\NTDS" -SYSVOLPath "d:\SYSVOL" -LogPath "e:\Logs" -Confirm:$False
 ```
 
 ### Install an additional (replica) domain controller using Windows PowerShell
@@ -189,7 +189,7 @@ Use the cmdlet [Add-ADDSReadOnlyDomainControllerAccount](/powershell/module/adds
 For example, to create an RODC account named RODC1:
 
 ```powershell
-Add-ADDSReadOnlyDomainControllerAccount -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName Boston DelegatedAdministratoraccountName AdminUser
+Add-ADDSReadOnlyDomainControllerAccount -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName Boston -DelegatedAdministratorAccountName AdminUser
 ```
 
 Then run the following commands on the server that you want to attach to the RODC1 account. The server can't be joined to the domain. First, install the AD DS server role and management tools:
@@ -198,17 +198,17 @@ Then run the following commands on the server that you want to attach to the ROD
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```
 
-The run the following command to create the RODC:
+Then run the following command to create the RODC:
 
 ```powershell
 Install-ADDSDomainController -DomainName corp.contoso.com -SafeModeAdministratorPassword (Read-Host -Prompt "DSRM Password:" -AsSecureString) -Credential (Get-Credential Corp\AdminUser) -UseExistingAccount
 ```
 
-Press **Y** to confirm or include the **"confirm** argument to prevent the confirmation prompt.
+Press **Y** to confirm or include the **"-Confirm:$false"** argument to prevent the confirmation prompt.
 
 ## Install AD DS using Server Manager
 
-AD DS can be installed in Windows Server using the Add Roles Wizard in Server Manager, followed by the Active Directory Domain Services Configuration Wizard, which is new beginning in  Windows Server 2012. The Active Directory Domain Services Installation Wizard (dcpromo.exe) is deprecated beginning in Windows Server 2012.
+AD DS can be installed in Windows Server using the Add Roles Wizard in Server Manager, followed by the Active Directory Domain Services Configuration Wizard, which is new beginning in Windows Server 2012. The Active Directory Domain Services Installation Wizard (dcpromo.exe) is deprecated beginning in Windows Server 2012.
 
 The following sections explain how to create server pools in order to install and manage AD DS on multiple servers, and how to use the wizards to install AD DS.
 
@@ -245,7 +245,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
 
 9. On the **Results** page, verify that the installation succeeded, and select **Promote this server to a domain controller** to start the Active Directory Domain Services Configuration Wizard.
 
-    ![Screenshot of the INstallation progress page of the Add Roles and Features Wizard with the Promote this server to a domain controller option called out.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)
+    ![Screenshot of the Installation progress page of the Add Roles and Features Wizard with the Promote this server to a domain controller option called out.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)
 
     > [!IMPORTANT]
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by selecting Tasks in Server Manager.
@@ -289,7 +289,7 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
 
     - If you're adding a domain controller to an existing domain, select the domain controller that you want to replicate the AD DS installation data from (or allow the wizard to select any domain controller). If you're installing from media, select **Install from media path** type and verify the path to the installation source files, and then select **Next**.
 
-        You can't use install from media (IFM) to install the first domain controller in a domain. IFM doesn't work across different operating system versions. In other words, in order to install an additional domain controller that runs Windows Server by using IFM, you must create the backup media on a  Windows Server domain controller. For more information about IFM, see [Installing an Additional Domain Controller by Using IFM](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816722(v=ws.10)).
+        You can't use install from media (IFM) to install the first domain controller in a domain. IFM doesn't work across different operating system versions. In other words, in order to install an additional domain controller that runs Windows Server by using IFM, you must create the backup media on a Windows Server domain controller. For more information about IFM, see [Installing an Additional Domain Controller by Using IFM](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816722(v=ws.10)).
 
 15. On the **Paths** page, type the locations for the Active Directory database, log files, and SYSVOL folder (or accept default locations), and select **Next**.
 
