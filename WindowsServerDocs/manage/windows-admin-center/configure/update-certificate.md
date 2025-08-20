@@ -47,13 +47,17 @@ To update the certificate used by Windows Admin Center, you need the following p
    Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.Configuration" 
    ```
 
-1. Apply the new certificate using the following command, making sure to replace `<subject name>` with the subject name of the certificate. Make sure the certificate uses a unique subject name.
+1. Apply the new certificate using the following command, making sure to replace `<subject name>` with the subject name of the certificate. Make sure the certificate uses a unique subject name. The subject name can be found in the `LocalMachine\My\` certificate store on your computer.
+
+    ```powershell
+    Get-ChildItem -Path Cert:\LocalMachine\My
+    ```
 
    ```powershell
    Set-WACCertificateSubjectName -SubjectName "<subject name>" 
    ```
 
-   Alternatively, you can use the SHA1 thumbprint of the certificate using the **Thumbprint** parameter.
+   Alternatively, you can use the SHA1 thumbprint of the certificate using the **Thumbprint** parameter. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
 
    ```powershell
    Set-WACCertificateSubjectName -Thumbprint "<thumbprint>"
@@ -77,15 +81,13 @@ To update the certificate used by Windows Admin Center, you need the following p
 
   1. Advance through the wizard to the **Select TLS certificate** screen.
   
-      :::image type="content" source="../media/select-tls-certificate.png" alt-text="Screenshot of the select TLS certificate screen.":::
-
   1. Select the **Use the pre-installed TLS certificate** radio button, then select **Next**.
 
-  1. Provide the thumbprint of your certificate.
+      :::image type="content" source="../media/select-pre-installed-tls-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
 
-      :::image type="content" source="../media/select-thumbprint-tls-cetificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+    1. Provide the thumbprint of your certificate. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
 
-  1. Complete the wizard and start Windows Admin Center.
+    1. Complete the wizard and start Windows Admin Center.
 
 ---
 
