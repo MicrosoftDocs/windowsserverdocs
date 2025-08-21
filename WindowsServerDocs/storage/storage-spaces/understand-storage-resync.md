@@ -77,7 +77,7 @@ Series                       Time                Value Unit
 ClusterNode.Storage.Degraded 01/11/2019 16:26:48     214 GB
 ```
 
-Windows Admin Center uses Health faults to set the status and color of the cluster nodes. On the HCI Dashboard, this new fault enables the cluster nodes to transition from red (down) to yellow (resyncing) to green (up), instead of going straight from red to green.
+Windows Admin Center uses Health faults to set the status and color of the cluster nodes. On the Dashboard, this new fault enables the cluster nodes to transition from red (down) to yellow (resyncing) to green (up), instead of going straight from red to green.
 
 The following image compares how storage resync progresses in Windows Server 2016 vs. Windows Server 2019.
 

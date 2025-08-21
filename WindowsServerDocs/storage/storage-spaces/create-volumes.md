@@ -14,7 +14,7 @@ appliesto: [
            ]
 ---
 
-# Create volumes on Azure Stack HCI and Windows Server clusters
+# Create volumes on Azure Local and Windows Server clusters
 
 This article describes how to create volumes on a cluster by using Windows Admin Center and Windows PowerShell, how to work with files on the volumes, and how to enable deduplication, integrity checksums, or BitLocker encryption on volumes. To learn how to create volumes and set up replication for stretched clusters, see [Create stretched volumes](/azure/azure-local/manage/create-stretched-volumes).
 

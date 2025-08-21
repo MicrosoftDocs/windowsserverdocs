@@ -202,10 +202,10 @@ Follow these steps to move volumes using PowerShell:
    Get-ClusterSharedVolume
    ```
 
-   Here's an example output that lists all the CSVs in the `hcicluster.contoso.corp.com` cluster:
+   Here's an example output that lists all the CSVs in the `cluster.contoso.corp.com` cluster:
 
    ```output
-   [hcicluster.contoso.corp.com]: PS C:\WINDOWS\system32> Get-ClusterSharedVolume
+   [cluster.contoso.corp.com]: PS C:\WINDOWS\system32> Get-ClusterSharedVolume
 
    Name                           State  Node
    ----                           -----  ----
@@ -228,7 +228,7 @@ Follow these steps to move volumes using PowerShell:
    Here's an example output that moves `Cluster Virtual Disk (Volume1)` to the `azuredoc-srv1` node:
 
    ```output
-      [hcicluster.contoso.corp.com]: PS C:\WINDOWS\system32> Move-ClusterSharedVolume -Name "Cluster Virtual Disk (Volume1)" -Node azuredoc-srv1
+      [cluster.contoso.corp.com]: PS C:\WINDOWS\system32> Move-ClusterSharedVolume -Name "Cluster Virtual Disk (Volume1)" -Node azuredoc-srv1
 
       Name                           State  Node
       ----                           -----  ----

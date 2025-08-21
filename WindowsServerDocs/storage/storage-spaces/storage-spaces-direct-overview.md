@@ -31,9 +31,9 @@ You can scale out the storage capacity of your cluster by adding more drives or 
 
 Storage Spaces Direct is a core technology of Azure Local, versions 21H2 and 20H2. It’s also included in the Datacenter editions of Windows Server 2022, Windows Server 2019, Windows Server 2016, [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/) and Azure Edition of Windows Server 2022.
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. If deploying it on a hyperconverged cluster of physical servers, we recommend using Azure Local servers. To deploy Storage Spaces Direct as part of Azure Local, see [Deploy the Azure Local operating system](/azure-stack/hci/deploy/operating-system).
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters.
 
-Deploying Storage Spaces Direct on VM guest clusters delivers virtual shared storage across a set of VMs on top of a private or public cloud. In production environments, this deployment is supported only in Windows Server. For information about how to deploy Storage Spaces Direct on VM guest clusters in Windows Server, see [Using Storage Spaces Direct in guest virtual machine clusters](/windows-server/storage/storage-spaces/storage-spaces-direct-in-vm).
+Deploying Storage Spaces Direct on VM guest clusters delivers virtual shared storage across a set of VMs on top of a private or public cloud. In production environments, this deployment is supported only in Windows Server. For information about how to deploy Storage Spaces Direct on VM guest clusters in Windows Server, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
 ## How it works
 
@@ -105,7 +105,7 @@ Storage Spaces Direct supports the following two deployment options:
 
 ### Hyperconverged deployment
 
-In a hyperconverged deployment, you use single cluster for both compute and storage. The hyperconverged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage—storing their files on the local volumes. This eliminates the need to configure file server access and permissions, which in turn reduces hardware costs for small-to-medium business and remote or branch office deployments. To deploy Storage Spaces Direct on Windows Server, see [Deploy Storage Spaces Direct on Windows Server](/windows-server/storage/storage-spaces/deploy-storage-spaces-direct). To deploy Storage Spaces Direct as part of Azure Local, see [What is the deployment process for Azure Local?](/azure-stack/hci/deploy/operating-system)
+In a hyperconverged deployment, you use single cluster for both compute and storage. The hyperconverged deployment option runs Hyper-V virtual machines or SQL Server databases directly on the servers providing the storage—storing their files on the local volumes. This eliminates the need to configure file server access and permissions, which in turn reduces hardware costs for small-to-medium business and remote or branch office deployments. To deploy Storage Spaces Direct on Windows Server, see [Deploy Storage Spaces Direct on Windows Server](/windows-server/storage/storage-spaces/deploy-storage-spaces-direct). To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local deployment](/azure/azure-local/deploy/deployment-introduction).
 
 :::image type="content" source="media/storage-spaces-direct-overview/hyper-converged-minimal.png" alt-text="Storage Spaces Direct serves storage to Hyper-V VMs in the same cluster.":::
 
@@ -150,11 +150,11 @@ There are [over 10,000 clusters](https://techcommunity.microsoft.com/t5/storage-
 
 Visit [Microsoft.com/HCI](https://www.microsoft.com/hci) to read their stories.
 
-<!-->:::image type="content" source="media/storage-spaces-direct-overview/customer-stories.png" alt-text="Grid of customer logos." link="https://azure.microsoft.com/products/azure-stack/hci/":::-->
+<!-->:::image type="content" source="media/storage-spaces-direct-overview/customer-stories.png" alt-text="Grid of customer logos." link="https://azure.microsoft.com/products/local/":::-->
 
 ## Additional references
 
-- [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance)
+- [Fault tolerance and storage efficiency](fault-tolerance.md)
 - [Storage Replica](/windows-server/storage/storage-replica/storage-replica-overview)
 - [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
 - [Storage Spaces Direct throughput with iWARP](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

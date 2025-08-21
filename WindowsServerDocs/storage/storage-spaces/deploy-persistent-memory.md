@@ -56,7 +56,7 @@ In block access mode, we recommend using BTT because all data uses block semanti
 
 The following table shows supported persistent memory hardware for Azure Local and Windows Server. Persistent memory is fully supported in Windows Server 2019, including Storage Spaces Direct.
 
-| Persistent Memory Technology                                      | Windows Server 2016 | Azure Stack HCI v20H2/Windows Server 2019 |
+| Persistent Memory Technology                                      | Windows Server 2016 | Azure Local 2311.2 and later / Windows Server 2019 and later |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
 | **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
 | **Intel Optane&trade; DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
@@ -228,7 +228,7 @@ Any storage system that provides fault tolerance necessarily makes distributed c
 
 If you watch the video closely, you'll notice that what's even more jaw-dropping is the latency. Even at over 13.7 M IOPS, the file system in Windows is reporting latency that's consistently less than 40 µs! (That's the symbol for microseconds, one-millionth of a second.) This speed is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
 
-Together, Storage Spaces Direct in Windows Server 2019 and Intel&reg; Optane&trade; DC persistent memory delivered breakthrough performance. This HCI benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than before.
+Together, Storage Spaces Direct in Windows Server 2019 and Intel&reg; Optane&trade; DC persistent memory delivered breakthrough performance. This benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than before.
 
 The test hardware was a 12-server cluster that was configured to use three-way mirroring and delimited ReFS volumes, **12** x Intel&reg; S2600WFT, **384 GiB** memory, 2 x 28-core "CascadeLake," **1.5 TB** Intel&reg; Optane&trade; DC persistent memory as cache, **32 TB** NVMe (4 x 8 TB Intel&reg; DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps.
 
