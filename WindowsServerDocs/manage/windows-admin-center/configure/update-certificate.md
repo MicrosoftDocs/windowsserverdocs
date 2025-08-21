@@ -87,7 +87,7 @@ To update the certificate used by Windows Admin Center, you need the following p
 
   1. Provide the thumbprint of your certificate. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
 
-      :::image type="content" source="../media/select-thumbprint-tls-cetificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+      :::image type="content" source="../media/select-thumbprint-tls-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
 
   1. Complete the wizard and start Windows Admin Center.
 
