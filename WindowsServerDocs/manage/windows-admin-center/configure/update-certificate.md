@@ -83,11 +83,11 @@ To update the certificate used by Windows Admin Center, you need the following p
   
   1. Select the **Use the pre-installed TLS certificate** radio button, then select **Next**.
 
-      :::image type="content" source="../media/select-pre-installed-tls-certificate.png" alt-text="Screenshot of the Select TLS certificate screen.":::
+      :::image type="content" source="../media/select-pre-installed-certificate.png" alt-text="Screenshot of the Select TLS certificate screen.":::
 
   1. Provide the thumbprint of your certificate. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
 
-      :::image type="content" source="../media/select-thumbprint-tls-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+      :::image type="content" source="../media/select-thumbprint-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
 
   1. Complete the wizard and start Windows Admin Center.
 
@@ -99,12 +99,12 @@ There are different tools that you can use to find logs and error messages. The 
 
 - **Events Viewer**: Utilize the Events Viewer under the WindowsAdminCenter Event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
 - **Browser errors**: If the WAC service is properly set up but the browser indicates an error, verify the configuration of the TLS certificate and ensure it matches the required setup parameters.
-- **Ajax error**: An Ajax error may appear when attempting to open a connection with an invalid certificate. To avoid this issue, ensure the certificate is correctly installed and validated.
+- **Ajax error**: An Ajax error might appear when attempting to open a connection with an invalid certificate. To avoid this issue, ensure the certificate is correctly installed and validated.
 
 ### Common problems
 
 - **Invalid certificate**:
-  - A certificate might be invalid. This shows as "invalid certificate".
+  - A certificate might be invalid. This shows as "invalid certificate."
   - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 can't be used if an invalid certificate is used when communicating with the sub processes.
   - You shouldn't generate a self-signed certificate because it's a security issue.
 
@@ -113,7 +113,7 @@ There are different tools that you can use to find logs and error messages. The 
   - If this isn't resolved then WAC might not work or bring errors.
 
 - **Wrong or inaccurate thumbprint**
-  - Check that the thumbprint is present, correctly registered, and doesn't match what is expected. WAC may not detect the certificate.
+  - Check that the thumbprint is present, correctly registered, and doesn't match what is expected. WAC might not detect the certificate.
 
 - **Private Key not configured to be accessed by the network service**
   - HTTPS protocol layer reads private key of certificate to encrypt TLS payload when communicating over HTTPS protocol.
