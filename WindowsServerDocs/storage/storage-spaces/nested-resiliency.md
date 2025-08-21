@@ -32,7 +32,7 @@ Nested resiliency is a capability of [Storage Spaces Direct](storage-spaces-dire
 
 ## Why nested resiliency
 
-Volumes that use nested resiliency can stay online and accessible even if multiple hardware failures happen at the same time, unlike classic [two-way mirroring](fault-tolerance) resiliency. For example, if two drives fail at the same time, or if a server goes down and a drive fails, volumes that use nested resiliency stay online and accessible. For hyper-converged infrastructure, this increases uptime for apps and virtual machines; for file server workloads, this means users have uninterrupted access to their files.
+Volumes that use nested resiliency can stay online and accessible even if multiple hardware failures happen at the same time, unlike classic [two-way mirroring](fault-tolerance.md) resiliency. For example, if two drives fail at the same time, or if a server goes down and a drive fails, volumes that use nested resiliency stay online and accessible. For hyper-converged infrastructure, this increases uptime for apps and virtual machines; for file server workloads, this means users have uninterrupted access to their files.
 
 :::image type="content" source="media/nested-resiliency/storage-availability.png" alt-text="Diagram that shows storage availability." lightbox="media/nested-resiliency/storage-availability.png":::
 
