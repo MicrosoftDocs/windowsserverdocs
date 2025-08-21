@@ -16,8 +16,6 @@ appliesto: [
 
 # Understanding the storage pool cache
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
-
 Storage Spaces Direct, the foundational storage virtualization technology behind Azure Local and Windows Server, features a built-in server-side cache to maximize storage performance while reducing costs. It's a large, persistent, real-time read *and* write cache that is configured automatically upon deployment. In most cases, no manual management whatsoever is required. How the cache works depends on the types of drives present.
 
 ## Drive types and deployment options
