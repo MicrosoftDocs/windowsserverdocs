@@ -105,7 +105,7 @@ There are different tools that you can use to find logs and error messages. The 
 
 - **Invalid certificate**:
   - A certificate might be invalid. This shows as "invalid certificate".
-  - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 can't be used if invalid certificate is used when communicates to the sub processes.
+  - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 can't be used if an invalid certificate is used when communicating with the sub processes.
   - You shouldn't generate a self-signed certificate because it's a security issue.
 
 - **Mismatched DNS name**
