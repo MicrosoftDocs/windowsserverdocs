@@ -120,7 +120,7 @@ To install RSATs using Server Manager, follow these steps:
 
 1. Wait for the installation to complete, then select **Close**.
 
-1. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting ** **Windows Tools** from the Start menu.
+1. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
 
 ### [Windows PowerShell](#tab/windows-powershell)
 
@@ -172,7 +172,6 @@ To install RSAT using the desktop experience:
 
     - Search for and select the tool you want to install, select **Next**, then **Install**
 
-    - Search for and select the tool you want to install, select **Next**, then **Install**
 
 1. Review the installation progress. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
 
@@ -278,11 +277,10 @@ To install RSAT using the desktop experience:
 
 1. Select **Start**, type _Optional Features_ in the search box, then select **Optional Features** (also referred to as **Manage optional features**).
 
-1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
+1. Scan the list to see if the RSAT tool is already installed. If not, at the top of the page, select **Add a feature**, then:
 
     - Search for the tool you want to install, then select **Install**
 
-    - Search for the tool you want to install, then select **Install**
 
 1. Review the installation progress. Once the installation is complete, you can access the tools from the **Tools** menu in Server Manager or selecting **Windows Tools** from the Start menu.
 
@@ -293,7 +291,7 @@ To install Remote Server Administration Tools using PowerShell, follow these ste
 
 1. Run PowerShell as an Administrator.
 
-1. Run the following cmdlet to make sure that OpenSSH is available:
+1. Run the following cmdlet to make sure that RSAT is available:
 
    ```powershell
    Get-WindowsCapability -Online | Where-Object Name -like 'RSAT*'
