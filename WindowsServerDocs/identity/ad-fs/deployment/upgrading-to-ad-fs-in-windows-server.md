@@ -2,7 +2,6 @@
 description: Learn how to upgrade the farm behavior level for an existing Active Directory Federation Service farm by using Windows Internal Database in Windows Server.
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrade an AD FS farm by using Windows Internal Database in Windows Server
-manager: tedhudek
 ms.date: 06/21/2023
 ms.topic: upgrade-and-migration-article
 ---

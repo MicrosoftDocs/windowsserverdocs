@@ -4,7 +4,6 @@ ms.assetid: 7f6b27e5-dc55-4ffc-8e76-6d57e65a870b
 title: Appendix A Dynamic Access Control Glossary
 author: robinharwood
 ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: glossary
 ---
