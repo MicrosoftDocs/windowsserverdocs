@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 07/12/2023
 ---
 # Updates Operations

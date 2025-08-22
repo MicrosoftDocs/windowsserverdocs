@@ -1,7 +1,6 @@
 ---
 title: fsutil dirty
 description: Reference article for the fsutil dirty command, which queries or sets a volume's dirty bit.
-manager: dmoss
 ms.author: alalve
 author: xelu86
 ms.assetid: 385a2a7c-d6bd-4f11-9c18-fca0413f9e97

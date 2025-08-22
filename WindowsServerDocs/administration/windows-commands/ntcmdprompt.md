@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 0063bdbb-dc2b-41c4-99ee-b011603aaa86
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # ntcmdprompt

@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 2a236c2a-8675-444d-b695-9cbc9aff643b
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg copy

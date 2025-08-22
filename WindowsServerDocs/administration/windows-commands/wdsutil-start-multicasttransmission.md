@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: a1b2d459-1ece-49d4-997c-9d206c463b61
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil start-multicasttransmission
