@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg timeout

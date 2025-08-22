@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # create volume raid

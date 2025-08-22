@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 3d772c90-e849-4e74-b9ec-b6cae1159336 Lizap
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
