@@ -1,6 +1,6 @@
 ---
-title: Remote Server Administration Tools (RSAT) in Windows
-description: Learn about the available Remote Server Administration Tools and how to install, enable, and use RSAT on Windows Server and Windows 10 or 11 clients
+title: Install and Manage Remote Server Administration Tools in Windows
+description: Learn about the available Remote Server Administration Tools (RSAT) and how to install, enable, and use RSAT on Windows Server and Windows 10 or 11 clients
 #customer intent: As an IT administrator, I want to manage Windows Server roles and features remotely from my Windows PC, so that I can efficiently administer servers without direct access.
 ms.topic: install-set-up-deploy
 ms.author: roharwoo
@@ -12,9 +12,9 @@ ms.custom:
   - ai-gen-description
   - ai-seo-date:08/20/2025
 ---
-# Remote Server Administration Tools (RSAT) in Windows
+# Install and Manage Remote Server Administration Tools in Windows
 
-Remote Server Administration Tools (RSAT) for Windows Server are a collection of utilities that enable IT administrators to remotely manage roles and features on Windows Server systems from a Windows client computer. This article provides an overview of the Remote Server Administration Tools (RSAT) for Windows. The article also shows you how to use them to manage Windows Server roles and features from a Windows Server or Windows client computer.
+Remote Server Administration Tools (RSAT) for Windows Server are a collection of utilities that enable IT administrators to remotely manage roles and features on Windows Server systems from a Windows client computer. This article provides an overview of the Remote Server Administration Tools (RSAT) for Windows. The article also shows you how to install and use them to manage Windows Server roles and features from a Windows Server or Windows client computer.
 
 The method to install the RSATs varies depending on your platform. Make sure to select your platform from the buttons at the start of the article.
 
