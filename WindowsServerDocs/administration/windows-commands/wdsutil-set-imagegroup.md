@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 4d86946a-e261-4d41-8b0c-1ab0ba2e3430
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil set-imagegroup
