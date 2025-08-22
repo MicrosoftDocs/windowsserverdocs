@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 5effbd52-993a-4657-b331-596c64deb8fb
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin peers

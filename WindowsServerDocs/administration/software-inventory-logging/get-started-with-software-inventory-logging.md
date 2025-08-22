@@ -5,7 +5,6 @@ ms.topic: get-started
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: xelu86
 ms.author: alalve
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging

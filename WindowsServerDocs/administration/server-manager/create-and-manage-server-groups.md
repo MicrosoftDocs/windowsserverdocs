@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # create and Manage Server Groups

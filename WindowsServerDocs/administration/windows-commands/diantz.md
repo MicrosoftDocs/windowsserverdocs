@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 218ed5d7-1203-4d68-ad9b-65cdd022d54f
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # diantz

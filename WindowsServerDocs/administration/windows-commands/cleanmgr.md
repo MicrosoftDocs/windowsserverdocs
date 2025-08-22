@@ -4,7 +4,6 @@ description: Configure the Disk Cleanup tool (Cleanmgr.exe) to automatically cle
 ms.reviewer: cosmosdarwin
 author: xelu86
 ms.author: alalve
-manager: daveba
 ms.date: 01/18/2024
 ms.topic: reference
 ---

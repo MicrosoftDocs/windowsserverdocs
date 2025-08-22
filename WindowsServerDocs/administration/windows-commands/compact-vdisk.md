@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 40ca0820-67de-4160-b62a-e9bf63fe2790
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # compact vdisk

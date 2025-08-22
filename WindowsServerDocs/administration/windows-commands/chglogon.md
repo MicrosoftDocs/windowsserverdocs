@@ -6,7 +6,6 @@ ms.assetid: 8280c5b3-ac10-48ae-87ca-678594837f03
 ms.date: 10/16/2017
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ---
 
 # chglogon

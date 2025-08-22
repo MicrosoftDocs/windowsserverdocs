@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # View and Configure Performance, Event, and Service Data
