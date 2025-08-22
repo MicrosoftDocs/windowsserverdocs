@@ -1,7 +1,6 @@
 ---
 title: AD FS Troubleshooting - AD FS Endpoints
 description: This article describes how to troubleshoot Active Directory Federation Services (AD FS) endpoints.
-manager: tedhudek
 ms.date: 10/14/2024
 ms.topic: troubleshooting-general
 ms.custom: sfi-image-nochange

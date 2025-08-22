@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/12/2016
 ---
 # Administer Software Restriction Policies
