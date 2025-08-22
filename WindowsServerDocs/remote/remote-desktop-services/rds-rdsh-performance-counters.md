@@ -5,7 +5,6 @@ ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: how-to
 author: dknappettmsft
-manager: dougkim
 ---
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts

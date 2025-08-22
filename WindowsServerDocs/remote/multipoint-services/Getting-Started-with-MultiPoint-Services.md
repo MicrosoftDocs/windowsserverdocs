@@ -4,7 +4,6 @@ description: Introduces MultiPoint Services and gets you started using it.
 ms.topic: get-started
 ms.assetid: aca5f0be-f253-46b5-b1e7-0bffa15f3227
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

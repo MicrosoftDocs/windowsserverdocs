@@ -4,7 +4,6 @@ description: PRovides user account, user name, and password considerations for M
 ms.topic: concept-article
 ms.assetid: e225900b-cee9-48c9-b21c-394dc5e72b78
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

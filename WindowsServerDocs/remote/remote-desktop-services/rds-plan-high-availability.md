@@ -6,7 +6,6 @@ ms.assetid: ec630ea0-ab80-4dfe-a25f-f4f601651f72
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 7/3/2024
-manager: dongill
 ---
 # Remote Desktop Services - High availability
 

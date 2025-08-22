@@ -4,7 +4,6 @@ description: Learn how to share a desktop from one system to another in MultiPoi
 ms.topic: how-to
 ms.assetid: 2c0d0faf-ba5b-406d-bd89-b685ddf81e93
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

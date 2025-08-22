@@ -4,7 +4,6 @@ description: Learn about user accounts in MultiPoint Services, especially which 
 ms.topic: example-scenario
 ms.assetid: 7f3c6ce5-9b7c-45a0-83c5-3f9b9f5f48d4
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

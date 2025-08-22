@@ -1,7 +1,6 @@
 ---
 title: Step 2 Plan Cluster Servers
 description: Learn how to plan to add additional servers to the cluster.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
 ms.author: daknappe

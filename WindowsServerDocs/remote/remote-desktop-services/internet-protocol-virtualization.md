@@ -5,7 +5,6 @@ author: xelu86
 ms.date: 7/3/2024
 ms.topic: how-to
 ms.author: alalve
-manager: tedhudek
 ---
 # Remote Desktop IP Virtualization in Windows Server
 

@@ -5,7 +5,6 @@ ms.date: 07/08/2016
 ms.topic: how-to
 ms.assetid: f0d1fc9c-f5ea-45bc-a8da-623c5d081cdf
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ---
 # Split a User Station

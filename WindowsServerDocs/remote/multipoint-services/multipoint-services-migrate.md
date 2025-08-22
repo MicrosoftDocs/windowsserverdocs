@@ -5,7 +5,6 @@ ms.date: 07/29/2016
 ms.topic: upgrade-and-migration-article
 ms.assetid: 16c217ad-700a-48a3-8398-4a7f7e9edb52
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ---
 # MultiPoint Services migration in Windows Server 2016

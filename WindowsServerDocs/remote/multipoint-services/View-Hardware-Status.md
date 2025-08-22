@@ -4,7 +4,6 @@ description: Learn how to view hardware information in MultiPoint Services
 ms.topic: how-to
 ms.assetid: 3a5ec549-e1f9-4714-9e6d-9ea959e1da60
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---
