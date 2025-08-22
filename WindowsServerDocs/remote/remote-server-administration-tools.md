@@ -2,10 +2,10 @@
 title: Remote Server Administration Tools (RSAT) in Windows
 description: Learn about the available Remote Server Administration Tools and how to install, enable, and use RSAT on Windows Server and Windows 10 or 11 clients
 #customer intent: As an IT administrator, I want to manage Windows Server roles and features remotely from my Windows PC, so that I can efficiently administer servers without direct access.
-ms.topic: how-to
+ms.topic: install-set-up-deploy
 ms.author: roharwoo
 author: robinharwood
-ms.date: 08/20/2025
+ms.date: 08/22/2025
 zone_pivot_groups: windows-os-version-plus-client
 ms.custom:
   - ai-gen-docs-bap
@@ -58,10 +58,12 @@ You can use the following RSATs from either a Windows Server or Windows client m
 | Remote Access Management Tools | Manage remote access roles and VPN services. | ✅ | ✅ | ✅ |
 | Volume Activation Tools | Configure and manage volume activation services. | ✅ | ✅ | ✅ |
 | Windows Deployment Services Tools | Manage Windows Deployment Services for network-based OS installations. | ✅ | ❌ | ❌ |
+| Server Manager | Centralized management console for managing server roles and features. | ✅<sup>2</sup> | ✅ | ✅ |
 
 1. Tools for managing Services for NFS on local and remote computers can be added as a Windows Optional Feature using DISM.
+1. Server Manager is included with Windows Server by default and not listed as a Remote Server Administration Tool.
 
-To learn more about the available Features on Demand RSAT, see the [list of RSAT tools available via **Features on Demand**](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat).
+To learn more about the available Features on Demand RSAT, see the [list of RSAT available via **Features on Demand**](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat).
 
 ## Prerequisites
 
@@ -364,79 +366,64 @@ To install RSAT Windows Features using PowerShell, follow these steps:
 
 :::zone-end
 
+## Manage local and remote servers with Server Manager
 
-### Run Remote Server Administration Tools
+Server Manager can used along with the other tools included in Remote Server Administration Tools to manage both local and remote servers from a single experience. You can use Server Manager to install, configure, and manage roles and features on multiple remote servers from a single console.
 
-> [!NOTE]
-> After installing Remote Server Administration Tools for Windows 10, the **Administrative Tools** folder is displayed on the **Start** menu. You can access the tools from the following locations.
->
-> -   The **Tools** menu in the Server Manager console.
-> -   **Control Panel\System and Security\Administrative Tools**.
-> -   A shortcut saved to the desktop from the **Administrative Tools** folder (to do this, right click the **Control Panel\System and Security\Administrative Tools** link, and then click **Create Shortcut**).
+:::zone pivot="windows-server-2025,windows-server-2022, windows-server-2019, windows-server-2016"
 
-The tools installed as part of Remote Server Administration Tools for Windows 10 cannot be used to manage the local client computer. Regardless of the tool you run, you must specify a remote server, or multiple remote servers, on which to run the tool. Because most tools are integrated with Server Manager, you add remote servers that you want to manage to the Server Manager server pool before managing the server by using the tools in the **Tools** menu. For more information about how to add servers to your server pool, and create custom groups of servers, see [Add servers to Server Manager](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831453(v=ws.11)) and [Create and manage server groups](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh868009(v=ws.11)).
+Server Manager is included with Windows Server by default and does not need to be installed separately. In the following steps, you'll use Server Manager to add an example Remote Server Administration Tool and launch the associated management tool.
 
-In Remote Server Administration Tools for Windows 10, all GUI-based server management tools, such as mmc snap-ins and dialog boxes, are accessed from the **Tools** menu of the Server Manager console. Although the computer that runs Remote Server Administration Tools for Windows 10 runs a client-based operating system, after installing the tools, Server Manager, included with Remote Server Administration Tools for Windows 10, opens automatically by default on the client computer. Note that there is no **Local Server** page in the Server Manager console that runs on a client computer.
+1. For new installations of Windows Server, Server Manager opens automatically by default. If Server Manager does not open automatically, open the Start menu, then select **Server Manager**.
+   :::image type="content" source="../manage/media/install-remote-server-administration-tools/server-manager.png" alt-text="a":::
 
-##### To start Server Manager on a client computer
+1. In Server Manager, select on **Manage** in the top right corner.
 
-1.  On the **Start** menu, click **All Apps**, and then click **Administrative Tools**.
+1. Select **Add Roles and Features** from the dropdown menu.
 
-2.  In the **Administrative Tools** folder, click **Server Manager**.
+1. In the **Add Roles and Features Wizard**, select **Next** until you reach the **Features** section.
 
-Although they are not listed in the Server Manager console **Tools** menu, Windows PowerShell cmdlets and Command prompt management tools are also installed for roles and features as part of Remote Server Administration Tools. For example, if you open a Windows PowerShell session with elevated user rights (Run as Administrator), and run the cmdlet `Get-Command -Module RDManagement`, the results include a list of remote Desktop Services cmdlets that are now available to run on the local computer after installing Remote Server Administration Tools, as long as the cmdlets are targeted at a remote server that is running all or part of the remote Desktop Services role.
+1. Expand the **Remote Server Administration Tools** category, then expand the **Role Administration Tools** category.
 
-##### To start Windows PowerShell with elevated user rights (Run as administrator)
+1. Select the checkbox next to **DNS Server Tools**, then select **Next**.
 
-1.  On the **Start** menu, click **All Apps**, click **Windows System**, and then click **Windows PowerShell**.
+1. Select **Install** to begin the installation process.
 
-2.  To run Windows PowerShell as an administrator from the desktop, right-click the **Windows PowerShell** shortcut, and then click **Run as Administrator**.
+1. Select **Close** once the installation is complete.
 
-> [!NOTE]
-> You can also start a Windows PowerShell session that is targeted at a specific server by right-clicking a managed server in a role or group page in Server Manager, and then clicking **Windows PowerShell**.
+1. To manage a DNS server, select **Tools** in the top right corner of Server Manager, then select **DNS** from the dropdown menu.
 
+1. You can now use the DNS Manager console to manage the DNS server or right-click the server name in the left pane to connect to a different DNS server.
 
-## Known issues
+To learn more about using Server Manager to manage remote servers, see [Server Manager](../administration/server-manager/server-manager.md).
 
-### **Issue**: RSAT FOD installation fails with error code 0x800f0954
+:::zone-end
 
-> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update) in WSUS/Configuration Manager environments
->
-> **Resolution**: To install FODs on a domain-joined PC which receives updates through WSUS or Configuration Manager, you will need to change a Group Policy setting to enable downloading FODs directly from Windows Update or a local share. For more details and instructions on how to change that setting, see [How to make Features on Demand and language packs available when you're using WSUS/SCCM](/windows/deployment/update/fod-and-lang-packs).
+::: zone pivot="windows-client-11, windows-client-10"
 
----
+Server Manager is included with Remote Server Administration Tools and can be installed as a Feature on Demand (FoD). In the following steps, you'll install Server Manager and use to add an example role to a remote server and launch the associated management tool.
 
-### **Issue**: RSAT FOD installation via Settings app does not show status/progress
+1. Install the _RSAT: Server Manager_ feature on demand by following the steps in the [Install RSAT as Feature on Demand](#install-rsat-as-feature-on-demand) section.
 
-> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update)
->
-> **Resolution**: To see installation progress, click the **Back** button to view status on the **Manage optional features** page.
+1. Install any other RSAT tools you want to use, such as the _RSAT: DNS Server Tools_.
 
----
+1. Once installed, open the Start menu, type _Server Manager_, then select **Server Manager** from the search results.
 
-### **Issue**: RSAT FOD uninstallation via Settings app may fail
+1. In Server Manager, select on **Tools** in the top right corner.
 
-> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update)
->
-> **Resolution**: In some cases, uninstallation failures are due to the need to manually uninstall dependencies. Specifically, if RSAT tool A is needed by RSAT tool B, then choosing to uninstall RSAT tool A will fail if RSAT tool B is still installed. In this case, uninstall RSAT tool B first, and then uninstall RSAT tool A. See the list of RSAT FODs including dependencies.
+1. Select the tool you want to use, such as **DNS** from the dropdown menu.
 
----
+1. When prompted, enter the name or IP address of the remote server you want to manage, then select **OK**.
 
-### **Issue**: RSAT FOD uninstallation appears to succeed, but the tool is still installed
+   :::image type="content" source="../manage/media/install-remote-server-administration-tools/server-manager-dns-tools.png" alt-text="a":::
 
-> **Impact**: RSAT FODs on Windows 10 1809 (October 2018 Update)
->
-> **Resolution**: Restarting the PC will complete the removal of the tool.
+To learn more about using Server Manager to manage remote servers, see [Server Manager](../administration/server-manager/server-manager.md).
 
----
+:::zone-end
 
-### **Issue**: RSAT missing after Windows 10 upgrade
+## Related content
 
-> **Impact**: Any RSAT .MSU package installation (prior to RSAT FODs) not automatically reinstalled
->
-> **Resolution**: An RSAT installation cannot be persisted across OS upgrades due to the RSAT .MSU being delivered as a Windows Update package. Please install RSAT again after upgrading Windows 10. Note that this limitation is one of the reasons why we've moved to FODs starting with Windows 10 1809. RSAT FODs which are installed will persist across future Windows 10 version upgrades.
-
-## See Also
->- [Remote Server Administration Tools for Windows 10](https://go.microsoft.com/fwlink/?LinkID=404281)
->- [Remote Server Administration Tools (RSAT) for Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2](/archive/technet-wiki/)
+- [Configure Features on Demand in Windows Server](../administration/server-manager/configure-features-on-demand-in-windows-server.md)
+- [Configure remote Management in Server Manager](../administration/server-manager/configure-remote-management-in-server-manager.md)
+- [Server Manager](../administration/server-manager/server-manager.md)
 '
