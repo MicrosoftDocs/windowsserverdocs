@@ -2,7 +2,6 @@
 description: "Learn more about: Web SSO Design"
 ms.assetid: eb778f63-f7be-438e-8c5e-1fd9b194b967
 title: Web SSO Design
-manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: concept-article
 ---

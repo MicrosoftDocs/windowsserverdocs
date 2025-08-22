@@ -1,7 +1,6 @@
 ---
 title: AD FS Troubleshooting - Claims Rules
 description: This article describes how to troubleshoot claims rule syntax with Active Directory Federation Services (AD FS).
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: troubleshooting-general
 ms.custom: sfi-image-nochange

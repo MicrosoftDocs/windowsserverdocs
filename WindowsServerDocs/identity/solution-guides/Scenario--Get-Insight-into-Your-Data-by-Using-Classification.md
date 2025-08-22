@@ -4,7 +4,6 @@ ms.assetid: ad3f0480-99f7-428a-ab33-6d165a440840
 title: Scenario Get Insight into Your Data by Using Classification
 author: robinharwood
 ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: example-scenario
 ---

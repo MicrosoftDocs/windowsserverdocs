@@ -5,7 +5,6 @@ ms.topic: concept-article
 ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/12/2016
 ---
 # Software Restriction Policies

@@ -1,7 +1,6 @@
 ---
 title: AD FS Troubleshooting - Proxy Trust Between WAP and AD FS Is Broken
 description: Learn how to troubleshoot various aspects of a broken trust between Web Application Proxy and Active Directory Federation Service (AD FS).
-manager: tedhudek
 ms.date: 10/14/2024
 ms.topic: troubleshooting-general
 ---
