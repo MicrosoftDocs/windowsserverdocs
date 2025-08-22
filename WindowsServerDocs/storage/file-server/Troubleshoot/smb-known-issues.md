@@ -1,10 +1,10 @@
 ---
 title: SMB known issues
 description: List of the SMB known issues.
-author: Deland-Han
+author: robinharwood
 manager: dcscontentpm
 ms.topic: troubleshooting-known-issue
-ms.author: delhan
+ms.author: roharwoo
 ms.date: 12/25/2019
 ---
 

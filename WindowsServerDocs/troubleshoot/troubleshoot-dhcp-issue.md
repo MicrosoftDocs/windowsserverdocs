@@ -4,8 +4,8 @@ description: This article introduces a troubleshooting guide for DHCP issues.
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
+author: robinharwood
+ms.author: roharwoo
 ---
 # Troubleshooting guide for Dynamic Host Configuration Protocol (DHCP)
 
