@@ -4,7 +4,6 @@ description: Learn how to share files in MultiPoint Services by using shared fol
 ms.topic: how-to
 ms.assetid: 5e138e01-39e3-4d60-ad3c-5a33b1e0b076
 author: dknappettmsft
-manager: dongill
 ms.date: 08/04/2016
 ms.author: daknappe
 ---

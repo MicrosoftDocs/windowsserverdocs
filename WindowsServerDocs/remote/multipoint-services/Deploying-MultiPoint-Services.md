@@ -6,7 +6,6 @@ ms.topic: concept-article
 ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: dknappettmsft
 ms.author: daknappe
-manager: scottman
 ---
 
 # Deploying MultiPoint Services

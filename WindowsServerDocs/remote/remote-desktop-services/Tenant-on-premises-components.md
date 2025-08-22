@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: concept-article
 ms.assetid: b3eebb38-a835-4fa6-9e41-1966014bf2cb
 author: dknappettmsft
-manager: dongill
 ---
 # Tenant on-premises components
 

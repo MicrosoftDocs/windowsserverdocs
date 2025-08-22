@@ -1,7 +1,6 @@
 ---
 title: STEP 7 Test DirectAccess Connectivity from the Internet
 description: Learn how to start to test connectivity from the internet.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: ed2a1616-30c6-482a-9a02-4a5023621f58
 ms.author: daknappe

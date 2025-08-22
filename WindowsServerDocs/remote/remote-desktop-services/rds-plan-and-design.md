@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: reference-architecture
 ms.assetid: 047b08be-7f91-4194-a641-5b6941b92515
 author: dknappettmsft
-manager: scottman
 ---
 # Plan and design your Remote Desktop Services environment
 

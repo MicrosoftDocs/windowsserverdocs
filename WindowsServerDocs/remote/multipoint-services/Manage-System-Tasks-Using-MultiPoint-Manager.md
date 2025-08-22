@@ -4,7 +4,6 @@ description: Overview of management tasks in MultiPoint Manager
 ms.topic: overview
 ms.assetid: efb34298-391c-4435-afdf-1a749f1ce224
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

@@ -4,7 +4,6 @@ description: Learn how video monitors and projectors work with stations in Multi
 ms.topic: how-to
 ms.assetid: 2f7f5a97-efd2-4184-8ad3-cf029d615eab
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

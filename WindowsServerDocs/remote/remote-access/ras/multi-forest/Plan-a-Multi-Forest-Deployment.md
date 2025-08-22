@@ -1,7 +1,6 @@
 ---
 title: Plan a Multi-Forest Deployment
 description: Learn about the planning steps required when configuring Remote Access in a multi-forest deployment.
-manager: brianlic
 ms.topic: concept-article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
 ms.author: daknappe

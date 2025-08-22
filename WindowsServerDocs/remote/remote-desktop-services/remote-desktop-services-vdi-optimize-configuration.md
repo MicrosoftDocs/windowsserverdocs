@@ -6,7 +6,6 @@ ms.subservice: remote-desktop-services
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: concept-article
-manager: tedhudek
 ms.date: 8/15/2025
 ---
 

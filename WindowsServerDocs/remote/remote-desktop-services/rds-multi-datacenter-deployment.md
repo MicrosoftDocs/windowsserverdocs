@@ -6,7 +6,6 @@ ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 7/3/2024
-manager: tedhudek
 ---
 # Create a geo-redundant, multi-data center RDS deployment for disaster recovery
 

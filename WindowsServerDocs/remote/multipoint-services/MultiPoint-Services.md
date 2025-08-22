@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: overview
 ms.assetid: 426005e1-03af-4595-9418-964b0962b905
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # MultiPoint Services

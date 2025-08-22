@@ -1,7 +1,6 @@
 ---
 title: Step 1 Configure the DirectAccess Infrastructure
 description: Learn how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
 ms.author: daknappe

@@ -6,7 +6,6 @@ ms.assetid: d3596907-4233-4c8e-86ad-8404720b760d
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 7/3/2024
-manager: scottman
 ---
 # Remote Desktop Services - Connect from any device
 
