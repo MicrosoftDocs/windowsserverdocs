@@ -4,7 +4,6 @@ description: In Windows Server and Azure Local, you can use the Server Configura
 ms.topic: how-to
 author: Orin-Thomas
 ms.author: alalve
-manager: tedhudek
 ms.date: 08/18/2021
 ms.assetid: e6cac074-c6fc-46dd-9664-fa0342c0a5e8
 ---
