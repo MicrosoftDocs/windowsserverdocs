@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 35724697-90dd-4dbe-85b0-337fbd369dcc
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg dbg1394

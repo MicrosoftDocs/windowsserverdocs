@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: xelu86
 ms.author: alalve
-manager: mtillman
 ms.date: 10/16/2017
 ms.custom: sfi-image-nochange
 ---

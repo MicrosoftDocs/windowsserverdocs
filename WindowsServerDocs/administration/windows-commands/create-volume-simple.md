@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # create volume simple

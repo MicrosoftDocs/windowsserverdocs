@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 07/25/2018
 ms.custom: sfi-image-nochange
 ---

@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 0e93bc84-5b9e-4f9d-8cf0-1634417da0f6
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil start-transportserver

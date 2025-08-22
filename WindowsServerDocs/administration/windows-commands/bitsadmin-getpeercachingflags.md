@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 3c3c9f28-4c04-4c49-a23a-dee5bbcc8981
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin getpeercachingflags

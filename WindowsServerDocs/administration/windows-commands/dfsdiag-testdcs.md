@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

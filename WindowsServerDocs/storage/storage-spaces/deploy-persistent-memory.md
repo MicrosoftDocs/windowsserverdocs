@@ -1,27 +1,32 @@
 ---
 title: Understand and deploy persistent memory 
-description: This article provides details on what persistent memory is and how to deploy it as storage in Azure Stack HCI and Windows Server.
+description: This article provides details on what persistent memory is and how to deploy it as storage in Azure Local and Windows Server.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 04/17/2023
+appliesto: [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+           ]
 ---
 
 # Understand and deploy persistent memory
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
-
-Persistent memory (or PMem) is a new type of memory technology that retains its content through power cycles and can be used as top-tier storage, which is why you may hear people refer to PMem as "storage-class memory" or SCM. This article provides background on persistent memory and explains how to deploy it as the top storage tier in Azure Stack HCI and Windows Server.
+Persistent memory (or PMem) is a new type of memory technology that retains its content through power cycles and can be used as top-tier storage, which is why you may hear people refer to PMem as "storage-class memory" or SCM. This article provides background on persistent memory and explains how to deploy it as the top storage tier in Azure Local and Windows Server.
 
 ## What is persistent memory?
 
 Persistent memory is a type of non-volatile media that fits in a standard DIMM (memory) slot. It's slower than DRAM, but provides higher throughput than SSD and NVMe. Compared to DRAM, persistent memory modules come in much larger capacities and are less expensive per GB, however they are still more expensive than NVMe. Memory contents remain even when system power goes down in the event of an unexpected power loss, user initiated shutdown, or system crash. This means that you can use persistent memory modules as ultra-fast, persistent storage.
 
-Azure Stack HCI and Windows Server 2019 support using persistent memory as either a cache or a capacity drive. However, given the pricing model, persistent memory provides the most value as either a cache or as a small amount of dedicated storage for memory mapping data. In most cases, persistent memory drives are automatically used as cache drives, and anything slower is used as capacity drives. For more information about how to set up cache and capacity drives, see [Understanding the storage pool cache](cache.md) and [Plan volumes](plan-volumes.md).
+Azure Local and Windows Server 2019 support using persistent memory as either a cache or a capacity drive. However, given the pricing model, persistent memory provides the most value as either a cache or as a small amount of dedicated storage for memory mapping data. In most cases, persistent memory drives are automatically used as cache drives, and anything slower is used as capacity drives. For more information about how to set up cache and capacity drives, see [Understanding the storage pool cache](cache.md) and [Plan volumes](plan-volumes.md).
 
 ## Persistent memory concepts
 
-This section describes the basic concepts you'll need to understand in order to deploy persistent memory in Windows Server and Azure Stack HCI environments to reduce I/O bottlenecks and improve performance.
+This section describes the basic concepts you'll need to understand in order to deploy persistent memory in Windows Server and Azure Local environments to reduce I/O bottlenecks and improve performance.
 
 ### Access methods
 
@@ -31,7 +36,7 @@ There are two methods for accessing persistent memory. They are:
 - **Direct access (DAX)**, which operates like memory to get the lowest latency. You can only use DAX in combination with NTFS. **If you don't use DAX correctly, there is potential for data loss.** We strongly recommend that you use DAX with [Block translation table (BTT)](#block-translation-table) turned on to mitigate the risk of torn writes. To learn more, see [Understand and configure DAX](/windows-server/storage/storage-spaces/persistent-memory-direct-access).
 
 > [!WARNING]
-> DAX isn't supported on Azure Stack HCI environments. Azure Stack HCI only supports block access, with BTT turned on.
+> DAX isn't supported on Azure Local environments. Azure Local only supports block access, with BTT turned on.
 
 ### Regions
 
@@ -49,9 +54,9 @@ In block access mode, we recommend using BTT because all data uses block semanti
 
 ## Supported hardware
 
-The following table shows supported persistent memory hardware for Azure Stack HCI and Windows Server. Persistent memory is fully supported in Windows Server 2019, including Storage Spaces Direct.
+The following table shows supported persistent memory hardware for Azure Local and Windows Server. Persistent memory is fully supported in Windows Server 2019, including Storage Spaces Direct.
 
-| Persistent Memory Technology                                      | Windows Server 2016 | Azure Stack HCI v20H2/Windows Server 2019 |
+| Persistent Memory Technology                                      | Windows Server 2016 | Azure Local 2311.2 and later / Windows Server 2019 and later |
 |-------------------------------------------------------------------|--------------------------|--------------------------|
 | **NVDIMM-N** in persistent mode                                  | Supported                | Supported                |
 | **Intel Optane&trade; DC Persistent Memory** in App Direct Mode             | Not Supported            | Supported                |
@@ -223,7 +228,7 @@ Any storage system that provides fault tolerance necessarily makes distributed c
 
 If you watch the video closely, you'll notice that what's even more jaw-dropping is the latency. Even at over 13.7 M IOPS, the file system in Windows is reporting latency that's consistently less than 40 µs! (That's the symbol for microseconds, one-millionth of a second.) This speed is an order of magnitude faster than what typical all-flash vendors proudly advertise today.
 
-Together, Storage Spaces Direct in Windows Server 2019 and Intel&reg; Optane&trade; DC persistent memory delivered breakthrough performance. This HCI benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than before.
+Together, Storage Spaces Direct in Windows Server 2019 and Intel&reg; Optane&trade; DC persistent memory delivered breakthrough performance. This benchmark of over 13.7M IOPS, accompanied by predictable and extremely low latency, is more than double our previous industry-leading benchmark of 6.7M IOPS. What's more, this time we needed only 12 server nodes&mdash;25 percent fewer than before.
 
 The test hardware was a 12-server cluster that was configured to use three-way mirroring and delimited ReFS volumes, **12** x Intel&reg; S2600WFT, **384 GiB** memory, 2 x 28-core "CascadeLake," **1.5 TB** Intel&reg; Optane&trade; DC persistent memory as cache, **32 TB** NVMe (4 x 8 TB Intel&reg; DC P4510) as capacity, **2** x Mellanox ConnectX-4 25 Gbps.
 

@@ -874,6 +874,11 @@
       "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
       "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-server-administration-tools.md",
+      "redirect_url": "/windows-server/administration/install-remote-server-administration-tools",
+      "redirect_document_id": false
     }
   ]
 }
