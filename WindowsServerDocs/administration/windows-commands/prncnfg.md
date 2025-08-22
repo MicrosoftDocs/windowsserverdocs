@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 38a4e8fa-3122-495b-a125-35b926bc6415
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 07/11/2018
 ---
 
