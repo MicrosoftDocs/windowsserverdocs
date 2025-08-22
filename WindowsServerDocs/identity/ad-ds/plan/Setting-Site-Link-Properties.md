@@ -4,7 +4,6 @@ ms.assetid: de054ac2-a386-43ec-a537-c0de21549741
 title: Setting Site Link Properties
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

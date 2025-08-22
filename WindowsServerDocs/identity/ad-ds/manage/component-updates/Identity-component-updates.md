@@ -4,7 +4,6 @@ ms.assetid: 7e87ce2b-062e-479f-bcf2-585b6c42026a
 title: Identity component updates
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

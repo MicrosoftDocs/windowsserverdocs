@@ -4,7 +4,6 @@ ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: Virtualized Domain Controller Deployment and Configuration
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

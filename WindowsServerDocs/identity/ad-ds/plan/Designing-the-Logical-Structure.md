@@ -4,7 +4,6 @@ ms.assetid: 9ad81367-f3fe-4b2e-bd7c-5900b2b9f77f
 title: Designing the Logical Structure
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

@@ -4,7 +4,6 @@ ms.assetid: 34244b53-1206-4f5b-8c4d-3ebf574d8e24
 title: Attractive Accounts for Credential Theft
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
 ---

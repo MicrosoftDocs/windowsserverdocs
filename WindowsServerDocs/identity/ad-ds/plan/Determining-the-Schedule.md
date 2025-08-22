@@ -4,7 +4,6 @@ ms.assetid: 28ecaf5c-9131-406c-b211-a230162e462e
 title: Determining the Schedule
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 
