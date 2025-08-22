@@ -375,7 +375,8 @@ Server Manager can used along with the other tools included in Remote Server Adm
 Server Manager is included with Windows Server by default and does not need to be installed separately. In the following steps, you'll use Server Manager to add an example Remote Server Administration Tool and launch the associated management tool.
 
 1. For new installations of Windows Server, Server Manager opens automatically by default. If Server Manager does not open automatically, open the Start menu, then select **Server Manager**.
-   :::image type="content" source="../manage/media/install-remote-server-administration-tools/server-manager.png" alt-text="a":::
+
+   :::image type="content" source="media/install-remote-server-administration-tools/server-manager.png" alt-text="Screenshot showing Server Manager Dashboard with configuration options and status tiles for installed roles.":::
 
 1. In Server Manager, select on **Manage** in the top right corner.
 
@@ -395,7 +396,7 @@ Server Manager is included with Windows Server by default and does not need to b
 
 1. You can now use the DNS Manager console to manage the DNS server or right-click the server name in the left pane to connect to a different DNS server.
 
-To learn more about using Server Manager to manage remote servers, see [Server Manager](../administration/server-manager/server-manager.md).
+To learn more about using Server Manager to manage remote servers, see [Server Manager](server-manager/server-manager.md).
 
 :::zone-end
 
@@ -415,15 +416,15 @@ Server Manager is included with Remote Server Administration Tools and can be in
 
 1. When prompted, enter the name or IP address of the remote server you want to manage, then select **OK**.
 
-   :::image type="content" source="../manage/media/install-remote-server-administration-tools/server-manager-dns-tools.png" alt-text="a":::
+   :::image type="content" source="media/install-remote-server-administration-tools/server-manager-dns-tools.png" alt-text="A screenshot showing Server Manager with the DNS Manager window open.":::
 
-To learn more about using Server Manager to manage remote servers, see [Server Manager](../administration/server-manager/server-manager.md).
+To learn more about using Server Manager to manage remote servers, see [Server Manager](server-manager/server-manager.md).
 
 :::zone-end
 
 ## Related content
 
-- [Configure Features on Demand in Windows Server](../administration/server-manager/configure-features-on-demand-in-windows-server.md)
-- [Configure remote Management in Server Manager](../administration/server-manager/configure-remote-management-in-server-manager.md)
-- [Server Manager](../administration/server-manager/server-manager.md)
+- [Configure Features on Demand in Windows Server](server-manager/configure-features-on-demand-in-windows-server.md)
+- [Configure remote Management in Server Manager](server-manager/configure-remote-management-in-server-manager.md)
+- [Server Manager](server-manager/server-manager.md)
 '

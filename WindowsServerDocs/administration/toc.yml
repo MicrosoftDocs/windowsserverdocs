@@ -91,8 +91,8 @@ items:
               href: server-manager/filter-sort-and-query-data-in-server-manager-tiles.md
             - name: Keyboard Shortcuts for Server Manager
               href: server-manager/keyboard-shortcuts-for-server-manager.md
-        - name: Manage Server Core and remote systems Remote Server Administration Tools
-          href: ../remote/remote-server-administration-tools.md
+        - name: Install Remote Server Administration Tools
+          href: install-remote-server-administration-tools.md
         - name: Manage Windows with OpenSSH
           items: 
             - name: What is OpenSSH for Windows?
