@@ -20,7 +20,14 @@ The method to install the RSATs varies depending on your platform. Make sure to 
 
 ## What are Remote Server Administration Tools?
 
- RSAT includes tools such as Server Manager, Microsoft Management Console (MMC) snap-ins, Windows PowerShell modules, and command-line utilities, allowing administrators to efficiently perform server management tasks without needing direct access to the server itself. These tools streamline remote administration, making it easier to configure, monitor, and troubleshoot Windows Server environments from virtually anywhere.
+RSAT includes several types of tools to help you manage servers remotely:
+
+- **Server Manager** - A central console for server tasks
+- **MMC snap-ins** - Focused tools for specific services  
+- **PowerShell modules** - Command-line scripts and automation
+- **Command-line tools** - Direct server control from the command prompt
+
+These tools streamline remote administration, making it easier to configure, monitor, and troubleshoot Windows Server environments from anywhere.
 
 ### Available tools
 
@@ -63,7 +70,7 @@ You can use the following RSATs from either a Windows Server or Windows client m
 1. Tools for managing Services for NFS on local and remote computers can be added as a Windows Optional Feature using DISM.
 1. Server Manager is included with Windows Server by default and not listed as a Remote Server Administration Tool.
 
-To learn more about the available Features on Demand RSAT, see the [list of RSAT available via **Features on Demand**](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat).
+To learn more about the available Features on Demand RSAT, see the [list of RSAT available via Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat).
 
 ## Prerequisites
 
@@ -91,7 +98,7 @@ To install Remote Server Administration Tools on Windows Server, select your pre
 
 ### [Server Manager](#tab/server-manager)
 
-To install RSATs using Server Manager follow these steps:
+To install RSATs using Server Manager, follow these steps:
 
 1. Sign in to the Windows Server computer with an account that has administrative privileges.
 
@@ -149,7 +156,7 @@ To install Remote Server Administration Tools using the Install-WindowsFeature P
 
 ### Install RSAT as Feature on Demand
 
-Some RSAT tools are available as **Features on Demand** (FoD), review the [Available tools](#available-tools) to see which tools are available as Features on Demand (FoD).
+Some RSAT tools are available as **Features on Demand**, review the [Available tools](#available-tools) to see which tools are available as Features on Demand.
 
 To install Remote Server Administration Tools on Windows client, select your preferred method:
 
@@ -215,7 +222,7 @@ To install RSAT using the desktop experience:
 
 1. Select **Start**, type _Windows Features_ in the search box, then select **Turn Windows features on or off**.
 
-1. In the **Windows Features** dialog box, search for tool you want to install, such as **Hyper-V Management Tools**, and check the box next to it. You may need to expand the category to see the specific tool.
+1. In the **Windows Features** dialog box, search for tool you want to install, such as **Hyper-V Management Tools**, and check the box next to it. You might need to expand the category to see the specific tool.
 
 1. Select **OK** to install the selected RSAT tools.
 
@@ -259,7 +266,7 @@ To install RSAT Windows Features using PowerShell, follow these steps:
 
 ### Install RSAT as Feature on Demand
 
-Some RSAT tools are available as **Features on Demand** (FoD), review the [Available tools](#available-tools) to see which tools are available as Features on Demand (FoD).
+Some RSAT tools are available as Features on Demand, review the [Available tools](#available-tools) to see which tools are available as Features on Demand.
 
 To install Remote Server Administration Tools on Windows client, select your preferred method:
 
@@ -326,7 +333,7 @@ To install RSAT using the desktop experience:
 
 1. Select **Start**, type _Windows Features_ in the search box, then select **Turn Windows features on or off**.
 
-1. In the **Windows Features** dialog box, search for tool you want to install, such as **Hyper-V Management Tools**, and check the box next to it. You may need to expand the category to see the specific tool.
+1. In the **Windows Features** dialog box, search for tool you want to install, such as **Hyper-V Management Tools**, and check the box next to it. You might need to expand the category to see the specific tool.
 
 1. Select **OK** to install the selected RSAT tools.
 
@@ -368,13 +375,13 @@ To install RSAT Windows Features using PowerShell, follow these steps:
 
 ## Manage local and remote servers with Server Manager
 
-Server Manager can used along with the other tools included in Remote Server Administration Tools to manage both local and remote servers from a single experience. You can use Server Manager to install, configure, and manage roles and features on multiple remote servers from a single console.
+Server Manager can be used along with the other tools included in Remote Server Administration Tools to manage both local and remote servers from a single experience. You can use Server Manager to install, configure, and manage roles and features on multiple remote servers from a single console.
 
 :::zone pivot="windows-server-2025,windows-server-2022, windows-server-2019, windows-server-2016"
 
-Server Manager is included with Windows Server by default and does not need to be installed separately. In the following steps, you'll use Server Manager to add an example Remote Server Administration Tool and launch the associated management tool.
+Server Manager is included with Windows Server by default and doesn't need to be installed separately. In the following steps, you'll use Server Manager to add an example Remote Server Administration Tool and launch the associated management tool.
 
-1. For new installations of Windows Server, Server Manager opens automatically by default. If Server Manager does not open automatically, open the Start menu, then select **Server Manager**.
+1. For new installations of Windows Server, Server Manager opens automatically by default. If Server Manager doesn't open automatically, open the Start menu, then select **Server Manager**.
 
    :::image type="content" source="media/install-remote-server-administration-tools/server-manager.png" alt-text="Screenshot showing Server Manager Dashboard with configuration options and status tiles for installed roles.":::
 
@@ -402,7 +409,7 @@ To learn more about using Server Manager to manage remote servers, see [Server M
 
 ::: zone pivot="windows-client-11, windows-client-10"
 
-Server Manager is included with Remote Server Administration Tools and can be installed as a Feature on Demand (FoD). In the following steps, you'll install Server Manager and use to add an example role to a remote server and launch the associated management tool.
+Server Manager is included with Remote Server Administration Tools and can be installed as a Feature on Demand. In the following steps, you'll install Server Manager and use to add an example role to a remote server and launch the associated management tool.
 
 1. Install the _RSAT: Server Manager_ feature on demand by following the steps in the [Install RSAT as Feature on Demand](#install-rsat-as-feature-on-demand) section.
 
