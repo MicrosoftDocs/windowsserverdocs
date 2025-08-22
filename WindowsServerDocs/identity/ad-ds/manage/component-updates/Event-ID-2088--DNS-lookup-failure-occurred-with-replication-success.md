@@ -66,21 +66,13 @@ dcdiag /test:dns
 Additional Data
 Error value:
 11004 The requested name is valid, but no data of the requested
-type was found</code>
-  </introduction>
-  <section>
-    <title>Diagnosis</title>
-    <content>
-      <para>Failure to resolve the source domain controller name by using the alias (CNAME) resource record in DNS can be due to DNS misconfigurations or delays in DNS data propagation.</para>
-    </content>
-  </section>
-  <section>
-    <title>Resolution</title>
-    <content>
-      <para>Proceed with DNS testing as described in &quot;<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">Event ID 2087: DNS lookup failure caused replication to fail</link>.&quot;</para>
-    </content>
-  </section>
-  <relatedTopics />
-</developerConceptualDocument>
->>>>>>> d3d5e1df7545fc05a0fe34e8d31a7bf943b585ae
+type was found
 ```
+
+## Diagnosis
+
+Failure to resolve the source domain controller name by using the alias (CNAME) resource record in DNS can be due to DNS misconfigurations or delays in DNS data propagation.
+
+## Resolution
+
+Proceed with DNS testing as described in [Event ID 2087: DNS lookup failure caused replication to fail](../Event-ID-2087--DNS-lookup-failure-caused-replication-to-fail.md).
