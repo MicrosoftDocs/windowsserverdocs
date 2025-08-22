@@ -5,7 +5,6 @@ ms.topic: concept-article
 ms.assetid: 4b1ea915-0f9f-4f0e-8913-a1dd460d07ab
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # Managing WSUS Client computers and WSUS computer Groups

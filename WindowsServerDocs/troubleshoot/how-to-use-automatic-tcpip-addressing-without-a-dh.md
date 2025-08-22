@@ -4,8 +4,8 @@ description: Introduce how to use automatic TCP/IP addressing without a DHCP ser
 manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
+author: robinharwood
+ms.author: roharwoo
 ms.reviewer: robsmi
 ---
 # How to use automatic TCP/IP addressing without a DHCP server

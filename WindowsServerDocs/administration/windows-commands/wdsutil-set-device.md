@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil set-device

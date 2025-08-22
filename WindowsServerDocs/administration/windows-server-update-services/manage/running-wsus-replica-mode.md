@@ -5,7 +5,6 @@ ms.topic: concept-article
 ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # Running WSUS Replica mode
