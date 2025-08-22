@@ -4,7 +4,6 @@ description: Learn more about how to install Active Directory Domain Services in
 ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 author: meaghanlewis
 ms.author: mosagie
-manager: daveba
 ms.topic: install-set-up-deploy
 ms.date: 04/18/2025
 #customer intent: As a system administrator, I want to install Active Directory Domain Services so that I can manage network resources effectively.

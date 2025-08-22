@@ -4,7 +4,6 @@ s.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: Virtualized Domain Controller Architecture
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ms.custom: inhenkel

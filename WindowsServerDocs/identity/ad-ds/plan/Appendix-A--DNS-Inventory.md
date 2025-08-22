@@ -4,7 +4,6 @@ ms.assetid: f3506489-f695-4d7d-b27a-ec714843c002
 title: Appendix A - DNS Inventory
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

@@ -4,7 +4,6 @@ ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
 title: Creating a DNS Infrastructure Design
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

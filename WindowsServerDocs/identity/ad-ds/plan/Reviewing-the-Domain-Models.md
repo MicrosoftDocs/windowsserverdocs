@@ -4,7 +4,6 @@ ms.assetid: e727a33d-133b-43c9-b6a4-7c00f9cb6000
 title: Reviewing the Domain Models
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

@@ -4,7 +4,6 @@ ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Appendix G - Securing Administrators Groups in Active Directory
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
 ---

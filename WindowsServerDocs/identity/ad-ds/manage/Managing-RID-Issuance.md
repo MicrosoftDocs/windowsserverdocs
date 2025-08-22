@@ -4,7 +4,6 @@ ms.assetid: aac117a7-aa7a-4322-96ae-e3cc22ada036
 title: Managing RID Issuance
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.custom: inhenkel

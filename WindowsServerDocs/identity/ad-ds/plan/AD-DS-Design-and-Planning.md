@@ -4,7 +4,6 @@ ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS Design and Planning
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
 ms.custom: inhenkel

@@ -4,7 +4,6 @@ ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Active Directory Replication Concepts
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

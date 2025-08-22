@@ -4,7 +4,6 @@ ms.assetid: 96a6749c-6c9f-4f2f-ad0a-51272d282ace
 title: Determining the Interval
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 
