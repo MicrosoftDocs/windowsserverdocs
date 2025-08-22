@@ -73,7 +73,7 @@ To use Remote Server Administration Tools, you need the following prerequisites:
 
   - Windows 10 (October 2018 Cumulative Update or later) Pro or Enterprise editions only
 
-  - Windows 11 Enterprise editions only
+  - Windows 11 Pro or Enterprise editions only
 
   - Any supported version of Windows Server
 
