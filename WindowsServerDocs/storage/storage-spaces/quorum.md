@@ -1,24 +1,29 @@
 ---
-title: Understand cluster and pool quorum on Azure Stack HCI and Windows Server clusters
-description: Understanding cluster and pool quorum in Storage Spaces Direct on Azure Stack HCI and Windows Server clusters, with specific examples to go over the intricacies.
+title: Understand cluster and pool quorum on Azure Local and Windows Server clusters
+description: Understanding cluster and pool quorum in Storage Spaces Direct on Azure Local and Windows Server clusters, with specific examples to go over the intricacies.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 02/22/2024
 ms.contributor: alalve
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Understanding cluster and pool quorum
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server
-
-[Windows Server Failover Clustering](/windows-server/failover-clustering/failover-clustering-overview) provides high availability for workloads running on Azure Stack HCI and Windows Server clusters. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
+[Windows Server Failover Clustering](/windows-server/failover-clustering/failover-clustering-overview) provides high availability for workloads running on Azure Local and Windows Server clusters. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
 
 Quorum is designed to prevent *split-brain* scenarios that can happen when there's a partition in the network and subsets of nodes can't communicate with each other. This can cause both subsets of nodes to try to own the workload and write to the same disk, which can lead to numerous problems. However, this is prevented with Failover Clustering's concept of quorum, which forces only one of these groups of nodes to continue running, so only one of these groups stays online.
 
 Quorum determines the number of failures that the cluster can sustain while still remaining online. Quorum is designed to handle the scenario when there's a problem with communication between subsets of cluster nodes, so that multiple servers don't try to simultaneously host a resource group and write to the same disk at the same time. By having this concept of quorum, the cluster forces the cluster service to stop in one of the subsets of nodes to ensure that there's only one true owner of a particular resource group. Nodes that have been stopped can once again communicate with the main group of nodes and will automatically rejoin the cluster and start their cluster service.
 
-In Azure Stack HCI and Windows Server 2019, there are two components of the system that have their own quorum mechanisms:
+In Azure Local and Windows Server 2019, there are two components of the system that have their own quorum mechanisms:
 
 - **Cluster Quorum**: This operates at the cluster level (i.e. you can lose nodes and have the cluster stay up)
 - **Pool Quorum**: This operates on the pool level (i.e. you can lose nodes and drives and have the pool stay up). Storage pools were designed to be used in both clustered and non-clustered scenarios, which is why they have a different quorum mechanism.

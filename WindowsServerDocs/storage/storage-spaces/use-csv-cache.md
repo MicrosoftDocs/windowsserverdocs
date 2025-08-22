@@ -1,20 +1,25 @@
 ---
-title: Use the CSV in-memory read cache with Azure Stack HCI and Windows Server clusters
+title: Use the CSV in-memory read cache with Azure Local and Windows Server clusters
 description: This topic describes how to use system memory to boost performance.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: jgerend
 ms.date: 04/19/2023
+appliesto: [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+           ]
 ---
 
 # Use the CSV in-memory read cache
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
+This topic describes how to use system memory to boost the performance of Azure Local and Windows Server by caching frequent reads. Writes cannot be cached in memory.
 
-This topic describes how to use system memory to boost the performance of Azure Stack HCI and Windows Server by caching frequent reads. Writes cannot be cached in memory.
-
-Azure Stack HCI and Windows Server are compatible with the Cluster Shared Volume (CSV) in-memory read cache. Using system memory to cache reads can improve performance for applications like Hyper-V, which uses unbuffered I/O to access VHD or VHDX files. (Unbuffered I/Os are any operations that are not cached by the Windows Cache Manager.)
+Azure Local and Windows Server are compatible with the Cluster Shared Volume (CSV) in-memory read cache. Using system memory to cache reads can improve performance for applications like Hyper-V, which uses unbuffered I/O to access VHD or VHDX files. (Unbuffered I/Os are any operations that are not cached by the Windows Cache Manager.)
 
 Because the in-memory cache is server-local, it improves data locality. Recent reads are cached in memory on the same host where the virtual machine (VM) is running, reducing how often reads go over the network. This results in lower latency and better storage performance.
 
@@ -31,11 +36,11 @@ You can use up to 80% of total physical memory for the CSV in-memory read cache.
 
 ## Configuring the in-memory read cache
 
-The CSV in-memory read cache is available in Azure Stack HCI, Windows Server 2019, and Windows Server 2016 with the same functionality. In Azure Stack HCI and Windows Server 2019, it's on by default with 1 gibibyte (GiB) allocated. In Windows Server 2016, it's off by default.
+The CSV in-memory read cache is available in Azure Local, Windows Server 2019, and Windows Server 2016 with the same functionality. In Azure Local and Windows Server 2019, it's on by default with 1 gibibyte (GiB) allocated. In Windows Server 2016, it's off by default.
 
 | OS version          | Default CSV cache size |
 |---------------------|------------------------|
-| Azure Stack HCI     | 1 GiB                  |
+| Azure Local     | 1 GiB                  |
 | Windows Server 2019 | 1 GiB                  |
 | Windows Server 2016 | 0 (disabled)           |
 
