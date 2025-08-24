@@ -293,6 +293,9 @@ WARNING: ACTIONS REQUIRED:
 
 ```
 
+### Storing Bitlocker Recovery Password on Cluster Database
+
+We must first get the Bitlocker Recovery password aka Numerical password for the CSV volume.
 To get the BitLocker protector information for the volume, the following command
 can be run:
 
