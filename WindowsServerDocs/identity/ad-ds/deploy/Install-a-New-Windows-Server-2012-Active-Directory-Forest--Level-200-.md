@@ -70,7 +70,7 @@ You use a graphical wizard in Server Manager or the ServerManager module for Win
 
 Active Directory Domain Services configuration " previously known as DCPROMO " is a now a discrete operation from role installation. After installing the AD DS role, an administrator configures the server as a domain controller using a separate wizard within Server Manager or using the ADDSDeployment Windows PowerShell module.
 
-AD DS role configuration builds on twelve years of field experience and now configures domain controllers based on the most recent Microsoft best practices. For example, Domain Name System and Global Catalogs install by default on every domain controller.
+AD DS role configuration builds on twelve years of field experience and now configures domain controllers based on the most recent Microsoft best practices. For example, Domain Name System and Global Catalogs install by default on every domain controller (unless the deployment is via Windows Powershell and there is no existing DNS server in the domain).
 
 The Server Manager AD DS configuration wizard merges many individual dialogs into fewer prompts and no longer hides settings in an "advanced" mode. The entire promotion process is in one expanding dialog box during installation. The wizard and the ADDSDeployment Windows PowerShell module show you notable changes and security concerns, with links to further information.
 
