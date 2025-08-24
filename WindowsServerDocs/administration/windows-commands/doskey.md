@@ -88,7 +88,7 @@ doskey [/reinstall] [/listsize=<size>] [/macros:[all | <exename>] [/history] [/i
   | `$G` or `$g` | Redirects output. Use either of these special characters to send output to a device or a file instead of to the screen. This character is equivalent to the redirection symbol for output (`>`). |
   | `$G$G` or `$g$g` | Appends output to the end of a file. Use either of these double characters to append output to an existing file instead of replacing the data in the file. These double characters are equivalent to the append redirection symbol for output (`>>`). |
   | `$L` or `$l` | Redirects input. Use either of these special characters to read input from a device or a file instead of from the keyboard. This character is equivalent to the redirection symbol for input (`<`). |
-  | `$B` or `$b` | Sends macro output to a command. These special characters are equivalent to using the pipe `(` and `*`. |
+  | `$B` or `$b` | Sends macro output to a command. These special characters are equivalent to using the pipe `\|`. |
   | `$T` or `$t` | Separates commands. Use either of these special characters to separate commands when you create macros or type commands on the **doskey** command line. These special characters are equivalent to using the ampersand (`&`) on a command line. |
   | `$$` | Specifies the dollar-sign character (`$`). |
   | `$1` through `$9` | Represent any command-line information you want to specify when you run the macro. The special characters `$1` through `$9` are batch parameters that enable you to use different data on the command line each time you run the macro. The `$1` character in a **doskey** command is similar to the `%1` character in a batch program. |
