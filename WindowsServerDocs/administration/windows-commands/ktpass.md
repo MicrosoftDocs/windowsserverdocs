@@ -22,7 +22,7 @@ ktpass
 [/princ <principalname>]
 [/mapuser <useraccount>]
 [/mapop {add|set}] [{-|+}desonly] [/in <filename>]
-[/pass {password|*|{-|+}rndpass}]
+[/pass {password|*}] [{-|+}rndpass]
 [/minpass]
 [/maxpass]
 [/crypto {DES-CBC-CRC|DES-CBC-MD5|RC4-HMAC-NT|AES256-SHA1|AES128-SHA1|All}]
@@ -44,7 +44,8 @@ ktpass
 | /mapop `{add|set}` | Specifies how the mapping attribute is set.<ul><li>**Add** - Adds the value of the specified local user name. This is the default.</li><li>**Set** - Sets the value for Data Encryption Standard (DES)-only encryption for the specified local user name.</li></ul> |
 | `{-|+}`desonly | DES-only encryption is set by default.<ul><li>**+** Sets an account for DES-only encryption.</li><li>**-** Releases restriction on an account for DES-only encryption. **Important:** Windows doesn't support DES by default.</li></ul> |
 | /in `<filename>` | Specifies the .keytab file to read from a host computer that is not running the Windows operating system. |
-| /pass `{password|*|{-|+}rndpass}` | Specifies a password for the principal user name that is specified by the **princ** parameter. Use `*` to prompt for a password. |
+| /pass `{password|*}` | Specifies a password for the principal user name that is specified by the **princ** parameter. Use `*` to prompt for a password. |
+| `{-|+}rndpass` | Use +rndpass to generate a random password. When this is specified `/pass` is no longer required |
 | /minpass | Sets the minimum length of the random password to 15 characters. |
 | /maxpass | Sets the maximum length of the random password to 256 characters. |
 | /crypto `{DES-CBC-CRC|DES-CBC-MD5|RC4-HMAC-NT|AES256-SHA1|AES128-SHA1|All}` | Specifies the keys that are generated in the keytab file:<ul><li>**DES-CBC-CRC** - Used for compatibility.</li><li>**DES-CBC-MD5** - Adheres more closely to the MIT implementation and is used for compatibility.</li><li>**RC4-HMAC-NT** - Employs 128-bit encryption.</li><li>**AES256-SHA1** - Employs AES256-CTS-HMAC-SHA1-96 encryption.</li><li>   **AES128-SHA1** - Employs AES128-CTS-HMAC-SHA1-96 encryption.</li><li>**All** - States that all supported cryptographic types can be used.</li></ul><p>**Note:** Because the default settings are based on older MIT versions, you should always use the `/crypto` parameter. |
