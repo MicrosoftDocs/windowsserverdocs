@@ -36,14 +36,14 @@ bitsadmin /setproxysettings myDownloadJob PRECONFIG
 ```
 
 ```
-bitsadmin /setproxysettings myDownloadJob NO_PROXY
+bitsadmin /setproxysettings myDownloadJob NO_PROXY
 ```
 ```
-bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1:80
+bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1:80
 ```
 
 ```
-bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1,proxy2,proxy3 NULL
+bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1,proxy2,proxy3 NULL
 ```
 
 ## Related links
