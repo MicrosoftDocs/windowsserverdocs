@@ -84,7 +84,7 @@ To create a Kerberos .keytab file for a host computer that isn't running the Win
     > [!NOTE]
     > You cannot map multiple service instances to the same user account.
 
-3. Merge the .keytab file with the */Etc/Krb5.keytab* file on a host computer that isn't running the Windows operating system.
+3. Merge the .keytab file with the */etc/krb5.keytab* file on a host computer that isn't running the Windows operating system.
 
 ## Related links
 
