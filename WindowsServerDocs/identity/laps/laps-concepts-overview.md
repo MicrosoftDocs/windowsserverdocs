@@ -91,8 +91,6 @@ Windows LAPS does respond to Group Policy change notifications. You can manually
 > [!TIP]
 > The earlier released Microsoft LAPS (legacy Microsoft LAPS) was built as a Group Policy (GPO) Client Side Extension (CSE). GPO CSEs are loaded and invoked in every Group Policy refresh cycle. The frequency of the legacy Microsoft LAPS polling cycle is the same as the frequency of the Group Policy refresh cycle. Windows LAPS is not built as a CSE, so its polling cycle is hard-coded to once per hour. Windows LAPS is not affected by the Group Policy refresh cycle.
 
-<a name='azure-active-directory-passwords'></a>
-
 ## Microsoft Entra passwords
 
 When you back up passwords to Microsoft Entra ID, managed local account passwords are stored on the Microsoft Entra device object. Windows LAPS authenticates to Microsoft Entra ID by using the device identity of the managed device. Data stored in Microsoft Entra ID is highly secure, but for extra protection, the password is further encrypted before being persisted. This extra encryption layer is removed before the password is returned to authorized clients.
@@ -112,7 +110,7 @@ When you back up passwords to Windows Server Active Directory, managed local acc
 
 #### ACLs
 
-The frontline of password security in Windows Server Active Directory uses ACLs that are set up on the computer object that contains an Organizational Unit (OU). The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
+The frontline of password security in Windows Server Active Directory uses ACLs that are set up on an Organizational Unit (OU) that contains the computer object. The ACLs are inherited to the computer object itself. You can specify who can read various password attributes by using the `Set-LapsADReadPasswordPermission` cmdlet. Similarly, you can specify who can read and set the password expiration time attribute by using the `Set-LapsADResetPasswordPermission` cmdlet.
 
 #### Encrypted passwords
 
