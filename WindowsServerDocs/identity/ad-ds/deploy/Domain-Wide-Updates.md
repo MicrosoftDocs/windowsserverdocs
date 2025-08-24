@@ -10,7 +10,7 @@ ms.topic: concept-article
 ms.custom: inhenkel
 
 ---
-# Domain-wide schema updates
+# Domain-wide updates
 
 You can review the following set of changes to help understand and prepare for the schema updates performed by adprep /domainprep in Windows Server.
 
