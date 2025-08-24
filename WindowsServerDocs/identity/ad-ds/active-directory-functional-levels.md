@@ -64,6 +64,10 @@ You can use the following operating systems as domain controllers (DCs) with the
 - Windows Server 2016
 - Windows Server 2012 R2
 
+> [!NOTE]
+> Windows Server 2025 DCs can only be introduced to forest of functional level Windows 2016 or higher. 
+  
+
 ### Windows Server 2012 R2 forest and domain functional level features
 
 All default Active Directory features, all features from the Windows Server 2012 domain functional level, plus the following features:
