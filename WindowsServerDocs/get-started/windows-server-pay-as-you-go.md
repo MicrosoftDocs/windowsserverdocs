@@ -168,12 +168,12 @@ To use Azure PowerShell to disable Windows Server Pay-as-you-go, follow these st
    $licenseProfile   = Set-AzResource -ResourceId $licenseProfileId -Properties $property -ApiVersion $apiVersion
    ```
 
+---
+
 > [!NOTE]
 > You have the ability to disable Windows Server Pay-as-you-go whenever you desire. Remember to disable Pay-as-you-go when you no longer need it. If you don't disable it, you continue to be charged for the Windows Server license—even if the device is shut down, disconnected, or unavailable.
 >
 > After disabling Windows Server Pay-as-you-go, you'll need a different type of license if you want to continue using your device. You can install a traditional perpetual license by entering a product key.
-
----
 
 ## See also
 
