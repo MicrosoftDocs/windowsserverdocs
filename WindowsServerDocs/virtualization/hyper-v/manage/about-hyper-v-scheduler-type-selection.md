@@ -68,7 +68,7 @@ Deploying Hyper-V hosts with the maximum security posture requires use of the hy
 
 * The hypervisor will use the core scheduler by default beginning with Windows Server 2019.
 
-* Microsoft reccommends configuring the core scheduler on Windows Server 2016. The hypervisor core scheduler type is supported in Windows Server 2016, however the default is the classic scheduler. The core scheduler is optional and must be explicitly enabled by the Hyper-V host administrator.
+* Microsoft recommends configuring the core scheduler on Windows Server 2016. The hypervisor core scheduler type is supported in Windows Server 2016, however the default is the classic scheduler. The core scheduler is optional and must be explicitly enabled by the Hyper-V host administrator.
 
 ### Virtual machine configuration changes
 
@@ -95,7 +95,7 @@ The guest virtual machine SMT configuration is set on a per-VM basis. The host a
 
 2. Configure VMs to run as non-SMT
 
-The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
+The SMT configuration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
 
 #### Configuring VM SMT settings using PowerShell
 
