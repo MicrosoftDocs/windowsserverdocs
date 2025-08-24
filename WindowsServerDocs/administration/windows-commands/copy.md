@@ -39,21 +39,21 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 
 #### Remarks
 
-- You can copy an ASCII text file that uses an end-of-file character (CTRL+Z) to indicate the end of the file.
+- You can copy an ASCII text file that uses an end-of-file (EOF) character (<kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>) to indicate the end of the file.
 
 - If **/a** precedes or follows a list of files on the command line, it applies to all files listed until **copy** encounters **/b**. In this case, **/b** applies to the file preceding **/b**.
 
     The effect of **/a** depends on its position in the command-line string:
-      - If **/a** follows *source*, the **copy** command treats the file as an ASCII file and copies data that precedes the first end-of-file character (CTRL+Z).
-      - If **/a** follows *destination*, the **copy** command adds an end-of-file character (CTRL+Z) as the last character of the file.
+      - If **/a** follows *source*, the **copy** command treats the file as an ASCII file and copies data that precedes the first EOF character (<kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>).
+      - If **/a** follows *destination*, the **copy** command adds an EOF character (<kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>) as the last character of the file.
 
 - If **/b** directs the command interpreter to read the number of bytes specified by the file size in the directory. **/b** is the default value for **copy**, unless **copy** combines files.
 
 - If **/b** precedes or follows a list of files on the command line, it applies to all listed files until **copy** encounters **/a**. In this case, **/a** applies to the file preceding **/a**.
 
     The effect of **/b** depends on its position in the command–line string:
-        - If **/b** follows *source*, the **copy** command copies the entire file, including any end-of-file character (CTRL+Z).
-        - If **/b** follows *destination*, the **copy** command doesn't add an end-of-file character (CTRL+Z).
+        - If **/b** follows *source*, the **copy** command copies the entire file, including any EOF character (<kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>).
+        - If **/b** follows *destination*, the **copy** command doesn't add an EOF character (<kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>).
 
 - If a write operation cannot be verified, an error message appears. Although recording errors rarely occur with the **copy** command , you can use **/v** to verify that critical data has been correctly recorded. The **/v** command-line option also slows down the **copy** command, because each sector recorded on the disk must be checked.
 
@@ -63,9 +63,9 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 
 - If the connection is lost during the copy phase (for example, if the server going offline breaks the connection), you can use **copy /z** to resume after the connection is re-established. The **/z** option also displays the percentage of the copy operation that is completed for each file.
 
-- You can substitute a device name for one or more occurrences of *source* or *destination*.
+- You can substitute a [device name](https://github.com/MicrosoftDocs/win32/blob/docs/desktop-src/DevNotes/rtlisdosdevicename_u.md) for one or more occurrences of *source* or *destination*.<!-- TODO: Provide a link to a better introduction -->
 
-- If *destination* is a device (for example, Com1 or Lpt1), the **/b** option copies data to the device in binary mode. In binary mode, **copy /b** copies all characters (including special characters such as CTRL+C, CTRL+S, CTRL+Z, and ENTER) to the device, as data. However, if you omit **/b**, the data is copied to the device in ASCII mode. In ASCII mode, special characters might cause files to combine during the copying process.
+- If *destination* is a device (for example, Com1 or Lpt1), the **/b** option copies data to the device in binary mode. In binary mode, **copy /b** copies all characters (including special characters such as <kbd>⎈ Ctrl</kbd> + <kbd>C</kbd>, <kbd>⎈ Ctrl</kbd> + <kbd>S</kbd>, <kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>, and <kbd>⎆ ENTER</kbd>) to the device, as data. However, if you omit **/b**, the data is copied to the device in ASCII mode. In ASCII mode, special characters might cause files to combine during the copying process.
 
 - If you don't specify a destination file, a copy is created with the same name, modified date, and modified time as the original file. The new copy is stored in the current directory on the current drive. If the source file is on the current drive and in the current directory and you do not specify a different drive or directory for the destination file, the **copy** command stops and displays the following error message:
 
@@ -88,7 +88,14 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 
 ## Examples
 
-To copy a file called *memo.doc* to *letter.doc* in the current drive and ensure that an end-of-file character (CTRL+Z) is at the end of the copied file, type:
+To add the command `echo Hello, World!` as a batch file named `Hello.bat` to the current directory, type the following and press <kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd> and then <kbd>⎆ Enter</kbd>:
+
+```cmd
+copy con Hello.bat
+echo Hello, World!
+```
+
+To copy a file called *memo.doc* to *letter.doc* in the current drive and ensure that an EOF character (<kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd>) is at the end of the copied file, type:
 
 ```
 copy memo.doc letter.doc /a
@@ -124,7 +131,7 @@ To combine all files in the current directory that have the .txt file name exten
 copy *.txt Combined.doc
 ```
 
-To combine several binary files into one file by using wildcard characters, include **/b**. This prevents Windows from treating CTRL+Z as an end-of-file character. For example, type:
+To combine several binary files into one file by using wildcard characters, include **/b**. This prevents Windows from treating <kbd>⎈ Ctrl</kbd> + <kbd>Z</kbd> as an EOF character. For example, type:
 
 ```
 copy /b *.exe Combined.exe
