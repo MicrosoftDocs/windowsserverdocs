@@ -445,6 +445,12 @@ To determine which clients attempt to connect to an SMB server by using SMBv1, y
   ```powershell
   Get-SmbServerConfiguration | Select AuditSmb1Access
   ```
+  
+  Server 2008 R2 doesn't support the powershell commands so the registry needs to be edited instead:
+  
+  **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+
+Registry entry: **AuditSmb1Access** REG_DWORD: **1**= enabled
 
 After you enable SMBv1 auditing, you can check the `Microsoft-Windows-SMBServer\Audit` event log for access events. Each time a client attempts to use SMBv1 to connect to a server, an entry that has an event ID of 3000 appears in the log.
 
