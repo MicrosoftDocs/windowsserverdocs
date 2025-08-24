@@ -85,7 +85,7 @@ Now you must add the records representing the web server host into the zone scop
 The records for the America datacenters were added in the previous scenario. You can use the following Windows PowerShell commands to add records to the zone scopes for European datacenters.
 
 ```powershell
-Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "151.1.0.1" -ZoneScope "DublinZoneScope”
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "151.1.0.1" -ZoneScope "DublinZoneScope"
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "AmsterdamZoneScope"
 ```
 
