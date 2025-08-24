@@ -45,7 +45,7 @@ To configure NTLM blocking:
 1. Run the following command to enable NTLM blocking.
 
    ```powershell
-   Set-SMbClientConfiguration -BlockNTLM $true 
+   Set-SmbClientConfiguration -BlockNTLM $true 
    ```
 
 ---
