@@ -44,6 +44,7 @@ Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentic
 |Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://docs.pingidentity.com/pingid-user-guide/secure_authentication_with_pingid/pid_verify_your_identity.html#pid_c_PingIDforADFSSSO.html)|
 |RSA|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation)|
 |SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
+|Securify Identity|Securify Identity MFA Adapter for AD FS| [Securify Identity MFA Adapter for AD FS](https://www.securifyidentity.com/integrations)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/)|
 |Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html)|
