@@ -43,16 +43,16 @@ To set the domain to corp.contoso.com, type:
 ksetup /domain corp.contoso.com
 ```
 
-To add the encryption type *AES-256-CTS-HMAC-SHA1-96* to the list of possible types for the domain *corp.contoso.com*, type:
+To add the encryption type *AES256-CTS-HMAC-SHA1-96* to the list of possible types for the domain *corp.contoso.com*, type:
 
 ```
-ksetup /addenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
+ksetup /addenctypeattr corp.contoso.com AES256-CTS-HMAC-SHA1-96
 ```
 
-To set the encryption type attribute to *AES-256-CTS-HMAC-SHA1-96* for the domain *corp.contoso.com*, type:
+To set the encryption type attribute to *AES256-CTS-HMAC-SHA1-96* for the domain *corp.contoso.com*, type:
 
 ```
-ksetup /setenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
+ksetup /setenctypeattr corp.contoso.com AES256-CTS-HMAC-SHA1-96
 ```
 
 To verify that the encryption type attribute was set as intended for the domain, type:
