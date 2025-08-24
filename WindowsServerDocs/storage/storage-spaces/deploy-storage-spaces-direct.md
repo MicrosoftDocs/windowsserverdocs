@@ -272,7 +272,7 @@ Enabling the CSV cache reduces the amount of memory available to run VMs on a hy
 To set the size of the CSV cache, open a PowerShell session on the management system with an account that has administrator permissions on the storage cluster, and then use this script, changing the `$ClusterName` and `$CSVCacheSize` variables as appropriate (this example sets a 2 GB CSV cache per server):
 
 ```PowerShell
-$ClusterName = "StorageSpacesDirect1"
+$ClusterName = $(Get-Cluster).Name
 $CSVCacheSize = 2048 #Size in MB
 
 Write-Output "Setting the CSV cache..."
