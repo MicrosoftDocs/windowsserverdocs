@@ -9,6 +9,9 @@ manager: scottman
 ms.author: daknappe
 ---
 # MultiPoint Services
+
+**MultiPoint Services were removed starting with Windows Server, version 1803** 
+
 MultiPoint Services is a solution that allows multiple users, each with their own independent and familiar Windows experience, to simultaneously share one computer.
 
 User stations, consisting of a monitor, keyboard, and mouse, are directly connected to the host computer through USB or video cables. Because MultiPoint Services is a genuine Microsoft published software product, when properly licensed, you are eligible to receive support by Microsoft or an authorized partner. This gives you the full capabilities of Windows, access to all the latest updates, and confidence that you are achieving the experience you expect.
