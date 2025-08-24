@@ -26,7 +26,7 @@ nfsadmin server [computername] [-u Username [-p Password]] creategroup <name>
 nfsadmin server [computername] [-u Username [-p Password]] listgroups
 nfsadmin server [computername] [-u Username [-p Password]] deletegroup <name>
 nfsadmin server [computername] [-u Username [-p Password]] renamegroup <oldname> <newname>
-nfsadmin server [computername] [-u Username [-p Password]] addmembers <hostname>[...]
+nfsadmin server [computername] [-u Username [-p Password]] addmembers <groupname>[...]
 nfsadmin server [computername] [-u Username [-p Password]] listmembers
 nfsadmin server [computername] [-u Username [-p Password]] deletemembers <hostname><groupname>[...]
 nfsadmin client [computername] [-u Username [-p Password]] {start | stop}
