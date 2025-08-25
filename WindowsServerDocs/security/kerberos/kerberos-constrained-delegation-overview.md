@@ -49,7 +49,7 @@ For more information about the basic message sequence for Kerberos delegation wi
 
 Resource-based constrained delegation gives control of delegation to the administrator who owns the resource being accessed. It depends on attributes of the resource service rather than the service being trusted to delegate. As a result, resource-based constrained delegation can't use the Trusted-to-Authenticate-for-Delegation bit that previously controlled protocol transition. The KDC always allows protocol transition when performing resource-based constrained delegation as though the bit were set.
 
-Because the KDC doesn't limit protocol transition, two new well known SIDs give this control to the resource administrator. These SIDs identify whether protocol transition has occurred, and can be used with standard access control lists to grant or limit access as needed.
+Because the KDC doesn't limit protocol transition, two new well-known SIDs give this control to the resource administrator. These SIDs identify whether protocol transition has occurred, and can be used with standard access control lists to grant or limit access as needed.
 
 |SID|Description|
 |-------|--------|
