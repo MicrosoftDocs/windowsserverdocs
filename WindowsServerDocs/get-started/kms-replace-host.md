@@ -13,7 +13,7 @@ This article outlines the steps and best practices for migrating the Key Managem
 
 Before proceeding with your installation and licensing tasks, review the following details regarding your new KMS host:
 
-- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office, which are obtained through the Microsoft 365 Admin Center. The CSVLK has a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
+- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office, which are obtained through the Microsoft 365 Admin Center. The CSVLK has a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl).
 
 - If you're unable to find your CSVLK, [contact support](/microsoft-365/commerce/licenses/contact-vl-support) for licensing assistance.
 
