@@ -13,7 +13,7 @@ This article describes new capabilities for Kerberos constrained delegation in W
 
 ## Feature description
 
-Kerberos constrained delegation was introduced in Windows Server to provide a safer form of delegation that could be used by services. When it is configured, constrained delegation restricts the services to which the specified server can act on the behalf of a user. This requires domain admin privileges to configure a domain account for a service and restricts the account to a single domain. In modern enterprises, front-end services aren't designed to integrate only with services in their domain.
+Kerberos constrained delegation was introduced in Windows Server to provide a safer form of delegation that could be used by services. When it's configured, constrained delegation restricts the services to which the specified server can act on the behalf of a user. This requires domain admin privileges to configure a domain account for a service and restricts the account to a single domain. In modern enterprises, front-end services aren't designed to integrate only with services in their domain.
 
 In earlier operating systems, domain admins configured the service, and service admins had no way to know which front-end services delegated to the resource services they owned. And any front-end service that could delegate to a resource service represented a potential attack point. If a server that hosted a front-end service was compromised, and it was configured to delegate to resource services, the resource services could also be compromised.
 
@@ -25,7 +25,7 @@ The Windows Server 2012 R2  and Windows Server 2012 implementation of the Kerber
 
 Constrained delegation lets service admins specify and enforce application trust boundaries by limiting where application services can act on a user's behalf. Service administrators can configure which front-end service accounts can delegate to their back-end services.
 
-By supporting constrained delegation across domains in Windows Server 2012 R2 and Windows Server 2012, front-end services like Microsoft Internet Security and Acceleration (ISA) Server, Microsoft Forefront Threat Management Gateway, Microsoft Exchange Outlook Web Access (OWA), and Microsoft SharePoint Server can use constrained delegation to authenticate to servers in other domains. This provides support for across domains service solutions by using an existing Kerberos infrastructure. Kerberos constrained delegation can be managed by domain administrators or service administrators.
+Front-end services like Microsoft Internet Security and Acceleration (ISA) Server, Microsoft Forefront Threat Management Gateway, Microsoft Exchange Outlook Web Access (OWA), and Microsoft SharePoint Server can use constrained delegation to authenticate to servers in other domains. This provides support for across domains service solutions by using an existing Kerberos infrastructure. Kerberos constrained delegation can be managed by domain administrators or service administrators.
 
 ## Resource-based constrained delegation across domains
 
@@ -33,7 +33,7 @@ Kerberos constrained delegation lets you provide constrained delegation when the
 
 ### What value does this change add?
 
-By supporting constrained delegation across domains, services can use constrained delegation to authenticate to servers in other domains instead of using unconstrained delegation. This provides authentication support for cross-domain service solutions using an existing Kerberos infrastructure without requiring trust in front-end services to delegate to any service.
+Services can use constrained delegation to authenticate to servers in other domains instead of using unconstrained delegation. This provides authentication support for cross-domain service solutions using an existing Kerberos infrastructure without requiring trust in front-end services to delegate to any service.
 
 This also shifts the decision of whether a server should trust the source of a delegated identity from the delegating-from domain administrator to the resource owner.
 
@@ -47,9 +47,9 @@ For more information about the basic message sequence for Kerberos delegation wi
 
 ### Security Implications of Resource-based Constrained Delegation
 
-Resource-based constrained delegation gives control of delegation to the administrator who owns the resource being accessed. It depends on attributes of the resource service rather than the service being trusted to delegate. As a result, resource-based constrained delegation cannot use the Trusted-to-Authenticate-for-Delegation bit that previously controlled protocol transition. The KDC always allows protocol transition when performing resource-based constrained delegation as though the bit were set.
+Resource-based constrained delegation gives control of delegation to the administrator who owns the resource being accessed. It depends on attributes of the resource service rather than the service being trusted to delegate. As a result, resource-based constrained delegation can't use the Trusted-to-Authenticate-for-Delegation bit that previously controlled protocol transition. The KDC always allows protocol transition when performing resource-based constrained delegation as though the bit were set.
 
-Because the KDC doesn't limit protocol transition, two new well known SIDs give this control to the resource administrator.  These SIDs identify whether protocol transition has occurred, and can be used with standard access control lists to grant or limit access as needed.
+Because the KDC doesn't limit protocol transition, two new well known SIDs give this control to the resource administrator. These SIDs identify whether protocol transition has occurred, and can be used with standard access control lists to grant or limit access as needed.
 
 |SID|Description|
 |-------|--------|
@@ -60,7 +60,7 @@ A backend service can use standard ACL expressions to determine how the user was
 
 ### How do you configure Resource-based Constrained Delegation?
 
-To configure a resource service to let a front-end service access resources on behalf of users, use Windows PowerShell cmdlets.
+To configure a resource service to let front-end services access resources on behalf of users, use Windows PowerShell cmdlets.
 
 - To retrieve a list of principals, use the **Get-ADComputer**, **Get-ADServiceAccount**, and **Get-ADUser** cmdlets with the **Properties PrincipalsAllowedToDelegateToAccount** parameter.
 
