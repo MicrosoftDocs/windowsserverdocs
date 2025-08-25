@@ -5,7 +5,6 @@ ms.topic: concept-article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 08/25/2025
 ---
 # Kerberos Constrained Delegation Overview
@@ -66,9 +65,3 @@ To configure a resource service to let a front-end service access resources on b
 - To retrieve a list of principals, use the **Get-ADComputer**, **Get-ADServiceAccount**, and **Get-ADUser** cmdlets with the **Properties PrincipalsAllowedToDelegateToAccount** parameter.
 
 - To configure the resource service, use the **New-ADComputer**, **New-ADServiceAccount**, **New-ADUser**, **Set-ADComputer**, **Set-ADServiceAccount**, and **Set-ADUser** cmdlets with the **PrincipalsAllowedToDelegateToAccount** parameter.
-
-## Software requirements
-
-Resource-based constrained delegation can only be configured on a domain controller running Windows Server 2012 R2 and Windows Server 2012, but it can be applied within a mixed-mode forest.
-
-Apply the following hotfix to all domain controllers running Windows Server 2012 in user account domains on the referral path between the front-end and back-end domains that run operating systems earlier than Windows Server: Resource-based constrained delegation KDC_ERR_POLICY failure in environments that have Windows Server 2008 R2-based domain controllers (https://support.microsoft.com/en-gb/help/2665790/resource-based-constrained-delegation-kdc-err-policy-failure-in-enviro).
