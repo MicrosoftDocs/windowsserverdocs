@@ -4,7 +4,6 @@ description: Learn how to use instant messaging in MultiPoint Services
 ms.topic: how-to
 ms.assetid: 475cde97-d05c-4589-afa9-96db891bd271
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

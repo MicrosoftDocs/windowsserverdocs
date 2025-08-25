@@ -4,7 +4,6 @@ description: USN Rollback and safe virtualization of Active Directory
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
 ms.custom: inhenkel

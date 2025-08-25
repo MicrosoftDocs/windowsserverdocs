@@ -4,7 +4,6 @@ ms.assetid: 13fe87d9-75cf-45bc-a954-ef75d4423839
 title: Appendix I - Creating Management Accounts for Protected Accounts and Groups in Active Directory
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.custom: sfi-image-nochange

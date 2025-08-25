@@ -1,7 +1,6 @@
 ---
 title: fsutil devdrv
 description: Reference article for the fsutil devdrv command, which groups dev drive related functionality.
-manager: nealch
 ms.author: chandkv
 author: chandkv
 ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d

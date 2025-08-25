@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.assetid: 63f08b5b-c735-41f4-b6c8-411eff85a4ab
 author: dknappettmsft
 ms.author: daknappe
-manager: scottman
 ---
 # Create Windows 10 Enterprise virtual desktops for stations
 This optional configuration in MultiPoint Services is primarily intended for situations where an essential application requires its own instance of a client operating system for each user. Examples include applications that cannot be installed on Windows Server and applications that will not run multiple instances on the same host computer.

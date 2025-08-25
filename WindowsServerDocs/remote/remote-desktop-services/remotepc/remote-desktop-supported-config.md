@@ -4,7 +4,6 @@ description: Learn which PCs you can and can't access by using supported configu
 ms.topic: feature-availability
 ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44
 author: xelu86
-manager: dongill
 ms.author: alalve
 ms.date: 7/3/2024
 ---

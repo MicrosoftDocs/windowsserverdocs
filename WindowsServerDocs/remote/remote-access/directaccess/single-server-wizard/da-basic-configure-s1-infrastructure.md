@@ -1,7 +1,6 @@
 ---
 title: Step 1 Configure the Basic DirectAccess Infrastructure
 description: Learn how to configure the infrastructure required for a basic DirectAccess deployment using a single DirectAccess server in a mixed IPv4 and IPv6 environment.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: ba4de2a4-f237-4b14-a8a7-0b06bfcd89ad
 ms.author: daknappe

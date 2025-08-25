@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: d3196995-1b38-48ff-ba08-911cfab77317
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

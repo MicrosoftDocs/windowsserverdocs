@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 08/07/2020
 ---
 

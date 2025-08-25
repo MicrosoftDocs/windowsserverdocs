@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: how-to
 ms.assetid: 4e83b126-ce9a-4cd7-a0bd-6627c9e0f81b
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # Set up the physical computer and primary station

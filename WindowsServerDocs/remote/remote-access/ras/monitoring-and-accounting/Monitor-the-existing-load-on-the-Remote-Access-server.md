@@ -1,7 +1,6 @@
 ---
 title: Monitor the existing load on the Remote Access server
 description: Learn how to use the monitoring dashboard to view the load statistics for the server, or you can use Performance Monitor counters to track the statistics.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 ms.author: daknappe

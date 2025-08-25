@@ -5,7 +5,6 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 7/3/2024
-manager: dongill
 ---
 # Add high availability to the RD Web and Gateway web front
 

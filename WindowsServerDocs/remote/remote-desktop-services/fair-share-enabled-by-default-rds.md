@@ -4,7 +4,6 @@ description: Describes how an RDSH server uses Fair Share technology to balance 
 ms.date: 7/3/2024
 author: robinharwood
 ms.author: roharwoo
-manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, davean

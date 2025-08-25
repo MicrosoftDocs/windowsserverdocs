@@ -4,7 +4,6 @@ ms.assetid: 249ba1be-b0d3-4a77-99af-3699074a2b6e
 title: Virtualized Domain Controller Troubleshooting
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: troubleshooting-general
 ms.custom: inhenkel

@@ -4,7 +4,6 @@ ms.assetid: 8be8c48d-790c-4199-b9d3-9f4a07d5ced2
 title: Collecting Network Information
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 

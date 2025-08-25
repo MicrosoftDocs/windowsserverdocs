@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: how-to
 ms.assetid: 76ed6fa3-2efb-4ebd-a734-f3f9440523f0
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # Optional configuration tasks for a MultiPoint Services deployment

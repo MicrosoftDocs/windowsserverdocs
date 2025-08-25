@@ -4,7 +4,6 @@ description: Learn how to remap some but not all systems in MultiPoint Services
 ms.topic: how-to
 ms.assetid: f6007f1a-95d3-4a6e-a9fb-a2b82fa6918a
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

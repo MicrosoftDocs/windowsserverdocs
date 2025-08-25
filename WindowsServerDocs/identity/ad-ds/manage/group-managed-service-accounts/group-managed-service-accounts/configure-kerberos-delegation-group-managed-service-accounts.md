@@ -4,7 +4,6 @@ description: Explains how to configure Kerberos delegation for group Managed Ser
 ms.topic: how-to
 ms.author: mosagie
 author: meaghanlewis
-manager: tedhudek
 ms.date: 07/09/2025
 ms.custom: sfi-image-nochange
 ---

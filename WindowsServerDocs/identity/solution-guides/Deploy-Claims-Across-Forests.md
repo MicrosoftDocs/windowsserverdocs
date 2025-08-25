@@ -4,7 +4,6 @@ ms.assetid: ceb9ce18-5a94-4166-9edd-2685b81fc15f
 title: Deploy Claims Across Forests
 author: robinharwood
 ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

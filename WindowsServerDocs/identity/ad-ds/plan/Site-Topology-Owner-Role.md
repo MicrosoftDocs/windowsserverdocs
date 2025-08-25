@@ -4,7 +4,6 @@ ms.assetid: af76ddbe-83a2-4a62-9989-873e3bb1c772
 title: Site Topology Owner Role
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

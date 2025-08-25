@@ -6,7 +6,6 @@ ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 7/3/2024
-manager: scottman
 ---
 # Manage users in your RDS collection
 

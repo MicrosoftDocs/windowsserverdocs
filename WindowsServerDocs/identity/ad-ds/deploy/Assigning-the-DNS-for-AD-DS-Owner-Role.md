@@ -4,7 +4,6 @@ title: DNS for AD DS Owner Role
 description: Information about the DNS for AD DS Owner role.
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

@@ -5,7 +5,6 @@ ms.date: 07/29/2016
 ms.topic: upgrade-and-migration-article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ---
 # Planning worksheet for MultiPoint Services migration

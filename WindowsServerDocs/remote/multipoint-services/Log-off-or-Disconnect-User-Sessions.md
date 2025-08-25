@@ -4,7 +4,6 @@ description: Learn how to manually log off a user
 ms.topic: how-to
 ms.assetid: 3e9bbcdc-e33b-481e-8b46-787a4f6d58bc
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

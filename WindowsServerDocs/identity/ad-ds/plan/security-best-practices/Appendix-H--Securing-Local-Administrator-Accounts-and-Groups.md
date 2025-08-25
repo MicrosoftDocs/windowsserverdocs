@@ -4,7 +4,6 @@ ms.assetid: ea015cbc-dea9-4c72-a9d8-d6c826d07608
 title: Appendix H - Securing Local Administrator Accounts and Groups
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
 ---

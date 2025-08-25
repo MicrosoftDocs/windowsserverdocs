@@ -2,7 +2,6 @@
 ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: The role of attribute stores in AD FS
 description: This article describes the role of attribute stores in Active Directory Federation Services (AD FS).
-manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: concept-article
 ---

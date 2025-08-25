@@ -5,7 +5,6 @@ ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: how-to
 author: dknappettmsft
-manager: dongill
 ---
 # Set up disaster recovery for RDS using Azure Site Recovery
 
