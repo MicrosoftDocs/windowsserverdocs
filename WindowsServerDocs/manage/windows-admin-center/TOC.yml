@@ -41,6 +41,8 @@
       href: configure/use-powershell.md
     - name: Websocket validation
       href: configure/websocket-validation.md
+    - name: Update the certificate
+      href: configure/update-certificate.md    
   - name: Use
     items:
     - name: Get started
