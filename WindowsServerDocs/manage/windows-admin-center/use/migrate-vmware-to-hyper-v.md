@@ -507,4 +507,3 @@ Cancellation isn't supported directly in the extension. As a workaround:
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
 
----
