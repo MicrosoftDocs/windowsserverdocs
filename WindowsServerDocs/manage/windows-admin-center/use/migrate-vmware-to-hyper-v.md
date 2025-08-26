@@ -476,7 +476,7 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 ---
 
-### Issue 3: Migration pre-check fails with error
+### Issue 3: Migration precheck fails with error
 
 **Error message:**
 
