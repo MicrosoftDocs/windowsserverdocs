@@ -436,7 +436,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     </details>
 
 
-## Troubleshooting Guide
+## Troubleshooting guide
 
 ### Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
 
