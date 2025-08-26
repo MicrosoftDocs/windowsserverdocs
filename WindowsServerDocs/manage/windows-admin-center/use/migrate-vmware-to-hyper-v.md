@@ -460,7 +460,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 **Symptom:**
 
-* User wants to cancel a synchronization or migration while it is in progress.
+- User wants to cancel a synchronization or migration while it is in progress.
 
 **Resolution:**
 Cancellation isn't supported directly in the extension. As a workaround:
