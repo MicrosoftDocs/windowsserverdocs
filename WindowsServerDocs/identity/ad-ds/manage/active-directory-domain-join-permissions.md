@@ -4,31 +4,27 @@ description: This article describes the permissions required in Active Directory
 ms.topic: concept-article
 author: xelu86
 ms.author: alalve
-ms.date: 08/18/2025
+ms.date: 08/26/2025
 ---
 
 # Active Directory domain join permissions
 
 This article describes the permissions required in Active Directory (AD) for successful domain join operations. Domain join is the process of adding a computer to an AD domain, enabling centralized management and authentication. The permissions required for domain join depend on whether you're *creating a new computer account* or *reusing an existing account*. Proper configuration of these permissions is essential for security and operational efficiency, as misconfigured permissions can lead to failed domain joins or introduce security risks. The following sections provide guidance for the given scenarios, including recommended practices and troubleshooting tips.
 
-## Scenario 1: A computer account doesn't exist and needs to be created
-
-**Permissions required to join a domain without pre-created computer accounts:**
+## Scenario 1: Permissions for creating computer accounts
 
 This scenario applies when users join their own computers to the domain without prior provisioning of computer accounts. During domain join, if the computer account with the name you're joining doesn't exist in AD, the system creates it using an [Ldap_Add()](/windows/win32/api/winldap/nf-winldap-ldap_add) operation, performed with the provided user credentials. To learn more, see [NetJoinDomain function (lmjoin.h)](/windows/win32/api/lmjoin/nf-lmjoin-netjoindomain). The user joining the computer must either have the **Add workstations to domain** user right (also known as `SeMachineAccountPrivilege`, managed by `Ms-Ds-Machine-Account-Quota`), or permission to create computer objects in the organizational unit (OU) or container where the account is created. Because of the vulnerabilities described in [Add workstations to domain](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/add-workstations-to-domain), Microsoft doesn't recommend using this option.
 
-**Permissions required to pre-create computer accounts:**
-
-When a computer account already exists in AD, and a different user needs to join the computer to the domain using that account, the process typically involves a delegated administrator or service account that pre-provisions computer accounts. This setup enables another user to perform the domain join by reusing the existing account. Lets say **Admin01** creates the computer account and **Admin02** performs the join. In this example, **Admin01** must be delegated the **Create Computer Accounts** permission using *Create Child* [ACTRL_DS_CREATE_CHILD](/windows/win32/SecAuthZ/directory-services-access-rights) on the relevant OU or container.
-
 > [!IMPORTANT]
-> Delegate it with care, and ensure appropriate security protections and monitoring are in place. See [KB5008383 - Active Directory permissions updates (CVE-2021-42291)](https://support.microsoft.com/topic/kb5008383-active-directory-permissions-updates-cve-2021-42291-536d5555-ffba-4248-a60e-d6cbc849cde1) for details.
+> Delegate with care, and ensure appropriate security protections and monitoring are in place. See [KB5008383 - Active Directory permissions updates (CVE-2021-42291)](https://support.microsoft.com/topic/kb5008383-active-directory-permissions-updates-cve-2021-42291-536d5555-ffba-4248-a60e-d6cbc849cde1) for details.
 
-## Scenario 2: A computer account exists and another user needs to reuse it for domain join
+## Scenario 2: Reusing computer accounts during domain join
+
+When a computer account already exists in AD, and a different user needs to join the computer to the domain using that account, the process typically involves a delegated administrator (or service account) that pre-provisions computer accounts. This setup enables another user to perform the domain join by reusing the existing account. Lets say **Admin01** creates the computer account and **Admin02** performs the join. In this example, **Admin01** must be delegated the **Create Computer Accounts** permission using *Create Child* [ACTRL_DS_CREATE_CHILD](/windows/win32/SecAuthZ/directory-services-access-rights) on the relevant OU or container.
+
+A more common scenario involves domain joining a device with a precreated computer account. For example, **Admin01** at `contoso.com` has the **Create Computer Account** permissions on `OU=Workstations,DC=Contoso,DC=com`. **Admin01** creates a computer account in the Workstations OU called **NewPC1** and **Admin02** needs to join this computer to the domain during the build process. In cases where troubleshooting is necessary, such as when **Admin03** needs to unjoin and rejoin a computer, the preexisting account eases this process. When an account with the name **NewPC1$** exists in AD, an [Ldap_modify()](/windows/win32/api/winldap/nf-winldap-ldap_modify) operation is executed using the credentials of the user handling the join, like \<<Admin02@contoso.com>>.
 
 When you perform the [offline domain join](/windows-server/remote/remote-access/directaccess/directaccess-offline-domain-join) process (`djoin /requestODJ`), the join doesn't require any permissions on the computer account in AD. This method is recommended because it minimizes required AD privileges and reduces potential issues.
-
-Another common scenario involves domain joining a device with a precreated computer account. For example, **Admin01** at `contoso.com` has the **Create Computer Account** permissions on `OU=Workstations,DC=Contoso,DC=com`. **Admin01** creates a computer account in the Workstations OU called **NewPC1** and **Admin02** needs to join this computer to the domain during the build process. In cases where troubleshooting is necessary, such as when **Admin03** needs to unjoin and rejoin a computer, the preexisting account eases this process. When an account with the name **NewPC1$** exists in AD, an [Ldap_modify()](/windows/win32/api/winldap/nf-winldap-ldap_modify) operation is executed using the credentials of the user handling the join, like \<<Admin02@contoso.com>>.
 
 When you reuse an existing computer account for domain join, the following attributes might be updated on the computer object as needed:
 
