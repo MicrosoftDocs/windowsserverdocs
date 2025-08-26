@@ -485,7 +485,7 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 **Resolution:**
 
-* Ensure there are no **failed virtual machines** present on the same destination server.
+- Ensure there are no **failed virtual machines** present on the same destination server.
 
 ---
 
