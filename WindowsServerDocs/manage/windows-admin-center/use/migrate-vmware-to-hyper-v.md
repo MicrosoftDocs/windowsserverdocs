@@ -435,7 +435,6 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     >If licensing in your environment depends on a combination of BIOS GUID and BIOS Serial Number, the source, and destination values won't match, even if the BIOS GUID is manually updated.
     </details>
 
-
 ## Troubleshooting guide
 
 ### Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
