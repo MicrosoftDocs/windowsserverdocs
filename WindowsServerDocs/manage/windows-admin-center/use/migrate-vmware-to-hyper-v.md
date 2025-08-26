@@ -464,7 +464,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 * User wants to cancel a synchronization or migration while it is in progress.
 
 **Resolution:**
-Currently, cancellation is not supported directly in the extension. As a workaround:
+Cancellation isn't supported directly in the extension. As a workaround:
 
 1. Stop the **Windows Admin Center service**.
 2. Restart the service. This will release all running threads.
