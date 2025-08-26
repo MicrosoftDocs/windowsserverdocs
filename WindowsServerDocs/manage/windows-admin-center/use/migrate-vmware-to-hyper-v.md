@@ -453,7 +453,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
    C:\Program Files\Windows Admin Center\Service\migrationStatus.json
    C:\Program Files\Windows Admin Center\Service\syncStatus.json
    ```
-2. If the VM already exists in **Hyper-V Manager**, delete it before re-initiating the migration.
+1. If the VM already exists in **Hyper-V Manager**, delete it before reinitiating the migration.
 
 ---
 
