@@ -443,7 +443,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 **Symptom:**
 
 * User wants to re-sync or re-migrate a VM.
-* Migration is stuck at a certain percentage due to a session timeout.
+- Migration is stuck at a certain percentage due to a session timeout.
 
 **Resolution:**
 
