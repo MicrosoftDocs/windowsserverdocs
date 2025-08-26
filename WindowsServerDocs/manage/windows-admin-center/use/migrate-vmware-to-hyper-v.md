@@ -244,8 +244,6 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's persisted on the target Hyper-V host post cutover phase.
 
-    Static IP addresses for Linux VMs aren't migrated automatically during conversion. Follow the steps to [maintain static IP addresses during migration](/azure/azure-local/migrate/migrate-maintain-ip-addresses).
-
 - How does the tool handle VM boot types?
 
     The tool automatically detects the source VM’s boot type. **BIOS boot** creates a Generation 1 VM on Hyper-V. **UEFI boot** creates a Generation 2 VM on Hyper-V.
@@ -436,3 +434,75 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     >- Hyper-V BIOS Serial Number: Custom format (4-4-4-4-4-4-2) → 3123-9812-5797-4305-8770-5953-62
     >If licensing in your environment depends on a combination of BIOS GUID and BIOS Serial Number, the source, and destination values won't match, even if the BIOS GUID is manually updated.
     </details>
+
+## Troubleshooting guide
+
+### Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
+
+**Symptom:**
+
+- User wants to resync or remigrate a VM.
+- Migration is stuck at a certain percentage due to a session timeout.
+
+**Resolution:**
+
+1. Delete the relevant entries from the following files on the Windows Admin Center gateway machine:
+
+   ```
+   C:\Program Files\Windows Admin Center\Service\migrationStatus.json
+   C:\Program Files\Windows Admin Center\Service\syncStatus.json
+   ```
+1. If the VM already exists in **Hyper-V Manager**, delete it before reinitiating the migration.
+
+---
+
+### Issue 2: Cancel VM synchronization or migration in progress
+
+**Symptom:**
+
+- User wants to cancel a synchronization or migration while it is in progress.
+
+**Resolution:**
+Cancellation isn't supported directly in the extension. As a workaround:
+
+1. Stop the **Windows Admin Center service**.
+2. Restart the service. This will release all running threads.
+3. Delete the relevant entries from the following files to ensure status does not continue to show as "In Progress":
+
+   ```
+   C:\Program Files\Windows Admin Center\Service\migrationStatus.json
+   C:\Program Files\Windows Admin Center\Service\syncStatus.json
+   ```
+
+---
+
+### Issue 3: Migration precheck fails with error
+
+**Error message:**
+
+> *"Failed to retrieve the list of VMs from the destination server. Please ensure the destination server is reachable and retry the operation."*
+
+**Resolution:**
+
+- Ensure there are no **failed virtual machines** present on the same destination server.
+
+---
+
+### Issue 4: Static IP migration failure for Windows VMs
+
+**Symptom:**
+
+* Static IP configuration does not migrate successfully for a Windows VM.
+
+**Resolution:**
+
+1. Download the [**static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download), which contains scripts for both Windows and Linux VMs.
+2. Extract the package to a specified path inside the guest VM **after synchronization and before migration**.
+3. Open a PowerShell window as Administrator.
+4. Navigate to the extracted path.
+5. Run the following command:
+
+   ```powershell
+   .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
+   ```
+
