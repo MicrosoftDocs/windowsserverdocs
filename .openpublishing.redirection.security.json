@@ -27,17 +27,17 @@
     },
     {
       "source_path": "WindowsServerDocs/security/securing-privileged-access/privileged-access-workstations.md",
-      "redirect_url": "/windows-server/identity/securing-privileged-access/privileged-access-workstations",
+      "redirect_url": "/security/compass/privileged-access-devices",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/security/securing-privileged-access/securing-privileged-access-reference-material.md",
-      "redirect_url": "/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material",
+      "redirect_url": "/security/compass/privileged-access-access-model",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/security/securing-privileged-access/securing-privileged-access.md",
-      "redirect_url": "/windows-server/identity/securing-privileged-access/securing-privileged-access",
+      "redirect_url": "/security/compass/overview",
       "redirect_document_id": true
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "source_path": "WindowsServerDocs/security/software-restriction-policies/troubleshoot-software-restriction-policies.md",
-      "redirect_url": "/windows-server/identity/software-restriction-policies/troubleshoot-software-restriction-policies",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
       "redirect_document_id": true
     },
     {
@@ -182,12 +182,12 @@
     },
     {
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
-      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
-      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts",
       "redirect_document_id": false
     },
     {
@@ -197,7 +197,7 @@
     },
     {
       "source_path": "WindowsServerDocs/security/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
-      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
       "redirect_document_id": false
     },
     {

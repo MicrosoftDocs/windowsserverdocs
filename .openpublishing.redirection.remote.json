@@ -107,7 +107,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md",
-      "redirect_url": "/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
       "redirect_document_id": true
     },
     {
@@ -522,7 +522,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
       "redirect_document_id": false
     },
     {
@@ -547,7 +547,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-remotefx-vgpu.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
       "redirect_document_id": false
     },
     {
@@ -587,7 +587,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-support.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
       "redirect_document_id": false
     },
     {
@@ -647,12 +647,12 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-started.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-hosting-partners.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/welcome-to-rds",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
       "redirect_document_id": false
     },
     {
@@ -752,7 +752,7 @@
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-privacy-settings.md",
-      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-privacy-settings",
+      "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
       "redirect_document_id": true
     },
     {

@@ -37,7 +37,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-2016-Accurate-Time.md",
-      "redirect_url": "/windows-server/identity/ad-ds/get-started/windows-time-service/accurate-time",
+      "redirect_url": "/windows-server/networking/windows-time-service/accurate-time",
       "redirect_document_id": false
     },
     {
@@ -232,7 +232,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-ds/whats-new-active-directory-domain-services-insider-preview.md",
-      "redirect_url": "/windows-server/get-started/whats-new-windows-server-insiders-preview",
+      "redirect_url": "/windows-server/get-started/whats-new-windows-server-2025",
       "redirect_document_id": false
     },
     {
@@ -412,17 +412,17 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md",
-      "redirect_url": "/windows-server/identity/ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/development/Customize-Id-Token-AD-FS-2016.md",
-      "redirect_url": "/windows-server/identity/ad-fs/development/customize-id-token-ad-fs",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md",
-      "redirect_url": "/windows-server/identity/ad-fs/development/enabling-oauth-confidential-clients-with-ad-fs",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
     {
@@ -502,12 +502,12 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/AD-FS-and-Azure-Multi-Factor-Authentication.md",
-      "redirect_url": "/windows-server/identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/ad-fs/development/customize-id-token-ad-fs.md",
-      "redirect_url": "/windows-server/identity/ad-fs/development/custom-id-tokens-in-ad-fs",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
       "redirect_document_id": false
     },
     {
@@ -632,7 +632,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
-      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Troubleshooting-Web-Application-Proxy",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-web-application-proxy",
       "redirect_document_id": true
     },
     {

@@ -17,12 +17,12 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/deploy-a-cloud-witness-for-a-failover-cluster.md",
-      "redirect_url": "/windows-server/failover-clustering/deploy-cloud-witness",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/whats-new-failover-clustering-windows-server.md",
-      "redirect_url": "/windows-server/failover-clustering/whats-new-in-failover-clustering",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
       "redirect_document_id": false
     },
     {
