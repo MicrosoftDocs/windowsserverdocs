@@ -63,6 +63,9 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
 
+> [!NOTE]
+> Ensure you download **VDDK version 8.0.3** specifically. Other versions are not supported.
+
 - Ensure that the Hyper-V role is installed. This is typically already enabled.
 
 - [Use Windows Admin Center Gateway V2](https://aka.ms/downloadWAC) – version `2410` build number `2.4.12.10`
