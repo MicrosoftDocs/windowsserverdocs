@@ -33,7 +33,7 @@ manage-bde -changepin [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To change the PIN used with BitLocker on drive C, type:
 
 ```
-manage-bde –changepin C:
+manage-bde -changepin C:
 ```
 
 ## Related links

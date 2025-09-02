@@ -33,7 +33,7 @@ manage-bde -resume [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To resume BitLocker encryption on drive C, type:
 
 ```
-manage-bde –resume C:
+manage-bde -resume C:
 ```
 
 ## Related links

@@ -36,7 +36,7 @@ manage-bde -autounlock [{-enable|-disable|-clearallkeys}] <drive> [-computername
 To enable automatic unlocking of data drive E, type:
 
 ```
-manage-bde –autounlock -enable E:
+manage-bde -autounlock -enable E:
 ```
 
 ## Related links

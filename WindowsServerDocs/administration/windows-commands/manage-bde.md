@@ -18,8 +18,8 @@ Turns on or turns off BitLocker, specifies unlock mechanisms, updates recovery m
 ## Syntax
 
 ```
-manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unlock] [–autounlock] [–protectors] [–tpm]
-[–setidentifier] [-forcerecovery] [–changepassword] [–changepin] [–changekey] [-keypackage] [–upgrade] [-wipefreespace] [{-?|/?}] [{-help|-h}]
+manage-bde [-status] [-on] [-off] [-pause] [-resume] [-lock] [-unlock] [-autounlock] [-protectors] [-tpm]
+[-setidentifier] [-forcerecovery] [-changepassword] [-changepin] [-changekey] [-keypackage] [-upgrade] [-wipefreespace] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
