@@ -58,12 +58,12 @@
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs.md",
@@ -138,7 +138,7 @@
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md",
@@ -303,27 +303,27 @@
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-hgs",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-hosts",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-shielded-vms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file.md",

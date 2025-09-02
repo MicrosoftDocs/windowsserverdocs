@@ -633,7 +633,7 @@
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-web-application-proxy",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",

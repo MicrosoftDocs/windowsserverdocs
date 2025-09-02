@@ -753,7 +753,7 @@
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-privacy-settings.md",
       "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/change-listening-port.md",

@@ -58,7 +58,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/da-stub.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/Remote-Access.md",
@@ -68,7 +68,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
       "redirect_url": "/powershell/module/remoteaccess/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/bgp/Border-Gateway-Protocol-BGP.md",
@@ -118,7 +118,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/Troubleshooting-DirectAccess.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-directaccess",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access-VPN-Deployment.md",
@@ -138,7 +138,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-1-Configure-the-DirectAccess-Infrastructure_3.md",
@@ -148,7 +148,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-1-Plan-DirectAccess-Infrastructure.md",
@@ -163,7 +163,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-2-Plan-the-DirectAccess-Deployment_4.md",
@@ -173,7 +173,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-3-Verify-the-Deployment_5.md",
@@ -183,27 +183,27 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md",
@@ -248,27 +248,27 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md",
@@ -313,12 +313,12 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/Configuration-Requirements_1.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements.md",
@@ -328,12 +328,12 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md",
       "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/Overview-of-the-Test-Lab-Scenario_5.md",
@@ -723,27 +723,27 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-multisite-deployment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Adding-Entry-Points.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-adding-entry-points",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-enabling-multisite",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-general-issues-related-remote-access",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-setting-entry-point-domain-controller",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
@@ -753,12 +753,12 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/Deploy-RA-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831379(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134229(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-Remote-Access-Deployment-5.md",
@@ -768,7 +768,7 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134164(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-3-Configure-the-Remote-Access-Server-for-OTP.md",
@@ -788,17 +788,17 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134170(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134220(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134161(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md",
@@ -808,17 +808,17 @@
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618321(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618331(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras-gateway/gre-tunneling-windows-server.md",
@@ -838,7 +838,7 @@
     {
       "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/create-security-policies-extended-port-access-control-lists",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md",
@@ -848,7 +848,7 @@
     {
       "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/virtual-switch",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md",

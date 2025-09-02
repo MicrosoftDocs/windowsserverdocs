@@ -548,7 +548,7 @@
     {
       "source_path": "WindowsServerDocs/administration/kernel-soft-reboot.md",
       "redirect_url": "/windows-server/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/administration/index.md",
@@ -1318,12 +1318,12 @@
     {
       "source_path": "WindowsServerDocs/administration/server-manager/install-or-uninstall-roles-role-services-or-features.md",
       "redirect_url": "/windows-server/administration/server-manager/add-remove-roles-features",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/administration/windows-commands/rem_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/rem",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }

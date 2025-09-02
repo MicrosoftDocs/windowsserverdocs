@@ -63,7 +63,7 @@
     {
       "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
       "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",

@@ -28,17 +28,17 @@
     {
       "source_path": "WindowsServerDocs/security/securing-privileged-access/privileged-access-workstations.md",
       "redirect_url": "/security/compass/privileged-access-devices",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/securing-privileged-access/securing-privileged-access-reference-material.md",
       "redirect_url": "/security/compass/privileged-access-access-model",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/securing-privileged-access/securing-privileged-access.md",
       "redirect_url": "/security/compass/overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/software-restriction-policies/administer-software-restriction-policies.md",
@@ -63,7 +63,7 @@
     {
       "source_path": "WindowsServerDocs/security/software-restriction-policies/troubleshoot-software-restriction-policies.md",
       "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/security/software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md",

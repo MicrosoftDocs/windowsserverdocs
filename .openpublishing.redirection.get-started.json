@@ -63,7 +63,7 @@
     {
       "source_path": "WindowsServerDocs/get-started/windows-server-versions.md",
       "redirect_url": "/windows-server/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
@@ -88,7 +88,7 @@
     {
       "source_path": "WindowsServerDocs/get-started/what-s-new-in-windows-server-2016.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/get-started/Customer-Experience-Guides-for-Windows-Server-2016-Technical-Preview-5.md",
