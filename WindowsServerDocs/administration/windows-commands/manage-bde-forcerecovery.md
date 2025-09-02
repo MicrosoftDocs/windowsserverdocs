@@ -15,7 +15,7 @@ Forces a BitLocker-protected drive into recovery mode on restart. This command d
 ## Syntax
 
 ```
-manage-bde –forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
+manage-bde -forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ manage-bde –forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 To cause BitLocker to start in recovery mode on drive C, type:
 
 ```
-manage-bde –forcerecovery C:
+manage-bde -forcerecovery C:
 ```
 
 ## Related links

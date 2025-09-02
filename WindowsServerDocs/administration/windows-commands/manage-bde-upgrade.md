@@ -33,7 +33,7 @@ manage-bde -upgrade [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To upgrade BitLocker encryption on drive C, type:
 
 ```
-manage-bde –upgrade C:
+manage-bde -upgrade C:
 ```
 
 ## Related links

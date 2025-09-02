@@ -52,7 +52,7 @@ manage-bde -status [<drive>] [-protectionaserrorlevel] [-computername <name>] [{
 To display the status of drive C, type:
 
 ```
-manage-bde –status C:
+manage-bde -status C:
 ```
 
 ## Related links
