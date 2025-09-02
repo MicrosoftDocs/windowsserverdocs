@@ -32,7 +32,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain",
+      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs#add-the-hgs-role",
       "redirect_document_id": true
     },
     {
@@ -57,13 +57,13 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-choose-where-to-install-hgs.md",
@@ -132,13 +132,13 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md",
       "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-overview.md",
@@ -157,7 +157,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview#deployment-tasks-for-guarded-fabrics-and-shielded-vms",
       "redirect_document_id": true
     },
     {
@@ -302,28 +302,28 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-hgs",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-hosts",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-overview",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md",
-      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms",
-      "redirect_document_id": true
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-shielded-vms",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-sample-unattend-xml-file.md",
@@ -357,7 +357,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/guarded-fabric-and-shielded-vms.md",
-      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms",
       "redirect_document_id": false
     },
     {
@@ -382,7 +382,7 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/processor-compatibility-mode-hyper-v.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/manage/dynamic-processor-compatibility-mode",
+      "redirect_url": "/windows-server/virtualization/hyper-v/processor-compatibility-mode",
       "redirect_document_id": false
     },
     {
@@ -392,22 +392,22 @@
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-Technology-Overview.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_url": "/windows-server/virtualization/hyper-v/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-on-Windows-Server.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_url": "/windows-server/virtualization/hyper-v/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/Hyper-V-Server-2016.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-overview",
+      "redirect_url": "/windows-server/virtualization/hyper-v/overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md",
-      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
       "redirect_document_id": false
     },
     {

@@ -2,12 +2,12 @@
   "redirections": [
     {
       "source_path": "WindowsServerDocs/management/get-started-with-smt.md",
-      "redirect_url": "/windows-server/administration/get-started-with-smt",
-      "redirect_document_id": true
+      "redirect_url": "https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/remote-server-administration-tools.md",
-      "redirect_url": "/windows-server/remote/remote-server-administration-tools",
+      "redirect_url": "/windows-server/administration/install-remote-server-administration-tools",
       "redirect_document_id": true
     },
     {
@@ -37,7 +37,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/server-manager/install-or-uninstall-roles-role-services-or-features.md",
-      "redirect_url": "/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features",
+      "redirect_url": "/windows-server/administration/server-manager/add-remove-roles-features",
       "redirect_document_id": true
     },
     {
@@ -77,8 +77,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor-pack-development-guide.md",
-      "redirect_url": "/windows-server/administration/server-performance-advisor/server-performance-advisor-pack-development-guide",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor-pack-for-tiered-storage-spaces.md",
@@ -87,8 +87,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor-users-guide.md",
-      "redirect_url": "/windows-server/administration/server-performance-advisor/server-performance-advisor-users-guide",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/server-performance-advisor/server-performance-advisor.md",
@@ -148,11 +148,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/add.md",
       "redirect_url": "/windows-server/administration/windows-commands/add",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/add_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/add_1",
+      "redirect_url": "/windows-server/administration/windows-commands/add",
       "redirect_document_id": true
     },
     {
@@ -287,33 +287,33 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg--driveinfo.md",
-      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg--driveinfo",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg-driveinfo",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg--newdriveletter.md",
-      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg--newdriveletter",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg-newdriveletter",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg--quiet.md",
-      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg--quiet",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg-quiet",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg--restart.md",
-      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg--restart",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg-restart",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg--size.md",
-      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg--size",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg-size",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg--target.md",
-      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg--target",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/bdehdcfg-target",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/bdehdcfg-driveinfo.md",
@@ -933,11 +933,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/break.md",
       "redirect_url": "/windows-server/administration/windows-commands/break",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/break_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/break_1",
+      "redirect_url": "/windows-server/administration/windows-commands/break",
       "redirect_document_id": true
     },
     {
@@ -947,7 +947,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/cacls_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/cacls_1",
+      "redirect_url": "/windows-server/administration/windows-commands/cacls",
       "redirect_document_id": true
     },
     {
@@ -963,11 +963,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/certreq_1.md",
       "redirect_url": "/windows-server/administration/windows-commands/certreq_1",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/certreq_old.md",
-      "redirect_url": "/windows-server/administration/windows-commands/certreq_old",
+      "redirect_url": "/windows-server/administration/windows-commands/certreq_1",
       "redirect_document_id": true
     },
     {
@@ -1002,7 +1002,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/chdir_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/chdir_1",
+      "redirect_url": "/windows-server/administration/windows-commands/chdir",
       "redirect_document_id": true
     },
     {
@@ -1128,11 +1128,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/convert.md",
       "redirect_url": "/windows-server/administration/windows-commands/convert",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/convert_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/convert_1",
+      "redirect_url": "/windows-server/administration/windows-commands/convert",
       "redirect_document_id": true
     },
     {
@@ -1142,8 +1142,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/cprofile.md",
-      "redirect_url": "/windows-server/administration/windows-commands/cprofile",
-      "redirect_document_id": true
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff934599(v=ws.11)",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/create-partition-efi.md",
@@ -1193,11 +1193,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/create.md",
       "redirect_url": "/windows-server/administration/windows-commands/create",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/create_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/create_1",
+      "redirect_url": "/windows-server/administration/windows-commands/create",
       "redirect_document_id": true
     },
     {
@@ -1317,98 +1317,98 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-cache.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-cache",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-client.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-client",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-diag.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-diag",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-domain.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-domain",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-link.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-link",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-oldcli.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-oldcli",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-property.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-property",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-adddom.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-adddom",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-addstd.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-addstd",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-export.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-export",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-import-blobsize.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-import-blobsize",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-import-compare.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-import-compare",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-import-merge.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-import-merge",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-import-set.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-import-set",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root-remove.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root-remove",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-root.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-root",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil-target.md",
-      "redirect_url": "/windows-server/administration/windows-commands/dfsutil-target",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/dfsutil.md",
       "redirect_url": "/windows-server/administration/windows-commands/dfsutil",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/diantz.md",
@@ -1507,13 +1507,13 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/eventquery.md",
-      "redirect_url": "/windows-server/administration/windows-commands/eventquery",
-      "redirect_document_id": true
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff935312(v=ws.11)",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/eventtriggers.md",
-      "redirect_url": "/windows-server/administration/windows-commands/eventtriggers",
-      "redirect_document_id": true
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff935309(v=ws.11)",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/evntcmd.md",
@@ -1528,16 +1528,16 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/exit.md",
       "redirect_url": "/windows-server/administration/windows-commands/exit",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/exit_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/exit_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/exit",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/exit_2.md",
-      "redirect_url": "/windows-server/administration/windows-commands/exit_2",
+      "redirect_url": "/windows-server/administration/windows-commands/exit",
       "redirect_document_id": true
     },
     {
@@ -1712,193 +1712,193 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--!.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--!",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-!",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp---.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp---",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--.mdir_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--ir_1",
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-rmdir_1",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--append.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--append",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-append",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--ascii.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--ascii",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-ascii",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--bell_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--bell_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-bell_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--binary.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--binary",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-binary",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--bye.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--bye",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-bye",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--cd.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--cd",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-cd",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--close_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--close_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-close_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--delete.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--delete",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-delete",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--dir.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--dir",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-dir",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--disconnect_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--disconnect_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-disconnect_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--get.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--get",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-get",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--glob_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--glob_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-glob_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--hash_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--hash_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-hash_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--lcd.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--lcd",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administrationment/windows-commands/ftp-lcd",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--literal_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--literal_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administrationment/windows-commands/ftp-literal_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--ls_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--ls_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-ls_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--mget.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--mget",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mget",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--mkdir.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--mkdir",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mkdir",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--mls_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--mls_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mls_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--mput_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--mput_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-mput_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--open_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--open_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-open_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--prompt_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--prompt_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-prompt_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--put.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--put",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-put",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--pwd_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--pwd_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-pwd_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--quit.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--quit",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-quit",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--quote.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--quote",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-quote",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--recv.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--recv",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-recv",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--remotehelp_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--remotehelp_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-remotehelp_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--rename.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--rename",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-rename",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--send_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--send_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-send_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--status.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--status",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-status",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--trace_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--trace_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-trace_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--type.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--type",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-type",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--user.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--user",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-user",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--verbose_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp--verbose_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-verbose_1",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp-.mdelete_1.md",
@@ -1912,7 +1912,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp-.mdir_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/ftp-mdir_1",
+      "redirect_url": "/windows-server/administration/windows-commands/ftp-rmdir",
       "redirect_document_id": false
     },
     {
@@ -2163,7 +2163,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/help.md",
       "redirect_url": "/windows-server/administration/windows-commands/help",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/helpctr.md",
@@ -2172,7 +2172,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/help_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/help_1",
+      "redirect_url": "/windows-server/administration/windows-commands/help",
       "redirect_document_id": true
     },
     {
@@ -2207,8 +2207,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/inuse.md",
-      "redirect_url": "/windows-server/administration/windows-commands/inuse",
-      "redirect_document_id": true
+      "redirect_url": "/previous-versions/orphan-topics/ws.10/dd996699(v=ws.10)",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/ipconfig.md",
@@ -2383,11 +2383,11 @@
     {
       "source_path": "WindowsServerDocs/management/windows-commands/list.md",
       "redirect_url": "/windows-server/administration/windows-commands/list",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/list_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/list_1",
+      "redirect_url": "/windows-server/administration/windows-commands/list",
       "redirect_document_id": true
     },
     {
@@ -2437,8 +2437,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/logman-import---export.md",
-      "redirect_url": "/windows-server/administration/windows-commands/logman-import---export",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/logman-import-export",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/logman-import-export.md",
@@ -2452,8 +2452,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/logman-start---stop.md",
-      "redirect_url": "/windows-server/administration/windows-commands/logman-start---stop",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/logman-start-stop",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/logman-start-stop.md",
@@ -2522,93 +2522,93 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--autounlock.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--autounlock",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-autounlock",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--changekey.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--changekey",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-changekey",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--changepassword.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--changepassword",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-changepassword",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--changepin.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--changepin",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-changepin",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--forcerecovery.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--forcerecovery",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-forcerecovery",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--keypackage.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--keypackage",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-keypackage",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--lock.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--lock",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-lock",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--off.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--off",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-off",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--on.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--on",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-on",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--pause.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--pause",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-pause",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--protectors.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--protectors",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-protectors",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--resume.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--resume",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-resume",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--setidentifier.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--setidentifier",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-setidentifier",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--status.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--status",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-status",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--tpm.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--tpm",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-tpm",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--unlock.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--unlock",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-unlock",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--upgrade.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--upgrade",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/manage-bde-upgrade",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde--wipefreespace.md",
-      "redirect_url": "/windows-server/administration/windows-commands/manage-bde--wipefreespace",
-      "redirect_document_id": true
+      "redirect_url": "/windowsserverdocs/management/windows-commands/manage-bde--wipefreespace",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/manage-bde-autounlock.md",
@@ -3202,8 +3202,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/rcp.md",
-      "redirect_url": "/windows-server/administration/windows-commands/rcp",
-      "redirect_document_id": true
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ff698996(v=ws.11)",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/rd.md",
@@ -3312,8 +3312,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/remote-desktop-services--terminal-services--command-reference.md",
-      "redirect_url": "/windows-server/administration/windows-commands/remote-desktop-services--terminal-services--command-reference",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/remote-desktop-services-terminal-services-command-reference",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/remote-desktop-services-terminal-services-command-reference.md",
@@ -3327,7 +3327,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/rem_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/rem_1",
+      "redirect_url": "/windows-server/administration/windows-commands/rem",
       "redirect_document_id": true
     },
     {
@@ -3467,33 +3467,33 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd--analyze.md",
-      "redirect_url": "/windows-server/administration/windows-commands/scwcmd--analyze",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/scwcmd-analyze",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd--configure.md",
-      "redirect_url": "/windows-server/administration/windows-commands/scwcmd--configure",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/scwcmd-configure",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd--register.md",
-      "redirect_url": "/windows-server/administration/windows-commands/scwcmd--register",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/scwcmd-register",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd--rollback.md",
-      "redirect_url": "/windows-server/administration/windows-commands/scwcmd--rollback",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/scwcmd-rollback",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd--transform.md",
-      "redirect_url": "/windows-server/administration/windows-commands/scwcmd--transform",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/scwcmd-transform",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd--view.md",
-      "redirect_url": "/windows-server/administration/windows-commands/scwcmd--view",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/scwcmd-view",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/scwcmd-analyze.md",
@@ -3652,7 +3652,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/set_2.md",
-      "redirect_url": "/windows-server/administration/windows-commands/set_2",
+      "redirect_url": "/windows-server/administration/windows-commands/set",
       "redirect_document_id": true
     },
     {
@@ -3702,142 +3702,142 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-device.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-device",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-device",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-drivergroup.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-drivergroup",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroup",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-drivergroupfilter.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-drivergroupfilter",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroupfilter",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-driverpackage.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-driverpackage",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-driverpackage",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-image.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-image",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-image",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-imagegroup.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-imagegroup",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-imagegroup",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--set-transportserver.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--set-transportserver",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-transportserver",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--start-multicasttransmission.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--start-multicasttransmission",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-multicasttransmission",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--start-namespace.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--start-namespace",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-namespace",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--start-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--start-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--start-transportserver.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--start-transportserver",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-transportserver",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--stop-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--stop-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand--stop-transportserver.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand--stop-transportserver",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-transportserver",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-device.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-device",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-device",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-drivergroup.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-drivergroup",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroup",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-drivergroupfilter.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-drivergroupfilter",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-drivergroupfilter",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-driverpackage.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-driverpackage",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-driverpackage",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-image.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-image",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-image",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-imagegroup.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-imagegroup",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-imagegroup",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-server",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-server",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-set-transportserver.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-set-transportserver",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set-transportserver",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-start-multicasttransmission.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-start-multicasttransmission",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-multicasttransmission",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-start-namespace.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-start-namespace",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-namespace",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-start-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-start-server",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-server",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-start-transportserver.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-start-transportserver",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-transportserver",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-stop-server.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-stop-server",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-server",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/subcommand-stop-transportserver.md",
-      "redirect_url": "/windows-server/administration/windows-commands/subcommand-stop-transportserver",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-stop-transportserver",
       "redirect_document_id": true
     },
     {
@@ -3887,53 +3887,53 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet---.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet---",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--close.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--close",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-close",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--display.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--display",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-display",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--open.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--open",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-open",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--quit.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--quit",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-quit",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--send.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--send",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-send",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--set.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--set",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-set",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--status.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--status",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-status",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet--unset.md",
-      "redirect_url": "/windows-server/administration/windows-commands/telnet--unset",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/telnet-unset",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/telnet-close.md",
@@ -3987,17 +3987,17 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-progress-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/the-progress-command",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-progress",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-set-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/the-set-command",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-set",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-start-server-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/the-start-server-command",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-start-server",
       "redirect_document_id": true
     },
     {
@@ -4007,17 +4007,17 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-uninitialize-server-option.md",
-      "redirect_url": "/windows-server/administration/windows-commands/the-uninitialize-server-option",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-uninitialize-server",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-update-serverfiles-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/the-update-serverfiles-command",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-update-serverfiles",
       "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/the-verbose-command.md",
-      "redirect_url": "/windows-server/administration/windows-commands/the-verbose-command",
+      "redirect_url": "/windows-server/administration/windows-commands/wdsutil-verbose",
       "redirect_document_id": true
     },
     {
@@ -4057,8 +4057,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/tsecimp_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/tsecimp_1",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-commands/tsecimp.md",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/tskill.md",
@@ -4097,7 +4097,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/unlodctr_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/unlodctr_1",
+      "redirect_url": "/windows-server/administration/windows-commands/unlodctr",
       "redirect_document_id": true
     },
     {
@@ -4112,7 +4112,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/verify_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/verify_1",
+      "redirect_url": "/windows-server/administration/windows-commands/verify",
       "redirect_document_id": true
     },
     {
@@ -4222,7 +4222,7 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/where_1.md",
-      "redirect_url": "/windows-server/administration/windows-commands/where_1",
+      "redirect_url": "/windows-server/administration/windows-commands/where",
       "redirect_document_id": true
     },
     {
@@ -4252,8 +4252,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/winpop.md",
-      "redirect_url": "/windows-server/administration/windows-commands/winpop",
-      "redirect_document_id": true
+      "redirect_url": "/previous-versions/orphan-topics/ws.10/cc772824(v=ws.10)",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-commands/winrm.md",
@@ -4302,8 +4302,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/1--install-the-wsus-server-role.md",
-      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/1--install-the-wsus-server-role",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/1-install-the-wsus-server-role.md",
@@ -4312,8 +4312,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/2--configure-wsus.md",
-      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/2--configure-wsus",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/2-configure-wsus.md",
@@ -4322,8 +4322,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/3--approve-and-deploy-updates-in-wsus.md",
-      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/3--approve-and-deploy-updates-in-wsus",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/3-approve-and-deploy-updates-in-wsus",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/3-approve-and-deploy-updates-in-wsus.md",
@@ -4332,8 +4332,8 @@
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/4--configure-group-policy-settings-for-automatic-updates.md",
-      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/4--configure-group-policy-settings-for-automatic-updates",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md",
@@ -4522,7 +4522,7 @@
     },
     {
       "source_path": "WindowsServerDocs/manage/windows-admin-center/use/azure-site-recovery.md",
-      "redirect_url": "/windows-server/manage/windows-admin-center/azure/azure-site-recovery",
+      "redirect_url": "/azure/azure-local/manage/azure-site-recovery",
       "redirect_document_id": false
     },
     {
