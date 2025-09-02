@@ -33,7 +33,7 @@ manage-bde -off [<volume>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To turn off BitLocker on drive C, type:
 
 ```
-manage-bde –off C:
+manage-bde -off C:
 ```
 
 ## Related links

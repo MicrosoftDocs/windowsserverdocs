@@ -15,7 +15,7 @@ Sets the drive identifier field on the drive to the value specified in the **Pro
 ## Syntax
 
 ```
-manage-bde –setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
+manage-bde -setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
@@ -33,7 +33,7 @@ manage-bde –setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 To set BitLocker drive identifier field for C, type:
 
 ```
-manage-bde –setidentifier C:
+manage-bde -setidentifier C:
 ```
 
 ## Related links

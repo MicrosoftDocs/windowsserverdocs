@@ -33,7 +33,7 @@ manage-bde -changepassword [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h
 To change the password used to unlock BitLocker on data drive D, type:
 
 ```
-manage-bde –changepassword D:
+manage-bde -changepassword D:
 ```
 
 ## Related links
