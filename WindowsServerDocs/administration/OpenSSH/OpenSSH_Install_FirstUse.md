@@ -82,7 +82,7 @@ To enable SSHD using PowerShell:
 1. Finally, run the following command to verify that the SSHD setup process automatically configured the firewall rule:
 
     ```powershell
-    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
         New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
     } else {
@@ -171,7 +171,7 @@ To install OpenSSH using PowerShell:
     Set-Service -Name sshd -StartupType 'Automatic'
 
     # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
-    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
         New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
     } else {
@@ -259,7 +259,7 @@ To install OpenSSH using PowerShell:
     Set-Service -Name sshd -StartupType 'Automatic'
 
     # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
-    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
         New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
     } else {
@@ -347,7 +347,7 @@ To install OpenSSH using PowerShell:
     Set-Service -Name sshd -StartupType 'Automatic'
 
     # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
-    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
         New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
     } else {
@@ -423,7 +423,7 @@ To disable SSHD using PowerShell:
 1. Finally, run the following command to disable the default SSHD firewall rule:
 
     ```powershell
-    if ((Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if ((Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' is being disabled."
         Disable-NetFirewallRule -Name 'OpenSSH-Server-In-TCP'
     } else {
@@ -470,7 +470,7 @@ To uninstall the OpenSSH components using PowerShell, follow these steps.
 1. Finally, run the following command to remove the firewall rule:
 
     ```powershell
-    if ((Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if ((Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' is being removed."
         Remove-NetFirewallRule -Name 'OpenSSH-Server-In-TCP'
     } else {
@@ -515,7 +515,7 @@ To uninstall the OpenSSH components using PowerShell, follow these steps.
 1. Finally, run the following command to remove the firewall rule:
 
     ```powershell
-    if ((Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    if ((Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue)) {
         Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' is being removed."
         Remove-NetFirewallRule -Name 'OpenSSH-Server-In-TCP'
     } else {
