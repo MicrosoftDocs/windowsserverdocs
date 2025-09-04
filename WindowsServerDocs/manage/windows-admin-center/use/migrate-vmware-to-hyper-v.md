@@ -56,28 +56,28 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 - Install PowerCLI.
 
-1. Open **PowerShell** as an administrator.
+    - Open **PowerShell** as an administrator.
 
-2. Run the following command to install the PowerCLI module:
+    - Run the following command to install the PowerCLI module:
 
-   ```powershell
-   Install-Module -Name VMware.PowerCLI
-   ```
+    ```powershell
+    Install-Module -Name VMware.PowerCLI
+    ```
 
-3. Verify that the module is installed:
+    - Verify that the module is installed:
 
-   ```powershell
-   Get-Module -Name VMware.PowerCLI -ListAvailable
-   ```
+    ```powershell
+    Get-Module -Name VMware.PowerCLI -ListAvailable
+    ```
 
-4. Test the connection to a vCenter Server by running:
+    - Test the connection to a vCenter Server by running:
 
-   ```powershell
-   Connect-VIServer -Server "<vCenterServerFQDN_or_IP>" -User "<username>" -Password "<password>" -Force
-   ```
+    ```powershell
+    Connect-VIServer -Server "<vCenterServerFQDN_or_IP>" -User "<username>" -Password "<password>" -Force
+    ```
 
-> \[!NOTE]
-> Replace `<vCenterServerFQDN_or_IP>`, `<username>`, and `<password>` with your actual vCenter credentials.
+    > [!NOTE]
+    > Replace `<vCenterServerFQDN_or_IP>`, `<username>`, and `<password>` with your actual vCenter credentials.
 
 
 - Install:
