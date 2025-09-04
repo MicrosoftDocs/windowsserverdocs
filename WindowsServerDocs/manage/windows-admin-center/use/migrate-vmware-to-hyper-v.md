@@ -55,7 +55,30 @@ Before you begin, review the prerequisites and ensure your environment meets the
 ### Windows Admin Center Gateway prerequisites
 
 - Install PowerCLI.
-  - Install using the PowerShell command: `Install-Module -Name VMware.PowerCLI`
+
+1. Open **PowerShell** as an administrator.
+
+2. Run the following command to install the PowerCLI module:
+
+   ```powershell
+   Install-Module -Name VMware.PowerCLI
+   ```
+
+3. Verify that the module is installed:
+
+   ```powershell
+   Get-Module -Name VMware.PowerCLI -ListAvailable
+   ```
+
+4. Test the connection to a vCenter Server by running:
+
+   ```powershell
+   Connect-VIServer -Server "<vCenterServerFQDN_or_IP>" -User "<username>" -Password "<password>" -Force
+   ```
+
+> \[!NOTE]
+> Replace `<vCenterServerFQDN_or_IP>`, `<username>`, and `<password>` with your actual vCenter credentials.
+
 
 - Install:
   - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist)
