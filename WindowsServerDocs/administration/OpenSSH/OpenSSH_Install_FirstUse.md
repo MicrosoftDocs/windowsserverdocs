@@ -1,7 +1,7 @@
 ---
 title: Get started with OpenSSH Server for Windows
 description: Learn how to install and connect to remote machines using the OpenSSH Client and Server for Windows.
-ms.date: 09/03/2025
+ms.date: 09/04/2025
 ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
@@ -102,13 +102,13 @@ To enable SSHD using PowerShell:
 
 To install the OpenSSH components on Windows Server devices:
 
-1. Select **Start**, type _Optional Features_ in the search box, then select **Add an optional feature**.
+1. Select **Start**, type _Optional Features_ in the search box, then select **Optional Features**.
 
 1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Views features**, then:
 
-    - Search for and select **OpenSSH Client**, select **Next**, then **Install**
+    - Search for and select **OpenSSH Client**, then select **Add**
 
-    - Search for and select **OpenSSH Server**, select **Next**, then **Install**
+    - Search for and select **OpenSSH Server**, then select **Add**
 
 1. Open the **Services** desktop app. (Select **Start**, type _services.msc_ in the search box, and then select the **Services** app or press <kbd>ENTER</kbd>.)
 
