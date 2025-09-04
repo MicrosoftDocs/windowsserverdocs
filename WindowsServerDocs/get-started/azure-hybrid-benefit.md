@@ -136,7 +136,7 @@ Each Windows Server core license entitles use on one physical core of Azure Loca
 
 You can use any number of Windows Server VMs on the Azure Local cluster if you allocate enough core licenses for all physical cores on servers in the Azure Local cluster.
 
-#### Use rights
+#### Azure Migration Allowance
 
 Licenses must be used either on-premises or on Azure Local, but not on both. You have 180 days of concurrent licensing to migrate your servers.
 
@@ -166,7 +166,7 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 Each Windows Server core license entitles use on one virtual core of AKS.
 
-#### Use rights
+#### Azure Migration Allowance
 
 Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
 
