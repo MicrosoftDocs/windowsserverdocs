@@ -43,7 +43,7 @@ Hyper-V delivers significant organizational benefits across many areas, includin
 
 Here's a video that provides a comprehensive technical overview of Hyper-V, covering its hypervisor architecture, performance characteristics, and scalability features. It demonstrates how Hyper-V delivers enterprise-grade virtualization capabilities, discusses high availability and clustering features, and showcases real-world deployment scenarios for organizations looking to implement virtualization solutions.<br /><br />
 
-> [!VIDEO https://www.youtube.com/embed/iTtYp-QdvI4]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=580e0b14-6d99-4fcf-9c6a-549da414c67c]
 
 The following sections provide an overview into some of the key enterprise-grade features available in Hyper-V that address critical business requirements around security, availability, management, and cost optimization.
 
