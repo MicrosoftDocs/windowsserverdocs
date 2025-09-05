@@ -1069,6 +1069,11 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/maximum-scale-limits",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Set-up-Hyper-V-Replica.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/replication-overview",
+      "redirect_document_id": true
     }
   ]
 }

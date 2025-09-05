@@ -145,10 +145,20 @@ items:
       href: integration-services.md
     - name: Manage Integration Services
       href: manage/Manage-Hyper-V-integration-services.md
-  - name: Set up Hyper-V Replica
-    href: manage/Set-up-Hyper-V-Replica.md
-  - name: Configure multiple CSV for VM replication
-    href: manage/configure-multiple-csv-for-vm-replication.md  
+  - name: Replicate virtual machines
+    items:
+    - name: Hyper-V Replica overview
+      href: replication-overview.md
+    - name: Enable Hyper-V Replica on a failover cluster
+      href: configure-replication-failover-cluster.md
+    - name: Enable Hyper-V Replica on a single host
+      href: configure-replication-single-host.md
+    - name: Replicate a virtual machine
+      href: replication-virtual-machines.md
+    - name: Failover a replicated virtual machine
+      href: replication-failover.md
+    - name: Configure multiple CSV for VM replication
+      href: manage/configure-multiple-csv-for-vm-replication.md  
   - name: Enable Intel Performance Monitoring Hardware
     href: manage/Performance-Monitoring-Hardware.md
   - name: Processor compatibility mode
