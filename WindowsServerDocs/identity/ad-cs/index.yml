@@ -73,6 +73,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: ADCSAdministration PowerShell module
-            url: /powershell/module/adcsadministration/?view=windowsserver2022-ps
+            url: /powershell/module/adcsadministration
           - text: ADCSDeployment PowerShell module
-            url: /powershell/module/adcsdeployment/?view=windowsserver2022-ps
+            url: /powershell/module/adcsdeployment
