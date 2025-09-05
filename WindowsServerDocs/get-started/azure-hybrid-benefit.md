@@ -138,7 +138,7 @@ You can use any number of Windows Server VMs on the Azure Local cluster if you a
 
 #### Azure Migration Allowance
 
-Licenses must be used either on-premises or on Azure Local, but not on both. You have 180 days of concurrent licensing to migrate your servers.
+Licenses must be used either on-premises or on Azure Local, but not on both. You have 180 days of concurrent licensing to migrate your servers to Azure Local.
 
 ### How to apply Azure Hybrid Benefit for Azure Local
 
