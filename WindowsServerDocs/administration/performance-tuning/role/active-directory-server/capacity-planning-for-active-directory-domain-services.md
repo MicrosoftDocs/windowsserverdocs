@@ -30,7 +30,7 @@ Capacity planning for scale-up systems is about making sure that the hardware an
 - High speed storage such as Solid State Drives (SSDs) and NVMe (nonvolatile memory express)
 - Cloud scenarios
 
-Active Directory Domain Services (AD DS), a mature distributed service that many Microsoft and third-party products use as a backend, is now one the most critical products in ensuring your other applications have the necessary capacity to run.
+Active Directory Domain Services (AD DS) is a mature distributed service that many Microsoft and third-party products use as a backend. It's one of the most critical components for ensuring other applications have the capacity they need.
 
 ### Important information to consider before you start planning
 
@@ -40,13 +40,13 @@ In order to get the most out of this article, you should do the following things
 - The Windows Server platform is an x64-based architecture, which provides larger memory address space compared to x86 systems. This article's guidelines apply to your Active Directory environment regardless of the Windows Server version. For current releases, the expanded x64 memory capabilities allow for caching larger databases in memory, though the capacity planning principles remain the same. The guidelines also apply if your environment has a directory information tree (DIT) that can fit entirely in the available system memory.
 - Understand that capacity planning is a continuous process, so you should regularly review how well the environment you build is meeting your expectations.
 - Understand that optimization occurs over multiple hardware lifecycles as hardware costs change. For example, if memory becomes cheaper, cost per core decreases, or the price of different storage options change.
-- Plan for the daily peak busy period. We recommend you make your plans based on either 30 minute or hour intervals. Consider the following when choosing your interval:
+- Plan for the daily peak busy period. We recommend you make your plans based on either 30 minute or hour intervals. Consider the following information when choosing your interval:
   - Intervals greater than one hour might hide when your service actually reaches peak capacity.
   - Intervals less than 30 minutes can make transient increases look more important than they actually are.
 - Plan for growth over the course of the hardware lifecycle for the enterprise. This growth planning can include strategies for upgrading or adding hardware in a staggered fashion, or a complete refresh every three to five years. Each growth plan requires you estimate how much the load on Active Directory grows. Historical data can help you make a more accurate assessment.
-- Fault tolerance is the ability of a system to continue operating properly in the event of the failure of some of its components. Once you determine the capacity you need, known as *n*, you should also plan for fault tolerance.  Consider planning for *n* + 1, *n* + 2, or even *n* + *x* scenarios, where *n* is the number of servers you need to support the load. For example, if your estimate says you need two domain controllers (DCs) to support the load, then you should plan to have three DCs in your environment to support a one-DC failure scenario.
+- Fault tolerance is the ability of a system to continue operating properly when some components fail. Once you determine the capacity you need (known as *n*), you should plan for fault tolerance. Consider *n* + 1, *n* + 2, or even *n* + *x* scenarios. For example, if you need two domain controllers (DCs), plan for three so you can handle one DC failure.
   - Based on your growth plan, add extra servers according to organizational need to ensure that losing one or more servers doesn't cause the system to exceed maximum peak capacity estimates.
-  - Remember to integrate your growth and fault tolerance plans. For example, if you know your deployment currently requires one domain controller (DC) to support the load but your estimate says the load will double in the next year and require two DCs to carry, then your system doesn't have enough capacity to support fault tolerance. In order to prevent this lack of capacity, you should instead plan to start with three DCs. If your budget doesn't allow for three DCs, you can also start with two DCs, then plan to add a third after three or six months.
+  - Remember to integrate your growth and fault tolerance plans. For example, one domain controller (DC) handles today’s load. Forecasts show the load will double within a year and will need two DCs just to meet demand. That leaves no spare capacity for fault tolerance. In order to prevent this lack of capacity, you should instead plan to start with three DCs. If your budget doesn't allow for three DCs, you can also start with two DCs, then plan to add a third after three or six months.
 
     > [!NOTE]
     > Adding Active Directory-aware applications might have a noticeable impact on the DC load, whether the load is coming from the application servers or clients.
@@ -64,7 +64,7 @@ Virtualization scenarios give you two options:
 
 You can treat direct mapping scenarios identically to physical hosts. If you choose a shared host scenario, it introduces other variables that you should take into consideration in later sections. Shared hosts also compete for resources with Active Directory Domain Services (AD DS), which might affect system performance and user experience.
 
-Now that we've answered those earlier planning questions, let's look at the capacity planning cycle itself. Each capacity planning cycle involves a three-step process:
+Once you answer those earlier planning questions, let's look at the capacity planning cycle itself. Each capacity planning cycle involves a three-step process:
 
 1. Measure the existing environment, determine where the system bottlenecks currently are, and get environmental basics necessary to plan the amount of capacity your deployment needs.
 1. Determine what hardware you need based on your capacity requirements.
@@ -80,7 +80,7 @@ To optimize performance, ensure the following major components are correctly sel
 - Processor
 - Netlogon
 
-Basic storage requirements for AD DS and the general behavior of compatible client software mean that environments with as many as 10,000 to 20,000 users typically find their capacity planning needs are easily met by modern server-class hardware. While capacity planning remains important for all deployments, smaller environments generally have more flexibility in their hardware choices since most current server systems can handle these loads without requiring specialized optimization.
+Basic storage requirements for AD DS and the general behavior of compatible client software mean that modern server-class hardware easily meets the capacity planning needs of environments with as many as 10,000 to 20,000 users. While capacity planning remains important for all deployments, smaller environments generally have more flexibility in their hardware choices since most current server systems can handle these loads without requiring specialized optimization.
 
 The tables in [Data collection summary tables](#data-collection-summary-tables) explain how to evaluate your existing environment to select the right hardware. The sections after that one go into more detail about baseline recommendations and environment-specific principles for hardware to help AD DS admins evaluate their infrastructure.
 
@@ -129,7 +129,6 @@ The more storage you can cache in the RAM, the less needs to go to disk.
 To maximize server scalability, calculate your minimum RAM requirements by summing these components:
 
 - Current database size
-- Total system value size  
 - Recommended amount for your operating system
 - Vendor recommendations for agents, such as:
   - Antivirus programs
@@ -147,7 +146,7 @@ Another important thing to consider for sizing memory is the page file sizing. I
 
 Determining how much RAM a domain controller (DC) needs can be difficult due to many complex factors:
 
-- Existing systems aren't always reliable indicators of RAM requirements because the Local Security Authority Subsystem Service (LSSAS) trims RAM under memory pressure conditions, artificially deflating requirements.
+- Existing systems aren't always reliable indicators of RAM requirements because the Local Security Authority Subsystem Service (LSASS) trims RAM under memory pressure, artificially deflating requirements.
 - Individual DCs only need to cache data their clients are interested in. This means data cached in different environments change depending on what kinds of clients it contains. For example, a DC in an environment with an Exchange Server collects different data than a DC that only authenticates users.
 - The amount of effort you need to evaluate RAM for each DC on a case-by-case basis is often excessive and changes as the environment changes.
 
@@ -158,13 +157,13 @@ The criteria behind recommendations can help you make more informed decisions:
 
 ### Virtualization considerations for RAM
 
-Your goal for optimizing RAM is to minimize the amount of time spent going to disk. You should also avoid memory over-commit at the host. In virtualization scenarios, memory over-commit is when the system allocates more RAM to guests than what exists on the physical machine itself. While over-commit isn't a problem on its own, when the total memory used by all guests exceeds the capability of the host's RAM, it causes the host to page. Paging makes performance disk-bound in cases where the DC goes to the `NTDS.nit` or page file to get data or the host goes to disk to try to access RAM data. As a result, this paging process vastly decreases performance and overall user experience.
+Your goal for optimizing RAM is to minimize time spent going to disk. Avoid memory over-commit at the host (allocating more RAM to guests than the physical machine has). Over-commit alone isn't a problem, but if total guest usage exceeds host RAM, the host pages. Paging makes performance disk-bound when the DC goes to the `NTDS.dit` or page file, or when the host pages RAM. This behavior sharply reduces performance and user experience.
 
 ### Calculation summary example
 
 | Component | Estimated memory (example) |
 |--|--|
-| Base operating system recommended RAMM | 4GB |
+| Base operating system recommended RAM | 4GB |
 | LSASS internal tasks | 200MB |
 | Monitoring agent | 100MB |
 | Antivirus | 200MB |
@@ -193,12 +192,12 @@ To evaluate intrasite traffic capacity, particularly in server consolidation sce
 
 Let's take a look at an example of a more complex way to validate that this general rule applies to a specific environment. In this example, we're making the following assumptions:
 
-- The goal is to reduce the footprint to as few servers as possible. Ideally, one server carries the load, then you deploy an another server for redundancy (*n* + 1 scenario).
+- The goal is to reduce the footprint to as few servers as possible. Ideally, one server carries the load, then you deploy another server for redundancy (*n* + 1 scenario).
 - In this scenario, the current network adapter only supports 100MB and is in a switched environment.
 - The maximum target network bandwidth utilization is 60% in an *n* scenario (loss of a DC).
 - Each server has about 10,000 clients connected to it.
 
-Now, let's take a look at what the chart in the `Network Interface(*)\Bytes Sent/sec` counter says about this example scenario:
+Now, let's look at what the chart in the `Network Interface(*)\Bytes Sent/sec` counter shows for this example scenario:
 
 1. The business day starts ramping up around 5:30 AM and winds down at 7:00 PM.
 1. The peak busiest period is from 8:00 AM to 8:15 AM, with greater than 25 bytes sent per second on the busiest DC.
@@ -210,7 +209,7 @@ Now, let's take a look at what the chart in the `Network Interface(*)\Bytes Sent
    > [!NOTE]
    > The Network Interface send/receive counters are in bytes, but the network bandwidth is measured in bits. Therefore, to calculate the total bandwidth, you'd need to do 100MB ÷ 8 = 12.5MB and 1GB ÷ 8 = 128MB.
 
-After reviewing the data, what conclusions can you draw from the network utilization example?
+After you review the data, what conclusions can you draw from the network utilization example?
 
 - The current environment meets the *n* + 1 level of fault tolerance at 60% target utilization. Taking one system offline shifts the bandwidth per server from about 5.5MBps (44%) to about 7MBps (56%).
 - Based on the previously stated goal of consolidating to one server, this consolidation change exceeds the maximum target utilization and possible utilization of a 100-MB connection.
@@ -268,7 +267,9 @@ Although capacity is important, it's important to not neglect performance. With 
 
 Compared to when Active Directory first arrived at a time when 4GB and 9GB drives were the most common drive sizes, now sizing for Active Directory isn't even a consideration for all but the largest environments. With the smallest available hard drive sizes in the 180GB range, the entire operating system, `SYSVOL`, and `NTDS.dit` can easily fit on one drive. As a result, we recommend you avoid investing too heavily in storage sizing.
 
-It's recommended that 110% of the `NTDS.dit` size is available so you can defragment your storage. Beyond this recommendation, you should take the usual considerations in accommodating future growth.
+We recommend that 110% of the `NTDS.dit` size us available so you can defragment your storage.
+
+Beyond this recommendation, you should take the usual considerations in accommodating future growth.
 
 If you're going to evaluate your storage, you must first evaluate how large the `NTDS.dit` and `SYSVOL` need to be. These measurements help you size both the fixed disk and RAM allocations. Because the components are relatively low cost, you don't need to be super precise when doing the math. For more information about storage evaluation, see [Storage Limits](/previous-versions/windows/it-pro/windows-2000-server/cc961769(v=technet.10)) and [Growth Estimates for Active Directory Users and Organizational Units](/previous-versions/windows/it-pro/windows-2000-server/cc961779(v=technet.10)).
 
@@ -298,7 +299,7 @@ The following table lists the values you'd use to estimate the space requirement
 | Modifier to allow for offline defrag | 2.1GB |
 | Total storage needed | 73.5GB |
 
-The storage estimate should also include additional storage components beyond the database. These components include:
+The storage estimate should also include more storage components beyond the database. These components include:
 
 - SYSVOL
 - Operating system files
@@ -318,14 +319,14 @@ The old recommendations about disks assumed that a disk was a dedicated spindle 
 - Shared spindles on a Storage Area Network (SAN)
 - VHD file on a SAN or network-attached storage
 - Solid State Drives (SSDs)
-- Non-volatile memory express (NVMe) drives
+- Nonvolatile memory express (NVMe) drives
 - Tiered storage architectures, such as SSD storage tier caching larger spindle-based storage
 
 Other workloads placed on the back-end storage can overload shared storage, such as RAID, SAN, NAS, JBOD, Storage Spaces, and VHD. These types of storage devices can present an extra consideration. For example, SAN, network, or driver issues between the physical disk and the AD application can cause throttling and delays. To clarify, these types of storage architectures aren't a bad choice, but they're more complex, which means you need to pay extra attention to make sure every component is working as intended. For more detailed explanations, see [Appendix C](#appendix-c-how-the-operating-system-interacts-with-storage) and [Appendix D](#appendix-d-storage-troubleshooting-in-environments-where-more-ram-isnt-an-option) later in this article.
 
 This solid-state storage technology (NVMe and SSD) doesn't have the same mechanical limitations as traditional hard drives. However, they still have I/O limitations. When you exceed these limits, the system can become overloaded.
 
-The goal of storage performance planning is to ensure that the needed number of I/Os is always available and that they happen within an acceptable timeframe. For more information about scenarios with locally attached storage, see [Appendix C](#appendix-c-how-the-operating-system-interacts-with-storage) for more information about design and planning. You can apply the principles in the appendix to more complex storage scenarios, and conversations with vendors supporting your back-end storage solutions.
+The goal of storage performance planning is to ensure that the needed number of I/Os is always available and that they happen within an acceptable timeframe. For more information about scenarios with locally attached storage, see [Appendix C](#appendix-c-how-the-operating-system-interacts-with-storage). You can apply the principles in the appendix to more complex storage scenarios, and conversations with vendors supporting your back-end storage solutions.
 
 Due to how many storage options are available today, we recommend you consult your hardware support teams or vendors while planning to ensure the solution meets the needs of your AD DS deployment. During these conversations, you might find the following performance counters helpful, especially when your database is too large for your RAM:
 
@@ -357,7 +358,7 @@ You might hear from other sources that storage performance is degraded at 15 ms 
 
 When you're making these calculations, here are some things you should consider:
 
-- If the server has a suboptimal amount of RAM, the resulting values are too high and won't be accurate enough to be useful for planning. However, you can still use them to predict worst-case scenarios.
+- If the server has a suboptimal amount of RAM, the resulting values might be too high and not accurate enough to be useful for planning. However, you can still use them to predict worst-case scenarios.
 - If you add or optimize RAM, you also decrease the amount of read I/O `LogicalDisk(<NTDS>)\Reads/Sec`. That decrease can cause the storage solution to be less robust than the original calculations suggested. Unfortunately, we can't give more specifics about what this statement means, as calculations vary widely depending on individual environments, particularly client load. However, we do recommend that you adjust storage sizing after you optimize the RAM.
 
 #### Virtualization considerations for performance
@@ -368,7 +369,7 @@ Similar to the previous sections, the goal for virtualization performance is to 
 - A user using pass-through access to a SAN, NAS, or iSCSI infrastructure that shares the media.
 - A user using a VHD file on shared media locally or a SAN, NAS, or iSCSI infrastructure.
 
-From the perspective of a guest user, having to go through a host to access any storage impacts performance, as the user must travel down more code paths to gain access. Performance testing indicates virtualizing impacts throughput based on how much of the processor the host system utilizes. Processor utilization is also influenced by how many resources the guest user demands of the host. This demand contributes to the [Virtualization considerations for processing](#virtualization-considerations-for-processing) you should take for processing needs in virtualized scenarios. For more information, see [Appendix A](#appendix-a-cpu-sizing-criteria).
+From the perspective of a guest user, having to go through a host to access any storage impacts performance, as the user must travel down more code paths to gain access. Performance testing indicates virtualizing impacts throughput based on how much of the processor the host system utilizes. Processor utilization influences how many resources the guest user demands of the host. This demand contributes to the [Virtualization considerations for processing](#virtualization-considerations-for-processing) you should take for processing needs in virtualized scenarios. For more information, see [Appendix A](#appendix-a-cpu-sizing-criteria).
 
 Further complicating matters are how many storage options are currently available, each with wildly different performance impacts. These options include pass-through storage, SCSI adapters, and IDE. When migrating from a physical to a virtual environment, you should adjust for different storage options for virtualized guest users by using a multiplier of 1.10. However, you don't need to consider adjustments when transferring between different storage scenarios, as whether the storage is local, SAN, NAS, or iSCSI matters more.
 
@@ -399,7 +400,7 @@ To determine the rate at which you should warm the cache:
 - Divide the database size by 8KB to get the total number of I/Os you need to load the database.
 - Divide the total I/Os by the number of seconds in the defined time frame.
 
-The number you calculate is mostly accurate, but might not be exact because you haven't configured (Extensible Storage Engine) ESE to have a fixed cache size, then AD DS evicts previously loaded pages because it uses variable cache size by default.
+The number you calculate is an approximation. It is not exact because the Extensible Storage Engine (ESE) cache size is not fixed. By default the cache grows and shrinks, so AD DS may evict pages it loaded earlier. A fixed cache size would make the estimate more precise.
 
 | Data points to collect | Values |
 |--|--|
@@ -421,7 +422,12 @@ For most environments, managing processing capacity is the component that deserv
 - Do the applications in your environment behave as intended within a shared services infrastructure based on the criteria outlined in [Tracking expensive and inefficient searches](/previous-versions/ms808539(v=msdn.10)#tracking-expensive-and-inefficient-searches)? In larger environments, poorly coded applications can make the CPU load become volatile, take an inordinate amount of CPU time at the expense of other applications, drive up capacity needs, and unevenly distribute load against the DCs.
 - AD DS is a distributed environment with many potential clients whose processing needs vary widely. Estimated costs for each client can vary due to usage patterns and how many applications are using AD DS. Much like in [Network](#network), you should approach estimating as an evaluation of total needed capacity in the environment instead of looking at each client one at a time.
 
-You should only make this estimate after you've completed your [storage](#storage) estimate, as you won't be able to make an accurate guess without valid data about your processor load. It's also important to make sure any bottlenecks aren't being caused by storage before troubleshooting the processor. As you remove processor wait states, CPU utilization increases because it no longer needs to wait on the data. Therefore, the performance counters you should pay the most attention to are `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` and `Process(lsass)\ Processor Time`. If the `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` counter is over 10 milliseconds or 15 milliseconds, then the data in `Process(lsass)\ Processor Time` is artificially low and the issue is related to storage performance. We recommend you set sample intervals to 15, 30, or 60 minutes for the most accurate data possible.
+Complete your [storage](#storage) estimate before you being to estimate your processor usage. You won't be able to make an accurate guess without valid data about your processor load. It's also important to make sure that your storage isn't creating any bottlenecks before troubleshooting the processor. As you remove processor wait states, CPU utilization increases because it no longer needs to wait on the data. Therefore, the performance counters you should pay the most attention to are:
+
+- `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read`
+- `Process(lsass)\ Processor Time`
+
+If the `Logical Disk(<NTDS Database Drive>)\Avg Disk sec/Read` counter is over 10 milliseconds or 15 milliseconds, then the data in `Process(lsass)\ Processor Time` is artificially low and the issue is related to storage performance. We recommend you set sample intervals to 15, 30, or 60 minutes for the most accurate data possible.
 
 ### Processing overview
 
@@ -452,20 +458,27 @@ Now, let's take a look at the `(Processor Information(_Total)\% Processor Utilit
 - In several five-minute intervals, there are spikes at 10%, sometimes even 20%. However, unless these spikes cause the CPU usage to exceed the capacity plan target, you don't need to investigate them.
 - The peak period for all systems is between 8:00 AM and 9:15 AM. The average business day lasts from 5:00 AM to 5:00 PM. Therefore, any randomized spikes of CPU usage that happen between 5:00 PM and 4:00 AM are outside of business hours, and therefore you don't need to include them in your capacity planning concerns.
 
-  > [!NOTE]
-  > On a well-managed system, spikes that happen during the off-peak period are usually caused by backup software, full system antivirus scans, hardware or software inventory, software or patch deployment, and so on. Because these spikes happen outside of business hours, they don't count towards exceeding capacity planning targets.
+  During off-peak hours, brief spikes on a well-managed system usually come from:  
 
-- Because each system is about 40% and they all have the same number of CPUs, if one of them goes offline, the remaining systems run at an estimated 53%. System D has a 40% load that's evenly split and added to System A and C's existing 40% load. This linear redistribution assumption isn't perfectly accurate, but it provides enough accuracy for estimation.
+  - Backup jobs  
+  - Full antivirus scans  
+  - Hardware inventory scans  
+  - Software inventory scans  
+  - Software distribution or patch deployments  
+
+  Spikes outside these tasks might indicate an abnormal load and warrant investigation. Because these spikes happen outside of business hours, they don't count towards exceeding capacity planning targets.
+
+- Because each system is about 40% and they all have the same number of CPUs, if one of them goes offline, the remaining systems run at an estimated 53%. System D's 40% load is then evenly split between the remaining systems and added to their existing 40% load. This linear redistribution assumption isn't perfectly accurate, but it provides enough accuracy for estimation.
 
 Next, let's look at an example of an environment that doesn't have good CPU usage and exceeds the capacity planning target.
 
-In this example, we have two DCs running at 40%. One domain controller goes offline, which causes the estimated CPU usage on the remaining DC to reach 80%. During failover the CPU usage level far exceeds the threshold for the capacity plan; this failover utilization level begins to limit the amount of headroom for the 10% to 20% of the load profile. As a result, every spike could potentially drive the DC to 90% or even 100 % during the *N* scenario, reducing its responsiveness.
+In this example, two DCs run at 40%. One goes offline and the remaining DC jumps to an estimated 80%. During failover this load exceeds the capacity plan threshold and shrinks headroom to 10%–20% for spikes. Each spike could now drive the DC to 90% or even 100%, reducing responsiveness.
 
 ### Calculating CPU demands
 
-The `Process\% Processor Time` performance counter tracks the total amount of time all application threads spend on the CPU, then divides that sum by the total amount of system time that's passed. A multithreaded application on a multi-CPU system can exceed 100% CPU time, and you'd interpret its data differently than the `Processor Information\% Processor Utility` counter. In practice, the `Process(lsass)\% Processor Time` counter tracks how many CPUs running at 100% the system requires to support a process' demands. For example, if the counter has a value of 200%, that means the system needs two CPUs running at 100% to support the full AD DS load. Although a CPU running at 100% capacity is the most cost-efficient in terms of power and energy consumption, for reasons outlined in [Appendix A](#appendix-a-cpu-sizing-criteria), a multithreaded system is more responsive when its system isn't running on 100%.
+The `Process\% Processor Time` performance counter tracks the total amount of time all application threads spend on the CPU, then divides that sum by the total amount of system time that's passed. A multithreaded application on a multi-CPU system can exceed 100% CPU time, and you'd interpret its data differently than the `Processor Information\% Processor Utility` counter. In practice, the `Process(lsass)\% Processor Time` counter tracks how many CPUs running at 100% the system requires to support a process' demands. For example, if the counter has a value of 200%, that means the system needs two CPUs running at 100% to support the full AD DS load. Although a CPU running at 100% capacity is the most cost-efficient in terms of power and energy consumption, a multithreaded system is more responsive when its system isn't running on 100%. The reasons for this efficiency are outlined in [Appendix A](#appendix-a-cpu-sizing-criteria), .
 
-To accommodate transient spikes in client load, we recommend you target a peak period CPU between 40% and 60% of system capacity. For example, in the first example in [Target site behavior profile](#target-site-behavior-profile), you'd need between 3.33 CPUs (60% target) and 5 CPUs (40% target) to support the AD DS load. You should add extra capacity according to the demands of the OS and any other required agents, such as antivirus, backup, monitoring, and so on. Although you should evaluate the impact of agents on CPU agents on a per-environment basis, generally you can allot between 5% and 10% for agent processes on a single CPU. To revisit our example, we would need between 3.43 (60% target) and 5.1 (40% target) CPUs to support load during peak periods.
+To accommodate transient spikes in client load, we recommend you target a peak period CPU between 40% and 60% of system capacity. For example, in the first example in [Target site behavior profile](#target-site-behavior-profile), you'd need between 3.33 CPUs (60% target) and 5 CPUs (40% target) to support the AD DS load. You should add extra capacity according to the demands of the OS and any other required agents, such as antivirus, backup, monitoring, and so on. Plan to reserve 5–10% of one CPU’s capacity for infrastructure agents (antivirus, backup, monitoring). Measure actual agent usage in your environment and adjust as needed. To revisit our example, we would need between 3.43 (60% target) and 5.1 (40% target) CPUs to support load during peak periods.
 
 Now, let's take a look at an example of calculating for a specific process. In this case, we're looking at the LSASS process.
 
@@ -496,10 +509,20 @@ The following sections describe two example scenarios where you should tune the 
 
 #### Example 1: PDC emulator environment
 
-If you're using a Primary Domain Controller (PDC) emulator, unevenly distributed user or application behavior can affect multiple environments at once. CPU resources on the PDC emulator are often more heavily demanded than elsewhere in the deployment because several tools and actions target it, such as Group Policy management tools, second authentication attempts, trust establishment, and so on.
+If you're using a Primary Domain Controller (PDC) emulator, unevenly distributed user or application behavior can affect multiple environments at once. The PDC emulator usually has higher CPU load than other domain controllers. Many operations prefer or always contact it, examples include:
 
-- You should tune your PDC emulator only if there's a noticeable difference in CPU utilization. Tuning should reduce the load on the PDC emulator and increase the load on other DCs, allowing for more even load distribution.
-- In these cases, set the value for `LDAPSrvWeight` between 50 and 75 for the PDC emulator.
+- Group Policy management tools (creation, editing, linking, GPMC refresh)
+- Password change verification / second authentication attempts (fallback password check)
+- Trust creation and maintenance operations
+- Time service hierarchy (authoritative time source in the domain/forest)
+- Account lockout processing
+- Legacy or misconfigured applications that still target the PDC emulator
+
+Monitor its CPU separately and plan extra headroom if these activities are common.
+
+You should tune your PDC emulator only if there's a noticeable difference in CPU utilization. Tuning should reduce the load on the PDC emulator and increase the load on other DCs, allowing for more even load distribution.
+
+In these cases, set the value for `LDAPSrvWeight` between 50 and 75 for the PDC emulator.
 
 | System | CPU utilization with defaults | New LdapSrvWeight | Estimated new CPU utilization |
 |--|--|--|--|
@@ -521,7 +544,7 @@ When you have servers with different CPU counts and speeds in the same site, you
 | 4-CPU DC 2 | 40 | 100 | 30% |
 | 8-CPU DC 3 | 20 | 200 | 30% |
 
-Planning for an *N* + 1 scenario is critical. The impact of one DC going offline must be calculated for every scenario. In the immediately preceding scenario where the load distribution is even, in order to ensure a 60% load during an “*N*” scenario, with the load balanced evenly across all servers, the distribution is fine as the ratios stay consistent. When you look at the PDC emulator tuning scenario, or any general scenario where user or application load is unbalanced, the effect is different:
+Planning for an *N* + 1 scenario is critical. The impact of one DC going offline must be calculated for every scenario. In the previous example, load is evenly shared across all servers. In an *N* scenario (one server lost), each remaining server stays at about 60%. The current distribution is acceptable because the ratios stay consistent. When you look at the PDC emulator tuning scenario, or any general scenario where user or application load is unbalanced, the effect is different:
 
 | System | Tuned Utilization | New LdapSrvWeight | Estimated New Utilization |
 |--|--|--|--|
@@ -533,9 +556,13 @@ Planning for an *N* + 1 scenario is critical. The impact of one DC going offline
 
 When you're capacity planning for a virtualized environment, there are two levels you need to consider: the host level and the guest level. At the host level, you must identify the peak periods of your business cycle. Because scheduling guest threads on the CPU for a virtual machine is similar to getting AD DS threads on the CPU for a physical machine, we still recommend you use 40% to 60% of the underlying host. At the guest level, because the underlying thread scheduling principles are unchanged, we also still recommend you keep CPU usage within the 40% to 60% range.
 
-In a direct-mapped scenario with one guest per host, you must bring in all capacity planning estimates you've done in the previous sections in order to make your estimate. For a shared host scenario, there's about 10% impact on the efficiency of the underlying processors, which means if a site needs 10 CPUs at a target of 40%, the recommended number of virtual CPUs you should allocate across all *N* guests would be 11. In sites with mixed distributions of physical and virtual servers, this virtualization overhead only applies to the virtual machines (VMs). For example, in an *N* + 1 scenario, one physical or direct-mapped server with 10 CPUs is almost equal to one guest with 11 CPUs on a host with 11 more CPUs reserved for the DC.
+For a direct-mapped setup (one guest per host), reuse the capacity planning numbers gathered earlier. Apply them directly to size this deployment.
 
-While you're analyzing and calculating how many CPUs you need to support AD DS load, keep in mind that if you plan to purchase physical hardware, the types of hardware available on the market might not map exactly to your estimates. However, you don't have that problem when you use virtualization. Using VMs decreases the effort needed for you to add compute capacity to a site, as you can add as many CPUs with the exact specifications you want to a VM. However, virtualization doesn't eliminate your responsibility to accurately evaluate how much compute power you need to guarantee your underlying hardware is available when guests need more CPU resources. Always plan ahead for growth.
+In a shared host scenario, assume about a 10% CPU efficiency overhead from virtualization. If the site needs 10 CPUs at a 40% target utilization on physical hardware, add one more CPU for that overhead. Allocate a total of 11 virtual CPUs (vCPUs) across the *N* guest domain controllers.
+
+In sites with mixed distributions of physical and virtual servers, this virtualization overhead only applies to the virtual machines (VMs). In an *N* + 1 design, a 10‑CPU physical (or direct-mapped) server is roughly equivalent to a virtual DC with 11 vCPUs. The host also needs another 11 CPUs reserved for that VM.
+
+While you're analyzing and calculating how many CPUs you need to support AD DS load.  Keep in mind that if you plan to purchase physical hardware, the types of hardware available on the market might not map exactly to your estimates. However, you don't have that problem when you use virtualization. Using VMs decreases the effort needed for you to add compute capacity to a site, as you can add as many CPUs with the exact specifications you want to a VM. However, virtualization doesn't eliminate your responsibility to accurately evaluate how much compute power you need to guarantee your underlying hardware is available when guests need more CPU resources. Always plan ahead for growth.
 
 ### Virtualization calculation summary example
 
@@ -546,9 +573,9 @@ While you're analyzing and calculating how many CPUs you need to support AD DS l
 | DC 3 | 218% |
 | Total CPU usage | 485% |
 
-| Target systems count | Total bandwidth (from above) |
+| Target systems count | Total CPU count require |
 |--|--|
-| CPUs needed at 40% target | 4.85 ÷ 0.4 = 12.25 |
+| CPUs needed at 40% target at peak | 485% ÷ 0.4 = 12.25 |
 
 If you project 50% demand growth over three years, plan for 18.375 CPUs (12.25 × 1.5) by that time. Alternatively, you can review demand after the first year, then add extra capacity based on what the results tell you.
 
@@ -556,7 +583,7 @@ If you project 50% demand growth over three years, plan for 18.375 CPUs (12.25 �
 
 #### Evaluating cross-trust client authentication load
 
-Many environments might have one or more domains connected by a trust. Authentication requests for identities in other domains that don't use Kerberos need to traverse a trust using a secure channel between two domain controllers. The domain controller the user is trying to access in the site connects to another domain controller that's located in either the destination domain or somewhere further up the path towards the destination domain. How many calls the DC can make to the other DC in the trusted domain is controlled by the **MaxConcurrentAPI* setting. In order to ensure the secure channel can handle the amount of load required for the DCs to communicate with each other, you can either tune MaxConcurrentAPI or, if you're in a forest, create shortcut trusts. Learn more about how to determine traffic volume across trusts at [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
+Many environments might have one or more domains connected by a trust. Authentication requests for identities in other domains that don't use Kerberos need to traverse a trust using a secure channel between two domain controllers. The user’s domain controller contacts a domain controller in the destination domain, or the next one along the trust path toward that domain. How many calls the DC can make to the other DC in the trusted domain is controlled by the **MaxConcurrentAPI* setting. In order to ensure the secure channel can handle the amount of load required for the DCs to communicate with each other, you can either tune MaxConcurrentAPI or, if you're in a forest, create shortcut trusts. Learn more about how to determine traffic volume across trusts at [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
 
 As with the previous scenarios, you must collect data during the peak busy periods of the day in order for it to be useful.
 
@@ -740,7 +767,7 @@ If processor speeds in your replacement hardware are lower than your current har
 However, this variability doesn't change capacity management processor utilization targets. Processor clock speeds adjust dynamically based on load demand, so running the system under higher loads causes the CPU to spend more time in a higher clock speed state. The ultimate goal is to have the CPU be at 40% utilization in a 100% clock speed state during peak business hours. Anything less generates power savings by throttling CPU speeds during off-peak scenarios.
 
 > [!NOTE]
-> You can turn off power management on the processors during data collection by setting the power plan to **High Performance**. Turning power management off gives you more accurate readings of CPU consumption in the target server.
+> You can turn off power management on the processors during data collection by setting the power plan to **High Performance**. Turning power management off gives more accurate readings of CPU consumption in the target server.
 
 To adjust estimates for different processors, we recommend you use the SPECint_rate2006 benchmark from Standard Performance Evaluation Corporation. To use this benchmark:
 
@@ -869,7 +896,7 @@ When you add any other device, such as a network adapter or a second SCSI contro
 
 #### Analyzing storage subsystems to find bottlenecks
 
-In this scenario, the spindle is the limiting factor for how much I/O you can request. As a result, this bottleneck also limits how much data the system can transmit. Because our example is an AD DS scenario, the amount of transmittable data is 100 random I/O per second in 8KB increments, for a total of 800KB per second when you access the Jet database. In contrast, the maximum throughput for a spindle you configure to exclusively allocate to log files would be limited to 300 sequential I/O per second in 8KB installments, totaling at 2,400KB or 2.4B per second.
+In this scenario, the spindle is the limiting factor for how much I/O you can request. As a result, this bottleneck also limits how much data the system can transmit. Because our example is an AD DS scenario, the amount of transmittable data is 100 random I/O per second in 8KB increments, for a total of 800KB per second when you access the Jet database. In contrast, the maximum throughput for a spindle you configure to exclusively allocate to log files would be limited to 300 sequential I/O per second in 8KB blocks, totaling 2,400KB or 2.4MB per second.
 
 Now that we've analyzed the components of our example configuration, let's look at a table that demonstrates where bottlenecks can happen as we add and change components in the storage subsystem.
 
@@ -975,12 +1002,12 @@ Caches are one of the components that can significantly impact overall performan
 
 ### SSD considerations
 
-Solid state drives (SSDs) are fundamentally different than spindle-based hard disks. SSDs can handle higher volumes of I/O with lower latency. While SSDs can be expensive on a cost-per-Gigabyte basis, they're cheap in terms of cost-per-I/O. However, capacity planning with SSDs involves asking yourself the same questions that you would ask about spindles: how many IOPS can they handle and and what is the latency of those IOPS?
+Solid state drives (SSDs) are fundamentally different than spindle-based hard disks. SSDs can handle higher volumes of I/O with lower latency. While SSDs can be expensive on a cost-per-Gigabyte basis, they're cheap on a cost-per-I/O basis. Capacity planning with SSDs still asks the same core questions as with spindles: how many IOPS can they handle, and what is the latency of those IOPS?
 
 Here are some things you should consider when planning for SSDs:
 
 - Both IOPS and latency are subject to manufacturer designs. In some cases, certain SSD designs can perform worse than spindle-based technologies. When trying to decide whether you should use SSD or spindles, you should review and validate manufacturer specs drive by drive instead of assuming all technologies work a certain way.
-- IOPS types can have different values depending on whether they're read or write. AD DS services are predominantly read-based, and therefore are less effected by which write technology you use compare dto other application scenarios.
+- IOPS types can have different values depending on whether they're read or write. AD DS services are predominantly read-based, and therefore are less affected by which write technology you use compared to other application scenarios.
 - Write endurance is the assumption that SSD cells have a limited lifespan and will eventually wear out after you use them a lot. For database drives, a predominantly read I/O profile extends the write endurance of cells to the point where you don't need to worry about write endurance that much.
 
 ### Summary
@@ -1003,7 +1030,7 @@ Many storage recommendations before virtualized storage served two purposes:
 
 With new storage options, a lot fundamental assumptions behind earlier storage recommendations are no longer true. Virtualized storage scenarios, such as iSCSI, SAN, NAS, and Virtual Disk image files, often share underlying storage media across multiple hosts. Shared‑storage negates the assumptions that you must isolate I/O and optimize sequential I/O. Now other hosts that access the shared media can reduce responsiveness to the domain controller.
 
-When you capacity plan for storage performance, you should consider three things:
+You should consider the following when capacity planning for storage performance:
 
 - Cold cache state
 - Warm cache state
