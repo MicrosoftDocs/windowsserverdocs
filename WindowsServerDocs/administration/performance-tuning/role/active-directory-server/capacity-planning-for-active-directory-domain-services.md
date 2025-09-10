@@ -583,7 +583,7 @@ If you project 50% demand growth over three years, plan for 18.375 CPUs (12.25 �
 
 #### Evaluating cross-trust client authentication load
 
-Many environments might have one or more domains connected by a trust. Authentication requests for identities in other domains that don't use Kerberos need to traverse a trust using a secure channel between two domain controllers. The user’s domain controller contacts a domain controller in the destination domain, or the next one along the trust path toward that domain. How many calls the DC can make to the other DC in the trusted domain is controlled by the **MaxConcurrentAPI* setting. In order to ensure the secure channel can handle the amount of load required for the DCs to communicate with each other, you can either tune MaxConcurrentAPI or, if you're in a forest, create shortcut trusts. Learn more about how to determine traffic volume across trusts at [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
+Many environments might have one or more domains connected by a trust. Authentication requests for identities in other domains that don't use Kerberos need to traverse a trust using a secure channel between two domain controllers. The user’s domain controller contacts a domain controller in the destination domain or the next one along the trust path toward that domain. The **MaxConcurrentAPI* setting controls how many calls the DC can make to the other DC in the trusted domain. In order to ensure the secure channel can handle the amount of load required for the DCs to communicate with each other, you can either tune MaxConcurrentAPI or, if you're in a forest, create shortcut trusts. Learn more about how to determine traffic volume across trusts at [How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting](https://support.microsoft.com/kb/2688798).
 
 As with the previous scenarios, you must collect data during the peak busy periods of the day in order for it to be useful.
 
@@ -633,7 +633,7 @@ For this system for this time period, the default values are acceptable.
 
 ## Monitoring for compliance with capacity planning goals
 
-Throughout this article, we've discussed how planning and scaling go towards utilization targets. The following table summarizes the recommended thresholds you must monitor to ensure systems are operating as intended. Keep in mind that these aren't performance thresholds, just capacity planning thresholds. A server operating in excess of these thresholds will still work, but you need to validate your applications are working as intended before you start seeing performance issues as user demand increases. If the applications are okay, then you should start evaluating hardware upgrades or other configuration changes.
+Throughout this article, we discussed how planning and scaling go towards utilization targets. The following table summarizes the recommended thresholds you must monitor to ensure systems are operating as intended. Keep in mind that these aren't performance thresholds, just capacity planning thresholds. A server operating in excess of these thresholds still works, but you need to validate your applications are working as intended before you start seeing performance issues as user demand increases. If the applications are okay, then you should start evaluating hardware upgrades or other configuration changes.
 
 | Category | Performance counter | Interval/Sampling | Target | Warning |
 |--|--|--|--|--|
@@ -664,7 +664,7 @@ As today's server systems have multiple processors, multiple multi-core processo
 
 ### Thread-level parallelism
 
-Each thread is an independent task, as each thread has its own stack and instructions. AD DS is multi-threaded and you can tune the number of available threads by following the directions in [How to view and set LDAP policy in Active Directory by using Ntdsutil.exe](https://support.microsoft.com/kb/315071), it scales well across multiple logical processors.
+Each thread is an independent task, as each thread has its own stack and instructions. AD DS can scale well across multiple logical processors as it is multi-threaded and can be tuned the number of available threads. To learn more about tuning the available threads, follow the directions in [How to view and set LDAP policy in Active Directory by using Ntdsutil.exe](https://support.microsoft.com/kb/315071).
 
 ### Data-level parallelism
 
@@ -672,7 +672,7 @@ Data-level parallelism is when a service shares data across many threads for the
 
 ### CPU speed versus multiple-core considerations
 
-Generally, faster logical processors reduce the time required to process a series of instructions. More logical processors mean you can run more tasks at the same time. However, these rules don't apply in scenarios that are more complex, such as fetching data from shared memory, waiting on data-level parallelism, and the overhead of managing multiple threads at once. As a result, scalability in multi-core systems isn't linear.
+Faster logical processors shorten the time a single thread needs to finish its work. Adding more logical processors increases how many threads can run in parallel. However, scaling is non‑linear due to memory latency, shared resource contention, synchronization/locking, serial code paths, and scheduling overhead. As a result, scalability in multi-core systems isn't linear.
 
 To understand why this utilization change happens, think of these scenarios like a highway. Each thread is an individual car, each lane is a core, and the speed limit is the clock speed.
 
@@ -680,7 +680,7 @@ If there's only one car on the highway, it doesn't matter if there are 2 or 12 l
 
 If the data the thread needs isn't immediately available, then the thread can't process instructions until it fetches the relevant data from memory. It's like if a segment of the highway is shut down. Even if there's only one car on the highway, the speed limit won't affect its ability to travel, because it can't go anywhere until the road is reopened.
 
-As the number of cars increases, the overhead that the highway needs to manage the number of cars also increases. Drivers need to focus harder when driving on the highway during rush hour traffic as opposed to the late evening when the road is mostly empty. Also, driving on a two-lane highway where you only need to worry about one other lane requires less focus than driving on a six-lane highway where you have five other lanes of traffic to pay attention to.
+As the number of cars increases, the overhead that the highway needs to manage the number of cars also increases. Drivers must concentrate more on a crowded rush-hour highway. Later in the evening, light traffic requires less focus. Also, driving on a two-lane highway where you only need to worry about one other lane requires less focus than driving on a six-lane highway where you have five other lanes of traffic to pay attention to.
 
 In summary, questions about whether you should add more or faster processors become highly subjective and should be considered on a case-by-case basis. For AD DS in particular, its processing needs depend on environmental factors and can vary from server to server within a single environment. As a result, the earlier sections in this article didn't invest heavily on making super precise calculations. When you make budget-driven buying decisions, we recommend you first optimize processor usage at either 40% or whichever number your specific environment requires. If your system isn't optimized, then you don't benefit as much from buying more processors.
 
@@ -705,9 +705,7 @@ To understand how queuing theory applies to your AD DS deployment, let's return 
 
 Busier times in the mid-afternoon would fall somewhere into the 40% to 70% capacity range. There's enough traffic that your ability to choose a lane to drive in isn't severely restricted. While the chance of another driver getting in your way is high, it doesn't require the same level of effort you'd need to find a safe gap between other cars in the lane as during rush hour.
 
-As rush hour approaches, the road system approaches 100% capacity. Changing lanes during rush hour becomes very challenging because cars are so close together that you don't have as much room to maneuver when changing lanes.
-
-This queuing behavior is why estimating long-term average capacity at 40% leaves headroom for abnormal load spikes, whether those spikes are transitory, such as with poorly coded queries that take a while to run, or abnormal bursts in general load, like the spike in activity the morning after a holiday weekend.
+As rush hour approaches, the road system approaches 100% capacity. Changing lanes during rush hour becomes very challenging because cars are so close together that you don't have as much room to maneuver when changing lanes. Queuing behavior explains the 40% long-term average capacity target. Keeping average utilization near 40% leaves room for brief spikes (for example, slow or poorly coded queries) and larger burst events (such as the surge the morning after a holiday).
 
 The previous statement regards the percentage of processor time calculation as being the same as the utilization law equation. This simplified version is meant to introduce the concept to new users. However, for more advanced math, you can use the following references as a guide:
 
@@ -723,7 +721,7 @@ The previous statement regards the percentage of processor time calculation as b
 
 ### Applying these concepts to capacity planning
 
-The math in the previous section probably makes determining how many logical processors you need in a system seem complex. As a result, your approach to sizing the system should focus on determining maximum target utilization based on current load, then calculating the number of logical processors you need to reach that target. Furthermore, your estimate doesn't need to be perfectly exact. While logical processor speeds do have a significant impact on synchronization, performance can also be affected by other areas:
+The math in the previous section probably makes determining how many logical processors you need in a system seem complex. As a result, your approach to sizing the system should focus on determining maximum target utilization based on current load, then calculating the number of logical processors you need to reach that target. Furthermore, your estimate doesn't need to be perfectly exact. While logical processor speeds do have a significant impact on synchronization, other areas can also affect performance, such as:
 
 - Cache efficiency
 - Memory coherence requirements
@@ -732,12 +730,12 @@ The math in the previous section probably makes determining how many logical pro
 
 Since compute power is relatively low-cost, it's not worth investing too much time in calculating the perfectly exact number of CPUs you need.
 
-It's also important to remember that the 40% recommendation, in this case, isn't a mandatory requirement. We use it as a reasonable start for making calculations. Different kinds of AD users need different levels of responsiveness. There might even be scenarios where environments can run at 80% or even 90% utilization at a sustained average without the increased wait times for processor access noticeably affecting client performance.
+It's also important to remember that the 40% recommendation, in this case, isn't a mandatory requirement. We use it as a reasonable start for making calculations. Different kinds of AD users need different levels of responsiveness. Some environments can average 80%–90% CPU and still meet user expectations if queue wait times do not rise noticeably. Treat this as an exception, validate with latency data and monitor closely for emerging contention.
 
-There are also other areas in the system that are slower than the logical processor, which you should also tune, including RAM access, disk access, and transmitting responses over the network. For example:
+Other parts of the system are slower than the CPU. Tune them too. Focus on RAM access, disk access, and network response time. For example:
 
 - If you add processors to a system running at 90% utilization that's disk-bound, it probably won't significantly improve performance. If you look more closely at the system, there are lots of threads that aren't even getting onto the processor because they're waiting for I/O operations to complete.
-- Resolving disk-bound issues can mean that threads previously stuck in waiting state stop being stuck, creating more competition for CPU time. As a result, the 90% utilization goes to 100%. You need to tune both components in order to bring back utilization down to manageable levels.
+- Resolving disk-bound issues can mean that threads previously stuck in waiting state stop being stuck, creating more competition for CPU time. As a result, the 90% utilization goes to 100%. You need to tune both components in order to bring back down utilization to manageable levels.
 
   > [!NOTE]
   > The `Processor Information(*)\% Processor Utility` counter can exceed 100% with systems that have a Turbo mode. Turbo mode lets the CPU exceed the rated processor speed for short periods. If you need more information, look at the CPU manufacturers' documentation and counter descriptions.
@@ -748,7 +746,7 @@ Let's revisit the highway metaphor from the previous sections, only this time we
 
 Now, let's imagine four scenarios:
 
-- A system's off-peak hours are like riding an express bus late at night. When the rider gets on, there are almost no other passengers and the road is nearly empty. Because there's no traffic for the bus to contend with, the ride is easy and as fast as if the rider had driven there in their own car. However, the rider's travel time is also constrained by the local speed limit.
+- A system's off-peak hours are like riding an express bus late at night. When the rider gets on, there are almost no other passengers and the road is nearly empty. Because there's no traffic for the bus to contend with, the ride is easy and as fast as if the rider had driven there in their own car. However, the local speed limit can constrain the rider's travel time.
 - Off-peak hours when a system's CPU utilization is too high is like a late night ride when most of the lanes on the highway are closed. Even though the bus itself is mostly empty, the road is still congested from leftover traffic dealing with the restricted lanes. While the rider is free to sit anywhere they want, their actual trip time is determined by the traffic outside of the bus.
 - A system with high CPU utilization during peak hours is like a crowded bus during rush hour. Not only does the trip take longer, but getting on and off the bus is harder because the bus is full of other passengers. Adding more logical processors to the guest system to try to speed up wait times would be like trying to solve the traffic problem by adding more buses. The problem isn't the number of buses, but how long the trip takes.
 - A system with high CPU utilization during off-peak hours is like that same crowded bus on a mostly empty road at night. While riders might have trouble finding seats or getting on and off the bus, the trip is fairly smooth once the bus picks up all its passengers. This scenario is the only one where performance would improve by adding more buses.
@@ -799,7 +797,7 @@ The queuing theory concepts we discussed in [Response time and how system activi
 
 In this illustration, the two spindles are mirrored and split into logical areas for data storage, labeled Data 1 and Data 2. The OS registers each of these logical areas as separate physical disks.
 
-Now we've clarified what defines a physical disk, you should also get familiar with the following terms to help you better understand the information in this Appendix.
+Now we've clarified what defines a physical disk, the following terms can help you better understand the information in this Appendix.
 
 - A *spindle* is the device physically installed in the server.
 - An *array* is a collection of spindles aggregated by the controller.
