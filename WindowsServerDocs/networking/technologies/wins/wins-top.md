@@ -4,8 +4,8 @@ description: This topic provides information about decommissioning WINS and usin
 manager: brianlic
 ms.topic: concept-article
 ms.assetid: 32eabe7d-1130-4001-a79a-8ddb31993e5b
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 08/07/2020
 ---
 
@@ -18,3 +18,4 @@ If you do not already have WINS deployed on your network, do not deploy WINS - i
 For more information, see [Domain Name System (DNS)](../../dns/dns-top.md)
 
 If you have already deployed WINS on your network, it is recommended that you deploy DNS and then decommission WINS.
+

@@ -2,8 +2,8 @@
 title: Install File Services Content Servers
 description: Learn how to install the BranchCache for network files role service of the File Services server role and enable BranchCache on file shares according to your requirements.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/05/2021
 ---
 # Install File Services Content Servers
@@ -24,6 +24,7 @@ See the following topics to deploy content servers.
 -   [Enable Hash Publication for File Servers](../../branchcache/deploy/Enable-Hash-Publication-for-File-Servers.md)
 
 -   [Enable BranchCache on a File Share &#40;Optional&#41;](../../branchcache/deploy/enable-bc-on-file-share.md)
+
 
 
 

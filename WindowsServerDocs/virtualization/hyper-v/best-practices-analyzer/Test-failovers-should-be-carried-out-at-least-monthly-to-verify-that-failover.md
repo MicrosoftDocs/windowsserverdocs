@@ -1,8 +1,8 @@
 ---
 title: Test failovers should be carried out at least monthly to verify that failover will succeed and that virtual machine workloads will operate as expected after failover
 description: Learn what to do when there has been no test failover in at least one month.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 57a8aa50-e59e-4a4b-8571-1099d5a8eee4
 ms.date: 8/16/2016
@@ -30,3 +30,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Use Hyper-V Manager to conduct a test failover.*
+

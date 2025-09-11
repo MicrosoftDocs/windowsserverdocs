@@ -4,8 +4,8 @@ description: "Learn more about: Shielded VMs for tenants - Deploying a shielded 
 ms.topic: how-to
 ms.assetid: 39d5e29c-835d-490a-b74d-798a0dcb3f39
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -19,3 +19,4 @@ To deploy a shielded VM in VMM, use the instructions in [Provision a new shielde
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

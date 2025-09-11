@@ -4,8 +4,8 @@ title: Managing a Guarded Fabric
 ms.topic: concept-article
 ms.assetid: aee13964-d1d9-471a-bef3-3c76280b9a15
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 12/10/2020
 ---
 # Managing a Guarded Fabric
@@ -18,3 +18,4 @@ The following topics describe how to manage a guarded fabric.
 ## Additional References
 
 - [Deploying a guarded fabric](guarded-fabric-deploying-hgs-overview.md)
+

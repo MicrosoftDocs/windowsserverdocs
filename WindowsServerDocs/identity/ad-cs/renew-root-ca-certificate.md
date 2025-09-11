@@ -1,8 +1,8 @@
 ---
 title: Renew root CA certificate in Windows Server
 description: This article describes how to renew a root CA certificate with existing key pair, and renew a CA certificate with new key pair.
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 03/13/2025
 #customer intent: As an IT administrator, I want to renew the root CA certificate so that the PKI remains secure and trusted.
@@ -109,3 +109,4 @@ After the changes, monitor your environment for any issues related to certificat
 
 - [Certification Authority Renewal](/windows/win32/seccrypto/certification-authority-renewal)
 - [Microsoft Learn: Active Directory Certificate Services](/windows-server/identity/ad-cs/)
+

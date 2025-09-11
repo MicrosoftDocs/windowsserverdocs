@@ -1,10 +1,10 @@
 ---
 title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)
 description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
-author: meaghanlewis
+author: xelu86
 ms.topic: how-to
 ms.date: 08/13/2025
-ms.author: mosagie
+ms.author: alalve
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
 
@@ -531,4 +531,5 @@ Cancellation isn't supported directly in the extension. As a workaround:
    ```powershell
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
+
 

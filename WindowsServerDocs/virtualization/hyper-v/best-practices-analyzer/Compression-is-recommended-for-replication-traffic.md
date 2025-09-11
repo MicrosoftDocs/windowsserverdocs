@@ -1,8 +1,8 @@
 ---
 title: Compression is recommended for replication traffic
 description: Learn what to do when the replication traffic sent across the network from the primary server to the Replica server is uncompressed.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.topic: best-practice
 ms.assetid: cf8be6e9-2909-4e4a-bb63-d1e1ebbc6930
 ms.date: 8/16/2016
@@ -30,3 +30,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Configure Hyper-V Replica to compress the data transmitted over the network in the settings for the virtual machine in Hyper-V Manager. You can also use tools outside of Hyper-V to perform compression.*
+

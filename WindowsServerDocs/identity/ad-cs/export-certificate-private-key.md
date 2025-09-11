@@ -2,8 +2,8 @@
 title: Export a certificate with its private key in Windows Server
 description: Learn how to export a certificate with its private key.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 5/14/2025
 ---
 
@@ -50,3 +50,4 @@ Once the certificate is exported, you can import it to another device that requi
 ## Related content
 
 - [Distribute certificates to Windows devices by using Group Policy](distribute-certificates-group-policy.md)
+

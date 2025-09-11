@@ -2,8 +2,8 @@
 title: Guest operating system and application supportability on Hyper-V
 description: Understand which versions of Windows Server or Azure Local are compatible products for a guest operating system or application that has been validated for Hyper-V.
 ms.topic: concept-article
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 manager: tedhudek
 ms.date: 01/11/2022
 ---
@@ -27,3 +27,4 @@ For more information, see:
 - [Windows Server release information](../../../get-started/windows-server-release-info.md)
 - [Supported Windows guest operating systems on Hyper-V](../Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)
 - [Supported Linux and FreeBSD guest operating systems on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
+

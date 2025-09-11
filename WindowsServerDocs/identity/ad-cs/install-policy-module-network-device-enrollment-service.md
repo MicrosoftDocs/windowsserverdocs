@@ -1,9 +1,9 @@
-﻿---
+---
 title: Install a policy module with the Network Device Enrollment Service in Windows Server
 description: Learn how to install, configure, and uninstall a policy module with the Network Device Enrollment Service.
-author: meaghanlewis
+author: dknappettmsft
 ms.topic: how-to
-ms.author: mosagie
+ms.author: daknappe
 ms.date: 03/27/2025
 ---
 

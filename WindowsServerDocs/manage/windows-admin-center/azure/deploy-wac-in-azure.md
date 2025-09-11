@@ -2,8 +2,8 @@
 title: Deploy a Windows Admin Center gateway in Azure
 description: How to deploy a Windows Admin Center gateway in Azure
 ms.topic: install-set-up-deploy
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 02/18/2021
 ---
 # Manually deploy Windows Admin Center in Azure for managing multiple servers
@@ -190,3 +190,4 @@ When you attempt to access Windows Admin Center, the browser will prompt for cre
 In order to add other VMs in the VNet, ensure WinRM is running on the target VMs by running the following in PowerShell or the command prompt on the target VM: `winrm quickconfig`
 
 If you haven't domain-joined the Azure VM, the VM behaves like a server in workgroup, so you'll need to make sure you account for [using Windows Admin Center in a workgroup](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup).
+

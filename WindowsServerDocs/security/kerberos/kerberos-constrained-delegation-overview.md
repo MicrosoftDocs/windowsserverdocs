@@ -3,8 +3,8 @@ title: Kerberos Constrained Delegation Overview in Windows Server
 description: Learn about the new capabilities for Kerberos constrained delegation in Windows Server.
 ms.topic: concept-article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 08/25/2025
 ---
 # Kerberos Constrained Delegation Overview
@@ -65,3 +65,4 @@ To configure a resource service to let front-end services access resources on be
 - To retrieve a list of principals, use the **Get-ADComputer**, **Get-ADServiceAccount**, and **Get-ADUser** cmdlets with the **Properties PrincipalsAllowedToDelegateToAccount** parameter.
 
 - To configure the resource service, use the **New-ADComputer**, **New-ADServiceAccount**, **New-ADUser**, **Set-ADComputer**, **Set-ADServiceAccount**, and **Set-ADUser** cmdlets with the **PrincipalsAllowedToDelegateToAccount** parameter.
+

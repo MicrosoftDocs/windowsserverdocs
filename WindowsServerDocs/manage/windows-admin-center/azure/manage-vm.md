@@ -2,8 +2,8 @@
 title: Manage a Windows VMs using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server and Client Azure VMs
 ms.topic: overview
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 06/18/2025
 ms.custom: sfi-image-nochange
 ---
@@ -463,3 +463,4 @@ No, unfortunately not.
 ### Is Windows Admin Center supported for VMs behind a load balancer?
 
 Yes.
+

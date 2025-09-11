@@ -4,8 +4,8 @@ title: Deploy shielded VMs
 ms.topic: install-set-up-deploy
 ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 08/29/2018
 ---
 
@@ -38,3 +38,4 @@ The following topics describe how a tenant can work with shielded VMs.
 ## Additional References
 
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

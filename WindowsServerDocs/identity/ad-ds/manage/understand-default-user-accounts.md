@@ -1,8 +1,8 @@
 ---
 title: Active Directory Accounts
 description: This article discusses how to create default local Windows Server Active Directory accounts on a domain controller.
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: concept-article
 ms.date: 06/30/2025
 ms.custom: sfi-image-nochange
@@ -392,3 +392,4 @@ In addition, installed applications and management agents on domain controllers 
 
 - [Security principals](understand-security-principals.md)
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
+

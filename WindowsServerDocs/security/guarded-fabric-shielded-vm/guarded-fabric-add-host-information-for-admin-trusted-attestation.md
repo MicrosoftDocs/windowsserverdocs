@@ -4,8 +4,8 @@ title: Add host information for Admin-trusted attestation
 ms.topic: how-to
 ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -45,5 +45,6 @@ To authorize a guarded host in AD mode:
    ```
 
 2. To verify the group was added, run [Get-HgsAttestationHostGroup](/powershell/module/hgsattestation/get-hgsattestationhostgroup).
+
 
 

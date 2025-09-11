@@ -2,8 +2,8 @@
 title: Migrate existing DHCP failover deployment on Windows Server
 description: This article serves as a guide for how to migrate a Dynamic Host Configuration Protocol (DHCP) failover relationship in Windows Server.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/08/2025
 #customer intent: As an IT administrator, I want to migrate a DHCP server to Windows Server so that I can ensure seamless network configuration and management.
 ---
@@ -211,3 +211,4 @@ After leases and settings are replicated to DHCP-2025-1 and DHCP-2025-2, setting
 - [DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
 
 - [Manage DHCP failover relationships](/windows-server/networking/technologies/dhcp/manage-dhcp-failover-relationships?tabs=powershell)
+

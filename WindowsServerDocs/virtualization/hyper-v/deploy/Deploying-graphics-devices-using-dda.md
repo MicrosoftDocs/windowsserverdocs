@@ -2,8 +2,8 @@
 title: Deploy graphics devices by using Discrete Device Assignment
 description: Learn how to use DDA to deploy graphics devices in Windows Server and how to mount a GPU to a virtual machine.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 02/19/2025
 ---
 # Deploy graphics devices by using Discrete Device Assignment
@@ -181,3 +181,4 @@ If you pass a GPU into a VM but Remote Desktop Services or an application isn't 
   **Computer Configuration\Administrator Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Remote Session Environment\Use hardware graphics adapters for all Remote Desktop Services sessions**.
 
   Set the Group Policy value to **Enabled**, then reboot the VM after you apply the policy.
+
