@@ -1,8 +1,8 @@
 ---
 title: Offer all available integration services to virtual machines
 description: Learn what to do when one or more available integration services are not enabled on virtual machines.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
 ms.date: 8/16/2016
@@ -47,3 +47,4 @@ The availability of some integration services can be managed through the virtual
 4.  Under **Management**, click **Integration Services**.
 
 5.  In the list of integration services, select the check box for each service you want to offer to the virtual machine. If a check box is unavailable, that particular integration service is not supported by the guest operating system that runs in the virtual machine.
+

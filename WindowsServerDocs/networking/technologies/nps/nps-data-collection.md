@@ -1,8 +1,8 @@
 ---
 title: Network Policy Server user data collection
 description: What information is used to help authenticate users by Network Policy Server in Windows Server 2016.
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.reviewer: 
 ms.custom: it-pro
 ms.topic: concept-article
@@ -39,3 +39,4 @@ If accounting data is configured for a log file, then search the log file for th
 Network Policy and Access Services event log entries are considered duplicative to the accounting data and don't need to be collected.
 
 If accounting data is not enabled, then records of a user's NPS authentication attempts can be obtained from the Network Policy and Access Services event log by searching for the `<username>`.
+

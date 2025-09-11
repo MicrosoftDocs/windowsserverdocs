@@ -1,8 +1,8 @@
 ---
 title:  Active Directory Forest Recovery - Perform initial recovery
 description: Beginning with a writeable DC in the forest root domain, complete the steps in this section in order to restore the first DC.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/10/2023
 ms.topic: how-to
 ---
@@ -311,3 +311,4 @@ forest by installing AD DS and configuring additional Global Catalog servers.
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+

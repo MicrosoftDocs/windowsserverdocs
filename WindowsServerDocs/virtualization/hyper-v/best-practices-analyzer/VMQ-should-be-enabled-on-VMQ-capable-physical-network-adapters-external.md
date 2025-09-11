@@ -1,8 +1,8 @@
 ---
 title: VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
 description: Learn what to do when the following network adapters are capable of virtual machine queue (VMQ) but the capability is disabled.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.topic: best-practice
 ms.assetid: 93d1b155-bf44-46b0-bb69-d34d5b30e574
 ms.date: 8/16/2016
@@ -30,3 +30,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *Enable VMQ using the Enable-NetAdapterVmq Windows PowerShell cmdlet or using the Advanced Properties user interface for the network adapter.*
+

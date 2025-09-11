@@ -2,8 +2,8 @@
 description: Learn more about Advanced AD DS Management using Active Directory Administrative Center (Level 200).
 ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
 title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 06/26/2025
 ms.topic: concept-article
 ms.custom: sfi-image-nochange
@@ -513,3 +513,4 @@ To troubleshoot this issue, use these steps:
 ## Related content
 
 - [Active Directory Recycle Bin, fine-grained password policy, and PowerShell History Viewer](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831702(v=ws.11))
+

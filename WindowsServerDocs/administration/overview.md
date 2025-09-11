@@ -1,8 +1,8 @@
 ---
 title: Windows Server management overview
 description: Learn about the various tools and solutions available to manage Windows Server effectively, including Azure Arc and Windows Admin Center.
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.topic: overview
 ms.date: 07/17/2025
 #customer intent: As an IT administrator, I want to understand Windows Server management tools so that I can choose the best solution for my organization.
@@ -142,3 +142,4 @@ You can learn more about the various tools that comprise local management tools 
 - [PowerShell](/powershell/scripting/overview)
 - [Windows Commands](windows-commands/windows-commands.md)
 - [Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
+

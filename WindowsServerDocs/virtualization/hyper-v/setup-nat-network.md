@@ -2,8 +2,8 @@
 title: Set up a NAT network
 description: Learn how to create a network address translation (NAT) virtual network using PowerShell, and then connect a virtual machine.
 keywords: windows 10, windows 11, hyper-v
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 01/22/2025
 ms.topic: how-to
 ms.assetid: 1f8a691c-ca75-42da-8ad8-a35611ad70ec
@@ -279,3 +279,4 @@ Get-NetNat | Remove-NetNat
 Set-Service docker -StartupType Automatic
 Start-Service docker 
 ```
+

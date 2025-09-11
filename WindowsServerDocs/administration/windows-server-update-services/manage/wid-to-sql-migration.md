@@ -3,8 +3,8 @@ title: Migrating the WSUS Database from (Windows Internal Database) WID to SQL
 description: Windows Server Update Service (WSUS) topic - How to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
 ms.topic: how-to
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/25/2018
 ms.custom: sfi-image-nochange
 ---
@@ -189,3 +189,4 @@ Uninstall-WindowsFeature -Name 'Windows-Internal-Database'
 ```
 
 After the WID role is removed, verify that the following registry key is present: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Update Services\Server\Setup\Installed Role Services\UpdateServices-Database**
+

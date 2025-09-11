@@ -3,8 +3,8 @@ title: Supported FreeBSD virtual machines on Hyper-V
 description: Lists the FreeBSD/Linux integration services and features included in each version
 ms.topic: concept-article
 ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 06/19/2025
 ---
 # Supported FreeBSD virtual machines on Hyper-V
@@ -70,3 +70,4 @@ The following feature distribution map indicates the features in each version. T
 
 * [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
+

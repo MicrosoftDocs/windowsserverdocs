@@ -1,8 +1,8 @@
 ---
 title: Export and import virtual machines
 description: This article shows you how to export and import virtual machines using Hyper-V Manager or Windows PowerShell.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 05/14/2015
 ms.topic: how-to
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
@@ -104,3 +104,4 @@ Hyper-V offers three import types:
 - **Restore the virtual machine** – Restore the virtual machine to a location you choose, or use the default to Hyper-V. This import type creates a copy of the exported files and moves them to the selected location. When imported, the virtual machine has the same ID as it did at the time of export. Because of this, if the virtual machine is already running in Hyper-V, it needs to be deleted before the import can be completed. When the import has completed, the exported files remain intact and can be removed or imported again.
 
 - **Copy the virtual machine** – The copy type is similar to the restore type in that you select a location for the files. The difference is that the imported virtual machine has a new unique ID, which means you can import the virtual machine to the same host multiple times.
+

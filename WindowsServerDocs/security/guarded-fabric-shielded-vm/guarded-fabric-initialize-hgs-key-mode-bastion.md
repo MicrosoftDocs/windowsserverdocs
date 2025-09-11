@@ -3,8 +3,8 @@ description: "Learn more about: Initialize the HGS cluster using key mode in an 
 title: Initialize the HGS cluster using key mode in a bastion forest
 ms.topic: how-to
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -36,4 +36,5 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 ```
 
 If you are using certificates installed on the local machine (such as HSM-backed certificates and non-exportable certificates), use the `-SigningCertificateThumbprint` and `-EncryptionCertificateThumbprint` parameters instead.
+
 

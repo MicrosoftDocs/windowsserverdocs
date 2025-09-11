@@ -2,8 +2,8 @@
 description: "Learn more about: How the Windows Time Service Works"
 ms.assetid: d1953097-63ea-4a0e-b860-2f3b7c175c41
 title: How the Windows Time Service Works
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 07/25/2025
 ms.topic: concept-article
 ---
@@ -247,3 +247,4 @@ The Windows Time service communicates on a network to identify reliable time sou
 [Windows Time Service Technical Reference](windows-time-service-tech-ref.md)
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
 [Windows Time Service (W32Time)](windows-time-service-top.md)
+

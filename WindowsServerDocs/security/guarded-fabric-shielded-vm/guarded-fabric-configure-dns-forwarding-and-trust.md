@@ -3,8 +3,8 @@ description: "Learn more about: Configure DNS forwarding in the HGS domain and a
 title: Configure DNS forwarding and domain trust
 ms.topic: how-to
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -33,3 +33,4 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
 > [!div class="nextstepaction"]
 > [Configure HTTPS](guarded-fabric-configure-hgs-https.md)
+

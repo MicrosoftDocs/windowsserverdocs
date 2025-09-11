@@ -1,8 +1,8 @@
 ---
 title: Minroot
 description: Configuring Host CPU Resource Controls
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/15/2017
 ms.topic: how-to
 ---
@@ -62,3 +62,4 @@ You can verify the host's minroot configuration using Task Manager, as shown bel
 ![Host's minroot configuration shown in Task Manager](./media/minroot-taskman.png)
 
 When Minroot is active, Task Manager will display the number of logical processors currently allotted to the host, in addition to the total number of logical processors in the system.
+

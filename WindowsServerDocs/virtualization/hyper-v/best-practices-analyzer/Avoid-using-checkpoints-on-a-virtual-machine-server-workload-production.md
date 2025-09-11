@@ -1,8 +1,8 @@
 ---
 title: Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
 description: Learn what to do when a virtual machine with one or more checkpoints has been found.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 1be75890-d316-495a-b9b7-be75fc1aac10
 ms.date: 8/16/2016
@@ -41,3 +41,4 @@ If physical disk space runs out, any running virtual machine that has checkpoint
 
 > [!NOTE]
 > Production checkpoints are now available as an alternative to standard checkpoints. For details, see [Choose between standard or production checkpoints](../manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md).
+

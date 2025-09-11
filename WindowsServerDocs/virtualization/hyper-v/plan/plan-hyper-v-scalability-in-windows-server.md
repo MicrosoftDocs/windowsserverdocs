@@ -2,8 +2,8 @@
 title: Plan for Hyper-V scalability in Windows Server
 description: Lists the maximum supported number for components you can add to or remove from Hyper-V and virtual machines, like how much memory, and how many virtual processors, in Windows Server.
 ms.topic: limits-and-quotas
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/25/2024
 zone_pivot_groups: windows-os-version
 ---
@@ -191,3 +191,4 @@ This table lists the maximums that apply when using Hyper-V and Failover Cluster
 |-------------|-----------|---------|
 |Nodes per cluster|64|Consider the number of nodes you want to reserve for failover, and maintenance tasks such as applying updates. We recommend that you plan for enough resources to allow for 1 node to be reserved for failover. Meaning it remains idle until another node is failed over to it, sometimes referred to as a passive node. You can increase this number if you want to reserve more nodes. There's no recommended ratio or multiplier of reserved nodes to active nodes; the only requirement is that the total number of nodes in a cluster can't exceed the maximum of 64.|
 |Running virtual machines per cluster and per node|8,000 per cluster|Several factors can affect the real number of virtual machines you can run at the same time on one node, such as:<br />- Amount of physical memory being used by each virtual machine.<br />- Networking and storage bandwidth.<br />- Number of disk spindles, which affects disk I/O performance.|
+

@@ -2,8 +2,8 @@
 title: Install Active Directory Domain Services on Windows Server
 description: Learn more about how to install Active Directory Domain Services in Windows Server using PowerShell, or Server Manager.
 ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: install-set-up-deploy
 ms.date: 04/18/2025
 #customer intent: As a system administrator, I want to install Active Directory Domain Services so that I can manage network resources effectively.
@@ -417,3 +417,4 @@ After an RODC account is created, you can attach a server to account to complete
 - [Install an Active Directory Child or Tree Domain](/windows-server/identity/ad-ds/deploy/install-a-new-windows-server-2012-active-directory-child-or-tree-domain--level-200-)
 
 - [Install a Windows Server Active Directory Read-Only Domain Controller](/windows-server/identity/ad-ds/deploy/rodc/install-a-windows-server-2012-active-directory-read-only-domain-controller--rodc---level-200-)
+

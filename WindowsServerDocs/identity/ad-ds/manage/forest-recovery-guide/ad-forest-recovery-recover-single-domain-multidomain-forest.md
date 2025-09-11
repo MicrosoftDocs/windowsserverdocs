@@ -1,8 +1,8 @@
 ---
 title: Active Directory Forest Recovery - Recovering a single domain in a multidomain forest
 description: In certain scenarios, it may be necessary to recover only a single domain within a forest that has multiple domains, rather than a full forest recovery. This topic covers considerations for recovering a single domain and possible strategies for recovery.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/10/2023
 ms.topic: how-to
 ---
@@ -86,3 +86,4 @@ For more information, see [Use repadmin to remove lingering objects](/previous-v
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
