@@ -4,8 +4,8 @@ title: Shielded VMs for tenants - Creating a template disk - optional
 ms.topic: how-to
 ms.assetid: c1992f8b-6f88-4dbc-b4a5-08368bba2787
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 08/29/2018
 ---
 
@@ -91,3 +91,4 @@ Provide the shielded disk template to the hosting service provider, along with a
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

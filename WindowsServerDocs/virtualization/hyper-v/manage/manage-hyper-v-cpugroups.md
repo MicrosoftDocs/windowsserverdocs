@@ -1,8 +1,8 @@
 ---
 title: Virtual Machine Resource Controls
 description: Using VM CPU Groups
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 06/18/2018
 ms.topic: how-to
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
@@ -374,3 +374,4 @@ CpuGroupId VmName VmId
 36ab08cb-3a76-4b38-992e-000000000003 P1 973B9426-0711-4742-AD3B-D8C39D6A0DEC
 36ab08cb-3a76-4b38-992e-000000000004 P2 A593D93A-3A5F-48AB-8862-A4350E3459E8
 ```
+

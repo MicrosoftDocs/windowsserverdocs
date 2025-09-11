@@ -3,8 +3,8 @@ description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
 ms.topic: best-practice
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/25/2024
 ---
 
@@ -55,3 +55,4 @@ Set-HgsKeyProtectionConfiguration -AllowKeyMaterialCaching:$true
 
 Since the cacheable key protectors are unique to each shielded VM, you will need to fully shut down (not restart) and start up your shielded VMs to obtain a cacheable key protector after this setting is enabled on HGS.
 If your shielded VM migrates to a Hyper-V host running an older version of Windows Server, or obtains a new key protector from an older version of HGS, it will not be able to start itself up in offline mode, but can continue running in online mode when access to HGS is available.
+

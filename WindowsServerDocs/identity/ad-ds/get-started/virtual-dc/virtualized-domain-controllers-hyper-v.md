@@ -1,8 +1,8 @@
 ---
 title: Virtualizing domain controllers with Hyper-V
 description: Learn about considerations for virtualizing Windows Server Active Directory domain controllers (DCs) in Hyper-V.
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/07/2024
 ms.topic: concept-article
 ms.custom: inhenkel
@@ -410,3 +410,4 @@ For more information about implementing RODCs, see the [Read-Only Domain Control
 ## Additional content
 
 Learn how to restore virtualized DCs at [Restore virtualized domain controllers](../../manage/virtual-dc/restore-virtualized-domain-controller.md).
+

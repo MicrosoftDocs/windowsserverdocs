@@ -1,8 +1,8 @@
 ---
 title: Use RAM that provides error correction
 description: Learn what to do when the RAM in use on this computer is not error-correcting (ECC) RAM.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 67eb6cef-b045-4748-90e1-406af5345d6a
 ms.date: 8/16/2016
@@ -33,3 +33,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *Verify the server is listed in the Windows Server catalog and qualified for Hyper-V.*
 
 To check whether the server is listed,  see the [Windows Server catalog](https://www.windowsservercatalog.com/).
+

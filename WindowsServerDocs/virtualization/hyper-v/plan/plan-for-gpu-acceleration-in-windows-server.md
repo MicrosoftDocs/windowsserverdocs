@@ -1,8 +1,8 @@
 ---
 title: Plan for GPU acceleration in Windows Server
 description: Learn about the different Hyper-V technologies for GPU acceleration, including DDA and GPU partitioning.
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 10/25/2024
 ---
@@ -64,3 +64,4 @@ Consider the following functionality and support differences between graphics vi
 | AVC444 | Available through Group Policy | Available through Group Policy |
 | GPU VRAM | Up to VRAM supported by the GPU | Up to VRAM supported by the GPU per partition |
 | GPU driver in guest | GPU vendor driver (NVIDIA, AMD, Intel) | GPU vendor driver (NVIDIA, AMD, Intel) |
+

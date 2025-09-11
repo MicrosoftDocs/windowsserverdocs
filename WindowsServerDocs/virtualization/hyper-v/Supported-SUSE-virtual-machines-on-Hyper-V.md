@@ -3,8 +3,8 @@ title: Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 description: Learn about supported SUSE Linux Enterprise Server virtual machines on Hyper-V, including integration services and features. Compare versions and get deployment guidance.
 ms.topic: concept-article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/19/2025
 ---
 # Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
@@ -106,3 +106,4 @@ SLES12+ is 64-bit only.
 * [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
 * [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
+

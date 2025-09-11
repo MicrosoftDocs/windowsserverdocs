@@ -4,8 +4,8 @@ description: "Learn more about: Obtain certificates for HGS"
 ms.topic: how-to
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 09/25/2019
 ---
 
@@ -91,3 +91,4 @@ You can also add or change the SSL certificate at a later time using the [Set-Hg
 
 > [!div class="nextstepaction"]
 > [Install HGS](guarded-fabric-choose-where-to-install-hgs.md)
+

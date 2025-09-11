@@ -2,8 +2,8 @@
 title: Migrate the Certification Authority in Windows Server
 description: Learn how to migrate your Certification Authority with step-by-step instructions and best practices.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/22/2025
 #customer intent: As a system administrator, I want to migrate the Certification Authority so that I can ensure continuity of certificate services.
 ---
@@ -797,3 +797,4 @@ When a CA is running on a failover cluster, the server's short name must be repl
 ## Next step
 
 After completing the procedures to migrate the CA, you should complete the procedures described in [Verifying the Certification Authority Migration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486770(v=ws.11)).
+

@@ -4,8 +4,8 @@ description: This topic provides information on how to configure Remote RADIUS S
 manager: brianlic
 ms.topic: how-to
 ms.assetid: ca125e57-249c-4d97-85d1-2929cbf871f1
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
@@ -39,4 +39,5 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 For more information about managing NPS, see [Manage Network Policy Server](nps-manage-top.md).
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+
 

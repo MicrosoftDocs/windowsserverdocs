@@ -2,8 +2,8 @@
 title: Migrate DHCP server to Windows Server
 description: This article serves as a guide for how to migrate a Dynamic Host Configuration Protocol (DHCP) in Windows Server.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/24/2025
 #customer intent: As an IT administrator, I want to migrate a DHCP server to Windows Server so that I can ensure seamless network configuration and management.
 ---
@@ -354,3 +354,4 @@ The following table describes the properties of objects within the **MigrationRe
 | DetailCode    | Integer | The error or warning code associated with each event message. |
 | Severity      | Enum | The severity of an event, if events occurred. Examples of values include **Information**, **Error**, and **Warning**. |
 | Title         | String | Title of the result object. Examples of values include the network adapter physical address for IP configuration, or user name for local user migration. |
+

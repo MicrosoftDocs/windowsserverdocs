@@ -1,8 +1,8 @@
 ---
 title: Get started with Windows LAPS and Windows Server Active Directory
 description: See how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Windows Server Active Directory.
-author: jay98014
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/11/2025
 ms.topic: how-to
 ms.custom: sfi-image-nochange
@@ -268,3 +268,4 @@ AuthorizedDecryptor : S-1-5-21-2127521184-1604012920-1887927527-35197
 - [Use Windows LAPS event logs](laps-management-event-log.md)
 - [Use Windows LAPS PowerShell cmdlets](laps-management-powershell.md)
 - [Key concepts in Windows LAPS](laps-concepts-overview.md)
+

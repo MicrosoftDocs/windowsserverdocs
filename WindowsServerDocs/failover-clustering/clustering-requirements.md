@@ -2,8 +2,8 @@
 title: Failover clustering hardware requirements and storage options
 description: Hardware requirements and storage options for creating a failover cluster.
 ms.topic: concept-article
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/18/2025
 ---
 
@@ -105,3 +105,4 @@ If you're deploying a storage area network (SAN) with a failover cluster, follow
 - [Failover Clustering](./failover-clustering-overview.md)
 - [Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11))
 - [Using Guest Clustering for High Availability](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11))
+

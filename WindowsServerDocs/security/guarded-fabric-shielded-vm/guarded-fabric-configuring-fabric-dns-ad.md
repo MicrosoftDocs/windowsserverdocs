@@ -4,8 +4,8 @@ title: Configure the fabric DNS for guarded hosts (AD)
 ms.topic: how-to
 ms.assetid: 074b6d09-f16e-49bf-b88a-377139d35067
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 08/29/2018
 ---
 
@@ -27,3 +27,4 @@ The HGS cluster must already be set up by the [HGS administrator](/windows-serve
 
 > [!div class="nextstepaction"]
 > [Configure HGS DNS and a one-way trust](guarded-fabric-configure-dns-forwarding-and-trust.md)
+

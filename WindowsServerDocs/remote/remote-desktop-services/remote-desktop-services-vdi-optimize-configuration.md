@@ -3,8 +3,8 @@ title: Optimizing Windows configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows Virtual Desktop Infrastructure (VDI) environments.
 ms.service: windows-server
 ms.subservice: remote-desktop-services
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: concept-article
 ms.date: 8/15/2025
 ---
@@ -733,3 +733,4 @@ If you'd like to enable the use of Windows Update after disabling it, follow the
 Learn more about Microsoft's VDI architecture in the [Azure Virtual Desktop documentation](https://azure.microsoft.com/services/virtual-desktop/).
 
 For help troubleshooting sysprep, see [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
+

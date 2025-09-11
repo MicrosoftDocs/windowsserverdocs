@@ -2,8 +2,8 @@
 title: What's new in Windows Server 2019
 description: This article describes some of the new features in Windows Server 2019.
 ms.topic: whats-new
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/25/2025
 ---
 
@@ -423,3 +423,4 @@ The scope parameter can now be organized as a space-separated list that structur
 
 > [!NOTE]
 > You can only specify one resource in the authentication request. If you include more than one resource in the request, AD FS returns an error and authentication doesn't succeed.
+

@@ -4,8 +4,8 @@ description: This topic provides an overview of using realm names in Network Pol
 manager: brianlic
 ms.topic: concept-article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
@@ -80,3 +80,4 @@ Value: the FQDN for the domain, like test.contoso.com
 > Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 Some non-Microsoft network access servers delete or modify the domain name as specified by the user. As the result, the network access request is authenticated against the default domain, which might not be the domain for the user's account. To resolve this problem, configure your RADIUS servers to change the user name into the correct format with the accurate domain name.
+

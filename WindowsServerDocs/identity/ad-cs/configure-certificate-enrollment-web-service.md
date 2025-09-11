@@ -1,9 +1,9 @@
 ---
 title: Configure the Certificate Enrollment Web Service role service
 description: Learn how to configure the Certificate Enrollment Web Service role service to enable secure certificate enrollment over HTTPS.
-author: meaghanlewis
+author: dknappettmsft
 ms.topic: how-to
-ms.author: mosagie
+ms.author: daknappe
 ms.date: 03/27/2025
 
 #customer intent: As an IT administrator, I want to install and configure the Certificate Enrollment Web Service so that users and computers can securely enroll for certificates.

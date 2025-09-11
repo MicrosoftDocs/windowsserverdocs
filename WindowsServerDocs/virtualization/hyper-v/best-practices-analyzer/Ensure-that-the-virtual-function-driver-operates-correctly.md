@@ -1,8 +1,8 @@
 ---
 title: Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
 description: Learn what to do when the virtual function driver is not operating correctly in the guest operating system of one or more virtual machines.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: d21e4b93-29bf-423a-a635-71c6d48dc49e
 ms.date: 8/16/2016
@@ -30,3 +30,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *In the guest operating system, do the following: Verify that appropriate drivers are installed and all networking devices are enabled, and check the Event log for errors or warnings.*
+

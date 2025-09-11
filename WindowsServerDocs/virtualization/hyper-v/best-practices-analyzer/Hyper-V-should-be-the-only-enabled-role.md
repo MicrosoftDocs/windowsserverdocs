@@ -1,8 +1,8 @@
 ---
 title: Hyper-V should be the only enabled role
 description: Learn what to do when roles other than Hyper-V are enabled on your server.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.topic: best-practice
 ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 ms.date: 8/16/2016
@@ -44,3 +44,4 @@ To use Server Manager, you must be logged on to the computer as an administrator
 
 1.  Open Server Manager by using shortcuts on the **Start** menu, on the Windows taskbar, or in Administrative Tools.
 2.   In the **Roles Summary** area of the Server Manager main window, click **Remove Roles**. Follow the instructions in the wizard to remove the role.
+

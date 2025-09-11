@@ -3,8 +3,8 @@ description: "Learn more about: Choose whether to install HGS in its own dedicat
 title: Choose whether to install HGS in its own new forest or in an existing bastion forest
 ms.topic: concept-article
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 08/29/2018
 ---
 
@@ -32,3 +32,4 @@ Choose the installation option that best suits your environment:
 
 - [Install HGS in its own dedicated forest](guarded-fabric-install-hgs-default.md)
 - [Install HGS in an existing bastion forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)
+
