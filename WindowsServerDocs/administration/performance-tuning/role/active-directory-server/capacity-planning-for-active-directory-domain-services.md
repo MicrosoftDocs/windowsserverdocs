@@ -278,7 +278,7 @@ If you're going to evaluate your storage, you must first evaluate how large the 
 
 As you review existing environments with multiple domains, you might notice variations in database sizes. When you spot these variations, use the smallest global catalog (GC) and non-GC sizes.
 
-Database sizes can vary between OS versions. DCs running earlier OS versions like Windows Server 2003 have smaller database sizes than one running a later version like Windows Server 2008 R2. The DC having features like Active Directory REcycle Bin or Credential Roaming enabled can also affect database size.
+Database sizes can vary between OS versions. DCs running earlier OS versions have smaller database sizes than one running a later version. The DC having features like Active Directory REcycle Bin or Credential Roaming enabled can also affect database size.
 
 > [!NOTE]
 >
@@ -639,7 +639,7 @@ Throughout this article, we discussed how planning and scaling go towards utiliz
 |--|--|--|--|--|
 | Processor | `Processor Information(_Total)\% Processor Utility` | 60 min | 40% | 60% |
 | RAM (Windows Server 2008 R2 or earlier) | `Memory\Available MB` | < 100MB | N/A | < 100MB |
-| RAM (Windows Server 2012) | `Memory\Long-Term Average Standby Cache Lifetime(s)` | 30 min | Must be tested | Must be tested |
+| RAM (Windows Server 2012 and later) | `Memory\Long-Term Average Standby Cache Lifetime(s)` | 30 min | Must be tested | Must be tested |
 | Network | `Network Interface(*)\Bytes Sent/sec`<p>`Network Interface(*)\Bytes Received/sec` | 30 min | 40% | 60% |
 | Storage | `LogicalDisk((<NTDS Database Drive>))\Avg Disk sec/Read`<p>`LogicalDisk((<NTDS Database Drive>))\Avg Disk sec/Write` | 60 min | 10 ms | 15 ms |
 | AD Services | `Netlogon(*)\Average Semaphore Hold Time` | 60 min | 0 | 1 second |
