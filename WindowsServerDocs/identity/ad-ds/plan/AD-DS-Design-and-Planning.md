@@ -6,7 +6,6 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 05/12/2025
 ms.topic: best-practice
-ms.custom: inhenkel
 ---
 
 # AD DS Design and Planning

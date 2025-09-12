@@ -5,7 +5,6 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 05/12/2025
 ms.topic: how-to
-ms.custom: inhenkel
 ---
 # Active Directory Forest Recovery - Configure the DNS Server service
 
