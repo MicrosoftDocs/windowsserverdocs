@@ -3,8 +3,8 @@ title: Plan NPS as a RADIUS server
 description: This article provides information about Network Policy Server RADIUS server deployment planning in Windows Server 2016.
 ms.topic: best-practice
 ms.assetid: 2900dd2c-0f70-4f8d-9650-ed83d51d509a
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/11/2025
 ---
 
@@ -214,3 +214,4 @@ During the planning for NPS accounting by using NPS SQL Server logging, you can 
 - Plan to always configure the Acct-Interim-Interval attribute in network policies. The Acct-Interim-Interval attribute sets the interval (in seconds) between each interim update that the network access server sends. According to RFC 2869, the value of the Acct-Interim-Interval attribute must not be smaller than 60 seconds (1 minute), and shouldn't be smaller than 600 seconds (10 minutes), meaning that values over 600 seconds reduce the frequency of updates received by the RADIUS server. For more information, see [RFC 2869](https://datatracker.ietf.org/doc/html/rfc2869).
 
 - Ensure that logging of periodic status is enabled on your NPSs.
+

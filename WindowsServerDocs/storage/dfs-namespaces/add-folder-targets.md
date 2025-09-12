@@ -1,9 +1,9 @@
 ---
 title: Add folder targets in Windows Server
 description: This article describes how to add folder targets (UNC paths) in the Windows Server environment.
-ms.author: alalve
+ms.author: roharwoo
 ms.topic: how-to
-author: xelu86
+author: robinharwood
 ms.date: 05/11/2023
 ---
 
@@ -48,3 +48,4 @@ If the folder is replicated using DFS Replication, you can specify whether to ad
 - [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 - [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
 - [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
+

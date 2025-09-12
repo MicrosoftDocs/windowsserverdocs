@@ -1,9 +1,9 @@
 ---
 title: Use a policy module with Network Device Enrollment Service
 description: Learn about the policy module and how it works. Understand how to install and uninstall the policy module for the Network Device Enrollment Service.
-author: xelu86
+author: dknappettmsft
 ms.topic: how-to
-ms.author: alalve
+ms.author: daknappe
 ms.date: 02/06/2025
 ---
 
@@ -91,4 +91,5 @@ This deployment design doesn't use a security boundary when you connect the wire
 - [Introduction to certificate profiles in Configuration Manager](/mem/configmgr/protect/deploy-use/introduction-to-certificate-profiles).
 
 - [PKI design considerations using Active Directory Certificate Services](/windows-server/identity/ad-cs/pki-design-considerations)
+
 

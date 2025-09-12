@@ -3,8 +3,8 @@ title: Best Practices for running Linux on Hyper-V
 description: Provides recommendations and best practices for running Linux on a virtual machine on Hyper-V in Windows Server.
 ms.topic: best-practice
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/19/2025
 ---
 # Best Practices for running Linux on Hyper-V
@@ -93,4 +93,5 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
 * [Create Linux Images for Azure](/azure/virtual-machines/linux/create-upload-generic)
 
 * [Optimize your Linux VM on Azure](/azure/virtual-machines/linux/optimization)
+
 

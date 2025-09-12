@@ -2,8 +2,8 @@
 title: Role-based Access Control
 description: Learn how to use role-based access control in IPAM.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 # Role-based Access Control
@@ -31,6 +31,7 @@ You can configure access control so that users are restricted to the following p
 [Manage Role Based Access Control with Server Manager](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)
 [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)
 [Manage IPAM](Manage-IPAM.md)
+
 
 
 

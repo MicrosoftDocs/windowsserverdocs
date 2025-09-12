@@ -2,8 +2,8 @@
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: troubleshooting-known-issue
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/05/2024
 ms.custom: sfi-image-nochange
 ---
@@ -650,3 +650,4 @@ about_Remote_Troubleshooting Help topic.
 This error is very rare. When you see this error message, it usually means WinRM couldn't process the request. The reason why this error appears varies based on context.
 
 To resolve this issue, make sure remoting is enabled and that you configure the WinRM listener to accept requests. We also recommend you check the event logs for other errors, such as if WinRM can't access certain files in the file system due to the files only having read permissions.
+

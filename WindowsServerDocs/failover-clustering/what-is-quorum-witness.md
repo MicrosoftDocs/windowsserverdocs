@@ -1,8 +1,8 @@
 ---
 title: What is a failover cluster quorum witness in Windows Server?
 description: Learn more about failover cluster quorum cloud witness, disk witness, and file share witness on maintaining high cluster availability.
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: concept-article
 ms.date: 03/28/2025
 ---
@@ -135,3 +135,4 @@ At any time, you can run the **Validate Quorum Configuration** test to ensure th
 - [Understanding cluster and pool quorum](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering)
 
 - [Validate hardware for a failover cluster](/troubleshoot/windows-server/high-availability/validate-hardware-failover-cluster)
+

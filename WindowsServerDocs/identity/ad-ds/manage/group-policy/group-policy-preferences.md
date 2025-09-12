@@ -2,8 +2,8 @@
 title: Group Policy preferences in Windows
 description: Group Policy Preferences allow administrators to configure, deploy, and manage user and computer settings in Active Directory with greater flexibility in Windows.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/16/2025
 ---
 
@@ -89,3 +89,4 @@ Each targeting item evaluates to either true or false. You can add several targe
 | **Time Range** | Applies if the current time on the user's computer is within the specified range. If **Is Not** is selected, applies only if the current time is outside the specified range. |
 | **User** | Applies if the processing user matches the specified user. If **Is Not** is selected, applies only if the processing user doesn't match. |
 | **WMI Query** | Applies if the processing computer evaluates the specified Windows Management Instrumentation (WMI) query as true. If **Is Not** is selected, applies only if the WMI query evaluates as false. |
+

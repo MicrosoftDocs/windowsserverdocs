@@ -2,8 +2,8 @@
 title: Prepare your environment for Windows Admin Center
 description: Prepare your environment for Windows Admin Center (Project Honolulu)
 ms.topic: how-to
-author: robinharwood
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/07/2019
 ---
 
@@ -122,4 +122,5 @@ Windows Admin Center uses the SMB file sharing protocol for some file copying ta
 
 > [!Tip]
 > Ready to install Windows Admin Center? [Download now](../overview.md#download-now)
+
 

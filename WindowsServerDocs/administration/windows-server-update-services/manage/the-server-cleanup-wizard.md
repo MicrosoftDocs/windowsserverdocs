@@ -2,8 +2,8 @@
 title: Server Cleanup wizard
 description: Windows Server Update Service (WSUS) article - How to use the Server Cleanup wizard to manage disk space.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/10/2023
 ---
 # Server cleanup wizard
@@ -41,4 +41,5 @@ The Server Cleanup wizard is integrated into the user interface to help you mana
   >  If you remove unnecessary content using the Server Cleanup wizard, all the private update files that you've downloaded from the Microsoft Update Catalog site are also removed. You must reimport these files after you run the Server Cleanup wizard.
 
 If updates are approved using an autoapproval rule, they could remain in an Approved state and won't be removed by The Server Cleanup wizard. To remove autoapproved updates that are in an Approved state, the WSUS Admin must at minimum manually set the approval status of superseded updates to Not Approved. Manually setting approval status of superseded updates to Not Approved make the updates eligible for declination by the Server Cleanup wizard. The Server Cleanup wizard ensures a newer update is approved and that no client system is still reporting these updates as needed before marking the update as Declined.
+
 

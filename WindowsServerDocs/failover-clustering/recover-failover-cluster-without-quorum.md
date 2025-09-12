@@ -2,8 +2,8 @@
 title: Recover a failover cluster without quorum in Windows Server
 description: How to recover a failover cluster without quorum in a disaster recovery scenario in Windows Server.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/27/2025
 ---
 
@@ -149,3 +149,4 @@ Only the nodes at *SiteA* are initially configured with quorum votes, which is n
 - [Failover Clustering](failover-clustering-overview.md)
 
 - [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/)
+

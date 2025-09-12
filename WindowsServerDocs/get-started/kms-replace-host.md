@@ -2,8 +2,8 @@
 title: Replace a KMS host in Windows Server
 description: Learn how to replace your Key Management Services (KMS) host in Windows Server.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/30/2025
 ---
 
@@ -199,3 +199,4 @@ Performing these actions must be done in an elevated command prompt or PowerShel
 - [Key Management Services (KMS) activation planning](/windows-server/get-started/kms-activation-planning)
 
 - [Slmgr.vbs options for obtaining volume activation information](/windows-server/get-started/activation-slmgr-vbs-options)
+

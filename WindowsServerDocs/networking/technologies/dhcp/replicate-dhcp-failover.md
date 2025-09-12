@@ -1,8 +1,8 @@
 ---
 title: Replicate DHCP failover in Windows Server
 description: Follow the steps to replicate DHCP failover, using either the DHCP Console, or Windows PowerShell.
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/25/2025
 ms.topic: how-to
 ---
@@ -125,4 +125,5 @@ In this example, the primary DHCP server is named **dhcp1.contoso.com**, and the
 ## Related content
 
 - [DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
+
 

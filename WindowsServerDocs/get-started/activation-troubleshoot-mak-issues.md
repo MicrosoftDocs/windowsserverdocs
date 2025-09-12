@@ -3,8 +3,8 @@ title: MAK activation known issues
 description: Describes common issues that may occur during the MAK activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
 ms.date: 10/3/2019
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 manager: dcscontentpm
 ---
 
@@ -35,3 +35,4 @@ slui.exe 0x2a 0x <ErrorCode>
 ```
 
 For more information about specific error codes and how to address them, see [Resolving common activation error codes](activation-error-codes.md).
+

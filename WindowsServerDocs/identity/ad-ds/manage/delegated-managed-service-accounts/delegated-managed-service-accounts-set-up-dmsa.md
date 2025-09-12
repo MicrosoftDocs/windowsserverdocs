@@ -2,8 +2,8 @@
 title: Setting up delegated Managed Service Accounts (dMSA) in Windows Server 2025
 description: Learn how to set up delegated Managed Service Accounts (dMSA) in Windows Server 2025 to ensure device credentials isolation in Active Directory.
 ms.topic: how-to
-ms.author: alalve
-author: mariamgewida
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/30/2025
 ---
 
@@ -184,3 +184,4 @@ The following table describes these captured events.
 - [Reset-ADServiceAccountMigration](/powershell/module/activedirectory/reset-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
 - [Start-ADServiceAccountMigration](/powershell/module/activedirectory/start-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
 - [Undo-ADServiceAccountMigration](/powershell/module/activedirectory/undo-adserviceaccountmigration?view=windowsserver2025-ps&preserve-view=true)
+

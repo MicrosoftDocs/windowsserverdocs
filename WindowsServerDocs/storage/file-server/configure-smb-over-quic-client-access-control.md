@@ -2,8 +2,8 @@
 title: Configure SMB over QUIC client access control in Windows Server
 description: Learn how to configure SMB over QUIC client access control using PowerShell in Windows and Windows Server.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 12/04/2024
 #customer intent: As an administrator, I want to configure SMB over QUIC client access control in Windows Server so that I can restrict which clients can access SMB over QUIC servers.
 ---
@@ -197,3 +197,4 @@ Once enabled, these events are captured in the **Event Viewer** in the following
 - [Microsoft MsQuic GitHub homepage](https://github.com/microsoft/msquic)
 - [QUIC Wikipedia](https://en.wikipedia.org/wiki/QUIC)
 - [TLS 1.3 Working Group homepage](https://tlswg.org/)
+

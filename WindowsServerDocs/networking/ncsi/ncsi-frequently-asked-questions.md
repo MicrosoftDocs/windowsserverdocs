@@ -3,8 +3,8 @@ title: Network Connectivity Status Indicator FAQ for Windows
 description: Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.
 ms.topic: faq
 ms.date: 02/06/2025
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.contributors: rnitsch
 ---
 
@@ -215,3 +215,4 @@ Additionally, some Linux applications don't perform connectivity checks. They se
 
 - [NCSI Overview](ncsi-overview.md)
 - [NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
+

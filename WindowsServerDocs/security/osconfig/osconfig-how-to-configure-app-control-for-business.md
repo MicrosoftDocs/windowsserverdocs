@@ -2,8 +2,8 @@
 title: Configure App Control policies in Windows Server
 description: Learn how to configure App Control for Business through OSConfig PowerShell commands to harden security by implementing custom security policies.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
 ms.date: 05/20/2025
 ---
@@ -194,3 +194,4 @@ Output for these queries varies based on your policy configuration needs.
 
 - [CiTool technical reference](/windows/security/application-security/application-control/app-control-for-business/operations/citool-commands)
 - [ConfigCI PowerShell reference](/powershell/module/configci)
+
