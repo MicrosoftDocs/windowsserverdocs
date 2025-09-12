@@ -3,8 +3,8 @@ title: AD DS Configuration Wizard Page Descriptions
 description: Find out about the Active Directory Domain Services Configuration Wizard pages that you use to promote a server to a domain controller and to demote a server.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/17/2025
 ms.custom: sfi-image-nochange
 # customer intent: As an administrator, I want to become familiar with the Active Directory Domain Services Configuration Wizard so that I can promote servers to domain controllers and demote servers.

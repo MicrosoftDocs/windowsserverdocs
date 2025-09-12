@@ -2,9 +2,9 @@
 ms.assetid: c91c7196-ee0d-4856-8cfb-4c38494ccf1f
 title: Work Folders overview
 ms.topic: concept-article
-author: dknappettmsft
+author: robinharwood
 manager: tedhudek
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 04/16/2025
 description: Learn how Work Folders provides a consistent way for users to access work files from PCs and devices in Windows.
 ---

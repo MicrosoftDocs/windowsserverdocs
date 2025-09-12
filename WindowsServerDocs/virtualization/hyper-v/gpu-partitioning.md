@@ -1,8 +1,8 @@
 ---
 title: Partition and share GPUs with virtual machines on Hyper-V
 description: Learn about how GPU partitioning works with multiple virtual machines on Windows Server.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: concept-article
 ms.subservice: core-os
 ms.date: 07/18/2025
