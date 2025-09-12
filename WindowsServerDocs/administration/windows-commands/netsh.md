@@ -2,8 +2,8 @@
 title: Network shell (netsh)
 description: Overview of Network shell (netsh), a command-line utility for displaying or modifying the network configuration of a local or remote Windows computer.
 ms.topic: overview
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/12/2025
 ---
 
@@ -238,3 +238,4 @@ Here's a brief explanation of what this script does:
 ## See also
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+

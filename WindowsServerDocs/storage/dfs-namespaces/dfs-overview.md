@@ -1,8 +1,8 @@
 ---
 title: DFS Namespaces overview in Windows Server
-ms.author: roharwoo
+ms.author: daknappe
 ms.topic: overview
-author: robinharwood
+author: dknappettmsft
 ms.date: 05/21/2025
 description: This article describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
@@ -110,3 +110,4 @@ To learn about how to get started with Azure virtual machines, see [Azure virtua
 - [The File Services and Storage TechNet Forum](/answers/topics/windows-server-storage.html)
 - [File Services Protocols in Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546)
 - [Failover Clustering](../../failover-clustering/failover-clustering-overview.md)
+

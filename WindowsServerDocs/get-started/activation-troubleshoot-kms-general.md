@@ -3,8 +3,8 @@ title: Guidelines for troubleshooting KMS
 description: This guide provides information about the KMS service, and suggests tools and approaches for troubleshooting activation issues in Windows Server.
 ms.topic: troubleshooting
 ms.date: 05/07/2025
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.custom: sfi-image-nochange
 ---
 
@@ -148,3 +148,4 @@ If your activations aren't working as expected after troubleshooting, you can [c
 
 - `slmgr.vbs /dlv` output from the KMS host and KMS client systems.
 - Event logs from both the KMS host (Key Management Service log) and KMS client systems (Application log).
+

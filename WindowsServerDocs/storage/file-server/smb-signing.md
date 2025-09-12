@@ -2,8 +2,8 @@
 title: Control SMB signing behavior
 description: How to disable SMB signing on third-party servers in Windows 11 and Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/13/2025
 ---
 
@@ -193,3 +193,4 @@ If the returned information is **True**, then SMB signing is enabled, otherwise,
 - [SMB security enhancements](smb-security.md)
 
 - [How to enable insecure guest logons in SMB2 and SMB3](enable-insecure-guest-logons-smb2-and-smb3.md)
+

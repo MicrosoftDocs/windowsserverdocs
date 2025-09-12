@@ -3,8 +3,8 @@ title: Protected Users Security Group in Windows Server
 description: Learn about the Active Directory security group Protected Users feature and how it works in Windows Server.
 ms.topic: concept-article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 06/27/2025
 ---
@@ -133,4 +133,5 @@ To enable capturing these logs:
 - [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
 
 - [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md)
+
 

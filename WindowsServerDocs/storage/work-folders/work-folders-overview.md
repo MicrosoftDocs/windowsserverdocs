@@ -2,9 +2,9 @@
 ms.assetid: c91c7196-ee0d-4856-8cfb-4c38494ccf1f
 title: Work Folders overview
 ms.topic: concept-article
-author: robinharwood
+author: dknappettmsft
 manager: tedhudek
-ms.author: roharwoo
+ms.author: daknappe
 ms.date: 04/16/2025
 description: Learn how Work Folders provides a consistent way for users to access work files from PCs and devices in Windows.
 ---
@@ -119,4 +119,5 @@ Both methods accomplish the following tasks:
 - [Deploy Work Folders](deploy-work-folders.md)
 - [Deploy Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md)
 - [SyncShare (Work Folders) Cmdlets in Windows PowerShell](/powershell/module/syncshare/)
+
 

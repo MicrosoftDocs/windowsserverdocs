@@ -2,8 +2,8 @@
 title: Session Host Virtual Machine Sizing Guidelines for Azure Virtual Desktop and Remote Desktop Services
 description: Learn about sizing for session host virtual machines based on different workload types when used with Azure Virtual Desktop or Remote Desktop Services.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/07/2025
 ---
 
@@ -72,3 +72,4 @@ Graphics processing units (GPUs) are a good choice for users who regularly use g
 ## Test your workload
 
 Finally, you should use simulation tools to test your deployment with both stress tests and real-life usage simulations. Make sure your system is responsive and resilient enough to meet user needs, and remember to vary the load size to avoid surprises.
+

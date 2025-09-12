@@ -2,8 +2,8 @@
 title: Overview of Windows Server upgrades | Microsoft Docs
 description: General Windows Server upgrade information, along with what to think through before you do the actual upgrade.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/23/2025
 ---
 
@@ -89,3 +89,4 @@ started:
 - [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md)
 - [Upgrade and conversion options for Windows Server](upgrade-conversion-options.md)
 - [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md)
+
