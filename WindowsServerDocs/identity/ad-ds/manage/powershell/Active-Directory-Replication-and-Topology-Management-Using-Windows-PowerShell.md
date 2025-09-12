@@ -4,9 +4,8 @@ ms.assetid: 853b7f02-bc69-416e-87b1-556f51cb2cea
 title: Active Directory Replication and Topology Management Using Windows PowerShell
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Active Directory Replication and Topology Management Using Windows PowerShell

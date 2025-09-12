@@ -2,8 +2,8 @@
 title: DHCP server events in Windows Server
 description: View a summary of DHCP server events for operational, administrative, system, filter, and audit events.
 ms.topic: troubleshooting-general
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 03/12/2025
 ---
 
@@ -397,3 +397,4 @@ DHCP server audit events log information about security-related events.
 | 20310    | DHCPv4.RecvConnectAckMessageRejectReason | A CONNECTACK message with transaction ID %1 was received from partner server: %2 for failover relationship: %3 with reject reason: %4. |
 
 </details>
+

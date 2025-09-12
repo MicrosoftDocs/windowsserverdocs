@@ -1,9 +1,9 @@
 ---
 title: Plan for Hyper-V networking in Windows Server
 description: Describes what's needed for basic networking in Windows Server Hyper-V and gives links to instructions.
-ms.topic: article
-ms.author: mosagie
-author: meaghanlewis
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 02/19/2025
 ---
 # Plan for Hyper-V networking in Windows Server
@@ -18,7 +18,7 @@ The easiest way to establish basic networking is to create a virtual switch when
 
 To handle different types of networking, you can add virtual switches and virtual network adapters. All switches are part of the Hyper-V host, but each virtual network adapter belongs to only one virtual machine.
 
-The virtual switch is a software-based layer-2 Ethernet network switch. It provides built-in features for monitoring, controlling, and segmenting traffic, as well as security, and diagnostics. You can add to the set of built-in features by installing plug-ins, also called *extensions*. These are available from independent software vendors. For more information about the switch and extensions, see [Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+The virtual switch is a software-based layer-2 Ethernet network switch. It provides built-in features for monitoring, controlling, and segmenting traffic, as well as security, and diagnostics. You can add to the set of built-in features by installing plug-ins, also called *extensions*. These are available from independent software vendors. For more information about the switch and extensions, see [Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md).
 
 ### Switch and network adapter choices
 
@@ -56,3 +56,4 @@ Some features rely on specific networking configurations or do better under cert
 **Live migration** - Use performance options to reduce network and CPU usage and the time it takes to complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 
 **Storage Spaces Direct** - This feature relies on the SMB3.0 network protocol and RDMA. For details, see [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage).
+

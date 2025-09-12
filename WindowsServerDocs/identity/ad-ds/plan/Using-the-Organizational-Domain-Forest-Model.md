@@ -4,7 +4,6 @@ ms.assetid: 093ef1ae-ebc1-490f-9fb1-2c000ce89eb6
 title: Using the Organizational Domain Forest Model
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

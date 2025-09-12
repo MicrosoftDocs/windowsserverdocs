@@ -6,7 +6,6 @@ ms.topic: how-to
 ms.assetid: 33321932-4266-4961-9924-2cb4620bfcb4
 author: dknappettmsft
 ms.author: daknappe
-manager: scottman
 ---
 # Create local user accounts
 Three levels of local user accounts can be created in using the MultiPoint Manager: Standard User accounts; MultiPoint Dashboard users, who have limited administrative rights; and full Administrative User accounts.

@@ -5,8 +5,8 @@ ms.topic: reference
 ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 06/05/2018
+ms.custom: sfi-ropc-nochange
 ---
 
 # sc.exe config

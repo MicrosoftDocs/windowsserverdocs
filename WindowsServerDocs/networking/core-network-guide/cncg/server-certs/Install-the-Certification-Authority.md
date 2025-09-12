@@ -4,8 +4,8 @@ description: Learn how to install Active Directory Certificate Services so that 
 manager: brianlic
 ms.topic: install-set-up-deploy
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/15/2025
 #customer intent: As a system administrator, I want to install and configure a Certification Authority so that I can issue server certificates for secure communication.
 ---
@@ -28,7 +28,7 @@ To use Windows PowerShell to install Active Directory Certificate Services, comp
 1. Open Windows PowerShell and type the following command, and then press ENTER.
 
     ```powershell
-    Add-WindowsFeature Adcs-Cert-Authority -IncludeManagementTools
+    Install-WindowsFeature -Name ADCS-Cert-Authority -IncludeManagementTools
     ```
 
 1. After AD CS is installed, type the following command and press ENTER.
@@ -81,3 +81,4 @@ To use Server Manager to install Active Directory Certificate Services, complete
 1. On the **CA Database** page, in **Specify the database locations**, specify the folder location for the certificate database and the certificate database log. If you specify locations other than the default locations, ensure that the folders are secured with access control lists (ACLs) that prevent unauthorized users or computers from accessing the CA database and log files. Select **Next**.
 
 1. In **Confirmation**, select **Configure** to apply your selections, and then select **Close**.
+

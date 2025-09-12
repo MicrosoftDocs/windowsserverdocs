@@ -1,7 +1,7 @@
 ---
 title: Manage Role Based Access Control with Server Manager
 description: Learn how to manage role based access control by using Server Manager, which has a graphical user interface.
-ms.topic: article
+ms.topic: how-to
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

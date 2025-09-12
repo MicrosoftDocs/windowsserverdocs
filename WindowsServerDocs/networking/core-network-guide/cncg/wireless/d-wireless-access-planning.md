@@ -2,7 +2,7 @@
 title: Wireless Access Deployment Planning
 description: Learn how to plan wireless AP installations and plan wireless client configuration and access.
 manager: brianlic
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
 ms.author: roharwoo
 author: robinharwood

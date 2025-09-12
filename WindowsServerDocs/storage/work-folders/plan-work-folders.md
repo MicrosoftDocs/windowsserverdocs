@@ -2,9 +2,9 @@
 ms.assetid: a7c39656-81ee-4c2b-80ef-4d017dd11b07
 title: Planning a Work Folders deployment
 ms.topic: concept-article
-author: meaghanlewis
+author: robinharwood
 manager: dongill
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 4/5/2017
 description: How to plan a Work Folders deployment including system requirements and how to prepare your network environment.
 ---
@@ -247,3 +247,4 @@ The following set of design questions is intended to aid customers in designing 
 |------------------|----------------|
 |**Product evaluation**|-   [Work Folders](work-folders-overview.md)<br />-   [Work Folders for Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
 |**Deployment**|-   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Deploying Work Folders with Microsoft Entra Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Performance Considerations for Work Folders Deployments](../../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
+

@@ -2,9 +2,9 @@
 title: Increase Concurrent Authentications Processed by NPS
 description: Learn how to improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller.
 manager: brianlic
-ms.topic: article
-author: meaghanlewis
-ms.author: mosagie
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 
@@ -28,3 +28,4 @@ For more information about MaxConcurrentApi, see [How to do performance tuning f
 For more information about managing NPS, see [Manage Network Policy Server](nps-manage-top.md).
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

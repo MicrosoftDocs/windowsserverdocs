@@ -3,9 +3,9 @@ title: Upgrade domain controllers to a newer version of Windows Server
 description: This article describes how to upgrade from an earlier version of Windows Server to a later version.
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/28/2025
 ms.topic: upgrade-and-migration-article
+ms.custom: sfi-image-nochange
 ---
 # Upgrade domain controllers to a newer version of Windows Server
 

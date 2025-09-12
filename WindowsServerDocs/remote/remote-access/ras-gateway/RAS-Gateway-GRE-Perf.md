@@ -1,8 +1,7 @@
 ---
 title: RAS Gateway GRE Tunnel Throughput and Performance
 description: This topic, which is intended for Information Technology (IT) professionals, provides throughput performance information about RAS Gateway Generic Routing Encapsulation (GRE) tunnels.
-manager: brianlic
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
 ms.author: daknappe
 author: dknappettmsft
@@ -49,7 +48,7 @@ Two Hyper\-V hosts are configured to support the test scenario in the following 
 - The Hyper\-V hosts are configured in a failover cluster over the intranet network.
 
 >[!NOTE]
->For more information, see [Hyper-V Virtual Switch](../../../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md).
+>For more information, see [Hyper-V Virtual Switch](../../../virtualization/hyper-v/virtual-switch.md).
 
 ### VM Configuration
 

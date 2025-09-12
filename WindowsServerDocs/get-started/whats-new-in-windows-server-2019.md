@@ -2,9 +2,9 @@
 title: What's new in Windows Server 2019
 description: This article describes some of the new features in Windows Server 2019.
 ms.topic: whats-new
-author: meaghanlewis
-ms.author: mosagie
-ms.date: 07/31/2024
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 07/25/2025
 ---
 
 # What's new in Windows Server 2019
@@ -17,7 +17,7 @@ This article describes some of the new features in Windows Server 2019. Windows 
 
 Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no extra cost beyond Windows and is ready to use in production.
 
-You can install Windows Admin Center on Windows Server 2019 and Windows 10 and earlier versions of Windows and Windows Server, and use it to manage servers and clusters running Windows Server 2008 R2 and later.
+You can install Windows Admin Center on Windows Server 2019 and Windows 10 and 11, and use it to manage servers and clusters running Windows Server 2012 and later.
 
 For more info, see [Windows Admin Center](../manage/windows-admin-center/overview.md).
 
@@ -148,7 +148,7 @@ It's now possible to prevent the File Server Resource Manager service from creat
 
 ### SMB
 
--  Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
+- Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
 
 - You can now disable oplocks in SMB2+ for legacy applications. You can also require signing or encryption on per-connection basis from a client. For more information, see [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps&preserve-view=true).
 
@@ -413,7 +413,7 @@ AD FS 2019 includes the following Security Assertion Markup Language (SAML) upda
 Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, the following example OAuth request contains a scope parameter:
 
 ```http
-https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https:&#47;&#47;adfshelp.microsoft.com/
+https://fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https://adfshelp.microsoft.com/
 ClaimsXray/TokenResponse&prompt=login
 ```
 
@@ -423,3 +423,4 @@ The scope parameter can now be organized as a space-separated list that structur
 
 > [!NOTE]
 > You can only specify one resource in the authentication request. If you include more than one resource in the request, AD FS returns an error and authentication doesn't succeed.
+

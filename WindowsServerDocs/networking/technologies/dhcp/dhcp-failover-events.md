@@ -2,8 +2,8 @@
 title: DHCP failover events in Windows Server
 description: View a summary of DHCP failover server events for operational, administrative, system, filter, and audit events.
 ms.topic: troubleshooting-general
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 04/22/2025
 ---
 
@@ -119,3 +119,4 @@ Windows Server has the following DHCP failover-related performance counters to t
 - [DHCP failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
 
 - [DHCP server events](/windows-server/networking/technologies/dhcp/dhcp-server-events)
+

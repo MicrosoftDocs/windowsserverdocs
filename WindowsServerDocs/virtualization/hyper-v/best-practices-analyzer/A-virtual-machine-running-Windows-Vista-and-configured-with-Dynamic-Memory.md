@@ -1,8 +1,8 @@
 ---
 title: A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows Vista.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: c35f08b2-e624-4811-a159-c1e5bb6d5281
 ms.date: 8/16/2016
@@ -56,3 +56,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ```
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 1GB -MinimumBytes 256MB -StartupBytes 512MB
 ```
+

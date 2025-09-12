@@ -1,10 +1,11 @@
 ---
 title: Active Directory Accounts
 description: This article discusses how to create default local Windows Server Active Directory accounts on a domain controller.
-author: meaghanlewis
-ms.author: mosagie
-ms.topic: article
-ms.date: 05/21/2025
+author: dknappettmsft
+ms.author: daknappe
+ms.topic: concept-article
+ms.date: 06/30/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Active Directory accounts
@@ -25,7 +26,7 @@ Default local accounts perform the following actions:
 
 - Let the domain represent, identify, and authenticate the identity of the user who's assigned to the account by using unique credentials (user name and password). It's a best practice to assign each user to a single account to ensure maximum security. Multiple users aren't allowed to share one account. A user account lets a user sign in to computers, networks, and domains with a unique identifier that can be authenticated by the computer, network, or domain.
 
-- Authorize (grant or deny) access to resources. After a user’s credentials have been authenticated, the user is authorized to access the network, and domain resources based on the user’s explicitly assigned rights on the resource.
+- Authorize (grant or deny) access to resources. After a user’s credentials have been authenticated, the user is authorized to access the network and domain resources based on the user’s explicitly assigned rights on the resource.
 
 - Audit the actions that are carried out on user accounts.
 
@@ -39,13 +40,13 @@ A security principal is represented by a unique security identifier (SID). The S
 
 Some of the default local accounts are protected by a background process that periodically checks and applies a specific security descriptor. A security descriptor is a data structure that contains security information that's associated with a protected object. This process ensures that any successful unauthorized attempt to modify the security descriptor on one of the default local accounts or groups is overwritten with the protected settings.
 
-This security descriptor is present on the AdminSDHolder object. If you want to modify the permissions on one of the service administrator groups or on any of its member accounts, you must modify the security descriptor on the AdminSDHolder object to ensure that it's applied consistently. Be careful when you're making these modifications, because you're also changing the default settings that are applied to all your protected accounts.
+This security descriptor is present on the AdminSDHolder object. If you want to modify the permissions on one of the service administrator groups or on any of its member accounts, you must modify the security descriptor on the AdminSDHolder object to ensure that it's applied consistently. Be careful when you make these modifications, because you're also changing the default settings that are applied to all your protected accounts.
 
 ## Administrator account
 
 An Administrator account is a default account that's used in all versions of the Windows operating system on every computer and device. The Administrator account is used by the system administrator for tasks that require administrative credentials. This account can't be deleted or locked out, but the account can be renamed or disabled.
 
-The Administrator account gives the user complete access (Full Control permissions) of the files, directories, services, and other resources that are on that local server. The Administrator account can be used to create local users, and to assign user rights and access control permissions. The account can also be used to take control of local resources at any time simply by changing the user rights and permissions. Although files and directories can be protected from the Administrator account temporarily, the account can take control of these resources at any time by changing the access permissions.
+The Administrator account gives the user complete access (Full Control permissions) to the files, directories, services, and other resources that are on that local server. You can use the Administrator account to create local users, and to assign user rights and access control permissions. You can also use the account to take control of local resources at any time simply by changing the user rights and permissions. Although files and directories can be protected from the Administrator account temporarily, the account can take control of these resources at any time by changing the access permissions.
 
 ### Account group membership
 
@@ -75,7 +76,7 @@ When Active Directory is installed on the first domain controller in the domain,
 |Default container|CN=Users, DC=`<domain>`, DC=|
 |Default members|N/A|
 |Default member of|Administrators, Domain Admins, Enterprise Administrators, Domain Users (the Primary Group ID of all user accounts is Domain Users)<br><br>Group Policy Creator Owners, and Schema Admins in Active Directory Domain Users group|
-|Protected by ADMINSDHOLDER?|Yes|
+|Protected by AdminSdHolder?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to nonservice administrators?|No|
 
@@ -118,7 +119,7 @@ For details about the Guest account attributes, see the following table:
 |Default container|CN=Users, DC=`<domain>`, DC=|
 |Default members|None|
 |Default member of|Guests, Domain Guests|
-|Protected by ADMINSDHOLDER?|No|
+|Protected by AdminSdHolder?|No|
 |Safe to move out of default container?|Can be moved out, but we don't recommend it.|
 |Safe to delegate management of this group to non-Service admins?|No|
 
@@ -149,7 +150,7 @@ For details about the HelpAssistant account attributes, see the following table:
 |Default container|CN=Users, DC=`<domain>`, DC=|
 |Default members|None|
 |Default member of|Domain Guests<br>Guests|
-|Protected by ADMINSDHOLDER?|No|
+|Protected by AdminSdHolder?|No|
 |Safe to move out of default container?|Can be moved out, but we don't recommend it.|
 |Safe to delegate management of this group to non-Service admins?|No|
 
@@ -159,25 +160,25 @@ The KRBTGT account is a local default account that acts as a service account for
 
 KRBTGT is also the security principal name used by the KDC for a Windows Server domain, as specified by RFC 4120. The KRBTGT account is the entity for the KRBTGT security principal, and it's created automatically when a new domain is created.
 
-Windows Server Kerberos authentication is achieved by the use of a special Kerberos ticket-granting ticket (TGT) enciphered with a symmetric key. This key is derived from the password of the server or service to which access is requested. The TGT password of the KRBTGT account is known only by the Kerberos service. To request a session ticket, the TGT must be presented to the KDC. The TGT is issued to the Kerberos client from the KDC.
+Windows Server Kerberos authentication is achieved by the use of a special Kerberos ticket-granting ticket (TGT) enciphered with a symmetric key. This key is derived from the password of the server or service to which access is requested. The TGT password of the KRBTGT account is known only by the Kerberos service. To request a session ticket, you must present the TGT to the KDC. The TGT is issued to the Kerberos client from the KDC.
 
 #### KRBTGT account maintenance considerations
 
-A strong password is assigned to the KRBTGT and trust accounts automatically. Like any privileged service accounts, organizations should change these passwords on a regular schedule. The password for the KDC account is used to derive a secret key for encrypting and decrypting the TGT requests that are issued. The password for a domain trust account is used to derive an inter-realm key for encrypting referral tickets.
+A strong password is assigned to the KRBTGT and trust accounts automatically. You should change these passwords on a regular schedule, as you would with any privileged service account. The password for the KDC account is used to derive a secret key for encrypting and decrypting the TGT requests that are issued. The password for a domain trust account is used to derive an inter-realm key for encrypting referral tickets.
 
-Resetting the password requires you either to be a member of the Domain Admins group or be delegated the appropriate authority. In addition, you must be a member of the local Administrators group or be delegated the appropriate authority.
+To reset the password, you need to either be a member of the Domain Admins group or be delegated the appropriate authority. In addition, you must be a member of the local Administrators group or be delegated the appropriate authority.
 
 After you reset the KRBTGT password, ensure that event ID 9 in the (Kerberos) Key-Distribution-Center event source is written to the System event log.
 
 #### KRBTGT account security considerations
 
-It's also a best practice to reset the KRBTGT account password to ensure that a newly restored domain controller doesn't replicate with a compromised domain controller. In this case, in a large forest recovery that's spread across multiple locations, you can't guarantee that all domain controllers are shut down and, if they're shut down, that they can't be rebooted again before all the appropriate recovery steps have been performed. After you reset the KRBTGT account, another domain controller can't replicate this account password by using an old password.
+It's also a best practice to reset the KRBTGT account password to ensure that a newly restored domain controller doesn't replicate with a compromised domain controller. In this case, in a large forest recovery that's spread across multiple locations, you can't guarantee that all domain controllers are shut down and, if they're shut down, that they can't be rebooted again before all the appropriate recovery steps are performed. After you reset the KRBTGT account, another domain controller can't replicate this account password by using an old password.
 
 An organization suspecting domain compromise of the KRBTGT account should consider the use of professional incident response services. The impact to restore the ownership of the account is domain-wide, labor intensive, and should be undertaken as part of a larger recovery effort.
 
-The KRBTGT password is the key from which all trust in Kerberos chains up to. Resetting the KRBTGT password is similar to renewing the root CA certificate with a new key and immediately not trusting the old key, resulting in almost all subsequent Kerberos operations will be affected.
+The KRBTGT password is the key from which all trust in Kerberos chains up to. Resetting the KRBTGT password is similar to renewing the root CA certificate with a new key and immediately not trusting the old key, resulting in almost all subsequent Kerberos operations being affected.
 
-For all account types (users, computers, and services)
+For all account types (users, computers, and services):
 
 - All the TGTs that are already issued and distributed will be invalid because the DCs will reject them. These tickets are encrypted with the KRBTGT so any DC can validate them. When the password changes, the tickets become invalid.
 
@@ -192,7 +193,7 @@ Because it's impossible to predict the specific errors that will occur for any g
 
 ### Read-only domain controllers and the KRBTGT account
 
-The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
+The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts TGT requests. After an account is successfully authenticated, the RODC determines whether a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
 
 After the credentials are cached on the RODC, the RODC can accept that user's sign-in requests until the credentials change. When a TGT is signed with the KRBTGT account of the RODC, the RODC recognizes that it has a cached copy of the credentials. If another domain controller signs the TGT, the RODC forwards requests to a writable domain controller.
 
@@ -206,8 +207,8 @@ For details about the KRBTGT account attributes, see the following table:
 |Type|User|
 |Default container|CN=Users, DC=`<domain>`, DC=|
 |Default members|None|
-|Default member of|Domain Users group (the Primary Group ID of all user accounts is Domain Users)|
-|Protected by ADMINSDHOLDER?|Yes|
+|Default member of|Domain Users group. (The Primary Group ID of all user accounts is Domain Users.)|
+|Protected by AdminSdHolder?|Yes|
 |Safe to move out of default container?|Can be moved out, but we don't recommend it.|
 |Safe to delegate management of this group to non-Service admins?|No|
 
@@ -215,18 +216,18 @@ For details about the KRBTGT account attributes, see the following table:
 
 Each default local account in Active Directory has several account settings that you can use to configure password settings and security-specific information, as described in the following table:
 
-|Account settings|Description|
+|Account setting|Description|
 |--- |--- |
 |User must change password at next logon|Forces a password change the next time that the user signs in to the network. Use this option when you want to ensure that the user is the only person who knows their password.|
 |User can't change password|Prevents the user from changing the password. Use this option when you want to maintain control over a user account, such as for a Guest or temporary account.|
 |Password never expires|Prevents a user password from expiring. It's a best practice to enable this option with service accounts and to use strong passwords.|
 |Store passwords using reversible encryption|Provides support for applications that use protocols requiring knowledge of the plaintext form of the user’s password for authentication purposes.<p>This option is required when you're using Challenge Handshake Authentication Protocol (CHAP) in Internet Authentication Services (IAS), and when you're using digest authentication in Internet Information Services (IIS).|
 |Account is disabled|Prevents the user from signing in with the selected account. As an administrator, you can use disabled accounts as templates for common user accounts.|
-|Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<br><br>When this attribute is applied on the account, the effect is as follows:<li>The attribute restricts only initial authentication for interactive sign-in and Remote Desktop sign-in. When interactive or Remote Desktop sign-in requires a subsequent network sign-in, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smartcard authentication process.<li>Each time the attribute is enabled on an account, the account’s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value doesn't change after that unless a new password is set or the attribute is disabled and re-enabled.<li>Accounts with this attribute can't be used to start services or run scheduled tasks.|
+|Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<br><br>When this attribute is applied on the account, the effect is as follows:<li>The attribute restricts only initial authentication for interactive sign-in and Remote Desktop sign-in. When interactive or Remote Desktop sign-in requires a subsequent network sign-in, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smart card authentication process.<li>Each time the attribute is enabled on an account, the account’s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value doesn't change after that unless a new password is set or the attribute is disabled and re-enabled.<li>Accounts with this attribute can't be used to start services or run scheduled tasks.|
 |Account is trusted for delegation|Lets a service running under this account to perform operations on behalf of other user accounts on the network. A service running under a user account (also known as a service account) that's trusted for delegation can impersonate a client to gain access to resources, either on the computer where the service is running or on other computers. For example, in a forest that's set to the Windows Server 2003 functional level, this setting is found on the Delegation tab. It's available only for accounts that have been assigned service principal names (SPNs), which are set by using the `setspn` command from Windows Support Tools. This setting is security-sensitive and should be assigned cautiously.|
-|Account is sensitive and can't be delegated|Gives control over a user account, such as for a Guest account or a temporary account. This option can be used if this account can't be assigned for delegation by another account.|
+|Account is sensitive and can't be delegated|Gives control over a user account, such as a Guest account or a temporary account. This option can be used if this account can't be assigned for delegation by another account.|
 |Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol Security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES).</div>|
-|Don't require Kerberos preauthentication|Provides support for alternate implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when you're enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
+|Don't require Kerberos preauthentication|Provides support for alternative implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when you're enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
 
 > [!NOTE]
 > DES isn't enabled by default in Windows Server operating systems (starting with Windows Server 2008 R2) or in Windows client operating systems (starting with Windows 7). For these operating systems, computers won't use DES-CBC-MD5 or DES-CBC-CRC cipher suites by default. If your environment requires DES, this setting might affect compatibility with client computers or services and applications in your environment.
@@ -237,7 +238,7 @@ For more information, see [Hunting down DES to securely deploy Kerberos](/archiv
 
 After the default local accounts are installed, these accounts reside in the Users container in Active Directory Users and Computers. You can  create, disable, reset, and delete default local accounts by using the Active Directory Users and Computers Microsoft Management Console (MMC) and by using command-line tools.
 
-You can use Active Directory Users and Computers to assign rights and permissions on a specified local domain controller, and that domain controller only, to limit the ability of local users and groups to perform certain actions. A right authorizes a user to perform certain actions on a computer, such as backing up files and folders or shutting down a computer. In contrast, an access permission is a rule that's associated with an object, usually a file, folder, or printer that regulates which users can have access to the object and in what manner.
+You can use Active Directory Users and Computers to assign rights and permissions on a specified local domain controller, and that domain controller only, to limit the ability of local users and groups to perform certain actions. A right authorizes a user to perform certain actions on a computer, such as backing up files and folders or shutting down a computer. In contrast, an access permission is a rule that's associated with an object, usually a file, folder, or printer, that regulates which users can have access to the object and in what manner.
 
 For more information about creating and managing local user accounts in Active Directory, see [Manage local users](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731899(v=ws.11)).
 
@@ -257,7 +258,7 @@ Restricting and protecting domain accounts in your domain environment requires y
 
 - Stringently control where and how domain accounts are used.
 
-Member accounts in the Administrators, Domain Admins, and Enterprise Admins groups in a domain or forest are high-value targets for malicious users. To limit any exposure, it's a best practice to strictly limit membership to these administrator groups to the smallest number of accounts. Restricting membership in these groups reduces the possibility that an administrator might unintentionally misuse these credentials creating a vulnerability that malicious users can exploit.
+Member accounts in the Administrators, Domain Admins, and Enterprise Admins groups in a domain or forest are high-value targets for malicious users. To limit any exposure, it's a best practice to strictly limit membership to these administrator groups to the smallest number of accounts. Restricting membership in these groups reduces the possibility that an administrator might unintentionally misuse these credentials, creating a vulnerability that malicious users can exploit.
 
 Moreover, it's a best practice to stringently control where and how sensitive domain accounts are used. Restrict the use of Domain Admins accounts and other Administrator accounts to prevent them from being used to sign in to management systems and workstations that are secured at the same level as the managed systems. When Administrator accounts aren't restricted in this manner, each workstation from which a domain administrator signs in provides another location that malicious users can exploit.
 
@@ -275,7 +276,7 @@ Restrict Domain Admins accounts and other sensitive accounts to prevent them fro
 
 - **Privileged account**: Allocate Administrator accounts to perform the following administrative duties only:
 
-  - **Minimum**: Create separate accounts for domain administrators, enterprise administrators, or the equivalent with appropriate administrator rights in the domain or forest. Use accounts that have been granted sensitive administrator rights only to administer domain data and domain controllers.
+  - **Minimum**: Create separate accounts for domain administrators, enterprise administrators, or the equivalent, with appropriate administrator rights in the domain or forest. Use accounts that have been granted sensitive administrator rights only to administer domain data and domain controllers.
 
   - **Better**: Create separate accounts for administrators that have reduced administrative rights, such as accounts for workstation administrators, and accounts with user rights over designated Active Directory organizational units (OUs).
 
@@ -284,7 +285,7 @@ Restrict Domain Admins accounts and other sensitive accounts to prevent them fro
 - **Standard user account**: Grant standard user rights for standard user tasks, such as email, web browsing, and using line-of-business (LOB) applications. These accounts shouldn't be granted administrator rights.
 
 > [!IMPORTANT]
-> Ensure that sensitive Administrator accounts can't access email or browse the internet as described in the following section.
+> Ensure that sensitive Administrator accounts can't access email or browse the internet, as described in the following section.
 
 To learn more about privileged access, see [Privileged access devices](/security/compass/privileged-access-devices).
 
@@ -304,7 +305,7 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 - **Ideal**: Restrict server administrators from signing in to workstations, in addition to domain administrators.
 
 > [!NOTE]
-> For this procedure, do *not* link accounts to the OU that contain workstations for administrators that perform administration duties only, and do *not* provide internet or email access.
+> For this procedure, don't link accounts to the OU that contain workstations for administrators that perform administration duties only, and don't provide internet or email access.
 
 #### To restrict domain administrators from workstations (minimum)
 
@@ -326,9 +327,11 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 
 7. Select **Computer Configuration** > **Policies** > **Windows Settings** > **Local Policies**, select **User Rights Assignment**, and then do the following:
 
-    a. Double-click **Deny logon locally**, and then select **Define these policy settings**.
-    b. Select **Add User or Group**, select **Browse**, type **Enterprise Admins**, and then select **OK**.
-    c. Select **Add User or Group**, select **Browse**, type **Domain Admins**, and then select **OK**.
+    1. Double-click **Deny logon locally**, and then select **Define these policy settings**.
+    
+    1. Select **Add User or Group**, select **Browse**, type **Enterprise Admins**, and then select **OK**.
+    
+    1. Select **Add User or Group**, select **Browse**, type **Domain Admins**, and then select **OK**.
 
     ![Screenshot of the "User Rights Management" window, showing that the "Define these policy settings" checkbox is selected and two domain accounts are being denied local sign-in.](media/default-user-account-restrict3.png)
 
@@ -354,16 +357,16 @@ Restrict sign-in access to lower-trust servers and workstations by using the fol
 
 10. Link all other OUs that contain workstations.
 
-    However, do *not* create a link to the Administrative Workstation OU if it's created for administrative workstations that are dedicated to administration duties only and are without internet or email access.
+    However, don't create a link to the Administrative Workstation OU if it's created for administrative workstations that are dedicated to administration duties only and are without internet or email access.
 
     > [!IMPORTANT]
-    > If you later extend this solution, do *not* deny sign-in rights for the Domain Users group. The Domain Users group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
+    > If you later extend this solution, don't deny sign-in rights for the Domain Users group. The Domain Users group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
 
 ### Disable the account delegation right for sensitive Administrator accounts
 
-Although user accounts aren't marked for delegation by default, accounts in an Active Directory domain can be trusted for delegation. This means that a service or a computer that's trusted for delegation can impersonate an account that authenticates to them to access other resources across the network.
+Although user accounts aren't marked for delegation by default, accounts in an Active Directory domain can be trusted for delegation. This means that a service or a computer that's trusted for delegation can impersonate an account that authenticates to it to access other resources across the network.
 
-For sensitive accounts, such as those belonging to members of the Administrators, Domain Admins, or Enterprise Admins groups in Active Directory, delegation can present a substantial risk of rights escalation. For example, if an account in the Domain Admins group is used to sign in to a compromised member server that's trusted for delegation, that server can request access to resources in the context of the Domain Admins account, and escalate the compromise of that member server to a domain compromise.
+For sensitive accounts, such as those belonging to members of the Administrators, Domain Admins, or Enterprise Admins groups in Active Directory, delegation can present a substantial risk of rights escalation. For example, if an account in the Domain Admins group is used to sign in to a compromised member server that's trusted for delegation, that server can request access to resources in the context of the Domain Admins account and escalate the compromise of that member server to a domain compromise.
 
 It's a best practice to configure the user objects for all sensitive accounts in Active Directory by selecting the **Account is sensitive and cannot be delegated** checkbox under **Account options** to prevent the accounts from being delegated. For more information, see [Settings for default local accounts in Active Directory](#settings-for-default-local-accounts-in-active-directory).
 
@@ -383,9 +386,10 @@ One aspect of securing and managing domain controllers is to ensure that the def
 
 Because domain controllers store credential password hashes of all accounts in the domain, they're high-value targets for malicious users. When domain controllers aren't well managed and secured by using restrictions that are strictly enforced, they can be compromised by malicious users. For example, a malicious user could steal sensitive domain administrator credentials from one domain controller, and then use these credentials to attack the domain and forest.
 
-In addition, installed applications and management agents on domain controllers might provide a path for escalating rights that malicious users can use to compromise the management service or administrators of that service. The management tools and services, which your organization uses to manage domain controllers and their administrators, are equally important to the security of the domain controllers and the domain Administrator accounts. Ensure that these services and administrators are fully secured with equal effort.
+In addition, installed applications and management agents on domain controllers might provide a path for escalating rights that malicious users can use to compromise the management service or administrators of that service. The management tools and services that your organization uses to manage domain controllers and their administrators are equally important to the security of the domain controllers and the domain Administrator accounts. Ensure that these services and administrators are fully secured with equal effort.
 
-## See also
+## Related content
 
 - [Security principals](understand-security-principals.md)
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
+

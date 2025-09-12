@@ -1,9 +1,9 @@
 ---
 title: Group Policy Management Console in Windows
 description: Learn how to create, edit, link, and manage Group Policy Objects using the Group Policy Management Console.
-author: Orin-Thomas
+author: orin-thomas
 ms.topic: how-to
-ms.author: mosagie
+ms.author: daknappe
 contributor: orthomas
 ms.date: 05/14/2025
 ---
@@ -101,3 +101,4 @@ To create a GPO to set only user-related policy settings, disable the Computer C
 - [Group Policy Processing](group-policy-processing.md)
 - [Backing up, restoring, migrating, and copying Group Policy Objects (GPOs)](group-policy-backup-restore.md)
 - [Group Policy Modeling and Group Policy Results](group-policy-modeling-results.md)
+

@@ -6,6 +6,7 @@ ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
 ms.author: alalve
 author: xelu86
 ms.date: 09/29/2023
+ms.custom: sfi-ropc-nochange
 ---
 
 # sc.exe create

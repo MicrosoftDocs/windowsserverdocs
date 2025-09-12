@@ -1,11 +1,11 @@
 ---
 title: Shielded VMs for tenants - Creating shielding data to define a shielded VM
 description: "Learn more about: Shielded VMs for tenants - Creating shielding data to define a shielded VM"
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 09/25/2019
 ---
 
@@ -252,3 +252,4 @@ See the cmdlet documentation for [New-ShieldingDataFile](/powershell/module/shie
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

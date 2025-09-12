@@ -2,9 +2,9 @@
 description: Learn more about Simplified SMB Multichannel and Multi-NIC Cluster Networks.
 ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
-ms.topic: article
-author: meaghanlewis
-ms.author: mosagie
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/24/2025
 ---
 
@@ -82,3 +82,4 @@ Windows Server 2016 and later automatically detect NIC capabilities and attempt 
 
 **Is the cluster common property PlumbAllCrossSubnetRoutes respected on a multi-NIC network?**
      Yes.
+

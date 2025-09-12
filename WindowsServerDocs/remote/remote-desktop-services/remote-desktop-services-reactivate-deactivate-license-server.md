@@ -5,7 +5,6 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 7/3/2024
-manager: tedhudek
 ---
 
 # Reactivate or deactivate a Remote Desktop Services license server

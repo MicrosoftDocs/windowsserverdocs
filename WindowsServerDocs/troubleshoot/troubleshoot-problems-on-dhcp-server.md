@@ -4,8 +4,8 @@ description: Find out how to troubleshoot problems on the DHCP server and collec
 manager: dcscontentpm
 ms.date: 09/27/2023
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
+author: robinharwood
+ms.author: roharwoo
 ---
 # Troubleshoot problems on the DHCP server
 

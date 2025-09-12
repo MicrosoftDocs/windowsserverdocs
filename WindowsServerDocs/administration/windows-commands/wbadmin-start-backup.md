@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 56f3e752-d99a-4c3d-8e97-10303c37dd78
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -57,13 +56,13 @@ wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566
 To perform a one-time backup of *f:\\folder1* and *h:\\folder2* to volume *d:*, to backup the system state, and to make a copy backup so the normally scheduled differential backup isn't impacted, type:
 
 ```
-wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
+wbadmin start backup -backupTarget:d: -include:g\folder1,h:\folder2 -systemstate -vsscopy
 ```
 
 To perform a one-time, non-recursive backup of *d:\\folder1* to the `\\backupshare\backup1*` network location, and to restrict access to members of the **Administrators** or **Backup Operators** group, type:
 
 ```
-wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
+wbadmin start backup -backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
 ```
 
 ## Related links

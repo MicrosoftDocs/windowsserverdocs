@@ -4,7 +4,6 @@ ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: Determining the Number of Domains Required
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 ---

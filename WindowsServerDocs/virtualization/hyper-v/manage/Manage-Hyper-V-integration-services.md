@@ -89,7 +89,7 @@ In order for an integration service to be fully functional, its corresponding se
 
 1. Open Services manager by running ```services.msc``` as an Administrator or by double-clicking the Services icon in Control Panel.
 
-    ![Screen shot that shows the Windows Services pane](media/HVServices.png)
+    ![Screen shot that shows the Windows Services pane](./media/HVServices.png)
 
 1. Find the services that start with **Hyper-V**.
 

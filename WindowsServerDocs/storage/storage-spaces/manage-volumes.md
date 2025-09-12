@@ -1,18 +1,23 @@
 ---
-title: Manage volumes in Azure Stack HCI and Windows Server
-description: How to manage volumes in Azure Stack HCI and Windows Server by using Windows Admin Center or PowerShell.
+title: Manage volumes in Azure Local and Windows Server
+description: How to manage volumes in Azure Local and Windows Server by using Windows Admin Center or PowerShell.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: jgerend
 ms.date: 02/11/2025
+appliesto: [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+           ]
 ---
 
-# Manage volumes in Azure Stack HCI and Windows Server
+# Manage volumes in Azure Local and Windows Server
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
-
-This article describes how to expand, move, or delete volumes in Azure Stack HCI and Windows Server by using either Windows Admin Center or PowerShell.
+This article describes how to expand, move, or delete volumes in Azure Local and Windows Server by using either Windows Admin Center or PowerShell.
 
 ## Prerequisites
 
@@ -197,10 +202,10 @@ Follow these steps to move volumes using PowerShell:
    Get-ClusterSharedVolume
    ```
 
-   Here's an example output that lists all the CSVs in the `hcicluster.contoso.corp.com` cluster:
+   Here's an example output that lists all the CSVs in the `cluster.contoso.corp.com` cluster:
 
    ```output
-   [hcicluster.contoso.corp.com]: PS C:\WINDOWS\system32> Get-ClusterSharedVolume
+   [cluster.contoso.corp.com]: PS C:\WINDOWS\system32> Get-ClusterSharedVolume
 
    Name                           State  Node
    ----                           -----  ----
@@ -223,7 +228,7 @@ Follow these steps to move volumes using PowerShell:
    Here's an example output that moves `Cluster Virtual Disk (Volume1)` to the `azuredoc-srv1` node:
 
    ```output
-      [hcicluster.contoso.corp.com]: PS C:\WINDOWS\system32> Move-ClusterSharedVolume -Name "Cluster Virtual Disk (Volume1)" -Node azuredoc-srv1
+      [cluster.contoso.corp.com]: PS C:\WINDOWS\system32> Move-ClusterSharedVolume -Name "Cluster Virtual Disk (Volume1)" -Node azuredoc-srv1
 
       Name                           State  Node
       ----                           -----  ----

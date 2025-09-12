@@ -4,8 +4,8 @@ description: This topic provides instructions on how to create and manage Qualit
 ms.topic: how-to
 ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
 manager: brianlic
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
@@ -331,3 +331,4 @@ Design your QoS policies as specifically as possible to simplify your organizati
 For the next topic in this guide, see [QoS Policy Events and Errors](qos-policy-errors.md).
 
 For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
+

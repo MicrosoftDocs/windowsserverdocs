@@ -4,7 +4,7 @@ description: Regulations in many sectors require systems to be traceable to UTC.
 author: xelu86
 ms.author: alalve
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Time for Traceability

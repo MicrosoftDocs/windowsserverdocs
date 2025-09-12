@@ -4,7 +4,6 @@ description: Learn how to shut down or restart one or more systems
 ms.topic: how-to
 ms.assetid: 6293b4f7-c009-419d-a503-fc4f3ea3913c
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

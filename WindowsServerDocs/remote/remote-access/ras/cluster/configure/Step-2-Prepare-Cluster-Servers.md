@@ -1,7 +1,6 @@
 ---
 title: Step 2 Prepare Cluster Servers
 description: Learn how to prepare additional servers to add to the cluster.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 ms.author: daknappe

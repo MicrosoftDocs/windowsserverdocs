@@ -2,9 +2,6 @@
 ms.assetid: 46725afe-8652-4cd7-928c-93b98f7fbae3
 title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 

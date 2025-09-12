@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol get

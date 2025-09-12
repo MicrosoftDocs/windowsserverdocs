@@ -2,8 +2,8 @@
 title: Install and configure DHCP Server on Windows Server
 description: Install a Windows Server DHCP server to automatically provide IP addresses and DHCP options to clients connected to one or more subnets on your network.
 ms.topic: quickstart
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.custom: template-quickstart, team=cloud_advocates
 ms.contributors: orthomas
 ms.date: 04/17/2025
@@ -259,3 +259,4 @@ To manage exclusions using the DHCP console:
 
 - [DHCP Basics](../../../troubleshoot/dynamic-host-configuration-protocol-basics.md)
 - [DHCP Subnet selection options](dhcp-subnet-options.md)
+

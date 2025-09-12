@@ -1,25 +1,31 @@
 ---
 title: Upgrade a Storage Spaces Direct cluster
-description: Learn how to upgrade a Storage Spaces Direct cluster to a newer version of Windows Server, either while VMs are running or while they're stopped.
-author: meaghanlewis
-ms.author: mosagie
-ms.date: 01/24/2025
+description: Upgrade your Storage Spaces Direct cluster efficiently. Review supported upgrade methods, prerequisites, and how to keep your workloads running.
+#customer intent: As an IT professional, I want to upgrade my Storage Spaces Direct cluster with minimal VM downtime so that my workloads stay available.
+author: xelu86
+ms.author: alalve
+ms.date: 06/27/2025
 ms.topic: upgrade-and-migration-article
 ---
 
 # Upgrade a Storage Spaces Direct cluster
 
+Upgrading a Storage Spaces Direct cluster to a newer version of Windows Server helps you take advantage of the latest features, security updates, and performance improvements. This article describes supported upgrade options for Storage Spaces Direct clusters running Windows Server 2016, including methods that minimize or eliminate virtual machine (VM) downtime. Learn about prerequisites, limitations, and step-by-step instructions for each upgrade approach, so you can choose the best method for your organization's needs.
+
+> [!TIP]
+> The steps covered in this article aren't needed if you're upgrading a cluster from Windows Server 2019 or later. If you're upgrading a cluster from Windows Server 2019 or later, use the [cluster OS rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) to upgrade the cluster without stopping VMs. The steps in this article are for upgrading a cluster from Windows Server 2016 to Windows Server 2019 only.
+
 To upgrade a Storage Spaces Direct cluster to a newer version of Windows Server, you have four options using the [cluster OS rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md). Two options involve keeping the virtual machines (VMs) running, and two options involve stopping all VMs. Each option has strengths and weaknesses, so select the option that best suits the needs of your organization.
 
 To read more about an upgrade option, select a link:
 
-- [In-place upgrade while VMs are running](#in-place-upgrade-while-vms-are-running) on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded.
+- **In-place upgrade while VMs are running** on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded.
 
-- [Clean OS installation while VMs are running](#clean-os-installation-while-vms-are-running) on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded, and you must set up each server and all its apps and roles again. We recommend this option over an in-place upgrade.
+- **Clean OS installation while VMs are running** on each server in the cluster. This option incurs no VM downtime. However, you must wait for storage jobs (mirror repair) to finish after each server is upgraded. You also need to set up each server again, including all its apps and roles. We recommend this option over an in-place upgrade.
 
-- [In-place upgrade while VMs are stopped](#in-place-upgrade-while-vms-are-stopped) on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
+- **In-place upgrade while VMs are stopped** on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
 
-- [Clean OS installation while VMs are stopped](#clean-os-installation-while-vms-are-stopped) on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster. We recommend this option over an in-place upgrade.
+- **Clean OS installation while VMs are stopped** on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster. We recommend this option over an in-place upgrade.
 
 ## Prerequisites and limitations
 
@@ -43,9 +49,13 @@ It's important to be aware of some limitations with the upgrade process:
 
 - A known issue occurs with Software Defined Networking environments that use Switch Embedded Teaming (SET) switches. The issue involves Hyper-V VM live migrations to an earlier version of the operating system. To ensure successful live migrations, we recommend that you change a VM network setting on VMs that you live-migrate.
 
-Because of the known issues described here, some customers might consider building a new cluster and copying data from the old cluster instead of upgrading their Windows Server clusters by using one of the four processes described in the following sections.
+Because of the known issues described here, some customers might choose to build a new cluster and copy data from the old cluster, instead of upgrading their Windows Server clusters by using one of the four methods described below.
 
-## In-place upgrade while VMs are running
+## Upgrade
+
+The following section describes the four upgrade options in detail. Each section includes step-by-step instructions for performing the upgrade. Select your preferred upgrade option.
+
+### [In-place upgrade while VMs are running](#tab/in-place-upgrade-while-vms-are-running)
 
 This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster and all VMs remain running.
 
@@ -141,7 +151,7 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
     Test-Cluster
     ```
 
-## Clean OS installation while VMs are running
+### [Clean OS installation while VMs are running](#tab/clean-os-installation-while-vms-are-running)
 
 This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to complete after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster and all VMs remain running.
 
@@ -158,13 +168,13 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
 
    1. Use Hyper-V VM live migration to move running VMs off the server you're about to upgrade.
 
-   2. Pause the cluster server by running the following PowerShell command. Some internal groups are hidden. We recommend that you do this step with caution. If you didn't already live-migrate VMs off the server, this cmdlet does that step for you. In that case, you can skip the previous step, if you prefer.
+   1. Pause the cluster server by running the following PowerShell command. Some internal groups are hidden. We recommend that you do this step with caution. If you didn't already live-migrate VMs off the server, this cmdlet does that step for you. In that case, you can skip the previous step, if you prefer.
 
        ```powershell
        Suspend-ClusterNode -Drain
        ```
 
-   3. Place the server in storage maintenance mode:
+   1. Place the server in storage maintenance mode:
 
        ```powershell
        Get-StorageFaultDomain -type StorageScaleUnit | `
@@ -172,33 +182,33 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
        Enable-StorageMaintenanceMode
        ```
 
-   4. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
+   1. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
 
        ```powershell
        Get-PhysicalDisk
        ```
 
-   5. Evict the server from the cluster:
+   1. Evict the server from the cluster:
 
        ```powershell
        Remove-ClusterNode <ServerName>
        ```
 
-   6. Perform a clean installation of the latest version of Windows Server on the server. For a clean installation, format the system drive, run *setup.exe*, and use the **Nothing** option. You must configure the server identity, roles, features, and applications after setup finishes and the server restarts.
+   1. Perform a clean installation of the latest version of Windows Server on the server. For a clean installation, format the system drive, run *setup.exe*, and use the **Nothing** option. You must configure the server identity, roles, features, and applications after setup finishes and the server restarts.
 
-   7. Install the Hyper-V role and Failover-Clustering feature on the server (you can use the `Install-WindowsFeature` cmdlet).
+   1. Install the Hyper-V role and Failover-Clustering feature on the server (you can use the `Install-WindowsFeature` cmdlet).
 
-   8. Install the latest storage and networking drivers for your hardware that are approved by your server manufacturer to use with Storage Spaces Direct.
+   1. Download and install the latest storage and networking drivers for your hardware from your server manufacturer that are approved for use with Storage Spaces Direct.
 
-   9. Check that the newly upgraded server has the latest updates.
+   1. Check that the newly upgraded server has the latest updates.
 
-   10. Rejoin the server to the cluster:
+   1. Rejoin the server to the cluster:
 
        ```powershell
        Add-ClusterNode
        ```
 
-   11. Remove the server from storage maintenance mode:
+   1. Remove the server from storage maintenance mode:
 
        ```powershell
        Get-StorageFaultDomain -type StorageScaleUnit | `
@@ -206,7 +216,7 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
        Disable-StorageMaintenanceMode
        ```
 
-   12. Wait for storage repair jobs to finish and for all disks to return to a healthy state. The process might take considerable time depending on the number of VMs running during the server upgrade. To check for a healthy state, run these commands:
+   1. Wait for storage repair jobs to finish and for all disks to return to a healthy state. The process might take considerable time depending on the number of VMs running during the server upgrade. To check for a healthy state, run these commands:
 
         ```powershell
         Get-StorageJob
@@ -247,9 +257,9 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
     Test-Cluster
     ```
 
-## In-place upgrade while VMs are stopped
+### [In-place upgrade while VMs are stopped](#tab/in-place-upgrade-while-vms-are-stopped)
 
-This option incurs VM downtime, but it might take less time than if you kept the VMs running during the upgrade because you don't need to wait for storage jobs (mirror repair) to finish after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster remain running.
+This option performs an in-place upgrade of each server in the cluster while all VMs are stopped. The upgrade process is usually faster than upgrading while VMs are running, because you don't need to wait for storage jobs (mirror repair) to finish after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster remain running.
 
 1. Check that all servers in the cluster are running the latest updates.
 
@@ -263,7 +273,7 @@ This option incurs VM downtime, but it might take less time than if you kept the
        Suspend-ClusterNode -Drain
        ```
 
-   2. Place the server in storage maintenance mode:
+   1. Place the server in storage maintenance mode:
 
        ```powershell
        Get-StorageFaultDomain -type StorageScaleUnit | `
@@ -271,17 +281,17 @@ This option incurs VM downtime, but it might take less time than if you kept the
        Enable-StorageMaintenanceMode
        ```
 
-   3. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
+   1. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
 
        ```powershell
        Get-PhysicalDisk
        ```
 
-   4. Perform an upgrade installation of Windows Server on the server by running *setup.exe* and using the **Keep personal files and apps** option. When installation is finished, the server remains in the cluster and the cluster service starts automatically.
+   1. Perform an upgrade installation of Windows Server on the server by running *setup.exe* and using the **Keep personal files and apps** option. When installation is finished, the server remains in the cluster and the cluster service starts automatically.
 
-   5. Check that the newly upgraded server has the latest Windows Server updates.
+   1. Check that the newly upgraded server has the latest Windows Server updates.
 
-   6. Remove the server from storage maintenance mode:
+   1. Remove the server from storage maintenance mode:
 
        ```powershell
        Get-StorageFaultDomain -type StorageScaleUnit | `
@@ -289,13 +299,13 @@ This option incurs VM downtime, but it might take less time than if you kept the
        Disable-StorageMaintenanceMode
        ```
 
-   7. Resume the server:
+   1. Resume the server:
 
        ```powershell
        Resume-ClusterNode
        ```
 
-   8. Wait for storage repair jobs to finish and for all disks to return to a healthy state. The process should be relatively fast because VMs aren't running. Run these commands to check for a healthy state:
+   1. Wait for storage repair jobs to finish and for all disks to return to a healthy state. The process should be relatively fast because VMs aren't running. Run these commands to check for a healthy state:
 
        ```powershell
        Get-StorageJob
@@ -331,9 +341,9 @@ This option incurs VM downtime, but it might take less time than if you kept the
     Test-Cluster
     ```
 
-## Clean OS installation while VMs are stopped
+### [Clean OS installation while VMs are stopped](#tab/clean-os-installation-while-vms-are-stopped)
 
-This option incurs VM downtime, but it might take less time than if you kept the VMs running during the upgrade because you don't need to wait for storage jobs (mirror repair) to finish after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster remain running.
+This option performs a clean installation of Windows Server on each server in the cluster while all VMs are stopped. The upgrade process is usually faster than upgrading while VMs are running, because you don't need to wait for storage jobs (mirror repair) to finish after each server is upgraded. Although individual servers are restarted sequentially during the upgrade process, the remaining servers in the cluster remain running.
 
 1. Check that all the servers in the cluster are running the latest updates.
 
@@ -347,7 +357,7 @@ This option incurs VM downtime, but it might take less time than if you kept the
        Suspend-ClusterNode -Drain
        ```
 
-   2. Place the server in storage maintenance mode:
+   1. Place the server in storage maintenance mode:
 
       ```powershell
       Get-StorageFaultDomain -type StorageScaleUnit | `
@@ -355,33 +365,33 @@ This option incurs VM downtime, but it might take less time than if you kept the
       Enable-StorageMaintenanceMode
       ```
 
-   3. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
+   1. Run the following cmdlet to check that the **OperationalStatus** value is **In Maintenance Mode**:
 
        ```powershell
        Get-PhysicalDisk
        ```
 
-   4. Evict the server from the cluster:
+   1. Evict the server from the cluster:
 
        ```powershell
        Remove-ClusterNode <ServerName>
        ```
 
-   5. Perform a clean installation of Windows Server on the server. For a clean installation, format the system drive, run *setup.exe*, and use the **Nothing** option. You must configure the server identity, roles, features, and applications after setup finishes and the server restarts.
+   1. Perform a clean installation of Windows Server on the server. For a clean installation, format the system drive, run *setup.exe*, and use the **Nothing** option. You must configure the server identity, roles, features, and applications after setup finishes and the server restarts.
 
-   6. Install the Hyper-V role and Failover-Clustering feature on the server (you can use the `Install-WindowsFeature` cmdlet).
+   1. Install the Hyper-V role and Failover-Clustering feature on the server (you can use the `Install-WindowsFeature` cmdlet).
 
-   7. Install the latest storage and networking drivers for your hardware that are approved by your server manufacturer to use with Storage Spaces Direct.
+   1. Download and install the latest storage and networking drivers for your hardware from your server manufacturer that are approved for use with Storage Spaces Direct.
 
-   8. Check that the newly upgraded server has the latest Windows Server updates.
+   1. Check that the newly upgraded server has the latest Windows Server updates.
 
-   9. Rejoin the server to the cluster:
+   1. Rejoin the server to the cluster:
 
        ```powershell
        Add-ClusterNode
        ```
 
-   10. Remove the server from storage maintenance mode:
+   1. Remove the server from storage maintenance mode:
 
        ```powershell
        Get-StorageFaultDomain -type StorageScaleUnit | `
@@ -389,7 +399,7 @@ This option incurs VM downtime, but it might take less time than if you kept the
        Disable-StorageMaintenanceMode
        ```
 
-   11. Wait for storage repair jobs to finish and for all disks to return to a healthy state.  The process might take considerable time depending on the number of VMs running during the server upgrade. To check for a healthy state, run these commands:
+   1. Wait for storage repair jobs to finish and for all disks to return to a healthy state.  The process might take considerable time depending on the number of VMs running during the server upgrade. To check for a healthy state, run these commands:
 
        ```powershell
        Get-StorageJob
@@ -424,3 +434,6 @@ This option incurs VM downtime, but it might take less time than if you kept the
      ```powershell
      Test-Cluster
      ```
+
+---
+

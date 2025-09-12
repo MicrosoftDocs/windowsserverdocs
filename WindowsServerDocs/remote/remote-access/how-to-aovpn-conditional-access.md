@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.date: 10/31/2023
 ms.author: daknappe
 author: dknappettmsft
+ms.custom: sfi-image-nochange
 ---
 
 # Conditional access for VPN connectivity using Microsoft Entra ID

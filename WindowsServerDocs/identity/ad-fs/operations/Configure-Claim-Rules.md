@@ -2,11 +2,8 @@
 description: "Learn more about: Configure Claim Rules in AD FS for Windows Server"
 ms.assetid: 9cafa3e1-8118-4a75-a7c2-1dbe40b1a444
 title: Configure Claims Rules
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure Claim Rules in AD FS for Windows Server

@@ -4,7 +4,6 @@ ms.assetid: 41b56704-c6f9-4d29-af97-62123e300565
 title: Reviewing OU Design Concepts
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

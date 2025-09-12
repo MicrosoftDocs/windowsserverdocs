@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center release history
 description: A summary of the history of Windows Admin Center releases, including links to download them.
-ms.topic: article
+ms.topic: release-notes
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 01/06/2020

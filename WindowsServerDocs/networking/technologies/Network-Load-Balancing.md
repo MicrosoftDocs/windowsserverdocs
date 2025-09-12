@@ -1,9 +1,9 @@
 ---
 title: Network Load Balancing
 description: In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.
-ms.topic: article
-author: meaghanlewis
-ms.author: mosagie
+ms.topic: overview
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/13/2018
 ---
 # Network Load Balancing
@@ -146,3 +146,4 @@ The following table provides links to additional information about the NLB featu
 |Troubleshooting|[Troubleshooting Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732592(v=ws.10)) &#124; [NLB Cluster Events and Errors](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731678(v=ws.10))|
 |Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](/previous-versions/windows/powershell-scripting/hh801274(v=wps.630))|
 |Community resources|[High Availability \(Clustering\) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)
+

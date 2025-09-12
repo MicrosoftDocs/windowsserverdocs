@@ -4,9 +4,8 @@ ms.assetid: 39c0126d-af5e-4dcb-88c1-aa38f888e973
 title: Active Directory-Integrated DNS Zones
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Active Directory-Integrated DNS Zones

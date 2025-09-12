@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: concept-article
 ms.assetid: e74961a2-bd38-48ae-b1c0-4b3eff761b4a
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 

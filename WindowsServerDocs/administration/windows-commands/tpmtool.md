@@ -4,7 +4,6 @@ description: Reference article for the tpmtool command, which gets information a
 ms.topic: reference
 author: dknappettmsft
 ms.author: daknappe
-manager: raigner
 ms.date: 05/07/2019
 ---
 

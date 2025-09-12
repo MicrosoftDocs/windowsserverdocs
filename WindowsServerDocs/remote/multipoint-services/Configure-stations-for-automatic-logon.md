@@ -4,7 +4,6 @@ description: Set up automatic logon for MultiPoint stations
 ms.topic: how-to
 ms.assetid: 52fcfac9-d500-4f1d-819f-b2ffc795e435
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

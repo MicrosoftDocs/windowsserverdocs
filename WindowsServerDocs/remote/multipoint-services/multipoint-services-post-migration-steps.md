@@ -2,10 +2,9 @@
 title: MultiPoint Services - post-migration tasks
 description: Learn how to validate and close out your migration to MultiPoint Services
 ms.date: 07/29/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 1497cae0-071e-467d-89b8-a7050815d7de
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # MultiPoint Services - post-migration tasks

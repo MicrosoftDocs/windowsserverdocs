@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Steps for Restoring the forest
 description: This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/21/2023
 ms.topic: how-to
 ---
@@ -50,3 +50,4 @@ these steps to account for such factors as:
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+

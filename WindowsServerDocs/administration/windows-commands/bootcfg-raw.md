@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: e3458749-b0a0-460f-a022-3ff199a71f27
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg raw

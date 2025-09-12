@@ -1,8 +1,8 @@
 ---
 title: Best Practices Analyzer for Hyper-V
 description: Learn how the Best Practices Analyzer scans your computer using rules based on these best practices and reports the results.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
 ms.date: 8/16/2016
@@ -18,3 +18,4 @@ For more details about Best Practices Analyzer and scans, see [Best Practices An
 
 ## About Hyper-V
 Hyper-V lets you run multiple operating systems at the same time on one physical computer, by running each one in a virtual machine. Virtual machines can help you use your computing resources more efficiently and flexibly. For more about Hyper-V, see [Hyper-V on Windows Server 2016](../Hyper-V-on-Windows-Server.md).
+

@@ -1,11 +1,11 @@
 ---
 title: Guarded fabric and shielded VMs
 description: "Learn more about: Guarded fabric and shielded VMs"
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -52,3 +52,4 @@ One of the most important goals of providing a hosted environment is to guarante
 ## Operations and management topic
 
 - [Managing the Host Guardian Service](guarded-fabric-manage-hgs.md)
+

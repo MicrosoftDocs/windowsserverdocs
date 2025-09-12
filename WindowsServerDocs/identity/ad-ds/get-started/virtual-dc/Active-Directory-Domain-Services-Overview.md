@@ -2,9 +2,8 @@
 description: Find out about Active Directory Domain Services, a directory service that makes network resource data available to authorized network users and administrators.
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services overview
-author: meaghanlewis
-ms.author: mosagie
-manager: daveba
+author: xelu86
+ms.author: alalve
 ms.date: 03/10/2025
 ms.topic: overview
 
@@ -45,3 +44,4 @@ AD DS also includes:
 * [Active Directory Schema Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))
 
 For a detailed list of AD DS concepts, see [Understanding Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10)).
+

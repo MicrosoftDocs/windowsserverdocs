@@ -4,6 +4,7 @@ description: How to edit an existing Windows Server-related articles, using GitH
 author: eross-msft
 ms.author: roharwoo
 ms.date: 05/06/2019
+ms.topic: contributor-guide
 ---
 
 # Edit an existing Windows Server article using GitHub and Visual Studio Code

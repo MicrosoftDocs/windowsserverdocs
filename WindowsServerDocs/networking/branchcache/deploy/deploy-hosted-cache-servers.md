@@ -2,8 +2,8 @@
 title: Deploy Hosted Cache Servers (Optional)
 description: Learn how to install and configure BranchCache hosted cache servers that are located in branch offices where you want to deploy BranchCache hosted cache mode.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/05/2021
 ---
 # Deploy Hosted Cache Servers (Optional)
@@ -37,5 +37,6 @@ You must be a member of **Administrators**, or equivalent to perform this proced
 
     > [!NOTE]
     > After you run this command, in the section **HostedCacheServerConfiguration**, the value for **HostedCacheServerIsEnabled** is **True**. If you configured a domain joined hosted cache server to register a service connection point (SCP) in Active Directory, the value for **HostedCacheScpRegistrationEnabled** is **True**.
+
 
 

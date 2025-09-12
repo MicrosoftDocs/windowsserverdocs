@@ -3,7 +3,7 @@ description: "Learn more about: Health Service faults"
 title: Health Service faults
 manager: eldenc
 ms.author: alalve
-ms.topic: article
+ms.topic: concept-article
 author: xelu86
 ms.date: 10/05/2017
 ---

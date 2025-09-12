@@ -1,11 +1,11 @@
 ---
 title: Network-Related Performance Counters
 description: Learn about the counters that are relevant to managing network performance.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 ms.date: 10/27/2021
 ---
 
@@ -126,3 +126,4 @@ The following performance counters are relevant to RSC performance.
     -   TCP RSC Exceptions/sec
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).
+

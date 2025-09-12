@@ -4,10 +4,8 @@ ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: What's New in Active Directory Domain Services Installation and Removal
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: whats-new
-ms.custom: inhenkel
 ---
 # What's New in Active Directory Domain Services Installation and Removal
 
@@ -31,7 +29,7 @@ AD DS installation includes the following features:
 
 ## The Active Directory Domain Services Configuration Wizard
 
-Beginning with  Windows Server 2012, the Active Directory Domain Services Configuration Wizard replaces the legacy Active Directory Domain Services Installation Wizard as the user interface (UI) option to specify settings when you install a domain controller. The Active Directory Domain Services Configuration Wizard begins after Add Roles Wizard is finished.
+Beginning with Windows Server 2012, the Active Directory Domain Services Configuration Wizard replaces the legacy Active Directory Domain Services Installation Wizard as the user interface (UI) option to specify settings when you install a domain controller. The Active Directory Domain Services Configuration Wizard begins after Add Roles Wizard is finished.
 
 In [Install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md), the UI procedures show how to start the Add Roles Wizard to install the AD DS server role binaries and then run the Active Directory Domain Services Configuration Wizard to complete the domain controller installation. The Windows PowerShell examples show how to complete both steps using an AD DS deployment cmdlet.
 

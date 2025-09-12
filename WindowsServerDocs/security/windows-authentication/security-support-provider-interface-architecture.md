@@ -1,10 +1,10 @@
 ---
 title: Security Support Provider Interface Architecture
 description: Learn about the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
-ms.author: mosagie
-author: meaghanlewis
+ms.author: alalve
+author: xelu86
 manager: mtillman
 ms.date: 10/12/2016
 ---
@@ -272,3 +272,4 @@ The negotiate option can be used to allow the client and server to attempt to fi
 
 ## Additional References
 [Windows Authentication Architecture](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169024(v=ws.10))
+

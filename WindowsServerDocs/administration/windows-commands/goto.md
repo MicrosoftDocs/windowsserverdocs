@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: e0de1458-1f78-48ff-a746-c285a945a510
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,12 +1,10 @@
 ---
 title: Active Directory Federation Services in Azure | Microsoft Docs
 description: Learn how to deploy Active Directory Federation Services in Azure for scalable, easy to manage, and high availability infrastructure.
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
 ms.topic: how-to
 ms.date: 04/08/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Deploy Active Directory Federation Services in Azure

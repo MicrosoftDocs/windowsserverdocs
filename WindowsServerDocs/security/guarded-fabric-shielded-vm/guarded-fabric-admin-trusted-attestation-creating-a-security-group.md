@@ -4,8 +4,8 @@ title: Create a security group for guarded hosts and register the group with HGS
 ms.topic: how-to
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 08/29/2018
 ---
 
@@ -51,3 +51,4 @@ This topic describes the intermediate steps to prepare Hyper-V hosts to become g
 ## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
+

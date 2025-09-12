@@ -2,8 +2,8 @@
 title: Deploy devices by using Discrete Device Assignment
 description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
 ms.topic: install-set-up-deploy
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 02/19/2025
 ---
 
@@ -26,7 +26,7 @@ For more information, see [Supported Linux and FreeBSD virtual machines for Hype
 
 ## System requirements
 
-Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
+Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../host-hardware-requirements.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings. If the same capabilities are required for SR-IOV support and in the BIOS, you might need to set "Enable SR-IOV." Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
@@ -120,3 +120,4 @@ If the system is incorrectly configured to support Discrete Device Assignment, t
 For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being incompatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
 
 :::image type="content" source="./images/hyper-v-surveydda-ps1.png" alt-text="Screenshot of the requirements displayed in SurveyDDA.ps1.":::
+

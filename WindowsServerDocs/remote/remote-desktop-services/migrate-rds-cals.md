@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: upgrade-and-migration-article
 ms.assetid: 91bdedce-6145-469f-b72e-7e113c4391e9
 author: dknappettmsft
-manager: scottman
 ---
 # Migrate your Remote Desktop Services Client Access Licenses (RDS CALs)
 

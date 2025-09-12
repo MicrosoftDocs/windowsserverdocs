@@ -2,9 +2,6 @@
 description: "Learn more about: Enroll an SSL Certificate for AD FS"
 ms.assetid: 3095e6a7-b562-4c6a-bf29-13b32c133cac
 title: Enroll an SSL Certificate for AD FS
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

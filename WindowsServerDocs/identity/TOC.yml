@@ -335,6 +335,8 @@
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
         - name: Directory services component updates
           href: ad-ds/manage/component-updates/directory-Services-component-updates.md
+      - name: Active Directory domain join permissions
+        href: ad-ds/manage/active-directory-domain-join-permissions.md
       - name: Join a computer to a domain
         href: ad-ds/manage/join-computer-to-domain.md
       - name: Active Directory accounts
@@ -380,15 +382,15 @@
         - name: Credential Guard protected machine accounts
           href: ad-ds/manage/delegated-managed-service-accounts/credential-guard-protected-machine-accounts.md
       - name: Group Managed Service Accounts
-        href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
         items:
-        - name: Get started with group Managed Service Accounts
-          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
-          items:
-          - name: Create the Key Distribution Services KDS Root Key
-            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
-          - name: Configuring Kerberos delegation for group Managed Service Accounts
-            href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
+        - name: Group Managed Service Accounts overview
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md
+        - name: Manage Group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts.md
+        - name: Create the Key Distribution Services KDS Root Key
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md
+        - name: Configuring Kerberos delegation for group Managed Service Accounts
+          href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
       - name: Delegation of Control in Active Directory Domain Services
         href: ad-ds/manage/delegation-control-wizard.md
       - name: Best Practices for Securing Active Directory
@@ -1064,7 +1066,7 @@
           href: ad-cs/configure-certificate-enrollment-web-service.md
         - name: Configure Certificate Enrollment Policy Web Service
           href: ad-cs/configure-certificate-enrollment-policy-web-service.md
-        - name: Use a custom port for Certificate Enrollment Web Service 
+        - name: Use a custom port for Certificate Enrollment Web Service
           href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
       - name: Certification Authority Web Enrollment
         items:
@@ -1088,6 +1090,14 @@
         href: ad-cs/migrate-certification-authority.md
       - name: Renew root CA certificate
         href: ad-cs/renew-root-ca-certificate.md
+      - name: Request certificates using Web Enrollment
+        href: ad-cs/request-certificate-windows-server.md
+      - name: Retrieve base and delta CRLs
+        href: ad-cs/retrieve-base-and-delta-crl.md
+      - name: Disable weak cryptographic algorithms in certificate validation
+        href: ad-cs/disable-weak-cryptographic-algorithms.md
+      - name: 'Submit certificate requests using a PKCS #10 or PKCS #7 file'
+        href: ad-cs/submit-pkcs-certificate-request.md
   - name: Administrative tools and logon types reference
     href: securing-privileged-access/reference-tools-logon-types.md
   - name: Software Restriction Policies

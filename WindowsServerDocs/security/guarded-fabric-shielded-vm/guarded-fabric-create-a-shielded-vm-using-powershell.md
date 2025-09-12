@@ -3,8 +3,8 @@ description: "Learn more about: Create a shielded VM using PowerShell"
 title: Create a shielded VM using PowerShell
 ms.topic: how-to
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/25/2019
 ---
 
@@ -127,3 +127,4 @@ The shielded VM can now be live migrated within the cluster.
 
 > [!div class="nextstepaction"]
 > [Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+

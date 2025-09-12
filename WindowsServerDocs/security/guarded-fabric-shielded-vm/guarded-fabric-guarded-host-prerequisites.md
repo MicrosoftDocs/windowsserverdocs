@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Prerequisites for guarded hosts"
 title: Guarded host prerequisites
-ms.topic: article
+ms.topic: concept-article
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: xelu86
+ms.author: alalve
 ms.date: 08/29/2018
 ---
 
@@ -84,3 +84,4 @@ Hyper-V hosts must meet the following prerequisites for AD mode:
 **Next step:**
 > [!div class="nextstepaction"]
 > [Place guarded hosts in a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
+

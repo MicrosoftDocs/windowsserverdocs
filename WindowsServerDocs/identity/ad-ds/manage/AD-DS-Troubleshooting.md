@@ -4,7 +4,6 @@ title: AD DS Troubleshooting
 description: Overview of the troubleshooting section for AD DS
 ms.author: roharwoo
 author: robinharwood
-manager: dcscontentpm
 ms.date: 05/12/2025
 ms.topic: troubleshooting-general
 ---

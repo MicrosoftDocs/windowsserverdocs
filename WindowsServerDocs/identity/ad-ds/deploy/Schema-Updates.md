@@ -5,7 +5,7 @@ description: Schema changes made by Adprep.exe listed by operating system versio
 author: xelu86
 ms.author: alalve
 ms.date: 02/06/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Server Active Directory schema updates

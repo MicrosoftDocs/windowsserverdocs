@@ -2,11 +2,8 @@
 description: "Learn more about: Set up an AD FS lab environment"
 ms.assetid: 276a7f7d-5faa-4c00-a51c-3fa511fe52f9
 title: Set up an AD FS lab environment
-author: robinharwood
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: install-set-up-deploy
-ms.author: roharwoo
 
 ---
 # Set up an AD FS lab environment

@@ -1,7 +1,6 @@
 ---
 title: Step 2 Plan the DirectAccess Deployment
 description: Learn how to plan the settings for the Enable DirectAccesss Wizard.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1
 ms.author: daknappe

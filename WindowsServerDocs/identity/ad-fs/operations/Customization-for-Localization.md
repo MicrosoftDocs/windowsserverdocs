@@ -2,11 +2,8 @@
 description: "Learn more about: Customization for Localization"
 ms.assetid: 38bbc002-a8fa-4211-9328-4ef67fca0acf
 title: Customization for Localization
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 # Customization for Localization
 

@@ -1,10 +1,10 @@
 ---
-title: Security identifiers
+title: Security Identifiers
 description: Become familiar with unique identifiers for Windows Server accounts and groups, such as security identifiers (SIDs). See tables of well-known SIDs.
-author: meaghanlewis
-ms.author: mosagie
-ms.topic: article
-ms.date: 03/21/2025
+author: dknappettmsft
+ms.author: daknappe
+ms.topic: concept-article
+ms.date: 06/26/2025
 # customer intent: As an administrator, I want to become familiar with Windows Server security identifiers (SIDs) so that I can protect access to network resources by better using this core part of the Windows security model.
 ---
 
@@ -106,7 +106,7 @@ New accounts and groups can be created on any domain controller. Changes that ar
 
 The process of generating unique RIDs is a single-master operation. One domain controller is assigned the role of RID master, and it allocates a sequence of RIDs to each domain controller in the domain. When a new domain account or group is created in one domain controller's replica of Active Directory, it's assigned a SID. The RID for the new SID is taken from the domain controller's allocation of RIDs. When its supply of RIDs begins to run low, the domain controller requests another block from the RID master.
 
-Each domain controller uses each value in a block of RIDs only once. The RID master allocates each block of RID values only once. This process assures that every account and group created in the domain has a unique RID.
+Each domain controller uses each value in a block of RIDs only once. The RID master allocates each block of RID values only once. This process ensures that every account and group created in the domain has a unique RID.
 
 ## SIDs and globally unique identifiers
 
@@ -114,7 +114,7 @@ When a new domain user or group account is created, Active Directory stores the 
 
 Active Directory uses GUIDs internally to identify objects. For example, the GUID is one of an object's properties that's published in the global catalog. Searching the global catalog for a User object GUID produces results if the user has an account somewhere in the enterprise. In fact, searching for any object by `ObjectGUID` might be the most reliable way of finding the object you want to locate. The values of other object properties can change, but the `ObjectGUID` property never changes. When an object is assigned a GUID, it keeps that value for life.
 
-If a user moves from one domain to another, the user gets a new SID. The SID for a group object doesn't change, because groups stay in the domain where they're created. However, if people move, their accounts can move with them. If an employee moves from North America to Europe, but stays in the same company, an administrator for the enterprise can move the employee's User object from, for example, Contoso\NoAm to Contoso\Europe. In this case, the User object for the account needs a new SID. The domain identifier portion of a SID that's issued in NoAm is unique to NoAm, so the SID for the user's account in Europe has a different domain identifier. The RID portion of a SID is unique relative to the domain, so if the domain changes, the RID also changes.
+If a user moves from one domain to another, the user gets a new SID. The SID for a Group object doesn't change, because groups stay in the domain where they're created. However, if people move, their accounts can move with them. If an employee moves from North America to Europe but stays in the same company, an administrator for the enterprise can move the employee's User object from, for example, Contoso\NoAm to Contoso\Europe. In this case, the User object for the account needs a new SID. The domain identifier portion of a SID that's issued in NoAm is unique to NoAm, so the SID for the user's account in Europe has a different domain identifier. The RID portion of a SID is unique relative to the domain, so if the domain changes, the RID also changes.
 
 When a User object moves from one domain to another, a new SID must be generated for the user account and stored in the `ObjectSID` property. Before the new value is written to the property, the previous value is copied to another property of a User object, `SIDHistory`. This property can hold multiple values. Each time a User object moves to another domain, a new SID is generated and stored in the `ObjectSID` property, and another value is added to the list of old SIDs in the `SIDHistory` value. When a user signs in and is successfully authenticated, the domain authentication service queries Active Directory for all the SIDs that are associated with the user. The query includes the user's current SID, the user's old SIDs, and the SIDs for the user's groups. All these SIDs are returned to the authentication client, and they're included in the user's access token. When the user tries to gain access to a resource, any one of the SIDs in the access token (including one of the SIDs in the `SIDHistory` property), can allow or deny the user access.
 
@@ -326,6 +326,7 @@ You might see the following registry keys under AllCachedCapabilities:
 
 The prefix of all capability SIDs is S-1-15-3.
 
-## See also
+## Related content
 
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
+

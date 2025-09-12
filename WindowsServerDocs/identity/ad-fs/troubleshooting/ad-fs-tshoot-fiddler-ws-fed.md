@@ -1,11 +1,9 @@
 ---
 title: AD FS Troubleshooting - Fiddler - WS-Federation
 description:  This document shows an in-depth trace of a WS-Federation exchange with AD FS
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
 # AD FS Troubleshooting - Fiddler - WS-Federation

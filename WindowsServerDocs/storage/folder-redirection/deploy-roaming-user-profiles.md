@@ -3,9 +3,9 @@ title: Deploy roaming user profiles
 description: Learn how to deploy roaming user profiles so that users receive the same operating system and application settings on multiple computers.
 TOCTitle: Deploy roaming user profiles
 ms.topic: install-set-up-deploy
-author: meaghanlewis
+author: dknappettmsft
 ms.date: 05/21/2025
-ms.author: mosagie
+ms.author: daknappe
 ---
 
 # Deploy roaming user profiles
@@ -344,3 +344,4 @@ The following table summarizes some of the most important changes to this articl
 - [Microsoft's support statement around replicated user profile data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
 - [Sideload apps with Deployment Image Servicing and Management (DISM)](/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
 - [Troubleshooting packaging, deployment, and query of Windows apps](/windows/win32/appxpkg/troubleshooting)
+

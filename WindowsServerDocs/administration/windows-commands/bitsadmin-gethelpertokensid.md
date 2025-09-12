@@ -4,7 +4,6 @@ description: Reference article for the bitsadmin gethelpertokensid command, whic
 ms.topic: reference
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 03/01/2019
 ---
 

@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: d3041407-4577-4716-a39f-2c8ab48818d1
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

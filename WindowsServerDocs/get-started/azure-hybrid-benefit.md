@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server lets you reduce costs by using your on-premises Windows Server licenses with Software Assurance enabled for VMs in Azure. Use Azure Local and Azure Kubernetes Service (AKS) on Azure Local and Windows Server at no extra cost.
-ms.date: 03/10/2025
+ms.date: 09/03/2025
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
@@ -40,7 +40,7 @@ Azure Hybrid Benefit includes the following cost savings:
 
 To evaluate your potential cost savings, you can use these resources:
 
-- **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Hybrid Benefit Savings Calculator](https://azure.microsoft.com/pricing/hybrid-benefit/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
+- **Windows VMs on Azure:** [Windows Virtual Machine Pricing](https://azure.microsoft.com/pricing/details/virtual-machines/windows). Use the [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) to estimate cost savings, or compare Windows VM pricing with and without Azure Hybrid Benefit.
 
 - **Azure Local:** [Azure Local pricing](https://azure.microsoft.com/pricing/details/azure-local/).  
 
@@ -65,19 +65,19 @@ To qualify for Azure Hybrid Benefit for Windows VMs in Azure, you must meet the 
 
 #### Number of licenses
 
-You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You may also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each processor license is equivalent to 16 core licenses.
+You need a minimum of 8 core licenses (Datacenter or Standard edition) per VM. For example, 8 core licenses are still required if you run a 4-core instance. You might also run instances larger than 8 cores by allocating licenses equal to the core size of the instance. For example, 12 core licenses are required for a 12-core instance. For customers with processor licenses, each processor license is equivalent to 16 core licenses.
 
-#### Use rights
+#### Azure Migration Allowance
 
 - **Windows Server Standard edition:** Licenses must be used either on-premises or in Azure, but not at the same time. The only exception is on a one-time basis, for up to 180 days, to allow you to migrate the same workloads to Azure.  
 
-- **Windows Server Datacenter edition:** For VM Licensing, licenses allow simultaneous usage on-premises and in Azure indefinitely. For Dedicated Host Licensing, licenses allow simultaneous usage on-premises and in Azure for a period of 180 days from when the licenses are allocated to Azure.
+- **Windows Server Datacenter edition:** For VM Licensing, when migrating workloads to Azure, licenses allow simultaneous usage on-premises and in Azure indefinitely. For Dedicated Host Licensing, when migrating workloads to Azure, licenses allow simultaneous usage on-premises and in Azure for a period of 180 days from when the licenses are allocated to Azure.
 
 #### Unlimited virtualization
 
 Unlimited Virtualization Rights refers to the right to use any number of Windows Server VMs on a host.  
 
-- **Windows Server Datacenter edition:** You can use any number of Windows Server VMs on an Azure dedicated host if you allocate Windows Server Datacenter licenses with active SA or subscription for all the available physical cores on that Azure server.
+- **Windows Server Datacenter edition:** You can use any number of Windows Server VMs on an Azure dedicated host if you allocate Windows Server Datacenter licenses with active Software Assurance or subscription for all the available physical cores on that Azure server.
 
 - **Windows Server Standard edition:** Unlimited Virtualization Rights aren't available.
 
@@ -93,7 +93,7 @@ If you apply Azure Hybrid Benefit to your Windows Server VMs, verify the number 
 
 If you already have Windows Server VMs running with Azure Hybrid Benefit, perform an inventory to see how many units you're running, and check this number against your Software Assurance or subscription licenses. You can contact your Microsoft licensing specialist to validate your Software Assurance licensing position.
 
-To see and count all VMs that are deployed with Azure Hybrid Benefit in an Azure subscription, [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription) using the steps in [Explore Azure Hybrid Benefit for Windows VMs](/azure/virtual-machines/windows/hybrid-use-benefit-licensing).
+To see and count all VMs that are deployed with Azure Hybrid Benefit in an Azure subscription, [list all VMs and virtual machine scale sets](/azure/virtual-machines/windows/hybrid-use-benefit-licensing#list-all-vms-and-virtual-machine-scale-sets-with-azure-hybrid-benefit-for-windows-server-in-a-subscription).
 
 You can also look at your Microsoft Azure bill to determine how many VMs with Azure Hybrid Benefit for Windows Server you're running. You can find information about the number of instances with the benefit under **Additional Info**:
 
@@ -136,9 +136,9 @@ Each Windows Server core license entitles use on one physical core of Azure Loca
 
 You can use any number of Windows Server VMs on the Azure Local cluster if you allocate enough core licenses for all physical cores on servers in the Azure Local cluster.
 
-#### Use rights
+#### Azure Migration Allowance
 
-Licenses must be used either on-premises or on Azure Local, but not on both. You have 180 days of concurrent licensing to migrate your servers.
+Licenses must be used either on-premises or on Azure Local, but not on both. You have 180 days of concurrent licensing to migrate your servers to Azure Local.
 
 ### How to apply Azure Hybrid Benefit for Azure Local
 
@@ -166,7 +166,7 @@ To qualify for Azure Hybrid Benefit for AKS, you must meet the following licensi
 
 Each Windows Server core license entitles use on one virtual core of AKS.
 
-#### Use rights
+#### Azure Migration Allowance
 
 Azure Hybrid Benefit for AKS is additive. Core licenses used for Azure Hybrid Benefit for AKS can be used at the same time with on-premises Windows Server licensing, as well as Azure Hybrid Benefit for other workloads in this article.
 

@@ -1,10 +1,9 @@
 ---
 title: Using ETW to troubleshoot LDAP connections
 description: How to turn on and use ETW to trace LDAP connections between AD DS domain controllers.
-author: meaghanlewis
-manager: dcscontentpm-dev
+author: xelu86
 audience: Admin
-ms.author: mosagie
+ms.author: alalve
 ms.topic: troubleshooting-general
 ms.date: 11/22/2019
 ---
@@ -133,3 +132,4 @@ Consider an application, App1.exe, that sets passwords for user accounts. Suppos
 
    > [!NOTE]
    > In this command, **tracerpt.exe** is a [trace consumer](/windows-hardware/drivers/devtest/trace-consumer) tool.
+

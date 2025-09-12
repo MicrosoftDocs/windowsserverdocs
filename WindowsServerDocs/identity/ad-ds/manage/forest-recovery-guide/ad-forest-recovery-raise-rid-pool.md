@@ -3,10 +3,12 @@ description: "Learn more about: AD Forest Recovery - Raising the value of availa
 title: AD Forest Recovery - Raising RID pools
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
-ms.custom: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4, inhenkel
+ms.custom:
+  - c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Active Directory Forest Recovery - Raise the value of available RID pools

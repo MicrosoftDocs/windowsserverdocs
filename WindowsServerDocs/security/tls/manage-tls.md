@@ -2,10 +2,11 @@
 title: Manage Transport Layer Security (TLS) in Windows Server
 description: Learn how to manage the Transport Layer Security (TLS) cipher suite order in Windows Server.
 ms.topic: how-to
-author: andreipo
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.contributor: alalve 
 ms.date: 04/17/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Manage Transport Layer Security (TLS)
@@ -110,3 +111,4 @@ Organizations can distribute curve parameters to enterprise, domain-joined, comp
 Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy settings can be used to configure the default TLS ECC Curve Order. Organizations can add their own trusted named curves to the operating system, and then add those named curves to the curve priority Group Policy setting to ensure they're used in future TLS handshakes. New curve priority lists become active on the next reboot after receiving the policy settings.
 
 ![Screenshot of the EEC Curve Order dialog box.](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
+
