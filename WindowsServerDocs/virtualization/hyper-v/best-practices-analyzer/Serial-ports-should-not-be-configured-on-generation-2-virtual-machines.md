@@ -1,8 +1,8 @@
 ---
 title: Serial ports should not be configured on generation 2 virtual machines
 description: Online version of the text for this Best Practices Analyzer rule.
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: 87061193-dd3f-4398-aa5d-4cee83cadfa3
 ms.date: 8/16/2016
@@ -30,4 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *If this is intentional, no further action is required. Otherwise, consider using Hyper-V Manager or Windows PowerShell to remove the connection string from the serial ports on the virtual machine.*
+
 

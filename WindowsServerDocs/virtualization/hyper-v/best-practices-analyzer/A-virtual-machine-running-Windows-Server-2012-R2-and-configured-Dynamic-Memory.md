@@ -1,8 +1,8 @@
 ---
 title: A virtual machine running Windows Server 2012 R2 and configured with Dynamic Memory should use recommended values for memory settings
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows Server 2012 R2.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 3a53c197-80ce-4b33-a83e-7e89e657a519
 ms.date: 8/16/2016
@@ -56,4 +56,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ```
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 2GB -MinimumBytes 256MB -StartupBytes 512MB
 ```
+
 

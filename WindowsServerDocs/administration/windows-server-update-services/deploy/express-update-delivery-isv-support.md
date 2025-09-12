@@ -2,8 +2,8 @@
 title: Express update delivery ISV support
 description: Windows Server Update Service (WSUS) article - How Independent Software Vendors (ISV) can configure Express update delivery using WSUS
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/11/2023
 ---
 # Express update delivery ISV support
@@ -153,4 +153,5 @@ Delivery Optimization (DO) is a self-organizing distributed cache solution for b
 By default in Windows 10 Enterprise and Education, DO allows peer-to-peer sharing on the organization's own network only, but you can configure it differently using Group Policy and mobile device management (MDM) settings.
 
 For more information about DO, see [Configure Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization).
+
 

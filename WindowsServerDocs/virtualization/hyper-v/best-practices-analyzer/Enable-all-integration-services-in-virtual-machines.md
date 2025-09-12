@@ -1,8 +1,8 @@
 ---
 title: Enable all integration services in virtual machines
 description: Learn what to do when one or more integration services are disabled or not working in a virtual machine.
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: how-to
 ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26
 ms.date: 8/16/2016
@@ -55,4 +55,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
     ```
     sc config <service-name> start=auto
     ```
+
 

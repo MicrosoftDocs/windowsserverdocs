@@ -2,8 +2,8 @@
 title: Deploy Azure Virtual Machines using Windows Admin Center
 description: Deploying Azure virtual machines with Windows Admin Center. Configuring Azure virtual machines as part of Windows Admin Center-managed scenarios.
 ms.topic: install-set-up-deploy
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 manager: jgerend
 ms.date: 01/28/2020
 ---
@@ -68,3 +68,4 @@ Here's a video showing how to use Storage Replica to replicate to Azure VMs.
 Here's a video showing how to use Windows Admin Center to create Azure VMs.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/__A8J9aC_Jk]
+

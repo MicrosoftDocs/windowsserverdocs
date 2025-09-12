@@ -2,8 +2,8 @@
 title: Active Directory domain join permissions in Windows Server
 description: This article describes the permissions required in Active Directory to successfully join computers to a Windows Server domain using a new computer account or an existing account.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/26/2025
 ---
 
@@ -270,3 +270,4 @@ If present, this error indicates that:
 - The user has insufficient access rights
 
 Review this document to ensure all mentioned necessary permissions are assigned to the user or group performing the domain join to prevent this issue.
+

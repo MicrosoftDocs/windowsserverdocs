@@ -2,8 +2,8 @@
 title: Configure multiple CSV for VM replication in Windows Server
 description: Configure multiple CSV for VM replication using Hyper-V Replica to increase scalability and fault tolerance in Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/15/2025
 ---
 
@@ -49,3 +49,4 @@ This command moves the VM storage to the specified destination path, allowing fo
 This approach is effective in different situations, including prereplication, post-replication, and during delta transfers of a replicated VM. During a VM storage move operation, delta replication is temporarily paused and automatically resumes once the move is complete. However, in some situations, such as when there's low disk space or storage movement latency, it might be necessary to manually resume the replication process.
 
 ---
+

@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)"
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/01/2022
 ms.topic: how-to
 ---
@@ -174,3 +174,4 @@ To manually classify a file:
 - [Plan for Retention of Information on File Servers](plan-retention-information-file-servers.md)
 
 - [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
+

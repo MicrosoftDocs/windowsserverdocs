@@ -1,8 +1,8 @@
 ---
 title: Avoid alignment inconsistencies between virtual blocks and physical disk sectors on dynamic virtual hard disks or differencing disks
 description: Learn what to do when alignment inconsistencies were detected for one or more virtual hard disks.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: a17c8fd2-af81-485b-bfea-bd1ef3e43923
 ms.date: 8/16/2016
@@ -30,4 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Use the Create Virtual Hard Disk Wizard to create a new VHD-format or VHDX-format virtual hard disk and specify the existing virtual hard disk as the source disk. The new virtual hard disk will be created with alignment between the virtual blocks and physical disk.*
+
 
