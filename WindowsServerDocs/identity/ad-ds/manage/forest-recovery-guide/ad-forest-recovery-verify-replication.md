@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 05/12/2025
-ms.custom: inhenkel
 ---
 
 # Active Directory Forest Recovery - Verify Replication
