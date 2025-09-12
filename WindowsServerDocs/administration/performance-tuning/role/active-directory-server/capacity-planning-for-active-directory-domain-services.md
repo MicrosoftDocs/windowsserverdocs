@@ -1049,7 +1049,7 @@ Always pair latency data with queue length and device/controller utilization to 
 Key success criteria:
 
 - Sustained `Avg Disk sec/Read` and `Avg Disk sec/Write` within target latency band during peak AD DS load.
-- No prolonged periods where observed IOPS plateau while latency climbs (symptom of saturation).
+- There are no prolonged periods where IOPS plateau and latency climbs. If observed this could indicate saturation.
 - Heavy maintenance tasks execute during defined maintenance windows without pushing production latency above thresholds.
 
 If targets aren't met after scheduling and configuration adjustments, proceed to capacity expansion or migration to higher‑performance storage tiers.
