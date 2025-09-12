@@ -5,7 +5,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 03/07/2024
 ms.topic: concept-article
-ms.custom: inhenkel
 ---
 
 # Virtualizing domain controllers with Hyper-V

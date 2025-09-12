@@ -7,7 +7,6 @@ ms.author: roharwoo
 ms.date: 05/12/2025
 ms.topic: best-practice
 
-ms.custom: inhenkel
 ---
 
 # Integrating AD DS into an Existing DNS Infrastructure

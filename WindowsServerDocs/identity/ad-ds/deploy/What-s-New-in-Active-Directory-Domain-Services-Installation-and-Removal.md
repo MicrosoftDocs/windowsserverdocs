@@ -6,7 +6,6 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 05/12/2025
 ms.topic: whats-new
-ms.custom: inhenkel
 ---
 # What's New in Active Directory Domain Services Installation and Removal
 
