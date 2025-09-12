@@ -12897,7 +12897,12 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-PowerShell.md",
-      "redirect_url": "/windows-server/networking/sdn/deploy/deploy-network-controller-using-windows-powershell",
+      "redirect_url": "/azure/azure-local/deploy/sdn-express-23h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md",
+      "redirect_url": "/azure/azure-local/deploy/sdn-express-23h2",
       "redirect_document_id": false
     },
     {
