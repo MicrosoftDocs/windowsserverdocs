@@ -1,8 +1,8 @@
 ---
 title: Time accuracy improvements for Windows Server 2016
 description: Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/17/2018
 ms.topic: how-to
 ---
@@ -456,3 +456,4 @@ To disable the feature:
 1. Rebooting the machine makes the setting effective immediately and also causes it to stop collecting any time data from SSL connections. The latter part has a small overhead and shouldn't be a performance concern.
 
 1. To apply this setting in an entire domain, set the `UtilizeSSLTimeData` value in the W32Time Group Policy setting to `0` and publish the setting. When the setting is picked up by a Group Policy client, W32Time is notified and it stops time monitoring and enforcement by using SSL time data. The SSL time data collection stops when each machine reboots. If your domain has portable slim laptops/tablets and other devices, you might want to exclude such machines from this policy change. These devices eventually face battery drain and need the Secure Time Seeding feature to bootstrap their time.
+

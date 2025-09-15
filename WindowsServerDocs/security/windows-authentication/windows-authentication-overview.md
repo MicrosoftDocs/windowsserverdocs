@@ -3,8 +3,8 @@ title: Windows Authentication Overview
 description: Learn about lists documentation resources for Windows authentication and logon technologies that include product evaluation, getting started guides, procedures, design and deployment guides, technical references, and command references.
 ms.topic: concept-article
 ms.assetid: 485a0774-0785-457f-a964-0e9403c12bb1
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/29/2025
 ---
 
@@ -73,4 +73,5 @@ Many authentication features can be configured using Group Policy, which can be 
 | PKU2U | [Introducing PKU2U in Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560634(v=ws.10)) |
 | Smart Card | [Smart Card Technical Reference](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference)<p> |
 | Credentials | [Credentials Protection and Management](../credentials-protection-and-management/credentials-protection-and-management.md)<br />Contains links to current and past resources<p>[Passwords Overview](../kerberos/passwords-overview.md)<br />Contains links to current and past resources |
+
 

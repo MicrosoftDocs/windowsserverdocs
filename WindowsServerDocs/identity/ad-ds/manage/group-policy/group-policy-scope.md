@@ -2,8 +2,8 @@
 title: Group Policy scope in Windows
 description: Learn about how Group Policy scope defines specific users, computers, and organizational units within an Active Directory environment in Windows.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/13/2025
 ---
 
@@ -129,3 +129,4 @@ In summary, Security Filtering utilizes permission settings to determine GPO app
 Each GPO contains various policy settings, and it's common for multiple GPOs to define the same setting, leading to potential conflicts. Consider two employees trying to reserve the same meeting room at the same time—only the last reservation made is honored, overriding the previous one. To manage these conflicts, Group Policy uses a technique called "last-writer-wins". This method resolves conflicts based on the order of application, where the most recently applied GPO takes precedence. The order of application is determined by a hierarchy. First, policies are applied at the Local level, followed by the site, domain, and then OU. Within the same AD location, GPOs are applied according to their link order that's set in the GPMC.
 
 While conflict resolution often addresses settings linked at different AD locations, conflicts can also occur between GPOs linked to the same location. In these cases, Group Policy continues to use the last-writer-wins approach to determine which setting takes precedence. The order in which GPOs are applied at a given AD location is defined by their link order in the GPMC. Understanding how GPOs are linked and ordered in GPMC is key to predicting which settings are enforced when conflicts arise at the same AD location.
+

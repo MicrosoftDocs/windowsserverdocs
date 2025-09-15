@@ -1,9 +1,9 @@
 ---
 title: Configure the Certificate Enrollment Policy Web Service in Windows Server
 description: Learn how to configure the Certificate Enrollment Policy Web Service so that users and computers can get certificate enrollment policy information.
-author: dknappettmsft
+author: robinharwood
 ms.topic: how-to
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 03/27/2025
 #customer intent: As an IT administrator, I want to configure the Certificate Enrollment Policy Web Service so that users and computers can obtain certificate enrollment policy information.
 ---
@@ -118,4 +118,5 @@ To distribute certificates for computers:
 - [Configure Certificate Enrollment Web Service for certificate key-based renewal on a custom port](/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal)
 
 - [PKI design considerations](/windows-server/identity/ad-cs/pki-design-considerations)
+
 

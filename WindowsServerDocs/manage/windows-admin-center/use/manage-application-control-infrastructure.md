@@ -2,8 +2,8 @@
 title: WDAC enforced infrastructure in Windows Admin Center
 description: Learn about Windows Defender Application Control (WDAC) enforced servers and clusters in using Windows Admin Center including settings and requirements.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/14/2025
 ---
 
@@ -113,3 +113,4 @@ If you get a "Module not found" or "failed to connect" error, perform one the fo
 - [WDAC deployment guide](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 - [AppLocker overview](/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview)
 - [Application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+

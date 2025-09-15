@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2018
 ms.topic: concept-article
 ---
@@ -89,3 +89,4 @@ PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 -   [ReFS overview](refs-overview.md)
 -   [ReFS block cloning](block-cloning.md)
 -   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+

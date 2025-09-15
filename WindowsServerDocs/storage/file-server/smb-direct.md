@@ -2,8 +2,8 @@
 title: Improve performance of a file server with SMB Direct
 description: SMB Direct allows for faster file transfer and more efficient network usage by utilizing remote direct memory access (RDMA) technology in Windows.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/16/2025
 ---
 
@@ -187,3 +187,4 @@ Here's how to confirm the failover capability of SMB Direct:
 - [Server Message Block overview](file-server-smb-overview.md)
 - [Increasing Server, Storage, and Network Availability: Scenario Overview](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
 - [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+

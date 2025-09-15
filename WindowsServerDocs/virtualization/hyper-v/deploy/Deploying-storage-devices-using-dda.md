@@ -2,8 +2,8 @@
 title: Deploy NVMe Storage Devices using Discrete Device Assignment
 description: Learn how to use DDA to deploy storage devices
 ms.topic: install-set-up-deploy
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
 ms.date: 09/17/2020
 ---
@@ -58,4 +58,5 @@ Remove-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 Mount-VMHostAssignableDevice -LocationPath $locationPath
 ```
 You can then re-enable the device in device manager and the host operating system will be able to interact with the device again.
+
 
