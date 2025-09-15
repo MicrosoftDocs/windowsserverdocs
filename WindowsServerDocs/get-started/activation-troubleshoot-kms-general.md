@@ -36,7 +36,7 @@ You can use the `slmgr.vbs` command-line tool and the Event Viewer to troublesho
 
 # [KMS client](#tab/kms-client)
 
-:::image type="content" source="./media/ee939272.kms_client_slmgr_output(en-us,technet.10).png" alt-text="A screenshot of the output for the s l m g r command for the k m s client. There are labels explaining what each variable means.":::
+:::image type="content" source="./media/ee939272.kms_client_slmgr_output(en-us,technet.10).png" alt-text="A screenshot of the output for the SLMGR command for the KMS client. There are labels explaining what each variable means.":::
 
 Here are some variables you should pay attention to in the output while troubleshooting:
 
@@ -100,7 +100,7 @@ The following sections describe client events that you should be familiar with t
 
 The following screenshot showing a segment of an event ID 12288 entry from the KMS event log:
 
-:::image type="content" source="./media/ee939272.client_12288(en-us,technet.10).png" alt-text="A screenshot of the k m s event i d 12288 with labels explaining what each value in the error message means.":::
+:::image type="content" source="./media/ee939272.client_12288(en-us,technet.10).png" alt-text="A screenshot of the KMS event ID 12288 with labels explaining what each value in the error message means.":::
 
 If you see only event ID 12288 without a corresponding event ID 12289, either the KMS client couldn't reach the KMS host, the KMS host didn't respond, or the client didn't receive the host's response. In these cases, you must verify that the KMS host is discoverable and that the KMS clients can contact it.
 
@@ -112,7 +112,7 @@ An unsuccessful activation doesn't always mean that the client has event ID 1228
 
 The following screenshot showing a segment of an event ID 12289 entry from the KMS event log:
 
-:::image type="content" source="./media/ee939272.client_12289(en-us,technet.10).png" alt-text="A screenshot of the k m s event i d 12289 with labels explaining what each value in the info section means.":::
+:::image type="content" source="./media/ee939272.client_12289(en-us,technet.10).png" alt-text="A screenshot of the KMS event ID 12289 with labels explaining what each value in the info section means.":::
 
 The *Info* section of event ID 12289 provides the following information:
 
