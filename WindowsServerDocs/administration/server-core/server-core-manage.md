@@ -1,8 +1,8 @@
 ---
 title: Manage Server Core
 description: Learn how to manage a Server Core installation of Windows Server.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/16/2025
 ms.topic: how-to
 ---
@@ -143,3 +143,4 @@ sc delete <service_name>
 ```
 
 Where *service_name* is the name of the service that you got when you ran **sc query type= driver**.
+

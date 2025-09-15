@@ -4,8 +4,8 @@ description: This topic provides an overview of Network Policy Server connection
 manager: brianlic
 ms.topic: concept-article
 ms.assetid: 849d661a-42c1-4f93-b669-6009d52aad39
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
@@ -90,3 +90,4 @@ When NPS is used as a RADIUS proxy between a RADIUS client and a RADIUS server, 
 10. The RADIUS server sends an Accounting-Response to the NPS RADIUS proxy, where it is forwarded to the access server.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

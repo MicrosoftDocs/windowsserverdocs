@@ -1,8 +1,8 @@
 ---
 title: Avoid mapping one storage path to multiple resource pools
 description: Learn what to do when a storage file path is mapped to multiple resource pools.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: 24992453-762b-4892-9a50-55d237b9b7f2
 ms.date: 8/16/2016
@@ -30,3 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *Use Windows PowerShell to reconfigure the storage resource pools so that multiple pools do not use the same storage path.*
+
+

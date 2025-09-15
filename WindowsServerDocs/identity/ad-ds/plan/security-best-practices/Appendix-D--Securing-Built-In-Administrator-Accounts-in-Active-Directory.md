@@ -4,7 +4,6 @@ ms.assetid: 11f36f2b-9981-4da0-9e7c-4eca78035f37
 title: Appendix D - Securing Built-In Administrator Accounts in Active Directory
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
 ms.custom: sfi-image-nochange

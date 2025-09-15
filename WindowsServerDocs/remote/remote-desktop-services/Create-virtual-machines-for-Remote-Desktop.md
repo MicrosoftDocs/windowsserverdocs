@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: how-to
 ms.assetid: b0f62d6f-0915-44ca-afef-be44a922e20e
 author: dknappettmsft
-manager: dongill
 ---
 
 # Create virtual machines for Remote Desktop

@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: concept-article
 ms.assetid: cd42fbac-fa7b-484d-b97d-3911e9180e7b
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ---
 # Important Information about Software License Compliance

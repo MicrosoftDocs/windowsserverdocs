@@ -4,8 +4,8 @@ description: This topic provides an overview of Hyper-V Virtual Switch in Window
 manager: brianlic
 ms.topic: concept-article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/08/2020
 ---
 # Hyper-V Virtual Switch
@@ -39,7 +39,7 @@ With built-in support for Network Device Interface Specification \(NDIS\) filter
 
 In the following illustration, a VM has a virtual NIC that is connected to the Hyper-V Virtual Switch through a switch port.
 
-![Virtual Switch connections](../media/Hyper-V-Virtual-Switch/Vswitch_01.jpg)
+![Virtual Switch connections](./media/Vswitch_01.jpg)
 
 Hyper-V Virtual Switch capabilities provide you with more options for enforcing tenant isolation, shaping and controlling network traffic, and employing protective measures against malicious VMs.
 
@@ -81,3 +81,5 @@ Following is a list of capabilities that enhance Hyper-V Virtual Switch usabilit
 -   **Explicit Congestion Notification (ECN) marking support**:  ECN marking, also known as Data CenterTCP (DCTCP), enables the physical switch and operating system to regulate traffic flow such that the buffer resources of the switch are not flooded, which results in increased traffic throughput.
 
 -   **Diagnostics**: Diagnostics allow easy tracing and monitoring of events and packets through the virtual switch.
+
+

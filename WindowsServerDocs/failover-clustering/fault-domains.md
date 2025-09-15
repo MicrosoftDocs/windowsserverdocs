@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Fault domain awareness"
 title: Fault domain awareness
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 02/16/2023
 ---
@@ -184,3 +184,4 @@ This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, 
 You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service.
 
 This short video demonstrates the value of [adding location descriptors to fault domains](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-4-location-description).
+

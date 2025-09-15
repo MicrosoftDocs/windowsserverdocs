@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: upgrade-and-migration-article
 ms.assetid: f7b1f1f6-57c8-40ab-a235-e36240dcc1f8
 author: dknappettmsft
-manager: scottman
 ---
 # Upgrade Remote Desktop Services deployments
 

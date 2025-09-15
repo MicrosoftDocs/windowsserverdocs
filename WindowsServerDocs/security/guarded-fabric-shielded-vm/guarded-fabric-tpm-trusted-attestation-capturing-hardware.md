@@ -4,8 +4,8 @@ description: "Learn more about: Authorize guarded hosts using TPM-based attestat
 ms.topic: how-to
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 1/24/2023
 ---
 
@@ -172,3 +172,5 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 > [!div class="nextstepaction"]
 > [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
+

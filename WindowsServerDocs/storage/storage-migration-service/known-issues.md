@@ -1,8 +1,8 @@
 ---
 title: Storage Migration Service known issues
 description: Known issues and troubleshooting support for Storage Migration Service, such as how to collect logs for Microsoft Support.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 manager: tiaascs
 ms.date: 04/24/2023
 ms.topic: troubleshooting-known-issue
@@ -965,3 +965,4 @@ To work around this issue, use the steps in [Manual cutover](cutover.md#manual-c
 ## See also
 
 - [Storage Migration Service overview](overview.md)
+

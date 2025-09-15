@@ -1,7 +1,6 @@
 ---
 title: fsutil hardlink
 description: Reference article for the fsutil hardlink command, which creates a hard link between an existing file and a new file.
-manager: dmoss
 ms.author: alalve
 author: xelu86
 ms.assetid: 835fc6f1-cc84-4189-b29a-dde90792469e

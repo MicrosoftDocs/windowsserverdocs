@@ -3,8 +3,8 @@ title: Windows Authentication Architecture
 description: Learn about the basic architectural scheme for Windows authentication.
 ms.topic: concept-article
 ms.assetid: 07c9d6bb-9b03-407d-89b6-97c7551b256b
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 manager: mtillman
 ms.date: 10/12/2016
 ---
@@ -37,3 +37,5 @@ SSPI is the implementation of the Generic Security Service API (GSSAPI). SSPI pr
 -   [Credentials Processes in Windows Authentication](credentials-processes-in-windows-authentication.md)
 
 -   [Windows Authentication Technical Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169029(v=ws.10))
+
+

@@ -1,8 +1,8 @@
 ---
 title: Find the Current Active Directory Schema Version
 description: This article describes how to find the current schema version in Active Directory for Windows Server.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/08/2025
 ms.topic: how-to
 ---
@@ -136,3 +136,4 @@ The following articles show how to map the **rangeUpper** attribute value with i
 ## Related content
 
 - [Windows Server Active Directory schema updates](Schema-Updates.md)
+

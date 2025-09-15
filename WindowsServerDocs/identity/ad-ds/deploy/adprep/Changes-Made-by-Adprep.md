@@ -4,7 +4,6 @@ title: Changes Made by Adprep.exe
 description: Describes the changes that Adprep.exe makes in Windows Server 2012 R2 and Windows Server 2012
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

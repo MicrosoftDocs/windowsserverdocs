@@ -4,7 +4,6 @@ description: Learn how to work with CALs in MultiPoint Services
 ms.topic: how-to
 ms.assetid: 675e089e-d841-401e-bba7-69f3929ef609
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

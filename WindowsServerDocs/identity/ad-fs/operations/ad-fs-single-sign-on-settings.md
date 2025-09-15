@@ -2,9 +2,6 @@
 title: AD FS 2016 Single Sign On Settings
 description: "Learn more about: AD FS single sign-on Settings"
 ms.topic: how-to
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
 ---
 # AD FS single sign-on settings

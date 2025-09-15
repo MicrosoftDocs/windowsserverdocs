@@ -2,8 +2,8 @@
 title: Hyper-V Virtual Fibre Channel in Windows Server
 description: Learn about how Virtual Fibre Channel works and device support in Hyper-V for Windows Server.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/12/2024
 ---
 
@@ -77,3 +77,4 @@ Hyper-V in Windows Server can use the multipath I/O (MPIO) functionality to ensu
 - [Plan for Hyper-V on Windows Server](Plan-Hyper-V-on-Windows-Server.md)
 
 - [Plan for Hyper-V scalability on Windows Server](plan-hyper-v-scalability-in-windows-server.md)
+

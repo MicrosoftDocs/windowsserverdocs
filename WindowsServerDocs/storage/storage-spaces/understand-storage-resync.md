@@ -5,12 +5,17 @@ ms.author: roharwoo
 ms.topic: concept-article
 author: robinharwood
 ms.date: 02/23/2024
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 # Understand and monitor storage resync
 
->Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
-
-Storage resync alert is a capability of [Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) in Azure Stack HCI and Windows Server. It allows the Health Service to throw a fault, notifying you about the resync. This helps prevent you from accidentally taking down more servers, which could affect multiple fault domains resulting in your cluster going down.
+Storage resync alert is a capability of [Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) in Azure Local and Windows Server. It allows the Health Service to throw a fault, notifying you about the resync. This helps prevent you from accidentally taking down more servers, which could affect multiple fault domains resulting in your cluster going down.
 
 This article provides an overview of storage resync and how you can monitor it in a failover cluster with Storage Spaces Direct.
 
@@ -72,7 +77,7 @@ Series                       Time                Value Unit
 ClusterNode.Storage.Degraded 01/11/2019 16:26:48     214 GB
 ```
 
-Windows Admin Center uses Health faults to set the status and color of the cluster nodes. On the HCI Dashboard, this new fault enables the cluster nodes to transition from red (down) to yellow (resyncing) to green (up), instead of going straight from red to green.
+Windows Admin Center uses Health faults to set the status and color of the cluster nodes. On the Dashboard, this new fault enables the cluster nodes to transition from red (down) to yellow (resyncing) to green (up), instead of going straight from red to green.
 
 The following image compares how storage resync progresses in Windows Server 2016 vs. Windows Server 2019.
 

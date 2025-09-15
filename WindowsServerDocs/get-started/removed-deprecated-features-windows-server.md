@@ -2,8 +2,8 @@
 title: Features Removed or No Longer Developed in Windows Server
 description: Learn about the features and functionalities removed or no longer developed in Windows Server.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/02/2025
 ---
 
@@ -138,3 +138,4 @@ We're removing the following features and functionalities from the installed pro
 ## Related content
 
 - [Deprecation: What it means in the Windows lifecycle](https://techcommunity.microsoft.com/blog/windows-itpro-blog/deprecation-what-it-means-in-the-windows-lifecycle/4372457)
+

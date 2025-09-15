@@ -1,8 +1,8 @@
 ---
 title: Hyper-V Virtual Machine Management service must be running
 description: Learn what to do when the service required to manage virtual machines isn't running, and how to resolve the problem.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 ms.date: 02/18/2025
@@ -80,3 +80,4 @@ If the service is already configured to start automatically and you just need to
 1. In the navigation pane, select the name of the server if it's not already selected.
 
 1. In the **Actions** pane, select **Start Service**.
+

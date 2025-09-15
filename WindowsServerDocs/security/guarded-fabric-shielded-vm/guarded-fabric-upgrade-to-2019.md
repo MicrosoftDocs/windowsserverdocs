@@ -3,8 +3,8 @@ description: "Learn more about: Upgrade a guarded fabric to Windows Server 2019"
 title: Upgrade a guarded fabric to Windows Server 2019
 ms.topic: upgrade-and-migration-article
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/21/2018
 ---
 
@@ -92,3 +92,4 @@ Follow the steps below if you are currently running Active Directory-based attes
     ```powershell
     Set-HgsServer -TrustActiveDirectory
     ```
+

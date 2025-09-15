@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: ca3cd1ca-6f2c-4190-b68f-27816635facb
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +33,7 @@ manage-bde -resume [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To resume BitLocker encryption on drive C, type:
 
 ```
-manage-bde –resume C:
+manage-bde -resume C:
 ```
 
 ## Related links

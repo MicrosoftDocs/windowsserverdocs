@@ -1,8 +1,8 @@
 ---
 title: Enable all virtual network adapters configured for a virtual machine
 description: Learn what to do when one or more network adapters may be disabled in a virtual machine.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
 ms.date: 8/16/2016
@@ -33,3 +33,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution
 
 *Use Device Manager in the guest operating system to enable all virtual network adapters. If the adapter is not required, use Hyper-V Manager to remove it from the virtual machine.*
+
+

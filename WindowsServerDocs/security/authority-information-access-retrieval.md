@@ -2,8 +2,8 @@
 title: Authority Information Access in Windows
 description: Learn how to manage Authority Information Access (AIA) URL retrieval in Windows, ensuring certificate trust chains are built safely.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/22/2025
 ---
 
@@ -118,3 +118,4 @@ try {
 - [Active Directory Certificate Services documentation](/windows-server/identity/ad-cs)
 
 - [Microsoft’s Zero Trust Best Practices](/azure/security/fundamentals/zero-trust)
+

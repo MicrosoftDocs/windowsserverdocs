@@ -2,8 +2,8 @@
 title: Manage Cluster Shared Volumes
 description: Learn how to manage Cluster Shared Volumes (CSVs) in a failover cluster in Windows Server.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/08/2025
 ---
 
@@ -169,3 +169,4 @@ Be sure to carefully review what data your backup application backs up and resto
 - [Understanding the state of your Cluster Shared Volumes](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-state-of-your-cluster-shared-volumes/ba-p/371889)
 
 - [Cluster Shared Volume Diagnostics](https://techcommunity.microsoft.com/t5/failover-clustering/cluster-shared-volume-diagnostics/ba-p/371908)
+

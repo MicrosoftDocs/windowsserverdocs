@@ -1,8 +1,8 @@
 ---
 title: Avoid pausing a virtual machine
 description: Learn what to do when this server has one or more virtual machines in a paused state.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 ms.date: 8/16/2016
@@ -52,3 +52,5 @@ You can do this in one command by using filtering and the pipeline after you get
 ```
 get-vm | where state -eq 'paused' | resume-vm
 ```
+
+

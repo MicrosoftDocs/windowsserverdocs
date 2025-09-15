@@ -3,8 +3,8 @@ title: Use local resources on Hyper-V with VMConnect
 description: Describes the requirements for using local resources with Virtual Machine Connection (VMConnect) on Hyper-V.
 ms.topic: how-to
 ms.assetid: 18eface5-7518-4c6b-9282-93e2e3e87492
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/18/2025
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
@@ -27,23 +27,23 @@ To choose a local resource:
 
 1. Select **Show options**.
 
-    ![Screenshot that calls out Show options on the bottom left of the dialog box.](media/HyperV-VMConnect-DisplayConfig.png)
+    ![Screenshot that calls out Show options on the bottom left of the dialog box.](./media/HyperV-VMConnect-DisplayConfig.png)
 
 1. Select **Local resources**.
 
-    ![Screenshot that calls out the Local resources tab.](media/HyperV-VMConnect-DisplayConfig-LocalResources.png)
+    ![Screenshot that calls out the Local resources tab.](./media/HyperV-VMConnect-DisplayConfig-LocalResources.png)
 
 1. Select **More**.
 
-    ![Screenshot that calls out the More button.](media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)
+    ![Screenshot that calls out the More button.](./media/HyperV-VMConnect-DisplayConfig-LocalResourcesMore.png)
 
 1. Select the drive that you want to use on the virtual machine and click **Ok**.
 
-    ![Screenshot that shows the local resources and drives that you can select.](media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)
+    ![Screenshot that shows the local resources and drives that you can select.](./media/HyperV-VMConnect-Settings-LocalResourcesDrives.png)
 
 1. Select **Save my settings for future connections to this virtual machine**.
 
-    ![Screenshot that calls out the checkbox to select for this option.](media/HyperV-VMConnect-SaveSettings.png)
+    ![Screenshot that calls out the checkbox to select for this option.](./media/HyperV-VMConnect-SaveSettings.png)
 
 1. Select **Connect**.
 
@@ -105,3 +105,4 @@ You may want to use the computer's local resources to:
 - [Hyper-V Virtual Machine Connection](/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect)
 
 - [Should I create a generation 1 or 2 virtual machine in Hyper-V?](plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
+

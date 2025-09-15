@@ -3,7 +3,6 @@ description: "Learn more about: AD Forest Recovery - Raising the value of availa
 title: AD Forest Recovery - Raising RID pools
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.custom:

@@ -1,11 +1,10 @@
 ---
 title: Desktop hosting service 
 description: Learn about the desktop hosting service's components in Windows Server.
-author: xelu86
+author: dknappettmsft
 ms.date: 7/3/2024
 ms.topic: concept-article
-ms.author: alalve
-manager: tedhudek
+ms.author: daknappe
 ---
 # Desktop hosting service
 
@@ -66,3 +65,4 @@ For more information, see the following articles:
 ### User profile disks
 
 User profile disks allow users to save personal settings and files when they are signed in to a session on an RD Session Host server in one collection, then access the same settings and files when signing in to a different [RD Session Host](rds-roles.md#remote-desktop-session-host) server in the collection. When the user first signs in, the tenant's file server creates a user profile disk that gets mounted to the RD Session Host server that the user is currently connected to. For each subsequent sign-in, the user profile disk is mounted to the appropriate RD Session host server, and it is unmounted with each sign-out. Only the user can access the profile disk's contents.
+

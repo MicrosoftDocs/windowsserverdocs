@@ -1,9 +1,9 @@
-﻿---
+---
 title: Install a policy module with the Network Device Enrollment Service in Windows Server
 description: Learn how to install, configure, and uninstall a policy module with the Network Device Enrollment Service.
-author: meaghanlewis
+author: robinharwood
 ms.topic: how-to
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 03/27/2025
 ---
 
@@ -73,3 +73,4 @@ NDES supports only one registered policy module. After you register it, it's alw
 - [Learn more about Network Device Enrollment Service for Active Directory Certificate Services](/windows-server/identity/ad-cs/network-device-enrollment-service-overview)
 - [Configure Network Device Enrollment Service to use a domain user account](/windows-server/identity/ad-cs/create-domain-user-account-ndes-service-account)
 - [Troubleshoot the NDES policy module in Microsoft Intune](/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-ndes-policy-module)
+

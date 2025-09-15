@@ -4,8 +4,8 @@ title: Deploy guarded hosts
 ms.topic: install-set-up-deploy
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -33,3 +33,4 @@ The topics in this section describe the steps that a fabric administrator takes 
 ## Additional References
 
 - [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms)
+

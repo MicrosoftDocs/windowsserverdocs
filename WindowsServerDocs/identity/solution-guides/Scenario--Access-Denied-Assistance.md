@@ -2,9 +2,8 @@
 description: "Learn more about: Scenario: Access-Denied Assistance"
 ms.assetid: aae907eb-11cf-4a87-a046-8680872ed0b1
 title: Scenario Access-Denied Assistance
-author: xelu86
-ms.author: alalve
-manager: tedhudek
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/06/2023
 ms.topic: example-scenario
 ---
@@ -49,3 +48,4 @@ The following table lists the features that are part of this scenario and descri
 |-----------|---------------------------------|
 |[File Server Resource Manager Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11))|Access-denied assistance can be configured by using the File Server Resource Manager console on the file server.|
 |[File and Storage Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))|File Server Resource Manager is a File and Storage Services role service, and it is comprised of a set of features that can be used to administer the file servers on your network.|
+

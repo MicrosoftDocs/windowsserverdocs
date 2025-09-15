@@ -1,12 +1,11 @@
 ---
 title: Azure services and considerations for desktop hosting
 description: Learn about considerations unique to Azure with a Remote Desktop hosting solution.
-author: xelu86
+author: dknappettmsft
 ms.date: 7/3/2024
 ms.topic: reference-architecture
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
-ms.author: alalve
-manager: tedhudek
+ms.author: daknappe
 ---
 # Azure services and considerations for desktop hosting
 
@@ -62,3 +61,4 @@ For more information, see the following articles:
 Microsoft Entra application proxy is a service provided in paid SKUs of Microsoft Entra ID that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet by a public IP address. Hosters can use Microsoft Entra application proxy to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment. Microsoft Entra application proxy also enables many of the benefits that Microsoft Entra ID provides, such as conditional access and multi-factor authentication.
 
 For more information, see [Get started with Application Proxy and install the connector](/azure/active-directory/manage-apps/application-proxy-enable).
+

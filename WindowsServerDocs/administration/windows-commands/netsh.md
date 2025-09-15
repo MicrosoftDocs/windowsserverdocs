@@ -2,8 +2,8 @@
 title: Network shell (netsh)
 description: Overview of Network shell (netsh), a command-line utility for displaying or modifying the network configuration of a local or remote Windows computer.
 ms.topic: overview
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/12/2025
 ---
 
@@ -39,7 +39,7 @@ The following parameters are optional.
 If your string value contains spaces between characters, you must enclose the string value in quotation marks. For example, `-r "contoso remote device"`. After you exit and reenter `netsh`, the target computer is reset as the local computer. You can run netsh commands on a remote computer by specifying a computer name stored in WINS, a UNC name, an internet name to be resolved by the DNS server, or an IP address.
 
 > [!NOTE]
-> To use certain netsh commands, such as the `netsh firewall` commands remotely on another computer by using the netsh `–r` parameter, the **Remote Registry** service must be running on the remote computer. If this service isn't running, you might receive a network communication error message.
+> To use certain netsh commands, such as the `netsh firewall` commands remotely on another computer by using the netsh `-r` parameter, the **Remote Registry** service must be running on the remote computer. If this service isn't running, you might receive a network communication error message.
 
 ## Running netsh commands
 
@@ -238,3 +238,4 @@ Here's a brief explanation of what this script does:
 ## See also
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+

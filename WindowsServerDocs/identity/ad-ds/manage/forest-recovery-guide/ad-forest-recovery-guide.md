@@ -1,8 +1,8 @@
 ---
 title: Active Directory Forest Recovery Guide 
 description: This guide contains recommendations for recovering an Active Directory forest if a forest-wide failure renders all DCs in the forest incapable of functioning normally.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/09/2025
 ms.topic: troubleshooting
 ---
@@ -20,3 +20,4 @@ the forest incapable of functioning normally. The steps it contains serve as a t
 ## Legacy guidance
 
 You can find guidance for older operating systems in the [Windows Server archive](/previous-versions/windows/).
+

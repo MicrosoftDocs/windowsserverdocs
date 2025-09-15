@@ -3,8 +3,8 @@ description: "Learn more about: Initialize HGS using host key attestation"
 title: Initialize HGS using host key attestation
 ms.topic: how-to
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -17,6 +17,8 @@ This step depends on whether you are initializing HGS in a new forest or an exis
   -Or-
 
 - [Initialize the HGS cluster in an existing bastion forest](guarded-fabric-initialize-hgs-key-mode-bastion.md)
+
+
 
 
 

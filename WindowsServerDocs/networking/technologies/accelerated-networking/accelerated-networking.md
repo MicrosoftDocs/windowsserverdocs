@@ -2,8 +2,8 @@
 title: Accelerated Networking (preview) for Windows Server
 description: How to set up and validate Accelerated Networking on your virtual machines using PowerShell and Windows Admin Center.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/18/2025
 ---
 
@@ -196,3 +196,4 @@ You might encounter the following error messages while using this feature.
 - [What are Azure Arc-enabled servers?](/azure/azure-arc/servers/overview)
 
 - [High-performance networking (HPN)](../hpn/hpn-top.md)
+

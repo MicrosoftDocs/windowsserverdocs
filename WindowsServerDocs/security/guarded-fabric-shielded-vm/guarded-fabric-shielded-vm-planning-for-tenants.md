@@ -4,8 +4,8 @@ title: Guarded Fabric and Shielded VM Planning Guide for Tenants
 ms.topic: concept-article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 12/10/2020
 ---
 
@@ -83,5 +83,7 @@ When using signed template disks to create shielded VMs, two options are availab
 
 1. Use an existing signed template disk that is provided by your virtualization provider. In this case, the virtualization provider maintains signed template disks.
 2. Upload a signed template disk to the virtualization fabric. The VM owner is responsible for maintaining signed template disks.
+
+
 
 

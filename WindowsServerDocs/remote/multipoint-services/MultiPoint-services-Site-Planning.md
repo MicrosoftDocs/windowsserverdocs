@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: concept-article
 ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # MultiPoint Services Site Planning

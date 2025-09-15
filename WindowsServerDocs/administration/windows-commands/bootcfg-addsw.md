@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: d8389293-ecd9-42f0-b84b-b9ead4cf52e6
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg addsw

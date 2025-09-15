@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: concept-article
 ms.assetid: d6ff5b22-7695-4fee-b1bd-6c9dce5bd0e8
 author: dknappettmsft
-manager: scottman
 ---
 # Remote Desktop Services - GPU acceleration
 

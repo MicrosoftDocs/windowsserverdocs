@@ -2,9 +2,9 @@
 title: Control SMB signing behavior
 description: How to disable SMB signing on third-party servers in Windows 11 and Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
-ms.date: 10/25/2024
+ms.author: roharwoo
+author: robinharwood
+ms.date: 08/13/2025
 ---
 
 # Control SMB signing behavior
@@ -23,35 +23,35 @@ SMB signing requirements can involve both outbound signing, which covers traffic
 
 ## SMB signing behavior
 
-Although all versions of Windows and Windows Server support SMB signing, a third-party may opt to disable or not support it. If you try to connect to a remote share on a third-party SMB server that doesn't allow SMB signing, you may encounter one of the following error messages:
+Although all versions of Windows and Windows Server support SMB signing, a third-party might opt to disable or not support it. If you try to connect to a remote share on a third-party SMB server that doesn't allow SMB signing, you might encounter one of the following error messages:
 
-  ```error
-  0xc000a000
-  -1073700864
-  STATUS_INVALID_SIGNATURE                                      
-  The cryptographic signature is invalid.
-  ```
+```error
+0xc000a000
+-1073700864
+STATUS_INVALID_SIGNATURE
+The cryptographic signature is invalid.
+```
 
-  To resolve this issue, adjust the settings on your third-party SMB server to allow (enable) SMB signing.
+To resolve this issue, adjust the settings on your third-party SMB server to allow (enable) SMB signing.
 
-When you try to connect to third-party devices that use guest accounts to simplify access, you may receive one of these error messages:
+When you try to connect to third-party devices that use guest accounts to simplify access, you might receive one of these error messages:
 
-  ```error
-  You can't access this shared folder because your organization's security policies block
-  unauthenticated guest access. These policies help protect your PC from unsafe or malicious
-  devices on the network.
-  ```
+```error
+You can't access this shared folder because your organization's security policies block
+unauthenticated guest access. These policies help protect your PC from unsafe or malicious
+devices on the network.
+```
 
-  ```error
-  Error code: 0x80070035
-  The network path was not found.
-  ```
+```error
+Error code: 0x80070035
+The network path was not found.
+```
 
-  ```error
-  System error 3227320323 has occurred.
-  ```
+```error
+System error 3227320323 has occurred.
+```
 
-Disabling SMB signing may be necessary if you're unable to disable guest usage for your third-party. However, this means that you're using guest access and preventing your client from ensuring signing to a trusted device.
+Disabling SMB signing might be necessary if you're unable to disable guest usage for your third-party. However, this means that you're using guest access and preventing your client from ensuring signing to a trusted device.
 
 > [!CAUTION]
 > We don't recommend disabling SMB signing as a workaround for third-party servers. We also don't recommend trying to sign with guest accounts.
@@ -67,7 +67,7 @@ You should also follow these recommendations to ensure your SMB signatures are e
 
 - Use Kerberos instead of NTLMv2.
 - Don't connect to shares using IP addresses.
-- Don't use CNAME DNS records. Instead, assign alternate computer names with NETDOM.EXE.
+- Don't use CNAME Domain Name System (DNS) records. Instead, assign alternate computer names with `netdom.exe`.
 
 ## Disable SMB signing
 
@@ -184,7 +184,7 @@ Get-SmbServerConfiguration | FL RequireSecuritySignature
 
 If the returned information is **True**, then SMB signing is enabled, otherwise, if the returned information is **False**, then SMB signing is disabled.
 
-## Related content
+## See also
 
 - [Overview of File Sharing using the SMB 3 protocol in Windows Server](file-server-smb-overview.md)
 
@@ -193,3 +193,4 @@ If the returned information is **True**, then SMB signing is enabled, otherwise,
 - [SMB security enhancements](smb-security.md)
 
 - [How to enable insecure guest logons in SMB2 and SMB3](enable-insecure-guest-logons-smb2-and-smb3.md)
+

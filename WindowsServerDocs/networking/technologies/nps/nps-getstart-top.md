@@ -2,8 +2,8 @@
 title: Getting Started with Network Policy Server
 description: This topic provides links to introductory topics for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
 ms.topic: get-started
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 
@@ -24,4 +24,5 @@ This section contains the following topics.
 - [Network Policies](nps-np-overview.md)
 - [NPS Templates](nps-templates.md)
 - [RADIUS Clients](nps-radius-clients.md)
+
 

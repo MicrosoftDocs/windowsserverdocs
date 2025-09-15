@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: e4ba9b1c-8c52-4fd5-969b-f7905611b364
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # Subcommand: set-DriverGroup

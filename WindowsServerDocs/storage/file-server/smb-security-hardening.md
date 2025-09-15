@@ -2,8 +2,8 @@
 title: SMB security hardening in Windows Server and Windows Client
 description: Learn about SMB security enhancements that help harden your Windows Server 2025 environment and Windows 11 client devices.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/25/2024
 ---
 
@@ -134,3 +134,4 @@ To learn more, see:
 ## See also
 
 - [SMB security enhancements](smb-security.md)
+

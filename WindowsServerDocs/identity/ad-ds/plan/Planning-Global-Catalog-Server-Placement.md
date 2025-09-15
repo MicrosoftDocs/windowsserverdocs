@@ -4,10 +4,8 @@ ms.assetid: 407d5e81-c04c-4275-9ae9-35f65b4a371a
 title: Planning Global Catalog Server Placement
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
-ms.custom: inhenkel
 ---
 
 # Planning Global Catalog Server Placement

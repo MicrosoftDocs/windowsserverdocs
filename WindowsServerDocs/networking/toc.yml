@@ -353,11 +353,6 @@ items:
           items:
           - name: Deploy an SDN infrastructure using scripts
             href: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
-        - name: Deploy SDN technologies using Windows PowerShell
-          href: sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md
-          items:
-          - name: Deploy Network Controller using Windows PowerShell
-            href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
         - name: Deploy Network Controller with Failover Clustering
           href: sdn/deploy/deploy-network-controller-failover-clustering.md
       - name: Manage SDN
@@ -620,8 +615,6 @@ items:
     items:
     - name: Netsh bridge
       href: technologies/netsh/netsh-bridge.md
-    - name: Netsh http commands
-      href: technologies/netsh/netsh-http.md
     - name: Netsh interface portproxy commands
       href: technologies/netsh/netsh-interface-portproxy.md
     - name: Netsh mbn commands

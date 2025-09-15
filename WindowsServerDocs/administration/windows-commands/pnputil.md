@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 07/11/2018
 ---
 
@@ -26,7 +25,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 | -a | Specifies to add the identified INF file. |
 | -d | Specifies to delete the identified INF file. |
 | -e | Specifies to enumerate all third-party INF files. |
-| -f | Specifies to force the deletion of the identified INF file. Can't be used in conjunction with the **–i** parameter. |
+| -f | Specifies to force the deletion of the identified INF file. Can't be used in conjunction with the **-i** parameter. |
 | -i | Specifies to install the identified INF file. Can't be used in conjunction with  the **-f** parameter. |
 | /? | Displays help at the command prompt. |
 
@@ -53,7 +52,7 @@ pnputil.exe -i -a a:\usbcam\USBCAM.INF
 To enumerate all third-party drivers, type:
 
 ```
-pnputil.exe –e
+pnputil.exe -e
 ```
 
 To delete the INF file and driver named oem0.inf, type:

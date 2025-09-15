@@ -4,7 +4,6 @@ description: Reference article for the tapicfg show command, which displays the 
 ms.topic: reference
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 09/29/2020
 ---
 

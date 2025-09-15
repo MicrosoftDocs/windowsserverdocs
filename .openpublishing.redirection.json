@@ -7,12 +7,12 @@
     },
     {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
-      "redirect_url": "/windows-server/windows-server",
+      "redirect_url": "/windows-server/index",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/windows-server-versions.md",
-      "redirect_url": "/windows-server/",
+      "redirect_url": "/windows-server/index",
       "redirect_document_id": false
     },
     {

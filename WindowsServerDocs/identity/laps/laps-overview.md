@@ -1,8 +1,8 @@
 ---
 title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
-author: jay98014
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/10/2025
 ms.topic: overview
 # customer intent: As an administrator, I want to become familiar with the Windows Local Administrator Password Solution (Windows LAPS) feature so that I can use it to manage and back up administrator passwords.
@@ -167,3 +167,5 @@ If you aren't sure where your feedback should go, submit it by using any of thes
 - [Get started with Windows LAPS and Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
 - [Get started with Windows LAPS and Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
+
+

@@ -1,8 +1,8 @@
 ---
 title: Ensure sufficient physical disk space is available when virtual machines use dynamically expanding virtual hard disks
 description: Learn what to do when one or more virtual machines are using dynamically expanding virtual hard disks.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 9e3e3e64-4b3a-4b9d-acf1-e4df61a04f1e
 ms.date: 8/16/2016
@@ -30,3 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Monitor available disk space to ensure sufficient space is available for expansion. Consider shutting down the virtual machine and use the Edit Disk Wizard in Hyper-V Manager to convert each dynamically expanding virtual hard disk for this virtual machine to a fixed sized virtual hard disk.*
+
+

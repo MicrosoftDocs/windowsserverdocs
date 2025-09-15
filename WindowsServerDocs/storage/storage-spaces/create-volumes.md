@@ -1,13 +1,20 @@
 ---
-title: Create volumes on Azure Stack HCI and Windows Server clusters
-description: How to create volumes on Azure Stack HCI and Windows Server clusters by using Windows Admin Center and PowerShell.
+title: Create volumes on Azure Local and Windows Server clusters
+description: How to create volumes on Azure Local and Windows Server clusters by using Windows Admin Center and PowerShell.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 07/22/2025
+appliesto: [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+           ]
 ---
 
-# Create volumes on Azure Stack HCI and Windows Server clusters
+# Create volumes on Azure Local and Windows Server clusters
 
 This article describes how to create volumes on a cluster by using Windows Admin Center and Windows PowerShell, how to work with files on the volumes, and how to enable deduplication, integrity checksums, or BitLocker encryption on volumes. To learn how to create volumes and set up replication for stretched clusters, see [Create stretched volumes](/azure/azure-local/manage/create-stretched-volumes).
 
@@ -70,7 +77,7 @@ To learn more, see [Enable volume encryption, deduplication,](volume-encryption-
 
 ## Create volumes using Windows PowerShell
 
-First, launch Windows PowerShell from the Windows start menu. We recommend using the **New-Volume** cmdlet to create volumes for Azure Stack HCI. It provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
+First, launch Windows PowerShell from the Windows start menu. We recommend using the **New-Volume** cmdlet to create volumes for Azure Local. It provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
 The **New-Volume** cmdlet has four parameters you need to provide:
 
@@ -105,7 +112,7 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 In deployments with three types of drives, one volume can span the SSD and HDD tiers to reside partially on each. Likewise, in deployments with four or more servers, one volume can mix mirroring and dual parity to reside partially on each.
 
-To help you create such volumes, Azure Stack HCI provides default tier templates called **MirrorOn*MediaType*** and **NestedMirrorOn*MediaType*** (for performance), and **ParityOn*MediaType*** and **NestedParityOn*MediaType*** (for capacity), where *MediaType* is HDD or SSD. The templates represent storage tiers based on media types and encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and dual parity on the slower capacity drives (if applicable).
+To help you create such volumes, Azure Local provides default tier templates called **MirrorOn*MediaType*** and **NestedMirrorOn*MediaType*** (for performance), and **ParityOn*MediaType*** and **NestedParityOn*MediaType*** (for capacity), where *MediaType* is HDD or SSD. The templates represent storage tiers based on media types and encapsulate definitions for three-way mirroring on the faster capacity drives (if applicable), and dual parity on the slower capacity drives (if applicable).
 
 - Storage Bus Layer (SBL) cache isn't supported in single server configuration. All flat single storage type configurations (for example all-NVMe or all-SSD) are the only supported storage type for single server.
 
@@ -138,7 +145,7 @@ Repeat as needed to create more than one volume.
 
 ### Storage tier summary table
 
-The following tables summarize the storage tiers that are created in Azure Stack HCI and Windows Server.
+The following tables summarize the storage tiers that are created in Azure Local and Windows Server.
 
 #### NumberOfNodes: 1
 
@@ -186,7 +193,7 @@ The following tables summarize the storage tiers that are created in Azure Stack
 
 ## Nested resiliency volumes
 
-Nested resiliency only applies to two-server clusters running Azure Stack HCI or Windows Server 2022 or Windows Server 2019; you can't use nested resiliency if your cluster has three or more servers, or if your cluster runs Windows Server 2016. Nested resiliency enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, allowing users, apps, and virtual machines to continue to run without disruption. For more information, see [Nested Resiliency for Storage Spaces Direct](./nested-resiliency.md) and [Plan volumes: choosing the resiliency type](./plan-volumes.md#choosing-the-resiliency-type).
+Nested resiliency only applies to two-server clusters running Azure Local or Windows Server 2022 or Windows Server 2019; you can't use nested resiliency if your cluster has three or more servers, or if your cluster runs Windows Server 2016. Nested resiliency enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, allowing users, apps, and virtual machines to continue to run without disruption. For more information, see [Nested Resiliency for Storage Spaces Direct](./nested-resiliency.md) and [Plan volumes: choosing the resiliency type](./plan-volumes.md#choosing-the-resiliency-type).
 
 [!INCLUDE [Create nested resiliency volumes](../../../includes/create-volumes-with-nested-resiliency.md)]
 

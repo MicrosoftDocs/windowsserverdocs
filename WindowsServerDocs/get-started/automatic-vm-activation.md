@@ -2,8 +2,8 @@
 title: Automatic Virtual Machine Activation in Windows Server
 description: Learn about Automatic Virtual Machine Activation (AVMA) and how to enable seamless activation of Windows Server virtual machines on licensed Hyper-V hosts.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/14/2025
 ---
 
@@ -138,3 +138,4 @@ Since the AVMA activation process is transparent, error messages aren't displaye
 | Invalid Host | The virtualization host is unresponsive. This event can happen when the server isn't running a supported version of Windows. |
 | Invalid Data | This event usually results from a failure in communication between the virtualization host and the VM, often caused by corruption, encryption, or data mismatch. |
 | Activation Denied | The virtualization host couldn't activate the guest operating system because the AVMA ID didn't match. |
+

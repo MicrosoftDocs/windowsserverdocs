@@ -1,8 +1,8 @@
 ---
 title: Manage Hyper-V Hypervisor Scheduler Types
 description: Find out about modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: how-to
 ms.date: 04/02/2025
 ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
@@ -197,3 +197,5 @@ Get-WinEvent -FilterHashTable @{ProviderName="Microsoft-Windows-Hyper-V-Hypervis
 ```
 
 :::image type="content" source="media/Hyper-V-CoreScheduler-PowerShell.png" alt-text="Screenshot of a PowerShell window. A command queries for the latest hypervisor launch event with ID 2. The output shows the scheduler type as 0x2.":::
+
+

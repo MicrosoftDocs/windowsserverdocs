@@ -1,7 +1,6 @@
 ---
 title: Monitor connected remote clients for activity and status
 description: Learn how to use the management console on the Remote Access server to monitor remote client activity and status.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
 ms.author: daknappe

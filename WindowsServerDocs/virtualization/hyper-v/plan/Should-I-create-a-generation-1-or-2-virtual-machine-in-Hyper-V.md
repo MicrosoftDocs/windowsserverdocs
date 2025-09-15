@@ -2,8 +2,8 @@
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
 description: Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs.
 ms.topic: concept-article
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/18/2025
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
@@ -252,3 +252,4 @@ To add a COM port:
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
 - [Plan for Hyper-V scalability in Windows Server 2016](./plan-hyper-v-scalability-in-windows-server.md)
+

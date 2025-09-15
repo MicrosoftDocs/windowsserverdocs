@@ -4,11 +4,9 @@ title: Winlogon automatic restart sign-on (ARSO)
 description: How Windows automatic restart sign-on can help make your users more productive.
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.reviewer: cahick
 ms.date: 05/12/2025
 ms.topic: concept-article
-ms.custom: inhenkel
 ---
 
 # Winlogon automatic restart sign-on (ARSO)

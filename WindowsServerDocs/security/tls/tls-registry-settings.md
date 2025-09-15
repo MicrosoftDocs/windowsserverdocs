@@ -2,8 +2,8 @@
 title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/18/2025
 ---
 
@@ -248,3 +248,4 @@ These registry settings only apply to Schannel SSP and don't affect any third-pa
 > Attempting to create or adjust any Schannel registry settings that aren't explicitly detailed in this article isn't recommended due to potential risks and unintended consequences that may arise from unsupported configurations.
 
 To learn about managing the TLS cipher suite using PowerShell, see [TLS command reference](/powershell/module/tls). If interested in managing TLS settings via Group Policy, see [Configure TLS cipher suite order by using Group Policy](/windows-server/security/tls/manage-tls#configure-tls-cipher-suite-order-by-using-group-policy).
+

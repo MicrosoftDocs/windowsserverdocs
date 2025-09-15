@@ -6,7 +6,6 @@ ms.date: 7/3/2024
 ms.topic: upgrade-and-migration-article
 ms.assetid: 9b1fa833-4325-48a8-bf34-46265f40c001
 author: dknappettmsft
-manager: scottman
 ---
 # Migrate your Remote Desktop Services deployment to a newer Windows Server version
 

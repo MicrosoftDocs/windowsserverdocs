@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: install-set-up-deploy
 ms.assetid: e4331370-ba07-4529-92ab-db14a41bfc3b
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # Install Server Backup on your MultiPoint server

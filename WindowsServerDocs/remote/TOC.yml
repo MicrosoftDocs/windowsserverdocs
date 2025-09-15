@@ -222,8 +222,6 @@
           href: multipoint-services/Restart-or-Shut-Down.md
         - name: Remap selected MultiPoint Systems
           href: multipoint-services/remap-selected-MultiPoint-Systems.md
-  - name: Remote Server Administration Tools
-    href: remote-server-administration-tools.md
   - name: Remote Desktop Services
     href: remote-desktop-services/index.yml
   - name: Remote Access

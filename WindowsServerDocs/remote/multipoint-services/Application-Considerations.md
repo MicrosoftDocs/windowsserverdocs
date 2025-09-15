@@ -4,7 +4,6 @@ description: Compatiblity information for apps on MultiPoint Services
 ms.topic: best-practice
 ms.assetid: 445e6184-4e1e-4f10-ad3c-042f2a6c2f5f
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

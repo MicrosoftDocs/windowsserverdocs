@@ -2,8 +2,8 @@
 title: Packet Monitor (Pktmon)
 description: This article provides an overview of the Packet Monitor (Pktmon) network diagnostics tool and its uses.
 ms.topic: overview
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/05/2025
 ---
 
@@ -100,3 +100,4 @@ Report any bugs or give feedback through the feedback hub using the following st
 1. To help us identify and fix the bug faster, capture screenshots, attach pktmon’s output log, and/or recreate the problem.
 
 1. Select **Submit**.
+

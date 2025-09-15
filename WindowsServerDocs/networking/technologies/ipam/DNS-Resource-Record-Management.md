@@ -2,8 +2,8 @@
 title: DNS Resource Record Management
 description: Learn how to manage DNS resource records by using IPAM.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ms.custom: sfi-image-nochange
 ---
@@ -101,6 +101,7 @@ IPAM automatically logs all DNS configuration changes that you make using the IP
 
 ## See Also
 [Manage IPAM](Manage-IPAM.md)
+
 
 
 

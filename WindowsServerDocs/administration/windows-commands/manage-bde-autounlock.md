@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 063528bf-d235-4b44-887a-52a7d983e01a
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -37,7 +36,7 @@ manage-bde -autounlock [{-enable|-disable|-clearallkeys}] <drive> [-computername
 To enable automatic unlocking of data drive E, type:
 
 ```
-manage-bde –autounlock -enable E:
+manage-bde -autounlock -enable E:
 ```
 
 ## Related links

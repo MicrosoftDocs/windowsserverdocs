@@ -1,17 +1,24 @@
 ---
-title: Disaster Recovery Scenarios for Hyper-Converged Infrastructure
+title: Disaster Recovery Scenarios for Storage Spaces Direct in Windows Server
 manager: tedhudek
 ms.topic: example-scenario
 ms.author: roharwoo
 author: robinharwood
 ms.date: 03/29/2018
-description: This article describes the scenarios available today for disaster recovery of Microsoft HCI (Storage Spaces Direct)
+description: This article describes the scenarios available today for disaster recovery of Storage Spaces Direct
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 # Disaster recovery with Storage Spaces Direct
 
-This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
+This topic provides scenarios on how Storage Spaces Direct can be configured for disaster recovery.
 
-Numerous companies are running hyper-converged solutions and planning for a disaster gives the ability to remain in or get back to production quickly if a disaster were to occur. There are several ways to configure HCI for disaster recovery and this document explains the options that are available to you today.
+Numerous companies are running hyper-converged solutions and planning for a disaster gives the ability to remain in or get back to production quickly if a disaster were to occur. There are several ways to configure Storage Spaces Direct for disaster recovery and this document explains the options that are available to you today.
 
 When discussions of restoring availability if disaster occurs revolve around what's known as Recovery Time Objective (RTO). This is the duration of time targeted where services must be restored to avoid unacceptable consequences to the business. In some cases, this process can occur automatically with production restored nearly immediately. In other cases, manual administrator intervention must occur to restore services.
 
@@ -25,11 +32,11 @@ The disaster recovery options with a hyper-converged today are:
 
 [Storage Replica](../storage-replica/storage-replica-overview.md) enables the replication of volumes and supports both synchronous and asynchronous replication. When choosing between using either synchronous or asynchronous replication, you should consider your Recovery Point Objective (RPO). Recovery Point Objective is the amount of possible data loss you are willing to incur before it is considered major loss. If you go with synchronous replication, it will sequentially write to both ends at the same time. If you go with asynchronous, writes will replicate very fast but could still be lost. You should consider the application or file usage to see which best works for you.
 
-Storage Replica is a block level copy mechanism versus file level; meaning, it does not matter what types of data being replicated. This makes it a popular option for hyper-converged infrastructure. Storage Replica also can utilize different types of drives between the replication partners, so having all of one type storage on one HCI and another type storage on the other is perfectly fine.
+Storage Replica is a block level copy mechanism versus file level; meaning, it does not matter what types of data being replicated. This makes it a popular option for hyper-converged infrastructure. Storage Replica also can utilize different types of drives between the replication partners, so having all of one type storage on one cluster and another type storage on the other is perfectly fine.
 
 One important capability of Storage Replica is that it can be run in Azure as well as on-premises. You can set up on-premises to on-premises, Azure to Azure, or even on-premises to Azure (or vice versa).
 
-In this scenario, there are two separate independent clusters. For configuring Storage Replica between HCI, you can follow the steps in [Cluster-to-cluster storage replication](../storage-replica/cluster-to-cluster-storage-replication.md).
+In this scenario, there are two separate independent clusters. For configuring Storage Replica between clusters, you can follow the steps in [Cluster-to-cluster storage replication](../storage-replica/cluster-to-cluster-storage-replication.md).
 
 ![Storage Replication diagram](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure1.png)
 
@@ -40,7 +47,7 @@ The following considerations apply when deploying Storage Replica.
 3.    In the case of a disaster, failovers between the clusters are not automatic and need to be orchestrated manually through the Storage Replica PowerShell cmdlets. In the diagram above, ClusterA is the primary and ClusterB is the secondary. If ClusterA goes down, you would need to manually set ClusterB as Primary before you can bring the resources up. Once ClusterA is back up, you would need to make it Secondary. Once all data has been synced up, make the change and swap the roles back to the way they were originally set.
 4.    Since Storage Replica is only replicating the data, a new virtual machine or Scale Out File Server (SOFS) utilizing this data would need to be created inside Failover Cluster Manager on the replica partner.
 
-Storage Replica can be used if you have virtual machines or an SOFS running on your cluster. Bringing resources online in the replica HCI can be manual or automated through the use of PowerShell scripting.
+Storage Replica can be used if you have virtual machines or an SOFS running on your cluster. Bringing resources online in the replica cluster can be manual or automated through the use of PowerShell scripting.
 
 ## Hyper-V Replica
 
@@ -66,7 +73,7 @@ Other considerations you will need are:
 - How often you wish to have the Volume Shadow Copy Service (VSS) replicate an incremental shadow copy.
 - How often changes get replicated (30 seconds, 5 minutes, 15 minutes).
 
-When HCI participate in Hyper-V Replica, you must have the [Hyper-V Replica Broker](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization) resource created in each cluster. This resource does several things:
+When clusters participate in Hyper-V Replica, you must have the [Hyper-V Replica Broker](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization) resource created in each cluster. This resource does several things:
 
 1.    Gives you a single namespace for each cluster for Hyper-V Replica to connect to.
 2.    Determines which node within that cluster the replica (or extended replica) will reside on when it first receives the copy.

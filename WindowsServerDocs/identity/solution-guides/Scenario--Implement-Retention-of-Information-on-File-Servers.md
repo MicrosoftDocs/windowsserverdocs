@@ -1,9 +1,8 @@
 ---
 description: "Learn more about: Scenario: Implement Retention of Information on File Servers"
 title: Scenario Implement Retention of Information on File Servers
-author: xelu86
-ms.author: alalve
-manager: tedhudek
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/01/2022
 ms.topic: solution-overview
 ---
@@ -28,3 +27,4 @@ You can find steps for classifying files for legal hold and configuring a retent
 This scenario is part of the Dynamic Access Control scenario. For more information about Dynamic Access Control, see:
 
 - [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
+

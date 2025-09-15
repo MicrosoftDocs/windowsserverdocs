@@ -4,8 +4,8 @@ title: Managing the Host Guardian Service
 ms.topic: how-to
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 12/10/2020
 ---
 
@@ -813,3 +813,5 @@ If you no longer intend to use the computer as a HGS node, you can remove the ro
 ```powershell
 Uninstall-WindowsFeature HostGuardianServiceRole
 ```
+
+

@@ -4,10 +4,8 @@ title: Active Directory domain-wide schema updates
 description: Domain-wide schema updates performed by adprep /domainprep when promoting a Domain Controller
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
-ms.custom: inhenkel
 
 ---
 # Domain-wide schema updates

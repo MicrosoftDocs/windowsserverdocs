@@ -1,8 +1,8 @@
 ---
 title: The number of running or configured virtual machines must be within supported limits
 description: Learn what to do when more virtual machines are running or configured than are supported.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 ms.date: 8/16/2016
@@ -83,3 +83,5 @@ Membership in the **Domain Administrators** group is required to complete this p
     2.  In the **Add Services** dialog box, click **Users or Computers**, select the remote computer, and then click **OK**.
 
     3.  In the **Available services** list, select the **cifs** protocol (also known as the Server Message Block (SMB) protocol), and then click **Add**.
+
+

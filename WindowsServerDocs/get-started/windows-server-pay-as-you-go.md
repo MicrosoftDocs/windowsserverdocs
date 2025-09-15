@@ -3,8 +3,8 @@ title: Configure Windows Server Pay-as-you-go with Azure Arc
 description: Set up usage-based licensing for Windows Server with Pay-as-you-go licensing with Azure Arc billed through your Azure subscription.
 #customer intent: As an IT admin, I want to set up Windows Server Pay-as-you-go with Azure Arc so that I can license my servers based on usage and manage billing through my Azure subscription.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/27/2025
 ---
 
@@ -180,3 +180,4 @@ To use Azure PowerShell to disable Windows Server Pay-as-you-go, follow these st
 - [Azure Arc-enabled servers](/azure/azure-arc/servers/)
 
 - [Connect Windows Server machines to Azure through Azure Arc Setup](/azure/azure-arc/servers/onboard-windows-server)
+

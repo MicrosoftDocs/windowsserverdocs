@@ -1,9 +1,6 @@
 ---
 title: Fine Tuning SQL and Addressing Latency Issues with AD FS
 description: This document discusses how to fine tune SQL with AD FS.
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: best-practice
 ms.custom: sfi-ropc-nochange

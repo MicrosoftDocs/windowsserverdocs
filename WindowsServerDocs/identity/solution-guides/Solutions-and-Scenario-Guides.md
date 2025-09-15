@@ -4,7 +4,6 @@ ms.assetid: bdb9ad4b-139c-4031-8f26-827432779829
 title: Solutions and Scenario Guides
 author: robinharwood
 ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: solution-overview
 ---

@@ -4,7 +4,6 @@ ms.assetid: 83f746e5-81db-4610-9977-1d5c57699f50
 title: Creating a Site Design
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
 ---

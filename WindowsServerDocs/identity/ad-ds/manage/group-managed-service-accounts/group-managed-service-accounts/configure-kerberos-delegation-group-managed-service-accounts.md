@@ -2,9 +2,8 @@
 title: Configuring Kerberos Delegation for Group Managed Service Accounts
 description: Explains how to configure Kerberos delegation for group Managed Service Accounts.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
-manager: tedhudek
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/09/2025
 ms.custom: sfi-image-nochange
 ---
@@ -90,3 +89,5 @@ If you add SPNs by mistake or want to remove SPNs from the delegation list of th
 
 - [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
 - [Manage Group Managed Service Accounts](manage-group-managed-service-accounts.md)
+
+

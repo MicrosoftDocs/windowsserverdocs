@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 23bfa824-6ff0-44cc-9b8b-b199a769fb8d
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +33,7 @@ manage-bde -upgrade [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To upgrade BitLocker encryption on drive C, type:
 
 ```
-manage-bde –upgrade C:
+manage-bde -upgrade C:
 ```
 
 ## Related links

@@ -4,7 +4,6 @@ description: Reference article for the schtasks commands, which schedules comman
 ms.topic: reference
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 02/01/2023
 ---
 

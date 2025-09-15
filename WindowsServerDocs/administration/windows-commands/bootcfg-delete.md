@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: 71382e29-9b39-41c8-9c23-cf0ff829440a
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg delete

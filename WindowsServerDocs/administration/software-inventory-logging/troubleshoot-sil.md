@@ -2,9 +2,8 @@
 title: Troubleshoot Software Inventory Logging
 description: Describes how to resolve common Software Inventory Logging deployment issues.
 ms.topic: troubleshooting-general
-author: xelu86
-ms.author: alalve
-manager: mtillman
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2017
 ---
 
@@ -154,3 +153,4 @@ If there is no error, and no output on the console, then the data push/publish f
 >There are rules SILA follows when processing data files in the SILA directory that are only relevant in low traffic situations. High traffic will always trigger processing in real time. The default behavior is that processing will commence either after 100 files arrive in the directory, or after 15 minutes. When troubleshooting end-to-end in a small environment, it is often necessary to wait 15 minutes.
 
 After these files are processed, you will see the data in the database.
+

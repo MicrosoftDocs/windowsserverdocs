@@ -3,8 +3,8 @@ title: Plan for Hyper-V security in Windows Server
 description: Provides a list of security considerations for Hyper-V hosts and virtual machines
 ms.topic: concept-article
 ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/03/2018
 ---
 
@@ -101,3 +101,5 @@ For more secure environments:
 - **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.**
 
     For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
+
+

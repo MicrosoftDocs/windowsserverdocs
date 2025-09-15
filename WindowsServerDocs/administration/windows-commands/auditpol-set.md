@@ -5,7 +5,6 @@ ms.topic: reference
 ms.assetid: f4947486-87bd-48cb-ba81-7230c8e70895
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol set

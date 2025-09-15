@@ -4,10 +4,8 @@ ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
 title: Simplified Administration Appendix
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
-ms.custom: inhenkel
 ---
 
 # Simplified Administration Appendix
@@ -94,6 +92,6 @@ The following table describes the two new menu items:
 |Create Full NoDefrag %s|Create IFM media without defragmenting for a full AD DC or an AD/LDS instance into folder %s|
 |Create Sysvol Full NoDefrag %s|Create IFM media with SYSVOL and without defragmenting for a full AD DC into folder %s|
 
-![Screenshot of a terminal window that shows the the process for creating IFM media.](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
+![Screenshot of a terminal window that shows the process for creating IFM media.](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
 
 ![Screenshot of a terminal window that shows the IFM media was successfully created.](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)

@@ -4,8 +4,8 @@ title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: concept-article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -68,3 +68,5 @@ Deploy the Host Guardian Service (HGS) in a highly secure environment, whether t
 | OS | We recommend using Server Core option for the Hyper-V host OS. |
 | Performance implications | Based on performance testing, we anticipate a roughly 5% density-difference between running shielded VMs and non-shielded VMs. This means that if a given Hyper-V host can run 20 non-shielded VMs, we expect that it can run 19 shielded VMs.<br><br>Make sure to verify sizing with your typical workloads. For example, there might be some outliers with intensive write-oriented IO workloads that will further affect the density difference. |
 | Branch office considerations | Beginning with Windows Server version 1709, you can specify a fallback URL for a virtualized HGS server running locally as a shielded VM in the branch office. The fallback URL can be used when the branch office loses connectivity to HGS servers in the datacenter. On previous versions of Windows Server, a Hyper-V host running in a branch office needs connectivity to the Host Guardian Service to power-on or to live migrate shielded VMs. For more information, see [Branch office considerations](guarded-fabric-manage-branch-office.md). |
+
+

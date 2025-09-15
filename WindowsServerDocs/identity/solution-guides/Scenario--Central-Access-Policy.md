@@ -4,7 +4,6 @@ ms.assetid: 7f285c9f-c3e8-4aae-9ff4-a9123815114e
 title: Scenario Central Access Policy
 author: robinharwood
 ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: example-scenario
 ---

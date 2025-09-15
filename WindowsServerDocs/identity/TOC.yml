@@ -335,6 +335,8 @@
             href: ad-ds/manage/component-updates/Command-line-process-auditing.md
         - name: Directory services component updates
           href: ad-ds/manage/component-updates/directory-Services-component-updates.md
+      - name: Active Directory domain join permissions
+        href: ad-ds/manage/active-directory-domain-join-permissions.md
       - name: Join a computer to a domain
         href: ad-ds/manage/join-computer-to-domain.md
       - name: Active Directory accounts

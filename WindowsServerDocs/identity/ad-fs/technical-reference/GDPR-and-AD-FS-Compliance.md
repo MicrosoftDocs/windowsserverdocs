@@ -2,9 +2,6 @@
 description: "Learn more about: User privacy and AD FS"
 
 title: User Privacy and AD FS
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
 ms.topic: concept-article
 ---

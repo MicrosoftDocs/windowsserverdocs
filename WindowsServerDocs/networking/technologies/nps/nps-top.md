@@ -3,8 +3,8 @@ title: Network Policy Server (NPS) overview
 description: Learn about using Network Policy Server (NPS) in Windows Server to manage network access authentication, authorization, and accounting.
 ms.topic: overview
 ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/05/2025
 # customer intent: As an administrator, I want to become familiar with Network Policy Server (NPS) in Windows Server so that I can centrally configure and manage network access authentication, authorization, and accounting.
 ---
@@ -239,3 +239,4 @@ For more information, see [Configure Network Policy Server accounting](nps-accou
 - [Deploy Network Policy Server](nps-deploy.md)
 - [Manage Network Policy Server (NPS)](nps-manage-top.md)
 - [NPS cmdlets in Windows PowerShell](/powershell/module/nps/)
+

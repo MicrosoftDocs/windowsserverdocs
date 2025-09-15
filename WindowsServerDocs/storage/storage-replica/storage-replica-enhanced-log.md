@@ -1,9 +1,9 @@
 ---
 title: Use Enhanced Log in Storage Replica
 description: Learn how to use Enhanced Log in Storage Replica and about the performance improvements it delivers to your replication groups.
-author: meaghanlewis
+author: robinharwood
 ms.topic: how-to
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 5/13/2025
 ---
 
@@ -82,3 +82,5 @@ You can use `-LogType FileBased` to deploy the Storage Replica partnership by us
 * [Storage Replica: FAQ](storage-replica-frequently-asked-questions.yml)
 * [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
+
+

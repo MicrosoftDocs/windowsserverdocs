@@ -3,8 +3,8 @@ description: "Learn more about: Initialize HGS using TPM-trusted attestation"
 title: Initialize HGS using TPM-trusted attestation
 ms.topic: how-to
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -20,4 +20,6 @@ These steps vary depending on whether you are initializing HGS in a new forest o
 
 2. [Install trusted TPM root certificates](guarded-fabric-install-trusted-tpm-root-certificates.md)
 3. [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md)
+
+
 

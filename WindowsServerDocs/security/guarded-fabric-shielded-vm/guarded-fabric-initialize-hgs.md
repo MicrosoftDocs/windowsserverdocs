@@ -3,8 +3,8 @@ description: "Learn more about: Initialize the Host Guardian Service (HGS)"
 title: Initialize HGS
 ms.topic: how-to
 manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -19,3 +19,5 @@ The following topics cover deployment steps for each mode:
 - [Admin-trusted attestation (AD mode)](guarded-fabric-initialize-hgs-ad-mode.md)
 
 You should perform these steps on a physical server.
+
+
