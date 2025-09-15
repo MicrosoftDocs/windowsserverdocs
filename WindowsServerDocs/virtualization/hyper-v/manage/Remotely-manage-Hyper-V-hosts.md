@@ -3,8 +3,8 @@ title: Remotely Manage Hyper-V Hosts
 description: Describes version compatibility between Hyper-V hosts and Hyper-V Manager and how to connect to remote hosts in different environments.
 ms.topic: how-to
 ms.assetid: 2d34e98c-6134-479b-8000-3eb360b8b8a3
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/30/2025
 ---
 
@@ -132,4 +132,5 @@ add-windowsfeature rsat-hyper-v-tools
 ## Related content
 
 - [Install Hyper-V](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md)
+
 

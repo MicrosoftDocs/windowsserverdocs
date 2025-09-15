@@ -120,3 +120,4 @@ Both methods accomplish the following tasks:
 - [Deploy Work Folders with AD FS and Web Application Proxy: Overview](deploy-work-folders-adfs-overview.md)
 - [SyncShare (Work Folders) Cmdlets in Windows PowerShell](/powershell/module/syncshare/)
 
+

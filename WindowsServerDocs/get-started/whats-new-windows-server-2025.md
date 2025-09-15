@@ -2,8 +2,8 @@
 title: What's new in Windows Server 2025
 description: Learn about the features and enhancements in Windows Server 2025 that help to improve security, performance, and flexibility.
 ms.topic: whats-new
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/28/2025
 ---
 
@@ -469,3 +469,4 @@ The [Windows Server Insider Program](get-started-with-windows-server-insiders-pr
 ## Related content
 
 [Windows Server Insider Community discussions](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
+

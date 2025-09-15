@@ -2,8 +2,8 @@
 title: What's New in Windows Server 2022
 description: Find out what's new in Windows Server 2022.
 ms.topic: whats-new
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/03/2025 
 ---
 
@@ -377,3 +377,4 @@ Windows Admin Center includes the following enhancements:
 Azure Migrate App: Containerization is an end-to-end solution that containerizes and moves existing web applications to the Azure Kubernetes Service. You can assess existing web servers, create a container image, push the image to the Azure Container Registry, create a Kubernetes deployment, and finally deploy it to the Azure Kubernetes Service.
 
 For more information about the Azure Migrate App: Containerization tool, see [ASP.NET app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-aspnet-kubernetes) and [Java web app containerization and migration to Azure Kubernetes Service](/azure/migrate/tutorial-app-containerization-java-kubernetes).
+

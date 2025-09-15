@@ -263,3 +263,4 @@ Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by def
 - [Credentials protection and management](credentials-protection-and-management.md)
 - [Partner Center for Windows Hardware](/windows-hardware/drivers/dashboard/)
 
+

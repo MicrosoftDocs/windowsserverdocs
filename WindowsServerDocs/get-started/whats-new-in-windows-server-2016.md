@@ -2,8 +2,8 @@
 title: What's new in Windows Server 2016
 description: This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 ms.topic: whats-new
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/08/2025
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
@@ -817,3 +817,4 @@ For more information, see [Configure AD FS to send password expiry claims](../id
 ### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
 
 Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and you removed the older servers, you can change the operational level to Windows Server 2016. For learn more, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
+

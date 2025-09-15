@@ -3,8 +3,8 @@ title: Convert a disk to Dynamic or Basic
 description: Learn how to convert a disk type to Dynamic or Basic using Disk Management and the command line in Windows.
 ms.date: 06/17/2025
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ---
 
 # Convert a disk type to Dynamic or Basic
@@ -115,3 +115,4 @@ Once conversion is complete, you're notified of the process.
 ## Related links
 
 - [Convert a disk to GPT or MBR partition scheme](change-disk-partition-scheme.md)
+

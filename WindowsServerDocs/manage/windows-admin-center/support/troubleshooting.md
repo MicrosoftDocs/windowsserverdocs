@@ -2,8 +2,8 @@
 title: Windows Admin Center common troubleshooting steps
 description: Windows Admin Center common troubleshooting steps
 ms.topic: troubleshooting-general
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/24/2025
 ---
 
@@ -283,3 +283,4 @@ To collect a HAR file in Microsoft Edge or Google Chrome, follow these steps:
 
 > [!WARNING]
 > Before sharing your HAR files with Microsoft, review and redact any sensitive data, such as passwords or personal information.
+

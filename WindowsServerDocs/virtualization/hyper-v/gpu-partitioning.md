@@ -100,3 +100,4 @@ For more information on using GPUs with your VMs and GPU partitioning, see:
 - [Partition and assign GPUs to a virtual machine](partition-assign-vm-gpu.md)
 - [Use GPUs with clustered VMs](deploy/use-gpu-with-clustered-vm.md)
 
+

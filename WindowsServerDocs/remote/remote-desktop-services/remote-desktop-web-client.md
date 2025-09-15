@@ -2,8 +2,8 @@
 title: Get started with the web client for Remote Desktop Services
 description: This article describes how to sign in to the Remote Desktop web client.
 ms.topic: get-started
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/06/2025
 ---
 
@@ -111,3 +111,4 @@ Native resolution is set to off by default. To turn on native resolution:
 ## Get help with the web client
 
 If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by raising feedback on the web client's Feedback page.
+

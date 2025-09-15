@@ -2,8 +2,8 @@
 title: Windows Time Service Tools and Settings
 description: Find out about the settings in the Windows Time service (W32Time). See how to configure these settings in the registry or Group Policy Object Editor.
 ms.topic: concept-article
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 ms.date: 07/02/2025
 # customer intent: As an administrator, I want to find out more about Windows Time service settings so that I can adjust their configuration when I need to.
@@ -412,3 +412,4 @@ To enable enhanced W32Time logging, add the following registry entries into the 
 
 - [RFC 1305 - Network Time Protocol, Version 3](https://datatracker.ietf.org/doc/rfc1305/)
 - [RFC 5905 - Network Time Protocol, Version 4](https://datatracker.ietf.org/doc/rfc5905/)
+

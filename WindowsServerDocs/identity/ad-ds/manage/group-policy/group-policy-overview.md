@@ -3,7 +3,7 @@ title: Group Policy overview for Windows Server
 description: Learn about what Group Policy does and how it works with Active Directory Domain Services in Windows.
 author: orin-thomas
 ms.topic: overview
-ms.author: alalve
+ms.author: daknappe
 contributor: orthomas
 ms.date: 06/10/2025
 #customer intent: As an IT administrator, I want to understand Group Policy so that I can manage user and computer settings effectively.

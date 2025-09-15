@@ -2,8 +2,8 @@
 title: Set up Remote Desktop web client for users
 description: Learn how to configure and manage the Remote Desktop web client for user access to remote apps and desktops.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/15/2025
 ---
 
@@ -347,3 +347,4 @@ The console might also be accessed directly through your browser. The console is
 ## Get help with the web client
 
 If you've encountered an issue that can't be solved by the information in this article, you can report it on the [Azure Virtual Desktop forum of Microsoft Tech Community](https://aka.ms/wvdtc).
+

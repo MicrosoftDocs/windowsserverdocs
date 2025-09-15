@@ -3,8 +3,8 @@ title: Service Accounts in Windows Server
 
 description: Learn about sMSA, gMSA, dMSA, and virtual accounts in Windows Server Active Directory.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/08/2025
 
 ---
@@ -109,3 +109,4 @@ When choosing a service account, it's important to consider factors such as the 
 | Product evaluation | [What's New for Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831451(v=ws.11)) <br> [Get Started with Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431(v=ws.11)) |
 | Deployment | [Windows Server 2012: Group Managed Service Accounts - Tech Community](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/windows-server-2012-group-managed-service-accounts/ba-p/255910) |
 | Related technologies | [Security principals](understand-security-principals.md) <br> [What's new in Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services) |
+
