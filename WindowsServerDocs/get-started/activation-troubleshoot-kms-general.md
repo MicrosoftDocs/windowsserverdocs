@@ -34,7 +34,7 @@ When you're examining the KMS host during troubleshooting, there are two areas y
 
 You can use the `slmgr.vbs` command-line tool and the Event Viewer to troubleshoot activation issues on KMS clients. To see verbose output from the Software Licensing service, open an elevated Command Prompt window, or PowerShell window, and run `slmgr.vbs /dlv`. The following screenshot shows the results of this command for the KMS client and KMS host respectively:
 
-# [KMS Client](#tab/kms-client)
+# [KMS client](#tab/kms-client)
 
 :::image type="content" source="./media/ee939272.kms_client_slmgr_output(en-us,technet.10).png" alt-text="A screenshot of the output for the s l m g r command for the k m s client. There are labels explaining what each variable means.":::
 
@@ -68,9 +68,9 @@ We often get asked about the *cumulative requests* section of the `slmgr.vbs /dl
 
 The *Requests with License Status* lines describe all possible license states, both past and present. From a troubleshooting perspective, this data is relevant only if the count isn't increasing as expected. In that case, you should see the number of failed requests increasing. To resolve this issue, you should check the product key that was used to first activate the KMS host system. Also, notice that the cumulative request values reset only if you reinstall the KMS host system.
 
-# [KMS Host](#tab/kms-host)
+# [KMS host](#tab/kms-host)
 
-:::image type="content" source="./media/ee939272.kms_slmgr_output(en-us,technet.10).png" alt-text="A screenshot of the output for the s l m g r command for the k m s host. There are labels explaining what each variable means.":::
+:::image type="content" source="./media/ee939272.kms_slmgr_output(en-us,technet.10).png" alt-text="A screenshot of the output for the SLMGR command for the KMS host. There are labels explaining what each variable means.":::
 
 Here are some variables you should pay attention to in the output while troubleshooting:
 
@@ -94,7 +94,7 @@ Here are some variables you should pay attention to in the output while troubles
 
 The following sections describe client events that you should be familiar with to help you troubleshoot potential issues more efficiently. When a KMS client successfully activates or reactivates, the client logs event ID 12288 and event ID 12289.
 
-# [KMS Client](#tab/kms-client)
+# [KMS client](#tab/kms-client)
 
 **Event ID 12288**:
 
@@ -120,7 +120,7 @@ The *Info* section of event ID 12289 provides the following information:
 
 - *Current Count on the KMS Host*, which shows the count value on the KMS host when the client tries to activate. If activation fails, it might be because the count is insufficient for this client OS or that there aren't enough systems in the environment to build the count.
 
-# [KMS Host](#tab/kms-host)
+# [KMS host](#tab/kms-host)
 
 **Event ID 12290**:
 
@@ -165,11 +165,8 @@ KMS activation operates on a renewal model, where each client device must connec
 
 For any reason, if the renewal requirement isn't met, you're prompted with a toast notification 30 days before the 180 days for renewal. The renewal toast notification is also displayed in the activation pane:
 
-<center>
+:::image type="content" source="./media/activation-troubleshoot-kms-general/kms-windows-license-renewal-notification.png" alt-text="Screenshot of the KMS license renewal notification reminder in the Windows activation screen.":::
 
-:::image type="content" source="./media/activation-troubleshoot-kms-general/kms-windows-license-renewal-notification.png" alt-text="Screenshot of the k m s license renewal notification reminder in the Windows activation screen.":::
-
-</center>
 
 ### Troubleshoot KMS client renewal requirements
 
@@ -179,7 +176,7 @@ For any reason, if the renewal requirement isn't met, you're prompted with a toa
 
   - **The KMS host is decommissioned**: The IT administrator must configure the KMS client version with the KMS Server. Refer to [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt).
 
-  - **Listening on a different port**: Communication with the KMS uses anonymous RPC. By default, clients use TCP port 1688 to connect to the KMS host. Ensure this port is open between your KMS clients and the KMS host. You can  configure the port on the KMS host through the Windows Defender Firewall with Advanced Security.
+  - **Listening on a different port**: Communication with the KMS uses anonymous RPC. By default, clients use TCP port 1688 to connect to the KMS host. Ensure this port is open between your KMS clients and the KMS host. You can  configure the port on the KMS host through the Windows Firewall with Advanced Security.
 
 
   - **Verify DNS Configuration**: By default, the KMS clients use the automatic discovery process to query DNS for a list of servers. To learn more, see [Guidelines for troubleshooting DNS-related activation issues](/windows-server/get-started/common-troubleshooting-procedures-kms-dns).
