@@ -126,7 +126,7 @@ The *Info* section of event ID 12289 provides the following information:
 
 The KMS host creates a log labeled *Event ID 12290* when a KMS client contacts the host when it's trying to activate. Event ID 12290 contains information you can use to figure out what kind of client contacted the host and why a failure occurred. The following screenshot shows a segment of event ID 12290:
 
-:::image type="content" source="./media/ee939272.kms_12290_event(en-us,technet.10).png" alt-text="A screenshot of the event viewer displaying the k m s event log i d 12290 with labels explaining what each value means.":::
+:::image type="content" source="./media/ee939272.kms_12290_event(en-us,technet.10).png" alt-text="A screenshot of the event viewer displaying the KMS event log ID 12290 with labels explaining what each value means.":::
 
 The event details include the following information:
 
