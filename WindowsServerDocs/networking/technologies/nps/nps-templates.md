@@ -4,8 +4,8 @@ description: This topic provides an overview of Network Policy Server Templates 
 manager: brianlic
 ms.topic: concept-article
 ms.assetid: fdfc0df1-21c7-492c-9fad-38fe9c7d935a
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
@@ -34,3 +34,4 @@ To create a template, open the NPS console, right-click a template type, such as
 You can use a template that you've created in **Templates Management** by navigating to a location in the NPS console where the template can be applied. For example, if you create a new Shared Secrets template that you want to apply to a RADIUS client configuration, in **RADIUS Clients and Servers** and **RADIUS Clients**, open the RADIUS client properties. In **Select an existing Shared Secrets template**, select the template you previously created from the list of available templates.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

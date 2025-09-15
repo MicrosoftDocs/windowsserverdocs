@@ -3,8 +3,8 @@ title: Install HGS in an existing bastion forest
 description: "Learn more about: Install HGS in an existing bastion forest"
 ms.topic: install-set-up-deploy
 manager: dongill
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -143,4 +143,5 @@ Check your Group Policy objects for the following settings and follow the guidan
 - For the next steps to set up TPM-based attestation, see [Initialize the HGS cluster using TPM mode in an existing bastion forest](guarded-fabric-initialize-hgs-tpm-mode-bastion.md).
 - For the next steps to set up host key attestation, see [Initialize the HGS cluster using key mode in an existing bastion forest](guarded-fabric-initialize-hgs-key-mode-bastion.md).
 - For the next steps to set up Admin-based attestation (deprecated in Windows Server 2019), see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
+
 

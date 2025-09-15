@@ -1,8 +1,8 @@
 ---
 title: Virtual hard disks with paging files should be excluded from replication
 description: Learn what to do when paging files experience a high volume of input/output activity, which will unnecessarily require much greater resources to participate in replication.
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: c0be8a5f-64a1-488a-944e-bb913bb90517
 ms.date: 8/16/2016
@@ -30,4 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *If you have not already done so, create a separate virtual hard disk for the Windows paging file. If initial replication has already been completed, use Hyper-V Manager to remove replication. Then, configure replication again and exclude the virtual hard disk with the paging file from replication.*
+
 

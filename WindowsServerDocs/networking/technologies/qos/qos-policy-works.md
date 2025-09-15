@@ -4,8 +4,8 @@ description: Learn about how QoS policy works.
 ms.topic: concept-article
 ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
@@ -66,3 +66,4 @@ These processes of Policy-based QoS provide the following advantages.
 For the next topic in this guide, see [QoS Policy Architecture](qos-policy-architecture.md).
 
 For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
+

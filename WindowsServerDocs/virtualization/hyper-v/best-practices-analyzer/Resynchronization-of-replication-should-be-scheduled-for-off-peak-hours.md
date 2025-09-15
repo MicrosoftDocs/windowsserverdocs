@@ -1,8 +1,8 @@
 ---
 title: Resynchronization of replication should be scheduled for off-peak hours
 description: Learn what to do when resynchronization of replication for the primary virtual machines is not scheduled for off-peak hours.
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
 ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
 ms.date: 8/16/2016
@@ -30,4 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Use Hyper-V Manager to modify the replication settings for the virtual machine to perform resynchronization automatically during off-peak hours.*
+
 

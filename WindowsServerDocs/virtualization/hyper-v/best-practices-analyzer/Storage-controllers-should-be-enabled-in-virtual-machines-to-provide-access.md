@@ -1,8 +1,8 @@
 ---
 title: Storage controllers should be enabled in virtual machines to provide access to attached storage
 description: Learn what to do when one or more storage controllers may be disabled in a virtual machine.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 532548a1-8ffe-4b5b-902e-ed2f0819012b
 ms.date: 8/16/2016
@@ -49,4 +49,5 @@ For instructions on how to use Device Manager, see Help in the guest operating s
 5.  In the left pane of the **Settings** dialog box, under **Hardware**, click **SCSI Controller**.
 
 6.  In the right pane, click **Remove**.
+
 

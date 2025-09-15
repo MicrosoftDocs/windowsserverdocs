@@ -3,8 +3,8 @@ title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator-software-inventory-logging
 ms.topic: how-to
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ms.custom: sfi-image-nochange
 ---
@@ -588,3 +588,4 @@ When you want to start inventorying servers in your environment with a different
 [SIL PowerShell cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)<br>
 [An Overview of SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268301(v=ws.11))<br>
 [Managing SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383584(v=ws.11))
+

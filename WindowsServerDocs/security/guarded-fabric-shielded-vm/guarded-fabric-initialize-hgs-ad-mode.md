@@ -3,8 +3,8 @@ description: "Learn more about: Initialize HGS using Admin-trusted attestation"
 title: Initialize HGS using Admin-trusted attestation
 ms.topic: how-to
 manager: dongill
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -25,6 +25,7 @@ These steps vary depending on whether you are initializing HGS in a new forest o
 2. [Configure DNS forwarding in the fabric domain](guarded-fabric-configuring-fabric-dns.md)
 
 3. [Configure DNS forwarding and a one-way trust in the HGS domain](guarded-fabric-configure-dns-forwarding-and-trust.md)
+
 
 
 
