@@ -269,3 +269,4 @@ AuthorizedDecryptor : S-1-5-21-2127521184-1604012920-1887927527-35197
 - [Use Windows LAPS PowerShell cmdlets](laps-management-powershell.md)
 - [Key concepts in Windows LAPS](laps-concepts-overview.md)
 
+

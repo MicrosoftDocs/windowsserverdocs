@@ -1,9 +1,9 @@
 ---
 title: Configure the Certificate Enrollment Web Service role service
 description: Learn how to configure the Certificate Enrollment Web Service role service to enable secure certificate enrollment over HTTPS.
-author: dknappettmsft
+author: robinharwood
 ms.topic: how-to
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 03/27/2025
 
 #customer intent: As an IT administrator, I want to install and configure the Certificate Enrollment Web Service so that users and computers can securely enroll for certificates.
@@ -253,3 +253,4 @@ If you enabled renewal-only mode, you need to complete the following extra confi
 - [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 - [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 - [Windows PKI Blog](https://blogs.technet.com/b/pki/)
+

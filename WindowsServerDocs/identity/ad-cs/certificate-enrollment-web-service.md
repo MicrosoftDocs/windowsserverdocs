@@ -1,9 +1,9 @@
 ---
 title: Certificate Enrollment Web Service overview
 description: Learn about the Certificate Enrollment Web Service, including authentication types, load balancing, and configuration options.
-author: xelu86
+author: robinharwood
 ms.topic: concept-article
-ms.author: alalve
+ms.author: roharwoo
 ms.date: 03/28/2025
 
 #customer intent: As a PKI admin/architect, I want to find accurate and relevant Active Directory Certificate Services (AD CS) documentation, so that understand/plan/deploy/operate AD CS.
@@ -144,4 +144,5 @@ The Certificate Enrollment Policy Web Service and the Certificate Enrollment Web
 
 - [Configure the Certificate Enrollment Web Service](/windows-server/identity/ad-cs/configure-certificate-enrollment-web-service)
 - [Certification Authority Web Enrollment Role Service](/windows-server/identity/ad-cs/certificate-authority-web-enrollment)
+
 

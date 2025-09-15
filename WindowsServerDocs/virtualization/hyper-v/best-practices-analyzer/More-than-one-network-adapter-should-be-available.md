@@ -1,8 +1,8 @@
 ---
 title: More than one network adapter should be available
 description: Learn what to do when the server is configured with one network adapter, which must be shared by the management operating system and all virtual machines that require access to a physical network.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 59940e56-e06a-490f-90ea-cf30d9f80b09
 ms.date: 8/16/2016
@@ -33,4 +33,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *Add more network adapters to this computer. To reserve one network adapter for exclusive use by the management operating system, do not configure it for use with an external virtual network.*
 
 For information about adding a network adapter to the computer, consult the documentation for the computer or the network adapter. Then, to reserve it exclusively for the management operating system, don't connect it to a virtual switch.
+
 

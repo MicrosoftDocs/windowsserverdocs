@@ -3,8 +3,8 @@ title: How User Account Control Works
 description: Learn about User Account Control (UAC) and how it helps prevent malicious programs from damaging a computer and helps organizations deploy a better-managed desktop.
 ms.topic: concept-article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 manager: mtillman
 ms.date: 10/12/2016
 ms.custom: sfi-image-nochange
@@ -177,5 +177,6 @@ Before a 32-bit process is created, the following attributes are checked to dete
 
 > [!NOTE]
 > The User Account Control: Detect application installations and prompt for elevation policy setting must be enabled for installer detection to detect installation programs. This setting is enabled by default and can be configured locally by using the Local Security Policy snap-in (Secpol.msc) or configured for the domain, OU, or specific groups by Group Policy (Gpedit.msc).
+
 
 

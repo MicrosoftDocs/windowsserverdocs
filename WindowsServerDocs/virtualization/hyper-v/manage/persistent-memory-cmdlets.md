@@ -3,8 +3,8 @@ title: Cmdlets for configuring persistent memory devices for Hyper-V VMs
 description: How to configure persistent memory devices for Hyper-V VMs
 ms.topic: how-to
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/08/2020
 ---
 
@@ -40,4 +40,5 @@ Persistent memory devices within a Hyper-V VM appear as a persistent memory devi
 
 >[!NOTE]
 >Persistent memory is only supported for Hyper-V Gen2 VMs. Live Migration and Storage Migration are not supported for VMs with persistent memory. Production checkpoints of VMs do not include persistent memory state.
+
 

@@ -2,8 +2,8 @@
 title: Configure the SMB client to require encryption in Windows
 description: Learn how to configure SMB encryption mandate in Windows and Windows Server using Group Policy and PowerShell.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/25/2024
 
 ---
@@ -75,3 +75,4 @@ Get-SmbClientConfiguration | Format-List -Property RequireEncryption
 ## Related content
 
 - [SMB security enhancements](smb-security.md)
+

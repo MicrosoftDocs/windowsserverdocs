@@ -3,8 +3,8 @@ title: Install Hyper-V in Windows and Windows Server
 description: Gives instructions for installing the Hyper-V role using Server Manager or Windows PowerShell. And gives instructions for enablings Hyper-V on Windows.
 ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-ms.author: roharwoo
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/23/2025
 zone_pivot_groups: windows
 #customer intent: As an IT administrator, I want to install and enable Hyper-V so that I can create and manage virtual machines effectively.
@@ -194,4 +194,5 @@ When the installation completes, you're prompted to restart your computer.
 ## Next step
 
 - [Create a virtual machine in Hyper-V](/windows-server/virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v)
+
 

@@ -1,8 +1,8 @@
 ---
 title: Use all virtual functions for networking when they are available
 description: Learn what to do when some hardware acceleration capabilities are not being utilized.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: bf895484-6a0d-4aa4-9a42-9fac739e875d
 ms.date: 8/16/2016
@@ -30,4 +30,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Consider configuring the virtual network adapter for SR-IOV if the physical hardware supports SR-IOV and if this configuration does not conflict with the networking features required by the virtual machine.*
+
 

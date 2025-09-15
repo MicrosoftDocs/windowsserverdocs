@@ -3,8 +3,8 @@ title: Get Started with Software Inventory Logging
 description: Describes how to install and start using Software Inventory Logging
 ms.topic: get-started
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging
@@ -37,3 +37,4 @@ Software Inventory Logging can assist server administrators in performing the fo
 [Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/details.aspx?id=7826&lc=1033)
 [Volume Activation Management Tool](https://blogs.technet.com/b/volume-licensing/)
+

@@ -168,3 +168,4 @@ If you aren't sure where your feedback should go, submit it by using any of thes
 - [Get started with Windows LAPS and Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
 
+

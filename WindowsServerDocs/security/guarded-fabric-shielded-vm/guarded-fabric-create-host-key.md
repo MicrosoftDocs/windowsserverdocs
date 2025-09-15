@@ -4,8 +4,8 @@ title: Create a host key and add it to HGS
 ms.topic: how-to
 ms.assetid: a12c8494-388c-4523-8d70-df9400bbc2c0
 manager: dongill
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -59,4 +59,5 @@ Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
 ## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
+
 

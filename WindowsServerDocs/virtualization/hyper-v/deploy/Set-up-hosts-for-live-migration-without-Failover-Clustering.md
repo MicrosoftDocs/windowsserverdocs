@@ -3,8 +3,8 @@ title: Set up hosts for live migration without Failover Clustering
 description: Set up nonclustered hosts for live migration, configure authentication, and secure your network for seamless virtual machine moves.
 ms.topic: how-to
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/14/2025
 ---
 # Set up hosts for live migration without Failover Clustering
@@ -141,4 +141,5 @@ This table describes how the performance options work.
 ## Next steps
 
 After you set up the hosts, you're ready to do a live migration. For instructions, see [Use live migration without Failover Clustering to move a virtual machine](../manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md).
+
 

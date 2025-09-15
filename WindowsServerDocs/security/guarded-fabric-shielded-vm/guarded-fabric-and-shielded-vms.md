@@ -3,8 +3,8 @@ description: "Learn more about: Guarded fabric and shielded VMs overview"
 title: Guarded Fabric and Shielded VMs overview
 ms.topic: concept-article
 manager: dongill
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/16/2023
 ms.custom: sfi-image-nochange
 ---
@@ -160,4 +160,5 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 - Blog: [Datacenter and Private Cloud Security Blog](/archive/blogs/datacentersecurity/)
 - Video: Introduction to Shielded Virtual Machines
 - Video: Dive into Shielded VMs with Windows Server 2016 Hyper-V
+
 

@@ -2,8 +2,8 @@
 title: NTFS overview
 description: Learn how NTFS provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata in Windows.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/17/2025
 ---
 
@@ -90,3 +90,4 @@ If the space on a volume is limited, NTFS provides the following ways to work wi
 - [What's New in NTFS for Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)
 - [What's New in NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)
 - [About Transactional NTFS](/windows/win32/fileio/about-transactional-ntfs)
+

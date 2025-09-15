@@ -2,8 +2,8 @@
 title: User access options with Windows Admin Center
 description: User access options and identity providers with Windows Admin Center (Project Honolulu)
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/07/2019
 ---
 
@@ -96,3 +96,4 @@ When you set up role-based access control on an individual computer, local secur
 You can grant access to users or other security groups by adding them as members of the role security groups.
 
 For an enterprise-wide deployment on multiple machines, you can download the configuration script from the gateway and distribute it to your computers using a Desired State Configuration pull server, Azure Automation, or your preferred management tooling.
+

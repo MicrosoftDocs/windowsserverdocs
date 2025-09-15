@@ -1,8 +1,8 @@
 ---
 title: Security Principals
 description: This article discusses security principals for Windows Server accounts and security groups and how they work in Active Directory.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: concept-article
 ms.date: 07/08/2025
 ---
@@ -134,4 +134,5 @@ For descriptions and settings information about special identities, see [Special
 ## Related content
 
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
+
 

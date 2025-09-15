@@ -1,8 +1,8 @@
 ---
 title: AD Forest Recovery - Performing a full server recovery
 description: A full server recovery is necessary if you're restoring to different hardware or a different operating system instance. Bare-Metal recovery is a supported method of backup.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/21/2023
 ms.topic: how-to
 ---
@@ -112,4 +112,5 @@ a network share, use the following steps.
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
 

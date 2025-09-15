@@ -7,8 +7,8 @@ metadata:
   title: Windows Server Management documentation
   description: Learn about tools, recommendations and guidance on managing Windows Server.
   ms.topic: landing-page # Required
-  author: thomasmaurer
-  ms.author: alalve
+  author: dknappettmsft
+  ms.author: daknappe
   ms.date: 02/25/2022
   ms.service: windows-server
 
@@ -175,3 +175,4 @@ landingContent:
             url: /previous-versions/windows/
           - text: Search for specific information
             url: /search/?dataSource=previousVersions&search=Windows+Server
+

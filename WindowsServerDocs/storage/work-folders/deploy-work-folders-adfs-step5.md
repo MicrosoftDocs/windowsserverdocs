@@ -3,8 +3,8 @@ description: "Learn more about: Deploy Work Folders with AD FS and Web Applicati
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 5, Set Up Clients
 ms.topic: install-set-up-deploy
 manager: klaasl
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 4/5/2017
 ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
 ---
@@ -117,5 +117,6 @@ This concludes the procedure for deploying Work Folders, AD FS and Web Applicati
 
 ## See Also
 [Work Folders Overview](Work-Folders-Overview.md)
+
 
 

@@ -3,8 +3,8 @@ metadata:
   ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
   title: Cluster-Aware Updating - Frequently Asked Questions
   ms.topic: faq
-  author: robinharwood
-  ms.author: roharwoo
+  author: dknappettmsft
+  ms.author: daknappe
   ms.date: 10/21/2021
   description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
   ms.service: windows-server

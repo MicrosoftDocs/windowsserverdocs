@@ -1,8 +1,8 @@
 ---
 title: Configure Policy Settings for Windows LAPS
 description: Learn how to configure policy settings for Windows Local Administrator Password Solution (Windows LAPS) to enhance security and automate local administrator password management.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/26/2025
 ms.topic: concept-article
 ms.custom: sfi-image-nochange
@@ -392,4 +392,5 @@ Keep these defaults in mind when configuring new Windows LAPS features, for exam
 - [Use event logs for Windows LAPS](laps-management-event-log.md)
 - [Use Windows LAPS PowerShell cmdlet](laps-management-powershell.md)
 - [Windows LAPS schema extensions reference](laps-technical-reference.md)
+
 

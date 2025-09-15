@@ -1,9 +1,9 @@
 ---
 title: Configure Stretch Cluster Replication using shared storage in Windows Server
 description: Stretch cluster replication using shared storage
-ms.author: alalve
+ms.author: daknappe
 ms.topic: how-to
-author: xelu86
+author: dknappettmsft
 ms.date: 04/16/2025
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
@@ -649,3 +649,4 @@ To alter replication source and destination within the stretch cluster, use the 
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+

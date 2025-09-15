@@ -1,8 +1,8 @@
 ---
 title: Configure failover cluster accounts in Active Directory
 description: Learn how to configure cluster accounts in Active Directory for Windows Server failover clusters.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 07/17/2025
 ---
@@ -119,3 +119,4 @@ Make sure that you know the name of the cluster and the name that the clustered 
 - [Active Directory security groups](/windows-server/identity/ad-ds/manage/understand-security-groups)
 
 - [Troubleshoot issues with accounts used by failover clusters](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters)
+

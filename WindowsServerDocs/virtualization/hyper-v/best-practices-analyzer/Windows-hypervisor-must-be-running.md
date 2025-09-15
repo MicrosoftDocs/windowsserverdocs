@@ -1,8 +1,8 @@
 ---
 title: Windows hypervisor must be running
 description: Learn what to do when Windows hypervisor is not running.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.assetid: 501a9beb-c464-46c0-88c5-e3e7e3e70101
 ms.date: 10/03/2016
@@ -78,4 +78,5 @@ Next, check the Hyper-V-Hypervisor event log. If there are problems, you'll also
 
 ### See Also
 For details about using Hyper-V on Windows 10, including how to check that your computer can run Hyper-V, see [Windows 10 Hyper-V System Requirements](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
+
 

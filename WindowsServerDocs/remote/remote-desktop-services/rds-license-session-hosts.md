@@ -2,8 +2,8 @@
 title: License Remote Desktop session hosts
 description: Learn how to install and configure licenses for Remote Desktop session hosts in Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/06/2025
 ms.custom: sfi-image-nochange
 ---
@@ -131,3 +131,4 @@ To update the registry key and value on the RD licensing server:
 ## Next steps
 
 Learn how to create reports to track RDS per-user CALs issued by a Remote Desktop license server at [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md).
+

@@ -2,8 +2,8 @@
 title: Key Management Services (KMS) client activation and product keys
 description: Find the Generic Volume License Keys (GVLKs) required to activate Windows and Windows Server editions using a Key Management Services (KMS) host.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/25/2025
 ---
 
@@ -254,3 +254,4 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2008 for Itanium-Based Systems  | 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK |
 
 ---
+

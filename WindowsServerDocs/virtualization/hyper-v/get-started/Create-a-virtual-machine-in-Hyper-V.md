@@ -3,8 +3,8 @@ title: Create a virtual machine in Hyper-V
 description: Gives instructions for creating a virtual machine using Hyper-V Manager or Windows PowerShell.
 ms.topic: how-to
 ms.assetid: 59297022-a898-456c-b299-d79cd5860238
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/29/2025
 ---
 
@@ -127,4 +127,5 @@ The following table lists the options you can pick when you create a virtual mac
 - [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 
 - [Create a virtual switch for Hyper-V virtual machines](Create-a-virtual-switch-for-Hyper-V-virtual-machines.md)
+
 

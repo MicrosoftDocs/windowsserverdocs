@@ -3,8 +3,8 @@ title: Manage Software Inventory Logging
 description: Describes how to manage Software Inventory Logging
 ms.topic: how-to
 ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ms.custom: sfi-image-nochange
 ---
@@ -280,3 +280,4 @@ Below are two examples of what the output on the PowerShell console would look l
 [Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)
 [Import-BinaryMiLog](/powershell/module/cimcmdlets/import-binarymilog)
 [Export-BinaryMiLog](/powershell/module/cimcmdlets/export-binarymilog)
+

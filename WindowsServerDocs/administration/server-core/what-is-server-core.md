@@ -1,8 +1,8 @@
 ---
 title: What is Server Core?
 description: Learn about the Server Core installation option in Windows Server
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/15/2025
 ms.topic: concept-article
 ---
@@ -108,3 +108,4 @@ Using Server Core:
 - [Manage Server Core](server-core-manage.md)
 - [Patching Server Core](server-core-servicing.md)
 - [Configure memory dump files](server-core-memory-dump.md)
+

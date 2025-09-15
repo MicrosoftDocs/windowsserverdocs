@@ -2,8 +2,8 @@
 title: Server Core vs Server with Desktop Experience install options
 description: Learn the differences between the Server Core and Server with Desktop Experience install options.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/15/2025
 ---
 
@@ -39,3 +39,4 @@ There are some key differences between Server Core and Server with Desktop Exper
 
 > [!NOTE]
 > For RSAT, you must use the version included with Windows 10 or later.
+

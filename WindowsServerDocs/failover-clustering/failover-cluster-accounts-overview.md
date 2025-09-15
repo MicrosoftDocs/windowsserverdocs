@@ -2,8 +2,8 @@
 title: Failover cluster accounts overview
 description: Learn about the Active Directory accounts in Windows Server failover clusters, including cluster name objects, clustered services, permissions, and best management practices.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/17/2025
 ---
 
@@ -73,3 +73,4 @@ As described in the preceding three sections, certain requirements must be met b
 ## Planning ahead for password resets and other account maintenance
 
 The administrators of failover clusters might sometimes need to reset the password of the cluster name account. This action requires a specific permission, the **Reset password** permission. Therefore, it's a best practice to edit the permissions of the cluster name account (by using the Active Directory Users and Computers snap-in) to give the administrators of the cluster the **Reset password** permission for the cluster name account. For more information, see [Troubleshoot password issues with the cluster name account](/troubleshoot/windows-server/high-availability/troubleshoot-issues-accounts-used-failover-clusters#troubleshoot-password-issues-with-the-cluster-name-account).
+

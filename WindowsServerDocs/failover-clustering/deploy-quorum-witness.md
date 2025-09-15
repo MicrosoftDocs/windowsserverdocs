@@ -1,8 +1,8 @@
 ---
 title: Deploy a quorum witness for a failover cluster in Windows Server
 description: Learn how to deploy a cluster quorum witness in Windows Server using Failover Cluster Manager, PowerShell, and Windows Admin Center.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
 ms.date: 06/16/2025
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
@@ -387,3 +387,4 @@ netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; 
 - [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts)
 
 - [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs)
+

@@ -2,8 +2,8 @@
 title: Windows Admin Center SDK Case Study - DataON
 description: Windows Admin Center SDK Case Study - DataON
 ms.topic: partner-tools
-author: robinharwood
-ms.author: roharwoo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/11/2019
 ---
 # DataON MUST Extension
@@ -37,4 +37,5 @@ The MUST extension extends the functionality of Windows Admin Center by providin
 > <cite>“MUST has been very valuable and was a big selling point. To us, it demonstrated a commitment from DataON to support Microsoft hyper-converged infrastructure. The inclusion of MUST with their S2D appliance is what completes the solution with Storage Spaces Direct as a viable SAN replacement.” </cite>
 >
 > -- Benjamin Clements, President, Strategic Online Systems, Inc.
+
 

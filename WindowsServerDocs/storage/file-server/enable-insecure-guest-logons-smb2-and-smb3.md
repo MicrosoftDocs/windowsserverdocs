@@ -2,8 +2,8 @@
 title: Enable insecure guest logons in SMB2 and SMB3 for Windows client and Windows Server
 description: This article describes how to enable guest logons policy in SMB2 and SMB3 for Windows client and Windows Server devices using Group Policy and PowerShell.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/13/2025
 ---
 
@@ -111,3 +111,4 @@ In the middle pane, you can review the following information concerning these ev
 | 31017 | Log Name: Microsoft-Windows-SmbClient/Security <br> Source: Microsoft-Windows-SMBClient <br> Logged: Date/Time <br> Task Category: RejectedInsecureGuestAuth <br> Level: Error <br> Keywords: Authentication <br> User: NETWORK SERVICE <br> Computer: <br><br> **Description**: Rejected an insecure guest logon. The machine attempted to connect to the server using an insecure guest logon. The server denied the connection. Ensure that the guest account is enabled on the server and configured to allow access from the network. |
 | 31018 | Log Name: Microsoft-Windows-SmbClient/Security <br> Source: Microsoft-Windows-SMBClient <br> Logged: Date/Time <br> Task Category: InsecureGuestAuthEnabled <br> Level: Warning <br> Keywords: Authentication <br> User: NETWORK SERVICE <br> Computer: <br><br> **Description**: An administrator has enabled AllowInsecureGuestAuth. Clients using insecure guest logons are more vulnerable to attackers-in-the-middle, phishing, and malware. |
 | 31022 | Log Name: Microsoft-Windows-SmbClient/Security <br> Source: Microsoft-Windows-SMBClient <br> Logged: Date/Time <br> Task Category: AllowedInsecureGuestAuth <br> Level: Warning <br> Keywords: Authentication <br> User: SYSTEM <br> Computer: <br><br> **Description**: Allowed an insecure guest logon. This event indicates that the server attempted to log the user on as an unauthenticated guest and was allowed by the client. <br><br> Username: nonexistantaccount <br> Server name: |
+

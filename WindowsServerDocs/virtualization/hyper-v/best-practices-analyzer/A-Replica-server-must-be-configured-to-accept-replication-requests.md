@@ -1,8 +1,8 @@
 ---
 title: A Replica server must be configured to accept replication requests
 description: Learn what to do when your computer is designated as a Hyper-V Replica server but is not configured to accept incoming replication data from primary servers.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
 ms.date: 8/16/2016
 ---
@@ -69,4 +69,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ```
 New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMStorage DEFAULT
 ```
+
 

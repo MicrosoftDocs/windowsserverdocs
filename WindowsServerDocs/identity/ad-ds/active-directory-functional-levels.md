@@ -4,7 +4,6 @@ description: Learn more about the different Active Directory domain and forest f
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 07/08/2025
 ---
 # Active Directory Domain Services functional levels
 
@@ -97,4 +96,5 @@ If you want to identify functional levels for a previous version of Windows Serv
 - Use the PowerShell command [Set-ADDomainMode](/powershell/module/activedirectory/set-addomainmode) to raise the domain functional level.
 
 - To learn more about raising the domain and forest functional levels, see [How to raise Active Directory domain and forest functional levels](/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels).
+
 
