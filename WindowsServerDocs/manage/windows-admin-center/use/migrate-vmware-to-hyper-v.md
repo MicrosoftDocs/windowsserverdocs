@@ -462,6 +462,8 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     </details>
 
 ## Troubleshooting guide
+>[!NOTE]
+>For issues or questions not covered in this documentation, you can submit feedback [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback). 
 
 ### Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
 
