@@ -23,7 +23,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 
 SLES12+ is 64-bit only.
 
-| **Feature** | **Operating system version** | **SLES 15 SP1-SP4** | **SLES 15** | **SLES 12 SP3-SP5** | **SLES 12 SP2** | **SLES 12 SP1** | **SLES 11 SP4** | **SLES 11 SP3** |
+| **Feature** | **Operating system version** | **SLES 15 SP1-SP7** | **SLES 15** | **SLES 12 SP3-SP5** | **SLES 12 SP2** | **SLES 12 SP1** | **SLES 11 SP4** | **SLES 11 SP3** |
 |--|--|--|--|--|--|--|--|--|
 | **Availability** |  | Built-in | Built-in | Built-in | Built in | Built-in | Built-in | Built-in |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
