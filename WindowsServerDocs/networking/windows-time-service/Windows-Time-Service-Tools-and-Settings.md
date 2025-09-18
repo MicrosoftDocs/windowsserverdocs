@@ -5,7 +5,7 @@ ms.topic: concept-article
 ms.author: daknappe
 author: dknappettmsft
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
-ms.date: 07/02/2025
+ms.date: 09/18/2025
 # customer intent: As an administrator, I want to find out more about Windows Time service settings so that I can adjust their configuration when I need to.
 ---
 
@@ -347,7 +347,7 @@ In the following table, *All versions* refers to all supported versions of Windo
 |**PollAdjustFactor** |All versions |Controls the decision to increase or decrease the poll interval for the system. The larger the value, the smaller the amount of error that causes the poll interval to be decreased. The default value on domain members is **5**. The default value on stand-alone clients and servers is **5**. |
 |**SpikeWatchPeriod** |All versions |Specifies the amount of time that a suspicious offset must persist before it's accepted as correct (in seconds). The default value on domain members is **900**. The default value on stand-alone clients and workstations is **900**. |
 |**TimeJumpAuditOffset** |All versions |Indicates the time jump audit threshold, in seconds. The offset is stored as an unsigned integer. If the time service adjusts the local clock by setting the clock directly, and the time correction is more than this value, the time service logs an audit event. |
-|**UpdateInterval** |All versions |Specifies the interval (in 10ms unit) between phase correction adjustments. A value of Zero has the same effect as 1. <p> **default values**:<ul><li> Domain Controllers: 100.</li><li> Domain Members：30,000.</li><li> Stand-alone Clients and Servers: 360,000.</li></ul> |
+|**UpdateInterval** |All versions |Specifies the interval (in 10ms unit) between phase correction adjustments. A value of 0 has the same effect as 1. The default values are:<ul><li>Domain controllers: **100**</li><li>Domain members：**30,000**</li><li>Stand-alone clients and servers: **360,000**</li></ul> |
 |**UtilizeSslTimeData** |Windows versions later than Windows 10 build 1511 |Indicates whether W32Time uses multiple SSL timestamps to seed a clock that's grossly inaccurate. A value of **1** indicates multiple SSL timestamps are used.<p>The **UtilizeSslTimeData** registry value refers to the secure time seeding feature. For more information, see [Secure Time Seeding – improving time keeping in Windows](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows).<p>The default out-of-box value for all Windows versions with this feature is **1** except for Windows Server 2025, where the default value is **0**. Domain membership doesn't affect this setting.|
 
 # [Parameters](#tab/parameters)
