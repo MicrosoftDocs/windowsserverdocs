@@ -1,7 +1,6 @@
 ---
 title: Install Active Directory Domain Services on Windows Server
 description: Learn more about how to install Active Directory Domain Services in Windows Server using PowerShell, or Server Manager.
-ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 author: dknappettmsft
 ms.author: daknappe
 ms.topic: install-set-up-deploy

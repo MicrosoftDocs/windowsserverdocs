@@ -1,6 +1,5 @@
 ---
 description: "Learn more about: The Role of the AD FS Configuration Database"
-ms.assetid: 68db7f26-d6e3-4e67-859b-80f352e6ab6a
 title: The Role of the AD FS Configuration Database
 ms.date: 04/08/2025
 ms.topic: concept-article
