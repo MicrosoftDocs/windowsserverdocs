@@ -1,9 +1,7 @@
 ---
 title: DNS Responses Based on Time of Day with an Azure Cloud App Server
 description: Learn how to use DNS responses based on time of day with an Azure Cloud App Server.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
 ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021

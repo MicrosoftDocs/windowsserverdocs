@@ -1,7 +1,6 @@
 ---
 description: "Learn more about: Virtual network peering"
 title: Virtual network peering
-manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood

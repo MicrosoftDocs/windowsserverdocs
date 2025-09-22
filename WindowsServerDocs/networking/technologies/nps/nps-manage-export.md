@@ -1,7 +1,6 @@
 ---
 title: Export an NPS Configuration for Import on Another Server
 description: You can use this topic to learn how to export a Network Policy Server configuration in Windows Server 2016.
-manager: brianlic
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
