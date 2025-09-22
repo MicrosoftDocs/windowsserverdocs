@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 09/28/2023
 ---
 
-
 # gpresult
 
 

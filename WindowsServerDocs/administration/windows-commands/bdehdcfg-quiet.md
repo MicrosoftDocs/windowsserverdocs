@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bdehdcfg: quiet
 
 Informs the bdehdcfg command-line tool that all actions and errors are not to be displayed in the command-line interface. Any Yes/No (Y/N) prompts displayed during the drive preparation will assume a "Yes" answer. To view any error that occurred during drive preparation, review the system event log under the **Microsoft-Windows-BitLocker-DrivePreparationTool** event provider.

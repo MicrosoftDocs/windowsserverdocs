@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getfilestransferred
 
 Retrieves the number of files transferred for the specified job.

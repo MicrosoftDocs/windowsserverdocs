@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # exec
 
 Runs a script file on the local computer. This command also duplicates or restores data as part of a backup or restore sequence. If the script fails, an error is returned and DiskShadow quits.

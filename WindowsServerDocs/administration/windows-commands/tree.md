@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # tree
 
 Displays the directory structure of a path or of the disk in a drive graphically. The structure displayed by this command depends upon the parameters that you specify at the command prompt. If you don't specify a drive or path, this command displays the tree structure beginning with the current directory of the current drive.

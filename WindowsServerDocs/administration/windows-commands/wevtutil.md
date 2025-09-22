@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/26/2022
 ---
 
-
 # wevtutil
 
 Enables you to retrieve information about event logs and publishers. You can also use this command to install and uninstall event manifests, to run queries, and to export, archive, and clear logs.

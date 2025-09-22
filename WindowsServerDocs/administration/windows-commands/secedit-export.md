@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit /export
 
 Exports security settings stored in a database configured with security templates. You can use this command to backup your security policies on a local computer, in addition to importing the settings to another computer.

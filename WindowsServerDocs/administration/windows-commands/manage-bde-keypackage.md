@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde keypackage
 
 Generates a key package for a drive. The key package can be used in conjunction with the repair tool to repair corrupted drives.

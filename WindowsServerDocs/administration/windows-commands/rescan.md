@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # rescan
 
 Using the diskpart command interpreter, you can locate new disks added to your computer.

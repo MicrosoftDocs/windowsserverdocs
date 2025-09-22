@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 01/04/2024
 ---
 
-
 # reg add
 
 Adds a new subkey or entry to the registry.

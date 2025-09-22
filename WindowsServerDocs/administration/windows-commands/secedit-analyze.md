@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit /analyze
 
 Allows you to analyze current systems settings against baseline settings that are stored in a database.

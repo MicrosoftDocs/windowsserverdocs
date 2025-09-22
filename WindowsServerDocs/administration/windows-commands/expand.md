@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 11/01/2022
 ---
 
-
 # expand
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit /import
 
 Imports security settings (.inf file), previously exported from the database configured with security templates.

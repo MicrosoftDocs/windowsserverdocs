@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # detail partition
 
 Displays the properties of the selected partition. Before you begin, you must select a partition for this operation to succeed. Use the [select partition](select-partition.md) command to select a partition and shift the focus to it.

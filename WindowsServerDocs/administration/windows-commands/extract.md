@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 12/29/2020
 ---
 
-
 # extract / extrac32
 
 Extracts files from a cabinet or source.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
-
 # regini
 
 Modifies the registry from the command line or a script, and applies changes that were preset in one or more text files. You can create, modify, or delete registry keys, in addition to modifying the permissions on the registry keys.

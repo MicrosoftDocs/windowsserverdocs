@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # Subcommand: set-DriverGroupFilter
 
 Adds or removes an existing driver group filter from a driver group.

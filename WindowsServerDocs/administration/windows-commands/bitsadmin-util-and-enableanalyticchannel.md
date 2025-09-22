@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin util and enableanalyticchannel
 
 Enables or disables the BITS client analytic channel.

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getproxylist
 
 Retrieves the comma-delimited list of proxy servers to use for the specified job.

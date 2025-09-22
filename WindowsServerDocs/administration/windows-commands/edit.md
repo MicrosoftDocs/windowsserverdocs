@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # edit
 
 Starts the MS-DOS Editor, which creates and changes ASCII text files.

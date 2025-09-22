@@ -7,7 +7,6 @@ ms.author: alalve
 ms.date: 09/08/2023
 ---
 
-
 # Command-line syntax key
 
 The following table describes the notation used to indicate command-line syntax.

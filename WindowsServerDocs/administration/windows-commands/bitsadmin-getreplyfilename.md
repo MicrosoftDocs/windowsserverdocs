@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getreplyfilename
 
 Gets the path of the file that contains the server upload-reply for the job.

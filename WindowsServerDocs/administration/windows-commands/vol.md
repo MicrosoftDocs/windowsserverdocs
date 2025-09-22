@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # vol
 
 Displays the disk volume label and serial number, if they exist.  If used without parameters, **vol** displays information for the current drive.

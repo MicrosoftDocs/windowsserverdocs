@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # Diskraid
 
 **Diskraid** is a command-line tool that enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems.

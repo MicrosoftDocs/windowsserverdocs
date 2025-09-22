@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # detail disk
 
 Displays the properties of the selected disk and the volumes on that disk. Before you begin, you must select a disk for this operation to succeed. Use the [select disk](select-disk.md) command to select a disk and shift the focus to it. If you select a virtual hard disk (VHD), this command will show the disk's bus type as *Virtual*.

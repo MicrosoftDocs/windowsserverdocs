@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # retain
 
 Prepares an existing simple dynamic volume for use as a boot or system volume. If you use a master boot record (MBR) dynamic disk, this command creates a partition entry in the master boot record. If you use a GUID partition table (GPT) dynamic disk, this command creates a partition entry in the GUID partition table.

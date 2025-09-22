@@ -7,7 +7,6 @@ ms.topic: reference
 ms.date: 03/04/2025
 ---
 
-
 # fsutil clfs
 
 The `fsutil clfs` command adds authentication support to a Common Log File System (CLFS) logfile that has either invalid or missing authentication codes. Authentication codes are written to the Base Logfile (`.blf`) and all containers associated with the logfile. When authentication is enforced, CLFS opens a logfile if it has valid authentication codes.

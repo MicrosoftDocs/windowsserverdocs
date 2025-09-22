@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 08/15/2025
 ---
 
-
 # sc delete
 
 Deletes a service subkey from the registry. If the service is running or if another process has an open handle to the service, the service is marked for deletion.

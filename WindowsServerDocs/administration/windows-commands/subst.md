@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # subst
 
 Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.

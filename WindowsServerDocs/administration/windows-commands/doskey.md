@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # doskey
 
 Calls Doskey.exe, which recalls previously entered command-line commands, edits command lines, and creates macros.

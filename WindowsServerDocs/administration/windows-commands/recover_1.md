@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # recover (DiskPart)
 
 Refreshes the state of all disks in a disk group, attempt to recover disks in an invalid disk group, and resynchronizes mirrored volumes and RAID-5 volumes that have stale data. This command operates on disks that are failed or failing. It also operates on volumes that are failed, failing, or in failed redundancy state.

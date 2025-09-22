@@ -7,7 +7,6 @@ ms.topic: reference
 ms.date: 08/29/2023
 ---
 
-
 # fsutil devdrv
 
 

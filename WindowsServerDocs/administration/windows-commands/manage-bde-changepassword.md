@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde changepassword
 
 Modifies the password for a data drive. The user is prompted for a new password.

@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin stop job
 
 Cancels the backup or recovery operation that is currently running.

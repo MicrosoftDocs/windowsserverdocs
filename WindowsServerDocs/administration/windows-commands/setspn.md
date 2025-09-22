@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 03/24/2025
 ---
 
-
 # setspn
 
 The `setspn` command line utility reads, modifies, and deletes the Service Principal Names (SPN) directory property for an Active Directory (AD) service account. You use SPNs to locate a target principal name for running a service. You can use `setspn` to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs. `Setspn` is available if you have the Active Directory Domain Services (AD DS) server role installed. `Setspn` must be ran through an elevated command prompt.

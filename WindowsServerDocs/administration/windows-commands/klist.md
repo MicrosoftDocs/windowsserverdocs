@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # klist
 
 Displays a list of currently cached Kerberos tickets.

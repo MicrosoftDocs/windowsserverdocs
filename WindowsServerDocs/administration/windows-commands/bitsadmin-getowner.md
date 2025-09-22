@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getowner
 
 Displays the display name or GUID of the owner of the specified job.

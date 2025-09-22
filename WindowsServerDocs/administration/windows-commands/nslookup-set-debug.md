@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set debug
 
 Turns debugging mode on or off.

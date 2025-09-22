@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin takeownership
 
 Lets a user with administrative privileges take ownership of the specified job.

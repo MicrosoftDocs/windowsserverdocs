@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # online
 
 Takes an offline disk or volume to the online state.

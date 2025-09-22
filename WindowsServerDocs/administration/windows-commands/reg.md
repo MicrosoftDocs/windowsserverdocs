@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # reg commands
 
 Performs operations on registry subkey information and values in registry entries.

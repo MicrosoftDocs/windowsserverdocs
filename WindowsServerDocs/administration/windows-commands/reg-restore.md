@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # reg restore
 
 Writes saved subkeys and entries back to the registry.

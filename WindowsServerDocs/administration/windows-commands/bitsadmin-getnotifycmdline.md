@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getnotifycmdline
 
 Retrieves the command-line command to run after the specified job finishes transferring data.

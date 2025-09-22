@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # openfiles
 
 Enables an administrator to query, display, or disconnect files and directories that have been opened on a system. This command also enables or disables the system **Maintain Objects List** global flag.

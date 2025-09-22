@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin peers and help
 
 Displays the command-line usage for the **/peers** switches.

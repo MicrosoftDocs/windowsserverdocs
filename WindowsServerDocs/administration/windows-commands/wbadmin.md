@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin
 
 Enables you to back up and restore your operating system, volumes, files, folders, and applications from a command prompt.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde status
 
 Provides information about all drives on the computer; whether or not they are BitLocker-protected, including:

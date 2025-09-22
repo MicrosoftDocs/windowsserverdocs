@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # delete disk
 
 Deletes a missing dynamic disk from the list of disks.

@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin start recovery
 
 Runs a recovery operation based on the parameters that you specify.

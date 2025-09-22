@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup addkpasswd
 
 Adds a Kerberos password (kpasswd) server address for a realm.

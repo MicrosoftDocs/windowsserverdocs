@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # set option
 
 Sets the options for shadow copy creation. If used without parameters, **set option** displays help at the command prompt.

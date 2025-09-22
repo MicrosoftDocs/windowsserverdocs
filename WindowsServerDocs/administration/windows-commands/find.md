@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # find
 
 Searches for a string of text in a file or files, and displays lines of text that contain the specified string.

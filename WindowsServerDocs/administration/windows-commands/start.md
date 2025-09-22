@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/02/2023
 ---
 
-
 # start
 
 Starts a separate Command Prompt window to run a specified program or command.

@@ -6,7 +6,6 @@ ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017
 ---
-
 # tsdiscon
 
 

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # attributes disk
 
 Displays, sets, or clears the attributes of a disk. When this command is used to display the current attributes of a disk, the startup disk attribute denotes the disk used to start the computer. For a dynamic mirror, it displays the disk that contains the boot plex of the boot volume.

@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # offline
 
 Takes an online disk or volume to the offline state.

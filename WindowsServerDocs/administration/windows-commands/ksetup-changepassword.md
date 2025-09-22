@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup changepassword
 
 Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. The output of the command informs you of the success or failure status.

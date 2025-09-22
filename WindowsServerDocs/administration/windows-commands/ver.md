@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/20/2022
 ---
 
-
 # ver
 
 Displays the operating system version number. This command is supported in the Windows Command prompt (Cmd.exe), but not in any version of PowerShell.

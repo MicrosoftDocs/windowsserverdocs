@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 04/16/2024
 ---
 
-
 # dcgpofix
 
 Recreates the default Group Policy Objects (GPOs) for a domain. To get to the Group Policy Management Console (GPMC), you must install Group Policy Management as a feature through Server Manager. `Dcgpofix.exe` is included with Windows Server and is located in the `C:\Windows\system32\` folder.

@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # detail
 
 Displays information about the selected disk, partition, volume, or virtual hard disk (VHD).

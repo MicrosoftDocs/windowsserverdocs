@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set d2
 
 Turns the verbose debugging mode on or off. All fields of every packet are printed.

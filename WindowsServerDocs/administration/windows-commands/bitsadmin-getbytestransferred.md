@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getbytestransferred
 
 Retrieves the number of bytes transferred for the specified job.

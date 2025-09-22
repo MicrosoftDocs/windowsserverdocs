@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # Sc.exe query
 
 Obtains and displays information about the specified service, driver, type of service, or type of driver.

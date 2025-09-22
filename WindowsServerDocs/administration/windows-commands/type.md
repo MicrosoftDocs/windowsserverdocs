@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2020
 ---
 
-
 # type
 
 In the Windows Command shell, **type** is a built in command which displays the contents of a text file. Use the **type** command to view a text file without modifying it.

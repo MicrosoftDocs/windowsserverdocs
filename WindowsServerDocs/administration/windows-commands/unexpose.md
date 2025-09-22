@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # unexpose
 
 Unexposes a shadow copy that was exposed by using the [expose command](expose.md). The exposed shadow copy can be specified by its Shadow ID, drive letter, share, or mount point.

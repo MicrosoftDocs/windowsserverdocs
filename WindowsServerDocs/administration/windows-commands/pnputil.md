@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
-
 # pnputil
 
 Pnputil.exe is a command line utility that you can use to manage the driver store. You can use this command to add driver packages, remove driver packages, and list driver packages that are in the store.

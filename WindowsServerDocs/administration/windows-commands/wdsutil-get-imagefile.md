@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # get-ImageFile
 
 Retrieves information about the images contained in a Windows Image (.wim) file.

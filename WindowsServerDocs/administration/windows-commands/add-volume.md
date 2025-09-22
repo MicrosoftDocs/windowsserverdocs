@@ -8,7 +8,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # add volume
 
 Adds volumes to the Shadow Copy Set, which is the set of volumes to be shadow copied. When a shadow copy is created, an environment variable links the alias to the shadow ID, so the alias can then be used for scripting.

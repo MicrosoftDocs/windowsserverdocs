@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # online disk
 
 Takes the offline disk to the online state. For basic disks, this command attempts to bring online the selected disk and all volumes on that disk. For dynamic disks, this command attempts to bring online all disks that are not marked as foreign on the local computer. It also attempts to bring online all volumes on the set of dynamic disks.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # mountvol
 
 Creates, deletes, or lists a volume mount point. You can also link volumes without requiring a drive letter.

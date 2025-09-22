@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # end restore
 
 Ends a restore session and issues a **PostRestore** event to involved writers.

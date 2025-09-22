@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # wdsutil disable-server
 
 Disables all services for a Windows Deployment Services server.

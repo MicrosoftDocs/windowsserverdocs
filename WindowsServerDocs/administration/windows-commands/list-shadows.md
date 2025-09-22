@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # list shadows
 
 Lists persistent and existing non-persistent shadow copies that are on the system.

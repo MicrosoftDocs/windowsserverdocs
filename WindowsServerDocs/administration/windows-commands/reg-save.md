@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # reg save
 
 Saves a copy of specified subkeys, entries, and values of the registry in a specified file.

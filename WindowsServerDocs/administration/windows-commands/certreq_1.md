@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 09/02/2025
 ---
 
-
 # certreq
 
 The certreq command can be used to request certificates from a certification authority (CA), to retrieve a response to a previous request from a CA, to create a new request from an .inf file, to accept and install a response to a request, to construct a cross-certification or qualified subordination request from an existing CA certificate or request, and to sign a cross-certification or qualified subordination request.

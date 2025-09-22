@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup setenctypeattr
 
 Sets the encryption type attribute for the domain. A status message is displayed upon successful or failed completion.

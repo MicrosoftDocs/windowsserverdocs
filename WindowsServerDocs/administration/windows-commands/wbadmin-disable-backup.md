@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin disable backup
 
 Stops running the existing scheduled daily backups.

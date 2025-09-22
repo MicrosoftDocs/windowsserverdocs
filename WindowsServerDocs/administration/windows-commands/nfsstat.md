@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nfsstat
 
 A command-line utility that displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls. Used without parameters, this command displays all of the statistical data without resetting anything.

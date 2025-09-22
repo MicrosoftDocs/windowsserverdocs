@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit /validate
 
 Validates the security settings stored in a security template (.inf file). Validating security templates can help you determine if one is corrupted or inappropriately set. Corrupted or inappropriately set security templates aren't applied.

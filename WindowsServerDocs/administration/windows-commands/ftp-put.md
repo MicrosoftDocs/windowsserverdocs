@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 03/30/2020
 ---
 
-
 # ftp put
 
 

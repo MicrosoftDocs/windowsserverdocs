@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin start backup
 
 Creates a backup using specified parameters. If no parameters are specified and you have created a scheduled daily backup, this command creates the backup by using the settings for the scheduled backup. If parameters are specified, it creates a Volume Shadow Copy Service (VSS) copy backup and won't update the history of the files that are being backed up.

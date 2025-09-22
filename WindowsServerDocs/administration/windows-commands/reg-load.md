@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # reg load
 
 Writes saved subkeys and entries into a different subkey in the registry. This command is intended for use with temporary files that are used for troubleshooting or editing registry entries.

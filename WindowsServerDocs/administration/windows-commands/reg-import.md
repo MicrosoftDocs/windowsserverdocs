@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/20/2022
 ---
 
-
 # reg import
 
 Copies the contents of a file that contains exported registry subkeys, entries, and values into the registry of the local computer.

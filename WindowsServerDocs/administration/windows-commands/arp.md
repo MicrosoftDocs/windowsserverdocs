@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 08/15/2025
 ---
 
-
 # arp
 
 The `arp` command displays and modifies entries in the Address Resolution Protocol (ARP) cache. The ARP cache contains one or more tables that are used to store IP addresses and their resolved Ethernet or Token Ring physical addresses. There's a separate table for each Ethernet or Token Ring network adapter installed on your computer.

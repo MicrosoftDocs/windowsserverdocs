@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
-
 # pnpunattend
 
 Audits a computer for device drivers, and perform unattended driver installations, or search for drivers without installing and, optionally, report the results to the command line. Use this command to specify the installation of specific drivers for specific hardware devices.

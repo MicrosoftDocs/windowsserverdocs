@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin get status
 
 Reports the status of the backup or recovery operation that is currently running.

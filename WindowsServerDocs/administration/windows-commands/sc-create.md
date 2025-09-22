@@ -8,7 +8,6 @@ ms.date: 09/29/2023
 ms.custom: sfi-ropc-nochange
 ---
 
-
 # sc.exe create
 
 Creates a subkey and entries for a service in the registry and in the Service Control Manager database.

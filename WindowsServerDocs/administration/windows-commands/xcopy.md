@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 05/28/2024
 ---
 
-
 # xcopy
 
 Copies files and directories, including subdirectories.

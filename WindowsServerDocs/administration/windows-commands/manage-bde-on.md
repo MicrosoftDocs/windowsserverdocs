@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde on
 
 Encrypts the drive and turns on BitLocker.

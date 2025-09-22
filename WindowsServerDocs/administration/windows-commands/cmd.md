@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 05/23/2025
 ---
 
-
 # cmd
 
 Starts a new instance of the command interpreter, cmd.exe. If used without parameters, `cmd` displays the version and copyright information of the operating system.

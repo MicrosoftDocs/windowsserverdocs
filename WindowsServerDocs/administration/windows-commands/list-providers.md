@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # list providers
 
 Lists shadow copy providers that are currently registered on the system.

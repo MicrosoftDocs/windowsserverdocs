@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin cancel
 
 Removes the job from the transfer queue and deletes all temporary files associated with the job.

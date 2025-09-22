@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # filesystems
 
 Displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.

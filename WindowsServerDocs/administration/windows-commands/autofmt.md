@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # autofmt
 
 Starts the Auto File System Format Utility, which formats a drive or partition when called from the Windows Recovery Console.

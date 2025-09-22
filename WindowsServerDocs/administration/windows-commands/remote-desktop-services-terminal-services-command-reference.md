@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # Remote Desktop Services (Terminal Services) command-line tools reference
 
 

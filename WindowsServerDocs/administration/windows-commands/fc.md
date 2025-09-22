@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # fc
 
 Compares two files or sets of files and displays the differences between them.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # pause
 
 Suspends the processing of a batch program, displaying the prompt, `Press any key to continue . . .`

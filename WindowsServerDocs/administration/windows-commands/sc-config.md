@@ -8,7 +8,6 @@ ms.date: 06/05/2018
 ms.custom: sfi-ropc-nochange
 ---
 
-
 # sc.exe config
 
 Modifies the value of a service's entries in the registry and in the Service Control Manager database.

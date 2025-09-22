@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set all
 
 Outputs the current configuration setting values, including the default server and computer (the host).

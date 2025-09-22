@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin setclientcertificatebyname
 
 Specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.

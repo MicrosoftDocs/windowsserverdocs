@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/20/2022
 ---
 
-
 # reg delete
 
 Deletes a subkey or entries from the registry.

@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # wdsutil add-alldriverpackages
 
 Adds all driver packages that are stored in a folder to a server.

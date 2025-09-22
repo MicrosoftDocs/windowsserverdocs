@@ -7,7 +7,6 @@ ms.topic: reference
 ms.date: 10/16/2017
 ---
 
-
 # fsutil wim
 
 

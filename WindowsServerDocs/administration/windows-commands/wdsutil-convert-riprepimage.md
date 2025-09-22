@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # convert-riprepimage
 
 Converts an existing Remote Installation Preparation (RIPrep) image to Windows Image (.wim) format.

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin setnotifyflags
 
 Sets the event notification flags for the specified job.

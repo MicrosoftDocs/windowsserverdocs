@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 01/17/2023
 ---
 
-
 # manage-bde lock
 
 Locks a BitLocker-protected drive to prevent access to it unless the unlock key is provided.

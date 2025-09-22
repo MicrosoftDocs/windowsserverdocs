@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
-
 # servermanagercmd
 
 

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # reg unload
 
 Removes a section of the registry that was loaded using the **reg load** operation.

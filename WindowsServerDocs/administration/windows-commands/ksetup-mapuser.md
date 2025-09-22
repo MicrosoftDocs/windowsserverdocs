@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup mapuser
 
 Maps the name of a Kerberos principal to an account.

@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 08/19/2024
 ---
 
-
 # wdsutil get-driverpackagefile
 
 Displays information about a driver package, including the drivers and files it contains.

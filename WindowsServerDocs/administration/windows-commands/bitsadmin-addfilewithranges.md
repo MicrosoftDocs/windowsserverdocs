@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin addfilewithranges
 
 Adds a file to the specified job. BITS downloads the specified ranges from the remote file. This switch is valid only for download jobs.

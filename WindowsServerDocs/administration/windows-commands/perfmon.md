@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/25/2018
 ---
 
-
 # perfmon
 
 Start Windows Reliability and Performance Monitor in a specific standalone mode.

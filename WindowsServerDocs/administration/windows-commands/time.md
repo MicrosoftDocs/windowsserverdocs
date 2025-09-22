@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # time
 
 Displays or sets the system time. If used without parameters, **time** displays the current system time and prompts you to enter a new time.

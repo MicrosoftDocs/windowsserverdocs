@@ -7,7 +7,6 @@ ms.author: alalve
 ms.date: 03/17/2025
 ---
 
-
 # robocopy
 
 Copies file data from one location to another.

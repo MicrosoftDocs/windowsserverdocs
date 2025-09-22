@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde resume
 
 Resumes BitLocker encryption or decryption after it has been paused.

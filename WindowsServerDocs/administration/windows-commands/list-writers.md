@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # list writers
 
 Lists writers that are on the system. If used without parameters, **list** displays the output for **list metadata** by default.

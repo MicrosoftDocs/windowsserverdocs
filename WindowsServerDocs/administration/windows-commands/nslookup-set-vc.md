@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set vc
 
 Specifies whether to use a virtual circuit when sending requests to the server.

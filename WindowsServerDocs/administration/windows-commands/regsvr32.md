@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # regsvr32
 
 Registers .dll files as command components in the registry.

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bdehdcfg: target
 
 Prepares a partition for use as a system drive by BitLocker and Windows Recovery. By default, this partition is created without a drive letter.

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin util and version
 
 Displays the version of BITS service (for example, 2.0).

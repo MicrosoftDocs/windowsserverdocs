@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 05/27/2021
 ---
 
-
 # bcdedit
 
 Boot Configuration Data (BCD) files provide a store that is used to describe boot applications and boot application settings. The objects and elements in the store effectively replace Boot.ini.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # shift
 
 Changes the position of batch parameters in a batch file.

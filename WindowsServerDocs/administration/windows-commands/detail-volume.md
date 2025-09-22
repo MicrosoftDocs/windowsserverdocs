@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # detail volume
 
 Displays the disks on which the current volume resides. Before you begin, you must select a volume for this operation to succeed. Use the [select volume](select-volume.md) command to select a volume and shift the focus to it. The volume details aren't applicable to read-only volumes, such as a DVD-ROM or CD-ROM drive.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # sysocmgr
 
 The sysocmger command has been deprecated and isn't guaranteed to be supported in future releases of Windows.

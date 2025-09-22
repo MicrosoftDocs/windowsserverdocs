@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup addenctypeattr
 
 Adds the encryption type attribute to the list of possible types for the domain. A status message is displayed upon successful or failed completion.

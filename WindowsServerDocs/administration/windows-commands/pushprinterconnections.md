@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # pushprinterconnections
 
 Reads Deployed Printer Connection settings from Group Policy and deploys/removes printer connections as needed.

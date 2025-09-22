@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde wipefreespace
 
 Wipes the free space on the volume, removing any data fragments that may have existed in the space. Running this command on a volume encrypted using the **Used Space Only** encryption method provides the same level of protection as the **Full Volume Encryption** encryption method.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit /configure
 
 Allows you to configure the current system settings using security settings stored in a database.

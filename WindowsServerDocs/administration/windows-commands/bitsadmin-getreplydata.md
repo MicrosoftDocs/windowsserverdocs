@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getreplydata
 
 Retrieves the server's upload-reply data in hexadecimal format for the job.

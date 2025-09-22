@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # ktmutil
 
 Starts the Kernel Transaction Manager utility. If used without parameters, **ktmutil** displays available subcommands.

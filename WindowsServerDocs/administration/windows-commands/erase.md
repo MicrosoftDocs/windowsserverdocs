@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # erase
 
 Deletes one or more files. If you use **erase** to delete a file from your disk, you can't retrieve it.

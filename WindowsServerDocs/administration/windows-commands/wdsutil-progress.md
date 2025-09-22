@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wdsutil /progress
 
 Displays progress while a command is running. You can use **/progress** with any other wdsutil commands that you run. If you want to turn on verbose logging for this command, you must specify **/verbose** and **/progress** directly after **wdsutil**.

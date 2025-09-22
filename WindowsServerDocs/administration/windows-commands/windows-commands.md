@@ -7,7 +7,6 @@ ms.author: roharwoo
 ms.date: 07/29/2025
 ---
 
-
 # Windows Commands
 
 All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.

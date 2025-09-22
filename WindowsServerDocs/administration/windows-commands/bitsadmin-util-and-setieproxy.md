@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin util and setieproxy
 
 Set the proxy settings to use when transferring files using a service account. You must run this command from an elevated command prompt for it to complete successfully.

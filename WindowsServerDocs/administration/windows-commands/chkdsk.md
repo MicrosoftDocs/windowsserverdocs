@@ -7,7 +7,6 @@ ms.author: alalve
 ms.date: 05/23/2025
 ---
 
-
 # chkdsk
 
 Checks the file system and file system metadata of a volume for logical and physical errors. If used without parameters, **chkdsk** displays only the status of the volume and doesn't fix any errors. If used with the **/f**, **/r**, **/x**, or **/b** parameters, it fixes errors on the volume.

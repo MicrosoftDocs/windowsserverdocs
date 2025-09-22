@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 08/06/2018
 ---
 
-
 # manage-bde protectors
 
 

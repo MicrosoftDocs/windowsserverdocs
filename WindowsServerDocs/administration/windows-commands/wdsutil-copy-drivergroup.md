@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # copy-drivergroup
 
 Duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.

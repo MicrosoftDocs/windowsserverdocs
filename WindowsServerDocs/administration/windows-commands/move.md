@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 08/15/2025
 ---
 
-
 # move
 
 Moves one or more files from one directory to another directory.

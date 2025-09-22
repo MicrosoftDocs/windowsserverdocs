@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # rexec
 
 Runs a specified command on a remote host. The remote host must be running a rexecd service (or daemon) for rexec to connect to.

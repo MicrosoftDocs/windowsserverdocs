@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getminretrydelay
 
 Retrieves the length of time, in seconds, that the service will wait after encountering a transient error before trying to transfer the file.

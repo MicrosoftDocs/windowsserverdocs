@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
-
 # PowerShell
 
 Windows PowerShell is a task-based command-line shell and scripting language designed especially for system administration. Built on the .NET Framework, Windows PowerShell helps IT professionals and power users control and automate the administration of the Windows operating system and applications that run on Windows.

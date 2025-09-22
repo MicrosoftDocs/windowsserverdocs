@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # offline disk
 
 Takes the online disk with focus to the offline state. If a dynamic disk in a disk group is taken offline, the status of the disk changes to **missing** and the group shows a disk that's offline. The missing disk is moved to the invalid group. If the dynamic disk is the last disk in the group, then the status of the disk changes to **offline**, and the empty group is removed.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # mklink
 
 Creates a directory or file symbolic or hard link.

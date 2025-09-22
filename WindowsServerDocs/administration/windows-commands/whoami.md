@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 05/23/2025
 ---
 
-
 # whoami
 
 The `whoami` command shows information about the user, groups, and privileges for the account currently logged on to the local system. When run without any parameters, `whoami` returns the current domain and user name.

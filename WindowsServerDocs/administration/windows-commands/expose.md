@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # expose
 
 Exposes a persistent shadow copy as a drive letter, share, or mount point.

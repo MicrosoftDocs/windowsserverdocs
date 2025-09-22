@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getproxyusage
 
 Retrieves the proxy usage setting for the specified job.

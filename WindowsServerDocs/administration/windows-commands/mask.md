@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # mask
 
 Removes hardware shadow copies that were imported by using the **import** command.

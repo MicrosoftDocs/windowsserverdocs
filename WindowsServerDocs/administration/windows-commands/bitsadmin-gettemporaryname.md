@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin gettemporaryname
 
 Reports the temporary filename of the given file within the job.

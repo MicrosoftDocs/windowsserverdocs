@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup server
 
 Allows you to specify a name for a computer running the Windows operating system, so changes made by the **ksetup** command update the target computer.

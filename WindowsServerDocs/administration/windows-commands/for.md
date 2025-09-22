@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/04/2023
 ---
 
-
 # for
 
 Runs a specified command for each file, within a set of files.

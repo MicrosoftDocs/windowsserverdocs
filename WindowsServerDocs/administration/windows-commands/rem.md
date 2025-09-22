@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # rem
 
 Records comments in a script, batch, or config.sys file. If no comment is specified, **rem** adds vertical spacing.

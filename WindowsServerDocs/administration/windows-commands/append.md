@@ -8,7 +8,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # append
 
 Allows programs to open data files in specified directories as if they were in the current directory. If used without parameters, **append** displays the appended directory list.

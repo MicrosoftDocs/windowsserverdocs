@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin setproxysettings
 
 Sets the proxy settings for the specified job.

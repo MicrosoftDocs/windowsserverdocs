@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin delete catalog
 
 Deletes the backup catalog that is stored on the local computer. Use this command when the backup catalog has been corrupted and you can't restore it using the [wbadmin restore catalog](wbadmin-restore-catalog.md) command.

@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin get disks
 
 Lists the internal and external disks that are currently online for the local computer.

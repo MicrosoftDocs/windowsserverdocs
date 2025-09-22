@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin monitor
 
 Monitors jobs in the transfer queue that are owned by the current user.

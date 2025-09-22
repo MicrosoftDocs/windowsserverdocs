@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # diskperf
 
 The **diskperf** command remotely enables or disables physical or logical disk performance counters on computers running Windows.

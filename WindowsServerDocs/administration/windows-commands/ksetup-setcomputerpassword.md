@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup setcomputerpassword
 
 Sets the password for the local computer. This command affects the computer account only and requires a restart for the password change to take effect.

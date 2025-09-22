@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # autochk
 
 Runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system.

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getcompletiontime
 
 Retrieves the time that the job finished transferring data.

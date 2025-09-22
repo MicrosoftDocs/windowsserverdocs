@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin restore catalog
 
 Recovers a backup catalog for the local computer from a storage location that you specify.

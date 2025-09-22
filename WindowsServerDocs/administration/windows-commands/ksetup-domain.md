@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup domain
 
 Sets the domain name for all Kerberos operations.

@@ -8,7 +8,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # assoc
 
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.

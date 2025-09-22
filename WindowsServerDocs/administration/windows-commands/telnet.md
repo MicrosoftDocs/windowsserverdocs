@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 6/21/2022
 ---
 
-
 # telnet
 
 

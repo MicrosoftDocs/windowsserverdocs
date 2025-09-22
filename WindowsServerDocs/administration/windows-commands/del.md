@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 6/22/2022
 ---
 
-
 # del
 
 Deletes one or more files. This command performs the same actions as the **erase** command.

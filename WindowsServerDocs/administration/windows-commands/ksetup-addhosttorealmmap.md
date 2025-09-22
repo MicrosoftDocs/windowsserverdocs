@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup addhosttorealmmap
 
 Adds a service principal name (SPN) mapping between the stated host and the realm. This command also allows you to map a host or multiple hosts that are sharing the same DNS suffix to the realm.

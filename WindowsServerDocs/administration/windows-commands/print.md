@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # print
 
 Sends a text file to a printer. A file can print in the background if you send it to a printer connected to a serial or parallel port on the local computer.

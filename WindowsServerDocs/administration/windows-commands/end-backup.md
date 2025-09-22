@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # end backup
 
 Ends a full backup session and issues a **BackupComplete** event with the appropriate writer state, if needed.

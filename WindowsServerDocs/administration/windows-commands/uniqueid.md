@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # uniqueid
 
 Displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the basic or dynamic disk with focus. A basic or dynamic disk must be selected for this operation to succeed. Use the [select disk command](select-disk.md) to select a disk and shift the focus to it.

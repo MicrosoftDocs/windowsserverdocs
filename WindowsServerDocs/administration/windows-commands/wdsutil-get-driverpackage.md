@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # get-DriverPackage
 
 Displays information about a driver package on the server.

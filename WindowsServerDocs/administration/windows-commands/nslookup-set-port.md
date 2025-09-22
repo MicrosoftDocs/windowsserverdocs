@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set port
 
 Changes the default TCP/UDP Domain Name System (DNS) name server port to the specified value.

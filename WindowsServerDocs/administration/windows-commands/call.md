@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/28/2022
 ---
 
-
 # call
 
 Calls one batch program from another without stopping the parent batch program. The **call** command accepts labels as the target of the call.

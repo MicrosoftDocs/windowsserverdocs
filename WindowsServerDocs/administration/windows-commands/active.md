@@ -8,7 +8,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # active
 
 On basic disks, marks the partition with focus as active. Only partitions can be marked as active. A partition must be selected for this operation to succeed. Use the **select partition** command to select a partition and shift the focus to it.

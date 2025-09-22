@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getmodificationtime
 
 Retrieves the last time the job was modified or data was successfully transferred.

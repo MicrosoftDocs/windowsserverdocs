@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nfsshare
 
 Controls Network File System (NFS) shares. Used without parameters, this command displays all Network File System (NFS) shares exported by Server for NFS.

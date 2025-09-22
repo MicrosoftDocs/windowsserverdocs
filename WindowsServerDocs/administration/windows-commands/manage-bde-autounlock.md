@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde autounlock
 
 Manages the automatic unlocking of BitLocker-protected data drives.

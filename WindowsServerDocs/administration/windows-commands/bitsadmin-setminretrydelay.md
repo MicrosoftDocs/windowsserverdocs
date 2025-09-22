@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin setminretrydelay
 
 Sets the minimum length of time, in seconds, that BITS waits after encountering a transient error before trying to transfer the file.

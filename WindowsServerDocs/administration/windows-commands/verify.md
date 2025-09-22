@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 11/01/2022
 ---
 
-
 # verify
 
 Tells the Command Prompt tool (cmd.exe) whether to verify your files are written correctly to a disk.

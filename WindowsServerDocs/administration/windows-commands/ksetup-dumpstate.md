@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup dumpstate
 
 Displays the current state of realm settings for all realms that are defined on the computer. This command displays the same output as the **ksetup** command.

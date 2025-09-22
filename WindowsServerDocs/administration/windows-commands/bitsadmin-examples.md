@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 05/31/2018
 ---
 
-
 # bitsadmin examples
 
 The following examples show how to use the `bitsadmin` tool to perform the most common tasks.

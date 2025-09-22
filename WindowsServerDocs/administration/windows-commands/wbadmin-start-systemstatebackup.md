@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin start systemstatebackup
 
 Creates a system state backup of the local computer and stores it on the location specified.

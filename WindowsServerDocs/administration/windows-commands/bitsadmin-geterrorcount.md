@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin geterrorcount
 
 Retrieves a count of the number of times the specified job generated a transient error.

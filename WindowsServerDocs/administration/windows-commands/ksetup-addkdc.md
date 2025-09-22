@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup addkdc
 
 Adds a Key Distribution Center (KDC) address for the given Kerberos realm

@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # chcp
 
 Changes the active console code page. If used without parameters, **chcp** displays the number of the active console code page.

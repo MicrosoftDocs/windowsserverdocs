@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getcreationtime
 
 Retrieves the creation time for the specified job.

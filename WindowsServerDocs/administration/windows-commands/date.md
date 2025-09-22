@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/26/2022
 ---
 
-
 # date
 
 Displays or sets the system date. If used without parameters, **date** displays the current system date setting and prompts you to enter a new date.

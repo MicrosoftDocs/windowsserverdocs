@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup setrealm
 
 Sets the name of a Kerberos realm.

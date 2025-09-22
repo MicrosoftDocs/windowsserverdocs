@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # ksetup setrealmflags
 
 Sets realm flags for the specified realm.

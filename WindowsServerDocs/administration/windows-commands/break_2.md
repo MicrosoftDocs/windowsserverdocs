@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/12/2023
 ---
 
-
 # break (diskshadow)
 
 Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume. The volume can then be accessed using a drive letter (if assigned) or volume name. If used without parameters, **break** displays help at the command prompt.

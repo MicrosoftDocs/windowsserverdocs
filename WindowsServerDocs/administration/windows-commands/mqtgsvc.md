@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # mqtgsvc
 
 Monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true. For examples of how the Message Queuing Triggers service can be used, see [Message Queuing Triggers](/previous-versions/windows/desktop/legacy/ms703197(v=vs.85)).

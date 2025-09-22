@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # inactive
 
 Marks the system partition or boot partition with focus as inactive on basic master boot record (MBR) disks.

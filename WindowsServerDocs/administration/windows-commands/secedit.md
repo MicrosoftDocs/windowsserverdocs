@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit commands
 
 Configures and analyzes system security by comparing your current security configuration against specified security templates.

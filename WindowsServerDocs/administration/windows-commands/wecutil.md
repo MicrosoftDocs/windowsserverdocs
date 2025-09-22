@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 12/04/2020
 ---
 
-
 # wecutil
 
 Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol.

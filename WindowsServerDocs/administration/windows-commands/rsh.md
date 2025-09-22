@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # rsh
 
 Runs commands on remote computers running the RSH service or daemon.

@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin start systemstaterecovery
 
 Performs a system state recovery to a location and from a backup that you specify.

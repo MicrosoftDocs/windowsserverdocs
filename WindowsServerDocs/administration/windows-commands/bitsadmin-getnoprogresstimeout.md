@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getnoprogresstimeout
 
 Retrieves the length of time, in seconds, that the service will try to transfer the file after a transient error occurs.

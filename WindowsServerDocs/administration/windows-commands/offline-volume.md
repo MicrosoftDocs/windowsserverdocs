@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # offline volume
 
 Takes the online volume with focus to the offline state.

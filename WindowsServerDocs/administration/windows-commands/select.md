@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # select commands
 
 Shifts the focus to a disk, partition, volume, or virtual hard disk (VHD).

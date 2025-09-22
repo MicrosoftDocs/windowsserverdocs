@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin peercaching and getconfigurationflags
 
 Gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers.

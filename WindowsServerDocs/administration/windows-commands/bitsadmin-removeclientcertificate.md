@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin removeclientcertificate
 
 Removes the client certificate from the job.

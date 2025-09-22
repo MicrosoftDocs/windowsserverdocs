@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set class
 
 Changes the query class. The class specifies the protocol group of the information.

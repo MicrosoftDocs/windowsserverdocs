@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/02/2023
 ---
 
-
 # echo
 
 Displays messages or turns on or off the command echoing feature. If used without parameters, **echo** displays the current echo setting.

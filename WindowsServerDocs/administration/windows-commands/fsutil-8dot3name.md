@@ -7,7 +7,6 @@ ms.topic: reference
 ms.date: 11/22/2022
 ---
 
-
 # fsutil 8dot3name
 
 

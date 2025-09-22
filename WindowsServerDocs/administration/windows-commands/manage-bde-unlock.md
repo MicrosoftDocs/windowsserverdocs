@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 01/17/2023
 ---
 
-
 # manage-bde unlock
 
 Unlocks a BitLocker-protected drive by using a recovery password or a recovery key.

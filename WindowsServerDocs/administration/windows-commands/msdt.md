@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 01/31/2023
 ---
 
-
 # msdt
 
 Invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.

@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 01/07/2022
 ---
 
-
 # sort
 
 Reads input, sorts data, and writes the results to the screen, to a file, or to another device.

@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # add-DriverGroupFilter
 
 Adds a filter to a driver group on a server.

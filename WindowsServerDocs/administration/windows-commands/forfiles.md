@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 05/20/2020
 ---
 
-
 # forfiles
 
 Selects and runs a command on a file or set of files. This command is most commonly used in batch files.

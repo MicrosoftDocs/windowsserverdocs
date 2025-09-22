@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin start sysrecovery
 
 Performs a system recovery (bare metal recovery) using your specified parameters.

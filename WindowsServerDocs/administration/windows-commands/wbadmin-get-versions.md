@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # wbadmin get versions
 
 Lists details about the available backups that are stored on the local computer or another computer. The details provided for a backup include the backup time, the backup storage location, the version identifier, and the type of recoveries you can perform.

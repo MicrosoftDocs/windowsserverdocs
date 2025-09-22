@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin setvalidationstate
 
 Sets the content validation state of the given file within the job.

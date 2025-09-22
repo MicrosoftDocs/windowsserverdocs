@@ -8,7 +8,6 @@ author: xelu86
 ms.date: 10/13/2023
 ---
 
-
 # add (diskshadow)
 
 Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. If used without subcommands, **add** lists the current volumes and aliases.

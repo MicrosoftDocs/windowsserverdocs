@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin peercaching and setconfigurationflags
 
 Sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers.

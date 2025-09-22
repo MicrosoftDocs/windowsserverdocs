@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # auditpol
 
 Displays information about and performs functions to manipulate audit policies, including:

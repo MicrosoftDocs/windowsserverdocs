@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # attributes
 
 Displays, sets, or clears the attributes of a disk or volume.

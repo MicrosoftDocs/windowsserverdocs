@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde off
 
 Decrypts the drive and turns off BitLocker. All key protectors are removed when decryption is complete.

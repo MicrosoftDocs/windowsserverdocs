@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/12/2023
 ---
 
-
 # delete
 
 Deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.

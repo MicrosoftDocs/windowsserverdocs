@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 07/26/2019
 ---
 
-
 # more
 
 Displays one screen of output at a time.

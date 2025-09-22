@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 10/16/2017
 ---
 
-
 # list
 
 Displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs).

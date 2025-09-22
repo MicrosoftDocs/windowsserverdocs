@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde changepin
 
 Modifies the PIN for an operating system drive. The user is prompted to enter a new PIN.

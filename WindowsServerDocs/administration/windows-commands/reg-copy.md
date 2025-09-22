@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # reg copy
 
 Copies a registry entry to a specified location on the local or remote computer.

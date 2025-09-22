@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 11/02/2022
 ---
 
-
 # reg query
 
 Returns a list of the next tier of subkeys and entries that are located under a specified subkey in the registry.

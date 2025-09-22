@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getfilestotal
 
 Retrieves the number of files in the specified job.

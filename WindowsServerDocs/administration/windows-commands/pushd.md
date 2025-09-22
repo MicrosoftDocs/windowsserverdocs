@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # pushd
 
 Stores the current directory for use by the **popd** command, and then changes to the specified directory.

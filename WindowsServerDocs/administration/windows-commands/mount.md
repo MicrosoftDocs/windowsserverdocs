@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 09/27/2023
 ---
 
-
 # mount
 
 A command-line utility that mounts Network File System (NFS) network shares. When used without options or arguments, **mount** displays information about all mounted NFS file systems.

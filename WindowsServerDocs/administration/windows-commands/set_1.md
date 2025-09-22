@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 09/06/2023
 ---
 
-
 # set (environment variable)
 
 Displays, sets, or removes cmd.exe environment variables. If used without parameters, **set** displays the current environment variable settings.

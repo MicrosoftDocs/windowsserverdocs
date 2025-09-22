@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # Set context
 
 Sets the context for shadow copy creation. If used without parameters, **set context** displays help at the command prompt.

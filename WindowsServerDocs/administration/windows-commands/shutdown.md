@@ -7,7 +7,6 @@ ms.author: alalve
 ms.date: 05/01/2025
 ---
 
-
 # shutdown
 
 Enables you to shut down or restart local or remote computers, one at a time.

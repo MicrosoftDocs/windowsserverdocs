@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 06/15/2023
 ---
 
-
 # typeperf
 
 The **typeperf** command writes performance data to the command window or to a log file. To stop **typeperf**, press CTRL+C.

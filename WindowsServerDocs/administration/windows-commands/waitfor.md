@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # waitfor
 
 Sends or waits for a signal on a system. This command is used to synchronize computers across a network.

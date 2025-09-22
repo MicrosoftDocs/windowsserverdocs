@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 09/19/2023
 ---
 
-
 # color
 
 Changes the foreground and background colors in the Command Prompt window for the current session. If used without parameters, **color** restores the default Command Prompt window foreground and background colors.

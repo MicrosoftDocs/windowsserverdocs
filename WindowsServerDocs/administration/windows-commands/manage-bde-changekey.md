@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # manage-bde changekey
 
 Modifies the startup key for an operating system drive.

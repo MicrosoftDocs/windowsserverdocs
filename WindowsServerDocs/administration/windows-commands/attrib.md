@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 09/22/2023
 ---
 
-
 # attrib
 
 Displays, sets, or removes attributes assigned to files or directories. If used without parameters, **attrib** displays attributes of all files in the current directory.

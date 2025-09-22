@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # remove
 
 Removes a drive letter or mount point from the volume with focus. If the all parameter is used, all current drive letters and mount points are removed. If no drive letter or mount point is specified, then DiskPart removes the first drive letter or mount point it encounters.

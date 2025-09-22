@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getcustomheaders
 
 Retrieves the custom HTTP headers from the job.

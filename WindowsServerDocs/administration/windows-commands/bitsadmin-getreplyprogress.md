@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin getreplyprogress
 
 Retrieves the size and progress of the server upload-reply.

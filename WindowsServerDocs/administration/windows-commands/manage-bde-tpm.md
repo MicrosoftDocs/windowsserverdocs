@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 08/29/2023
 ---
 
-
 # manage-bde tpm
 
 

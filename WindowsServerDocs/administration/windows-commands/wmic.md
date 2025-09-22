@@ -7,7 +7,6 @@ author: xelu86
 ms.date: 05/19/2025
 ---
 
-
 # wmic
 
 Displays WMI information inside an interactive command shell.

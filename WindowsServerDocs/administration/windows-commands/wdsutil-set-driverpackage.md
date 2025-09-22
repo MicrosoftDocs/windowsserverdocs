@@ -7,7 +7,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # Subcommand: set-DriverPackage
 
 Renames and/or enables or disables a driver package on a server.

@@ -7,7 +7,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # bitsadmin replaceremoteprefix
 
 Changes the remote URL for all files in the job from *oldprefix* to *newprefix*, as necessary.

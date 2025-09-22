@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # timeout
 
 Pauses the command processor for the specified number of seconds. This command is typically used in batch files.

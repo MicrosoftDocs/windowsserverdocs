@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # secedit /generaterollback
 
 Allows you to generate a rollback template for a specified configuration template. If an existing rollback template exists, running this command again will overwrite the existing information.

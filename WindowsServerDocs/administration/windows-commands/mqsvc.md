@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # mqsvc
 
 Message Queuing technology enables apps running at different times to communicate across heterogeneous networks and systems that may be temporarily offline. Message Queuing provides guaranteed message delivery, efficient routing, security, and priority-based messaging. It can be used to implement solutions for both asynchronous and synchronous messaging scenarios. For more information about Message Queuing, see [Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)).

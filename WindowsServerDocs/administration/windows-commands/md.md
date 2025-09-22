@@ -7,7 +7,6 @@ author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
-
 # md
 
 Creates a directory or subdirectory. Command extensions, which are enabled by default, allow you to use a single **md** command to create intermediate directories in a specified path.

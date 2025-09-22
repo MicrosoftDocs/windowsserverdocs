@@ -8,7 +8,6 @@ author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
-
 # add alias
 
 Adds aliases to the alias environment. If used without parameters, **add alias** displays help at the command prompt. Aliases are saved in the metadata file and will be loaded with the **load metadata** command.

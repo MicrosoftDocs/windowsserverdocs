@@ -10,7 +10,6 @@ author: robinharwood
 ms.date: 10/16/2017
 ---
 
-
 # nslookup set recurse
 
 Tells the Domain Name System (DNS) name server to query other servers if it can't find the information on the specified server.
