@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 09/24/2019
 author: dknappettmsft
 ms.author: daknappe
-manager: dcscontentpm
 ---
 
 # Troubleshooting Windows volume activation
