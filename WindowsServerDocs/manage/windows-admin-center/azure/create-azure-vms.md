@@ -4,7 +4,6 @@ description: Deploying Azure virtual machines with Windows Admin Center. Configu
 ms.topic: install-set-up-deploy
 author: dknappettmsft
 ms.author: daknappe
-manager: jgerend
 ms.date: 01/28/2020
 ---
 
