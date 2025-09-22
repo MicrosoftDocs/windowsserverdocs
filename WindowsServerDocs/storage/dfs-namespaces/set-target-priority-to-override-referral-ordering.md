@@ -4,7 +4,6 @@ description: This article describes how to set the target priority to override r
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Set target priority to override referral ordering
@@ -49,3 +48,4 @@ To set target priority on a folder target, use the following procedure:
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

@@ -1,7 +1,6 @@
 ---
 title: File Server Resource Manager (FSRM) overview
 ms.author: roharwoo
-manager: brianlic
 ms.topic: how-to
 author: robinharwood
 ms.date: 03/15/2023
@@ -108,3 +107,4 @@ To prevent FSRM from creating a change journal on some or all volumes when the s
 ## Related links
 
 - [Dynamic Access Control overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408191(v=ws.11))
+

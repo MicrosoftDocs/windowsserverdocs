@@ -5,7 +5,6 @@ ms.topic: install-set-up-deploy
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 06/06/2019
-ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 2, AD FS Post-Configuration Work
 
@@ -244,5 +243,6 @@ Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Se
 
 ## See Also
 [Work Folders Overview](Work-Folders-Overview.md)
+
 
 

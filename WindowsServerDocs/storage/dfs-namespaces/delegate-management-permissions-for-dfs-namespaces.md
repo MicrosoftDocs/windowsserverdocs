@@ -4,7 +4,6 @@ description: This article describes how to delegate management permissions for D
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Delegate management permissions for DFS Namespaces
@@ -23,3 +22,4 @@ The following table describes the groups that can perform basic namespace tasks 
 <br />
 
 \*Delegating management permissions to manage a stand-alone namespace does not grant the user the ability to view and manage security by using the **Delegation** tab unless the user is a member of the local Administrators group on the namespace server. This issue occurs because the DFS Management snap-in cannot retrieve the discretionary access control lists (DACLs) for the stand-alone namespace from the registry.
+

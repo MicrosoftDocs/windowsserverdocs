@@ -1,11 +1,9 @@
 ---
 title: Storage Spaces Direct overview
 ms.author: cosdar
-manager: dongill
 ms.topic: overview
 author: cosmosdarwin
 ms.date: 02/11/2025
-ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server and Azure Local that enables you to cluster servers with internal storage into a software-defined storage solution.
 appliesto: [
 			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
@@ -161,3 +159,4 @@ Visit [Microsoft.com/HCI](https://www.microsoft.com/hci) to read their stories.
 - [What's New in Failover Clustering in Windows Server](/windows-server/failover-clustering/whats-new-in-failover-clustering)
 - [Storage Quality of Service](/windows-server/storage/storage-qos/storage-qos-overview)
 - [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
+

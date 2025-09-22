@@ -4,7 +4,6 @@ description: This article describes how to optimize how the DFS Namespace handle
 ms.date: 6/5/2017
 ms.topic: checklist
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Checklist: Tune a DFS namespace
@@ -27,3 +26,4 @@ In addition, by using a DFS Namespaces enhancement known as target priority, yo
 -   [Namespaces](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Checklist: Deploy DFS Namespaces](checklist-deploy-dfs-namespaces.md)
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
+

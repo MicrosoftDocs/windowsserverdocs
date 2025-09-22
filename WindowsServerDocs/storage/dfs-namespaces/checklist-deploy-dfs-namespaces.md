@@ -4,7 +4,6 @@ description: This article describes how to configure and deploy DFS Namespaces.
 ms.date: 6/5/2017
 ms.topic: checklist
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Checklist: Deploy DFS Namespaces
@@ -31,3 +30,4 @@ To deploy DFS Namespaces, perform the following tasks:
 -   [Namespaces](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Checklist: Tune a DFS Namespace](checklist-tune-a-dfs-namespace.md)
 -   [Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v=ws.11))
+

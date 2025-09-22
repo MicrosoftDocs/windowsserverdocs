@@ -4,7 +4,6 @@ description: This article describes how to optimize namespace polling to maintai
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Optimize Namespace Polling
@@ -31,3 +30,4 @@ Use the following procedure to optimize how namespace polling occurs:
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

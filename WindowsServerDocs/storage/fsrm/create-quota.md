@@ -4,7 +4,6 @@ description: This article describes how to create a quota based on a template
 ms.date: 7/7/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a Quota
@@ -44,5 +43,6 @@ When you create a quota, you choose a quota path, which is a volume or folder th
 -   [Quota Management](quota-management.md)
 -   [Create an Auto Apply Quota](create-auto-apply-quota.md)
 -   [Create a Quota Template](create-quota-template.md)
+
 
 

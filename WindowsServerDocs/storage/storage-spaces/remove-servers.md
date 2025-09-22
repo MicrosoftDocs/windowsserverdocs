@@ -1,8 +1,6 @@
 ---
 title: Removing servers in Storage Spaces Direct
-ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
 ms.author: roharwoo
-manager: eldenc
 ms.topic: how-to
 author: robinharwood
 description: How to remove servers from a Storage Spaces Direct cluster in Windows Server.
@@ -72,3 +70,4 @@ This table shows the minimum number of fault domains required for each resilienc
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+

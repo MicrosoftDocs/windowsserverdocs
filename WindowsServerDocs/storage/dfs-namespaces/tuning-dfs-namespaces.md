@@ -4,7 +4,6 @@ description: This article describes how to tune or optimize DFS namespaces
 ms.date: 6/5/2017
 ms.topic: concept-article
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Tuning DFS Namespaces
@@ -21,3 +20,4 @@ After creating a namespace and adding folders and targets, refer to the followin
 
 > [!NOTE]
 > To search for folders or folder targets, select a namespace, click the **Search** tab, type your search string in the text box, and then click **Search**.
+

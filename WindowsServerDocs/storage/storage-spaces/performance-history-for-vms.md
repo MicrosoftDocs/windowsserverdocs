@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for virtual machines"
 title: Performance history for virtual machines
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 09/07/2018
@@ -76,3 +75,4 @@ Get-VM <Name> | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+
