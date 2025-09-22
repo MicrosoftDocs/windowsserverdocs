@@ -4,10 +4,11 @@ ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN and UPN uniqueness
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
-ms.custom: inhenkel
+ms.topic: concept-article
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # SPN and UPN uniqueness

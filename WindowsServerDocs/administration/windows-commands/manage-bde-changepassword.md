@@ -2,10 +2,8 @@
 title: manage-bde changepassword
 description: Reference article for the manage-bde changepassword command, which modifies the password for a data drive.
 ms.topic: reference
-ms.assetid: b174e152-8442-4fba-8b33-56a81ff4f547
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ manage-bde -changepassword [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h
 To change the password used to unlock BitLocker on data drive D, type:
 
 ```
-manage-bde –changepassword D:
+manage-bde -changepassword D:
 ```
 
 ## Related links

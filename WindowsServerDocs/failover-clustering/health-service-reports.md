@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Health Service reports"
 title: Health Service reports
-manager: eldenc
-ms.author: alalve
-ms.topic: article
-author: xelu86
+ms.author: daknappe
+ms.topic: how-to
+author: dknappettmsft
 ms.date: 10/05/2017
 ---
 
@@ -277,3 +276,4 @@ Below are the metrics available for each scope in Windows Server 2016.
 ## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)
+

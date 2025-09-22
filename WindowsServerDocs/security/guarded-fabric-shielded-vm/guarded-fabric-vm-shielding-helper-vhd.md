@@ -1,11 +1,9 @@
 ---
 description: "Learn more about: Shielded VMs - Preparing a VM Shielding Helper VHD"
 title: Shielded VMs - Preparing a VM Shielding Helper VHD
-ms.topic: article
-ms.assetid: 0e3414cf-98ca-4e91-9e8d-0d7bce56033b
-manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -55,3 +53,4 @@ In the VMM Console, open the settings pane and then **Host Guardian Service Sett
 
 - [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

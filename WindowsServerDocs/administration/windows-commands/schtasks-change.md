@@ -4,7 +4,6 @@ description: Reference article for the schtasks change command, which schedules 
 ms.topic: reference
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 06/30/2022
 ---
 

@@ -2,10 +2,8 @@
 title: Windows Authentication Technical Overview
 description: Find links to articles for the Windows Authentication Technical Overview.
 ms.topic: concept-article
-ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
-ms.author: mosagie
-author: meaghanlewis
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Windows Authentication Technical Overview
@@ -62,3 +60,5 @@ This collection of topics does not cover procedures for designing, implementing,
     -   [Windows Server 2008 R2 Security Baseline](/previous-versions/tn-archive/gg236605(v=technet.10))
 
 -   For information about auditing logon and authentication events in Windows, see [Auditing Security Events](/previous-versions/windows/it-pro/windows-server-2003/cc776394(v=ws.10)).
+
+

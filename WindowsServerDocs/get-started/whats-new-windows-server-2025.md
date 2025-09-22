@@ -2,8 +2,8 @@
 title: What's new in Windows Server 2025
 description: Learn about the features and enhancements in Windows Server 2025 that help to improve security, performance, and flexibility.
 ms.topic: whats-new
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/28/2025
 ---
 
@@ -353,7 +353,7 @@ Accelerated Networking (AccelNet) simplifies the management of single root I/O v
 
 The dynamic processor compatibility mode is updated to take advantage of new processor capabilities in a clustered environment. Dynamic processor compatibility uses the maximum number of processor features available across all servers in a cluster. The mode improves performance compared to the previous version of processor compatibility.
 
-You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Dynamic processor compatibility mode](../virtualization/hyper-v/manage/dynamic-processor-compatibility-mode.md).
+You can also use dynamic processor compatibility to save its state between virtualization hosts that use different generations of processors. The processor compatibility mode now provides enhanced, dynamic capabilities on processors capable of second-level address translation. To learn more about the updated compatibility mode, see [Processor compatibility for Hyper-V virtual machines](../virtualization/hyper-v/processor-compatibility-mode.md).
 
 ### Hyper-V Manager
 
@@ -469,3 +469,4 @@ The [Windows Server Insider Program](get-started-with-windows-server-insiders-pr
 ## Related content
 
 [Windows Server Insider Community discussions](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
+

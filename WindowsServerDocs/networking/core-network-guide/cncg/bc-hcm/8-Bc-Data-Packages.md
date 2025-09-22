@@ -1,9 +1,7 @@
 ---
 title: Create Content Server Data Packages for Web and File Content (Optional)
 description: Learn how to prehash content on Web and file servers, and then create data packages to import on your hosted cache server.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

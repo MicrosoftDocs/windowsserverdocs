@@ -3,8 +3,8 @@ metadata:
   description: "Frequently asked questions about Distributed File System Replication (DFSR) in Windows Server"
   title: DFS Replication - FAQ
   ms.date: 02/25/2025
-  author: xelu86
-  ms.author: alalve
+  author: robinharwood
+  ms.author: roharwoo
   ms.topic: faq
   ms.service: windows-server
 title: "DFS Replication FAQ"
@@ -747,3 +747,4 @@ sections:
           | March 30, 2011     | Edited the _Can DFS Replication replicate Outlook .pst or Microsoft Office Access database files?_ entry to correct the potential impact of using DFS Replication with `.pst` and Access files. Added _How can I improve replication performance?_ | Customer questions about the previous entry, which incorrectly indicated that replicating `.pst` or Access files could corrupt the DFS Replication database. | 
           | January 26, 2011   | Added _How can files be recovered from the ConflictAndDeleted or PreExisting folders?_ | Customer feedback |
           | October 20, 2010   | Added _How can I upgrade or replace a DFS Replication member?_ | Customer feedback |
+

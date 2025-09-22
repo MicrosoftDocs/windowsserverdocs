@@ -1,10 +1,9 @@
 ---
 title: Configure virtual machines running Windows Vista with 1 or 2 virtual processors
 description: Learn what to do when a virtual machine running Windows Vista is configured with more than 2 virtual processors.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: how-to
-ms.assetid: e562bce3-fd68-42c9-821c-12022ae4746c
 ms.date: 8/16/2016
 ---
 # Configure virtual machines running Windows Vista with 1 or 2 virtual processors
@@ -45,3 +44,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 4.  In the navigation pane, click **Processor**.
 
 5.  On the **Processor** page, set the number of processors to **1** or **2** and then click **OK**.
+

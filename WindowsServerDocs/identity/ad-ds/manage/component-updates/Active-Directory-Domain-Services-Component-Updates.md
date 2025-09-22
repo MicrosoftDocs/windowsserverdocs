@@ -3,9 +3,8 @@ title: Active Directory Domain Services Component Updates
 description: This document discusses the AD DS component updates for Windows Server 2012 R2
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: overview
 ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 ---
 

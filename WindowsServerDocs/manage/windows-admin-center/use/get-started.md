@@ -2,9 +2,10 @@
 title: Get Started with Windows Admin Center
 description: Get started with Windows Admin Center after you download and install it on a Windows PC.
 ms.topic: get-started
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/24/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Windows Admin Center
@@ -194,3 +195,4 @@ After you connect to a server, cluster, or PC, you can view the PowerShell scrip
 1. In the dropdown list, select a command of interest to go to the corresponding PowerShell script.
 
    :::image type="content" source="../media/launch/showscript.png" alt-text="Screenshot of the page for viewing PowerShell scripts for an overview.":::
+

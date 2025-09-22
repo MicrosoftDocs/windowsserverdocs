@@ -4,7 +4,6 @@ description: Learn how to log off of MultiPoint Services
 ms.topic: how-to
 ms.assetid: e5b604fa-17d7-4d23-88ca-8ffa6caad4e8
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

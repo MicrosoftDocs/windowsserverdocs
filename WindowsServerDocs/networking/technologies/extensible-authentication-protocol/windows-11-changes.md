@@ -1,8 +1,8 @@
 ---
 title: EAP - What's changed in Windows 11
 description: This article presents information about the changes in Windows 11 for Extensible Authentication Protocol (EAP) settings.
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 06/27/2024
 ---
@@ -60,3 +60,5 @@ Windows 11 enabled TLS 1.3 by default systemwide, and while EAP-TLS used TLS 1.3
 - NPS doesn't support TLS 1.3 at this time.
 - Some older versions of third-party RADIUS servers may incorrectly advertise TLS 1.3 support. If you're experiencing issues with authenticating EAP-TLS with TLS 1.3 with Windows 11 22H2, ensure the RADIUS server is patched and up to date or has TLS 1.3 disabled.
 - Session resumption is not currently supported. Windows clients will always do a full authentication.
+
+

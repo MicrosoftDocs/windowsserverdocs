@@ -1,11 +1,9 @@
 ---
 description: "Learn more about: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity"
 title: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
-ms.topic: article
-ms.assetid: 15ded82c-f70f-4efb-9e26-2731127931af
-manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -34,6 +32,8 @@ These are the systems we and our partners have been testing in our environment.
 Please make sure that you verify the system works as expected in your environment:
 
 - Virtual Machines – You can enable Virtualization-based protection of code integrity on virtual machines that run on a Hyper-V host beginning with Windows Server 2016.
+
+
 
 
 

@@ -2,8 +2,8 @@
 title: Manage DHCP failover relationships in Windows Server
 description: Learn how to manage DHCP failover relationships in Windows Server. This guide provides steps and best practices for configuring and maintaining DHCP failover.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/23/2025
 #customer intent: As a network administrator, I want to manage DHCP failover relationships so that I can ensure high availability and load balancing for DHCP services.
 ---
@@ -249,3 +249,5 @@ To delete a failover relationship using the DHCP console, complete the following
 ## Related content
 
 [DHCP Failover overview](/windows-server/networking/technologies/dhcp/dhcp-failover)
+
+

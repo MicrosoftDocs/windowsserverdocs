@@ -2,8 +2,8 @@
 title: Join a computer to a domain
 description: Learn how to add a client computer or server device to a domain in Windows Server.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/06/2025
 zone_pivot_groups: windows-os-version-plus-client
 ---
@@ -359,3 +359,4 @@ This error typically occurs when the machine's password isn't synchronized with 
 1. After your device reboots, follow the steps provided in [Command line method](#command-line-method) to rejoin the domain.
 
 ---
+

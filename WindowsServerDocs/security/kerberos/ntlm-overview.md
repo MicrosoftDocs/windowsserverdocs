@@ -2,10 +2,8 @@
 title: NTLM overview in Windows Server
 description: Learn about NTLM, and find links to technical resources to Windows Authentication and NTLM for Windows Server.
 ms.topic: concept-article
-ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
-ms.author: mosagie
-author: meaghanlewis
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/17/2025
 ---
 # NTLM overview
@@ -34,3 +32,4 @@ The following table lists relevant resources for NTLM and other Windows authenti
 |**Deployment**|[Extended Protection for Authentication](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)<p>[Audit use of NTLMv1 on a Windows Server-based domain controller](/troubleshoot/windows-server/windows-security/audit-domain-controller-ntlmv1)<p>[Ask the Directory Services Team : NTLM Blocking and You: Application Analysis and Auditing Methodologies in Windows 7](https://blogs.technet.com/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)<p>[Windows Authentication Blog](https://blogs.technet.com/authentication/)<p>[Configuring MaxConcurrentAPI for NTLM pass-through authentication](https://support.microsoft.com/help/2688798/how-to-do-performance-tuning-for-ntlm-authentication-by-using-the-maxc)|
 |**Development**|[Microsoft NTLM \(Windows\)](/windows/win32/secauthn/microsoft-ntlm)<p>[\[MS\-NLMP\]: NT LAN Manager \(NTLM\) Authentication Protocol Specification](/openspecs/windows_protocols/ms-nlmp/b38c36ed-2804-4868-a9ff-8dd3182128e4)<p>[\[MS\-NNTP\]: NT LAN Manager \(NTLM\) Authentication: Network News Transfer Protocol \(NNTP\) Extension](/openspecs/windows_protocols/ms-nntp/73ae7d96-30fe-4750-807c-bfe7c38b3a0a)<p>[\[MS\-NTHT\]: NTLM Over HTTP Protocol Specification](/openspecs/windows_protocols/ms-ntht/f09cf6e1-529e-403b-a8a5-7368ee096a6a)|
 |**Updates**|[New NTLM pass-through authentication protections for CVE-2022-21857](/troubleshoot/windows-server/windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections)|
+

@@ -1,8 +1,8 @@
 ---
 title: Configuring systems for high accuracy in Windows
 description: Improve Windows Time synchronization tuning under reasonable operating conditions where systems can be configured to maintain 1 ms (millisecond) accuracy or better with respect to UTC.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/25/2025
 ms.topic: how-to
 ---
@@ -164,3 +164,4 @@ Applying UtilizeSslTimeData setting change requires system restart.
 
 > [!NOTE]
 > To learn more about the W32Time registry settings, see [W32Time registry reference](Windows-Time-Service-Tools-and-Settings.md#w32time-registry-reference)
+

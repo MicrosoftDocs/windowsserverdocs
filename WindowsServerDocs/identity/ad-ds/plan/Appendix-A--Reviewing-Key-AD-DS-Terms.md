@@ -4,9 +4,8 @@ ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Appendix A - Reviewing Key AD DS Terms
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: glossary
 ---
 
 # Appendix A: Reviewing Key AD DS Terms

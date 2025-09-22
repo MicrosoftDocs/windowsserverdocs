@@ -1,10 +1,9 @@
 ---
 title: Manage User Stations
 description: Learn how to manage user stations in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: b418578d-3a4c-49b0-90db-8389b320b2f6
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

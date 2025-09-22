@@ -1,9 +1,9 @@
 ---
 title: Manage Network Policy Server (NPS)
 description: This topic provides links to management procedures for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-ms.topic: article
-author: xelu86
-ms.author: alalve
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 
@@ -29,4 +29,5 @@ This section contains the following topics.
 - [Manage Certificates Used with NPS](nps-manage-certificates.md)
 - [Manage NPSs](nps-manage-servers.md)
 - [Manage NPS Templates](nps-manage-templates.md)
+
 

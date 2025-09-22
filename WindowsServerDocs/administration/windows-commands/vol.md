@@ -2,10 +2,8 @@
 title: vol
 description: Reference article for the vol command, which displays the disk volume label and serial number, if they exist.
 ms.topic: reference
-ms.assetid: 398b3aa1-2442-42be-a4fb-78701080b0df
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

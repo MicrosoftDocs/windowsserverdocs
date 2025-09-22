@@ -9,6 +9,7 @@ metadata:
   ms.date: 11/02/2020
   ms.topic: faq
   ms.service: windows-server
+  ms.custom: sfi-ropc-nochange
 title: Frequently asked questions (FAQ) about AD FS
 summary: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS). It's divided into sections that are based on the type of question.
 

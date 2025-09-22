@@ -4,10 +4,8 @@ ms.assetid: 692bd2af-deee-44cf-9af9-f364677e267f
 title: Planning Domain Controller Placement
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: concept-article
-ms.custom: inhenkel
 ---
 
 # Planning Domain Controller Placement

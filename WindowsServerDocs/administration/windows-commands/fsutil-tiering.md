@@ -1,10 +1,8 @@
 ---
 title: fsutil tiering
 description: Reference article for the fsutil tiering command, which enables management of storage tier functions, such as setting and disabling flags and listing of tiers.
-manager: dmoss
 ms.author: alalve
 author: xelu86
-ms.assetid: e5f55f3e-8d2a-4526-8d67-36a539126c22
 ms.topic: reference
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,6 @@ description: Learn how to use the Disk Management system utility in Windows to i
 ms.date: 06/24/2025
 ms.topic: concept-article
 author: dknappettmsft
-manager: brianlic
 ms.author: daknappe
 #customer intent: As an administrator, I want to explore the Disk Management utility in Windows, so I can initialize drives, extend volumes, shrink partitions, and change drive letters.
 ---

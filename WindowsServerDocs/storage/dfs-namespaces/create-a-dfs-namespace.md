@@ -4,7 +4,6 @@ description: Use
 ms.date: 04/03/2025
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ai-usage: ai-assisted
 ---
@@ -127,3 +126,4 @@ To secure the namespace, you can use the following procedure:
 - [Add Namespace Servers to a Domain-based DFS Namespace](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 
 - [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md).
+

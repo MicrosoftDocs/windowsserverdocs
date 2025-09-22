@@ -1,170 +1,156 @@
 ---
-title: Hyper-V technology overview
-description: Describes what Hyper-V is, how to get it, key features, and common uses. This article includes an overview for Hyper-V in Windows and Windows Server.
+title: Hyper-V virtualization in Windows Server and Windows
+description: Learn about Hyper-V virtualization technology to run virtual machines, its key features, benefits, and how to get started in Windows Server and Windows. Discover common uses and scenarios.
 ms.topic: overview
-ms.assetid: ac069fed-7bf5-4cc3-aff5-25a2766040b8
-ms.author: mosagie
-author: meaghanlewis
-ms.date: 05/27/2025
-ms.subservice: core-os
-zone_pivot_groups: windows
+ai-usage: ai-assisted
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 07/28/2025
+#customer-intent: As an IT professional, I want to understand Hyper-V's capabilities and how it can benefit my organization, so I can make informed decisions about virtualization solutions.
 ---
 
-# Hyper-V technology overview
+# Hyper-V virtualization in Windows Server and Windows
 
-Hyper-V is Microsoft's hardware virtualization product. It lets you create and run a software version of a computer, called a *virtual machine*. Each virtual machine acts like a complete computer, running an operating system and programs. When you need compute resources, virtual machines give you more flexibility, help save time and money, and are a more efficient way to use hardware than just running one operating system on physical hardware.
+Hyper-V is Microsoft's enterprise-grade hypervisor technology built into Windows Server and Windows. It provides hardware virtualization capabilities that enable organizations to create, manage, and run virtual machines at scale. As a type-1 hypervisor, Hyper-V runs directly on computing hardware, delivering near-native performance and robust isolation for virtualized workloads.
 
-Hyper-V runs each virtual machine in its own isolated space, which means you can run more than one virtual machine on the same hardware at the same time. You might want to do this to avoid problems such as a crash affecting the other workloads, or to give different people, groups, or services access to different systems.
+Virtualizing your workloads with Hyper-V enables you to maximize hardware utilization, streamline IT operations, and enhance business continuity. It supports a wide range of operating systems for guest virtual machines, including many versions of Windows, Linux, and FreeBSD, making it a versatile solution for diverse IT environments.
 
-## Some ways Hyper-V can help you
+Whether you're consolidating servers, spanning on-premises and hyperscale cloud providers, or enabling flexible development and testing environments, Hyper-V offers scalable solutions for modern IT needs.
 
-Hyper-V can help you:
+Hyper-V in Windows Server and Windows has different capabilities and features, but both provide a solid foundation for virtualization. Hyper-V in Windows Server is designed for enterprise deployments with advanced features like live migration, high availability, and disaster recovery. Hyper-V in Windows provides IT professionals and developers a lightweight solution suitable for development and testing scenarios.
 
-- **Establish or expand a private cloud environment.** Provide more flexible, on-demand IT services by moving to or expanding your use of shared resources and adjust utilization as demand changes.
+This overview explains Hyper-V's benefits, key features, and common use cases, and provides guidance on getting started.
 
-- **Use your hardware more effectively.** Consolidate servers and workloads onto fewer, more powerful physical computers to use less power, and physical space.
+## Benefits of Hyper-V
 
-- **Improve business continuity.** Minimize the impact of both scheduled and unscheduled downtime of your workloads.
+Hyper-V delivers significant organizational benefits across many areas, including:
 
-- **Establish or expand a virtual desktop infrastructure (VDI).** Use a centralized desktop strategy with VDI can help you increase business agility and data security, as well as simplify regulatory compliance and manage desktop operating systems and applications. Deploy Hyper-V and Remote Desktop Virtualization Host (RD Virtualization Host) on the same server to make personal virtual desktops or virtual desktop pools available to your users.
+- **Cost optimization**: reduce hardware acquisition and maintenance costs through server consolidation, while lowering datacenter space, power, and cooling requirements. Organizations can achieve high consolidation ratios, dramatically reducing total cost of ownership. Hyper-V is included with Windows Server and Windows, eliminating additional hypervisor licensing costs.
 
-- **Make development and test more efficient.** Reproduce different computing environments without having to buy or maintain all the hardware you'd need if you only used physical systems.
+- **Operational efficiency**: streamline IT operations with centralized management, automated provisioning, and simplified backup and disaster recovery processes. Virtual machine templates and PowerShell automation reduce deployment time from hours to minutes.
 
-## Hyper-V and other virtualization products
+- **Business agility**: rapidly provision new environments to support business initiatives, scale resources up or down based on demand, and quickly adapt to changing market conditions without lengthy hardware procurement cycles.
 
-Hyper-V in Windows and Windows Server replaces older hardware virtualization products, such as Microsoft Virtual PC, Microsoft Virtual Server, and Windows Virtual PC. Hyper-V offers networking, performance, storage, and security features not available in these older products.
+- **Enhanced security**: implement strong workload isolation, use shielded virtual machines for sensitive data, and maintain secure environments with features like Secure Boot and TPM 2.0 support.
 
-Hyper-V and most third-party virtualization applications that require the same processor features aren't compatible. That's because the processor features, known as hardware virtualization extensions, are designed to not be shared. For details, see [Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard](https://support.microsoft.com/kb/3204980).
+- **Improved resilience**: minimize downtime through high availability features, implement comprehensive disaster recovery strategies with Hyper-V Replica, and ensure business continuity with live migration capabilities.
 
-## What features does Hyper-V have?
+- **Development acceleration**: enable rapid creation of development and testing environments, support DevOps practices with consistent infrastructure, and reduce time-to-market for new applications and services.
 
-Hyper-V offers many features. This is an overview, grouped by what the features provide or help you do.
+- **Simplified compliance**: meet regulatory requirements more easily through consistent configurations, centralized monitoring, and comprehensive audit trails across virtualized environments.
 
-**Computing environment** - A Hyper-V virtual machine includes the same basic parts as a physical computer, such as memory, processor, storage, and networking. All these parts have features and options that you can configure different ways to meet different needs. Storage and networking can each be considered categories of their own, because of the many ways you can configure them.
+## Technical capabilities of Hyper-V
 
-**Disaster recovery and backup** - For disaster recovery, Hyper-V Replica creates copies of virtual machines, intended to be stored in another physical location, so you can restore the virtual machine from the copy. For backup, Hyper-V offers two types. One uses saved states and the other uses Volume Shadow Copy Service (VSS) so you can make application-consistent backups for programs that support VSS.
+Here's a video that provides a comprehensive technical overview of Hyper-V, covering its hypervisor architecture, performance characteristics, and scalability features. It demonstrates how Hyper-V delivers enterprise-grade virtualization capabilities, discusses high availability and clustering features, and showcases real-world deployment scenarios for organizations looking to implement virtualization solutions.<br /><br />
 
-**Optimization** - Each supported guest operating system has a customized set of services and drivers, called *integration services*, that make it easier to use the operating system in a Hyper-V virtual machine.
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=580e0b14-6d99-4fcf-9c6a-549da414c67c]
 
-**Portability** - Features such as live migration, storage migration, and import/export make it easier to move or distribute a virtual machine.
+The following sections provide an overview into some of the key enterprise-grade features available in Hyper-V that address critical business requirements around security, availability, management, and cost optimization.
 
-**Remote connectivity** - Hyper-V includes Virtual Machine Connection, a remote connection tool for use with both Windows and Linux. Unlike Remote Desktop, this tool gives you console access, so you can see what's happening in the guest even when the operating system isn't booted yet.
+### Extensibility and integration
 
-**Security** - Secure boot and shielded virtual machines help protect against malware and other unauthorized access to a virtual machine and its data.
+An important aspect of Hyper-V is its extensibility and integration with other Windows Server features and other Microsoft and third-party products and services to create a comprehensive virtualization solution ready for enterprise deployments.
 
-## How to get Hyper-V
+For example, Hyper-V works seamlessly with Windows Server Failover Clustering to provide high availability, connects to a range of storage providers for flexible storage options, supports Azure integration for hybrid cloud scenarios, and integrates with Windows Admin Center or System Center Virtual Machine Manager for advanced management.
 
-Hyper-V is available in Windows Server and Windows.
+Hyper-V also is a key component of [Azure Local](https://azure.microsoft.com/products/local), enabling organizations to run Azure services on-premises with consistent management and development experiences. This integration allows for hybrid cloud scenarios where workloads can be seamlessly moved between on-premises environments and Azure, providing flexibility and scalability.
 
-:::zone pivot="windows-server"
+### Security and isolation
 
- Hyper-V is a server role available for x64 versions of Windows Server. For server instructions, see [Install the Hyper-V role on Windows Server](get-started/Install-the-Hyper-V-role-on-Windows-Server.md).
+Robust security features help protect virtual machines and their data, ensuring that workloads run in isolated environments:
 
-::: zone-end
+- **Shielded Virtual Machines** provide comprehensive protection for sensitive workloads through BitLocker encryption, Secure Boot verification, and TPM 2.0 attestation. Host Guardian Service (HGS) ensures only authorized hosts can run shielded VMs, protecting against compromised administrators and malicious insiders.
 
-:::zone pivot="windows"
+- **Generation 2 virtual machines** deliver enhanced security with UEFI firmware, Secure Boot capabilities, and improved malware resistance. Virtual TPM 2.0 support enables BitLocker encryption within guest operating systems and supports Windows Hello for Business authentication.
 
-On Windows, Hyper-V available as feature in some 64-bit versions of Windows. It's also available as a downloadable, standalone server product, [Microsoft Hyper-V Server](https://www.microsoft.com/evalcenter/evaluate-hyper-v-server-2019).
+- **Network isolation** through Virtual LANs (VLANs), private virtual switches, and software-defined networking (SDN) creates secure network segments that prevent unauthorized lateral movement between workloads.
 
-::: zone-end
+### Storage flexibility
 
-## Supported operating systems
+Flexible storage options meet diverse organizational requirements, from local disks to cost-effective hyperconverged solutions to existing SAN deployments:
 
-Many operating systems run on virtual machines. In general, an operating system that uses an x86 architecture runs on a Hyper-V virtual machine. Not all operating systems that can be run are tested and supported by Microsoft, however. For lists of what Microsoft supports, see:
+- **Storage Spaces Direct** creates hyperconverged infrastructure by pooling local storage across cluster nodes into a single, highly available storage namespace. This software-defined storage solution eliminates traditional SAN requirements while delivering enterprise-class features including fault tolerance, automatic repair, and performance optimization. Organizations achieve lower storage costs compared to traditional SAN solutions while gaining simplified management and improved performance through NVMe and persistent memory support.
 
-:::zone pivot="windows-server"
+- **Storage Spaces** enables disaggregated storage architectures by pooling Just a Bunch of Disks (JBOD) enclosures into resilient storage pools with configurable redundancy levels. This approach provides flexibility to scale storage independently from compute resources while maintaining high availability through mirror, parity, or dual-parity configurations.
 
-[Supported Windows guest operating systems for Hyper-V on Windows Server](/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows)
+- **Local storage** options support various deployment scenarios from development environments using single drives to production workloads with NVMe arrays. Direct-attached storage provides optimal performance for I/O-intensive applications while reducing complexity for smaller deployments or edge computing scenarios.
 
-::: zone-end
+- **SAN connectivity** supports both iSCSI and Fibre Channel protocols for integration with existing enterprise storage infrastructure. Multipath I/O (MPIO) ensures high availability and load balancing across multiple storage paths, while support for SMB 3.0 and NFS enables file-based storage scenarios with features like transparent failover and scale-out file server clustering.
 
-:::zone pivot="windows"
+### High availability and business continuity
 
-[Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows)
+Comprehensive high availability and business continuity features help ensure mission-critical workloads remain operational:
 
-::: zone-end
+- **Failover Clustering** with Cluster Shared Volumes (CSV) enables automatic failover of virtual machines between cluster nodes, providing valuable uptime for mission-critical applications. Live migration enables planned maintenance without service interruption. CSV Cache improves performance by caching frequently accessed data in memory, while CSV Block Cache uses system memory on storage-rich nodes to accelerate read operations.
 
-## How Hyper-V works
+- **Hyper-V Replica** delivers cost-effective disaster recovery by asynchronously replicating virtual machines to secondary sites over standard network connections, eliminating expensive SAN replication requirements. Recovery Point Objectives (RPO) can be as low as 30 seconds to ensure minimal data loss.
 
-Hyper-V is a hypervisor-based virtualization technology. Hyper-V uses the Windows hypervisor, which requires a physical processor with specific features. For hardware details, see [System requirements for Hyper-V on Windows Server](host-hardware-requirements.md).
+- **Shared nothing live migration** enables virtual machines to be moved between hosts without shared storage, enabling flexible resource allocation and load balancing across the cluster. This feature supports scenarios where hosts have different storage configurations or when migrating workloads between geographically distributed sites.
 
-In most cases, the hypervisor manages the interactions between the hardware and the virtual machines. This hypervisor-controlled access to the hardware gives virtual machines the isolated environment in which they run. In some configurations, a virtual machine or the operating system running in the virtual machine has direct access to graphics, networking, or storage hardware.
+- **Storage Migration** enables moving virtual machine storage between different storage arrays without downtime, facilitating storage upgrades and load balancing across the infrastructure.
 
-:::zone pivot="windows-server"
+- **Azure Site Recovery** extends Hyper-V disaster recovery capabilities to the cloud, providing automated replication, failover, and failback for virtual machines. This integration enables organizations to use Azure as a secondary site for disaster recovery without complex configuration or extra hardware.
 
-## What does Hyper-V consist of?
+### Performance and scalability
 
-Hyper-V has required parts that work together so you can create and run virtual machines. Together, these parts are called the virtualization platform. They're installed as a set when you install the Hyper-V role. The required parts include Windows hypervisor, Hyper-V Virtual Machine Management Service, the virtualization WMI provider, the virtual machine bus (VMbus), virtualization service provider (VSP), and virtual infrastructure driver (VID).
+High performance and scalability help meet demanding enterprise workloads:
 
-Hyper-V also has tools for management and connectivity. You can install these on the same computer that Hyper-V role is installed on, and on computers without the Hyper-V role installed. These tools are:
+- **Dynamic Memory** automatically adjusts memory allocation based on actual workload demands, maximizing host utilization while maintaining performance. Smart paging and memory overcommit ratios enable higher consolidation ratios.
 
-- Hyper-V Manager
-- [Hyper-V module for Windows PowerShell](/powershell/module/hyper-v/index)
-- [Virtual Machine Connection](./learn-more/hyper-v-virtual-machine-connect.md) \(sometimes called VMConnect\)
-- [Windows PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)
+- **SR-IOV and RDMA support** delivers near-native network performance by bypassing the hypervisor for high-bandwidth, low-latency networking scenarios.
 
-## Related technologies
+- **GPU-Partitioning** (GPU-P) enables multiple virtual machines to share GPU resources for AI and graphics workloads.
 
-These are some technologies from Microsoft that are often used with Hyper-V:
+- **Persistent Memory** integration provides ultra-low latency storage access for databases and in-memory computing scenarios.
 
-- [Failover Clustering](../../failover-clustering/whats-new-in-failover-clustering.md)
-- [Remote Desktop Services](../../remote/remote-desktop-services/remote-desktop-services-overview.md)
-- [System Center Virtual Machine Manager](/system-center/vmm/overview)
-- [Client Hyper-V](/virtualization/hyper-v-on-windows/index)
+### Advanced management capabilities
 
-Various storage technologies: cluster shared volumes, SMB 3.0, storage spaces direct
+A range of management tools and automation capabilities simplify operations and enhance productivity:
 
-::: zone-end
+- **Windows Admin Center** provides modern web-based management with hyperconverged infrastructure monitoring, performance analytics, and streamlined troubleshooting workflows accessible from any device.
 
-Windows containers offer another approach to virtualization. See the [Windows Containers](/virtualization/windowscontainers/index) library on MSDN.
+- **Hyper-V Manager** provides intuitive graphical management for day-to-day operations, while the Hyper-V module for Windows PowerShell enables advanced scripting and automation scenarios.
 
-:::zone pivot="windows"
+- **System Center Virtual Machine Manager** delivers enterprise-scale management with automated provisioning, compliance monitoring, capacity planning, and self-service portals for delegated administration.
 
-## System requirements
+- **PowerShell Direct** enables secure management of virtual machines without network connectivity, simplifying automation and troubleshooting. Extensive PowerShell cmdlet library supports Infrastructure as Code practices.
 
-Hyper-V requires:
+- **Seamless Active Directory integration** as Hyper-V uses existing Windows authentication infrastructure without extra configuration. Domain-joined hosts inherit existing Group Policy settings and security configurations automatically.
 
-- A processor with second level address translation (SLAT) capabilities.
+### Cost optimization features
 
-- Windows 10 (Pro or Enterprise) or Windows 11 (Pro or Enterprise).
+Optimize costs associated with virtualization:
 
-> Upgrade to Windows Pro by opening **Settings** > **Update and Security** > **Activation**. Here you can visit the store and purchase an upgrade.
+- **Existing Windows Server licensing** enables you to run virtual machine without extra hypervisor licensing costs. Hyper-V is included with Windows Server and Windows, with the Datacenter edition of Windows Server providing unlimited virtual machine rights, meaning you can run Windows Server virtual machines at no extra cost. This approach simplifies licensing calculations and reduces overall costs.
 
-Most computers run Hyper-V, however each virtual machine runs a separate operating system. You can generally run one or more virtual machines on a computer with 4 GB of RAM, though you need more resources for more virtual machines or to install and run resource intense software like games, video editing, or engineering design software.
+- **Deduplication and compression** greatly reduce storage requirements in scenarios such as virtual desktop infrastructure (VDI) and data backup.
 
-For more information about Hyper-V's system requirements and how to verify that Hyper-V runs on your machine, see the [Hyper-V Requirements Reference](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
+- **Nested virtualization** enables running hypervisors within virtual machines, supporting development scenarios and multitenant cloud environments without extra hardware.
 
-## Operating systems you can run in a virtual machine
+## Benefits for developers and IT professionals
 
-Hyper-V on Windows supports many different operating systems in a virtual machine including various releases of Linux, FreeBSD, and Windows.
+Hyper-V in both Windows Server and Windows provides developers and IT professionals with powerful virtualization capabilities that accelerate development workflows and streamline IT operations for Windows and Linux environments. Developers can rapidly create isolated development and testing environments that mirror production configurations, enabling them to test applications across multiple operating systems and versions without requiring dedicated hardware. IT professionals benefit from the ability to quickly provision sandbox environments for testing patches, updates, and new configurations before deploying to production systems.
 
-As a reminder, you need to have a valid license for any operating systems you use in the VMs.
+The ability to snapshot virtual machines before making changes provides a safety net for experimentation and rollback scenarios, while virtual machine templates and PowerShell automation enable consistent environment provisioning in minutes rather than hours. This capability is valuable for both development teams creating standardized build environments and IT teams maintaining consistent infrastructure configurations.
 
-For information about which operating systems are supported as guests in Hyper-V on Windows, see [Supported Windows Guest Operating Systems](/windows-server/virtualization/hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows) and [Supported Linux Guest Operating Systems](/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
+For Windows 11 users, Hyper-V offers Quick Create for streamlined virtual machine setup, making it easy to spin up development environments for different projects or create isolated testing environments for IT evaluation scenarios. The integration with Visual Studio and development tools, combined with features like nested virtualization, enables developers to create complex multi-tier applications and test containerized workloads locally, while IT professionals can evaluate new technologies and solutions in isolated environments.
 
-::: zone-end
+## Get started with Hyper-V
 
-## Differences between Hyper-V on Windows and Hyper-V on Windows Server
+Hyper-V is readily available as a server role across all editions of Windows Server 2025, with multiple installation options to meet different organizational needs. Organizations can choose between Server with Desktop Experience for full GUI management or Server Core for reduced attack surface and resource usage.
 
-There are some features that work differently in Hyper-V on Windows than they do in Hyper-V running on Windows Server.
+For Windows 11, Hyper-V is included in the Pro, Enterprise, and Education editions, enabling developers and IT professionals to use virtualization capabilities directly on their desktops.
 
-Hyper-V features only available on Windows Server:
+> [!div class="nextstepaction"]
+> [Install Hyper-V](get-started/install-hyper-v.md)
 
-- Live migration of virtual machines from one host to another
-- Hyper-V Replica
-- Virtual Fiber Channel
-- SR-IOV networking
-- Shared VHDX files
+## Related content
 
-Hyper-V features only available on Windows:
+Here are some additional resources to help you learn more about Hyper-V and its capabilities:
 
-- Quick Create and the VM Gallery
-- Default network (NAT switch)
-
-The memory management model is different for Hyper-V on Windows. On a server, Hyper-V memory is managed with the assumption that only the virtual machines are running on the server. In Hyper-V on Windows, memory is managed with the expectation that most client machines are running software on host in addition to running virtual machines.
-
-## Limitations
-
-Programs that depend on specific hardware don't work well in a virtual machine. For example, games or applications that require processing with GPUs might not work well. Also, applications relying on sub-10ms timers such as live music mixing applications or high precision times could have issues running in a virtual machine.
-
-In addition, if you have Hyper-V enabled, those latency-sensitive, high-precision applications may also have issues running in the host. This is because with virtualization enabled, the host OS also runs on top of the Hyper-V virtualization layer, just as guest operating systems do. However, unlike guests, the host OS is special in that it has direct access to all the hardware, which means that applications with special hardware requirements can still run without issues in the host OS.
+- [Hardware requirements for Hyper-V](host-hardware-requirements.md).
+- [Plan for Hyper-V networking](plan/plan-hyper-v-networking-in-windows-server.md).
+- [Storage architectures for Hyper-V](storage-architecture.md).
+- [Virtual machine generations](plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md).
+- [Supported Windows virtual machine operating systems](supported-windows-guest-operating-systems-for-hyper-v-on-windows.md).
+- [Supported Linux and FreeBSD virtual machine operating systems](supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).

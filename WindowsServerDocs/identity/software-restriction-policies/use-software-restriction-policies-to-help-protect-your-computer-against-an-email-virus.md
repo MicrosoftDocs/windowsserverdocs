@@ -5,7 +5,6 @@ ms.topic: concept-article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/12/2016
 ---
 # Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus

@@ -2,9 +2,8 @@
 title: System Requirements for Hyper-V on Windows and Windows Server
 description: Learn about the hardware and firmware requirements for Hyper-V in Windows and Windows Server.
 ms.topic: concept-article
-ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/26/2025
 zone_pivot_groups: windows
 ---
@@ -60,7 +59,7 @@ Systeminfo.exe
 
 Scroll to the Hyper-V requirements section to review the report. If all listed Hyper-V requirements have a value of **Yes**, your system can run the Hyper-V role. If any item returns **No**, check the requirements listed in this document and make adjustments where possible.
 
-![Screenshot of the Administrator Command Prompt screen with a focus on the output for the Hyper V requirements section.](media/system-info-upd.png)
+![Screenshot of the Administrator Command Prompt screen with a focus on the output for the Hyper V requirements section.](./media/system-info-upd.png)
 
 ## Requirements for specific features
 
@@ -123,3 +122,5 @@ If all OS, hardware, and compatibility requirements are met, you see **Hyper-V**
 >```
 
 ::: zone-end
+
+

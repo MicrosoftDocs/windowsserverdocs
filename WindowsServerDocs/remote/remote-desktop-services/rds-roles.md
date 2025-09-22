@@ -1,11 +1,10 @@
 ---
 title: Remote Desktop Services roles
 description: Learn about the roles within a Remote Desktop Services environment in Windows Server.
-author: xelu86
+author: dknappettmsft
 ms.date: 7/3/2024
-ms.topic: article
-ms.author: alalve
-manager: tedhudek
+ms.topic: concept-article
+ms.author: daknappe
 ---
 # Remote Desktop Services roles
 
@@ -93,3 +92,4 @@ For more information, see the following articles:
 * [Activate the Remote Desktop Services license server](rds-activate-license-server.md)
 * [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md)
 * [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/Licensing/licensing-programs/spla-program.aspx)
+

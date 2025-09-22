@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine is configured to allow unfi
 ms.author: mosagie
 author: meaghanlewis
 ms.topic: best-practice
-ms.assetid: dd4a3d78-a77f-451e-a383-d5cf45ea17cf
 ms.date: 8/16/2016
 ---
 # Avoid configuring virtual machines to allow unfiltered SCSI commands

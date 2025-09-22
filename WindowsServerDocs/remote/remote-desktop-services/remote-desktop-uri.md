@@ -1,10 +1,10 @@
 ---
 title: Remote Desktop URI scheme
 description: Learn about the Uniform Resource Identifier scheme for Remote Desktop clients
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Remote Desktop URI scheme
@@ -95,3 +95,4 @@ This table gives a complete list of supported attributes that can be used with t
 | [screen mode id=i:&lt;1 or 2&gt;](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff393692(v=ws.10))            |   | x |   |
 | [session bpp=i:&lt;8, 15, 16, 24, or 32&gt;](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff393680(v=ws.10)) |   | x |   |
 | [use multimon=i:&lt;0 or 1&gt;](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff393695(v=ws.10))              |   | x |   |
+

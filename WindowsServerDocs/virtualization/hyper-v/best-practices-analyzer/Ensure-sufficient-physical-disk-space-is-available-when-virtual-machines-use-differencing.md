@@ -1,10 +1,9 @@
 ---
 title: Ensure sufficient physical disk space is available when virtual machines use differencing virtual hard disks
 description: Learn what to do when one or more virtual machines are using differencing virtual hard disks.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
-ms.assetid: 71f99aab-f994-4022-9da0-d661965b95ac
 ms.date: 8/16/2016
 ---
 # Ensure sufficient physical disk space is available when virtual machines use differencing virtual hard disks
@@ -30,3 +29,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Monitor available disk space to ensure sufficient space is available for virtual hard disk expansion. Consider merging differencing virtual hard disks into their parent. In Hyper-V Manager, inspect the differencing disk to determine the parent virtual hard disk. If you merge a differencing disk to a parent disk that is shared by other differencing disks, that action will corrupt the relationship between the other differencing disks and the parent disk, making them unusable. After verifying that the parent virtual hard disk is not shared, you can use the Edit Disk Wizard to merge the differencing disk to the parent virtual hard disk.*
+
+

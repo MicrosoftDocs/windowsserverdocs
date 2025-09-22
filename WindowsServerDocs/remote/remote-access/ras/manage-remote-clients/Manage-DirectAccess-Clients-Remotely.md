@@ -1,7 +1,6 @@
 ---
 title: Manage DirectAccess Clients Remotely
 description: Learn how to leverage the monitoring capabilities of Remote Access by using the DirectAccess management console and the corresponding Windows PowerShell cmdlets, which are provided as part of the Remote Access server role.
-manager: brianlic
 ms.topic: concept-article
 ms.assetid: 36255d80-a13e-4af7-a5c0-ab4c8f302622
 ms.author: daknappe

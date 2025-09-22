@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 3/19/2025
+ms.custom: sfi-image-nochange
 ---
 
 # Upgrade a Windows Server failover cluster with a cluster OS rolling upgrade

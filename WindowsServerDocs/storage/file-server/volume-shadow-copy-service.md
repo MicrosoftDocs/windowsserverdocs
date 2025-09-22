@@ -2,8 +2,8 @@
 title: Volume Shadow Copy Service (VSS)
 description: Learn how to use Volume Shadow Copy Service to coordinate the actions that are required to create a consistent shadow copy for backup and restore operations in Windows Server.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/07/2025
 ---
 
@@ -442,3 +442,4 @@ The following table lists the minimum supported operating system versions for VS
 ## Related content
 
 - [Volume Shadow Copy Service in Windows Developer Center](/windows/desktop/vss/volume-shadow-copy-service-overview)
+

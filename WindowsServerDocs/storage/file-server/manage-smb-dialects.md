@@ -2,9 +2,10 @@
 title: Manage SMB dialects in Windows and Windows Server 2025
 description: Learn how to manage SMB2 and SMB3 dialects using Group Policy and Windows PowerShell in Windows Server and Windows client.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/25/2024
+ms.custom: sfi-image-nochange
 
 ---
 
@@ -115,3 +116,4 @@ You can use a network capture tool like Wireshark to examine the client and serv
 ## Related content
 
 - [Protect SMB traffic from interception](smb-interception-defense.md)
+

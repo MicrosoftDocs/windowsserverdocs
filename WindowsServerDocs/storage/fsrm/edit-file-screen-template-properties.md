@@ -4,7 +4,6 @@ description: This article describes how to edit file screen template properties
 ms.date: 7/7/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Edit File Screen Template Properties
@@ -38,5 +37,6 @@ When you make changes to a file screen template, you have the option of extendin
 
 -   [File Screening Management](file-screening-management.md)
 -   [Create a File Screen Template](create-file-screen-template.md)
+
 
 

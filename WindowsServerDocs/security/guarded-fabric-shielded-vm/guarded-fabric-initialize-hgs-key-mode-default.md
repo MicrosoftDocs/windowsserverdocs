@@ -2,9 +2,8 @@
 description: "Learn more about: Initialize the HGS cluster using key mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using key mode in a new dedicated forest (default)
 ms.topic: how-to
-manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -40,3 +39,5 @@ ms.date: 08/29/2018
 
 > [!div class="nextstepaction"]
 > [Create host key](guarded-fabric-create-host-key.md)
+
+

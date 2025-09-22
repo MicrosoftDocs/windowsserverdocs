@@ -4,9 +4,8 @@ ms.assetid: f7002265-60fa-40b8-9dd7-4bf131d9320a
 title: Computer Naming
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Computer Naming

@@ -2,10 +2,8 @@
 title: bitsadmin getminretrydelay
 description: Reference article for the bitsadmin getminretrydelay command, which retrieves the length of time, in seconds, that the service waits after encountering a transient error before trying to transfer the file.
 ms.topic: reference
-ms.assetid: 54f0abab-c129-40ed-a603-50f464d26011
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

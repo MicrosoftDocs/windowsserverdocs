@@ -4,11 +4,9 @@ ms.assetid: 4981b32f-741e-4afc-8734-26a8533ac530
 title: Integrating AD DS into an Existing DNS Infrastructure
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: best-practice
 
-ms.custom: inhenkel
 ---
 
 # Integrating AD DS into an Existing DNS Infrastructure

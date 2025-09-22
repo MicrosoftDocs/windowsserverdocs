@@ -2,10 +2,8 @@
 title: gpt
 description: Reference article for the gpt command, which assigns the gpt attribute(s) to the partition with focus.
 ms.topic: reference
-ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

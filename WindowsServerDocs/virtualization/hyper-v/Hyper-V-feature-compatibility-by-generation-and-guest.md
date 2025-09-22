@@ -1,10 +1,9 @@
 ---
 title: Hyper-V feature compatibility by generation and guest
 description: Lists the generations and operating systems that are compatible with key Hyper-V features
-ms.topic: article
-ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
-ms.author: mosagie
-author: meaghanlewis
+ms.topic: feature-availability
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/19/2025
 ---
 # Hyper-V feature compatibility by generation and guest
@@ -79,3 +78,4 @@ SMB3 | 1 and 2 | All that support SMB3
 Storage spaces direct | 2 | Windows Server 2016 and later
 Virtual Fibre Channel | 1 and 2 |  Windows Server 2012 and later
 VHDX format | 1 and 2 | Any supported guest
+

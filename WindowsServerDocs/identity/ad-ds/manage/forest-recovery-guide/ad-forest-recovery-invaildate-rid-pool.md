@@ -3,7 +3,6 @@ description: "Learn more about: AD Forest Recovery - Invalidating the current RI
 title: AD Forest Recovery - Invalidating the RID Pool
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11

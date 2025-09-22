@@ -2,9 +2,8 @@
 title: File Management Tasks
 description: This article describes the process of automating file management tasks
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
@@ -35,5 +34,6 @@ This section includes the following topics:
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+
 
 

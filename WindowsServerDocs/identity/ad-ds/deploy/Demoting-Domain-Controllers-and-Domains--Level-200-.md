@@ -2,10 +2,11 @@
 description: Learn how to demote domain controllers and domains using Server Manager or PowerShell in Windows Server.
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Demote Domain Controllers and Domains
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/09/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Demote domain controllers and domains
@@ -230,3 +231,4 @@ If you attempt to remove the AD DS role before demoting the server, Windows Powe
 ![Screenshot that shows the You're About to be signed off messsage.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_DemoteSignoff.png)
 
 The **Results** page shows the success or failure of the promotion and any important administrative information. The domain controller automatically reboots after 10 seconds.
+

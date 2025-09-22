@@ -2,9 +2,6 @@
 description: "Learn more about: Deploying Federation Server Proxies"
 ms.assetid: 222e9f93-7c41-4527-8a98-8f7fbc7a58af
 title: Deploying Federation Server Proxies in AD FS for Windows Server 2012 R2
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: checklist
 ---

@@ -1,10 +1,8 @@
 ---
-ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Advanced Data Deduplication settings
 description: "Learn more about: Advanced Data Deduplication settings"
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
-manager: klaasl
 ms.author: roharwoo
 ms.date: 02/18/2022
 ---
@@ -324,3 +322,4 @@ There are two types of [Garbage Collection](understand.md#job-info-gc):
 <a id="faq-why-disable-full-gc"></a>**Why would I want to disable full Garbage Collection?**
 - Garbage Collection could adversely affect the volume's lifetime shadow copies and the size of incremental backup. High churn or I/O-intensive workloads may see a degradation in performance by full Garbage Collection jobs.
 - You can manually run a full Garbage Collection job from PowerShell to clean up leaks if you know your system crashed.
+

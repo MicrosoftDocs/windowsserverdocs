@@ -3,8 +3,8 @@ title: Install Windows Server from installation media
 description: Learn how to create a bootable USB flash drive or DVD media to deploy Windows Server on physical and virtual hardware.
 ms.date: 01/27/2025
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 zone_pivot_groups: windows-os-version
 ---
 
@@ -237,3 +237,4 @@ Once modifications are made to the boot order and you select to boot from either
 - [Hyper-V Technology Overview](/windows-server/virtualization/hyper-v/hyper-v-overview)
 
 - [Overview of file sharing using the SMB 3 protocol in Windows Server](/windows-server/storage/file-server/file-server-smb-overview)
+

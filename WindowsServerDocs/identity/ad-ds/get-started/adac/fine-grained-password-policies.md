@@ -1,7 +1,7 @@
 ---
 description: Learn how to create, view, edit, and delete fine grained password policies in Active Directory Domain Services on Windows Server.
 title: Configure fine grained password policies for Active Directory Domain Services in Windows Server
-ms.author: mosagie
+ms.author: daknappe
 author: orin-thomas
 ms.date: 06/16/2025
 ms.topic: how-to
@@ -190,3 +190,4 @@ Here's how to use the [Remove-ADFineGrainedPasswordPolicy](/powershell/module/ac
    ```
 
 ---
+

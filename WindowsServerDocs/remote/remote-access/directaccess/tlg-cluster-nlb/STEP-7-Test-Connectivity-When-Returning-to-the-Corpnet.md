@@ -1,7 +1,6 @@
 ---
 title: STEP 7 Test Connectivity When Returning to the Corpnet
 description: Learn how to test connectivity when returning to the corpnet on CLIENT1.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
 ms.author: daknappe

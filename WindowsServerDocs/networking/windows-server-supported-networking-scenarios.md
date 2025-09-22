@@ -1,9 +1,7 @@
 ---
 title: Windows Server supported networking scenarios
 description: This topic provides information about new supported Networking scenarios in Windows Server 2016 and later
-manager: brianlic
-ms.topic: article
-ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 08/07/2020

@@ -1,16 +1,14 @@
 ---
 title: Storage Replica Overview
 description: Get an overview of Storage Replica in Windows Server.
-manager: siroy
-ms.author: mosagie
-ms.topic: how-to
-author: meaghanlewis
-ms.date: 10/04/2022
-ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
+ms.author: roharwoo
+ms.topic: overview
+author: robinharwood
+ms.date: 08/22/2025
 ---
 # Storage Replica overview
 
-You can use Storage Replica in Windows Server to replicate volumes between servers or clusters for disaster recovery. You can also use it to create stretch failover clusters that span two sites, and all nodes stay in sync.
+Storage Replica in Windows Server protects your critical data by replicating volumes between servers or clusters for disaster recovery. Whether you're safeguarding against hardware failures, natural disasters, or planned maintenance, Storage Replica ensures zero data loss with the ability to create stretch failover clusters that span multiple sites while keeping all nodes synchronized.
 
 Storage Replica supports synchronous and asynchronous replication:
 
@@ -63,7 +61,7 @@ The following figure depicts cluster-to-cluster storage replication by using Sto
 
 *Server-to-server replication* is synchronous and asynchronous replication between two standalone servers.
 
-In this scenario, you can by using Storage Spaces with shared SAS storage, SAN LUNs, iSCSI-attached LUNs, and local drives.
+In this scenario, you can use Storage Spaces with shared SAS storage, SAN LUNs, iSCSI-attached LUNs, and local drives.
 
 You manage a server-to-server configuration by using Windows Admin Center and PowerShell. The configuration requires manual intervention for failover.
 
@@ -150,7 +148,7 @@ This section includes information about high-level industry terms, synchronous a
 
 *Disaster recovery* refers to a contingency plan for recovering from site catastrophes so that the business continues to operate. *Data disaster recovery* means that multiple copies of production data are stored in a separate physical location. An example is a stretch cluster, where half the nodes are in one site and half are in another. Disaster preparedness refers to a contingency plan for preemptively moving workloads to a different location before an oncoming disaster, such as a hurricane.
 
-*Service-level agreements (SLAs)* define the availability of an organization applications and their tolerance of downtime and data loss during planned and unplanned outages. *Recovery Time Objective (RTO)* defines how long the business can tolerate total inaccessibility of data. *Recovery Point Objective (RPO)* defines how much data the business can afford to lose.
+*Service-level agreements (SLAs)* define the availability of an organization's applications and their tolerance of downtime and data loss during planned and unplanned outages. *Recovery Time Objective (RTO)* defines how long the business can tolerate total inaccessibility of data. *Recovery Point Objective (RPO)* defines how much data the business can afford to lose.
 
 ### Synchronous replication
 
@@ -178,7 +176,7 @@ With its higher-than-zero RPO, asynchronous replication is less suitable for hig
 
 * Network bandwidth and latency with fastest storage. There are physical limitations in synchronous replication. Because Storage Replica implements an I/O filtering mechanism by using logs and requiring network round trips, synchronous replication is likely to make application writes slower. By using low-latency, high-bandwidth networks and high-throughput disk subsystems for the logs, you minimize performance overhead.
 
-* The destination volume isn't accessible while replicating in Windows Server 2016. When you configure replication, the destination volume dismounts, making it inaccessible to any reads or writes by users. Its driver letter might be visible in common user interfaces like File Explorer, but an application can't actually access the volume. Block-level replication technologies are incompatible with allowing access to the destination target's mounted file system in a volume. New Technology File System (NTFS) and Resilient File System (ReFS) don't support users writing data to the volume while blocks change underneath them.
+* The destination volume isn't accessible while replicating in Windows Server 2016. When you configure replication, the destination volume dismounts, making it inaccessible to any reads or writes by users. Its drive letter might be visible in common user interfaces like File Explorer, but an application can't actually access the volume. Block-level replication technologies are incompatible with allowing access to the destination target's mounted file system in a volume. New Technology File System (NTFS) and Resilient File System (ReFS) don't support users writing data to the volume while blocks change underneath them.
 
   The `Test-Failover` cmdlet debuted in Windows Server version 1709 and was also included in Windows Server 2019. The cmdlet now supports temporarily mounting a read-write snapshot of the destination volume for backups, testing, and so on. For more information, see the [Storage Replica FAQ](https://aka.ms/srfaq).
 
@@ -205,10 +203,6 @@ Storage Replica articles frequently use the following terms:
 
 * A *replication group* is the organization of volumes and their replication configuration within a partnership, on a per-server basis. A group can contain one or more volumes.
 
-### What's new in Storage Replica
-
-For a list of new features in Storage Replica in Windows Server 2019, see [What's new in storage](../whats-new-in-storage.md#storage-replica2019).
-
 ## Related content
 
 * [Stretch cluster replication by using shared storage](stretch-cluster-replication-using-shared-storage.md)
@@ -218,3 +212,5 @@ For a list of new features in Storage Replica in Windows Server 2019, see [What'
 * [Storage Replica FAQ](storage-replica-frequently-asked-questions.yml)
 * [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
+
+

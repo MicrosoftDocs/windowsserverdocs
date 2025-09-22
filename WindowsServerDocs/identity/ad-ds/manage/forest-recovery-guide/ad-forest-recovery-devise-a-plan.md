@@ -3,7 +3,6 @@ description: "Learn more about: AD Forest Recovery - Devising an AD Forest Recov
 title: AD Forest Recovery - Devising an AD Forest Recovery Plan
 ms.author: roharwoo
 author: robinharwood
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: how-to
 ms.custom: 17381f30-55f2-4e00-977a-b701675fa4ff, inhenkel

@@ -2,8 +2,8 @@
 description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/30/2019
 ms.topic: how-to
 ---
@@ -527,3 +527,4 @@ You can remove unnecessary AD RMS servers after an upgrade. You may choose to pe
 7.  Once this completes, restart the server.
 
 8.  You can now shut down this server and reallocate the resources as needed.
+

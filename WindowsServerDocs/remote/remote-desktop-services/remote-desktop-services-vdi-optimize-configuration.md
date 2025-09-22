@@ -3,42 +3,41 @@ title: Optimizing Windows configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows Virtual Desktop Infrastructure (VDI) environments.
 ms.service: windows-server
 ms.subservice: remote-desktop-services
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: concept-article
-manager: tedhudek
-ms.date: 7/3/2024
+ms.date: 8/15/2025
 ---
 
 # Optimizing Windows configuration for VDI desktops
 
-Although the Windows operating system is well tuned out of the box, there are opportunities for you to refine it further, specifically for the corporate Microsoft Virtual Desktop Infrastructure (VDI) environment. In the VDI environment, many background services and tasks are disabled by default.
+Windows is tuned out of the box, but you can refine it for your corporate Microsoft Virtual Desktop Infrastructure (VDI) environment. In VDI, many background services and tasks are disabled by default.
 
-This article is a guide or starting point for how you might optimize your configuration. Some recommendations disable functionality that you prefer to use, so you must consider the cost versus the benefit of adjusting a particular setting in your scenario.
+This article is a guide to help you optimize your configuration. Some recommendations disable features you might want to use, so weigh the cost and benefit before adjusting a setting for your scenario.
 
 >[!NOTE]
-> Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
+> Settings not mentioned in this article can stay at their default values, or you can set them based on your requirements and policies. These changes don't affect VDI functionality.
 
 ## VDI optimization principles
 
-A "full" virtual desktop environment can present a complete desktop session, including applications, to a computer user over a network. The network delivery vehicle can be an on-premises network, the Internet, or both. Some implementations of virtual desktop environments use a "base" operating system image, which then becomes the basis for the desktops then presented to the users for work. There are variations of virtual desktop implementations such as **persistent**, **non-persistent**, and **desktop session**.
+A "full" virtual desktop environment presents a complete desktop session, including apps, to a user over a network. The network can be on-premises, the internet, or both. Some virtual desktop environments use a "base" operating system image, which is the basis for the desktops presented to users for work. There are types of virtual desktop implementations like **persistent**, **non-persistent**, and **desktop session**.
 
-- The persistent type preserves changes to the virtual desktop operating system from one session to the next.
-- The non-persistent type doesn't preserve changes to the virtual desktop operating system from one session to the next.
-- The desktop session is like sessions on other virtual or physical devices, and accessed over a network.
+- The persistent type saves changes to the virtual desktop operating system from one session to the next.
+- The non-persistent type doesn't save changes to the virtual desktop operating system from one session to the next.
+- The desktop session works like sessions on other virtual or physical devices and is accessed over a network.
 
-The optimization settings could take place on a reference machine. A virtual machine (VM) is an ideal place to build the VM, because state is saved, there are checkpoints, and backups are made. A default OS installation is performed to the base VM. That base VM is then optimized by doing things like removing unneeded apps, installing updates, deleting temporary files, and applying settings.
+Set optimization settings on a reference machine. A virtual machine (VM) is ideal for building the VM because it saves state, lets you create checkpoints, and backs up data. Install the default OS to the base VM. Then optimize the base VM by removing unneeded apps, installing updates, deleting temporary files, and applying settings.
 
-Security and stability are among the highest priorities for Microsoft when it comes to products and services. In the virtual desktop realm, security isn't handled much differently than physical devices. Enterprise customers may choose to utilize the built-in to Windows services of Windows Security, which comprises a suite of services that work well connected or not connected to the Internet. For those virtual desktop environments not connected to the Internet, security signatures can be downloaded proactively several times per day, because Microsoft may release more than one signature update per day. Those signatures can then be provided to the virtual desktop devices and scheduled to be installed during production, regardless of persistent or non-persistent. That way the VM protection is as current as possible.
+Security and stability are top priorities for Microsoft products and services. In virtual desktop environments, security works much like it does on physical devices. Enterprise customers can use the built-in Windows Security services, which work whether the device is connected to the internet or not. For virtual desktop environments not connected to the internet, download security signatures proactively several times a day, because Microsoft can release more than one signature update per day. Provide those signatures to virtual desktop devices and schedule installation during production, whether persistent or non-persistent. This keeps VM protection current.
 
-There are some security settings not applicable to virtual desktop environments not connected to the internet and unable to participate in cloud-enabled security. There are other settings that "normal" Windows devices may utilize such as Cloud Experience, or The Windows Store. Removing access to unused features reduces footprint, network bandwidth, and attack surface.
+Some security settings don't apply to virtual desktop environments that aren't connected to the internet or can't use cloud-enabled security. Other settings that standard Windows devices use, like Cloud Experience or the Windows Store, might not be needed. Removing access to unused features reduces footprint, network bandwidth, and attack surface.
 
-Windows utilizes a monthly update rhythm. In some cases, virtual desktop administrators control the update process by shutting down VMs based on a "master" or "gold" image, unsealing that read-only image, patching the image, then resealing it and bringing it back into production. Therefore, there's no need to have virtual desktop devices checking Windows Update. However, there are cases where normal patching procedures take place, like the case of persistent "personal" virtual desktop devices. In some cases, Windows Update can be utilized. In some cases, Intune could be utilized. In some cases, Microsoft Endpoint Configuration Manager (formerly SCCM) is utilized to handle update and other package delivery. It's up to each organization to determine the best approach to updating virtual desktop devices, while reducing overhead cycles.
+Windows uses a monthly update rhythm. Sometimes, virtual desktop admins control the update process by shutting down VMs based on a "master" or "gold" image, unsealing the read-only image, patching it, then resealing and returning it to production. In these cases, virtual desktop devices don't need to check Windows Update. For persistent "personal" virtual desktop devices, standard patching procedures might apply. Organizations can use Windows Update, Intune, or Microsoft Endpoint Configuration Manager (formerly SCCM) to handle updates and package delivery. Each organization decides the best approach to updating virtual desktop devices while reducing overhead.
 
-The local policy settings, and many other settings in this guide, can be overridden with domain-based policy. We recommended that you go through the policy settings thoroughly and remove or not use any that aren't desired or applicable to your environment. The settings listed in this document try to achieve the best balance of performance optimization in virtual desktop environments, while maintaining a quality user experience.
+Local policy settings and many other settings in this guide can be overridden with domain-based policy. Review the policy settings and remove or skip any that aren't needed for your environment. The settings in this document aim to balance performance optimization in virtual desktop environments while maintaining a quality user experience.
 
 >[!NOTE]
-> There's a set of [scripts available on GitHub](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool) that'll do all the work items documented in this paper. The scripts are designed to be easily customizable for your environment and requirements. The main code is PowerShell, and the work is done by calling input files, which are plain text (now .JSON), with also Local Group Policy Object (LGPO) tool export files. These text files contain lists of the apps to be removed, services to be disabled, and so on. If you don't want to remove a particular app or disable a particular service, you can edit the corresponding text file and remove the item you don't want acted upon. Finally, there's an export of local policy settings that can be imported into your environment machines. It's better to have some of the settings within the base image, than to have the settings applied through group policy, as some of the settings take effect on the next restart or when a component is first used.
+> You can use a set of [scripts available on GitHub](https://github.com/The-Virtual-Desktop-Team/Virtual-Desktop-Optimization-Tool) to automate all the work items in this article. The scripts are easy to customize for your environment and requirements. The main code is PowerShell, and it works by calling input files, which are plain text (now .JSON), along with Local Group Policy Object (LGPO) tool export files. These text files list the apps to remove, services to disable, and more. If you don't want to remove an app or disable a service, edit the corresponding text file and remove the item you don't want to change. There's also an export of local policy settings you can import into your environment machines. It's better to include some settings in the base image than to apply them through group policy, because some settings take effect on the next restart or when a component is first used.
 
 ## Non-persistent virtual desktop environments
 
@@ -74,25 +73,25 @@ Depending on the architecture of virtual desktop device, things like PreFetch an
 
 ## To sysprep or not sysprep
 
-Windows has a built-in capability called the [System Preparation Tool](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), also known as sysprep. The sysprep tool is used to prepare a customized Windows 10 or Windows 11 image for duplication. The sysprep process assures the resulting OS is properly unique to run in production.
+Windows has a built-in capability called the [System Preparation Tool](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), also known as sysprep. Use sysprep to prepare a customized Windows 10 or Windows 11 image for duplication. The sysprep process makes sure the resulting OS is unique and ready for production.
 
-There are reasons for and against running sysprep. For virtual desktop environments, you may want the ability to customize the default user profile, which would be used as the profile template for later users that sign in using this image. You may have apps that you want installed, but also want to be able to control per-app settings.
+There are reasons for and against running sysprep. In virtual desktop environments, you might want to customize the default user profile, which acts as the profile template for users who sign in using this image. You might want apps installed, but also want to control per-app settings.
 
-The alternative is to use a standard .ISO to install from, possibly using an unattended installation answer file, and a task sequence to install applications or remove applications. You can also use a task sequence to set local policy settings in the image, perhaps using the [Local Group Policy Object Utility (LGPO)](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool) tool.
+The alternative is to use a standard .ISO to install, possibly with an unattended installation answer file, and a task sequence to install or remove applications. You can also use a task sequence to set local policy settings in the image, maybe using the [Local Group Policy Object Utility (LGPO)](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10#what-is-the-local-group-policy-object-lgpo-tool) tool.
 
 To learn more about image preparation for Azure, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image)
 
 ## Supportability
 
-Anytime that Windows defaults are changed, questions arise regarding supportability. Once a virtual desktop image (VM or session) is customized, every change made to the image needs to be tracked in a change log. If a time comes to troubleshoot, often an image can be isolated in a pool and configured for problem analysis. Once a problem is tracked to the root cause, that change can then be rolled out to the test environment first, and ultimately to the production workload.
+When you change Windows defaults, questions about supportability can come up. After you customize a virtual desktop image (VM or session), track every change in a change log. If you need to troubleshoot, you can isolate an image in a pool and set it up for problem analysis. After you find the root cause, roll out the change to the test environment first, and then to the production workload.
 
-This document intentionally avoids touching system services, policies, or tasks that affect security. After that comes Windows servicing. The ability to service virtual desktop images outside of maintenance windows is removed, as maintenance windows are when most servicing events take place in virtual desktop environments, except for security software updates. Microsoft's guidance for Windows Security in virtual desktop environments is documented in the [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
+This document intentionally avoids changing system services, policies, or tasks that affect security. Windows servicing comes next. You can't service virtual desktop images outside of maintenance windows, because most servicing events happen during maintenance windows in virtual desktop environments, except for security software updates. Microsoft's guidance for Windows security in virtual desktop environments is in the [Deployment guide for Windows Defender Antivirus in a virtual desktop infrastructure (VDI) environment](/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus)
 
-Consider supportability when altering default Windows settings. Occasionally, difficult to solve problems arise when altering system services, policies, or scheduled tasks, in the name of hardening, "lightening," and so on. Consult the Microsoft Knowledge Base for current known issues regarding altered default settings. The guidance in this document, and the associated script on GitHub are maintained with respect to known issues, if any arise. In addition, you can report issues in many ways to Microsoft.
+Think about supportability when you change default Windows settings. Sometimes, problems that are hard to fix can happen when you change system services, policies, or scheduled tasks to harden or lighten the system. Check the Microsoft Knowledge Base for current known issues about changed default settings. The guidance in this document and the associated script on GitHub are updated based on known issues, if any come up. You can report issues to Microsoft in several ways.
 
-You can use your favorite search engine with the terms `"start value" site:support.microsoft.com` to bring up known issues regarding default start values for services.
+Use your favorite search engine with the terms `"start value" site:support.microsoft.com` to find known issues about default start values for services.
 
-This document and the associated scripts on GitHub don't modify any default permissions. If you're interested in increasing your security settings, start with the project known as AaronLocker. For more information, ["AaronLocker" overview](https://github.com/microsoft/AaronLocker).
+This document and the associated scripts on GitHub don't change any default permissions. If you want to increase your security settings, start with the AaronLocker project. For more information, see [AaronLocker overview](https://github.com/microsoft/AaronLocker).
 
 ## Virtual desktop optimization categories
 
@@ -731,6 +730,7 @@ If you'd like to enable the use of Windows Update after disabling it, follow the
 
 ## More information
 
-Learn more about Microsoft's VDI architecture at our [Azure Virtual Desktop documentation](https://azure.microsoft.com/services/virtual-desktop/).
+Learn more about Microsoft's VDI architecture in the [Azure Virtual Desktop documentation](https://azure.microsoft.com/services/virtual-desktop/).
 
-If you need more help with troubleshooting sysprep, check out [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
+For help troubleshooting sysprep, see [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).
+

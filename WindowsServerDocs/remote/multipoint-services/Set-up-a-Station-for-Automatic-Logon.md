@@ -4,7 +4,6 @@ description: Learn how to configure automatic logon for MultiPoint Services stat
 ms.topic: how-to
 ms.assetid: 7a326085-7438-41de-9874-59aca393fa4a
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

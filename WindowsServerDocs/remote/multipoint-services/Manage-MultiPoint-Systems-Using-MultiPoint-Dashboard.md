@@ -1,10 +1,9 @@
 ---
 title: Manage MultiPoint Systems Using MultiPoint Dashboard
 description: Provides an overview of using the MultiPoint Dashboard
-ms.topic: article
+ms.topic: overview
 ms.assetid: 28b5383e-6996-4e1c-953d-00d5205ec55f
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

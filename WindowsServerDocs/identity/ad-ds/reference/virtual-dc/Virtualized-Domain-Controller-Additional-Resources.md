@@ -4,9 +4,8 @@ ms.assetid: 47a7cede-f94a-4233-872b-fa65a5b9d8f1
 title: Virtualized Domain Controller Additional Resources
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Virtualized Domain Controller Additional Resources

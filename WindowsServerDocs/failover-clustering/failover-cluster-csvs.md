@@ -2,8 +2,8 @@
 title: Cluster Shared Volumes overview
 description: Understand Cluster Shared Volumes (CSV) in Windows Server failover clusters, including features, requirements, and best practices for deployment and management.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/08/2025
 ---
 
@@ -181,3 +181,4 @@ In Windows Server 2012 R2 and later, you can view the state of a CSV on a per no
 - [Manage Cluster Shared Volumes](failover-cluster-manage-cluster-shared-volumes.md)
 
 - [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
+

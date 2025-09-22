@@ -1,17 +1,22 @@
 ---
-title: Understanding the storage pool cache in Azure Stack HCI and Windows Server clusters
+title: Understanding the storage pool cache in Azure Local and Windows Server clusters
 description: How to read and write caching works to accelerate performance in Storage Spaces Direct.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 02/11/2025
+appliesto: [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+           ]
 ---
 
 # Understanding the storage pool cache
 
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
-
-Storage Spaces Direct, the foundational storage virtualization technology behind Azure Stack HCI and Windows Server, features a built-in server-side cache to maximize storage performance while reducing costs. It's a large, persistent, real-time read *and* write cache that is configured automatically upon deployment. In most cases, no manual management whatsoever is required. How the cache works depends on the types of drives present.
+Storage Spaces Direct, the foundational storage virtualization technology behind Azure Local and Windows Server, features a built-in server-side cache to maximize storage performance while reducing costs. It's a large, persistent, real-time read *and* write cache that is configured automatically upon deployment. In most cases, no manual management whatsoever is required. How the cache works depends on the types of drives present.
 
 ## Drive types and deployment options
 
@@ -140,9 +145,9 @@ You can then replace the cache drive just like any other drive replacement.
 
 There are several other unrelated caches in the Windows software-defined storage stack. Examples include the Storage Spaces write-back cache and the Cluster Shared Volume (CSV) in-memory read cache.
 
-With Azure Stack HCI, the Storage Spaces write-back cache shouldn't be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet shouldn't be used.
+With Azure Local, the Storage Spaces write-back cache shouldn't be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet shouldn't be used.
 
-You may choose to use the CSV cache, or not – it's up to you. It's on by default in Azure Stack HCI, but it doesn't conflict with the cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [Use the CSV in-memory read cache with Azure Stack HCI](./use-csv-cache.md).
+You may choose to use the CSV cache, or not – it's up to you. It's on by default in Azure Local, but it doesn't conflict with the cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [Use the CSV in-memory read cache with Azure Local](./use-csv-cache.md).
 
 ## Manual configuration
 

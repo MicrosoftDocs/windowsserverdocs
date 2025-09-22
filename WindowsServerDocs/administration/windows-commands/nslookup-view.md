@@ -2,10 +2,8 @@
 title: nslookup view
 description: Reference article for the nslookup view command, which sorts and lists the output of the previous **ls** commands or subcommands.
 ms.topic: reference
-ms.assetid: c1d9fff7-b567-451c-af80-6be8f604e193
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,10 +1,9 @@
 ---
 title: Configure the server with a sufficient amount of dynamic MAC addresses
 description: Learn what to do when the number of available dynamic MAC addresses is low.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe
 ms.date: 8/16/2016
 ---
 # Configure the server with a sufficient amount of dynamic MAC addresses
@@ -31,3 +30,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution
 
 *Use Virtual Switch Manager to view and extend the range of dynamic addresses.*
+

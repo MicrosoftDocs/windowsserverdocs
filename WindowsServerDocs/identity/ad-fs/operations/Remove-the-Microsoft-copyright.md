@@ -2,9 +2,6 @@
 description: "Learn more about: Remove the Microsoft copyright"
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Remove the Microsoft copyright
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 02/13/2024
 ms.topic: how-to
 ---

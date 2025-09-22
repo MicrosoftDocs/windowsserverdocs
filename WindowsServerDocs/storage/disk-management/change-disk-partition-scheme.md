@@ -3,8 +3,8 @@ title: Convert a disk to GPT or MBR
 description: Learn how to convert a disk to GPT or MBR partition scheme (style) using Disk Management and the command line in Windows.
 ms.date: 06/17/2025
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ---
 
 # Convert a disk to GPT or MBR partition scheme
@@ -114,3 +114,4 @@ Before you convert partition styles, back up or move the data off the disk.
 ## See also
 
 - [Convert a disk type to Dynamic or Basic](change-disk-type-dynamic-basic.md)
+

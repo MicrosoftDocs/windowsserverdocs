@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: how-to
 ms.assetid: 82ba3517-9743-4cde-8eea-63a17edb016f
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ---
 # Set up a direct-video-connected station in MultiPoint Services

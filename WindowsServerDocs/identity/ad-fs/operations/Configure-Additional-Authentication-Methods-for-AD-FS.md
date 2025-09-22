@@ -2,11 +2,8 @@
 description: "Learn more about: Configure Additional Authentication Methods for AD FS"
 ms.assetid: ddfbbda3-30ca-4537-af12-667efc6f63ff
 title: Configure Additional Authentication Methods for AD FS
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure Additional Authentication Methods for AD FS
@@ -43,12 +40,12 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://docs.mideye.com/6.4/integrations/microsoft-adfs/)|
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Defender AD FS|[Defender AD FS Adapter](https://www.oneidentity.com/products/defender/)|
-|Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://docs.pingidentity.com/pingid-user-guide/secure_authentication_with_pingid/pid_verify_your_identity.html#pid_c_PingIDforADFSSSO.html)|
+|Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrate_with_ad_fs.html)|
 |RSA|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation)|
 |SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/)|
-|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://www.thalesdocs.com/sta/Content/STA/SEdocs/AuthADFS.htm)|
+|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html)|
 |Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona multifactor authentication](https://www.trusona.com/solution-overview/)|
 
 ## Custom Authentication Method for AD FS in Windows Server
@@ -58,3 +55,4 @@ We now provide instructions for building your own custom authentication method f
 ## See Also
 
 [Manage Risk with Additional multifactor authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+

@@ -1,8 +1,8 @@
 ---
 title: Extensible Authentication Protocol (EAP) for network access in Windows
 description: This article presents information about the Extensible Authentication Protocol (EAP) settings and configuration in Windows-based computers.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 07/09/2025
 ms.contributor: samyun
@@ -382,3 +382,4 @@ To configure a network for WPA3-Enterprise 192-bit mode, Windows requires EAP-TL
 - [Managing the New Wired Network (IEEE 802.3) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831813(v=ws.11))
 
 - [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11))
+

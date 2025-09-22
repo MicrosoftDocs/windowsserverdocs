@@ -2,10 +2,8 @@
 title: bitsadmin removeclientcertificate
 description: Reference article for the bitsadmin removeclientcertificate command, which removes the client certificate from the job.
 ms.topic: reference
-ms.assetid: b417c3e5-aadd-4fcc-968f-45d8b67ca516
 ms.author: mosagie
 author: meaghanlewis
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

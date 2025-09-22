@@ -1,10 +1,9 @@
 ---
 title: Configure at least the required amount of memory for a virtual machine running Windows 8.1 and enabled for Dynamic Memory
 description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory required for Windows 8.1.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
-ms.assetid: d43a62f5-75ff-4b50-9687-3e58f42c0f4f
 ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows 8.1 and enabled for Dynamic Memory
@@ -56,3 +55,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ```
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 512MB -MinimumBytes 256MB -StartupBytes 512MB
 ```
+
+

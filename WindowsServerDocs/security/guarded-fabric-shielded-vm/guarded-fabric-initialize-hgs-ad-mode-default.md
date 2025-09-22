@@ -2,9 +2,8 @@
 description: "Learn more about: Initialize the HGS cluster using AD mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using AD mode in a new dedicated forest (default)
 ms.topic: how-to
-manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -41,3 +40,5 @@ ms.date: 08/29/2018
 
 > [!div class="nextstepaction"]
 > [Configure fabric DNS](guarded-fabric-configuring-fabric-dns-ad.md)
+
+

@@ -1074,16 +1074,30 @@
         href: netsh-dump.md
       - name: netsh exec
         href: netsh-exec.md
+      - name: netsh http
+        href: netsh-http.md
+      - name: netsh ipsec
+        href: netsh-ipsec.md
       - name: netsh lan
         href: netsh-lan.md
       - name: netsh namespace
         href: netsh-namespace.md
+      - name: netsh netio
+        href: netsh-netio.md
+      - name: netsh rpc
+        href: netsh-rpc.md
       - name: netsh set
         href: netsh-set.md
       - name: netsh show
         href: netsh-show.md
       - name: netsh wcn
         href: netsh-wcn.md
+      - name: netsh wfp
+        href: netsh-wfp.md
+      - name: netsh winhttp
+        href: netsh-winhttp.md
+      - name: netsh winsock
+        href: netsh-winsock.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

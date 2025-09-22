@@ -2,10 +2,9 @@
 title: Hardware Requirements for Windows Server
 description: Review the minimum hardware requirements for CPU, memory (RAM), storage, and network needed to install and run Windows Server.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/02/2025
-ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 zone_pivot_groups: windows-os-version
 ---
 
@@ -167,3 +166,4 @@ The following items are required only for certain features:
 > - Hardware-based TPMs must implement version 2.0 of the TPM specification.
 > - TPMs that implement version 2.0 must have an EK certificate that's either pre-provisioned to the TPM by the hardware vendor or capable of being retrieved by the device during the first boot.
 > - TPMs that implement version 2.0 must ship with SHA-256 PCR banks and implement PCRs 0 through 23 for SHA-256. It's acceptable to ship TPMs with a single switchable PCR bank that can be used for both SHA-1 and SHA-256 measurements.
+

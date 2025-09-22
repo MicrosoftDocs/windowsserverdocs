@@ -1,8 +1,8 @@
 ---
 title: Active Directory Security Groups
 description: Become familiar with Windows Server Active Directory security groups, group scope, and group functions. See information on groups, such as members and rights.
-author: Xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 07/02/2025
 # customer intent: As an administrator, I want to become familiar with Windows Server Active Directory security groups so that I can simplify network maintenance and administration by organizing user accounts, computer accounts, and other groups into manageable units.
@@ -1174,3 +1174,4 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 - [Security principals](understand-security-principals.md)
 - [Special identity groups](understand-special-identities-groups.md)
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
+

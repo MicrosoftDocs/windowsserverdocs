@@ -1,9 +1,7 @@
 ---
 title: Server Certificate Deployment Planning
 description: Learn how to plan for your server certificate deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: 7eb746e0-1046-4123-b532-77d5683ded44
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

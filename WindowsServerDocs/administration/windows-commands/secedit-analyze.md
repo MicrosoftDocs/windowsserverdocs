@@ -2,10 +2,8 @@
 title: secedit analyze
 description: Reference article for the secedit analyze command, which allows you to analyze current systems settings against baseline settings that are stored in a database.
 ms.topic: reference
-ms.assetid: 3430cf9d-1411-48b1-b5a9-2e47701dc87f
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -5,6 +5,7 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 10/21/2021
 ms.topic: troubleshooting
+ms.custom: sfi-image-nochange
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting
 

@@ -1,11 +1,10 @@
 ---
 title: DHCP (Dynamic Host Configuration Protocol) Basics
 description: "Learn more about: DHCP (Dynamic Host Configuration Protocol) Basics"
-manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
+author: robinharwood
+ms.author: roharwoo
 ms.reviewer:
 ---
 # DHCP (Dynamic Host Configuration Protocol) Basics

@@ -2,8 +2,8 @@
 title: Deploy Remote Desktop Gateway role for Remote Desktop Services
 description: Learn how to deploy the Remote Desktop Gateway role for Remote Desktop Services.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/24/2025
 ---
 
@@ -46,3 +46,4 @@ After you've imported the certificate and its private key, the display should sh
 ## Next steps
 
 If you want to add high availability to your RD Gateway role, see [Add high availability to the RD Web and Gateway web front](rds-rdweb-gateway-ha.md).
+

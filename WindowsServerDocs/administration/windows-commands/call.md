@@ -2,10 +2,8 @@
 title: call
 description: Reference article for the call command, which calls one batch program from another without stopping the parent batch program.
 ms.topic: reference
-ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/28/2022
 ---
 

@@ -2,8 +2,8 @@
 title: Troubleshoot Active Directory Domain Services performance
 description: Resources and guidance to help with troubleshooting in Active Directory performance tuning.
 ms.topic: troubleshooting-general
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/03/2023
 ---
 
@@ -20,3 +20,5 @@ For more information on AD DS performance tuning troubleshooting, see [Monitorin
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
 - [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md)
+
+

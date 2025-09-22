@@ -2,8 +2,8 @@
 title: Enable Hash Publication for Non-Domain Member File Servers
 description: Learn how to configure hash publication for BranchCache using local computer Group Policy on a file server with the BranchCache for Network Files role service of the File Services server role installed.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # Enable Hash Publication for Non-Domain Member File Servers
@@ -40,6 +40,7 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
     3.  To disallow hash publication for all shared folders on the computer even if BranchCache is enabled on the file shares, click **Disallow hash publication on all shared folders**.
 
 8.  Click **OK**.
+
 
 
 

@@ -2,10 +2,9 @@
 title: Key Management Services (KMS) activation planning for Windows Server
 description: Learn how to plan for Key Management Services (KMS) activation in Windows Server.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/17/2025
-ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ---
 
 # Key Management Services (KMS) activation planning
@@ -102,3 +101,4 @@ Depending on which operating system your KMS host is running and which operating
 | Windows Server 2008 R2 | - Windows Server 2012 R2 <br> - Windows Server 2012 <br> - Windows 10 | [Update that enables Windows 7 and Windows Server 2008 R2 KMS hosts to activate Windows 10](https://support.microsoft.com/help/3079821) |
 | Windows 8.1 | - Windows 10 | [July 2016 update rollup for Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3172614) or later monthly rollup |
 | Windows 7 | - Windows 10 | [Update that enables Windows 7 and Windows Server 2008 R2 KMS hosts to activate Windows 10](https://support.microsoft.com/help/3079821) |
+

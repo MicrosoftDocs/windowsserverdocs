@@ -2,10 +2,16 @@
 description: "Learn more about: Scripting with PowerShell and Storage Spaces Direct performance history"
 title: Scripting with Storage Spaces Direct performance history
 ms.author: roharwoo
-manager: eldenc
 ms.topic: how-to
 author: robinharwood
 ms.date: 05/15/2018
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Scripting with PowerShell and Storage Spaces Direct performance history
@@ -484,3 +490,4 @@ That's it! Hopefully these samples inspire you and help you get started. With St
 - [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Performance history](performance-history.md)
+

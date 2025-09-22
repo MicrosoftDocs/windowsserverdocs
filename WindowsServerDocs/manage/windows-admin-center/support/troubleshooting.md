@@ -2,8 +2,8 @@
 title: Windows Admin Center common troubleshooting steps
 description: Windows Admin Center common troubleshooting steps
 ms.topic: troubleshooting-general
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/24/2025
 ---
 
@@ -11,7 +11,7 @@ ms.date: 06/24/2025
 
 This article describes how to diagnose and resolve issues in Windows Admin Center. If you're having an issue with a specific tool, check to see if you're experiencing a [known issue](known-issues.md).
 
-## Prerequisite
+## Prerequisites
 
 Windows Admin Center is supported on the following operating systems:
 
@@ -30,6 +30,10 @@ This failure can happen if your default PowerShell module path has been modified
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
 ```
+
+## The Windows Admin Center gateway installation failed
+
+If your installation fails, or Windows Admin Center fails to open after install, try uninstalling and reinstalling. This issue can happen if you have an older version of a modernized gateway build installed, and you're trying to update to a newer version.
 
 ## I receive an error in my web browser
 
@@ -279,3 +283,4 @@ To collect a HAR file in Microsoft Edge or Google Chrome, follow these steps:
 
 > [!WARNING]
 > Before sharing your HAR files with Microsoft, review and redact any sensitive data, such as passwords or personal information.
+

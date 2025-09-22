@@ -1,11 +1,10 @@
 ---
 title: Troubleshooting Domain Name System (DNS) issues
 description: This article introduces how to collect data when DNS issues occur.
-manager: dcscontentpm
 ms.topic: troubleshooting-general
-ms.author: delhan
+ms.author: roharwoo
 ms.date: 8/8/2019
-author: Deland-Han
+author: robinharwood
 ---
 
 # Troubleshooting Domain Name System (DNS) issues

@@ -1,9 +1,7 @@
 ---
 title: Hyper-V Network Virtualization
 description: This topic provides links to content about Hyper-V Network Virtualization in Windows Server 2019 and 2016.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/27/2021

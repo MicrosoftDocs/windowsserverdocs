@@ -2,10 +2,8 @@
 title: ftp mdelete
 description: Reference article for the ftp mdelete command, which deletes files on the remote computer.
 ms.topic: reference
-ms.assetid: 8a80a8f5-e880-40a8-abc9-29a41836844f
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

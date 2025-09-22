@@ -1,7 +1,6 @@
 ---
 title: STEP 6 Install and Configure 2-DC1
 description: Learn how to install and configure 2-DC1.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
 ms.author: daknappe

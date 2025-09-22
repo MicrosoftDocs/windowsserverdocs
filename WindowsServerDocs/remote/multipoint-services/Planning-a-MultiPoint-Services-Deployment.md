@@ -5,7 +5,6 @@ ms.date: 07/22/2016
 ms.topic: concept-article
 ms.assetid: dcb9edf1-99d0-490c-a7f8-863b18a80cdf
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # Planning a MultiPoint Services Deployment

@@ -2,9 +2,8 @@
 title: Create a failover cluster
 description: How to create a failover cluster for Windows Server 2012 R2, Windows Server 2012, Windows Server 2016, and Windows Server 2019.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
-manager: lizross
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 1/15/2025
 zone_pivot_groups: failover-clustering-management-tools
 ---
@@ -404,3 +403,5 @@ To create a clustered role:
 - [Cluster-Aware Updating](cluster-aware-updating.md)
 - [New-Cluster](/powershell/module/failoverclusters/new-cluster)
 - [Test-Cluster](/powershell/module/failoverclusters/test-cluster)
+
+

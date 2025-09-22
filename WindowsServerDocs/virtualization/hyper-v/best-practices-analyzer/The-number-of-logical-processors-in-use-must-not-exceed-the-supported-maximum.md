@@ -1,10 +1,9 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
 description: Learn what to do when the server is configured with too many logical processors.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
-ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
 ms.date: 8/16/2016
 ---
 # The number of logical processors in use must not exceed the supported maximum
@@ -43,3 +42,4 @@ See the following instructions to use MSConfig. For details about removing proce
 3.  Select **Number of processors** and then select a number in the list. Click **OK**.
 
 4.  Restart the computer to run it using the new number of processors.
+

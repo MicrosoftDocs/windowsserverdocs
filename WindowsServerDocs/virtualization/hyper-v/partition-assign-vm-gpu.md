@@ -1,8 +1,8 @@
 ---
 title: Partition and assign GPUs to a virtual machine in Hyper-V
 description: Learn how to partition and share a GPU with multiple virtual machines on Windows Server.
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.subservice: core-os
 ms.date: 01/09/2025
@@ -416,3 +416,5 @@ Follow these steps to unassign a GPU partition from a VM using PowerShell:
     ```
 
 ---
+
+

@@ -5,7 +5,6 @@ ms.date: 05/07/2018
 ms.topic: release-notes
 author: robinharwood
 ms.author: roharwoo
-manager: dougkim
 ---
 # Release Notes: Important Issues in Windows Server, version 1803
 

@@ -1,12 +1,11 @@
 ---
 title: Configure AD FS and Microsoft Entra multifactor authentication
 description: Learn more about configuring Microsoft Entra multifactor authentication as authentication provider using AD FS.
-ms.author: roharwoo
-author: robinharwood
-manager: tedhudek
 ms.date: 03/13/2024
 ms.topic: how-to
-ms.custom: has-azure-ad-ps-ref
+ms.custom:
+  - has-azure-ad-ps-ref
+  - sfi-image-nochange
 ---
 
 # Configure Microsoft Entra multifactor authentication as authentication provider using AD FS

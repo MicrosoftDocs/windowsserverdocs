@@ -4,7 +4,6 @@ description: Overview of articles about managing MultiPoint Services
 ms.topic: concept-article
 ms.assetid: 81135740-e9ce-4b4c-a770-760d741f20b1
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

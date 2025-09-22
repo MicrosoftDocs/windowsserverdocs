@@ -2,10 +2,8 @@
 title: repair-bde
 description: Reference article for the repair-bde command, which can try to reconstruct critical parts of a severely damaged drive and salvage recoverable data if the drive was encrypted by using BitLocker.
 ms.topic: reference
-ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -21,7 +19,7 @@ Attempts to reconstruct critical parts of a severely damaged drive and salvage r
 ## Syntax
 
 ```
-repair-bde <inputvolume> <outputvolumeorimage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
+repair-bde <inputvolume> <outputvolumeorimage> [-rk] [-rp] [-pw] [-kp] [-lf] [-f] [{-?|/?}]
 ```
 
 > [!WARNING]
@@ -54,7 +52,7 @@ The following limitations exist for the this command:
 To attempt to repair drive C:, to write the content from drive C: to drive D: using the recovery key file (RecoveryKey.bek) stored on drive F:, and to write the results of this attempt to the log file (log.txt) on drive Z:, type:
 
 ```
-repair-bde C: D: -rk F:\RecoveryKey.bek –lf Z:\log.txt
+repair-bde C: D: -rk F:\RecoveryKey.bek -lf Z:\log.txt
 ```
 
 To attempt to repair drive C: and to write the content from drive C: to drive D: using the 48-digit recovery password specified, type:

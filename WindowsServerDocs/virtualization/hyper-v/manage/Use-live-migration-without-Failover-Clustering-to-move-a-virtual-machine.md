@@ -2,9 +2,8 @@
 title: Use live migration without Failover Clustering to move a VM
 description: Gives prerequisites and instructions for doing a virtual machine live migration in a standalone environment.
 ms.topic: how-to
-ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/19/2025
 ---
 # Use live migration without Failover Clustering to move a virtual machine
@@ -70,3 +69,4 @@ Failed to establish a connection with host *computer name*: No credentials are a
    ```powershell
    PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
    ```
+

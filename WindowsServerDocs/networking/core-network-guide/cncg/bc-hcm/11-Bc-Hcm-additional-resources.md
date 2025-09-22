@@ -1,9 +1,7 @@
 ---
 title: BranchCache Additional Resources
 description: Lean more information about the technologies that are discussed related to BranchCache.
-manager: brianlic
-ms.topic: article
-ms.assetid: c7326f5b-87fb-4e57-9b77-72a5d0ab0444
+ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

@@ -2,9 +2,10 @@
 title: How to configure best practices assessment for Arc-enabled Windows servers
 description: Learn how to deploy the best Practices Assessment tool to evaluate your servers by identifying and providing guidance on areas for improvement for Arc-enabled Windows servers and Azure VMs.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/31/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Best Practices Assessment for Arc-enabled Windows servers
@@ -107,3 +108,4 @@ To report app feedback for the best practices assessment tool or if other issues
 - [Configure Azure Site Recovery for Arc-enabled Windows servers](azure-site-recovery-for-windows-server.md)
 
 - [Configure Remote Support for Arc-enabled Windows servers](remote-support-for-windows-server.md)
+

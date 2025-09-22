@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/18/2021
+ms.custom: sfi-ropc-nochange
 ---
 
 # Configuring Azure integration

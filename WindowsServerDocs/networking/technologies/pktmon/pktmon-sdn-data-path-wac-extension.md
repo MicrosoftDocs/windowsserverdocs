@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/27/2021
+ms.custom: sfi-image-nochange
 ---
 
 # SDN Data Path Diagnostics Extension in Windows Admin Center

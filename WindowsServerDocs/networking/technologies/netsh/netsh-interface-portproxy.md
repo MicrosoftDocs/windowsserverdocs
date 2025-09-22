@@ -1,10 +1,9 @@
 ---
 title: Netsh commands for interface portproxy
 description: Use the netsh interface portproxy commands to act as proxies between IPv4 and IPv6 networks and applications.
-ms.topic: article
-manager: dougkim
-ms.author: alalve
-author: xelu86
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/27/2021
 ---
 
@@ -361,3 +360,4 @@ Displays v6tov6 portproxy parameters.
 `show v6tov6`
 
 ---
+

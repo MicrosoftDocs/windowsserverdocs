@@ -1,9 +1,7 @@
 ---
 title: NIC advanced properties
 description: You can manage NICs and all the features via Windows PowerShell or the Network Control Panel.
-ms.topic: article
-ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
-manager: dougkim
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/26/2021

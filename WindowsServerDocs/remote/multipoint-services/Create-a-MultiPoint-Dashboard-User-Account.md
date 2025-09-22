@@ -4,7 +4,6 @@ description: Create an account to use with the dashboard
 ms.topic: how-to
 ms.assetid: eb9d7da1-eb5e-42c0-8d59-bb6d7b007ea9
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

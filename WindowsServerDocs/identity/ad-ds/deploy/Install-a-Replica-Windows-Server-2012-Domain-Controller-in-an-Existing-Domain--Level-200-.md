@@ -4,9 +4,9 @@ ms.assetid: e6da5984-d99d-4c34-9c11-4a18cd413f06
 title: Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)
 author: robinharwood
 ms.author: roharwoo
-manager: daveba
 ms.date: 05/12/2025
 ms.topic: install-set-up-deploy
+ms.custom: sfi-image-nochange
 ---
 
 # Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)
@@ -310,7 +310,7 @@ For example:
 > For more information on how the installation and Adprep process works, see the [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).
 
 ### Results
-![Screenshot of the Results page that includes the the success or failure message for the promotion and any important administrative information.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)
+![Screenshot of the Results page that includes the success or failure message for the promotion and any important administrative information.](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_ForestSignOff.png)
 
 The **Results** page shows the success or failure of the promotion and any important administrative information. If successful, the domain controller will automatically reboot after 10 seconds.
 

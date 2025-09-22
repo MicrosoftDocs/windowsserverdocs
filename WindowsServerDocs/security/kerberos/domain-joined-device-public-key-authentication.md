@@ -1,8 +1,7 @@
 ---
 description: "Learn more about: Domain-joined Device Public Key Authentication"
 title: Domain-joined Device Public Key Authentication
-ms.topic: article
-ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 05/12/2025

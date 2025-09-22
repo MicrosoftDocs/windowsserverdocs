@@ -2,10 +2,8 @@
 title: tcmsetup
 description: Reference article for the tcmsetup command, which sets up and disables the TAPI client.
 ms.topic: reference
-ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

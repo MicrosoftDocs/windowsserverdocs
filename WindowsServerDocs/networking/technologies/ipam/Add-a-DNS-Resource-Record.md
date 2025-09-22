@@ -1,11 +1,11 @@
 ---
 title: Add a DNS Resource Record
 description: Learn how to add one or more new DNS resource records by using the IPAM client console.
-manager: brianlic
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # Add a DNS Resource Record
 
@@ -62,6 +62,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 ## See Also
 [DNS Resource Record Management](DNS-Resource-Record-Management.md)
 [Manage IPAM](Manage-IPAM.md)
+
 
 
 

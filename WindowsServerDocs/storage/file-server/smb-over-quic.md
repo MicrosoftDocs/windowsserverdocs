@@ -2,10 +2,11 @@
 title: SMB over QUIC
 description: Learn about SMB over QUIC, a secure alternative to TCP for file sharing in Windows and Windows Server that enables encrypted access to file servers over untrusted networks.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.contributor: inhenkel
 ms.date: 07/24/2025
+ms.custom: sfi-image-nochange
 ---
 
 # SMB over QUIC
@@ -334,3 +335,4 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 - [QUIC Wikipedia](https://en.wikipedia.org/wiki/QUIC)
 - [TLS 1.3 Working Group homepage](https://tlswg.org/)
 - [Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/)
+

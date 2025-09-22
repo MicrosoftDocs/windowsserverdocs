@@ -1,10 +1,9 @@
 ---
 title: Manage Station Hardware
 description: Provides an overview of how to manage hardware for MultiPoint stations
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: 429b8539-b17a-4e01-9576-860600466451
 author: dknappettmsft
-manager: dongill
 ms.author: daknappe
 ms.date: 08/04/2016
 ---

@@ -2,10 +2,8 @@
 title: wdsutil add-imagedriverpackage
 description: Reference article for the wdsutil add-imagedriverpackage command, which adds a driver package that is in the driver store to an existing boot image on the server.
 ms.topic: reference
-ms.assetid: 6c2a4833-6427-47f8-9ffb-20b3786cb406
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

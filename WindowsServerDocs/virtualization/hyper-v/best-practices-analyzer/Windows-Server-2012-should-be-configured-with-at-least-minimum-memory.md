@@ -1,10 +1,9 @@
 ---
 title: Windows Server 2012 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows Server 2012 is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
-ms.assetid: f218a7c7-4361-45f1-835c-e19761b2565c
 ms.date: 8/16/2016
 ---
 # Windows Server 2012 should be configured with at least the minimum amount of memory
@@ -57,3 +56,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 
 ## See Also
 [Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
+

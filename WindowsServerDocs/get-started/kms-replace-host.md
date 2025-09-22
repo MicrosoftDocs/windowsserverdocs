@@ -2,8 +2,8 @@
 title: Replace a KMS host in Windows Server
 description: Learn how to replace your Key Management Services (KMS) host in Windows Server.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/30/2025
 ---
 
@@ -13,9 +13,9 @@ This article outlines the steps and best practices for migrating the Key Managem
 
 Before proceeding with your installation and licensing tasks, review the following details regarding your new KMS host:
 
-- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office, which are obtained through the Microsoft 365 Admin Center. The CSVLK has a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl?view=o365-worldwide).
+- Ensure you have access to your new Customer Specific Volume License Key (CSVLK). Your CSVLK is also known as the **KMS host key** for the Microsoft Windows OS and Microsoft Office, which are obtained through the Microsoft 365 Admin Center. The CSVLK has a predefined activation limit. If you encounter an error stating that you exceeded the activation limit, you can reset the key per request. To learn more, see [Find and use product keys for volume licensing](/microsoft-365/commerce/licenses/product-keys-for-vl).
 
-- If you're unable to find your CSVLK, [contact support](https://learn.microsoft.com/licensing/contact-us) for licensing assistance.
+- If you're unable to find your CSVLK, [contact support](/microsoft-365/commerce/licenses/contact-vl-support) for licensing assistance.
 
 ## Prerequisites
 
@@ -199,3 +199,4 @@ Performing these actions must be done in an elevated command prompt or PowerShel
 - [Key Management Services (KMS) activation planning](/windows-server/get-started/kms-activation-planning)
 
 - [Slmgr.vbs options for obtaining volume activation information](/windows-server/get-started/activation-slmgr-vbs-options)
+

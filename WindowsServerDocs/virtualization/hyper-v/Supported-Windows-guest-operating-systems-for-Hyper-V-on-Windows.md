@@ -95,7 +95,7 @@ Following are the versions of Windows client that are supported as guest operati
 - **Notes**:  
   - Windows 11 requires an increased CPU instruction for installation and boot (POPCNT and SSE4.2). To meet these requirements in Hyper-V:  
     - On Windows 11, Windows Server 2022 (standalone or clustered hosts), or standalone Windows Server 2025 hosts, disable processor compatibility to enable these features. Disabling processor compatibility limits live migration to hosts with the same processor features.  
-    - On Windows Server 2025 clusters with CPUs supporting POPCNT and SSE4.2, enable dynamic processor compatibility to ensure these features are available while retaining live migration capabilities within the cluster. To learn more about dynamic processor compatibility, see [Dynamic processor compatibility mode](manage/dynamic-processor-compatibility-mode.md).
+    - On Windows Server 2025 clusters with CPUs supporting POPCNT and SSE4.2, enable dynamic processor compatibility to ensure these features are available while retaining live migration capabilities within the cluster. To learn more about dynamic processor compatibility, see [Processor compatibility for Hyper-V virtual machines](processor-compatibility-mode.md).
 
 ### Windows 10
 

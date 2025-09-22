@@ -1,9 +1,9 @@
 ---
 title: Configure shared connections for all users of the Windows Admin Center gateway
 description: Learn how administrators can configure their Windows Admin Center (Project Honolulu) gateway once to let all users share a single list of connections.
-ms.topic: article
-author: meaghanlewis
-ms.author: mosagie
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/18/2021
 ---
 
@@ -18,3 +18,4 @@ From the **Shared Connections** tab of Windows Admin Center gateway Settings, ga
 When any Windows Admin Center user accesses the "All Connections" page after Shared Connections have been configured, they will see their connections grouped into two sections: Personal and Shared connections. The Personal group is a specific user's connection list and persists across that user's browser sessions. The Shared connections group is the same across all users, and cannot be modified from the All Connections page.
 
 ![Windows Admin Center - All Connections page](../media/shared-cnxns-2.png)
+

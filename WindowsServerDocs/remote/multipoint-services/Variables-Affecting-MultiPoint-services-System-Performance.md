@@ -2,10 +2,9 @@
 title: Variables Affecting MultiPoint Services System Performance
 description: Performance information for MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 0f3e8875-1b5e-4789-b16c-d06d6e31f38e
 author: dknappettmsft
-manager: scottman
 ms.author: daknappe
 ---
 # Variables Affecting MultiPoint Services System Performance

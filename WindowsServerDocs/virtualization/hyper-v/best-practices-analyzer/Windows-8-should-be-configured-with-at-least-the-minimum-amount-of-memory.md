@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows 8 is config
 author: meaghanlewis
 ms.author: mosagie
 ms.topic: best-practice
-ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 ms.date: 8/16/2016
 ---
 # Windows 8 should be configured with at least the minimum amount of memory

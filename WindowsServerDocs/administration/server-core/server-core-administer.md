@@ -3,8 +3,8 @@ title: Administer Server Core installation
 description: Learn how to administer a Server Core installation of Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/24/2025
 ms.topic: how-to
 ---
@@ -195,3 +195,4 @@ Use the following reference information to perform administrative tasks from the
 |----|-------|
 |Add a driver for a new hardware device|Copy the driver to a folder at **%homedrive%\<driver folder\>**. <br><br>Run `pnputil -i -a %homedrive%\<driver folder>\<driver\<.inf>`|
 |Remove a driver for a hardware device|For a list of loaded drivers, run `sc query type= driver`. <br><br>Then run `sc delete <service_name>`|
+

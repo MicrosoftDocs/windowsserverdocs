@@ -4,7 +4,6 @@ description: Learn how to manage disks in a computer using Disk Management and d
 ms.date: 03/08/2023
 ms.topic: how-to
 author: dknappettmsft
-manager: brianlic
 ms.author: daknappe
 ---
 
@@ -33,3 +32,4 @@ To bring a disk online or take it offline, follow these steps.
 - [Change a dynamic disk back to a basic disk](change-a-dynamic-disk-back-to-a-basic-disk.md)
 - [Convert disk partition style](change-disk-partition-scheme.md)
 - [Manage Virtual Hard Disks](manage-virtual-hard-disks.md)
+

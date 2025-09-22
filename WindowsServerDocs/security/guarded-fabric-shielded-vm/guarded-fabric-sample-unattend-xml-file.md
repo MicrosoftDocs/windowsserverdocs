@@ -2,11 +2,10 @@
 description: "Learn more about: Create OS specialization answer file"
 title: Create OS specialization answer file
 ms.topic: how-to
-ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
-manager: dongill
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
+ms.custom: sfi-image-nochange
 ---
 
 # Create OS specialization answer file
@@ -124,3 +123,5 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $ro
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+
+

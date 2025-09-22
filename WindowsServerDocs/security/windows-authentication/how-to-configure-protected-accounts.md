@@ -2,10 +2,10 @@
 description: "Learn more about: How to Configure Protected Accounts"
 title: How to Configure Protected Accounts
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2016
+ms.custom: sfi-image-nochange
 ---
 # How to Configure Protected Accounts
 
@@ -455,3 +455,4 @@ This example first uses the **Get-ADComputer** cmdlet to get all computer accoun
 ```
 PS C:\>Get-ADComputer -Filter 'Name -like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo -AuthenticationPolicySilo Silo -AuthenticationPolicy AuthenticationPolicy02
 ```
+

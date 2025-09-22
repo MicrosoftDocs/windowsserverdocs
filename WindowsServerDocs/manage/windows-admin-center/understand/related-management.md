@@ -1,9 +1,9 @@
 ---
 title: Windows Admin Center related management solutions
 description: How Windows Admin Center compares with and complements other Microsoft monitoring and management solutions/products (Project Honolulu)
-ms.topic: article
-author: xelu86
-ms.author: alalve
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 
@@ -39,3 +39,4 @@ ms.date: 08/07/2020
 |**Lights up platform features** of Windows Server: Storage Migration Service, Storage Replica, System Insights, etc.|**Additional platforms**: Automation in Orchestrator/SMA.Integrations with SCSM & other service management tools|
 
 #### Each delivers targeted value independently; **better together** with complementary capabilities.
+

@@ -1,10 +1,9 @@
 ---
 title: Avoid using VHD-format differencing virtual hard disks on virtual machines that run server workloads in a production environment
 description: Learn what to do when one or more virtual machines use VHD-format differencing virtual hard disks.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.topic: best-practice
-ms.assetid: 272de33d-2708-4679-8564-ee28848a2839
 ms.date: 8/16/2016
 ---
 # Avoid using VHD-format differencing virtual hard disks on virtual machines that run server workloads in a production environment
@@ -30,3 +29,4 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *Shut down the virtual machine and convert the chain of VHD-format differencing virtual hard disks to the VHDX format or merge the chain to a fixed virtual hard disk. (The VHDX format has reliability mechanisms that help protect the disk from corruptions due to power failures.) However, do not convert the virtual hard disk if it is likely to be attached to an earlier release of Windows at some point. Windows releases earlier than  Windows Server 2012  do not support the VHDX format.*
+

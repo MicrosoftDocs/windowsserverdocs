@@ -1,7 +1,6 @@
 ---
 title: Step 3 Plan a Load-Balanced Cluster Deployment
 description: Learn how to plan the load-balancing configuration and cluster deployment.
-manager: brianlic
 ms.topic: how-to
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
 ms.author: daknappe

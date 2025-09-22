@@ -1,10 +1,9 @@
 ---
 title: Windows 7 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows 7 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: d77d648c-6e26-43fa-be0a-6eb4b28f9cb4
 ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with the recommended amount of memory
@@ -60,3 +59,4 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 
 ## See Also
 [Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
+

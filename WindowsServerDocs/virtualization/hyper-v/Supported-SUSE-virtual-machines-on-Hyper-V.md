@@ -2,9 +2,8 @@
 title: Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 description: Learn about supported SUSE Linux Enterprise Server virtual machines on Hyper-V, including integration services and features. Compare versions and get deployment guidance.
 ms.topic: concept-article
-ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/19/2025
 ---
 # Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
@@ -23,7 +22,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 
 SLES12+ is 64-bit only.
 
-| **Feature** | **Operating system version** | **SLES 15 SP1-SP4** | **SLES 15** | **SLES 12 SP3-SP5** | **SLES 12 SP2** | **SLES 12 SP1** | **SLES 11 SP4** | **SLES 11 SP3** |
+| **Feature** | **Operating system version** | **SLES 15 SP1-SP7** | **SLES 15** | **SLES 12 SP3-SP5** | **SLES 12 SP2** | **SLES 12 SP1** | **SLES 11 SP4** | **SLES 11 SP3** |
 |--|--|--|--|--|--|--|--|--|
 | **Availability** |  | Built-in | Built-in | Built-in | Built in | Built-in | Built-in | Built-in |
 | **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | WS/Hyper-V 2025,2022,2019,2016,2012<br/> Azure Stack HCI | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
@@ -106,3 +105,4 @@ SLES12+ is 64-bit only.
 * [Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
 * [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
+

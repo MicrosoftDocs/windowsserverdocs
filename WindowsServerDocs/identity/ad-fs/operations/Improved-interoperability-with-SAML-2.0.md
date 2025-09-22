@@ -2,11 +2,8 @@
 description: "Learn more about: Improved interoperability with SAML 2.0"
 ms.assetid: 80b5335b-fa02-4944-900c-5fe4f5c6111d
 title: Improved interoperability with SAML 2.0
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 # Improved interoperability with SAML 2.0
 

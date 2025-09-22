@@ -2,10 +2,10 @@
 ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema updates in Windows Server
 description: Schema changes made by Adprep.exe listed by operating system version.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/06/2025
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Server Active Directory schema updates
@@ -48910,3 +48910,4 @@ objectVersion: 47
 [Domain-wide schema update operations](Domain-Wide-Updates.md)
 
 [Forest-wide schema update operations](../deploy/rodc/forest-wide-updates.md)
+

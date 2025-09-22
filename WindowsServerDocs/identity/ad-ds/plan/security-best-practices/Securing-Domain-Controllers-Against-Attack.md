@@ -2,8 +2,8 @@
 description: Learn more about securing domain controllers against attack.
 ms.assetid: ba28bd05-16e6-465f-982b-df49633cfde4
 title: Securing Domain Controllers Against Attack
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/09/2025
 ms.topic: concept-article
 ms.reviewer: rickys
@@ -90,3 +90,5 @@ Perimeter firewalls should be configured to block outbound connections from doma
 ### Preventing web browsing from domain controllers
 
 You can use a combination of AppLocker configuration, "black hole" proxy configuration, and Windows Firewall with Advanced Security configuration to prevent domain controllers from accessing the Internet and to prevent the use of web browsers on domain controllers.
+
+

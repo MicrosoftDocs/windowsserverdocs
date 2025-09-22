@@ -1,11 +1,8 @@
 ---
 description: "Learn more about: Client Access Control policies in AD FS 2.0"
 title: Client Access Control policies in Active Directory Federation Services 2.0
-author: robinharwood
-ms.author: roharwoo
-manager: tedhudek
 ms.date: 04/08/2025
-ms.topic: article
+ms.topic: how-to
 ---
 # Client Access Control policies in AD FS 2.0
 A client access policies in Active Directory Federation Services 2.0 allow you to restrict or grant users access to resources.  This document describes how to enable client access policies in AD FS 2.0 and how to configure the most common scenarios.

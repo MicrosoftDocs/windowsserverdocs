@@ -1,10 +1,9 @@
 ---
 title: The WFP virtual switch extension should be enabled if it is required by third party extensions
 description: Learn what to do when the Windows Filtering Platform (WFP) virtual switch extension is disabled.
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 8aa8a9a5-e3fa-4c9b-8331-ba5a3de22429
 ms.date: 8/16/2016
 ---
 # The WFP virtual switch extension should be enabled if it is required by third party extensions
@@ -45,3 +44,4 @@ Enable-VMSwitchExtension -VMSwitchName External -Name Microsoft Windows Filterin
 
 ## See Also
 [Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension)
+

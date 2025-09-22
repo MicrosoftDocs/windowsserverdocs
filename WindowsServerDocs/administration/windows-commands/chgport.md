@@ -2,10 +2,8 @@
 title: chgport
 description: Reference article for the chgport command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
 ms.topic: reference
-ms.assetid: 8adb145f-6c53-4549-9253-9a966794a4f3
 ms.author: alalve
 author: xelu86
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # chgport

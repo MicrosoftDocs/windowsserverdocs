@@ -2,8 +2,8 @@
 title: Deploy devices by using Discrete Device Assignment
 description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
 ms.topic: install-set-up-deploy
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/19/2025
 ---
 
@@ -120,3 +120,5 @@ If the system is incorrectly configured to support Discrete Device Assignment, t
 For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being incompatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
 
 :::image type="content" source="./images/hyper-v-surveydda-ps1.png" alt-text="Screenshot of the requirements displayed in SurveyDDA.ps1.":::
+
+
