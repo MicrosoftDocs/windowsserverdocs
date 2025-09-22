@@ -2,7 +2,6 @@
 title: ftp delete
 description: Reference article for the ftp delete command, which deletes files on remote computers.
 ms.topic: reference
-ms.assetid: 067c45f3-e4e8-4450-b8b6-836994f6adfe
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

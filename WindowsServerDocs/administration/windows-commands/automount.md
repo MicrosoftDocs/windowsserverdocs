@@ -2,7 +2,6 @@
 title: automount
 description: Reference article for the automount command, which enables or disables the automount feature.
 ms.topic: reference
-ms.assetid: 4635fc91-a477-4f17-8dcc-aa08854bfe45
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/16/2017

@@ -2,7 +2,6 @@
 title: wdsutil approve-autoadddevices
 description: Reference article for the wdsutil approve-autoadddevices command, which approves computers that are pending administrative approval.
 ms.topic: reference
-ms.assetid: 8d76e8d3-ab35-429c-be7b-904f95d0782d
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

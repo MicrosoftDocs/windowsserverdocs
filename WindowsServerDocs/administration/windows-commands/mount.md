@@ -2,7 +2,6 @@
 title: mount
 description: Reference article for the mount command, which mounts Network File System (NFS) network shares.
 ms.topic: reference
-ms.assetid: dd9d7ecb-ef00-4aaa-bcd0-423fa636e34a
 ms.author: alalve
 author: xelu86
 ms.date: 09/27/2023

@@ -2,7 +2,6 @@
 title: bitsadmin info
 description: Reference article for the bitsadmin info command, which displays summary information about the specified job.
 ms.topic: reference
-ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/16/2017
