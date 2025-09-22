@@ -1,7 +1,6 @@
 ---
 description: "Learn more about: Health Service reports"
 title: Health Service reports
-manager: eldenc
 ms.author: daknappe
 ms.topic: how-to
 author: dknappettmsft

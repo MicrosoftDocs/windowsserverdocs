@@ -5,7 +5,6 @@ ms.author: roharwoo
 author: robinharwood
 ms.topic: how-to
 ms.date: 06/16/2025
-ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
 zone_pivot_groups: quorum-witness
 #customer intent: As a cluster admin, I want to configure a quorum witness to determine cluster nodes availability and node majority vote.
 ---
