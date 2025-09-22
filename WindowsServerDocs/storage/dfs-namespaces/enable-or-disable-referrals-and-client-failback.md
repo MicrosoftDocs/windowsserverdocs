@@ -4,7 +4,6 @@ description: This article describes how to enable or disable referrals and clien
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Enable or Disable Referrals and Client Failback
@@ -63,3 +62,4 @@ Folders with targets inherit client failback settings from the namespace root. I
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Review DFS Namespaces Client Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11))
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

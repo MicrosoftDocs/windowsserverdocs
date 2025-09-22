@@ -4,7 +4,6 @@ description: See how to decrease the space used by primary partitions and logica
 ms.date: 04/22/2025
 ms.topic: how-to
 author: dknappettmsft
-manager: brianlic
 ms.author: daknappe
 # customer intent: As an administrator, I want to see how to shrink primary partitions and logical drives into adjacent, contiguous space on the same disk so that I can create new unallocated space.
 ---
@@ -71,3 +70,4 @@ The following table lists the `diskpart` commands, parameters, and arguments tha
 ## Related content
 
 - [Manage basic volumes](manage-basic-volumes.md)
+

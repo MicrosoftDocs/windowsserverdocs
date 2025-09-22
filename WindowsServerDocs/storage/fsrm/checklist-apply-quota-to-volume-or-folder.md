@@ -4,7 +4,6 @@ description: This article describes how to apply a storage quota to a volume or 
 ms.date: 7/7/2017
 ms.topic: checklist
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Checklist: Apply a Quota to a volume or folder
@@ -23,6 +22,7 @@ ms.author: roharwoo
 
 > [!Note]
 > If you want to screen files on a volume or folder, see [Checklist: Apply a File Screen to a Volume or Folder](checklist-apply-file-screen-to-volume-or-folder.md).
+
 
 
 

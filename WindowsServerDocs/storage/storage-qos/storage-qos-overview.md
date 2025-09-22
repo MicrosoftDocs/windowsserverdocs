@@ -1,10 +1,8 @@
 ---
 description: "Learn more about: Storage Quality of Service"
 title: Storage Quality of Service
-manager: dongill
 ms.author: daknappe
 ms.topic: how-to
-ms.assetid: 8dcb8cf9-0e08-4fdd-9d7e-ec577ce8d8a0
 author: dknappettmsft
 ms.date: 10/10/2016
 ---
@@ -910,4 +908,5 @@ IOPSNormalizationSize
 - [Windows Server 2016](../../index.yml)
 - [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+
 

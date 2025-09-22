@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for clusters"
 title: Performance history for clusters
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 02/02/2018
@@ -32,3 +31,4 @@ Get-Cluster | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+

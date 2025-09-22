@@ -4,7 +4,6 @@ description: This article describes how to create a folder in a DFS namespace
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a folder in a DFS namespace
@@ -33,3 +32,4 @@ cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

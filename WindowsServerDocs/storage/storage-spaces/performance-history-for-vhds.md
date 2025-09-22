@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for virtual hard disks"
 title: Performance history for virtual hard disks
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 02/09/2018
@@ -89,3 +88,4 @@ To get the path of every VHD from the virtual machine:
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+

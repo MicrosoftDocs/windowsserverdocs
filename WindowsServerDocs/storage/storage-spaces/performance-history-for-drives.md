@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for drives"
 title: Performance history for drives
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 02/02/2018
@@ -93,3 +92,4 @@ Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+
