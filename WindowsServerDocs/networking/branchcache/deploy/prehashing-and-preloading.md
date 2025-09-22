@@ -1,9 +1,7 @@
 ---
 title: Prehashing and Preloading Content on Hosted Cache Servers (Optional)
 description: Learn how to force the creation of content information - also called hashes - on BranchCache-enabled Web and file servers.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
 ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021

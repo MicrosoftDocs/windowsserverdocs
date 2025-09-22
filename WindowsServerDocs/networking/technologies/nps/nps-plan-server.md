@@ -2,7 +2,6 @@
 title: Plan NPS as a RADIUS server
 description: This article provides information about Network Policy Server RADIUS server deployment planning in Windows Server 2016.
 ms.topic: best-practice
-ms.assetid: 2900dd2c-0f70-4f8d-9650-ed83d51d509a
 ms.author: roharwoo
 author: robinharwood
 ms.date: 03/11/2025
