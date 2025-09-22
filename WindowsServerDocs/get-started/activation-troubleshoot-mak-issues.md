@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 10/3/2019
 author: robinharwood
 ms.author: roharwoo
-manager: dcscontentpm
 ---
 
 # MAK activation: known issues

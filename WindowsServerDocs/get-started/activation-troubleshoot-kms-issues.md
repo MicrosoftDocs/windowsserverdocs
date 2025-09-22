@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 10/3/2019
 author: dknappettmsft
 ms.author: daknappe
-manager: dcscontentpm
 ---
 
 # KMS activation: known issues
