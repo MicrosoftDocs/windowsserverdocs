@@ -2,11 +2,11 @@
 title: ksetup setenctypeattr
 description: Reference article for the ksetup setenctypeattr command, which sets the encryption type attribute for the domain.
 ms.topic: reference
-ms.assetid: 88fb913e-6b57-48d9-8c16-a035ab2977ac
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/16/2017
 ---
+
 
 # ksetup setenctypeattr
 

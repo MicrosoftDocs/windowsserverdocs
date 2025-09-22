@@ -2,11 +2,11 @@
 title: dir
 description: Reference article for the dir command, which displays a list of a directory's files and subdirectories.
 ms.topic: reference
-ms.assetid: edcbf69b-eaa4-466e-b210-3dd8892f4d93
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017
 ---
+
 
 # dir
 

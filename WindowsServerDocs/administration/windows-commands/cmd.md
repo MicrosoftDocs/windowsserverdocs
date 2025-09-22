@@ -2,11 +2,11 @@
 title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter.
 ms.topic: reference
-ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
 ms.author: alalve
 author: xelu86
 ms.date: 05/23/2025
 ---
+
 
 # cmd
 

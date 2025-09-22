@@ -2,11 +2,11 @@
 title: bitsadmin cache and delete
 description: Reference article for the bitsadmin cache and delete command, which deletes a specific cache entry.
 ms.topic: reference
-ms.assetid: 22540273-55a5-46ea-869b-6df2aa6808a1
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/16/2017
 ---
+
 
 # bitsadmin cache and delete
 

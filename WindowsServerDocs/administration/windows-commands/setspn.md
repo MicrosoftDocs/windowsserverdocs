@@ -5,8 +5,8 @@ ms.topic: reference
 ms.author: alalve
 author: xelu86
 ms.date: 03/24/2025
-ms:assetid: 9341c753-11ff-4acc-993c-b05d50f32330
 ---
+
 
 # setspn
 

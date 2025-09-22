@@ -2,11 +2,11 @@
 title: route
 description: Reference article for the route command, which modifies and displays entries in the local IP routing table.
 ms.topic: reference
-ms.assetid: afcd666c-0cef-47c2-9bcc-02d202b983b3
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/05/2022
 ---
+
 
 # route
 

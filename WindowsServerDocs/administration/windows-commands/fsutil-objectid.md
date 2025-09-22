@@ -3,10 +3,10 @@ title: fsutil objectid
 description: Reference article for the fsutil objectid command, which manages object identifiers to track other objects such as files, directories, and links.
 ms.author: alalve
 author: xelu86
-ms.assetid: 693ab895-9d0c-47c1-9f52-df5cd287842a
 ms.topic: reference
 ms.date: 10/16/2017
 ---
+
 
 # fsutil objectid
 

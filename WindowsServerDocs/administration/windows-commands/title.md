@@ -2,11 +2,11 @@
 title: title
 description: Reference article for the title command, which creates a title for the Command Prompt window.
 ms.topic: reference
-ms.assetid: c0bbe8bd-201a-4b6c-b617-5d9809881dc8
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017
 ---
+
 
 # title
 

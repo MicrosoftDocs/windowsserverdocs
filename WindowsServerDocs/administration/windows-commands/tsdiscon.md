@@ -2,11 +2,11 @@
 title: tsdiscon
 description: Reference article for tsdiscon, which disconnects a session from a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 13139674-7dee-4965-8cac-32f4928e8b9a
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017
 ---
+
 # tsdiscon
 
 

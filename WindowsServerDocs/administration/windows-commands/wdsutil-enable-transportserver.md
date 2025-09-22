@@ -2,11 +2,11 @@
 title: wdsutil enable-transportserver
 description: Reference article for the wdsutil enable-transportserver command, which enables all services for the Transport Server.
 ms.topic: reference
-ms.assetid: 9d79dba1-4b57-4a00-8cba-877e6b8618e6
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017
 ---
+
 
 # wdsutil enable-transportserver
 

@@ -2,11 +2,11 @@
 title: wdsutil initialize-server
 description: Reference article for wdsutil initialize-server, which configures a Windows Deployment Services server for initial use after the server role has been installed.
 ms.topic: reference
-ms.assetid: 68a26ad9-5eb2-4490-b782-b7cd46b8000d
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017
 ---
+
 
 # wdsutil initialize-server
 

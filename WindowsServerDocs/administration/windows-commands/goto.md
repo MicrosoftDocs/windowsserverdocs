@@ -2,11 +2,11 @@
 title: goto
 description: Reference article for the goto command, which directs cmd.exe to a labeled line in a batch program.
 ms.topic: reference
-ms.assetid: e0de1458-1f78-48ff-a746-c285a945a510
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017
 ---
+
 
 # goto
 

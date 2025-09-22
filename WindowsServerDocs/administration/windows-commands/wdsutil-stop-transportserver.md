@@ -2,11 +2,11 @@
 title: wdsutil stop-transportserver
 description: Reference article for stop-TransportServer
 ms.topic: reference
-ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017
 ---
+
 # wdsutil stop-transportserver
 
 

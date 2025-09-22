@@ -2,11 +2,11 @@
 title: wdsutil remove-driverpackage
 description: Reference article for wdsutil remove-driverpackage, which removes a driver package from a server.
 ms.topic: reference
-ms.assetid: 6b201e91-0d44-4e4a-8252-8b0235df1002
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017
 ---
+
 
 # wdsutil remove-driverpackage
 

@@ -2,11 +2,11 @@
 title: scwcmd register
 description: Reference article for the scwcmd register command, which extends or customizes the Security Configuration Wizard (SCW) Security Configuration Database by registering a Security Configuration Database file that contains role, task, service, or port definitions.
 ms.topic: reference
-ms.assetid: fe4d126a-9f27-4076-b7b1-fbefa45f378a
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017
 ---
+
 
 # scwcmd register
 

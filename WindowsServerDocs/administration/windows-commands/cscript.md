@@ -2,11 +2,11 @@
 title: cscript
 description: Reference article for the cscript command, which starts a script so that it runs in a command-line environment.
 ms.topic: reference
-ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017
 ---
+
 # cscript
 
 

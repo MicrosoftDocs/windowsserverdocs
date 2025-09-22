@@ -2,11 +2,11 @@
 title: serverceipoptin
 description: Reference article for the serverceipoptin, which allows you to participate in the Customer Experience Improvement Program (CEIP).
 ms.topic: reference
-ms.assetid: 3d7d7fa7-0689-4797-b802-36fe260d21a0
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017
 ---
+
 
 # serverceipoptin
 

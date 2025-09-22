@@ -2,11 +2,11 @@
 title: certreq
 description: Reference article for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.
 ms.topic: reference
-ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
 ms.author: alalve
 author: xelu86
 ms.date: 09/02/2025
 ---
+
 
 # certreq
 
