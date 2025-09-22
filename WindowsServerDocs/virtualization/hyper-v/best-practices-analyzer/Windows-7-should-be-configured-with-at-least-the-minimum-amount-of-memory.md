@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows 7 is config
 ms.author: mosagie
 author: meaghanlewis
 ms.topic: best-practice
-ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
 ms.date: 8/16/2016
 ---
 # Windows 7 should be configured with at least the minimum amount of memory

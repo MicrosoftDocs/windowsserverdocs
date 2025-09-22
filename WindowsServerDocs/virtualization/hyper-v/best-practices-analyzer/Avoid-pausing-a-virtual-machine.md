@@ -4,7 +4,6 @@ description: Learn what to do when this server has one or more virtual machines 
 ms.author: roharwoo
 author: robinharwood
 ms.topic: how-to
-ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
 ms.date: 8/16/2016
 ---
 # Avoid pausing a virtual machine

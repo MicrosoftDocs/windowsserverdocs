@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 05/02/2016
 ms.topic: how-to
-ms.assetid: fb228e06-e284-45c0-b6e6-e7b0217c3a49
 ---
 
 # Virtual Machine automation and management using PowerShell

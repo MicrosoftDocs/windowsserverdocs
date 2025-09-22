@@ -4,7 +4,6 @@ description: Learn what to do when the service required to manage virtual machin
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
 ms.date: 02/18/2025
 ---
 # Hyper-V Virtual Machine Management service must be running

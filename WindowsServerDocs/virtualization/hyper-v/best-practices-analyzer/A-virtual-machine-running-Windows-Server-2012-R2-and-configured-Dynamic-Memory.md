@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 3a53c197-80ce-4b33-a83e-7e89e657a519
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Server 2012 R2 and configured with Dynamic Memory should use recommended values for memory settings

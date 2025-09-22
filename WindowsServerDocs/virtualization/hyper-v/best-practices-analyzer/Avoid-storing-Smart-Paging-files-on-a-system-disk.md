@@ -4,7 +4,6 @@ description: Learn what to do when the memory configuration for one or more virt
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 9b57c9b8-76c5-43c7-bfa6-2c95b3cb6510
 ms.date: 8/16/2016
 ---
 # Avoid storing Smart Paging files on a system disk

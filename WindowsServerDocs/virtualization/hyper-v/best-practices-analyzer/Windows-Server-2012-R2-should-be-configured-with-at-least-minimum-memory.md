@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows Server 2012
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 01da6f02-1a5f-4d3e-9bef-4d122a91c5c2
 ms.date: 8/16/2016
 ---
 # Windows Server 2012 R2 should be configured with at least the minimum amount of memory

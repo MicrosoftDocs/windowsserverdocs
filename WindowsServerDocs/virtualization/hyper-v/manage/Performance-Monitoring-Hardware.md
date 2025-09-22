@@ -4,7 +4,6 @@ description: How to enable Intel's Performance Monitoring Hardware in a Hyper-V 
 ms.reviewer: ifufondu
 author: dknappettmsft
 ms.author: daknappe
-manager: chhuybre
 ms.topic: how-to
 ms.date: 11/30/2020
 ---

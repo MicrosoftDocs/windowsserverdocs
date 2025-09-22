@@ -4,7 +4,6 @@ description: Learn what to do when the following network adapters are capable of
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 93d1b155-bf44-46b0-bb69-d34d5b30e574
 ms.date: 8/16/2016
 ---
 # VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch

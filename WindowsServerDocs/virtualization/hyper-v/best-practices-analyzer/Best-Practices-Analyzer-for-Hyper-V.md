@@ -4,7 +4,6 @@ description: Learn how the Best Practices Analyzer scans your computer using rul
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 3747faa5-6e9f-499e-8a79-3fb9d73b6b92
 ms.date: 8/16/2016
 ---
 

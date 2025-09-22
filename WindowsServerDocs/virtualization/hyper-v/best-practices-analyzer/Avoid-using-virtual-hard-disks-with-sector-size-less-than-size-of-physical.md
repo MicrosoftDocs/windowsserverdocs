@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual hard disks have a physica
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: b7cf994e-bf4b-4b1b-bad6-ecf7d46d105e
 ms.date: 8/16/2016
 ---
 # Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file

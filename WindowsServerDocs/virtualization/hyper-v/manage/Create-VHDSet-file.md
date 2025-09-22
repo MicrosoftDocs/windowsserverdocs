@@ -5,7 +5,6 @@ author: dknappettmsft
 ms.author: daknappe
 ms.date: 01/26/2017
 ms.topic: how-to
-ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
 ---
 
 # Create Hyper-V VHD Set files

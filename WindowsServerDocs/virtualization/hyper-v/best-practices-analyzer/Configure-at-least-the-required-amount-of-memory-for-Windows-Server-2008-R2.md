@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: how-to
-ms.assetid: db0bff4c-39fe-49c1-903a-1f2a0b0db891
 ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows Server 2008 R2 and enabled for Dynamic Memory

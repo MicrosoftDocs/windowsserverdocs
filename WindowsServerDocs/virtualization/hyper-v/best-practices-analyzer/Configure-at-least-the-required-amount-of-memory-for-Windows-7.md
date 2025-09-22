@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: roharwoo
 author: robinharwood
 ms.topic: how-to
-ms.assetid: 119965bf-6154-414d-b3a1-aa5b30eac5f6
 ms.date: 8/16/2016
 ---
 # Configure at least the required amount of memory for a virtual machine running Windows 7 and enabled for Dynamic Memory

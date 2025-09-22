@@ -4,7 +4,6 @@ description: Learn what to do when all external virtual networks are configured 
 ms.author: roharwoo
 author: robinharwood
 ms.topic: how-to
-ms.assetid: f7732258-93f1-44e8-835b-5ad2d1c45cd9
 ms.date: 8/16/2016
 ---
 # Reserve one or more external virtual networks for exclusive use by virtual machines

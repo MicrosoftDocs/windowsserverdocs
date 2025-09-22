@@ -2,7 +2,6 @@
 title: Supported Debian virtual machines on Hyper-V
 description: Learn about the Debian and Linux integration services and features included in each version and known issues and workarounds for each distribution.
 ms.topic: concept-article
-ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 06/19/2025

@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows 10 is confi
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: e4f5bd2f-b5be-4d43-80e0-0cf198182791
 ms.date: 8/16/2016
 ---
 # Windows 10 should be configured with at least the minimum amount of memory

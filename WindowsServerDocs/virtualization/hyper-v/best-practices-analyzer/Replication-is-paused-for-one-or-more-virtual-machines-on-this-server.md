@@ -4,7 +4,6 @@ description: Learn what to do when replication is paused for one or more of the 
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: e1119a40-eda3-4058-8648-7df81cbc6c29
 ms.date: 8/16/2016
 ---
 # Replication is paused for one or more virtual machines on this server

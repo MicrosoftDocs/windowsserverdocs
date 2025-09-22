@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual network adapters associat
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
 ms.date: 8/16/2016
 ---
 # All virtual network adapters should be enabled

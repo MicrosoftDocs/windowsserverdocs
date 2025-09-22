@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows Server 2008
 ms.author: mosagie
 author: meaghanlewis
 ms.topic: best-practice
-ms.assetid: a98a8594-603b-487a-8739-78887c568e57
 ms.date: 8/16/2016
 ---
 # Windows Server 2008 should be configured with the recommended amount of memory

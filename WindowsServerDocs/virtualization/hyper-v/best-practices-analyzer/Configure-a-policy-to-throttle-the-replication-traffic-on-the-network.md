@@ -4,7 +4,6 @@ description: Learn what to do when there might not be a limit on the amount of n
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 82cb1aef-cdc3-4d0a-88d4-ef497ab79606
 ms.date: 8/16/2016
 ---
 # Configure a policy to throttle the replication traffic on the network

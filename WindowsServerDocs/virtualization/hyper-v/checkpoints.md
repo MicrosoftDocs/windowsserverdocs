@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 07/31/2024
 ms.topic: how-to
-ms.assetid: d9c398c4-ee72-45c6-9ce8-4f06569dae6c
 ---
 
 # Using checkpoints to revert virtual machines to a previous state
