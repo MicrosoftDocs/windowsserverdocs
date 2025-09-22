@@ -2,7 +2,6 @@
 title: STEP 4 Configure APP1
 description: Learn how to configure the default gateway and DNS server.
 ms.topic: how-to
-ms.assetid: 7000e80f-31b1-43c5-b51e-1469d26909e5
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

@@ -2,7 +2,6 @@
 title: Remote Access Always On VPN migration overview
 description: Always On VPN addresses the previous gaps between Windows VPNs and DirectAccess, and how to migrate from DirectAccess to Always On VPN.
 ms.topic: upgrade-and-migration-article
-ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 05/29/2018

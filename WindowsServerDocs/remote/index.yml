@@ -9,7 +9,6 @@ metadata:
   ms.service: windows-server
   author: robinharwood
   ms.author: daknappe
-  manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required
   ms.date: 06/29/2020 #Required; mm/dd/yyyy format.

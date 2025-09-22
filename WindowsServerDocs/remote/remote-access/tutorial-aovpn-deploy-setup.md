@@ -2,7 +2,6 @@
 title: "Tutorial: Deploy Always On VPN Infrastructure"
 description: Learn how to deploy Always On VPN connections for Windows client computers that are working offsite, such as from home, a customer site, or a public location.
 ms.topic: tutorial
-ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 05/07/2025

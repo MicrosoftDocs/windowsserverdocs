@@ -2,7 +2,6 @@
 title: Manage User Files
 description: Provides guidance for managing user files in MultiPoint Services
 ms.topic: how-to
-ms.assetid: e94efa0b-8531-4a2d-94ce-858b5642cc68
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016

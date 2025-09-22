@@ -4,7 +4,6 @@ description: Learn about considerations unique to Azure with a Remote Desktop ho
 author: dknappettmsft
 ms.date: 7/3/2024
 ms.topic: reference-architecture
-ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
 ms.author: daknappe
 ---
 # Azure services and considerations for desktop hosting

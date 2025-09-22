@@ -2,7 +2,6 @@
 title: Switch Between Modes
 description: Learn how to switch between station and console mode in MultiPoint Services
 ms.topic: how-to
-ms.assetid: 5f1b2324-c1b0-4b61-ab51-39af15e7792a
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016

@@ -3,7 +3,6 @@ title: Predeployment Checklist
 description: Provides a checklist you can use to plan your MultiPoint Services deployment
 ms.date: 07/22/2016
 ms.topic: checklist
-ms.assetid: 87ea20e4-46cf-49e9-86bf-70be9098c8db
 author: dknappettmsft
 ms.author: daknappe
 ---
