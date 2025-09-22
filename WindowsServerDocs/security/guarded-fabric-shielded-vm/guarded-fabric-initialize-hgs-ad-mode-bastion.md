@@ -2,7 +2,6 @@
 description: "Learn more about: Initialize the HGS cluster using AD mode in an existing bastion forest"
 title: Initialize the HGS cluster using AD mode in a bastion forest
 ms.topic: how-to
-manager: dongill
 author: meaghanlewis
 ms.author: mosagie
 ms.date: 08/29/2018

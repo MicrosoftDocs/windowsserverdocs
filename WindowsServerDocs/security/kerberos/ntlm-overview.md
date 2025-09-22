@@ -2,10 +2,8 @@
 title: NTLM overview in Windows Server
 description: Learn about NTLM, and find links to technical resources to Windows Authentication and NTLM for Windows Server.
 ms.topic: concept-article
-ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 04/17/2025
 ---
 # NTLM overview

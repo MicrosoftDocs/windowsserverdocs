@@ -4,7 +4,6 @@ title: How to Configure Protected Accounts
 ms.topic: how-to
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/12/2016
 ms.custom: sfi-image-nochange
 ---
