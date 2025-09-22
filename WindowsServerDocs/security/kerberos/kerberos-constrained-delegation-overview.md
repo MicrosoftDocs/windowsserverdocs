@@ -2,7 +2,6 @@
 title: Kerberos Constrained Delegation Overview in Windows Server
 description: Learn about the new capabilities for Kerberos constrained delegation in Windows Server.
 ms.topic: concept-article
-ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/25/2025
