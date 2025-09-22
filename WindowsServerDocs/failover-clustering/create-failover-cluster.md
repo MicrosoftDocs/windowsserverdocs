@@ -4,7 +4,6 @@ description: How to create a failover cluster for Windows Server 2012 R2, Window
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
-manager: lizross
 ms.date: 1/15/2025
 zone_pivot_groups: failover-clustering-management-tools
 ---

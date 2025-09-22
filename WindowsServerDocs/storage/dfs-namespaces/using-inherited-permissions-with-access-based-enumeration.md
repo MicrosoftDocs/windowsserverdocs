@@ -4,7 +4,6 @@ description: This article describes how to use inherited permissions with access
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Using inherited permissions with Access-based Enumeration
@@ -51,3 +50,4 @@ To limit which users can view a DFS folder, you must perform one of the followin
 ## Additional References
 
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
+

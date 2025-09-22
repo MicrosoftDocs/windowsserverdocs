@@ -2,7 +2,6 @@
 title: wbadmin start systemstaterecovery
 description: Reference article for the wbadmin start systemstaterecovery command, which performs a system state recovery to a location, and from a backup, that you specify.
 ms.topic: reference
-ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

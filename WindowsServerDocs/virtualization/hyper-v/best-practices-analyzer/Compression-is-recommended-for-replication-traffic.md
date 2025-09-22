@@ -4,7 +4,6 @@ description: Learn what to do when the replication traffic sent across the netwo
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: cf8be6e9-2909-4e4a-bb63-d1e1ebbc6930
 ms.date: 8/16/2016
 ---
 # Compression is recommended for replication traffic

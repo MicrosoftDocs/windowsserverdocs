@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 81b5034a-31ea-4397-bcd0-7b9ef50beb94
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Server 2008 R2 and configured with Dynamic Memory should use recommended values for memory settings

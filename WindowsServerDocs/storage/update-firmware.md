@@ -1,9 +1,7 @@
 ---
 description: "Learn more about: Updating drive firmware"
-ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Updating drive firmware
 ms.author: roharwoo
-manager: dmoss
 ms.topic: how-to
 author: robinharwood
 ms.date: 10/04/2016
@@ -202,3 +200,4 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.P
 ### I am seeing an access denied or path-not-found error during roll out. How do I fix this
 
 Ensure that the firmware image you would like to use for the update is accessible by all cluster nodes. The easiest way to ensure this is to place it on a cluster shared volume.
+

@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines have a network a
 ms.author: mosagie
 author: meaghanlewis
 ms.topic: best-practice
-ms.assetid: b83c166d-f010-47c4-a4bb-02167f2e3361
 ms.date: 8/16/2016
 ---
 # One or more network adapters should be configured as the destination for Port Mirroring

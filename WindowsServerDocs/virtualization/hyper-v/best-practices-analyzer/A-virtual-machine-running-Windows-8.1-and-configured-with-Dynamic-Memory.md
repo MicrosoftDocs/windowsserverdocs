@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: b9a14f85-326f-4916-9278-2c8d39a32848
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows 8.1 and configured with Dynamic Memory should use recommended values for memory settings

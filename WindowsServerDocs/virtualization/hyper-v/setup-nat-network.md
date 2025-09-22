@@ -6,7 +6,6 @@ author: dknappettmsft
 ms.author: daknappe
 ms.date: 01/22/2025
 ms.topic: how-to
-ms.assetid: 1f8a691c-ca75-42da-8ad8-a35611ad70ec
 ---
 
 # Set up a NAT network

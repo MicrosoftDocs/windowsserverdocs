@@ -1,7 +1,6 @@
 ---
 title: Deploy a two-node clustered file server
 description: Deploy a highly available file server with a two-node failover cluster. Step-by-step instructions help you configure, validate, and manage your cluster.
-manager: tedhudek
 ms.topic: install-set-up-deploy
 ms.author: roharwoo
 author: robinharwood

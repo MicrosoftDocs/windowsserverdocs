@@ -1,9 +1,7 @@
 ---
-ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Storage-class Memory (NVDIMM-N) Health Management in Windows
 description: "Learn more about: Storage-class Memory (NVDIMM-N) Health Management in Windows"
 ms.author: roharwoo
-manager: dongill
 ms.topic: concept-article
 author: robinharwood
 ms.date: 06/25/2019
@@ -145,3 +143,4 @@ Interleaved sets can often be created in a platform's BIOS to make multiple NVDI
 Windows Server 2016 and Windows 10 Anniversary Edition do not support interleaved sets of NVDIMM-Ns.
 
 At the time of this writing, there is no mechanism for the host operating system to correctly identify individual NVDIMM-Ns in such a set and clearly communicate to the user which particular device may have caused an error or needs to be serviced.
+

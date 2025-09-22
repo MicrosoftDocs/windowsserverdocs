@@ -4,7 +4,6 @@ description: Learn what to do when roles other than Hyper-V are enabled on your 
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 5a0ed176-048f-40b1-b56c-8391b805fd37
 ms.date: 8/16/2016
 ---
 # Hyper-V should be the only enabled role

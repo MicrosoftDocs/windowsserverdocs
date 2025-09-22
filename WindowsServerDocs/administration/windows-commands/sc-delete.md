@@ -2,7 +2,6 @@
 title: sc delete
 description: Reference article for the sc delete command, which deletes a service subkey from the registry.
 ms.topic: reference
-ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/15/2025

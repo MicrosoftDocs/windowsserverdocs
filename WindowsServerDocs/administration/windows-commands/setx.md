@@ -2,7 +2,6 @@
 title: setx
 description: Reference article for the setx command, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting.
 ms.topic: reference
-ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

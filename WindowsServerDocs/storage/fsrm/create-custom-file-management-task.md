@@ -4,7 +4,6 @@ description: This article describes how to create a custom file management task 
 ms.date: 7/7/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a Custom File Management Task
@@ -33,3 +32,4 @@ Expiration is not always a desired action to be performed on files. File managem
 
 -   [Classification Management](classification-management.md)
 -   [File Management Tasks](file-management-tasks.md)
+

@@ -1,8 +1,6 @@
 ---
-ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
 ms.author: roharwoo
-manager: dongill
 ms.topic: how-to
 author: robinharwood
 ms.date: 11/06/2017
@@ -201,3 +199,4 @@ You can manually optimize a storage pool with the [Optimize-StoragePool](/powers
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool
 ```
+

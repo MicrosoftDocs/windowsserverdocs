@@ -4,7 +4,6 @@ description: Learn what to do when there are not enough virtual functions availa
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 8bd4af5e-9e7d-4710-8950-39435a8bb373
 ms.date: 8/16/2016
 ---
 # The number of running virtual machines configured for SR-IOV should not exceed the number of virtual functions available to the virtual machines

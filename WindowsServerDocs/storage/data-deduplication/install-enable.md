@@ -1,5 +1,4 @@
 ---
-ms.assetid: 07d6b251-c492-4d9f-bcc4-031023695b24
 title: Installing and enabling Data Deduplication
 ms.topic: install-set-up-deploy
 author: dknappettmsft
@@ -157,4 +156,5 @@ Optimally, Data Deduplication should have 1 GB of memory for every 1 TB of logic
 
 **What are the storage requirements for Data Deduplication?**
 In Windows Server 2016, Data Deduplication can support volume sizes up to 64 TB. For more information, view [What's new in Data Deduplication](../../get-started/whats-new-in-windows-server-2016.md#support-for-large-volumes).
+
 

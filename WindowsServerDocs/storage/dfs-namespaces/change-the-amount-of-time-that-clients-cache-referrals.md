@@ -4,7 +4,6 @@ description: This article describes how to change the amount of time that client
 ms.date: 6/5/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Change the amount of time that clients cache referrals
@@ -35,3 +34,4 @@ cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

@@ -2,10 +2,8 @@
 title: Security Support Provider Interface Architecture
 description: Learn about the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 ms.topic: concept-article
-ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 ms.author: daknappe
 author: dknappettmsft
-manager: mtillman
 ms.date: 10/12/2016
 ---
 # Security Support Provider Interface Architecture

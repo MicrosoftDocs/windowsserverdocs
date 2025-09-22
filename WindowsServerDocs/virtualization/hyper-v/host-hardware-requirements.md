@@ -2,7 +2,6 @@
 title: System Requirements for Hyper-V on Windows and Windows Server
 description: Learn about the hardware and firmware requirements for Hyper-V in Windows and Windows Server.
 ms.topic: concept-article
-ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/26/2025

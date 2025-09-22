@@ -5,7 +5,6 @@ ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 03/17/2025
-ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ---
 
 # Key Management Services (KMS) activation planning

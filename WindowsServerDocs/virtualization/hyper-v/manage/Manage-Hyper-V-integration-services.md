@@ -5,7 +5,6 @@ ms.author: daknappe
 author: dknappettmsft
 ms.date: 02/18/2025
 ms.topic: how-to
-ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
 
 # Manage Hyper-V Integration Services

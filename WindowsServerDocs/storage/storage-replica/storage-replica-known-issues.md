@@ -1,12 +1,10 @@
 ---
 title: Storage Replica Known Issues
 description: Review known issues with Storage Replica in Windows Server and how to resolve them.
-manager: candyc
 ms.author: roharwoo
 ms.topic: troubleshooting
 author: robinharwood
 ms.date: 05/31/2023
-ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 ---
 
 # Known issues in Storage Replica
@@ -497,5 +495,6 @@ Currently, Storage Replica doesn't support disks that have a physical sector siz
 - [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica FAQ](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+
 
 

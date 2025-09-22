@@ -2,7 +2,6 @@
 title: tapicfg
 description: Reference article for the tapicfg commands, which creates, removes, or displays a TAPI application directory partition, or sets a default TAPI application directory partition.
 ms.topic: reference
-ms.assetid: c0e642ce-5d98-4edb-9a65-1dff09aef4e1
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 07/11/2018

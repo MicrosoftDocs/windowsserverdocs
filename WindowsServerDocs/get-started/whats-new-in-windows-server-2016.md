@@ -5,7 +5,6 @@ ms.topic: whats-new
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 04/08/2025
-ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
 # What's new in Windows Server 2016

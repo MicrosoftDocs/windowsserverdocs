@@ -2,7 +2,6 @@
 title: replace
 description: Reference article for the replace command, which can replace existing or add new files to a directory.
 ms.topic: reference
-ms.assetid: 6143661e-d90f-4812-b265-6669b567dd1f
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 07/11/2018

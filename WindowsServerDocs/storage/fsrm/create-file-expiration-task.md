@@ -4,7 +4,6 @@ description: This article describes the process of creating a file management ta
 ms.date: 7/7/2017
 ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a File Expiration Task
@@ -90,3 +89,4 @@ The new directory name is based on the name of the file management task and the 
 
 -   [Classification Management](classification-management.md)
 -   [File Management Tasks](file-management-tasks.md)
+

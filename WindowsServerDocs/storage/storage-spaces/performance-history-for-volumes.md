@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for volumes"
 title: Performance history for volumes
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 02/09/2018
@@ -96,3 +95,4 @@ Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+

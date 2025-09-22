@@ -5,7 +5,6 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 05/14/2015
 ms.topic: how-to
-ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 ---
 
 # Export and import virtual machines

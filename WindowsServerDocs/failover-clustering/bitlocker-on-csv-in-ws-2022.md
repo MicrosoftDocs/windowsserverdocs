@@ -1,5 +1,4 @@
 ---
-ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
 title: Use BitLocker with Cluster Shared Volumes
 description: BitLocker on volumes within a cluster are managed based on how the cluster service "views" the volume to be protected. The volume can be a physical disk resource such as a logical unit number (LUN) on a storage area network (SAN) or network attached storage (NAS).
 ms.topic: how-to

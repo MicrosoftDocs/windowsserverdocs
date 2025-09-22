@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 04/13/2017
 ms.topic: concept-article
-ms.assetid: b13a3594-d168-448b-b0a1-7d77153759a8
 ---
 
 # Move from Hyper-V WMI v1 to WMI v2

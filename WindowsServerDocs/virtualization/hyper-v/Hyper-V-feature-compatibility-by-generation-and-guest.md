@@ -2,7 +2,6 @@
 title: Hyper-V feature compatibility by generation and guest
 description: Lists the generations and operating systems that are compatible with key Hyper-V features
 ms.topic: feature-availability
-ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 06/19/2025

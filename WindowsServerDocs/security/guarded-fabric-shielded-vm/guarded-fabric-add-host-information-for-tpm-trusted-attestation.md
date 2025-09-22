@@ -2,8 +2,6 @@
 title: Add host information for TPM-trusted attestation
 description: Information about adding host information for TPM-trusted attestation.
 ms.topic: how-to
-ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
-manager: dongill
 author: robinharwood
 ms.author: roharwoo
 ms.date: 06/21/2019

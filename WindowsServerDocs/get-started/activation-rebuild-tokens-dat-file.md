@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 06/22/2021
 author: dknappettmsft
 ms.author: daknappe
-manager: dcscontentpm
 ---
 
 # Rebuild the Tokens.dat file

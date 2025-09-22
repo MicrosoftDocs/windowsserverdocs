@@ -2,7 +2,6 @@
 title: fc
 description: Reference article for the fc command, which compares two files or sets of files and displays the differences between them.
 ms.topic: reference
-ms.assetid: 485fc3d8-b7c5-496d-87be-0011112f27d5
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

@@ -2,7 +2,6 @@
 title: Detect, enable, and disable SMBv1, SMBv2, and SMBv3 in Windows
 description: See various ways to detect, enable, and disable the Server Message Block (SMB) protocol (SMBv1, SMBv2, and SMBv3) in Windows client and server environments.
 author: robinharwood
-manager: dcscontentpm
 ms.topic: how-to
 ms.author: roharwoo
 ms.date: 02/28/2025
@@ -460,3 +459,4 @@ After you complete the configuration steps in Group Policy Management Console, g
 
 > [!NOTE]
 > After you test the policy, restart the target systems.
+

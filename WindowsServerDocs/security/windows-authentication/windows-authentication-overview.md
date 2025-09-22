@@ -2,7 +2,6 @@
 title: Windows Authentication Overview
 description: Learn about lists documentation resources for Windows authentication and logon technologies that include product evaluation, getting started guides, procedures, design and deployment guides, technical references, and command references.
 ms.topic: concept-article
-ms.assetid: 485a0774-0785-457f-a964-0e9403c12bb1
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 07/29/2025

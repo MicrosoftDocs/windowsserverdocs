@@ -2,7 +2,6 @@
 title: Set up hosts for live migration without Failover Clustering
 description: Set up nonclustered hosts for live migration, configure authentication, and secure your network for seamless virtual machine moves.
 ms.topic: how-to
-ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/14/2025

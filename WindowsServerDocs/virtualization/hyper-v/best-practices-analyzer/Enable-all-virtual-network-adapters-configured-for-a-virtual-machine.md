@@ -4,7 +4,6 @@ description: Learn what to do when one or more network adapters may be disabled 
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
 ms.date: 8/16/2016
 ---
 # Enable all virtual network adapters configured for a virtual machine

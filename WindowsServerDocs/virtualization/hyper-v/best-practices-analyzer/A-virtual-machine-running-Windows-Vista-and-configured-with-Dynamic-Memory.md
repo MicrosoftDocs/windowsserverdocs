@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: c35f08b2-e624-4811-a159-c1e5bb6d5281
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Vista and configured with Dynamic Memory should use recommended values for memory settings

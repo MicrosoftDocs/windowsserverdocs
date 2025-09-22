@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual network adapters are conn
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 2f2f2698-f5ec-4cad-aa64-d6987e8142a1
 ms.date: 8/16/2016
 ---
 # Ensure that all mandatory virtual switch extensions are available

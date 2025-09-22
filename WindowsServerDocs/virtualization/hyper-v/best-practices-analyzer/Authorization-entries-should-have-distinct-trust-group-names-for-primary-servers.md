@@ -4,7 +4,6 @@ description: Learn what to do when the server will accept replication requests f
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 8827a3a7-9f3c-4f51-826a-8e2ec43e01df
 ms.date: 8/16/2016
 ---
 # Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group

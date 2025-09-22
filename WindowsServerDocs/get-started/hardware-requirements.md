@@ -5,7 +5,6 @@ ms.topic: concept-article
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 07/02/2025
-ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 zone_pivot_groups: windows-os-version
 ---
 

@@ -4,7 +4,6 @@ description: Learn what to do when resynchronization of replication for the prim
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 093a7bb7-8e0a-486b-b42b-04edd8809710
 ms.date: 8/16/2016
 ---
 # Resynchronization of replication should be scheduled for off-peak hours

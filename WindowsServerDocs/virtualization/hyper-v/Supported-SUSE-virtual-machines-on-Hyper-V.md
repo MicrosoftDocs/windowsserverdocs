@@ -2,7 +2,6 @@
 title: Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 description: Learn about supported SUSE Linux Enterprise Server virtual machines on Hyper-V, including integration services and features. Compare versions and get deployment guidance.
 ms.topic: concept-article
-ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/19/2025
