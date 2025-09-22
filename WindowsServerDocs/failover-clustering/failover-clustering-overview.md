@@ -5,7 +5,6 @@ ms.topic: overview
 author: robinharwood
 ms.author: roharwoo
 ms.date: 06/25/2025
-ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 ---
 
 # Failover Clustering in Windows Server and Azure Local

@@ -1,6 +1,5 @@
 ---
 title: Cluster affinity
-manager: tedhudek
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
