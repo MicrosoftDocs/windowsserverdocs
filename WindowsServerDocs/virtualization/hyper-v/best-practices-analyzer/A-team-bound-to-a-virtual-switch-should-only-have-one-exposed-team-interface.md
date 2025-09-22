@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual switches are bound to a t
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 1074f086-1a2e-42e1-b58c-f55e657d5ce1
 ms.date: 8/16/2016
 ---
 # A team bound to a virtual switch should only have one exposed team interface

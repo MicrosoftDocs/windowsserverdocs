@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines selected for rep
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
 ms.date: 8/16/2016
 ---
 # Certificate-based authentication is recommended for replication

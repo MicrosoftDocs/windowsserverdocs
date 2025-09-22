@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are configured t
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 33cf5b68-e43e-47ef-adbc-6b266c1d4dce
 ms.date: 8/16/2016
 ---
 # Configure virtual machines to use SR-IOV only when supported by the guest operating system

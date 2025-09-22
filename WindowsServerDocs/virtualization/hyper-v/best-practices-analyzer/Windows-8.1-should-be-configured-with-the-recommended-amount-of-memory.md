@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows 8.1 is conf
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 4972101a-c266-4045-bdd6-4e75a9cd750e
 ms.date: 8/16/2016
 ---
 # Windows 8.1 should be configured with the recommended amount of memory

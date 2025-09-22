@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 04/07/2017
 ms.topic: how-to
-ms.assetid: 1ef8f18c-3d76-4c06-87e4-11d8d4e31aea
 ---
 
 # Make your own integration services

@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines have not been ba
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 7dbd3dfc-c873-4a77-89f7-3166e18d9531
 ms.date: 8/16/2016
 ---
 # Virtual machines should be backed up at least once every week

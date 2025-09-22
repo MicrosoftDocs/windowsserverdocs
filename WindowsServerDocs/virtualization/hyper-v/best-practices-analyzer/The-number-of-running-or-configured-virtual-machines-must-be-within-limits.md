@@ -4,7 +4,6 @@ description: Learn what to do when more virtual machines are running or configur
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
 ms.date: 8/16/2016
 ---
 # The number of running or configured virtual machines must be within supported limits

@@ -4,7 +4,6 @@ description: Learn what to do when paging files experience a high volume of inpu
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: c0be8a5f-64a1-488a-944e-bb913bb90517
 ms.date: 8/16/2016
 ---
 # Virtual hard disks with paging files should be excluded from replication

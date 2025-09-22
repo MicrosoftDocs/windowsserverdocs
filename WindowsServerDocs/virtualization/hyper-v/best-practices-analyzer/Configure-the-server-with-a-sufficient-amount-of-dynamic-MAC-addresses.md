@@ -4,7 +4,6 @@ description: Learn what to do when the number of available dynamic MAC addresses
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe
 ms.date: 8/16/2016
 ---
 # Configure the server with a sufficient amount of dynamic MAC addresses

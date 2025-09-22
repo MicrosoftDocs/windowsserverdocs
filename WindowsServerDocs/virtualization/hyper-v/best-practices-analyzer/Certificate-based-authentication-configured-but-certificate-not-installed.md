@@ -4,7 +4,6 @@ description: Learn what to do when the security certificate that Hyper-V Replica
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 4cabbce3-9367-4ddc-a108-1e5e1ab2bcff
 ms.date: 8/16/2016
 ---
 # Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes

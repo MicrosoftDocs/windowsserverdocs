@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines are experiencing
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 91b7f50f-a071-4ab6-beb1-1b29f92f52b6
 ms.date: 8/16/2016
 ---
 # Dynamic Memory is enabled but not responding on some virtual machines

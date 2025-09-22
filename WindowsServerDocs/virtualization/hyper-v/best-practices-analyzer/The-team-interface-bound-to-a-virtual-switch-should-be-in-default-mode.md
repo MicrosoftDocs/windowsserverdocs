@@ -4,7 +4,6 @@ description: Learn what to do when some virtual switches are bound to a team int
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 8c118e1e-865f-4cff-acdc-7c35e45d5da9
 ms.date: 8/16/2016
 ---
 # The team interface bound to a virtual switch should be in default mode

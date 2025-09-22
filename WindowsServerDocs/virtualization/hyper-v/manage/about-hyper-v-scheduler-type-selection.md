@@ -5,7 +5,6 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 08/14/2018
 ms.topic: concept-article
-ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
 ---
 # About Hyper-V hypervisor scheduler type selection
 

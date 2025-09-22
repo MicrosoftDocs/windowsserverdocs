@@ -4,7 +4,6 @@ description: Learn what to do when a virtual machine running Windows Server 2016
 ms.author: roharwoo
 author: robinharwood
 ms.topic: best-practice
-ms.assetid: 7860e609-d278-42a3-85a4-ca92c8b6b2ad
 ms.date: 8/16/2016
 ---
 # Windows Server 2016 should be configured with the recommended amount of memory

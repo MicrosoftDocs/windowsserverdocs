@@ -4,7 +4,6 @@ description: Learn what to do when one or more integration services are disabled
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: how-to
-ms.assetid: 16e202ad-3795-40c9-8176-7ca319e56d26
 ms.date: 8/16/2016
 ---
 # Enable all integration services in virtual machines

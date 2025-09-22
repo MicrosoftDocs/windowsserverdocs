@@ -4,7 +4,6 @@ description: Learn what to do when a failed over virtual machine has one or more
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 922115fa-e8dd-4055-aaf1-4a4437c5cf28
 ms.date: 8/16/2016
 ---
 # Recovery snapshots should be removed after failover

@@ -4,7 +4,6 @@ description: Understand which versions of Windows Server or Azure Local are comp
 ms.topic: concept-article
 author: dknappettmsft
 ms.author: daknappe
-manager: tedhudek
 ms.date: 01/11/2022
 ---
 

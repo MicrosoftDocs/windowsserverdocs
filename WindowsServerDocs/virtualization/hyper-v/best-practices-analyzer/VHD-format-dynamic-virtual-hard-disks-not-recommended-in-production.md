@@ -4,7 +4,6 @@ description: Learn what to do when one or more virtual machines use VHD-format d
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: best-practice
-ms.assetid: 324a60a0-1d15-4ef2-9f17-23cbd2eb42ce
 ms.date: 8/16/2016
 ---
 # VHD-format dynamic virtual hard disks are not recommended for virtual machines that run server workloads in a production environment
