@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Token-Signing Certificates"
-ms.assetid: 98c5ef45-2bcb-4f87-86c8-5ac6c16a6097
 title: Token-Signing Certificates
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Token-Signing Certificates

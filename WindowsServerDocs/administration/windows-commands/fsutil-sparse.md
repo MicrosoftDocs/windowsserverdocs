@@ -1,17 +1,15 @@
 ---
 title: fsutil sparse
 description: Reference article for the fsutil sparse command, which manages sparse files.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: 77545920-2d13-4f35-a4d1-14dbec8340dc
+ms.author: alalve
+author: xelu86
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil sparse
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Manages sparse files. A sparse file is a file with one or more regions of unallocated data in it.
 

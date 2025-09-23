@@ -222,37 +222,37 @@
           href: multipoint-services/Restart-or-Shut-Down.md
         - name: Remap selected MultiPoint Systems
           href: multipoint-services/remap-selected-MultiPoint-Systems.md
-  - name: Remote Server Administration Tools
-    href: remote-server-administration-tools.md
   - name: Remote Desktop Services
-    href: remote-desktop-services/welcome-to-rds.md
+    href: remote-desktop-services/index.yml
   - name: Remote Access
     items:
     - name: Overview
       items:
+      - name: Remote Desktop Services
+        href: remote-desktop-services/remote-desktop-services-overview.md
       - name: About Remote Access
         href: remote-access/remote-Access.md
       - name: About Always On VPN
         href: remote-access/overview-always-on-vpn.md
       - name: About DirectAccess
         href: remote-access/directaccess/directAccess.md
-      - name: About RAS Gateway 
+      - name: About RAS Gateway
         href: remote-access/ras-gateway/RAS-Gateway.md
     - name: Getting started
       items:
       - name: Install Remote Access as a VPN Server
-        href: remote-access/get-started-install-ras-as-vpn.md 
+        href: remote-access/get-started-install-ras-as-vpn.md
     - name: Tutorials
       items:
-      - name: Deploy Always on VPN
+      - name: Deploy Always On VPN
         items:
-        - name: 1- Set up infrastructure for Always On VPN 
-          href: remote-access/tutorial-aovpn-deploy-setup.md        
+        - name: 1- Deploy Always On VPN infrastructure
+          href: remote-access/tutorial-aovpn-deploy-setup.md
         - name: 2- Configure Always On VPN certificates
-          href: remote-access/tutorial-aovpn-deploy-create-certificates.md        
-        - name: 3- Deploy Always On VPN profile for Windows clients
+          href: remote-access/tutorial-aovpn-deploy-create-certificates.md
+        - name: 3- Create Always On VPN connection
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
-      - name: Migrate from Direct Access to Always on VPN
+      - name: Migrate from Direct Access to Always On VPN
         items:
         - name: Overview of DirectAccess to Always On VPN migration
           href: remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md
@@ -325,7 +325,6 @@
           href: remote-access/ras/manage-remote-access.md
         - name: Deploy Remote Access in an Enterprise
           href: remote-access/ras/Deploy-remote-Access-in-an-Enterprise.md
-          items:
         - name: Deploy Remote Access in a Load Balancing Cluster
           href: remote-access/ras/cluster/Deploy-remote-Access-In-Cluster.md
           items:
@@ -372,24 +371,13 @@
                 href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
               - name: 'Step 4: Verify the Multisite Deployment'
                 href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
-            - name: Troubleshoot a Multisite Deployment
-              href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
-              items:
-              - name: Troubleshooting Enabling Multisite
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md
-              - name: Troubleshooting adding Entry Points
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-adding-Entry-Points.md
-              - name: Troubleshooting Setting the Entry Point Domain Controller
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md
-              - name: Troubleshooting General Issues
-                href: remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md
           - name: Deploy Remote Access in a Multi-forest Environment
             href: remote-access/ras/multi-forest/Deploy-remote-Access-in-a-Multi-forest-Environment.md
             items:
             - name: Plan a Multi-forest Deployment
               href: remote-access/ras/multi-forest/Plan-a-Multi-forest-Deployment.md
             - name: Configure a Multi-forest Deployment
-              href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md 
+              href: remote-access/ras/multi-forest/Configure-a-Multi-forest-Deployment.md
         - name: Use Remote Access Monitoring and Accounting
           href: remote-access/ras/monitoring-and-accounting/Use-remote-Access-Monitoring-and-Accounting.md
           items:
@@ -423,7 +411,7 @@
             - name: 'Step 2: Configure the Remote Access Server'
               href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
             - name: 'Step 3: Verify the Deployment'
-              href:  remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2.md
+              href: remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2.md
           - name: Publishing Applications using AD FS Preauthentication
             href: remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md
           - name: Publishing Applications with SharePoint, Exchange and RDG
@@ -436,20 +424,22 @@
           href: remote-access/how-to-aovpn-client-intune.md
         - name: Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager
           href: remote-access/how-to-aovpn-client-config-mgr.md
-        - name: Configure Always on VPN Conditional Access using Azure AD
+        - name: Configure Always On VPN Conditional Access using Microsoft Entra ID
           href: remote-access/how-to-aovpn-conditional-access.md
         - name: Configure Always On VPN Conditional Access using NPS
           href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
         - name: Block VPN clients that use a revoked certificate
           href: remote-access/how-to-always-on-vpn-block-clients-revoked-certificates.md
-      - name: Virtual Private Networking (VPN) 
-        items: 
+      - name: Virtual Private Networking (VPN)
+        items:
         - name: Configure VPN device tunneling
           href: remote-access/vpn/vpn-device-tunnel-config.md
         - name: How to configure Diffie Hellman protocol over IKEv2 VPN connections
           href: /windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
         - name: How to use single sign-on (SSO) over VPN and Wi-Fi connections
           href: /windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        - name: Configure VPN protocols
+          href: remote-access/configure-vpn-protocols.md
     - name: Concepts
       items:
       - name: DirectAccess
@@ -469,7 +459,7 @@
         - name: RAS Gateway GRE Tunnel Throughput and Performance
           href: remote-access/ras-gateway/RAS-Gateway-GRE-Perf.md
         - name: RAS Gateway for Software Defined Networking
-          href: /azure-stack/hci/concepts/gateway-overview
+          href: /azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-remote
       - name: Routing
         items:
         - name: Network Address Translation (NAT) routers
@@ -487,21 +477,13 @@
       - name: Web Application Proxy
         href: remote-access/web-application-proxy/web-app-proxy-windows-server.md
     - name: Troubleshooting
-      items:
-      - name: Always On VPN
-        href: remote-access/troubleshoot-always-on-vpn.md
-      - name: DirectAccess
-        href: remote-access/directaccess/Troubleshooting-directAccess.md
+      items: 
       - name: DirectAccess Known Issues
-        href: remote-access/directaccess/directAccess-Known-Issues.md
-      - name: Troubleshooting Web Application Proxy
-        href: remote-access//web-application-proxy/Troubleshooting-Web-Application-Proxy.md
+        href: remote-access/directaccess/directAccess-Known-Issues.md      
     - name: Reference
       items:
-      - name: BGP Windows PowerShell Command reference
-        href: remote-access/bgp/BGP-Windows-powershell-Command-Reference.md
       - name: Remote Access PowerShell Command reference
-        href: /powershell/module/remoteaccess/?view=windowsserver2022-ps&preserve-view=true?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
+        href: /powershell/module/remoteaccess/?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
       - name: Windows VPN technical guide
         href: /windows/security/identity-protection/vpn/vpn-guide?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
     - name: Resources
@@ -598,4 +580,3 @@
               href: remote-access/directaccess/tlg-otp-securid/STEP-7-Test-directAccess-Connectivity-from-the-Internet.md
       - name: Routing and Remote Access Snap-In
         href: /previous-versions/windows/it-pro/windows-2000-server/cc957873(v=technet.10)?toc=/windows-server/remote/toc.json&bc=/windows-server/remote/breadcrumbs/toc.json
-

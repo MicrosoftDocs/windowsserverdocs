@@ -2,14 +2,14 @@
 title: san
 description: Reference article for the san command that displays or sets the storage area network (SAN) policy for the operating system.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/01/2023
 ---
 
 # san
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays or sets the storage area network (san) policy for the operating system. If used without parameters, the current san policy is displayed.
 

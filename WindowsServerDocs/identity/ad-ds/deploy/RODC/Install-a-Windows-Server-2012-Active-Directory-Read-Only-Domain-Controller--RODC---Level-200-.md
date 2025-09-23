@@ -1,18 +1,16 @@
 ---
-ms.assetid: 66fa945e-598d-4f18-b603-97a39ce0d836
 title: Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)
 description: This article explains how to create a staged RODC account and then attach a server to that account during RODC installation. This article also explains how to install an RODC without performing a staged installation.
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: install-set-up-deploy
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article explains how to create a staged RODC account and then attach a server to that account during RODC installation. This article also explains how to install an RODC without performing a staged installation.
 
@@ -356,7 +354,7 @@ The **Prerequisites Check** is a new feature in AD DS domain configuration. This
 
 When installing a new forest root domain, the Server Manager Active Directory Domain Services Configuration Wizard invokes a series of serialized modular tests. These tests alert you with suggested repair options. You can run the tests as many times as required. The domain controller installation process can't continue until all prerequisite tests pass.
 
-The **Prerequisites Check** also surfaces relevant information such as security changes that affect older operating systems. For more information about the prerequisite checks, see [Prerequisite Checking](../../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).
+The **Prerequisites Check** also surfaces relevant information such as security changes that affect older operating systems. For more information about the prerequisite checks, see [Prerequisite Checking](../../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrerequisiteChecking).
 
 You can't bypass the **Prerequisite Check** when using Server Manager, but you can skip the process when using the AD DS Deployment cmdlet using the following argument:
 

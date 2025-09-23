@@ -1,450 +1,438 @@
 ---
 title: Manage Servers with Windows Admin Center
-description: Manage Servers with Windows Admin Center (Project Honolulu)
-ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+description: Learn about the tools available for managing servers in Windows Admin Center.
+ms.topic: how-to
+author: davannaw-msft
+ms.author: dawhite
 ms.date: 11/21/2019
+ms.custom: sfi-image-nochange
 ---
-# Manage Servers with Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+# Manage servers in Windows Admin Center
 
 > [!Tip]
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).
 
-## Managing Windows Server machines
+You can add individual servers running Windows Server to Windows Admin Center so that you can manage them by using a comprehensive set of tools.
 
-You can add individual servers running Windows Server 2012 or later to Windows Admin Center to manage the server with a comprehensive set of tools including Certificates, Devices, Events, Processes, Roles and Features, Updates, Virtual Machines and more.
+## Procedure for adding a server to Windows Admin Center
 
-![Server connection Overview screen](../media/manage-servers/server-overview.png)
+1. Under **All connections**, select **+ Add**.
+2. For the **Servers** resource type, select **Add**.
+3. Enter the name of the server. If you're prompted, enter the credentials to use.
+4. Select **Add** to finish.
 
-## Adding a server to Windows Admin Center
-
-To add a server to Windows Admin Center:
-
-1. Click **+ Add** under All Connections.
-2. Choose to add **Servers**.
-3. Type the name of the server and, if prompted, the credentials to use.
-4. Click **Add** to finish.
-
-The server will be added to your connection list on the Overview page. Click it to connect to the server.
+The server is added to your list of connections on the **All connections** page. Select it to connect to the server.
 
 > [!NOTE]
 > You can also add [failover clusters](manage-failover-clusters.md) or [hyper-converged clusters](manage-hyper-converged.md) as a separate connection in Windows Admin Center.
 
-## Tools
+## Summary of tools
 
-The following tools are available for server connections:
+The following table briefly describes the tools that are available in Windows Admin Center for server connections. Sections in this article provide more details for all the tools except Performance Monitor and Packetmon (whose links go to blog posts).
 
 | Tool | Description |
 | ---- | ----------- |
-| [Overview](#overview) | View server details and control server state |
-| [Active Directory](#active-directory-preview) | Manage Active Directory |
-| [Backup](#backup) | View and configure Azure Backup |
-| [Certificates](#certificates) | View and modify certificates |
-| [Containers](#containers) | View Containers |
-| [Devices](#devices) | View and modify devices |
-| [DHCP](#dhcp) | View and manage DHCP server configuration |
-| [DNS](#dns) | View and manage DNS server configuration |
-| [Events](#events) | View events |
-| [Files and file sharing](#files-and-file-sharing) | Browse files and folders |
-| [Firewall](#firewall) | View and modify firewall rules |
-| [Installed Apps](#installed-apps) | View and remove installed apps |
-| [Local Users and Groups](#local-users-and-groups) | View and modify local users and groups |
-| [Network](#network) | View and modify network devices |
-| [Packet monitoring](https://aka.ms/wac1908) | Monitor network packets |
-| [Performance monitor](https://aka.ms/perfmon-blog) | View performance counters and reports |
-| [PowerShell](#powershell) | Interact with server via PowerShell |
-| [Processes](#processes) | View and modify running processes |
-| [Registry](#registry) | View and modify registry entries |
-| [Remote Desktop](#remote-desktop) | Interact with server via Remote Desktop |
-| [Roles and Features](#roles-and-features) | View and modify roles and features |
-| [Scheduled Tasks](#scheduled-tasks) | View and modify scheduled tasks |
-| [Services](#services) | View and modify services |
-| [Settings](#settings) | View and modify services |
-| [Storage](#storage) | View and modify storage devices |
-| [Storage Migration Service](#storage-migration-service) | Migrate servers and file shares to Azure or Windows Server 2019 |
-| [Storage Replica](#storage-replica) | Use Storage Replica to manage server-to-server storage replication |
-| [System Insights](#system-insights) | System Insights gives you increased insight into the functioning of your server. |
-| [Updates](#updates) | View installed and check for new updates |
-| [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
-| [Virtual Switches](#virtual-switches) | View and manage virtual switches |
+| [Overview](#overview) | View server details and control server state. |
+| [Settings](#settings) | View and modify services. |
+| [Active Directory](#active-directory-preview) | Manage Active Directory. |
+| [Azure Backup](#azure-backup) | View and configure Azure Backup. |
+| [Azure File Sync](#azure-file-sync) | View and configure Azure File Sync. |
+| [Azure hybrid center](#azure-hybrid-center) | View and configure Azure hybrid services. |
+| [Azure Monitor](#azure-monitor) | View and configure Azure Monitor. |
+| [Certificates](#certificates) | View and modify certificates. |
+| [Containers](#containers) | View containers. |
+| [Devices](#devices) | View and modify devices. |
+| [DHCP](#dhcp) | View and manage DHCP server configuration. |
+| [DNS](#dns) | View and manage DNS server configuration. |
+| [Events](#events) | View events. |
+| [Files](#files) | Browse through files and folders. |
+| [Firewall](#firewall) | View and modify firewall rules. |
+| [Installed apps](#installed-apps) | View and remove installed apps. |
+| [Local users & groups](#local-users--groups) | View and modify local users and groups. |
+| [Microsoft Defender for Cloud](#microsoft-defender-for-cloud) | View and configure Microsoft Defender for Cloud. |
+| [Networks](#networks) | View and modify network devices. |
+| [Packetmon](https://aka.ms/wac1908) | Monitor network packets. |
+| [Performance Monitor](https://aka.ms/perfmon-blog) | View performance counters and reports. |
+| [PowerShell](#powershell) | Interact with servers via PowerShell. |
+| [Processes](#processes) | View and modify running processes. |
+| [Registry](#registry) | View and modify registry entries. |
+| [Remote Desktop](#remote-desktop) | Interact with servers via Remote Desktop. |
+| [Roles & features](#roles--features) | View and modify roles and features. |
+| [Scheduled tasks](#scheduled-tasks) | View and modify scheduled tasks. |
+| [Security](#security) | View and modify security settings. |
+| [Services](#services) | View and modify services. |
+| [Storage](#storage) | View and modify storage devices. |
+| [Storage Migration Service](#storage-migration-service) | Migrate servers and file shares to Azure or Windows Server 2019. |
+| [Storage Replica](#storage-replica) | Manage server-to-server storage replication. |
+| [System Insights](#system-insights) | Get increased insight into the functioning of your servers. |
+| [Updates](#updates) | View installed updates and check for new updates. |
+| [Virtual machines](manage-virtual-machines.md) | View and manage virtual machines. |
+| [Virtual switches](#virtual-switches) | View and manage virtual switches. |
 
 ## Overview
 
-**Overview** allows you to see the current state of CPU, memory, and network performance, as well as perform operations and modify settings on a target computer or server.
+The **Overview** page shows the current state of CPU, memory, and network performance. You can also use it to perform operations and modify settings on a target computer or server.
 
-### Overview features
+![Screenshot that shows the Windows Admin Center overview page for server connections.](../media/manage-servers/server-overview.png)
 
-The following features are supported in Server Manager Overview:
+**Overview** supports these features:
 
-- View server details
-- View CPU activity
-- View memory activity
-- View network activity
-- Restart server
-- Shutdown server
-- Enable disk metrics on server
-- Edit Computer ID on server
-- View BMC IP address with hyperlink (requires IPMI-compatible BMC).
+- View server details.
+- View CPU activity.
+- View memory activity.
+- View network activity.
+- Restart the server.
+- Shut down the server.
+- Enable disk metrics on the server.
+- Edit the computer ID on the server.
+- View the baseboard management controller (BMC) IP address with a hyperlink. This feature requires a BMC that's compatible with Intelligent Platform Management Interface (IPMI).
 
-## Active Directory (Preview)
+## Active Directory (preview)
 
-**Active Directory** is an early preview that is available on the [extension feed](../configure/using-extensions.md).
+**Active Directory** is an early preview that's available on the [extension feed](../configure/using-extensions.md).
 
-### Active Directory features
+The following Active Directory management features are available:
 
-The following Active Directory management are available:
+- Create a user.
+- Create a group.
+- Search for users, computers, and groups.
+- View a details pane for users, computers, and groups when they're selected in a grid.
+- Perform global grid actions for users, computers, and groups (disable, enable, and remove).
+- Reset user passwords.
+- Configure basic properties and group memberships for user objects.
+- Configure delegation to a single machine for computer objects.
+- Manage membership for group objects. (Add or remove one user at a time.)
 
-- Create user
-- Create group
-- Search for users, computers, and groups
-- Details pane for users, computers, and groups when selected in grid
-- Global Grid actions users, computers, and groups (disable/enable, remove)
-- Reset user password
-- User objects: configure basic properties & group memberships
-- Computer objects: configure delegation to a single machine
-- Group objects: manage membership (add/remove 1 user at a time)
+## Azure Backup
 
-## Backup
+Use **Azure Backup** to help protect your Windows server from corruptions, attacks, or disasters by backing up your server directly to Microsoft Azure.
+[Learn more about Azure Backup](https://aka.ms/windows-admin-center-backup).
 
-**Backup** allows you to protect your Windows server from corruptions, attacks or disasters by backing up your server directly to Microsoft Azure.
-[Learn more about Azure Backup.](https://aka.ms/windows-admin-center-backup)
+The following features are available:
 
-[Provide feedback for backup in Windows Admin Center](https://aka.ms/backup-wac-feedback)
+- View an overview of your Azure backup status.
+- Configure backup items and schedule.
+- Start or stop a backup job.
+- View backup job history and status.
+- View recovery points and recover data.
+- Delete backup data.
 
-### Backup features
+## Azure File Sync
 
-The following features are supported in Backup:
+Use **Azure File Sync** to sync your file server with the cloud.
+[Learn more about Azure File Sync](../azure/azure-file-sync.md).
 
-- View an overview of your Azure backup status
-- Configure backup items and schedule
-- Start or stop a backup job
-- View backup job history and status
-- View recovery points and recover data
-- Delete backup data
+## Azure hybrid center
+
+**Azure hybrid center** is your centralized location for learning about and onboarding to Azure hybrid services. [Learn more about Azure hybrid services in Windows Admin Center](../azure/index.md).
+
+## Azure Monitor
+
+Use **Azure Monitor** to monitor your servers and configure alerts.
+[Learn more about Azure Monitor](../azure/azure-monitor.md).
 
 ## Certificates
 
-**Certificates** allows you to manage certificate stores on a computer or server.
+Use **Certificates** to manage certificate stores on a computer or server.
 
-### Certificates features
+The following features are available:
 
-The following features are supported in Certificates:
-
-- Browse and search existing certificates
-- View certificate details
-- Export certificates
-- Renew certificates
-- Request new certificates
-- Delete certificates
+- Browse through and search for existing certificates.
+- View certificate details.
+- Export certificates.
+- Renew certificates.
+- Request new certificates.
+- Delete certificates.
 
 ## Containers
 
-**Containers** allows you to view the containers on a Windows Server container host. In the case of a running Windows Server Core container, you can view the event logs and access the CLI of the container.
+Use **Containers** to view the containers on a Windows Server container host. In the case of a running Windows Server Core container, you can view the event logs and access the command-line interface of the container. It's available on the [extension feed](../configure/using-extensions.md).
 
 ## Devices
 
-**Devices** allows you to manage connected devices on a computer or server.
+Use **Devices** to manage connected devices on a computer or server.
 
-### Devices features
+The following features are available:
 
-The following features are supported in Devices:
-
-- Browse and search devices
-- View device details
-- Disable a device
-- Update driver on a device
+- Browse through and search for devices.
+- View device details.
+- Disable a device.
+- Update a driver on a device.
 
 ## DHCP
 
-**DHCP** allows you to manage connected devices on a computer or server.
+Use **DHCP** to manage connected devices on a computer or server. It's available on the [extension feed](../configure/using-extensions.md).
 
-### DHCP features
+The following features are available:
 
-- Create/configure/view IPV4 and IPV6 scopes
-- Create address exclusions and configure start and end IP address
-- Create address reservations and configure client MAC address (IPV4), DUID and IAID (IPV6)
+- Create, configure, and view IPv4 and IPv6 scopes.
+- Create address exclusions, and configure start and end IP addresses.
+- Create address reservations, and configure client MAC address (IPv4), DUID (IPv6), and IAID (IPv6).
 
 ## DNS
 
-**DNS** allows you to manage connected devices on a computer or server.
+Use **DNS** to manage connected devices on a computer or server. It's available on the [extension feed](../configure/using-extensions.md).
 
-### DNS features
+The following features are available:
 
-- View details of DNS Forward Lookup zones, Reverse Lookup zones and DNS records
-- Create forward Lookup zones (primary, secondary, or stub), and configure forward lookup zone properties
-- Create Host (A or AAAA), CNAME or MX type of DNS records
-- Configure DNS records properties
-- Create IPV4 and IPV6 Reverse Lookup zones (primary, secondary and stub), configure reverse lookup zone properties
-- Create PTR, CNAME type of DNS records under reverse lookup zone.
+- View details of DNS forward lookup zones, reverse lookup zones, and DNS records.
+- Create forward lookup zones (primary, secondary, and stub), and configure the properties of forward lookup zones.
+- Create Host (A or AAAA), CNAME, and MX types of DNS records.
+- Configure the properties of DNS records.
+- Create IPv4 and IPv6 reverse lookup zones (primary, secondary, and stub), and configure the properties of reverse lookup zones.
+- Create PTR and CNAME types of DNS records under reverse lookup zones.
 
 ## Events
 
-**Events** allows you to manage event logs on a computer or server.
+Use **Events** to manage event logs on a computer or server.
 
-### Events features
+The following features are available:
 
-The following features are supported in Events:
+- Browse through and search for events.
+- View event details.
+- Clear events from the log.
+- Export events from the log.
+- Create workspaces (preview).
+- Save workspaces (preview).
+- Delete workspaces (preview).
+- View events in a stacked bar format (preview).
 
-- Browse and search events
-- View event details
-- Clear events from the log
-- Export events from the log
-- Create workspaces (preview)
-- Save workspaces (preview)
-- Delete workspaces (preview)
-- View events in a stacked bar format (preview)
+## Files
 
-## Files and file sharing
+Use **Files** to manage files and folders on a computer or server.
 
-**Files and file sharing** allows you to manage files and folders on a computer or server.
+The following features are available:
 
-### Files and file sharing features
-
-The following features are supported in Files and file sharing:
-
-- Browse files and folders
-- Search for a file or folder
-- Create a new folder
-- Delete a file or folder
-- Download a file or folder
-- Upload a file or folder
-- Rename a file or folder
-- Extract a zip file
-- Copy and move files and folders
-- View file or folder properties
-- Add, edit, or remove file shares
-- Modify user and group permissions on file shares
-- Modify file server security
+- Browse through files and folders.
+- Search for a file or folder.
+- Create a folder.
+- Delete a file or folder.
+- Download a file or folder.
+- Upload a file or folder.
+- Rename a file or folder.
+- Extract a .zip file.
+- Copy and move files and folders.
+- View file or folder properties.
+- Add, edit, or remove file shares.
+- Modify user and group permissions on file shares.
+- Modify the security of a file server.
 
 ## Firewall
 
-**Firewall** allows you to manage firewall settings and rules on a computer or server.
+Use **Firewall** to manage firewall settings and rules on a computer or server.
 
-### Firewall features
+The following features are available:
 
-The following features are supported in Firewall:
+- View an overview of firewall settings.
+- View incoming firewall rules.
+- View outgoing firewall rules.
+- Search for firewall rules.
+- View firewall rule details.
+- Create a firewall rule.
+- Enable or disable a firewall rule.
+- Delete a firewall rule.
+- Edit the properties of a firewall rule.
 
-- View an overview of firewall settings
-- View incoming firewall rules
-- View outgoing firewall rules
-- Search firewall rules
-- View firewall rule details
-- Create a new firewall rule
-- Enable or disable a firewall rule
-- Delete a firewall rule
-- Edit the properties of a firewall rule
+## Installed apps
 
-## Installed Apps
+Use **Installed apps** to list and uninstall applications that are installed.
 
-**Installed Apps** allows you to list and uninstall application that are installed.
+## Local users & groups
 
-## Local Users and Groups
+Use **Local users & groups** to manage security groups and users that exist locally on a computer or server.
 
-**Local Users and Groups** allows you to manage security groups and users that exist locally on a computer or server.
+The following features are available:
 
-### Local Users and Groups features
+- View and search for users and groups.
+- Create a user or group.
+- Manage a user's group membership.
+- Delete a user or group.
+- Change a user's password.
+- Edit the properties of a user or group.
 
-The following features are supported in Local Users and Groups:
+## Microsoft Defender for Cloud
 
-- View and search users and groups
-- Create a new user or group
-- Manage a user's group membership
-- Delete a user or group
-- Change a user's password
-- Edit the properties of a user or group
+**Microsoft Defender for Cloud** is a cloud-native application protection platform. It has a set of security measures and practices that help protect cloud-based applications from various cyberthreats and vulnerabilities.
 
-## Network
+## Networks
 
-**Network** allows you to manage network devices and settings on a computer or server.
+Use **Networks** to manage network devices and settings on a computer or server.
 
-### Network features
+The following features are available:
 
-The following features are supported in Network:
-
-- Browse and search existing network adapters
-- View details of a network adapter
-- Edit properties of a network adapter
-- Create an [Azure Network Adapter (Preview feature)](https://blogs.technet.microsoft.com/networking/2018/09/05/azurenetworkadapter/)
+- Browse through and search for existing network adapters.
+- View the details of a network adapter.
+- Edit the properties of a network adapter.
+- Create an [Azure Network Adapter (preview feature)](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-3-azure/ba-p/339780).
 
 ## PowerShell
 
-**PowerShell** allows you to interact with a computer or server via a PowerShell session.
+Use **PowerShell** to interact with a computer or server via a PowerShell session.
 
-### PowerShell features
+The following features are available:
 
-The following features are supported in PowerShell:
-
-- Create an interactive PowerShell session on the server
-- Disconnect from PowerShell session on the server
+- Create an interactive PowerShell session on a server.
+- Disconnect from a PowerShell session on a server.
 
 ## Processes
 
-**Processes** allows you to manage running processes on a computer or server.
+Use **Processes** to manage running processes on a computer or server.
 
-### Processes features
+The following features are available:
 
-The following features are supported in Processes:
-
-- Browse and search for running processes
-- View process details
-- Start a process
-- End a process
-- Create a process dump
-- Find process handles
+- Browse through and search for running processes.
+- View process details.
+- Start a process.
+- End a process.
+- Create a process dump.
+- Find process handles.
 
 ## Registry
 
-**Registry** allows you to manage registry keys and values on a computer or server.
+Use **Registry** to manage registry keys and values on a computer or server.
 
-### Registry features
+The following features are available:
 
-The following features are supported in Registry:
-
-- Browse registry keys and values
-- Add or modify registry values
-- Delete registry values
+- Browse through registry keys and values.
+- Add or modify registry values.
+- Delete registry values.
 
 ## Remote Desktop
 
-**Remote Desktop** allows you to interact with a computer or server via an interactive desktop session.
+Use **Remote Desktop** to interact with a computer or server via an interactive desktop session.
 
-### Remote Desktop features
+The following features are available:
 
-The following features are supported in Remote Desktop:
+- Start an interactive remote desktop session.
+- Disconnect from a remote desktop session.
+- Send Ctrl+Alt+Delete to a remote desktop session.
 
-- Start an interactive remote desktop session
-- Disconnect from a remote desktop session
-- Send Ctrl+Alt+Del to a remote desktop session
+## Roles & features
 
-## Roles and Features
+Use **Roles & features** to manage roles and features on a server.
 
-**Roles and Features** allows you to manage roles and features on a server.
+The following features are available:
 
-### Roles and Features features
+- Browse through roles and features on a server.
+- View role or feature details.
+- Install a role or feature.
+- Remove a role or feature.
 
-The following features are supported in Roles and Features:
+## Scheduled tasks
 
-- Browse list of roles and features on a server
-- View role or feature details
-- Install a role or feature
-- Remove a role or feature
+Use **Scheduled tasks** to manage scheduled tasks on a computer or server.
 
-## Scheduled Tasks
+The following features are available:
 
-**Scheduled Tasks** allows you to manage scheduled tasks on a computer or server.
+- Browse the task scheduler library.
+- Edit scheduled tasks.
+- Enable and disable scheduled tasks.
+- Start and stop scheduled tasks.
+- Create scheduled tasks.
 
-### Scheduled Tasks features
+## Security
 
-The following features are supported in Scheduled Tasks:
+Use **Security** to manage your security settings on a computer or server.
 
-- Browse the task scheduler library
-- Edit scheduled tasks
-- Enable & Disable scheduled tasks
-- Start & Stop scheduled tasks
-- Create scheduled tasks
+The following features are available:
+
+- Run and schedule virus scans.
+- Enable and disable real-time threat protection.
+- View threat history.
+- Check secured-core status.
+- Enable or disable secured-core security features.
 
 ## Services
 
-**Services** allows you to manage services on a computer or server.
+Use **Services** to manage services on a computer or server.
 
-### Services features
+The following features are available:
 
-The following features are supported in Services:
-
-- Browse and search services on a server
-- View details of a service
-- Start a service
-- Pause a service
-- Restart a service
-- Edit the properties of a service
+- Browse through and search for services on a server.
+- View details of a service.
+- Start a service.
+- Pause a service.
+- Restart a service.
+- Edit the properties of a service.
 
 ## Settings
 
 **Settings** is a central location to manage settings on a computer or server.
 
-### Settings features
+The following features are available:
 
-- View and modify user and system environment variables
-- View the configuration for monitoring alerts from [Azure Monitor](../azure/azure-monitor.md)
-- View and modify the power configuration
-- View and modify Remote Desktop settings
-- View and modify role-based access control settings
-- View and modify Hyper-V host settings, if applicable
+- View and modify file share settings.
+- View and modify user and system environment variables.
+- View and modify the power configuration.
+- View and modify Remote Desktop settings.
+- View and modify settings for role-based access control.
+- View and modify Hyper-V host settings, if applicable.
 
 ## Storage
 
-**Storage** allows you to manage storage devices on a computer or server.
+Use **Storage** to manage storage devices on a computer or server.
 
-### Storage features
+The following features are available:
 
-The following features are supported in Storage:
-
-- Browse and search existing disks on a server
-- View disk details
-- Create a volume
-- Initialize a disk
-- Create, attach, and detach a virtual hard disk (VHD)
-- Take a disk offline
-- Format a volume
-- Resize a volume
-- Edit volume properties
-- Delete a volume
-- Install Quota Management
-- Manage File Server Resource Manager Quotas [Storage->Create/Update Quota](../../../storage/fsrm/quota-management.md)
+- Browse through and search for existing disks on a server.
+- View disk details.
+- Create a volume.
+- Initialize a disk.
+- Create, attach, and detach a virtual hard disk.
+- Take a disk offline.
+- Format a volume.
+- Resize a volume.
+- Edit volume properties.
+- Delete a volume.
+- Install Quota Management.
+- Manage [File Server Resource Manager quotas](../../../storage/fsrm/quota-management.md).
 
 ## Storage Migration Service
 
-**Storage Migration Service** allows you to migrate servers and file shares to Azure or Windows Server 2019—without requiring apps or users to change anything.
-[Get an overview of Storage Migration Service](../../../storage/storage-migration-service/overview.md)
+Use **Storage Migration Service** to migrate servers and file shares to Azure or Windows Server 2019, without requiring apps or users to change anything. [Get an overview of Storage Migration Service](../../../storage/storage-migration-service/overview.md).
 
->[!NOTE]
->Storage Migration Service requires Windows Server 2019.
+> [!NOTE]
+> Storage Migration Service requires Windows Server 2019.
 
 ## Storage Replica
 
 Use **Storage Replica** to manage server-to-server storage replication.
-[Learn more about Storage Replica](../../../storage/storage-replica/server-to-server-storage-replication.md)
+[Learn more about Storage Replica](../../../storage/storage-replica/server-to-server-storage-replication.md).
 
 ## System Insights
 
-**System Insights** introduces predictive analytics natively in Windows Server to help give you increased insight into the functioning of your server.
-[Get an overview of System Insights](../../system-insights/overview.md)
+**System Insights** introduces predictive analytics natively in Windows Server to give you increased insight into the functioning of your server.
+[Get an overview of System Insights](../../system-insights/overview.md).
 
->[!NOTE]
->System Insights requires Windows Server 2019.
+> [!NOTE]
+> System Insights requires Windows Server 2019.
 
 ## Updates
 
-**Updates** allows you to manage Microsoft and/or Windows Updates on a computer or server.
+Use **Updates** to manage Microsoft and Windows updates on a computer or server.
 
-### Updates features
+The following features are available:
 
-The following features are supported in Updates:
+- View available Microsoft and Windows updates.
+- View the update history.
+- Install updates.
+- Check online for updates from Microsoft Update.
+- Manage [Azure Update Management](/azure/automation/update-management/overview) integration.
 
-- View available Windows or Microsoft Updates
-- View a list of update history
-- Install Updates
-- Check online for updates from Microsoft Update
-- Manage [Azure Update Management](/azure/automation/update-management/overview) integration
+## Virtual machines
 
-## Virtual Machines
+See [Manage virtual machines by using Windows Admin Center](manage-virtual-machines.md).
 
-See [Managing Virtual Machines with Windows Admin Center](manage-virtual-machines.md)
+## Virtual switches
 
-## Virtual Switches
+Use **Virtual switches** to manage Hyper-V virtual switches on a computer or server.
 
-**Virtual Switches** allows you to manage Hyper-V virtual switches on a computer or server.
+The following features are available:
 
-### Features
-
-The following features are supported in Virtual Switches:
-
-- Browse and search Virtual Switches on a server
-- Create a new Virtual Switch
-- Rename a Virtual Switch
-- Delete an existing Virtual Switch
-- Edit the properties of a Virtual Switch
+- Browse through and search for virtual switches on a server.
+- Create a virtual switch.
+- Rename a virtual switch.
+- Delete a virtual switch.
+- Edit the properties of a virtual switch.

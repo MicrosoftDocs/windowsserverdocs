@@ -2,11 +2,10 @@
 title: Enable file sharing
 description: Learn about file sharing in MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: best-practice
 ms.assetid: 508ad056-8e0c-4d59-a4fa-05775a54125d
-author: evaseydl
-ms.author: evas
-manager: Scottman
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Enable file sharing in MultiPoint Services
 You can allow users on your MultiPoint stations to share files in two ways:

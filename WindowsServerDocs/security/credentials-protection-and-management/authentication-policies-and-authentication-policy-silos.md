@@ -1,16 +1,12 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
 description: Learn about authentication policy silos and the policies that can restrict accounts to those silos.
-ms.topic: article
-ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional describes authentication policy silos and the policies that can restrict accounts to those silos. It also explains how authentication policies can be used to restrict the scope of accounts.
 
@@ -121,7 +117,7 @@ The Protected Users security group triggers non-configurable protection on devic
 
 -   The default Kerberos TGTs lifetime setting of four hours is configurable by using authentication policies and silos, which can be accessed through the Active Directory Administrative Center. This means that when four hours has passed, the user must authenticate again.
 
-For more information about this security group, see [How the Protected Users group works](protected-users-security-group.md#BKMK_HowItWorks).
+For more information about this security group, see [How the Protected Users group works](protected-users-security-group.md#how-the-protected-users-group-works).
 
 **Silos and authentication policies**
 
@@ -218,7 +214,7 @@ The following table describes the events that are associated with Protected User
 
 The events are recorded in the Applications and Services Logs at **Microsoft\Windows\Authentication**.
 
-For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents).
+For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TroubleshootingEvents).
 
 |Event ID and Log|Description|
 |----------|--------|
@@ -234,3 +230,4 @@ For troubleshooting steps that use these events, see [Troubleshoot Authenticatio
 [Credentials Protection and Management](credentials-protection-and-management.md)
 
 [Protected Users Security Group](protected-users-security-group.md)
+

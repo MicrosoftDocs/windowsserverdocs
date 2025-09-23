@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Creating a Site Link Design"
-ms.assetid: 206b8072-1d0c-4a0b-ba8a-35a868d67b4c
 title: Creating a Site Link Design
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/08/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 # Creating a Site Link Design
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Create a site link design to connect your sites with site links. Site links reflect the intersite connectivity and method used to transfer replication traffic. You must connect sites with site links so that domain controllers at each site can replicate Active Directory changes.
 

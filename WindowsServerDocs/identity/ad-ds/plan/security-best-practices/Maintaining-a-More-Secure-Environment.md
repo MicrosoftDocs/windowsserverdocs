@@ -1,18 +1,13 @@
 ---
 description: "Learn more about: Maintaining a More Secure Environment"
-ms.assetid: 8f994e2e-6c07-43f0-aef4-75f8b2c9a144
 title: Maintaining a More Secure Environment
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Maintaining a More Secure Environment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Ten: Technology isn't a panacea.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 

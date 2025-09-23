@@ -1,11 +1,10 @@
 ---
 title: Remap Selected MultiPoint Systems
 description: Learn how to remap some but not all systems in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f6007f1a-95d3-4a6e-a9fb-a2b82fa6918a
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Remap Selected MultiPoint Systems

@@ -2,10 +2,8 @@
 title: erase
 description: Reference article for the erase command, which deletes one or more files.
 ms.topic: reference
-ms.assetid: 024a4d0f-8679-4e06-b46f-61fdaf5464bc
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 

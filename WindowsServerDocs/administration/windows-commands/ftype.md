@@ -2,10 +2,8 @@
 title: ftype
 description: Reference article for the ftype command, which displays or modifies file type used in file name extension associations.
 ms.topic: reference
-ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 

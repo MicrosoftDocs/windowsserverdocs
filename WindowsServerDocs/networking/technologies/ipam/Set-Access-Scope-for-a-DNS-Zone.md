@@ -1,16 +1,12 @@
 ---
 title: Set Access Scope for a DNS Zone
 description: Learn how to set the access scope for a DNS zone by using the IPAM client console.
-manager: brianlic
-ms.topic: article
-ms.assetid: 6a211dde-80eb-4888-b5bb-4e28fe8dc7df
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Set Access Scope for a DNS Zone
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to set the access scope for a DNS zone by using the IPAM client console.
 

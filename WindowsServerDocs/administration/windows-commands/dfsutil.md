@@ -2,16 +2,14 @@
 title: dfsutil
 description: Reference article for the dfsutil command, which manages DFS Namespaces, servers and clients.
 ms.topic: reference
-ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # dfsutil
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The dfsutil command manages DFS Namespaces, servers, and clients.
 

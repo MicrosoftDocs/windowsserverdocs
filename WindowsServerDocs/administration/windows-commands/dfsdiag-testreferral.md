@@ -2,16 +2,14 @@
 title: dfsdiag testreferral
 description: Reference article for the dfsdiag testreferral command, which checks Distributed File System (DFS) referrals.
 ms.topic: reference
-ms.assetid: 877c60dc-e993-4bd5-87dd-e892e3f98a1a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # dfsdiag testreferral
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Checks Distributed File System (DFS) referrals by performing the following tests:
 

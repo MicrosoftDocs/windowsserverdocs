@@ -2,16 +2,14 @@
 title: ksetup delkpasswd
 description: Reference article for the ksetup delkpasswd command, which removes a Kerberos password server (kpasswd) for a realm.
 ms.topic: reference
-ms.assetid: 2db0bfcd-bc08-48e3-9f30-65b6411839c6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
 # ksetup delkpasswd
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes a Kerberos password server (kpasswd) for a realm.
 

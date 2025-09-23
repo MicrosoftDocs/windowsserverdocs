@@ -2,12 +2,12 @@
 title: What is Server Core 2008?
 description: Learn about the Server Core installation option in Windows Server 2008
 ms.date: 11/01/2017
-ms.topic: article
-author: pronichkin
-ms.author: artemp
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ---
 # What is Server Core 2008?
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2008
+
 
 >[!NOTE]
 >This information applies to Windows Server 2008. For information about Server Core in Windows Server, see [What is the Server Core Installation in Windows Server](./what-is-server-core.md).
@@ -276,3 +276,4 @@ Table 1-5 lists the services that are installed by default on a Server Core inst
 | WinRM  | Windows Remote Management (WS-Management) | Auto | Network-Service |
 | wmiApSrv  | WMI Performance Adapter  | Manual | LocalSystem |
 | wuauserv | Windows Update | Auto | LocalSystem |
+

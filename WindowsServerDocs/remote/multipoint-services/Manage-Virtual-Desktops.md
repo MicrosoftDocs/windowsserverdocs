@@ -1,11 +1,10 @@
 ---
 title: Manage Virtual Desktops
 description: Learn how to manage virtual desktops (VDI) in MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: fa9ac0ed-47cb-4811-91ff-4fcb62d7858b
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/04/2016
 ---
 # Manage Virtual Desktops

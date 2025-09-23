@@ -1,16 +1,12 @@
 ---
 title: Windows Server supported networking scenarios
 description: This topic provides information about new supported Networking scenarios in Windows Server 2016 and later
-manager: brianlic
-ms.topic: article
-ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
-author: dcuomo
-ms.author: dacuo
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # Windows Server supported networking scenarios
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server \(Semi-Annual Channel\), Windows Server 2016
 
 This topic provides information about supported and unsupported scenarios that you can or cannot perform with this release of Windows Server 2016.
 >[!IMPORTANT]
@@ -39,7 +35,7 @@ You can use the following documentation to deploy SDN scenarios with Windows Ser
 
 -   [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 
-For more information, see [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking).
+For more information, see [Software Defined Networking &#40;SDN&#41;](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking).
 
 #### <a name="bkmk_netc"></a>Network Controller scenarios
 
@@ -51,7 +47,7 @@ The Network Controller scenarios allow you to:
 
 -   Use Network Controller to create and manage virtual networks with Hyper-V Network Virtualization - using NVGRE or VXLAN encapsulation.
 
-For more information, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+For more information, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).
 
 #### <a name="bkmk_netf"></a>Network Function Virtualization (NFV) scenarios
 The NFV scenarios allow you to:
@@ -88,7 +84,7 @@ The network platform scenarios allow you to:
 
 -   Configure SET to spread SMB Direct and RDMA traffic flows between up to two network adapters.
 
-For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements).
+For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 #### <a name="bkmk_switch"></a>Hyper-V Virtual Switch Scenarios
 
@@ -102,7 +98,7 @@ The Hyper-V Virtual Switch scenarios allow you to:
 
 -   Manage a SET team by using Windows PowerShell commands
 
-For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements)
+For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking)
 
 ### <a name="bkmk_dns"></a>DNS Server scenarios
 
@@ -163,7 +159,7 @@ The NIC Teaming scenarios allow you to:
 
 SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
 
-For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements)
+For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking)
 
 
 

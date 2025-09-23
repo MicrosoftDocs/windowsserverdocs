@@ -1,11 +1,10 @@
 ---
 title: Top support solutions for Windows Server
 description: Get links to solutions for Windows Server issues
-manager: alant
 ms.date: 03/16/2018
 ms.topic: troubleshooting
-author: kaushika-msft
-ms.author: elizapo
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Top support solutions for Windows Server 2016
@@ -48,7 +47,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 - [Known Issues for Installing and Removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10))
 
 ## Solutions for Active Directory Federation Services (AD FS)
-- [How to configure automatic registration of Windows domain-joined devices with Azure Active Directory](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
+- [How to configure automatic registration of Windows domain-joined devices with Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
 - [Setup issuance of claims](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims)
 - [Configure AD FS to authenticate users stored in LDAP directories](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
 - [AD FS support for alternate hostname binding for certificate authentication](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
@@ -68,3 +67,4 @@ These are the top Microsoft Support solutions for the most common issues experie
 - [Troubleshooting AD Replication error 8451: The replication operation encountered a database error](https://support.microsoft.com/kb/2645996)
 - [Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries](https://support.microsoft.com/kb/2025726)
 - [Clean Up Server Metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))
+

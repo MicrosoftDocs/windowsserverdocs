@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Active Directory-Integrated DNS Zones"
-ms.assetid: 39c0126d-af5e-4dcb-88c1-aa38f888e973
 title: Active Directory-Integrated DNS Zones
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Active Directory-Integrated DNS Zones
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Domain Name System (DNS) servers running on domain controllers can store their zones in Active Directory Domain Services (AD DS). In this way, it is not necessary to configure a separate DNS replication topology that uses ordinary DNS zone transfers because all zone data is replicated automatically by means of Active Directory replication. This simplifies the process of deploying DNS and provides the following advantages:
 

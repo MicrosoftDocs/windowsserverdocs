@@ -1,15 +1,13 @@
 ---
 title: Guides
 description: Guides Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/17/2018
 ---
 
 # Guides
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Guides
 Here are some guides for developing with the Windows Admin Center SDK:
@@ -33,3 +31,5 @@ Here are some guides for developing with the Windows Admin Center SDK:
 - Sample code can be found for [tool](develop-tool.md), [solution](develop-solution.md), and [gateway plugin](develop-gateway-plugin.md) extension types in our SDK documentation. There you will leverage the Windows Admin Center CLI to build a new extension project, then follow the individual guides to customize your project to meet your needs.
 
 - [Developer Tools](https://aka.ms/wacsdk), hosted on  our GitHub SDK site, is a solution extension containing a rich collection of controls that you can browse and use in your own extension.  Developer Tools is a fully functioning extension that can be side-loaded into Windows Admin Center in Developer Mode.
+
+

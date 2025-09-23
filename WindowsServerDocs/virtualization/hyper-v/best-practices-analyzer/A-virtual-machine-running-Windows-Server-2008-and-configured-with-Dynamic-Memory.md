@@ -1,15 +1,12 @@
 ---
 title: A virtual machine running Windows Server 2008 and configured with Dynamic Memory should use recommended values for memory settings
 description: Learn how to use Hyper-V Manager or Windows PowerShell to increase the minimum memory to at least 256 MB, and the startup memory and maximum memory to at least 512 MB.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: f4c05a2c-52d0-4fa2-987d-37a6ed667134
+ms.author: roharwoo
+author: robinharwood
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # A virtual machine running Windows Server 2008 and configured with Dynamic Memory should use recommended values for memory settings
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
@@ -58,3 +55,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ```
 Get-VM MyVM | Set-VMMemory -DynamicMemoryEnabled $True -MaximumBytes 512MB -MinimumBytes 256MB -StartupBytes 512MB
 ```
+
+

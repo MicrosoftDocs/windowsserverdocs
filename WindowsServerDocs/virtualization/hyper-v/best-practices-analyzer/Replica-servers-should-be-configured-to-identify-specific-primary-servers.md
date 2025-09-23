@@ -1,15 +1,12 @@
 ---
 title: Replica servers should be configured to identify specific primary servers authorized to send replication traffic
 description: Learn what to do when, as configured, your Replica server accepts replication traffic from all primary servers and stores them in a single location.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: 0aeb1f4b-2e75-430b-9557-fe64738c4992
+ms.author: daknappe
+author: dknappettmsft
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # Replica servers should be configured to identify specific primary servers authorized to send replication traffic
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
@@ -75,3 +72,5 @@ New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMSt
 
 ## See Also
 [New-VMReplicationAuthorizationEntry](/powershell/module/hyper-v/new-vmreplicationauthorizationentry)
+
+

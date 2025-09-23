@@ -1,17 +1,13 @@
 ---
 title: Getting Started with QoS Policy
 description: This topic provides links to overview topics for Quality of Service (QoS) Policy, which allows you to use Group Policy to prioritize network traffic bandwidth of specific applications and services in Windows Server 2016.
-ms.topic: article
-ms.assetid: a37398a4-fe46-464f-8a33-829ef3c6db55
-manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.topic: get-started
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 
 # Getting Started with QoS Policy
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following topics to get started with Quality of Service \(QoS\) Policy.
 
@@ -21,3 +17,5 @@ You can use the following topics to get started with Quality of Service \(QoS\) 
 
 
 For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
+
+

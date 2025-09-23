@@ -1,16 +1,12 @@
 ---
 title: Install a New File Server as a Content Server
 description: Learn how to install the File Services server role and the BranchCache for Network Files role service on a computer running  Windows Server 2016.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # Install a New File Server as a Content Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to install the File Services server role and the **BranchCache for Network Files** role service on a computer running  Windows Server 2016.
 
@@ -47,3 +43,4 @@ Membership in **Administrators**, or equivalent is the minimum required to perfo
 6.  In **Select features**, click **Next**.
 
 7.  In **Confirm installation selections**, review your selections, and then click **Install**. The **Installation progress** pane is displayed during installation. When installation is complete, click **Close**.
+

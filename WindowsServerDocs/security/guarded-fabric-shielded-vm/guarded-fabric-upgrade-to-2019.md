@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Upgrade a guarded fabric to Windows Server 2019"
 title: Upgrade a guarded fabric to Windows Server 2019
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: upgrade-and-migration-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/21/2018
 ---
 
 # Upgrade a guarded fabric to Windows Server 2019
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes the steps necessary to upgrade an existing guarded fabric from Windows Server 2016, Windows Server version 1709 or Windows Server version 1803 to Windows Server 2019.
 
@@ -94,3 +91,4 @@ Follow the steps below if you are currently running Active Directory-based attes
     ```powershell
     Set-HgsServer -TrustActiveDirectory
     ```
+

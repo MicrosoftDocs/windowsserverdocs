@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using TPM mode in an existing bastion forest"
 title: Initialize the HGS cluster using TPM mode in a bastion forest
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using TPM mode in an existing bastion forest
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 To initialize the HGS cluster using TPM mode in an existing bastion forest, follow the steps below. Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
@@ -41,3 +38,5 @@ In a production environment, you should continue to [add additional HGS nodes to
 
 > [!div class="nextstepaction"]
 > [Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
+
+

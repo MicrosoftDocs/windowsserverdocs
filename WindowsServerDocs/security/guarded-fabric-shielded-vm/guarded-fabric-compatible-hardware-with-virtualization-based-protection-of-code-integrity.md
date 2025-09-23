@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity"
 title: Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
-ms.topic: article
-ms.assetid: 15ded82c-f70f-4efb-9e26-2731127931af
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Server 2016 introduced a new Virtualization-based code protection to help protect physical and virtual machines from attacks that modify system code.
 To achieve this high protection level, Microsoft works in tandem with the computer hardware manufactures (Original Equipment Manufacturers, or OEMs) to prevent malicious writes into system execution code.
@@ -27,7 +23,7 @@ The adoption of the new UEFI standard takes time; meanwhile, to prevent customer
 The following configurations are known to be non-compatible with Virtualization-based protection of code integrity and cannot be used as a host for Shielded VMs:
 
 - Dell PowerEdge Servers running PERC H330 RAID Controllers
-    For more information, see the following article from Dell Support [H330 – Enabling "Host Guardian Hyper-V Support" or "Device Guard" on Win 2016 OS causes OS boot failure](http://www.dell.com/Support/Article/us/en/19/QNA44045).
+    For more information, see the following article from Dell Support [H330 – Enabling "Host Guardian Hyper-V Support" or "Device Guard" on Win 2016 OS causes OS boot failure](https://www.dell.com/support/manuals/microsoft-windows-server-2016/ws2016_iig_pub/unable-to-boot-into-windows-server-2016-if-host-guardian-hyper-v-support-or-device-guard-is-enable~?guid=guid-a8273240-e45b-4c18-a553-97250a7e835d&lang=en-us).
 
 
 ## Compatible systems
@@ -36,6 +32,8 @@ These are the systems we and our partners have been testing in our environment.
 Please make sure that you verify the system works as expected in your environment:
 
 - Virtual Machines – You can enable Virtualization-based protection of code integrity on virtual machines that run on a Hyper-V host beginning with Windows Server 2016.
+
+
 
 
 

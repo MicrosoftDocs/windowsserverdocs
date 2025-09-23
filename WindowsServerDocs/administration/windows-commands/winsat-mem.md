@@ -2,8 +2,8 @@
 title: winsat mem
 description: Reference article for winsat mem command that tests system memory bandwidth using a process similar to the large memory-to-memory buffer copies in multimedia processing.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/01/2023
 ---
 

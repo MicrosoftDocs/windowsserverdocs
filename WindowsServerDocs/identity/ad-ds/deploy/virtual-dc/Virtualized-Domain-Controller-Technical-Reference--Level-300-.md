@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Virtualized Domain Controller Technical Reference (Level 300)"
-ms.assetid: 956f23b8-0c74-4436-ad43-e041f63302ce
 title: Virtualized Domain Controller Technical Reference (Level 300)
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Virtualized Domain Controller Technical Reference (Level 300)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The virtualized domain controller (VDC) technical reference consists of the following topics:
 

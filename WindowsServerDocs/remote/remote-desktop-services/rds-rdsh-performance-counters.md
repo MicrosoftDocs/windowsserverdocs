@@ -1,16 +1,15 @@
 ---
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop session hosts
 description: Learn about performance counters you can use to diagnose app performance problems, such as an app running slowly, on Remote Desktop sessions.
-ms.author: wscontent
-ms.date: 05/31/2023
-ms.topic: article
-author: lizap
-manager: dougkim
+ms.author: daknappe
+ms.date: 7/3/2024
+ms.topic: how-to
+author: dknappettmsft
 ---
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows 10
+> 
 
 Poor application performance is one of the most difficult problems to diagnose, especially for slow or nonresponsive applications. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics. You then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This situation makes it difficult to read the data and correlate it with the reported issue.
 

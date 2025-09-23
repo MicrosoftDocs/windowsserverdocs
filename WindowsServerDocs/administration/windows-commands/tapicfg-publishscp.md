@@ -2,15 +2,14 @@
 title: tapicfg publishscp
 description: Reference article for the tapicfg publishscp command, which creates a service connection point to publish a TAPI application directory partition.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/29/2020
 ---
 
 # tapicfg publishscp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a service connection point to publish a TAPI application directory partition.
 

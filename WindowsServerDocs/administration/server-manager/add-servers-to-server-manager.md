@@ -1,24 +1,22 @@
 ---
 title: Add Servers to Server Manager
 description: Learn how to add servers to the Server Manager server pool.
-ms.topic: article
-ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 02/01/2018
 ---
 
 # Add Servers to Server Manager
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In Windows Server you can manage multiple remote servers by using a single Server Manager console. Servers that you want to manage by using Server Manager can be running Windows Server 2016,  Windows Server 2012 R2,  Windows Server 2012,  Windows Server 2008 R2, or  Windows Server 2008. Note that you cannot manage a newer release of Windows Server with an older release of Server Manager.
 
 This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
-> In our tests, Server Manager in  Windows Server 2012 and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://go.microsoft.com/fwlink/p/?LinkId=239437).
+> In our tests, Server Manager in  Windows Server 2012 and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://www.microsoft.com/system-center).
 >
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
 >

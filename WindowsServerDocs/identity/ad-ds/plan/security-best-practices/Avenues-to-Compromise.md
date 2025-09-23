@@ -1,18 +1,13 @@
 ---
 description: "Learn more about: Avenues to Compromise"
-ms.assetid: d7a4d2e1-217d-4ffc-93f0-817149bd9e7f
 title: Avenues to Compromise
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: best-practice
 ---
 
 # Avenues to Compromise
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Seven: The most secure network is a well-administered one.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 

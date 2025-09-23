@@ -1,16 +1,12 @@
 ---
 title: System key utility technical overview
 description: Describes the system key utility (Syskey), which protects the Security Accounts Manager (SAM) database in Windows operating systems.
-ms.topic: article
-ms.assetid: 398fcb59-906c-4cbc-8a7d-a9750632477a
-ms.author: jgerend
-author: JasonGerend
-manager: 
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 3/17/2021
 ---
 # System key utility technical overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 8.1, Windows Server 2012, Windows Server 2012 R2
 
 This topic for the IT professional describes the system key utility (Syskey), which protects the Security Accounts Manager (SAM) database in Windows operating systems.
 
@@ -36,3 +32,5 @@ Use of the system key utility is optional. If the disk that contains the system 
 Each time a new user is added to a computer, the Windows Data Protection API (DPAPI) generates a master key that is used to protect all other private keys used by applications and services running in that user's context, such as Encrypting File System (EFS) keys and S/MIME keys. The computer also has its own master key that protects system keys such as IPsec keys, computer keys, and SSL keys. All these master keys are then protected by a computer's startup key. When you start a computer, the startup key decrypts the master keys. The startup key also protects the local SAM database on each computer, the computer's Local Security Authority (LSA) secrets, account information stored in Active Directory Domain Services (AD DS) on domain controllers, and the administrator account password used for system recovery in Safe Mode.
 
 The Syskey utility lets you choose where that startup key is stored. By default, the computer generates a random key and scatters it throughout the registry; a complex obfuscation algorithm ensures that the scatter pattern is different on every Windows installation. You can change this to one of two other Syskey modes: you can continue to use a computer-generated key but store it on a floppy disk, or you can have the system prompt during startup for a password that is used to derive the master key. You can always change between the three options, but if you have enabled either **System Generated Password, Store Startup Key on Floppy Disk** or **Administrator generated password, Password Startup** and you have lost your floppy disk or forgotten your password, your only recovery option is to use a repair disk to restore the registry to the state it was in before you enabled the Syskey mode. You will lose any other changes made between then and now. To change your startup key, open a command prompt, and type *syskey* to run the Syskey utility.
+
+

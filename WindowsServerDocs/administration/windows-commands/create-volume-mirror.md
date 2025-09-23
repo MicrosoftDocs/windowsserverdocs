@@ -2,15 +2,13 @@
 title: create volume mirror
 description: Reference article for the create volume mirror command, which creates a volume mirror by using the two specified dynamic disks.
 ms.topic: reference
-ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 # create volume mirror
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a volume mirror by using the two specified dynamic disks. After the volume has been created, the focus automatically shifts to the new volume.
 

@@ -1,16 +1,13 @@
 ---
 title: Netsh commands for interface portproxy
 description: Use the netsh interface portproxy commands to act as proxies between IPv4 and IPv6 networks and applications.
-ms.topic: article
-manager: dougkim
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/27/2021
 ---
 
 # Netsh interface portproxy commands
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Use the **netsh interface portproxy** commands to act as proxies between IPv4 and IPv6 networks and applications. You can use these commands to establish proxy service in the following ways:
 
@@ -363,3 +360,4 @@ Displays v6tov6 portproxy parameters.
 `show v6tov6`
 
 ---
+

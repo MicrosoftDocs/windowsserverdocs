@@ -1,17 +1,13 @@
 ---
 title: Guarded fabric and shielded VMs
 description: "Learn more about: Guarded fabric and shielded VMs"
-ms.topic: article
-ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Guarded fabric and shielded VMs
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
@@ -54,3 +50,5 @@ One of the most important goals of providing a hosted environment is to guarante
 ## Operations and management topic
 
 - [Managing the Host Guardian Service](guarded-fabric-manage-hgs.md)
+
+

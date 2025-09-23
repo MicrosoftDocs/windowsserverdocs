@@ -1,15 +1,12 @@
 ---
 title: About Hyper-V hypervisor scheduler type selection
 description: Learn about important changes to Hyper-V's default and recommended use of hypervisor scheduler types.
-ms.author: benarm
-author: BenjaminArmstrong
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/14/2018
-ms.topic: article
-ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
+ms.topic: concept-article
 ---
 # About Hyper-V hypervisor scheduler type selection
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server, version 1709, Windows Server, version 1803
 
 This document describes important changes to Hyper-V's default and recommended use of hypervisor scheduler types. These changes impact both system security and virtualization performance. Virtualization host administrators should review and understand the changes and implications described in this document, and carefully evaluate the impacts, suggested deployment guidance and risk factors involved to best understand how to deploy and manage Hyper-V hosts in the face of the rapidly changing security landscape.
 
@@ -171,3 +168,5 @@ The security threat landscape continues to evolve. To ensure our customers are s
 * Consider re-configuring existing Windows Server 2016 Hyper-V hosts to leverage the strong security benefits offered by the hypervisor core scheduler
 
 * Update existing non-SMT VMs to reduce the performance impacts from scheduling constraints imposed by VP isolation that addresses hardware security vulnerabilities
+
+

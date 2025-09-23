@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Winlogon Automatic Restart Sign-On (ARSO)"
 title: Winlogon Automatic Restart Sign-On (ARSO)
-ms.topic: article
-ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2016
+ms.custom: sfi-image-nochange
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
@@ -136,3 +133,4 @@ The Logon Hours and parental controls can prohibit a new user session from being
 |Term|Definition|
 |----|-------|
 |Autologon|Autologon is a feature that has been present in Windows for several releases.  It is a documented feature of Windows that even has tools such as Autologon for Windows v3.01 *[http:/technet.microsoft.com/sysinternals/bb963905.aspx](/sysinternals/downloads/autologon)*<p>It allows a single user of the device to sign in automatically without entering credentials. The credentials are configured and stored in registry as an encrypted LSA secret.|
+

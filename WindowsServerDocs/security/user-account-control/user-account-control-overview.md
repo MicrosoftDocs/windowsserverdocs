@@ -1,11 +1,9 @@
 ---
 title: User Account Control Overview
 description: Learn about User Account Control, how it is a fundamental component of Microsoft's overall security vision, and how it helps mitigate the impact of a malicious program.
-ms.topic: article
-ms.assetid: 1b7a39cd-fc10-4408-befd-4b2c45806732
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # User Account Control Overview
@@ -20,6 +18,7 @@ When an applications needs to run with more than standard user rights, UAC can r
 
 ## <a name="BKMK_APP"></a>Practical applications
 Admin Approval Mode in UAC helps prevent malicious programs from silently installing without an administrator's knowledge. It also helps protect from inadvertent system\-wide changes. Lastly, it can be used to enforce a higher level of compliance where administrators must actively consent or provide credentials for each administrative process.
+
 
 
 

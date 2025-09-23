@@ -1,17 +1,13 @@
 ---
 title: Remote RADIUS Server Groups
 description: This topic provides an overview of Network Policy Server Remote RADIUS Server Groups in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: d81678a7-be21-48f2-9b3f-5a75d6aef013
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # Remote RADIUS Server Groups
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When you configure Network Policy Server (NPS) as a Remote Authentication Dial-In User Service (RADIUS) proxy, you use NPS to forward connection requests to RADIUS servers that are capable of processing the connection requests because they can perform authentication and authorization in the domain where the user or computer account is located. For example, if you want to forward connection requests to one or more RADIUS servers in untrusted domains, you can configure NPS as a RADIUS proxy to forward the requests to the remote RADIUS servers in the untrusted domain.
 
@@ -37,3 +33,4 @@ Each server in the group has the following settings.
 After you have configured a Remote RADIUS Server Group, you can specify the group in the authentication and accounting settings of a connection request policy. Because of this, you can configure a remote RADIUS server group first. Next, you can configure the connection request policy to use the newly configured remote RADIUS server group. Alternatively, you can use the New Connection Request Policy Wizard to create a new remote RADIUS server group while you are creating the connection request policy.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

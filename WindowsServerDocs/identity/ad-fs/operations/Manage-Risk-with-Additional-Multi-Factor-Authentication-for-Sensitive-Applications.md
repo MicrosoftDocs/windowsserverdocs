@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications"
-ms.assetid: 934ac796-e2ee-490d-8265-6a818be5ee79
 title: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications

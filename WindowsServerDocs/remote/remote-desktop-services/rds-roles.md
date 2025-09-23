@@ -1,15 +1,12 @@
 ---
 title: Remote Desktop Services roles
 description: Learn about the roles within a Remote Desktop Services environment in Windows Server.
-ms.author: helohr
-ms.date: 07/06/2018
-ms.topic: article
-author: heidilohr
-manager: femila
+author: dknappettmsft
+ms.date: 7/3/2024
+ms.topic: concept-article
+ms.author: daknappe
 ---
 # Remote Desktop Services roles
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes the roles within a Remote Desktop Services environment.
 
@@ -35,7 +32,7 @@ For more information, see the following articles:
 
 ## Remote Desktop Connection Broker
 
-Remote Desktop Connection Broker (RD Connection Broker) manages incoming remote desktop connections to RD Session Host server farms. RD Connection Broker handles connections to both collections of full desktops and collections of remote apps. RD Connection Broker can balance the load across the collection's servers when making new connections. If RD Connection Broker is enabled, using DNS round robin to RD Session Hosts for balacing servers is not supported. If a session disconnects, RD Connection Broker will reconnect the user to the correct RD Session Host server and their interrupted session, which still exists in the RD Session Host farm.
+Remote Desktop Connection Broker (RD Connection Broker) manages incoming remote desktop connections to RD Session Host server farms. RD Connection Broker handles connections to both collections of full desktops and collections of remote apps. RD Connection Broker can balance the load across the collection's servers when making new connections. If RD Connection Broker is enabled, using DNS round robin to RD Session Hosts for balancing servers is not supported. If a session disconnects, RD Connection Broker will reconnect the user to the correct RD Session Host server and their interrupted session, which still exists in the RD Session Host farm.
 
 You'll need to install matching digital certificates on both the RD Connection Broker server and the client to support single sign-on and application publishing. When developing or testing a network, you can use a self-generated and self-signed certificate. However, released services require a digital certificate from a trusted certification authority. The name you give the certificate must be the same as the internal Fully Qualified Domain Name (FQDN) of the RD Connection Broker virtual machine.
 
@@ -56,13 +53,13 @@ The RD Gateway component uses Secure Sockets Layer (SSL) to encrypt the communic
 
 The digital certificates installed on the server and client have to match for this to work. When you're developing or testing a network, you can use a self-generated and self-signed certificate. However, a released service requires a certificate from a trusted certification authority. The name of the certificate must match the FQDN used to access RD Gateway, whether the FQDN is the public IP address' externally facing DNS name or the CNAME DNS record pointing to the public IP address.
 
-For tenants with fewer users, the RD Web Access and RD Gateway roles can be combined on a single virtual machine to reduce cost. You can also add more RD Gateway virtual machines to an RD Gateway farm to increase service availability and scale out to more users. Virtual machines in larger RD Gateway farms should be configured in a load-balanced set. IP affinity isn't required when you're using RD Gateway on a Windows Server 2016 virtual machine, but it is when you're running it on a Windows Server 2012 R2 virtual machine.
+For tenants with fewer users, the RD Web Access and RD Gateway roles can be combined on a single virtual machine to reduce cost. You can also add more RD Gateway virtual machines to an RD Gateway farm to increase service availability and scale out to more users. Virtual machines in larger RD Gateway farms should be configured in a load-balanced set. IP affinity isn't required.
 
 For more information, see the following articles:
 
 * [Add high availability to the RD Web and Gateway web front](rds-rdweb-gateway-ha.md)
 * [Remote Desktop Services - Access from anywhere](rds-plan-access-from-anywhere.md)
-* [Remote Desktop Services - Multi-factor authentication](rds-plan-mfa.md)
+* [Remote Desktop Services - Multifactor authentication](rds-plan-mfa.md)
 * [Set up the RD Gateway role](remote-desktop-gateway-role.md)
 
 ## Remote Desktop Web Access
@@ -95,3 +92,4 @@ For more information, see the following articles:
 * [Activate the Remote Desktop Services license server](rds-activate-license-server.md)
 * [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md)
 * [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/Licensing/licensing-programs/spla-program.aspx)
+

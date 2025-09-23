@@ -1,17 +1,13 @@
 ---
 title: Create a Linux shielded VM template disk
 description: "Learn more about: Create a Linux shielded VM template disk"
-ms.topic: article
-ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Create a Linux shielded VM template disk
-
->Applies to: Windows Server 2022, Windows Server 2019
 
 This topic explains how to prepare a template disk for Linux shielded VMs that can be used to instantiate one or more tenant VMs.
 
@@ -207,3 +203,5 @@ To extract the volume signature catalog, run the following command in PowerShell
 ```powershell
 Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -VolumeSignatureCatalogPath 'C:\temp\MyLinuxTemplate.vsc'
 ```
+
+

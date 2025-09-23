@@ -2,14 +2,11 @@
 title: Connect to a Remote Computer
 description: This article describes how to connect to a remote computer to manage storage resources from File Server Resource Manager
 ms.date: 7/7/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ---
 # Connect to a Remote Computer
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 To manage storage resources on a remote computer, you can connect to the computer from File Server Resource Manager. While you are connected, File Server Resource Manager allows you to manage quotas, screen files, manage classifications, schedule file management tasks, and generate reports with those remote resources.
 
@@ -40,3 +37,4 @@ To manage remote resources with File Server Resource Manager:
 ## Additional References
 
 -   [Managing Remote Storage Resources](managing-remote-storage-resources.md)
+

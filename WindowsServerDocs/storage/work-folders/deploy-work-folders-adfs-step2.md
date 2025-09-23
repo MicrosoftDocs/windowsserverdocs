@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 2, AD FS Post-Configuration Work"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 2, AD FS Post-Configuration Work
-ms.topic: article
-manager: klaasl
-ms.author: jeffpatt
-author: JeffPatt24
+ms.topic: install-set-up-deploy
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/06/2019
-ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 2, AD FS Post-Configuration Work
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the second step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:
 
@@ -247,3 +243,6 @@ Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Se
 
 ## See Also
 [Work Folders Overview](Work-Folders-Overview.md)
+
+
+

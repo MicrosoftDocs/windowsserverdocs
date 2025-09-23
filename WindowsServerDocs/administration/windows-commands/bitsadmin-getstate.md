@@ -2,8 +2,8 @@
 title: bitsadmin getstate
 description: Reference article for the bitsadmin getstate command, which retrieves the state of the specified job.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 04/01/2023
 ---
 

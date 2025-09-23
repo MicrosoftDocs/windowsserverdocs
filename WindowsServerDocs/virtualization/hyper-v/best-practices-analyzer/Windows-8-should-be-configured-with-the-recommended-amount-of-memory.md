@@ -1,15 +1,12 @@
 ---
 title: Windows 8 should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows 8 is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: 0c739e7c-4403-4eff-9e69-213ba1ab7336
+ms.author: daknappe
+author: dknappettmsft
+ms.topic: best-practice
 ms.date: 10/03/2016
 ---
 # Windows 8 should be configured with the recommended amount of memory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
@@ -59,3 +56,4 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 
 ## See Also
 [Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
+

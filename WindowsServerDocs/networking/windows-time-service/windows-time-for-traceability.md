@@ -1,14 +1,14 @@
 ---
 title: Windows Time for Traceability
 description: Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC.
-author: dahavey
-ms.author: dahavey
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Time for Traceability
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 version 1709 or later, and Windows 10 version 1703 or later, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC.  To enable regulatory compliance scenarios, Windows 10 (version 1703 or higher) and Windows Server 2016 (version 1709 or higher) provides new event logs to provide a picture from the perspective of the Operating System to form an understanding of the actions taken on the system clock.  These event logs are generated continuously for Windows Time service and can be examined or archived for later analysis.
 
@@ -146,3 +146,4 @@ This event logs each instance when System Time is modified using the SetSystemTi
 |---|---|
 |Details |This operation is triggered:<ul><li>When network changes occur</li><li>System returns from connected standby/hibernation</li><li>When we didn't sync for a long time</li><li>Admin issues the resync command</li></ul>This operation results in immediate loss of fine-grained time sync accuracy because it causes NTP client to clear its filters. |
 |Throttling mechanism  |Max frequency - once every 5 minutes.<br><br>It's possible that a bad network card (or a poor script) can trigger this operation repeatedly and result in logs getting overwhelmed. Hence the need to throttle this event.<br><br>Accurate time sync takes far more than 5 minutes to achieve, and throttling doesn't lose information about the original event that resulted in loss of time accuracy.  |
+

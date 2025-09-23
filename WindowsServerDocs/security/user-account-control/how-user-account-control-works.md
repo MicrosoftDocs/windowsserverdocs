@@ -1,16 +1,13 @@
 ---
 title: How User Account Control Works
 description: Learn about User Account Control (UAC) and how it helps prevent malicious programs from damaging a computer and helps organizations deploy a better-managed desktop.
-ms.topic: article
-ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2016
+ms.custom: sfi-image-nochange
 ---
 # How User Account Control Works
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 User Account Control (UAC) helps prevent malicious programs (also called malware) from damaging a computer and helps organizations deploy a better-managed desktop. With UAC, applications and tasks always run in the security context of a non-administrator account, unless an administrator specifically authorizes administrator-level access to the system. UAC can block the automatic installation of unauthorized applications and prevent inadvertent changes to system settings.
 
@@ -151,7 +148,7 @@ All UAC-compliant applications should have a requested execution level added to 
 ### Installer Detection Technology
 Installation programs are applications designed to deploy software. Most installation programs write to system directories and registry keys. These protected system locations are typically writeable only by an administrator in Installer detection technology, which means that standard users do not have sufficient access to install programs. Windows Server 2012 heuristically detects installation programs and requests administrator credentials or approval from the administrator user in order to run with access privileges. Windows Server 2012 also heuristically detects updates and programs that uninstall applications. One of the design goals of UAC is to prevent installations from being run without the user's knowledge and consent because installation programs write to protected areas of the file system and registry.
 
-Installer detection only applies to:
+Installer detection only 
 
 -   32-bit executable files.
 
@@ -178,5 +175,6 @@ Before a 32-bit process is created, the following attributes are checked to dete
 
 > [!NOTE]
 > The User Account Control: Detect application installations and prompt for elevation policy setting must be enabled for installer detection to detect installation programs. This setting is enabled by default and can be configured locally by using the Local Security Policy snap-in (Secpol.msc) or configured for the domain, OU, or specific groups by Group Policy (Gpedit.msc).
+
 
 

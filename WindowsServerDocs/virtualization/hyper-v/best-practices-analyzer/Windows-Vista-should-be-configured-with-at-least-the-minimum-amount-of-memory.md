@@ -1,15 +1,12 @@
 ---
 title: Windows Vista should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows Vista is configured with less than the minimum amount of RAM, which is 512 MB.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
+ms.author: daknappe
+author: dknappettmsft
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # Windows Vista should be configured with at least the minimum amount of memory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
@@ -62,3 +59,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 
 ## See Also
 [Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
+

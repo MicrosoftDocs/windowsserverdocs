@@ -2,16 +2,14 @@
 title: ftp mput
 description: Reference article for the ftp mput command, which copies local files to the remote computer using the current file transfer type.
 ms.topic: reference
-ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # ftp mput
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies local files to the remote computer using the current file transfer type.
 

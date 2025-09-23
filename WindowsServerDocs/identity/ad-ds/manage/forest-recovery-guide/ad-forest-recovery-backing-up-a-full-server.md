@@ -1,15 +1,15 @@
 ---
 title: AD Forest Recovery - Backing up a full server 
 description: A Bare Metal Recovery (BMR) backup is recommended to prepare for a forest recovery because it can be restored to different hardware or a different operating system instance. Using Windows Server Backup you can perform a Bare-Metal Recovery (BMR) backup of your server. 
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Back up a full server
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 A Bare Metal Recovery (BMR) backup is recommended to prepare for a forest recovery because it can be restored to different hardware or a different operating system instance. Using Windows Server Backup you can perform a Bare-Metal Recovery (BMR) backup of your server.
 
@@ -75,3 +75,5 @@ Windows Server Backup isn't installed by default. In Windows Server 2012 R2, Win
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

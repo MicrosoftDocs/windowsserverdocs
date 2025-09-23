@@ -2,15 +2,13 @@
 title: cscript
 description: Reference article for the cscript command, which starts a script so that it runs in a command-line environment.
 ms.topic: reference
-ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 # cscript
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts a script to run in a command-line environment.
 

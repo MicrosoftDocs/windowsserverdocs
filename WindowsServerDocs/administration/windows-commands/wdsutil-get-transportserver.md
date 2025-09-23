@@ -2,16 +2,14 @@
 title: wdsutil get-transportserver
 description: Reference article for wdsutil get-transportserver, which displays information about a specified Transport Server.
 ms.topic: reference
-ms.assetid: de634123-0179-41b2-9c6f-726508130ff5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-transportserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about a specified Transport Server.
 

@@ -2,16 +2,14 @@
 title: Using the set command
 description: Reference article for set, which sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
 ms.topic: reference
-ms.assetid: 5def6be0-83b9-4133-bc1b-bbe6d407eca7
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # Using the set command
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
 

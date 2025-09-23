@@ -1,15 +1,12 @@
 ---
 title: Use at least SMB protocol version 3.0 for file shares that store files for virtual machines.
 description: Learn what to do when virtual machine files or virtual hard disk files are stored on a file share that does not support at least SMB protocol version 3.0.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: 4bb832b8-f1aa-4c1f-a0f2-324dd53553ea
+ms.author: roharwoo
+author: robinharwood
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # Use at least SMB protocol version 3.0 for file shares that store files for virtual machines.
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
@@ -32,3 +29,5 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *Move the files to a file share that uses at least SMB protocol version 3.0.*
+
+

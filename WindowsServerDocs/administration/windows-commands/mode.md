@@ -2,10 +2,8 @@
 title: mode
 description: Reference article for the mode command, which displays system status, changes system settings, or reconfigures ports or devices.
 ms.topic: reference
-ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -64,7 +62,7 @@ mode [<device>] [/status]
 Redirects printer output. You must be a member of the Administrators group to redirect printing.
 
 > [!NOTE]
-To set up your system so that it sends parallel printer output to a serial printer, you must use the **mode** command twice. The first time, you must use **mode** to configure the serial port. The second time, you must use **mode** to redirect parallel printer output to the serial port you specified in the first **mode** command.
+> To set up your system so that it sends parallel printer output to a serial printer, you must use the **mode** command twice. The first time, you must use **mode** to configure the serial port. The second time, you must use **mode** to redirect parallel printer output to the serial port you specified in the first **mode** command.
 
 ### Syntax
 

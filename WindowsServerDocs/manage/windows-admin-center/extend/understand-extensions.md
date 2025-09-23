@@ -1,23 +1,22 @@
 ---
 title: Understanding Windows Admin Center Extensions
 description: Understanding Windows Admin Center SDK Extensions (Project Honolulu)
-ms.topic: article
-author: daniellee-msft
-ms.author: jol
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/18/2018
+ms.custom: sfi-image-nochange
 ---
 # Understanding Windows Admin Center Extensions
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
-In case you're not yet familiar with how Windows Admin Center works, let's start with the high-level architecture. Windows Admin Center is comprised of two main components:
+In case you're not yet familiar with how Windows Admin Center works, let's start with the high-level architecture. Windows Admin Center is composed of two main components:
 
 - Lightweight **web service** that serves Windows Admin Center UI web pages to web browser requests.
 - **Gateway component** that listens for REST API requests from the web pages and relays WMI calls or PowerShell scripts to be executed on a target server or cluster.
 
 ![A diagram of a Windows Admin Center architecture.](../media/understand-extensions/wac-architecture-500px.png)
 
-The Windows Admin Center UI web pages served by the web service has two main UI components from an extensibility perspective, solutions and tools, which are implemented as extensions, and, a third extension type called gateway plugins.
+The Windows Admin Center UI web pages served by the web service have two main UI components from an extensibility perspective, solutions and tools, which are implemented as extensions, and, a third extension type called gateway plugins.
 
 ## Solution extensions
 
@@ -25,15 +24,15 @@ In the Windows Admin Center home screen, by default, you can add connections tha
 
 ![Screenshot of the Add Connections feature of the Windows Admin Center.](../media/launch/use-get-started-5.png)
 
-Each of these connection types map to a solution and solutions are defined through a type of extension called “solution” extensions. Solutions typically define a unique type of object you wish to manage through Windows Admin Center, such as servers, PCs or failover clusters. You could also define a new solution for connecting to and managing other devices such as network switches and Linux servers, or even services such as Remote Desktop Services.
+Each connection type maps to a solution, and solutions are defined through a type of extension called “solution” extensions. Solutions typically define a unique type of object you wish to manage through Windows Admin Center, such as servers, PCs or failover clusters. You could also define a new solution for connecting to and managing other devices such as network switches and Linux servers, or even services such as Remote Desktop Services.
 
 ## Tool extensions
 
-When you click on a connection in the Windows Admin Center home screen and connect, the solution extension for the selected connection type will be loaded and you will then be presented with the solution UI including a list of tools in the left navigation pane. When you click on a tool, the tool UI is loaded and displayed in the right pane.
+When you click on a connection in the Windows Admin Center home screen and connect, the solution extension for the selected connection type will be loaded and you'll then be presented with the solution UI including a list of tools in the left navigation pane. When you click on a tool, the tool UI is loaded and displayed in the right pane.
 
 ![Windows Admin Center UI architecture](../media/understand-extensions/extend-understanding-extensions-2.png)
 
-Each of these tools are defined through a second type of extension called “tool” extensions. When a tool is loaded, it can execute WMI calls or PowerShell scripts on a target server or cluster and display information in the UI or execute commands based on user input. A tool extension defines which solutions it should be displayed for, resulting in a different set of tools for each solution. If you are creating a new solution extension, you'll additionally need to write one or more tool extensions that provide functionality for the solution.
+Each tool is defined through a second type of extension called “tool” extensions. When a tool is loaded, it can execute WMI calls or PowerShell scripts on a target server or cluster and display information in the UI or execute commands based on user input. A tool extension defines which solutions it should be displayed for, resulting in a different set of tools for each solution. If you're creating a new solution extension, you'll additionally need to write one or more tool extensions that provide functionality for the solution.
 
 ![List of tools for each solution](../media/understand-extensions/extend-understanding-extensions-3.png)
 

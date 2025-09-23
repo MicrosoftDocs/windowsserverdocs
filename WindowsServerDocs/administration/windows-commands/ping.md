@@ -2,16 +2,14 @@
 title: ping
 description: Reference article for the ping command, which verifies network connectivity.
 ms.topic: reference
-ms.assetid: 49272671-2eec-4fa5-881f-65c24cfbef52
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/15/2023
 ---
 
 # ping
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Verifies IP-level connectivity to another TCP/IP computer by sending Internet Control Message Protocol (ICMP) echo Request messages. The receipt of the corresponding echo Reply messages is displayed, along with round-trip times. ping is the primary TCP/IP command used to troubleshoot connectivity, reachability, and name resolution. Used without parameters, this command displays Help content.
 
@@ -35,7 +33,7 @@ ping [/t] [/a] [/n <count>] [/l <size>] [/f] [/I <TTL>] [/v <TOS>] [/r <count>] 
 | /n `<count>` | Specifies the number of echo Request messages be sent. The default is 4. |
 | /l `<size>` | Specifies the length, in bytes, of the **Data** field in the echo Request messages. The default is 32. The maximum size is 65,500. |
 | /f | Specifies that echo Request messages are sent with the **Do not Fragment** flag in the IP header set to 1 (available on IPv4 only). The echo Request message can't be fragmented by routers in the path to the destination. This parameter is useful for troubleshooting path Maximum Transmission Unit (PMTU) problems. |
-| /I `<TTL>` | Specifies the value of the Time To Live (TTL) field in the IP header for echo Request messages sent. The default is the default TTL value for the host. The maximum *TTL* is 255. |
+| /i `<TTL>` | Specifies the value of the Time To Live (TTL) field in the IP header for echo Request messages sent. The default is the default TTL value for the host. The maximum *TTL* is 255. |
 | /v `<TOS>` | Specifies the value of the Type Of Service (TOS) field in the IP header for echo Request messages sent (available on IPv4 only). The default is 0. *TOS* is specified as a decimal value from 0 through 255. |
 | /r `<count>` | Specifies the **Record Route** option in the IP header is used to record the path taken by the echo Request message and corresponding echo Reply message (available on IPv4 only). Each hop in the path uses an entry in the **Record Route** option. If possible, specify a *count* equal to or greater than the number of hops between the source and destination. The *count* must be a minimum of 1 and a maximum of 9. |
 | /s `<count>` | Specifies that the **Internet timestamp** option in the IP header is used to record the time of arrival for the echo Request message and corresponding echo Reply message for each hop. The *count* must be a minimum of 1 and a maximum of 4. This parameter is required for link-local destination addresses. |

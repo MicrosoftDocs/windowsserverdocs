@@ -1,17 +1,13 @@
 ---
 title: Plan for retention of information on file servers
 description: Plan how you can retain information on file servers.
-ms.topic: conceptual
-author: robinharwood
-ms.author: roharwoo
-manager: femila
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/01/2022
-ms.prod: windows-server
 ---
 
 # Plan for retention of information on file servers
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A data retention policy is important for any organization. You can use the following information to plan how you retain information in your organization.
 
@@ -45,3 +41,4 @@ There are several things to consider when you've more than one file server in yo
 - [Scenario: Implement Retention of Information on File Servers](Scenario--Implement-Retention-of-Information-on-File-Servers.md)
 - [Deploy Implementing Retention of Information on File Servers (Demonstration Steps)](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)
 - [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
+

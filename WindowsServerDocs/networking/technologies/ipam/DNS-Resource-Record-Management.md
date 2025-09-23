@@ -1,16 +1,13 @@
 ---
 title: DNS Resource Record Management
 description: Learn how to manage DNS resource records by using IPAM.
-manager: brianlic
-ms.topic: article
-ms.assetid: 7b66c09d-e401-4f70-9a2a-6047dd629bfa
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # DNS Resource Record Management
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides information about managing DNS resource records by using IPAM.
 
@@ -104,6 +101,7 @@ IPAM automatically logs all DNS configuration changes that you make using the IP
 
 ## See Also
 [Manage IPAM](Manage-IPAM.md)
+
 
 
 

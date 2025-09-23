@@ -1,15 +1,12 @@
 ---
 title: Domain membership is recommended for servers running Hyper-V
 description: Learn what to do when the server is a member of a workgroup.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: 2f4578e5-0848-46b4-a50b-7dbd480b80bf
+ms.author: roharwoo
+author: robinharwood
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # Domain membership is recommended for servers running Hyper-V
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 
@@ -46,3 +43,4 @@ Joining a computer to a domain requires permissions on the computer and the doma
 - On the domain, you'll need a user account that's authorized to join the computer to the domain. You'll be prompted for the user name and password.
 
 For instructions, see [Join the Computer to the Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894430(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=190193).
+

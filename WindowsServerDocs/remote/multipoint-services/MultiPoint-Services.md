@@ -2,11 +2,10 @@
 title: MultiPoint Services
 description: Learn how to use MultiPoint Services, a solution that lets multiple users access the same system
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: overview
 ms.assetid: 426005e1-03af-4595-9418-964b0962b905
-author: evaseydl
-manager: scottman
-ms.author: evas
+author: dknappettmsft
+ms.author: daknappe
 ---
 # MultiPoint Services
 MultiPoint Services is a solution that allows multiple users, each with their own independent and familiar Windows experience, to simultaneously share one computer.

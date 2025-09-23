@@ -1,11 +1,10 @@
 ---
 title: Storage Migration Service known issues
 description: Known issues and troubleshooting support for Storage Migration Service, such as how to collect logs for Microsoft Support.
-author: nedpyle
-ms.author: nedpyle
-manager: tiaascs
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/24/2023
-ms.topic: article
+ms.topic: troubleshooting-known-issue
 ---
 # Storage Migration Service known issues
 
@@ -930,7 +929,7 @@ Windows Server 2003, you need to perform a manual cutover using the steps descri
    the computer from the domain after
    [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
 
-## Transfer validation warning "The destination proxy wasn't found"
+### Transfer validation warning "The destination proxy wasn't found"
 
 If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it fails to register and display validation error "The destination proxy wasn't found".
 
@@ -942,6 +941,28 @@ Register-SMSProxy -ComputerName <destination server FQDN> -Force
 
 Validation now passes.
 
+###  Missing disks on Windows Server 2008 R2 failover cluster source
+
+After inventorying a Windows Server 2008 R2 failover cluster source, you do not see all the clustered disks. This iscaused by the default file server role in Windows Server 2008 R2 will always pick one disk as a dependency, but not the remaining disks assigned to a file server role.
+
+To resolve this issue, ensure all the disks assigned to the file role are added as a dependency in the file server role. 
+
+1. Open failover cluster manager (cluadmin.msc).
+2. Right click on a clustered disk and click **Properties**
+3. On the Dependencies tab, add an **AND** line for the disk to the file server role.
+4. repeat for all other clustered disks.
+5. Close the snap-in and inventory the source again. All disks should now appear and be available for transfer. 
+
+### Cut over of Windows Server 2022 fails with error 5 at computer rename
+
+After you start the cut over process, the rename of a Windows Server 2022 source computer fails to complete at 41%. If migrating to a Windows Server 2022 destination computer, rename fails to complete at 75%. Examining the SMS debug logs shows `error 5: access denied`.
+
+This issue occurs after installing the [March 12, 2024 - KB5035857 Cumulative Update for Windows Server 2022](https://support.microsoft.com/help/5035857). A solution for this regression is currently under investigation.
+
+To work around this issue, use the steps in [Manual cutover](cutover.md#manual-cutover).
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
+
+

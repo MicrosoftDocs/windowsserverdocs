@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Virtual network peering"
 title: Virtual network peering
-manager: grcusanz
 ms.topic: how-to
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/04/2021
 ---
 
 # Virtual network peering
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Virtual network peering lets you connect two virtual networks seamlessly. Once peered, for connectivity purposes, the virtual networks appear as one.
 
@@ -52,7 +49,7 @@ After you peer virtual networks, resources in either virtual network can directl
 - Virtual machines in a virtual network can access the internal load-balancer in the peered virtual network.
 
 You can apply access control lists (ACLs) in either virtual network to block access to other virtual networks or subnets if desired. If you open full connectivity between peered virtual networks (which is the default option), you
-can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell).
+can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure/azure-local/manage/use-datacenter-firewall-powershell?context=/windows-server/context/windows-server-edge-networking).
 
 ## Service chaining
 

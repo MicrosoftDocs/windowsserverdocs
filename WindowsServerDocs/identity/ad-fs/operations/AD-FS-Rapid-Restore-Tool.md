@@ -1,13 +1,11 @@
 ---
 title: Active Directory Federation Services Rapid Restore tool
 description: "Learn about the Active Directory Federation Services (AD FS) Rapid Restore tool and restore AD FS data without a full backup or export an AD FS configuration."
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
-ms.custom: inhenkel
-ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
+ms.date: 04/08/2025
+ms.topic: how-to
+ms.custom:
+  - inhenkel
+  - sfi-ropc-nochange
 ---
 
 # Active Directory Federation Services Rapid Restore tool
@@ -55,7 +53,7 @@ The `RngCryptoServiceProvider` Class generates the salt (binary blob) used by AE
 To get started with the AD FS Rapid Restore tool, first review the following system and tool requirements.
 
 - The tool works for AD FS in Windows Server 2016 and later.
-- The tool requires .NET framework 4.0 or later.
+- The tool requires .NET framework 4.6 or later.
 - If you use a WID, the tool must run on the primary AD FS server. Use the `Get-AdfsSyncProperties` cmdlet to check if your server is the primary server.
 - A restore must run on an AD FS server of the same version as the backup server, and use the same Active Directory account as the AD FS service account.
 
@@ -113,7 +111,7 @@ Backup-ADFS -StorageType {FileSystem | Azure}
 
 The following list describes the parameter details for the Backup-ADFS cmdlet.
 
-- `BackupDKM`: Backs up the Active Directory DKM container that contains the AD FS keys in the default configuration (automatically generated token signing and decrypting certificates). This approach uses the Azure AD `ldifde` tool to export the Azure AD container and all its subtrees.
+- `BackupDKM`: Backs up the Active Directory DKM container that contains the AD FS keys in the default configuration (automatically generated token signing and decrypting certificates). This approach uses the Microsoft Entra `ldifde` tool to export the Microsoft Entra container and all its subtrees.
 
 - `StorageType <string>`: When the user performs the backup, they select the backup location:
 
@@ -324,6 +322,14 @@ A log file is created for every backup and restore operation. The log files can 
 ## Version release history
 
 The following sections identify version details for the AD FS Rapid Restore tool.
+
+### Version 2.0.2464.1
+
+Release: December 2023
+
+**Fixed issues:**
+
+- Bug fix: Distinguish CNG & CSP keys during restore
 
 ### Version 1.0.82.3
 

@@ -1,15 +1,13 @@
 ---
-title: break (shadow copy volume)
+title: break (diskshadow)
 description: Reference article for the break command, which disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
 ms.topic: reference
-ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: alalve
+author: xelu86
+ms.date: 10/12/2023
 ---
 
-# break (shadow copy volume)
+# break (diskshadow)
 
 Disassociates a shadow copy volume from VSS and makes it accessible as a regular volume. The volume can then be accessed using a drive letter (if assigned) or volume name. If used without parameters, **break** displays help at the command prompt.
 
@@ -28,8 +26,8 @@ break [writable] <setid>
 
 | Parameter | Description |
 | --------- | ----------- |
-| [writable] | Enables read/write access on the volume. |
-| \<setid> | Specifies the ID of the shadow copy set. The alias of the shadow copy ID, which is stored as an environment variable by the **load metadata** command, can be used in the *SetID* parameter. |
+| writable | Enables read/write access on the volume. |
+| `<setid>` | Specifies the ID of the shadow copy set. The alias of the shadow copy ID, which is stored as an environment variable by the **load metadata** command, can be used in the *SetID* parameter. |
 
 ## Examples
 

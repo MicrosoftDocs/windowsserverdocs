@@ -1,17 +1,13 @@
 ---
 title: Realm Names
 description: This topic provides an overview of using realm names in Network Policy Server connection request processing in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # Realm Names
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
 
@@ -82,3 +78,5 @@ Value: the FQDN for the domain, like test.contoso.com
 > Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 Some non-Microsoft network access servers delete or modify the domain name as specified by the user. As the result, the network access request is authenticated against the default domain, which might not be the domain for the user's account. To resolve this problem, configure your RADIUS servers to change the user name into the correct format with the accurate domain name.
+
+

@@ -1,16 +1,13 @@
 ---
 title: Step 1 Plan the Remote Access Infrastructure
 description: Learn about the steps for planning an infrastructure that you can use to set up a single Remote Access server for remote management of DirectAccess clients.
-manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Remote Access Infrastructure
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!NOTE]
 > Windows Server 2016 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.

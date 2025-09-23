@@ -2,10 +2,8 @@
 title: bdehdcfg
 description: Reference article for the bdehdcfg command, which prepares a hard drive with the partitions necessary for BitLocker Drive Encryption.
 ms.topic: reference
-ms.assetid: 4c92cd74-188e-4fec-b7c4-fe4e8903e032
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/16/2017
 ---
 
@@ -29,7 +27,7 @@ Prepares a hard drive with the partitions necessary for BitLocker Drive Encrypti
 ## Syntax
 
 ```
-bdehdcfg [–driveinfo <drive_letter>] [-target {default|unallocated|<drive_letter> shrink|<drive_letter> merge}] [–newdriveletter] [–size <size_in_mb>] [-quiet]
+bdehdcfg [-driveinfo <drive_letter>] [-target {default|unallocated|<drive_letter> shrink|<drive_letter> merge}] [-newdriveletter] [-size <size_in_mb>] [-quiet]
 ```
 
 #### Parameters

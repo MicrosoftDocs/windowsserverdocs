@@ -1,11 +1,10 @@
 ---
 title: Create a Standard User Account
 description: Create a basic user account for MultiPoint Services
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 1e113666-e45f-48b6-aad8-42c361c9046d
-author: evaseydl
-manager: scottman
-ms.author: evas
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 09/14/2020
 ---
 # Create a Standard User Account

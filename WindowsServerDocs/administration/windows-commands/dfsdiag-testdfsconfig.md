@@ -2,16 +2,14 @@
 title: dfsdiag testdfsconfig
 description: Reference article for the dfsdiag testdfsconfig, which checks the configuration of a Distributed File System (DFS) namespace.
 ms.topic: reference
-ms.assetid: 106aeeb9-ea79-4e6e-829c-eca06309bab2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 06/30/2022
 ---
 
 # dfsdiag testdfsconfig
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Checks the configuration of a Distributed File System (DFS) namespace by performing the following actions:
 

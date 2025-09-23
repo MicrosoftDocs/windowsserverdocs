@@ -1,10 +1,11 @@
 ---
 title: Windows Admin Center SDK Case Study - Lenovo
 description: Windows Admin Center SDK Case Study - Lenovo
-ms.topic: article
-author: daniellee-msft
-ms.author: jol
+ms.topic: partner-tools
+author: robinharwood
+ms.author: roharwoo
 ms.date: 1/7/2019
+ms.custom: sfi-image-nochange
 ---
 # Lenovo XClarity Integrator Extension
 
@@ -40,3 +41,4 @@ The tool extension for hyperconverged clusters provides the disk/storage pool ma
 In version 2.1, Lenovo extensions introduced role-based access control capabilities. These capabilities are enabled if Lenovo XClarity Administrator is applied for hardware management.
 
 Learn more about the Lenovo XClarity Integrator offerings for Windows Admin Center on the [Lenovo website](https://support.lenovo.com/us/en/solutions/ht507549).
+

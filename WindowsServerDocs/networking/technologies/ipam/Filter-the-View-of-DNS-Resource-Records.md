@@ -1,16 +1,12 @@
 ---
 title: Filter the View of DNS Resource Records
 description: Learn how to filter the view of DNS resource records in the IPAM client console.
-manager: brianlic
-ms.topic: article
-ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Filter the View of DNS Resource Records
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to filter the view of DNS resource records in the IPAM client console.
 

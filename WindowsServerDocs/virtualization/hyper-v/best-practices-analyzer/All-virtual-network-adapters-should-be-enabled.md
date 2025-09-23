@@ -1,15 +1,12 @@
 ---
 title: All virtual network adapters should be enabled
 description: Learn what to do when one or more virtual network adapters associated with a physical network adapter are disabled in the management operating system.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: b17d647d-a34a-44de-ada6-01a2bf5eeb48
+ms.author: daknappe
+author: dknappettmsft
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # All virtual network adapters should be enabled
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 
@@ -35,6 +32,8 @@ The management operating system can't connect to a physical (external) network u
 ## Resolution
 
 *Use Network &  Internet Settings to enable the virtual network adapter. Or, use Virtual Switch Manager to reconfigure the external virtual switch so that it is not shared with the management operating system.*
+
+
 
 
 

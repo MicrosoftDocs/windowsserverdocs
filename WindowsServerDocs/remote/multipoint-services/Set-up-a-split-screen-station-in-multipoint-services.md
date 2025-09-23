@@ -2,11 +2,10 @@
 title: Set up a split-screen station
 description: Describes how to set up MultiPoint Services so two users can share a single system
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 35d1d434-79b2-4e0a-835f-d94ed8ee6b21
-author: evaseydl
-manager: scottman
-ms.author: evas
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Set up a split-screen station
 You can set up a split-screen station so two users can simultaneously use the system.

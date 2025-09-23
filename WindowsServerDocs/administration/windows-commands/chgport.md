@@ -2,15 +2,13 @@
 title: chgport
 description: Reference article for the chgport command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
 ms.topic: reference
-ms.assetid: 8adb145f-6c53-4549-9253-9a966794a4f3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 # chgport
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists or changes the COM port mappings to be compatible with MS-DOS applications.
 

@@ -2,10 +2,9 @@
 title: Enable Intel Performance Monitoring Hardware in a Hyper-V Virtual Machine
 description: How to enable Intel's Performance Monitoring Hardware in a Hyper-V Machine. Also touches on how enabling performance monitoring hardware effects live migration.
 ms.reviewer: ifufondu
-author: ifeomaufondu-ms
-ms.author: ifufondu
-manager: chhuybre
-ms.topic: article
+author: dknappettmsft
+ms.author: daknappe
+ms.topic: how-to
 ms.date: 11/30/2020
 ---
 
@@ -62,3 +61,4 @@ Set-VMProcessor MyVMName -Perfmon @()
 ## Effects of enabling performance monitoring hardware on save/restore, export, and live migration
 
 Microsoft does not recommend live migrating or saving/restoring virtual machines with performance monitoring hardware between systems with different Intel hardware. The specific behavior of performance monitoring hardware is often non-architectural and changes between Intel hardware systems.  Moving a running virtual machine between different systems can result in unpredictable behavior of the non-architectural counters.
+

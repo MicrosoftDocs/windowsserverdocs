@@ -1,17 +1,13 @@
 ---
 title: Create Content Server Data Packages for Web and File Content (Optional)
 description: Learn how to prehash content on Web and file servers, and then create data packages to import on your hosted cache server.
-manager: brianlic
-ms.topic: article
-ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Create Content Server Data Packages for Web and File Content (Optional)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this procedure to prehash content on Web and file servers, and then create data packages to import on your hosted cache server.
 

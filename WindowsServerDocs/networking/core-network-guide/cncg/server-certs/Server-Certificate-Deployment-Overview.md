@@ -1,16 +1,13 @@
 ---
 title: Server Certificate Deployment Overview
 description: Learn about the Server certificate deployment components and the deployment process.
-manager: brianlic
-ms.topic: article
-ms.assetid: ca5c3e04-ae25-4590-97f3-0376a9c2a9a2
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # Server Certificate Deployment Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic contains the following sections.
 

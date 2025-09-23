@@ -2,15 +2,13 @@
 title: create volume raid
 description: Reference article for the create volume raid command, which creates a RAID-5 volume using three or more specified dynamic disks.
 ms.topic: reference
-ms.assetid: 9f257950-9240-4d5f-9537-8ad653d48ebf
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 # create volume raid
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a RAID-5 volume using three or more specified dynamic disks. After you create the volume, the focus automatically shifts to the new volume.
 

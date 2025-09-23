@@ -1,17 +1,15 @@
 ---
 title: fsutil wim
 description: Reference article for the fsutil wim command, which provides functions to discover and manage Windows Image (WIM)-backed files.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: 6c6ff819-f349-4aea-b0be-1f637f631736
+ms.author: alalve
+author: xelu86
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil wim
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
+
 
 Provides functions to discover and manage Windows Image (WIM)-backed files.
 

@@ -1,14 +1,12 @@
 ---
 title: Enable optimized moves of redirected folders
 description: How to perform an optimized move of redirected folders to a new file share.
-ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/10/2018
 ---
 # Enable optimized moves of redirected folders
-
->Applies to: Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to perform an optimized move of redirected folders (Folder Redirection) to a new file share. If you enable this policy setting, when an administrator moves the file share hosting redirected folders and updates the target path of the redirected folders in Group Policy, the cached content is simply renamed in the local Offline Files cache without any delays or potential data loss for the user.
 

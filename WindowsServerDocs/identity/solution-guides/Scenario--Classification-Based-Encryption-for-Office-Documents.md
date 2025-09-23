@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Scenario: Classification-Based Encryption for Office Documents"
-ms.assetid: 73542e1c-53ef-4ddb-89b1-bc563b2bfb49
 title: Scenario Classification-Based Encryption for Office Documents
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 02/13/2024
+ms.topic: example-scenario
 ---
 
 # Scenario: Classification-Based Encryption for Office Documents
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Protection of sensitive information is mainly about mitigating risk for the organization. Various compliance regulations, such as the Health Insurance Portability and Accountability Act (HIPAA) and Payment Card Industry Data Security Standard (PCI-DSS), dictate encryption of information, and there are numerous business reasons to encrypt sensitive business information. However, encrypting information is expensive, and it might impair business productivity. Thus, organizations tend to have different approaches and priorities for encrypting their information.
 

@@ -1,16 +1,15 @@
 ---
 description: Learn more about How LDAP Server Cookies Are Handled
 title: How LDAP server cookies are handled
-author: iainfoulds
-ms.author: daveba
-ms.date: 04/01/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # How LDAP server cookies are handled
 
-Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In LDAP, some queries result in a large result set. Such queries pose certain challenges to Windows Server.
 
@@ -18,7 +17,7 @@ Collecting and building these large result sets is significant work. Many of the
 
 Another challenge is that result sets with tens of thousands of objects require enormous amounts of storage space, easily several hundred Mega-Bytes. These then require lots of virtual address space. The transfer over network encounters issues because the whole effort is lost when the TCP session breaks down in transit.
 
-These capacity and logistic issues encouraged the Microsoft LDAP developers to create an LDAP extension known as "Paged Query". Paged Query implements an LDAP control to separate one huge query into chunks of smaller result sets. Paged Query is an RFC standard: [RFC 2696](http://www.ietf.org/rfc/rfc2696).
+These capacity and logistic issues encouraged the Microsoft LDAP developers to create an LDAP extension known as "Paged Query". Paged Query implements an LDAP control to separate one huge query into chunks of smaller result sets. Paged Query is an RFC standard: [RFC 2696](https://datatracker.ietf.org/doc/rfc2696/).
 
 ## Cookie handling on client
 

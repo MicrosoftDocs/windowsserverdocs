@@ -3,14 +3,14 @@ title: Roles, Role Services, and Features not in Windows Server - Server Core
 description: Learn about the roles and features not included in the Server Core installation option for Windows Server.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
-ms.author: artemp
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/23/2018
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 The following roles, role services, and features have been removed from the Server Core installation option of Windows Server. Use this information to help figure out if the Server Core option works for your environment.
 
@@ -83,3 +83,4 @@ Note that some Remote Desktop role services are included in Server Core (Connect
 - Windows TIFF IFilter (**Windows-TIFF-IFilter**)
 - Wireless LAN Service (**Wireless-Networking**)
 - XPS Viewer (**XPS-Viewer**)
+

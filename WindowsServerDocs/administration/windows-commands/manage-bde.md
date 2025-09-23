@@ -2,10 +2,8 @@
 title: manage-bde
 description: Reference article for the manage-bde command, which turns on or turns off BitLocker, specifies unlock mechanisms, updates recovery methods, and unlocks BitLocker-protected data drives.
 ms.topic: reference
-ms.assetid: 276a7841-7289-48d4-a57d-bc7c300affbb
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -19,8 +17,8 @@ Turns on or turns off BitLocker, specifies unlock mechanisms, updates recovery m
 ## Syntax
 
 ```
-manage-bde [-status] [–on] [–off] [–pause] [–resume] [–lock] [–unlock] [–autounlock] [–protectors] [–tpm]
-[–setidentifier] [-forcerecovery] [–changepassword] [–changepin] [–changekey] [-keypackage] [–upgrade] [-wipefreespace] [{-?|/?}] [{-help|-h}]
+manage-bde [-status] [-on] [-off] [-pause] [-resume] [-lock] [-unlock] [-autounlock] [-protectors] [-tpm]
+[-setidentifier] [-forcerecovery] [-changepassword] [-changepin] [-changekey] [-keypackage] [-upgrade] [-wipefreespace] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters

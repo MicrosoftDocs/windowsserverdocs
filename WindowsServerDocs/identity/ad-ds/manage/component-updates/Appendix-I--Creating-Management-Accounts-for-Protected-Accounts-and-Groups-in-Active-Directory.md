@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory"
-ms.assetid: 13fe87d9-75cf-45bc-a954-ef75d4423839
 title: Appendix I - Creating Management Accounts for Protected Accounts and Groups in Active Directory
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 One of the challenges in implementing an Active Directory model that does not rely on permanent membership in highly privileged groups is that there must be a mechanism to populate these groups when temporary membership in the groups is required. Some privileged identity management solutions require that the software's service accounts are granted permanent membership in groups such as DA or Administrators in each domain in the forest. However, it is technically not necessary for Privileged Identity Management (PIM) solutions to run their services in such highly privileged contexts.
 

@@ -1,12 +1,9 @@
 ---
 description: "Learn more about: Create a Rule to Send an Authentication Method Claim"
-ms.assetid: 96b9f4e6-f01c-4517-8299-017d187d447e
 title: Create a Rule to Send an Authentication Method Claim
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 

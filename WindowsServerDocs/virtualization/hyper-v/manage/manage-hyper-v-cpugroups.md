@@ -1,17 +1,13 @@
 ---
 title: Virtual Machine Resource Controls
 description: Using VM CPU Groups
-ms.author: benarm
-author: BenjaminArmstrong
-ms.prod: windows-server
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/18/2018
-ms.topic: article
-ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
+ms.topic: how-to
 ---
 
 # Virtual Machine Resource Controls
-
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article describes Hyper-V resource and isolation controls for virtual machines.  These capabilities, which we'll refer to as Virtual Machine CPU Groups, or just "CPU groups", were introduced in Windows Server 2016.  CPU groups allow Hyper-V administrators to better manage and allocate the host's CPU resources across guest virtual machines.  Using CPU groups, Hyper-V administrators can:
 
@@ -23,7 +19,7 @@ This article describes Hyper-V resource and isolation controls for virtual machi
 
 ## Managing CPU Groups
 
-CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team's blog in the posting [Introducing the Host Compute Service (HCS)](https://blogs.technet.microsoft.com/virtualization/2017/01/27/introducing-the-host-compute-service-hcs/).
+CPU groups are managed through the Hyper-V Host Compute Service, or HCS. A great description of the HCS, its genesis, links to the HCS APIs, and more is available on the Microsoft Virtualization team's blog in the posting [Introducing the Host Compute Service (HCS)](https://techcommunity.microsoft.com/blog/containers/introducing-the-host-compute-service-hcs/382332).
 
 >[!NOTE]
 >Only the HCS may be used to create and manage CPU groups; the Hyper-V Manager applet, WMI and PowerShell management interfaces don't support CPU groups.
@@ -377,3 +373,5 @@ CpuGroupId VmName VmId
 36ab08cb-3a76-4b38-992e-000000000003 P1 973B9426-0711-4742-AD3B-D8C39D6A0DEC
 36ab08cb-3a76-4b38-992e-000000000004 P2 A593D93A-3A5F-48AB-8862-A4350E3459E8
 ```
+
+

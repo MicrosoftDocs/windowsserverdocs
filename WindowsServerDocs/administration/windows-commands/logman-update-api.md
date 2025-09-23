@@ -2,16 +2,14 @@
 title: logman update api
 description: Reference article for the logman update api command, which updates the properties of an existing API tracking data collector.
 ms.topic: reference
-ms.assetid: 6f322e52-0f9f-42b1-bd64-8b8f8fe086fc
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # logman update api
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Updates the properties of an existing API tracing data collector.
 

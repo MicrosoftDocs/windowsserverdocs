@@ -1,14 +1,12 @@
 ---
 title: Extension support for the management of Windows Defender Application Control (WDAC) enforced infrastructure
 description: Develop an extension using Windows Admin Center SDK - Ensuring your extension can manage WDAC-enforced servers and clusters
-ms.topic: article
+ms.topic: best-practice
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 06/27/2023
 ---
 # Extension support for the management of Windows Defender Application Control (WDAC) enforced infrastructure
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center supports the management of Windows Defender Application Control (WDAC) enforced infrastructure at the platform level. Learn more about [managing WDAC enforced infrastructure in Windows Admin Center](../../use/manage-application-control-infrastructure.md).
 

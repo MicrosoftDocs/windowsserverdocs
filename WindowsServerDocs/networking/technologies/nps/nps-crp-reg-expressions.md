@@ -1,17 +1,13 @@
 ---
 title: Use Regular Expressions in NPS
 description: This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
-manager: brianlic
-ms.topic: article
-ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
-ms.author: jgerend
-author: jasongerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/16/2019
 ---
 
 # Use Regular Expressions in NPS
-
->Applies to: Windows Server 2022,  Windows Server 2019, Windows Server 2016
 
 This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
 

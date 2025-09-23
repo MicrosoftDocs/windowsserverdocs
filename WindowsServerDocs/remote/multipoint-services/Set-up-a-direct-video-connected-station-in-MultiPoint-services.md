@@ -2,11 +2,10 @@
 title: Set up a direct-video-connected station in MultiPoint Services
 description: Learn how to create a direct-video-connected station in MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 82ba3517-9743-4cde-8eea-63a17edb016f
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Set up a direct-video-connected station in MultiPoint Services
 On a direct video-connected station, the monitor is connected directly to a video port on the MultiPoint Server computer. A keyboard and mouse are then connected to a USB hub, and are associated with the monitor.

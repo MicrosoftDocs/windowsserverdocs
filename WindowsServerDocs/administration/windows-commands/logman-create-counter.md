@@ -2,16 +2,14 @@
 title: logman create counter
 description: Reference article for the logman create counter command, which creates a counter data collector.
 ms.topic: reference
-ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # logman create counter
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a counter data collector.
 

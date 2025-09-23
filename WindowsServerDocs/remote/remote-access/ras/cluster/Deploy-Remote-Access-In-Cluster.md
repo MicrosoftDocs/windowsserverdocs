@@ -1,15 +1,12 @@
 ---
 title: Deploy Remote Access in a Cluster
 description: Learn about the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing or with an external load balancer.
-manager: dougkim
-ms.topic: article
-ms.author: jgerend
-author: JasonGerend
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Cluster
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service \(RAS\) VPN into a single Remote Access role. You can deploy Remote Access in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing \(NLB\) or with an external load balancer \(ELB\), such as F5 Big\-IP.
 
@@ -95,7 +92,7 @@ The following are known issues when configuring a cluster scenario:
 
     To resolve this issue:
 
-    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](https://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).
+    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](/power-platform/admin/backup-restore-environments).
 
     2.  Back up your Remote Access GPOs using the downloaded script Backup\-RemoteAccess.ps1
 

@@ -2,10 +2,8 @@
 title: bitsadmin setpriority
 description: Reference article for the bitsadmin setpriority command, which sets the priority of the specified job.
 ms.topic: reference
-ms.assetid: 90788363-01a2-4d7c-a560-a3eba45b5e9e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: mosagie
+author: meaghanlewis
 ms.date: 10/16/2017
 ---
 

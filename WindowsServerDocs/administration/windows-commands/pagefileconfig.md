@@ -2,16 +2,14 @@
 title: pagefileconfig
 description: Reference article for the pagefileconfig command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.topic: reference
-ms.assetid: a18c98ce-a0dc-41cc-8d44-dc7eee0131e8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # pagefileconfig
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2003, Windows Server 2003 R2, Windows Server 2003 with SP1, Windows Server 2003 with SP2
+
 
 >[!IMPORTANT]
 > This command has been deprecated.

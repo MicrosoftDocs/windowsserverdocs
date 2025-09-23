@@ -2,11 +2,10 @@
 title: View User Connection Status
 description: Learn how to view user status in MultiPoint Services
 ms.date: 07/08/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 426df382-07a0-4be1-a87a-12e63bd8157b
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: dknappettmsft
+ms.author: daknappe
 ---
 # View User Connection Status
 Use the **Stations** tab to determine the status of a standard or other administrative user's connection to a MultiPoint Services station.

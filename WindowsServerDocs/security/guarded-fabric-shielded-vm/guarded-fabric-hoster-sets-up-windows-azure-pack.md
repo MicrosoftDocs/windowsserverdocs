@@ -1,11 +1,9 @@
 ---
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
 description: "Learn more about: Shielded VMs - Hosting service provider sets up Windows Azure Pack"
-ms.topic: article
-ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -111,3 +109,5 @@ In order to allow tenants to create VMs in WAP, you must first create a hosting 
 
 - [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+
+

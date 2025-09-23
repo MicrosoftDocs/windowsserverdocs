@@ -2,8 +2,8 @@
 title: Licensing content for Windows Server
 description: Learn about the Windows Server licensing agreements.
 ms.topic: reference
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/11/2019
 ---
 

@@ -2,11 +2,10 @@
 title: Glossary
 description: Defines words, terms, and concepts in MultiPoint Services
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: glossary
 ms.assetid: 807bce1d-b993-49c6-9783-b01a3c55846c
-author: evaseydl
-manager: scottman
-ms.author: evas
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Glossary
 **associate a station**

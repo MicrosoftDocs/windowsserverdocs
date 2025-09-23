@@ -1,21 +1,18 @@
 ---
 title: Desktop hosting service 
 description: Learn about the desktop hosting service's components in Windows Server.
-ms.author: helohr
-ms.date: 07/06/2018
-ms.topic: article
-author: heidilohr
-manager: femila
+author: dknappettmsft
+ms.date: 7/3/2024
+ms.topic: concept-article
+ms.author: daknappe
 ---
 # Desktop hosting service
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article will tell you more about the desktop hosting service's components.
 
 ## Tenant environment
 
-As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant envrionment.
+As described in [Remote Desktop service roles](rds-roles.md), each role plays a distinct part in the tenant environment.
 
 The provider's desktop hosting service is implemented as a set of isolated tenant environments. Each tenant's environment consists of a storage container, a set of virtual machines, and a combination of Azure services, all communicating over an isolated virtual network. Each virtual machine contains one or more of the components that make up the tenant's hosted desktop environment. The following subsections describe the components that make up each tenant's hosted desktop environment.
 
@@ -27,14 +24,14 @@ The tenant's forest does not require any trust relationship with the provider's 
 
 There are multiple ways to deploy AD DS:
 
-1. Enable Azure Active Directory Domain Services in the tenant's virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
+1. Enable Microsoft Entra Domain Services in the tenant's virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Microsoft Entra ID.
 2. Set up a stand-alone AD DS server in the tenant's virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
 3. Create a site-to-site VPN connection to an AD DS server located on the tenant's premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
 
 For more information, see the following articles:
 
-* [Azure Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
-* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Microsoft Entra Domain Services documentation](/azure/active-directory-domain-services/)
+* [Desktop Hosting Reference Architecture Guide](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 * [Create a site-to-site connection in the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
 ## SQL database
@@ -68,3 +65,4 @@ For more information, see the following articles:
 ### User profile disks
 
 User profile disks allow users to save personal settings and files when they are signed in to a session on an RD Session Host server in one collection, then access the same settings and files when signing in to a different [RD Session Host](rds-roles.md#remote-desktop-session-host) server in the collection. When the user first signs in, the tenant's file server creates a user profile disk that gets mounted to the RD Session Host server that the user is currently connected to. For each subsequent sign-in, the user profile disk is mounted to the appropriate RD Session host server, and it is unmounted with each sign-out. Only the user can access the profile disk's contents.
+

@@ -3,8 +3,7 @@ title: schtasks commands
 description: Reference article for the schtasks commands, which schedules commands and programs to run periodically or at a specific time, adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 ms.topic: reference
 ms.author: alalve
-author: JasonGerend
-manager: mtillman
+author: xelu86
 ms.date: 02/01/2023
 ---
 

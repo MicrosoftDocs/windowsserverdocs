@@ -1,17 +1,13 @@
 ---
 title: NPS Templates
 description: This topic provides an overview of Network Policy Server Templates in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: fdfc0df1-21c7-492c-9fad-38fe9c7d935a
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # NPS Templates
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Network Policy Server \(NPS\) templates allow you to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs.
 
@@ -36,3 +32,4 @@ To create a template, open the NPS console, right-click a template type, such as
 You can use a template that you've created in **Templates Management** by navigating to a location in the NPS console where the template can be applied. For example, if you create a new Shared Secrets template that you want to apply to a RADIUS client configuration, in **RADIUS Clients and Servers** and **RADIUS Clients**, open the RADIUS client properties. In **Select an existing Shared Secrets template**, select the template you previously created from the list of available templates.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

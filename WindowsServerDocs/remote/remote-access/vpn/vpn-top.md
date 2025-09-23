@@ -1,16 +1,14 @@
 ---
 title: Virtual Private Networking (VPN)
 description: Learn how you can use RAS Gateway as a single-tenant VPN server.
-ms.topic: article
+ms.topic: overview
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
 ms.date: 11/05/2018
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 ---
 
 # Virtual Private Networking (VPN)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 ## RAS Gateway as a Single Tenant VPN Server
 
@@ -27,7 +25,7 @@ When you install the Remote Access server role with the Add Roles and Features W
 When you install the **DirectAccess and VPN (RAS)** role service, you are deploying the Remote Access Service Gateway (**RAS Gateway**). You can deploy RAS Gateway as a single tenant RAS Gateway virtual private network (VPN) server that provides many advanced features and enhanced functionality.
 
 >[!NOTE]
->You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking (SDN), or as a DirectAccess server. For more information, see [RAS Gateway](../ras-gateway/ras-gateway.md), [Software Defined Networking (SDN)](/azure-stack/hci/concepts/software-defined-networking), and [DirectAccess](../directaccess/directaccess.md).
+>You can also deploy RAS Gateway as a Multitenant VPN server for use with Software Defined Networking (SDN), or as a DirectAccess server. For more information, see [RAS Gateway](../ras-gateway/ras-gateway.md), [Software Defined Networking (SDN)](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-remote), and [DirectAccess](../directaccess/directaccess.md).
 
 ## Related topics
 - [Always On VPN features and functionality](vpn-map-da.md): In this topic, you learn about the features and functionality of Always On VPN.

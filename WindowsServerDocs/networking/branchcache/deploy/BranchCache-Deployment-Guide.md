@@ -1,16 +1,12 @@
 ---
 title: BranchCache Deployment Guide
 description: Learn how to deploy BranchCache in Windows Server 2016.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
-ms.author: jgerend
-author: JasonGerend
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # BranchCache Deployment Guide
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this guide to learn how to deploy BranchCache in Windows Server 2016.
 

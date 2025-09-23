@@ -1,9 +1,9 @@
 ---
 title: Use PowerShell to manage Windows Admin Center settings
 description: Learn how to use PowerShell to Manage Windows Admin Center Settings and Configuration
-ms.topic: article
-author: jwwool
-ms.author: jeffrew
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 11/21/2019
 ---
 
@@ -23,3 +23,4 @@ If you have a large organization with multiple Windows Admin Center servers, you
 
 * [Deploy a highly available Windows Admin Center gateway on a cluster](../deploy/high-availability.md)
 * [Deploy a Windows Admin Center gateway in Azure using Cloud Shell](../azure/deploy-wac-in-azure.md)
+

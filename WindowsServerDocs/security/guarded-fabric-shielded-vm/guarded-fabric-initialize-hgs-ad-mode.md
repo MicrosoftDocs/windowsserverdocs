@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Initialize HGS using Admin-trusted attestation"
 title: Initialize HGS using Admin-trusted attestation
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Initialize HGS using Admin-trusted attestation
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!IMPORTANT]
 >Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
@@ -27,6 +24,8 @@ These steps vary depending on whether you are initializing HGS in a new forest o
 2. [Configure DNS forwarding in the fabric domain](guarded-fabric-configuring-fabric-dns.md)
 
 3. [Configure DNS forwarding and a one-way trust in the HGS domain](guarded-fabric-configure-dns-forwarding-and-trust.md)
+
+
 
 
 

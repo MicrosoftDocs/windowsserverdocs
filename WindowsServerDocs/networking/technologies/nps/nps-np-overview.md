@@ -1,17 +1,13 @@
 ---
 title: Network Policies
 description: This topic provides an overview of network policies for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
-manager: brianlic
-ms.topic: article
-ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # Network Policies
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for an overview of network policies in NPS.
 
@@ -64,3 +60,4 @@ When you add a new network policy by using the NPS console, you must use the New
 For examples of pattern-matching syntax to specify network policy attributes, see [Use Regular Expressions in NPS](nps-crp-reg-expressions.md).
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

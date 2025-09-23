@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: Create OS specialization answer file"
 title: Create OS specialization answer file
-ms.topic: article
-ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
+ms.custom: sfi-image-nochange
 ---
 
 # Create OS specialization answer file
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In preparation to deploy shielded VMs, you may need to create an operating system specialization answer file. On Windows, this is commonly known as the "unattend.xml" file. The **New-ShieldingDataAnswerFile** Windows PowerShell function helps you do this. You can then use the answer file when you're creating shielded VMs from a template by using System Center Virtual Machine Manager (or any other fabric controller).
 
@@ -126,3 +123,5 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $ro
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+
+

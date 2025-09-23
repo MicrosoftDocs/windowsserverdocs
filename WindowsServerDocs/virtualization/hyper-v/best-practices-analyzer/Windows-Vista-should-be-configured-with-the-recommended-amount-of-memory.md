@@ -1,15 +1,12 @@
 ---
 title: Windows Vista should be configured with the recommended amount of memory
 description: Learn what to do when a virtual machine running Windows Vista is configured with less than the recommended amount of RAM, which is 1 GB.
-ms.author: benarm
-author: BenjaminArmstrong
-ms.topic: article
-ms.assetid: 64f4e53b-4adb-4e1d-bc48-c24f5f9d222f
+ms.author: daknappe
+author: dknappettmsft
+ms.topic: best-practice
 ms.date: 8/16/2016
 ---
 # Windows Vista should be configured with the recommended amount of memory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
@@ -62,3 +59,5 @@ Set-VMMemory <MyVM> -StartupBytes 1GB
 
 ## See Also
 [Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
+
+

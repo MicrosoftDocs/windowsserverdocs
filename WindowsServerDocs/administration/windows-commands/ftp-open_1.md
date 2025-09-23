@@ -2,16 +2,14 @@
 title: ftp open
 description: Reference article for the ftp open command, which connects to the specified ftp server.
 ms.topic: reference
-ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: alalve
+author: xelu86
 ms.date: 10/16/2017
 ---
 
 # ftp open
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Connects to the specified ftp server.
 

@@ -1,16 +1,13 @@
 ---
 title: Configure virtual network peering
 description: Configuring the virtual network peering involves creating two virtual networks that get peered.
-manager: grcusanz
 ms.topic: how-to
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/04/2021
 ---
 
 # Configure virtual network peering
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 
@@ -26,7 +23,7 @@ In this procedure, you use Windows PowerShell to create two virtual networks, ea
 >[!IMPORTANT]
 >Remember to update the properties for your environment.
 
-## Step 1. Create the first virtual network
+## Step 1: Create the first virtual network
 
 In this step, you use Windows PowerShell find the HNV provider logical network to create the first virtual network with one subnet. The following example script creates Contoso's virtual network with one subnet.
 
@@ -58,7 +55,7 @@ $vnetproperties.Subnets = @($vsubnet)
 New-NetworkControllerVirtualNetwork -ResourceId "Contoso_VNet1" -ConnectionUri $uri -Properties $vnetproperties
 ```
 
-## Step 2. Create the second virtual network
+## Step 2: Create the second virtual network
 
 In this step, you create a second virtual network with one subnet. The following example script creates Woodgrove's virtual network with one subnet.
 
@@ -82,7 +79,7 @@ $vnetproperties.Subnets = @($vsubnet)
 New-NetworkControllerVirtualNetwork -ResourceId "Woodgrove_VNet1" -ConnectionUri $uri -Properties $vnetproperties
 ```
 
-## Step 3. Configure peering from the first virtual network to the second virtual network
+## Step 3: Configure peering from the first virtual network to the second virtual network
 
 In this step, you configure the peering between the first virtual network and the second virtual network you created in the previous two steps. The following example script establishes virtual network peering from **Contoso_vnet1** to **Woodgrove_vnet1**.
 
@@ -110,7 +107,7 @@ New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId
 >[!IMPORTANT]
 >After creating this peering, the vnet status shows **Initiated**.
 
-## Step 4. Configure peering from the second virtual network to the first virtual network
+## Step 4: Configure peering from the second virtual network to the first virtual network
 
 In this step, you configure the peering between the second virtual network and the first virtual network you created in steps 1 and 2 above. The following example script establishes virtual network peering from **Woodgrove_vnet1** to **Contoso_vnet1**.
 

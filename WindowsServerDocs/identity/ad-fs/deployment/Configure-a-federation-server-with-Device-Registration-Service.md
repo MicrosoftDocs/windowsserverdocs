@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Configure a federation server with Device Registration Service"
-ms.assetid: fdd1c1fd-55aa-4eb8-ae84-53f811de042c
 title: Configure a federation server with Device Registration Service
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Configure a federation server with Device Registration Service

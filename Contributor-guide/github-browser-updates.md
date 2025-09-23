@@ -2,11 +2,12 @@
 title: Edit existing Windows Server articles using a web browser and GitHub
 description: How to make quick edits to the existing Windows Server documentation using a web browser and GitHub, as a Microsoft employee.
 author: eross-msft
-ms.author: lizross
+ms.author: roharwoo
 ms.date: 07/02/2020
+ms.topic: contributor-guide
 ---
 
-# Update existing Windows Server and Azure Stack HCI articles using a web browser and GitHub
+# Update existing Windows Server and Azure Local articles using a web browser and GitHub
 
 There are two separate locations where we keep Windows Server technical content. One of the locations is public (`windowsserverdocs`) while the other is private (`windowsserverdocs-pr`). Who you are determines which location you contribute to:
 
@@ -31,7 +32,7 @@ Quick edits streamline the process to report and fix small errors and omissions 
 
 1. Follow the instructions in [GitHub account setup](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main).
 
-1. Go to the [Windows Server](https://github.com/MicrosoftDocs/windowsserverdocs-pr/tree/master/WindowsServerDocs) or [Azure Stack HCI](https://github.com/MicrosoftDocs/azure-stack-docs-pr/tree/master/azure-stack/hci) private repository. The private repositories are monitored more frequently so our approval time is faster, they benefit from increased quality checks, and provide the ability to view content in staging as it will appear on our live site.
+1. Go to the [Windows Server](https://github.com/MicrosoftDocs/windowsserverdocs-pr/tree/master/WindowsServerDocs) or [Azure Local](https://github.com/MicrosoftDocs/azure-stack-docs-pr/tree/master/azure/azure-local) private repository. The private repositories are monitored more frequently so our approval time is faster, they benefit from increased quality checks, and provide the ability to view content in staging as it will appear on our live site.
 
 1. Navigate to the article you want to edit, and then select the **Edit this file** button.
 

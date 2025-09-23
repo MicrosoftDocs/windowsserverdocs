@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using key mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using key mode in a new dedicated forest (default)
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using key mode in a new dedicated forest (default)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
@@ -42,3 +39,5 @@ ms.date: 08/29/2018
 
 > [!div class="nextstepaction"]
 > [Create host key](guarded-fabric-create-host-key.md)
+
+

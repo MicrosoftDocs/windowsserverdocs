@@ -1,17 +1,13 @@
 ---
 title: How QoS Policy Works
 description: Learn about how QoS policy works.
-ms.topic: article
-ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
-manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # How QoS Policy Works
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When starting up or obtaining updated user or computer configuration Group Policy settings for QoS, the following process occurs.
 
@@ -68,3 +64,4 @@ These processes of Policy-based QoS provide the following advantages.
 For the next topic in this guide, see [QoS Policy Architecture](qos-policy-architecture.md).
 
 For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
+

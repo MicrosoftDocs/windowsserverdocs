@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Health Service faults"
 title: Health Service faults
-manager: eldenc
-ms.author: cosdar
-ms.topic: article
-author: cosmosdarwin
+ms.author: daknappe
+ms.topic: concept-article
+author: dknappettmsft
 ms.date: 10/05/2017
 ---
 
@@ -129,7 +128,7 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
+You can access all the same properties, documented at [Storage Management API Classes](/windows-hardware/drivers/storage/storage-management-api-classes).
 
 ```
 using System.Diagnostics;
@@ -522,3 +521,4 @@ In Windows Server 2016, the Health Service provides the following fault coverage
 ## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)
+

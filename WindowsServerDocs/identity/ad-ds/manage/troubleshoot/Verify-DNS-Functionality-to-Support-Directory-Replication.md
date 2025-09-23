@@ -1,15 +1,12 @@
 ---
 description: "Learn more about: Verify DNS Functionality to Support Directory Replication"
-ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: Verify DNS Functionality to Support Directory Replication
-ms.author: daveba
-ms.date: 05/31/2017
-author: Femila
+ms.author: roharwoo
+ms.date: 05/12/2025
+author: robinharwood
 ms.topic: troubleshooting
 ---
 # Verify DNS Functionality to Support Directory Replication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
  To check Domain Name System (DNS) settings that might interfere with Active Directory replication, you can begin by running the basic test that ensures that DNS is operating properly for your domain. After you run the basic test, you can test other aspects of DNS functionality, including resource record registration and dynamic update.
 
@@ -53,7 +50,7 @@ To validate the configuration changes, rerun the Dcdiag /test:DNS /v command wit
 
 ## Verifying resource record registration
 
-The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)or, if that fails, NetBIOS namesthe presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
+The destination domain controller uses the DNS alias (CNAME) resource record to locate its source domain controller replication partner. Although domain controllers running Windows Server (starting with Windows Server 2003 with Service Pack 1 (SP1)) can locate source replication partners by using fully qualified domain names (FQDNs)or, if that fails, NetBIOS names the presence of the alias (CNAME) resource record is expected and should be verified for proper DNS functioning.
 
 You can use the following procedure to verify resource record registration, including alias (CNAME) resource record registration.
 

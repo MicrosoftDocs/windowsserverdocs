@@ -1,15 +1,13 @@
 ---
 title: Windows Admin Center network requirements
 description: Networking requirements to use Windows Admin Center
-ms.topic: article
-author: prasidharora
-ms.author: praror
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/12/2023
 ---
 
 # Windows Admin Center network requirements
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 This article describes the networking requirements for using Windows Admin center to manage your servers and clusters.
 
@@ -71,3 +69,5 @@ If outbound connectivity is restricted by your firewall or proxy server, make su
 
 - [Prepare your environment](prepare-environment.md)
 - [Install Windows Admin Center](install.md)
+
+

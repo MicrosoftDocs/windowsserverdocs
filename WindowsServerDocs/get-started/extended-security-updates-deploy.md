@@ -1,14 +1,11 @@
 ---
-title: How to get Extended Security Updates (ESU) for Windows Server 2008, 2008 R2, 2012, and 2012 R2
-description: Learn how to get Extended Security Updates (ESU) for Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 after the end of their support lifecycle.
+title: How to get Extended Security Updates (ESU) for Windows Server 2012, and 2012 R2
+description: Learn how to get Extended Security Updates (ESU) for Windows Server 2012, and Windows Server 2012 R2 after the end of their support lifecycle.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-manager: femila
-ms.date: 07/12/2023
-ms.prod: windows-server
+ms.date: 05/23/2025
 ms.mktglfcycl: manage
-ms.custom: contperf-fy22q3
 ---
 
 # How to get Extended Security Updates (ESU) for Windows Server
@@ -23,31 +20,31 @@ ESUs through the following options.
 
 - **Azure virtual machines** - Applicable virtual machines (VMs) hosted in Azure are automatically
    enabled for ESUs and these updates are provided free of charge, there's no
-   need to deploy a MAK key or take any other action. See
-   [Extended Security Updates on Azure](#extended-security-updates-on-azure) to learn more.
+   need to deploy a MAK key or take any other action. To learn more, see
+   [Extended Security Updates on Azure](#extended-security-updates-on-azure).
 
 - **Azure Arc-enabled servers** - If your servers are on-premises or in a hosted environment, you
    can enroll your Windows Server 2012 and 2012 R2 or SQL Server 2012 machines for Extended Security
-   Updates via the Azure portal, connect through Azure Arc, and you'll be billed monthly via your
-   Azure subscription. See
+   Updates via the Azure portal through Azure Arc. Once enrolled you're billed monthly via your
+   Azure subscription. To learn more, see
    [Extended Security Updates enabled by Azure Arc](#extended-security-updates-enabled-by-azure-arc)
-   to learn more. <sup>1</sup>
+   . <sup>1</sup>
 
 - **Non-Azure physical and virtual machines** - If you can't connect using Azure Arc, use Extended
    Security Updates on non-Azure VMs, by using a Multiple Activation Key (MAK) and applying it to
    the relevant servers. This MAK key lets the Windows Update servers know that you can continue to
-   receive security updates. See
+   receive security updates. To learn more, see
    [Access your Multiple Activation Key from the Microsoft 365 Admin Center](#access-your-multiple-activation-key-from-the-microsoft-365-admin-center)
-   to learn more. <sup>1</sup>
+   . <sup>1</sup>
 
-<sup>1</sup> When using Azure Arc-enabled servers and non-Azure machines you must purchase ESUs. In
-order to purchase ESUs, you must have Software Assurance through Volume Licensing Programs such as
-an Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education
+<sup>1</sup> When using Azure Arc-enabled servers and non-Azure machines you must purchase ESUs. To
+purchase ESUs, you must have Software Assurance through Volume Licensing Programs such as an
+Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education
 Solutions (EES), or Server and Cloud Enrollment (SCE).
 
 > [!NOTE]
-> It may take 3-5 business days for your Multiple Activation Key to become available after
-> purchasing ESUs for on-premises VMs or physical servers. Your organization may also require time
+> It might take 3-5 business days for your Multiple Activation Key to become available after
+> purchasing ESUs for on-premises VMs or physical servers. Your organization might also require time
 > to plan and deploy the new keys. Before purchasing ESUs, you should keep these timelines in mind.
 
 ## Extended Security Updates on Azure
@@ -58,9 +55,9 @@ charge for using ESUs with Azure VMs. ESUs are automatically delivered to Azure 
 configured to receive updates.
 
 > [!NOTE]
-> Extended Security Updates are also free of charge in other Azure products such as Azure Dedicated
-> Host, Azure VMware Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI), and
-> might require additional configuration. Contact
+> Extended Security Updates are also free in some Azure products. These products include Azure
+> Dedicated Host, Azure VMware Solution, Azure Nutanix Solution, Azure Local, and Azure Stack Hub
+> and Edge. Some of these products might require extra configuration. Contact
 > [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help.
 >
 > Azure Classic VMs (Microsoft.ClassicCompute) also require extra configuration to receive Extended
@@ -74,7 +71,7 @@ ESUs are automatically delivered to Azure Arc-enabled servers if they're connect
 ESUs through Azure Arc. This can also apply to non-Azure servers connected to Azure Arc.
 
 You can enroll in ESUs at scale by using Azure Policy or Azure portal, there's no upfront charge and
-you'll be billed monthly via your Azure subscription. You also don't need to activate product keys.
+you're billed monthly via your Azure subscription. You also don't need to activate product keys.
 
 Azure Arc-enabled servers also enable to you to use other Azure services, such as:
 
@@ -99,7 +96,7 @@ To prepare for activating Windows Server 2012 and 2012R2 ESUs on your Arc-enable
 To learn more about ESUs with Azure Arc, see
 [Prepare to deliver Extended Security Updates for Windows Server 2012](/azure/azure-arc/servers/prepare-extended-security-updates) and [Deliver Extended Security Updates for Windows 2012 and 2012 R2](/azure/azure-arc/servers/deliver-extended-security-updates).
 
-### Access your Multiple Activation Key from the Microsoft 365 Admin Center
+## Access your Multiple Activation Key from the Microsoft 365 Admin Center
 
 Customers who can't connect to Azure Arc to apply ESUs can use Multiple Activation Keys (MAK)
 through Microsoft 365 Admin Center:
@@ -120,6 +117,8 @@ through Microsoft 365 Admin Center:
 
 Delivery, download, and application of ESUs for Windows Server is no different than other Windows Updates. The updates provided through ESUs are only *Security* updates.
 
-You can install the updates using whatever tools and processes you already have in place. The only difference is that the system must be registered using the key generated in the previous section for the updates to download and install.
+Before you can download and install ESUs, you must have installed the latest Servicing Stack Update (SSU) and the Licensing Preparation Package. To learn more about the steps required to install the latest SSU and Licensing Preparation Package, see [KB5031043: Procedure to continue receiving security updates after extended support has ended on October 10, 2023](https://support.microsoft.com/help/5031043).
+
+You can install the updates using whatever tools and processes you already have in place. The only difference is that the system must be registered with the key that was generated in the previous section. Once the system is registered, the updates will download and install.
 
 For VMs hosted in Azure, the process of enabling the server for ESUs is automatically completed for you. Updates should download and install without extra configuration.

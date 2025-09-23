@@ -2,14 +2,11 @@
 title: File Server Resource Manager Command-Line Tools
 description: This article describes Windows Server 2016 command-line tools
 ms.date: 7/7/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ---
 # File Server Resource Manager command-line tools
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 File Server Resource Manager installs the [FileServerResourceManager](/powershell/module/fileserverresourcemanager/)
 PowerShell cmdlets as well as the following command-line tools:
@@ -53,3 +50,4 @@ To manage remote resources with the command-line tools:
 ## Additional References
 
 -   [Managing Remote Storage Resources](managing-remote-storage-resources.md)
+

@@ -1,9 +1,9 @@
 ---
 title: Manage Azure IaaS virtual machines
 description: Managing Azure IaaS VMs with Windows Admin Center
-ms.topic: article
-author: jasongerend
-ms.author: jgerend
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/18/2021
 ---
 # Manage Azure virtual machines with Windows Admin Center
@@ -24,9 +24,8 @@ If your target VMs (the VMs you want to manage with Windows Admin Center) have p
 
   2. You must also open the port in Azure networking:
 
-     - Select your Azure VM, select **Networking**, then **Add inbound port rule**.
-     - Ensure **Basic** is selected at the top of the **Add inbound security rule** pane.
-     - In the **Port ranges** field, enter **5985**.
+     - Select your Azure VM, select **Network settings**, then **Create port rule**, and finally **inbound port rule**.
+     - In the **Destination ranges** field, enter **5985**.
 
      If your Windows Admin Center gateway has a static IP, you can select to allow only inbound WinRM access from your Windows Admin Center gateway for added security.
      To do this, select **Advanced** at the top of the **Add inbound security rule** pane.

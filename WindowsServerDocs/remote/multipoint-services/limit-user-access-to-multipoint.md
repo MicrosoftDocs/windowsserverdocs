@@ -2,11 +2,10 @@
 title: Limit user access to the server
 description: Learn how to grant or deny access to MultiPoint Services for users and groups
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 4cabd4f1-a764-4be6-bc6e-0a5f5566390c
-author: evaseydl
-manager: scottman
-ms.author: evas
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Limit users' access to the Multipoint server
 Whether you join MultiPoint server to an Active Directory domain or you use local user accounts, all users have access to MultiPoint server by default. Before you allow users to log on to stations in your MultiPoint Services environment, you should restrict access to the server.

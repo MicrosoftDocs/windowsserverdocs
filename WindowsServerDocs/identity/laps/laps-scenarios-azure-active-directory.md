@@ -1,52 +1,58 @@
 ---
-title: Get started with Windows LAPS and Azure Active Directory
-description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Azure Active Directory.
+title: Get started with Windows LAPS and Microsoft Entra ID
+description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Microsoft Entra ID.
 author: jay98014
-ms.author: jsimmons
-ms.date: 07/04/2022
-ms.topic: conceptual
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: get-started
+ms.custom: sfi-image-nochange
 ---
 
-# Get started with Windows LAPS and Azure Active Directory
+# Get started with Windows LAPS and Microsoft Entra ID
 
-Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Azure Active Directory. The article describes the basic procedures for using Windows LAPS to back up passwords to Azure Active Directory and how to retrieve them.
-
-> [!IMPORTANT]
-> For more information on specific OS updates required to use the Windows LAPS feature, and the current status of the Azure Active Directory LAPS scenario, see [Windows LAPS availability and Azure AD LAPS public preview status](laps-overview.md#windows-laps-supported-platforms-and-azure-ad-laps-preview-status).
+Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Microsoft Entra ID. The article describes the basic procedures for using Windows LAPS to back up passwords to Microsoft Entra ID and how to retrieve them.
 
 ## Supported Azure clouds
 
-See [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
+See [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
 
-## Enable LAPS in the Azure AD device settings
+<a name='enable-laps-in-the-azure-ad-device-settings'></a>
+
+## Review Microsoft Entra ID permissions
+
+Review the membership of the built-in Microsoft Entra roles that, by default, have access to Windows LAPS passwords stored in Microsoft Entra ID. These roles are highly privileged.
+
+## Enable LAPS in the Microsoft Entra device settings
 
 > [!IMPORTANT]
-> By default Azure AD doesn't allow managed devices to post new Windows LAPS passwords to Azure AD. You MUST first have your IT admin enable the feature at the Azure AD tenant level. For more information, see [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
+> By default Microsoft Entra ID doesn't allow managed devices to post new Windows LAPS passwords to Microsoft Entra ID. You MUST first have your IT admin enable the feature at the Microsoft Entra tenant level. For more information, see [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad).
 
 ## Configure device policy
 
 To configure device policy, complete these tasks:
 
 - Choose a policy deployment mechanism
-- Understand policies that apply to Azure Active Directory mode
+- Understand policies that apply to Microsoft Entra mode
 - Configure specific policies
 
 ### Choose a policy deployment mechanism
 
 The first step is to choose how to apply policy to your devices.
 
-The preferred option for Azure Active Directory-joined devices is to use [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
+The preferred option for Microsoft Entra joined devices is to use [Microsoft Intune](/mem/intune) with the [Windows LAPS configuration service provider (CSP)](/windows/client-management/mdm/laps-csp).
 
-If your devices are Azure Active Directory-joined but you're not using Microsoft Intune, you can still deploy Windows LAPS for Azure Active Directory. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
+If your devices are Microsoft Entra joined but you're not using Microsoft Intune, you can still deploy Windows LAPS for Microsoft Entra ID. In this scenario, you must deploy policy manually (for example, either by using direct registry modification or by using Local Computer Group Policy). For more information, see [Configure Windows LAPS policy settings](laps-management-policy-settings.md).
 
 > [!NOTE]
 > If your devices are hybrid-joined to on-premises Windows Server Active Directory, you can deploy policy by using [Windows LAPS Group Policy](laps-management-policy-settings.md#windows-laps-group-policy).
 
-### Policies that apply to Azure Active Directory mode
+<a name='policies-that-apply-to-azure-active-directory-mode'></a>
+
+### Policies that apply to Microsoft Entra mode
 
 The Windows LAPS CSP and Windows LAPS Group Policy object both manage the same settings, but only a subset of these settings applies to Windows LAPS in Azure mode.
 
-The following settings are applicable when backing passwords up to Azure Active Directory:
+The following settings are applicable when backing passwords up to Microsoft Entra ID:
 
 - BackupDirectory
 - PasswordAgeDays
@@ -56,11 +62,11 @@ The following settings are applicable when backing passwords up to Azure Active 
 - PostAuthenticationResetDelay
 - PostAuthenticationActions
 
-More plainly: the Windows Server Active Directory-specific policy settings don't make sense, and aren't supported, when backing the password up to Azure Active Directory.
+More plainly: the Windows Server Active Directory-specific policy settings don't make sense, and aren't supported, when backing the password up to Microsoft Entra ID.
 
 ### Configure specific policies
 
-At a minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Azure Active Directory).
+At a minimum, you must configure the BackupDirectory setting to the value 1 (backup passwords to Microsoft Entra ID).
 
 If you don't configure the AdministratorAccountName setting, Windows LAPS defaults to managing the default built-in local administrator account. This built-in account is automatically identified using its well-known relative identifier (RID) and should never be identified with its name. The name of the built-in local administrator account varies depending on the default locale of the device.
 
@@ -71,19 +77,23 @@ If you want to configure a custom local administrator account, you should config
 
 You can configure other settings, like PasswordLength, as needed for your organization.
 
-## Update a password in Azure Active Directory
+<a name='update-a-password-in-azure-active-directory'></a>
+
+## Update a password in Microsoft Entra ID
 
 Windows LAPS processes the currently active policy on a periodic basis (every hour). To avoid waiting after you apply the policy, you can run the `Invoke-LapsPolicyProcessing` PowerShell cmdlet.
 
-To verify that the password was successfully updated in Azure Active Directory, look in the event log for the 10029 event:
+To verify that the password was successfully updated in Microsoft Entra ID, look in the event log for the 10029 event:
 
-:::image type="content" source="./media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-password-update-event.png" alt-text="Screenshot of the event log and a successful Azure Active Directory password update event log message.":::
+:::image type="content" source="./media/laps-scenarios-azure-active-directory/laps-scenarios-azure-active-directory-password-update-event.png" alt-text="Screenshot of the event log and a successful Microsoft Entra password update event log message.":::
 
-## Retrieve a password from Azure Active Directory
+<a name='retrieve-a-password-from-azure-active-directory'></a>
 
-Retrieving Windows LAPS passwords stored in Azure Active Directory is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. You may also  use the Azure AD and\or Intune management portals for a UI-based password retrieval experience. Windows LAPS doesn't provide any user interface options within Windows for Azure Active Directory password retrieval.
+## Retrieve a password from Microsoft Entra ID
 
-The rest of these instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Azure Active Directory using Microsoft Graph.
+Retrieving Windows LAPS passwords stored in Microsoft Entra ID is supported by using Microsoft Graph. Windows LAPS includes a PowerShell cmdlet (`Get-LapsAADPassword`) that's a wrapper around the Microsoft Graph PowerShell library. You may also  use the Microsoft Entra ID and\or Intune management portals for a UI-based password retrieval experience. Windows LAPS doesn't provide any user interface options within Windows for Microsoft Entra password retrieval.
+
+The rest of these instructions describe how to use the `Get-LapsAADPassword` cmdlet to retrieve Windows LAPS passwords from Microsoft Entra ID using Microsoft Graph.
 
 ### Install the Microsoft Graph PowerShell library
 
@@ -95,25 +105,29 @@ You might need to configure the repository as Trusted for the command to succeed
 
 `Set-PSRepository PSGallery -InstallationPolicy Trusted`
 
-### Create an Azure Active Directory registered app to retrieve Windows LAPS passwords
+<a name='create-an-azure-active-directory-registered-app-to-retrieve-windows-laps-passwords'></a>
 
-The next step is to create an Azure Active Directory application that's configured with the necessary permissions. To review the basic instructions for creating an Azure Active Directory application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+### Create a Microsoft Entra registered app to retrieve Windows LAPS passwords
 
-The app needs to be configured with two permissions: `Device.Read.All` and either `Device.LocalCredential.Read` or `Device.LocalCredential.ReadAll`. `DeviceManagementManagedDevices.Read.All` may also be required in order to query passwords for Microsoft Managed Desktop devices.
+The next step is to create a Microsoft Entra application that's configured with the necessary permissions. To review the basic instructions for creating a Microsoft Entra application, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+
+The app needs to be configured with two permissions: `Device.Read.All` and either `DeviceLocalCredential.ReadBasic.All` or `DeviceLocalCredential.Read.All`. `DeviceManagementManagedDevices.Read.All` may also be required in order to query passwords for Microsoft Managed Desktop devices.
 
 > [!IMPORTANT]
 >
 > - Use `DeviceLocalCredential.ReadBasic.All` to grant permissions for reading non-sensitive metadata about persisted Windows LAPS passwords. Examples include the time the password was backed up to Azure and the expected expiration time of a password. This permissions level is appropriate for reporting and compliance applications.
 > - Use `DeviceLocalCredential.Read.All` to grant full permissions for reading everything about persisted Windows LAPS passwords, including the clear-text passwords themselves. This permissions level is sensitive and should be used carefully.
 
-### Retrieve the password from Azure Active Directory
+<a name='retrieve-the-password-from-azure-active-directory'></a>
+
+### Retrieve the password from Microsoft Entra ID
 
 You're almost there! First, sign in to Microsoft Graph. Then, use the `Get-LapsAADPassword` cmdlet to retrieve the password.
 
-To sign in to Microsoft Graph, use the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID and the application ID of the Azure Active Directory application you created earlier. Run the cmdlet once to sign in. For example:
+To sign in to Microsoft Graph, use the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID and the application ID of the Microsoft Entra application you created earlier. Run the cmdlet once to sign in. For example:
 
 ```powershell
-PS C:\> Connect-MgGraph -Environment Global -TenantId acca2622-272f-413f-865f-a67416923a6b -ClientId 1c2e514c-2ef1-486d-adbb-8da208457957
+PS C:\> Connect-MgGraph -Environment Global -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee -ClientId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```output
@@ -194,21 +208,23 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 
 > [!IMPORTANT]
 >
-> - Azure Active Directory doesn't support expiration of a device's currently stored password via modification of the password expiration timestamp in Azure Active Directory. This is a design difference from the Windows Server Active Directory-based Windows LAPS.
+> - Microsoft Entra ID doesn't support expiration of a device's currently stored password via modification of the password expiration timestamp in Microsoft Entra ID. This is a design difference from the Windows Server Active Directory-based Windows LAPS.
 > - Avoid excessively frequent use of the `Reset-LapsPassword` cmdlet. If detected, the activity might be throttled.
 
-## Windows LAPS and Azure AD Connect in hybrid environments
+<a name='windows-laps-and-azure-ad-connect-in-hybrid-environments'></a>
 
-Windows LAPS doesn't rely on [Azure AD Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect-v2), and there are no dependencies between these two technologies. Managed Windows LAPS devices that back up their passwords to Azure AD do so directly via https, with no reliance whatsoever on data synchronization.
+## Windows LAPS and Microsoft Entra Connect in hybrid environments
 
-Furthermore, the Azure AD and Intune device management portals can only view and manage passwords that have been directly backed up from a Windows LAPS device. Configuring Azure AD Connect to synchronize the on-premises Active Directory Windows LAPS attributes to Azure AD isn't a tested scenario. Manually synchronizing the on-premises Active Directory Windows LAPS attributes to Azure AD **won't** result in those attributes showing up in the Azure AD or Intune device management portals.
+Windows LAPS doesn't rely on [Microsoft Entra Connect](/azure/active-directory/hybrid/connect/whatis-azure-ad-connect-v2), and there are no dependencies between these two technologies. Managed Windows LAPS devices that back up their passwords to Microsoft Entra ID do so directly via https, with no reliance whatsoever on data synchronization.
 
-While not required for Windows LAPS to operate, whenever you extend your on-premises Active Directory schema as a best practice you should also refresh your Azure AD Connect directory schema. See [Refresh directory schema](/azure/active-directory/hybrid/connect/how-to-connect-installation-wizard#refresh-directory-schema).
+Furthermore, the Microsoft Entra ID and Intune device management portals can only view and manage passwords that have been directly backed up from a Windows LAPS device. Configuring Microsoft Entra Connect to synchronize the on-premises Active Directory Windows LAPS attributes to Microsoft Entra ID isn't a tested scenario. Manually synchronizing the on-premises Active Directory Windows LAPS attributes to Microsoft Entra ID **won't** result in those attributes showing up in the Microsoft Entra ID or Intune device management portals.
+
+While not required for Windows LAPS to operate, whenever you extend your on-premises Active Directory schema as a best practice you should also refresh your Microsoft Entra Connect directory schema. See [Refresh directory schema](/azure/active-directory/hybrid/connect/how-to-connect-installation-wizard#refresh-directory-schema).
 
 ## See also
 
-- [Introducing Windows Local Administrator Password Solution with Azure AD](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
-- [Windows Local Administrator Password Solution in Azure AD (preview)](https://aka.ms/cloudlaps)
+- [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
+- [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps)
 - [Microsoft Intune](/mem/intune)
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)
@@ -219,4 +235,4 @@ While not required for Windows LAPS to operate, whenever you extend your on-prem
 
 - [Configure Windows LAPS policy settings](laps-management-policy-settings.md)
 - [Use Windows LAPS event logs](laps-management-event-log.md)
-- [Key concepts in Windows LAPS](laps-concepts.md)
+- [Key concepts in Windows LAPS](laps-concepts-overview.md)

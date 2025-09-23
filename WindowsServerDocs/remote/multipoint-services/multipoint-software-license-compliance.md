@@ -2,11 +2,10 @@
 title: Important Information about Software License Compliance
 description: Provides information about licenses in MultiPoint Services.
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: concept-article
 ms.assetid: cd42fbac-fa7b-484d-b97d-3911e9180e7b
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Important Information about Software License Compliance
 You must comply with the license terms for the programs you use on the MultiPoint Services system. You must also have the proper number of licenses for the number of *stations* that you add to your MultiPoint Services system, as described in the following sections.

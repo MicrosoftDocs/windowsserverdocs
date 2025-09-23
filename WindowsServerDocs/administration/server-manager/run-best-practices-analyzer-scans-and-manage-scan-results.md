@@ -1,16 +1,14 @@
 ---
 title: Run Best Practices Analyzer Scans and Manage Scan Results_1
 description: Learn how to run Best Practices Analyzer (BPA) scans either from Server Manager, by using the BPA GUI, or by using cmdlets in Windows PowerShell and learn how to manage the scan results.
-ms.topic: article
-ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/25/2023
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 

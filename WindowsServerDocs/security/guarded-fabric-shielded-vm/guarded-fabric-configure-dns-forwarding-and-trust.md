@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Configure DNS forwarding in the HGS domain and a one-way trust with the fabric domain"
 title: Configure DNS forwarding and domain trust
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Configure DNS forwarding in the HGS domain and a one-way trust with the fabric domain
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!IMPORTANT]
 >AD mode is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
@@ -35,3 +32,4 @@ Use the following steps to set up DNS forwarding and establish a one-way trust w
 
 > [!div class="nextstepaction"]
 > [Configure HTTPS](guarded-fabric-configure-hgs-https.md)
+

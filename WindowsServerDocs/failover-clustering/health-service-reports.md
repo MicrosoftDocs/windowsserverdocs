@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Health Service reports"
 title: Health Service reports
-manager: eldenc
-ms.author: cosdar
-ms.topic: article
-author: cosmosdarwin
+ms.author: daknappe
+ms.topic: how-to
+author: dknappettmsft
 ms.date: 10/05/2017
 ---
 
@@ -103,7 +102,7 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
+You can access all the same properties, documented at [Storage Management API Classes](/windows-hardware/drivers/storage/storage-management-api-classes).
 
 ```
 using System.Diagnostics;
@@ -277,3 +276,4 @@ Below are the metrics available for each scope in Windows Server 2016.
 ## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)
+

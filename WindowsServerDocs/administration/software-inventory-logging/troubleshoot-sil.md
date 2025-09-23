@@ -1,16 +1,15 @@
 ---
 title: Troubleshoot Software Inventory Logging
 description: Describes how to resolve common Software Inventory Logging deployment issues.
-ms.topic: article
-author: brentfor
-ms.author: brentf
-manager: mtillman
+ms.topic: troubleshooting-general
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2017
 ---
 
 # Troubleshoot Software Inventory Logging
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+
 
 ## Understanding SIL
 
@@ -154,3 +153,4 @@ If there is no error, and no output on the console, then the data push/publish f
 >There are rules SILA follows when processing data files in the SILA directory that are only relevant in low traffic situations. High traffic will always trigger processing in real time. The default behavior is that processing will commence either after 100 files arrive in the directory, or after 15 minutes. When troubleshooting end-to-end in a small environment, it is often necessary to wait 15 minutes.
 
 After these files are processed, you will see the data in the database.
+

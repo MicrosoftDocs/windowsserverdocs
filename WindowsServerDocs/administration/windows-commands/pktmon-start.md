@@ -2,14 +2,14 @@
 title: pktmon start
 description: Reference article for the pktmon start command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: wscontent
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon start
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Starts packet capture and event collection.
 

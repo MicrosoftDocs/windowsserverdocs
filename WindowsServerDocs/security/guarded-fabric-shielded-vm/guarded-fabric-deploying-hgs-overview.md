@@ -1,23 +1,19 @@
 ---
 title: Deploying the Host Guardian Service
 description: "Learn more about: Deploying the Host Guardian Service"
-ms.topic: article
-ms.assetid: 310b63d9-5ac7-4961-98ef-103af45d706a
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: install-set-up-deploy
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/14/2020
 ---
 
 # Deploying the Host Guardian Service
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
 ## Video: Deploying a guarded fabric
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/dcd8e99f-36f1-4bc8-b3d2-9576da38d9f1?autoplay=false]
+> [!VIDEO ecb8912d-d8fa-4b3e-8673-2f5be964d12a]
 
 ## Deployment tasks for guarded fabrics and shielded VMs
 
@@ -44,3 +40,4 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 ## Additional References
 
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

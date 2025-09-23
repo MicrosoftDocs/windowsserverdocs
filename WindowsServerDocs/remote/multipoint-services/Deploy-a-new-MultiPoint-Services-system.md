@@ -2,11 +2,10 @@
 title: Deploy a new Windows MultiPoint Services system
 description: Steps required to deploy a new MultiPoint Services environment
 ms.date: 07/22/2016
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.assetid: 4bac9d1b-bd21-4bc8-8f72-0dd9bb2b3f5d
-author: evaseydl
-ms.author: evas
-manager: scottman
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Deploy a new Windows MultiPoint Services system
 The topics in this section explain how to set up your MultiPoint Services System. You will install and configure a MultiPoint server; set up your stations; install drivers, updates, and software; optionally join a domain; activate MultiPoint Server; and add client access licenses (CALs) for each station.

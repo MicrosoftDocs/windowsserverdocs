@@ -2,11 +2,10 @@
 title: Update or Delete a User Account
 description: Learn how to update or delete a user in MultiPoint Services
 ms.date: 07/11/2016
-ms.topic: article
+ms.topic: how-to
 ms.assetid: f7f55a35-c932-482c-97d4-ef3c1f390cbf
-author: lizap
-manager: dongill
-ms.author: elizapo
+author: dknappettmsft
+ms.author: daknappe
 ---
 # Update or Delete a User Account
 If you are logged on as an administrative user on the MultiPoint Services system, you can modify any user account, including changing the level of access for an account, changing a full name and password, or deleting an account.
