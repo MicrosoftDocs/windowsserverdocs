@@ -1,5 +1,5 @@
 ---
-title: Configure Cluster-wide Live Migration SMB Bandwidth control in Windows Server
+title: Control Live Migration SMB Bandwidth Cluster-wide in Windows Server
 description: Learn how to configure cluster-wide Live Migration SMB bandwidth control in Windows Server and Azure Stack HCI.
 author: robinharwood
 ms.author: wscontent
@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 09/25/2023
 ---
 
-# Configure cluster-wide Live Migration SMB bandwidth control
+# Control Live Migration SMB Bandwidth Cluster-wide
 
 >Applies to:  Windows Server 2022 and later, Azure Stack HCI, version 21H2 and later versions
 
