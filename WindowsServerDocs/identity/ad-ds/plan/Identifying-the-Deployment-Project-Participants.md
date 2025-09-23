@@ -1,6 +1,5 @@
 ---
 description: "Learn more about: Identifying the Deployment Project Participants"
-ms.assetid: 50bd2566-e03c-4884-b5c4-895c8aab80aa
 title: Identifying the Deployment Project Participants
 author: robinharwood
 ms.author: roharwoo
