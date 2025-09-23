@@ -2,8 +2,6 @@
 title: QoS Policy Architecture
 description: Learn about the architecture of QoS Policy.
 ms.topic: concept-article
-ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
-manager: brianlic
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

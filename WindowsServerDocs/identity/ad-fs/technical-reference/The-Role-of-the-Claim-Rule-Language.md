@@ -3,7 +3,6 @@ description: "Learn more about: The Role of the Claim Rule Language"
 title: The Role of the Claim Rule Language
 ms.date: 04/08/2025
 ms.topic: concept-article
-ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ---
 
 

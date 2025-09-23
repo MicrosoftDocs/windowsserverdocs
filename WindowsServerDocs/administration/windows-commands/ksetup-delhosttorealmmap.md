@@ -2,7 +2,6 @@
 title: ksetup delhosttorealmmap
 description: Reference article for the ksetup delhosttorealmmap command, which removes a service principal name (SPN) mapping between the stated host and the realm.
 ms.topic: reference
-ms.assetid: 3faee482-a96c-4614-86fd-aaa446643ec4
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/16/2017

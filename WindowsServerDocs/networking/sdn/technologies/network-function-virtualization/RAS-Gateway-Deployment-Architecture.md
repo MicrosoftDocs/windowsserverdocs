@@ -1,9 +1,7 @@
 ---
 title: RAS Gateway Deployment Architecture
 description: You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway in Windows Server 2019 and 2016, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
-manager: grcusanz
 ms.topic: how-to
-ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/28/2021

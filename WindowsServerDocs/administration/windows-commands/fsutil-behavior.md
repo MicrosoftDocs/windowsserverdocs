@@ -5,7 +5,6 @@ ms.author: alalve
 author: xelu86
 ms.topic: reference
 ms.date: 10/16/2017
-ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
 ---
 
 # fsutil behavior

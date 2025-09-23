@@ -1,7 +1,6 @@
 ---
 title: Configure virtual network peering
 description: Configuring the virtual network peering involves creating two virtual networks that get peered.
-manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood

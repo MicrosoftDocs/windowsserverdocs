@@ -1,6 +1,5 @@
 ---
 description: Learn more about best practices for securing Active Directory.
-ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
 title: Best practices for securing Active Directory
 author: robinharwood
 ms.author: roharwoo

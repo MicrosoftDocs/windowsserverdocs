@@ -1,6 +1,5 @@
 ---
 description: Learn how to enable and troubleshoot user certificate authentication as an intranet or extranet authentication method in Active Directory Federation Services.
-ms.assetid: 1ea2e1be-874f-4df3-bc9a-eb215002da91
 title: Configure AD FS support for user certificate authentication
 ms.date: 04/08/2025
 ms.topic: how-to

@@ -1,9 +1,7 @@
 ---
 title: Network Policy Server Best Practices
 description: This topic provides best practices for deploying and managing Network Policy Server in Windows Server 2016.
-manager: brianlic
 ms.topic: best-practice
-ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 12/08/2020

@@ -2,7 +2,6 @@
 title: logman import and logman export
 description: Reference article for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 ms.topic: reference
-ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

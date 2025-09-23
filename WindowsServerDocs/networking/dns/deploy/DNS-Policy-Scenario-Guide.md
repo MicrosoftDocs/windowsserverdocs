@@ -1,9 +1,7 @@
 ---
 title: DNS Policy Scenario Guide
 description: Learn how to use DNS policy to control how a DNS server processes name resolution queries based on different parameters that you define in policies.
-manager: brianlic
 ms.topic: example-scenario
-ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
 ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021

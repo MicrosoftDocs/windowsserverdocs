@@ -2,7 +2,6 @@
 title: wbadmin start backup
 description: Reference article for the wbadmin start backup command, which creates a backup using specified parameters.
 ms.topic: reference
-ms.assetid: 56f3e752-d99a-4c3d-8e97-10303c37dd78
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

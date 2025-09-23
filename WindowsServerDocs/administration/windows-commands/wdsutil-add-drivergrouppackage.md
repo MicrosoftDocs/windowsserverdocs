@@ -2,7 +2,6 @@
 title: wdsutil add-drivergrouppackage
 description: Reference article for the wdsutil add-drivergrouppackage command, which adds a driver package to a driver group.
 ms.topic: reference
-ms.assetid: 7cd323ae-9049-448e-a460-6c7d6462d4c8
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

@@ -1,7 +1,6 @@
 ---
 title: Add a DNS Resource Record
 description: Learn how to add one or more new DNS resource records by using the IPAM client console.
-manager: brianlic
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo

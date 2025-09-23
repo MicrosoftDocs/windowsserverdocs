@@ -2,7 +2,6 @@
 title: rwinsta
 description: Reference article for the rwinsta command, which resets (deletes) a session on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 82bee0e4-1c2c-43fe-afd3-04a6ce0f4518
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

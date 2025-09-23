@@ -1,6 +1,5 @@
 ---
 description: "Learn more about: The Role of the Claims Pipeline"
-ms.assetid: ffb9d63c-ba7c-4ad1-b814-6db67f98c943
 title: The Role of the Claims Pipeline
 ms.date: 04/08/2025
 ms.topic: concept-article

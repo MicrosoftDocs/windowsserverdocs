@@ -1,6 +1,5 @@
 ---
 description: "Learn more about: Custom Web Themes in AD FS"
-ms.assetid: 0379abc3-25c7-46ab-9a6b-80a5152365b0
 title: Custom Web Themes in AD FS
 ms.date: 04/08/2025
 ms.topic: how-to

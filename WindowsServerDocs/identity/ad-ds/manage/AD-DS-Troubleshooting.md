@@ -1,5 +1,4 @@
 ---
-ms.assetid: fd3bc84a-48eb-4f00-9dc2-846bf2c2668b
 title: AD DS Troubleshooting
 description: Overview of the troubleshooting section for AD DS
 ms.author: roharwoo
