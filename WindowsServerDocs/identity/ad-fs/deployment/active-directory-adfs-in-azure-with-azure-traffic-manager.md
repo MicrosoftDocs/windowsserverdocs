@@ -2,7 +2,6 @@
 title: High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager | Microsoft Docs
 description: How to deploy AD FS in Azure for high availability.
 services: active-directory
-ms.assetid: a14bc870-9fad-45ed-acd5-a90ccd432e54
 ms.topic: how-to
 ms.date: 04/08/2025
 ms.custom: sfi-image-nochange

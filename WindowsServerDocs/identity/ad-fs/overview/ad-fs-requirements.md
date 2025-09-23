@@ -1,5 +1,4 @@
 ---
-ms.assetid: 28f4a518-1341-4a10-8a4e-5f84625b314b
 title: AD FS 2016 Requirements
 description: Learn about the requirements for installing Active Directory Federation Services (ADFS) for your systems.
 ms.date: 04/08/2025
