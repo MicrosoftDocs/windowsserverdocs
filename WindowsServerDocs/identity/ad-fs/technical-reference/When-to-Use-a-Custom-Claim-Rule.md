@@ -1,6 +1,5 @@
 ---
 description: "Learn more about: When to Use a Custom Claim Rule"
-ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: When to Use a Custom Claim Rule
 ms.date: 02/13/2024
 ms.topic: concept-article

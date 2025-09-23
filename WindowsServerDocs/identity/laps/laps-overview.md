@@ -16,13 +16,21 @@ Windows Local Administrator Password Solution (Windows LAPS) is a Windows featur
 
 Windows LAPS is available on the following OS platforms:
 
-- [Windows 11 23H2](https://support.microsoft.com/topic/windows-11-version-23h2-update-history-59875222-b990-4bd9-932f-91a5954de434) and later Windows Client releases
-- [Windows Server 23H2](https://support.microsoft.com/topic/windows-server-version-23h2-update-history-68c851ff-825a-4dbc-857b-51c5aa0ab248) and later Windows Server releases
-- [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239) and later
-- [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224) and later
-- [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221) and later
-- [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230) and later
-- [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229) and later
+### Windows client
+
+- Windows 11 23H2 and later.
+- Other versions of Windows client that have received the April 11, 2023 Update or later, including:
+  - [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239) and later.
+  - [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224) and later.
+  - [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221) and later.
+
+### Windows Server
+
+- Windows Server 2025 and later.
+- [Windows Server Annual Channel for Containers, 23H2 and later](https://support.microsoft.com/topic/windows-server-version-23h2-update-history-68c851ff-825a-4dbc-857b-51c5aa0ab248).
+- Other versions of Windows Server that have received the April 11, 2023 Update or later, including:
+  - [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230) and later.
+  - [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229) and later.
 
 All supported editions of these platforms have been updated with Windows LAPS, including long-term servicing channel (LTSC) editions. The introduction of the Windows LAPS feature doesn't modify the standard Microsoft product lifecycle policies.
 

@@ -5,7 +5,6 @@ ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 05/12/2025
-ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
 ---
 # Safely virtualizing Active Directory Domain Services (AD DS)
 
