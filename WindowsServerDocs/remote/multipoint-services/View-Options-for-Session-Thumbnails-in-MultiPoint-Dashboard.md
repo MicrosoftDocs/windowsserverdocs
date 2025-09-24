@@ -2,7 +2,6 @@
 title: View Options for Session Thumbnails in MultiPoint Dashboard
 description: Learn how to customize your view options for MultiPoint Services
 ms.topic: how-to
-ms.assetid: 288a6504-418c-4489-acc6-930410c47cdb
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016

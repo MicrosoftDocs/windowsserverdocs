@@ -3,7 +3,6 @@ title: Set up a USB zero client-connected station in MultiPoint Services
 description: Learn how to create a USB zero client station in MultiPoint Services
 ms.date: 07/22/2016
 ms.topic: how-to
-ms.assetid: d2908865-6be3-474d-88f1-995f40bb61d0
 author: dknappettmsft
 ms.author: daknappe
 ---

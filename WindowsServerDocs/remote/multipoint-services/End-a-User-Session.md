@@ -2,7 +2,6 @@
 title: End a User Session
 description: Learn when and how to manually end a user's session in MultiPoint Services
 ms.topic: how-to
-ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/07/2020

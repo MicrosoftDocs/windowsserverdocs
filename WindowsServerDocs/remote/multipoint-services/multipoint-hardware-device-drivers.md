@@ -2,7 +2,6 @@
 title: Collect hardware and device drivers needed for the installation
 description: Information about drivers you need to install for MultiPoint Services
 ms.topic: concept-article
-ms.assetid: 4cf5fdbe-b871-4360-b003-d65ac43b491e
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016

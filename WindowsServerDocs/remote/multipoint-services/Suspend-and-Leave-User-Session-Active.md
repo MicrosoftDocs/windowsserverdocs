@@ -2,7 +2,6 @@
 title: Suspend and Leave User Session Active
 description: Learn how to suspend a user from a MultiPoint session without disconnecting them
 ms.topic: how-to
-ms.assetid: 5263bce3-fe92-4398-8393-2e3a4e05d530
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016
