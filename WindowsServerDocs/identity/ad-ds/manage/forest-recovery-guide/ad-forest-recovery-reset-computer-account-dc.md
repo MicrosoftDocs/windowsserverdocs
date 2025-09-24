@@ -5,6 +5,7 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 05/12/2025
 ms.topic: how-to
+ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 ---
 
 # Active Directory Forest Recovery - Reset the computer account on the recovered DC

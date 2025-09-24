@@ -1,7 +1,9 @@
 ---
 title: Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 description: Learn how to deploy server certificates to your Remote Access and Network Policy Server (NPS) infrastructure servers.
+manager: brianlic
 ms.topic: how-to
+ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

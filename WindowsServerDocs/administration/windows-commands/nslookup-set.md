@@ -2,6 +2,7 @@
 title: nslookup set
 description: Reference article for the nslookup set command, which changes configuration settings affecting how lookups behave.
 ms.topic: reference
+ms.assetid: 1fe5b36d-e93e-468b-abca-43b0204b32d1
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

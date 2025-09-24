@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Evaluating AD DS Deployment Strategy Examples"
+ms.assetid: 4f835b82-67b9-428c-b634-ce133cca5113
 title: Evaluating AD DS Deployment Strategy Examples
 author: robinharwood
 ms.author: roharwoo

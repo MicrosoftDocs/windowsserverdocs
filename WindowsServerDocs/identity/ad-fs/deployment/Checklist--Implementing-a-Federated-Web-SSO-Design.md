@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Checklist: Implementing a Federated Web SSO Design"
+ms.assetid: 6b49cde3-d2cb-4ece-b9b7-dc600e037495
 title: Checklist - Implementing a Federated Web SSO Design
 ms.date: 02/13/2024
 ms.topic: checklist

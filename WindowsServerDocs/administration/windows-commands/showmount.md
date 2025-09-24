@@ -2,6 +2,7 @@
 title: showmount
 description: Reference article for the showmount command, which displays information about mounted file systems exported by Server for NFS on a specified computer.
 ms.topic: reference
+ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

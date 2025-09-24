@@ -1,7 +1,9 @@
 ---
 title: Wireless Access Deployment
 description: Learn how to deploy wireless access in five steps.
+manager: brianlic
 ms.topic: how-to
+ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

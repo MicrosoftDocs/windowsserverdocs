@@ -1,7 +1,9 @@
 ---
 title: Configure Encryption for a Virtual Network
 description: Learn how to create the encryption certificate, create the certificate credential, and configuring a virtual network for encryption.
+manager: grcusanz
 ms.topic: how-to
+ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: roharwoo
 author: robinharwood
 ms.date: 11/02/2021

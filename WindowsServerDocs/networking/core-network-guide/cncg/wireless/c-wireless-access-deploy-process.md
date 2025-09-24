@@ -1,7 +1,9 @@
 ---
 title: Wireless Access Deployment Process
 description: Learn about the five stages used in the process to deploy wireless access.
+manager: brianlic
 ms.topic: how-to
+ms.assetid: 2555f238-926e-4b20-9bfb-9774831062da
 author: robinharwood
 ms.author: roharwoo
 ms.date: 08/07/2020

@@ -2,6 +2,7 @@
 title: wdsutil
 description: Reference article for wdsutil, which is a command-line utility used for managing your Windows Deployment Services server.
 ms.topic: reference
+ms.assetid: 3a1965a0-8677-40cc-9495-30ae806808d1
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

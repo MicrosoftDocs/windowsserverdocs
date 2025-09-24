@@ -2,6 +2,7 @@
 title: wdsutil get-imagegroup
 description: Reference article for wdsutil get-imagegroup, which retrieves information about an image group and the images in it.
 ms.topic: reference
+ms.assetid: 0fc25aca-a529-44ee-bc8e-96bc8affb458
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

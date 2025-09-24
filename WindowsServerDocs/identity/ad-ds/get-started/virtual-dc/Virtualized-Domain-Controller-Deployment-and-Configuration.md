@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Virtualized Domain Controller Deployment and Configuration"
+ms.assetid: b146f47e-3081-4c8e-bf68-d0f993564db2
 title: Virtualized Domain Controller Deployment and Configuration
 author: robinharwood
 ms.author: roharwoo

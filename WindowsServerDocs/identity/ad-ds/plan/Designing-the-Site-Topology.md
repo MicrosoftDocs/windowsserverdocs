@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Designing the Site Topology"
+ms.assetid: eeb919de-e21e-48d8-8186-e42adec6933f
 title: Designing the Site Topology
 author: robinharwood
 ms.author: roharwoo

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
 author: robinharwood

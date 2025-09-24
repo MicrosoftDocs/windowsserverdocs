@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Appendix H: Securing Local Administrator Accounts and Groups"
+ms.assetid: ea015cbc-dea9-4c72-a9d8-d6c826d07608
 title: Appendix H - Securing Local Administrator Accounts and Groups
 author: robinharwood
 ms.author: roharwoo

@@ -4,6 +4,7 @@ description: Find out about the settings in the Windows Time service (W32Time). 
 ms.topic: concept-article
 ms.author: daknappe
 author: dknappettmsft
+ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 ms.date: 09/18/2025
 # customer intent: As an administrator, I want to find out more about Windows Time service settings so that I can adjust their configuration when I need to.
 ---

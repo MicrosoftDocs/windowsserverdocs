@@ -1,7 +1,9 @@
 ---
 title: Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 description: Learn how to configure the web server WEB1 to distribute CRLs.
+manager: brianlic
 ms.topic: how-to
+ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

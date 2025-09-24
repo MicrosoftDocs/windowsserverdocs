@@ -3,6 +3,7 @@ title: Overview of Active Directory Domain Services
 description: Learn about how Active Directory Domain Services, provides the methods for storing directory data and making this data available to network users and administrators.
 ms.topic: overview
 
+ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/12/2016

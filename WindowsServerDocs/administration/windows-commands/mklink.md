@@ -2,6 +2,7 @@
 title: mklink
 description: Reference article for the mklink command, which creates a directory or file symbolic or hard link.
 ms.topic: reference
+ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

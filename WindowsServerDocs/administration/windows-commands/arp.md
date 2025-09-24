@@ -2,6 +2,7 @@
 title: arp
 description: Reference article for the arp command, which displays and modifies entries in the Address Resolution Protocol (arp) cache used to store IP addresses and their resolved physical addresses in Windows.
 ms.topic: reference
+ms.assetid: 827e96eb-1945-483f-980f-714703456f7c
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 08/15/2025

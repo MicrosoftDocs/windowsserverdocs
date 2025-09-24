@@ -2,6 +2,7 @@
 title: bitsadmin gettype
 description: Reference article for the bitsadmin gettype command, which retrieves the job type of the specified job.
 ms.topic: reference
+ms.assetid: bec16f04-3e95-4587-889e-3de6ad03c9c8
 ms.author: mosagie
 author: meaghanlewis
 ms.date: 10/16/2017

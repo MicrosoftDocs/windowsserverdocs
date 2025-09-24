@@ -1,7 +1,9 @@
 ---
 title: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 description: Learn how to use DNS policy for intelligent DNS responses based on the time of day.
+manager: brianlic
 ms.topic: how-to
+ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021

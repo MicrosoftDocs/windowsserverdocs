@@ -2,6 +2,7 @@
 title: convert
 description: Reference article for the convert command, which converts a disk from one disk type to another.
 ms.topic: reference
+ms.assetid: ae151297-af21-4701-bd69-21d775518e03
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

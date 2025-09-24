@@ -2,6 +2,8 @@
 description: "Learn more about: High-performance networking (HPN)"
 title: High-performance networking (HPN)
 ms.topic: concept-article
+ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
+manager: dougkim
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/26/2021

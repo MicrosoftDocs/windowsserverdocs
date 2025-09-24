@@ -2,6 +2,7 @@
 title: get-AllServers
 description: Reference article for get-AllServers, which retrieves information about all Windows Deployment Services servers.
 ms.topic: reference
+ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
 ms.author: alalve
 author: xelu86
 ms.date: 10/16/2017

@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Configuring Partner Organizations"
+ms.assetid: 4d002764-58b4-4137-9c86-1e55b02e07ce
 title: Configuring Partner Organizations
 ms.date: 02/13/2024
 ms.topic: concept-article

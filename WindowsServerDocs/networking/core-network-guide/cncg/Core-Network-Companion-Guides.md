@@ -1,7 +1,9 @@
 ---
 title: Core Network Companion Guides
 description: This topic provides an overview of the companion guides to the Windows Server 2016 Core Network Guide
+manager: brianlic
 ms.topic: concept-article
+ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

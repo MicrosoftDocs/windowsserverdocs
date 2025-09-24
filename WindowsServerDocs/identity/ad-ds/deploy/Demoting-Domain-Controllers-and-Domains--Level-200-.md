@@ -1,5 +1,6 @@
 ---
 description: Learn how to demote domain controllers and domains using Server Manager or PowerShell in Windows Server.
+ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Demote Domain Controllers and Domains
 author: dknappettmsft
 ms.author: daknappe

@@ -1,6 +1,7 @@
 ---
 description: "Learn more about SDN gateway performance"
 title: SDN gateway performance
+manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood

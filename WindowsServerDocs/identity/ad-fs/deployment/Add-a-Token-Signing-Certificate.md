@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Add a Token-Signing Certificate"
+ms.assetid: bbb84ea6-7e31-4442-85ab-a9447e7c19e8
 title: Add a Token-Signing Certificate
 ms.date: 02/13/2024
 ms.topic: how-to

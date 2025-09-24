@@ -2,6 +2,8 @@
 title: Software and hardware (SH) integrated features and technologies
 description: These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS.
 ms.topic: concept-article
+ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
+manager: dougkim
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/26/2021

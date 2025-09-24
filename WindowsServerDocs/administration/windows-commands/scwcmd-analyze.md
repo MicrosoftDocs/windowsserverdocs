@@ -2,6 +2,7 @@
 title: scwcmd analyze
 description: Reference article for the scwcmd analyze command, which determines whether a computer is in compliance with a policy.
 ms.topic: reference
+ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

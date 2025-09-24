@@ -2,6 +2,7 @@
 title: simulate restore
 description: Reference article for the simulate restore command, which tests whether writer involvement in restore sessions will be successful on the computer without issuing PreRestore or PostRestore events to writers.
 ms.topic: reference
+ms.assetid: d883d94c-3cb1-4848-9d74-1b4378044b31
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

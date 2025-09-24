@@ -2,6 +2,8 @@
 title: Manage QoS Policy
 description: This topic provides instructions on how to create and manage Quality of Service (QoS) Policy in Windows Server 2016.
 ms.topic: how-to
+ms.assetid: 04fdfa54-6600-43d4-8945-35f75e15275a
+manager: brianlic
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

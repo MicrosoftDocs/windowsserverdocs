@@ -2,6 +2,7 @@
 title: Network Policy Server (NPS) overview
 description: Learn about using Network Policy Server (NPS) in Windows Server to manage network access authentication, authorization, and accounting.
 ms.topic: overview
+ms.assetid: 9c7a67e0-0953-479c-8736-ccb356230bde
 ms.author: roharwoo
 author: robinharwood
 ms.date: 05/05/2025

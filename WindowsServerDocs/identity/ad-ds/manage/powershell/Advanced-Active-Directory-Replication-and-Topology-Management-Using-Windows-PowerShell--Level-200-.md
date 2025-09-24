@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)"
+ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
 author: robinharwood
 ms.author: roharwoo

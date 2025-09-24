@@ -1,7 +1,9 @@
 ---
 title: Deploy Password-Based 802.1X Authenticated Wireless Access
 description: Learn how to deploy Institute of Electrical and Electronics Engineers 802.1X-authenticated IEEE 802.11 wireless access using Protected Extensible Authentication Protocol – Microsoft Challenge Handshake Authentication Protocol version 2.
+manager: brianlic
 ms.topic: install-set-up-deploy
+ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
 ms.author: roharwoo
 author: robinharwood
 ms.date: 02/06/2023

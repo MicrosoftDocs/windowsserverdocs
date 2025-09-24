@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Deploying Federation Servers"
+ms.assetid: c4d83dd3-2846-4658-8b9c-93901ee69766
 title: Deploying Federation Servers
 ms.date: 02/13/2024
 ms.topic: concept-article

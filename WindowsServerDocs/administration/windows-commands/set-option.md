@@ -2,6 +2,7 @@
 title: set option
 description: Reference article for the set option command, which sets the options for shadow copy creation.
 ms.topic: reference
+ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/16/2017

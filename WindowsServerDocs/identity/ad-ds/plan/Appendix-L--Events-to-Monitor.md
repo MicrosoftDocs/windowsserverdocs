@@ -1,6 +1,7 @@
 ---
 title: Appendix L - Events to Monitor
 description: "Learn more about: Appendix L: Events to Monitor"
+ms.assetid: 99a68050-8d19-4c58-ad86-e08a3dcdb4f7
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 05/30/2025

@@ -1,7 +1,9 @@
 ---
 title: Install the Certification Authority on Windows Server
 description: Learn how to install Active Directory Certificate Services so that you can enroll a server certificate to servers.
+manager: brianlic
 ms.topic: install-set-up-deploy
+ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 author: robinharwood
 ms.author: roharwoo
 ms.date: 04/15/2025

@@ -2,6 +2,7 @@
 title: Create a Key Distribution Service (KDS) Root Key
 description: Learn how to create a Key Distribution Service root key on a domain controller by using Windows PowerShell to generate group Managed Service Account passwords in Windows Server 2012 or later.
 ms.topic: how-to
+ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
 ms.author: roharwoo
 author: robinharwood
 ms.date: 07/09/2025

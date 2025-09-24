@@ -2,6 +2,7 @@
 title: Determine Allow-Deny List and Application Inventory for Software Restriction Policies
 description: Learn how to create an allow and deny list for applications to be managed by Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 ms.topic: concept-article
+ms.assetid: 0abb73b6-b5d8-4505-8ab1-2f29e4bf0411
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/12/2016

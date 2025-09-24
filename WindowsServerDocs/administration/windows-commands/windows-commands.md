@@ -2,6 +2,7 @@
 title: Windows commands
 description: Reference
 ms.topic: reference
+ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
 ms.date: 07/29/2025

@@ -3,6 +3,7 @@ title: fsutil clfs
 description: Reference article for the fsutil clfs command.
 ms.author: alalve
 author: xelu86
+ms.assetid: 3a5851ad-664c-4467-9ac9-132c3e4b2f7c
 ms.topic: reference
 ms.date: 03/04/2025
 ---

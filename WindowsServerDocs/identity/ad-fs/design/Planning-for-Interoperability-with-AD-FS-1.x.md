@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Planning for Interoperability with AD FS 1.x"
+ms.assetid: 04b63d9f-e924-4146-9b1d-785ed8b4239c
 title: Planning for Interoperability with AD FS 1.x
 ms.date: 02/13/2024
 ms.topic: concept-article

@@ -1,4 +1,5 @@
 ---
+ms.assetid: 4163cf03-3bff-426c-9844-4cc2d7897d52
 title: DNS for AD DS Owner Role
 description: Information about the DNS for AD DS Owner role.
 author: robinharwood

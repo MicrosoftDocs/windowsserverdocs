@@ -1,7 +1,9 @@
 ---
 title: Copy the CA Certificate and CRL to the Virtual Directory
 description: Learn how to copy the Certificate Revocation List and Enterprise root CA certificate from your certification authority to a virtual directory on your Web server, and to ensure that AD CS is configured correctly.
+manager: dougkim
 ms.topic: how-to
+ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.author: roharwoo
 author: robinharwood
 ms.date: 07/19/2018

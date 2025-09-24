@@ -5,6 +5,7 @@ ms.author: roharwoo
 author: robinharwood
 ms.date: 05/12/2025
 ms.topic: how-to
+ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11
 ---
 
 # Active Directory Forest Recovery - Invalidate the current RID pool

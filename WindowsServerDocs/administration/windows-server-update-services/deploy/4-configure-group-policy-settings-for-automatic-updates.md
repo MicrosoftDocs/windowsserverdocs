@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 05/02/2025
+ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
 # customer intent: As an administrator, I want to see how to configure Windows Update settings in Group Policy so that I can specify how users and computers obtain automatic updates from Windows Server Update Services (WSUS).
 # freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
 ---

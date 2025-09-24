@@ -2,6 +2,7 @@
 title: wdsutil start-namespace
 description: Reference article for Subcommand start-Namespace, which starts a Scheduled-Cast namespace.
 ms.topic: reference
+ms.assetid: 2dd1c11e-6ab7-4129-9e3a-3f80e0ba59c0
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

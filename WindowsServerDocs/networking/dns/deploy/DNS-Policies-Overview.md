@@ -1,7 +1,9 @@
 ---
 title: DNS Policies Overview
 description: Learn how to use DNS Policy for Geo-Location based traffic management, intelligent DNS responses based on the time of day, to manage a single DNS server configured for split\-brain deployment, applying filters on DNS queries, and more.
+manager: brianlic
 ms.topic: concept-article
+ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/23/2022

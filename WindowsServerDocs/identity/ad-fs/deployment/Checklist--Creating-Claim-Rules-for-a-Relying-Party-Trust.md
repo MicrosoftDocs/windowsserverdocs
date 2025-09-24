@@ -1,5 +1,6 @@
 ---
 description: "Learn more about: Checklist: Creating Claim Rules for a Relying Party Trust"
+ms.assetid: 44271f44-b50a-4bce-9375-4fcab9618048
 title: Checklist - Creating Claim Rules for a Relying Party Trust
 ms.date: 02/13/2024
 ms.topic: checklist
