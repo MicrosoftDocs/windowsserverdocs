@@ -2,7 +2,6 @@
 title: Monitor the configuration distribution status of the Remote Access server
 description: Learn how to use the monitoring dashboard to monitor the configuration distribution status of the Remote Access server.
 ms.topic: how-to
-ms.assetid: de285d13-9e54-4c46-88f0-607182e5e3dc
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

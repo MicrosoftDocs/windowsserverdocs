@@ -3,7 +3,6 @@ title: Configure the VPN device tunnel in Windows client
 description: Learn how to create a VPN device tunnel in Windows client.
 ms.date: 01/25/2023
 ms.topic: how-to
-ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: daknappe
 author: dknappettmsft
 ---

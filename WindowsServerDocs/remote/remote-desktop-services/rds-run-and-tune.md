@@ -4,7 +4,6 @@ description: Provides management information for Remote Desktop Services.
 ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: best-practice
-ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
 author: dknappettmsft
 ---
 # Run and tune your Remote Desktop Services environment

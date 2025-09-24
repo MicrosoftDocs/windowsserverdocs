@@ -4,7 +4,6 @@ description: Architectural guidance for creating a desktop hosting solution with
 ms.author: daknappe
 ms.date: 7/3/2024
 ms.topic: reference-architecture
-ms.assetid: 1bac5dd3-8430-46ee-8bef-10cc4b7cc437
 author: dknappettmsft
 ---
 # Desktop Hosting Reference Architecture

@@ -2,7 +2,6 @@
 title: Install and Configure Advanced DirectAccess
 description: Learn about the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with IPv4 and IPv6.
 ms.topic: install-set-up-deploy
-ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020
