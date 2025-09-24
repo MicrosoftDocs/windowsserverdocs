@@ -4,7 +4,7 @@ description: Learn about the features and functionalities removed or no longer d
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/23/2025
+ms.date: 09/24/2025
 ---
 
 # Features removed or no longer developed in Windows Server
@@ -100,7 +100,7 @@ We're removing the following features and functionalities from the installed pro
 | Data Encryption Standard (DES) | DES, the symmetric-key block encryption cipher, isn't considered secure against modern cryptographic attacks. It's replaced by more robust encryption algorithms. DES was disabled starting with Windows Server 2008 R2 and is removed from Windows Server 2025 and later releases. |
 | IIS 6 Management Console (Web-Lgcy-Mgmt-Console) | The console is removed after being no longer developed in Windows Server 2019. You should also start migrating from IIS 6.0 or earlier versions to the latest version of IIS, which is always available in the most recent release of Windows Server. |
 | NTLMv1 | Replace calls to NTLM with calls to [Negotiate](/windows/win32/secauthn/microsoft-negotiate), which tries to authenticate with Kerberos and only falls back to NTLM when necessary. For more information, see [The evolution of Windows authentication](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-evolution-of-windows-authentication/ba-p/3926848). |
-| Windows PowerShell 2.0 | Starting with the [September 2025 update](https://support.microsoft.com/en-us/topic/september-9-2025-kb5065426-update-for-windows-server-2025-os-build-26100-6584-6a59dc6a-1ff2-48f4-b375-81e93deee5dd), Windows Server 2025 no longer includes Windows PowerShell 2.0. Windows PowerShell 2.0 applications and components should be migrated to PowerShell 5.0 or later. To learn more about the deprecation, see [Windows PowerShell 2.0 Deprecation](https://devblogs.microsoft.com/powershell/windows-powershell-2-0-deprecation/). |
+| Windows PowerShell 2.0 | Starting with the [September 2025 update](https://support.microsoft.com/en-us/topic/september-9-2025-kb5065426-update-for-windows-server-2025-os-build-26100-6584-6a59dc6a-1ff2-48f4-b375-81e93deee5dd), Windows Server 2025 no longer includes Windows PowerShell 2.0. If Windows PowerShell 2.0 was installed before the September update, you can no longer use it. Windows PowerShell 2.0 applications and components should be migrated to PowerShell 5.0 or later. To learn more about the deprecation, see [Windows PowerShell 2.0 Deprecation](https://devblogs.microsoft.com/powershell/windows-powershell-2-0-deprecation/). |
 | SMTP Server | Because SMTP Server features were removed from Windows Server 2025, there's no replacement within the operating system. Consider using Exchange Server or a non-Microsoft SMTP server as an alternative. To learn more about enabling SMTP connection in Exchange Server, see [Receive connectors in Exchange Server](/exchange/mail-flow/connectors/receive-connectors). |
 | Wordpad | We recommend Microsoft Word for rich text documents like `.doc` and `.rtf`, and Windows Notepad for plain text documents like `.txt`. |
 
