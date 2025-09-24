@@ -3,7 +3,6 @@ title: Storing Files with MultiPoint Services
 description: Learn about file storage in MultiPoint Services
 ms.date: 07/22/2016
 ms.topic: concept-article
-ms.assetid: c9eb0461-3846-4ddc-97ff-de10f03f30cf
 author: dknappettmsft
 ms.author: daknappe
 ---

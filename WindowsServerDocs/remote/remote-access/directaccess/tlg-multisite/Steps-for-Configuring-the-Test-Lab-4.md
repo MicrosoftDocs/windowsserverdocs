@@ -2,7 +2,6 @@
 title: Steps for Configuring the Test Lab
 description: Learn how to configure the Remote Access infrastructure, configure the Remote Access servers and clients and test DirectAccess connectivity from the Internet and Homenet subnets.
 ms.topic: how-to
-ms.assetid: dc7205b4-a822-4038-ab67-ec0a870737f2
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

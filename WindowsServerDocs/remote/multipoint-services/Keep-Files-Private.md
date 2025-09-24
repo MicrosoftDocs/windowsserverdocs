@@ -2,7 +2,6 @@
 title: Keep Files Private
 description: Learn how to protect certain files from users within MultiPoint Services
 ms.topic: how-to
-ms.assetid: 909049dc-6514-4040-89fb-fcf33fa96a9d
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016

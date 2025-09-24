@@ -2,7 +2,6 @@
 title: Set up a Station for Automatic Logon
 description: Learn how to configure automatic logon for MultiPoint Services stations
 ms.topic: how-to
-ms.assetid: 7a326085-7438-41de-9874-59aca393fa4a
 author: dknappettmsft
 ms.author: daknappe
 ms.date: 08/04/2016
