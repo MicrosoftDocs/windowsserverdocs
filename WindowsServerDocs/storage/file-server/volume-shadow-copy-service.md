@@ -330,7 +330,7 @@ The maximum number of shadow copied volumes in a single shadow copy set is 64. T
 
 ### What's the maximum number of software shadow copies created by the system provider that I can maintain for a volume?
 
-The maximum number is of software shadow copies for each volume is 512. However, by default, you can only maintain 64 shadow copies that are used by the Shadow Copies of Shared Folders feature. To change the limit for the Shadow Copies of Shared Folders feature, use the following registry key: `MaxShadowCopies`.
+The maximum number of software shadow copies for each volume is 512. However, by default, you can only maintain 64 shadow copies that are used by the Shadow Copies of Shared Folders feature. To change the limit for the Shadow Copies of Shared Folders feature, use the following registry key: `MaxShadowCopies`.
 
 ### How can I control the space that's used for shadow copy storage space?
 
