@@ -20,8 +20,8 @@
       href: rds-plan-build-anywhere.md
     - name: Network guidelines
       href: network-guidance.md
-    - name: Virtual machine sizing guidelines
-      href: virtual-machine-recs.md
+    - name: Session host VM sizing guidelines
+      href: session-host-virtual-machine-sizing-guidelines.md
     - name: Access from anywhere
       href: rds-plan-access-from-anywhere.md
     - name: High availability
