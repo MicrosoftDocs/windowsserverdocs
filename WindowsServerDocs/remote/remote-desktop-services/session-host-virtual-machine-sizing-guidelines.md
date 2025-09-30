@@ -126,7 +126,7 @@ The following table shows examples of typical workloads:
 
 In a *multi-session* scenario, more than one user is signed in to a session host virtual machine at any given time. For example, when you use pooled host pools in Azure Virtual Desktop with the Windows 11 Enterprise multi-session operating system (OS), that's a multi-session deployment.
 
-A multi-session computing environment experiences significantly higher peak loads compared to single-session environments. An session host with a specific hardware capacity has a maximum workload limit that it can support before its resources are exhausted.
+A multi-session computing environment experiences significantly higher peak loads compared to single-session environments. A session host with a specific hardware capacity has a maximum workload limit that it can support before its resources are exhausted.
 
 These sizing recommendations for multi-session scenarios are based on Azure VMs. You can also use these figures as a baseline for physical session hosts, consider your capacity planning approach to refine these recommendations for your workloads.
 
@@ -145,7 +145,7 @@ For multi-session workloads, you should limit VM size to between 4 vCPUs and 24 
 
 - VMs shouldn't have more than 32 cores. As the number of cores increases, the system's synchronization overhead also increases. For most workloads, at around 16 cores, the return on investment gets lower, with most of the extra capacity offset by synchronization overhead. User experience is better with two 16-core VMs instead of one 32-core VM.
 
-The recommended range between 4 and 24 cores generally provides better capacity returns for your users as you increase the number of cores. For example, if you have 12 users sign in at the same time to a VM that has four cores, the ratio is three users per core. On a VM with 8 cores and 14 users, the ratio is 1.75 users per core. In this scenario, the latter configuration with a ratio of 1.75 offers greater burst capacity for your apps that have short-term CPU demand.
+The recommended range between 4 and 24 cores generally provides better capacity returns for your users as you increase the number of cores. For example, if you have 12 users sign in at the same time to a VM that has four cores, the ratio is three users per core. On a VM with 8 cores and 14 users, the ratio is 1.75 users per core. In this scenario, the latter configuration with a ratio of 1.75 offers greater burst capacity for applications that have short-term CPU demand.
 
 This recommendation is true at a larger scale. For scenarios with 20 or more users connected to a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to sign in within 10 minutes of each other on the same session host with 16 cores, two 8-core VMs would handle the workload better. You can also use breadth-first load balancing to evenly distribute users across different VMs instead of depth-first load balancing, where you can only use a new session host after the existing one is full of users.
 
