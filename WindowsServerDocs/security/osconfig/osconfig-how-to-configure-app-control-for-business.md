@@ -179,13 +179,13 @@ To verify that the supplemental policies were applied, monitor event IDs **3076*
 To view the policies that are currently in effect in your environment, run the following command:
 
 ```powershell
-(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PolicyInfo | Where-Object { $_.IsEffective -eq $true }
+(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PSObject.Properties | ForEach-Object { $_.Value.PolicyInfo } | Where-Object { $_.IsEffective -eq $true }
 ```
 
 To view policies that are currently inactive in your environment, run the following command:
 
 ```powershell
-(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PolicyInfo | Where-Object { $_.IsEffective -eq $false }
+(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PSObject.Properties | ForEach-Object { $_.Value.PolicyInfo } | Where-Object { $_.IsEffective -eq $false }
 ```
 
 Output for these queries varies based on your policy configuration needs.
