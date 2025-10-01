@@ -19,6 +19,8 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 ## General
 
+- When upgrading from version 2311 to version 2410, the existing certificate may not be set in the updated installation, especially for users using Windows Admin Center in international languages or those with special characters. [Learn how to update your Windows Admin Center certificate](../configure/update-certificate).
+
 - Windows Admin Center version 2410 build 2.4.2.1 may appear as build number 2.4.1 on the Windows Admin Center Updates settings page.
 
 - In Windows Admin Center version 2410, users are unable to register their Windows Admin Center gateways to sovereign clouds. This issue is actively being investigated.
@@ -63,12 +65,9 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 Even with an added extension feed, the following extensions currently don't work with the modernized gateway build 2410:
 
-- Dell OpenManage
-- Lenovo XClarity Integrator
 - Fujitsu ServerView RAID
 - Fujitsu Software Infrastructure Manager (ISM)
 - Fujitsu ServerView Health
-- Pure Storage FlashArray
 
 ## Partner extension issues
 
