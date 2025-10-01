@@ -46,8 +46,8 @@ Use this article to compare the Standard, Datacenter, and Datacenter: Azure Edit
 | Data Center Bridging                             |                                                                | ✅               | ✅                  | ✅                        |
 | Device Health Attestation                        |                                                                | ✅               | ✅                  | ✅                        |
 | DHCP Server                                      |                                                                | ✅               | ✅                  | ✅                        |
-| Direct Play                                      |                                                                | ✅&sup3;         | ✅&#8308;           | ✅&#8308;                 |
-| DLNA codecs and web media streaming              |                                                                | ✅&sup3;         | ✅&#8308;           | ✅&#8308;                 |
+| Direct Play                                      |                                                                | ✅&#8308;         | ✅&#8308;           | ✅&#8308;                 |
+| DLNA codecs and web media streaming              |                                                                | ✅&#8308;         | ✅&#8308;           | ✅&#8308;                 |
 | DNS Server                                       |                                                                | ✅               | ✅                  | ✅                        |
 | Enhanced Storage                                 |                                                                | ✅               | ✅                  | ✅                        |
 | Failover Clustering                              |                                                                | ✅               | ✅                  | ✅                        |
