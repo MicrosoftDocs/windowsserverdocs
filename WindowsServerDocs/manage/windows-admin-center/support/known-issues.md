@@ -19,7 +19,7 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 ## General
 
-- When upgrading from version 2311 to version 2410, the existing certificate may not be set in the updated installation, especially for users using Windows Admin Center in international languages or those with special characters. [Learn how to update your Windows Admin Center certificate](../configure/update-certificate).
+- When upgrading from version 2311 to version 2410, the existing certificate may not be set in the updated installation, especially for users using Windows Admin Center in international languages or those with special characters. [Learn how to update your Windows Admin Center certificate](../configure/update-certificate.md).
 
 - Windows Admin Center version 2410 build 2.4.2.1 may appear as build number 2.4.1 on the Windows Admin Center Updates settings page.
 
