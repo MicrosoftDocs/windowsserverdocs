@@ -541,32 +541,32 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 ### New Features
 - **Bulk VM Migration with Queuing Support**
-To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
+    To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
 
->[!NOTE]  
->Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
->The browser session must remain active during the final migration step.  
+    >[!NOTE]  
+    >Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
+    >The browser session must remain active during the final migration step.  
 
 - **Static IP Batch Support**
-Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
+    Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
 
 - **Batch Uninstall of VMware Tools (Windows VMs)** 
-You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
- 
->[!NOTE]
->While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
+    You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
+    
+    >[!NOTE]
+    >While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
 
 - **BIOS UUID Migration**
-The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
+    The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
->[!NOTE] 
->Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions).
+    >[!NOTE] 
+    >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions).
 
 - **Standardized Destination Folder Structure**
-The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
+    The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
 
 - **Thick and Thin Disk Provisioning**
-During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
+    During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
 
 ---
 
