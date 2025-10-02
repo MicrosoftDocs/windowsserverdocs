@@ -299,7 +299,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
   
 - How is memory configured during virtual machine migration?
 
-    During migration, memory is configured as static, even if the source virtual machine is set to use dynamic memory. This is a design choice to ensure migration stability and compatibility between VMware and Hyper-V memory management.
+    During migration, memory is configured as static, even if the source virtual machine is set to use dynamic memory. This design choice to ensure migration stability and compatibility between VMware and Hyper-V memory management.
 
     To re-enable dynamic memory of change RAM parameters after migration:
 
@@ -318,7 +318,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
   - Hyper-V drivers must be installed on Linux machines before starting migration. Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure.​
 
-  - During virtual machine conversion, the BIOS GUID on the destination virtual machine won't match the source virtual machine unless it's manually updated. This might affect virtual machine identity synchronization, or licensing checks that rely on consistent BIOS-level identifiers. BIOS-level identifiers must be updated in virtual machine identity synchronization, and migration.
+  - During virtual machine conversion, the BIOS GUID on the destination virtual machine doesn't match the source virtual machine unless it's manually updated. This behavior might affect virtual machine identity synchronization, or licensing checks that rely on consistent BIOS-level identifiers. BIOS-level identifiers must be updated in virtual machine identity synchronization, and migration.
 
     <details>
     <summary>Expand this section and use the script provided to update the BIOS GUID on the migrated Hyper-V virtual machine.</summary>
@@ -588,7 +588,7 @@ Bulk migration requires session persistence. Remain logged in to Windows Admin C
   - The Synchronization Confirmation dialog explicitly shows the destination path.  
 
 [!IMPORTANT]  
-- For Linux VMs, ensure Hyper-V drivers are installed on the guest OS prior to migration.  
+- For Linux VMs, install the Hyper-V drivers on the guest OS before migration.  
 - VMware Tools batch uninstall is supported only for Windows VMs.  
 - BIOS Serial Number differences may affect licensing. See FAQ for details.  
 
