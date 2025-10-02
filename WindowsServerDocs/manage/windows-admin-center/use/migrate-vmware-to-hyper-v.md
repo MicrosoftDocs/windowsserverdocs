@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
-> This document provides information about a prerelease product that might change substantially before its release.Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
