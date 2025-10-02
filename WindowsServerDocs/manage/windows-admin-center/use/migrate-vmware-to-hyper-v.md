@@ -87,7 +87,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
 - Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
 
     > [!NOTE]
-    > Ensure you download **VDDK version 8.0.3** specifically. Other versions are not supported.
+    > Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
 
 - Ensure that the Hyper-V role is installed. This is typically already enabled.
 
@@ -494,8 +494,8 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 Cancellation isn't supported directly in the extension. As a workaround:
 
 1. Stop the **Windows Admin Center service**.
-2. Restart the service. This will release all running threads.
-3. Delete the relevant entries from the following files to ensure status does not continue to show as "In Progress":
+2. Restart the service. This releases all running threads.
+3. Delete the relevant entries from the following files to ensure status doesn't continue to show as "In Progress":
 
    ```
    C:\Program Files\Windows Admin Center\Service\migrationStatus.json
@@ -520,7 +520,7 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 **Symptom:**
 
-* Static IP configuration does not migrate successfully for a Windows VM.
+* Static IP configuration doesn't migrate successfully for a Windows VM.
 
 **Resolution:**
 
@@ -560,13 +560,13 @@ Cancellation isn't supported directly in the extension. As a workaround:
   The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
   [!NOTE] 
-  Only the BIOS UUID is migrated. BIOS Serial Number format differ between VMware and Hyper-V, which can affect licensing checks. See FAQ for more details.
+  Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see FAQ.
 
 - **Standardized Destination Folder Structure**  
   The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
 
 - **Thick and Thin Disk Provisioning**
-  During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use and simplifying post-migration management.
+  During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
 
 ---
 
@@ -574,7 +574,7 @@ Cancellation isn't supported directly in the extension. As a workaround:
 - Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
 - Corrected VM listing issue where VMs already present in **Hyper-V Manager** were incorrectly marked as failed.  
 - Improved notification accuracy during migration progress.  
-- Enhanced pre-checks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
+- Enhanced prechecks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
 
 ---
 
