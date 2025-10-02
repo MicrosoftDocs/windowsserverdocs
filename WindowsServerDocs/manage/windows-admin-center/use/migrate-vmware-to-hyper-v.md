@@ -580,16 +580,18 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 ## User Experience Changes
 
->[!NOTE]  
->Bulk migration requires session persistence. Remain logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration.   
+- **Session Persistence for Bulk Migration**
+  - Stay logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration. 
+  - The browser session must remain active during the final migration step. 
 
 - **Folder Structure Transparency**  
   - Destination folders now directly reflect **Hyper-V layout**.  
-  - The Synchronization Confirmation dialog explicitly shows the destination path.  
+  - The Synchronization Confirmation dialog explicitly shows the destination path. 
 
->[!NOTE]  
->- For Linux VMs, install the Hyper-V drivers on the guest OS before migration.  
->- VMware Tools batch uninstall is supported only for Windows VMs.  
->- BIOS Serial Number differences may affect licensing. See [FAQ](https://learn.microsoft.com/en-in/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions) for details.  
+- **Linux VMs** - Install Hyper-V drivers on the guest OS before migration.  
+
+- **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
+
+- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](https://learn.microsoft.com/en-in/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions) for details.  
 
 ---
