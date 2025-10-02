@@ -103,7 +103,7 @@ None.
 
 ### Supported vCenter versions
 
-- The extension supports VMware VCenter version 6.x or 7.x.
+- The extension supports VMware VCenter version 6.x or 7.x or 8.x.
 - To connect to vCenter from the extension, keep the following vCenter information at hand:
   - Fully Qualified Domain Name (FQDN)
   - Username
@@ -534,5 +534,62 @@ Cancellation isn't supported directly in the extension. As a workaround:
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
 
+---
 
+## What's new 
+## Update (September 2025)
 
+### New Features
+- **Bulk VM Migration with Queuing Support**
+ To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
+
+  [!NOTE]  
+  Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
+  The browser session must remain active during the final migration step.  
+
+- **Static IP Batch Support**  
+ Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
+
+- **Batch Uninstall of VMware Tools (Windows VMs)** 
+ You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
+ 
+ [!NOTE]
+ While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
+
+- **BIOS UUID Migration**  
+  The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
+
+  [!NOTE] 
+  Only the BIOS UUID is migrated. BIOS Serial Number format differ between VMware and Hyper-V, which can affect licensing checks. See FAQ for more details.
+
+- **Standardized Destination Folder Structure**  
+  The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
+
+- **Thick and Thin Disk Provisioning**
+  During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use and simplifying post-migration management.
+
+---
+
+### Bug Fixes
+- Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
+- Corrected VM listing issue where VMs already present in **Hyper-V Manager** were incorrectly marked as failed.  
+- Improved notification accuracy during migration progress.  
+- Enhanced pre-checks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
+
+---
+
+## User Experience Changes
+
+[!IMPORTANT]  
+Bulk migration requires session persistence. Remain logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration.   
+
+- **Folder Structure Transparency**  
+  - Destination folders now directly reflect **Hyper-V layout**.  
+  - The Synchronization Confirmation dialog explicitly shows the destination path.  
+
+[!IMPORTANT]  
+- For Linux VMs, ensure Hyper-V drivers are installed on the guest OS prior to migration.  
+- VMware Tools batch uninstall is supported only for Windows VMs.  
+- BIOS Serial Number differences may affect licensing. See FAQ for details.  
+
+---
