@@ -541,25 +541,25 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 ### New Features
 - **Bulk VM Migration with Queuing Support**
- To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
+  To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
 
-  [!NOTE]  
+  >[!NOTE]  
   Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
   The browser session must remain active during the final migration step.  
 
 - **Static IP Batch Support**  
- Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
+  Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
 
 - **Batch Uninstall of VMware Tools (Windows VMs)** 
- You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
+  You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
  
- [!NOTE]
- While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
+  >[!NOTE]
+  While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
 
 - **BIOS UUID Migration**  
   The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
-  [!NOTE] 
+  >[!NOTE] 
   Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see FAQ.
 
 - **Standardized Destination Folder Structure**  
@@ -580,14 +580,14 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 ## User Experience Changes
 
-[!IMPORTANT]  
+>[!NOTE]  
 Bulk migration requires session persistence. Remain logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration.   
 
 - **Folder Structure Transparency**  
   - Destination folders now directly reflect **Hyper-V layout**.  
   - The Synchronization Confirmation dialog explicitly shows the destination path.  
 
-[!IMPORTANT]  
+>[!NOTE]  
 - For Linux VMs, install the Hyper-V drivers on the guest OS before migration.  
 - VMware Tools batch uninstall is supported only for Windows VMs.  
 - BIOS Serial Number differences may affect licensing. See FAQ for details.  
