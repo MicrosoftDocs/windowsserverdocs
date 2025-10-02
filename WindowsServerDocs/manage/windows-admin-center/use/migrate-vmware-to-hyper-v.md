@@ -560,7 +560,7 @@ Cancellation isn't supported directly in the extension. As a workaround:
   The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
   >[!NOTE] 
-  >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see FAQ.
+  >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](https://learn.microsoft.com/en-in/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions).
 
 - **Standardized Destination Folder Structure**  
   The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
@@ -590,6 +590,6 @@ Cancellation isn't supported directly in the extension. As a workaround:
 >[!NOTE]  
 >- For Linux VMs, install the Hyper-V drivers on the guest OS before migration.  
 >- VMware Tools batch uninstall is supported only for Windows VMs.  
->- BIOS Serial Number differences may affect licensing. See FAQ for details.  
+>- BIOS Serial Number differences may affect licensing. See [FAQ](https://learn.microsoft.com/en-in/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions) for details.  
 
 ---
