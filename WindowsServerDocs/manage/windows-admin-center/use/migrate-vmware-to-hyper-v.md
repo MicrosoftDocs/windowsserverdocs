@@ -560,7 +560,7 @@ You can now uninstall VMware Tools from multiple Windows virtual machines in a s
 The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
 >[!NOTE] 
->Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](https://learn.microsoft.com/en-in/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions).
+>Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions).
 
 - **Standardized Destination Folder Structure**
 The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
@@ -592,6 +592,6 @@ During synchronization, VM disks are created as **thick (fixed)** or **thin (dyn
 
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
-- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](https://learn.microsoft.com/en-in/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions) for details.  
+- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions) for details.  
 
 ---
