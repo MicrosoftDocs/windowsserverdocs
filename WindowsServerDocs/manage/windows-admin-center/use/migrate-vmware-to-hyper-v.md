@@ -1,6 +1,6 @@
 ---
 title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)
-description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
+description: Learn how to migrate VMware virtual machines (VMs) to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
 author: robinharwood
 ms.topic: how-to
 ms.date: 08/13/2025
@@ -10,7 +10,7 @@ ms.author: roharwoo
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
-> This information relates to a prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> This document provides information about a prerelease product that might change substantially before its release.Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
@@ -20,7 +20,7 @@ In this article, you learn how to install and configure the extension, follow th
 
 The **VM Conversion extension** provides the following key features:
 
-- **Bulk migration**: Supports a batch of 10 virtual machines migration at-a-time. This enables admins to group virtual machines based on:
+- **Bulk migration**: Supports a batch of 10 virtual machines migration at-a-time. This feature enables admins to group virtual machines based on:
 
   - **Application dependency** – virtual machines that are part of the same application stack or service.
   - **Cluster dependency** – virtual machines that need to be distributed on nodes within same cluster.
@@ -29,10 +29,10 @@ The **VM Conversion extension** provides the following key features:
 
 - **Cluster-aware migration**: Supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
 
-- **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This reduces post-migration tasks and enables seamless network continuity.
+- **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This functionality reduces post-migration tasks and enables seamless network continuity.
 
 - **Secure Boot and UEFI template configuration**: Provides enhanced security and compliance.
-  - Integrated osType across the migration flow for accurate secure boot and UEFI setup.
+  - Integrated osType across the migration flow for accurate secure boot and Unified Extensible Firmware Interface (UEFI) setup.
   - Secure boot settings are dynamically configured based on OS, either Windows or Linux.
   - Added error handling for unsupported OS types.
 
@@ -89,7 +89,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
     > [!NOTE]
     > Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
 
-- Ensure that the Hyper-V role is installed. This is typically already enabled.
+- Ensure that the Hyper-V role is installed. This setting is typically enabled by default.
 
 - [Use Windows Admin Center Gateway V2](https://aka.ms/downloadWAC) – version `2410` build number `2.4.12.10`
 
@@ -196,7 +196,7 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png":::
 
-1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
+1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the Hyper-V Virtual Hard Disk (VHDX) file is created in the folder path specified.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png":::
 
@@ -264,11 +264,11 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ## Frequently asked questions
 
-- Does the tool support both Static and DHCP IP addresses?
+- Does the tool support both Static and Dynamic Host Configuration Protocol (DHCP) IP addresses?
 
     Yes, both DHCP and Static IP addresses are supported.
 
-    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's persisted on the target Hyper-V host post cutover phase.
+    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. This data persists on the target Hyper-V host after the cutover phase.
 
 - How does the tool handle VM boot types?
 
@@ -278,7 +278,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied—not the full allocated size.
 
-    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it might cause storage management issues later.
+    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this approach is space-efficient, it might cause storage management issues later.
 
     After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage using the PowerShell command:
 
