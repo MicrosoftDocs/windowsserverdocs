@@ -533,9 +533,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
 
----
-
-## What's new 
+## What's new
 
 ## Update (September 2025)
 
@@ -565,7 +563,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
     The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
 
     >[!NOTE]
-    >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions).
+    >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](#frequently-asked-questions).
 
 - **Standardized Destination Folder Structure**
 
@@ -575,8 +573,6 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
     During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
 
----
-
 ### Bug Fixes
 
 - Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
@@ -584,22 +580,22 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 - Improved notification accuracy during migration progress.  
 - Enhanced prechecks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
 
----
-
 ## User Experience Changes
 
 - **Session Persistence for Bulk Migration**
-  - Stay logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration. 
+
+  - Stay logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration.
+
   - The browser session must remain active during the final migration step.
 
 - **Folder Structure Transparency**  
+
   - Destination folders now directly reflect **Hyper-V layout**.  
-  - The Synchronization Confirmation dialog explicitly shows the destination path.
+ 
+  -  - The Synchronization Confirmation dialog explicitly shows the destination path.
 
 - **Linux VMs** - Install Hyper-V drivers on the guest OS before migration.  
 
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
-- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v#frequently-asked-questions) for details.  
-
----
+- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](#frequently-asked-questions) for details.  
