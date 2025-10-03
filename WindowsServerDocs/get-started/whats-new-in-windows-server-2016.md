@@ -464,7 +464,7 @@ In Windows 10 and Windows Server 2016, client connections to the Active Director
 > [!NOTE]
 > The registry values for these settings aren't present by default, but the hardening rules still apply until you override them by editing Group Policy or other registry values.
 
-For more information on these security improvements, see [MS15-011: Vulnerability in Group Policy](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://msrc-blog.microsoft.com/2015/02/10/ms15-011-ms15-014-hardening-group-policy).
+For more information on these security improvements, see [MS15-011: Vulnerability in Group Policy](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://www.microsoft.com/msrc/blog/2015/02/ms15-011-ms15-014-hardening-group-policy).
 
 ### Work Folders
 
