@@ -4,6 +4,7 @@ description: Learn more about the different Active Directory domain and forest f
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
+ms.date: 10/03/2025
 ---
 # Active Directory Domain Services functional levels
 

@@ -20,6 +20,25 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.66.0.0 - September 2025
+
+### Fixed
+- Reinstated the fix for an issue where installation would fail on WDAC-enforced devices, including Azure Local devices.
+- Modified installation logic to reduce occurrence of timeout issues.
+
+> [!WARNING]
+> Windows Admin Center in Azure extension versions 0.62.0.0 and earlier may not install successfully on Arc-enabled machines due to changes in the definition of the Windows Admin Center in Azure Arc extension.
+
+## Version 0.62.0.0 - September 2025
+
+### Fixed
+- Fixed an issue where the Remote Desktop extension would not load.
+
+## Version 0.61.0.0 - August 2025
+
+### Fixed
+- Fixed an issue where installation would fail on WDAC-enforced devices, including Azure Local devices.
+
 ## Version 0.31.0.0 - June 2024
 
 ### New features
