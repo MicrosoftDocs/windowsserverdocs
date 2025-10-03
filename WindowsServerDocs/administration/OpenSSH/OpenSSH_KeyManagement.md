@@ -1,7 +1,7 @@
 ---
 title: Key-Based Authentication in OpenSSH for Windows
 description: Find out about OpenSSH Server key-based authentication, generation, and deployment for Windows. See how to use built-in Windows tools or PowerShell to manage keys.
-ms.date: 06/30/2025
+ms.date: 10/03/2025
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
@@ -20,6 +20,9 @@ By comparison, Linux environments commonly use public/private key pairs to drive
 
 This document provides an overview of how to use these tools on Windows to begin using key-based authentication with Secure Shell (SSH). If you're not familiar with SSH key management, we strongly recommend that you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf), titled _Security of Interactive and Automated Access Management Using Secure Shell (SSH)_.
 
+> [!NOTE]
+> Windows OpenSSH doesn't support the `AuthorizedKeysCommand` and `AuthorizedKeysCommandUser` directives. Meaning you can't dynamically fetch SSH keys from Active Directory using these directives as you might on Linux system. For more information about the supported configuration options, see [OpenSSH Server configuration for Windows Server and Windows](openssh-server-configuration.md).
+
 ## Key pairs
 
 Key pairs refer to the public and private key files that are used by certain authentication protocols.
@@ -32,9 +35,6 @@ You can implement multifactor authentication with key pairs by entering a passph
 
 > [!IMPORTANT]
 > A remote session opened via key-based authentication doesn't have associated user credentials. As a result, the session isn't capable of outbound authentication as the user. This behavior is by design.
-
-> [!NOTE]
-> Windows OpenSSH does not support the AuthorizedKeysCommand andAuthorizedKeysCommandUser directives. This means you cannot dynamically fetch SSH keys from Active Directory using these directives as you might on Linux system
 
 ## Host key generation
 
