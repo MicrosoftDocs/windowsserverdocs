@@ -2,6 +2,7 @@
 title: Windows commands
 description: Reference
 ms.topic: reference
+ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: robinharwood
 ms.author: roharwoo
 ms.date: 07/29/2025
@@ -565,6 +566,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh lan](netsh-lan.md)
   - [netsh namespace](netsh-namespace.md)
   - [netsh netio](netsh-netio.md)
+  - [netsh ras](netsh-ras.md)
   - [netsh rpc](netsh-rpc.md)
   - [netsh set](netsh-set.md)
   - [netsh show](netsh-show.md)
