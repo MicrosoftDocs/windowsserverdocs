@@ -55,11 +55,11 @@ Use the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) mo
    New-MgDomainFederationConfiguration -DomainId <your_domain_name> `
       -FederatedIdpMfaBehavior <current_value_from_step1> `
       -PreferredAuthenticationProtocol <current_value_from_step1> `
-      -PromptLoginBehavior <TranslateToFreshPasswordAuth|NativeSupport|Disabled>
+      -PromptLoginBehavior <TranslateToFreshPasswordAuth|nativeSupport|Disabled>
    ```
 
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 
 - **TranslateToFreshPasswordAuth**: means the default Microsoft Entra behavior of translating `prompt=login` to `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
-- **NativeSupport**: means that the `prompt=login` parameter will be sent as is to AD FS. This is the recommended value if AD FS is in Windows Server 2012 R2 with the July 2016 update rollup or higher.
+- **nativeSupport**: means that the `prompt=login` parameter will be sent as is to AD FS. This is the recommended value if AD FS is in Windows Server 2012 R2 with the July 2016 update rollup or higher.
 - **Disabled**: means that only `wfresh=0` is sent to AD FS.
