@@ -570,6 +570,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh rpc](netsh-rpc.md)
   - [netsh set](netsh-set.md)
   - [netsh show](netsh-show.md)
+  - [netsh trace](netsh-trace.md)
   - [netsh wcn](netsh-wcn.md)
   - [netsh wfp](netsh-wfp.md)
   - [netsh winhttp](netsh-winhttp.md)
