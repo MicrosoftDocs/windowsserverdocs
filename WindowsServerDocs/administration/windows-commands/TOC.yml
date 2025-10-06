@@ -1092,6 +1092,8 @@
         href: netsh-set.md
       - name: netsh show
         href: netsh-show.md
+      - name: netsh trace
+        href: netsh-trace.md
       - name: netsh wcn
         href: netsh-wcn.md
       - name: netsh wfp
