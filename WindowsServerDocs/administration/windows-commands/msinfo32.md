@@ -4,12 +4,10 @@ description: Reference article for the msinfo32 command, which opens the System 
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 10/07/2025
 ---
 
 # msinfo32
-
-
 
 Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 
@@ -25,18 +23,18 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computername>] [/show
 
 | Parameter | Description |
 | --------- | ----------- |
-| `<path>` | Specifies the file to be opened in the format *C:\Folder1\File1.xxx*, where *C* is the drive letter, *Folder1* is the folder, *File1* is the file name, and *xxx* is the file name extension.<p>This file can be an **.nfo**, **.xml**, **.txt**, or **.cab** file. |
+| `<path>` | Specifies the file to be opened in the format `C:\Folder1\File1.abc`, where `C` is the drive letter, `Folder1` is the folder, `File1` is the file name, and `abc` is the file name extension.<p>This file can be an `.nfo`, `.xml`, `.txt`, or `.cab` file. |
 | `<computername>` | Specifies the name of the target or local computer. This can be a UNC name, an IP address, or a full computer name. |
-| `<categoryID>` | Specifies the ID of the category item. You can obtain the category ID by using **/showcategories**. |
-| /pch | Displays the System History view in the System Information tool. |
-| /nfo | Saves the exported file as an **.nfo** file. If the file name that is specified in *path* does not end in an **.nfo** extension, the **.nfo** extension is automatically appended to the file name. |
-| /report | Saves the file in *path* as a text file. The file name is saved exactly as it appears in *path*. The .txt extension is not appended to the file unless it is specified in path. |
-| /computer | Starts the System Information tool for the specified remote computer. You must have the appropriate permissions to access the remote computer. |
-| /showcategories | Starts the System Information tool with all available category IDs displayed, rather than displaying the friendly or localized names. For example, the Software Environment category is displayed as the **SWEnv** category. |
-| /category | Starts System Information with the specified category selected. Use **/showcategories** to display a list of available category IDs. |
-| /categories | Starts System Information with only the specified category or categories displayed. It also limits the output to the selected category or categories. Use **/showcategories** to display a list of available category IDs. |
-| /silent | Runs the System Information tool silently in the background without displaying a progress UI. This flag must be used in conjunction with the **/report** or **/nfo** flags; otherwise it will be ignored. |
-| /? | Displays help at the command prompt. |
+| `<categoryID>` | Specifies the ID of the category item. You can obtain the category ID by using `/showcategories`. |
+| `/pch` | Displays the System History view in the System Information tool. |
+| `/nfo` | Saves the exported file as an `.nfo` file. If the file name that is specified in *path* doesn't end in an `.nfo` extension, the `.nfo` extension is automatically appended to the file name. |
+| `/report` | Saves the file in *path* as a text file. The file name is saved exactly as it appears in *path*. The .txt extension isn't appended to the file unless it's specified in path. |
+| `/computer` | Starts the System Information tool for the specified remote computer. You must have the appropriate permissions to access the remote computer. |
+| `/showcategories` | Starts the System Information tool with all available category IDs displayed, rather than displaying the friendly or localized names. For example, the Software Environment category is displayed as the `SWEnv` category. |
+| `/category` | Starts System Information with the specified category selected. Use `/showcategories` to display a list of available category IDs. |
+| `/categories` | Starts System Information with only the specified category or categories displayed. It also limits the output to the selected category or categories. Use **/showcategories` to display a list of available category IDs. |
+| `/silent` | Runs the System Information tool silently in the background without displaying a progress UI. This flag must be used with the `/report` or `/nfo` flags; otherwise it is ignored. The  `/silent` parameter is available starting with the Windows 11 October Cumulative Update and later. |
+| `/?` | Displays help at the command prompt. |
 
 ### Examples
 
@@ -52,13 +50,13 @@ To start the System Information tool with all available information displayed, e
 msinfo32 /categories +all -loadedmodules
 ```
 
-To display **System Summary** information and to create an .nfo file called *syssum.nfo*, which contains information in the **System Summary** category, type:
+To display **System Summary** information and to create an `.nfo` file called `syssum.nfo`, which contains information in the **System Summary** category, type:
 
 ```
 msinfo32 /nfo syssum.nfo /categories +systemsummary
 ```
 
-To display resource conflict information and to create an .nfo file called *conflicts.nfo*, which contains information about resource conflicts, type:
+To display resource conflict information and to create an `.nfo` file called `conflicts.nfo`, which contains information about resource conflicts, type:
 
 ```
 msinfo32 /nfo conflicts.nfo /categories +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
