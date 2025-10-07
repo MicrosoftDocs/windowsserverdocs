@@ -35,7 +35,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computername>] [/show
 | /showcategories | Starts the System Information tool with all available category IDs displayed, rather than displaying the friendly or localized names. For example, the Software Environment category is displayed as the **SWEnv** category. |
 | /category | Starts System Information with the specified category selected. Use **/showcategories** to display a list of available category IDs. |
 | /categories | Starts System Information with only the specified category or categories displayed. It also limits the output to the selected category or categories. Use **/showcategories** to display a list of available category IDs. |
-| /silent | Runs the System Information tool silently in the background without displaying a progress UI. This flag must be used in conjunction with the **/report** or **/nfo** flags; otherwise it will be ignored.
+| /silent | Runs the System Information tool silently in the background without displaying a progress UI. This flag must be used in conjunction with the **/report** or **/nfo** flags; otherwise it will be ignored. |
 | /? | Displays help at the command prompt. |
 
 ### Examples
