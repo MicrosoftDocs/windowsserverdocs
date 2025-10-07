@@ -1084,12 +1084,16 @@
         href: netsh-namespace.md
       - name: netsh netio
         href: netsh-netio.md
+      - name: netsh ras
+        href: netsh-ras.md
       - name: netsh rpc
         href: netsh-rpc.md
       - name: netsh set
         href: netsh-set.md
       - name: netsh show
         href: netsh-show.md
+      - name: netsh trace
+        href: netsh-trace.md
       - name: netsh wcn
         href: netsh-wcn.md
       - name: netsh wfp
