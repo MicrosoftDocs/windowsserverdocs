@@ -2,7 +2,6 @@
 title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator-software-inventory-logging
 ms.topic: how-to
-ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/16/2017
