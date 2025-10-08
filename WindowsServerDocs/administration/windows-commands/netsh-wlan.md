@@ -107,11 +107,6 @@ netsh wlan start hostednetwork
 netsh wlan stop hostednetwork
 ```
 
-
-
-
-
-
 ## Parameters
 
 | Command | Description |
