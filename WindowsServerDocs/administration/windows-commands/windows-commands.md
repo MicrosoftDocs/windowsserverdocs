@@ -564,6 +564,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh http](netsh-http.md)
   - [netsh ipsec](netsh-ipsec.md)
   - [netsh lan](netsh-lan.md)
+  - [netsh mbn](netsh-mbn.md)
   - [netsh namespace](netsh-namespace.md)
   - [netsh netio](netsh-netio.md)
   - [netsh ras](netsh-ras.md)
