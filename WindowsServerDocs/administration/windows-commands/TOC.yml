@@ -1080,6 +1080,8 @@
         href: netsh-ipsec.md
       - name: netsh lan
         href: netsh-lan.md
+      - name: netsh mbn
+        href: netsh-mbn.md
       - name: netsh namespace
         href: netsh-namespace.md
       - name: netsh netio
