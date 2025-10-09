@@ -575,6 +575,7 @@ To find information about a specific command, in the following A-Z menu, select 
   - [netsh wfp](netsh-wfp.md)
   - [netsh winhttp](netsh-winhttp.md)
   - [netsh winsock](netsh-winsock.md)
+  - [netsh wlan](netsh-wlan.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)

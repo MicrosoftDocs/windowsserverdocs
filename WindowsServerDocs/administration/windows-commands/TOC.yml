@@ -1102,6 +1102,8 @@
         href: netsh-winhttp.md
       - name: netsh winsock
         href: netsh-winsock.md
+      - name: netsh wlan
+        href: netsh-wlan.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin
