@@ -1064,6 +1064,8 @@
         href: netsh-advfirewall.md
       - name: netsh branchcache
         href: netsh-branchcache.md
+      - name: netsh bridge
+        href: netsh-bridge.md
       - name: netsh delete
         href: netsh-delete.md
       - name: netsh dhcpclient
