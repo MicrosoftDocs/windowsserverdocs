@@ -229,8 +229,8 @@ Requesttype = Cert
 
 [Extensions]
 2.5.29.17 = "{text}"
-_continue_ = "DNS=example.com"
-_continue_ = "DNS=www.example.com"
+_continue_ = "DNS=example.com&"
+_continue_ = "DNS=www.example.com&"
 _continue_ = "IP Address=192.168.1.1"
 ```
 
