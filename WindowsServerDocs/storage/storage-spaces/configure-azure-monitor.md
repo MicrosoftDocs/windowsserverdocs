@@ -70,11 +70,11 @@ To give an overview, [Azure Log Analytics](/azure/azure-monitor/platform/agent-w
 
 To understand the supported configuration, review [supported Windows operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
 
-If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 #### Login in to Azure Portal
 
-Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 #### Create a workspace
 
