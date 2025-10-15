@@ -2,7 +2,6 @@
 title: Server Manager
 description: Server Manager centralizes Windows Server management. Discover how to provision, monitor, and manage servers without Remote Desktop.
 ms.topic: concept-article
-ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/16/2025
