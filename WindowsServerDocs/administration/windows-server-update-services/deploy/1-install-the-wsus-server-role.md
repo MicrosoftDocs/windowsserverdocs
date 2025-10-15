@@ -2,7 +2,6 @@
 title: Step 1 - Install the WSUS Server Role
 description: Windows Server Update Service (WSUS) topic - Describes how to install the server role using Server Manager
 ms.topic: how-to
-ms.assetid: fabc8619-350e-403b-96f8-116424931300
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 05/03/2025
