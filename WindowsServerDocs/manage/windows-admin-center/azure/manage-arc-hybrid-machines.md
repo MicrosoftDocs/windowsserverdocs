@@ -165,7 +165,7 @@ Make sure you review the [supported devices and recommended browsers](/azure/azu
 Before you can use Windows Admin Center in the Azure portal, you must deploy the Windows Admin Center VM extension using the following steps:
 
 1. Open the Azure portal and navigate to your Arc-enabled server.
-1. Under the **Settings** group, select **Windows Admin Center**.
+1. Under the **Windows management** group, select **Windows Admin Center**.
 1. Specify the port on which you wish to install Windows Admin Center, and then select **Install**.
 
 :::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-arc-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Arc-enabled server." lightbox="../../media/manage-vm/windows-admin-center-in-azure-arc-install.png":::
@@ -174,7 +174,7 @@ Before you can use Windows Admin Center in the Azure portal, you must deploy the
 
 After you've installed Windows Admin Center on your hybrid machine, perform the following steps to connect to it and use it to manage Windows Server:
 
-1. Open the Azure portal and navigate to your Arc-enabled server, and then under the **Settings** group, select **Windows Admin Center (preview)**.
+1. Open the Azure portal and navigate to your Arc-enabled server, and then under the **Windows management** group, select **Windows Admin Center (preview)**.
 1. Select **Connect**.
 
 > [!NOTE]
