@@ -615,7 +615,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
 - **Quick Access to Documentation:**  
   The **“Open in New Window”** icon on the landing page now links directly to the official guide —  
-  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/use/manage-vm-migrate-vmware).
+  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](https://learn.microsoft.com/windows-server/manage/windows-admin-center/use/migrate-vmware-to-hyper-v).
 
 ## Other Improvements
 
