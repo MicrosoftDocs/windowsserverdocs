@@ -4,6 +4,7 @@ description: Reference article for the edit command, which starts the MS-DOS Edi
 ms.topic: reference
 ms.author: alalve
 author: xelu86
+no-loc: [edit]
 ms.date: 10/16/2017
 ---
 
@@ -43,7 +44,7 @@ To open MS-DOS Editor, type:
 edit
 ```
 
-To create and edit a file named *newtextfile.txt* in the current directory, type:
+To create and modify a file named *newtextfile.txt* in the current directory, type:
 
 ```
 edit newtextfile.txt
