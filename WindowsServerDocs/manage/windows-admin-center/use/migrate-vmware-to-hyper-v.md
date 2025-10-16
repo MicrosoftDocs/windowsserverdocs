@@ -533,9 +533,10 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
 
-## What's new
+---
 
-## Update (September 2025)
+## What's new 
+## [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.0)  (September 2025)
 
 ### New Features
 
@@ -599,3 +600,24 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 - **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
 
 - **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](#frequently-asked-questions) for details.  
+
+---
+
+## [Version 1.8.1](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.1) (October 2025)
+
+### New Features
+
+- **vCenter Version Display:**  
+  You can now view the vCenter version directly on the **vCenter List** page for easier identification and management.
+
+- **Migration Reconnection Banner:**  
+  A new banner now appears, prompting users to stay signed in and refresh their session every 2 hours during migration to ensure continuity.
+
+- **Quick Access to Documentation:**  
+  The **“Open in New Window”** icon on the landing page now links directly to the official guide —  
+  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](https://learn.microsoft.com/en-us/windows-server/manage/windows-admin-center/use/manage-vm-migrate-vmware).
+
+## Other Improvements
+
+- Enhanced telemetry for improved diagnostics and secure handling of environment information.
+
