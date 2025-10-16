@@ -4,6 +4,7 @@ description: Reference article for the clip command, which redirects the command
 ms.topic: reference
 ms.author: alalve
 author: xelu86
+no-loc: [clip]
 ms.date: 10/16/2017
 ---
 
