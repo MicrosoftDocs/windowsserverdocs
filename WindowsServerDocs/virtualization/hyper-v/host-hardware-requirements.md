@@ -18,7 +18,7 @@ Then review the [Windows Server catalog](https://www.windowsservercatalog.com/).
 
 If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements have changed minimally from  Windows Server 2012 R2, but you need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described later in this article. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.
 
-For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server](../hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).
+For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server](../hyper-v/maximum-scale-limits.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).
 
 ::: zone-end
 
