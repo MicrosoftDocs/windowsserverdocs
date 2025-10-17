@@ -76,5 +76,4 @@ Hyper-V in Windows Server can use the multipath I/O (MPIO) functionality to ensu
 
 - [Plan for Hyper-V on Windows Server](Plan-Hyper-V-on-Windows-Server.md)
 
-- [Plan for Hyper-V scalability on Windows Server](plan-hyper-v-scalability-in-windows-server.md)
-
+- [Plan for Hyper-V scalability on Windows Server](../maximum-scale-limits.md)

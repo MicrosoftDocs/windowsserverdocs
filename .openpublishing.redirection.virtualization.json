@@ -1064,6 +1064,11 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-the-recommended-amount-of-memory.md",
       "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-vista-should-be-configured-with-the-recommended-amount-of-memory",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/maximum-scale-limits",
+      "redirect_document_id": true
     }
   ]
 }
