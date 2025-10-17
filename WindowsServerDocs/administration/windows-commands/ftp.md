@@ -34,7 +34,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 | -x:`<sendbuffer> `| Overrides the default SO_SNDBUF size of 8192. |
 | -r:`<recvbuffer>` | Overrides the default SO_RCVBUF size of 8192. |
 | -b:`<asyncbuffers>` | Overrides the default async buffer count of 3. |
-| -w:`<windowssize>` | Specifies the size of the transfer buffer. The default window size is 65535 bytes. |
+| -w:`<windowsize>` | Specifies the size of the transfer buffer. The default window size is 65535 bytes. |
 | `<host>` | Specifies the computer name, IP address, or IPv6 address of the ftp server to which to connect. The host name or address, if specified, must be the last parameter on the line. |
 | -? | Displays help at the command prompt. |
 
