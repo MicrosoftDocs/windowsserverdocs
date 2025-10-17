@@ -251,5 +251,4 @@ To add a COM port:
 
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
-- [Plan for Hyper-V scalability in Windows Server 2016](./plan-hyper-v-scalability-in-windows-server.md)
-
+- [Plan for Hyper-V scalability in Windows Server 2016](../maximum-scale-limits.md)

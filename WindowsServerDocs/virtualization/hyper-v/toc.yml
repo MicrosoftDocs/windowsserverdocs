@@ -13,6 +13,8 @@ items:
 - name: Plan
   expanded: true
   items:
+  - name: Maximum scale limits
+    href: maximum-scale-limits.md
   - name: Hosts
     items:
     - name: Hardware requirements
@@ -59,8 +61,6 @@ items:
       href: virtual-switch.md
     - name: RDMA and SET
       href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization
-  - name: Scalability
-    href: plan/plan-hyper-v-scalability-in-windows-server.md
   - name: Security
     href: plan/plan-hyper-v-security-in-windows-server.md
   - name: GPU acceleration

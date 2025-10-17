@@ -13,7 +13,7 @@ Hyper-V supports several versions of Windows Server, Windows, and Linux distribu
 
 Some operating systems have the integration services built-in. Others require that you install or upgrade integration services as a separate step after you set up the operating system in the virtual machine. For more information, see the following sections and [Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
-Guest operating systems configurable components are confined based on the hosting operating system. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](plan/plan-hyper-v-scalability-in-windows-server.md).
+Guest operating systems configurable components are confined based on the hosting operating system. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](maximum-scale-limits.md).
 
 ## Supported Windows Server guest operating systems
 
