@@ -1,9 +1,9 @@
-﻿---
+---
 title: Netdom resetpwd
 description: Netdom resetpwd is a command-line utility that resets the computer account password for a domain controller in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

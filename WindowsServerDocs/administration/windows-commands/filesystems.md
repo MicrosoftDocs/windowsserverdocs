@@ -2,8 +2,8 @@
 title: filesystems
 description: Reference article for the filesystems command, which displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

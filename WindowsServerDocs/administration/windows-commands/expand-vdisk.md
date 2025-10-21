@@ -2,8 +2,8 @@
 title: expand vdisk
 description: Reference article for the expand vdisk command, which expands a virtual hard disk (VHD) to a specified size.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

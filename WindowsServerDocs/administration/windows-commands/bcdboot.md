@@ -2,8 +2,8 @@
 title: bcdboot
 description: Reference article for the bcdboot command, which quickly set up a system partition, or repair the boot environment located on the system partition.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

@@ -1,9 +1,9 @@
-﻿---
+---
 title: Setspn
 description: The setspn command reads, modifies, and deletes the Service Principal Names (SPN) directory property for an Active Directory service account.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 03/24/2025
 ---
 

@@ -1,9 +1,9 @@
-﻿---
+---
 title: Netdom query
 description: Netdom query is a command-line utility that retrieves information from a domain about its membership and trust relationships in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

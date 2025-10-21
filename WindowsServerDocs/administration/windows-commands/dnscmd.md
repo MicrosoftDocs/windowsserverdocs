@@ -2,8 +2,8 @@
 title: Dnscmd
 description: Reference article for the dnscmd command, which is a command-line interface for managing DNS servers.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/21/2024
 ---
 
@@ -99,7 +99,7 @@ dnscmd [<servername>] /config <parameter>
 #### Parameters
 
 > [!NOTE]
-> This article contains references to the term slave, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+> This article contains references to the term slave, a term that Microsoft no longer uses. When the term is removed from the software, weâ€™ll remove it from this article.
 
 | Parameters | Description |
 | ---------- | ----------- |

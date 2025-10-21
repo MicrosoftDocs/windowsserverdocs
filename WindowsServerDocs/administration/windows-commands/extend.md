@@ -2,8 +2,8 @@
 title: extend
 description: Reference article for the extend command, which extends the volume or partition with focus and its file system into free (unallocated) space on a disk.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

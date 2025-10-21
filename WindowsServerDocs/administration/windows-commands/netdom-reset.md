@@ -1,9 +1,9 @@
-﻿---
+---
 title: Netdom reset
 description: Netdom reset is a command-line utility that resets the secure connection between a workstation and a domain controller in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/09/2025
 ---
 

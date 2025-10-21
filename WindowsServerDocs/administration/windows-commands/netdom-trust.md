@@ -1,9 +1,9 @@
-﻿---
+---
 title: Netdom trust
 description: Netdom trust is a command-line utility that manages, establishes, verifies, or resets trust relationships between domains in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

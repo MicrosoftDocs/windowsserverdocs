@@ -2,8 +2,8 @@
 title: driverquery
 description: Reference article for the driverquery command, which enables an administrator to display a list of installed device drivers and their properties.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

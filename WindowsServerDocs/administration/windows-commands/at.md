@@ -3,8 +3,8 @@ title: at
 no-loc: [at]
 description: Reference article for the at command, which schedules commands and programs to run on a computer at a specified time and date.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

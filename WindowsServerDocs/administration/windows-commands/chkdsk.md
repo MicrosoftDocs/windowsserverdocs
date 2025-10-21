@@ -2,8 +2,8 @@
 title: chkdsk
 description: Reference article for the chkdsk command, which checks the file system and file system metadata of a volume for logical and physical errors.
 ms.topic: reference
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/23/2025
 ---
 
@@ -103,7 +103,7 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 
   - The physical head must move to each data location being checked, which is **slower** due to mechanical movement.
   - Checking for *bad sectors* (with `/r`) takes longer as every sector's physical integrity is checked and bad ones are replaced if possible.
-  - High-hour runtimes aren’t uncommon for large drives.
+  - High-hour runtimes arenâ€™t uncommon for large drives.
 
 Normally, on large capacity HDDs, `/r` or `/b` would take a considerable amount of time as it reads every sector. Even without errors and with a mostly empty drive, the physical read speed bottlenecks the process.
 
@@ -122,7 +122,7 @@ Viewing the `chkdsk` logs might point to a potential issue during scans. To lear
 
 - **When chkdsk runs:**
 
-  - **No seek time:** Reading any sector is equally fast; there’s no mechanical latency.
+  - **No seek time:** Reading any sector is equally fast; thereâ€™s no mechanical latency.
   - Checking for *bad sectors* (with `/r`) is faster but still requires reading **every single sector**. However, NAND flash can read much **faster** than an HDD can.
   - Marking *clusters bad* is logical, not physical remapping.
 
@@ -132,7 +132,7 @@ There might be cases where on large capacity SSDs where `chkdsk` might complete 
 
 - The `chkdsk` operation didn't actually scan every sector on the drive.
 - The SSD didn't have much data to process (more free space).
-- The SSD scanned is an NVMe that isn’t heavily fragmented.
+- The SSD scanned is an NVMe that isnâ€™t heavily fragmented.
 - The SSD might internally optimize "full scans" efficiently, thus further improving scan speed.
 
 Viewing the `chkdsk` logs might point to a potential issue during scans. To learn more, see [Viewing chkdsk logs](#viewing-chkdsk-logs).

@@ -2,8 +2,8 @@
 title: ver
 description: Reference article for the ver command, which displays the operating system version number.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/20/2022
 ---
 

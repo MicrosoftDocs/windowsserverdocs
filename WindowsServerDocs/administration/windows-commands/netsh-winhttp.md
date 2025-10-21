@@ -2,8 +2,8 @@
 title: netsh winhttp
 description: The netsh winhttp command configures and manages WinHTTP settings for network communications for applications that use WinHTTP in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/19/2025
 ---
 

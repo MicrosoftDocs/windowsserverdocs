@@ -1,9 +1,9 @@
-﻿---
+---
 title: Netdom
 description: Netdom is a command-line utility for administering Active Directory (AD) domains, managing computer accounts, and configuring or verifying trust relationships between domains.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

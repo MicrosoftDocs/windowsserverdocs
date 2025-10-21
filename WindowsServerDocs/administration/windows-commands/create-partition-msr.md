@@ -2,8 +2,8 @@
 title: create partition msr
 description: Reference article for create partition msr, which creates a Microsoft Reserved (MSR) partition on a GUID partition table (gpt) disk.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

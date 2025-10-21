@@ -2,8 +2,8 @@
 title: choice
 description: Reference article for the choice command, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -14,14 +14,14 @@ Prompts the user to select one item from a list of single-character choices in a
 ## Syntax
 
 ```
-choice [/c [<choice1><choice2><…>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m <text>]
+choice [/c [<choice1><choice2><â€¦>]] [/n] [/cs] [/t <timeout> /d <choice>] [/m <text>]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 | --------- | ----------- |
-| /c `<choice1><choice2><…>` | Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is YN, which is displayed as `[Y,N]?`. |
+| /c `<choice1><choice2><â€¦>` | Specifies the list of choices to be created. Valid choices include a-z, A-Z, 0-9, and extended ASCII characters (128-254). The default list is YN, which is displayed as `[Y,N]?`. |
 | /n | Hides the list of choices, although the choices are still enabled and the message text (if specified by **/m**) is still displayed. |
 | /cs | Specifies that the choices are case-sensitive. By default, the choices are not case-sensitive. |
 | /t `<timeout>` | Specifies the number of seconds to pause before using the default choice specified by **/d**. Acceptable values are from **0** to **9999**. If **/t** is set to **0**, **choice** does not pause before returning the default choice. |

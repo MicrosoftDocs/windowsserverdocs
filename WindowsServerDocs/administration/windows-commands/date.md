@@ -2,8 +2,8 @@
 title: date
 description: Reference article for the date command, which displays or sets the system date. If used without parameters,
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/26/2022
 ---
 

@@ -2,8 +2,8 @@
 title: extract
 description: Reference article for the extract command, which extracts files from a source location.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/29/2020
 ---
 

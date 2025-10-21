@@ -2,8 +2,8 @@
 title: change logon
 description: Reference article for the change logon command, which enables or disables logons from client sessions, or displays current logon status.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

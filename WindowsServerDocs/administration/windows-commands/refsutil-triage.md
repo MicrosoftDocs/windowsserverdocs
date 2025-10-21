@@ -1,8 +1,8 @@
 ---
 title: refsutil triage
 description: Reference article for the refsutil triage tool, which ensures data integrity and consistency by scrubbing the directory contents or global tables on a ReFS (Resilient File System) volume in Windows.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/02/2025
 ms.topic: reference
 ---

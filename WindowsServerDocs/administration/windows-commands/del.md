@@ -2,8 +2,8 @@
 title: del
 description: Reference article for the del command, which deletes one or more files.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 6/22/2022
 ---
 

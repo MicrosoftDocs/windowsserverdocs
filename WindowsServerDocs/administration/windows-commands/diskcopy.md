@@ -2,8 +2,8 @@
 title: diskcopy
 description: Reference article for the diskcopy command, which copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/07/2018
 ---
 
