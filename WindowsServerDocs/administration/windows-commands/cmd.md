@@ -133,7 +133,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions\REG_DWORD**
 
-  Set the **REG_DWORD** value to either **0Ã—1** (enabled) or **0Ã—0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+  Set the **REG_DWORD** value to either **0x1** (enabled) or **0x0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
   > [!CAUTION]
   > Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
@@ -173,7 +173,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
 
-  To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0Ã—9** is TAB and **0Ã—08** is BACKSPACE). Use the [**0Ã—20**] value for white space, because it isn't a valid control character. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+  To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0x9** is TAB and **0x08** is BACKSPACE). Use the [**0x20**] value for white space, because it isn't a valid control character. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
   > [!CAUTION]
   > Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
