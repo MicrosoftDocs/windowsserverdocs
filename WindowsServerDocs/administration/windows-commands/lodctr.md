@@ -30,9 +30,10 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 | /t:`<servicename>` | Indicates that service `<servicename>` is trusted. |
 | /? | Displays help at the command prompt. |
 
-#### Remarks
+## Remarks
 
 - If the information that you supply contains spaces, use quotation marks around the text (for example, "file name 1").
+- An exit code of **0** indicates the command line syntax was correct. It does not mean the removal was successful. Check the output from the command for potential error messages.
 
 ### Examples
 
