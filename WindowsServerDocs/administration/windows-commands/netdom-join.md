@@ -1,4 +1,4 @@
----
+﻿---
 title: Netdom join
 description: Netdom is a command-line utility that joins a workstation or member server to a domain in Windows Server.
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 06/09/2025
 
 # netdom join
 
-The `netdom join` command joins a workstation or member server to a domain. The act of joining a computer to a domain creates an account for the computer on the domain, if it doesn't already exist. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the Active Directory Domain Services Tools that are part of the Remote Server Administration Tools (RSAT). For more information, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
+The `netdom join` command joins a workstation or member server to a domain. The act of joining a computer to a domain creates an account for the computer on the domain, if it doesn't already exist. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the Active Directory Domain Services Tools that are part of the Remote Server Administration Tools (RSAT). For more information, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
 
 To use `netdom join`, you must run the command from an elevated command prompt.
 
@@ -31,7 +31,7 @@ netdom join machine /Domain:domain [/OU:ou path] [/UserD:user]
 |-----------|-------------|
 | `<machine>` | Specifies the name of the computer that you want to join to the domain. |
 | `/domain:<Domain>` | Specifies the domain that you want to join the computer to. Using the Fully Qualified Domain Name (FQDN) format is recommended for clarity. If not specified, `netdom join` defaults to the domain to which the current computer belongs to. |
-| `/ou:<OUPath>` | Specifies the organizational unit (OU) under which you want to create the account. You must specify the full [RFC 1779](https://www.rfc-editor.org/rfc/rfc1779) distinguished name of the OU. If not specified, `netdom join` creates the account under the default OU for computer objects for that domain. |
+| `/ou:<OUPath>` | Specifies the organizational unit (OU) under which you want to create the account. You must specify the full [RFC 1779](https://www.rfc-editor.org/rfc/rfc1779) distinguished name of the OU. If not specified, `netdom join` creates the account under the default OU for computer objects for that domain. |
 | `/userd:<Domain>\<User>` | Specifies the user account that makes the connection with the domain specified with the `/domain` parameter. If not specified, `netdom join` uses the current user account. |
 | `/usero:<User>` | Specifies the user account that makes the connection with the computer you want to join to the domain. If not specified, `netdom join` uses the current user account. |
 | `/passwordd:<Password>` \| `*` | Specifies the password of the user account specified with the `/userd` parameter. If you specify `*`, you're prompted for the password. |

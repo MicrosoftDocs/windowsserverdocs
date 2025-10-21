@@ -1,4 +1,4 @@
----
+﻿---
 title: Netdom remove
 description: Netdom remove is a command-line utility that removes a workstation or server from a domain in Windows Server.
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 06/09/2025
 
 # netdom remove
 
-The `netdom remove` command removes a workstation or server from a domain. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). For more information, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
+The `netdom remove` command removes a workstation or server from a domain. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). For more information, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
 
 To use `netdom remove`, you must run the command from an elevated command prompt.
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: dcpromo in Windows Server
 description: Learn about using the dcpromo command to install, promote, demote, and remove Active Directory Domain Services (AD DS) from a Windows Server.
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.date: 04/22/2024
 
 Applies To: Windows Server (All supported versions)
 
-The dcpromo command installs, promotes, demotes, and removes Active Directory Domain Services (AD DS) from a Windows Server.
+The dcpromo command installs, promotes, demotes, and removes Active Directory Domain Services (AD DS) from a Windows Server.
 
 For examples of how to use **dcpromo**, see [Examples]().
 
@@ -37,13 +37,13 @@ For examples of how to use **dcpromo**, see [Examples]().
 
 The following table shows the parameters available when running `dcpromo.exe` from a command prompt for the unattended installation of a domain controller that runs Windows Server.
 
-For more information about creating a new forest, see [Installing a New Windows Server 2008 Forest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772464(v=ws.10)).
+For more information about creating a new forest, see [Installing a New Windows Server 2008 Forest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772464(v=ws.10)).
 
-For more information about creating a new domain, see [Installing a New Windows Server 2008 Child Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731394(v=ws.10)).
+For more information about creating a new domain, see [Installing a New Windows Server 2008 Child Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731394(v=ws.10)).
 
-For more information about creating a new domain tree, see [Installing a New Windows Server 2008 Domain Tree](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733006(v=ws.10)).
+For more information about creating a new domain tree, see [Installing a New Windows Server 2008 Domain Tree](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733006(v=ws.10)).
 
-For more information about creating another domain controller for a domain, see [Installing an Additional Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733027(v=ws.10)).
+For more information about creating another domain controller for a domain, see [Installing an Additional Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733027(v=ws.10)).
 
 | Parameter and value pair | Description and default |
 |---|---|
@@ -82,7 +82,7 @@ For more information about creating another domain controller for a domain, see 
 | SkipAutoConfigDns | Skips automatic configuration of DNS client settings, forwarders, and root hints. This parameter is in effect only if the DNS Server service is already installed. |
 | Syskey:{\<none> \| system key} | <p>Specifies the system key for the media from which you replicate the data.</p><p>The default is **none**.</p> |
 | SysVolPath:"path_to_database_file" | <p>Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer, for example, **C:\Windows\SYSVOL**.</p><p>The default is **%SYSTEMROOT%\SYSVOL**. |
-| TransferIMRoleIfNecessary:{Yes \| \<No>} | <p>Specifies whether to transfer the infrastructure master operations master role (also known as flexible single master operations or FSMO) to the domain controller that you're creating. Perform the transfer in case it's currently hosted on a global catalog server—and you don't plan to make the domain controller that you're creating a global catalog server. Use **Yes** to transfer the infrastructure master role to the domain controller that you're creating in case the transfer is needed; in this case, make sure to use `/ConfirmGC:No`. Use **No** if you want the infrastructure master role to remain where it currently is.</p><p>The default is **No**.</p> |
+| TransferIMRoleIfNecessary:{Yes \| \<No>} | <p>Specifies whether to transfer the infrastructure master operations master role (also known as flexible single master operations or FSMO) to the domain controller that you're creating. Perform the transfer in case it's currently hosted on a global catalog server and you don't plan to make the domain controller that you're creating a global catalog server. Use **Yes** to transfer the infrastructure master role to the domain controller that you're creating in case the transfer is needed; in this case, make sure to use `/ConfirmGC:No`. Use **No** if you want the infrastructure master role to remain where it currently is.</p><p>The default is **No**.</p> |
 | UserDomain:"domain_name" | <p>Specifies the domain name for the user name (account credentials) for installing a domain controller.</p><p>Use this parameter with the **UserName** parameter.</p> |
 | UserName:"user_name" | Specifies the user name (account credentials) for the operation. If no value is specified, the credentials of the current user are used for the operation. |
 
@@ -136,15 +136,15 @@ For more information about attaching a server to an RODC account, see [Performin
 
 ## dcpromo Demotion operation parameters
 
-You can use parameters in the following list when you remove AD DS from a domain controller that runs Windows Server.
+You can use parameters in the following list when you remove AD DS from a domain controller that runs Windows Server.
 
-For more information about removing a domain controller from a domain, see [Removing a Windows Server 2008 Domain Controller from a Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771844(v=ws.10)).
+For more information about removing a domain controller from a domain, see [Removing a Windows Server 2008 Domain Controller from a Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771844(v=ws.10)).
 
-For more information about removing the last domain controller in a domain, see [Removing the Last Windows Server 2008 Domain Controller in a Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771839(v=ws.10)).
+For more information about removing the last domain controller in a domain, see [Removing the Last Windows Server 2008 Domain Controller in a Domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771839(v=ws.10)).
 
-For more information about removing the last domain controller in a forest, see [Removing the Last Windows Server 2008 Domain Controller in a Forest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771835(v=ws.10)).
+For more information about removing the last domain controller in a forest, see [Removing the Last Windows Server 2008 Domain Controller in a Forest](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771835(v=ws.10)).
 
-For more information about forcing the removal of a domain controller, see [Forcing the Removal of a Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731871(v=ws.10)).
+For more information about forcing the removal of a domain controller, see [Forcing the Removal of a Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731871(v=ws.10)).
 
 | Parameter and value pair | Description and default |
 |---|---|
@@ -172,7 +172,7 @@ The following example supplies an answer file named **NewForestInstallation**:
 dcpromo /answer:NewForestInstallation
 ```
 
-The following example creates the first domain controller in a new child domain where you expect to install at least some Windows Server 2025 domain controllers:
+The following example creates the first domain controller in a new child domain where you expect to install at least some Windows Server 2025 domain controllers:
 
 ```cli
 dcpromo /unattend /InstallDns:yes /ParentDomainDNSName:contoso.com /replicaOrNewDomain:domain /newDomain:child /newDomainDnsName:east.contoso.com /childName:east /DomainNetbiosName:east /databasePath:"e:\ntds" /logPath:"e:\ntdslogs" /sysvolpath:"g:\sysvol" /safeModeAdminPassword:FH#3573.cK /forestLevel:10 /domainLevel:10 /rebootOnCompletion:yes

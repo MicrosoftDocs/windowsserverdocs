@@ -1,4 +1,4 @@
----
+﻿---
 title: Netdom computername
 description: Netdom computername is a command-line utility that manages the primary and alternate names for a computer in Windows Server.
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 06/09/2025
 
 # netdom computername
 
-The `netdom computername` command manages the primary and alternate names for a computer. This command can safely rename Active Directory (AD) domain controllers (DC) and member servers. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom computername`, you must run the command from an elevated command prompt.
+The `netdom computername` command manages the primary and alternate names for a computer. This command can safely rename Active Directory (AD) domain controllers (DC) and member servers. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom computername`, you must run the command from an elevated command prompt.
 
 ## Syntax
 

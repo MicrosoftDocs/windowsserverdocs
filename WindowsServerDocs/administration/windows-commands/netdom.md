@@ -1,4 +1,4 @@
----
+﻿---
 title: Netdom
 description: Netdom is a command-line utility for administering Active Directory (AD) domains, managing computer accounts, and configuring or verifying trust relationships between domains.
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.date: 06/09/2025
 
 # netdom
 
-`Netdom` is a command-line tool that enables administrators to manage Active Directory (AD) domains and trust relationships from the command line. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To learn more, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
+`Netdom` is a command-line tool that enables administrators to manage Active Directory (AD) domains and trust relationships from the command line. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To learn more, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
 
 You must run the `netdom` command from an elevated command prompt. The `netdom` allows you to performing the following actions:
 
@@ -57,7 +57,7 @@ netdom [ ADD | COMPUTERNAME | HELP | JOIN | MOVE | MOVENT4BDC | QUERY | REMOVE |
 | [netdom computername](netdom-computername.md) | Manages the primary and alternate names for a computer. This command can safely rename Active Directory domain controllers and member servers. |
 | [netdom join](netdom-join.md) | Joins a workstation or member server to a domain. The act of joining a computer to a domain creates an account for the computer on the domain, if it doesn't already exist. |
 | [netdom move](netdom-move.md) | Moves a workstation or member server to a new domain. The act of moving a computer to a new domain creates an account for the computer on the domain, if it doesn't already exist. |
-| [netdom movent4bdc](netdom-movent4bdc.md) | Renames a Windows NT 4.0 backup domain controller to reflect a domain name change. This can help Windows NT 4.0 domain renaming efforts. |
+| [netdom movent4bdc](netdom-movent4bdc.md) | Renames a Windows NT 4.0 backup domain controller to reflect a domain name change. This can help Windows NT 4.0 domain renaming efforts. |
 | [netdom query](netdom-query.md) | Queries the domain for information such as membership and trust. |
 | [netdom remove](netdom-remove.md) | Removes a workstation or server from the domain. |
 | [netdom renamecomputer](netdom-renamecomputer.md) | Renames a domain computer and its corresponding domain account. Use this command to rename domain workstations and member servers only. To rename domain controllers, use the `netdom computername` command. |
