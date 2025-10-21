@@ -29,6 +29,10 @@ unlodctr <drivername>
 | `<drivername>` | Removes the **Performance counter name** settings and **Explain text** for driver or service `<drivername>` from the Windows Server registry. If your `<drivername>` includes spaces, you must use quotation marks around the text, for example "Driver name". |
 | /? | Displays help at the command prompt. |
 
+## Remarks
+
+An exit code of **0** indicates the command line syntax was correct. It does not mean the removal was successful. Check the output from the command for potential error messages.
+
 ## Examples
 
 To remove the current **Performance counter names** and **Explain text** for the Simple Mail Transfer Protocol (SMTP) service, type:
