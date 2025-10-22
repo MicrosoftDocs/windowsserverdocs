@@ -2,8 +2,8 @@
 title: detail
 description: Reference article for the detail command, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

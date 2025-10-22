@@ -1,8 +1,8 @@
 ---
 title: refsutil salvage
 description: Reference article for the refsutil salvage tool, which attempts to diagnose and recover a damaged Resilient File System (ReFS) volume by copying data to another volume in Windows.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/02/2025
 ms.topic: reference
 ---

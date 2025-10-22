@@ -2,8 +2,8 @@
 title: shutdown
 description: Reference article for the shutdown command, which enables you to shut down or restart local or remote computers, one at a time.
 ms.topic: reference
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/01/2025
 ---
 
@@ -28,7 +28,7 @@ shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/sof
 | /r | Restarts the computer after shutdown. |
 | /g | Fully shuts down and restarts the computer. On restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /a | Aborts a system shutdown. Can only be used during the time-out period. Combine with **/fw** to clear any pending boots to firmware. |
-| /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it shuts down when you use **/p**, but the power to the computer remains on. |
+| /p | Turns off the local computer only (not a remote computer) with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it shuts down when you use **/p**, but the power to the computer remains on. |
 | /h | Puts the local computer into hibernation, if hibernation is enabled. The **/f** switch can be used with the **/h** switch. |
 | /hybrid | Shuts down the device and prepares it for fast startup. This option must be used with the **/s** option. |
 | /soft | Allows running processes and applications to gracefully close instead of forcibly terminating. |

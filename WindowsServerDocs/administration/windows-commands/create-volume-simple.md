@@ -2,8 +2,8 @@
 title: create volume simple
 description: Reference article for the create volume simple command, which creates a simple volume on the specified dynamic disk.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # create volume simple

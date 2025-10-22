@@ -2,8 +2,8 @@
 title: diskpart
 description: Reference article for the diskpart command interpreter, which helps you manage your computer's drives.
 ms.topic: reference
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 09/21/2022
 ---
 

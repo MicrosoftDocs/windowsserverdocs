@@ -2,8 +2,8 @@
 title: netsh ipsec
 description: The netsh ipsec command is a suite of commands that configures and manages Internet Protocol Security (IPsec) policies and settings in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/04/2025
 ---
 

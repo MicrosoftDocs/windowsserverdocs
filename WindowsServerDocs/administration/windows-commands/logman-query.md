@@ -2,8 +2,8 @@
 title: logman query
 description: Reference article for the logman query command, which queries data collector or data collector set properties.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

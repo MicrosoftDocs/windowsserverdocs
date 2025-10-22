@@ -1,8 +1,8 @@
 ---
 title: refsutil
 description: Reference article for the refsutil tool, which manages and repairs Resilient File System (ReFS) volumes in Windows ensuring their integrity, performance, and optimization.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/02/2025
 ms.topic: reference
 ---

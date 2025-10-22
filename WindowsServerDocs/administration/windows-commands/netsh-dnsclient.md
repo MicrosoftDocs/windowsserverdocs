@@ -2,8 +2,8 @@
 title: netsh dnsclient
 description: The netsh dnsclient command configures and manages DNS client settings in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/28/2025
 ---
 

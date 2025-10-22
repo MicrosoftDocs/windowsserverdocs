@@ -2,8 +2,8 @@
 title: netsh wfp
 description: The netsh wfp command manages the Windows Filtering Platform (WFP) to capture, display, and analyze network traffic in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/11/2025
 ---
 

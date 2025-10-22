@@ -2,8 +2,8 @@
 title: verify
 description: Reference article for the verify command, which tells the Command Prompt tool whether to verify your files are written correctly to a disk.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/01/2022
 ---
 

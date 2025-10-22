@@ -2,8 +2,8 @@
 title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/23/2025
 ---
 
@@ -133,7 +133,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions\REG_DWORD**
 
-  Set the **REG_DWORD** value to either **0×1** (enabled) or **0×0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+  Set the **REG_DWORD** value to either **0x1** (enabled) or **0x0** (disabled) in the registry by using Regedit.exe. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
   > [!CAUTION]
   > Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
@@ -173,7 +173,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - **HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar\REG_DWORD**
 
-  To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0×9** is TAB and **0×08** is BACKSPACE). Use the [**0×20**] value for white space, because it isn't a valid control character. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+  To set the **REG_DWORD** value, run Regedit.exe and use the hexadecimal value of a control character for a particular function (for example, **0x9** is TAB and **0x08** is BACKSPACE). Use the [**0x20**] value for white space, because it isn't a valid control character. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
   > [!CAUTION]
   > Incorrectly editing the registry might severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
