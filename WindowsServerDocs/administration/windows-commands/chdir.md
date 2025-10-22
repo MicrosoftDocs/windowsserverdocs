@@ -2,8 +2,8 @@
 title: chdir
 description: Reference article for the chdir command, which performs the same actions as the cd command.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # chdir

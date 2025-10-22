@@ -2,8 +2,8 @@
 title: start
 description: Reference article for the start command, which starts a separate Command Prompt window to run a specified program or command.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/02/2023
 ---
 

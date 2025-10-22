@@ -2,8 +2,8 @@
 title: verifier
 description: Reference article for the verifier command, which runs the Driver Verifier manager utility.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/20/2022
 ---
 

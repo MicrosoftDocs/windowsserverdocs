@@ -2,8 +2,8 @@
 title: DTrace
 description: DTrace is a dynamic tracing framework that allows users to monitor and debug system performance for Windows and other operating systems.
 ms.topic: reference
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/18/2024
 ---
 

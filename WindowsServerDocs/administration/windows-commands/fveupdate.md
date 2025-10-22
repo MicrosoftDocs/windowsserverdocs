@@ -2,8 +2,8 @@
 title: fveupdate
 description: Reference article for the fveupdate tool, which is an internal tool used by the setup program when a computer is upgraded.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

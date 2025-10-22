@@ -2,8 +2,8 @@
 title: ipxroute
 description: Reference article for the ipxroute command, which displays and modifies information about the routing tables used by the IPX protocol.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

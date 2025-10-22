@@ -2,8 +2,8 @@
 title: getmac
 description: Reference article for the getmac command, which returns the media access control (MAC) address and the list of network protocols associated with each, locally or across a network.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

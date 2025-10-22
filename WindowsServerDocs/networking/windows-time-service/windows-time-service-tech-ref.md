@@ -1,8 +1,8 @@
 ---
 title: Windows Time Service Technical Reference
 description: The W32Time service provides network clock synchronization for computers without the need for extensive configuration. The W32Time service is essential to the successful operation of Kerberos V5 authentication and, therefore, to AD DS-based authentication.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/04/2021
 ms.topic: reference
 ---

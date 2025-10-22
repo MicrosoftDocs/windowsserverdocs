@@ -2,8 +2,8 @@
 title: net user
 description: Reference article for the net user command, which adds, deletes, modifies, and displays user account information.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/06/2025
 ---
 
@@ -66,25 +66,25 @@ To display information about the user account **TommyH**, run the following comm
 net user tommyh
 ```
 
-To add a user account for **Jay Samson** (user name: **jays**), with sign in rights from 8 AM to 5 PM, Monday through Friday, with the mandatory password **Cyk4^g3B**, and use the user's full name, run the following command:
+To add a user account for **Jay Samson** (user name: **jays**), with sign in rights from 8 AM to 5 PM, Monday through Friday, with the mandatory password **Cyk4^g3B**, and use the user's full name, run the following command:
 
 ```cmd
 net user jays Cyk4^g3B /add /passwordreq:yes /times:monday-friday,8am-5pm /fullname:"Jay Jamison"
 ```
 
-To set the sign-in time from 8 AM to 5 PM for the username **MikeD** using 24-hour notation, run the following command:
+To set the sign-in time from 8 AM to 5 PM for the username **MikeD** using 24-hour notation, run the following command:
 
 ```cmd
 net user miked /time:M-F,08:00-17:00
 ```
 
-To set the sign-in time from 8 AM to 5 PM for **MikeD** using 12-hour notation, run the following command:
+To set the sign-in time from 8 AM to 5 PM for **MikeD** using 12-hour notation, run the following command:
 
 ```cmd
 net user miked /time:M-F,8AM-5PM
 ```
 
-To specify sign-in hours of 4 AM to 12 PM on Monday, 12 PM to 8 PM on Tuesday, and 8 AM to 5 PM Wednesday through Friday for username **AnibalS**, run the following command:
+To specify sign-in hours of 4 AM to 12 PM on Monday, 12 PM to 8 PM on Tuesday, and 8 AM to 5 PM Wednesday through Friday for username **AnibalS**, run the following command:
 
 ```cmd
 net user anibals /time:M,4AM-12PM;T,12PM-8PM;W-F,8AM-5PM

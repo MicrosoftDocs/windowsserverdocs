@@ -1,8 +1,8 @@
 ---
 title: refsutil dedup
 description: Reference article for the refsutil dedup tool, which deduplicates a Resilient File System (ReFS) volume in Windows.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/02/2025
 ms.topic: reference
 ---

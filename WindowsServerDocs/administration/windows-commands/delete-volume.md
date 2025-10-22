@@ -2,8 +2,8 @@
 title: delete volume
 description: Reference article for the delete volume command, which deletes the selected volume.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

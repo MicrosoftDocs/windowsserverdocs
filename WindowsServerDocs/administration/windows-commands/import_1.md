@@ -2,8 +2,8 @@
 title: import diskpart
 description: Reference article for the import command, which imports a foreign disk group into the disk group of the local computer.
 ms.topic: reference
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: edit
 description: Reference article for the edit command, which starts the MS-DOS Editor, so you can create and change ASCII text files.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 no-loc: [edit]
 ms.date: 10/16/2017
 ---

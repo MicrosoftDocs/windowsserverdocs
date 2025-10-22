@@ -2,8 +2,8 @@
 title: irftp
 description: Reference article for the irftp command, which sends files over an infrared link.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

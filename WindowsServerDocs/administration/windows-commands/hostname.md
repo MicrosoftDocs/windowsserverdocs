@@ -2,8 +2,8 @@
 title: hostname
 description: Reference article for the hostname command, which displays the host name portion of the full computer name of the computer.
 ms.topic: reference
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 

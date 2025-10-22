@@ -2,8 +2,8 @@
 title: netsh advfirewall
 description: Reference article for the netsh command, which is a command-line scripting utility that allows you to display or modify the network configuration of a currently running computer locally or remotely.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/24/2025
 ---
 

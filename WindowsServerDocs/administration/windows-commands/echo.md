@@ -2,8 +2,8 @@
 title: echo
 description: Reference article for the echo command, which displays messages or turns on or off the command echoing feature.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/02/2023
 ---
 

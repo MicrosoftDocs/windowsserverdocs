@@ -2,8 +2,8 @@
 title: exit
 description: Reference article for exit, which exits the diskpart command interpreter.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2023
 ---
 

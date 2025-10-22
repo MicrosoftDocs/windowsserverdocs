@@ -2,8 +2,8 @@
 title: help
 description: Reference article for the help command, which displays a list of the available commands or detailed help information on a specified command.
 ms.topic: reference
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 

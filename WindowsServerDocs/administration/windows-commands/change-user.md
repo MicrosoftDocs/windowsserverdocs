@@ -2,8 +2,8 @@
 title: change user
 description: Reference article for the change user command, which changes the install mode for the Remote Desktop Session Host server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # change user

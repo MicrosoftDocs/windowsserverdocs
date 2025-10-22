@@ -2,8 +2,8 @@
 title: set
 description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/06/2023
 ---
 
@@ -68,7 +68,7 @@ set /a <variable>=<expression>
 
 - If you run **set /a** from the command line outside of a command script, it displays the final value of the expression.
 
-- Numeric values are decimal numbers unless prefixed by 0× for hexadecimal numbers or 0 for octal numbers. Therefore, 0×12 is the same as 18, which is the same as 022.
+- Numeric values are decimal numbers unless prefixed by 0x for hexadecimal numbers or 0 for octal numbers. Therefore, 0x12 is the same as 18, which is the same as 022.
 
 - Delayed environment variable expansion support is disabled by default, but you can enable or disable it by using **cmd /v**.
 

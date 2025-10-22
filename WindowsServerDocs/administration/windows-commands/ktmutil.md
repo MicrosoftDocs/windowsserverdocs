@@ -2,8 +2,8 @@
 title: ktmutil
 description: Reference article for the ktmutil command, which starts the Kernel Transaction Manager utility.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

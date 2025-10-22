@@ -1,8 +1,8 @@
 ---
 title: fsutil volume
 description: Reference article for the fsutil volume command, which dismounts a volume, or queries the hard disk drive to determine how much free space is currently available on the hard disk drive or which file is using a particular cluster.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---
@@ -21,7 +21,7 @@ fsutil volume [diskfree] <volumepath>
 fsutil volume [dismount] <volumepath>
 fsutil volume [filelayout] <volumepath> <fileID>
 fsutil volume [list]
-fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] … …
+fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] …
 ```
 
 ### Parameters
