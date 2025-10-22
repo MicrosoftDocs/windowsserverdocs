@@ -4,7 +4,7 @@ description: Reference article for the unlodctr command, which removes Performan
 ms.topic: reference
 ms.author: daknappe
 author: dknappettmsft
-ms.date: 10/16/2017
+ms.date: 10/22/2025
 ---
 
 # unlodctr
@@ -29,9 +29,9 @@ unlodctr <drivername>
 | `<drivername>` | Removes the **Performance counter name** settings and **Explain text** for driver or service `<drivername>` from the Windows Server registry. If your `<drivername>` includes spaces, you must use quotation marks around the text, for example "Driver name". |
 | /? | Displays help at the command prompt. |
 
-## Remarks
+#### Remarks
 
-An exit code of **0** indicates the command line syntax was correct. It does not mean the removal was successful. Check the output from the command for potential error messages.
+An exit code of **0** indicates the command line syntax was correct. It doesn't mean the operation was successful. Check the output from the command for potential error messages.
 
 ## Examples
 
