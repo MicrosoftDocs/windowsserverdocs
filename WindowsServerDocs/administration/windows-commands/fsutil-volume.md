@@ -21,7 +21,7 @@ fsutil volume [diskfree] <volumepath>
 fsutil volume [dismount] <volumepath>
 fsutil volume [filelayout] <volumepath> <fileID>
 fsutil volume [list]
-fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] â€¦ â€¦
+fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] …
 ```
 
 ### Parameters
