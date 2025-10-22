@@ -2,8 +2,8 @@
 title: wdsutil copy
 description: Reference article for the wdsutil copy commands, which copies an image or a driver group.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

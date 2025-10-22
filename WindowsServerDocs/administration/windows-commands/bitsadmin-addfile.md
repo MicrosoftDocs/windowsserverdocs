@@ -2,8 +2,8 @@
 title: bitsadmin addfile
 description: Reference article for the bitsadmin addfile command, which adds a file to the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

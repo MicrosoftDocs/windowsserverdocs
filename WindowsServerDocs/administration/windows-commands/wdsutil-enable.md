@@ -2,8 +2,8 @@
 title: wdsutil enable
 description: Reference article for the wdsutil enable commands, which enables all services for Windows Deployment Services.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

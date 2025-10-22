@@ -2,8 +2,8 @@
 title: ftp bye
 description: Reference article for the ftp bye command, which ends the ftp session on the remote computer, and then exits.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

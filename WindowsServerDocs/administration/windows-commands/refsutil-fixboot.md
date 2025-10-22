@@ -1,8 +1,8 @@
 ---
 title: refsutil fixboot
 description: Reference article for the refsutil fixboot tool, which repairs or updates the boot sector of a ReFS (Resilient File System) volume in Windows.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/02/2025
 ms.topic: reference
 ---

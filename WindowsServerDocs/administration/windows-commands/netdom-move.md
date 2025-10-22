@@ -1,9 +1,9 @@
-﻿---
+---
 title: Netdom move
 description: Netdom move is a command-line utility moves a workstation or member server to a new domain in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

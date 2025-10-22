@@ -2,8 +2,8 @@
 title: wdsutil add-drivergroup
 description: Reference article for the wdsutil add-drivergroup command, which adds a driver group to the server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: bitsadmin peers and help
 description: Reference article for the bitsadmin peers and help command, which displays the command-line usage for the /peers switches.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

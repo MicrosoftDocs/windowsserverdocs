@@ -2,8 +2,8 @@
 title: bitsadmin addfileset
 description: Reference article for the bitsadmin addfileset command, which adds one or more files to the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

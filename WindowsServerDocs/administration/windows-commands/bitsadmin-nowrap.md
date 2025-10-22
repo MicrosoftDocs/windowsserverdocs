@@ -2,8 +2,8 @@
 title: bitsadmin nowrap
 description: Reference article for the bitsadmin nowrap command, which truncates any line of output text extending beyond the rightmost edge of the command window.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

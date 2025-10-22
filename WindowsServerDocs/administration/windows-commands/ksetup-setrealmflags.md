@@ -2,8 +2,8 @@
 title: ksetup setrealmflags
 description: Reference article for the ksetup setrealmflags command, which sets realm flags for the specified realm.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

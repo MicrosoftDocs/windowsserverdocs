@@ -2,8 +2,8 @@
 title: bitsadmin setdescription
 description: Reference article for the bitsadmin setdescription command, which sets the description of the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: bitsadmin resume
 description: Reference article for the bitsadmin resume command, which activates a new or suspended job in the transfer queue.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

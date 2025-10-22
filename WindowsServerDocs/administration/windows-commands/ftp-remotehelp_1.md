@@ -2,8 +2,8 @@
 title: ftp remotehelp
 description: Reference article for the ftp remotehelp command, which displays help for remote commands.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
