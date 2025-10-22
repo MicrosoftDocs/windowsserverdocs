@@ -2,8 +2,8 @@
 title: wdsutil export-image
 description: Reference article for the wdsutil export-image command, which exports an existing image from the image store to another Windows Image (.wim) file.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

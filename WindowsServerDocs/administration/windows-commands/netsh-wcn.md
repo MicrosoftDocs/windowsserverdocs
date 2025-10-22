@@ -2,8 +2,8 @@
 title: netsh wcn
 description: The netsh wcn command configures, manages, and troubleshoots Wireless Configuration Network (WCN) settings on Windows devices.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/29/2025
 ---
 
@@ -58,7 +58,7 @@ netsh wcn query SSID=your-network-ssid interface=your-interface-name
 
 The `enroll` parameter starts WPS enrollment with the device identified by the enrollee UUID. The specified network profile is applied using the chosen interface, or the default if none is given.
 
-The device password is usually a 4-digit or 8-digit PIN. Refer to your device’s documentation for its UUID and PIN. If no transport type is set, or "auto" is used, the system selects the best available option.
+The device password is usually a 4-digit or 8-digit PIN. Refer to your device's documentation for its UUID and PIN. If no transport type is set, or "auto" is used, the system selects the best available option.
 
 ## See also
 

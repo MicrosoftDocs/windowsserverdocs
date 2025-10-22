@@ -2,8 +2,8 @@
 title: bitsadmin cache and setexpirationtime
 description: Reference article for the bitsadmin cache and setexpirationtime command, which sets the cache expiration time.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

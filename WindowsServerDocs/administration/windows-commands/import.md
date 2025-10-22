@@ -2,8 +2,8 @@
 title: import diskshadow
 description: Reference article for the import command, which imports a transportable shadow copy from a loaded metadata file into the system.
 ms.topic: reference
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 

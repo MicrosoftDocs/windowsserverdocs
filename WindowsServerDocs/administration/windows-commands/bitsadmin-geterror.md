@@ -2,8 +2,8 @@
 title: bitsadmin geterror
 description: Reference article for the bitsadmin geterror command, which retrieves detailed error information for the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: bitsadmin peers and list
 description: Reference article for the bitsadmin peers and list command that lists all peers.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/01/2023
 ---
 

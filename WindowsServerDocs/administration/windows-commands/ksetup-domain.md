@@ -2,8 +2,8 @@
 title: ksetup domain
 description: Reference article for the ksetup domain command, which sets the domain name for all Kerberos operations.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

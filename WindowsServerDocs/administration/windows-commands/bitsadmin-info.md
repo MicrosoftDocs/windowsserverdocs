@@ -2,8 +2,8 @@
 title: bitsadmin info
 description: Reference article for the bitsadmin info command, which displays summary information about the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

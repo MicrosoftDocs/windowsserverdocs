@@ -2,8 +2,8 @@
 title: end restore
 description: Reference article for the end restore command, which ends a restore session and issues a **PostRestore** event to involved writers.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

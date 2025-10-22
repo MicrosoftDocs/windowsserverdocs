@@ -1,8 +1,8 @@
 ---
 title: refsutil streamsnapshot
 description: Reference article for the refsutil streamsnapshot tool, which manages Resilient File System (ReFS) data stream snapshots where you can create, delete, list, or compare snapshots in Windows.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/02/2025
 ms.topic: reference
 ---

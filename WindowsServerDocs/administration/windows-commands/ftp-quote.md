@@ -2,8 +2,8 @@
 title: ftp quote
 description: Reference article for the ftp quote command, which sends verbatim arguments to the remote ftp server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

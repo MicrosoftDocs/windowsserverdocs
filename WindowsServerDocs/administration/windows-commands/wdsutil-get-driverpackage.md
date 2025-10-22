@@ -2,8 +2,8 @@
 title: get-DriverPackage
 description: Reference article for get-DriverPackage, which displays information about a driver package on the server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

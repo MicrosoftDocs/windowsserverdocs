@@ -2,8 +2,8 @@
 title: bitsadmin setnotifyflags
 description: Reference article for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

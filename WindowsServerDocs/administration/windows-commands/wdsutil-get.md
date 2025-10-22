@@ -2,8 +2,8 @@
 title: wdsutil get
 description: Reference article for wdsutil get command, which retrieves properties or attributes about the specified object.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/19/2024
 ---
 

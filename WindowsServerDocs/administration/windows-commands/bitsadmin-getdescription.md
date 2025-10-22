@@ -2,8 +2,8 @@
 title: bitsadmin getdescription
 description: Reference article for the bitsadmin getdescription command, which retrieves the description of the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

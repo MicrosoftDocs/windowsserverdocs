@@ -1,9 +1,9 @@
-﻿---
+---
 title: bitsadmin create
 description: Reference article for the bitsadmin create command, which creates a transfer job with the given display name.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

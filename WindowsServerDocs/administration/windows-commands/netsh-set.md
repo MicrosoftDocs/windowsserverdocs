@@ -2,8 +2,8 @@
 title: netsh set
 description: The netsh set command targets local or remote devices to perform network configuration tasks in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/29/2025
 ---
 

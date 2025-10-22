@@ -2,8 +2,8 @@
 title: wdsutil get-namespace
 description: Reference article for wdsutil get-namespace, which displays information about a custom namespace.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
