@@ -2,8 +2,8 @@
 title: logman update cfg
 description: Reference article for the logman update cfg command, which updates the properties of an existing configuration data collector.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: ksetup setcomputerpassword
 description: Reference article for the ksetup setcomputerpassword command, which sets the password for the local computer.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

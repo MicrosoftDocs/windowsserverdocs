@@ -2,8 +2,8 @@
 title: wdsutil disable
 description: Reference article for the wdsutil disable commands, which disables all services for Windows Deployment Services.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

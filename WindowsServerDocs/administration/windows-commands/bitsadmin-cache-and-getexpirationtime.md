@@ -2,8 +2,8 @@
 title: bitsadmin cache and getexpirationtime
 description: Reference article for the bitsadmin cache and getexpirationtime command, which retrieves the cache expiration time.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

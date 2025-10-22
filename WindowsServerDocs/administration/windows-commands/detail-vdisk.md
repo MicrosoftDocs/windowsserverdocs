@@ -2,8 +2,8 @@
 title: detail vdisk
 description: Reference article for the detail vdisk command, which displays the properties of the selected virtual hard disk (VHD).
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

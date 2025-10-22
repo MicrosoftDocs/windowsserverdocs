@@ -2,8 +2,8 @@
 title: bitsadmin getowner
 description: Reference article for the bitsadmin getowner command, which retrieves the owner of the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: ksetup addkdc
 description: Reference article for the ksetup addkdc command, which ads a Key Distribution Center (KDC) address for the given Kerberos realm.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

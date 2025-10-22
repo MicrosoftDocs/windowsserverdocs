@@ -2,8 +2,8 @@
 title: bitsadmin peercaching
 description: Reference article for the bitsadmin peercaching command, which lists the /peercaching switches.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # bitsadmin peercaching

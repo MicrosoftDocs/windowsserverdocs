@@ -2,8 +2,8 @@
 title: bitsadmin util and repairservice
 description: Reference article for the bitsadmin util and repairservice command, which fixes known issues in various versions of BITS service.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

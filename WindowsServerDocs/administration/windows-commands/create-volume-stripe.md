@@ -2,8 +2,8 @@
 title: create volume stripe
 description: Reference article for the create volume stripe command, which creates a striped volume using two or more specified dynamic disks.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # create volume stripe

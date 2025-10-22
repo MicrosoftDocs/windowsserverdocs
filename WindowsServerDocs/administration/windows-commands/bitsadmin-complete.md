@@ -2,8 +2,8 @@
 title: bitsadmin complete
 description: Reference article for the bitsadmin complete command, which completes the job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

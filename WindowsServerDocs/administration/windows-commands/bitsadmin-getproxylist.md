@@ -2,8 +2,8 @@
 title: bitsadmin getproxylist - Retrieves the proxy list for the specified job.
 description: Reference article for the bitsadmin getproxylist command, which retrieves the proxy list for the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

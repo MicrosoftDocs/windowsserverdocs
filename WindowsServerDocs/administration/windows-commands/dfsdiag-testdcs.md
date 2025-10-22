@@ -2,8 +2,8 @@
 title: dfsdiag testdcs
 description: Reference article for the dfsdiag testdcs command, which checks the configuration of domain controllers in the specified domain.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: ksetup removerealm
 description: Reference article for the ksetup removerealm command, which deletes all information for the specified realm from the registry.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

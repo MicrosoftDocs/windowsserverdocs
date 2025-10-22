@@ -2,8 +2,8 @@
 title: bitsadmin cache and deleteURL
 description: Reference article for the bitsadmin cache and deleteURL command, which deletes all cache entries for the given URL.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

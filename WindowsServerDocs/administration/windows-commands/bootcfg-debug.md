@@ -2,8 +2,8 @@
 title: bootcfg debug
 description: Reference article for the bootcfg debug command, which adds or changes the debug settings for a specified operating system entry.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # bootcfg debug

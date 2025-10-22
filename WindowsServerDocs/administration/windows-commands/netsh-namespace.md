@@ -2,8 +2,8 @@
 title: netsh namespace
 description: The netsh namespace command retrieves namespace policies in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/29/2025
 ---
 

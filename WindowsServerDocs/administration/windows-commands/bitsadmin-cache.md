@@ -2,8 +2,8 @@
 title: bitsadmin cache
 description: Reference article for the bitsadmin cache command, which contains a list of the bitsadmin cache switches.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # bitsadmin cache
