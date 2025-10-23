@@ -25,7 +25,7 @@ Windows LAPS supports five different complexity settings that can be used to gen
 |2|Large letters + small letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"|"fOiMbhmcVFHzmI"|
 |3|Large letters + small letters + numbers|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"|"logqQVGs53R4vY"|
 |4|Large letters + small letters + numbers + specials|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"<br/><br/>",.-+;!#&@{}[]$/()%"|"P5QWg43.1lA}ra"|
-|5|Large letters + small letters + numbers (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|"vnJ!!?MTb5=U7Y"|
+|5|Large letters + small letters + numbers + specials (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|"vnJ!!?MTb5=U7Y"|
 
 When a complexity setting with multiple character sets is chosen, Windows LAPS ensures that the resultant password contains at least one character randomly chosen from each character set.
 
