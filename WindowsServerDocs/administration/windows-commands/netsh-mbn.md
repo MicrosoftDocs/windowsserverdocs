@@ -2,8 +2,8 @@
 title: netsh mbn
 description: The netsh mbn command manages Mobile Broadband (MBN) interfaces, cellular modems, and SIM-based network connections in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/09/2025
 ---
 
