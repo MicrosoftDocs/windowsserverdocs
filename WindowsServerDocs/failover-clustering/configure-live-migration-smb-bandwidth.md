@@ -1,42 +1,41 @@
 ---
-title: Control Live Migration SMB Bandwidth Cluster-wide in Windows Server
-description: Learn how to configure cluster-wide Live Migration SMB bandwidth control in Windows Server and Azure Stack HCI.
+title: Control Live Migration SMB Bandwidth Cluster-wide in Windows Server and Azure Local
+description: Learn how to configure cluster-wide SMB bandwidth limits for Live Migration in Windows Server and Azure Local to optimize network performance and reliability.
+#customer intent: As a Hyper-V administrator, I want to calculate the SMB bandwidth limit factor so that I can allocate network resources effectively.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to
-ms.date: 09/25/2023
+ms.date: 10/23/2025
 ---
 
 # Control Live Migration SMB Bandwidth Cluster-wide
 
->Applies to:  Windows Server 2022 and later, Azure Stack HCI, version 21H2 and later versions
-
 Cluster-wide parameters enable you to reserve network bandwidth for SMB between failover cluster
 nodes. With automatic configuration of the SMB bandwidth limits for live migration, administrators
-no longer need to analyze and configuring these limits on individual cluster nodes. This article
+no longer need to analyze and configure these limits on individual cluster nodes. This article
 shows you how to configure cluster-wide Live Migration SMB Bandwidth control in Windows Server and
-Azure Stack HCI.
+Azure Local.
 
-When you configure Hyper-V to use SMB for Live Migration, having the SMB bandwidth limits configured
+When you configure Hyper-V to use SMB for Live Migration, configuring the SMB bandwidth limits
 is critical to the reliability and availability of the system. If live migration over SMB consumes
 too much bandwidth, storage and cluster network traffic could be delayed or dropped, affecting the
 system and hosted services.
 
 > [!TIP]
-> If you're using Azure Stack HCI, we recommend using Network ATC for all your host networking
-> requirements, including SMB Bandwidth management, live migrations and much more. To learn more
-> about using Network ATC to manage SMB bandwidth limits, see
-> [Network ATC](/azure-stack/hci/manage/manage-network-atc?tabs=21H2).
+> If you're using Azure Local, use Network ATC for all your host networking requirements, including
+> SMB Bandwidth management, live migrations, and much more. To learn more about using Network ATC to
+> manage SMB bandwidth limits, see
+> [Manage Network ATC](../networking/network-atc/manage-network-atc.md).
 
 ## Prerequisites
 
 Before you can configure SMB bandwidth control for Live Migration, you must have the following
 prerequisites.
 
-- A failover cluster running Windows Server or Azure Stack HCI. To learn more about creating a
+- A failover cluster running Windows Server or Azure Local. To learn more about creating a
   failover cluster, see [Create a failover cluster](create-failover-cluster.md) for Windows Server
   and
-  [Create an Azure Stack HCI cluster](/azure-stack/hci/deploy/create-cluster?tabs=use-network-atc-to-deploy-and-manage-networking-recommended).
+  [Create an Azure Local cluster](/previous-versions/azure/azure-local/deploy/create-cluster?tabs=use-network-atc-to-deploy-and-manage-networking-recommended).
 
 - Each cluster node must have the Hyper-V Server role installed and has Live Migration configured.
   For more information, see
@@ -48,13 +47,13 @@ prerequisites.
   Feature installed.
 
   > [!IMPORTANT]
-  > After installing the SMB Bandwidth Limit feature on a cluster node, SMB bandwidth is limited to
+  > After you install the SMB Bandwidth Limit feature on a cluster node, SMB bandwidth is limited to
   > the default of 25% of the nodes total bandwidth.
 
-- Each cluster node must have the 2022-09 Cumulative Update for Microsoft server operating system
-  version 21H2 for x64-based systems installed. For more information, see
+- Each cluster node must have 2022-09 Cumulative Update for Microsoft server operating system
+  version 21H2 or later installed. For more information, see
 [KB5017381](https://support.microsoft.com/help/5017381) for Windows Server 2022 and
-[KB5017382](https://support.microsoft.com/help/5017382) for Azure Stack HCI, version 21H2.
+[KB5017382](https://support.microsoft.com/help/5017382) for Azure Stack HCI OS, version 21H2.
 
 - An account that is a member of the Administrators group, or equivalent.
 
@@ -69,7 +68,7 @@ The default SMB bandwidth limit factor is 2500 (25%) of the total bandwidth avai
 node.
 
 You should consider how much bandwidth is available to the cluster and how much bandwidth is needed
-for other cluster traffic, as well as other traffic using the same cluster network enabled for Live
+for other cluster traffic, and other traffic using the same cluster network enabled for Live
 Migration.
 
 To calculate the bandwidth limit factor, follow the steps.
@@ -80,7 +79,7 @@ To calculate the bandwidth limit factor, follow the steps.
    > [!IMPORTANT]
    > Cluster nodes should have the same number of network adapters across all nodes in the cluster.
    > The connected network adapters should also be connected at the same speeds as the other nodes
-   > in the cluster. If the cluster nodes are consistent, the bandwidth limit will be calculated
+   > in the cluster. If the cluster nodes are consistent, the bandwidth limit is calculated
    > differently on those nodes.
 
 1. Determine how much bandwidth you wish to reserve.
@@ -105,8 +104,8 @@ SMB bandwidth limit factor is 2500, or 25%, as shown in the following example.
 
 ## Configure Live Migration performance options
 
-When you're using Hyper-V in a cluster, the cluster nodes should be configured consistently. To use the SMB
-bandwidth limit, the cluster nodes must be configured to use SMB for Live Migration. To learn more
+When you use Hyper-V in a cluster, configure the cluster nodes consistently. To use the SMB
+bandwidth limit, configure the cluster nodes to use SMB for Live Migration. For more information
 about Live Migration performance options, see
 [Virtual Machine Live Migration Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831435(v=ws.11)).
 
@@ -135,11 +134,11 @@ Repeat these steps for each cluster node.
 
 Here's how to set the SMB performance option using PowerShell.
 
-1. Sign into the cluster node.
+1. Sign in to the cluster node.
 
 1. Open a PowerShell prompt as an administrator.
 
-1. Get all cluster nodes using the following command.
+1. Get all cluster nodes by running the following command.
 
    ```powershell
    $ClusterNodes = (Get-ClusterNode).name
@@ -155,13 +154,13 @@ Here's how to set the SMB performance option using PowerShell.
 
 ## Configure Live Migration network selection
 
-_Optional:_ When configuring SMB bandwidth limits for Live Migration, you may also want to configure
+_Optional:_ When configuring SMB bandwidth limits for Live Migration, you might also want to configure
 which cluster networks can be used for Live Migration settings.
 
 The default Live Migration settings set the cluster network used for cluster communications, CSV,
-and Storage Spaces Direct at the lowest preference. The default setting is designed to keep Live
-Migration network traffic away from the same network the cluster is using to communicate between
-nodes. To learn more about network prioritization and traffic isolation in a cluster, see the
+and Storage Spaces Direct at the lowest preference. The default setting keeps Live
+Migration network traffic away from the same network the cluster uses to communicate between
+nodes. For more information about network prioritization and traffic isolation in a cluster, see the
 following articles.
 
 - [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).
@@ -180,7 +179,7 @@ Here's how to set the Live Migration network selection using the user interface.
 
 1. Right-click **Networks**, then select **Live Migration Settings**.
 
-1. In the **Live Migration Settings** dialog, select the cluster networks to be used for Live
+1. In the **Live Migration Settings** dialog, select the cluster networks to use for Live
    Migration by checking or unchecking the required networks.
 
 1. Select **OK** to save the changes.
@@ -189,7 +188,7 @@ Here's how to set the Live Migration network selection using the user interface.
 
 Here's how to set the Live Migration network selection using PowerShell.
 
-1. Sign into the cluster node.
+1. Sign in to the cluster node.
 
 1. Open a PowerShell prompt as an administrator.
 
@@ -216,37 +215,37 @@ Here's how to set the Live Migration network selection using PowerShell.
 
 ## Configure cluster-wide SMB bandwidth limits
 
-You can set the cluster-wide SMB bandwidth limits using the `SetSMBBandwidthLimit` and
-`SetSMBBandwidthLimitFactor` cluster parameters. Any new node added to the cluster automatically has
-the cluster wide values applied.
+Set the cluster-wide SMB bandwidth limits by using the `SetSMBBandwidthLimit` and
+`SetSMBBandwidthLimitFactor` cluster parameters. When you add a new node to the cluster, it automatically uses
+the cluster-wide values.
 
 To apply the cluster-wide SMB bandwidth limits, follow the steps using PowerShell.
 
 > [!IMPORTANT]
-> The cluster-wide bandwidth limits will only be applied if the cluster nodes are on physical
-> hardware, they will not be in effect if the nodes are running inside of virtual  
+> The cluster-wide bandwidth limits apply only if the cluster nodes run on physical
+> hardware. They don't take effect if the nodes run inside of virtual  
 > machines.
 
-1. Sign into one of the cluster nodes.
+1. Sign in to one of the cluster nodes.
 
 1. Open a PowerShell prompt as an administrator.
 
-1. To verify the current values of the `SetSMBBandwidthLimit` and `SetSMBBandwidthLimitFactor`
+1. To check the current values of the `SetSMBBandwidthLimit` and `SetSMBBandwidthLimitFactor`
    cluster parameters, use the following command.
 
    ```powershell
    Get-Cluster | FL SetSMBBandwidthLimit,SetSMBBandwidthLimitFactor
    ```
 
-1. Using the value you calculated in the [Calculate bandwidth limit](#calculate-bandwidth-limit)
-   section, set the SMB bandwidth limit factor using the following command. For example, the
-   following command sets the SMB bandwidth limit factor to 3000 (30%).
+1. Set the SMB bandwidth limit factor with the following command using the value you calculated in
+   the [Calculate bandwidth limit](#calculate-bandwidth-limit) section. For example, the following
+   command sets the SMB bandwidth limit factor to 3000 (30%).
 
    ```powershell
    Get-Cluster | %($_.SMBBandwidthLimitFactor=3000)
    ```
 
-1. If you want to enable or disable the cluster-wide SMB bandwidth limits, use the following
+1. To enable or disable the cluster-wide SMB bandwidth limits, use the following
    relevant command.
 
    ```powershell
@@ -259,7 +258,7 @@ To apply the cluster-wide SMB bandwidth limits, follow the steps using PowerShel
 
 ## Next steps
 
-Now you've configured cluster-wide Live Migration SMB bandwidth control, here are some resources to
+Now you've configured cluster-wide Live Migration SMB bandwidth control here are some resources to
 learn more.
 
 - [Network recommendations for a Hyper-V cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn550728(v=ws.11)#isolate-traffic-on-the-live-migration-network).
