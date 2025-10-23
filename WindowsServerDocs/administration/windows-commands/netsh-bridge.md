@@ -2,8 +2,8 @@
 title: netsh bridge
 description: The netsh bridge command manages network adapter bridge settings to combine two or more network segments as one network in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/10/2025
 ---
 

@@ -2,8 +2,8 @@
 title: netsh ras
 description: The netsh ras command manages Remote Access Service (RAS) settings to configure, monitor, and troubleshoot remote access features in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/03/2025
 ---
 

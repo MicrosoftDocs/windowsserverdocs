@@ -2,8 +2,8 @@
 title: netsh wlan
 description: The netsh wlan command manages, configures, and helps troubleshoot wireless networking settings in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/08/2025
 ---
 

@@ -25,7 +25,7 @@ Windows LAPS supports five different complexity settings that can be used to gen
 |2|Large letters + small letters|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"|"fOiMbhmcVFHzmI"|
 |3|Large letters + small letters + numbers|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"|"logqQVGs53R4vY"|
 |4|Large letters + small letters + numbers + specials|"ABCDEFGHIJKLMNOPQRSTUVWXYZ"<br/><br/>"abcdefghijklmnopqrstuvwxyz"<br/><br/>"0123456789"<br/><br/>",.-+;!#&@{}[]$/()%"|"P5QWg43.1lA}ra"|
-|5|Large letters + small letters + numbers (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|"vnJ!!?MTb5=U7Y"|
+|5|Large letters + small letters + numbers + specials (improved readability)|"ABCDEFGHJKLMNPRSTUVWXYZ"<br/><br/>"abcdefghijkmnpqrstuvwxyz"<br/><br/>"23456789"<br/><br/>"!#%+@:=?*"|"vnJ!!?MTb5=U7Y"|
 
 When a complexity setting with multiple character sets is chosen, Windows LAPS ensures that the resultant password contains at least one character randomly chosen from each character set.
 
@@ -39,7 +39,7 @@ Password complexity setting five is equivalent to password complexity setting fo
 - Adds the symbols ':', '=', '?', and '*'
 
 > [!IMPORTANT]
-> The PasswordComplexity setting of '5' is only supported in Windows 11 24H2, Windows Server 2025 and later releases. It is not required to deploy any Windows Server 2025 domain controllers in order to use this new setting.
+> The PasswordComplexity setting of '5' is only supported in Windows 11 24H2, Windows Server 2025, and later releases. It isn't required to deploy any Windows Server 2025 domain controllers in order to use this new setting.
 
 ## Passphrase word lists
 
@@ -56,7 +56,7 @@ The length of passphrases is controlled using the PassphraseLength policy settin
 Passphrase word lists were taken from ["Deep Dive: EFF's New Wordlists for Random Passphrases"](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) by [Electronic Frontier Foundation](https://www.eff.org/), and are used under a CC-BY-3.0 Attribution license. The specific contents of all Windows LAPS passphrase word lists can be downloaded from [Windows LAPS Passphrase Word Lists](https://go.microsoft.com/fwlink/?linkid=2255471). Microsoft made slight modifications to the original word lists; all changes are detailed in the downloadable lists.
 
 > [!IMPORTANT]
-> Windows LAPS passphrase support is only supported in Windows 11 24H2, Windows Server 2025 and later releases. It is not required to deploy Windows Server 2025 domain controllers in order to use this new setting.
+> Windows LAPS passphrase support is only supported in Windows 11 24H2, Windows Server 2025, and later releases. It isn't required to deploy Windows Server 2025 domain controllers in order to use this new setting.
 
 ## Entropy considerations
 

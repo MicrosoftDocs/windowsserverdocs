@@ -2,8 +2,8 @@
 title: netsh trace
 description: The netsh trace command captures network traffic and trace events for network diagnostics and troubleshooting in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/06/2025
 ---
 
