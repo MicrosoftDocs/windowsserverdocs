@@ -2,8 +2,8 @@
 title: wdsutil get-alldriverpackages
 description: Reference article for the wdsutil get-alldriverpackages command, which displays information about all the driver packages on a server that match the specified search criteria.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
