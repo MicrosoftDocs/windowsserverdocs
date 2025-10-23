@@ -603,7 +603,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
 ---
 
-## [Version 1.8.1](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.1) (October 2025)
+## [Version 1.8.2](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.2) (October 2025)
 
 ### New Features
 
