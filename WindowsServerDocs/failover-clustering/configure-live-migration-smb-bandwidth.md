@@ -1,5 +1,5 @@
 ---
-title: Control Live Migration SMB Bandwidth Cluster-wide in Windows Server and Azure Local
+title: Control Live Migration SMB Bandwidth Control Cluster-wide in Windows Server and Azure Local
 description: Learn how to configure cluster-wide SMB bandwidth limits for Live Migration in Windows Server and Azure Local to optimize network performance and reliability.
 #customer intent: As a Hyper-V administrator, I want to calculate the SMB bandwidth limit factor so that I can allocate network resources effectively.
 author: robinharwood
@@ -8,7 +8,7 @@ ms.topic: how-to
 ms.date: 10/23/2025
 ---
 
-# Control Live Migration SMB Bandwidth Cluster-wide
+# Control Live Migration SMB Bandwidth control cluster-wide
 
 Cluster-wide parameters enable you to reserve network bandwidth for SMB between failover cluster
 nodes. With automatic configuration of the SMB bandwidth limits for live migration, administrators
