@@ -724,7 +724,7 @@ To configure Teredo state to `natawareclient` with server name `teredo.example.c
 netsh interface teredo set state type=natawareclient servername=teredo.example.com refreshinterval=60 clientport=3544
 ```
 
-To enable UDP URO and UDP USO globally, run the following command:
+To enable URO and USO globally, run the following command:
 
 ```cmd
 netsh interface udp set global uro=enabled uso=enabled
