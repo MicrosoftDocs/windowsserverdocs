@@ -86,7 +86,7 @@ To calculate the bandwidth limit factor, follow the steps.
 
 1. Calculate your SMB bandwidth limit factor using the following formula.
 
-    :::image type="content" source="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation.png" alt-text="An equation showing how to calculate the bandwidth limit. The equation reads open parentheses, SMB Bandwidth Limit divided by the sum of all bandwidth, close parentheses, times 10000, equals, SMB Bandwidth Limit Factor." lightbox="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation.png":::
+   :::image type="content" source="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation.png" alt-text="Diagram that shows the equation: (SMB bandwidth limit / total bandwidth) * 10000 = SMB bandwidth limit factor." lightbox="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation.png":::
 
 If you already know the percentage of bandwidth you wish to reserve, times this value by 100.
 
@@ -100,7 +100,7 @@ The bandwidth limit is calculated as a percentage of the total bandwidth availab
 The total bandwidth is 40GB and the SMB Live Migration reservation needs to be 10GB. Therefore, the
 SMB bandwidth limit factor is 2500, or 25%, as shown in the following example.
 
-:::image type="content" source="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png" alt-text="eq" lightbox="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png":::
+:::image type="content" source="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png" alt-text="Diagram that shows an example calculation reserving 10 GB of 40 GB total bandwidth, giving a limit factor of 2500 (25%)." lightbox="media/configure-live-migration-smb-bandwidth/smb-bandwidth-limit-factor-equation-example.png":::
 
 ## Configure Live Migration performance options
 
