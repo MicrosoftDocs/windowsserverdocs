@@ -65,12 +65,12 @@ items:
 ### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
   tocHref: /azure/azure-local/
-  topicHref: /windows-server/index
+  topicHref: /windows-server/virtualization/hyper-v/
 
 ### For linking to system center topics and keeping the context in Windows Server TOC
-- name: Windows Server                         # Destination doc set name
-  tocHref: /system-center/      # Destination doc set route
-  topicHref: /windows-server/    # Original doc set route
+- name: Windows Server
+  tocHref: /system-center/
+  topicHref: /windows-server/
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server
