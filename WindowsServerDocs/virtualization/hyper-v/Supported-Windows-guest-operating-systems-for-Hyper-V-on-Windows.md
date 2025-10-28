@@ -113,16 +113,6 @@ Following are the versions of Windows client that are supported as guest operati
 - **Integration Services**: Upgrade the integration services after you set up the guest operating system.  
 - **Notes**: Ultimate, Enterprise, and Professional editions (32-bit and 64-bit).  
 
-## Guest operating system support on other versions of Windows
-
-The following table gives links to information about guest operating systems supported for Hyper-V on other versions of Windows.
-
-|Host operating system|Article|
-|-------------------------|---------|
-|Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
-|Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
-|Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|
-
 ## Supported Linux and FreeBSD
 
 | Guest operating system |

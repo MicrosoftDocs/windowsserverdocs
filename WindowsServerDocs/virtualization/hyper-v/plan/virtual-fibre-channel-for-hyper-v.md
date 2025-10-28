@@ -57,7 +57,7 @@ To support live migration of virtual machines across Hyper-V hosts while maintai
 
 ### Tape library support
 
-Windows Server only supports virtual tape libraries configured with virtual Fibre Channel adapters when using System Center Data Protection Manager 2012 R2 U3 or later with certified hardware. You can check if your virtual Fibre Channel adapter supports a tape library by contacting the tape library hardware vendor. You can also check compatibility by running the Data Protection Management (DPM) Tape Library Compatibility Test tool on the virtual tape library in a guest VM. For more information about the DPM Tape Library Compatibility Test, see [Verify tape library compatibility](/previous-versions/system-center/system-center-2012-R2/jj733581(v=sc.12)).
+Windows Server only supports virtual tape libraries configured with virtual Fibre Channel adapters when using System Center Data Protection Manager 2012 R2 U3 or later with certified hardware. You can check if your virtual Fibre Channel adapter supports a tape library by contacting the tape library hardware vendor. You can also check compatibility by running the Data Protection Management (DPM) Tape Library Compatibility Test tool on the virtual tape library in a guest VM. For more information about the DPM Tape Library Compatibility Test, see [System Center DPM Compatible Tape Libraries](/system-center/dpm/dpm-compatible-tape-libraries).
 
 ### MPIO functionality
 

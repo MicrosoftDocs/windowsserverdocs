@@ -57,10 +57,15 @@ items:
     items:
     - name: Networking overview
       href: plan/plan-hyper-v-networking-in-windows-server.md
+    - name: Failover cluster network recommendations
+      href: failover-cluster-network-recommendations.md
     - name: Virtual switch
       href: virtual-switch.md
     - name: RDMA and SET
       href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization
+    - name: Network Quality of Service and bandwidth limits
+      displayName: QoS
+      href: network-quality-of-service-bandwidth-limits.md
   - name: Security
     href: plan/plan-hyper-v-security-in-windows-server.md
   - name: GPU acceleration
@@ -164,6 +169,8 @@ items:
       href: manage/live-migration-workgroup-cluster.md
     - name: Use PowerShell with Hyper-V
       href: powershell.md
+  - name: Dynamic Memory
+    href: dynamic-memory.md
   - name: Virtual machines
     items:
     - name: Virtual Machine Connection overview
@@ -180,10 +187,15 @@ items:
   items:
   - name: Hyper-V specification and API documentation
     href: /virtualization/hyper-v-on-windows/
-  - name: Build an integration Service
-    href: make-integration-service.md
+  - name: Integration Services
+    items:
+    - name: Build an integration Service
+      href: make-integration-service.md
+    - name: Data exchange between the host and VM
+      href: integration-services-data-exchange.md
   - name: Move from Hyper-V WMI v1 to WMI v2
     href: refactor-wmi-v1-to-wmi-v2.md
+
 - name: Reference
   items:
   - name: PowerShell module reference

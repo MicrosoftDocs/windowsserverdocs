@@ -87,10 +87,6 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
 
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
 
-* [Deploy a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj863389(v=ws.11))
-
 * [Create Linux Images for Azure](/azure/virtual-machines/linux/create-upload-generic)
 
 * [Optimize your Linux VM on Azure](/azure/virtual-machines/linux/optimization)
-
-
