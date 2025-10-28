@@ -63,8 +63,9 @@ items:
       href: virtual-switch.md
     - name: RDMA and SET
       href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization
-    - name: Quality of Service (QoS) and bandwidth limits
-      href: quality-of-service-bandwidth-limits.md
+    - name: Network Quality of Service and bandwidth limits
+      displayName: QoS
+      href: network-quality-of-service-bandwidth-limits.md
   - name: Security
     href: plan/plan-hyper-v-security-in-windows-server.md
   - name: GPU acceleration

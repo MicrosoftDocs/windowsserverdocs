@@ -232,7 +232,7 @@ For a Hyper-V cluster, configure Hyper-V QoS that applies to the virtual switch.
 - **Configure minimum bandwidth in weight mode instead of in bits per second.** Minimum bandwidth specified by weight is more flexible and it's compatible with other features, such as live migration and NIC Teaming. For more information, see the **MinimumBandwidthMode** parameter in [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch).
 - **Enable and configure QoS for all virtual network adapters.** Assign a weight to all virtual adapters. For more information, see [Set-VMNetworkAdapter](/powershell/module/hyper-v/set-vmnetworkadapter). To make sure that all virtual adapters have a weight, configure the **DefaultFlowMinimumBandwidthWeight** parameter on the virtual switch to a reasonable value. For more information, see [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch).
 
-The following table recommends some generic weight values. You can assign a value from 1 to 100. For guidelines to consider when you assign weight values, see [QoS minimum bandwidth best practices](quality-of-service-bandwidth-limits.md).
+The following table recommends some generic weight values. You can assign a value from 1 to 100. For guidelines to consider when you assign weight values, see [QoS minimum bandwidth best practices](network-quality-of-service-bandwidth-limits.md).
 
 | Network Classification | Weight |
 | --- | --- |

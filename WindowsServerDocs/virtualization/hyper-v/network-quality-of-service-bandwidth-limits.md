@@ -1,5 +1,5 @@
 ---
-title: QoS minimum bandwidth best practices for Hyper-V
+title: Network QoS Minimum Bandwidth Best Practices for Hyper-V
 description: Guidance and best practices for configuring Hyper-V Quality of Service (QoS) minimum bandwidth on Windows Server.
 author: dknappettmsft
 ms.author: daknappe
@@ -7,9 +7,9 @@ ms.topic: best-practice
 ms.date: 10/28/2025
 ---
 
-# QoS minimum bandwidth best practices
+# Network QoS minimum bandwidth best practices for Hyper-V
 
-Use these best practices to configure Hyper‑V Quality of Service (QoS) Minimum Bandwidth on Windows Server. The guidance helps you choose the appropriate mode (weight or bits per second), assign effective weights, and avoid configuration pitfalls with NIC Teaming and Data Center Bridging (DCB).
+Use these best practices to configure Hyper‑V network Quality of Service (QoS) Minimum Bandwidth on Windows Server. The guidance helps you choose the appropriate mode (weight or bits per second), assign effective weights, and avoid configuration pitfalls with NIC Teaming and Data Center Bridging (DCB).
 
 The article covers: weight assignment strategy, when to prefer weight over absolute bandwidth, interaction with teaming algorithms, coexistence considerations for QoS and DCB, and mitigation techniques for uneven bandwidth distribution.
 
