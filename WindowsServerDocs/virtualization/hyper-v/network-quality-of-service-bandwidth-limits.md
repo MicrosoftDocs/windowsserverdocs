@@ -119,7 +119,3 @@ If a Hyper-V switch is bound to a two‑member 1 Gb NIC team (aggregate 2 Gb), y
 - Hyper-V QoS overview (newer versions) *(add link when available)*
 - `New-VMSwitch` PowerShell reference
 - NIC Teaming overview
-
-> [!NOTE]
-> This legacy content is retained for reference. Validate applicability before using these practices on later Windows Server versions.
-
