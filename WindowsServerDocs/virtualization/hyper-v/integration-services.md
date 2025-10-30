@@ -100,7 +100,7 @@ Learn more about [Using key-value pairs to share information between the host an
 
 The Volume Shadow Copy Requestor integration service is required for Volume Shadow Copy Service ([VSS](/windows/desktop/VSS/overview-of-processing-a-backup-under-vss)).  The Volume Shadow Copy Service (VSS) captures and copies images for backup on running systems, particularly servers, without unduly degrading the performance and stability of the services they provide.  This integration service makes that possible by coordinating the virtual machine's workloads with the host's backup process.
 
-Read more about Volume Shadow Copy in [Backing Up and Restoring Virtual Machines](/previous-versions/windows/desktop/virtual/backing-up-and-restoring-virtual-machines).
+Read more about Volume Shadow Copy in [Backing Up and Restoring Virtual Machines](/windows/win32/hyperv_v2/backing-up-and-restoring-virtual-machines).
 
 ## Hyper-V Guest Service Interface
 

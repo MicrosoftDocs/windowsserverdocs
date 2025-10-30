@@ -183,10 +183,16 @@ items:
       href: powershell-direct.md
     - name: Create a custom VM Gallery
       href: custom-vm-gallery.md
-- name: Developers
+- name: Reference and developers
   items:
-  - name: Hyper-V specification and API documentation
+  - name: PowerShell module reference
+    href: /powershell/module/hyper-v
+  - name: Hyper-V specification and API reference
     href: /virtualization/hyper-v-on-windows/
+  - name: Hyper-V management reference
+    href: /windows/win32/hyperv_v2/hyper-v-management
+  - name: Hyper-V WMI provider (V2) reference
+    href: /windows/win32/hyperv_v2/windows-virtualization-portal
   - name: Integration Services
     items:
     - name: Build an integration Service
@@ -195,12 +201,6 @@ items:
       href: integration-services-data-exchange.md
   - name: Move from Hyper-V WMI v1 to WMI v2
     href: refactor-wmi-v1-to-wmi-v2.md
-- name: Reference
-  items:
-  - name: PowerShell module reference
-    href: /powershell/module/hyper-v
-  - name: Hyper-V specification and API documentation
-    href: /virtualization/hyper-v-on-windows/
 - name: Resources
   items:
   - name: Hyper-V forums
