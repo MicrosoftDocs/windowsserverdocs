@@ -81,7 +81,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 To search for *hello* or *there* in file *x.y*, type:
 
 ```
-findstr hello there x.y
+findstr "hello there" x.y
 ```
 
 To search for *hello there* in file *x.y*, type:
