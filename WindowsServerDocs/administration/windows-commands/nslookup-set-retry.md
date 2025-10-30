@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 
 
-If a reply isn't received within a certain amount of time, the time-out period is doubled, and the request is resent. This command sets the number of times a request is resent to a server for information, before giving up.
+This command sets the number of times a request is resent to a server for information, before giving up.
 
 > [!NOTE]
 > To change the length of time before the request times out, use the [nslookup set timeout](nslookup-set-timeout.md) command.
@@ -26,7 +26,7 @@ set retry=<number>
 
 | Parameter | Description |
 | ---------- | ---------- |
-| `<number>` | Specifies the new value for the number of retries. The default number of retries is **4**. |
+| `<number>` | Specifies the new value for the number of retries. The default number of retries is **1**. |
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
