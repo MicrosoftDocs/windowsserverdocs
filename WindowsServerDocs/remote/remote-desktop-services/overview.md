@@ -30,7 +30,7 @@ Instead of installing and patching applications on many individual endpoints, yo
 
 ### Key benefits
 
-Remote Desktop Services centralizes application and desktop management so you patch and secure resources once rather than across many endpoints. Multi‑session density lowers per‑user cost while a mix of session hosts and VDI provides flexibility for performance or compatibility needs. Data remains in the datacenter; encrypted remote access, MFA, and auditing can strengthen your compliance posture. Users stay productive because RemoteApp windows behave like local apps, •supporting taskbar pinning, multi‑monitor workflows, and standard window controls. The platform extends easily with profile management, printing, monitoring, GPU acceleration, and broad automation via PowerShell.
+Remote Desktop Services centralizes application and desktop management so you patch and secure resources once rather than across many endpoints. Multi‑session density lowers per‑user cost while a mix of session hosts and VDI provides flexibility for performance or compatibility needs. Data remains in the datacenter; encrypted remote access, MFA, and auditing can strengthen your compliance posture. Users stay productive because RemoteApp windows behave like local apps, supporting taskbar pinning, multi‑monitor workflows, and standard window controls. The platform extends easily with profile management, printing, monitoring, GPU acceleration, and broad automation via PowerShell.
 
 ## Core Remote Desktop Services roles and components
 
@@ -71,7 +71,7 @@ Organizations use Remote Desktop Services to standardize application delivery to
 
 ## Publishing options
 
-You can publish full desktops (session‑based or VM‑based) that present a curated application set, or provide individual RemoteApp programs that integrate into the user's Start menu and taskbar and can span multiple monitors that appear and behave like locally installed software.
+You can publish full desktops (session‑based or VM‑based) that present a curated application set, or provide individual RemoteApp programs that integrate into the user's Start menu and taskbar, can span multiple monitors, and appear and behave like locally installed software.
 
 ## Security and compliance
 
