@@ -2,8 +2,8 @@
 title: bdehdcfg quiet
 description: Reference article for the bdehdcfg quiet command, which tells bdehdcfg to not display all actions and errors.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

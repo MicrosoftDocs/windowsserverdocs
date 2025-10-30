@@ -2,8 +2,8 @@
 title: attributes volume
 description: Reference article for the attributes volume command, which displays, sets, or clears the attributes of a volume.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # attributes volume

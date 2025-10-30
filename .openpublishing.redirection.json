@@ -1,6 +1,526 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Add-or-Remove-Computers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Add-or-Remove-Computers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Add-printers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Add-printers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Allow-one-account-to-have-multiple-sessions.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Allow-one-account-to-have-multiple-sessions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Application-Considerations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Application-Considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Block-or-Unblock-a-Station.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Block-or-Unblock-a-Station",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Block-or-Unblock-USB-Storage.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Block-or-Unblock-USB-Storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Common-MultiPoint-services-Usage-Scenarios.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Common-MultiPoint-services-Usage-Scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Configure-Disk-Protection-in-MultiPoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Configure-Disk-Protection-in-MultiPoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Configure-group-policies-for-a-domain-deployment.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Configure-group-policies-for-a-domain-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Configure-stations-for-automatic-logon.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Configure-stations-for-automatic-logon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Create-a-MultiPoint-Dashboard-User-Account.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Create-a-MultiPoint-Dashboard-User-Account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Create-a-Standard-User-Account.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Create-a-Standard-User-Account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Create-an-Administrative-User-Account.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Create-an-Administrative-User-Account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Create-local-user-accounts.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Create-local-user-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Deploy-a-new-MultiPoint-Services-system.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Deploy-a-new-MultiPoint-Services-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/deploy-multipoint-services-task-list.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/deploy-multipoint-services-task-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Deploying-MultiPoint-Services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Deploying-MultiPoint-Services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Edit-Server-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Edit-Server-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Enable-file-sharing-in-multipoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Enable-file-sharing-in-multipoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Enable-or-Disable-Disk-Protection.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Enable-or-Disable-Disk-Protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/End-a-User-Session.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/End-a-User-Session",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Getting-Started-with-MultiPoint-Services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Getting-Started-with-MultiPoint-Services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Glossary.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Glossary",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/hardware-and-performance-recommendations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/hardware-and-performance-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Install-MultiPoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Install-MultiPoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/install-server-backup-on-multipoint.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/install-server-backup-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/install-software-on-multipoint.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/install-software-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Install-updates.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Install-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Introducing-MultiPoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Introducing-MultiPoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/join-multipoint-services-to-a-domain.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/join-multipoint-services-to-a-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Keep-Files-Private.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Keep-Files-Private",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Launch-or-Close-Applications-on-a-Station.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Launch-or-Close-Applications-on-a-Station",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/limit-user-access-to-multipoint.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/limit-user-access-to-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Limit-Web-Access.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Limit-Web-Access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Log-off-or-Disconnect-User-Sessions.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Log-off-or-Disconnect-User-Sessions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Log-Off-User-Sessions.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Log-Off-User-Sessions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-Client-Access-Licenses.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-Client-Access-Licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-Station-Hardware.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-Station-Hardware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-System-Tasks-Using-MultiPoint-Manager.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-System-Tasks-Using-MultiPoint-Manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-User-Accounts.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-User-Accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-User-Desktops-Using-MultiPoint-Dashboard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-User-Desktops-Using-MultiPoint-Dashboard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-User-Files.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-User-Files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-User-Stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-User-Stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Manage-Virtual-Desktops.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Manage-Virtual-Desktops",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Managing-MultiPoint-Services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Managing-MultiPoint-Services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Managing-Your-MultiPoint-Services-System.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Managing-Your-MultiPoint-Services-System",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-attach-additional-stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-attach-additional-stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-hardware-device-drivers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-hardware-device-drivers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-services-migrate.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-services-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-services-migration-preparation.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-services-migration-preparation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-services-migration-steps.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-services-migration-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-services-migration-worksheet.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-services-migration-worksheet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-services-post-migration-steps.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-services-post-migration-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/MultiPoint-services-Site-Planning.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/MultiPoint-services-Site-Planning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/MultiPoint-services-Stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/MultiPoint-services-Stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/MultiPoint-services-Virtualization-Support.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/MultiPoint-services-Virtualization-Support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/MultiPoint-Services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/MultiPoint-Services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-software-license-compliance.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-software-license-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/multipoint-users-scenario.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/multipoint-users-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Network-Considerations-and-User-Accounts.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Network-Considerations-and-User-Accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Planning-a-MultiPoint-Services-Deployment.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Planning-a-MultiPoint-Services-Deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Predeployment-Checklist.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Predeployment-Checklist",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Prepare-your-MultiPoint-services-system-for-users.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Prepare-your-MultiPoint-services-system-for-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Privacy-and-Security-Considerations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Privacy-and-Security-Considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Project-a-Station-to-Other-Stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Project-a-Station-to-Other-Stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Protecting-the-System-Volume-with-Disk-Protection.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Protecting-the-System-Volume-with-Disk-Protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Remap-All-Stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Remap-All-Stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Remap-Selected-MultiPoint-Systems.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Remap-Selected-MultiPoint-Systems",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Restart-or-Shut-Down-MultiPoint-Systems.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Restart-or-Shut-Down-MultiPoint-Systems",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Restart-or-Shut-Down.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Restart-or-Shut-Down",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Save-and-Share-Files-on-a-USB-Flash-Drive.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Save-and-Share-Files-on-a-USB-Flash-Drive",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Save-Connection-Settings-to-File.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Save-Connection-Settings-to-File",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/select-hardware-mps.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/select-hardware-mps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/set-the-date-time.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/set-the-date-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-up-a-split-screen-station-in-multipoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-up-a-split-screen-station-in-multipoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-up-a-Station-for-Automatic-Logon.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-up-a-Station-for-Automatic-Logon",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-Up-a-Station.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-Up-a-Station",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-multipoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-multipoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-up-the-physical-computer-and-primary-station.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Set-up-the-physical-computer-and-primary-station",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Share-Files.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Share-Files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Show-All-Stations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Show-All-Stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Split-a-User-Station.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Split-a-User-Station",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Storing-Files-with-MultiPoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Storing-Files-with-MultiPoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Suspend-and-Leave-User-Session-Active.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Suspend-and-Leave-User-Session-Active",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Switch-Between-Modes.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Switch-Between-Modes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/System-administration-in-multipoint-services.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/System-administration-in-multipoint-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Take-Control-of-a-User-Session.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Take-Control-of-a-User-Session",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Troubleshooting.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Update-and-install-device-drivers-if-needed.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Update-and-install-device-drivers-if-needed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Update-or-Delete-a-User-Account.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Update-or-Delete-a-User-Account",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Use-IM.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Use-IM",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/User-Account-Considerations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/User-Account-Considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/View-Hardware-Status.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/View-Hardware-Status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/View-User-Connection-Status.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/View-User-Connection-Status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Work-with-USB-Devices.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Work-with-USB-Devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Work-with-Video-Devices.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/multipoint-services/Work-with-Video-Devices",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/windows-server.md",
       "redirect_url": "/windows-server/index",
       "redirect_document_id": false

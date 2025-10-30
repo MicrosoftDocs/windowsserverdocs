@@ -2,8 +2,8 @@
 title: netsh nlm
 description: The netsh nlm command manages the Network Location Manager (NLM) settings to override network connection quality classification in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/09/2025
 ---
 

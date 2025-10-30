@@ -2,8 +2,8 @@
 title: change port
 description: Reference article for the change port command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: lodctr
 description: Reference article for the lodctr command, which allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/22/2025
 ---
 

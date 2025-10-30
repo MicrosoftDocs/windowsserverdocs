@@ -2,8 +2,8 @@
 title: bitsadmin getvalidationstate
 description: Reference article for the bitsadmin getvalidationstate command, which reports the content validation state of the given file within the job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

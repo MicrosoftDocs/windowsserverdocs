@@ -2,8 +2,8 @@
 title: ksetup mapuser
 description: Reference article for the ksetup mapuser command, which maps the name of a Kerberos principal to an account.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

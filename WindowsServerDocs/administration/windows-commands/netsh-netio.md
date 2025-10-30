@@ -2,8 +2,8 @@
 title: netsh netio
 description: The netsh netio command  manages network binding filters in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/12/2025
 ---
 

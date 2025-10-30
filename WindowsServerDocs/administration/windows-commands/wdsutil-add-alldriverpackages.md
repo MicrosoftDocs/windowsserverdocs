@@ -2,8 +2,8 @@
 title: wdsutil add-alldriverpackages
 description: Reference article for the wdsutil add-alldriverpackages command, which adds all driver packages that are stored in a folder to a server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

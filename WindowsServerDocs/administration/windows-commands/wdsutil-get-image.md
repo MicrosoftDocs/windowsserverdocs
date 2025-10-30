@@ -2,8 +2,8 @@
 title: wdsutil get-image
 description: Reference article for wdsutil get-image, which retrieves information about an image.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

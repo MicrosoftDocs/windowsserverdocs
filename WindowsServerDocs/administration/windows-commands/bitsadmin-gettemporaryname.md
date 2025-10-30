@@ -2,8 +2,8 @@
 title: bitsadmin gettemporaryname
 description: Reference article for the bitsadmin gettemporaryname command, which reports the temporary filename of the given file within the job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

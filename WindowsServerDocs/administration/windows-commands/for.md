@@ -2,8 +2,8 @@
 title: for
 description: Reference article for the for command, which runs a specified command for each file, within a set of files.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/04/2023
 ---
 

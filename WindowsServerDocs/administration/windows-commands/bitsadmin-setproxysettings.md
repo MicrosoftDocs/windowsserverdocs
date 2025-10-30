@@ -2,8 +2,8 @@
 title: bitsadmin setproxysettings
 description: Reference article for the bitsadmin setproxysettings command, which sets the proxy settings for the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -35,14 +35,14 @@ bitsadmin /setproxysettings myDownloadJob PRECONFIG
 ```
 
 ```
-bitsadmin /setproxysettings myDownloadJob NO_PROXY
+bitsadmin /setproxysettings myDownloadJob NO_PROXY
 ```
 ```
-bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1:80
+bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1:80
 ```
 
 ```
-bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1,proxy2,proxy3 NULL
+bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1,proxy2,proxy3 NULL
 ```
 
 ## Related links

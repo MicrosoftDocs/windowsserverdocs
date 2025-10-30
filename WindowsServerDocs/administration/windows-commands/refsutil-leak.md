@@ -1,8 +1,8 @@
 ---
 title: refsutil leak
 description: Reference article for the refsutil leak tool, which detects and diagnoses storage leaks, revealing their location and size to optimize storage usage on a specified Resilient File System (ReFS) volume in Windows.
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/03/2025
 ms.topic: reference
 ---

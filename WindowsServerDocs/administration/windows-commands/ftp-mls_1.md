@@ -2,8 +2,8 @@
 title: ftp mls
 description: Reference article for the ftp mls command, which displays an abbreviated list of files and subdirectories in a remote directory.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

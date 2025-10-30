@@ -1,8 +1,8 @@
 ---
 title: fsutil resource
 description: Reference article for the fsutil resource command, which manages a Transactional Resource Manager and its behavior.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---

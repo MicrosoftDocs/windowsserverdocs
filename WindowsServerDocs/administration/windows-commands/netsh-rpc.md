@@ -2,8 +2,8 @@
 title: netsh rpc
 description: The netsh rpc command configures and manages Remote Procedure Call (RPC) service settings in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/20/2025
 ---
 

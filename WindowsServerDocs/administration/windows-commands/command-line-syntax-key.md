@@ -2,8 +2,8 @@
 title: Command-line syntax key
 description: Reference article for the command-line syntax key, which describes the notation used to indicate command-line syntax.
 ms.topic: reference
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/08/2023
 ---
 

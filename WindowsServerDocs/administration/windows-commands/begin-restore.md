@@ -2,8 +2,8 @@
 title: begin restore
 description: Reference article for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

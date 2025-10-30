@@ -3,8 +3,8 @@ title: active
 no-loc: [active]
 description: Reference article for the active command, which on basic disks, marks the partition with focus as active.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

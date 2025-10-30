@@ -2,8 +2,8 @@
 title: dfsdiag testdfsconfig
 description: Reference article for the dfsdiag testdfsconfig, which checks the configuration of a Distributed File System (DFS) namespace.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/30/2022
 ---
 
