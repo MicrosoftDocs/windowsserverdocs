@@ -156,7 +156,7 @@ Please note that hotpatching on [Windows Server 2025 Datacenter: Azure Edition](
 
 To resolve this issue, a series of manual steps is recommended. Failure to apply the workaround will result in regular (non-hotpatch) updates until (and including) the next baseline month, which is currently scheduled for January 2026. These updates will require a reboot each month.
 
-There are two ways to apply the manual workaround on affected machines. Each of the options below offer a complete solution. You will need to apply the workadound on each of the affected machines **before** next scheduled update installation, which is anticipated on November “patch Tuesday” date (November 11, 2025.) Applying the workaround will require a reboot, so plan accordingly.
+There are two ways to apply the manual workaround on affected machines. Each of the options below offer a complete solution. You will need to apply the workadound on each of the affected machines **before** the next update is offered, which is anticipated on November “patch Tuesday” date (November 11, 2025.) Applying the workaround will require a reboot, so plan accordingly.
 
 Once either of the following workarounds is applied, subsequent hotpatches (in November and December 2025) will apply without a reboot as expected.
 
@@ -167,7 +167,7 @@ Once either of the following workarounds is applied, subsequent hotpatches (in N
 ](/troubleshoot/windows-client/group-policy/use-group-policy-enable-update-disabled-by-default).
 3. Set the **KB5062660 251028_18301 Feature Preview** policy to **Enabled** state via either Local or Group Policy.
 4. Once the policy is applied, reboot the affected machine(s).
-5. Delete the **DeviceLicensingServiceCommandMutex** value found under **HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions** registry key.
+5. Delete the **DeviceLicensingServiceCommandMutex** value found under **HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions** registry key. (if the value is missing already, just ignore this step.)
 
 #### Option 2. Use a script to enable the remediation
 
@@ -175,7 +175,9 @@ Run the following series of PowerShell commands as administrator on each of the 
 ```PowerShell
 Stop-Service -Name 'himds'
 New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides' -PropertyType 'dword' -Name '4264695439' -Value 1 -Force
-Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' -Name 'DeviceLicensingServiceCommandMutex'
+if ( ( Get-Itemproperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' ).DeviceLicensingServiceCommandMutex ) {
+  Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' -Name 'DeviceLicensingServiceCommandMutex'
+}
 Restart-Computer -Confirm
 ```
 
