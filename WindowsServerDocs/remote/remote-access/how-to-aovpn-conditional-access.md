@@ -76,7 +76,7 @@ When a user attempts a VPN connection, the VPN client makes a call into the Web 
 The VPN client then sends the certificate issued by Microsoft Entra ID to the VPN for credential validation. 
 
 > [!NOTE]
-> Microsoft Entra ID uses the most recently created certificate in the VPN connectivity blade as the Issuer. Microsoft Entra Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-aaaabbbb-0000-cccc-1111-dddd2222eeee). VPN connection leaf certificates now include a [SID extension](/openspecs/windows_protocols/ms-wcce/bbbbcccc-1111-dddd-2222-eeee3333ffff) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user’s SID obtained from the onPremisesSecurityIdentifier attribute.
+> Microsoft Entra ID uses the most recently created certificate in the VPN connectivity blade as the Issuer. Microsoft Entra Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). VPN connection leaf certificates now include a [SID extension](/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user’s SID obtained from the onPremisesSecurityIdentifier attribute.
 
 **To create root certificates:**
 
