@@ -4,7 +4,7 @@ description: Reference article for the lodctr command, which allows you to regis
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 10/22/2025
 ---
 
 # lodctr
@@ -33,6 +33,7 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 #### Remarks
 
 - If the information that you supply contains spaces, use quotation marks around the text (for example, "file name 1").
+- An exit code of **0** indicates the command line syntax was correct. It doesn't mean the operation was successful. Check the output from the command for potential error messages.
 
 ### Examples
 
