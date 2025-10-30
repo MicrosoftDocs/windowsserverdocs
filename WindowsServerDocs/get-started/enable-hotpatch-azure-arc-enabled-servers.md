@@ -138,6 +138,47 @@ Whenever a Hotpatch is available from Windows Update, you should receive a promp
 
 You can optionally automate hotpatch installation using update management tools such as [Azure Update Manager](/azure/automation/update-management/overview) (AUM).
 
+## Known issues
+
+### Multiple updates released in October 2025
+
+In October 2025, Microsoft had to release several updates, which might be offered to some Windows Server customers. If you enrolled in hotpatch or plan to enroll, and plan to install hotpatch updates in November and December 2025, please make sure your Windows Server instances are running **exactly** [October 14, 2025—KB5066835 (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e).
+
+Running a different build number (higher or lower than specified above) will result in regular (non-hotpatch) updates until (and including) the next baseline month, which is currently scheduled for January 2026. These updates will require a reboot each month.
+
+### Feature licensing issue in October 2025
+
+An issue has been identified with October 2025 security updates for Windows Server 2025. This may impact customers running [October 14, 2025—KB5066835 (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e) or later. Due to this issue, the following unexpected behavior can be observed.
+1.	Enabling Windows Server hotpatching via Azure Arc on new machines may fail or not complete as expected. Instead, feature enablement will remain in the “in progress” state until the issue is resolved.
+2.	On machines previously enabled for Windows Server hotpatching, the feature license may expire, and this will prevent the next Hotpatch from being installed. Instead, the next update will cause a reboot if no action is taken.
+   
+Please note that hotpatching on [Windows Server 2025 Datacenter: Azure Edition](/windows-server/get-started/azure-edition) is not affected by this issue.
+
+To resolve this issue, a series of manual steps is recommended. Failure to apply the workaround will result in regular (non-hotpatch) updates until (and including) the next baseline month, which is currently scheduled for January 2026. These updates will require a reboot each month.
+
+There are two ways to apply the manual workaround on affected machines. Each of the options below offer a complete solution. You will need to apply the workadound on each of the affected machines **before** next scheduled update installation, which is anticipated on November “patch Tuesday” date (November 11, 2025.) Applying the workaround will require a reboot, so plan accordingly.
+
+Once either of the following workarounds is applied, subsequent hotpatches (in November and December 2025) will apply without a reboot as expected.
+
+#### Option 1. Use Local or Group Policy to enable the remediation
+
+1. Download and install [Windows 11 24H2, Windows 11 25H2 and Windows Server 2025 KB5062660 251028_18301 Feature Preview](https://download.microsoft.com/download/2d85085c-4890-4c4d-930c-744d6f090cfa/Windows%2011%2024H2%2c%20Windows%2011%2025H2%20and%20Windows%20Server%202025%20KB5062660%20251028_18301%20Feature%20Preview.msi) package. This will install Local or Group Policy template (ADMX file) for this specific remediation.
+2. The special Group Policy can be found in **Computer Configuration → Administrative Templates → KB5062660 251028_18301 Feature Preview → Windows 11, version 24H2, 25H2 → KB5062660 251028_18301 Feature Preview**. For more information on deploying and configuring these special Group Policy, see [Use Group Policy to enable an update that is disabled by default
+](/troubleshoot/windows-client/group-policy/use-group-policy-enable-update-disabled-by-default).
+3. Set the **KB5062660 251028_18301 Feature Preview** policy to **Enabled** state via either Local or Group Policy.
+4. Once the policy is applied, reboot the affected machine(s).
+5. Delete the **DeviceLicensingServiceCommandMutex** value found under **HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions**.
+
+#### Option 2. Use a script to enable the remediation
+
+Run the following series of PowerShell commands on each of the affected machines. Note that the last command will prompt for a restart. The mitigation is not complete until the machine is rebooted, and we recommend that you restart immediately after the previous steps in the script are performed.
+```PowerShell
+Stop-Service -Name 'himds'
+New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides' -PropertyType 'dword' -Name '4264695439' -Value 1 -Force
+Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' -Name 'DeviceLicensingServiceCommandMutex'
+Restart-Computer -Confirm
+```
+
 ## Next steps
 
 Now that Hotpatch is enabled, here are some articles that might help you with updating your computer:
