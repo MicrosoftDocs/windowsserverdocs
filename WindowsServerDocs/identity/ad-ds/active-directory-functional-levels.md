@@ -26,7 +26,7 @@ The following interoperability matrix summarizes which Windows Server versions y
 | Windows Server 2016         | ❌ Not supported                     | ✅ Supported                         | ✅ Supported                            |
 | Windows Server 2012 R2      | ❌ Not supported                     | ❌ Not supported                     | ✅ Supported                            |
 
-✅ Supported" means you can run a domain controller with that Windows Server release at the specified forest and domain functional level; "❌ Not supported" means you cannot.
+✅ Supported means you can run a domain controller with that Windows Server release at the specified forest and domain functional level; ❌ Not supported means you cannot.
 
 > [!NOTE]
 > Windows Server 2019 and Windows Server 2022 use Windows Server 2016 as the most recent functional level. For earlier functional levels (for example Windows Server 2008 R2), see [Understanding Active Directory Domain Services (AD DS) Functional Levels](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754918(v=ws.10)).
