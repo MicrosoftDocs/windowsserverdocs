@@ -14,7 +14,7 @@ Remote Desktop Services (RDS) in Windows Server is a built-in platform for secur
 
 Remote Desktop Services supports both multi‑session server‑based desktops and single‑session (or pooled/personal) virtual desktops, plus publishing of individual applications (RemoteApp). You choose the right mix of models to optimize cost, performance, and user experience.
 
-:::image type="content" source="./media/rds-overview.png" alt-text="Remote Desktop Services overview":::
+:::image type="content" source="./media/rds-overview.png" alt-text="Graphic of Remote Desktop Services overview.":::
 
 > [!TIP]
 > If you want to evaluate a broader cloud-based desktop solution, see [Azure Virtual Desktop](/azure/virtual-desktop/). You can even extend Azure Virtual Desktop to your on-premises datacenter with Azure Local.
