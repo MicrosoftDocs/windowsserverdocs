@@ -1078,6 +1078,8 @@
         href: netsh-exec.md
       - name: netsh http
         href: netsh-http.md
+      - name: netsh interface
+        href: netsh-interface.md
       - name: netsh ipsec
         href: netsh-ipsec.md
       - name: netsh lan
