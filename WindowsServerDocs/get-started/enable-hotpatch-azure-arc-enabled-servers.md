@@ -143,23 +143,23 @@ You can optionally automate hotpatch installation using update management tools 
 ### Multiple updates released in October 2025
 
 In October 2025, Microsoft released several updates that were offered to some Windows Server customers. If you enrolled in hotpatch or plan to enroll, and plan to install hotpatch updates in November and December 2025, ensure your Windows Server machines are running on **exactly** one of the following update levels.
-- [October 14, 2025—**KB5066835** (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e)
-- [October 24, 2025—**KB5070893** (OS Build 26100.6905) Security Update for Windows Server Update Services](https://support.microsoft.com/topic/78f3720c-9511-4deb-b0d7-7bed2016fefd)
+- [October 14, 2025 - **KB5066835** (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e)
+- [October 24, 2025 - **KB5070893** (OS Build 26100.6905) Security Update for Windows Server Update Services](https://support.microsoft.com/topic/78f3720c-9511-4deb-b0d7-7bed2016fefd)
 
-If you have one of the other October updates installed, this will result in regular non-hotpatch updates until, and including, the next baseline month that is currently scheduled for January 2026. These updates require a reboot each month. In particular, the following update, if installed, makes the machine incompatible with upcoming hotpatches: [October 23, 2025—**KB5070881** (OS Build 26100.6905) Out-of-band](https://support.microsoft.com/topic/8e7ac742-6785-4677-87e4-b73dd8ac0122), and so does any other update not explicitly listed above.
+If you have one of the other October updates installed, this will result in regular non-hotpatch updates until, and including, the next baseline month that is currently scheduled for January 2026. These updates require a reboot each month. In particular, the following update, if installed, makes the machine incompatible with upcoming hotpatches: [October 23, 2025 - **KB5070881** (OS Build 26100.6905) Out-of-band](https://support.microsoft.com/topic/8e7ac742-6785-4677-87e4-b73dd8ac0122), and so does any other update not explicitly listed in this section.
 
 ### Feature licensing issue in October 2025 updates
 
-An issue was identified with the October 2025 security updates for Windows Server 2025. This may impact customers running [October 14, 2025—KB5066835 (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e) update or later. Due to this issue, the following unexpected behavior can be observed.
+An issue was identified with the October 2025 security updates for Windows Server 2025. This may impact customers running [October 14, 2025 - KB5066835 (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e) update or later. Due to this issue, the following unexpected behavior can be observed.
 
-- Enabling Windows Server hotpatching via Azure Arc on new machines may fail or not complete as expected. Instead, feature enablement remains in the “In Progress” state until the issue is resolved.
+- Enabling Windows Server hotpatching via Azure Arc on new machines may fail or not complete as expected. Instead, feature enablement remains in the "In Progress" state until the issue is resolved.
 - On machines previously enabled for Windows Server hotpatching, the feature license may expire, and this will prevent the next Hotpatch from being installed. Instead, the next update will cause a reboot if no action is taken.
 
 Hotpatching on [Windows Server 2025 Datacenter: Azure Edition](/windows-server/get-started/azure-edition) isn't affected by this issue.
 
 To resolve this issue, a series of manual steps is recommended. Failure to apply either workaround will result in regular non-hotpatch updates until, and including, the next baseline month that is currently scheduled for January 2026. These updates require a reboot each month.
 
-There are two ways to apply the manual workaround on affected machines. Each of the provided options offers a complete solution. You'll need to apply the workaround on each of the affected machines **before** the next update is offered, which is anticipated in the next “patch Tuesday” date of **November 11, 2025**. Applying the workaround requires a reboot, so plan accordingly.
+There are two ways to apply the manual workaround on affected machines. Each of the provided options offers a complete solution. You'll need to apply the workaround on each of the affected machines **before** the next update is offered, which is anticipated in the next "patch Tuesday" date of **November 11, 2025**. Applying the workaround requires a reboot, so plan accordingly.
 
 After you apply either workaround, hotpatch updates released in November and December 2025 will install without requiring a reboot.
 
@@ -184,7 +184,8 @@ After you apply either workaround, hotpatch updates released in November and Dec
    Write-Host "DeviceLicensingServiceCommandMutex entry not present, skipping removal."
    }
    ```
-   Alternatively, use your preferred registry editing tool or automation solution to delete the same value. Do not delete the whole registry key.
+
+   Alternatively, use your preferred registry editing tool or automation solution to delete the same value. Don't delete the whole registry key.
 
 #### Option 2: Use a script to enable the remediation
 
