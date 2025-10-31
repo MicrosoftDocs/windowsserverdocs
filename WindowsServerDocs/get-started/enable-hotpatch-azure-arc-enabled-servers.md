@@ -174,6 +174,7 @@ Once either of the following workarounds is applied, subsequent hotpatches (in N
 Run the following series of PowerShell commands as administrator on each of the affected machines. Note that the last command will prompt for a restart. The mitigation is not complete until the machine is rebooted, and we recommend that you restart immediately after the previous commands are executed.
 ```PowerShell
 Stop-Service -Name 'himds'
+New-Item -Path 'HKLM:\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides' -Force
 New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides' -PropertyType 'dword' -Name '4264695439' -Value 1 -Force
 if ( ( Get-Itemproperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' ).DeviceLicensingServiceCommandMutex ) {
   Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' -Name 'DeviceLicensingServiceCommandMutex'
