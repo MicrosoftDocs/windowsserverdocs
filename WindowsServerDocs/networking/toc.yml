@@ -611,14 +611,6 @@ items:
           href: technologies/nps/nps-data-collection.md
       - name: Manage NPS templates
         href: technologies/nps/nps-manage-templates.md
-  - name: Network Shell (Netsh)
-    items:
-    - name: Netsh bridge
-      href: technologies/netsh/netsh-bridge.md
-    - name: Netsh interface portproxy commands
-      href: technologies/netsh/netsh-interface-portproxy.md
-    - name: Netsh mbn commands
-      href: technologies/netsh/netsh-mbn.md
   - name: Network subsystem performance tuning
     href: technologies/network-subsystem/net-sub-performance-top.md
     items:
