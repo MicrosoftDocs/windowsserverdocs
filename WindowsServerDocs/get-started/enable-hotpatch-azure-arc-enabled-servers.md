@@ -159,7 +159,7 @@ To resolve this issue, a series of manual steps is recommended. Failure to apply
 
 There are two ways to apply the manual workaround on affected machines. Each of the provided options offers a complete solution. You'll need to apply the workaround on each of the affected machines **before** the next update is offered, which is anticipated in the next "patch Tuesday" date of **November 11, 2025**. Applying the workaround requires a reboot, so plan accordingly.
 
-Once either of the following workarounds is applied, subsequent hotpatches in November 2025 and December 2025 applies without a reboot as expected.
+After you apply either workaround, hotpatch updates released in November and December 2025 will install without requiring a reboot.
 
 #### Option 1: Use Local or Group Policy to enable the remediation
 
