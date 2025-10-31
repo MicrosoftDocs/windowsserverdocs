@@ -2,9 +2,8 @@
 title: Edit Auto Apply Quota Properties
 description: This article describes how to edit auto apply quota properties
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Edit Auto Apply Quota Properties
@@ -36,5 +35,6 @@ When you make changes to an auto apply quota, you have the option of extending t
 
 -   [Quota Management](quota-management.md)
 -   [Create an Auto Apply Quota](create-auto-apply-quota.md)
+
 
 

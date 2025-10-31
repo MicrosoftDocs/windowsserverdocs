@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Creating a Site Link Design"
-ms.assetid: 206b8072-1d0c-4a0b-ba8a-35a868d67b4c
 title: Creating a Site Link Design
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/08/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 # Creating a Site Link Design
 

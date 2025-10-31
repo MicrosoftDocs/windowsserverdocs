@@ -3,8 +3,8 @@ title: Configure Windows Server Core Windows Update
 description: Learn how to configure Windows Server Core in updating the operating system automatically and manually through the command line.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/10/2025
 ms.topic: how-to
 ---
@@ -178,3 +178,4 @@ Dism /Online /Remove-Package /PackageName:<package_name>
 ## Update with Azure Update Manager
 
 You can also update your Windows Server Core installation using [Azure Update Manager](/azure/update-manager/overview?tabs=azure-arc-vms) from the Azure portal.
+

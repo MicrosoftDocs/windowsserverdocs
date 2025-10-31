@@ -2,228 +2,29 @@
   href: index.yml
   items:
   - name: MultiPoint Services
-    href: multipoint-services/MultiPoint-Services.md
     items:
     - name: Planning a MultiPoint Services Deployment
-      href: multipoint-services/Planning-a-MultiPoint-Services-Deployment.md
       items:
-      - name: Introducing MultiPoint Services
-        href: multipoint-services/Introducing-MultiPoint-services.md
-      - name: Getting started with MultiPoint Services
-        href: multipoint-services/getting-started-with-MultiPoint-services.md
-      - name: Common Usage Scenarios
-        href: multipoint-services/Common-MultiPoint-services-Usage-Scenarios.md
-      - name: MultiPoint Stations
-        href: multipoint-services/MultiPoint-services-Stations.md
-      - name: Selecting Hardware for Your MultiPoint Services System
-        href: multipoint-services/select-hardware-mps.md
       - name: Hardware Requirements and Performance Recommendations
-        href: multipoint-services/hardware-and-performance-recommendations.md
-        items:
-        - name: Variables Affecting MultiPoint Services System Performance
-          href: multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance.md
-      - name: MultiPoint Services Site Planning
-        href: multipoint-services/MultiPoint-services-Site-Planning.md
-      - name: Network Considerations and User Accounts
-        href: multipoint-services/Network-Considerations-and-User-Accounts.md
-      - name: Storing Files with MultiPoint Services
-        href: multipoint-services/Storing-Files-with-MultiPoint-services.md
-      - name: Protecting the System volume with Disk Protection
-        href: multipoint-services/Protecting-the-System-volume-with-Disk-Protection.md
-      - name: MultiPoint Services Virtualization Support
-        href: multipoint-services/MultiPoint-services-Virtualization-Support.md
-      - name: Application Considerations
-        href: multipoint-services/Application-Considerations.md
-      - name: Predeployment Checklist
-        href: multipoint-services/Predeployment-Checklist.md
-      - name: Glossary
-        href: multipoint-services/Glossary.md
     - name: Migrate MultiPoint Services
-      href: multipoint-services/multipoint-services-migrate.md
-      items:
-      - name: Prepare to migrate to MultiPoint Services
-        href: multipoint-services/multipoint-services-migration-preparation.md
-      - name: Planning worksheet for your migration
-        href: multipoint-services/multipoint-services-migration-worksheet.md
-      - name: Migrate to MultiPoint Services
-        href: multipoint-services/multipoint-services-migration-steps.md
-      - name: Post-migration tasks
-        href: multipoint-services/multipoint-services-post-migration-steps.md
     - name: Deploying MultiPoint Services
-      href: multipoint-services/Deploying-MultiPoint-Services.md
       items:
       - name: Deploy a new MultiPoint Services System
-        href: multipoint-services/Deploy-a-new-MultiPoint-services-system.md
         items:
-        - name: Collect hardware and device drivers needed for the installation
-          href: multipoint-services/multipoint-hardware-device-drivers.md
-        - name: Set up the physical computer and primary station
-          href: multipoint-services/Set-up-the-physical-computer-and-primary-station.md
-        - name: Install MultiPoint Services
-          href: multipoint-services/Install-MultiPoint-services.md
-        - name: Update and install device drivers if needed
-          href: multipoint-services/Update-and-install-device-drivers-if-needed.md
-        - name: Set the date, time, and time zone
-          href: multipoint-services/set-the-date-time.md
-        - name: Join the MultiPoint Server to a domain (optional)
-          href: multipoint-services/join-multipoint-services-to-a-domain.md
-        - name: Install updates
-          href: multipoint-services/Install-updates.md
         - name: attach additional stations to your MultiPoint server
-          href: multipoint-services/multipoint-attach-additional-stations.md
-          items:
-          - name: Set up a direct-video-connected station
-            href: multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services.md
-          - name: Set up a USB zero client-connected station
-            href: multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md
-          - name: Set up an RDP-over-LAN connected station
-            href: multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-MultiPoint-services.md
-        - name: Manage Client Access Licenses (CAL) with MultiPoint Services
-          href: multipoint-services/manage-client-access-licenses.md
-        - name: Install software on your MultiPoint Services System
-          href: multipoint-services/install-software-on-multipoint.md
       - name: Optional configuration tasks for a MultiPoint Services deployment
-        href: multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md
-        items:
-        - name: Set up a split-screen station
-          href: multipoint-services/Set-up-a-split-screen-station-in-multipoint-services.md
-        - name: Add printers
-          href: multipoint-services/add-printers.md
-        - name: Create Windows 10 Enterprise virtual desktops for stations
-          href: multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations.md
       - name: Prepare your MultiPoint Services System for users
-        href: multipoint-services/Prepare-your-MultiPoint-services-system-for-users.md
-        items:
-        - name: Plan user accounts for your MultiPoint Services environment
-          href: multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment.md
-        - name: 'Example scenarios: MultiPoint Services user accounts'
-          href: multipoint-services/multipoint-users-scenario.md
-        - name: Create local user accounts
-          href: multipoint-services/create-local-user-accounts.md
-        - name: Limit users' access to the MultiPoint server
-          href: multipoint-services/limit-user-access-to-multipoint.md
-        - name: Configure stations for automatic logon
-          href: multipoint-services/Configure-stations-for-automatic-logon.md
-        - name: Allow one account to have multiple sessions
-          href: multipoint-services/Allow-one-account-to-have-multiple-sessions.md
-        - name: Enable file sharing in MultiPoint Services
-          href: multipoint-services/Enable-file-sharing-in-multipoint-services.md
       - name: System administration in MultiPoint Services
-        href: multipoint-services/System-administration-in-multipoint-services.md
-        items:
-        - name: Configure Disk Protection in MultiPoint Services
-          href: multipoint-services/Configure-Disk-Protection-in-MultiPoint-services.md
-        - name: Install Server Backup on your MultiPoint system
-          href: multipoint-services/install-server-backup-on-multiPoint.md
-        - name: Configure group policies for a domain deployment
-          href: multipoint-services/Configure-group-policies-for-a-domain-deployment.md
     - name: Managing MultiPoint Services
-      href: multipoint-services/Managing-MultiPoint-Services.md
       items:
       - name: Managing Your MultiPoint Services System
-        href: multipoint-services/Managing-Your-MultiPoint-Services-System.md
-        items:
-        - name: Privacy and Security Considerations
-          href: multipoint-services/Privacy-and-Security-Considerations.md
       - name: Manage Station Hardware
-        href: multipoint-services/Manage-Station-Hardware.md
-        items:
-        - name: View Hardware Status
-          href: multipoint-services/View-Hardware-Status.md
-        - name: Work with USB Devices
-          href: multipoint-services/Work-with-USB-Devices.md
-        - name: Work with Video Devices
-          href: multipoint-services/Work-with-Video-Devices.md
-        - name: Set Up a Station
-          href: multipoint-services/Set-Up-a-Station.md
       - name: Manage System Tasks Using MultiPoint Manager
-        href: multipoint-services/Manage-System-Tasks-Using-MultiPoint-Manager.md
-        items:
-        - name: Edit Server Settings
-          href: multipoint-services/edit-Server-Settings.md
-        - name: Restart or Shut Down MultiPoint Systems
-          href: multipoint-services/Restart-or-Shut-Down-MultiPoint-Systems.md
-        - name: Switch Between modes
-          href: multipoint-services/Switch-Between-modes.md
-        - name: Enable or Disable Disk Protection
-          href: multipoint-services/Enable-or-Disable-Disk-Protection.md
-        - name: Manage Client Access Licenses
-          href: multipoint-services/Manage-Client-Access-Licenses.md
-        - name: Remap All Stations
-          href: multipoint-services/remap-All-Stations.md
-        - name: Save Connection Settings to File
-          href: multipoint-services/Save-Connection-Settings-to-File.md
-        - name: Add or remove computers
-          href: multipoint-services/add-or-remove-computers.md
       - name: Manage User Stations
-        href: multipoint-services/Manage-User-Stations.md
-        items:
-        - name: View User Connection Status
-          href: multipoint-services/View-User-Connection-Status.md
-        - name: Log off or Disconnect User Sessions
-          href: multipoint-services/Log-off-or-Disconnect-User-Sessions.md
-        - name: Suspend and Leave User Session active
-          href: multipoint-services/Suspend-and-Leave-User-Session-active.md
-        - name: End a User Session
-          href: multipoint-services/End-a-User-Session.md
-        - name: Set up a Station for Automatic Logon
-          href: multipoint-services/Set-up-a-Station-for-Automatic-Logon.md
-        - name: Split a User Station
-          href: multipoint-services/Split-a-User-Station.md
       - name: Manage User Accounts
-        href: multipoint-services/Manage-User-Accounts.md
-        items:
-        - name: User Account Considerations
-          href: multipoint-services/User-Account-Considerations.md
-        - name: Create an Administrative User Account
-          href: multipoint-services/create-an-Administrative-User-Account.md
-        - name: Create a Standard User Account
-          href: multipoint-services/create-a-Standard-User-Account.md
-        - name: Create a MultiPoint Dashboard User Account
-          href: multipoint-services/create-a-MultiPoint-Dashboard-User-Account.md
-        - name: Update or delete a User Account
-          href: multipoint-services/Update-or-delete-a-User-Account.md
-      - name: Manage Virtual Desktops
-        href: multipoint-services/Manage-Virtual-Desktops.md
       - name: Manage User Files
-        href: multipoint-services/Manage-User-Files.md
-        items:
-        - name: Keep Files Private
-          href: multipoint-services/Keep-Files-Private.md
-        - name: Share Files
-          href: multipoint-services/Share-Files.md
-        - name: Save and Share Files on a USB Flash Drive
-          href: multipoint-services/Save-and-Share-Files-on-a-USB-Flash-Drive.md
       - name: Manage User Desktops Using MultiPoint Dashboard
-        href: multipoint-services/Manage-User-Desktops-Using-MultiPoint-Dashboard.md
-        items:
-        - name: Block or Unblock a Station
-          href: multipoint-services/Block-or-Unblock-a-Station.md
-        - name: Limit Web Access
-          href: multipoint-services/Limit-Web-Access.md
-        - name: Block or Unblock USB Storage
-          href: multipoint-services/Block-or-Unblock-USB-Storage.md
-        - name: Project a Station to Other Stations
-          href: multipoint-services/Project-a-Station-to-Other-Stations.md
-        - name: Launch or Close Applications on a Station
-          href: multipoint-services/Launch-or-Close-Applications-on-a-Station.md
-        - name: Use IM
-          href: multipoint-services/Use-IM.md
-        - name: Take Control of a User Session
-          href: multipoint-services/Take-Control-of-a-User-Session.md
-        - name: View Options for Session Thumbnails in MultiPoint Dashboard
-          href: multipoint-services/View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md
-        - name: Log Off User Sessions
-          href: multipoint-services/Log-Off-User-Sessions.md
       - name: Manage MultiPoint Systems Using MultiPoint Dashboard
-        href: multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md
-        items:
-        - name: Restart or Shut Down
-          href: multipoint-services/Restart-or-Shut-Down.md
-        - name: Remap selected MultiPoint Systems
-          href: multipoint-services/remap-selected-MultiPoint-Systems.md
-  - name: Remote Server Administration Tools
-    href: remote-server-administration-tools.md
   - name: Remote Desktop Services
     href: remote-desktop-services/index.yml
   - name: Remote Access
@@ -246,15 +47,15 @@
         href: remote-access/get-started-install-ras-as-vpn.md
     - name: Tutorials
       items:
-      - name: Deploy Always on VPN
+      - name: Deploy Always On VPN
         items:
-        - name: 1- Set up infrastructure for Always On VPN
+        - name: 1- Deploy Always On VPN infrastructure
           href: remote-access/tutorial-aovpn-deploy-setup.md
         - name: 2- Configure Always On VPN certificates
           href: remote-access/tutorial-aovpn-deploy-create-certificates.md
-        - name: 3- Deploy Always On VPN profile for Windows clients
+        - name: 3- Create Always On VPN connection
           href: remote-access/tutorial-aovpn-deploy-configure-client.md
-      - name: Migrate from Direct Access to Always on VPN
+      - name: Migrate from Direct Access to Always On VPN
         items:
         - name: Overview of DirectAccess to Always On VPN migration
           href: remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md
@@ -426,7 +227,7 @@
           href: remote-access/how-to-aovpn-client-intune.md
         - name: Deploy Always On VPN profile to Windows clients with Microsoft Configuration Manager
           href: remote-access/how-to-aovpn-client-config-mgr.md
-        - name: Configure Always on VPN Conditional Access using Microsoft Entra ID
+        - name: Configure Always On VPN Conditional Access using Microsoft Entra ID
           href: remote-access/how-to-aovpn-conditional-access.md
         - name: Configure Always On VPN Conditional Access using NPS
           href: remote-access/how-to-always-on-vpn-conditional-access-network-policy-server.md
@@ -479,9 +280,9 @@
       - name: Web Application Proxy
         href: remote-access/web-application-proxy/web-app-proxy-windows-server.md
     - name: Troubleshooting
-      items: 
+      items:
       - name: DirectAccess Known Issues
-        href: remote-access/directaccess/directAccess-Known-Issues.md      
+        href: remote-access/directaccess/directAccess-Known-Issues.md
     - name: Reference
       items:
       - name: Remote Access PowerShell Command reference

@@ -2,10 +2,8 @@
 title: telnet set
 description: Reference article for the telnet set command, which sets options.
 ms.topic: reference
-ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e
 ms.author: daknappe
-author: robinharwood
-manager: mtillman
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

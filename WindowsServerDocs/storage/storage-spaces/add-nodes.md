@@ -1,12 +1,17 @@
 ---
-ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
 ms.author: roharwoo
-manager: dongill
-ms.topic: article
-author: cosmosdarwin
+ms.topic: how-to
+author: robinharwood
 ms.date: 11/06/2017
 description: How to add servers or drives to a Storage Spaces Direct cluster
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 # Adding servers or drives to Storage Spaces Direct
 
@@ -194,3 +199,4 @@ You can manually optimize a storage pool with the [Optimize-StoragePool](/powers
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool
 ```
+

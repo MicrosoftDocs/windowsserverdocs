@@ -2,8 +2,8 @@
 title: How to configure remote support for Arc-enabled Windows servers (preview)
 description: Learn how to configure, grant, and revoke remote support assistance for your Arc-enabled Windows server.
 ms.topic: how-to
-ms.author: alalve
-author: trungtran
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 03/04/2025
 ---
 
@@ -97,3 +97,4 @@ For more information about how Microsoft processes personal data, including what
 - [Configure Azure Site Recovery for Arc-enabled Windows servers](azure-site-recovery-for-windows-server.md)
 
 - [Configure Best Practices Assessment for Arc-enabled Windows servers](best-practices-assessment-for-windows-server.md)
+

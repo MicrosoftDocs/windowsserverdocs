@@ -2,9 +2,8 @@
 title: Deploying DFS Namespaces
 description: This article describes how to deploy DFS namespaces
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: install-set-up-deploy
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Deploying DFS Namespaces
@@ -19,3 +18,4 @@ To deploy DFS Namespaces, refer to the following topics:
 -   [Add Folder Targets](add-folder-targets.md)
 -   [Replicate Folder Targets Using DFS Replication](replicate-folder-targets-using-dfs-replication.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

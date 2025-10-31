@@ -1,39 +1,54 @@
 ---
-ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
-title: AD DS Installation and Removal Wizard Page Descriptions
+title: AD DS Configuration Wizard Page Descriptions
 description: Find out about the Active Directory Domain Services Configuration Wizard pages that you use to promote a server to a domain controller and to demote a server.
-author: iainfoulds
-ms.author: mosagie
-manager: daveba
-ms.date: 04/10/2025
-ms.topic: article
+ms.topic: concept-article
+ai-usage: ai-assisted
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 07/17/2025
+ms.custom: sfi-image-nochange
 # customer intent: As an administrator, I want to become familiar with the Active Directory Domain Services Configuration Wizard so that I can promote servers to domain controllers and demote servers.
 ---
 
-# Active Directory Domain Services (AD DS) installation and removal wizard page descriptions
+# Active Directory Domain Services (AD DS) configuration wizard page descriptions
 
-In Server Manager, you can use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller and to demote a server. This article describes the controls on the following pages in that wizard.
+The Active Directory Domain Services (AD DS) Configuration Wizard is a tool in Server Manager that enables administrators to promote servers to domain controllers or demote them as needed. This article provides a detailed overview of the wizard's pages, including their controls and options, to help you navigate the installation and removal processes effectively. Whether you're creating a new forest, adding a domain controller to an existing domain, or demoting a domain controller, this guide outlines the steps and considerations for each operation.
 
-- For promoting a server to a domain controller:
-  - [Deployment Configuration](#deployment-configuration)
-  - [Domain Controller Options](#domain-controller-options)
-  - [DNS Options](#dns-options)
-  - [RODC Options](#rodc-options)
-  - [Additional Options](#additional-options)
-  - [Paths](#paths)
-  - [Preparation Options](#preparation-options)
-  - [Review Options](#review-options)
-  - [Prerequisites Check](#prerequisites-check)
-  - [Results](#results)
+Watch the following video to get an overview of promoting and demoting domain controllers using the AD DS Configuration Wizard:
+</br></br>
 
-- For demoting a domain controller:
-  - [Credentials](#credentials)
-  - [Warnings](#warnings)
-  - [Removal Options](#removal-options)
-  - [New Administrator Password](#new-administrator-password)
-  - [Review Options](#review-options-1)
+> [!VIDEO ec343800-59ae-43c3-a031-83d8647034a6]
 
-## Promote a server to a domain controller
+## Summary of each page
+
+The tables in this section summarize the pages that you see when you use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller or to demote a domain controller. Select the link for each page to learn more about the options and controls that you see on that page.
+
+When you promote a server to a domain controller, you navigate through the following pages:
+
+| Active Directory configuration page | Description |
+|--|--|
+| [Deployment Configuration](#deployment-configuration) | Select the type of deployment operation you want to perform: create a new forest (first domain controller), create a new domain within an existing forest, or add an additional domain controller to an existing domain. This page also validates basic requirements and prompts for domain names. |
+| [Domain Controller Options](#domain-controller-options) | Configure forest and domain functional levels, select domain controller roles including DNS server, Global Catalog, and Read-Only Domain Controller options. Set the Directory Services Restore Mode (DSRM) password required for offline AD DS operations and maintenance. |
+| [DNS Options](#dns-options) | Configure DNS delegation settings when installing the DNS server role. Create delegation records in the parent DNS zone to ensure proper name resolution and authority transfer for the new domain controller's DNS zone. |
+| [RODC Options](#rodc-options) | Set up delegated administrator accounts that can manage the read-only domain controller locally, and configure the Password Replication Policy (PRP) to control which user and computer account passwords can be cached on the RODC for authentication. |
+| [Additional Options](#additional-options) | Specify the NetBIOS domain name for new domains, select a specific domain controller as the replication source, and configure install from media options using backup media created with Windows Server Backup or ntdsutil.exe to reduce installation time. |
+| [Paths](#paths) | Set custom file system locations for the Active Directory database (`ntds.dit`), database transaction logs, and `SYSVOL` shared folder instead of using the default system drive locations for better performance or storage management. |
+| [Preparation Options](#preparation-options) | Provide Enterprise Admins, Schema Admins, or Domain Admins credentials to run required `adprep.exe` commands (`forestprep`, `domainprep`, or `rodcprep`) when the current user account lacks sufficient permissions for schema or domain preparation. |
+| [Review Options](#review-options) | Review and validate all selected configuration settings before starting the installation process. Export the configuration as a Windows PowerShell script for automation or documentation purposes, and make final adjustments if needed. |
+| [Prerequisites Check](#prerequisites-check) | Display comprehensive results of prerequisite validation checks including network connectivity, DNS resolution, permissions verification, and system requirements. Shows any warnings or errors that must be addressed before proceeding. |
+| [Results](#results) | Show the final results and status of the domain controller installation or promotion process, including success confirmation, any post-installation warnings, and options to restart the server to complete the configuration. |
+
+When you demote a domain controller, you navigate through the following pages:
+
+| Active Directory configuration page | Description |
+|--|--|
+| [Credentials](#credentials) | Provide the required credentials for demotion operation, including Domain Admin credentials for additional domain controllers or Enterprise Admins credentials for the last domain controller in a domain. Configure forced removal options if the domain controller cannot contact other domain controllers. |
+| [Warnings](#warnings) | Review warnings about removing critical roles and services hosted by the domain controller, such as DNS server, global catalog, or operations master roles. Acknowledge the impact of removing these roles before proceeding with demotion. |
+| [Removal Options](#removal-options) | Configure DNS zone delegation removal options when the domain controller being demoted hosts DNS zones. Remove the DNS server from zone delegations to prevent DNS resolution issues after demotion. |
+| [New Administrator Password](#new-administrator-password) | Set a new password for the built-in local Administrator account that will be used after demotion when the computer becomes a member server or workgroup computer instead of a domain controller. |
+| [Review Options](#review-options-1) | Review and validate all demotion settings before starting the process. Export the configuration as a Windows PowerShell script for automation purposes and confirm final settings before beginning the domain controller demotion. |
+
+## Pages when promoting a server to a domain controller
 
 The following sections describe the pages that you see when you use the Active Directory Domain Services Configuration Wizard to promote a server to a domain controller.
 
@@ -56,7 +71,7 @@ The following screenshot shows the options that appear when you create a forest:
   - It must use allowed Domain Name System (DNS) domain naming conventions. For more information about DNS domain naming conventions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs](/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou).
   - You can specify an internationalized domain name (IDN).
 
-- The name of any Active Directory forest that you create must be different than your external DNS name. For example, if your internet DNS URL is `https://example-domain.com`, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, such as `corp.example-domain.com`.
+- The name of any Active Directory forest that you create must be different from your external DNS name. For example, if your internet DNS URL is `https://example-domain.com`, you must choose a different name for your internal forest to avoid future compatibility issues. That name should be unique and unlikely for web traffic, for example, `corp.example-domain.com`.
 
 - You must be a member of Administrators group on the server that you want to create a forest on.
 
@@ -89,7 +104,7 @@ The following screenshot shows you the options that appear when you add a new do
 
 - For **Domain**, select **Select** to go to the domain, or enter a valid domain name.
 
-- If needed, Server Manager prompts you for valid credentials. Installing an additional domain controller requires membership in the Domain Admins group.
+- As needed, Server Manager prompts you for valid credentials. Installing an additional domain controller requires membership in the Domain Admins group.
 
   Also, installing the first domain controller that runs Windows Server in a forest requires credentials that include group memberships in both the Enterprise Admins and Schema Admins groups. The Active Directory Domain Services Configuration Wizard prompts you later if your current credentials don't have adequate permissions or group memberships.
 
@@ -107,7 +122,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
 - The default values of the forest and domain functional levels depend on your Windows Server version.
 
-  Starting with the Windows Server 2012 version, the domain functional level offers the following settings in the key distribution center (KDC) administrative template policy **KDC support for claims, compound authentication, and Kerberos armoring**:
+  Starting with Windows Server 2012, the domain functional level offers the following settings in the key distribution center (KDC) administrative template policy **KDC support for claims, compound authentication, and Kerberos armoring**:
 
   - Always provide claims
   - Fail unarmored authentication requests
@@ -122,7 +137,7 @@ When you create a forest, the **Domain Controller Options** page displays the op
 
 - When you create a forest, the **Domain Name System (DNS) server** option is selected by default. The first domain controller in the forest must be a global catalog server, and it can't be a read-only domain controller (RODC).
 
-- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a non-blank password. Always choose a strong, complex password or preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
+- To sign in to a domain controller that's not running AD DS, you need the Directory Services Restore Mode (DSRM) password. The password you specify must adhere to the password policy applied to the server. By default, that policy doesn't require a strong password. It only requires a nonblank password. Always choose a strong, complex password or, preferably, a passphrase. For information about how to synchronize the DSRM password with the password of a domain user account, see the [support article about synchronizing passwords](https://support.microsoft.com/topic/a-feature-is-available-for-windows-server-2008-that-lets-you-synchronize-the-dsrm-administrator-password-with-a-domain-user-account-a9a2ef06-2771-b0d4-6cd3-e1fe836f69e1).
 
 For more information about how to create a forest, see [Install a New Windows Server 2012 Active Directory Forest &#40;Level 200&#41;](./Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md).
 
@@ -180,7 +195,7 @@ You can have the Active Directory Domain Services Configuration Wizard create th
 
 Alternatively, you can create these DNS delegation records before you install the DNS server role. To create a zone delegation, open **DNS Manager**, right-click the parent domain, and then select **New Delegation**. Follow the steps in the New Delegation Wizard to create the delegation.
 
-The installation process tries to create the delegation to ensure that computers in other domains can resolve DNS queries for hosts, including domain controllers and member computers, in the DNS subdomain. The delegation records can be automatically created only on Microsoft DNS servers. If the parent DNS domain zone resides on third-party DNS servers such as Berkeley Internet Name Domain (BIND) servers, a warning about the failure to create DNS delegation records appears on the **Prerequisites Check** page. For more information about the warning, see [Known Issues for installing and removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
+The installation process tries to create the delegation to ensure that computers in other domains can resolve DNS queries for hosts, including domain controllers and member computers, in the DNS subdomain. The delegation records can be automatically created only on Microsoft DNS servers. If the parent DNS domain zone resides on non-Microsoft DNS servers such as Berkeley Internet Name Domain (BIND) servers, a warning about the failure to create DNS delegation records appears on the **Prerequisites Check** page. For more information about the warning, see [Known Issues for installing and removing AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)).
 
 Delegations between the parent domain and the subdomain being promoted can be created and validated before or after the installation. There's no reason to delay the installation of a new domain controller because you can't create or update the DNS delegation.
 
@@ -254,7 +269,7 @@ The `adprep.exe` tool is required to run in the following situations:
 
 - The `adprep /rodcprep` command must be run to add the first RODC to an existing forest. This command must be run by a member of the Enterprise Admins group. For this command to run successfully, there must be connectivity between the computer where you run the command and the infrastructure master for each application directory partition in the forest.
 
-For more information about `adprep.exe`, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) and [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+For more information about `adprep.exe`, see [Adprep.exe integration](./What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md) and [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
 ### Review Options
 
@@ -299,9 +314,9 @@ You can also restart the target server from this page after the wizard finishes.
 
 In some cases, the target server fails to restart. If the wizard finishes on a target server that isn't joined to the domain before the installation, the system state of the target server can make the server unreachable on the network. The system state can also prevent you from having permissions to manage the remote server.
 
-If the target server fails to restart in these cases, you must manually restart it. You can't use tools, such as `shutdown.exe` or Windows PowerShell, to restart it. You can use Remote Desktop Services to sign in and remotely shut down the target server.
+If the target server fails to restart in these cases, you must manually restart it. You can't use tools like `shutdown.exe` or Windows PowerShell to restart it. You can use Remote Desktop Services to sign in and remotely shut down the target server.
 
-## Demote a domain controller
+## Pages when demoting a domain controller
 
 The following sections describe the pages that you see when you use the Active Directory Domain Services Configuration Wizard to demote a domain controller.
 
@@ -316,7 +331,7 @@ On this page, you configure demotion options. The following credentials are need
 - Demoting an additional domain controller requires Domain Admin credentials. Selecting **Force removal of the domain controller** demotes the domain controller without removing the domain controller object's metadata from Active Directory.
 
   > [!IMPORTANT]
-  > Don't select the **Force the removal of this domain controller** option unless the domain controller can't contact other domain controllers and there's *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. Also, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft support cases for AD DS, Microsoft Exchange, SQL Server, and other software. If you forcibly demote a domain controller, you *must* manually perform metadata cleanup immediately. For instructions, see [Clean up server metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)).
+  > Don't select the **Force the removal of this domain controller** option unless the domain controller can't contact other domain controllers and there's *no reasonable way* to resolve that network issue. Forced demotion leaves orphaned metadata in Active Directory on the remaining domain controllers in the forest. Also, all unreplicated changes on that domain controller, such as passwords or new user accounts, are lost forever. Orphaned metadata is the root cause in a significant percentage of Microsoft support cases for AD DS, Microsoft Exchange, SQL Server, and other software. If you forcibly demote a domain controller, you must manually perform metadata cleanup immediately. For instructions, see [Clean up server metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10)).
 
 - Demoting the last domain controller in a domain requires Enterprise Admins group membership, because this action removes the domain itself. If the domain is the last one in the forest, this action also removes the forest. Server Manager informs you if the current domain controller is the last domain controller in the domain. Select **Last domain controller in the domain** to confirm the domain controller is the last domain controller in the domain.
 
@@ -381,3 +396,5 @@ You can use this page to review your selections and start the demotion.
 This page also provides you with the chance to export the configuration settings for demotion to a Windows PowerShell script so you can automate other demotions.
 
 To demote the server, select **Demote**.
+
+

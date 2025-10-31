@@ -1,11 +1,9 @@
 ---
 description: "Learn more about: Planning a Guarded Fabric"
 title: Planning a guarded fabric and shielded VMs
-ms.topic: article
-ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
-manager: dongill
-author: robinharwood
-ms.author: mosagie
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 12/10/2020
 ---
 
@@ -16,3 +14,5 @@ The following topics cover planning for the deployment of a guarded fabric and s
 - [Guarded Fabric and Shielded VM Planning Guide for Hosters](guarded-fabric-planning-for-hosters.md)
 - [Compatible hardware with Windows Server 2016 Virtualization-based protection of Code Integrity](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md)
 - [Guarded Fabric and Shielded VM Planning Guide for Tenants](guarded-fabric-shielded-vm-planning-for-tenants.md)
+
+

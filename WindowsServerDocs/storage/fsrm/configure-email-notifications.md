@@ -2,9 +2,8 @@
 title: Configure E-Mail Notifications
 description: This article describes how to configure e-mail notifications
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Configure E-Mail Notifications
@@ -53,3 +52,4 @@ Send-FsrmTestEmail @MHT
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+

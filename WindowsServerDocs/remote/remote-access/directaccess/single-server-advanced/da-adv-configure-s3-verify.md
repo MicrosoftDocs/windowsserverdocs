@@ -1,11 +1,9 @@
 ---
 title: Step 3 Verify the Advanced DirectAccess Deployment
 description: Learn how to verify that you have correctly configured your advanced DirectAccess deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: ae8bbff0-c981-4bc6-8df1-861621d0627f
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Verify the Advanced DirectAccess Deployment

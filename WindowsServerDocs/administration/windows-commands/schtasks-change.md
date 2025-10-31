@@ -3,8 +3,7 @@ title: schtasks change
 description: Reference article for the schtasks change command, which schedules commands and programs to run periodically or at a specific time, adds and removes tasks from the schedule, starts and stops tasks on demand, and displays and changes scheduled tasks.
 ms.topic: reference
 ms.author: daknappe
-author: robinharwood
-manager: mtillman
+author: dknappettmsft
 ms.date: 06/30/2022
 ---
 

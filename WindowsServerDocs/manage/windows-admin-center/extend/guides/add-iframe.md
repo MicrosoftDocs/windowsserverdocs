@@ -1,9 +1,9 @@
 ---
 title: Add an iFrame to a tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu) - add an iFrame to a tool extension
-ms.topic: article
+ms.topic: how-to
+ms.author: roharwoo
 author: robinharwood
-ms.author: jgerend
 ms.date: 09/18/2018
 ---
 

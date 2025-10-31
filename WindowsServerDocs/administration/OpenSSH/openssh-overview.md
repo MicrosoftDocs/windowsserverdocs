@@ -3,7 +3,7 @@ title: OpenSSH for Windows overview
 description: Overview of the OpenSSH tools used by Windows administrators for cross-platform management of remote systems.
 ms.date: 02/20/2025
 ms.author: roharwoo
-author: maertendmsft
+author: robinharwood
 ms.topic: overview
 ---
 

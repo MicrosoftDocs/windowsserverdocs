@@ -1,20 +1,19 @@
 ---
 title: Step 1 - Install the WSUS Server Role
 description: Windows Server Update Service (WSUS) topic - Describes how to install the server role using Server Manager
-ms.topic: article
-ms.assetid: fabc8619-350e-403b-96f8-116424931300
-ms.author: jgerend
-author: robinharwood
-manager: mtillman
-ms.date: 09/27/2023
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 05/03/2025
+# freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
 ---
 # Step 1: Install the WSUS Server Role
 
+The next step in the deployment of your WSUS server is to install the WSUS server role.
 
+# [Server Manager](#tab/server-manager)
 
-The next step in the deployment of your WSUS server is to install the WSUS server role. The following procedure describes how to install the WSUS server role by using Server Manager.
-
-### To install the WSUS server role
+The following procedure describes how to install the WSUS server role by using Server Manager.
 
 1.  Log on to the server on which you plan to install the WSUS server role by using an account that is a member of the Local Administrators group.
 
@@ -50,5 +49,23 @@ The next step in the deployment of your WSUS server is to install the WSUS serve
 
 14. In **Server Manager**, verify if a notification appears to inform you that a restart is required. This can vary according to the installed server role. If it requires a restart make sure to restart the server to complete the installation.
 
-> [!IMPORTANT]
-> At this point the installation process is finished, however for WSUS to be functional you need to proceed to [Step 2: Configure WSUS](2-configure-wsus.md).
+# [PowerShell](#tab/powershell)
+
+The following procedure describes how to install the WSUS server role by using Windows PowerShell.
+
+1. Log on to the server on which you plan to install the WSUS server role by using an account that is a member of the Local Administrators group.
+2. Open a Windows PowerShell command prompt. To do this, click **Start**, type **Windows PowerShell**, and then press **Enter**.
+3. Type the following command, and then press **Enter**:
+
+    ```powershell
+    Install-WindowsFeature -Name UpdateServices -IncludeManagementTools -Restart
+    ```
+
+    The **-IncludeManagementTools** parameter installs the WSUS management console. The **-Restart** parameter restarts the server if required.
+
+---
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Step 2: Configure WSUS](2-configure-wsus.md)

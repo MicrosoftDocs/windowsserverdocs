@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: When to Create a Federation Server"
-ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: When to Create a Federation Server
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # When to Create a Federation Server

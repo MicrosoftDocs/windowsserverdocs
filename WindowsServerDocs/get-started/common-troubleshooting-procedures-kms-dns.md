@@ -3,8 +3,8 @@ description: "Learn more about: Guidelines for troubleshooting DNS-related activ
 title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019
-author: Teresa-Motiv
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Guidelines for troubleshooting DNS-related activation issues
@@ -251,3 +251,4 @@ If the KMS host and KMS clients use different DNS zones, you must configure the 
    ```cmd
    cscript C:\Windows\System32\slmgr.vbs -ckms
    ```
+

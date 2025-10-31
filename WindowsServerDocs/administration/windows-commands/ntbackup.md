@@ -2,8 +2,8 @@
 title: ntbackup
 description: Reference article for the ntbackup command (replaced with the wbadmin command).
 ms.topic: reference
-ms.author: alalve
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/01/2023
 ---
 

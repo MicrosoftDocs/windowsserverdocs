@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Determining the Number of Forests Required"
-ms.assetid: 173b72c1-ac83-4f42-abab-cf58f43769f0
 title: Determining the Number of Forests Required
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: how-to
 ---
 
 # Determining the Number of Forests Required

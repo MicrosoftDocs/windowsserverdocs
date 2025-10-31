@@ -1,8 +1,8 @@
 ---
 title: Windows LAPS overview
 description: Get an overview of Windows Local Administrator Password Solution (Windows LAPS), including key scenarios and setup and management options.
-author: jay98014
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/10/2025
 ms.topic: overview
 # customer intent: As an administrator, I want to become familiar with the Windows Local Administrator Password Solution (Windows LAPS) feature so that I can use it to manage and back up administrator passwords.
@@ -16,13 +16,21 @@ Windows Local Administrator Password Solution (Windows LAPS) is a Windows featur
 
 Windows LAPS is available on the following OS platforms:
 
-- [Windows 11 23H2](https://support.microsoft.com/topic/windows-11-version-23h2-update-history-59875222-b990-4bd9-932f-91a5954de434) and later Windows Client releases
-- [Windows Server 23H2](https://support.microsoft.com/topic/windows-server-version-23h2-update-history-68c851ff-825a-4dbc-857b-51c5aa0ab248) and later Windows Server releases
-- [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239) and later
-- [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224) and later
-- [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221) and later
-- [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230) and later
-- [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229) and later
+### Windows client
+
+- Windows 11 23H2 and later.
+- Other versions of Windows client that have received the April 11, 2023 Update or later, including:
+  - [Windows 11 22H2 - April 11 2023 Update](https://support.microsoft.com/help/5025239) and later.
+  - [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224) and later.
+  - [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221) and later.
+
+### Windows Server
+
+- Windows Server 2025 and later.
+- [Windows Server Annual Channel for Containers, 23H2 and later](https://support.microsoft.com/topic/windows-server-version-23h2-update-history-68c851ff-825a-4dbc-857b-51c5aa0ab248).
+- Other versions of Windows Server that have received the April 11, 2023 Update or later, including:
+  - [Windows Server 2022 - April 11 2023 Update](https://support.microsoft.com/help/5025230) and later.
+  - [Windows Server 2019 - April 11 2023 Update](https://support.microsoft.com/help/5025229) and later.
 
 All supported editions of these platforms have been updated with Windows LAPS, including long-term servicing channel (LTSC) editions. The introduction of the Windows LAPS feature doesn't modify the standard Microsoft product lifecycle policies.
 
@@ -102,9 +110,9 @@ Entra-based monitoring and reporting solutions are available when you back up pa
 
 > [!IMPORTANT]
 > The [legacy Microsoft LAPS product](https://www.microsoft.com/download/details.aspx?id=46899) is deprecated as of Windows 11 23H2 and later. Installation of the legacy Microsoft LAPS Microsoft Installer (MSI) package is blocked on newer OS versions, and Microsoft no longer considers code changes for the legacy Microsoft LAPS product.
-> 
+>
 > Use Windows LAPS for managing local administrator account passwords. Windows LAPS is available on Windows Server 2019 and later, and on supported Windows 10 and Windows 11 clients.
-> 
+>
 > Microsoft will continue to support the legacy Microsoft LAPS product on older versions of Windows (earlier than Windows 11 23H2) on which it was previously supported. That support will end upon the normal end of support for those OS versions.
 
 ## Windows LAPS vs. legacy Microsoft LAPS
@@ -167,3 +175,5 @@ If you aren't sure where your feedback should go, submit it by using any of thes
 - [Get started with Windows LAPS and Windows Server Active Directory](laps-scenarios-windows-server-active-directory.md)
 - [Get started with Windows LAPS and Microsoft Entra ID](laps-scenarios-azure-active-directory.md)
 - [Get started with Windows LAPS in legacy Microsoft LAPS emulation mode](laps-scenarios-legacy.md)
+
+

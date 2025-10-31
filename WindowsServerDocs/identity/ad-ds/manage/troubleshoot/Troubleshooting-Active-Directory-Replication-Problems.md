@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Troubleshooting Active Directory Replication Problems"
-ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Troubleshooting Active Directory Replication Problems
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 03/07/2024
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: troubleshooting-general
 ---
 # Troubleshooting Active Directory Replication Problems
 

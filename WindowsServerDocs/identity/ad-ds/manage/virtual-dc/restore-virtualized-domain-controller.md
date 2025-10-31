@@ -1,10 +1,10 @@
 ---
 title: Restore a virtualized domain controller in Windows Server
 description: Learn about how to restore a virtualized Active Directory Domain Services Domain Controller (DC) in Windows Server.
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/24/2025
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Restore a virtual domain controller
@@ -151,3 +151,4 @@ To restore a virtual DC with a VHD file:
 ## Additional content
 
 For more information about virtualized DCs, see [Virtualizing domain controllers with Hyper-V](../../get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md).
+

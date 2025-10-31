@@ -1,11 +1,10 @@
 ---
 description: "Learn more about: Windows Time Service (W32Time)"
-ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows Time Service (W32Time)
-author: dahavey
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Time Service (W32Time)
@@ -30,3 +29,4 @@ The windows time provider plugin model is [documented on TechNet](/windows/win32
 An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)
 
 For a quick overview of Windows Time service, take a look at this [high-level overview video](https://aka.ms/WS2016TimeVideo).
+

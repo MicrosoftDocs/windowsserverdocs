@@ -1,9 +1,9 @@
 ---
 title: Windows Admin Center Case Studies
 description: Windows Admin Center Case Studies (Project Honolulu)
-ms.topic: article
+ms.topic: example-scenario
+ms.author: roharwoo
 author: robinharwood
-ms.author: jgerend
 ms.date: 06/18/2018
 ---
 
@@ -94,7 +94,7 @@ Windows Admin Center allows FZI to accelerate the rate they can perform tasks li
 
 ## GVC Group
 
-[GVC Group](https://gvc-plc.com/) is an online entertainment provider, with over 15,000 servers operated around the globe.
+Entain plc, formerly GVC Group, [Entain](https://www.entaingroup.com/) is an online entertainment provider, with over 15,000 servers operated around the globe.
 
 GVC Group uses Windows Server 2016 with many roles (Hyper-V, WSFC, AD-DS, Fileserver, among others), as well as System Center products including SCCM and SCOM.
 

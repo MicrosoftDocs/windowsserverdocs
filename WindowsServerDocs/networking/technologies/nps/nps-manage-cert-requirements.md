@@ -1,10 +1,9 @@
 ---
 title: Configure Certificate Templates for PEAP and EAP requirements
 description: This article provides information about using certificates with Network Policy Server and Remote Access in Windows Server 2016.
-ms.topic: article
-ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
-ms.author: alalve
-author: xelu86
+ms.topic: best-practice
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/16/2025
 ms.contributor: samyun
 ---
@@ -114,3 +113,4 @@ With PEAP-TLS and EAP-TLS, clients display a list of all installed certificates 
 - [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access).
 
 - [Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS](/troubleshoot/windows-server/networking/certificate-requirements-eap-tls-peap)
+

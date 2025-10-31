@@ -4,7 +4,7 @@
   - name: Get started
     items:
     - name: Remote Desktop Services overview
-      href: remote-desktop-services-overview.md
+      href: overview.md
     - name: Create virtual machines for Remote Desktop
       href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS
@@ -20,8 +20,8 @@
       href: rds-plan-build-anywhere.md
     - name: Network guidelines
       href: network-guidance.md
-    - name: Virtual machine sizing guidelines
-      href: virtual-machine-recs.md
+    - name: Session host VM sizing guidelines
+      href: session-host-virtual-machine-sizing-guidelines.md
     - name: Access from anywhere
       href: rds-plan-access-from-anywhere.md
     - name: High availability
@@ -166,7 +166,7 @@
       - name: What's new in Remote Desktop Services web client
         href: web-client-whats-new.md
       - name: Remote Desktop Web Access FAQ
-        href: remote-desktop-web-access-faq.yml
+        href: /troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting?context=/windows-server/context/windows-server-remote-desktop-services
     - name: Windows App documentation
       href: /windows-app/
     - name: Remote Desktop client documentation
@@ -185,11 +185,11 @@
       items:
       - name: Supported PCs
         href: remotepc/remote-desktop-supported-config.md
-      - name: Grant Remote Desktop access to your PC
+      - name: Enable Remote Desktop access to your PC
         href: remotepc/remote-desktop-allow-access.md
       - name: Grant access to your PC from outside your network
         href: remotepc/remote-desktop-allow-outside-access.md
-      - name: Change the RD listening port on your PC
+      - name: Change the listening port on your PC
         href: remotepc/change-listening-port.md
     - name: Remote Desktop Connection client for Windows (MSTSC)
       items:

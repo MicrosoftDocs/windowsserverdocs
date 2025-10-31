@@ -2,9 +2,8 @@
 title: Create a File Screen
 description: This article describes how to create a file screen
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a File Screen
@@ -50,5 +49,6 @@ When creating a new file screen, you can choose to save a file screen template t
 -   [Define File Groups for Screening](define-file-groups-for-screening.md)
 -   [Create a File Screen Template](create-file-screen-template.md)
 -   [Edit File Screen Template Properties](edit-file-screen-template-properties.md)
+
 
 

@@ -1,15 +1,20 @@
 ---
-title: Persistent memory health management in Azure Stack HCI and Windows Server
-description: This article provides information about error handling and health management specific to persistent memory (PMem) devices in Azure Stack HCI and Windows Server.
+title: Persistent memory health management in Azure Local and Windows Server
+description: This article provides information about error handling and health management specific to persistent memory (PMem) devices in Azure Local and Windows Server.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 02/10/2025
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Persistent memory health management
-
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 This article provides information about error handling and health management specific to persistent memory (PMem) devices, often called storage-class memory (SCM), which is a type of non-volatile media that can be used as top-tier storage.
 

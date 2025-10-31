@@ -2,8 +2,8 @@
 title: How to configure Azure Site Recovery for Arc-enabled Windows servers
 description: Learn how to deploy Azure Site Recovery to manage and orchestrate replication, failover, and failback for both on-premises Arc-enabled Windows servers and Azure VMs.
 ms.topic: how-to
-ms.author: alalve
-author: trungtran
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/31/2024
 ---
 
@@ -136,3 +136,4 @@ To report app feedback for disaster recovery or if other issues are encountered,
 - [Configure Best Practices Assessment for Arc-enabled Windows servers](best-practices-assessment-for-windows-server.md)
 
 - [Configure Remote Support for Arc-enabled Windows servers](remote-support-for-windows-server.md)
+

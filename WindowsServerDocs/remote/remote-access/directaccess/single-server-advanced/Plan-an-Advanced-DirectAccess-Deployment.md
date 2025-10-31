@@ -1,11 +1,9 @@
 ---
 title: Plan an Advanced DirectAccess Deployment
 description: Learn about the planning steps that are required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with a full range of basic and advanced features.
-manager: brianlic
-ms.topic: article
-ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
+ms.topic: concept-article
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Plan an Advanced DirectAccess Deployment

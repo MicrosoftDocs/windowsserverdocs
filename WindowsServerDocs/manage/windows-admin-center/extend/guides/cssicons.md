@@ -1,9 +1,9 @@
 ---
 title: Current list of icons in Windows Admin Center
 description: Current list of icons in Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
-author: robinharwood
-ms.author: jgerend
+ms.topic: reference
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/18/2018
 ---
 

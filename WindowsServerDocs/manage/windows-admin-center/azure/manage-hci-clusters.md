@@ -2,9 +2,10 @@
 title: Manage Azure Local clusters with Windows Admin Center in Azure (preview)
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Azure Local.
 ms.topic: overview
-author: prasidharora
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/06/2022
+ms.custom: sfi-image-nochange
 ---
 # Manage Azure Local clusters using Windows Admin Center in Azure (preview)
 
@@ -14,6 +15,9 @@ ms.date: 05/06/2022
 
 > [!IMPORTANT]
 > Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) This can be [downloaded here](https://download.microsoft.com/download/f/6/4/f64c574f-d3d5-4128-8308-ed6a7097a93d/AzureConnectedMachineAgent.msi).
+
+> [!IMPORTANT]
+> There are currently several [known issues](#known-issues) impacting connections to Azure Local machines and installation of the Windows Admin Center in the Azure Portal extension on Azure Local machines. These issues are impacting Windows Admin Center in the Azure Portal extension versions 0.49.0.0 and above.
 
 Using Windows Admin Center in the Azure portal you can manage the Azure Local operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
@@ -71,7 +75,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 ### Azure account with an active subscription
 
-You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 During the deployment of Windows Admin Center,  you'll register the *Microsoft.HybridConnectivity* resource provider for your subscription.  
 
@@ -317,10 +321,40 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 
 ## Known issues
 
+- On extension versions 0.49.0.0 and above, installation of Windows Admin Center in the Azure Portal or connections to Azure Local OS systems may fail. Installation issues may be mitigated by reverting to version 0.47.0.0 of the extension. Connection issues may be fixed by a page refresh.
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't available yet.
 - Updates isn’t supported. Users cannot apply updates to Azure Local cluster with CAU (Cluster-Aware Updating).
+- If Windows Defender Application Control (WDAC) is set to Enforced mode, the installation of the AdminCenter extension may be blocked. In that case, please follow the steps to reinstall it.
+    1. Check if WDAC is enforced in the cluster.
+
+       ```powershell
+       Get-AsWdacPolicyMode
+       ```
+
+    1. Set WDAC in Audit Mode. It can take two or three minutes to switch mode. Validate the mode switched with the `Get-AsWdacPolicyMode` cmdlet.
+
+        ```powershell
+        Enable-AsWdacPolicy -Mode Audit
+        ```
+
+    1. In all nodes, restart the extension service.
+
+       ```powershell
+       Restart-Service ExtensionService
+       ```
+
+    1. From Azure Portal, open each of the nodes, and uninstall the AdminCenter extension from: Settings > Extensions.
+
+    1. Once extension is removed from all nodes, retry installing the extension from the Azure Local Cluster > Settings > Windows Admin Center (preview).
+
+    1. If WAC extension works again, restore the AsWdacPolicy setting.
+
+       ```powershell
+       Enable-AsWdacPolicy -Mode Enforced
+       ```
+
 
 ## Frequently asked questions
 
@@ -374,3 +408,4 @@ Yes. You can follow the same steps outlined in this document.
 - Learn about [managing servers with Windows Admin Center](../use/manage-servers.md)
 - Learn about [Azure Local](/azure/azure-local/overview)
 - Learn about [connecting Azure Local to Azure](/azure/azure-local/deploy/register-with-azure)
+

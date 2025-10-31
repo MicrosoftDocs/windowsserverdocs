@@ -1,11 +1,9 @@
 ---
 title: Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 description: Learn how to use the Software Defined Networking software load balancer to provide outbound network address translation, inbound NAT, or load balancing between multiple instances of an application.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
+ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)

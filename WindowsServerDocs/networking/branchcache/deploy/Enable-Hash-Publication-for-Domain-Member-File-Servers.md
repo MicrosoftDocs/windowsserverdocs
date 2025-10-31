@@ -1,10 +1,8 @@
 ---
 title: Enable Hash Publication for Domain Member File Servers
 description: Learn how to enable BranchCache hash publication for multiple file servers.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: a3f1f7c4-d9b2-43e6-8bfa-fac707bbd4d3
-ms.author: jgerend
+ms.author: roharwoo
 author: robinharwood
 ms.date: 01/05/2021
 ---
@@ -21,6 +19,7 @@ See the following topics to enable hash publication for multiple file servers.
 -   [Create the BranchCache Hash Publication Group Policy Object](../../branchcache/deploy/Create-the-BranchCache-Hash-Publication-Group-Policy-Object.md)
 
 -   [Configure the BranchCache Hash Publication Group Policy Object](../../branchcache/deploy/Configure-the-BranchCache-Hash-Publication-Group-Policy-Object.md)
+
 
 
 

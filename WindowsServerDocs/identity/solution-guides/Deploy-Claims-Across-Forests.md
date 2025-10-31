@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Deploy Claims Across Forests"
-ms.assetid: ceb9ce18-5a94-4166-9edd-2685b81fc15f
 title: Deploy Claims Across Forests
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Deploy Claims Across Forests

@@ -1,11 +1,9 @@
 ---
 title: Configure additional HGS nodes
 description: "Learn more about: Configure additional HGS nodes"
-ms.topic: article
-ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
-manager: dongill
+ms.topic: how-to
 author: robinharwood
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 01/14/2020
 ---
 
@@ -138,3 +136,5 @@ To decommission an HGS node:
    You can optionally unjoin the machine from the domain and remove the gMSA account from Active Directory.
 
 2. If HGS created its own domain, you should also [uninstall HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) to unjoin the domain and demote the domain controller.
+
+

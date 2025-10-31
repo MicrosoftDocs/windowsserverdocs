@@ -2,10 +2,8 @@
 title: ping
 description: Reference article for the ping command, which verifies network connectivity.
 ms.topic: reference
-ms.assetid: 49272671-2eec-4fa5-881f-65c24cfbef52
 ms.author: daknappe
-author: robinharwood
-manager: mtillman
+author: dknappettmsft
 ms.date: 09/15/2023
 ---
 
@@ -30,7 +28,7 @@ ping [/t] [/a] [/n <count>] [/l <size>] [/f] [/I <TTL>] [/v <TOS>] [/r <count>] 
 
 | Parameter | Description |
 |:--:|---|
-| /t | Specifies ping continue sending echo Request messages to the destination until interrupted. To interrupt and display statistics, press CTRL+ENTER. To interrupt and quit this command, press CTRL+C. |
+| /t | Specifies ping continue sending echo Request messages to the destination until interrupted. To interrupt and display statistics, press CTRL+BREAK. To interrupt and quit this command, press CTRL+C. |
 | /a | Specifies reverse name resolution be performed on the destination IP address. If this operation is successful, ping displays the corresponding host name. |
 | /n `<count>` | Specifies the number of echo Request messages be sent. The default is 4. |
 | /l `<size>` | Specifies the length, in bytes, of the **Data** field in the echo Request messages. The default is 32. The maximum size is 65,500. |

@@ -1,10 +1,11 @@
 ---
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
-ms.topic: article
-author: davannaw-msft
-ms.author: jgerend
+ms.topic: troubleshooting-known-issue
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/05/2024
+ms.custom: sfi-image-nochange
 ---
 # Windows Admin Center known issues
 
@@ -17,6 +18,8 @@ If you encounter an issue not described on this page, let us know at the [Window
 - Windows Admin Center doesn't support ports lower than 1024. In service mode, you can optionally configure port 80 to redirect to your specified port.
 
 ## General
+
+- When upgrading from version 2311 to version 2410, the existing certificate may not be set in the updated installation, especially for users using Windows Admin Center in international languages or those with special characters. [Learn how to update your Windows Admin Center certificate](../configure/update-certificate.md).
 
 - Windows Admin Center version 2410 build 2.4.2.1 may appear as build number 2.4.1 on the Windows Admin Center Updates settings page.
 
@@ -41,22 +44,30 @@ If you encounter an issue not described on this page, let us know at the [Window
   
   1. Reinstall Windows Admin Center.
 
-- If you leave the tool open and idle for a long period of time, several error messages appear that say "The runspace state is not valid for this operation." If this issue occurs, refresh your browser. If you encounter this error, [send us feedback](https://aka.ms/WACfeedback).
+- If you leave the tool open and idle for a long period of time, several error messages appear that say "The runspace state isn't valid for this operation." If this issue occurs, refresh your browser. If you encounter this error, [send us feedback](https://aka.ms/WACfeedback).
 
 - There can be minor differences between version numbers of open-source software (OSS) running in Windows Admin Center modules versus what's listed in the third Party Software Notice.
 
 - You can access and use Windows Admin Center tool application programming interfaces (APIs) through other methods during an active session of Windows Admin Center if you have access to that session. The actions you take using these APIs only affect the machine you installed Windows Admin Center on, also known as the gateway machine. They don't affect machines managed remotely without authentication through the Windows Admin Center gateway.
 
-- Some APIs used by Windows Admin Center, including the DeploymentShare API, require the user to be a local administrator. Network share creation operations cannot be performed by a standard Windows user by default. Windows Admin Center cannot elevate a standard user account to administrator. Adding the user to the "Gateway administrators" group in Settings only changes the permissions the user has within the gateway, not on the system.
-   - You may not run into this issue on modernized gateway builds of Windows Admin Center. By default, modernized gateway builds utilize a form login to access the gateway, which does not have the local administrator restriction. Existing versions of Windows Admin Center utilize NTLM/Kerberos, which obtains a token limited to the localhost environment. NTLM/Kerberos login is also available on modernized gateway builds.
+- Some APIs used by Windows Admin Center, including the DeploymentShare API, require the user to be a local administrator. Network share creation operations can't be performed by a standard Windows user by default. Windows Admin Center can't elevate a standard user account to administrator. Adding the user to the "Gateway administrators" group in Settings only changes the permissions the user has within the gateway, not on the system.
+  - You may not run into this issue on modernized gateway builds of Windows Admin Center. By default, modernized gateway builds utilize a form login to access the gateway, which doesn't have the local administrator restriction. Existing versions of Windows Admin Center utilize NTLM/Kerberos, which obtains a token limited to the localhost environment. NTLM/Kerberos login is also available on modernized gateway builds.
 
-- Windows Admin Center does not support authenticating guest users of Microsoft Entra ID tenants. As a result, guest users of Microsoft Entra ID tenants will no longer be able to connect their Windows Admin Center instance to Azure or use Azure services like Azure Arc, Azure Site Recovery, Azure File Sync, etc. 
+- Windows Admin Center doesn't support authenticating guest users of Microsoft Entra ID tenants. As a result, guest users of Microsoft Entra ID tenants will no longer be able to connect their Windows Admin Center instance to Azure or use Azure services like Azure Arc, Azure Site Recovery, Azure File Sync, etc. 
 
 ### Extension Manager
 
 - When you update Windows Admin Center, you must reinstall your extensions.
 
 - If you add an extension feed that is inaccessible, no warning or error message appears.
+
+### Extensions not supported
+
+Even with an added extension feed, the following extensions currently don't work with the modernized gateway build 2410:
+
+- Fujitsu ServerView RAID
+- Fujitsu Software Infrastructure Manager (ISM)
+- Fujitsu ServerView Health
 
 ## Partner extension issues
 
@@ -170,7 +181,7 @@ This section describes common issues you can run into in Server Manager on Windo
 
 ### Certificates
 
-Server Manager on Windows Admin Center doesn't currently support importing the .PFX Encrypted Certificate into the current user store.
+Server Manager on Windows Admin Center doesn't currently support importing the `.PFX Encrypted Certificate` into the current user store.
 
 ### Files
 
@@ -185,6 +196,8 @@ Windows Admin Center doesn't currently support uploading or downloading files ov
 - PowerShell in Server Manager doesn't support the Ctrl+C shortcut to copy content to the clipboard. To copy content, highlight the text, right-click it, then select **Copy**.
 
 - When you make the Windows Admin Center window smaller, the terminal content adjusts to fit the new window size. When you return the window to its original size, the content might not return to its original state. You can restore the text by using the `Clear-Host` command, or disconnect and reconnect using the button above the terminal.
+
+- The account for the PowerShell session in version 2410 always defaults to the user signed into the Windows Admin Center gateway, even if different management credentials were specified when remoting to a connection.
 
 ### Registry Editor
 
@@ -208,7 +221,7 @@ Registry Editor for Windows Admin Center for Windows Server hasn't implemented s
 
 ### Updates
 
-After the system installs updates, it sometimes caches the install status and requires a browser refresh. If you see an error message that says "Keyset does not exist" when attempting to set up Azure Update management, follow these directions on the managed node:
+After the system installs updates, it sometimes caches the install status and requires a browser refresh. If you see an error message that says "Keyset doesn't exist" when attempting to set up Azure Update management, follow these directions on the managed node:
 
   1. Stop the **Cryptographic Services** service.
   
@@ -252,7 +265,7 @@ This section describes known issues that affect cluster deployment.
 
 ### Adding servers to cluster groups
 
-Windows Admin Center doesn't currently support scenarios with mixed work group machines when adding servers. All machines you add to cluster groups must be part of the same work group. If they aren't, an error message appears that says "Cannot create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again." You can't proceed with setting up the cluster unless you use machines from the same work group.
+Windows Admin Center doesn't currently support scenarios with mixed work group machines when adding servers. All machines you add to cluster groups must be part of the same work group. If they aren't, an error message appears that says "Can't create a cluster with servers in different Active Directory domains. Verify the server names are correct. Move all the servers into the same domain and try again." You can't proceed with setting up the cluster unless you use machines from the same work group.
 
 ### Enabling Hyper-V on VMs
 
@@ -446,7 +459,7 @@ The following sections describe issues you can encounter when using Azure servic
 
 ### Azure login and gateway registration
 
-- When attempting to register your Windows Admin Center gateway in the Azure China 21Vianet or Azure US Gov cloud domains in version 2211, the gateway can sometimes redirect you to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
+- When attempting to register your Windows Admin Center gateway in the Azure operated by 21Vianet or Azure US Gov cloud domains in version 2211, the gateway can sometimes redirect you to the Azure Global sign-in experience. To work around this issue, use an earlier version of Windows Admin Center.
 
 - In the 2009 release, you can run into issues signing in to Azure or registering your Windows Admin Center gateway with Azure. Try doing the following to troubleshoot the issue:
 
@@ -456,7 +469,7 @@ The following sections describe issues you can encounter when using Azure servic
 
   - If you've already given admin approval for Windows Admin Center in the portal but still see an error message that says "Need admin approval", try signing in to Azure using the banners around Windows Admin Center instead of going to the Settings page.
 
-  - If your proxy is misconfigured, you can see an error message that says "Error: Value cannot be null. Parameter name: httpClientFactory." To resolve this issue, go to the **Settings** page and adjust your settings to the correct configuration.
+  - If your proxy is misconfigured, you can see an error message that says "Error: Value can't be null. Parameter name: httpClientFactory." To resolve this issue, go to the **Settings** page and adjust your settings to the correct configuration.
 
 ### Azure File Sync permissions
 
@@ -519,7 +532,7 @@ When you encounter this error, the following error message appears:
 ```error
 Cluster wasn't created Connecting to remote server tk5-3wp13r1131.cfdev.nttest.microsoft.com failed
 with the following error message:
-WinRM cannot complete the operation. Verify that the specified computer name is valid, that the
+WinRM can't complete the operation. Verify that the specified computer name is valid, that the
 computer is accessible over the network, and that a firewall exception for the WinRM service is
 enabled and allows access from this computer. By default, the WinRM firewall exception for public
 profiles limits access to remote computers within the same local subnet. For more information, see
@@ -542,8 +555,8 @@ When you encounter this error, the following error message appears:
 
 ```error
 Connecting to remote server ack failed with the following error message:
-WinRM cannot process the request. The following error with error code 0x8009030e occurred while
-using Negotiate authentication: A specified logon session does not exist. It may already have been
+WinRM can't process the request. The following error with error code 0x8009030e occurred while
+using Negotiate authentication: A specified logon session doesn't exist. It may already have been
 terminated. \r\n This can occur if the provided credentials are not valid on the target server, or
 if the server identity could not be verified. If you trust the server identity add the server name
 to the TrustedHosts list, and then retry the request. User winrm.cmd to view or edit the
@@ -571,9 +584,9 @@ You can try the following methods to resolve this issue:
 When you encounter this error, the following error message appears:
 
 ```error
-We cannot display the changes right now:
+We can't display the changes right now:
 Connecting to remote server localhost failed with the
-following error message : The client cannot connect to the destination specified in the request.
+following error message : The client can't connect to the destination specified in the request.
 Verify that the service on the destination is running and is accepting requests. Consult the logs
 and documentation for the WS-Management services running on the destination, mostly commonly IIS or
 WinRM. If the destination is the WinRM service, run the following command on the destination to
@@ -593,7 +606,7 @@ When you encounter this error, the following error message appears:
 
 ```error
 Connecting to remote server dc1.root.contoso.com failed with the following error message:
-WinRM cannot process the request. The following error with errorcode 0x80090322 occurred while
+WinRM can't process the request. The following error with errorcode 0x80090322 occurred while
 using Kerberos authentication. An unknown security error occurred. At line:1 char:1 +
 Enter-PSSession dc1.root.contoso.com + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo
 :InvalidArgument:(dc1.root.contoso.com:String)[Enter-PSSession], PSRemotingTransportException +
@@ -636,3 +649,4 @@ about_Remote_Troubleshooting Help topic.
 This error is very rare. When you see this error message, it usually means WinRM couldn't process the request. The reason why this error appears varies based on context.
 
 To resolve this issue, make sure remoting is enabled and that you configure the WinRM listener to accept requests. We also recommend you check the event logs for other errors, such as if WinRM can't access certain files in the file system due to the files only having read permissions.
+

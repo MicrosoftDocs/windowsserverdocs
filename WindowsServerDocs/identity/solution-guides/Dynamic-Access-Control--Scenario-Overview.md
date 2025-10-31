@@ -1,12 +1,10 @@
 ---
-ms.assetid: 7b22adfa-298d-413c-88d0-1231825b7d4d
 title: Dynamic Access Control Scenario Overview
 description: "Learn more about: Dynamic Access Control: Scenario Overview"
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Dynamic Access Control: Scenario Overview

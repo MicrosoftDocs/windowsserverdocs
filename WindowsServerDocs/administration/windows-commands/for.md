@@ -2,9 +2,8 @@
 title: for
 description: Reference article for the for command, which runs a specified command for each file, within a set of files.
 ms.topic: reference
-ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/04/2023
 ---
 
@@ -104,7 +103,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
     | eol=`<c>` | Specifies an end of line character (just one character). |
     | skip=`<n>` | Specifies the number of lines to skip at the beginning of the file. |
     | delims=`<xxx>` | Specifies a delimiter set. This replaces the default delimiter set of space and tab. |
-    | tokens=`<x,y,m–n>` | Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *m-n* specifies a range, from the *m*th through the *n*th tokens. If the last character in the **tokens=** string is an asterisk (**&#42;**), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed. |
+    | tokens=`<x,y,m-n>` | Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *m-n* specifies a range, from the *m*th through the *n*th tokens. If the last character in the **tokens=** string is an asterisk (**&#42;**), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed. |
     | usebackq | Specifies to run a back-quoted string as a command, use a single-quoted string as a literal string, or, for long file names that contain spaces, allow file names in `<set>`, to each be enclosed in double-quotation marks. |
 
   - **Variable substitution:** The following table lists optional syntax (for any variable **I**):

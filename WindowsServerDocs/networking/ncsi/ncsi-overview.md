@@ -1,10 +1,10 @@
 ---
 title: Network Connectivity Status Indicator overview for Windows
 description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
-ms.topic: article
+ms.topic: concept-article
 ms.date: 02/25/2025
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.contributors: rnitsch
 ---
 
@@ -93,3 +93,4 @@ Captive portals may send an HTTP redirect or an empty response to the probe inst
 
 - [NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
 - [NCSI FAQ](ncsi-frequently-asked-questions.md)
+

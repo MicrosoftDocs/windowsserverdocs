@@ -1,9 +1,7 @@
 ---
 title: Create an Alias (CNAME) Record in DNS for WEB1
 description: Learn how to add an Alias canonical name (CNAME) resource record for your Web server to a zone in DNS on your domain controller.
-manager: brianlic
-ms.topic: article
-ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

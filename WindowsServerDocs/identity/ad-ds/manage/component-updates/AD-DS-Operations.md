@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: AD DS Operations"
-ms.assetid: 560dfa18-0398-4186-ba91-da03ab72c2d5
 title: AD DS Operations
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: best-practice
 ---
 
 # AD DS Operations

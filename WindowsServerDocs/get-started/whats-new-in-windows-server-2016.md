@@ -1,11 +1,10 @@
 ---
 title: What's new in Windows Server 2016
 description: This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
-ms.topic: article
-author: robinharwood
-ms.author: alalve
+ms.topic: whats-new
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/08/2025
-ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
 
 # What's new in Windows Server 2016
@@ -14,7 +13,7 @@ This article describes some of the new features in Windows Server 2016 that are 
 
 ## Compute
 
-The [Virtualization area](../virtualization/virtualization.yml) includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
+The [Virtualization area](../virtualization/index.yml) includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
 
 ### General
 
@@ -36,7 +35,7 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - Hyper-V is now compatible with Connected Standby. When you install the Hyper-V role on a computer that uses the Always On/Always Connected (AOAC) power model, you can now configure it to use the Connected Standby power state.
 
-- Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see [Discrete device assignment](../virtualization/hyper-v/System-requirements-for-Hyper-V-on-Windows.md#discrete-device-assignment) and [Discrete Device Assignment - Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262).
+- Discrete device assignment lets you give a virtual machine (VM) direct and exclusive access to certain PCIe hardware devices. This feature bypasses the Hyper-V virtualization stack, which results in faster access. For more information, see [Discrete device assignment](../virtualization/hyper-v/host-hardware-requirements.md#discrete-device-assignment) and [Discrete Device Assignment - Description and background](https://techcommunity.microsoft.com/t5/virtualization/discrete-device-assignment-description-and-background/ba-p/382262).
 
 - Hyper-V now supports BitLocker drive encryption for operating system (OS) disks in generation 1 VMs. This protection method replaces virtual Trusted Platform Modules (TPMs), which are only available in generation 2 VMs. To decrypt the disk and start the VM, the Hyper-V host must either be part of an authorized guarded fabric or have the private key from one of the VM's guardians. Key storage requires a version 8 VM. For more information, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 
@@ -59,7 +58,7 @@ Hyper-V network virtualization (HNV) is a fundamental building block of Microsof
 
 - Linux OSs running on generation 2 VMs can now boot with the Secure Boot option enabled. The OSs that support Secure Boot on Windows Server 2016 hosts include Ubuntu 14.04 and later, SUSE Linux Enterprise Server 12 and later, Red Hat Enterprise Linux 7.0 and later, and CentOS 7.0 and later. Before you boot the VM for the first time, you must configure it to use the Microsoft UEFI Certificate Authority in either Hyper-V Manager, Virtual Machine Manager, or by running the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet in PowerShell.
 
-- Generation 2 VMs and Hyper-V hosts can now use more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. For more information, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://www.microsoft.com/windows-server/blog/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). To earn more about version compatibility and supported maximum configurations, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) and [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+- Generation 2 VMs and Hyper-V hosts can now use more memory and virtual processors. You can also configure hosts with more memory and virtual processors than previous versions. These changes support scenarios such as running large in-memory databases for online transaction processing (OLTP) and data warehousing (DW) for e-commerce. For more information, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://www.microsoft.com/windows-server/blog/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). To earn more about version compatibility and supported maximum configurations, see [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](../virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md) and [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/maximum-scale-limits.md).
 
 - The Nested Virtualization feature lets you use a VM as a Hyper-V host and create VMs within the virtualized host. You can use this feature to build development and test environments running at least Windows Server 2016 or Windows 10 with an Intel VT-x capable processor. For more information, see [What is Nested Virtualization?](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
 
@@ -242,7 +241,7 @@ Software-Defined Networking (SDN) is a new Software Defined Datacenter (SDDC) so
 
 - New features for Hyper-V:
 
-  - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+  - Hyper-V Virtual Switch, which lets you create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. To learn more, see [Hyper-V Virtual Switch](../virtualization/hyper-v/virtual-switch.md).
 
   - Remote direct memory access (RDMA) and switch-embedded teaming (SET) for when you create virtual switches. You can set up RDMA on network adapters bound to a Hyper-V virtual switch regardless of whether you're already using SET. SET can give your virtual switches similar capabilities as NIC teaming. For more information, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
@@ -465,7 +464,7 @@ In Windows 10 and Windows Server 2016, client connections to the Active Director
 > [!NOTE]
 > The registry values for these settings aren't present by default, but the hardening rules still apply until you override them by editing Group Policy or other registry values.
 
-For more information on these security improvements, see [MS15-011: Vulnerability in Group Policy](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://msrc-blog.microsoft.com/2015/02/10/ms15-011-ms15-014-hardening-group-policy).
+For more information on these security improvements, see [MS15-011: Vulnerability in Group Policy](https://support.microsoft.com/kb/3000483) and [MS15-011 & MS15-014: Hardening Group Policy](https://www.microsoft.com/msrc/blog/2015/02/ms15-011-ms15-014-hardening-group-policy).
 
 ### Work Folders
 
@@ -817,3 +816,4 @@ For more information, see [Configure AD FS to send password expiry claims](../id
 ### Moving from AD FS in Windows Server 2012 R2 to AD FS in Windows Server 2016 is easier
 
 Previously, migrating to a new version of AD FS required exporting the configuration settings from your Windows Server farm to a new, parallel server farm. AD FS on Windows Server 2016 makes the process easier by removing the requirement to have a parallel server farm. When you add a Windows Server 2016 server to a Windows Server 2012 R2 server farm, the new server behaves just like a Windows Server 2012 R2 server. When you're ready to upgrade and you removed the older servers, you can change the operational level to Windows Server 2016. For learn more, see [Upgrading to AD FS in Windows Server 2016](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md).
+

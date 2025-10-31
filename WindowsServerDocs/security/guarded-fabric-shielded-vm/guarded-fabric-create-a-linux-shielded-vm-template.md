@@ -1,11 +1,9 @@
 ---
 title: Create a Linux shielded VM template disk
 description: "Learn more about: Create a Linux shielded VM template disk"
-ms.topic: article
-ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
-manager: dongill
-author: robinharwood
-ms.author: mosagie
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -205,3 +203,5 @@ To extract the volume signature catalog, run the following command in PowerShell
 ```powershell
 Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -VolumeSignatureCatalogPath 'C:\temp\MyLinuxTemplate.vsc'
 ```
+
+

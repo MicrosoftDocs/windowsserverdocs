@@ -1,10 +1,11 @@
 ---
 title: Manage Servers with Windows Admin Center
 description: Learn about the tools available for managing servers in Windows Admin Center.
-ms.topic: article
+ms.topic: how-to
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/21/2019
+ms.custom: sfi-image-nochange
 ---
 
 # Manage servers in Windows Admin Center

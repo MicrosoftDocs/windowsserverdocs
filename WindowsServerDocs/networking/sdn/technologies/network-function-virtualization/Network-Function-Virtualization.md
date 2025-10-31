@@ -1,11 +1,9 @@
 ---
 title: Network Function Virtualization
 description: You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances like Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing (SLB) in Windows Server 2019 and 2016.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
+ms.topic: concept-article
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Network Function Virtualization

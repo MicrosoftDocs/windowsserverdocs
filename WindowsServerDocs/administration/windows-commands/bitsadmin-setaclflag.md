@@ -2,16 +2,14 @@
 title: bitsadmin setaclflag
 description: Reference article for the bitsadmin setaclflag command, which sets the access control list (ACL) propagations flags.
 ms.topic: reference
-ms.assetid: 6e3bcda0-827d-4dfd-8384-d1da018f3e10
-ms.author: mosagie
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # bitsadmin setaclflag
 
-Sets the access control list (ACL) propagations flags for the job. The flags indicate that you want to maintain the owner and ACL information with the file being downloaded. For example, to maintain the owner and group with the file, set the **flags** parameter to `og`.
+Sets the access control list (ACL) propagations flags for the job. The flags indicate that you want to maintain the owner and ACL information with the file being downloaded. For example, to maintain the owner and group with the file, set the **flags** parameter to `og`.
 
 ## Syntax
 

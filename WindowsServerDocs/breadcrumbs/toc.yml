@@ -42,6 +42,9 @@ items:
       - name: Remote Desktop Services
         tocHref: /previous-versions/remote-desktop-client/
         topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Remote Desktop Services
+        tocHref: /troubleshoot/windows-server/remote/remote-desktop-services-overview
+        topicHref: /windows-server/remote/remote-desktop-services/
       - name: Security
         tocHref: /windows-server/security/
         topicHref: /windows-server/security/security-and-assurance
@@ -54,22 +57,20 @@ items:
       - name: Virtualization
         tocHref: /windows-server/virtualization/
         topicHref: /windows-server/virtualization/
-      - name: Hyper-V
-        tocHref: /windows-server/virtualization/hyper-v/
-        topicHref: /windows-server/virtualization/hyper-v/
-      - name: Hyper-V Virtual Switch
-        tocHref: /windows-server/virtualization/hyper-v-virtual-switch/
-        topicHref: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch/
+        items:
+        - name: Hyper-V
+          tocHref: /windows-server/virtualization/hyper-v/
+          topicHref: /windows-server/virtualization/hyper-v/
 
 ### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
   tocHref: /azure/azure-local/
-  topicHref: /windows-server/index
+  topicHref: /windows-server/virtualization/hyper-v/
 
 ### For linking to system center topics and keeping the context in Windows Server TOC
-- name: Windows Server                         # Destination doc set name
-  tocHref: /system-center/      # Destination doc set route
-  topicHref: /windows-server/    # Original doc set route
+- name: Windows Server
+  tocHref: /system-center/
+  topicHref: /windows-server/
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server

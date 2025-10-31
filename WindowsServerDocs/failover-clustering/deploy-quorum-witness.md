@@ -1,11 +1,10 @@
 ---
 title: Deploy a quorum witness for a failover cluster in Windows Server
-description: How to deploy a cluster quorum witness in Windows Server using Failover Cluster Manager, PowerShell, and Windows Admin Center.
-ms.author: alalve
-author: xelu86
+description: Learn how to deploy a cluster quorum witness in Windows Server using Failover Cluster Manager, PowerShell, and Windows Admin Center.
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
-ms.date: 02/06/2025
-ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
+ms.date: 06/16/2025
 zone_pivot_groups: quorum-witness
 #customer intent: As a cluster admin, I want to configure a quorum witness to determine cluster nodes availability and node majority vote.
 ---
@@ -24,11 +23,13 @@ In order to configure a cloud witness, the following are required:
 
 - The Failover Cluster feature must be installed and configured on your device. To learn more, see [Install or Uninstall Roles, Role Services, or Features](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features).
 
-- You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription and a valid Azure general-purpose storage account. This storage account is where a cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration. You can use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters. Each cluster has its own blob file that it stores in the container.
+- You must have an [Azure account](/azure/storage/common/storage-account-create?tabs=azure-portal) with an active subscription.
 
-- When creating your Azure Storage account, if the cluster you're configuring the cloud witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)** when configuring the **Replication** field. If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)** instead.
+- You must have an Azure Standard [general purpose V2 storage account](/azure/storage/common/storage-account-upgrade) as only this storage account type is supported. This storage account is where a cloud witness creates the `msft-cloud-witness` container to store the blob file required for voting arbitration. You can use this account and the `msft-cloud-witness` container that the cloud witness automatically creates to configure a cloud witness across multiple different clusters.
 
-- When you create an Azure Storage account, Azure associates it with automatically generated primary and secondary access keys. When you set up a cloud witness for the first time, we recommend you use the primary access key. After that, you can use either the primary or secondary access key.
+  - When creating your Azure Storage account, if the cluster you're configuring the cloud witness for is on-premises or in Azure within the same Azure region and availability zones, select **Locally-redundant storage (LRS)** when configuring the **Replication** field. If your cluster is in the same Azure region but in different availability zones, select **Zone-redundant storage (ZRS)** instead.
+
+  - When you create an Azure Storage account, Azure associates it with automatically generated primary and secondary access keys. When you set up a cloud witness for the first time, we recommend you use the primary access key. After that, you can use either the primary or secondary access key.
 
 - You must ensure all firewalls between the failover cluster and Azure Storage account service allow traffic from port 443, also known as the HTTPS port. A cloud witness uses the HTTPS REST interface for the Azure Storage service. Therefore, you must have port 443 open on all nodes in your failover cluster for a cloud witness to work as intended.
 
@@ -45,12 +46,6 @@ You must also use one of the following supported scenarios:
 - Storage clusters with or without shared storage, such as Scale-out File Server clusters.
 
 - Small branch-office clusters, which are even two-node clusters.
-
-> [!NOTE]
-> Cloud witness isn't compatible with the following types of Azure storage accounts:
->
-> - Blob storage
-> - Azure Premium Storage
 
 ::: zone-end
 
@@ -391,3 +386,4 @@ netsh winhttp set proxy proxy-server="192.168.10.80:8080" bypass-list="<local>; 
 - [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts)
 
 - [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs)
+

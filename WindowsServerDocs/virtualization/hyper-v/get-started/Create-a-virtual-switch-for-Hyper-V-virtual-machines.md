@@ -2,9 +2,8 @@
 title: Create and configure a virtual switch with Hyper-V
 description: Learn how to create and configure a virtual switch for use by the Hyper-V host and guest virtual machines.
 ms.topic: how-to
-ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/29/2025
 zone_pivot_groups: windows
 ---
@@ -16,7 +15,7 @@ This article shows you how to create and configure your virtual switch using Hyp
 :::zone pivot="windows-server"
 
 When you first install the Hyper-V role on Windows Server, you can optionally create a virtual switch at the same time. To learn more about virtual switches, see
-[Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+[Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md).
 
 For more information about how you can set up your networking infrastructure with Windows Server, review the [Networking](../../../networking/index.yml) documentation.
 
@@ -229,3 +228,5 @@ Now that you set up a virtual switch, here are other articles to help you contin
 - Learn about other configuration options in the
   [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch) and
   [Set-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan) PowerShell reference articles.
+
+

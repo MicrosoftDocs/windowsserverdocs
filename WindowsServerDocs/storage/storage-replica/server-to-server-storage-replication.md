@@ -2,9 +2,10 @@
 title: Server-to-Server Storage Replication
 description: Learn how to set up and use Storage Replica for server-to-server replication in Windows Server by using Windows Admin Center or PowerShell.
 ms.topic: how-to
-ms.author: alalve
-author: nedpyle
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/16/2025
+ms.custom: sfi-image-nochange
 ---
 # Set up server-to-server storage replication by using Storage Replica
 
@@ -47,7 +48,7 @@ To use Storage Replica and Windows Admin Center together, you need the following
 | One PC                     | Windows 10                                                  | Windows Admin Center |
 
 > [!NOTE]
-> Currently, you can't use Windows Admin Center on a server to manage Storage Replica.
+> Currently, you can't use Windows Admin Center in the Azure Portal to manage Storage Replica. Windows Admin Center version 2410 and later can be used to manage Storage Replica.
 
 ## Terms
 
@@ -484,4 +485,5 @@ Users can then access their data.
 * [Cluster-to-cluster storage replication](cluster-to-cluster-storage-replication.md)
 * [Storage Replica: Known issues](storage-replica-known-issues.md)
 * [Storage Replica: FAQ](storage-replica-frequently-asked-questions.yml)
-* [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+* [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+

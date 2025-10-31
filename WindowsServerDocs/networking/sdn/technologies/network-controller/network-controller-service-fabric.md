@@ -2,9 +2,8 @@
 title: Network Controller with Service Fabric on Windows Server and Azure Local
 description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server.
 ms.topic: how-to
-ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 12/06/2024
 ---
 

@@ -1,11 +1,9 @@
 ---
 title: QoS Policy Architecture
 description: Learn about the architecture of QoS Policy.
-ms.topic: article
-ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
-manager: brianlic
-ms.author: jgerend
-author: robinharwood
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
@@ -38,4 +36,5 @@ The architecture of Policy-based QoS consists of the following components:
 For the next topic in this guide, see [QoS Policy Scenarios](qos-policy-scenarios.md).
 
 For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).
+
 

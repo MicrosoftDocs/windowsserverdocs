@@ -1,17 +1,15 @@
 ---
 description: "Learn more about: AD DS Deployment"
-ms.assetid: 241d93f9-06cf-4327-96a3-70dfe656f19d
 title: AD DS Deployment
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: install-set-up-deploy
 ---
 
 # AD DS Deployment
 
-This guide covers how to install and remove Active Directory Domain Services (AD DS) in  Windows Server 2012 , and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.
+This guide covers how to install and remove Active Directory Domain Services (AD DS) in Windows Server 2012, and important issues to be aware of when you add new domain controllers to an existing Active Directory environment.
 
 - [What's New in Active Directory Domain Services Installation and Removal](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md)
 

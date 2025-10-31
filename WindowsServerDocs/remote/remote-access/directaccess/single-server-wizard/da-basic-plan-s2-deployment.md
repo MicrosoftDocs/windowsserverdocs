@@ -1,11 +1,9 @@
 ---
 title: Step 2 Plan the Basic DirectAccess Deployment
 description: Learn how to plan the settings for the Getting Started Wizard.
-manager: brianlic
-ms.topic: article
-ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Basic DirectAccess Deployment

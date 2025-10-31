@@ -39,13 +39,9 @@ items:
           - name: Copy the CA certificate and CRL to the virtual directory
             href: core-network-guide/cncg/server-certs/copy-the-CA-Certificate-and-CRL-to-the-Virtual-directory.md
           - name: Configure the server certificate template
-            href: core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md
-          - name: Configure server certificate autoenrollment
-            href: core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md
-          - name: Refresh group policy
-            href: core-network-guide/cncg/server-certs/Refresh-Group-Policy.md
-          - name: Verify server enrollment of a server certificate
-            href: core-network-guide/cncg/server-certs/verify-Server-Enrollment-of-a-Server-Certificate.md
+            href: core-network-guide/cncg/server-certs/configure-server-certificate-template-remote-access-network-policy-server.md
+          - name: Configure certificate auto-enrollment for NPS
+            href: core-network-guide/cncg/server-certs/configure-server-certificate-autoenrollment.md
       - name: Deploy password-based 802.1X authenticated wireless access
         href: core-network-guide/cncg/wireless/a-deploy-8021X-wireless-access.md
         items:
@@ -152,7 +148,6 @@ items:
   - name: DirectAccess
     href: ../remote/remote-access/directaccess/directaccess.md
   - name: Domain Name System (DNS)
-    href: dns/dns-overview.md
     items:
     - name: Overview
       href: dns/dns-overview.md
@@ -170,9 +165,11 @@ items:
       - name: DNS zones
         href: dns/zone-types.md
       - name: DNS architecture
-        href: dns/dns-architecture.md  
+        href: dns/dns-architecture.md
       - name: Network Ports
         href: dns/network-ports.md
+      - name: Message formats
+        href: dns/message-formats.md
       - name: DNS processes
         items:
         - name: Queries and lookups
@@ -193,6 +190,8 @@ items:
           href: dns/dnssec-overview.md
         - name: Validate and secure DNS responses
           href: dns/validate-dnssec-responses.md
+        - name: Key Master
+          href: dns/dnssec-key-master.md
     - name: How-to guides
       items:
       - name: Manage DNS zones
@@ -202,7 +201,15 @@ items:
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
       - name: Enable DNS Logging and Diagnostics
-        href: dns/dns-logging-and-diagnostics.md 
+        href: dns/dns-logging-and-diagnostics.md
+      - name: DNSSEC
+        items:
+        - name: Transfer the DNSSEC Key Master Role
+          href: dns/transfer-dnssec-key-master.md
+        - name: Sign DNS Zones
+          href: dns/sign-dnssec-zone.md
+      - name: Configure the Name Resolution Policy Table
+        href: dns/name-resolution-policy-table.md
     - name: Tutorials
       items:
       - name: DNS policy
@@ -257,11 +264,21 @@ items:
       - name: Install DHCP relay agent
         href: technologies/dhcp/dhcp-deploy-relay-agent.md
       - name: Migrate DHCP server to Windows Server
-        href: technologies/dhcp/migrate-dhcp-server.md  
+        href: technologies/dhcp/migrate-dhcp-server.md
     - name: DHCP failover
       items:
       - name: DHCP failover overview
         href: technologies/dhcp/dhcp-failover.md
+      - name: Manage DHCP failover relationships
+        href: technologies/dhcp/manage-dhcp-failover-relationships.md
+      - name: Migrate existing DHCP failover deployments
+        href: technologies/dhcp/migrate-existing-dhcp-failover.md
+      - name: Migrate to DHCP failover
+        href: technologies/dhcp/migrate-to-dhcp-failover.md
+      - name: Replicate DHCP failover settings
+        href: technologies/dhcp/replicate-dhcp-failover.md
+      - name: DHCP failover events
+        href: technologies/dhcp/dhcp-failover-events.md
     - name: Troubleshoot DHCP issues
       href: ../troubleshoot/troubleshoot-dhcp-issue.md
       items:
@@ -270,16 +287,16 @@ items:
       - name: Troubleshoot problems on the DHCP server
         href: ../troubleshoot/troubleshoot-problems-on-dhcp-server.md
       - name: DHCP server events
-        href: technologies/dhcp/dhcp-server-events.md  
+        href: technologies/dhcp/dhcp-server-events.md
   - name: Edge networking
     items:
     - name: Network ATC
       href: /azure/azure-local/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
       items:
       - name: Deploy host networking with Network ATC
-        href: /azure/azure-local/deploy/network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        href: network-atc/network-atc.md
       - name: Manage Network ATC
-        href: /azure/azure-local/manage/manage-network-atc?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
+        href: network-atc/manage-network-atc.md
     - name: Software Defined Networking (SDN)
       href: sdn/index.yml
       items:
@@ -336,11 +353,6 @@ items:
           items:
           - name: Deploy an SDN infrastructure using scripts
             href: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
-        - name: Deploy SDN technologies using Windows PowerShell
-          href: sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md
-          items:
-          - name: Deploy Network Controller using Windows PowerShell
-            href: sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md
         - name: Deploy Network Controller with Failover Clustering
           href: sdn/deploy/deploy-network-controller-failover-clustering.md
       - name: Manage SDN
@@ -448,7 +460,7 @@ items:
     - name: Example of Go generated code
       href: technologies/hcn/example-go.md
   - name: Hyper-V Virtual Switch
-    href: ../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md
+    href: ../virtualization/hyper-v/virtual-switch.md
   - name: IP Address Management (IPAM)
     href: technologies/ipam/ipam-top.md
     items:
@@ -600,16 +612,9 @@ items:
       - name: Manage NPS templates
         href: technologies/nps/nps-manage-templates.md
   - name: Network Shell (Netsh)
-    href: technologies/netsh/netsh.md
     items:
-    - name: Netsh command syntax, contexts, and formatting
-      href: technologies/netsh/netsh-contexts.md
-    - name: Network Shell (Netsh) example batch file
-      href: technologies/netsh/netsh-wins.md
     - name: Netsh bridge
       href: technologies/netsh/netsh-bridge.md
-    - name: Netsh http commands
-      href: technologies/netsh/netsh-http.md
     - name: Netsh interface portproxy commands
       href: technologies/netsh/netsh-interface-portproxy.md
     - name: Netsh mbn commands
@@ -681,5 +686,5 @@ items:
         href: windows-time-service/How-the-Windows-Time-Service-Works.md
       - name: Windows Time service tools and settings
         href: windows-time-service/Windows-Time-Service-Tools-and-Settings.md
-  - name: Wireless networking 
+  - name: Wireless networking
     href: technologies/wlan/wireless-networking.md

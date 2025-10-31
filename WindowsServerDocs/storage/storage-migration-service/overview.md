@@ -2,9 +2,9 @@
 title: Storage Migration Service overview
 description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows, Linux, and NetApp CIFS servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 author: robinharwood
-ms.author: alalve
+ms.author: roharwoo
 ms.date: 06/25/2024
-ms.topic: article
+ms.topic: overview
 ---
 
 # Storage Migration Service overview
@@ -147,3 +147,4 @@ If you want to lift and shift virtual machines to Azure without migrating to a l
 - [Use Storage Migration Service to migrate a server](migrate-data.md)
 - [Storage Migration Service frequently asked questions (FAQ)](faq.yml)
 - [Storage Migration Service known issues](known-issues.md)
+

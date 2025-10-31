@@ -2,9 +2,8 @@
 title: Create a File Screen Template
 description: This article describes how to create a file screen template
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a File Screen Template
@@ -70,4 +69,5 @@ By creating file screens exclusively from templates, you can centrally manage yo
 -   [File Screening Management](file-screening-management.md)
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Edit File Screen Template Properties](edit-file-screen-template-properties.md)
+
 

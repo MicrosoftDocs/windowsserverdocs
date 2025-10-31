@@ -1,11 +1,10 @@
 ---
 title: Top support solutions for Windows Server
 description: Get links to solutions for Windows Server issues
-manager: alant
 ms.date: 03/16/2018
 ms.topic: troubleshooting
-author: kaushika-msft
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Top support solutions for Windows Server 2016
@@ -68,3 +67,4 @@ These are the top Microsoft Support solutions for the most common issues experie
 - [Troubleshooting AD Replication error 8451: The replication operation encountered a database error](https://support.microsoft.com/kb/2645996)
 - [Troubleshooting AD Replication error 1127: While accessing the hard disk, a disk operation failed even after retries](https://support.microsoft.com/kb/2025726)
 - [Clean Up Server Metadata](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))
+

@@ -1,16 +1,16 @@
 ---
-title: Enable Hotpatch for Azure Arc-enabled servers (preview)
+title: Enable Hotpatch for Azure Arc-enabled servers
 description: Learn how to enable Hotpatch for Windows Server 2025 installations on Azure Arc-enabled servers.
-ms.author: alalve
+ms.author: daknappe
 ms.topic: how-to
-author: xelu86
-ms.date: 03/11/2025
+author: dknappettmsft
+ms.date: 10/30/2025
 ---
 
-# Enable Hotpatch for Azure Arc-enabled servers (preview)
+# Enable Hotpatch for Azure Arc-enabled servers
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch is currently in **preview**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available for a monthly subscription fee. To learn more about pricing, see [Tired of all the restarts? Get hotpatching for Windows Server](https://www.microsoft.com/en-us/windows-server/blog/2025/04/24/tired-of-all-the-restarts-get-hotpatching-for-windows-server/).
 
 Hotpatch allows you to update your Windows Server installation without requiring your users to restart after installation. This feature minimizes downtime spent on updates and keeps your users running their workloads uninterrupted. For more information about how Hotpatch works, see [Hotpatch for Windows Server](hotpatch.md).
 
@@ -20,7 +20,7 @@ Windows Server 2025 features the ability to enable Hotpatch for Azure Arc-enable
 
 Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, you need to satisfy the following requirements.
 
-- A server must be running a _released_ version of Windows Server 2025 (build 26100.1742 or later). Preview versions or [Windows Server Insiders](/windows-server/get-started/get-started-with-windows-server-insiders-preview) builds aren't supported because hotpatches aren't created for prerelease operating systems.
+- A server must be running Windows Server 2025 (build 26100.1742 or later). Preview versions or [Windows Server Insiders](/windows-server/get-started/get-started-with-windows-server-insiders-preview) builds aren't supported because hotpatches aren't created for prerelease operating systems.
 
 - The machine should be running one of the following editions of Windows Server.
 
@@ -32,7 +32,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 - The physical or virtual machine you intend to enable Hotpatch on needs to satisfy the requirements for [Virtualization-based security](/windows-hardware/design/device-experiences/oem-vbs) (VBS), also known as [Virtual Secure Mode](/virtualization/hyper-v-on-windows/tlfs/vsm) (VSM). At bare minimum, the machine has to use Unified extensible firmware interface (UEFI) with Secure boot enabled. Therefore, for a virtual machine (VM) on Hyper-V, it needs to be a [Generation 2 virtual machine](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282285(v=ws.11)).
 
-- An Azure subscription. If you don't already have one, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+- An Azure subscription. If you don't already have one, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 - Your server and infrastructure should satisfy the [Connected Machine agent prerequisites](/azure/azure-arc/servers/prerequisites) for enabling Azure Arc on a server.
 
@@ -40,7 +40,7 @@ Before you can enable Hotpatch on Arc-enabled servers for Windows Server 2025, y
 
 ## Check and enable Virtual Secure Mode if necessary
 
-When you [enable Hotpatch using the Azure portal](#enable-hotpatch-preview-on-windows-server-2025), it checks whether [Virtual Secure Mode](/virtualization/hyper-v-on-windows/tlfs/vsm) (VSM) is running on the machine. If VSM isn't running, enabling hotpatch fails, and you'll have to enable VSM.
+When you [enable Hotpatch using the Azure portal](#enable-hotpatch-on-windows-server-2025), it checks whether [Virtual Secure Mode](/virtualization/hyper-v-on-windows/tlfs/vsm) (VSM) is running on the machine. If VSM isn't running, enabling hotpatch fails, and you'll have to enable VSM.
 
 Alternatively, you can check the VSM status manually before enabling Hotpatch. VSM might be already enabled if you previously configured other features that (like Hotpatch) depend on VSM. Common examples of such features include [Credential guard](/windows/security/identity-protection/credential-guard) or [Virtualization-based protection of code integrity](/windows/security/hardware-security/enable-virtualization-based-protection-of-code-integrity), also known as Hypervisor-protected code integrity (HVCI).
 
@@ -72,7 +72,7 @@ for /f "tokens=2 delims==" %a in ('wmic.exe /namespace:\\root\Microsoft\Windows\
 
 ---
 
-If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch preview on Windows Server 2025](#enable-hotpatch-preview-on-windows-server-2025).
+If the command output is `2`, VSM is configured and running. In this case, proceed directly to [Enable Hotpatch on Windows Server 2025](#enable-hotpatch-on-windows-server-2025).
 
 If the output isn't `2`, you need to enable VSM.<br /><br />
 
@@ -120,7 +120,7 @@ If the output isn't `2`, you need to enable VSM.<br /><br />
 
 </details>
 
-## Enable Hotpatch preview on Windows Server 2025
+## Enable Hotpatch on Windows Server 2025
 
 1. Connect the machine to Azure Arc, if it wasn't Arc-enabled previously.
 
@@ -128,19 +128,84 @@ If the output isn't `2`, you need to enable VSM.<br /><br />
 
 1. Select the name of your machine.
 
-1. Select **Hotpatch (preview)**, then select **Confirm**.
+1. Select **Hotpatch**, then select **Confirm**.
 
 1. Wait about 10 minutes for the changes to apply. If the update stays stuck on the _Pending_ status, proceed to [troubleshooting Azure Arc agent](/azure/azure-arc/servers/troubleshoot-agent-onboard).
 
-## Using Hotpatch preview on Windows Server 2025
+## Using Hotpatch on Windows Server 2025
 
 Whenever a Hotpatch is available from Windows Update, you should receive a prompt to install it. Since these updates aren't released every month, you might need to wait until the next Hotpatch is published.
 
 You can optionally automate hotpatch installation using update management tools such as [Azure Update Manager](/azure/automation/update-management/overview) (AUM).
 
+## Known issues
+
+### Multiple updates released in October 2025
+
+In October 2025, Microsoft released several updates that were offered to some Windows Server customers. If you enrolled in hotpatch or plan to enroll, and plan to install hotpatch updates in November and December 2025, ensure your Windows Server machines are running on **exactly** one of the following update levels.
+- [October 14, 2025 - **KB5066835** (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e)
+- [October 24, 2025 - **KB5070893** (OS Build 26100.6905) Security Update for Windows Server Update Services](https://support.microsoft.com/topic/78f3720c-9511-4deb-b0d7-7bed2016fefd)
+
+If you have one of the other October updates installed, this will result in regular non-hotpatch updates until, and including, the next baseline month that is currently scheduled for January 2026. These updates require a reboot each month. In particular, the following update, if installed, makes the machine incompatible with upcoming hotpatches: [October 23, 2025 - **KB5070881** (OS Build 26100.6905) Out-of-band](https://support.microsoft.com/topic/8e7ac742-6785-4677-87e4-b73dd8ac0122), and so does any other update not explicitly listed in this section.
+
+### Feature licensing issue in October 2025 updates
+
+An issue was identified with the October 2025 security updates for Windows Server 2025. This may impact customers running [October 14, 2025 - KB5066835 (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e) update or later. Due to this issue, the following unexpected behavior can be observed.
+
+- Enabling Windows Server hotpatching via Azure Arc on new machines may fail or not complete as expected. Instead, feature enablement remains in the "In Progress" state until the issue is resolved.
+- On machines previously enabled for Windows Server hotpatching, the feature license may expire, and this will prevent the next Hotpatch from being installed. Instead, the next update will cause a reboot if no action is taken.
+
+Hotpatching on [Windows Server 2025 Datacenter: Azure Edition](/windows-server/get-started/azure-edition) isn't affected by this issue.
+
+To resolve this issue, a series of manual steps is recommended. Failure to apply either workaround will result in regular non-hotpatch updates until, and including, the next baseline month that is currently scheduled for January 2026. These updates require a reboot each month.
+
+There are two ways to apply the manual workaround on affected machines. Each of the provided options offers a complete solution. You'll need to apply the workaround on each of the affected machines **before** the next update is offered, which is anticipated in the next "patch Tuesday" date of **November 11, 2025**. Applying the workaround requires a reboot, so plan accordingly.
+
+After you apply either workaround, hotpatch updates released in November and December 2025 will install without requiring a reboot.
+
+#### Option 1: Use Local or Group Policy to enable the remediation
+
+1. Download and install the [Windows 11 24H2, Windows 11 25H2, and Windows Server 2025 KB5062660 251028_18301 Feature Preview](https://download.microsoft.com/download/2d85085c-4890-4c4d-930c-744d6f090cfa/Windows%2011%2024H2%2c%20Windows%2011%2025H2%20and%20Windows%20Server%202025%20KB5062660%20251028_18301%20Feature%20Preview.msi) package. This installs the Local or Group Policy template (`ADMX` file) for this specific remediation.
+
+1. Select **Start**, type **gpedit**, then select **Edit group policy**. Navigate to **Computer Configuration\Administrative Templates\KB5062660 251028_18301 Feature Preview\Windows 11, version 24H2, 25H2\KB5062660 251028_18301 Feature Preview**.
+
+   For more information on deploying and configuring this special Group Policy, see [Use Group Policy to enable an update that is disabled by default](/troubleshoot/windows-client/group-policy/use-group-policy-enable-update-disabled-by-default).
+
+1. In the right window pane, open **KB5062660 251028_18301 Feature Preview**, select **Enabled**, then select **OK**.
+
+1. Reboot the affected machine.
+
+1. Run the following command to remove the **DeviceLicensingServiceCommandMutex** entry from the registry. If this entry isn't present on the affected device, removal is ignored.
+
+   ```powershell
+   try {
+   Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' -Name 'DeviceLicensingServiceCommandMutex' -ErrorAction Stop
+   } catch {
+   Write-Host "DeviceLicensingServiceCommandMutex entry not present, skipping removal."
+   }
+   ```
+
+   Alternatively, use your preferred registry editing tool or automation solution to delete the same value. Don't delete the whole registry key.
+
+#### Option 2: Use a script to enable the remediation
+
+Open an elevated PowerShell window on each of the affected machines and run the following commands. The last command prompts you to restart your device. The mitigation isn't complete until the machine is rebooted, and it's recommended that you restart immediately after running this script.
+
+```powershell
+Stop-Service -Name 'HIMDS'
+New-Item -Path 'HKLM:\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides' -Force
+New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides' -PropertyType 'dword' -Name '4264695439' -Value 1 -Force
+try {
+  Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Subscriptions' -Name 'DeviceLicensingServiceCommandMutex' -ErrorAction Stop
+} catch {
+  Write-Host "DeviceLicensingServiceCommandMutex entry not present, skipping removal."
+}
+Restart-Computer -Confirm
+```
+
 ## Next steps
 
-Now that Hotpatch is enabled, here are some articles that might help you with updating your computer:
+Now that Hotpatch is enabled, here are some articles that might help you with updating your computer.
 
 - [Hotpatch for Windows Server](hotpatch.md)
 - [Patch a Server Core installation](../administration/server-core/server-core-servicing.md)

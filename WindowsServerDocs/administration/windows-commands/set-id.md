@@ -2,10 +2,8 @@
 title: set id
 description: Reference article for the Diskpart set id command, which changes the partition type field for the partition with focus.
 ms.topic: reference
-ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
 ms.author: daknappe
-author: robinharwood
-manager: mtillman
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

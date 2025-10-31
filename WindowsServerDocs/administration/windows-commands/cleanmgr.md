@@ -3,8 +3,7 @@ title: cleanmgr
 description: Configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files.
 ms.reviewer: cosmosdarwin
 author: robinharwood
-ms.author: alalve
-manager: daveba
+ms.author: roharwoo
 ms.date: 01/18/2024
 ms.topic: reference
 ---

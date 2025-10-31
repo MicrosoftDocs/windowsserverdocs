@@ -1,11 +1,9 @@
 ---
 title: BranchCache
 description: This topic provides an overview of BranchCache in Windows Server 2016
-manager: brianlic
-ms.topic: article
-ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: jgerend
+ms.topic: concept-article
 author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # BranchCache
@@ -466,3 +464,4 @@ In a hosted cache environment where the hosted cache server is running  Windows 
 > Hosted cache servers that are running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 encrypt all data in the cache by default, so the use of additional encryption technologies is not required.
 
 Even if a client is configured in hosted cache mode, it will still cache data locally, and you might want to take steps to protect the local cache in addition to the cache on the hosted cache server.
+

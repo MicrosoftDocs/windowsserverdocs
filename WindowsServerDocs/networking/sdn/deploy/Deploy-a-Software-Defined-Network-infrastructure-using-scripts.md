@@ -2,7 +2,6 @@
 title: Deploy a Software Defined Network Infrastructure Using Scripts
 description: This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server.
 ms.topic: how-to
-ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/13/2024

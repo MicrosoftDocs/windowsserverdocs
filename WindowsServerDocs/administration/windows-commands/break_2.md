@@ -2,9 +2,8 @@
 title: break (diskshadow)
 description: Reference article for the break command, which disassociates a shadow copy volume from VSS and makes it accessible as a regular volume.
 ms.topic: reference
-ms.assetid: de2b6c95-1c2e-4a43-bec5-341a9014371b
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2023
 ---
 

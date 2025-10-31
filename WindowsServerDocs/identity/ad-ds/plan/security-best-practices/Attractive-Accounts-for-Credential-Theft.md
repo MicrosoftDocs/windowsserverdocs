@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Attractive Accounts for Credential Theft"
-ms.assetid: 34244b53-1206-4f5b-8c4d-3ebf574d8e24
 title: Attractive Accounts for Credential Theft
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: best-practice
 ---
 
 # Attractive Accounts for Credential Theft

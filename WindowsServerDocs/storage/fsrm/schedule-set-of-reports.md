@@ -2,9 +2,8 @@
 title: Schedule a Set of Reports
 description: This article describes how to generate a set of reports on a regular schedule
 ms.date: 12/10/2024
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
@@ -80,3 +79,4 @@ In addition, you can view the current status of the report (whether or not the r
 
 - [Storage Reports Management](storage-reports-management.md)
 - [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+

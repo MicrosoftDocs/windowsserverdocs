@@ -2,10 +2,8 @@
 title: jetpack
 description: Reference article for the jetpack command, which compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database.
 ms.topic: reference
-ms.assetid: 82a2b7ef-0db5-4575-a028-8acb0bf6c7ba
-ms.author: jgerend
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

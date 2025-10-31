@@ -1,11 +1,9 @@
 ---
 title: STEP 2 Install and Configure ROUTER1
 description: Learn how to install and configure ROUTER1.
-manager: brianlic
-ms.topic: article
-ms.assetid: dc20b1a0-540d-4531-a176-50b87c071600
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 2 Install and Configure ROUTER1

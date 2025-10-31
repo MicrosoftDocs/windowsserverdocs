@@ -1,21 +1,26 @@
 ---
-title: Choose drives for Azure Stack HCI and Windows Server clusters
-description: How to choose drives for Azure Stack HCI and Windows Server clusters to meet performance and capacity requirements.
+title: Choose drives for Azure Local and Windows Server clusters
+description: How to choose drives for Azure Local and Windows Server clusters to meet performance and capacity requirements.
 author: robinharwood
 ms.author: roharwoo
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/10/2025
+appliesto: [
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+           ]
 ---
 
-# Choose drives for Azure Stack HCI and Windows Server clusters
-
-> Applies to: Azure Stack HCI, versions 22H2 and 21H2; Windows Server 2022, Windows Server 2019
+# Choose drives for Azure Local and Windows Server clusters
 
 This article provides guidance on how to choose drives to meet your performance and capacity requirements.
 
 ## Drive types
 
-Storage Spaces Direct, the underlying storage virtualization technology behind Azure Stack HCI and Windows Server currently works with four types of drives:
+Storage Spaces Direct, the underlying storage virtualization technology behind Azure Local and Windows Server currently works with four types of drives:
 
 | Type of drive | Description |
 |----------------------|--------------------------|

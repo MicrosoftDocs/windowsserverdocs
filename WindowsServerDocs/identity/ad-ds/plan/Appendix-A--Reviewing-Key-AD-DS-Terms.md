@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Appendix A: Reviewing Key AD DS Terms"
-ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Appendix A - Reviewing Key AD DS Terms
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: glossary
 ---
 
 # Appendix A: Reviewing Key AD DS Terms

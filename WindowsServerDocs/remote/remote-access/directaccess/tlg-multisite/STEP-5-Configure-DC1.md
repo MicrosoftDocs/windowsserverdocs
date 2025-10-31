@@ -1,11 +1,9 @@
 ---
 title: STEP 5 Configure DC1
 description: Learn how to configure the default gateway on the domain controller, create security groups for Windows 7 DirectAccess clients on DC1, and add a new AD DS site.
-manager: brianlic
-ms.topic: article
-ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 5 Configure DC1

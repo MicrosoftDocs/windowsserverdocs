@@ -2,9 +2,8 @@
 title: File Server Resource Manager Command-Line Tools
 description: This article describes Windows Server 2016 command-line tools
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # File Server Resource Manager command-line tools
@@ -51,3 +50,4 @@ To manage remote resources with the command-line tools:
 ## Additional References
 
 -   [Managing Remote Storage Resources](managing-remote-storage-resources.md)
+

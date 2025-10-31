@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using TPM mode in an existing bastion forest"
 title: Initialize the HGS cluster using TPM mode in a bastion forest
-ms.topic: article
-manager: dongill
-author: robinharwood
-ms.author: mosagie
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
@@ -39,3 +38,5 @@ In a production environment, you should continue to [add additional HGS nodes to
 
 > [!div class="nextstepaction"]
 > [Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
+
+

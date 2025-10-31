@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Fault domain awareness"
-ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
-ms.author: jgerend
-manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+author: robinharwood
+ms.author: roharwoo
+ms.topic: how-to
 ms.date: 02/16/2023
 ---
+
 # Fault domain awareness
-
-
 
 Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduced chassis, rack, and site fault tolerance as well.
 
@@ -187,3 +184,4 @@ This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, 
 You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service.
 
 This short video demonstrates the value of [adding location descriptors to fault domains](/shows/windowsserver/fault-domain-awareness-in-ws2016-part-4-location-description).
+

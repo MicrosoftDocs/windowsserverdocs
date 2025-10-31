@@ -2,10 +2,8 @@
 title: rmdir
 description: Reference article for the rmdir command, which deletes a directory.
 ms.topic: reference
-ms.assetid: e4d7162b-7132-413c-a416-6eb3dc032a26
 ms.author: daknappe
-author: robinharwood
-manager: mtillman
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

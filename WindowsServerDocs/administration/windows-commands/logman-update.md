@@ -2,10 +2,8 @@
 title: logman update
 description: Reference article for the logman update command, which updates an existing data collector.
 ms.topic: reference
-ms.assetid: c98af84f-64ba-40c3-826d-75b80dfb9b34
-ms.author: jgerend
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

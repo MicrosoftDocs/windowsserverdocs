@@ -1,9 +1,9 @@
 ---
 title: Plan for Hyper-V networking in Windows Server
 description: Describes what's needed for basic networking in Windows Server Hyper-V and gives links to instructions.
-ms.topic: article
-ms.author: mosagie
-author: meaghanlewis
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 02/19/2025
 ---
 # Plan for Hyper-V networking in Windows Server
@@ -18,7 +18,7 @@ The easiest way to establish basic networking is to create a virtual switch when
 
 To handle different types of networking, you can add virtual switches and virtual network adapters. All switches are part of the Hyper-V host, but each virtual network adapter belongs to only one virtual machine.
 
-The virtual switch is a software-based layer-2 Ethernet network switch. It provides built-in features for monitoring, controlling, and segmenting traffic, as well as security, and diagnostics. You can add to the set of built-in features by installing plug-ins, also called *extensions*. These are available from independent software vendors. For more information about the switch and extensions, see [Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
+The virtual switch is a software-based layer-2 Ethernet network switch. It provides built-in features for monitoring, controlling, and segmenting traffic, as well as security, and diagnostics. You can add to the set of built-in features by installing plug-ins, also called *extensions*. These are available from independent software vendors. For more information about the switch and extensions, see [Hyper-V Virtual Switch](../../hyper-v/virtual-switch.md).
 
 ### Switch and network adapter choices
 
@@ -39,7 +39,7 @@ Virtual switch options:
 | Setting name | Description |
 |---|---|
 | Allow management operating system to share this network adapter | Allow the Hyper-V host to share the use of the virtual switch and NIC or NIC team with the virtual machine. With this enabled, the host can use any of the settings that you configure for the virtual switch, such as Quality of Service (QoS) settings, security settings, or other features of the Hyper-V virtual switch. |
-| Enable single-root I/O virtualization (SR-IOV) | Allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. SR-IOV is only available for virtual machines running Windows Server. For more information, see [Single-Root I/O Virtualization](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn641211(v=ws.11)#Sec4) in the Poster Companion Reference: Hyper-V Networking. |
+| Enable single-root I/O virtualization (SR-IOV) | Allow virtual machine traffic to bypass the virtual machine switch and go directly to the physical NIC. SR-IOV is only available for virtual machines running Windows Server. For more information, see [Single-Root I/O Virtualization](/windows-hardware/drivers/network/overview-of-single-root-i-o-virtualization--sr-iov-). |
 
 Virtual network adapter types are:
 
@@ -51,7 +51,7 @@ Virtual network adapter types are:
 
 Some features rely on specific networking configurations or do better under certain configurations. Consider these when planning or updating your network infrastructure.
 
-**Failover clustering** - It's a best practice to isolate cluster traffic and use Hyper-V Quality of Service (QoS) on the virtual switch. For details, see [Network Recommendations for a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn550728(v=ws.11))
+**Failover clustering** - It's a best practice to isolate cluster traffic and use Hyper-V Quality of Service (QoS) on the virtual switch.
 
 **Live migration** - Use performance options to reduce network and CPU usage and the time it takes to complete a live migration. For instructions, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 

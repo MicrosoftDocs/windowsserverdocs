@@ -2,8 +2,8 @@
 title: RPC Interface Restriction for Windows Server
 description: RPC Interface Restriction helps to prevent unauthorized access to system resources and data when enabled in group policy object editor or in the registry.
 ms.topic: how-to
-author: xelu86 
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/25/2025
 ---
 
@@ -98,3 +98,4 @@ The use of these flags is at the discretion of the application developer. RPC ap
 
 - [Remote Procedure Call (RPC)](/windows/win32/rpc/rpc-start-page)
 - [RPC error troubleshooting](/troubleshoot/windows-client/networking/rpc-errors-troubleshooting)
+

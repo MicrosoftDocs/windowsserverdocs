@@ -2,10 +2,8 @@
 title: wdsutil disconnect-client
 description: Reference article for the wdsutil disconnect-client command, which disconnects a client from a multicast transmission or namespace.
 ms.topic: reference
-ms.assetid: 876bbe6c-76ab-4de5-879b-d2066e700326
-ms.author: alalve
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Modify root navigation behavior
 description: Develop a solution extension Windows Admin Center SDK - modify root navigation behavior
-ms.topic: article
-author: robinharwood
-ms.author: jgerend
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/01/2023
 ---
 
@@ -75,3 +75,4 @@ When the rootNavigationBehavior is set to "connections", you're required to buil
 ## Enabling and disabling the tools menu
 
 Another property available in the solution definition is the Tools property. The Tools property decides whether the Tools menu is displayed, and which tool will be loaded. When enabled, Windows Admin Center renders the left hand Tools menu. With defaultTool, it's required that you add a tool entry point to the manifest in order to load the appropriate resources. The value of "defaultTool" needs to be the "name" property of the tool as it's defined in the manifest.
+

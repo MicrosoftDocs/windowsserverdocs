@@ -11,8 +11,6 @@
       href: understand/case-studies.md
     - name: Related management products
       href: understand/related-management.md
-    - name: Windows Admin Center modernized gateway (preview)
-      href: understand/modernized-gateway.md  
   - name: Plan
     items:
     - name: What type of installation is right for you?
@@ -43,6 +41,8 @@
       href: configure/use-powershell.md
     - name: Websocket validation
       href: configure/websocket-validation.md
+    - name: Update the certificate
+      href: configure/update-certificate.md    
   - name: Use
     items:
     - name: Get started
@@ -63,6 +63,8 @@
       href: use/logging.md
     - name: Manage AWS Machines
       href: use/manage-aws-machines.md
+    - name: Migrate VMware virtual machines to Hyper-V
+      href: use/migrate-vmware-to-hyper-v.md  
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
@@ -71,7 +73,7 @@
       - name: Azure Backup
         href: azure/azure-backup.md
       - name: Azure Site Recovery
-        href: azure/azure-site-recovery.md
+        href: /azure/azure-local/manage/azure-site-recovery?toc=/windows-server/manage/windows-admin-center/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Azure File Sync
         href: azure/azure-file-sync.md
       - name: Azure Monitor

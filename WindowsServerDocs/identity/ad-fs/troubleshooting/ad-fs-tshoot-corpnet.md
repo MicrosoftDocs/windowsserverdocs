@@ -1,11 +1,8 @@
 ---
 title: AD FS Troubleshooting - Corporate Network Sign-In
 description: Learn how to troubleshoot various aspects of Active Directory Federation Services (AD FS) sign-in from inside the corporate network.
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 01/23/2025
+ms.topic: troubleshooting-general
 ---
 
 # Users can't sign in by using AD FS from inside the corporate network

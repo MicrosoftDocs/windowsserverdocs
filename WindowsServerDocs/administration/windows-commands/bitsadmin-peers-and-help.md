@@ -2,10 +2,8 @@
 title: bitsadmin peers and help
 description: Reference article for the bitsadmin peers and help command, which displays the command-line usage for the /peers switches.
 ms.topic: reference
-ms.assetid: 49016dcb-e3be-44d9-b00a-1a42eb5984ff
-ms.author: mosagie
+ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

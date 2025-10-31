@@ -2,7 +2,7 @@
 title: Understand and Configure Azure Monitor
 description: Detailed setup information on what Azure Monitor is and how to configure email and sms alerts for your storage spaces direct cluster in Windows Server 2016 and 2019.
 ms.author: roharwoo
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 ms.date: 01/10/2020
 ---
@@ -70,11 +70,11 @@ To give an overview, [Azure Log Analytics](/azure/azure-monitor/platform/agent-w
 
 To understand the supported configuration, review [supported Windows operating systems](/azure/azure-monitor/platform/log-analytics-agent#supported-windows-operating-systems) and [network firewall configuration](/azure/azure-monitor/platform/log-analytics-agent#network-firewall-requirements).
 
-If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) before you begin.
+If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 #### Login in to Azure Portal
 
-Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 #### Create a workspace
 
@@ -240,6 +240,6 @@ Below is an example of the email that you will be send by Azure Monitor:
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - For more detailed information, read the [Azure Monitor documentation](/azure/azure-monitor/learn/tutorial-viewdata).
 - Read this for an overview on how to [connect to other Azure hybrid services](../../manage/windows-admin-center/azure/index.md).

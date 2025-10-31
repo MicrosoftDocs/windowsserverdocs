@@ -2,8 +2,8 @@
 title: How to configure SPN for Windows Server
 description: Learn how to configure Service Principal Names (SPN) for Active Directory service accounts in Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 03/24/2025
 ---
 
@@ -247,3 +247,4 @@ $computerDN = (Get-ADComputer -Identity ComputerName).DistinguishedName
 - [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10))
 
 - [SetSPN command reference](/windows-server/administration/windows-commands/setspn)
+

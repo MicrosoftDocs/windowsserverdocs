@@ -1,11 +1,9 @@
 ---
 title: Configure Firewalls for RADIUS Traffic
 description: This topic provides an overview of how to configure firewalls to allow RADIUS traffic for Network Policy Server in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 58cca2b2-4ef3-4a09-a614-8bdc08d24f15
-ms.author: jgerend
-author: robinharwood
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 
@@ -110,6 +108,7 @@ Configure the following output packet filters on the intranet interface of the f
 For more information about managing NPS, see [Manage Network Policy Server](nps-manage-top.md).
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+
 
 
 

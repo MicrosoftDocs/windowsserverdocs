@@ -1,11 +1,9 @@
 ---
 title: Configure BranchCache Client Computers
 description: Learn how to configure domain member and non-domain member client computers as BranchCache distributed cache or hosted cache mode clients.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: e16dbea9-0f0a-41db-b460-14a1a7ad7540
-ms.author: jgerend
-author: robinharwood
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/05/2021
 ---
 # Configure BranchCache Client Computers
@@ -19,6 +17,8 @@ You can use the following topics to configure domain member and non-domain membe
 -   [Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic](../../branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 
 -   [Verify Client Computer Settings](../../branchcache/deploy/Verify-Client-Computer-Settings.md)
+
+
 
 
 

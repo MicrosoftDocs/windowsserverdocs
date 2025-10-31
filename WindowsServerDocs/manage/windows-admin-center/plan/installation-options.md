@@ -1,16 +1,16 @@
 ---
 title: What type of installation is right for you
 description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins.
-ms.topic: article
+ms.topic: concept-article
 author: davannaw-msft
 ms.author: dawhite
-ms.date: 12/11/2019
+ms.date: 07/14/2025
 ---
 # What type of installation is right for you?
 
-This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+This topic describes the different installation options for Windows Admin Center, including installing on a Windows PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
-We don’t recommend using Windows Admin Center for local management of the same server on which it’s installed. To manage a server, use Windows Admin Center to connect to the server remotely from a management PC or other server.
+We don't recommend using Windows Admin Center for local management of the same server on which it’s installed. To manage a server, use Windows Admin Center to connect to the server remotely from a management PC or other server.
 
 ## Installation: Types
 
@@ -47,7 +47,7 @@ To operate Windows Admin Center:
 
 ## Installation: Supported web browsers
 
-Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10. Other web browsers—including Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
+Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10 and 11. Other web browsers—including Firefox—aren't currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
 
 ## Management target: Supported operating systems
 
@@ -68,13 +68,11 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Windows Server 2012 | Yes | Yes |
 | Azure Local, version 22H2 and higher | Yes | Yes |
 
-> [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
->
-> Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-> and that the version is 5.1 or higher.
->
-> If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
+Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
+
+Type `$PSVersiontable` in PowerShell to verify that WMF is installed, and that the version is 5.1 or higher.
+
+If WMF isn't installed, you can [download WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## High availability
 

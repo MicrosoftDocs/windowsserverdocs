@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Install trusted TPM root certificates"
 title: Install trusted TPM root certificates
-ms.topic: article
-manager: dongill
+ms.topic: install-set-up-deploy
 author: robinharwood
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 06/27/2019
 ---
 
@@ -68,6 +67,7 @@ Existing certificates will remain trusted but new certificates found in the expa
 
 > [!div class="nextstepaction"]
 > [Configure fabric DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
+
 
 
 

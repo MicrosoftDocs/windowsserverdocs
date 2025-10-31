@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Verify DNS Functionality to Support Directory Replication"
-ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: Verify DNS Functionality to Support Directory Replication
-ms.author: justinha
-ms.date: 05/31/2017
-author: Femila
+ms.author: roharwoo
+ms.date: 05/12/2025
+author: robinharwood
 ms.topic: troubleshooting
 ---
 # Verify DNS Functionality to Support Directory Replication

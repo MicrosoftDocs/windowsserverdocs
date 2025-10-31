@@ -2,9 +2,8 @@
 title: File Screening Management
 description: This article describes how to create file screens, generate notifications, define file screening templates, and create file screening exceptions
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
@@ -35,5 +34,6 @@ This section includes the following topics:
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+
 
 

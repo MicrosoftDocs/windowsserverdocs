@@ -1,11 +1,10 @@
 ---
 description: "Learn more about: Windows Time Service"
-ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows Time Service
-author: dahavey
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/08/2018
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Windows Time Service
@@ -70,3 +69,4 @@ The Windows Time service uses NTP to help synchronize time across a network. NTP
 [How the Windows Time Service Works](How-the-Windows-Time-Service-Works.md)
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
 [Microsoft Knowledge Base article 902229](/windows-server/networking/windows-time-service/windows-time-service-top)
+

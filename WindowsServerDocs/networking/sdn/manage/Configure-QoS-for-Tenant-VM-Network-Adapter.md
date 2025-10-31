@@ -1,11 +1,9 @@
 ---
 title: Configure Quality of Service (QoS) for a VM network adapter
 description: You can configure SDN QoS for a VM network adapter to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
+ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Configure Quality of Service (QoS) for a VM network adapter

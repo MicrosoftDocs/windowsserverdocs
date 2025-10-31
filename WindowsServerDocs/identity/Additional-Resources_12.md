@@ -1,9 +1,8 @@
 ---
 description: "Learn more about: Additional Resources"
-ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources
 ms.author: roharwoo
-author: MicrosoftGuyJFlo
+author: robinharwood
 ms.date: 05/30/2024
 ms.topic: reference
 ---

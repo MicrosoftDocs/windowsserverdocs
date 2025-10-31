@@ -1,12 +1,9 @@
 ---
 description: "Learn more about: Federation Server Farm Using WID"
-ms.assetid: 663a2482-33d1-4c19-8607-2e24eef89fcb
 title: AD FS Federation Server Farm Using WID
-author: billmath
-ms.author: alalve
-manager: femila
 ms.date: 11/03/2022
-ms.topic: article
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 
 # Federation Server Farm Using WID

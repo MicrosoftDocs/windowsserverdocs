@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Claims Transformation Rules Language"
-ms.assetid: e831f781-3c45-4d44-b411-160d121d1324
 title: Claims Transformation Rules Language
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Claims Transformation Rules Language

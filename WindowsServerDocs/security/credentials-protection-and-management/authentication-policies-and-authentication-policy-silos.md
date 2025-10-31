@@ -1,11 +1,9 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
 description: Learn about authentication policy silos and the policies that can restrict accounts to those silos.
-ms.topic: article
-ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
-ms.author: alalve
-author: robinharwood
-manager: mtillman
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
@@ -232,3 +230,4 @@ For troubleshooting steps that use these events, see [Troubleshoot Authenticatio
 [Credentials Protection and Management](credentials-protection-and-management.md)
 
 [Protected Users Security Group](protected-users-security-group.md)
+

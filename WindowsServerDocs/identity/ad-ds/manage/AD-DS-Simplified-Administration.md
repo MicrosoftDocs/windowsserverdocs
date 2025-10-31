@@ -1,12 +1,11 @@
 ---
 description: "Learn more about: AD DS Simplified Administration"
-ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS Simplified Administration
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/09/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 # AD DS Simplified Administration
 

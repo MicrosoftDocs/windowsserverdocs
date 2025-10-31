@@ -1,11 +1,9 @@
 ---
 title: STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device
 description: Learn how to test DirectAccess Teredo connectivity and IP-HTTPS connectivity from behind a NAT device.
-manager: brianlic
-ms.topic: article
-ms.assetid: aded2881-99ed-4f18-868b-b765ab926597
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device

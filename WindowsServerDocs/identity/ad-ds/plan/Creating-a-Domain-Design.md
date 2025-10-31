@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Creating a Domain Design"
-ms.assetid: 2a25bf86-a8ec-4b1a-9cbb-924d5b574481
 title: Creating a Domain Design
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Creating a Domain Design

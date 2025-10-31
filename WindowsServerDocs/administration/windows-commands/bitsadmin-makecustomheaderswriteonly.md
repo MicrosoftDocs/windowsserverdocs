@@ -2,9 +2,8 @@
 title: bitsadmin makecustomheaderswriteonly
 description: Reference article for the bitsadmin makecustomheaderswriteonly command, which make a job's Custom HTTP Headers write-only.
 ms.topic: reference
-ms.author: mosagie
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 03/01/2019
 ---
 

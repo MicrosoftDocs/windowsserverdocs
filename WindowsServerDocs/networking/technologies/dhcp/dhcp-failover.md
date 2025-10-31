@@ -2,8 +2,8 @@
 title: DHCP failover in Windows Server
 description: Learn how DHCP Failover replicates IP address leases and settings in DHCP scopes from a primary DHCP server to a failover partner server.
 ms.topic: overview
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/11/2025
 ---
 
@@ -185,3 +185,4 @@ In this example, both DHCP servers are on the same subnet (10.0.1.0/24). The pri
 Virtual Router Redundancy Protocol (VRRP) is another failover protocol used to enable redundancy on network devices. An example of VRRP includes Hot Standby Router Protocol (HSRP), which is a Cisco proprietary VRRP. If VRRP/HSRP is configured on a network device that is also configured with one or more DHCP relays, this can cause duplicate DHCP relay messages to be sent to the same DHCP failover server.
 
 If a single DHCP server configured for DHCP failover receives duplicate lease requests, this can cause inconsistent client lease durations, and clients might lease IP addresses that belong to other clients. Consult your vendor documentation to determine if the router redundancy protocol requires a specific configuration to support DHCP relay. For example, Cisco provides DHCP relay support for the HSRP protocol using virtual router groups.
+

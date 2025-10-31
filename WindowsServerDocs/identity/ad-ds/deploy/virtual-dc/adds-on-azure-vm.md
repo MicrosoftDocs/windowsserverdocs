@@ -1,11 +1,10 @@
 ---
 title: Install Active Directory Domain Services on an Azure virtual machine
 description: How to create a new Active Directory forest on a virtual machine (VM) on an Azure virtual machine.
-author: justinha
-ms.author: justinha
-manager: femila
-ms.date: 03/18/2025
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: install-set-up-deploy
 ---
 
 # Install a new Active Directory forest using Azure CLI

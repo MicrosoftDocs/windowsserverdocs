@@ -1,11 +1,10 @@
 ---
-ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Accurate Time for Windows Server 2016
 description: Time synchronization accuracy in Windows Server 2016 has been improved substantially, while maintaining full backwards NTP compatibility with older Windows versions.
-author: dahavey
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 11/04/2021
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Accurate Time for Windows Server 2016
@@ -70,3 +69,4 @@ There are many different reasons you might need accurate time. The typical case 
 ## Additional references
 
 - [Time accuracy improvements for Windows Server 2016](windows-server-2016-improvements.md)
+

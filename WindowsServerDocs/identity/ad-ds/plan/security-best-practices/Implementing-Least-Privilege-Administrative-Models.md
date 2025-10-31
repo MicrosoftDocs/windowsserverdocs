@@ -1,12 +1,12 @@
 ---
 description: "Learn more about: Implementing Least-Privilege Administrative Models"
-ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementing Least-Privilege Administrative Models
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/09/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
+
 ---
 # Implementing Least-Privilege Administrative Models
 

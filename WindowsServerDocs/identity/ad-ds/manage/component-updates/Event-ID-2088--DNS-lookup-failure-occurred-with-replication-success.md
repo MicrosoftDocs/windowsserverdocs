@@ -1,12 +1,10 @@
 ---
 description: "Learn more about: Event ID 2088: DNS lookup failure occurred with replication success"
-ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: Event ID 2088 - DNS lookup failure occurred with replication success
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: troubleshooting-error-codes
 ---
 
 # Event ID 2088: DNS lookup failure occurred with replication success
@@ -49,7 +47,7 @@ metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498.
 
 2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \<source DC name>" or "ping \<source DC name>".
 
-3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on <https://www.microsoft.com/dns>
+3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using `DCDIAG.EXE`. For more information, see [Dcdiag](/windows-server/administration/windows-commands/dcdiag).
 
 dcdiag /test:dns
 

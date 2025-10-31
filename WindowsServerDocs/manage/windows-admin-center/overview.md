@@ -1,7 +1,7 @@
 ---
 title: Windows Admin Center overview
 description: Learn how to manage Windows Server using Windows Admin Center (Project Honolulu).
-ms.topic: article
+ms.topic: overview
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 08/22/2024
@@ -58,17 +58,25 @@ Here's a video to give you an overview, followed by a poster giving more details
 
 | Extend |
 |--------|
-| - [Overview of extensions](extend/extensibility-overview.md) <br> - [Understanding extensions](extend/understand-extensions.md) <br> - [Develop an extension](extend/developing-extensions.md) <br> - [Guides](extend/publish-extensions.md) <br> - [Publishing extensions](extend/publish-extensions.md) |
+| - [Overview of extensions](extend/extensibility-overview.md)<br>- [Understanding extensions](extend/understand-extensions.md)<br>- [Develop an extension](extend/developing-extensions.md)<br>- [Guides](extend/publish-extensions.md)<br>- [Publishing extensions](extend/publish-extensions.md) |
 
 ## See how customers benefit from Windows Admin Center
 
-"[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%."<br> *- Rand Morimoto, President, Convergent Computing*
+- "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%."
 
-"Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Microsoft Entra ID, we're able to increase the security thanks to the multifactor authentication."<br> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies*
+   *- Rand Morimoto, President, Convergent Computing*
 
-“We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security, and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb*
+- "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Microsoft Entra ID, we're able to increase the security thanks to the multifactor authentication."
 
-“With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br> *- Helmut Otto, Managing Director, SecureGUARD*
+   *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies*
+
+- "We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security, and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only."
+
+   *- Guglielmo Mengora, Founder and CEO, VaiSulWeb*
+
+- "With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!"
+
+   *- Helmut Otto, Managing Director, SecureGUARD*
 
 To read more about companies using Windows Admin Center in their production environments, see [Windows Admin Center Case Studies](understand/case-studies.md).
 

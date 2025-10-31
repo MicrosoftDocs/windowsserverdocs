@@ -1,11 +1,9 @@
 ---
 title: Add host information for TPM-trusted attestation
 description: Information about adding host information for TPM-trusted attestation.
-ms.topic: article
-ms.assetid: f0aa575b-b34e-4f6c-8416-ed3e398e0ad2
-manager: dongill
+ms.topic: how-to
 author: robinharwood
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 06/21/2019
 ---
 
@@ -54,3 +52,5 @@ This completes the process of configuring an HGS cluster for TPM mode. The fabri
 ## Next step
 
 > [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
+

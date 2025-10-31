@@ -1,11 +1,9 @@
 ---
 title: RADIUS Clients
 description: This topic provides an overview of RADIUS Clients for Network Policy Server in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: d3a09ac9-75f8-4f57-aab4-b0fdfe110118
-ms.author: jgerend
-author: robinharwood
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 
@@ -75,4 +73,5 @@ Described in RFC 2869, "RADIUS Extensions," a Message Digest 5 \(MD5\) hash of t
 >The Message Authenticator attribute is required and enabled by default when you use Extensible Authentication Protocol \(EAP\) authentication.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+
 

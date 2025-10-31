@@ -1,7 +1,7 @@
 ---
 title: Deploy Hyperconverged Infrastructure with Windows Admin Center
 description: Learn how to deploy a hyperconverged infrastructure by using Windows Admin Center.
-ms.topic: article
+ms.topic: install-set-up-deploy
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/04/2019

@@ -2,9 +2,8 @@
 title: Managing Remote Storage Resources
 description: This article describes how to manage storage resources on a remote computer
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
@@ -29,3 +28,4 @@ This section includes the following topics:
 
 -   [Connect to a Remote Computer](connect-to-remote-computer.md)
 -   [Command-Line Tools](command-line-tools.md)
+

@@ -1,13 +1,13 @@
 ---
 description: "Learn more about: SPN and UPN uniqueness"
-ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN and UPN uniqueness
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/18/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # SPN and UPN uniqueness

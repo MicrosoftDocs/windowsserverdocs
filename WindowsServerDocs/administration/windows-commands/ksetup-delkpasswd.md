@@ -2,10 +2,8 @@
 title: ksetup delkpasswd
 description: Reference article for the ksetup delkpasswd command, which removes a Kerberos password server (kpasswd) for a realm.
 ms.topic: reference
-ms.assetid: 2db0bfcd-bc08-48e3-9f30-65b6411839c6
-ms.author: jgerend
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

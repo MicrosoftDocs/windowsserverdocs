@@ -1,11 +1,9 @@
 ---
 title: Credentials Protection and Management
 description: Learn about features and methods introduced in Windows Server 2012 R2 and Windows 8.1 for credential protection and domain authentication controls to reduce credential theft.
-ms.topic: article
-ms.assetid: e457229c-0126-40fe-948c-101c943e1b57
-ms.author: alalve
+ms.topic: concept-article
+ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/12/2016
 ---
 # Credentials Protection and Management
@@ -60,3 +58,4 @@ For more information how to configure protected accounts, see [How to Configure 
 
 ## Additional References
 For more information about the LSA and the LSASS, see the [Windows Logon and Authentication Technical Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169029(v=ws.10)).
+

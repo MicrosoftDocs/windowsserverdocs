@@ -3,10 +3,8 @@ title: Upgrading your Remote Desktop Session Host
 description: Learn how to upgrade your existing Remote Desktop Session Host.
 ms.author: daknappe
 ms.date: 7/3/2024
-ms.topic: article
-ms.assetid: 5c9b98b8-4eca-4a39-b10b-2bac729f7f44
-author: spatnaik
-manager: scottman
+ms.topic: upgrade-and-migration-article
+author: dknappettmsft
 ---
 # Upgrading your Remote Desktop Session Host
 

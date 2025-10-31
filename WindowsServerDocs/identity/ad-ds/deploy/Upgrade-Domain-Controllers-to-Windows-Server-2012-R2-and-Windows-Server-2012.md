@@ -1,16 +1,16 @@
 ---
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 description: Learn more about upgrading domain controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.author: justinha
-author: iainfoulds
-ms.date: 05/16/2023
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: upgrade-and-migration-article
 ms.custom: inhenke
 ---
 
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
-This article provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
+This article provides background information about Active Directory Domain Services in Windows Server 2012 R2 and Windows Server 2012 and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
 
 ## <a name="BKMK_UpgradeWorkflow"></a>Domain controller upgrade steps
 
@@ -22,7 +22,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 1. Check connectivity to the target server from the computer where you plan to run the installation.
 1. Check for availability of necessary operation master roles:
 
-   - To install the first DC that runs  Windows Server 2012  in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.
+   - To install the first DC that runs Windows Server 2012 in an existing domain and forest, the machine where you run the installation needs connectivity to the schema master in order to run adprep /forestprep and the infrastructure master in order to run adprep /domainprep.
    - To install the first DC in a domain where the forest schema is already extended, you only need connectivity to infrastructure master.
    - To install or remove a domain in an existing forest, you need connectivity to the domain naming master.
    - Any domain controller installation also requires connectivity to the RID master.
@@ -139,22 +139,22 @@ There are some changes related to AD DS:
 - **Deprecation of Adprep32.exe**
    - There's only one version of Adprep.exe and it can be run as needed on 64-bit servers that run Windows Server 2008 or later. It can be run remotely, and must be run remotely if that targeted operations master role is hosted on a 32-bit operating system or Windows Server 2003.
 - **Deprecation of Dcpromo.exe**
-   - Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
+   - Dcpromo is deprecated although in Windows Server 2012 only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
 - **LMHash is disabled on user accounts**
   - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps described in the page [How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases](/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
 
-Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
+Beginning with Windows Server 2008, domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
 
 | Encryption type or policy | Windows Server 2008 default | Windows Server 2012 and Windows Server 2008 R2 default | Comment |
 |--|--|--|--|
 | AllowNT4Crypto | Disabled | Disabled | Third-party Server Message Block (SMB) clients may be incompatible with the secure default settings on domain controllers. In all cases, these settings can be relaxed to allow interoperability, but only at the expense of security. For more information, see [Disable the AllowNT4Crypto setting on all affected domain controllers](/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers) in the Microsoft Knowledge Base (/services-hub/unified/health/remediation-steps-ad/disable-the-allownt4crypto-setting-on-all-affected-domain-controllers). |
 | DES | Enabled | Disabled | [Article 977321](/troubleshoot/windows-server/windows-security/kdc-event-16-27-des-encryption-disabled) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [Install Service Packs and Hotfixes - Windows Client](/troubleshoot/windows-client/deployment/install-service-packs-hotfixes) (/troubleshoot/windows-client/deployment/install-service-packs-hotfixes) in the Microsoft Knowledge Base as required. |
+| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](/security-updates/securityadvisories/2009/973811) ([https://learn.microsoft.com/security-updates/securityadvisories/2009/973811](/security-updates/securityadvisories/2009/973811)) and [article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [Install Service Packs and Hotfixes - Windows Client](/troubleshoot/windows-client/deployment/install-service-packs-hotfixes) ([https://learn.microsoft.com/previous-versions/troubleshoot/windows-client/install-service-packs-hotfixes](/troubleshoot/windows-client/deployment/install-service-packs-hotfixes)) in the Microsoft Knowledge Base as required. |
 | LMv2 | Enabled | Disabled | [Article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="BKMK_SysReqs"></a>Operating system requirements
 
-The minimum system requirements for  Windows Server 2012  are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
+The minimum system requirements for Windows Server 2012 are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
 
 | Requirement | Value |
 | ---------- | ----- |
@@ -166,7 +166,7 @@ The minimum system requirements for  Windows Server 2012  are listed in the foll
 
 ### <a name="BKMK_DiskSpaceDCWin8"></a>Disk space requirements for upgrading domain controllers
 
-This section covers disk space requirements only for upgrading domain controllers from  Windows Server 2008  or  Windows Server 2008 R2 . For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008R2).
+This section covers disk space requirements only for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2. For more information about disk space requirements for upgrading domain controllers to earlier versions of Windows Server, see [Disk space requirements for upgrading to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008) or [Disk space requirements for upgrading to Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754463(v=ws.10)#BKMK_2008R2).
 
 Size the disk that hosts the Active Directory database and log files in order to accommodate the custom and application-driven schema extensions, application and administrator-initiated indexes, plus space for the objects and attributes that you'll be added to the directory over deployment life of the domain controller (typically 5 to 8 years). Right sizing at deployment time is typically a good investment compared to greater touch costs required to expand disk storage after deployment. For more information, see [Capacity Planning for Active Directory Domain Services](../../../administration/performance-tuning/role/active-directory-server/capacity-planning-for-active-directory-domain-services.md).
 
@@ -189,7 +189,7 @@ The following Windows client and Windows Server operating systems are supported 
 
 ## <a name="BKMK_UpgradePaths"></a>Supported in-place upgrade paths
 
-Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Server 2008 R2 can be upgraded to  Windows Server 2012 . You can't upgrade domain controllers that run Windows Server 2003 or 32-bit versions of Windows Server 2008. To replace them, install domain controllers that run a later version of Windows Server in the domain, and then remove the domain controllers that Windows Server 2003.
+Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Server 2008 R2 can be upgraded to Windows Server 2012. You can't upgrade domain controllers that run Windows Server 2003 or 32-bit versions of Windows Server 2008. To replace them, install domain controllers that run a later version of Windows Server in the domain, and then remove the domain controllers that Windows Server 2003.
 
 | If you're running these editions | You can upgrade to these editions |
 |--|--|
@@ -202,11 +202,11 @@ Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Se
 
 For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204(v=ws.11)). Note that you can't convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.
 
-Due to a known issue, you can't upgrade a domain controller that runs a Server Core installation of Windows Server 2008 R2 to a Server Core installation of  Windows Server 2012 . The upgrade will hang on a solid black screen late in the upgrade process. Rebooting such DCs exposes an option in boot.ini file to roll back to the previous operating system version. An additional reboot triggers the automatic rollback to the previous operating system version. Until a solution is available, it's recommended that you install a new domain controller running a Server Core installation of  Windows Server 2012  instead of in-place upgrading an existing domain controller that runs a Server Core installation of Windows Server 2008 R2. For more information, see KB article [2734222](/troubleshoot/developer/visualstudio/installation/installation-hangs-install-kb-update).
+Due to a known issue, you can't upgrade a domain controller that runs a Server Core installation of Windows Server 2008 R2 to a Server Core installation of Windows Server 2012. The upgrade will hang on a solid black screen late in the upgrade process. Rebooting such DCs exposes an option in boot.ini file to roll back to the previous operating system version. An additional reboot triggers the automatic rollback to the previous operating system version. Until a solution is available, it's recommended that you install a new domain controller running a Server Core installation of Windows Server 2012 instead of in-place upgrading an existing domain controller that runs a Server Core installation of Windows Server 2008 R2. For more information, see KB article [2734222](/troubleshoot/developer/visualstudio/installation/installation-hangs-install-kb-update).
 
 ## <a name="BKMK_FunctionalLevels"></a>Functional level features and requirements
 
-Windows Server 2012  requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs  Windows Server 2012  to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. This means that domain controllers that run Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003 can operate in the same forest, but domain controllers that run Windows 2000 Server aren't supported and will block installation of a domain controller that runs Windows Server 2012. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked.
+Windows Server 2012 requires a Windows Server 2003 forest functional level. That is, before you can add a domain controller that runs Windows Server 2012 to an existing Active Directory forest, the forest functional level must be Windows Server 2003 or higher. This means that domain controllers that run Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003 can operate in the same forest, but domain controllers that run Windows 2000 Server aren't supported and will block installation of a domain controller that runs Windows Server 2012. If the forest contains domain controllers running Windows Server 2003 or later but the forest functional level is still Windows 2000, the installation is also blocked.
 
 Windows 2000 domain controllers must be removed prior to adding Windows Server 2012 domain controllers to your forest. In this case, consider the following workflow:
 
@@ -216,17 +216,17 @@ Windows 2000 domain controllers must be removed prior to adding Windows Server 2
 4. Install domain controllers that run Windows Server 2012.
 5. Remove domain controllers that run earlier versions of Windows Server.
 
-The new  Windows Server 2012  domain functional level enables one new feature: the **KDC support for claims, compound authentication, and Kerberos armoring** KDC administrative template policy has two settings (**Always provide claims** and **Fail unarmored authentication requests**) that require  Windows Server 2012  domain functional level.
+The new Windows Server 2012 domain functional level enables one new feature: the **KDC support for claims, compound authentication, and Kerberos armoring** KDC administrative template policy has two settings (**Always provide claims** and **Fail unarmored authentication requests**) that require Windows Server 2012 domain functional level.
 
-The  Windows Server 2012  forest functional level doesn't provide any new features, but it ensures that any new domain created in the forest will automatically operate at the  Windows Server 2012  domain functional level. The  Windows Server 2012  domain functional level doesn't provide other new features beyond KDC support for claims, compound authentication, and Kerberos armoring. But it ensures that any domain controller in the domain runs  Windows Server 2012 . For more information about other features that are available at different functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
+The Windows Server 2012 forest functional level doesn't provide any new features, but it ensures that any new domain created in the forest will automatically operate at the Windows Server 2012 domain functional level. The Windows Server 2012 domain functional level doesn't provide other new features beyond KDC support for claims, compound authentication, and Kerberos armoring. But it ensures that any domain controller in the domain runs Windows Server 2012. For more information about other features that are available at different functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
 
-After you set the forest functional level to a certain value, you can't roll back or lower the forest functional level, with the following exceptions: after you raise the forest functional level to  Windows Server 2012 , you can lower it to  Windows Server 2008 R2 . If Active Directory Recycle Bin hasn't been enabled, you can also lower the forest functional level from  Windows Server 2012  to  Windows Server 2008 R2  or  Windows Server 2008  or from  Windows Server 2008 R2  back to  Windows Server 2008 . If the forest functional level is set to  Windows Server 2008 R2 , it can't be rolled back, for example, to Windows Server 2003.
+After you set the forest functional level to a certain value, you can't roll back or lower the forest functional level, with the following exceptions: after you raise the forest functional level to Windows Server 2012, you can lower it to Windows Server 2008 R2. If Active Directory Recycle Bin hasn't been enabled, you can also lower the forest functional level from Windows Server 2012 to Windows Server 2008 R2 or Windows Server 2008 or from Windows Server 2008 R2 back to Windows Server 2008. If the forest functional level is set to Windows Server 2008 R2, it can't be rolled back, for example, to Windows Server 2003.
 
-After you set the domain functional level to a certain value, you can't roll back or lower the domain functional level, with the following exceptions: when you raise the domain functional level to  Windows Server 2008 R2  or  Windows Server 2012 , and if the forest functional level is  Windows Server 2008  or lower, you have the option of rolling the domain functional level back to  Windows Server 2008  or  Windows Server 2008 R2 . You can lower the domain functional level only from  Windows Server 2012  to  Windows Server 2008 R2  or  Windows Server 2008  or from  Windows Server 2008 R2  to  Windows Server 2008 . If the domain functional level is set to  Windows Server 2008 R2 , it can't be rolled back, for example, to Windows Server 2003.
+After you set the domain functional level to a certain value, you can't roll back or lower the domain functional level, with the following exceptions: when you raise the domain functional level to Windows Server 2008 R2 or Windows Server 2012, and if the forest functional level is Windows Server 2008 or lower, you have the option of rolling the domain functional level back to Windows Server 2008 or Windows Server 2008 R2. You can lower the domain functional level only from Windows Server 2012 to Windows Server 2008 R2 or Windows Server 2008 or from Windows Server 2008 R2 to Windows Server 2008. If the domain functional level is set to Windows Server 2008 R2, it can't be rolled back, for example, to Windows Server 2003.
 
 For more information about features that are available at lower functional levels, see [Understanding Active Directory Domain Services (AD DS) Functional Levels](../active-directory-functional-levels.md).
 
-Beyond functional levels, a domain controller that runs  Windows Server 2012  provides additional features that are not available on a domain controller that runs an earlier version of Windows Server. For example, a domain controller that runs  Windows Server 2012  can be used for virtual domain controller cloning, whereas a domain controller that runs an earlier version of Windows Server can't. But virtual domain controller cloning and virtual domain controller safeguards in  Windows Server 2012  don't have any functional level requirements.
+Beyond functional levels, a domain controller that runs Windows Server 2012 provides additional features that are not available on a domain controller that runs an earlier version of Windows Server. For example, a domain controller that runs Windows Server 2012 can be used for virtual domain controller cloning, whereas a domain controller that runs an earlier version of Windows Server can't. But virtual domain controller cloning and virtual domain controller safeguards in Windows Server 2012 don't have any functional level requirements.
 
 > [!NOTE]
 > Microsoft Exchange Server 2013 requires a forest functional level of Windows server 2003 or higher.
@@ -245,22 +245,22 @@ AD DS can't be installed on a server that also runs the following server roles o
 
 ## <a name="BKMK_OpsMasters"></a>Operations master roles
 
-Some new features in  Windows Server 2012  affect operations master roles:
+Some new features in Windows Server 2012 affect operations master roles:
 
-- The PDC emulator must be running  Windows Server 2012  to support cloning virtual domain controllers. There are additional prerequisites for cloning DCs. For more information, see [Active Directory Domain Services (AD DS) Virtualization](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
-- New security principals are created when the PDC emulator runs  Windows Server 2012 .
+- The PDC emulator must be running Windows Server 2012 to support cloning virtual domain controllers. There are additional prerequisites for cloning DCs. For more information, see [Active Directory Domain Services (AD DS) Virtualization](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+- New security principals are created when the PDC emulator runs Windows Server 2012.
 - The RID Master has new RID issuance and monitoring functionality. The improvements include better event logging, more appropriate limits, and the ability to - in an emergency - increase the overall RID pool allocation by one bit. For more information, see [Managing RID Issuance](../../ad-ds/manage/Managing-RID-Issuance.md).
 
 > [!NOTE]
-> Though they are not operations master roles, another change in AD DS installation is that DNS server role and the global catalog are installed by default on all domain controllers that run  Windows Server 2012 .
+> Though they are not operations master roles, another change in AD DS installation is that DNS server role and the global catalog are installed by default on all domain controllers that run Windows Server 2012.
 
 ## <a name="BKMK_Virtual"></a>Virtualizing domain controllers
 
-Improvements in AD DS beginning in  Windows Server 2012  enable safer virtualization of domain controllers and the ability to clone domain controllers. Cloning domain controllers in turn enables rapid deployment of additional domain controllers in a new domain and other benefits. For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).
+Improvements in AD DS beginning in Windows Server 2012 enable safer virtualization of domain controllers and the ability to clone domain controllers. Cloning domain controllers in turn enables rapid deployment of additional domain controllers in a new domain and other benefits. For more information, see [Introduction to Active Directory Domain Services &#40;AD DS&#41; Virtualization &#40;Level 100&#41;](../../ad-ds/Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md).
 
 ## <a name="BKMK_Admin"></a>Administration of Windows Server 2012 servers
 
-Use the [Remote Server Administration Tools for Windows 8](https://www.microsoft.com/download/details.aspx?id=28972) to manage domain controllers and other servers that run  Windows Server 2012 . You can run the  Windows Server 2012  Remote Server Administration Tools on a computer that runs Windows 8.
+Use the [Remote Server Administration Tools for Windows 8](https://www.microsoft.com/download/details.aspx?id=28972) to manage domain controllers and other servers that run Windows Server 2012. You can run the Windows Server 2012 Remote Server Administration Tools on a computer that runs Windows 8.
 
 ## <a name="BKMK_AppCompat"></a>Application compatibility
 

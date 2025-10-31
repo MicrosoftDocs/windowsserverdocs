@@ -2,10 +2,9 @@
 title: Manage Hyper-V Integration Services
 description: This article describes how to turn Hyper-V integration services on and off, and install them if needed.
 ms.author: daknappe
-author: meaghanlewis
+author: dknappettmsft
 ms.date: 02/18/2025
-ms.topic: article
-ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
+ms.topic: how-to
 ---
 
 # Manage Hyper-V Integration Services
@@ -89,7 +88,7 @@ In order for an integration service to be fully functional, its corresponding se
 
 1. Open Services manager by running ```services.msc``` as an Administrator or by double-clicking the Services icon in Control Panel.
 
-    ![Screen shot that shows the Windows Services pane](media/HVServices.png)
+    ![Screen shot that shows the Windows Services pane](./media/HVServices.png)
 
 1. Find the services that start with **Hyper-V**.
 

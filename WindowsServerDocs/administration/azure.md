@@ -1,9 +1,8 @@
 ---
 title: Windows Server and Azure Management
 description: Learn how Microsoft Azure can extend Windows Server Management
-author: thomasmaurer
-ms.author: alalve
-manager: rclaus
+author: dknappettmsft
+ms.author: daknappe
 ms.reviewer: rclaus
 ms.topic: overview
 ms.date: 02/27/2022
@@ -70,3 +69,4 @@ When you run Windows Server on Azure, it enables the following integration:
 | Microsoft Entra ID | Connect your on-premises Windows Server Active Directory to Microsoft Entra ID to create a [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). <br>[Managed identities](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) for Azure virtual machines provides Azure services with an automatically managed identity in Microsoft Entra ID. You can use this identity to authenticate to any service that supports Microsoft Entra authentication, without having credentials in your code. <br> Improve the security of Windows virtual machines (VMs) in Azure by integrating with [Microsoft Entra authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows). You can now use Microsoft Entra ID as a core authentication platform to remotely connect using the Remote Desktop Protocol (RDP) into Windows Server (starting with Windows Server 2019 Datacenter edition) or Windows 10 (starting with version 1809).|
 
 Learn more about Windows Server on Azure at [Windows virtual machines in Azure](/azure/virtual-machines/windows/overview) and how to migrate Windows Server to Azure at [Azure Migrate](/azure/migrate/migrate-services-overview).
+

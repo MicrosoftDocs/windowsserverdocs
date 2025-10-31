@@ -2,9 +2,8 @@
 title: Setting File Server Resource Manager Options
 description: This article describes how to set file server resource manager options
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
@@ -18,5 +17,6 @@ This section includes the following topics:
 -   [Configure Notification Limits](configure-notification-limits.md)
 -   [Configure Storage Reports](configure-storage-reports.md)
 -   [Configure File Screen Audit](configure-file-screen-audit.md)
+
 
 

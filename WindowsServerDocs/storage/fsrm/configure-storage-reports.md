@@ -2,9 +2,8 @@
 title: Configure Storage Reports
 description: This article describes how to configure the default parameters for storage reports
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Configure Storage Reports
@@ -34,3 +33,4 @@ You can configure the default parameters for storage reports. These default para
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Storage Reports Management](storage-reports-management.md)
+

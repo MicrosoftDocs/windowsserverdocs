@@ -1,7 +1,7 @@
 ---
 title: Hyper-V processor performance
 description: Learn about the processor performance considerations to use for tuning and improving Hyper-V performance.
-ms.topic: article
+ms.topic: best-practice
 ms.author: roharwoo
 author: robinharwood
 ms.date: 01/17/2025
@@ -17,7 +17,7 @@ The virtual machine (VM) integration services include enlightened drivers for th
 
 ## Virtual processors
 
-Assess your workload to determine the processor requirements to avoid under or over provisioning. Use the results of your assessment to configure number of virtual processors required. Increase the number of virtual processors if the VM requires more processing resources under peak load. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+Assess your workload to determine the processor requirements to avoid under or over provisioning. Use the results of your assessment to configure number of virtual processors required. Increase the number of virtual processors if the VM requires more processing resources under peak load. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/maximum-scale-limits.md).
 
 When using Simultaneous multithreading (SMT), we recommended using virtual processors in multiples of two. Most modern AMD and Intel based systems have SMT enabled, where enabled we recommended configuring virtual machines to have an even number of virtual processors. To learn more about SMT, see [Manage Hyper-V hypervisor scheduler types](../../../../virtualization/hyper-v/manage/manage-hyper-v-scheduler-types.md).
 
@@ -51,7 +51,7 @@ The following are best practices for configuring a *client version* of Windows i
 
 ## Virtual NUMA
 
-Hyper-V in Windows Server expands VM scale limits to enable virtualizing large scale-up workloads. When you create large VMs, memory from multiple NUMA nodes on the host system are typically used. In that type of VM configuration, if you don't allocate virtual processors and memory from the same NUMA node, workloads might have poor performance. Performance is negatively affected because workloads can't take advantage of the NUMA optimizations. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+Hyper-V in Windows Server expands VM scale limits to enable virtualizing large scale-up workloads. When you create large VMs, memory from multiple NUMA nodes on the host system are typically used. In that type of VM configuration, if you don't allocate virtual processors and memory from the same NUMA node, workloads might have poor performance. Performance is negatively affected because workloads can't take advantage of the NUMA optimizations. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/maximum-scale-limits.md).
 
 In Windows Server, Hyper-V presents a Virtual NUMA topology to VMs. By default, this Virtual NUMA topology is optimized to match the NUMA topology of the underlying host computer. Exposing a Virtual NUMA topology into a VM lets the guest operating system, and any NUMA-aware applications running within it, take advantage of the NUMA performance optimizations, just as they would when running on a physical computer.
 
@@ -67,7 +67,7 @@ For more info on Virtual NUMA, see [Hyper-V Virtual NUMA overview](/previous-ver
 
 Here are some articles to help you learn more about Hyper-V.
 
-- [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md)
+- [Plan for Hyper-V scalability in Windows Server](../../../../virtualization/hyper-v/maximum-scale-limits.md)
 
 - [Hyper-V architecture](architecture.md)
 

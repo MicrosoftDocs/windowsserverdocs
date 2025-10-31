@@ -3,8 +3,8 @@ title: Configure security baselines for Windows Server 2025
 description: Learn how to deploy security baselines using OSConfig to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.product: windows-server
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral, Simon Jäger
 ms.date: 03/11/2025
 ---
@@ -287,3 +287,4 @@ Provide us **OSConfig security baseline** as the feedback title. Under **Choose 
 ## Related content
 
 - [Configure App Control for Business with OSConfig](osconfig-how-to-configure-app-control-for-business.md)
+

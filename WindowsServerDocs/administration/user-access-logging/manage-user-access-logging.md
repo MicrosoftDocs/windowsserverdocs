@@ -2,10 +2,8 @@
 title: Manage User Access Logging
 description: Describes how to manage User Access Logging
 ms.topic: how-to
-ms.assetid: 4f039017-4152-47eb-838e-bb6ef730b638
-author: brentfor
-ms.author: alalve
-manager: mtillman
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2017
 ---
 # Manage User Access Logging
@@ -252,3 +250,4 @@ After logging is enabled, 2 informational events get logged to the Windows Logs\
 ## <a name="BKMK_Links"></a>See also
 
 - [Get Started with User Access Logging](get-started-with-user-access-logging.md)
+

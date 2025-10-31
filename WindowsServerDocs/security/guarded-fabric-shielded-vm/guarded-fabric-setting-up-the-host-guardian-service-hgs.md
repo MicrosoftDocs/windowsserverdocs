@@ -1,11 +1,9 @@
 ---
 description: "Learn more about: Deploy the Host Guardian Service (HGS)"
 title: Deploy the Host Guardian Service
-ms.topic: article
-ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
-manager: dongill
+ms.topic: install-set-up-deploy
 author: robinharwood
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 01/14/2020
 ---
 
@@ -24,3 +22,5 @@ To deploy the HGS, complete the following tasks:
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
 - [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
+
+

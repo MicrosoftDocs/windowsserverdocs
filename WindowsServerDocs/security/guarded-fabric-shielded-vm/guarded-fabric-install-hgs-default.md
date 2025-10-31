@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Install HGS in a new forest"
 title: Install HGS in a new forest
-ms.topic: article
-manager: dongill
+ms.topic: install-set-up-deploy
 author: robinharwood
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
@@ -30,5 +29,6 @@ Run the following commands in an elevated PowerShell session to add the HGS serv
 
 > [!div class="nextstepaction"]
 > [Initialize HGS](guarded-fabric-initialize-hgs.md)
+
 
 

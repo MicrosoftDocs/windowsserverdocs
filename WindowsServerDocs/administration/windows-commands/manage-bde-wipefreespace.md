@@ -2,10 +2,8 @@
 title: manage-bde wipefreespace
 description: Reference article for the manage-bde wipefreespace command, which wipes the free space on the volume removing any data fragments that may have existed in the space.
 ms.topic: reference
-ms.assetid: b8d83a2a-c5c8-4019-9041-23d1d6abf282
-ms.author: jgerend
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

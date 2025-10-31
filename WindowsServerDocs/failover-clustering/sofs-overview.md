@@ -1,9 +1,9 @@
 ---
 title: Scale-Out File Server for application data overview for Windows Server
 description: How to plan for and deploy a Scale-Out File Server. This allows sharing the same folder from multiple nodes of the same cluster for file-based server application storage availability.
-ms.topic: article
-author: robinharwood
-ms.author: alalve
+ms.topic: overview
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/06/2025
 ---
 
@@ -133,3 +133,4 @@ The following table lists the features that are part of this scenario and descri
 - [To scale out or not to scale out, that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/to-scale-out-or-not-to-scale-out-that-is-the-question/ba-p/425080) (blog post)
 
 - [Folder Redirection, Offline Files, and Roaming User Profiles](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)
+

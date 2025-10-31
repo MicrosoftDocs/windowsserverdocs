@@ -1,10 +1,10 @@
 ---
 title: Active Directory Forest Recovery - Identify the problem
 description: When symptoms of a forest-wide failure appear, such as in event logs or other monitoring solutions, work with Microsoft Support to determine the cause of the failure and evaluate any possible remedies.
-ms.author: mosagie
-author: robinharwood
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/10/2023
-ms.topic: article
+ms.topic: troubleshooting
 ---
 
 # Active Directory Forest Recovery - Identify the problem
@@ -31,3 +31,5 @@ When symptoms of a forest-wide failure appear, such as in event logs or other mo
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

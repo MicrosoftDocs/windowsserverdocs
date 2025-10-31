@@ -2,9 +2,8 @@
 title: Add Namespace Servers to a Domain-based DFS Namespace
 description: This article describes how to specify additional namespace servers to host a namespace using DFS management.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Add namespace servers to a domain-based DFS namespace
@@ -34,3 +33,4 @@ To add a namespace server to a domain-based namespace using DFS Management, use 
 -   [Review DFS Namespaces Server Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753448(v=ws.11))
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

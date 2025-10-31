@@ -2,10 +2,8 @@
 title: logman create api
 description: Reference article for the logman create api command, which creates an API-tracing data collector.
 ms.topic: reference
-ms.assetid: 2ecc0a75-2613-464a-8616-c5dc404bb736
-ms.author: jgerend
+ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

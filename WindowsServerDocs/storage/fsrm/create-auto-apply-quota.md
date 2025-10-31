@@ -2,9 +2,8 @@
 title: Create an Auto Apply Quota
 description: This article describes how to create auto apply quotas based on a quota template
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create an Auto Apply Quota
@@ -34,3 +33,4 @@ For example, you can define an auto apply quota for subfolders that are created 
 
 -   [Quota Management](quota-management.md)
 -   [Edit Auto Apply Quota Properties](edit-auto-apply-quota-properties.md)
+

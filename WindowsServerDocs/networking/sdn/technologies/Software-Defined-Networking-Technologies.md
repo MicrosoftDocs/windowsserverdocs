@@ -1,11 +1,9 @@
 ---
 title: SDN Technologies
 description: The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2019 and 2016.
-manager: grcusanz
-ms.topic: article
-ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
+ms.topic: concept-article
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/27/2021
 ---
 # SDN Technologies
@@ -34,7 +32,7 @@ You can use Windows PowerShell, the Representational State Transfer (REST) API, 
 
 Hyper-V Network Virtualization (HNV) helps you abstract your applications and workloads from the physical network by using virtual networks. Virtual networks provide the necessary multitenant isolation while running on a shared physical network fabric, thereby driving up resource utilization. To ensure that you can carry forward your existing investments, you can set up virtual networks on existing networking gear. Also, virtual networks are compatible with virtual Local Area Networks (VLANs).
 
-## [Hyper-V Virtual Switch](../../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
+## [Hyper-V Virtual Switch](../../../virtualization/hyper-v/virtual-switch.md)
 
 The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager after you have installed the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. Also, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
 

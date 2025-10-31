@@ -1,13 +1,10 @@
 ---
 description: "Learn more about: Autonomy vs. Isolation"
-ms.assetid: ef63d40c-a262-4a18-938d-b95c10680c0b
 title: Autonomy vs. Isolation
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Autonomy vs. Isolation

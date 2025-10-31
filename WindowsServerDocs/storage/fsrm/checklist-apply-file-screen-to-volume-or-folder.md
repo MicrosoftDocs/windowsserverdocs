@@ -2,9 +2,8 @@
 title: Checklist - Apply a file screen to a volume or folder
 description: This article describes how to apply a file screen to a volume or folder
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: checklist
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Checklist - Apply a file screen to a volume or folder
@@ -37,3 +36,4 @@ To apply a file screen to a volume or folder, use the following list:
 > [!NOTE]
 > To limit storage on a volume or folder, see
 [Checklist: Apply a Quota to a Volume or Folder](checklist-apply-file-screen-to-volume-or-folder.md)
+

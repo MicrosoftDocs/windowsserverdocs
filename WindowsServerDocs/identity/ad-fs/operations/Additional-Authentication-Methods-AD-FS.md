@@ -1,10 +1,9 @@
 ---
 title: Additional authentication methods with AD FS in Windows Server 
 description: This article describes new authentication methods available with AD FS in Windows Server.
-author: billmath
-ms.author: billmath
-ms.date: 04/08/2025
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Configure third party authentication providers as primary authentication in AD FS 2019

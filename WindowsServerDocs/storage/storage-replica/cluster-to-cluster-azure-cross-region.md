@@ -1,11 +1,11 @@
 ---
 title: Cluster-to-Cluster Replication Cross-Region in Azure
 description: Learn how to use cluster-to-cluster Storage Replica in Windows Server for cross-region storage replication in Azure.
-author: arduppal
-ms.author: jgerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/18/2025
-ms.topic: article
-manager: mchad
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Set up cluster-to-cluster storage replication across Azure regions by using Storage Replica
 
@@ -212,3 +212,4 @@ Then run the following command:
 
 New-SRPartnership -SourceComputerName SRAZC1 -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\DataDisk1 -SourceLogVolumeName  g: -DestinationComputerName SRAZCross -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\DataDiskCross -DestinationLogVolumeName  g: -LogType Raw
 ```
+

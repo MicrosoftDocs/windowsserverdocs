@@ -4,7 +4,7 @@ description: Learn how to deploy a cluster set
 author: robinharwood
 ms.topic: how-to
 ms.date: 09/08/2022
-ms.author: jgerend
+ms.author: roharwoo
 ms.reviewer: stevenek
 ---
 
@@ -364,3 +364,5 @@ System state backup will back up the cluster state and metadata. Using Windows S
 ## Next steps
 
 - Learn more about [Storage Replica](/windows-server/storage/storage-replica/storage-replica-overview).
+
+

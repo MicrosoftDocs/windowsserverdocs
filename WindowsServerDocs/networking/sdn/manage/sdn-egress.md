@@ -1,10 +1,9 @@
 ---
 title: Egress metering in virtual network
 description: A fundamental aspect of cloud networking monetization is network bandwidth egress, for example, outbound data transfers in the Microsoft Azure business model. Outbound data is charged based on the total amount of data moving out of the Azure datacenters via the internet in a given billing cycle.
-manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 10/02/2018
 ---
 

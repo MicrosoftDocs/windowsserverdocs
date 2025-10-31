@@ -1,8 +1,8 @@
 ---
 title: Storage bus cache on Storage Spaces 
 description: Learn how to enable the storage bus cache on standalone servers for better read and write performance.
-author: TinaWu-Msft
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: tutorial #Required; leave this attribute/value as-is.
 ms.date: 02/12/2025
 ms.custom: template-tutorial #Required; leave this attribute/value as-is.
@@ -234,3 +234,4 @@ See the following example for changing the Provision Mode from Shared (default) 
 ```powershell
 Set-StorageBusCache -ProvisionMode Cache
 ```
+

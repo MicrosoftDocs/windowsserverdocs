@@ -2,9 +2,8 @@
 title: Configure Notification Limits
 description: This article describes how to add time limits to various notification types
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Configure Notification Limits
@@ -35,3 +34,4 @@ A default 60-minute limit is set for each notification type, but you can change 
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Command-Line Tools](command-line-tools.md)
+

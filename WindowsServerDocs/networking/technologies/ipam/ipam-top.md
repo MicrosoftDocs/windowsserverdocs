@@ -1,10 +1,8 @@
 ---
 title: IP Address Management (IPAM)
 description: This topic provides links to information about IPAM in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
-ms.author: jgerend
+ms.topic: concept-article
+ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---

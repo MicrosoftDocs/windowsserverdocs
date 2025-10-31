@@ -1,11 +1,9 @@
 ---
 title: Passwords technical overview
 description: Explains how Windows implements passwords in versions of Windows beginning with Windows Server 2012 and Windows 8.1. It also discusses strong passwords, passphrases, and password policies.
-ms.topic: article
-ms.assetid: 0288c73f-8ce8-4bfd-9016-2e47139fa38d
-ms.author: mosagie
+ms.topic: concept-article
+ms.author: roharwoo
 author: robinharwood
-manager: 
 ms.date: 3/17/2021
 ---
 # Passwords technical overview
@@ -139,3 +137,5 @@ To store fine-grained password policies, two new object classes exist in the AD 
 - Password Settings
 
 For more information about these policies, see [AD DS: Fine-Grained Password Policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10)).
+
+

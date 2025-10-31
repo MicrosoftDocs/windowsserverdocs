@@ -2,18 +2,17 @@
 title: Deploy Storage Spaces Direct on Windows Server
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ms.author: daknappe
-author: xelu86
+author: dknappettmsft
 ms.topic: how-to
-ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 ms.date: 03/18/2025
 ---
 
 # Deploy Storage Spaces Direct on Windows Server
 
-This article provides step-by-step instructions to deploy [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
+This article provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Local, see [About Azure Local](/azure/azure-local/deploy/deployment-introduction?context=/windows-server/context/windows-server-storage)
 
 > [!Tip]
-> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Local solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Local, see the [Azure Local Catalog](https://aka.ms/azurestackhcicatalog).
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Local solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Local, see the [Azure Local Catalog](https://aka.ms/azurelocalcatalog).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
@@ -385,9 +384,10 @@ CD $ScriptFolder
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understand the cache in Storage Spaces Direct](/azure/azure-local/concepts/cache?context=/windows-server/context/windows-server-storage)
 - [Planning volumes in Storage Spaces Direct](/azure/azure-local/concepts/plan-volumes?context=/windows-server/context/windows-server-storage)
 - [Storage Spaces Fault Tolerance](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 - [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 - [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)
+

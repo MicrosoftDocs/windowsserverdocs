@@ -1,9 +1,9 @@
 ---
 title: Performance tuning for file servers
 description: Performance tuning for file servers running Windows Server
-ms.topic: article
-author: robinharwood
-ms.author: alalve
+ms.topic: best-practice
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/24/2025
 audience: Admin
 ---
@@ -68,3 +68,4 @@ Starting in Windows 8, you can configure many of these SMB settings by using th
 ```powershell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
+

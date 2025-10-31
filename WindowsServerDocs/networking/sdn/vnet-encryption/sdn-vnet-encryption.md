@@ -1,11 +1,9 @@
 ---
 title: Virtual Network Encryption
 description: Learn about the requirements of virtual network encryption.
-manager: grcusanz
 ms.topic: how-to
-ms.assetid: 7da0f509-7b02-4a0f-90fb-d97c83a2bc4e
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 08/08/2018
 ---
 # Virtual Network Encryption

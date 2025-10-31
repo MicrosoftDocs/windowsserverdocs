@@ -1,11 +1,9 @@
 ---
 title: STEP 14 Snapshot the Configuration
 description: Learn how to save a snapshot of the DirectAccess multisite test lab configuration.
-manager: brianlic
-ms.topic: article
-ms.assetid: 8e17d886-f216-400e-bd31-808aceb88033
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 14 Snapshot the Configuration

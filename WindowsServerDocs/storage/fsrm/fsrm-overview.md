@@ -1,8 +1,7 @@
 ---
 title: File Server Resource Manager (FSRM) overview
-ms.author: jgerend
-manager: brianlic
-ms.topic: article
+ms.author: roharwoo
+ms.topic: how-to
 author: robinharwood
 ms.date: 03/15/2023
 description: Learn about File Server Resource Manager (FSRM), which is a tool that enables you to manage and classify data on a Windows Server file server.
@@ -108,3 +107,4 @@ To prevent FSRM from creating a change journal on some or all volumes when the s
 ## Related links
 
 - [Dynamic Access Control overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408191(v=ws.11))
+

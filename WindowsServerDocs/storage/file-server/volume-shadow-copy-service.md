@@ -1,10 +1,10 @@
 ---
 title: Volume Shadow Copy Service (VSS)
 description: Learn how to use Volume Shadow Copy Service to coordinate the actions that are required to create a consistent shadow copy for backup and restore operations in Windows Server.
-ms.topic: article
-author: robinharwood
-ms.author: alalve
-ms.date: 04/09/2025
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 07/07/2025
 ---
 
 # Volume Shadow Copy Service (VSS)
@@ -15,7 +15,7 @@ Backing up and restoring critical business data can be complex due to the follow
 
 - If the data set is large, it can be difficult to back up all of it at one time.
 
-Correctly performing backup and restore operations requires close coordination between the backup applications, the line-of-business applications that are being backed up, and the storage management hardware and software. The Volume Shadow Copy Service (VSS), which was introduced in Windows Server® 2003, facilitates the conversation between these components to allow them to work better together. When all the components support VSS, you can use them to back up your application data without taking the applications offline.
+Correctly performing backup and restore operations requires close coordination between the backup applications, the line-of-business applications that are being backed up, and the storage management hardware and software. The Volume Shadow Copy Service (VSS), which was introduced in Windows Server 2003, facilitates the communication between these components to allow them to work better together. When all the components support VSS, you can use them to back up your application data without taking the applications offline.
 
 VSS coordinates the actions that are required to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up. The shadow copy can be used as-is, or it can be used in the following scenarios:
 
@@ -27,7 +27,7 @@ VSS coordinates the actions that are required to create a consistent shadow copy
 
 - You need a fast recovery from data loss by restoring data to the original Logical Unit Number (LUN) or to an entirely new LUN that replaces an original LUN that failed.
 
-Windows features and applications that use VSS includes:
+Windows features and applications that use VSS include:
 
 - [Windows Server Backup](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754572(v=ws.10))
 
@@ -45,7 +45,7 @@ A complete VSS solution requires all of the following basic parts:
 
 - **VSS requester**: The software that requests the actual creation of shadow copies (or other high-level operations like importing or deleting them). Typically, this is the backup application. The Windows Server Backup utility and the System Center Data Protection Manager application are VSS requesters. Non-Microsoft VSS requesters include nearly all backup software that runs on Windows.
 
-- **VSS writer**: The component that guarantees we have a consistent data set to back up. This is typically provided as part of a line-of-business application, such as SQL Server or Exchange Server. VSS writers for various Windows components, such as the registry, are included with the Windows operating system. Non-Microsoft VSS writers are included with many applications for Windows that need to guarantee data consistency during backup.
+- **VSS writer**: The component that guarantees you have a consistent data set to back up. This is typically provided as part of a line-of-business application, such as SQL Server or Exchange Server. VSS writers for various Windows components, such as the registry, are included with the Windows operating system. Non-Microsoft VSS writers are included with many applications for Windows that need to guarantee data consistency during backup.
 
 - **VSS provider**: The component that creates and maintains the shadow copies. This can occur in the software or in the hardware. The Windows operating system includes a VSS provider that uses copy-on-write. If you use a storage area network (SAN), it's important that you install the VSS hardware provider for the SAN, if one is provided. A hardware provider offloads the task of creating and maintaining a shadow copy from the host operating system.
 
@@ -73,13 +73,13 @@ To create a shadow copy, the requester, writer, and provider perform the followi
 
 1. Each writer prepares the data as appropriate, such as completing all open transactions, rolling transaction logs, and flushing caches. When the data is ready to be shadow-copied, the writer notifies VSS.
 
-1. VSS tells the writers to temporarily freeze application write I/O requests (read I/O requests are still possible) for the few seconds that are required to create the shadow copy of the volume or volumes. The application freeze isn't allowed to take longer than 60 seconds. VSS flushes the file system buffers and then freezes the file system, which ensures that the file system metadata is recorded correctly and the data to be shadow-copied is written in a consistent order.
+1. VSS informs the writers to temporarily freeze application write I/O requests (read I/O requests are still possible) for the few seconds that are required to create the shadow copy of the volume or volumes. The application freeze isn't allowed to take longer than 60 seconds. VSS flushes the file system buffers and then freezes the file system, which ensures that the file system metadata is recorded correctly and the data to be shadow-copied is written in a consistent order.
 
-1. VSS tells the provider to create the shadow copy. The shadow copy creation period lasts no more than 10 seconds, during which all write I/O requests to the file system remain frozen.
+1. VSS informs the provider to create the shadow copy. The shadow copy creation period lasts no more than 10 seconds, during which all write I/O requests to the file system remain frozen.
 
 1. VSS releases file system write I/O requests.
 
-1. VSS tells the writers to thaw application write I/O requests. At this point, applications are free to resume writing data to the disk that is being shadow-copied.
+1. VSS informs the writers to thaw application write I/O requests. At this point, applications are free to resume writing data to the disk that's being shadow-copied.
 
    > [!NOTE]
    > The shadow copy creation can be aborted if the writers are kept in the freeze state for longer than 60 seconds or if the providers take longer than 10 seconds to commit the shadow copy.
@@ -100,7 +100,7 @@ A hardware or software shadow copy provider uses one of the following methods fo
 
 ## Complete copy
 
-A complete copy is created by making a *split mirror* as follows:
+A complete copy is created by making a *split mirror*, as follows:
 
 1. The original volume and the shadow copy volume are a mirrored volume set.
 
@@ -120,7 +120,7 @@ In the copy-on-write method, when a change to the original volume occurs (but be
 
 *Table 1: The copy-on-write method of creating shadow copies*
 
-The copy-on-write method is a quick method for creating a shadow copy, because it copies only data that is changed. The copied blocks in the diff area can be combined with the changed data on the original volume to restore the volume to its state before any of the changes were made. If there are many changes, the copy-on-write method can become expensive.
+The copy-on-write method is a quick method for creating a shadow copy, because it copies only data that's changed. The copied blocks in the diff area can be combined with the changed data on the original volume to restore the volume to its state before any of the changes were made. If there are many changes, the copy-on-write method can become expensive.
 
 ### Redirect-on-write method
 
@@ -138,7 +138,7 @@ Like the copy-on-write method, the redirect-on-write method is a quick method fo
 
 ## Shadow copy providers
 
-There are two types of shadow copy providers: hardware-based providers and software-based providers. There's also a system provider, which is a software provider that is built in to the Windows operating system.
+There are two types of shadow copy providers: hardware-based providers and software-based providers. There's also a system provider, which is a software provider that's built in to the Windows operating system.
 
 ### Hardware-based providers
 
@@ -156,7 +156,7 @@ These providers are implemented as a user-mode DLL component and at least one ke
 
 A software-based shadow copy provider must maintain a *point-in-time* view of a volume by having access to a data set that can be used to re-create volume status before the shadow copy creation time. An example is the copy-on-write technique of the system provider. However, VSS places no restrictions on what technique the software-based providers use to create and maintain shadow copies.
 
-A software provider is applicable to a wider range of storage platforms than a hardware-based provider, and it should work with basic disks or logical volumes equally well. (A logical volume is a volume that is created by combining free space from two or more disks.) In contrast to hardware shadow copies, software providers consume operating system resources to maintain the shadow copy.
+A software provider is applicable to a wider range of storage platforms than a hardware-based provider, and it should work with basic disks or logical volumes equally well. (A logical volume is a volume that's created by combining free space from two or more disks.) In contrast to hardware shadow copies, software providers consume operating system resources to maintain the shadow copy.
 
 For more information about basic disks, see [Manage basic volumes](../disk-management/manage-basic-volumes.md).
 
@@ -164,7 +164,7 @@ For more information about basic disks, see [Manage basic volumes](../disk-manag
 
 One shadow copy provider, the system provider, is supplied in the Windows operating system. Although a default provider is supplied in Windows, other vendors are free to supply implementations that are optimized for their storage hardware and software applications.
 
-To maintain the *point-in-time* view of a volume that is contained in a shadow copy, the system provider uses a copy-on-write technique. Copies of the blocks on volume that have been modified since the beginning of the shadow copy creation are stored in a shadow copy storage area.
+To maintain the *point-in-time* view of a volume that's contained in a shadow copy, the system provider uses a copy-on-write technique. Copies of the blocks on volume that have been modified since the beginning of the shadow copy creation are stored in a shadow copy storage area.
 
 The system provider can expose the production volume, which can be written to and read from normally. When the shadow copy is needed, it logically applies the differences to data on the production volume to expose the complete shadow copy.
 
@@ -174,7 +174,7 @@ The component files that make up the system provider are `swprv.dll` and `volsna
 
 ### In-box VSS writers
 
-The Windows operating system includes a set of VSS writers that are responsible for enumerating the data that is required by various Windows features.
+The Windows operating system includes a set of VSS writers that are responsible for enumerating the data that's required by various Windows features.
 
 For more information about these writers, see [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers).
 
@@ -182,11 +182,11 @@ For more information about these writers, see [In-Box VSS Writers](/windows/win3
 
 In addition to backing up application data and system state information, shadow copies can be used for many purposes, including:
 
-- Restoring LUNs (LUN resynchronization and LUN swapping)
+- Restoring LUNs (LUN resynchronization and LUN swapping).
 
-- Restoring individual files (Shadow Copies for Shared Folders)
+- Restoring individual files (Shadow Copies of Shared Folders).
 
-- Data mining by using transportable shadow copies
+- Data mining by using transportable shadow copies.
 
 ### Restoring LUNs (LUN resynchronization and LUN swapping)
 
@@ -205,28 +205,28 @@ LUN resynchronization is different from LUN swapping. A LUN swap is a fast recov
 
 - At the end of a LUN swap, the shadow copy LUN is used for production I/O requests. For this reason, the shadow copy LUN must use the same quality of storage as the original production LUN to ensure that performance isn't impacted after the recovery operation. If LUN resynchronization is used instead, the hardware provider can maintain the shadow copy on storage that is less expensive than production-quality storage.
 
-- If the destination LUN is unusable and needs to be recreated, LUN swapping might be more economical because it doesn't require a destination LUN.
+- If the destination LUN is unusable and needs to be re-created, LUN swapping might be more economical because it doesn't require a destination LUN.
 
 > [!WARNING]
 > All of the operations listed are LUN-level operations. If you attempt to recover a specific volume by using LUN resynchronization, you're unwittingly going to revert all the other volumes that are sharing the LUN.
 
-### Restoring individual files (Shadow Copies for Shared Folders)
+### Restoring individual files (Shadow Copies of Shared Folders)
 
-Shadow Copies for Shared Folders uses VSS to provide point-in-time copies of files that are located on a shared network resource, such as a file server. With Shadow Copies for Shared Folders, users can quickly recover deleted or changed files that are stored on the network. Because they can do so without administrator assistance, Shadow Copies for Shared Folders can increase productivity and reduce administrative costs.
+Shadow Copies of Shared Folders uses VSS to provide point-in-time copies of files that are located on a shared network resource, such as a file server. With Shadow Copies of Shared Folders, users can quickly recover deleted or changed files that are stored on the network. Because they can do so without administrator assistance, Shadow Copies of Shared Folders can increase productivity and reduce administrative costs.
 
-For more information about Shadow Copies for Shared Folders, see [Shadow Copies for Shared Folders](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771305(v=ws.10)).
+For more information, see [Shadow Copies of Shared Folders](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771305(v=ws.10)).
 
 ### Data mining by using transportable shadow copies
 
-With a hardware provider that is designed for use with VSS, you can create transportable shadow copies that can be imported onto servers within the same subsystem (for example, a SAN). These shadow copies can be used to seed a production or test installation with read-only data for data mining.
+With a hardware provider that's designed for use with VSS, you can create transportable shadow copies that can be imported onto servers within the same subsystem (for example, a SAN). These shadow copies can be used to seed a production or test installation with read-only data for data mining.
 
-With VSS and a storage array with a hardware provider that is designed for use with VSS, it's possible to create a shadow copy of the source data volume on one server, and then import the shadow copy onto another server (or back to the same server). This process is accomplished in a few minutes, regardless of the size of the data. The transport process is accomplished through a series of steps that use a shadow copy requester (a storage-management application) that supports transportable shadow copies.
+With VSS and a storage array with a hardware provider that's designed for use with VSS, it's possible to create a shadow copy of the source data volume on one server, and then import the shadow copy onto another server (or back to the same server). This process is accomplished in a few minutes, regardless of the size of the data. The transport process is accomplished through a series of steps that use a shadow copy requester (a storage-management application) that supports transportable shadow copies.
 
 ## To transport a shadow copy
 
 1. Create a transportable shadow copy of the source data on a server.
 
-1. Import the shadow copy to a server that is connected to the SAN (you can import to a different server or the same server).
+1. Import the shadow copy to a server that's connected to the SAN. (You can import to a different server or the same server.)
 
 1. The data is now ready to be used.
 
@@ -235,7 +235,7 @@ With VSS and a storage array with a hardware provider that is designed for use w
 *Figure 3: Shadow copy creation and transport between two servers*
 
 > [!NOTE]
-> A transportable shadow copy that is created on Windows Server 2003 can't be imported onto a server that is running Windows Server 2008 or Windows Server 2008 R2. A transportable shadow copy that was created on Windows Server 2008 or Windows Server 2008 R2 can't be imported onto a server that is running Windows Server 2003. However, a shadow copy that is created on Windows Server 2008 can be imported onto a server that is running Windows Server 2008 R2 and vice versa.
+> A transportable shadow copy that's created on Windows Server 2003 can't be imported onto a server that's running Windows Server 2008 or Windows Server 2008 R2. A transportable shadow copy that was created on Windows Server 2008 or Windows Server 2008 R2 can't be imported onto a server that's running Windows Server 2003. However, a shadow copy that's created on Windows Server 2008 can be imported onto a server that's running Windows Server 2008 R2, and vice versa.
 
 Shadow copies are read-only. If you want to convert a shadow copy to a read/write LUN, you can use a Virtual Disk Service-based storage-management application (including some requesters) in addition to VSS. By using this application, you can remove the shadow copy from Volume Shadow Copy Service management and convert it to a read/write LUN.
 
@@ -249,13 +249,13 @@ This FAQ answers questions about VSS for system administrators. For information 
 
 VSS was introduced in Windows XP. It's available on Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2.
 
-### What is the difference between a shadow copy and a backup?
+### What's the difference between a shadow copy and a backup?
 
-A shadow copy serves as the backup when performing a hard disk drive backup. Data can be extracted from the shadow copy for restoration purposes, or the shadow copy can be directly utilized for rapid recovery scenarios, such as LUN resynchronization or LUN swapping.
+A shadow copy serves as the backup when performing a hard disk drive backup. Data can be extracted from the shadow copy for restoration purposes, or the shadow copy can be directly used for rapid recovery scenarios, such as LUN resynchronization or LUN swapping.
 
-When data is copied from the shadow copy to tape or other removable media, the content that is stored on the media constitutes the backup. The shadow copy itself can be deleted after the data is copied from it.
+When data is copied from the shadow copy to tape or other removable media, the content that's stored on the media constitutes the backup. The shadow copy itself can be deleted after the data is copied from it.
 
-### What is the largest size volume that VSS supports?
+### What's the largest size volume that VSS supports?
 
 VSS supports a volume size of up to 64 TB.
 
@@ -283,26 +283,26 @@ For more information, see the following Microsoft TechNet Web sites:
 
 VSS is designed to create shadow copies of entire volumes. Temporary files, such as paging files, are automatically omitted from shadow copies to save space.
 
-To exclude specific files from shadow copies, use the following registry key: `FilesNotToSnapshot`
+To exclude specific files from shadow copies, use the following registry key: `FilesNotToSnapshot`.
 
 > [!NOTE]
-> The `FilesNotToSnapshot` registry key is intended to be used only by applications. Users who attempt to use it encounters limitations such as:
+> The `FilesNotToSnapshot` registry key is intended to be used only by applications. Users who attempt to use it encounter limitations such as:
 >
 > - It can't delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.
 > - It can't delete files from shadow copies for shared folders.
-> - It can delete files from a shadow copy that was created by using the [Diskshadow](../../administration/windows-commands/diskshadow.md) utility, but it can't delete files from a shadow copy that was created by using the [Vssadmin](../../administration/windows-commands/vssadmin.md) utility.
+> - It can delete files from a shadow copy that was created by using the [Diskshadow](../../administration/windows-commands/diskshadow.md) utility, but it can't delete files from a shadow copy that was created by using the [VssAdmin](../../administration/windows-commands/vssadmin.md) utility.
 > - Files are deleted from a shadow copy on a best-effort basis. This means that they aren't guaranteed to be deleted.
 
 For more information, see [Excluding Files from Shadow Copies](/windows/win32/vss/excluding-files-from-shadow-copies).
 
 ### My non-Microsoft backup program failed with a VSS error. What can I do?
 
-Check the product support section of the Web site of the company that created the backup program. There could be a product update that you can download and install to fix the problem. If not, contact the company's product support department.
-System administrators can use the VSS troubleshooting information on the following Microsoft TechNet Library Web site to gather diagnostic information about VSS-related issues. For more information, see [Volume Shadow Copy Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd364794(v=ws.10)).
+Check the product support section of the web site of the company that created the backup program. There could be a product update that you can download and install to fix the problem. If not, contact the company's product support department.
+System administrators can use the VSS troubleshooting information on the following Microsoft TechNet Library web site to gather diagnostic information about VSS-related issues. For more information, see [Volume Shadow Copy Service](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd364794(v=ws.10)).
 
 ### What is the *diff area*?
 
-The shadow copy storage area (or diff area) is the location where the data for the shadow copy that is created by the system software provider is stored.
+The shadow copy storage area (or diff area) is the location where the data for the shadow copy that's created by the system software provider is stored.
 
 ### Where is the diff area located?
 
@@ -314,11 +314,11 @@ The following criteria are evaluated, in this order, to determine the diff area 
 
 - If a volume already has an existing shadow copy, that location is used.
 
-- If there's a preconfigured manual association between the original volume and the shadow copy volume location, then that location is used.
+- If there's a preconfigured manual association between the original volume and the shadow copy volume location, that location is used.
 
 - If the previous two criteria don't provide a location, the shadow copy service chooses a location based on available free space. If more than one volume is being shadow copied, the shadow copy service creates a list of possible snapshot locations based on the size of free space, in descending order. The number of locations provided is equal to the number of volumes being shadow copied.
 
-- If the volume being shadow copied is one of the possible locations, then a local association is created. Otherwise an association with the volume with the most available space is created.
+- If the volume being shadow copied is one of the possible locations, a local association is created. Otherwise, an association with the volume that has the most available space is created.
 
 ### Can VSS create shadow copies of non-NTFS volumes?
 
@@ -330,9 +330,9 @@ The maximum number of shadow copied volumes in a single shadow copy set is 64. T
 
 ### What's the maximum number of software shadow copies created by the system provider that I can maintain for a volume?
 
-The max number is of software shadow copies for each volume is 512. However, by default you can only maintain 64 shadow copies that are used by the Shadow Copies of Shared Folders feature. To change the limit for the Shadow Copies of Shared Folders feature, use the following registry key: `MaxShadowCopies`.
+The maximum number of software shadow copies for each volume is 512. However, by default, you can only maintain 64 shadow copies that are used by the Shadow Copies of Shared Folders feature. To change the limit for the Shadow Copies of Shared Folders feature, use the following registry key: `MaxShadowCopies`.
 
-### How can I control the space that is used for shadow copy storage space?
+### How can I control the space that's used for shadow copy storage space?
 
 Type the `vssadmin resize shadowstorage` command.
 
@@ -402,7 +402,7 @@ The following registry keys are available for use with VSS:
 
 This key is used to specify which users have access to shadow copies.
 
-For more information, see the following entries on the MSDN Web site:
+For more information, see:
 
 - [Security Considerations for Writers](/windows/win32/vss/security-considerations-for-writers)
 
@@ -410,7 +410,7 @@ For more information, see the following entries on the MSDN Web site:
 
 ### MaxShadowCopies
 
-This key specifies the maximum number of client-accessible shadow copies that can be stored on each volume of the computer. Client-accessible shadow copies are used by Shadow Copies for Shared Folders.
+This key specifies the maximum number of client-accessible shadow copies that can be stored on each volume of the computer. Client-accessible shadow copies are used by Shadow Copies of Shared Folders.
 
 For more information, see *MaxShadowCopies* under [Registry Keys for Backup and Restore](/windows/win32/backup/registry-keys-for-backup-and-restore).
 
@@ -433,7 +433,7 @@ The following table lists the minimum supported operating system versions for VS
 | Previous versions of Windows Server | Windows Vista | Windows Server 2003 |
 | Fast recovery using LUN swap | None supported | Windows Server 2003 with SP1 |
 | Multiple imports of hardware shadow copies (This is the ability to import a shadow copy more than once. Only one import operation can be performed at a time.) | None supported | Windows Server 2008 |
-| Shadow Copies for Shared Folders | None supported | Windows Server 2003 |
+| Shadow Copies of Shared Folders | None supported | Windows Server 2003 |
 | Transportable auto-recovered shadow copies | None supported | Windows Server 2008 |
 | Concurrent backup sessions (up to 64) | Windows XP | Windows Server 2003 |
 | Single restore session concurrent with backups | Windows Vista | Windows Server 2003 with SP2 |
@@ -442,3 +442,4 @@ The following table lists the minimum supported operating system versions for VS
 ## Related content
 
 - [Volume Shadow Copy Service in Windows Developer Center](/windows/desktop/vss/volume-shadow-copy-service-overview)
+

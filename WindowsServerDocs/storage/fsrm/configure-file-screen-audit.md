@@ -2,9 +2,8 @@
 title: Configure File Screen Audit
 description: This article describes how to configure File Screen Audit to generate the File Screening Audit report
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Configure File Screen Audit
@@ -26,3 +25,4 @@ By using File Server Resource Manager, you can record file screening activity in
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Storage Reports Management](storage-reports-management.md)
+

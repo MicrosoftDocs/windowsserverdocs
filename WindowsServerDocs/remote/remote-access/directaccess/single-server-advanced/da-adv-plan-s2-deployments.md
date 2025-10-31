@@ -1,11 +1,9 @@
 ---
 title: Step 2 Plan Advanced DirectAccess Deployments
 description: Learn how to plan the settings for the Remote Access Setup Wizard.
-manager: brianlic
-ms.topic: article
-ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Plan Advanced DirectAccess Deployments

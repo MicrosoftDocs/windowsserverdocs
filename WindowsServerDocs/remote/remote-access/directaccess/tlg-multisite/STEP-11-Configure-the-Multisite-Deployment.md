@@ -1,11 +1,9 @@
 ---
 title: STEP 11 Configure the Multisite Deployment
 description: Learn how to make changes to the current Remote Access configuration wizard on EDGE1, enable the multisite feature, and then add 2-EDGE1 as a second entry point.
-manager: brianlic
-ms.topic: article
-ms.assetid: 8cbdeb1d-5f7c-4360-bcc1-ab40d3cd8040
+ms.topic: how-to
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 11 Configure the Multisite Deployment

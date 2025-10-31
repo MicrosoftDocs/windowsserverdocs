@@ -1,11 +1,9 @@
 ---
 title: Manage Tenant Virtual Networks
 description: Learn how to manage Tenant Hyper-V Network Virtualization Virtual Networks after you have deployed Software Defined Networking.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
+ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Manage Tenant Virtual Networks

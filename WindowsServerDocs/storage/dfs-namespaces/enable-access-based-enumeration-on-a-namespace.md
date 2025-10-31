@@ -2,9 +2,8 @@
 title: Enable Access-based Enumeration on a Namespace
 description: This article describes how to enable access-based enumeration on a namespace.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Enable access-based enumeration on a namespace
@@ -97,3 +96,4 @@ You can control which users and groups can view individual DFS folders either by
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
 -   [Installing DFS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11))
 -   [Using Inherited Permissions with Access-Based Enumeration](using-inherited-permissions-with-access-based-enumeration.md)
+

@@ -3,8 +3,8 @@ title: Generate reports on demand in Windows Server
 description: This article describes how to generate reports on demand to analyze disk usage in the Windows Server environment using FSRM (File Server Resource Manager).
 ms.date: 12/10/2024
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Generate reports on demand
@@ -88,3 +88,4 @@ To deliver copies of the reports to administrators by e-mail:
 
 - [Storage Reports Management](storage-reports-management.md)
 - [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+

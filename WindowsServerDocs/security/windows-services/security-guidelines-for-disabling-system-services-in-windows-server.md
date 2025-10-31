@@ -1,11 +1,10 @@
 ---
 title: Security guidelines for system services in Windows Server 2016
 description: Provides security guidelines and recommendations for disabling services in Windows Server 2016 with Desktop Experience.
-ms.topic: article
+ms.topic: best-practice
 ms.date: 08/22/2024
-ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
-author: nirb
-ms.author: jgerend
+author: dknappettmsft
+ms.author: daknappe
 ---
 
 # Guidance on disabling system services on Windows Server 2016 with Desktop Experience
@@ -2146,3 +2145,4 @@ The following tables describes the default services found in Windows Server 2016
 | **Startup type** | Manual |
 | **Recommendation** | Should be disabled |
 | **Comments** | This service syncs save data for Xbox Live save enabled games. If you stop this service, game save data will not upload to or download from Xbox Live. |
+

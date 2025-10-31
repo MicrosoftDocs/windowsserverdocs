@@ -2,9 +2,8 @@
 title: Create a Quota Template
 description: This article describes how to create a quota template to define a storage space limit
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a Quota Template
@@ -84,5 +83,6 @@ For example, you could configure thresholds to send an e-mail message to the adm
 -    [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
 -   [Edit Quota Template Properties](edit-quota-template-properties.md)
 -   [Command-Line Tools](command-line-tools.md)
+
 
 

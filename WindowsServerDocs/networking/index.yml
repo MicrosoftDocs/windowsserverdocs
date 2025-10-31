@@ -6,14 +6,11 @@ summary: Networking is a foundational part of the Software Defined Datacenter (S
 metadata:
   title: Networking documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016. # Required; article description that is displayed in search results. < 160 chars.
-  layout: LandingPage
   ms.subservice: networking
   ms.topic: landing-page # Required
-  manager: dougkim
   author: AnirbanPaul #Required; your GitHub user alias, with correct capitalization.
   ms.author: anpaul #Required; microsoft alias of author; optional team alias.
   ms.date: 06/11/2020 #Required; mm/dd/yyyy format.
-  ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
   ms.localizationpriority: medium
   ms.service: windows-server
 
@@ -80,7 +77,7 @@ landingContent:
           - text: Hyper-V Network Virtualization
             url: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
           - text: Hyper-V Virtual Switch
-            url: ../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+            url: ../virtualization/hyper-v/virtual-switch.md
           - text: IP Address Management (IPAM)
             url: technologies/ipam/ipam-top.md
           - text: Network Load Balancing (NLB)

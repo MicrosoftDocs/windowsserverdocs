@@ -2,8 +2,8 @@
 title: Configure SMB authentication rate limiter for Windows
 description: Learn how SMB authentication rate limiter works and how to configure it for Windows Server and Windows client.
 ms.topic: how-to
-author: gswashington
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/25/2024
 
 ---
@@ -83,3 +83,4 @@ SMB authentication rate limiter doesn't affect Kerberos; Kerberos authenticates 
 ## Related content
 
 - [SMB Authentication Rate Limiter in Insider builds](https://techcommunity.microsoft.com/t5/storage-at-microsoft/smb-authentication-rate-limiter-in-insider-builds/ba-p/2829090)
+

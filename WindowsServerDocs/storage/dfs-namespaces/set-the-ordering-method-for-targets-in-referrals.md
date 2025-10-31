@@ -2,9 +2,8 @@
 title: Set the Ordering Method for Targets in Referrals
 description: This article describes how to set the ordering method for targets in referrals.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Set the Ordering Method for Targets in Referrals
@@ -83,3 +82,4 @@ In this method, the referral contains only the targets that are in the same site
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

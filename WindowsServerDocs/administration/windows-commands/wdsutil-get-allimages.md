@@ -2,10 +2,8 @@
 title: wdsutil get-allimages
 description: Reference article for the wdsutil get-allimages command, which retrieves information about all images on a server.
 ms.topic: reference
-ms.assetid: 19de3720-4315-415a-8dc6-486caa0b2100
-ms.author: alalve
+ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -2,9 +2,8 @@
 title: Create an Automatic Classification Rule
 description: This article describes how to create a classification rule for a property.
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create an Automatic Classification Rule
@@ -46,3 +45,4 @@ The following procedure guides you through the process of creating a classificat
 
 -   [Create a Classification Property](create-classification-property.md)
 -   [Classification Management](classification-management.md)
+

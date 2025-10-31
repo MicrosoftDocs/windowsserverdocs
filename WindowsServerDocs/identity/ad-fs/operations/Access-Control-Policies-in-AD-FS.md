@@ -1,13 +1,11 @@
 ---
 description: "Learn more about: Access Control Policies in Windows Server 2016 AD FS"
-ms.assetid: 102eeeb1-6c55-42a2-b321-71a7dab46146
 title: Access Control Policies in AD FS Windows Server 2016
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 04/08/2025
-ms.topic: article
-ms.custom: inhenkel
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Access Control Policies in Windows Server 2016 AD FS

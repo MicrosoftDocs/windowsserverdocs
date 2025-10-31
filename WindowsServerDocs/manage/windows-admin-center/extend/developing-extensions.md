@@ -1,9 +1,9 @@
 ---
 title: Develop an extension for Windows Admin Center
 description: Develop an extension for Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-ms.author: jgerend
+ms.author: roharwoo
 ms.date: 09/19/2018
 ---
 
@@ -25,3 +25,4 @@ Windows Admin Center supports three types of extensions - tool extensions, solut
 ## SDK design toolkit
 
 Check out our Windows Admin Center [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! This toolkit is designed to help you rapidly mock up extensions in PowerPoint using Windows Admin Center styles, controls, and page templates. See what your extension can look like in Windows Admin Center before you start coding!
+

@@ -2,13 +2,13 @@
 title: Migrate DHCP server to Windows Server
 description: This article serves as a guide for how to migrate a Dynamic Host Configuration Protocol (DHCP) in Windows Server.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/24/2025
 #customer intent: As an IT administrator, I want to migrate a DHCP server to Windows Server so that I can ensure seamless network configuration and management.
 ---
 
-# Migrate DHCP server to Windows Server
+# Migrate a DHCP server installation to another Windows Server
 
 DHCP server migration involves moving the settings for your existing DHCP server to a new DHCP server on the network. The goal of this server migration is to install the DHCP server role on the Windows Server operating system so that it provides DHCP leases on a network without any perceptible change to DHCP client computers.
 
@@ -205,7 +205,7 @@ Follow the steps in this section to migrate DHCP Server from the source server.
 
 Return to the destination server and follow these steps to complete the migration.
 
-1. Before you use the [**Import-SmigServerSetting**](/powershell/module/servermigration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
+1. Before you use the [**Import-SmigServerSetting**](/powershell/module/microsoft.windows.servermanager.migration/import-smigserversetting) cmdlet to import the DHCP server settings, be aware of the following conditions:
 
     - You can either use a single command line with all the parameters to import DHCP settings (as when you export data from the source server) or you can use the cmdlet multiple times to import data one parameter at a time.
 
@@ -354,3 +354,4 @@ The following table describes the properties of objects within the **MigrationRe
 | DetailCode    | Integer | The error or warning code associated with each event message. |
 | Severity      | Enum | The severity of an event, if events occurred. Examples of values include **Information**, **Error**, and **Warning**. |
 | Title         | String | Title of the result object. Examples of values include the network adapter physical address for IP configuration, or user name for local user migration. |
+

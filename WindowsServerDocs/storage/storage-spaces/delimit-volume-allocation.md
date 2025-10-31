@@ -1,15 +1,20 @@
 ---
 description: "Learn more about: Delimit the allocation of volumes in Storage Spaces Direct"
 title: Delimit the allocation of volumes in Storage Spaces Direct
-manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.topic: how-to
+author: robinharwood
 ms.author: roharwoo
 ms.date: 03/29/2018
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
->
 
 Windows Server 2019 introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
@@ -201,7 +206,7 @@ No, it's the same as with regular allocation.
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Fault tolerance in Storage Spaces Direct](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 
 ## Appendix
@@ -372,3 +377,4 @@ Function Get-VirtualDiskFootprintByStorageFaultDomain {
 
 Get-VirtualDiskFootprintByStorageFaultDomain
 ```
+

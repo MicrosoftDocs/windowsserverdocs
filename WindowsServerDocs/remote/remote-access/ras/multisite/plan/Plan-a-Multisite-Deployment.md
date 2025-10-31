@@ -1,11 +1,9 @@
 ---
 title: Plan a Multisite Deployment
 description: Learn about the planning steps required in order to deploy  Windows Server 2016 or  Windows Server 2012  Remote Access in a multisite configuration.
-manager: brianlic
-ms.topic: article
-ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
+ms.topic: concept-article
 ms.author: daknappe
-author: robinharwood
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Plan a Multisite Deployment

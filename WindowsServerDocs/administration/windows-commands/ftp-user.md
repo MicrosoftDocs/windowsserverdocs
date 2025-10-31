@@ -2,10 +2,8 @@
 title: ftp user
 description: Reference article for the ftp user command, which specifies a user to the remote computer.
 ms.topic: reference
-ms.assetid: 0a77bfeb-27a9-4f2f-a3c4-2fef529fb569
-ms.author: alalve
-author: robinharwood
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

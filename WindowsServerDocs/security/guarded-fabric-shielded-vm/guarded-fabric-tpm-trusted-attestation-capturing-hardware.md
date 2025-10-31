@@ -1,11 +1,9 @@
 ---
 title: Capture TPM-mode information required by HGS
 description: "Learn more about: Authorize guarded hosts using TPM-based attestation"
-ms.topic: article
-ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
-manager: dongill
+ms.topic: how-to
 author: robinharwood
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 1/24/2023
 ---
 
@@ -172,3 +170,5 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
 
 > [!div class="nextstepaction"]
 > [Confirm attestation](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+
+
