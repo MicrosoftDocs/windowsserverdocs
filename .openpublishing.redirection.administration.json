@@ -1329,6 +1329,11 @@
       "source_path": "WindowsServerDocs/administration/windows-server-update-services/manage/wsus-messages-and-troubleshooting-tips.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wsus-messages-troubleshooting-tips",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/manage-windows-server-old.md",
+      "redirect_url": "/windows-server/administration/manage-windows-server",
+      "redirect_document_id": false
     }
   ]
 }

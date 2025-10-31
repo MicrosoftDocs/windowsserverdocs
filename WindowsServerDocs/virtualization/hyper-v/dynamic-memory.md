@@ -1,7 +1,7 @@
 ---
 title: Dynamic Memory for Hyper-V Virtual Machines
 description: Provides an overview of Dynamic Memory for Hyper-V virtual machines, including how it works and best practices.
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 10/27/2025
