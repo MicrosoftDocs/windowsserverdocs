@@ -17,7 +17,6 @@
 # Doc location
 
 /WindowsServerDocs/ @MicrosoftDocs/windowsserverdocs-admin
-/WindowsServerDocs/security/tls/ @robinharwood @Xelu86
 
 # Configuration
 
