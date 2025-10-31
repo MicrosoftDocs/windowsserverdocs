@@ -380,6 +380,8 @@ netsh interface udp show global [store=]active|persistent
 
 ## Parameters
 
+### interface 6to4
+
 | Command | Description |
 |--|--|
 | interface `6to4 set interface` | Configures settings for a specified 6to4 interface in the legacy IPv4-based context. <br><br> `name` - Specifies the interface name or index. <br> `routing` - Sets whether the interface acts as a router: <br> - `enabled`: Turns on routing for this interface. <br> - `disabled`: Turns off routing for this interface. <br> - `default`: Uses the system’s default routing setting. |
@@ -387,17 +389,47 @@ netsh interface udp show global [store=]active|persistent
 | interface `6to4 set routing` | Configures routing options for 6to4 tunneling in the legacy IPv4-based context. <br><br>`routing` - Controls how 6to4 routing is handled: <br> - `enabled`: Forces 6to4 routing to be active. <br> - `disabled`: Turns off 6to4 routing. <br> - `automatic`: Lets Windows decide when to enable/disable routing based on network conditions. <br> - `default`: Resets routing to the system default. <br> `sitelocals` - Manages the use of site-local addresses in 6to4 routing: <br> - `enabled`: Allows site-local addresses. <br> - `disabled`: Blocks site-local addresses. <br> - `default`: Resets to the system default for site-local address handling. |
 | interface `6to4 set state` | Configures the 6to4 service in the legacy IPv4-based context <br><br> `state` - Specifies the operational mode for the 6to4 service: <br> - `disabled`: Disables the 6to4 service; no 6to4 interfaces are created. <br> - `enabled`: Enables the 6to4 service and configures 6to4 addresses for each public IPv4 address. <br> - `automatic`: Enables the 6to4 service to automatically configure itself for each available public IPv4 address. <br> - `default`: Restores the default 6to4 behavior, equivalent to `disabled`. <br> `undoonstop` - Determines whether 6to4 is disabled when the service stops. |
 | interface `6to4 show` | Displays the 6to4 interface configuration and status in the legacy IPv4-based context. <br><br> `interface` - Displays the configuration details of the 6to4 interface. <br> `relay` - Displays information about the 6to4 relay server. <br> `routing` - Displays the current routing state for 6to4. <br> `state` - Displays the current operational state of the 6to4 service. |
+
+### interface clat
+
+| Command | Description |
+|--|--|
 | interface `clat set global` | Configures global Customer-side Translator (CLAT) settings, including enabling or disabling CLAT and setting DNS or RA preferences. If both `pref64fromdns` and `pref64fromra` are disabled, CLAT can't be activated because this combination is invalid. <br><br> `permit` - Specifies if CLAT is allowed on noncellular interfaces. <br> `pref64fromdns` - Determines whether DNS is used as the source for prefix information. If `pref64fromra` is also enabled, DNS is used only as a fallback. <br> `pref64fromra` - Determines whether router advertisements (RA) are used as the source for prefix information. |
 | interface `clat show global` | Displays the current global CLAT configuration settings. |
+
+### interface dump
+
+| Command | Description |
+|--|--|
 | interface `dump` <br> interface `6to4 dump` <br> interface `clat dump` <br> interface `fl48 dump` <br> interface `fl68 dump` <br> interface `httpstunnel dump` <br> interface `ipv4 dump` <br> interface `ipv6 6to4 dump` <br> interface `ipv6 dump` <br> interface `ipv6 isatap dump` <br> interface `isatap dump` <br> interface `portproxy dump` <br> interface `tcp dump` <br> interface `teredo dump` <br> interface `udp dump` | Creates a script containing the current context configuration. The script can be saved to a file and used to restore settings if they're altered or need to be replicated on another system. |
+
+### interface fl48
+
+| Command | Description |
+|--|--|
 | interface `fl48 show virtualinterfaces` | Displays a list of all FL48 virtual interfaces. |
+
+### interface fl68
+
+| Command | Description |
+|--|--|
 | interface `fl68 show virtualinterfaces` | Displays a list of all FL68 virtual interfaces. |
+
+### interface httpstunnel
+
+| Command | Description |
+|--|--|
 | interface `httpstunnel add interface` | Creates and configures an IPHTTPS client or server interface, allowing you to specify connection properties and authentication settings. <br><br> `type` - Specifies the interface type: <br> - `client`: Configures a client interface. <br> - `server`: Configures a server interface (valid only on Windows Server). <br><br> `url` - For a server interface, the URL to listen for HTTP(S) requests. For a client interface, the URL to send HTTP(S) requests. <br><br> `state` - Sets the operational state: <br> - `default`: Server interface is always configured. Client interface is configured on demand (default for client). <br> - `enabled`: Interface is always configured (default for server). <br> - `disabled`: Disables the interface. <br><br> `authmode` - Specifies authentication mode: <br> - `none`: No client authentication during SSL handshake (default). <br> - `certificates`: Uses client certificates for authentication (server interface only, valid only for Windows Server). |
 | interface `httpstunnel delete interface` | Removes an existing IPHTTPS client or server interface configuration. |
 | interface `httpstunnel reset` | Removes all IPHTTPS client and server interface configurations from the local system. |
 | interface `httpstunnel set interface` | Modifies the configuration of an existing IPHTTPS client or server interface. <br><br> `url` - For a server interface, the URL to listen for HTTP(S) requests. For a client interface, the URL to send HTTP(S) requests. <br><br> `state` - Sets the operational state: <br> - `default`: Server interface is always configured. Client interface is configured on demand (default for client). <br> - `enabled`: Interface is always configured (default for server). <br> - `disabled`: Disables the interface. <br><br> `authmode` - Specifies authentication mode: <br> - `none`: No client authentication during SSL handshake (default). <br> - `certificates`: Uses client certificates for authentication (server interface only, valid only for Windows Server). |
 | interface `httpstunnel show interfaces` | Displays details for all network interfaces, or for a specified interface if provided. <br><br> `store` - Specifies which interfaces to display: <br> - `active`: Shows only active interfaces. <br> - `persistent`: Shows all interfaces (default). |
 | interface `httpstunnel show statistics` | Shows IPHTTPS interface statistics. <br><br> `interface` - Specifies the interface name for which statistics are displayed. |
+
+### interface ipv4
+
+| Command | Description |
+|--|--|
 | interface `ipv4 add address` | Assigns a static IPv4 address and default gateway to a specified interface. If the interface is currently configured for DHCP, DHCP is disabled when this command is executed. <br><br> `name` - Specifies the interface name or index. <br> `address` - The IPv4 address to assign. Optionally, include a subnet prefix length (example: `192.168.1.10/24`). <br> `mask` - Specifies the subnet mask for the IP address. <br> `type` - Specifies the address type. Use `unicast` to assign a unicast address (default), or `anycast` to assign an anycast address. <br> `gateway` - The IPv4 address of the default gateway. <br> `gwmetric` - The metric value for the default gateway. <br> `validlifetime` - Duration of the address or route that remains valid. Default is `infinite`. <br> `preferredlifetime` - Duration of the address or route that's preferred. Default is `infinite`. <br> `subinterface` - Specifies the LUID of the subinterface for the default gateway. Required only for interfaces with multiple subinterfaces. <br> `store` - Specifies the address persistence. Use `active` for a temporary address removed on reboot, or `persistent` to retain the address after reboot (default). <br> `skipassource` - If `true`, the address isn't used as the source for outgoing packets unless explicitly specified. Default is `false`. |
 | interface `ipv4 add dnsservers` | Adds a new DNS server IP address to the static list for the specified interface. By default, the new DNS server is appended to the end of the list. If an index is provided, the server is inserted at that position, shifting others as needed. If the interface previously used DHCP for DNS, the static address replaces the DHCP-assigned list. When the `validate` option is set to `yes`, the new DNS server is verified before being added. <br><br> `name` - Specifies the name or index of the interface where the DNS server is added. <br> `address` - The IPv4 address of the DNS server to add. <br> `index` - Sets the preference order for the DNS server address. <br> `validate` - Indicates whether to validate the DNS server setting using `yes` (default) or `no`. |
 | interface `ipv4 add excludedportrange` | Excludes a specified range of consecutive ports from being used by the system. <br><br> `protocol` - Specifies the protocol to exclude. Use `tcp` to exclude TCP ports or `udp` to exclude UDP ports. <br> `startport` - The starting port number for the exclusion range. <br> `numberofports` - The total number of consecutive ports to exclude, beginning with `startport`. <br> `store` - Determines the persistence of the exclusion. Use `active` for a temporary exclusion until the next reboot, or `persistent` to retain the exclusion after reboot (default). |
@@ -448,6 +480,11 @@ netsh interface udp show global [store=]active|persistent
 | interface `ipv4 show udpstats` | Displays the UDP connection statistics. <br><br> `rr` - Sets the refresh interval, in seconds, for displaying UDP statistics information. |
 | interface `ipv4 show winsservers` | Displays the WINS server configuration for a specific interface or interfaces. <br><br> `name` - Specifies the interface name or index. |
 | interface `ipv4 uninstall` | Removes the IPv4 protocol from the system. A system restart is required for the changes to take effect. |
+
+### interface ipv6
+
+| Command | Description |
+|--|--|
 | interface `ipv6 6to4 set interface` | Configures settings for a specified 6to4 interface within the IPv6 context. <br><br> `name` - Specifies the interface name or index. <br> `routing` - Sets whether the interface acts as a router: <br> - `enabled`: Turns on routing for this interface. <br> - `disabled`: Turns off routing for this interface. <br> - `default`: Uses the system’s default routing setting. |
 | interface `ipv6 6to4 set relay` | Configures the 6to4 relay server for IPv6 tunneling. <br><br> `name` - Specifies the name of the 6to4 relay or use `default` for the system default. <br> `state` - Sets the state of relay name resolution: <br> - `enabled`: Forces the relay to be active and handle 6to4 traffic. <br> - `disabled`: Turns off the relay. It doesn't process any 6to4 traffic. <br> - `automatic`: Lets Windows decide when to enable or disable the relay based on network conditions. <br> - `default`: Resets the relay state to its default configuration. <br> `interval` - Sets the relay name resolution interval in minutes. |
 | interface `ipv6 6to4 set routing` | Configures routing options for 6to4 tunneling in the IPv6 configuration context. <br><br>`routing` - Controls how 6to4 routing is handled: <br> - `enabled`: Forces 6to4 routing to be active. <br> - `disabled`: Turns off 6to4 routing. <br> - `automatic`: Lets Windows decide when to enable/disable routing based on network conditions. <br> - `default`: Resets routing to the system default. <br> `sitelocals` - Manages the use of site-local addresses in 6to4 routing: <br> - `enabled`: Allows site-local addresses. <br> - `disabled`: Blocks site-local addresses. <br> - `default`: Resets to the system default for site-local address handling. |
@@ -462,7 +499,7 @@ netsh interface udp show global [store=]active|persistent
 | interface `ipv6 add route` | Adds a network route for a specified IPv6 prefix. <br><br> `prefix` - The IP prefix for which to add a route. <br> `interface` - The name or index of the interface to use for the route. <br> `nexthop` - The gateway address, if the prefix isn't on-link. <br> `siteprefixlength` - The prefix length for the entire site, if on-link. <br> `metric` - The metric value for the route. <br> `publish` - Controls advertisement in Route Advertisements. Use `no` (default) to not advertise, `age` to advertise with a finite lifetime, or `yes` to advertise with an infinite lifetime. <br> `validlifetime` - The duration for which the route remains valid. Default is `infinite`. <br> `preferredlifetime` - The duration for which the route is preferred. Default is equal to `validlifetime`. <br> `store` - Determines persistence. Use `active` for a temporary change (until next boot), or `persistent` for a change that remains after reboot (default). |
 | interface `ipv6 add v6v4tunnel` | Creates an IPv6-over-IPv4 tunnel interface. <br><rb> `interface` - The friendly name for the tunnel interface. <br> `localaddress` - The IPv4 address of the local tunnel endpoint. <br> `remoteaddress` - The IPv4 address of the remote tunnel endpoint. |
 | interface `ipv6 delete address` | Removes a static IPv6 address or default gateway from the specified interface. <br><br> `interface` - The interface name or index. <br> `address` - The static IPv6 address to delete. <br> `store` - Use `active` to make the deletion temporary (until next boot), or `persistent` to make it permanent (default). |
-| interface `ipv4 delete destinationcache` | Flushes the destination cache, which stores routing information for IPv6 destinations. If an interface is specified, only that interface's cache is flushed. If an address is also specified, only that destination cache entry is deleted. <br><br>`interface` - The name or index of the interface. <br> `address` - The destination address. |
+| interface `ipv6 delete destinationcache` | Flushes the destination cache, which stores routing information for IPv6 destinations. If an interface is specified, only that interface's cache is flushed. If an address is also specified, only that destination cache entry is deleted. <br><br>`interface` - The name or index of the interface. <br> `address` - The destination address. |
 | interface `ipv6 delete dnsservers` | Deletes statically configured DNS server IP addresses for a specific interface. If `validate` is set to `yes`, the remaining DNS servers are validated. <br><br> `name` - The name or index of the interface where DNS servers are deleted. <br> `address` - The IPv6 address of the DNS server to delete, or `all` to delete all configured DNS server addresses. <br> `validate` - Specifies whether to validate the DNS server setting after deletion, `yes` (default) or `no`. |
 | interface `ipv6 delete excludedportrange` | Deletes a previously set exclusion for a range of TCP or UDP ports. The`startport` and `numberofports` must match the previously created exclusion. <br><br> `protocol` - `tcp` to delete a TCP exclusion, or `udp` for UDP. <br> `startport` - The starting port number of the exclusion.<br> `numberofports` - The number of consecutive ports to delete, starting from `startport`. <br>`store` - `active` for a temporary deletion (until next boot), or `persistent` for a permanent deletion (default). |
 | interface `ipv6 delete interface` | Removes a specified interface from the IPv6 stack. Only point-to-point interfaces that were manually configured can be deleted. <br><br> `interface` - Name or index of the interface to delete. |
@@ -510,10 +547,20 @@ netsh interface udp show global [store=]active|persistent
 | interface `ipv6 show teredo` | Displays the current configuration and operational status of the Teredo tunneling protocol. |
 | interface `ipv6 show tfofallback` | Displays the current status and statistics for TCP Fast Open (TFO) fallback on IPv6 interfaces. This helps determine if TFO is being used or if connections are falling back to standard TCP. |
 | interface `ipv6 show udpstats` | Displays the UDP connection statistics. <br><br> `rr` - Sets the refresh interval, in seconds, for displaying UDP statistics information. |
+
+### interface isatap
+
+| Command | Description |
+|--|--|
 | interface `isatap set router` | Configures the ISATAP router settings. <br><br> `name` - Specifies the ISATAP router name or use `default` for the system default. <br> `state` - Sets the router name resolution state: <br> - `enabled`: Enables router name resolution, allowing the system to resolve the ISATAP router name to an IPv6 address. <br> - `disabled`: Disables router name resolution, preventing the system from resolving the ISATAP router name. <br> - `default`: Restores the router name resolution state to the system default setting. <br> `interval` - Sets the router name resolution interval in minutes. |
 | interface `isatap set state` | Configures the operational state of the ISATAP service. <br><br> `state` - Specifies the ISATAP service mode: <br> - `enabled`: Enables the ISATAP service and configures a link-local address on each ISATAP interface. Additional addresses may be assigned by the ISATAP server. <br> - `disabled`: Disables the ISATAP service. No ISATAP interfaces are created. <br> - `default`: Attempts to contact the ISATAP server. If unreachable, no addresses are configured on the ISATAP interface. |
 | interface `isatap show router` | Displays information about the configured ISATAP router. |
 | interface `isatap show state` | Displays the current operational state of the ISATAP service. |
+
+### interface portproxy
+
+| Command | Description |
+|--|--|
 | interface `portproxy add v4tov4` | Adds a proxy rule to listen on an IPv4 address and port, forwarding incoming TCP connections to another IPv4 address and port. <br><br> `listenport` - The IPv4 TCP port number (1-65535) or service name on which the proxy listens for incoming connections. <br> `connectaddress` - The IPv4 address, or hostname, to which incoming connections are forwarded. <br> `connectport` - The IPv4 TCP port number (1-65535) or service name on the destination address. <br> `listenaddress` - The local IPv4 address or hostname to listen on. <br> `protocol` - The protocol to use. Only `tcp` is supported. |
 | interface `portproxy add v4tov6` | Adds a proxy rule to listen on an IPv4 address and port, forwarding incoming TCP connections to an IPv6 address and port. <br><br> `listenport` - The IPv4 TCP port number (1-65535) or service name on which the proxy listens for incoming connections. <br> `connectaddress` - The IPv6 address, or hostname, to which incoming connections are forwarded. <br> `connectport` - The IPv6 TCP port number (1-65535) or service name on the destination address. <br> `listenaddress` - The local IPv4 address or hostname to listen on. <br> `protocol` - The protocol to use. Only `tcp` is supported. |
 | interface `portproxy add v6tov4` | Adds a proxy rule to listen on an IPv6 address and port, forwarding incoming TCP connections to an IPv4 address and port. <br><br> `listenport` - The IPv6 TCP port number (1-65535) or service name on which the proxy listens for incoming connections. <br> `connectaddress` - The IPv4 address, or hostname, to which incoming connections are forwarded. <br> `connectport` - The IPv4 TCP port number (1-65535) or service name on the destination address. <br> `listenaddress` - The local IPv6 address or hostname to listen on. <br> `protocol` - The protocol to use. Only `tcp` is supported. |
@@ -532,8 +579,31 @@ netsh interface udp show global [store=]active|persistent
 | interface `portproxy show v4tov6` | Displays the configuration details for proxy rules forwarding IPv4 connections to IPv6. |
 | interface `portproxy show v6tov4` | Displays the configuration details for proxy rules forwarding IPv6 connections to IPv4. |
 | interface `portproxy show v6tov6` | Displays the configuration details for proxy rules forwarding IPv6 connections to IPv6. |
+
+> [!NOTE]
+> See the following remarks for the `portproxy` command usage:
+>
+> - All parameters except `protocol` are required.
+> - If you omit `listenaddress`, it defaults to `0.0.0.0`.
+> - Port numbers *must* be valid integers in the range 1-65535.
+> - Service names (for example, `listenport=MyService`) are resolved using the system's services file, which also applies to `connectport`.
+
+### interface set
+
+| Command | Description |
+|--|--|
 | interface `set interface` | Changes the configuration of a network interface. <br><br> `name` - The current name of the network interface you want to modify. <br> `admin` - Controls whether the interface is `enabled` or `disabled`. <br> `connect` - Sets the connection state, `connected` or `disconnected`, for non-LAN interfaces. <br> `newname` - Assigns a new name to the interface (LAN only). <br><br> You must specify at least one subparameter other than `name`. If you use `connect=CONNECTED`, the interface is enabled even if you also specify `admin=DISABLED`. |
+
+### interface show
+
+| Command | Description |
+|--|--|
 | interface `show interface` | Displays the parameters and status of network interfaces. <br><br> `name` - Specifies the name of a particular interface to display its current settings. If omitted, information for all interfaces is shown. |
+
+### interface tcp
+
+| Command | Description |
+|--|--|
 | interface `tcp add supplementalport` | Adds a TCP template for a specific source and destination port pair. <br><br> `template` - Specifies the TCP template to apply: <br> - `internet`: Configures the port for typical internet-facing scenarios. <br> - `datacenter`: Optimizes the port for use in a datacenter environment. <br> - `automatic`: Lets the system choose the most appropriate template based on detected environment or other heuristics. <br> - `custom`: Allows you to specify your own settings instead of using a predefined template. <br> - `compat`: Uses compatibility settings, typically for legacy systems or applications that require older networking behaviors. <br> `localport` - Sets the source port. Use `*` for all ports or specify a port number. <br> `remoteport` - Sets the destination port. Use `*` for all ports or specify a port number. |
 | interface `tcp add supplementalsubnet` | Adds a TCP template filter for traffic destined to a specific subnet. <br><br> `template` - Specifies the TCP template to apply: <br> - `internet`: Configures the port for typical internet-facing scenarios. <br> - `datacenter`: Optimizes the port for use in a datacenter environment. <br> - `automatic`: Lets the system choose the most appropriate template based on detected environment or other heuristics. <br> - `custom`: Allows you to specify your own settings instead of using a predefined template. <br> - `compat`: Uses compatibility settings, typically for legacy systems or applications that require older networking behaviors. <br> `family` - Sets the address family, either `ipv4` or `ipv6`. <br> `address` - Specifies the subnet address in IPv4 or IPv6 notation, optionally followed by a prefix length. |
 | interface `tcp delete supplementalport` | Removes the specified port entry from the TCP supplemental filter table. <br><br> `localport` - Specifies the source port to remove. Use `*` to match all ports or provide a specific port number. <br> `remoteport` - Specifies the destination port to remove. Use `*` to match all ports or provide a specific port number. |
@@ -551,20 +621,27 @@ netsh interface udp show global [store=]active|persistent
 | interface `tcp show supplemental` | Displays the current TCP supplemental template settings. If no parameters are specified, the default global TCP template is shown. If a `template=` parameter is provided, details for that specific template are displayed. <br><br> `template` - Specifies the TCP template to display: <br> - `automatic`: Uses system-selected settings based on environment. <br> - `datacenter`: Optimized for datacenter workloads. <br> - `internet`: Optimized for typical internet scenarios. <br> - `compat`: Provides legacy compatibility settings. <br> - `custom`: Shows user-defined custom settings. |
 | interface `tcp show supplementalports` | Displays which ports are using supplemental TCP settings. <br><br> `level` - Sets the output detail: <br> - `normal`: Displays basic information for supplemental ports. <br> - `verbose`: Displays detailed information for supplemental ports. |
 | interface `tcp show supplementalsubnets` | Displays which subnets are using supplemental TCP settings. <br><br> `level` - Sets the output detail: <br> - `normal`: Displays basic information for supplemental subnets. <br> - `verbose`: Displays detailed information for supplemental subnets. |
+
+### interface teredo
+
+| Command | Description |
+|--|--|
 | interface `teredo set state` | Configures the Teredo operational state. Use `default` for any parameter to restore its system default. The `type=server` option is available only on Windows Server editions. <br><br> `type` - Specifies the Teredo mode: <br> - `disabled`: Turns off the Teredo service. <br> - `client`: Enables the Teredo service on the client. <br> - `enterpriseclient`: Skips managed network detection. <br> - `natawareclient`: Enables Teredo client detection and NAT type. <br> - `server`: Enables the server (Windows Server only). <br> - `default`: Sets to the system default (client). <br> `servername` - Sets the Teredo server name or IPv4 address. <br> `refreshinterval` - Defines the client refresh interval in seconds. <br> `clientport` - Sets the UDP port for the Teredo client. If omitted, the system chooses the port. <br> `servervirtualip` - Specifies the IPv4 address for the server's virtual IP (not used in client mode). |
 | interface `teredo show state` | Displays the current configuration and operational status of the Teredo tunneling protocol. |
+
+### interface udp
+
+| Command | Description |
+|--|--|
 | interface `udp reset` | Removes all user-configured UDP settings and restores all UDP parameters to their default values. |
 | interface `udp set global` | Configures the global UDP offload settings for all network connections. <br><br> `uro` - Enables (`enabled`), disables (`disabled`), or restores (`default`) UDP Receive Offload (URO), which allows the network adapter to offload UDP *receive* processing from the CPU. <br> `uso` - Enables (`enabled`), disables (`disabled`), or restores (`default`) UDP Segmentation Offload (USO), which allows the network adapter to offload UDP *send* processing from the CPU. |
 | interface `udp show global` | Displays the global UDP offload settings for all network connections. <br><br> `store` - Specifies which configuration to display: <br> - `active`: Shows the current in-memory settings (default). <br> - `persistent`: Shows settings that persist after reboot. |
-| `help` *or* `?` | Displays a list of commands and their descriptions in the current context. |
 
-> [!NOTE]
-> See the following remarks for the `portproxy` command usage:
->
-> - All parameters except `protocol` are required.
-> - If you omit `listenaddress`, it defaults to `0.0.0.0`.
-> - Port numbers *must* be valid integers in the range 1-65535.
-> - Service names (for example, `listenport=MyService`) are resolved using the system's services file, which also applies to `connectport`.
+### interface help
+
+| Command | Description |
+|--|--|
+| `help` *or* `?` | Displays a list of commands and their descriptions in the current context. |
 
 ## Examples
 
