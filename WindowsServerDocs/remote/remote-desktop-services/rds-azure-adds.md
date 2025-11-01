@@ -6,6 +6,9 @@ ms.date: 7/3/2024
 ms.topic: how-to
 author: dknappettmsft
 ---
+>[!IMPORTANT]
+>This is currently an unsupported configuration
+
 # Integrate Microsoft Entra Domain Services with your RDS deployment
 
 You can use [Microsoft Entra Domain Services](/azure/active-directory-domain-services/active-directory-ds-overview) in your Remote Desktop Services deployment in the place of Windows Server Active Directory. Microsoft Entra Domain Services lets you use your existing Microsoft Entra identities in with classic Windows workloads.
