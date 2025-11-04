@@ -91,8 +91,9 @@ Administrators can also view Network HUD faults in Windows Admin Center cluster 
 
 TODO: get screenshot of HUD fault in WAC
 
-## Related content
+## Next steps
 
-- [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server)
-- [Physical network requirements](/azure/azure-local/concepts/physical-network-requirements)
-- [Host network requirements (traffic types)](/azure/azure-local/concepts/host-network-requirements#network-traffic-types)
+- [Install Network HUD for Windows Server](install-network-hud.md)
+- [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
+- [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
+- [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).

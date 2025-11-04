@@ -110,9 +110,3 @@ To verify the installation and view health faults using PowerShell, follow these
    ```
 
 ---
-
-## Related content
-
-- Deploy host networking with Network ATC (Azure Stack HCI) <https://learn.microsoft.com/en-us/azure-stack/hci/deploy/network-atc?tabs=22H2>
-- Physical network requirements <https://learn.microsoft.com/en-us/azure-stack/hci/concepts/physical-network-requirements?tabs=overview%2C23H2reqs>
-- Connect Windows Server machines to Azure through Azure Arc Setup <https://learn.microsoft.com/en-us/azure/azure-arc/servers/onboard-windows-server>
