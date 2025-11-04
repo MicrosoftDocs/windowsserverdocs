@@ -46,7 +46,7 @@ Before you install Network HUD, ensure you have the following prerequisites in p
     - Australia East
 
 - Physical switch infrastructure requirements:
-  - You're using approved and validated physical switches for your Windows Server 2025 Datacenter clustered deployment (<https://learn.microsoft.com/en-us/azure-stack/hci/concepts/physical-network-requirements?tabs=overview%2C23H2reqs>). Network HUD queries physical switches to ensure that your host network configuration aligns with the corresponding physical switch configuration.
+  - You're using approved and [validated physical switches for your Windows Server 2025 Datacenter clustered deployment](/azure-stack/hci/concepts/physical-network-requirements?tabs=overview%2C23H2reqs). Network HUD queries physical switches to ensure that your host network configuration aligns with the corresponding physical switch configuration.
   - Your switches have LLDP enabled to allow Network HUD to query physical switch information.
 
 ## Enable the Network HUD extension in the Azure portal
