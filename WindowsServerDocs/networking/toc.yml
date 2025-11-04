@@ -297,6 +297,12 @@ items:
         href: network-atc/network-atc.md
       - name: Manage Network ATC
         href: network-atc/manage-network-atc.md
+      - name: Network HUD (preview)
+        items:
+        - name: What is Network HUD?
+          href: network-hud-overview.md
+        - name: Install Network HUD
+          href: install-network-hud.md
     - name: Software Defined Networking (SDN)
       href: sdn/index.yml
       items:

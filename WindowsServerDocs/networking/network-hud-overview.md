@@ -1,17 +1,21 @@
 ---
-title: What is Network HUD for Windows Server?
+title: What is Network HUD (preview) for Windows Server? 
 description: Learn what Network HUD is, how it works, and the core capabilities it provides for host networking diagnostics across Windows Server clusters.
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: baselkablawi
-ms.date: 11/03/2025
+ms.date: 11/04/2025
 ms.topic: overview
 #customer intent: As a cluster administrator, I want to understand what Network HUD does and when to use it so that I can improve host networking reliability and performance.
 ---
 
-# What is Network HUD?
+# What is Network HUD for Windows Server?
 
-Network HUD is a host networking diagnostics and operational tool that analyzes and remediates host networking issues. Network HUD performs real-time, intent‑aware checks across physical switch connectivity, host adapter configuration, and cluster roles to surface proactive alerts before instability or performance degradation impacts workloads. Instead of post-incident analysis of event logs, performance counters, packet traces, and switch settings, Network HUD surfaces these signals as actionable health faults that accelerate prevention and remediation.
+> [!IMPORTANT]
+> Network HUD for Windows Server is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+
+Network HUD is a host networking diagnostics and operational tool that analyzes and remediates host networking issues. Network HUD runs continuously, correlating physical switch links, host adapter settings, and the cluster roles that consume them; it uses intent data to select only relevant tests and raises early alerts when emerging issues threaten workload performance or stability. Instead of post-incident analysis of event logs, performance counters, packet traces, and switch settings, Network HUD surfaces these signals as actionable health faults that accelerate prevention and remediation.
 
 Diagnosing host networking issues is challenging because visibility is fragmented across the physical fabric (ToR switches, cabling, NIC hardware), the cluster hosts and their configuration state, and the guest VMs or containers consuming virtual switches and adapters. This separation obscures root causes, slows remediation, and increases the risk of performance or stability degradation. Network HUD helps you to:
 
@@ -28,7 +32,7 @@ Once you have confirmed you're eligible for Windows Server Management enabled by
 
 - You're using Windows Server Failover Clustering.
 - Cluster nodes must be running Windows Server 2025 Datacenter.
-- Network ATC is deployed with host networking intents.
+- Network ATC is deployed with host networking intents. To learn more about deploying Network ATC, see [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
 - The cluster must have Storage Spaces Direct (S2D) enabled (required for the Cluster Health service). To learn more about deploying Storage Spaces Direct, see [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).
 - Each cluster node must be connected to Azure Arc.
 
@@ -46,9 +50,9 @@ The following table defines some of the key terms used in this document:
 
 ## How Network HUD works
 
-Network HUD continuously interprets raw host and fabric signals through the lens of declared Network ATC intents. Instead of treating adapters, switches, and roles as isolated components, it correlates them so you can understand emerging instability, such as a flapping port in context storage, compute, or management intents. Each detection combines multiple telemetry streams to reduce noise and surface only actionable health faults.
+Network HUD is cluster-aware continuously interpreting raw host and fabric signals in the context of declared Network ATC intents and cluster states. Instead of treating adapters, switches, and roles as isolated components, it correlates them across cluster-wide so you can understand emerging instability in an operational context. For example, a flapping port in context storage, compute, or management intents. Each detection combines multiple telemetry streams to reduce noise and surface only actionable health faults.
 
-It gathers and normalizes events from:
+To surface actionable health faults, Network HUD gathers and normalizes events from:
 
 - Network ATC intent metadata that declares what each adapter is supposed to carry, shaping which tests are relevant and suppressing unnecessary probes.
 - LLDP exchanges with top-of-rack switches to map physical ports, VLAN advertisement, and Priority Flow Control readiness for RDMA traffic.
@@ -57,10 +61,6 @@ It gathers and normalizes events from:
 - Packet-level insights (using `pktmon`) and low-level hardware properties when precision is required. For example, validating oversubscription risk.
 
 These inputs are combined into intent-aware detections that publish health faults through the existing cluster health pipeline—so Windows Admin Center and PowerShell reflect networking issues. Network HUD runs locally on each node for low latency and resilience.
-
-### Cluster awareness and Network ATC integration
-
-Network HUD is cluster-aware. Nodes share contextual status so healthy nodes don't overwhelm degraded nodes. For example, during an adapter instability event. By using Network ATC intents, HUD knows each adapter's intended traffic role and applies only relevant tests. This approach reduces overhead and produces clearer, role-specific alerts (storage, compute, and management). Failed or missing intents lower diagnostic fidelity. HUD surfaces these issues early so other detections remain accurate and scoped.
 
 ## Health detection scenarios
 
