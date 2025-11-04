@@ -6,6 +6,7 @@ ms.author: roharwoo
 ms.reviewer: baselkablawi
 ms.date: 11/04/2025
 ms.topic: install-set-up-deploy
+ai-usage: ai-assisted
 #customer intent: As a cluster administrator, I want to install and enable Network HUD so that I can surface proactive host networking health faults.
 ---
 

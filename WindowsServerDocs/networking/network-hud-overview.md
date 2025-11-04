@@ -6,6 +6,7 @@ ms.author: roharwoo
 ms.reviewer: baselkablawi
 ms.date: 11/04/2025
 ms.topic: overview
+ai-usage: ai-assisted
 #customer intent: As a cluster administrator, I want to understand what Network HUD does and when to use it so that I can improve host networking reliability and performance.
 ---
 
