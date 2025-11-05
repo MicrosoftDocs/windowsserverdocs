@@ -12,9 +12,9 @@ ai-usage: ai-assisted
 ---
 # Windows Server failover clustering storage architectures
 
-Windows Server Failover Clustering supports several storage architecture patterns that provide high availability for clustered workloads (clustered roles) such as virtual machines (Hyper-V), Scale-Out File Server application data shares, SQL Server (including FCI or databases on SMB shares where supported), and other clustered applications. This article focuses only on clustered architectures—standalone (nonclustered) deployments are intentionally excluded.
+Windows Server Failover Clustering supports several storage architecture patterns that provide high availability and resiliency for clustered roles. This article focuses clustered topologies.
 
-The architectures covered here are sourced from existing clustering guidance and reflect how compute and storage components scale, how Cluster Shared Volumes (CSV) or Storage Spaces Direct (S2D) are used, and which workloads commonly benefit. For detailed functionality of Failover Clustering (quorum, health monitoring, CSV behavior, Scale-Out File Server active-active access), see:
+The storage architectures covered here reflect how compute and storage components scale, how Cluster Shared Volumes (CSV) or Storage Spaces Direct (S2D) are used. For detailed functionality of Failover Clustering (quorum, health monitoring, CSV behavior, Scale-Out File Server active-active access), see:
 
 - [Failover Clustering overview](failover-clustering-overview.md)
 - [Cluster Shared Volumes overview](failover-cluster-csvs.md)
