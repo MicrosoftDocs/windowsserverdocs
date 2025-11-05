@@ -56,8 +56,6 @@
         href: Azure-services-and-considerations-for-desktop-hosting.md
       - name: Understanding the desktop hosting environment
         href: Understanding-the-desktop-hosting-environment.md    
-      - name: Tenant on-premises components
-        href: Tenant-on-premises-components.md  
   - name: Build and deploy
     href: rds-build-and-deploy.md
     items:
