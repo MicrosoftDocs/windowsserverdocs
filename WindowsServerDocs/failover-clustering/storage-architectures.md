@@ -1,5 +1,5 @@
 ---
-title: Failover clustering storage architectures in Windows Server
+title: Failover Clustering Storage Architectures in Windows Server
 ms.reviewer: robhind
 description: Explore Windows Server Failover Clustering storage topologies like SAN, NAS, hyperconverged, disaggregated, and mixed topologies scale compute and storage efficiently.
 #customer intent: As a systems architect, I want to learn how to scale compute and storage in a Windows Server Failover Cluster so that I can optimize resource allocation.
@@ -10,7 +10,7 @@ ms.review: robhind
 ms.date: 11/05/2025
 ai-usage: ai-assisted
 ---
-# Windows Server failover clustering storage architectures
+# Failover clustering storage architectures
 
 Windows Server Failover Clustering supports several storage architecture patterns that provide high availability and resiliency for clustered roles. This article covers storage architectures including SAN, NAS, hyperconverged, disaggregated Storage Spaces Direct, and mixed topologies.
 
