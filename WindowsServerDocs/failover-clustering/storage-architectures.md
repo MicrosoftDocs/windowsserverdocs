@@ -96,7 +96,7 @@ Planning considerations before deploying or expanding hyperconverged clusters:
 
 - Monitor drive, enclosure, and replication health proactively.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png" alt-text="Diagram of a basic hyperconverged Storage Spaces Direct cluster with compute hosts and pooled local disks." lightbox="media/hyper-v-storage-architecture/hyperconverged-hyper-v-storage.png":::
+:::image type="content" source="media/storage-architectures/hyperconverged-storage.png" alt-text="Diagram of a basic hyperconverged Storage Spaces Direct cluster with compute hosts and pooled local disks." lightbox="media/storage-architectures/hyperconverged-storage.png":::
 
 ## Disaggregated Storage Spaces Direct
 
@@ -134,15 +134,15 @@ Planning considerations before deploying or expanding disaggregated Storage Spac
 
 The following diagram shows a disaggregated deployment with one compute cluster and one storage cluster.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-example.png" alt-text="Diagram of disaggregated architecture: one compute cluster accessing a separate Storage Spaces Direct cluster." lightbox="media/hyper-v-storage-architecture/hyperconverged-basic-example.png":::
+:::image type="content" source="media/storage-architectures/hyperconverged-basic-example.png" alt-text="Diagram of disaggregated architecture: one compute cluster accessing a separate Storage Spaces Direct cluster." lightbox="media/storage-architectures/hyperconverged-basic-example.png":::
 
 When you add more compute resources, you can either add a new node to the existing compute cluster or add a new cluster. The following diagram shows what happens to the simple deployment if you add a new cluster to it without adding more storage.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-compute.png" alt-text="Diagram showing disaggregated model after adding a second compute cluster (compute scale only)." lightbox="media/hyper-v-storage-architecture/hyperconverged-basic-compute.png":::
+:::image type="content" source="media/storage-architectures/hyperconverged-basic-compute.png" alt-text="Diagram showing disaggregated model after adding a second compute cluster (compute scale only)." lightbox="media/storage-architectures/hyperconverged-basic-compute.png":::
 
 When you add more storage resources for hosting data without adding more compute resources, you can either add a new node to the existing storage cluster or add a new cluster. The following diagram shows what the simple deployment looks like when you add a new cluster without adding compute resources like CPU or RAM.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-basic-storage.png" alt-text="Diagram showing disaggregated model after adding a second storage cluster (storage scale only)." lightbox="media/hyper-v-storage-architecture/hyperconverged-basic-storage.png":::
+:::image type="content" source="media/storage-architectures/hyperconverged-basic-storage.png" alt-text="Diagram showing disaggregated model after adding a second storage cluster (storage scale only)." lightbox="media/storage-architectures/hyperconverged-basic-storage.png":::
 
 ## Hyperconverged with SAN storage
 
@@ -201,7 +201,7 @@ Hyper-V supports combining the following architectures in the same compute clust
 
 The following diagram shows an example of a deployment with a compute cluster containing a mix of disaggregated SAN and NAS storage.
 
-:::image type="content" source="media/hyper-v-storage-architecture/hyperconverged-mixed-example.png" alt-text="A diagram that shows a deployment with a compute cluster containing a mix of disaggregated SAN and NAS storage." lightbox="media/hyper-v-storage-architecture/hyperconverged-mixed-example.png":::
+:::image type="content" source="media/storage-architectures/hyperconverged-mixed-example.png" alt-text="A diagram that shows a deployment with a compute cluster containing a mix of disaggregated SAN and NAS storage." lightbox="media/storage-architectures/hyperconverged-mixed-example.png":::
 
 ### Network Storage Protocols
 
