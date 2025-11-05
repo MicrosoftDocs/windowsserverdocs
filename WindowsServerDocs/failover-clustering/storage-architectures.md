@@ -14,14 +14,7 @@ ai-usage: ai-assisted
 
 Windows Server Failover Clustering supports several storage architecture patterns that provide high availability and resiliency for clustered roles. This article covers storage architectures including SAN, NAS, hyperconverged, disaggregated Storage Spaces Direct, and mixed topologies.
 
-The storage architectures covered here reflect how compute and storage components scale, how Cluster Shared Volumes (CSV) or Storage Spaces Direct (S2D) are used. For detailed functionality of Failover Clustering (quorum, health monitoring, CSV behavior, Scale-Out File Server active-active access), see:
-
-- [Failover Clustering overview](failover-clustering-overview.md)
-- [Cluster Shared Volumes overview](failover-cluster-csvs.md)
-- [Failover clustering hardware requirements and storage options](clustering-requirements.md)
-- [Scale-Out File Server for application data overview](sofs-overview.md)
-
-This article doesn't describe every possible storage architecture configuration or uncommon edge cases.
+The storage architectures covered here reflect how compute and storage components scale, how Cluster Shared Volumes (CSV) or Storage Spaces Direct (S2D) are used.This article doesn't describe every possible storage architecture configuration or uncommon edge cases.
 
 ## Architecture comparison
 
