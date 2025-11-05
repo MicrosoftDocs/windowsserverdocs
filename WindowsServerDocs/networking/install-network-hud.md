@@ -4,7 +4,7 @@ description: Install and enable Network HUD on Windows Server 2025 Datacenter cl
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: baselkablawi
-ms.date: 11/04/2025
+ms.date: 11/05/2025
 ms.topic: install-set-up-deploy
 ai-usage: ai-assisted
 #customer intent: As a cluster administrator, I want to install and enable Network HUD so that I can surface proactive host networking health faults.
@@ -46,9 +46,7 @@ Before you install Network HUD, ensure you have the following prerequisites in p
     - Southeast Asia
     - Australia East
 
-- Physical switch infrastructure requirements:
-  - You're using approved and [validated physical switches for your Windows Server 2025 Datacenter clustered deployment](/azure-stack/hci/concepts/physical-network-requirements?tabs=overview%2C23H2reqs). Network HUD queries physical switches to ensure that your host network configuration aligns with the corresponding physical switch configuration.
-  - Your switches have LLDP enabled to allow Network HUD to query physical switch information.
+- Network HUD for Windows Server has the same network switch requirements as Azure Local. When using Network HUD on Windows Server, ensure you're using validated physical switches for Azure Local and that the network switch requirements are met. To learn more, review the sections _**Network switches for Azure Local**_ and _**Network switch requirements**_ in [Physical network requirements for Azure Local](/azure/azure-local/concepts/physical-network-requirements). Other sections in the Physical network requirements for Azure Local article don't apply to Network HUD Windows. Server
 
 ## Enable the Network HUD extension in the Azure portal
 
@@ -60,7 +58,7 @@ To use the Azure portal to enable the Network HUD extension, follow these steps:
 
 1. Select the **Network HUD** tile.
 
-   :::image type="content" source="media/install-network-hud/network-hud-azure-arc.png" alt-text="Screenshot of the Azure portal Machines - Azure Arc page showing the Network HUD extension tile before it is enabled.":::
+   :::image type="content" source="media/install-network-hud/network-hud-azure-arc.png" alt-text="Screenshot of the Azure portal Machines - Azure Arc page showing the Network HUD extension tile before it's enabled.":::
 
 1. When ready, select **Enable**.
 
@@ -86,6 +84,8 @@ To verify the installation and view health faults using Windows Admin Center, fo
 
    :::image type="content" source="media/install-network-hud/windows-admin-center-alert-detail.png" alt-text="Screenshot of Windows Admin Center fault detail pane for a Network HUD alert showing fields and recommended remediation actions.":::
 
+Alerts automatically resolve themselves when the underlying issue is fixed.
+
 # [PowerShell](#tab/powershell)
 
 To verify the installation and view health faults using PowerShell, follow these steps:
@@ -108,6 +108,22 @@ To verify the installation and view health faults using PowerShell, follow these
 
    ```powershell
    Get-HealthFault -Cluster $cluster | Where Reason -like '*hud*'
+   ```
+
+1. The command output displays a list of Network HUD related health faults, including details about the issue and a recommended resolution. The following is an example output:
+
+   ```powershell
+   FaultId      : 1015
+   
+   Reason       : Network HUD detected incorrect VLAN configuration
+   
+   Severity     : Warning
+   
+   NodeName     : ClusterNode01
+   
+   Timestamp    : 11/04/2025 09:15:32
+   
+   Resolution   : Verify VLAN settings on NIC and switch ports
    ```
 
 ---
