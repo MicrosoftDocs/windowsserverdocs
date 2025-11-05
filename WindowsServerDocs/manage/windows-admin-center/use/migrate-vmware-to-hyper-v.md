@@ -625,18 +625,18 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
 ## [Version 1.8.3](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.3) (October 2025)
 
-## New Features & Enhancements
+## New features and enhancements
 
-### PowerCLI Installation Support
+### PowerCLI installation support
 - Added a **PowerCLI installation option** on the landing page to help users set up required component on the gateway.  
 - Introduced an **alert banner** on the VM List and vSphere List pages that notifies users if PowerCLI is missing, with a direct link to install it.
 
-### Migration Workflow Improvements
+### Migration workflow improvements
 - Improved stability, validation, and error handling for a smoother migration experience.
 
 ---
 
-## Bug Fixes
+## Bug fixes
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
