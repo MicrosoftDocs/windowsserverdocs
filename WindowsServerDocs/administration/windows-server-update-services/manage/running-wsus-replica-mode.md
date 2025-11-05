@@ -2,9 +2,8 @@
 title: Running WSUS Replica mode
 description: Windows Server Update Service (WSUS) topic - How to configure Replica mode
 ms.topic: concept-article
-ms.assetid: d218cd6b-3b6b-4429-913b-31d412ce3356
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # Running WSUS Replica mode
@@ -28,6 +27,7 @@ If your WSUS server is running in replica mode, you will be able to perform only
 -   Monitoring update, synchronization, computer status, and WSUS settings on the server
 
 -   Running all standard WSUS reports available on replica mode servers
+
 
 
 

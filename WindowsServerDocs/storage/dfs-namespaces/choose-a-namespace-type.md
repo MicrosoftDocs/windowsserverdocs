@@ -4,7 +4,6 @@ description: This article describes how to choose a namespace type.
 ms.date: 6/5/2017
 ms.topic: concept-article
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Choose a namespace type
@@ -63,3 +62,4 @@ The characteristics of each namespace type and mode are described in the followi
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Migrate a Domain-based Namespace to Windows Server 2008 Mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md)
+

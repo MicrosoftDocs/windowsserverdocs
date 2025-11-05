@@ -1,6 +1,5 @@
 ---
 title: Disaster Recovery Scenarios for Storage Spaces Direct in Windows Server
-manager: tedhudek
 ms.topic: example-scenario
 ms.author: roharwoo
 author: robinharwood
@@ -122,3 +121,4 @@ Once the restore has taken place, this node must be the one to start the Cluster
 ## Summary
 
 To sum this all up, hyper-converged disaster recovery is something that should be planned out carefully. There are several scenarios that can best suits your needs and should be thoroughly tested. One item to note is that if you are familiar with Failover Clusters in the past, stretch clusters have been a very popular option over the years. There was a bit of a design change with the hyper-converged solution and it is based on resiliency. If you lose two nodes in a hyper-converged cluster, the entire cluster will go down. With this being the case, in a hyper-converged environment, the stretch scenario is not supported.
+

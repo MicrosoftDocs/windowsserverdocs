@@ -1,14 +1,14 @@
 ---
-title: Migrate the Certification Authority in Windows Server
+title: Migrate a Certification Authority in Windows Server
 description: Learn how to migrate your Certification Authority with step-by-step instructions and best practices.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/22/2025
 #customer intent: As a system administrator, I want to migrate the Certification Authority so that I can ensure continuity of certificate services.
 ---
 
-# Migrate the Certification Authority
+# Migrate a Certification Authority
 
 Migrating a Certification Authority (CA) ensures the continuity of your organization's certificate services. This guide provides step-by-step instructions and best practices for successfully migrating a CA. It covers essential tasks such as backing up the CA database and private key, removing the CA role service from the source server, and restoring the CA on the destination server. Whether you're using the Certification Authority snap-in, Windows PowerShell, or command-line tools like Certutil, this guide offers detailed steps tailored to various migration scenarios. Follow these instructions to ensure a smooth and secure migration process.
 
@@ -797,3 +797,4 @@ When a CA is running on a failover cluster, the server's short name must be repl
 ## Next step
 
 After completing the procedures to migrate the CA, you should complete the procedures described in [Verifying the Certification Authority Migration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486770(v=ws.11)).
+

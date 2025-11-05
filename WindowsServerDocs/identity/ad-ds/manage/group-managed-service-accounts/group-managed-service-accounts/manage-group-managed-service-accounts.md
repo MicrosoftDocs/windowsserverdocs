@@ -2,9 +2,8 @@
 title: Manage Group Managed Service Accounts
 description: Learn how to manage and use Group Managed Service Accounts (gMSA) in Windows Server.
 ms.topic: how-to
-ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/01/2025
 ---
 
@@ -264,3 +263,4 @@ For more information about the `Uninstall-ADServiceAccount` cmdlet, see  [Uninst
 ## See also
 
 - [Group Managed Service Accounts overview](group-managed-service-accounts-overview.md)
+

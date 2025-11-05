@@ -2,9 +2,8 @@
 title: Remote Desktop client - supported configuration
 description: Learn which PCs you can and can't access by using supported configurations for Remote Desktop clients.
 ms.topic: feature-availability
-ms.assetid: bb932dad-6f74-484f-8f7b-dd957b615d44
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 7/3/2024
 ---
 
@@ -38,3 +37,4 @@ The following operating systems can serve as Remote Desktop Gateway, Web Access,
 ## RD Gateway messaging isn't supported
 
 Remote Desktop Client doesn't support RD Gateway messaging. Verify that the Remote Desktop Resource Access Policy (RD RAP) for your RD Gateway server doesn't specify **Only allow computers with support for RD Gateway Messaging**, or you aren't able to connect.
+

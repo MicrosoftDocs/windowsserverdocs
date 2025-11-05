@@ -2,9 +2,8 @@
 title: logman start and logman stop
 description: Reference article for the logman start and logman stop commands, which starts a data collector and sets the begin time to manual, or stops a Data Collector Set and sets the end time to manual.
 ms.topic: reference
-ms.assetid: a40006a1-876e-474b-aaf1-f365c730deea
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

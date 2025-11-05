@@ -4,7 +4,6 @@ description: Step-by-step instructions to deploy software-defined storage with S
 ms.author: daknappe
 author: dknappettmsft
 ms.topic: how-to
-ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 ms.date: 03/18/2025
 ---
 
@@ -391,3 +390,4 @@ CD $ScriptFolder
 - [Storage Spaces Fault Tolerance](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage)
 - [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 - [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)
+

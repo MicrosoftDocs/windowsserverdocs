@@ -1,12 +1,10 @@
 ---
 title: Storage Replica Overview
 description: Get an overview of Storage Replica in Windows Server.
-manager: siroy
-ms.author: mosagie
+ms.author: roharwoo
 ms.topic: overview
-author: meaghanlewis
+author: robinharwood
 ms.date: 08/22/2025
-ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica overview
 
@@ -214,3 +212,5 @@ Storage Replica articles frequently use the following terms:
 * [Storage Replica FAQ](storage-replica-frequently-asked-questions.yml)
 * [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
 * [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)
+
+

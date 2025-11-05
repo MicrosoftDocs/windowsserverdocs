@@ -1,10 +1,10 @@
 ---
 title: Install Windows Server from installation media
 description: Learn how to create a bootable USB flash drive or DVD media to deploy Windows Server on physical and virtual hardware.
-ms.date: 01/27/2025
+ms.date: 10/13/2025
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 zone_pivot_groups: windows-os-version
 ---
 
@@ -64,10 +64,10 @@ robocopy $source $destination /COPYALL /Z /E /SEC /R:3 /W:3
 
 # Make USB drive bootable
 $usbDriveNumber = (Get-WmiObject -Class Win32_DiskDrive | Where-Object {$_.InterfaceType -eq "USB" -and $_.DeviceID -like "*$usbDriveLetter"}).Index
-bootsect /nt60 $usbDriveLetter | Out-Null
+bootsect /nt60 $usbDriveLetter`:
 
 # Task completion notification
-Write-Host "Copy operation complete"
+Write-Host "USB Creation Complete!"
 Start-Sleep -Seconds 2
 ```
 
@@ -80,7 +80,7 @@ This script makes your USB drive bootable in FAT32 format. The FAT32 filesystem 
 $usbDriveLetter = Read-Host "Enter USB drive letter (Ex: E)"
 
 # Format USB drive
-Format-Volume -DriveLetter $usbDriveLetter -FileSystem FAT32 -NewFileSystemLabel "ServerUSB" -Confirm:$false
+Format-Volume -DriveLetter $usbDriveLetter -FileSystem FAT32 -NewFileSystemLabel "ServerUSB" -Confirm:$false -Force  | Out-Null
 
 # Select ISO file mount point
 $isoMountPointDriveLetter = Read-Host "Enter ISO mount point drive letter (Ex: F)"
@@ -92,20 +92,25 @@ robocopy $source $destination /COPYALL /Z /E /SEC /R:3 /W:3 /XF "$($isoMountPoin
 
 # Split install.wim file
 Write-Host "[--- Splitting install.wim ---]"
-Start-Sleep -Seconds 2
 Dism /Split-Image /ImageFile:"$($isoMountPointDriveLetter):\sources\install.wim" /SWMFile:"$($usbDriveLetter):\sources\install.swm" /FileSize:3800
+Write-Host "" | Start-Sleep -Seconds 2
 
-# Copy split install.wim files to USB drive
-$source = "$($isoMountPointDriveLetter):\sources\"
-$destination = "$($usbDriveLetter):\sources\"
-robocopy $source $destination /COPYALL /Z /E /SEC /R:3 /W:3 *.swm
+# Verify .swm files are on the USB drive
+Write-Host "[--- Verifying split .swm files ---]"
+Write-Host ""
+$swmFiles = Get-ChildItem "$($usbDriveLetter):\sources\*.swm"
+Write-Host "Number of .swm files found: $($swmFiles.Count)"
+$swmFiles | ForEach-Object { Write-Host $_.Name }
+Write-Host "" | Start-Sleep -Seconds 2
 
 # Make USB drive bootable
-$usbDriveNumber = (Get-WmiObject -Class Win32_DiskDrive | Where-Object {$_.InterfaceType -eq "USB" -and $_.DeviceID -like "*$usbDriveLetter"}).Index
-bootsect /nt60 $usbDriveLetter | Out-Null
+Write-Host "Making USB drive bootable..."
+Write-Host ""  | Start-Sleep -Seconds 2
+bootsect /nt60 $usbDriveLetter`:
+Write-Host ""
 
 # Task completion notification
-Write-Host "Copy operation complete"
+Write-Host "USB Creation Complete!"
 Start-Sleep -Seconds 2
 ```
 
@@ -144,14 +149,14 @@ Once modifications are made to the boot order and you select to boot from either
 1. Under **Select keyboard settings**, select your keyboard language, then select **Next**.
 1. Under **Select setup option**, select **Install Windows Server**, select **I agree everything will be deleted including files, apps, and settings**, then select **Next**.
 1. Under **Choose a licensing method**, select the option that best serves your environment, then select **Next**:
-  
+
    1. **Use a product key** - This option is for users who have an OEM, Retail, or Volume License (VL) key. If this license type is selected, proceed with the next steps.
 
    1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
-  
+
 1. Under **Select image**, select your Windows Server version, then select **Next**.
 1. Under **Applicable notices and license terms**, review the software terms, then select **Accept**.
-1. Under **Select location to install Windows Server**, select the disk which you want to install Windows Server, then select **Next**.
+1. Under **Select location to install Windows Server**, select the disk that you want to install Windows Server, then select **Next**.
 1. Under **Ready to install**, select **Install**.
 1. Once your device reboots a few times, the **License terms** appear. Select **Accept** to proceed.
 1. Under **Customize settings**, provide a complex password for the Administrator account, then select **Finish**.
@@ -165,14 +170,14 @@ Once modifications are made to the boot order and you select to boot from either
 1. Under **Select keyboard settings**, select your keyboard language, then select **Next**.
 1. Under **Select setup option**, select **Install Windows Server**, select **I agree everything will be deleted including files, apps, and settings**, then select **Next**.
 1. Under **Choose a licensing method**, select the option that best serves your environment, then select **Next**:
-  
+
    1. **Use a product key** - This option is for users who have an OEM, Retail, or Volume License (VL) key. If this license type is selected, proceed with the next steps.
 
    1. **Pay-as-you-go** - This option is for users who desire to use their Azure subscription license. This option is only available for Windows Server 2025 and has its own set of [prerequisites](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#prerequisites). If this license type is selected, see [Set up Windows Server Pay-as-you-go](windows-server-pay-as-you-go.md?tabs=gui%2Cazureportal#set-up-windows-server-pay-as-you-go) to continue the installation process.
-  
+
 1. Under **Select image**, select your Windows Server version, then select **Next**.
 1. Under **Applicable notices and license terms**, review the software terms, then select **Accept**.
-1. Under **Select location to install Windows Server**, select the disk which you want to install Windows Server, then select **Next**.
+1. Under **Select location to install Windows Server**, select the disk that you want to install Windows Server, then select **Next**.
 1. Under **Ready to install**, select **Install**.
 1. Once your device reboots a few times, you're prompted to change the Administrator password. Hit the **Enter** button.
 1. Provide a complex password for the Administrator account, then hit the **Tab** button.

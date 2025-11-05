@@ -2,8 +2,8 @@
 title: netsh lan
 description: Reference article for the netsh lan command that manages and configures LAN settings on your Windows-based computer.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/25/2025
 ---
 

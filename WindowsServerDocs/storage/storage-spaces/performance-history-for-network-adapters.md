@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for network adapters"
 title: Performance history for network adapters
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 02/02/2018
@@ -81,3 +80,4 @@ Get-NetAdapter <Name> | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+

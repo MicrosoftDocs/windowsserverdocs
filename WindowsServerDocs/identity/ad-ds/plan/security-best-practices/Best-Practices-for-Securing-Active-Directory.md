@@ -1,9 +1,8 @@
 ---
 description: Learn more about best practices for securing Active Directory.
-ms.assetid: e2651dc8-4b31-4cd8-a400-3b8123890210
 title: Best practices for securing Active Directory
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/21/2025
 ms.topic: best-practice
 ---
@@ -198,3 +197,4 @@ Each measure is also categorized based on whether it's tactical, strategic, prev
 - [Maintaining a more secure environment](../../../ad-ds/plan/security-best-practices/Maintaining-a-More-Secure-Environment.md)
 
 - [Appendices](../../../ad-ds/plan/security-best-practices/Appendices.md)
+

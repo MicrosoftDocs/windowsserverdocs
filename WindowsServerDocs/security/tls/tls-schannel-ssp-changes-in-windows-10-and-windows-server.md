@@ -2,7 +2,6 @@
 description: "Learn more about: TLS (Schannel SSP) changes in Windows 10 and Windows Server 2016"
 title: TLS (Schannel SSP)
 ms.topic: how-to
-ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df
 ms.date: 05/16/2018
 ---
 

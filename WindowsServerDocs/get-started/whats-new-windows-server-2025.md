@@ -2,8 +2,8 @@
 title: What's new in Windows Server 2025
 description: Learn about the features and enhancements in Windows Server 2025 that help to improve security, performance, and flexibility.
 ms.topic: whats-new
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/28/2025
 ---
 
@@ -379,7 +379,7 @@ This approach reduces the time, complexity, and errors associated with host netw
 
 With Windows Server 2025, Hyper-V now supports up to 4 petabytes of memory and 2,048 logical processors per host. This increase allows for greater scalability and performance for virtualized workloads.
 
-Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md).
+Windows Server 2025 also supports up to 240 TB of memory and 2,048 virtual processors for generation 2 VMs, providing increased flexibility for running large workloads. To learn more, see [Plan for Hyper-V scalability in Windows Server](../virtualization/hyper-v/maximum-scale-limits.md).
 
 ### Workgroup clusters
 
@@ -469,3 +469,4 @@ The [Windows Server Insider Program](get-started-with-windows-server-insiders-pr
 ## Related content
 
 [Windows Server Insider Community discussions](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders)
+

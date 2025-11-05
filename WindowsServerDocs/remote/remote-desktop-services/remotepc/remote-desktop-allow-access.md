@@ -2,9 +2,8 @@
 title: Enable Remote Desktop on your PC
 description: Learn how to use Remote Desktop to connect to and control your PC from a remote device.
 ms.topic: how-to
-ms.assetid: 0f1557ed-53f7-4333-b023-c8e0f4b58bf4
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/18/2025
 ---
 
@@ -70,3 +69,4 @@ To learn more, see [Configure NLA for RDS Connections](/previous-versions/window
 - [Troubleshoot Remote Desktop connections to an Azure virtual machine](/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-connection)
 
 - [Troubleshoot authentication errors when you use RDP to connect to Azure VM](/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)
+

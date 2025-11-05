@@ -2,8 +2,8 @@
 title: Use certificates in Remote Desktop Services
 description: How to create and use authentication certificates for Remote Desktop Services.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/14/2025
 ---
 
@@ -98,3 +98,4 @@ You might want to use certificates for the RDS Session Host along with the certi
 - [Remote Desktop Services - Secure data storage with UPDs](rds-plan-secure-data-storage.md)
 
 - [Remote Desktop Services - Multifactor Authentication](rds-plan-mfa.md)
+

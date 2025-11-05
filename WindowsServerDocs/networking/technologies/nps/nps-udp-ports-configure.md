@@ -1,11 +1,9 @@
 ---
 title: Configure NPS UDP Port Information
 description: You can use this topic to configure the ports that Network Policy Server (NPS) uses for Remote Authentication Dial-In User Service (RADIUS) authentication and accounting traffic in Windows Server 2016.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 70569958-d7a7-474e-a817-6b7b5134784a
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
@@ -35,3 +33,5 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 For more information about managing NPS, see [Manage Network Policy Server](nps-manage-top.md).
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+
+

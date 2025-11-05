@@ -2,10 +2,9 @@
 title: Step 4 - Configure Group Policy Settings for Automatic Updates
 description: See how to use Group Policy to specify how users and computers interact with Windows Update to get automatic updates from Windows Server Update Services (WSUS).
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/02/2025
-ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
 # customer intent: As an administrator, I want to see how to configure Windows Update settings in Group Policy so that I can specify how users and computers obtain automatic updates from Windows Server Update Services (WSUS).
 # freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
 ---
@@ -558,3 +557,4 @@ This article uses the following terms:
 |Windows Server Update Services (WSUS)|A server role program that runs on one or more Windows Server computers on a corporate network. A WSUS infrastructure provides a way for you to manage updates for computers on your network to install.<br><br>You can use WSUS to approve or decline updates before release, to force updates to install by a certain date, and to obtain extensive reports on what updates each computer on your network requires. You can configure WSUS to approve certain classes of updates automatically, including critical updates, security updates, service packs, and drivers. You can also use WSUS to approve updates for detection only, so that you can see what computers require a particular update without having to install the update.<br><br>In a WSUS implementation, at least one WSUS server in the network must be able to connect to Microsoft Update to get available updates. Based on network security and configuration, the administrator can determine how many other servers connect directly to Microsoft Update.<br><br>You can configure a WSUS server to get updates over the internet from Microsoft Update, Windows Update, or Microsoft Store.|
 |Windows Update|A Microsoft internet site that stores and distributes updates for Windows computers, device drivers, and Windows operating systems. Windows Update is also the name of a service that runs on Windows computers and detects, downloads, and installs updates.<br><br>Depending on computer and policy configurations, the Windows Update Agent can download updates from:<br><br>- Microsoft Update.<br><br>- Windows Update.<br><br>- Microsoft Store.<br><br>- An internet (network) update service (WSUS).<br><br>Computers that aren't managed in a WSUS-based environment typically use Windows Update to connect directly over the internet to Windows Update, Microsoft Update, or Microsoft Store to obtain updates.|
 |WSUS client|A computer that receives updates from a WSUS intranet update service. If Group Policy settings control user interaction with Automatic Updates, a WSUS client is a user of a computer in a WSUS environment.|
+

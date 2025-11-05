@@ -4,7 +4,6 @@ description: When writing a new capability in System Insights, you can specify e
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-manager: mallikarjun.chadalapaka
 ms.date: 06/09/2025
 ---
 

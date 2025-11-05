@@ -1,5 +1,4 @@
 ---
-ms.assetid: 46725afe-8652-4cd7-928c-93b98f7fbae3
 title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
 ms.date: 02/13/2024
@@ -46,7 +45,7 @@ Next, create the farm:
 ```
 PS:\>$svcCred = (get-credential)
 PS:\>$localAdminCred = (get-credential)
-PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -ServiceAccountCredential $svcCred -Credential $localAdminCred -OverwriteConfiguration -AdminConfiguration $adminConfig -Verbose
+PS:\>Install-AdfsFarm -CertificateThumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 -FederationServiceName "fs.contoso.com" -ServiceAccountCredential $svcCred -Credential $localAdminCred -OverwriteConfiguration -AdminConfiguration $adminConfig -Verbose
 ```
 ## Using a gMSA as the AD FS Service Account
 ### Prepare AD
@@ -75,7 +74,7 @@ PS:\>$localAdminObj = Get-ADUser "localadmin"
 PS:\>$adfsNodeComputerAcct = Get-ADComputer "contoso_adfs_node"
 PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value) -PrincipalsAllowedToDelegateToAccount @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value)
 PS:\>$localAdminCred = (Get-Credential)
-PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
+PS:\>Install-AdfsFarm -CertificateThumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
 ```
 
 ## Script for preparing AD

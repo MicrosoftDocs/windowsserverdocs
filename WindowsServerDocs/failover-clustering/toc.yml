@@ -58,6 +58,8 @@
       href: cluster-operating-system-rolling-upgrade.md
   - name: Deploy a cluster set
     href: cluster-set.md
+  - name: Configure Live Migration SMB bandwidth control
+    href: configure-live-migration-smb-bandwidth.md
 - name: Concepts
   items:
   - name: Cluster and pool quorum

@@ -1,6 +1,5 @@
 ---
 description: "Learn more about: Block cloning on ReFS"
-ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
 title: Block cloning on ReFS
 author: dknappettmsft
 ms.author: daknappe
@@ -60,3 +59,4 @@ After the modifying write, region B is still shared by both files. If region A w
 - [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
 - [DUPLICATE_EXTENTS_DATA](/windows/win32/api/winioctl/ns-winioctl-duplicate_extents_data)
 - [FSCTL_DUPLICATE_EXTENTS_TO_FILE](/windows/win32/api/winioctl/ni-winioctl-fsctl_duplicate_extents_to_file)
+

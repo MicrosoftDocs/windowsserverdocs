@@ -2,7 +2,6 @@
 title: Install and Configure Deployment for Remote Management of DirectAccess Clients
 description: Learn about the configuration steps that are required to deploy a single Remote Access server that can be used for remote management of DirectAccess clients.
 ms.topic: install-set-up-deploy
-ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

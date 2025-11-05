@@ -2,9 +2,8 @@
 title: Server Manager
 description: Server Manager centralizes Windows Server management. Discover how to provision, monitor, and manage servers without Remote Desktop.
 ms.topic: concept-article
-ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/16/2025
 ---
 # Server Manager
@@ -172,3 +171,4 @@ You can export Server Manager settings, make Server Manager settings portable, o
   - %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
   - %*localappdata*%\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
+

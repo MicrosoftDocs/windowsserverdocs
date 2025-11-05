@@ -2,12 +2,10 @@
 metadata:
   title: "Storage Replica FAQ"
   description: Get answers to common questions for Storage Replica in Windows Server.
-  manager: siroy
-  ms.author: alalve
+  ms.author: roharwoo
   ms.topic: faq
-  author: nedpyle
+  author: robinharwood
   ms.date: 04/15/2020
-  ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
   ms.service: windows-server
 title: Storage Replica FAQ
 summary: |
@@ -323,3 +321,4 @@ sections:
           - [Storage Replica: Known issues](storage-replica-known-issues.md)
           - [Storage overview](../storage.yml)
           - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+

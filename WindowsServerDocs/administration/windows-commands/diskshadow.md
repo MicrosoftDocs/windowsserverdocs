@@ -2,9 +2,8 @@
 title: Diskshadow
 description: Reference article for the Diskshadow command, which is a tool that exposes the functionality offered by the volume shadow copy service (VSS).
 ms.topic: reference
-ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # Diskshadow

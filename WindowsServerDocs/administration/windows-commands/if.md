@@ -2,8 +2,8 @@
 title: if
 description: Reference article for the if command, which performs conditional processing in batch programs.
 ms.topic: reference
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 

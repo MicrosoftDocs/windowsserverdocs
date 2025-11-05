@@ -2,8 +2,8 @@
 title: Use live migration with workgroup clusters in Windows Server
 description: This article provides an overview of live migration functionality with workgroup clusters in Windows Server 2025.
 ms.topic: how-to
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/24/2024
 ---
 
@@ -191,9 +191,9 @@ Finally, do a live migration to move a running virtual machine.
 
 ## Next steps
 
-After completing a live migration, it's important to confirm that the migration works, and all virtual machines migrated were migrated successfully. If you notice any issues during or after a migration, it might be necessary to revisit the simultaneous migrations allowed or configure live migration performance options. 
+After completing a live migration, it's important to confirm that the migration works, and all virtual machines migrated were migrated successfully. If you notice any issues during or after a migration, it might be necessary to revisit the simultaneous migrations allowed or configure live migration performance options.
 
 To learn more about Live Migration performance options, see
-[Virtual Machine Live Migration Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831435(v=ws.11))
+[Virtual Machine Live Migration Overview](live-migration-overview.md).
 
 You can also read more about live migration performance in [Hyper-V Network I/O Performance](/windows-server/administration/performance-tuning/role/hyper-v-server/network-io-performance).

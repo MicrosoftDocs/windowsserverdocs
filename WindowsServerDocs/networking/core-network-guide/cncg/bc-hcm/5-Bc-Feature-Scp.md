@@ -1,9 +1,7 @@
 ---
 title: Install the BranchCache Feature and Configure the Hosted Cache Server by Service Connection Point
 description: Learn how to install the BranchCache feature on your hosted cache server, HCS1, and to configure the server to register an SCP in AD DS.
-manager: brianlic
 ms.topic: install-set-up-deploy
-ms.assetid: 9adf420b-5a58-4e59-9906-71bd58f757fd
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020

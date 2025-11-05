@@ -2,8 +2,8 @@
 title: netsh http
 description: The netsh http command configures and manages HTTP traffic for applications and system components for the HTTP Service in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/19/2025
 ---
 

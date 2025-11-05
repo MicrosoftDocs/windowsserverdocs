@@ -2,8 +2,8 @@
 title: netsh branchcache
 description: Reference article for the netsh branchcache command in Windows, which manages data access speeds in branch offices locally.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/24/2025
 ---
 

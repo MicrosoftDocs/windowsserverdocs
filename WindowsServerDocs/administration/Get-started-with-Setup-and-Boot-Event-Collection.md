@@ -3,9 +3,8 @@ title: Get started with Setup and Boot Event Collection
 description: Setting up Setup and Boot Event Collection collectors and targets
 ms.date: 10/16/2017
 ms.topic: how-to
-ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ---
 # Get started with Setup and Boot Event Collection
 
@@ -373,3 +372,4 @@ Alternately, if you don't want to save the result in a variable, you can use `Ge
 | Collector | I am no longer seeing events after migrating the VM my collector is hosted on. | Verify that the IP address of the collector computer has not changed. If it has, review To enable sending of ETW events through the transport remotely. |
 | Collector | The ETL files are not created. | `Get-SbecForwarding` shows that the target has connected, with no errors, but the ETL files are not created.<p>The target computer has probably not sent any data yet; ETL files are only created when data is received. |
 | Collector | An event is not showing in the ETL file. | The target computer has sent an event but when the ETL file is read with Event Viewer of Message Analyzer, the event is not present. The event could still be in the buffer. Events aren't written to the ETL file until a full 64 KB buffer is collected or a timeout of about 10-15 seconds with no new events has occurred. Either wait for the timeout to expire or flush the buffers with `Save-SbecInstance`.<p>The event manifest is not available on the collector computer or the computer where the Event Viewer or Message Analyzer runs.  In this case, the Collector might not be able to process the event (check the Collector log) or the viewer might not be able to show it.  It is a good practice to have all the manifests installed on the collector computer and install updates on the collector computer before installing them on the target computers. |
+

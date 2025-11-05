@@ -2,10 +2,9 @@
 title: System Audit Policy recommendations
 description: This article provides guidance on Windows audit policy settings, baseline recommendations, and advanced options for both workstations and Windows servers.
 ms.topic: best-practice
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/13/2025
-ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 ---
 
 # System audit policy recommendations
@@ -359,3 +358,4 @@ These recommendations are meant to provide a baseline guide for an administrator
 ## See also
 
 - [Advanced Audit Policy Configuration settings](advanced-audit-policy-configuration.md)
+

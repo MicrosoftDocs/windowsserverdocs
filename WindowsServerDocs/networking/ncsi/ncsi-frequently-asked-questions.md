@@ -3,8 +3,8 @@ title: Network Connectivity Status Indicator FAQ for Windows
 description: Frequently asked questions surrounding the Network Connectivity Status Indicator (NCSI) in Windows.
 ms.topic: faq
 ms.date: 02/06/2025
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.contributors: rnitsch
 ---
 
@@ -180,7 +180,7 @@ This behavior is by design. Windows wants users to know when they connect to a n
 
 ## Where can I find public documentation stating msftconnecttest.com must be in the allowlist?
 
-The following list of URLs mentions or implies `msftconnecttext.com`:
+The following list of URLs mentions or implies `msftconnecttest.com`:
 
 - [Network Connection Status Indicator](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator)
 - [Windows 11 Enterprise connection endpoints](/windows/privacy/manage-windows-11-endpoints#windows-11-enterprise-connection-endpoints)
@@ -215,3 +215,4 @@ Additionally, some Linux applications don't perform connectivity checks. They se
 
 - [NCSI Overview](ncsi-overview.md)
 - [NCSI Troubleshooting Guide](ncsi-troubleshooting-guide.md)
+

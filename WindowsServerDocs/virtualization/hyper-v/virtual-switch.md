@@ -1,11 +1,9 @@
 ---
 title: Hyper-V Virtual Switch
 description: This topic provides an overview of Hyper-V Virtual Switch in Windows Server 2016.
-manager: brianlic
 ms.topic: concept-article
-ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/08/2020
 ---
 # Hyper-V Virtual Switch
@@ -81,3 +79,5 @@ Following is a list of capabilities that enhance Hyper-V Virtual Switch usabilit
 -   **Explicit Congestion Notification (ECN) marking support**:  ECN marking, also known as Data CenterTCP (DCTCP), enables the physical switch and operating system to regulate traffic flow such that the buffer resources of the switch are not flooded, which results in increased traffic throughput.
 
 -   **Diagnostics**: Diagnostics allow easy tracing and monitoring of events and packets through the virtual switch.
+
+

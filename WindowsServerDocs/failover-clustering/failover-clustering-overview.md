@@ -2,10 +2,9 @@
 title: Failover Clustering
 description: Learn more about Failover Clustering in Windows Server and Azure Local.
 ms.topic: overview
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/25/2025
-ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 ---
 
 # Failover Clustering in Windows Server and Azure Local
@@ -79,3 +78,4 @@ This curated table of resources is designed to help you understand, plan, deploy
 | [Health Service](health-service-overview.md) | [Cluster Aware Updating PowerShell Cmdlets](/powershell/module/clusterawareupdating/) | [Failover Clustering Blog](https://techcommunity.microsoft.com/category/windows-server/blog/failoverclustering) |
 | [Cluster-domain migration](cluster-domain-migration.md) | | |
 | [Troubleshooting using Windows Error Reporting](troubleshooting-using-wer-reports.md) | | |
+

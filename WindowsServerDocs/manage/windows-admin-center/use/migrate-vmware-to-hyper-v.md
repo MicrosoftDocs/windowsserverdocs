@@ -1,16 +1,16 @@
 ---
 title: Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)
-description: Learn how to migrate VMware virtual machines to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
-author: meaghanlewis
+description: Learn how to migrate VMware virtual machines (VMs) to Hyper-V using the Windows Admin Center VM Conversion extension. Discover step-by-step instructions and benefits.
+author: robinharwood
 ms.topic: how-to
 ms.date: 08/13/2025
-ms.author: mosagie
+ms.author: roharwoo
 ---
 # Migrate VMware virtual machines to Hyper-V in Windows Admin Center (Preview)
 
 > [!IMPORTANT]
 > The VM Conversion extension is currently in PREVIEW.
-> This information relates to a prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+> This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
@@ -20,7 +20,7 @@ In this article, you learn how to install and configure the extension, follow th
 
 The **VM Conversion extension** provides the following key features:
 
-- **Bulk migration**: Supports a batch of 10 virtual machines migration at-a-time. This enables admins to group virtual machines based on:
+- **Bulk migration**: Supports a batch of 10 virtual machines migration at-a-time. This feature enables admins to group virtual machines based on:
 
   - **Application dependency** – virtual machines that are part of the same application stack or service.
   - **Cluster dependency** – virtual machines that need to be distributed on nodes within same cluster.
@@ -29,10 +29,10 @@ The **VM Conversion extension** provides the following key features:
 
 - **Cluster-aware migration**: Supports migration virtual machines from eSXI hosts to Windows Server Failover clusters.
 
-- **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This reduces post-migration tasks and enables seamless network continuity.
+- **Static IP configurations**: Persists the static IP configurations of virtual machines from source to destination Hyper-V hosts. This functionality reduces post-migration tasks and enables seamless network continuity.
 
 - **Secure Boot and UEFI template configuration**: Provides enhanced security and compliance.
-  - Integrated osType across the migration flow for accurate secure boot and UEFI setup.
+  - Integrated osType across the migration flow for accurate secure boot and Unified Extensible Firmware Interface (UEFI) setup.
   - Secure boot settings are dynamically configured based on OS, either Windows or Linux.
   - Added error handling for unsupported OS types.
 
@@ -55,7 +55,30 @@ Before you begin, review the prerequisites and ensure your environment meets the
 ### Windows Admin Center Gateway prerequisites
 
 - Install PowerCLI.
-  - Install using the PowerShell command: `Install-Module -Name VMware.PowerCLI`
+
+    - Open **PowerShell** as an administrator.
+
+    - Run the following command to install the PowerCLI module:
+
+    ```powershell
+    Install-Module -Name VMware.PowerCLI
+    ```
+
+    - Verify that the module is installed:
+
+    ```powershell
+    Get-Module -Name VMware.PowerCLI -ListAvailable
+    ```
+
+    - Test the connection to a vCenter Server by running:
+
+    ```powershell
+    Connect-VIServer -Server "<vCenterServerFQDN_or_IP>" -User "<username>" -Password "<password>" -Force
+    ```
+
+    > [!NOTE]
+    > Replace `<vCenterServerFQDN_or_IP>`, `<username>`, and `<password>` with your actual vCenter credentials.
+
 
 - Install:
   - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist)
@@ -64,9 +87,9 @@ Before you begin, review the prerequisites and ensure your environment meets the
 - Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
 
     > [!NOTE]
-    > Ensure you download **VDDK version 8.0.3** specifically. Other versions are not supported.
+    > Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
 
-- Ensure that the Hyper-V role is installed. This is typically already enabled.
+- Ensure that the Hyper-V role is installed. This setting is typically enabled by default.
 
 - [Use Windows Admin Center Gateway V2](https://aka.ms/downloadWAC) – version `2410` build number `2.4.12.10`
 
@@ -80,7 +103,7 @@ None.
 
 ### Supported vCenter versions
 
-- The extension supports VMware VCenter version 6.x or 7.x.
+- The extension supports VMware VCenter version 6.x or 7.x or 8.x.
 - To connect to vCenter from the extension, keep the following vCenter information at hand:
   - Fully Qualified Domain Name (FQDN)
   - Username
@@ -173,7 +196,7 @@ Complete the following steps to synchronize VMware virtual machines in Windows A
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png" alt-text="Screenshot of the dialog to enter the path to store data and confirm the synchronization can start." lightbox="media/migrate-vmware-to-hyper-v/synchronize-vm-path-selection.png":::
 
-1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the VHDX file is created in the folder path specified.
+1. You see notifications appear with the progress for: running prechecks, preparing the environment, creating a snapshot, and finalizing synchronization. Confirm that the Hyper-V Virtual Hard Disk (VHDX) file is created in the folder path specified.
 
     :::image type="content" source="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png" alt-text="Screenshot of the notifications that appear while the synchronization is in progress." lightbox="media/migrate-vmware-to-hyper-v/synchronization-in-progress.png":::
 
@@ -241,11 +264,11 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ## Frequently asked questions
 
-- Does the tool support both Static and DHCP IP addresses?
+- Does the tool support both Static and Dynamic Host Configuration Protocol (DHCP) IP addresses?
 
     Yes, both DHCP and Static IP addresses are supported.
 
-    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. It's persisted on the target Hyper-V host post cutover phase.
+    Static IP is supported using scripts. When a static IP is detected, the VM credentials are collected to run the script and capture the IP address details. This data persists on the target Hyper-V host after the cutover phase.
 
 - How does the tool handle VM boot types?
 
@@ -255,13 +278,14 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
     The VM Conversion tool currently migrates disks as **dynamically expanding (thin provisioned)** VHDX files, which means only the used portion of the disk is copied—not the full allocated size.
 
-    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this is space-efficient, it might cause storage management issues later.
+    During migration, a VM with a **provisioned size of 500 GB** but **actual usage of 250 GB** results in a 250 GB dynamic VHDX on the destination. While this approach is space-efficient, it might cause storage management issues later.
 
     After migration, customers should convert the VHDX to a fixed size to reflect the full provisioned storage using the PowerShell command:
 
     ```powershell
     Convert-VHD -Path "C:\VMs\MyDisk.vhdx" -DestinationPath "C:\VMs\MyDisk_Fixed.vhdx" -VHDType Fixed
     ```
+
 - Is VMware to Azure Local migration supported?
 
     No, the tool doesn't support migration to Azure Local. Use [Azure Migrate to migrate virtual machines to Azure Local](/azure/azure-local/migrate/migration-azure-migrate-vmware-overview).
@@ -276,7 +300,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
   
 - How is memory configured during virtual machine migration?
 
-    During migration, memory is configured as static, even if the source virtual machine is set to use dynamic memory. This is a design choice to ensure migration stability and compatibility between VMware and Hyper-V memory management.
+    During migration, memory is configured as static, even if the source virtual machine is set to use dynamic memory. This design choice to ensure migration stability and compatibility between VMware and Hyper-V memory management.
 
     To re-enable dynamic memory of change RAM parameters after migration:
 
@@ -295,7 +319,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
   - Hyper-V drivers must be installed on Linux machines before starting migration. Download and install [Linux Integration Services v4.3](https://www.microsoft.com/download/details.aspx?id=55106) for Hyper-V and Azure.​
 
-  - During virtual machine conversion, the BIOS GUID on the destination virtual machine won't match the source virtual machine unless it's manually updated. This might affect virtual machine identity synchronization, or licensing checks that rely on consistent BIOS-level identifiers. BIOS-level identifiers must be updated in virtual machine identity synchronization, and migration.
+  - During virtual machine conversion, the BIOS GUID on the destination virtual machine doesn't match the source virtual machine unless it's manually updated. This behavior might affect virtual machine identity synchronization, or licensing checks that rely on consistent BIOS-level identifiers. BIOS-level identifiers must be updated in virtual machine identity synchronization, and migration.
 
     <details>
     <summary>Expand this section and use the script provided to update the BIOS GUID on the migrated Hyper-V virtual machine.</summary>
@@ -440,6 +464,9 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ## Troubleshooting guide
 
+>[!NOTE]
+>For issues or questions not covered in this documentation, you can submit feedback [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
+
 ### Issue 1: VM resync/remigrate required, or migration stuck at a certain percentage (session timeout)
 
 **Symptom:**
@@ -451,13 +478,10 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 1. Delete the relevant entries from the following files on the Windows Admin Center gateway machine:
 
-   ```
-   C:\Program Files\Windows Admin Center\Service\migrationStatus.json
-   C:\Program Files\Windows Admin Center\Service\syncStatus.json
-   ```
-1. If the VM already exists in **Hyper-V Manager**, delete it before reinitiating the migration.
+   - `C:\Program Files\Windows Admin Center\Service\migrationStatus.json`
+   - `C:\Program Files\Windows Admin Center\Service\syncStatus.json`
 
----
+1. If the VM already exists in **Hyper-V Manager**, delete it before reinitiating the migration.
 
 ### Issue 2: Cancel VM synchronization or migration in progress
 
@@ -469,15 +493,13 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 Cancellation isn't supported directly in the extension. As a workaround:
 
 1. Stop the **Windows Admin Center service**.
-2. Restart the service. This will release all running threads.
-3. Delete the relevant entries from the following files to ensure status does not continue to show as "In Progress":
 
-   ```
-   C:\Program Files\Windows Admin Center\Service\migrationStatus.json
-   C:\Program Files\Windows Admin Center\Service\syncStatus.json
-   ```
+1. Restart the service. This releases all running threads.
 
----
+1. Delete the relevant entries from the following files to ensure status doesn't continue to show as "In Progress":
+
+   - `C:\Program Files\Windows Admin Center\Service\migrationStatus.json`
+   - `C:\Program Files\Windows Admin Center\Service\syncStatus.json`
 
 ### Issue 3: Migration precheck fails with error
 
@@ -489,23 +511,113 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 - Ensure there are no **failed virtual machines** present on the same destination server.
 
----
-
 ### Issue 4: Static IP migration failure for Windows VMs
 
 **Symptom:**
 
-* Static IP configuration does not migrate successfully for a Windows VM.
+Static IP configuration doesn't migrate successfully for a Windows VM.
 
 **Resolution:**
 
 1. Download the [**static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download), which contains scripts for both Windows and Linux VMs.
-2. Extract the package to a specified path inside the guest VM **after synchronization and before migration**.
-3. Open a PowerShell window as Administrator.
-4. Navigate to the extracted path.
-5. Run the following command:
+
+1. Extract the package to a specified path inside the guest VM **after synchronization and before migration**.
+
+1. Open a PowerShell window as Administrator.
+
+1. Navigate to the extracted path.
+
+1. Run the following command:
 
    ```powershell
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
+
+---
+
+## What's new 
+## [Version 1.8.0](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.0)  (September 2025)
+
+### New Features
+
+- **Bulk VM Migration with Queuing Support**
+
+    To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
+
+    >[!NOTE]  
+    >Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
+    >The browser session must remain active during the final migration step.  
+
+- **Static IP Batch Support**
+
+    Bulk migration now supports **static IP migration** for both **Windows** and **Linux** Virtual Machines. This feature automates network configuration, reducing manual reconfiguration after migration.
+
+- **Batch Uninstall of VMware Tools (Windows VMs)** 
+
+    You can now uninstall VMware Tools from multiple Windows virtual machines in a single batch operation prior to migration, streamlining the preparation process.
+
+    >[!NOTE]
+    >While batch uninstall for Windows VMs is supported, Linux VMs still require manual removal.
+
+- **BIOS UUID Migration**
+
+    The migration process now preserves the BIOS UUID from the source VM, ensuring improved compatibility and identity synchronization on Hyper-V.
+
+    >[!NOTE]
+    >Only the BIOS UUID is migrated. BIOS Serial Number format differs between VMware and Hyper-V, which can affect licensing checks. For more information, see [FAQ](#frequently-asked-questions).
+
+- **Standardized Destination Folder Structure**
+
+    The destination VM folder structure now follows **Hyper-V conventions**. The Synchronization Confirmation dialog displays the folder path, helping administrators verify and predict destination locations.
+
+- **Thick and Thin Disk Provisioning**
+
+    During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
+
+### Bug Fixes
+
+- Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
+- Corrected VM listing issue where VMs already present in **Hyper-V Manager** were incorrectly marked as failed.  
+- Improved notification accuracy during migration progress.  
+- Enhanced prechecks for PowerCLI installation to catch failures early and provide clearer troubleshooting guidance.
+
+## User Experience Changes
+
+- **Session Persistence for Bulk Migration**
+
+  - Stay logged in to Windows Admin Center -> VM Conversion Extension -> vCenter and keep your browser session active throughout migration.
+
+  - The browser session must remain active during the final migration step.
+
+- **Folder Structure Transparency**  
+
+  - Destination folders now directly reflect **Hyper-V layout**.  
+ 
+  -  - The Synchronization Confirmation dialog explicitly shows the destination path.
+
+- **Linux VMs** - Install Hyper-V drivers on the guest OS before migration.  
+
+- **Windows VMs** - VMware Tools batch uninstall is supported only for Windows VMs.  
+
+- **Licensing Note** - Differences in BIOS Serial Number may affect licensing. See [FAQ](#frequently-asked-questions) for details.  
+
+---
+
+## [Version 1.8.2](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.2) (October 2025)
+
+### New Features
+
+- **vCenter Version Display:**  
+  You can now view the vCenter version directly on the **vCenter List** page for easier identification and management.
+
+- **Migration Reconnection Banner:**  
+  A new banner now appears, prompting users to stay signed in and refresh their session every 2 hours during migration to ensure continuity.
+
+- **Quick Access to Documentation:**  
+  The **“Open in New Window”** icon on the landing page now links directly to the official guide —  
+  [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](../use/migrate-vmware-to-hyper-v.md).
+
+## Other Improvements
+
+- Enhanced telemetry for improved diagnostics and secure handling of environment information.
 

@@ -4,18 +4,12 @@ description: Learn more about resources to verify replication.
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 05/12/2025
-ms.custom: inhenkel
+ms.date: 09/25/2025
 ---
 
 # Active Directory Forest Recovery - Verify Replication
 
-
-
 After you've restored or reinstalled all domain controllers (DCs), you can verify that AD DS, and the sysvol folder has recovered and is replicating correctly by using `repadmin /replsum`. `repadmin /replsum` runs on any version of Windows Server.
-
-> [!TIP]
-> You can also download and run the [Active Directory Replication Status Tool](/troubleshoot/windows-server/identity/get-use-active-directory-replication-status-tool), a free tool that monitors replication status of DCs and reports errors. ADReplStatus requires .NET Framework 4, which will be installed if it isn't already present.
 
 Check the DFS Replication event logs for Event ID 4602 (or File Replication Service event ID 13516). This log event indicates sysvol replication has been initialized.
 

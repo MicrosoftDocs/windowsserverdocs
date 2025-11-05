@@ -6,7 +6,6 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 07/29/2024
 ms.topic: how-to
-ms.assetid: 6d1ae036-0841-4ba5-b7e0-733aad31e9a7
 ---
 
 # Working with Hyper-V and Windows PowerShell
@@ -51,7 +50,7 @@ Use the `Get-VM` command to return a list of virtual machines.
 
      ![Screenshot of the Administrator Windows Power Shell screen showing the output after entering Get V M.](./media/powershell/get-vm.png)
 
-1. To return a list of only powered on virtual machines add a filter to the `Get-VM` command. A filter can be added by using the `Where-Object` command. For more information on filtering, see [Using the Where-Object](/previous-versions/windows/it-pro/windows-powershell-1.0/ee177028(v=technet.10)) documentation.
+1. To return a list of only powered on virtual machines add a filter to the `Get-VM` command. A filter can be added by using the `Where-Object` command. For more information on filtering, see [Using the Where-Object](/powershell/module/microsoft.powershell.core/where-object) documentation.
 
      ```powershell
      Get-VM | where {$_.State -eq 'Running'}

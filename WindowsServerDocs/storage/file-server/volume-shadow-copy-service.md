@@ -2,8 +2,8 @@
 title: Volume Shadow Copy Service (VSS)
 description: Learn how to use Volume Shadow Copy Service to coordinate the actions that are required to create a consistent shadow copy for backup and restore operations in Windows Server.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/07/2025
 ---
 
@@ -330,7 +330,7 @@ The maximum number of shadow copied volumes in a single shadow copy set is 64. T
 
 ### What's the maximum number of software shadow copies created by the system provider that I can maintain for a volume?
 
-The maximum number is of software shadow copies for each volume is 512. However, by default, you can only maintain 64 shadow copies that are used by the Shadow Copies of Shared Folders feature. To change the limit for the Shadow Copies of Shared Folders feature, use the following registry key: `MaxShadowCopies`.
+The maximum number of software shadow copies for each volume is 512. However, by default, you can only maintain 64 shadow copies that are used by the Shadow Copies of Shared Folders feature. To change the limit for the Shadow Copies of Shared Folders feature, use the following registry key: `MaxShadowCopies`.
 
 ### How can I control the space that's used for shadow copy storage space?
 
@@ -442,3 +442,4 @@ The following table lists the minimum supported operating system versions for VS
 ## Related content
 
 - [Volume Shadow Copy Service in Windows Developer Center](/windows/desktop/vss/volume-shadow-copy-service-overview)
+

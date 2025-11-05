@@ -2,8 +2,8 @@
 title: Configure Network Policy Server Certificate Revocation List registry settings for Windows Server
 description: This article provides information about configuring Certificate Revocation List registry settings for EAP-TLS authentication on a Network Policy Server in a Windows Server environment.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/31/2023
 ---
 
@@ -86,3 +86,4 @@ To manually update the CRL on your NPS server, run these commands in the command
 certutil -urlcache * delete
 certutil -setreg chain\ChainCacheResyncFiletime @now
 ```
+

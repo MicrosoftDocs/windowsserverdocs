@@ -2,8 +2,8 @@
 title: Advanced Audit Policy Configuration settings
 description: The Advanced Audit Policy Configuration settings in Group Policy allows admins to specify which security events are audited on Windows systems for tracking activities, security monitoring, and incident detection.
 ms.topic: concept-article
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/29/2025
 ---
 
@@ -1719,3 +1719,4 @@ The advanced Audit Policy configurations are as follows:
   - Event volume: *Varies* on the effective SACL and the level of user activity.
 
   </details>
+

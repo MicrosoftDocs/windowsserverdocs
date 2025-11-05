@@ -2,10 +2,8 @@
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Overview"
 title: Deploy Work Folders with AD FS and Web Application Proxy Overview
 ms.topic: install-set-up-deploy
-ms.assetid: ea19f0f0-6cc0-4322-b387-c0873f7795ad
-manager: klaasl
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 4/5/2017
 ms.custom: sfi-image-nochange
 ---
@@ -75,4 +73,6 @@ To perform the deployment by using the Windows Server user interface, follow the
 [Work Folders Overview](Work-Folders-Overview.md)
 [Designing a Work Folders Implementation](Plan-Work-Folders.md)
 [Deploying Work Folders](Deploy-Work-Folders.md)
+
+
 

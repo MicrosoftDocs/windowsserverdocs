@@ -13,7 +13,7 @@ Hyper-V supports several versions of Windows Server, Windows, and Linux distribu
 
 Some operating systems have the integration services built-in. Others require that you install or upgrade integration services as a separate step after you set up the operating system in the virtual machine. For more information, see the following sections and [Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
-Guest operating systems configurable components are confined based on the hosting operating system. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](plan/plan-hyper-v-scalability-in-windows-server.md).
+Guest operating systems configurable components are confined based on the hosting operating system. To learn more about the maximum configurable components in Hyper-V, see [Plan for Hyper-V scalability in Windows Server](maximum-scale-limits.md).
 
 ## Supported Windows Server guest operating systems
 
@@ -112,16 +112,6 @@ Following are the versions of Windows client that are supported as guest operati
 - **Maximum number of virtual processors**: 4  
 - **Integration Services**: Upgrade the integration services after you set up the guest operating system.  
 - **Notes**: Ultimate, Enterprise, and Professional editions (32-bit and 64-bit).  
-
-## Guest operating system support on other versions of Windows
-
-The following table gives links to information about guest operating systems supported for Hyper-V on other versions of Windows.
-
-|Host operating system|Article|
-|-------------------------|---------|
-|Windows Server 2012 R2 and Windows 8.1|-   [Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 R2 and Windows 8.1](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
-|Windows Server 2012 and Windows 8|[Supported Windows Guest Operating Systems for Hyper-V in Windows Server 2012 and Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
-|Windows Server 2008 and Windows Server 2008 R2|[About Virtual Machines and Guest Operating Systems](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|
 
 ## Supported Linux and FreeBSD
 

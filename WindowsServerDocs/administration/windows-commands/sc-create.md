@@ -2,9 +2,8 @@
 title: sc.exe create
 description: Reference article for the sc.exe create command, which creates a subkey and entries for a service in the registry and in the Service Control Manager database.
 ms.topic: reference
-ms.assetid: 59416460-0661-4fef-85cc-73e9d8f4beb4
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/29/2023
 ms.custom: sfi-ropc-nochange
 ---

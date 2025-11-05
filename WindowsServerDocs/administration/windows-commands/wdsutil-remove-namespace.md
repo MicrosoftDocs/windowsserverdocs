@@ -2,7 +2,6 @@
 title: wdsutil remove-namespace
 description: Reference article for wdsutil remove-namespace, which removes a custom namespace.
 ms.topic: reference
-ms.assetid: 4eb758b6-8519-4e26-9fe0-2e19bb0e8702
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

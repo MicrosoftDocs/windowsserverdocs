@@ -2,9 +2,8 @@
 title: Best Practices for running Linux on Hyper-V
 description: Provides recommendations and best practices for running Linux on a virtual machine on Hyper-V in Windows Server.
 ms.topic: best-practice
-ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/19/2025
 ---
 # Best Practices for running Linux on Hyper-V
@@ -87,8 +86,6 @@ After resizing a VHD or VHDX, administrators should use a utility like fdisk or 
 * [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
-
-* [Deploy a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj863389(v=ws.11))
 
 * [Create Linux Images for Azure](/azure/virtual-machines/linux/create-upload-generic)
 

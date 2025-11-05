@@ -1,8 +1,8 @@
 ---
 title: Active Directory Domain Services Maximum Limits and Scalability
 description: Recommended limits for creating objects, entries, names, and more in your Active Directory deployment to ensure optimal performance.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/08/2025
 ms.topic: concept-article
 ---
@@ -220,3 +220,4 @@ For more information about the limit, see the [AD database details article](/pre
 To change an attribute with a lot of data, you must store the new and old values in the database transaction. Storing the values lets you roll back the transaction if the database shuts down in the middle of the transaction. The maximum size of a transaction limits the total blob size of attribute value data to 5 MB.
 
 The maximum size of the Active Directory transactions that you can perform also affects the limit of how many group members you can have before link-value replication and how many transactions in group membership changes exist.
+

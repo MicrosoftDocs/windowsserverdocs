@@ -2,7 +2,6 @@
 title: Step 3 Plan the Multisite Deployment
 description: Learn how to plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.
 ms.topic: how-to
-ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

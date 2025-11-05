@@ -514,6 +514,561 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v/manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md",
       "redirect_url": "/windows-server/virtualization/hyper-v/powershell-direct",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-Replica-server-must-be-configured-to-accept-replication-requests.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-replica-server-must-be-configured-to-accept-replication-requests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-team-bound-to-a-virtual-switch-should-only-have-one-exposed-team-interface.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-team-bound-to-a-virtual-switch-should-only-have-one-exposed-team-interface",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-7-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-7-and-configured-with-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-8-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-8-and-configured-with-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-8.1-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-8.1-and-configured-with-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2008-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-server-2008-and-configured-with-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2008-R2-and-configured-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-server-2008-r2-and-configured-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2012-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-server-2012-and-configured-with-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2012-R2-and-configured-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-server-2012-r2-and-configured-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Vista-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-machine-running-windows-vista-and-configured-with-dynamic-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/A-virtual-SAN-should-be-associated-with-a-physical-host-bus-adapter.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/a-virtual-san-should-be-associated-with-a-physical-host-bus-adapter",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/All-networks-for-live-migration-traffic-should-have-a-link-speed-of-at-least-1-G.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/all-networks-for-live-migration-traffic-should-have-a-link-speed-of-at-least-1-g",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/All-virtual-network-adapters-should-be-enabled.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/all-virtual-network-adapters-should-be-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/At-least-one-network-for-live-migration-traffic-should-have-a-link-speed-at-least.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/at-least-one-network-for-live-migration-traffic-should-have-a-link-speed-at-least",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Authorization-entries-should-have-distinct-trust-group-names-for-primary-servers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/authorization-entries-should-have-distinct-trust-group-names-for-primary-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-alignment-inconsistencies-between-virtual-blocks-and-physical-disk-sectors.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-alignment-inconsistencies-between-virtual-blocks-and-physical-disk-sectors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-configuring-virtual-machines-to-allow-unfiltered-SCSI-commands.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-configuring-virtual-machines-to-allow-unfiltered-scsi-commands",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-enabling-storage-Quality-of-Service-when-using-a-differencing-virtual-hard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-enabling-storage-quality-of-service-when-using-a-differencing-virtual-hard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-enabling-virtual-machines-configured-with-virtual-Fibre-Channel-adapters.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-enabling-virtual-machines-configured-with-virtual-fibre-channel-adapters",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-installing-RemoteFX-on-a-computer-configured-as-a-domain-controller.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-installing-remotefx-on-a-computer-configured-as-a-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-mapping-one-storage-path-to-multiple-resource-pools.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-mapping-one-storage-path-to-multiple-resource-pools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-pausing-a-virtual-machine.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-pausing-a-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-storing-Smart-Paging-files-on-a-system-disk.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-storing-smart-paging-files-on-a-system-disk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-using-checkpoints-on-a-virtual-machine-server-workload-production.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-using-checkpoints-on-a-virtual-machine-server-workload-production",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-using-VHD-format-differencing-virtual-hard-disks-on-virtual-machines.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-using-vhd-format-differencing-virtual-hard-disks-on-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Avoid-using-virtual-hard-disks-with-sector-size-less-than-size-of-physical.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/avoid-using-virtual-hard-disks-with-sector-size-less-than-size-of-physical",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Best-Practices-Analyzer-for-Hyper-V.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/best-practices-analyzer-for-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Certificate-based-authentication-configured-but-certificate-not-installed.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/certificate-based-authentication-configured-but-certificate-not-installed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Certificate-based-authentication-is-recommended-for-replication.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/certificate-based-authentication-is-recommended-for-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Compression-is-recommended-for-replication-traffic.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/compression-is-recommended-for-replication-traffic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-a-policy-to-throttle-the-replication-traffic-on-the-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-a-policy-to-throttle-the-replication-traffic-on-the-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-a-virtual-machine-with-a-SCSI-controller-to-hot-plug-and-unplug.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-a-virtual-machine-with-a-scsi-controller-to-hot-plug-and-unplug",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-7.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-8.1.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-8.1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-8.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2008-R2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-server-2008-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2008.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-server-2008",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2012-R2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-server-2012-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2012.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-server-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Vista.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-at-least-the-required-amount-of-memory-for-windows-vista",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-guest-operating-systems-for-VSS-based-backups-for-app-consistent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-guest-operating-systems-for-vss-based-backups-for-app-consistent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-SCSI-controllers-only-when-supported-by-the-guest-operating-system.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-scsi-controllers-only-when-supported-by-the-guest-operating-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-the-Failover-TCPIP-settings-that-you-want-the-Replica-virtual-machine.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-the-failover-tcpip-settings-that-you-want-the-replica-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-the-server-with-a-sufficient-amount-of-dynamic-MAC-addresses.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-the-server-with-a-sufficient-amount-of-dynamic-mac-addresses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-virtual-machines-running-Windows-7-with-no-more-than-4-virtual-process.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-virtual-machines-running-windows-7-with-no-more-than-4-virtual-process",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-virtual-machines-running-Windows-Vista-with-1-or-2-virtual-processors.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-virtual-machines-running-windows-vista-with-1-or-2-virtual-processors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Configure-virtual-machines-to-use-SR-IOV-only-when-supported-by-the-guest.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/configure-virtual-machines-to-use-sr-iov-only-when-supported-by-the-guest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Display-adapters-should-be-enabled-in-virtual-machines-to-provide-video.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/display-adapters-should-be-enabled-in-virtual-machines-to-provide-video",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Domain-membership-is-recommended-for-servers-running-Hyper-V.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/domain-membership-is-recommended-for-servers-running-hyper-v",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Dynamic-Memory-is-enabled-but-not-responding-on-some-virtual-machines.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/dynamic-memory-is-enabled-but-not-responding-on-some-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Enable-all-integration-services-in-virtual-machines.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/enable-all-integration-services-in-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Enable-all-virtual-network-adapters-configured-for-a-virtual-machine.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/enable-all-virtual-network-adapters-configured-for-a-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-differencing.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-differencing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-dynamically.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-dynamically",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Ensure-that-all-mandatory-virtual-switch-extensions-are-available.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/ensure-that-all-mandatory-virtual-switch-extensions-are-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Ensure-that-the-virtual-function-driver-operates-correctly.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/ensure-that-the-virtual-function-driver-operates-correctly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Hyper-V-should-be-the-only-enabled-role.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/hyper-v-should-be-the-only-enabled-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Integration-services-must-be-installed-before-primary-or-Replica-virtual-machine.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/integration-services-must-be-installed-before-primary-or-replica-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/More-than-one-network-adapter-should-be-available.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/more-than-one-network-adapter-should-be-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Offer-all-available-integration-services-to-virtual-machines.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/offer-all-available-integration-services-to-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/One-or-more-network-adapters-should-be-configured-as-the-destination-for-Port.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/one-or-more-network-adapters-should-be-configured-as-the-destination-for-port",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/One-or-more-network-adapters-should-be-configured-as-the-source-for-Port.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/one-or-more-network-adapters-should-be-configured-as-the-source-for-port",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/PVLAN-configuration-on-a-virtual-switch-must-be-consistent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/pvlan-configuration-on-a-virtual-switch-must-be-consistent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Recovery-snapshots-should-be-removed-after-failover.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/recovery-snapshots-should-be-removed-after-failover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Replica-servers-should-be-configured-to-identify-specific-primary-servers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/replica-servers-should-be-configured-to-identify-specific-primary-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Replication-is-paused-for-one-or-more-virtual-machines-on-this-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/replication-is-paused-for-one-or-more-virtual-machines-on-this-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Reserve-one-or-more-external-virtual-networks-exclusive-for-virtual-machine.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/reserve-one-or-more-external-virtual-networks-exclusive-for-virtual-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Resynchronization-of-replication-should-be-scheduled-for-off-peak-hours.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/resynchronization-of-replication-should-be-scheduled-for-off-peak-hours",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Serial-ports-should-not-be-configured-on-generation-2-virtual-machines.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/serial-ports-should-not-be-configured-on-generation-2-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Storage-controllers-should-be-enabled-in-virtual-machines-to-provide-access.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/storage-controllers-should-be-enabled-in-virtual-machines-to-provide-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Test-failover-should-be-attempted-after-initial-replication-is-complete.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/test-failover-should-be-attempted-after-initial-replication-is-complete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Test-failovers-should-be-carried-out-at-least-monthly-to-verify-that-failover.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/test-failovers-should-be-carried-out-at-least-monthly-to-verify-that-failover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-Hyper-V-Virtual-Machine-Management-service-must-be-running.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-hyper-v-virtual-machine-management-service-must-be-running",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-Hyper-V-Virtual-Machine-Management-service-should-be-configured-to-start.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-hyper-v-virtual-machine-management-service-should-be-configured-to-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-number-of-running-or-configured-virtual-machines-must-be-within-limits.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-number-of-running-or-configured-virtual-machines-must-be-within-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-number-of-running-virtual-machines-configured-for-SR-IOV-should-not-exceed.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-number-of-running-virtual-machines-configured-for-sr-iov-should-not-exceed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-team-interface-bound-to-a-virtual-switch-should-be-in-default-mode.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-team-interface-bound-to-a-virtual-switch-should-be-in-default-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/The-WFP-virtual-switch-extension-should-be-enabled-if-required-by-third-parties.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/the-wfp-virtual-switch-extension-should-be-enabled-if-required-by-third-parties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/To-participate-in-replication-servers-in-clusters-must-have-Hyper-V-Replica-Broker.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/to-participate-in-replication-servers-in-clusters-must-have-hyper-v-replica-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Use-all-virtual-functions-for-networking-when-they-are-available.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/use-all-virtual-functions-for-networking-when-they-are-available",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Use-at-least-SMB-protocol-version-3.0-configured-for-continuous-availability-file-shares.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/use-at-least-smb-protocol-version-3.0-configured-for-continuous-availability-file-shares",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Use-at-least-SMB-protocol-version-3.0-for-file-shares-that-store-files-for-virtual-machines.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/use-at-least-smb-protocol-version-3.0-for-file-shares-that-store-files-for-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Use-RAM-that-provides-error-correction.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/use-ram-that-provides-error-correction",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/VHD-format-dynamic-virtual-hard-disks-not-recommended-in-production.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/vhd-format-dynamic-virtual-hard-disks-not-recommended-in-production",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Virtual-hard-disks-with-paging-files-should-be-excluded-from-replication.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/virtual-hard-disks-with-paging-files-should-be-excluded-from-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Virtual-machines-should-be-backed-up-at-least-once-every-week.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/virtual-machines-should-be-backed-up-at-least-once-every-week",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Virtual-machines-with-virtual-Fibre-Channel-adapter-should-be-configured.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/virtual-machines-with-virtual-fibre-channel-adapter-should-be-configured",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/VMQ-should-be-enabled-on-VMQ-capable-physical-network-adapters-external.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/vmq-should-be-enabled-on-vmq-capable-physical-network-adapters-external",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-10-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-10-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-10-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-10-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-7-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-7-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-8-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-8-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-8-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-8-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-8.1-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-8.1-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-8.1-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-8.1-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-hypervisor-must-be-running.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-hypervisor-must-be-running",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-R2-should-be-configured-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2008-r2-should-be-configured-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-R2-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2008-r2-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2008-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2008-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-R2-should-be-configured-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2012-r2-should-be-configured-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-R2-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2012-r2-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2012-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-2012-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-least-minimum-amount-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-least-minimum-amount-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-recommended-amount-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-recommended-amount-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-vista-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/best-practices-analyzer/windows-vista-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/maximum-scale-limits",
+      "redirect_document_id": true
     }
   ]
 }

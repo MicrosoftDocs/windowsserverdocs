@@ -2,9 +2,8 @@
 title: logman create trace
 description: Reference article for the logman create trace command, which creates an event trace data collector.
 ms.topic: reference
-ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

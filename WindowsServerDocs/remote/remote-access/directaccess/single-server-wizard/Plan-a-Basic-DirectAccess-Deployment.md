@@ -2,7 +2,6 @@
 title: Plan a Basic DirectAccess Deployment
 description: Learn about the planning steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with basic features.
 ms.topic: concept-article
-ms.assetid: d12632d7-4f47-4b4e-a4ad-f18322d726e2
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

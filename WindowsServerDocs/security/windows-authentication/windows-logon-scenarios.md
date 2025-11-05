@@ -2,9 +2,8 @@
 title: Windows Logon Scenarios
 description: Learn about common Windows logon and sign-in scenarios.
 ms.topic: concept-article
-ms.assetid: 66b7c568-67b7-4ac9-a479-a5a3b8a66142
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/30/2025
 ms.custom: sfi-image-nochange
 ---
@@ -104,3 +103,4 @@ A device is used to capture and build a digital characteristic of an artifact, s
 For information about how Windows manages credentials submitted during the logon process, see [Credentials Management in Windows Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169014(v=ws.10)).
 
 [Windows Logon and Authentication Technical Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169029(v=ws.10))
+

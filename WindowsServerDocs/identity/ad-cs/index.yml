@@ -7,7 +7,7 @@ metadata:
   title: Active Directory Certificate Services documentation
   description: Learn how Active Directory Certificate Services (AD CS) provides public key infrastructure (PKI) for cryptography, digital certificates, and signature capabilities.
   ms.topic: landing-page
-  ms.date: 11/17/2022
+  ms.date: 09/05/2025
   author: robinharwood
   ms.author: roharwoo 
 
@@ -27,34 +27,37 @@ landingContent:
         links:
           - text: What is Active Directory Certificate Services?
             url: active-directory-certificate-services-overview.md
+
       
   # Card
   - title: Get started
     linkLists:
       - linkListType: concept
         links:
-          - text: Certification Authority role for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831574(v=ws.11)
-          - text: Certification Authority Web Enrollment for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831649(v=ws.11)
-          - text: Certificate Enrollment Web Service for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)
-          - text: Certificate Enrollment Policy Web Service for AD CS
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11)
-          - text: Network Device Enrollment Service for AD CS
+          - text: Certification Authority role service
+            url: certification-authority-role.md
+          - text: Certification Authority Web Enrollment
+            url: certificate-authority-web-enrollment.md
+          - text: Certificate Enrollment Web Service
+            url: certificate-enrollment-web-service.md
+          - text: Certificate Enrollment Policy Web Service
+            url: certificate-enrollment-policy-web-service-overview.md
+          - text: Network Device Enrollment Service
             url: network-device-enrollment-service-overview.md
-          - text: Protecting Against Weak Cryptographic Algorithms
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn375961(v=ws.11)
       - linkListType: how-to-guide
         links:
           - text: Configure Network Device Enrollment Service to use a domain user account
             url: create-domain-user-account-ndes-service-account.md
+          - text: Disable weak cryptographic algorithms
+            url: disable-weak-cryptographic-algorithms.md
           - text: Migrate a Certification Authority key to a Key Storage Provider
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn771627(v=ws.11)
           - text: Configure trusted root and disallowed certificates
             url: configure-trusted-roots-disallowed-certificates.md
-          - text: Use a Policy Module with the Network Device Enrollment
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473016(v=ws.11)
+          - text: Use a policy module with Network Device Enrollment Service
+            url: use-policy-module-with-network-device-enrollment-service.md
+          - text: Key-based certificate renewal
+            url: certificate-enrollment-certificate-key-based-renewal.md
           - text: Perform a Delegated Installation for an Enterprise Certification Authority
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn722303(v=ws.11)
 
@@ -67,11 +70,9 @@ landingContent:
             url: /training/modules/implement-manage-active-directory-certificate-services/
           - text: Deploying an AD CS Two-Tier PKI Hierarchy
             url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831348(v=ws.11)
-          - text: Demonstrating Certificate Key-Based Renewal
-            url: /previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v=ws.11)
       - linkListType: reference
         links:
           - text: ADCSAdministration PowerShell module
-            url: /powershell/module/adcsadministration/?view=windowsserver2022-ps
+            url: /powershell/module/adcsadministration
           - text: ADCSDeployment PowerShell module
-            url: /powershell/module/adcsdeployment/?view=windowsserver2022-ps
+            url: /powershell/module/adcsdeployment

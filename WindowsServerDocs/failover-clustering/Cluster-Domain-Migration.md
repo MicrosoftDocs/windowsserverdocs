@@ -2,8 +2,8 @@
 title: Cross Domain Cluster Migration in Windows Server 2016/2019
 description: This article describes moving a Windows Server 2019 cluster from one domain to another
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/02/2023
 ---
 # Failover Cluster domain migration
@@ -149,3 +149,4 @@ If you're using the new USB witness feature, you'll be unable to add the cluster
 ```
 New-ClusternameAccount : Cluster name account cannot be created. This cluster contains a file share witness with invalid permissions for a cluster of type AdministrativeAccesssPoint ActiveDirectoryAndDns. To proceed, delete the file share witness. After this you can create the cluster name account and recreate the file share witness. The new file share witness will be automatically created with valid permissions.
 ```
+

@@ -1,8 +1,8 @@
 ---
 title: Special Identity Groups
 description: Learn about Windows Server special identity groups that are used for Windows access control.
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.topic: concept-article
 ms.date: 07/08/2025
 ---
@@ -470,3 +470,5 @@ Any user that's accessing the system through Terminal Services has the Terminal 
 - [Security principals](understand-security-principals.md)
 
 - [Access control overview](/windows/security/identity-protection/access-control/access-control)
+
+

@@ -2,8 +2,8 @@
 title: netsh dhcpclient
 description: Reference article for the netsh dhcpclient command, which configures and manages the DHCP client settings.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/28/2025
 ---
 

@@ -2,9 +2,8 @@
 title: reg add
 description: Reference article for the reg add command, which adds a new subkey or entry to the registry.
 ms.topic: reference
-ms.assetid: d9ad143e-dc10-4e2e-a229-408393c40079
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/04/2024
 ---
 

@@ -13,6 +13,8 @@ items:
 - name: Plan
   expanded: true
   items:
+  - name: Maximum scale limits
+    href: maximum-scale-limits.md
   - name: Hosts
     items:
     - name: Hardware requirements
@@ -26,9 +28,10 @@ items:
       href: plan/guest-operating-system-application-supportability.md
     - name: Supported Windows guest operating systems
       href: Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md
-    - name: Supported Linux and FreeBSD VMs
-      href: Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md
+    - name: Linux and FreeBSD VMs
       items:
+      - name: Supported Linux and FreeBSD VMs
+        href: Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md
       - name: CentOS and Red Hat Enterprise Linux VMs
         href: Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md
       - name: Debian VMs
@@ -55,12 +58,15 @@ items:
     items:
     - name: Networking overview
       href: plan/plan-hyper-v-networking-in-windows-server.md
+    - name: Failover cluster network recommendations
+      href: failover-cluster-network-recommendations.md
     - name: Virtual switch
       href: virtual-switch.md
     - name: RDMA and SET
       href: /azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-virtualization
-  - name: Scalability
-    href: plan/plan-hyper-v-scalability-in-windows-server.md
+    - name: Network Quality of Service and bandwidth limits
+      displayName: QoS
+      href: network-quality-of-service-bandwidth-limits.md
   - name: Security
     href: plan/plan-hyper-v-security-in-windows-server.md
   - name: GPU acceleration
@@ -152,9 +158,8 @@ items:
     - name: Configure processor compatibility mode
       href: configure-processor-compatibility-mode.md
   - name: Move VMs with live migration
-    href: manage/Live-migration-overview.md
     items:
-    - name: Live Migration Overview
+    - name: Live migration overview
       href: manage/Live-migration-overview.md
     - name: Set up hosts for live migration
       href: deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
@@ -162,8 +167,10 @@ items:
       href: manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
     - name: Use live migration with workgroup clusters
       href: manage/live-migration-workgroup-cluster.md
-    - name: Use PowerShell with Hyper-V
-      href: powershell.md
+  - name: Use PowerShell with Hyper-V
+    href: powershell.md
+  - name: Dynamic Memory
+    href: dynamic-memory.md
   - name: Virtual machines
     items:
     - name: Virtual Machine Connection overview
@@ -176,20 +183,24 @@ items:
       href: powershell-direct.md
     - name: Create a custom VM Gallery
       href: custom-vm-gallery.md
-- name: Developers
-  items:
-  - name: Hyper-V specification and API documentation
-    href: /virtualization/hyper-v-on-windows/
-  - name: Build an integration Service
-    href: make-integration-service.md
-  - name: Move from Hyper-V WMI v1 to WMI v2
-    href: refactor-wmi-v1-to-wmi-v2.md
-- name: Reference
+- name: Reference and developers
   items:
   - name: PowerShell module reference
     href: /powershell/module/hyper-v
-  - name: Hyper-V specification and API documentation
+  - name: Hyper-V specification and API reference
     href: /virtualization/hyper-v-on-windows/
+  - name: Hyper-V management reference
+    href: /windows/win32/hyperv_v2/hyper-v-management
+  - name: Hyper-V WMI provider (V2) reference
+    href: /windows/win32/hyperv_v2/windows-virtualization-portal
+  - name: Integration Services
+    items:
+    - name: Build an integration Service
+      href: make-integration-service.md
+    - name: Data exchange between the host and VM
+      href: integration-services-data-exchange.md
+  - name: Move from Hyper-V WMI v1 to WMI v2
+    href: refactor-wmi-v1-to-wmi-v2.md
 - name: Resources
   items:
   - name: Hyper-V forums

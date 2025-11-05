@@ -2,7 +2,6 @@
 title: "Tutorial: Configure Certificate Authority Templates for Always On VPN"
 description: Learn how to create certificate templates and enroll and validate certificates for users, VPN server, and NPS server to use with Always On VPN connections.
 ms.topic: tutorial
-ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 05/08/2025

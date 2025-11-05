@@ -2,14 +2,14 @@
 title: Netdom resetpwd
 description: Netdom resetpwd is a command-line utility that resets the computer account password for a domain controller in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 
 # netdom resetpwd
 
-The `netdom resetpwd` command resets the secure channel password of the machine account for a domain controller (DC). This command must be run on the DC whose machine account password you wish to reset. It doesn't support resetting passwords for remote machines or member servers. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT).
+The `netdom resetpwd` command resets the secure channel password of the machine account for a domain controller (DC). This command must be run on the DC whose machine account password you wish to reset. It doesn't support resetting passwords for remote machines or member servers. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT).
 
 For more information, see [How to Administer Microsoft Windows Client and Server Computers Locally and Remotely](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649281(v=ws.10)).
 

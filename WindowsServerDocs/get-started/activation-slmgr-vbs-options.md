@@ -2,8 +2,8 @@
 title: Slmgr.vbs Options for Obtaining Volume Activation Information
 description: Provides a list of options available for the Slmgr.vbs script and describes usage cases.
 ms.topic: best-practice
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 07/07/2025
 ---
 
@@ -118,3 +118,4 @@ To manage remote clients, use the Volume Activation Management Tool (VAMT) versi
 - [Volume Activation Technical Reference](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502529%28v%3dws.11%29)
 
 - [Volume Activation Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831612%28v%3dws.11%29)
+

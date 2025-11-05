@@ -2,10 +2,9 @@
 title: ftp
 description: Reference article for the ftp command, which transfers files to and from a computer running a File Transfer Protocol (ftp) server service.
 ms.topic: reference
-ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
-ms.author: alalve
-author: xelu86
-ms.date: 10/16/2017
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 10/17/2025
 ---
 
 # ftp
@@ -35,7 +34,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 | -x:`<sendbuffer> `| Overrides the default SO_SNDBUF size of 8192. |
 | -r:`<recvbuffer>` | Overrides the default SO_RCVBUF size of 8192. |
 | -b:`<asyncbuffers>` | Overrides the default async buffer count of 3. |
-| -w:`<windowssize>` | Specifies the size of the transfer buffer. The default window size is 4096 bytes. |
+| -w:`<windowsize>` | Specifies the size of the transfer buffer. The default window size is 65535 bytes. |
 | `<host>` | Specifies the computer name, IP address, or IPv6 address of the ftp server to which to connect. The host name or address, if specified, must be the last parameter on the line. |
 | -? | Displays help at the command prompt. |
 

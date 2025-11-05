@@ -2,7 +2,6 @@
 description: "Learn more about: Performance history for Storage Spaces Direct"
 title: Performance history for Storage Spaces Direct
 ms.author: roharwoo
-manager: eldenc
 ms.topic: concept-article
 author: robinharwood
 ms.date: 10/25/2024
@@ -227,3 +226,4 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+

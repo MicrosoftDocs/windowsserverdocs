@@ -4,7 +4,6 @@ description: This article describes how to generate, schedule, and monitor stora
 ms.date: 7/7/2017
 ms.topic: concept-article
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
@@ -34,5 +33,6 @@ This section includes the following topics:
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+
 
 

@@ -1,9 +1,9 @@
-﻿---
+---
 title: Certificate Enrollment Policy Web Service overview
 description: Learn more about Certificate Enrollment Policy Web Service, including Server Manager configuration and authentication options. 
-author: meaghanlewis
+author: robinharwood
 ms.topic: concept-article
-ms.author: mosagie
+ms.author: roharwoo
 ms.date: 02/14/2025
 #customer intent: As an IT administrator, I want to understand the configuration and authentication options for the Certificate Enrollment Policy Web Service so that I can properly set it up and manage it.
 ---
@@ -55,3 +55,4 @@ The Certificate Enrollment Web Service and the Certificate Enrollment Policy Web
 - [Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 
 - [Windows PKI Blog](https://blogs.technet.com/b/pki/)
+

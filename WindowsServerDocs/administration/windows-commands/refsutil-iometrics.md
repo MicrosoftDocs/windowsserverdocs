@@ -1,8 +1,8 @@
 ---
 title: refsutil iometrics
 description: Reference article for the refsutil iometrics tool, which tracks IO data to monitor performance and usage patterns on a Resilient File System (ReFS) volume in Windows.
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/02/2025
 ms.topic: reference
 ---

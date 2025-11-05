@@ -2,8 +2,8 @@
 title: Plan for retention of information on file servers
 description: Plan how you can retain information on file servers.
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 04/01/2022
 ---
 
@@ -41,3 +41,4 @@ There are several things to consider when you've more than one file server in yo
 - [Scenario: Implement Retention of Information on File Servers](Scenario--Implement-Retention-of-Information-on-File-Servers.md)
 - [Deploy Implementing Retention of Information on File Servers (Demonstration Steps)](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)
 - [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
+

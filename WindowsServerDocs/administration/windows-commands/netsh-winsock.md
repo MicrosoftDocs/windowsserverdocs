@@ -2,8 +2,8 @@
 title: netsh winsock
 description: The netsh winsock command manages the Windows Sockets (Winsock) API network communication in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/12/2025
 ---
 

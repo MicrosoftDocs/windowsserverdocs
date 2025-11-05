@@ -2,7 +2,6 @@
 title: Configure a Multisite Deployment
 description: Learn about the configuration steps required to deploy a single Windows Server 2016 or Windows Server 2012 Remote Access multisite deployment.
 ms.topic: how-to
-ms.assetid: cb84920e-7cf5-4266-b071-d09e3d5e1f10
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

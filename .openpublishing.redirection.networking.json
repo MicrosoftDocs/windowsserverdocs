@@ -1269,6 +1269,31 @@
       "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-http.md",
       "redirect_url": "/windows-server/administration/windows-commands/netsh-http",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-PowerShell.md",
+      "redirect_url": "/azure/azure-local/deploy/sdn-express-23h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md",
+      "redirect_url": "/azure/azure-local/deploy/sdn-express-23h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-bridge.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-bridge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-interface-portproxy.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-interface",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-mbn.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-mbn",
+      "redirect_document_id": false
     }
   ]
 }

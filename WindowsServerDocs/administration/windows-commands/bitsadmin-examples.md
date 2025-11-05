@@ -2,9 +2,8 @@
 title: bitsadmin examples
 description: Examples showing how to use the bitsadmin tool to perform the most common tasks.
 ms.topic: reference
-ms.assetid: cb8f8374-ba6e-4a68-85a1-9a95b8215354
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/31/2018
 ---
 

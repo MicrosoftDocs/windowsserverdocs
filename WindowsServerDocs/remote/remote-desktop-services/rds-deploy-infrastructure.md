@@ -1,10 +1,10 @@
 ---
 title: Deploy your Remote Desktop environment
 description: Learn how to deploy a Remote Desktop environment with step-by-step instructions. Set up your servers quickly and efficiently.
-ms.author: mosagie
+ms.author: daknappe
 ms.date: 06/16/2025
 ms.topic: install-set-up-deploy
-author: meaghanlewis
+author: dknappettmsft
 ---
 # Deploy your Remote Desktop environment
 
@@ -80,3 +80,5 @@ If you're using virtual machines for any of the Remote Desktop Services servers,
    4. Set a Maximum size, and then click **Create**.
 
 You now created a basic Remote Desktop Services infrastructure. If you need to create a highly available deployment, you can add a [connection broker cluster](rds-connection-broker-cluster.md) or a [second RD Session Host server](rds-scale-rdsh-farm.md).
+
+

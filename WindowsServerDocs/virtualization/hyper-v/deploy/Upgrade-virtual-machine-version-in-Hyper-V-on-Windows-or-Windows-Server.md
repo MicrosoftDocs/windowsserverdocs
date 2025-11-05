@@ -2,9 +2,8 @@
 title: Upgrade virtual machine version in Hyper-V on Windows or Windows Server
 description: Gives instructions and considerations for upgrading the version of a virtual machine
 ms.topic: upgrade-and-migration-article
-ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/30/2025
 ---
 # Upgrade virtual machine version in Hyper-V on Windows or Windows Server
@@ -163,3 +162,4 @@ The following table shows the minimum virtual machine configuration version requ
 |Virtual Machine Grouping|6.2|
 
 For more information about these features, see [What's new in Hyper-V on Windows Server](../What-s-new-in-Hyper-V-on-Windows.md).
+

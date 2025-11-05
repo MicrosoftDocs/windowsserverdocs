@@ -2,9 +2,8 @@
 title: bitsadmin create
 description: Reference article for the bitsadmin create command, which creates a transfer job with the given display name.
 ms.topic: reference
-ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -15,7 +14,7 @@ ms.date: 10/16/2017
 Creates a transfer job with the given display name.
 
 > [!NOTE]
-> The **/Upload** and **/Upload-Reply** parameter types aren't supported by BITS 1.2 and earlier.
+> The **/Upload** and **/Upload-Reply** parameter types aren't supported by BITS 1.2 and earlier.
 
 ## Syntax
 

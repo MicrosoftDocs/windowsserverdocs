@@ -1,11 +1,9 @@
 ---
 title: Prehashing and Preloading Content on Hosted Cache Servers (Optional)
 description: Learn how to force the creation of content information - also called hashes - on BranchCache-enabled Web and file servers.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Prehashing and Preloading Content on Hosted Cache Servers (Optional)
@@ -25,5 +23,6 @@ You must be a member of **Administrators**, or equivalent to perform this proced
 4.  Move the data package file to the remote hosted cache servers by using your choice of file transfer technology.  FTP, SMB, HTTP, DVD and portable hard disks are all viable transports.
 
 5.  Import the data package file on the remote hosted cache servers by using the `Import-BCCachePackage` command.
+
 
 

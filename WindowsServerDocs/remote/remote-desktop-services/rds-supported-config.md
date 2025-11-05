@@ -2,9 +2,8 @@
 title: Supported Configurations for Remote Desktop Services
 description: Provides information about supported configurations for Remote Desktop Services (RDS) in Windows Server.
 ms.topic: concept-article
-ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/07/2025
 ---
 
@@ -127,3 +126,4 @@ For more information about creating a VDI deployment of RDS, see [Supported Wind
 ## Using RDS with application proxy services
 
 You can use RDS with [Microsoft Entra application proxy](/azure/active-directory/application-proxy-publish-remote-desktop). RDS doesn't support [Web Application Proxy](../remote-access/web-application-proxy/web-app-proxy-windows-server.md).
+

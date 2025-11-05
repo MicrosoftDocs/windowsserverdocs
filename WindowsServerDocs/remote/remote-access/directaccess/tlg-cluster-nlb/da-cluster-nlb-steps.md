@@ -2,7 +2,6 @@
 title: Steps for Configuring the DirectAccess Cluster-NLB Test Lab
 description: Learn how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.
 ms.topic: how-to
-ms.assetid: e508d3ee-ffa6-463f-a3dd-9e35e745c005
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

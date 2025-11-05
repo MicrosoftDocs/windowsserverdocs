@@ -2,9 +2,8 @@
 title: Set up hosts for live migration without Failover Clustering
 description: Set up nonclustered hosts for live migration, configure authentication, and secure your network for seamless virtual machine moves.
 ms.topic: how-to
-ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/14/2025
 ---
 # Set up hosts for live migration without Failover Clustering
@@ -136,8 +135,10 @@ This table describes how the performance options work.
 |--------|-------------|
 | TCP/IP | Copies the memory of the virtual machine to the destination server over a TCP/IP connection. |
 | Compression | Compresses the memory content of the virtual machine before copying it to the destination server over a TCP/IP connection. Compression is the **default** setting. |
-| SMB | Copies the memory of the virtual machine to the destination server over an SMB 3.0 connection.<br>- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) enabled.<br>- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is set up.<br>For more information, see [Improve Performance of a File Server with SMB Direct](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11)). |
+| SMB | Copies the memory of the virtual machine to the destination server over an SMB 3.0 connection.<br>- SMB Direct is used when the network adapters on the source and destination servers have Remote Direct Memory Access (RDMA) enabled.<br>- SMB Multichannel automatically detects and uses multiple connections when a proper SMB Multichannel configuration is set up.<br>For more information, see [Improve Performance of a File Server with SMB Direct](/windows-server/storage/file-server/smb-direct). |
 
 ## Next steps
 
 After you set up the hosts, you're ready to do a live migration. For instructions, see [Use live migration without Failover Clustering to move a virtual machine](../manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md).
+
+

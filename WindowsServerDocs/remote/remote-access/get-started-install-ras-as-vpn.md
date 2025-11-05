@@ -2,8 +2,8 @@
 title: How to install and configure Remote Access (RAS) as a VPN server
 description: How to install and configure Remote Access (RAS) as a VPN server in Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/06/2025
 ---
 
@@ -140,3 +140,4 @@ Existing configurations and Windows Server releases retain their behavior. For e
 ## Next steps
 
 - [Tutorial: Deploy Always On VPN](tutorial-aovpn-deploy-setup.md)
+

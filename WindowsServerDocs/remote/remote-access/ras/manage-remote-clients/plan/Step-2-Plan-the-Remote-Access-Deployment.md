@@ -2,7 +2,6 @@
 title: Step 2 Plan the Remote Access Deployment
 description: Learn how to plan the settings that the Remote Access Setup Wizard will use.
 ms.topic: how-to
-ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 ms.author: daknappe
 author: dknappettmsft
 ms.date: 08/07/2020

@@ -2,8 +2,8 @@
 title: View Roles and Role Permissions
 description: Learn how to view Access Control user roles in the IPAM client console.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions
@@ -29,6 +29,8 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 ## See Also
 [Role-based Access Control](Role-based-Access-Control.md)
 [Manage IPAM](Manage-IPAM.md)
+
+
 
 
 

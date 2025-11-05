@@ -3,8 +3,8 @@ title: Hyper-V storage architectures in Windows Server
 description: Learn how to use Windows Server with SAN, NAS, fiber channel, iSCSI, SMB storage for Hyper-V. Also learn about Hyper-V with hyperconverged and disaggregated storage.
 keywords: Hyper-V, Windows Server, storage, SAN, NAS, fiber channel, iSCSI, SMB, hyperconverged, disaggregated
 ms.topic: concept-article
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 01/16/2025
 ---
 # Windows Server storage architectures with Hyper-V
@@ -119,3 +119,4 @@ Windows Server also supports the following network block storage protocols:
 Microsoft also provides an in-box software-based iSCSI initiator for network block storage.
 
 You can also use a storage vendor client for any device available in the Windows Server catalog.
+

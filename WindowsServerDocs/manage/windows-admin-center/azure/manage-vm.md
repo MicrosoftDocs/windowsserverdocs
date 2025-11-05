@@ -2,8 +2,8 @@
 title: Manage a Windows VMs using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server and Client Azure VMs
 ms.topic: overview
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/18/2025
 ms.custom: sfi-image-nochange
 ---
@@ -53,7 +53,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 ### Azure account with an active subscription
 
-You need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+You need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 ### Azure permissions
 
@@ -463,3 +463,5 @@ No, unfortunately not.
 ### Is Windows Admin Center supported for VMs behind a load balancer?
 
 Yes.
+
+

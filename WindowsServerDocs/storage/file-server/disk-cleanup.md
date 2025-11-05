@@ -2,8 +2,8 @@
 title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clear certain files.
 ms.reviewer: cosmosdarwin
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 01/15/2025
 ---
@@ -70,3 +70,4 @@ To set up the Disk Cleanup button to appear on a disk's Properties dialog, you n
 
 - [Free up drive space in Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)
 - [cleanmgr](../../administration/windows-commands/cleanmgr.md)
+

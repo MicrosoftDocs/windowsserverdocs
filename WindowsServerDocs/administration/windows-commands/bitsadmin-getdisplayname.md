@@ -2,9 +2,8 @@
 title: bitsadmin getdisplayname
 description: Reference article for the bitsadmin getdisplayname command, which retrieves the display name of the specified job.
 ms.topic: reference
-ms.assetid: e5c0e76c-4cc6-42d8-ac30-30bf3dc11b9b
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

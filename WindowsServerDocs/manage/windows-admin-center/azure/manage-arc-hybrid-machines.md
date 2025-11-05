@@ -2,8 +2,8 @@
 title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
 description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
-author: meaghanlewis
-ms.author: mosagie
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/30/2024
 ms.custom:
   - references_regions
@@ -66,7 +66,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 ### Azure account with an active subscription
 
-You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 During the deployment of Windows Admin Center, we'll attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.
 
@@ -443,3 +443,4 @@ Yes. You can follow the same steps outlined in this document.
 - Learn about [Windows Admin Center](../overview.md)
 - Learn about [managing servers with Windows Admin Center](../use/manage-servers.md)
 - Learn about [Azure Arc](/azure/azure-arc/overview)
+

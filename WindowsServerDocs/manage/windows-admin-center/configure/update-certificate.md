@@ -2,8 +2,8 @@
 title: Update the certificate used by Windows Admin Center
 description: Learn how to update the HTTPS certificate used by Windows Admin Center, including PowerShell commands and steps to apply and activate the new certificate.
 ms.topic: how-to
-author: meaghanlewis
-ms.author: mosagie
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/19/2025
 ---
 # Update the certificate used by Windows Admin Center
@@ -122,3 +122,4 @@ There are different tools that you can use to find logs and error messages. The 
 
 - **Network, Policy and Firewall configuration issues**
   - If you restrict TLS communications, then the WAC Gateway might not be able to access the certificate. This might be firewall or GPO issue.
+

@@ -1,9 +1,8 @@
 ---
 title: fsutil
 description: Reference article for the fsutil command, which performs tasks that are related to file allocation table (FAT) and NTFS file systems.
-ms.author: alalve
-author: xelu86
-ms.assetid: 2e748187-6a10-4bb0-aed5-34f886a250d2
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 03/04/2025
 ---

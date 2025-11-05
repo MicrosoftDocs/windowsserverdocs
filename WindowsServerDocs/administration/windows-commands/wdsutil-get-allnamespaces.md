@@ -2,9 +2,8 @@
 title: wdsutil get-allnamespaces
 description: Reference article for wdsutil get-allnamespaces, which displays information about all namespaces on a server.
 ms.topic: reference
-ms.assetid: e8fe896d-a69a-4180-923b-9f18185f5941
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

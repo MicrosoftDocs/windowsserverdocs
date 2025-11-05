@@ -2,8 +2,8 @@
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: troubleshooting-known-issue
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/05/2024
 ms.custom: sfi-image-nochange
 ---
@@ -18,6 +18,8 @@ If you encounter an issue not described on this page, let us know at the [Window
 - Windows Admin Center doesn't support ports lower than 1024. In service mode, you can optionally configure port 80 to redirect to your specified port.
 
 ## General
+
+- When upgrading from version 2311 to version 2410, the existing certificate may not be set in the updated installation, especially for users using Windows Admin Center in international languages or those with special characters. [Learn how to update your Windows Admin Center certificate](../configure/update-certificate.md).
 
 - Windows Admin Center version 2410 build 2.4.2.1 may appear as build number 2.4.1 on the Windows Admin Center Updates settings page.
 
@@ -63,12 +65,9 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 Even with an added extension feed, the following extensions currently don't work with the modernized gateway build 2410:
 
-- Dell OpenManage
-- Lenovo XClarity Integrator
 - Fujitsu ServerView RAID
 - Fujitsu Software Infrastructure Manager (ISM)
 - Fujitsu ServerView Health
-- Pure Storage FlashArray
 
 ## Partner extension issues
 
@@ -650,3 +649,4 @@ about_Remote_Troubleshooting Help topic.
 This error is very rare. When you see this error message, it usually means WinRM couldn't process the request. The reason why this error appears varies based on context.
 
 To resolve this issue, make sure remoting is enabled and that you configure the WinRM listener to accept requests. We also recommend you check the event logs for other errors, such as if WinRM can't access certain files in the file system due to the files only having read permissions.
+

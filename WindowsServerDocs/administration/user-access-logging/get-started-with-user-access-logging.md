@@ -2,9 +2,8 @@
 title: Get Started with User Access Logging
 description: Describes the User Access Logging feature and how to start using it.
 ms.topic: get-started
-ms.assetid: 5c395b8b-3b35-4042-b9cc-07e438f86d50
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2017
 ---
 
@@ -122,3 +121,4 @@ UAL can be used on any computer running versions of Windows Server after Windows
 ## Additional References
 [User Access Logging](/previous-versions/windows/desktop/ual/user-access-logging) on MSDN.
 [Manage User Access Logging](Manage-User-Access-Logging.md)
+

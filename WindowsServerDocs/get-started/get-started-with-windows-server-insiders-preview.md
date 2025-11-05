@@ -2,8 +2,8 @@
 title: Get started with Windows Server Insiders Preview
 description: This article describes how users can become Windows Server Insiders members and test Windows Server Insiders Preview release builds.
 ms.topic: get-started
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.contributor: stacycl
 ms.date: 11/22/2024
 ---
@@ -63,3 +63,4 @@ Use your registered Windows 10 or Windows 11 device and open the [Feedback Hub](
 
 - [What's new in Windows Server 2025](whats-new-windows-server-2025.md)
 - [Explore the Feedback Hub](/windows-insider/feedback-hub/feedback-hub-app)
+

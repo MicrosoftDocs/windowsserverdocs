@@ -2,7 +2,6 @@
 description: "Learn more about: Device Health Attestation"
 title: Device Health Attestation
 ms.topic: concept-article
-ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024

@@ -2,8 +2,8 @@
 title: Manage Hyper-converged Infrastructure by Using Windows Admin Center
 description: Learn how to manage a hyper-converged infrastructure by using Windows Admin Center.
 ms.topic: how-to
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/15/2023
 ms.custom: sfi-image-nochange
 ---
@@ -323,3 +323,4 @@ The most important benefit of frequent updates is to hear what's working and wha
 - [Storage Spaces Direct overview](/azure/azure-local/concepts/storage-spaces-direct-overview)
 - [Hyper-V technology overview](../../../virtualization/hyper-v/hyper-v-on-windows-server.md)
 - [Software Defined Networking in Azure Stack HCI and Windows Server](/azure/azure-local/concepts/software-defined-networking)
+

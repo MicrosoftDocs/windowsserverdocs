@@ -2,8 +2,8 @@
 title: Configure App Control policies in Windows Server
 description: Learn how to configure App Control for Business through OSConfig PowerShell commands to harden security by implementing custom security policies.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral
 ms.date: 05/20/2025
 ---
@@ -179,13 +179,13 @@ To verify that the supplemental policies were applied, monitor event IDs **3076*
 To view the policies that are currently in effect in your environment, run the following command:
 
 ```powershell
-(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PolicyInfo | Where-Object { $_.IsEffective -eq $true }
+(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PSObject.Properties | ForEach-Object { $_.Value.PolicyInfo } | Where-Object { $_.IsEffective -eq $true }
 ```
 
 To view policies that are currently inactive in your environment, run the following command:
 
 ```powershell
-(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PolicyInfo | Where-Object { $_.IsEffective -eq $false }
+(Get-OSConfigDesiredConfiguration -Scenario AppControl).Value.PSObject.Properties | ForEach-Object { $_.Value.PolicyInfo } | Where-Object { $_.IsEffective -eq $false }
 ```
 
 Output for these queries varies based on your policy configuration needs.
@@ -194,3 +194,4 @@ Output for these queries varies based on your policy configuration needs.
 
 - [CiTool technical reference](/windows/security/application-security/application-control/app-control-for-business/operations/citool-commands)
 - [ConfigCI PowerShell reference](/powershell/module/configci)
+

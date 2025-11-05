@@ -2,10 +2,9 @@
 title: Cluster-to-cluster storage replication
 description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server.
 ms.topic: how-to
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 04/16/2025
-ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 ---
 # Cluster to Cluster Storage Replication
 
@@ -381,3 +380,5 @@ Now you'll manage and operate your cluster-to-cluster replication. You can perfo
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 -   [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+
+

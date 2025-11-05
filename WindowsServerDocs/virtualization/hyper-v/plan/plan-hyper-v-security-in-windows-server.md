@@ -2,9 +2,8 @@
 title: Plan for Hyper-V security in Windows Server
 description: Provides a list of security considerations for Hyper-V hosts and virtual machines
 ms.topic: concept-article
-ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/03/2018
 ---
 
@@ -25,7 +24,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
     - Use a private/dedicated network for your live migration traffic. Consider enabling IPSec on this network to use encryption and secure your VM's data going over the network during migration. For more information, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 - **Secure storage migration traffic.**
 
-    Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn551363(v=ws.11)).
+    Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](/windows-server/storage/file-server/smb-security).
 - **Configure hosts to be part of a guarded fabric.**
 
     For more information, see [Guarded fabric](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
@@ -101,3 +100,5 @@ For more secure environments:
 - **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.**
 
     For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
+
+
