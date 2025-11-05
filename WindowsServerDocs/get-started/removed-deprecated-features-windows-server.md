@@ -12,7 +12,7 @@ ms.date: 09/24/2025
 Each release of Windows Server brings new features and improvements. Sometimes older features are removed to make room for better alternatives. This article details the features and functionalities removed or deprecated in Windows Server.
 
 > [!TIP]
-> You can get early access to Windows Server builds by joining the [Windows Insider Program for Business](https://insider.windows.com/for-business), which is a great way to test feature changes.
+> You can get early access to Windows Server builds by joining the [Windows Insider Program for Windows Server](https://www.microsoft.com/windowsinsider/for-business-getting-started-server), which is a great way to test feature changes.
 
 > [!NOTE]
 > Windows Server long-term servicing channel (LTSC) releases have a Fixed Lifecycle Policy that includes 5 years of mainstream support and 5 years of extended support for a total lifecycle of 10 years. To learn more, see:

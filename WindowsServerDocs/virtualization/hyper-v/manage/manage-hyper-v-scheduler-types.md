@@ -28,7 +28,7 @@ In order to use SMT with Windows Server, you must have a compatible processor. P
 
 For the purposes of this article, the descriptions of SMT and how it's used by Hyper-V apply equally to both Intel and AMD systems.
 
-- For more information on Intel HT Technology, see [Intel Hyper-Threading Technology](https://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html).
+- For more information on Intel HT Technology, see [Intel Hyper-Threading Technology](https://www.intel.com/content/www/us/en/gaming/resources/hyper-threading.html).
 - For more information on AMD SMT, see [AMD "Zen" Core Architecture](https://www.amd.com/en/technologies/zen-core.html).
 
 ### Understand how Hyper-V virtualizes processors
