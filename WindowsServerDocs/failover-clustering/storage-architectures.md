@@ -210,9 +210,9 @@ Windows Server supports the following network file storage protocols:
 
 - [SMB over TCP](/troubleshoot/windows-server/networking/direct-hosting-of-smb-over-tcpip)
 
-- [SMB over QUIC](../../storage/file-server/smb-over-quic.md)
+- [SMB over QUIC](../storage/file-server/smb-over-quic.md)
 
-- [SMB over RDMA (SMB Direct)](../../storage/file-server/smb-direct.md)
+- [SMB over RDMA (SMB Direct)](../storage/file-server/smb-direct.md)
 
 Windows Server also supports the following network block storage protocols:
 
