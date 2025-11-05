@@ -25,13 +25,13 @@ This article doesn't describe every possible storage architecture configuration 
 
 ## Architecture comparison
 
-| Architecture | Storage placement | Scaling characteristics | Common clustered workloads |
-|--------------|------------------|-------------------------|----------------------------|
-| SAN or NAS storage | External shared storage (SAN, NAS, or SMB 3.0 file shares) accessed over the network by a compute cluster. | Compute and storage scale independently (add compute nodes without adding storage; storage growth is vendor-specific). | Hyper-V VMs, Scale-Out File Server shares, SQL Server databases (on SMB where supported), other clustered apps. |
-| Hyperconverged | Local disks in each cluster node pooled by S2D; data replicated across nodes; CSVs present storage uniformly. | Symmetric scaling—each node adds both compute and storage; cluster supported up to documented node counts for S2D. | Hyper-V VMs, Scale-Out File Server application data, database workloads, other high-availability roles. |
-| Hyperconverged with SAN storage | Local S2D pool (ReFS CSVs) plus external SAN volumes (NTFS CSVs) in same cluster; disk sets remain separate. | Dual scaling: add nodes (compute + S2D storage) or expand SAN independently. | Same as hyperconverged plus workloads needing NTFS/SAN tooling or features. |
-| Disaggregated Storage Spaces Direct | Separate compute cluster accesses storage provided by a distinct S2D storage cluster over the network. | Compute and storage scale independently (add only compute or only storage cluster nodes). | Same as above when storage exposed via SMB 3.0 or CSV-backed shares. |
-| Mixed architecture support | Combination of disaggregated SAN/NAS storage and S2D-based storage consumed by the same compute cluster. | Flexible—mix independent and symmetric scaling strategies per workload. | Mixed VM sets, application data on Scale-Out File Server shares, database workloads. |
+| Architecture | Storage placement | Scaling characteristics |
+|--------------|------------------|-------------------------|
+| SAN or NAS storage | External shared storage (SAN, NAS, or SMB 3.0 file shares) accessed over the network by a compute cluster. | Compute and storage scale independently (add compute nodes without adding storage; storage growth is vendor-specific). |
+| Hyperconverged | Local disks in each cluster node pooled by S2D; data replicated across nodes; CSVs present storage uniformly. | Symmetric scaling—each node adds both compute and storage; cluster supported up to documented node counts for S2D. |
+| Hyperconverged with SAN storage | Local S2D pool (ReFS CSVs) plus external SAN volumes (NTFS CSVs) in same cluster; disk sets remain separate. | Dual scaling: add nodes (compute + S2D storage) or expand SAN independently. |
+| Disaggregated Storage Spaces Direct | Separate compute cluster accesses storage provided by a distinct S2D storage cluster over the network. | Compute and storage scale independently (add only compute or only storage cluster nodes). |
+| Mixed architecture support | Combination of disaggregated SAN/NAS storage and S2D-based storage consumed by the same compute cluster. | Flexible—mix independent and symmetric scaling strategies per workload. |
 
 All architectures rely on cluster capabilities (quorum, health monitoring, failover) described in the overview. CSV usage details (metadata synchronization, redirected I/O) are available in the CSV overview. For SAN/NAS considerations (multipath, isolation), see the clustering hardware requirements. Scale-Out File Server active-active semantics are covered in its overview.
 
