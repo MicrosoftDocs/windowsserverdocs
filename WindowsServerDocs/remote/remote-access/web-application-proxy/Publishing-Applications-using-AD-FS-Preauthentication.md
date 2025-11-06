@@ -9,7 +9,7 @@ ms.topic: how-to
 
 # Publishing Applications using AD FS Preauthentication
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/azure/active-directory/manage-apps/application-proxy).**
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/entra/identity/app-proxy/overview-what-is-app-proxy).**
 
 This topic describes how to publish applications through Web Application Proxy using Active Directory Federation Services (AD FS) preauthentication.
 

@@ -129,7 +129,7 @@ Work Folders supports using Web Application Proxy, Microsoft Entra application p
 
 -  Web Application Proxy is an on-premises reverse proxy solution. To learn more, see [Web Application Proxy in Windows Server 2016](../../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md).
 
--  Microsoft Entra application proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started)
+-  Microsoft Entra application proxy is a cloud reverse proxy solution. To learn more, see [How to provide secure remote access to on-premises applications](/entra/identity/app-proxy/overview-what-is-app-proxy)
 
 ## Additional design considerations
  In addition to understanding each of the components noted above, customers need to spend time in their design thinking about the number of sync servers and shares to operate, and whether or not to leverage failover clustering to provide fault tolerance on those sync servers
