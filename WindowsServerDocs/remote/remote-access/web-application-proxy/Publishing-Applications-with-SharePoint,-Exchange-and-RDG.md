@@ -9,12 +9,12 @@ ms.topic: how-to
 
 # Publishing Applications with SharePoint, Exchange and RDG
 
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/azure/active-directory/manage-apps/application-proxy).**
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/entra/identity/app-proxy/overview-what-is-app-proxy).**
 
 This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway (RDP) through Web Application Proxy.
 
 > [!NOTE]
-> This information is provided as-is.  Remote Desktop Services supports and recommends using [Azure App Proxy to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started).
+> This information is provided as-is.  Remote Desktop Services supports and recommends using [Azure App Proxy to provide secure remote access to on-premises applications](/entra/identity/app-proxy/application-proxy-add-on-premises-application).
 
 ## <a name="BKMK_6.1"></a>Publish SharePoint Server
 You can publish a SharePoint site through Web Application Proxy when the SharePoint site is configured for claims-based authentication or Integrated Windows authentication. If you want to use Active Directory Federation Services (AD FS) for pre-authentication, you must configure a relying party using one of the wizards.
