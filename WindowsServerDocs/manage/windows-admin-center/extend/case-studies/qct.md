@@ -35,6 +35,6 @@ The QCT Management Suite extends the functionality of Windows Admin Center with 
 ![Screenshot of the S.M.A.R.T information and unhealthy notifications that are included in the QCT extension.](../../media/extend-case-study-qct/T21P_SMART.PNG)
 
 Learn more about the QCT Management Suite for Windows Admin Center:
-- [QCT Management Suite (Windows Admin Center Extension)](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-2019-server-solution/qct-management-suite-windows-admin-center-extension/)
+- [QCT Management Suite (Windows Admin Center Extension)](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-2019-server-solution/)
 - [QCT Management Suite datasheet](https://go.qct.io/wp-content/uploads/2019/04/WAC-data-sheet_v04222019.pdf)
 

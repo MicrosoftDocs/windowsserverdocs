@@ -64,7 +64,7 @@ The two standard architecture diagrams are based on a traditional Active Directo
 
 ### RDS deployment with Microsoft Entra application proxy
 
-The two standard architecture diagrams use the RD Web/Gateway servers as the Internet-facing entry point into the RDS system. For some environments, administrators would prefer to remove their own servers from the perimeter and instead use technologies that also provide extra security through reverse proxy technologies. The [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started) PaaS role fits nicely with this scenario.
+The two standard architecture diagrams use the RD Web/Gateway servers as the Internet-facing entry point into the RDS system. For some environments, administrators would prefer to remove their own servers from the perimeter and instead use technologies that also provide extra security through reverse proxy technologies. The [Microsoft Entra application proxy](/entra/identity/app-proxy/overview-what-is-app-proxy) PaaS role fits nicely with this scenario.
 
 For supported configurations and how to create this setup, see [Publish Remote Desktop with Microsoft Entra application proxy](/azure/active-directory/application-proxy-publish-remote-desktop).
 
