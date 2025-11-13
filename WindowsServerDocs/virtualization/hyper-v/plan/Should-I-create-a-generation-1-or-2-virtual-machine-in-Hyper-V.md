@@ -10,7 +10,7 @@ ms.date: 06/18/2025
 
 Creating a generation 1 or generation 2 virtual machine depends on which guest operating system you want to install and the boot method you want to use to deploy the virtual machine. We recommend you create a generation 2 virtual machines to take advantage of features like Secure Boot unless one of the following statements is true:
 
-- You're using an existing, prebuilt virtual hard drive (VHD or VHDX files), which isn't [compatible with UEFI](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
+- You're using an existing, prebuilt virtual hard drive (VHD or VHDX files), which isn't [compatible with UEFI](/windows-hardware/manufacture/desktop/boot-to-uefi-mode-or-legacy-bios-mode).
 - Generation 2 doesn't support the operating system you want to run on the virtual machine.
 - Generation 2 doesn't support the boot method you want to use.
 
@@ -24,12 +24,12 @@ Here are some of the advantages you get when you use a generation 2 virtual mach
 
 - **Secure Boot**
 
-  Use Secure Boot to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot verifies the boot loader is signed by a trusted authority in the UEFI database. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that Secure Boot doesn't support, you can disable it after you create the virtual machine. For more information, see [Secure Boot](/previous-versions/windows/it-pro/windows-8.1-and-8/dn486875(v=ws.11)).
+  Use Secure Boot to help prevent unauthorized firmware, operating systems, or UEFI drivers from running at boot time. Secure Boot verifies the boot loader is signed by a trusted authority in the UEFI database. Secure Boot is enabled by default for generation 2 virtual machines. If you need to run a guest operating system that Secure Boot doesn't support, you can disable it after you create the virtual machine. For more information, see [Secure Boot](/windows-hardware/design/device-experiences/oem-secure-boot).
 
   To Secure Boot generation 2 Linux virtual machines, you need to choose the UEFI CA Secure Boot template when you create the virtual machine.
 
 - **Larger boot volume**
-  The maximum boot volume for generation 2 virtual machines is 64 TB. This maximum boot volume is the maximum disk size supported by a `.VHDX` For generation 1 virtual machines, the maximum boot volume is 2 TB for a `.VHDX`and 2040 GB for a `.VHD` For more information, see [Hyper-V Virtual Hard Disk Format Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831446(v=ws.11)).
+  The maximum boot volume for generation 2 virtual machines is 64 TB. This maximum boot volume is the maximum disk size supported by a `.VHDX` For generation 1 virtual machines, the maximum boot volume is 2 TB for a `.VHDX`and 2040 GB for a `.VHD`.
 
   You might also see a slight improvement in virtual machine boot and installation times with generation 2 virtual machines.
 
@@ -202,7 +202,7 @@ Virtual hard drives created on generation 1 and generation 2 VMs can be uploaded
 
 ### Attach or add a DVD drive
 
-- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the *OScdimg* command line tool. For more information, see [Oscdimg Command-Line Options](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824847(v=win.10)).
+- You can't attach a physical CD or DVD drive to a generation 2 virtual machine. The virtual DVD drive in generation 2 virtual machines only supports ISO image files. To create an ISO image file of a Windows environment, you can use the *OScdimg* command line tool. For more information, see [Oscdimg Command-Line Options](/windows-hardware/manufacture/desktop/oscdimg-command-line-options).
 - When you create a new virtual machine with the `New-VM` Windows PowerShell cmdlet, the generation 2 virtual machine doesn't have a DVD drive. You can add a DVD drive while the virtual machine is running.
 
 ### Use UEFI firmware
@@ -251,5 +251,4 @@ To add a COM port:
 
 - [Linux and FreeBSD Virtual Machines on Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 - [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
-- [Plan for Hyper-V scalability in Windows Server 2016](./plan-hyper-v-scalability-in-windows-server.md)
-
+- [Plan for Hyper-V scalability in Windows Server 2016](../maximum-scale-limits.md)

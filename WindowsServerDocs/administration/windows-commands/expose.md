@@ -2,8 +2,8 @@
 title: expose
 description: Reference article for the expose command, which exposes a persistent shadow copy as a drive letter, share, or mount point.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

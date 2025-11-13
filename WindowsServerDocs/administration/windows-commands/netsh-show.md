@@ -2,8 +2,8 @@
 title: netsh show
 description: The netsh show command displays the alias and DLL helper modules available within the netsh in Windows.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/29/2025
 ---
 

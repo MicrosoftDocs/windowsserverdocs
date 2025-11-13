@@ -1,11 +1,9 @@
 ### YamlMime:FAQ
 metadata:
-  ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
   title: Active Directory Federation Services (AD FS) FAQ
   description: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS).
   author: robinharwood
   ms.author:  billmath
-  manager: mtillman
   ms.date: 11/02/2020
   ms.topic: faq
   ms.service: windows-server

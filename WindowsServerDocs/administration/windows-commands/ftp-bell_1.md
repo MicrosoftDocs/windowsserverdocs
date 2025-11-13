@@ -2,8 +2,8 @@
 title: ftp bell
 description: Reference article for the ftp bell command, which toggles an audible sound to occur after each file transfer command is completed.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

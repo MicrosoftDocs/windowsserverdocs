@@ -1064,6 +1064,8 @@
         href: netsh-advfirewall.md
       - name: netsh branchcache
         href: netsh-branchcache.md
+      - name: netsh bridge
+        href: netsh-bridge.md
       - name: netsh delete
         href: netsh-delete.md
       - name: netsh dhcpclient
@@ -1076,20 +1078,30 @@
         href: netsh-exec.md
       - name: netsh http
         href: netsh-http.md
+      - name: netsh interface
+        href: netsh-interface.md
       - name: netsh ipsec
         href: netsh-ipsec.md
       - name: netsh lan
         href: netsh-lan.md
+      - name: netsh mbn
+        href: netsh-mbn.md
       - name: netsh namespace
         href: netsh-namespace.md
       - name: netsh netio
         href: netsh-netio.md
+      - name: netsh nlm
+        href: netsh-nlm.md
+      - name: netsh ras
+        href: netsh-ras.md
       - name: netsh rpc
         href: netsh-rpc.md
       - name: netsh set
         href: netsh-set.md
       - name: netsh show
         href: netsh-show.md
+      - name: netsh trace
+        href: netsh-trace.md
       - name: netsh wcn
         href: netsh-wcn.md
       - name: netsh wfp
@@ -1098,6 +1110,8 @@
         href: netsh-winhttp.md
       - name: netsh winsock
         href: netsh-winsock.md
+      - name: netsh wlan
+        href: netsh-wlan.md
     - name: netstat
       href: netstat.md
     - name: nfsadmin

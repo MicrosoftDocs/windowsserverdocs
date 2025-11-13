@@ -2,14 +2,14 @@
 title: Netdom move
 description: Netdom move is a command-line utility moves a workstation or member server to a new domain in Windows Server.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 
 # netdom move
 
-The `netdom move` command moves a workstation or member server to a new domain. The act of moving a computer to a new domain creates an account for the computer on the domain, if it doesn't already exist. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom move`, you must run the command from an elevated command prompt.
+The `netdom move` command moves a workstation or member server to a new domain. The act of moving a computer to a new domain creates an account for the computer on the domain, if it doesn't already exist. It's available if you have the Active Directory Domain Services (AD DS) server role installed. It's also available if you install the AD DS tools that are part of the Remote Server Administration Tools (RSAT). To use `netdom move`, you must run the command from an elevated command prompt.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ netdom move machine /Domain:domain [/OU:ou path]
 |-----------|-------------|
 | `<machine>` | Specifies the name of the computer that you want to move. |
 | `/domain:<Domain>` | Specifies the domain to which you want to move the account. If you don't specify the parameter, then `netdom move` uses the domain to which the current computer belongs. |
-| `/ou:<OUPath>` | Specifies the organizational unit (OU) under which to create the account. This must be the full [RFC 1779](https://www.rfc-editor.org/rfc/rfc1779) distinguished name of the OU. If you don't specify this parameter, `netdom move` creates the account under the default OU for computer objects for that domain. |
+| `/ou:<OUPath>` | Specifies the organizational unit (OU) under which to create the account. This must be the full [RFC 1779](https://www.rfc-editor.org/rfc/rfc1779) distinguished name of the OU. If you don't specify this parameter, `netdom move` creates the account under the default OU for computer objects for that domain. |
 | `/userd:<User>` | Specifies the user account that makes the connection with the domain that you specify using the `/domain` parameter. If you don't specify this parameter, `netdom move` uses the current user account. |
 | `/passwordd:<Password>` \| `*` | Specifies the password of the user account that you specify using the `/userd` parameter. If you specify the value of this parameter as a wildcard character (`*`), this parameter prompts you for the password. |
 | `/usero:<User>` | Specifies the user account to make the connection with the computer that you want to move. If you don't specify this parameter, `netdom move` uses the current user account. |
@@ -50,7 +50,7 @@ To move **mywksta** from its current domain into the **MyDomain** domain, run th
 netdom move mywksta /domain:mydomain /userd:mydomain\admin /passwordd:*
 ```
 
-If the destination is an AD DS domain, this command updates the Security ID history for the workstation, retaining the security permissions that the computer account had previously.
+If the destination is an AD DS domain, this command updates the Security ID history for the workstation, retaining the security permissions that the computer account had previously.
 
 To move **Srv01** to the domain **NewDomain** and specify the OU, run the following command:
 

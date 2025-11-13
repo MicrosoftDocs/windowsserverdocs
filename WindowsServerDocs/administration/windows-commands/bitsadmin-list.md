@@ -2,8 +2,8 @@
 title: bitsadmin list
 description: Reference article for the bitsadmin list command, which lists the transfer jobs owned by the current user.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

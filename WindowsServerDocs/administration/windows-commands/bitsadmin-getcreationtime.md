@@ -2,8 +2,8 @@
 title: bitsadmin getcreationtime
 description: Reference article for the bitsadmin getcreationtime command, which retrieves the creation time for the specified job.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

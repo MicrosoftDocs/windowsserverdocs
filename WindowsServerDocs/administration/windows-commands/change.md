@@ -2,8 +2,8 @@
 title: change
 description: Reference article for the change command, which changes Remote Desktop Session Host server settings for logons, COM port mappings, and install mode.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

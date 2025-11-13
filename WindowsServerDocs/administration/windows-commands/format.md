@@ -1,9 +1,9 @@
 ---
 title: format
 description: Reference article for the format command that formats a drive to accept Windows files.
-ms.author: alalve
+ms.author: roharwoo
 ms.topic: reference
-author: xelu86
+author: robinharwood
 ms.date: 09/28/2023
 ---
 

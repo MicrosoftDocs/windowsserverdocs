@@ -2,8 +2,8 @@
 title: list shadows
 description: Reference article for the list shadows command, which lists persistent and existing non-persistent shadow copies that are on the system.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

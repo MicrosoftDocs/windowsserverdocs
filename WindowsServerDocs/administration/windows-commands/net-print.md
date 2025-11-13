@@ -4,6 +4,7 @@ description: Reference article for the net print command. This command has been 
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
+no-loc: [net print]
 ms.date: 10/16/2017
 ---
 

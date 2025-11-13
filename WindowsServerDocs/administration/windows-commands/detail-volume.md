@@ -2,8 +2,8 @@
 title: detail volume
 description: Reference article for detail volume, which displays the disks on which the current volume resides.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

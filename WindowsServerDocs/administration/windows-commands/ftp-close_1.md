@@ -2,8 +2,8 @@
 title: ftp close
 description: Reference article for the ftp close command, which ends the ftp session with the remote server and remains at the ftp prompt.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

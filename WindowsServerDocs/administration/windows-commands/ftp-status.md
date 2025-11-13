@@ -2,8 +2,8 @@
 title: ftp status
 description: Reference article for the ftp status command, which displays the current status of your ftp connections.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

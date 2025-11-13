@@ -63,13 +63,13 @@ If a domain controller running Windows 2000 Server has failed for longer than th
 2. Either forcefully remove Active Directory or reinstall the operating system.
 3. Remove the server metadata from Active Directory so that the server object can't be revived.
 
-You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see [Remove Active Directory Domain Controller Metadata](https://go.microsoft.com/fwlink/?LinkID=123599).
-
 By default, NTDS Settings objects that are deleted are revived automatically for a period of 14 days. Therefore, if you don't remove server metadata (use Ntdsutil or the script mentioned previously to perform metadata cleanup), the server metadata is reinstated in the directory, which prompts replication attempts to occur. In this case, errors will be logged persistently as a result of the inability to replicate with the missing domain controller.
+
+For more information about removing server metadata, see [Clean up Active Directory Domain Controller server metadata](../../deploy/ad-ds-metadata-cleanup.md).
 
 ## Root causes
 
-If you rule out intentional disconnections, hardware failures, and outdated Windows 2,000 domain controllers, the remainder of replication problems almost always have one of the following root causes:
+If you rule out intentional disconnections, hardware failures, and outdated Windows Server 2000 domain controllers, the remainder of replication problems almost always have one of the following root causes:
 
 - Network connectivity: The network connection might be unavailable, or network settings aren't configured properly.
 - Name resolution: DNS misconfigurations are a common cause of replication failures.

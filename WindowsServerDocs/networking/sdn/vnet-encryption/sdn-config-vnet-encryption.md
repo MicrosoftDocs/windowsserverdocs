@@ -92,7 +92,7 @@ Each host must have an encryption certificate installed. You can use the same ce
     Thumbprint                                Subject
     ----------                                -------
     84857CBBE7A1C851A80AE22391EB2C39BF820CE7  CN=MyNetwork
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00  CN=EncryptedVirtualNetworks
     ```
 
 1. Export the certificate to a file.<p>You need two copies of the certificate, one with the private key and one without.
@@ -170,13 +170,13 @@ Each host must have an encryption certificate installed. You can use the same ce
 
     Thumbprint                                Subject
     ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00  CN=EncryptedVirtualNetworks
 
     PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\root
 
     Thumbprint                                Subject
     ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00  CN=EncryptedVirtualNetworks
     ```
 
 7. Make note of the Thumbprint.<p>You must make a note of the thumbprint because you need it to create the certificate credential object in the network controller.
@@ -187,7 +187,7 @@ After you install the certificate on each of the Hyper-V hosts connected to the 
 
 ```
 ///Replace with the thumbprint from your certificate
-$thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"
+$thumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
 
 $uri = "https://nc.contoso.com"
 

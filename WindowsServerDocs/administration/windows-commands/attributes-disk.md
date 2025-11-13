@@ -2,8 +2,8 @@
 title: attributes disk
 description: Reference article for the attributes disk command, which displays, sets, or clears the attributes of a disk.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

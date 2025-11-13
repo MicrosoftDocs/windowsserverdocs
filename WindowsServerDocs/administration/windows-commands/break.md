@@ -2,9 +2,10 @@
 title: break
 description: Reference article for the break command, which breaks the mirrored volume with focus into two simple volumes.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
+no-loc: [break]
 ---
 
 # break

@@ -2,8 +2,8 @@
 title: auditpol get
 description: Reference article for the auditpol get command, which retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # auditpol get

@@ -2,8 +2,8 @@
 title: reg query
 description: Reference article for the reg query command, which returns a list of the next tier of subkeys and entries that are located under a specified subkey in the registry.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/02/2022
 ---
 

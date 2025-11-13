@@ -2,8 +2,8 @@
 title: bitsadmin setsecurityflags
 description: Reference article for the bitsadmin setsecurityflags command, which sets security flags for HTTP to determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

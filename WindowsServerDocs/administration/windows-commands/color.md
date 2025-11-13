@@ -2,8 +2,8 @@
 title: color
 description: Reference article for the color command, which changes the foreground and background colors in the Command Prompt window for the current session.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/19/2023
 ---
 

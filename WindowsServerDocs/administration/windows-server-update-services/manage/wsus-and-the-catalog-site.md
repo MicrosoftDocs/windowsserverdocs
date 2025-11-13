@@ -2,7 +2,6 @@
 title: WSUS and the Microsoft Update Catalog
 description: Windows Server Update Service (WSUS) article - How to import updates into WSUS using PowerShell and the Microsoft Update Catalog.
 ms.topic: how-to
-ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
 ms.author: roharwoo
 author: robinharwood
 ms.date: 07/01/2025

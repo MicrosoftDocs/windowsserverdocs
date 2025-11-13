@@ -3,8 +3,8 @@ title: append
 no-loc: [append]
 description: Reference article for the append command, which allows programs to open data files in specified directories, as if they were in the current directory.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

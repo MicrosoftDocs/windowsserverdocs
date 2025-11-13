@@ -2,8 +2,8 @@
 title: typeperf
 description: Reference article for the typeperf command, which writes performance data to the command window or to a log file.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/15/2023
 ---
 

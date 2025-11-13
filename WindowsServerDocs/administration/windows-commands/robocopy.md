@@ -2,8 +2,8 @@
 title: Robocopy
 description: Reference article for the robocopy command, which copies file data from one location to another.
 ms.topic: reference
-author: xelu86
-ms.author: alalve
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 03/17/2025
 ---
 

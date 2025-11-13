@@ -2,8 +2,8 @@
 title: logman update counter
 description: Reference article for the logman update counter command, which updates an existing counter data collector's properties.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

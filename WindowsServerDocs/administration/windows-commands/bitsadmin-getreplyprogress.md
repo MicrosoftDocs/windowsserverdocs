@@ -2,8 +2,8 @@
 title: bitsadmin getreplyprogress
 description: Reference article for the bitsadmin getreplyprogress command, which retrieves the size and progress of the server upload-reply.
 ms.topic: reference
-ms.author: mosagie
-author: meaghanlewis
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

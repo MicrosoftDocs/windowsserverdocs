@@ -4,7 +4,7 @@
   - name: Get started
     items:
     - name: Remote Desktop Services overview
-      href: remote-desktop-services-overview.md
+      href: overview.md
     - name: Create virtual machines for Remote Desktop
       href: Create-virtual-machines-for-Remote-Desktop.md
     - name: Supported configurations for RDS
@@ -56,8 +56,6 @@
         href: Azure-services-and-considerations-for-desktop-hosting.md
       - name: Understanding the desktop hosting environment
         href: Understanding-the-desktop-hosting-environment.md    
-      - name: Tenant on-premises components
-        href: Tenant-on-premises-components.md  
   - name: Build and deploy
     href: rds-build-and-deploy.md
     items:

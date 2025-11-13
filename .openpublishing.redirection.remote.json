@@ -884,6 +884,16 @@
       "source_path": "WindowsServerDocs/remote/remote-desktop-services/virtual-machine-recs.md",
       "redirect_url": "/windows-server/remote/remote-desktop-services/session-host-virtual-machine-sizing-guidelines",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-services-overview.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Tenant-on-premises-components.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/desktop-hosting-reference-architecture",
+      "redirect_document_id": false
     }
   ]
 }

@@ -1,15 +1,15 @@
 ---
 title: Setspn
-description: The setspn command reads, modifies, and deletes the Service Principal Names (SPN) directory property for an Active Directory service account.
+description: The setspn command reads, modifies, and deletes the Service Principal Names (SPN) directory property for an Active Directory service account.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 03/24/2025
 ---
 
 # setspn
 
-The `setspn` command line utility reads, modifies, and deletes the Service Principal Names (SPN) directory property for an Active Directory (AD) service account. You use SPNs to locate a target principal name for running a service. You can use `setspn` to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs. `Setspn` is available if you have the Active Directory Domain Services (AD DS) server role installed. `Setspn` must be ran through an elevated command prompt.
+The `setspn` command line utility reads, modifies, and deletes the Service Principal Names (SPN) directory property for an Active Directory (AD) service account. You use SPNs to locate a target principal name for running a service. You can use `setspn` to view the current SPNs, reset the account's default SPNs, and add or delete supplemental SPNs. `Setspn` is available if you have the Active Directory Domain Services (AD DS) server role installed. `Setspn` must be ran through an elevated command prompt.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ Query Mode modifiers can be used with the `-S` switch in order to specify where 
 
 - SPNs must be constructed using the base name of the account specified as the _accountname_ parameter. If this condition isn't met, the directory service returns a constraint violation error.
 
-You might not have the rights to access or modify this property on some account objects. You can determine what your access rights are by viewing the security attributes of the account object using the Microsoft Management Console (MMC) in Active Directory Users and Computers. You can also delegate the permission by assigning the Validated write to service principal name permission to the desired user or group.
+You might not have the rights to access or modify this property on some account objects. You can determine what your access rights are by viewing the security attributes of the account object using the Microsoft Management Console (MMC) in Active Directory Users and Computers. You can also delegate the permission by assigning the Validated write to service principal name permission to the desired user or group.
 
 The built-in SPNs that are recognized for computer accounts are:
 

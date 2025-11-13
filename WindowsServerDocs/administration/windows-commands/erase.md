@@ -2,8 +2,8 @@
 title: erase
 description: Reference article for the erase command, which deletes one or more files.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

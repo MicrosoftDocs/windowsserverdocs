@@ -8,7 +8,6 @@ metadata:
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
   ms.service: windows-server
   ms.topic: hub-page
-  manager: tedhudek
   ms.author: roharwoo
   author: robinharwood
   ms.date: 05/28/2025

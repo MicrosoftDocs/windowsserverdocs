@@ -63,7 +63,7 @@ While it might be possible for Hyper-V virtualization to run on non-Microsoft vi
 
 Azure Local is designed and tested to run on validated physical hardware. Azure Local can run nested in a virtual machine for evaluation, but production environments in a nested configuration aren't supported.
 
-To learn more about Azure Local nested on Hyper-V VMs, see [Nested virtualization in Azure Local](/previous-versions/azure/azure-local/concepts/nested-virtualization).
+To learn more about Azure Local nested on Hyper-V VMs, see [Nested virtualization in Azure Local](/azure/azure-local/manage/enable-nested-virtualization).
 
 ### Hyper-V isolated containers running nested on Hyper-V
 

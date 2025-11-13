@@ -2,8 +2,8 @@
 title: wdsutil add-device
 description: Reference article for the wdsutil add-device command, which pre-stages a computer in Active Directory Domain Services.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

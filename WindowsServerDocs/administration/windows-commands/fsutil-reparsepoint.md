@@ -1,8 +1,8 @@
 ---
 title: fsutil reparsepoint
 description: Reference article for the fsutil reparsepoint command, which queries or deletes reparse points.
-ms.author: alalve
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---

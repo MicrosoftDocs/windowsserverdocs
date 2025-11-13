@@ -2,8 +2,8 @@
 title: lpr
 description: Reference article for the lpr command, which sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 ms.topic: reference
-ms.author: alalve
-author: xelu86
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
