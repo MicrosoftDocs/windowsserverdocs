@@ -4,7 +4,7 @@ description: Learn what Network HUD is, how it works, and the core capabilities 
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: baselkablawi
-ms.date: 11/05/2025
+ms.date: 11/17/2025
 ms.topic: overview
 ai-usage: ai-assisted
 #customer intent: As a cluster administrator, I want to understand what Network HUD does and when to use it so that I can improve host networking reliability and performance.
@@ -16,9 +16,7 @@ ai-usage: ai-assisted
 > Network HUD for Windows Server is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Network HUD is a host networking diagnostics and operational tool that analyzes and remediates host networking issues. Network HID runs continuously, correlating physical switch links, host adapter settings, and the cluster roles that consume
-them. Using intent data, Network HUD selects relevant tests and raises early alerts when emerging issues threaten workload
-performance or stability.
+Network HUD is a host networking diagnostics and operational tool that analyzes and remediates host networking issues. Network HID runs continuously, correlating physical switch links, host adapter settings, and the cluster roles that consume them. Using network intent data, Network HUD selects relevant tests and raises early alerts when emerging issues threaten workload performance or stability.
 
 Host networking can be hard to troubleshoot because you need to gather information from the physical fabric switches, cluster hosts, network adapters settings, and guest workloads. This separation obscures root causes, slows remediation, and increases the risk of performance or stability degradation. Network HUD helps you to:
 
@@ -34,7 +32,7 @@ For Network HUD to be available to you, you must be eligible for Windows Server 
 When your machines are eligible for Windows Server Management enabled by Azure Arc, your environment must meet the following requirements:
 
 - You're using Windows Server Failover Clustering.
-- Cluster nodes must be running Windows Server 2025 Datacenter.
+- Cluster nodes must run Windows Server 2025 Datacenter.
 - Network ATC is deployed with host networking intents. To learn more about deploying Network ATC, see [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
 - The cluster must have Storage Spaces Direct (S2D) enabled (required for the Cluster Health service). To learn more about deploying Storage Spaces Direct, see [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).
 - Each cluster node must be connected to Azure Arc.
