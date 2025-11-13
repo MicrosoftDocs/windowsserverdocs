@@ -42,11 +42,12 @@ Complete the following prerequisites for using Network ATC:
   - Hyper-V
   - Failover Clustering
   - Data Center Bridging
+  - Failover cluster - SMB Bandwidth (FS-SMBBW)
 
    Here's an example of installing the required features via PowerShell:
 
    ```powershell
-  Install-WindowsFeature -Name NetworkATC, Hyper-V, 'Failover-Clustering', 'Data-Center-Bridging' -IncludeManagementTools
+  Install-WindowsFeature -Name NetworkATC, Hyper-V, 'Failover-Clustering', 'Data-Center-Bridging', FS-SMBBW -IncludeManagementTools
    ```
 
 - Insert each adapter in the same PCI slots in each host. This practice leads to ease in automated naming conventions by imaging systems.
@@ -55,8 +56,6 @@ Complete the following prerequisites for using Network ATC:
 
 > [!IMPORTANT]
 > Deploying Network ATC in virtual machines might be used for test and validation purposes only. VM-based deployment requires an override to the default adapter settings to disable the NetworkDirect property. For more information on submission of an override, see: [Override default network settings](./manage-network-atc.md#update-or-override-network-settings).
->
-> Deploying Network ATC in standalone mode might be used for test and validation purposes only.
 
 ## Common Network ATC commands
 
