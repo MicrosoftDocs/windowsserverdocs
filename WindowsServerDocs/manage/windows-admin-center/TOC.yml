@@ -75,6 +75,8 @@
         href: add-virtualization-mode-resources.md
       - name: Manage virtual machines in Virtualization Mode
         href: manage-virtualization-mode-virtual-machines.md
+      - name: Known issues in Virtualization Mode
+        href: virtualization-mode-known-issues.md
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
