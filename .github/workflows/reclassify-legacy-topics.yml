@@ -1,0 +1,226 @@
+name: Reclassify markdown topics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  reclassify-topics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    concurrency:
+      group: reclassify-topics
+      cancel-in-progress: false
+    env:
+      AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+      AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+      AZURE_OPENAI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_DEPLOYMENT }}
+      AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-frontmatter pyyaml requests
+
+      - name: Reclassify markdown topics with Azure OpenAI
+        id: classify
+        env:
+          TOPIC_DEFINITIONS: |
+            best-practice: Use for content that offers recommendations for working with a service or feature.
+            checklist: Use for content that contains a list of requirements or tasks to complete or to use a product or feature.
+            concept-article: Use for content that provides an in-depth explanation of functionality related to a service(s) that is fundamental to understanding and use.
+            design-pattern: Use for content that provides software design patterns used in architecture. The article follows a pattern that must include Context and problem, Solution, Issues and considerations, When to use this pattern, and Example sections.
+            end-user-help: Use for content aimed at end users that provides a resolution on a specific issue.
+            error-reference: Use for reference content that documents error codes.
+            example-scenario: Use for content that describes a solution architecture and suggested best practices for a specific scenario. The guidance is aligned to well-architected design principles. It doesn’t have accompanying code. Customers are expected to use this type as they are starting the design process of the solution.
+            faq: Use for question-and-answer formatted content. (Has a .yml template.)
+            feature-availability: Use for an article that contains all service/feature availability for each sovereign cloud (China, US Gov, etc.)
+            get-started: Use for an article pattern that helps users get started using a particular product or service.
+            glossary: Use for an article pattern that lists relevant terms for understanding and using a product, service, or scenario.
+            how-to: Use for content that shows the customer how to complete a task.
+            install-set-up-deploy: Use to provide the basic structure of a Install, set up, deploy article pattern.
+            integration: Use for an article pattern that shows users how to connect applications, data, products, services, and devices.
+            overview: Use for content that describes what a product or service is and what it’s used for.
+            product-comparison: Use for an article pattern that guides a customer to select the best product or service for their needs.
+            quickstart: Use for content that provides fundamental day-one instructions that help new customers quickly use a product or service.
+            reference: Use for consistently-structured documentation of a technical artifact, like an API or SDK, that’s entirely written by people or is a combination of manual writing and autogeneration.
+            release-notes: Use for content that highlights capabilities, features, and enhancements recently released or improved.
+            solution-overview: Helps administrators understand and learn how to deploy, implement, or configure one or more Microsoft products and services to implement a specific business scenario or solution
+            system-utilities: Use for content describing and providing programs or applications specifically designed to help manage and tune system or application software.
+            troubleshooting: Use for content that helps customers resolve problems they're experiencing.
+            troubleshooting-error-codes: Use for developing articles that list error codes and provide information to help resolve the errors.
+            troubleshooting-general: Use for developing articles that help customers resolve problems they're experiencing when they don't have a specific error message.
+            troubleshooting-known-issue: Use for developing articles that describe known issues that engineering is aware of and has a definite plan to fix.
+            troubleshooting-problem-resolution: Use for developing articles that help customers identify the cause of the problem and provide steps to fix it.
+            tutorial: Use for content that walks a user through a concept.
+            upgrade-and-migration-article: Use for an article pattern that helps users upgrade or migrate a particular product or service.
+            whats-new: Use for content that describes the differences in a product or service and highlights new features.
+        run: |
+          python <<'PY'
+          import csv
+          import json
+          import os
+          import sys
+          import textwrap
+          from pathlib import Path
+
+          import frontmatter
+          import requests
+
+          endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT", "").rstrip("/")
+          deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT")
+          api_key = os.environ.get("AZURE_OPENAI_API_KEY")
+          api_version = os.environ.get("AZURE_OPENAI_API_VERSION", "2024-05-01-preview")
+          topic_definitions = {
+              line.split(": ", 1)[0]: line.split(": ", 1)[1]
+              for line in os.environ.get("TOPIC_DEFINITIONS", "").splitlines()
+              if ": " in line
+          }
+
+          if not (endpoint and deployment and api_key and topic_definitions):
+              raise SystemExit("Azure OpenAI and topic definition environment variables must be set.")
+
+          url = f"{endpoint}/openai/deployments/{deployment}/chat/completions?api-version={api_version}"
+          headers = {
+              "api-key": api_key,
+              "Content-Type": "application/json",
+          }
+
+          def build_system_prompt():
+              defs = "\n".join(f"{k}: {v}" for k, v in topic_definitions.items())
+              return textwrap.dedent(f"""\
+              You are a documentation taxonomy classifier.
+              Only choose a topic from this exact list: {', '.join(topic_definitions)}.
+              Definitions:
+              {defs}
+
+              Respond ONLY with minified JSON in this shape:
+              {{"topic":"<slug>","confidence":"low|medium|high","reason":"<short sentence>"}}
+              """)
+
+          system_prompt = build_system_prompt()
+
+          def classify_file(body: str, meta: dict, path: Path) -> dict:
+              excerpt = body.strip()
+              if len(excerpt) > 4000:
+                  excerpt = excerpt[:4000]
+              user_prompt = textwrap.dedent(f"""\
+              File: {path.as_posix()}
+              Title: {meta.get('title','')}
+              Description: {meta.get('description','')}
+              Existing topic: {meta.get('topic')}
+              Content excerpt:
+              {excerpt}
+              """)
+              payload = {
+                  "temperature": 0,
+                  "max_tokens": 300,
+                  "top_p": 0,
+                  "messages": [
+                      {"role": "system", "content": system_prompt},
+                      {"role": "user", "content": user_prompt},
+                  ],
+              }
+              response = requests.post(url, headers=headers, json=payload, timeout=120)
+              response.raise_for_status()
+              message = response.json()["choices"][0]["message"]["content"]
+              try:
+                  data = json.loads(message)
+              except json.JSONDecodeError as exc:
+                  raise RuntimeError(f"Model returned non-JSON for {path}: {message}") from exc
+              topic = data.get("topic", "").strip()
+              if topic not in topic_definitions:
+                  raise RuntimeError(f"Invalid topic '{topic}' for {path}")
+              return data
+
+          skipped_dirs = {".git", ".github", "node_modules", ".vscode", ".venv", "dist", "build", "out"}
+          target_topics = {"article", "conceptual"}
+
+          rows = []
+          changed_files = 0
+          for md_path in Path(".").rglob("*.md"):
+              if skipped_dirs.intersection(md_path.parts):
+                  continue
+              try:
+                  post = frontmatter.load(md_path)
+              except Exception as exc:
+                  print(f"Skipping {md_path}: unable to parse front matter ({exc})")
+                  continue
+              topic = post.metadata.get("topic")
+              if topic not in target_topics:
+                  continue
+
+              try:
+                  result = classify_file(post.content, post.metadata, md_path)
+              except Exception as exc:
+                  print(f"Classification failed for {md_path}: {exc}", file=sys.stderr)
+                  raise
+
+              new_topic = result["topic"]
+              if new_topic == topic:
+                  print(f"No change for {md_path}")
+              else:
+                  post.metadata["topic"] = new_topic
+                  frontmatter.dump(post, md_path.open("w", encoding="utf-8"))
+                  changed_files += 1
+                  print(f"Updated {md_path}: {topic} -> {new_topic}")
+
+              rows.append({
+                  "path": md_path.as_posix(),
+                  "old_topic": topic,
+                  "new_topic": new_topic,
+                  "confidence": result.get("confidence", ""),
+                  "reason": result.get("reason", "").replace("\n", " "),
+              })
+
+          csv_path = Path("topic-reclassification.csv")
+          with csv_path.open("w", newline="", encoding="utf-8") as csvfile:
+              writer = csv.DictWriter(csvfile, fieldnames=["path","old_topic","new_topic","confidence","reason"])
+              writer.writeheader()
+              writer.writerows(rows)
+
+          print(f"Processed {len(rows)} markdown files; updated {changed_files}.")
+          PY
+
+      - name: Capture git diff status
+        id: git-status
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Upload classification report
+        uses: actions/upload-artifact@v4
+        with:
+          name: topic-reclassification
+          path: topic-reclassification.csv
+          if-no-files-found: ignore
+        if: always()
+
+      - name: Create pull request
+        if: steps.git-status.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/topic-reclassification
+          branch-suffix: timestamp
+          commit-message: "chore: reclassify markdown topics"
+          title: Reclassify markdown topics via Azure OpenAI
+          body: |
+            - reclassified markdown files that previously used the legacy topic values `article` or `conceptual`
+            - applied Azure OpenAI classification against the latest topic taxonomy
+            - generated `topic-reclassification.csv` with audit details
+          labels: automated-pr
