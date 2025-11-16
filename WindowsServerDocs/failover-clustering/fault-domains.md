@@ -19,17 +19,17 @@ This short video presents an [overview of fault domains in Windows Server 2016](
 
 ### Fault domain awareness in Windows Server 2019
 
-Fault domain awareness is available in Windows Server 2019 but it's disabled by default and must be enabled through the Windows Registry.
+Fault domain awareness is available in Windows Server 2019 but it's disabled by default and must be enabled through PowerShell.
 
-To enable fault domain awareness in Windows Server 2019, go to the Windows Registry and set the (Get-Cluster).AutoAssignNodeSite registry key to 1.
+To enable fault domain awareness in Windows Server 2019, go to PowerShell and set the (Get-Cluster).AutoAssignNodeSite property to 1.
 
-```Registry
+```PowerShell
     (Get-Cluster).AutoAssignNodeSite=1
 ```
 
-To disable fault domain awareness in Windows 2019, go to the Windows Registry and set the (Get-Cluster).AutoAssignNodeSite registry key to 0.
+To disable fault domain awareness in Windows 2019, go to PowerShell and set the (Get-Cluster).AutoAssignNodeSite property to 0.
 
-```Registry
+```PowerShell
     (Get-Cluster).AutoAssignNodeSite=0
 ```
 
