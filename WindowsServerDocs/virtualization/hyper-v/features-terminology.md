@@ -266,7 +266,7 @@ Replication can be configured with various options, such as:
 
 - **Exclusion of disks from replication**: You can exclude specific virtual hard disks from replication, allowing you to control which disks are replicated and which aren't.
 
-To learn more about Hyper-V Replica, see [Set up Hyper-V Replica](manage/set-up-hyper-v-replica.md).
+To learn more about Hyper-V Replica, see [Hyper-V Replica overview](replication-overview.md).
 
 ## Graphics
 

@@ -68,6 +68,8 @@
     href: sofs-overview.md
   - name: Fault domain awareness
     href: fault-domains.md
+  - name: Storage architectures
+    href: storage-architectures.md
   - name: Simplified SMB Multichannel and multi-NIC cluster networks
     href: smb-multichannel.md
   - name: VM load balancing
