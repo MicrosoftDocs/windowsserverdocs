@@ -140,7 +140,7 @@ When you add more storage resources for hosting data without adding more compute
 
 ## Hyperconverged with SAN storage
 
-This architecture combines a hyperconverged Storage Spaces Direct cluster (local disks pooled and exposed as ReFS-backed CSVs) with external SAN storage presented to the same cluster and added as NTFS-backed CSVs. The two storage sources coexist but remain separate.
+Starting with Windows Server 2022, you can combine hyperconverged Storage Spaces Direct with external SAN storage in the same failover cluster. This architecture combines a hyperconverged Storage Spaces Direct cluster (local disks pooled and exposed as ReFS-backed CSVs) with external SAN storage presented to the same cluster and added as NTFS-backed CSVs. The two storage sources coexist but remain separate.
 
 Key characteristics of a hyperconverged plus SAN model:
 
