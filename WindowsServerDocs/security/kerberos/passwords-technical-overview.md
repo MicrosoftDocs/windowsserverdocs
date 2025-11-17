@@ -125,7 +125,7 @@ There are several ways to ensure the LM hash is not stored; one of them is to us
 
 ## Local password policies available in Windows
 
-You can implement a password policy setting that enforces password complexity requirements. For more information about this policy setting, see [Password must meet complexity requirements](/previous-versions/windows/it-pro/windows-server-2003/cc786468(v=ws.10)). For information about how to apply a password policy, see [Apply or Modify a Password Policy](https://technet.microsoft.com/library/f3287250-2422-4875-805f-cccdb3e6362c(v=WS.10)). For information about all available password policy settings, see [Password Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh994572(v=ws.10)).
+You can implement a password policy setting that enforces password complexity requirements. For more information about this policy setting, see [Password must meet complexity requirements](/previous-versions/windows/it-pro/windows-server-2003/cc786468(v=ws.10)). <!--For information about how to apply a password policy, see [Apply or Modify a Password Policy](https://technet.microsoft.com/library/f3287250-2422-4875-805f-cccdb3e6362c(v=WS.10)).--> For information about all available password policy settings, see [Password Policy](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh994572(v=ws.10)).
 
 ## Fine-grained password policy available through Active Directory Domain Services (AD DS)
 
