@@ -1,16 +1,13 @@
 ---
-title: Accelerated Networking (preview) for Windows Server
+title: Accelerated Networking for Windows Server
 description: How to set up and validate Accelerated Networking on your virtual machines using PowerShell and Windows Admin Center.
 ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 03/18/2025
+ms.date: 11/03/2025
 ---
 
-# Accelerated Networking (preview)
-
-> [!IMPORTANT]
-> Accelerated Networking is currently in PREVIEW. This information relates to a prerelease product that might be substantially modified before release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Accelerated Networking
 
 Accelerated Networking enables single root input-output (I/O) virtualization (SR-IOV) on supported virtual machine (VM) types, greatly improving networking performance. Accelerated Networking lets network traffic bypass the software switch layer of Hyper-V virtualization stacks. Because Accelerated Networking assigns the virtual function (VF) to a child partition, the network traffic flows directly between the VF and child partition. As a result, the I/O overhead in the software emulation layer shrinks until network performance becomes almost the same as physical, on-premises environments. Both single servers that aren't clustered and Windows Server Standard edition don't support Accelerated Networking.
 
@@ -154,7 +151,7 @@ To configure Accelerated Networking in Windows Admin Center, navigate to your cl
 
 1. On this same screen, if you want to disable Accelerated Networking on your cluster, select **Disable cluster-level Accelerated Networking**, then select **Disable Accelerated Networking**.
 
-To enable or disable Accelerated Networking on your VMs, you're given the option to perform this action on single or multiple VMs at once. On the same screen, perform the following steps:
+To enable or disable Accelerated Networking on your VMs, perform the following steps. You can perform this action on single or multiple VMs at once.
 
 1. To disable one or more VMs, select **Enabled virtual machines**, select your VMs, then select **Disable VM Accelerated Networking**.
 
@@ -174,20 +171,20 @@ You might encounter the following error messages while using this feature.
 
 | Error | Description | Resolution |
 | --- | --- | --- |
-| Accel_net_not_supported | Node {0} does not support Accelerated Networking. Windows Server 2025 or later is required. | Your device must be running the latest version of Windows Server 2025. |
-| cannot_provision_performance | Cannot provision {0} on this system. | Select a different Performance option or update your network adapters. |
-| cluster_not_enough_resources | The cluster does not have enough SRIOV resources to enable VM {0}. | Either lower the **NodeReservePercentage** value, select a different performance option, or increase the number of SRIOV resources in your cluster. |
-| enable_accel_net_failed | Failed to enable Accelerated Networking on the cluster {0}. | Make sure you're using a valid Pay-as-you-go subscription license. |
-| Get_network_adapter_failed | Failed to get network adapters for VM {0}. | Make sure the VM has at least one network adapter. |
-| ht_enabled_min_processor_counter | The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}. | Add more vCPUs to the VM to meet the requirements. |
-| Hyperthreading_check_failed | Hyperthreading validation: Failed. There is an inconsistency across the cluster. Either disable or enable hyperthreading on all nodes. | Make sure the hyperthreading configuration is consistent for every node in your cluster. |
-| Intent_not_found | Intent validation: Failed. Intent {0} not found. | Make sure the intent name you entered is correct, then try again. |
-| Intent_type_check_failed | The selected intent {0} does not have Compute capabilities. | Create or update an intent with the Compute state. |
-| Sriov_support_MissingAcs | Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS). | Either try moving the device to another PCIe slot or contact your hardware vendor. |
-| Sriov_support_MissingPfDriver | Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV. | Ensure the drivers are updated. |
-| Sriov_support_NoBusResources | Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available. | Adjust the PCI Express bus speed in the BIOS settings, or add an expansion card that supports additional PCI Express slots. |
-| Sriov_support_Unknown | Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support. | Make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS. |
-| vm_not_enough_vcpus | VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance. | Increase the vCPU amount for your VM. |
+| `Accel_net_not_supported` | `Node {0} does not support Accelerated Networking. Windows Server 2025 or later is required.` | Your device must be running the latest version of Windows Server 2025. |
+| `cannot_provision_performance` | `Cannot provision {0} on this system.` | Select a different Performance option or update your network adapters. |
+| `cluster_not_enough_resources` | `The cluster does not have enough SRIOV resources to enable VM {0}.` | Either lower the **NodeReservePercentage** value, select a different performance option, or increase the number of SRIOV resources in your cluster. |
+| `enable_accel_net_failed` | `Failed to enable Accelerated Networking on the cluster {0}.` | Make sure you're using a valid Pay-as-you-go subscription license. |
+| `Get_network_adapter_failed` | `Failed to get network adapters for VM {0}.` | Make sure the VM has at least one network adapter. |
+| `ht_enabled_min_processor_counter` | `The minimum required processor count for requested performance with hyperthreading enabled/disabled is {0}.` | To meet the requirements, add more vCPUs to your VM. |
+| `Hyperthreading_check_failed` | `Hyperthreading validation: Failed. There is an inconsistency across the cluster. Either disable or enable hyperthreading on all nodes.` | Make sure the hyperthreading configuration is consistent for every node in your cluster. |
+| `Intent_not_found` | `Intent validation: Failed. Intent {0} not found.` | Make sure the intent name you entered is correct, then try again. |
+| `Intent_type_check_failed` | `The selected intent {0} does not have Compute capabilities.` | Create or update an intent with the Compute state. |
+| `Sriov_support_MissingAcs` | `Adapter {0} cannot be enabled for Accelerated Networking because it is in a PCIe slot that does not support Access Control Services (ACS).` | Either try moving the device to another PCIe slot or contact your hardware vendor. |
+| `Sriov_support_MissingPfDriver` | `Adapter {0} cannot be enabled for Accelerated Networking because the device driver does not support SR-IOV.` | Ensure the drivers are updated. |
+| `Sriov_support_NoBusResources` | `Adapter {0} cannot be enabled for Accelerated Networking because there are not enough PCI Express bus numbers available.` | Adjust the PCI Express bus speed in the BIOS settings, or add an expansion card that supports more PCI Express slots. |
+| `Sriov_support_Unknown` | `Adapter {0} cannot be enabled for Accelerated Networking because it is not advertising SR-IOV Support.` | Make sure the computer hardware can support SR-IOV and that you enabled I/O virtualization in the BIOS. |
+| `vm_not_enough_vcpus` | `VM {0} does not have enough vCPUs to enable Accelerated Networking with the specified performance.` | Increase the vCPU amount for your VM. |
 
 ## See also
 

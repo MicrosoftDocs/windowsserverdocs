@@ -1659,8 +1659,8 @@ The following tables describes the default services found in Windows Server 2016
 | **Description** | Enables Touch Keyboard and Handwriting Panel pen and ink functionality. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
-| **Recommendation** | OK to disable |
-| **Comments** | None |
+| **Recommendation** | Do not disable |
+| **Comments** | Do not disable if Desktop Experience is installed. |
 
 ### Update Orchestrator Service for Windows Update
 
