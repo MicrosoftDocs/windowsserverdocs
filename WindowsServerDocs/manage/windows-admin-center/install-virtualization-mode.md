@@ -34,7 +34,7 @@ To install Windows Admin Center Virtualization Mode, you need the following prer
 
 - Administrator privileges or equivalent permissions on the machine you're installing Windows Admin Center on.
 
-- Download the Windows Admin Center Virtualization Mode preview installer from [Windows Insider Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) to a location on the machine where you want to install Windows Admin Center.
+- Download the Windows Admin Center Virtualization Mode preview installer from [Windows Insider Preview Downloads](https://aka.ms/WACDownloadvMode) to a location on the machine where you want to install Windows Admin Center.
 
 - Download the [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist) to a location on the machine where you want to install Windows Admin Center. Alternatively, if your server has internet access, you can use `winget` from the Windows Terminal to download and install as shown in the next section.
 
