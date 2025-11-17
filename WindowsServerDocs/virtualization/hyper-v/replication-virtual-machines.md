@@ -219,7 +219,7 @@ To replicate a virtual machine by using PowerShell, use the `Enable-VMReplicatio
 > - Replication and failover of VMs is from a primary host to a replica host only. Performing a test failover or configuring reverse replication or extended replication isn't supported at this time.
 > - Hyper-V hosts must be running Windows Server 2022 or later.
 >
-> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../windows-admin-center/virtualization-mode-overview.md).
+> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
 
 To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:
 
