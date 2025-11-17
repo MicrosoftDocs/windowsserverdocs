@@ -187,7 +187,8 @@ In a default installation of the CA, a subset of the default certificate templat
 You may not want to issue any certificates immediately after a CA has been installed, so you can use the LoadDefaultTemplates setting to prevent the default templates from being added to the Enterprise CA. If there are no templates configured on the CA, then it can issue no certificates.
 
 **AlternateSignatureAlgorithm** configures the CA to support the PKCS\#1 V2.1 signature format for both the CA certificate and certificate requests. When set to 1 on a root CA the CA certificate will include the PKCS\#1 V2.1 signature format. When set on a subordinate CA, the subordinate CA will create a certificate request that includes the PKCS\#1 V2.1 signature format.
-
+   > [!CAUTION]
+   >   If you are planning to enable AlternateSignatureAlgorithm flag make sure all software applications in your environment are compatible with PKCS\#1 V2.1 signature format. There are some applications that may not compatible and cause issues. If you are not sure check with application vendor.
 **ForceUTF8** changes the default encoding of relative distinguished names (RDNs) in Subject and Issuer distinguished names to UTF-8. Only those RDNs that support UTF-8, such as those that are defined as Directory String types by an RFC, are affected. For example, the RDN for Domain Component (DC) supports encoding as either IA5 or UTF-8, while the Country RDN (C) only supports encoding as a Printable String. The ForceUTF8 directive will therefore affect a DC RDN but won't affect a C RDN.
 
 **EnableKeyCounting** configures the CA to increment a counter every time the CA's signing key is used. Don't enable this setting unless you have a Hardware Security Module (HSM) and associated cryptographic service provider (CSP) that supports key counting. Key counting isn't support by either the Microsoft Strong CSP or the Microsoft Software Key Storage Provider (KSP) support.
@@ -218,7 +219,7 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
    CRLPeriod=weeks
    CRLPeriodUnits=1
    LoadDefaultTemplates=0
-   AlternateSignatureAlgorithm=1
+   AlternateSignatureAlgorithm=0
    [CRLDistributionPoint]
    [AuthorityInformationAccess]
    ```
