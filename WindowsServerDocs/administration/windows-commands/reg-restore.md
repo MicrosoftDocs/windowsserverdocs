@@ -2,10 +2,8 @@
 title: reg restore
 description: Reference article for the reg restore command, which writes saved subkeys and entries back to the registry.
 ms.topic: reference
-ms.assetid: a51f1c0c-969b-4b76-930a-c8bb14dea26e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -46,7 +44,7 @@ To restore the file named NTRKBkUp.hiv into the key HKLM\Software\Microsoft\ResK
 reg restore HKLM\Software\Microsoft\ResKit NTRKBkUp.hiv
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

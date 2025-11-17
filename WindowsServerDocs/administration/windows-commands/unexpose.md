@@ -2,10 +2,8 @@
 title: unexpose
 description: Reference article for the unexpose command, which unexposes an exposed shadow copy.
 ms.topic: reference
-ms.assetid: 58dc7d0f-52e9-4587-9487-d3b4c3e52640
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -37,7 +35,7 @@ To unexpose the shadow copy associated with *drive P:\*, type:
 unexpose P:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,16 +1,12 @@
 ---
 title: Step 3 Configure the Multisite Deployment
 description: Learn about the steps required to set up the  Remote Access multisite deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Configure the Multisite Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After configuring the multisite infrastructure follow these steps to set up the  Remote Access multisite deployment.
 

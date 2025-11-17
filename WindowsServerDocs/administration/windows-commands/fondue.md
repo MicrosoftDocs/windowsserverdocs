@@ -2,16 +2,14 @@
 title: fondue
 description: Reference article for the fondue command, which enables Windows optional features by downloading required files from Windows Update or another source specified by Group Policy.
 ms.topic: reference
-ms.assetid: fc4467f6-ddbb-4d6d-b51e-5a50a957b8c0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # fondue
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables Windows optional features by downloading required files from Windows Update or another source specified by Group Policy. The manifest file for the feature must already be installed in your Windows image.
 
@@ -43,7 +41,7 @@ To enable Microsoft .NET Framework 4.8, add the program name to the SQM report, 
 fondue.exe /enable-feature:NETFX4 /caller-name:Admin.bat /hide-ux:all
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

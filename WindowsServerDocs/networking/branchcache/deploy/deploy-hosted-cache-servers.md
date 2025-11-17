@@ -1,16 +1,12 @@
 ---
 title: Deploy Hosted Cache Servers (Optional)
 description: Learn how to install and configure BranchCache hosted cache servers that are located in branch offices where you want to deploy BranchCache hosted cache mode.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 96d03b42-6cd9-4905-b6a2-dc36130dd24f
-ms.author: jgerend
-author: JasonGerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/05/2021
 ---
 # Deploy Hosted Cache Servers (Optional)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to install and configure BranchCache hosted cache servers that are located in branch offices where you want to deploy BranchCache hosted cache mode. With BranchCache in Windows Server 2016, you can deploy multiple hosted cache servers in one branch office.
 
@@ -41,5 +37,7 @@ You must be a member of **Administrators**, or equivalent to perform this proced
 
     > [!NOTE]
     > After you run this command, in the section **HostedCacheServerConfiguration**, the value for **HostedCacheServerIsEnabled** is **True**. If you configured a domain joined hosted cache server to register a service connection point (SCP) in Active Directory, the value for **HostedCacheScpRegistrationEnabled** is **True**.
+
+
 
 

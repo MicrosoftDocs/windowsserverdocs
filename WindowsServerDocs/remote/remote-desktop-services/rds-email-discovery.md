@@ -1,10 +1,10 @@
 ---
 title: Set up email discovery to subscribe to your RDS feed
 description: Learn how to set up email discovery in your RDS deployment.
-ms.author: chrimo
-ms.date: 8/28/2020
-ms.topic: article
-author: christianmontoya
+ms.author: daknappe
+ms.date: 7/3/2024
+ms.topic: how-to
+author: dknappettmsft
 ---
 # Set up email discovery to subscribe to your RDS feed
 
@@ -12,14 +12,14 @@ Have you ever had trouble getting your end users connected to their published RD
 
 Before you set up email discovery, do the following:
 
-- Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your users have @contoso.com email addresses, you would need permissions for the contoso.com domain)
-- Create an RD Web feed URL (https://\<rdweb-dns-name\>.domain/RDWeb/Feed/webfeed.aspx, such as https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx)
+- Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your users have @contoso.com email addresses, you would need permissions for the contoso.com domain).
+- Create an RD Web feed URL (`https://<rdweb-dns-name>.<domain>/RDWeb/Feed/webfeed.aspx`), such as `https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx`.
 
 >[!NOTE]
 >If you're using Azure Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
 >
->- If you're using Azure Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx>
->- If you're using Azure Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
+>- If you're using Azure Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+>- If you're using Azure Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
 
 Now, follow these steps to set up email discovery:
 

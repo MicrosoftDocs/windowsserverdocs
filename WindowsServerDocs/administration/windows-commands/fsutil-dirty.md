@@ -1,17 +1,15 @@
 ---
 title: fsutil dirty
 description: Reference article for the fsutil dirty command, which queries or sets a volume's dirty bit.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: 385a2a7c-d6bd-4f11-9c18-fca0413f9e97
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil dirty
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Queries or sets a volume's dirty bit. When a volume's dirty bit is set, **autochk** automatically checks the volume for errors the next time the computer is restarted.
 
@@ -59,7 +57,7 @@ To set the dirty bit on drive C, type:
 fsutil dirty set C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

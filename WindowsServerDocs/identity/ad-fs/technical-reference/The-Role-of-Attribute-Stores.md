@@ -1,12 +1,8 @@
 ---
-ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: The role of attribute stores in AD FS
 description: This article describes the role of attribute stores in Active Directory Federation Services (AD FS).
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: concept-article
 ---
 
 
@@ -29,7 +25,7 @@ Depending on attribute store placement and other requirements of your organizati
 ## Attribute stores that AD FS supports
 AD FS supports a wide range of directory and database stores. You can use them to extract administrator-defined attribute values and populate claims with those values. AD FS supports any of these directories or databases as attribute stores:
 
-- Azure Active Directory Domain Services (AD DS) in Windows Server 2012 and 2012 R2, and in Windows Server 2016 and later
+- Microsoft Entra Domain Services in Windows Server 2012 and 2012 R2, and in Windows Server 2016 and later
 
 - All editions of SQL Server 2012, SQL Server 2014, and SQL Server 2016 and later
 

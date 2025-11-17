@@ -1,32 +1,31 @@
 ---
-title: Adding, removing, and updating capabilities
-description: System Insights enables you to create new capabilities that leverage the existing data collection and management functionality. It's important that you also have the platform support to manage the addition, removal, and updates of these capabilities. This topic describes the high-level functionality to add, remove, and update capabilities in System Insights.
-ms.topic: article
-author: gawatu
-ms.author: daknappe
-manager: mallikarjun.chadalapaka
-ms.date: 7/31/2018
+title: Add, remove, and update capabilities in System Insights
+description: Learn how to add, remove, and update capabilities in System Insights to manage data collection and prediction features. Discover platform support and best practices.
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
+ms.date: 06/06/2025
 ---
 
-# Adding, removing, and updating capabilities
+# Add, remove, and update capabilities in System Insights
 
->Applies to: Windows Server 2022, Windows Server 2019
-
-System Insights enables you to create new capabilities that leverage the existing data collection and management functionality. Once these capabilities are created, however, it's equally important that you also have the platform support to manage the addition, removal, and updates of these capabilities.
+System Insights enables you to create new capabilities that use the existing data collection and management functionality. Once these capabilities are created, however, it's equally important that you also have the platform support to manage the addition, removal, and updates of these capabilities.
 
 This topic describes the high-level functionality to add, remove, and update capabilities in System Insights.
 
-## Adding a capability
+## Add a capability
+
 System Insights allows you to add new capabilities anytime using the **Add-InsightsCapability** cmdlet. The **Add-InsightsCapability** requires you to specify a capability name and the capability library. The capability library contains the capability description, data sources, and prediction logic.
 
 ```PowerShell
 Add-InsightsCapability -Name Sample capability -Library C:\SampleCapability.dll
 ```
 
-After a capability has been added to System Insights, you can immediately invoke and manage the capability using PowerShell or Windows Admin Center.
+After a capability is added to System Insights, you can immediately invoke and manage the capability using PowerShell or Windows Admin Center.
 
-## Updating a capability
-System Insights also enables you to update a capability using the **Update-InsightsCapability** cmdlet.
+## Update a capability
+
+System Insights enables you to update a capability using the **Update-InsightsCapability** cmdlet.
 
 ```PowerShell
 Update-InsightsCapability -Name Sample capability -Library C:\SampleCapabilityv2.dll
@@ -34,21 +33,23 @@ Update-InsightsCapability -Name Sample capability -Library C:\SampleCapabilityv2
 
 Updating a capability allows you to specify a new capability library, which allows you to change the capability description, the data sources, and the prediction logic associated with that capability. Importantly, updating a capability preserves all configuration and historical information about that capability, including custom schedules, actions, and historical prediction results.
 
-## Removing a capability
-You can also remove capabilities in System Insights using the **Remove-InsightsCapability** cmdlet.
+## Remove a capability
+
+You can remove capabilities in System Insights using the **Remove-InsightsCapability** cmdlet.
 
 ```PowerShell
 Remove-InsightsCapability -Name Sample capability
 ```
+
 >[!NOTE]
 >The default forecasting capabilities can't be removed.
 
 Removing a capability permanently deletes the capability and all associated information, including the schedule, any remediation actions, and past prediction results.
 
->[!TIP]
->Consider disabling a capability rather than removing it if you are worried about permanently deleting all information associated with the capability.
+Consider disabling a capability rather than removing it if you're worried about permanently deleting all information associated with the capability.
 
-## Additional References
+## Related content
+
 To learn more about System Insights, use the following resources:
 
 - [System Insights overview](overview.md)

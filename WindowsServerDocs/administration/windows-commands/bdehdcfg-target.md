@@ -2,10 +2,8 @@
 title: bdehdcfg target
 description: Reference article for the bdehdcfg target command, which prepares a partition for use as a system drive by BitLocker and Windows recovery.
 ms.topic: reference
-ms.assetid: f761d25d-8349-4ac7-ac46-6bb340a4348f
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To designate an existing drive (P) as the system drive:
 bdehdcfg -target P: merge
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

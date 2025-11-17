@@ -2,16 +2,14 @@
 title: rpcinfo
 description: Reference article for the rpcinfo command, which lists the programs on a remote computer.
 ms.topic: reference
-ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # rpcinfo
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists programs on remote computers. The **rpcinfo** command-line utility makes a remote procedure call (RPC) to an RPC server and reports what it finds.
 
@@ -57,6 +55,6 @@ Use User Datagram Protocol (UDP) to call a program:
 rpcinfo /u <node program> [<version>]
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

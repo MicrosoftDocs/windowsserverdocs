@@ -1,84 +1,86 @@
-- name: Failover Clustering
-  href: failover-clustering-overview.md
-- name: What's New in Failover Clustering
-  href: whats-new-in-failover-clustering.md
-- name: Understand
-  items: 
-    - name: Scale-Out File Server for application data
-      href: sofs-overview.md
-    - name: Cluster and pool quorum
-      href: /azure-stack/hci/concepts/quorum
-    - name: Fault domain awareness
-      href: fault-domains.md
-    - name: Simplified SMB Multichannel and multi-NIC cluster networks
-      href: smb-multichannel.md
-    - name: VM load balancing
-      href: /azure-stack/hci/manage/vm-load-balancing
-    - name: Cluster sets
-      href: /azure-stack/hci/deploy/cluster-set
-    - name: Cluster affinity
-      href: cluster-affinity.md
-- name: Plan
-  items: 
-    - name: Hardware requirements
-      href: clustering-requirements.md
-    - name: Use Cluster Shared Volumes (CSVs
-      href: failover-cluster-csvs.md
-    - name: Using guest VM clusters
-      href: ../storage/storage-spaces/storage-spaces-direct-in-vm.md
-- name: Deploy
-  items: 
-    - name: Create a failover cluster
-      href: create-failover-cluster.md
-    - name: Deploy a two-node file server
-      href: deploy-two-node-clustered-file-server.md
+- name: Overview
+  items:
+  - name: Failover clustering
+    href: failover-clustering-overview.md
+  - name: Hardware requirements
+    href: clustering-requirements.md
+- name: Quickstarts
+  items:
+  - name: Create a failover cluster
+    href: create-failover-cluster.md
+  - name: Deploy a two-node file server
+    href: deploy-two-node-clustered-file-server.md
+  - name: Recover a failover cluster without quorum
+    href: recover-failover-cluster-without-quorum.md
+  - name: Create a workgroup cluster
+    href: create-workgroup-cluster.md
+- name: Tutorials
+  items:
+  - name: Failover clusters in AD DS
+    items:
+    - name: Failover cluster accounts overview
+      href: failover-cluster-accounts-overview.md
+    - name: Configure failover cluster accounts
+      href: configure-failover-cluster-accounts.md
     - name: Prestage a cluster in AD DS
       href: prestage-cluster-adds.md
-      items: 
-        - name: Configuring cluster accounts in Active Directory
-          href: configure-ad-accounts.md
-    - name: Manage quorum and witnesses
-      href: manage-cluster-quorum.md
-    - name: Deploy a Cloud Witness
-      href: deploy-cloud-witness.md
-    - name: Deploy a file share witness
-      href: file-share-witness.md
-    - name: Cluster operating system rolling upgrades
-      href: cluster-operating-system-rolling-upgrade.md
-    - name: Upgrading a failover cluster on the same hardware
-      href: upgrade-option-same-hardware.md
-- name: Manage
-  items: 
-    - name: Cluster-Aware Updating
-      href: cluster-aware-updating.md
-      items: 
-        - name: Requirements and best practices
-          href: cluster-aware-updating-requirements.md
-        - name: Advanced options
-          href: cluster-aware-updating-options.md
-        - name: FAQ
-          href: cluster-aware-updating-faq.yml
-        - name: Plug-ins
-          href: cluster-aware-updating-plug-ins.md
+  - name: Health Service
+    items:
     - name: Health Service reports
       href: health-service-reports.md
     - name: Health Service faults
       href: health-service-faults.md
-    - name: Cluster-domain migration
-      href: cluster-domain-migration.md
-    - name: Troubleshooting using Windows Error Reporting
-      href: troubleshooting-using-WER-reports.md
-    - name: Troubleshooting cluster issue with Event ID 1135
-      href: ../troubleshoot/troubleshooting-cluster-event-id-1135.md
-    - name: A problem with deleting a node
-      href: ../troubleshoot/problem-nodes-failover-cluster.md
-    - name: Remove node from active failover cluster membership
-      href: ../troubleshoot/nodes-failover-cluster-vmware.md
-    - name: Adjust the failover baseline network threshold
-      href: ../troubleshoot/iaas-sql-failover-cluster.md
-    - name: Cluster system log events
-      href: system-events.md
-    - name: Use BitLocker with Cluster Shared Volumes
-      href: bitlocker-on-csv-in-ws-2022.md
-- name: Change history for Failover Clustering topics
-  href: clustering-change-history.md
+  - name: Cluster-Aware Updating
+    items:
+    - name: Overview
+      href: cluster-aware-updating.md
+    - name: Requirements and best practices
+      href: cluster-aware-updating-requirements.md
+    - name: Advanced options
+      href: cluster-aware-updating-options.md
+- name: How-tos
+  items:
+  - name: Cluster-domain migration
+    href: cluster-domain-migration.md
+  - name: Troubleshooting using Windows Error Reporting
+    href: troubleshooting-using-WER-reports.md
+  - name: Use BitLocker with Cluster Shared Volumes
+    href: bitlocker-on-csv-in-ws-2022.md
+  - name: Deploy a witness
+    items:
+    - name: What is a quorum witness?
+      href: what-is-quorum-witness.md
+    - name: Deploy a quorum witness
+      href: deploy-quorum-witness.md
+  - name: Upgrade your failover cluster
+    items:
+    - name: Cluster operating system rolling upgrades
+      href: cluster-operating-system-rolling-upgrade.md
+  - name: Deploy a cluster set
+    href: cluster-set.md
+  - name: Configure Live Migration SMB bandwidth control
+    href: configure-live-migration-smb-bandwidth.md
+- name: Concepts
+  items:
+  - name: Cluster and pool quorum
+    href: /azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering
+  - name: Scale-Out File Server for application data
+    href: sofs-overview.md
+  - name: Fault domain awareness
+    href: fault-domains.md
+  - name: Simplified SMB Multichannel and multi-NIC cluster networks
+    href: smb-multichannel.md
+  - name: VM load balancing
+    href: /azure/azure-local/manage/vm-load-balancing?context=/windows-server/context/windows-server-failover-clustering
+  - name: Cluster affinity
+    href: cluster-affinity.md
+  - name: Cluster Shared Volumes overview
+    href: failover-cluster-csvs.md
+  - name: Manage Cluster Shared Volumes
+    href: failover-cluster-manage-cluster-shared-volumes.md
+  - name: Using guest VM clusters
+    href: ../storage/storage-spaces/storage-spaces-direct-in-vm.md
+  - name: Plug-ins
+    href: cluster-aware-updating-plug-ins.md
+  - name: Cluster-aware updating FAQ
+    href: cluster-aware-updating-faq.yml

@@ -2,15 +2,13 @@
 title: shrink
 description: Reference article for the DiskPart shrink command, which reduces the size of the selected volume by the amount you specify.
 ms.topic: reference
-ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # shrink
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The Diskpart shrink command reduces the size of the selected volume by the amount you specify. This command makes free disk space available from the unused space at the end of the volume.
 
@@ -62,7 +60,7 @@ To display the maximum number of MB that the volume can be reduced by, type:
 shrink querymax
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

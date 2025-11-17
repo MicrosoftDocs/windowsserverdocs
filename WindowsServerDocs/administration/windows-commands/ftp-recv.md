@@ -2,16 +2,14 @@
 title: ftp recv
 description: Reference article for the ftp recv command, which copies a remote file to the local computer using the current file transfer type.
 ms.topic: reference
-ms.assetid: f249ce61-247d-421b-9b93-48bce5108800
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # ftp recv
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies a remote file to the local computer using the current file transfer type.
 
@@ -45,7 +43,7 @@ To copy *test.txt* to the local computer as *test1.txt* using the current file t
 recv test.txt test1.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: manage-bde off
 description: Reference article for the manage-bde off command, which decrypts the drive and turns off BitLocker.
 ms.topic: reference
-ms.assetid: 0a27c119-d385-45e5-89fe-e311d4429876
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -34,10 +32,10 @@ manage-bde -off [<volume>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 To turn off BitLocker on drive C, type:
 
 ```
-manage-bde –off C:
+manage-bde -off C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

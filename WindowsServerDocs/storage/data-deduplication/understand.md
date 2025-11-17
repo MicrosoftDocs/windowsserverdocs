@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Understanding Data Deduplication"
-ms.assetid: acc0803b-fa05-4fc3-b94d-2916abf4fdbd
 title: Understanding Data Deduplication
-ms.topic: article
-author: wmgries
-manager: klaasl
-ms.author: wgries
+ms.topic: concept-article
+
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Understanding Data Deduplication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 This document describes how [Data Deduplication](overview.md) works.
 
@@ -106,3 +103,4 @@ Yes, [all Data Deduplication jobs make entries in the Windows Event Log](run.md#
 
 **Can I change the default schedules for the Data Deduplication jobs on my system?**
 Yes, [all schedules are configurable](advanced-settings.md#modifying-job-schedules). Modifying the default Data Deduplication schedules is particularly desirable to ensure that the Data Deduplication jobs have time to finish and do not compete for resources with the workload.
+

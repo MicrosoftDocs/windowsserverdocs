@@ -2,15 +2,13 @@
 title: auditpol list
 description: Reference article for the auditpol list command, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
 ms.topic: reference
-ms.assetid: 45502abe-3d6e-4e13-94f0-8e6fcb6db860
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # auditpol list
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
 
@@ -61,7 +59,7 @@ To list the subcategories of the detailed Tracking and DS Access categories, typ
 auditpol /list /subcategory:detailed Tracking,DS Access
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

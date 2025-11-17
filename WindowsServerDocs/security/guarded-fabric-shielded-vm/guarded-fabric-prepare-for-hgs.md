@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Review prerequisites for the Host Guardian Service"
 title: Review HGS prerequisites
-ms.topic: article
-ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/29/2018
 ---
 
 # Review prerequisites for the Host Guardian Service
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 This topic covers HGS prerequisites and initial steps to prepare for the HGS deployment.
@@ -36,3 +32,5 @@ If you've already deployed HGS and want to upgrade its operating system, follow 
 
 > [!div class="nextstepaction"]
 > [Obtain certificates for HGS](guarded-fabric-obtain-certs.md)
+
+

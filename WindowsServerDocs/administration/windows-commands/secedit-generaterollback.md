@@ -2,10 +2,8 @@
 title: secedit generaterollback
 description: Reference article for the secedit generaterollback command, which allows you to generate a rollback template for a specified configuration template.
 ms.topic: reference
-ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -39,7 +37,7 @@ To create the rollback configuration file, for the previously created *SecTmplCo
 secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

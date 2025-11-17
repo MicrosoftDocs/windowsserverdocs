@@ -2,10 +2,8 @@
 title: ksetup
 description: Reference article for the ksetup command, which performs tasks related to setting up and maintaining Kerberos protocol and the Key Distribution Center (KDC) to support Kerberos realms.
 ms.topic: reference
-ms.assetid: 4e046f8a-811b-48dc-9a69-18d8e097f353
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -13,7 +11,7 @@ ms.date: 10/16/2017
 
 Performs tasks related to setting up and maintaining Kerberos protocol and the Key Distribution Center (KDC) to support Kerberos realms. Specifically, this command is used to:
 
-- Change the computer settings for locating Kerberos realms. In non-Microsoft, Kerberos–based implementations, this information is usually kept in the Krb5.conf file. In Windows Server operating systems, it's kept in the registry. You can use this tool to modify these settings. These settings are used by workstations to locate Kerberos realms and by domain controllers to locate Kerberos realms for cross-realm trust relationships.
+- Change the computer settings for locating Kerberos realms. In non-Microsoft, Kerberos-based implementations, this information is usually kept in the Krb5.conf file. In Windows Server operating systems, it's kept in the registry. You can use this tool to modify these settings. These settings are used by workstations to locate Kerberos realms and by domain controllers to locate Kerberos realms for cross-realm trust relationships.
 
 - Initialize registry keys that the Kerberos Security Support Provider (SSP) uses to locate a KDC for the Kerberos realm, if the computer is isn't a member of a Windows domain. After configuration, the user of a client computer running the Windows operating system can log on to accounts in the Kerberos realm.
 
@@ -74,6 +72,6 @@ ksetup
 | [ksetup delenctypeattr](ksetup-delenctypeattr.md) | Deletes the encryption types trust attribute for the domain. |
 | /? | Displays Help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

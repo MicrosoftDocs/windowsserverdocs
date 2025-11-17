@@ -1,18 +1,356 @@
 ---
-ms.assetid: abf69b09-6528-42e0-b164-813c7c2c78e7
 title: Schema updates in Windows Server
-description: Schema changes made by adprep by operating system version
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 12/02/2019
-ms.topic: article
+description: Schema changes made by Adprep.exe listed by operating system version.
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 02/06/2025
+ms.topic: concept-article
 ---
+
 # Windows Server Active Directory schema updates
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
+This article lists the LDF (Log Database File) files that include the changes that Adprep.exe makes.
 
-This topic lists the LDF files that include the changes that Adprep.exe makes.
+## Schema Updates in Windows Server 2025
+
+Sch89.ldf through Sch91.ldf are introduced with Windows Server 2025.
+
+### Sch91.ldf
+
+```
+dn: CN=Send-As,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=Receive-As,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=Personal-Information,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=Public-Information,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=Validated-SPN,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=Allowed-To-Authenticate,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=MS-TS-GatewayAccess,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: modify
+add: appliesTo
+appliesTo: 0feb936f-47b3-49f2-9386-1dedc2c23765
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 91
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### Sch90.ldf
+
+```
+dn: CN=ms-DS-JetGetRecordSize3,CN=schema,CN=configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+attributeID: 1.2.840.113556.1.4.2377
+attributeSyntax: 2.5.5.12
+adminDisplayName: ms-DS-JetGetRecordSize3
+adminDescription: This attribute dumps the result of JetGetRecordSize3 API.
+oMSyntax: 64
+lDAPDisplayName: msDS-JetGetRecordSize3
+isSingleValued: TRUE
+schemaIDGUID:: L4mhWZ5xo0eVpYYz3Ti6eA==
+searchFlags: 0
+showInAdvancedViewOnly: FALSE
+systemFlags: 20
+systemOnly: FALSE
+
+dn: CN=ms-DS-JetDB-Page-Size,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+ldapDisplayName: msDS-JetDBPageSize
+adminDisplayName: ms-DS-JetDB-Page-Size
+adminDescription: Attribute used to indicate what page size the DSA supports.
+attributeId: 1.2.840.113556.1.4.2378
+attributeSyntax: 2.5.5.9
+omSyntax: 2
+isSingleValued: TRUE
+systemOnly: TRUE
+searchFlags: 0
+schemaIdGuid:: YDqC2vBBiUyUKytwpsAD1A==
+showInAdvancedViewOnly: TRUE
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Top,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2377
+-
+
+dn: CN=NTDS-DSA,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2378
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Validated-MS-DS-JetDB-Page-Size,CN=Extended-Rights,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: controlAccessRight
+rightsGuid: da823a60-41f0-4c89-942b-2b70a6c003d4
+appliesTo: f0f8ffab-1191-11d0-a060-00aa006c33ed
+displayName: Validated write to MS DS Jet Database Page Size
+localizationDisplayId: 84
+validAccesses: 8
+showInAdvancedViewOnly: TRUE
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+#
+# Optional Feature Object
+#
+dn: CN=Database 32k Pages Feature,CN=Optional Features,CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: msDS-OptionalFeature
+msDS-OptionalFeatureGUID:: xiqYUnMeT3WuJHOuJ3WquA==
+msDS-RequiredForestBehaviorVersion: 10
+msDS-OptionalFeatureFlags: 1
+systemFlags: -1946157056
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 90
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+```
+
+### Sch89.ldf
+
+```
+dn: CN=ms-DS-Superseded-Service-Account-State,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-SupersededServiceAccountState
+adminDisplayName: ms-DS-Superseded-Service-Account-State
+adminDescription: This attribute is used to track whether a service account has been superseded by a Delegated Managed Service Account.
+attributeID: 1.2.840.113556.1.4.2371
+attributeSyntax: 2.5.5.9
+oMSyntax: 10
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: ljBppMOkzU64y3PNY5i3og==
+systemFlags: 16
+
+dn: CN=ms-DS-Delegated-MSA-State,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-DelegatedMSAState
+adminDisplayName: ms-DS-Delegated-MSA-State
+adminDescription: This attribute is used to track whether a DelegatedManagedServiceAccount has been Linked to a Service Account.
+attributeID: 1.2.840.113556.1.4.2372
+attributeSyntax: 2.5.5.9
+oMSyntax: 10
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: ihNcLzi9FkCItA7IfLtJGQ==
+systemFlags: 16
+
+dn: CN=ms-DS-Superseded-Managed-Account-Link,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-SupersededManagedAccountLink
+adminDisplayName: ms-DS-Superseded-Managed-Account-Link
+adminDescription: This attribute is the forward link from a service account to a delegated managed service account object.
+attributeId: 1.2.840.113556.1.4.2373
+attributeSyntax: 2.5.5.1
+oMObjectClass:: KwwCh3McAIVK
+oMSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: AuBSN75DyEizyiyy//vIoQ==
+systemFlags: 16
+InstanceType: 4
+linkID: 2222
+
+dn: CN=ms-DS-Superseded-Managed-Account-LinkBL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-SupersededManagedAccountLinkBL
+adminDisplayName: ms-DS-Superseded-Managed-Account-LinkBL
+adminDescription: This attribute is the back link from a service account to a delegated managed service account object.
+attributeId: 1.2.840.113556.1.4.2374
+attributeSyntax: 2.5.5.1
+oMObjectClass:: KwwCh3McAIVK
+oMSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: CnMF+v2eukukphyeVO9X1Q==
+systemFlags: 16
+InstanceType: 4
+linkID: 2223
+
+dn: CN=ms-DS-Managed-Account-Preceded-By-Link,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-ManagedAccountPrecededByLink
+adminDisplayName: ms-DS-Managed-Account-Preceded-By-Link
+adminDescription: This attribute is the forward link from a delegated managed service account to a service account object.
+attributeId: 1.2.840.113556.1.4.2375
+attributeSyntax: 2.5.5.1
+oMObjectClass:: KwwCh3McAIVK
+oMSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: K1uUoKJXvUOzJ00RKk6L0Q==
+systemFlags: 16
+InstanceType: 4
+linkID: 2224
+
+dn: CN=ms-DS-Managed-Account-Preceded-By-LinkBL,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: attributeSchema
+lDAPDisplayName: msDS-ManagedAccountPrecededByLinkBL
+adminDisplayName: ms-DS-Managed-Account-Preceded-By-LinkBL
+adminDescription: This attribute is the back link from a delegated managed service account to a service account object.
+attributeId: 1.2.840.113556.1.4.2376
+attributeSyntax: 2.5.5.1
+oMObjectClass:: KwwCh3McAIVK
+oMSyntax: 127
+isSingleValued: TRUE
+systemOnly: FALSE
+searchFlags: 0
+schemaIDGUID:: 8Ep3lFVTLECcmhJHDIc+Sg==
+systemFlags: 16
+InstanceType: 4
+linkID: 2225
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Top,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2374
+systemMayContain: 1.2.840.113556.1.4.2376
+-
+
+dn: CN=User,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+add: systemMayContain
+systemMayContain: 1.2.840.113556.1.4.2371
+systemMayContain: 1.2.840.113556.1.4.2373
+-
+
+dn: CN=ms-DS-Group-Managed-Service-Account,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+delete: systemPossSuperiors
+systemPossSuperiors: 1.2.840.113556.1.3.30
+-
+
+dn: CN=ms-DS-Delegated-Managed-Service-Account,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaAdd
+objectClass: classSchema
+lDAPDisplayName: msDS-DelegatedManagedServiceAccount
+adminDisplayName: ms-DS-Delegated-Managed-Service-Account
+adminDescription: The delegated managed service account class is used to create an account which can supersede a legacy service account and shared by different computers.
+governsId: 1.2.840.113556.1.5.302
+objectClassCategory: 1
+rdnAttId: cn
+subClassOf: 1.2.840.113556.1.3.30
+systemMustContain: 1.2.840.113556.1.4.2372
+systemMustContain: 1.2.840.113556.1.4.2199
+systemMayContain: 1.2.840.113556.1.4.2375
+systemMayContain: 1.2.840.113556.1.4.2200
+systemMayContain: 1.2.840.113556.1.4.2198
+systemMayContain: 1.2.840.113556.1.4.2197
+systemMayContain: 1.2.840.113556.1.4.2196
+systemPossSuperiors: 1.2.840.113556.1.3.23
+systemPossSuperiors: 2.5.6.5
+schemaIDGUID:: b5PrD7NH8kmThh3twsI3ZQ==
+defaultSecurityDescriptor: D:(OD;;CR;00299570-246d-11d0-a768-00aa006e0529;;WD)(OD;;RP;e362ed86-b728-0842-b27d-2dea7a9df218;;WD)(OA;;WP;5f202010-79a5-11d0-9020-00c04fc2d4cf;bf967a86-0de6-11d0-a285-00aa003049e2;CO)(OA;;WP;bf967950-0de6-11d0-a285-00aa003049e2;bf967a86-0de6-11d0-a285-00aa003049e2;CO)(OA;;WP;bf967953-0de6-11d0-a285-00aa003049e2;bf967a86-0de6-11d0-a285-00aa003049e2;CO)(OA;;WP;3e0abfd0-126a-11d0-a060-00aa006c33ed;bf967a86-0de6-11d0-a285-00aa003049e2;CO)(OA;;RP;46a9b11d-60ae-405a-b7e8-ff8a58d456d2;;S-1-5-32-560)(OA;;SW;72e39547-7b18-11d1-adef-00c04fd8d5cd;;CO)(OA;;SW;72e39547-7b18-11d1-adef-00c04fd8d5cd;;PS)(OA;;SW;f3a64788-5306-11d1-a9c5-0000f80367c1;;CO)(OA;;SW;f3a64788-5306-11d1-a9c5-0000f80367c1;;PS)(OA;;WP;4c164200-20c0-11d0-a768-00aa006e0529;;CO)(OA;;RPWP;77b5b886-944a-11d1-aebd-0000f80367c1;;PS)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;AO)(A;;LCRPDTLOCRSDRC;;;CO)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)
+showInAdvancedViewOnly: TRUE
+defaultHidingValue: FALSE
+systemOnly: FALSE
+defaultObjectCategory: CN=ms-DS-Delegated-Managed-Service-Account,CN=Schema,CN=Configuration,DC=X
+systemFlags: 16
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+dn: CN=Schema,CN=Configuration,DC=X
+changeType: ntdsSchemaModify
+replace: objectVersion
+objectVersion: 89
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+- 
+
+```
 
 ## Schema Update in Windows Server 2019
 
@@ -48571,3 +48909,4 @@ objectVersion: 47
 [Domain-wide schema update operations](Domain-Wide-Updates.md)
 
 [Forest-wide schema update operations](../deploy/rodc/forest-wide-updates.md)
+

@@ -2,10 +2,8 @@
 title: ksetup delenctypeattr
 description: Reference article for the ksetup delenctypeattr, which removes the encryption type attribute for the domain.
 ms.topic: reference
-ms.assetid: 4fc25ef3-e271-4229-a712-72c507df55aa
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -53,7 +51,7 @@ To remove the set encryption type attribute for the domain mit.contoso.com, type
 ksetup /delenctypeattr mit.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

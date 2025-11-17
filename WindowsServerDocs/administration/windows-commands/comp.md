@@ -2,10 +2,8 @@
 title: comp
 description: Reference article for the comp command, which compares the contents of two files or sets of files byte-by-byte.
 ms.topic: reference
-ms.assetid: 40319d23-704d-4da1-be93-8259547275d0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -86,6 +84,6 @@ To compare the first ten lines of the text files in the *\invoice* directory and
 comp \invoice\*.txt \invoice\backup\*.txt /n=10 /d
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,16 +1,12 @@
 ---
 title: Windows Authentication Technical Overview
 description: Find links to articles for the Windows Authentication Technical Overview.
-ms.topic: article
-ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Windows Authentication Technical Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional provides links to topics for the Windows Authentication Technical Overview. Windows authentication is the process to prove the authenticity of a user or service attempting to access Windows.
 
@@ -57,14 +53,12 @@ This collection of topics does not cover procedures for designing, implementing,
 
 -   For configuring and monitoring security, including authentication, in your Windows environment, see:
 
-    -   [Windows XP Security Guide](https://www.microsoft.com/download/details.aspx?id=962)
-
     -   [Windows Vista Security Baseline](/previous-versions/tn-archive/dd450978(v=technet.10))
 
     -   [Windows Server 2003 Security Baseline](/previous-versions/tn-archive/cc163140(v=technet.10)) and the [Threats and Countermeasures Guide](/previous-versions/tn-archive/dd162275(v=technet.10))
 
-    -   [Windows Server 2008 Security Guide](https://www.microsoft.com/download/details.aspx?id=17606)
-
     -   [Windows Server 2008 R2 Security Baseline](/previous-versions/tn-archive/gg236605(v=technet.10))
 
 -   For information about auditing logon and authentication events in Windows, see [Auditing Security Events](/previous-versions/windows/it-pro/windows-server-2003/cc776394(v=ws.10)).
+
+

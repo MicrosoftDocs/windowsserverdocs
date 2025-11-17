@@ -2,14 +2,11 @@
 title: Tuning DFS Namespaces
 description: This article describes how to tune or optimize DFS namespaces
 ms.date: 6/5/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ---
 # Tuning DFS Namespaces
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 After creating a namespace and adding folders and targets, refer to the following sections to tune or optimize the way DFS Namespace handles referrals and polls Active Directory Domain Services (AD DS) for updated namespace data:
 
@@ -23,3 +20,4 @@ After creating a namespace and adding folders and targets, refer to the followin
 
 > [!NOTE]
 > To search for folders or folder targets, select a namespace, click the **Search** tab, type your search string in the text box, and then click **Search**.
+

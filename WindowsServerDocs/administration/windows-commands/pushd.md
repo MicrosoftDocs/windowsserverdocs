@@ -2,10 +2,8 @@
 title: pushd
 description: Reference article for the pushd command, which stores the current directory for use by the popd command, and then changes to the specified directory.
 ms.topic: reference
-ms.assetid: 396bc545-0f41-473e-b0ac-76fbbb74d390
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -50,7 +48,7 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

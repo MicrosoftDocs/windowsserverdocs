@@ -2,10 +2,8 @@
 title: recover (DiskPart)
 description: Reference article for the DiskPart recover command, which refreshes the state of all disks in a disk group, attempt to recover disks in an invalid disk group, and resynchronizes mirrored volumes and RAID-5 volumes that have stale data.
 ms.topic: reference
-ms.assetid: 8cc3a73d-9456-41a0-b375-2b4cc37c3992
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -38,6 +36,6 @@ To recover the disk group that contains the disk with focus, type:
 recover
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

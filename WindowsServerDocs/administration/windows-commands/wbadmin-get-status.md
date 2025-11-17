@@ -2,10 +2,8 @@
 title: wbadmin get status
 description: Reference article for the wbadmin get status command, which reports the status of the backup or recovery operation that is currently running.
 ms.topic: reference
-ms.assetid: 2911b944-7b95-46aa-8c1e-1d55a2fcc94c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -24,7 +22,7 @@ To get the status of the currently running backup or recovery operation using th
 wbadmin get status
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

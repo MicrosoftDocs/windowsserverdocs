@@ -1,16 +1,12 @@
 ---
 title: Step 3 Verify the Advanced DirectAccess Deployment
 description: Learn how to verify that you have correctly configured your advanced DirectAccess deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: ae8bbff0-c981-4bc6-8df1-861621d0627f
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Verify the Advanced DirectAccess Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.
 

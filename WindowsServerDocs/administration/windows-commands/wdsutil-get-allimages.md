@@ -2,16 +2,14 @@
 title: wdsutil get-allimages
 description: Reference article for the wdsutil get-allimages command, which retrieves information about all images on a server.
 ms.topic: reference
-ms.assetid: 19de3720-4315-415a-8dc6-486caa0b2100
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-allimages
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves information about all images on a server.
 
@@ -41,7 +39,7 @@ wdsutil /get-allimages /show:install
 wdsutil /verbose /get-allimages /server:MyWDSServer /show:all /detailed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

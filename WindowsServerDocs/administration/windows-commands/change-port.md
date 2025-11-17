@@ -1,17 +1,15 @@
 ---
 title: change port
 description: Reference article for the change port command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
-ms.topic: article
-ms.assetid: 3d772c90-e849-4e74-b9ec-b6cae1159336 Lizap
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: reference
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # change port
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists or changes the COM port mappings to be compatible with MS-DOS applications.
 
@@ -53,7 +51,7 @@ change port [<portX>=<portY>| /d <portX> | /query]
   change port /query
   ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

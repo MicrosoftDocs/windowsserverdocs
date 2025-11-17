@@ -1,16 +1,14 @@
 ---
 title: Manage the Local Server and the Server Manager Console
 description: Learn how to  manage both the local server and remote servers that are running Windows Server 2008 and newer releases of the Windows Server operating system.
-ms.topic: article
-ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # Manage the Local Server and the Server Manager Console
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 In Windows Server, Server Manager lets you manage both the local server (if you are running Server Manager on Windows Server, and not on a Windows-based client operating system) and remote servers that are running  Windows Server 2008  and newer releases of the Windows Server operating system.
 
@@ -53,7 +51,7 @@ You can view or change the following settings in the **Properties** tile on the 
 |Windows Firewall|Displays Windows Firewall status for the local server. Opens **Control Panel\System and Security\Windows Firewall**. For more information about configuring Windows Firewall, see [Windows Firewall with Advanced Security and IPsec](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732283(v=ws.10)).|
 |remote management|Displays Server Manager and Windows PowerShell remote management status. Opens the **Configure remote Management** dialog box. For more information about remote management, see [Configure remote Management in Server Manager](configure-remote-management-in-server-manager.md).|
 |Remote Desktop|Shows whether users can connect to the server remotely by using Remote Desktop sessions. Opens the **remote** tab of the **System Properties** dialog box.|
-|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired. For more information about NIC Teaming, see the [NIC Teaming white paper](https://go.microsoft.com/fwlink/?LinkID=253449).|
+|NIC Teaming|Shows whether the local server is participating in NIC teaming. Opens the **NIC Teaming** dialog box, and lets you join the local server to a NIC team if desired.|
 |Ethernet|Displays the networking status of the server. Opens **Control Panel\Network and Internet\Network Connections**.|
 |Operating system version|This read-only field displays the version number of the Windows operating system that the local server is running.|
 |Hardware information|This read-only field displays the manufacturer and model name and number of the server hardware.|

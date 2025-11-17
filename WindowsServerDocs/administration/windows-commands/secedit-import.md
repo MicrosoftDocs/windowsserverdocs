@@ -2,10 +2,8 @@
 title: secedit import
 description: Reference article for the secedit import command, which imports security settings (.inf file), previously exported from the database configured with security templates.
 ms.topic: reference
-ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -49,7 +47,7 @@ To import just the security policies portion of the file to a different database
 secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies\SecContoso.inf /areas securitypolicy /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

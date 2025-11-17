@@ -2,16 +2,14 @@
 title: msinfo32
 description: Reference article for the msinfo32 command, which opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 ms.topic: reference
-ms.assetid: a38f31d7-1766-4103-becc-9d0b87c2826d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # msinfo32
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 
@@ -65,6 +63,6 @@ To display resource conflict information and to create an .nfo file called *conf
 msinfo32 /nfo conflicts.nfo /categories +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

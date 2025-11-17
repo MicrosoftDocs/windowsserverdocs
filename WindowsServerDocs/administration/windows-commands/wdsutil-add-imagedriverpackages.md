@@ -2,16 +2,14 @@
 title: wdsutil add-imagedriverpackages
 description: Reference article for the wdsutil add-imagedriverpackages command, which adds driver packages from the driver store to a boot image.
 ms.topic: reference
-ms.assetid: 9dc78909-a4d1-42a2-af8f-21ebcbfe8302
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # wdsutil add-imagedriverpackages
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds driver packages from the driver store to a boot image.
 
@@ -50,7 +48,7 @@ wdsutil /verbose /add-ImageDriverPackagemedia: WinPE Boot Image /Server:MyWDSSer
 wdsutil /verbose /add-ImageDriverPackagemedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filtertype:PackageClass /Operator:Equal /Value:Net /Value:System /Value:DiskDrive /Value:HDC /Value:SCSIAdapter
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -

@@ -2,16 +2,14 @@
 title: wdsutil enable-transportserver
 description: Reference article for the wdsutil enable-transportserver command, which enables all services for the Transport Server.
 ms.topic: reference
-ms.assetid: 9d79dba1-4b57-4a00-8cba-877e6b8618e6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # wdsutil enable-transportserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables all services for the Transport Server.
 
@@ -39,7 +37,7 @@ wdsutil /Enable-TransportServer
 wdsutil /verbose /Enable-TransportServer /Server:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,16 +2,14 @@
 title: wdsutil get-alldevices
 description: Reference article for the wdsutil get-alldevices command, which displays the Windows Deployment Services properties of all pre-staged computers.
 ms.topic: reference
-ms.assetid: 5824b3d2-2df1-4ed6-a289-e6c47c13fea2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-alldevices
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the Windows Deployment Services properties of all pre-staged computers. A pre-staged computer is a physical computer that has been linked to a computer account in active directory Domain Services.
 
@@ -40,7 +38,7 @@ wdsutil /get-alldevices
 wdsutil /verbose /get-alldevices /forest:Yes /referralserver:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

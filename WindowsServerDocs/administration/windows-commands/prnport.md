@@ -2,16 +2,14 @@
 title: prnport
 description: Reference article for the prnport command, which creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 ms.topic: reference
-ms.assetid: 6a0ec638-a21e-4a34-be5c-bd0f7ca89ffe
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # prnport
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration. This command is a Visual Basic script located in the `%WINdir%\System32\printing_Admin_Scripts\<language>` directory. To use this command at a command prompt, type **cscript** followed by the full path to the prnport file, or change directories to the appropriate folder. For example: `cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnport`.
 
@@ -79,7 +77,7 @@ To add a standard TCP/IP printing port on the local computer that connects to a 
 cscript prnport -a -r IP_10.2.3.4 -h 10.2.3.4
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

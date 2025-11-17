@@ -1,16 +1,12 @@
 ---
 title: Configuration Requirements
 description: Learn about the components that have to have Remote Access configured in the test lab.
-manager: brianlic
-ms.topic: article
-ms.assetid: aaabdf3b-d926-48d9-9d01-358668da88ba
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Configuration Requirements
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following components are required to configure Remote Access in the test lab:
 

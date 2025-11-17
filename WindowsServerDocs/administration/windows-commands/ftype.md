@@ -2,10 +2,8 @@
 title: ftype
 description: Reference article for the ftype command, which displays or modifies file type used in file name extension associations.
 ms.topic: reference
-ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -79,6 +77,6 @@ To eliminate the need to type the .pl file name extension when invoking a Perl s
 set PATHEXT=.pl;%PATHEXT%
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

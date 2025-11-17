@@ -1,17 +1,13 @@
 ---
 title: DirectAccess Deployment Paths in Windows Server
 description: This topic provides a listing of the documentation for the two main DirectAccess deployment paths in Windows Server 2016 asic and Advanced.
-manager: brianlic
-ms.topic: article
-ms.assetid: 22ccd5c3-0a26-484c-88c8-54119d1228cc
-ms.author: jgerend
-author: JasonGerend
+ms.topic: overview
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # DirectAccess Deployment Paths in Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides a listing of the documentation for the two main Remote Access deployment paths: **Basic** and **Advanced**.
 

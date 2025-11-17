@@ -2,16 +2,14 @@
 title: dfsutil
 description: Reference article for the dfsutil command, which manages DFS Namespaces, servers and clients.
 ms.topic: reference
-ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # dfsutil
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The dfsutil command manages DFS Namespaces, servers, and clients.
 
@@ -40,6 +38,6 @@ The following functionality is available only as dfsutil parameters:
 
 For more info about each of these commands, open a command prompt on a server with the DFS Namespaces management tools installed, and then type `dfsutil client /?`, `dfsutil diag /?`, or `dfsutil cache /?`.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

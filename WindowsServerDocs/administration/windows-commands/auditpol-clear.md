@@ -2,15 +2,13 @@
 title: auditpol clear
 description: Reference article for the auditpol clear command, which deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled.
 ms.topic: reference
-ms.assetid: 05bfa218-2434-4ad1-b33c-e6fcfb2b4f67
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # auditpol clear
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled.
 
@@ -46,7 +44,7 @@ auditpol /clear /y
 > [!NOTE]
 > The preceding example is useful when using a script to perform this operation.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

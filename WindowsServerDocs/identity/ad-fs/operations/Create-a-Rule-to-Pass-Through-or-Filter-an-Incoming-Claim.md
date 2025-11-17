@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Create a Rule to Pass Through or Filter an Incoming Claim"
-ms.assetid: 6127963f-71b2-4d8f-8b53-7c525bf06521
 title: Create a Rule to Pass Through or Filter an Incoming Claim
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Create a Rule to Pass Through or Filter an Incoming Claim
@@ -97,7 +93,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
     -   **Issuance Authorization Rules**
 
     -   **Delegation Authorization Rules**
-![Sceenshot thats shows the Add Rule button.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![Screenshot thats shows the Add Rule button.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Pass Through or Filter an Incoming Claim** from the list, and then click **Next**.
 ![Screenshot that shows the the Choose Rule Type screen.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule7.PNG)

@@ -1,36 +1,42 @@
 ---
-title: Upgrading your Remote Desktop Session Host to Windows Server 2016
-description: Learn how to upgrade your existing Remote Desktop Session Host to Windows Server 2016.
-ms.author: spatnaik
-ms.date: 08/01/2016
-ms.topic: article
-ms.assetid: 5c9b98b8-4eca-4a39-b10b-2bac729f7f44
-author: spatnaik
-manager: scottman
+title: Upgrading your Remote Desktop Session Host
+description: Learn how to upgrade your existing Remote Desktop Session Host.
+ms.author: daknappe
+ms.date: 7/3/2024
+ms.topic: upgrade-and-migration-article
+author: dknappettmsft
 ---
-# Upgrading your Remote Desktop Session Host to Windows Server 2016
+# Upgrading your Remote Desktop Session Host
 
->Applies to: Windows Server 2016
+> 
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.
 
-## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2.
-
 ## Upgrading a RDS session-based collection
-In order to keep the down-time to a minimum, it is best to follow the steps below while upgrading a RDS session-based collection:
+
+In order to keep the down-time to a minimum, it's best to follow these steps while upgrading a RDS session-based collection:
 
 1. Identify the servers to be upgraded, say, half the servers in the collection.
-2. Prevent new connections to these servers by setting **Allow New Connections** to false.
-3. Log off all sessions on these servers.
-4. Remove these servers from the collection.
-5. Upgrade the servers to Windows Server 2016.
-6. Set **Allow New Connections** to "false" on the remaining servers in the collection.
-7. Add the upgraded servers back to their corresponding collections.
-8. Remove the remaining set of servers to be upgraded from the collection.
-9. Set **Allow New Connections** to "true" on the upgraded servers in the collection.
-10. Now upgrade the remaining servers in the deployment by following steps 3 through 9 above.
+
+1. Prevent new connections to these servers by setting **Allow New Connections** to false.
+
+1. Log off all sessions on these servers.
+
+1. Remove these servers from the collection.
+
+1. Upgrade the servers to the latest Windows Server version.
+
+1. Set **Allow New Connections** to "false" on the remaining servers in the collection.
+
+1. Add the upgraded servers back to their corresponding collections.
+
+1. Remove the remaining set of servers to be upgraded from the collection.
+
+1. Set **Allow New Connections** to "true" on the upgraded servers in the collection.
+
+1. Upgrade the remaining servers in the deployment by following steps 3 through 9.
 
 ## Upgrading a standalone RD Session Host server
+
 A standalone RD Session Host server can be upgraded anytime.

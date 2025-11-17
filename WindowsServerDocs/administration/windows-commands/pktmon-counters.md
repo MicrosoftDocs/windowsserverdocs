@@ -1,15 +1,15 @@
 ---
 title: pktmon counters
-description: Reference article for the pktmon counters command.
+description: Reference article for the pktmon counters command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon counters
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Pktmon counters allows you to query and display current packet counters from monitored components to confirm the presence of expected traffic and get a high-level view of how the traffic flowed in the machine.
 
@@ -31,7 +31,7 @@ pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--dr
 | **--refresh-rate \<n\>** | Number of times to refresh the counters per second, from 1 to 30. Default is 10. |
 | **--json** | Output the counters in JSON format. Implies -i and -r. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon etl2pcap](pktmon-etl2pcap.md)

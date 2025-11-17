@@ -2,16 +2,14 @@
 title: wdsutil export-image
 description: Reference article for the wdsutil export-image command, which exports an existing image from the image store to another Windows Image (.wim) file.
 ms.topic: reference
-ms.assetid: a9b8b467-0f2d-4754-8998-55503a262778
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil export-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Exports an existing image from the image store to another Windows Image (.wim) file.
 
@@ -77,7 +75,7 @@ wdsutil /Export-Image image:Windows Vista with Office imagetype:Install /Destina
 wdsutil /verbose /Progress /Export-Image image:Windows Vista with Office /Server:MyWDSServer imagetype:Instal imageGroup:ImageGroup1 /Filename:install.wim /DestinationImage /Filepath:\\server\share\export.wim /Name:Exported Windows image /Description:Windows Vista image from WDS server /Overwrite:append
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

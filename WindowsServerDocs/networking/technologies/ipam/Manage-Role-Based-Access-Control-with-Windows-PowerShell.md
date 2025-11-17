@@ -1,16 +1,12 @@
 ---
 title: Manage Role Based Access Control with Windows PowerShell
 description: Learn how to use IPAM to manage role based access control with Windows PowerShell.
-manager: brianlic
-ms.topic: article
-ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Windows PowerShell
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.
 
@@ -127,3 +123,4 @@ IsSigned             : False
 DynamicUpdateStatus  : None
 ScavengeStaleRecords : False
 ```
+

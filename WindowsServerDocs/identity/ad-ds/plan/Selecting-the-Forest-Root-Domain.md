@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Selecting the Forest Root Domain"
-ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: Selecting the Forest Root Domain
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/08/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: how-to
 ---
 
 # Selecting the Forest Root Domain
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first domain that you deploy in an Active Directory forest is called the forest root domain. This domain remains the forest root domain for the life cycle of the AD DS deployment.
 
@@ -76,7 +72,7 @@ The following table lists the rules for selecting a prefix for a registered DNS 
 | -------- | --------------- |
 | Select a prefix that is not likely to become outdated. | Avoid names such as a product line or operating system that might change in the future. We recommend using generic names such as corp or ds.|
 | Select a prefix that includes Internet standard characters only. | A-Z, a-z, 0-9, and (-), but not entirely numerical. |
-| Include 15 characters or less in the prefix. | If you choose a prefix length of 15 characters or less, the NetBIOS name is the same as the prefix. |
+| Include 15 characters or fewer in the prefix. | If you choose a prefix length of 15 characters or less, the NetBIOS name is the same as the prefix. |
 
 It is important for the Active Directory DNS owner to work with the DNS owner for the organization to obtain ownership of the name that will be used for the Active Directory namespace. For more information about designing a DNS infrastructure to support AD DS, see [Creating a DNS Infrastructure Design](../../ad-ds/plan/Creating-a-DNS-Infrastructure-Design.md).
 

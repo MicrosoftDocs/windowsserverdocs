@@ -1,17 +1,13 @@
 ---
 title: Prepare your virtual machines for Remote Desktop
 description: Get your VMs ready for Remote Desktop components
-ms.author: elizapo
-ms.date: 07/21/2017
-ms.topic: article
-ms.assetid: 2fc39dff-61ca-4eba-81ab-52289081bead
-author: lizap
-manager: dongill
+ms.author: daknappe
+ms.date: 7/3/2024
+ms.topic: how-to
+author: dknappettmsft
 ---
 
 # Prepare your virtual machines for Remote Desktop
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can install Remote Desktop Services components on physical servers or on virtual machines.
 

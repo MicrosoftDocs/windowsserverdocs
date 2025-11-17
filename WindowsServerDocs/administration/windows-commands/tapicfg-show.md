@@ -2,15 +2,14 @@
 title: tapicfg show
 description: Reference article for the tapicfg show command, which displays the names and locations of the TAPI application directory partitions in the domain.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/29/2020
 ---
 
 # tapicfg show
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the names and locations of the TAPI application directory partitions in the domain.
 
@@ -46,7 +45,7 @@ To display the name of the default TAPI application directory partition for the 
 tapicfg show /defaultonly
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

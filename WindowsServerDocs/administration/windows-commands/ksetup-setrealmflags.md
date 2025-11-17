@@ -2,10 +2,8 @@
 title: ksetup setrealmflags
 description: Reference article for the ksetup setrealmflags command, which sets realm flags for the specified realm.
 ms.topic: reference
-ms.assetid: bcb2824e-fba7-4ebe-be62-e62b4fae5b17
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -59,7 +57,7 @@ ksetup /setrealmflags CONTOSO ncsupported delegate
 
 To verify the realm flag is set, type `ksetup` and then view the output, looking for the text, **Realm flags =**. If you don't see the text, it means that the flag hasn't been set.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,15 +2,13 @@
 title: winnt32
 description: Reference article for winnt32, which performs an installation of, or upgrade to, a product in Windows Server 2003.
 ms.topic: reference
-ms.assetid: 5a0a6fb3-ba4e-4ace-8984-7f6d3875560e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # winnt32
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Performs an installation of or upgrade to a product in Windows Server 2003. You can run **winnt32** at the command prompt on a computer running Windows 95, Windows 98, Windows Millennium edition, Windows NT, Windows 2000, Windows XP, or a product in the Windows Server 2003. If you run **winnt32** on a computer running Windows NT version 4.0, you must first apply Service Pack 5 or later.
 ## Syntax
@@ -62,5 +60,5 @@ for more detailed information about using Dynamic Update and installing multiple
 for information about modifying boot settings, see the Windows Deployment and Resource Kits for Windows Server 2003. For more information, see [Using the Windows Deployment and Resource Kits](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
 Using the **/unattend** command-line option to automate setup affirms that you have read and accepted the Microsoft License Agreement for Windows Server 2003. Before using this command-line option to install Windows Server 2003 on behalf of an organization other than your own, you must confirm that the end user (whether an individual, or a single entity) has received, read, and accepted the terms of the Microsoft License Agreement for that product.  OEMs may not specify this key on machines being sold to end users.
 
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)

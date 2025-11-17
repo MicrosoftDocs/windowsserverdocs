@@ -2,10 +2,8 @@
 title: regini
 description: Reference article for the regini command, which modifies the registry from the command line or a script, and applies changes that were preset in one or more text files.
 ms.topic: reference
-ms.assetid: 5ff18dc3-5bd8-400a-b311-fd73a3267e8c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
@@ -42,6 +40,6 @@ The following guidelines apply primarily to the content of the text files that c
 
 - Use hard-tab characters to control indentation. This indentation indicates the tree structure of the registry keys; however, these characters are converted to a single space regardless of their position.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,54 +1,64 @@
 ---
 title: AD FS Troubleshooting - DNS Resolution
-description:  This document describes how to troubleshoot DNS aspects of AD FS
-author: billmath
-ms.author: billmath
-manager: mtillman
-ms.date: 01/03/2017
-ms.topic: article
+description: This article describes how to troubleshoot Domain Name System aspects of Active Directory Federation Services.
+ms.date: 02/13/2024
+ms.topic: troubleshooting-general
 ---
 
-# AD FS Troubleshooting - DNS
-One of the first things to check, if AD FS is not working or responding, is DNS name resolution.  These are basic tests to determine if the AD FS servers or WAP servers are being found on your network.  For internal users, these tests should resolve to the AD FS servers (STS).    For external users, these tests should resolve to the WAP servers.
+# AD FS troubleshooting: DNS
 
-The remainder of this document will show how to do some quick name resolution checks using command-line tools.
+If Active Directory Federation Services (AD FS) isn't working or responding, one of the first things to check is Domain Name System (DNS) name resolution. Basic tests determine if the AD FS or Web Application Proxy (WAP) servers are found on your network. For internal users, these tests should resolve to the AD FS servers security token service (STS). For external users, these tests should resolve to the WAP servers.
+
+The remainder of this article shows how to use command-line tools to do some quick name resolution checks.
 
 ## Ping test
-Verifies IP-level connectivity to another TCP/IP computer by sending Internet Control Message Protocol (ICMP) Echo Request messages. The receipt of corresponding Echo Reply messages are displayed, along with round-trip times.  For more information, see [Ping](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff961503(v=ws.11)).
 
+A ping test verifies IP-level connectivity to another TCP/IP computer by sending Internet Control Message Protocol (ICMP) Echo Request messages. The receipt of corresponding Echo Reply messages appears, along with round-trip times. For more information, see [Ping](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff961503(v=ws.11)).
 
->[!NOTE]
->Be aware that some organizations block this port on their servers and you may get a **Request timed out** response.
+> [!NOTE]
+> Some organizations block this port on their servers. You might get a **Request timed out** response.
 
-### To use a PING test
-1.  Open a command prompt
-2. Enter ```ping <name of AD FS server>```
-    a. Example:  ping sts.contoso.com
-3. You should see a reply from the server
+To use a ping test:
 
-![Ping](media/ad-fs-tshoot-dns/dns1.png)
+1. Open a command prompt.
+1. Enter ```ping <name of AD FS server>```.
+   
+   Example: `ping sts.contoso.com`
+
+A reply from the server appears.
+
+![Screenshot that shows a ping sample.](media/ad-fs-tshoot-dns/dns1.png)
 
 ## NSLookup
-Displays information that you can use to diagnose Domain Name System (DNS) infrastructure.  For more information, see [NSLookup](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725991(v=ws.11)).
 
-### To use a NSLookup
-1.  Open a command prompt
-2. Enter ```nslookup <name of AD FS server>```
-    a. Example:  nslookup sts.contoso.com
-3. You should see the dns information for the server
-![NSLookup](media/ad-fs-tshoot-dns/dns2.png)
+NSLookup shows information that you can use to diagnose DNS infrastructure. For more information, see [NSLookup](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725991(v=ws.11)).
+
+To use NSLookup:
+
+1. Open a command prompt.
+1. Enter ```nslookup <name of AD FS server>```.
+
+   Example: `nslookup sts.contoso.com`
+
+The DNS information for the server appears.
+
+![Screenshot that shows NSLookup.](media/ad-fs-tshoot-dns/dns2.png)
 
 ## Tracert
-Determines the path taken to a destination by sending Internet Control Message Protocol (ICMP) Echo Request or ICMPv6 messages to the destination with incrementally increasing Time to Live (TTL) field values.   For more information, see [Tracert](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff961507(v=ws.11)).
 
+Tracert determines the path taken to a destination by sending an ICMP Echo Request or ICMPv6 messages to the destination with incrementally increasing Time to Live (TTL) field values. For more information, see [Tracert](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff961507(v=ws.11)).
 
-### To use Tracert
-1.  Open a command prompt
-2. Enter ```tracert <name of AD FS server>```
-    a. Example:  tracert sts.contoso.com
-3. You should see the destination path used to reach the server
-![Tracert](media/ad-fs-tshoot-dns/dns3.png)
+To use tracert:
 
-## Next Steps
+1. Open a command prompt.
+1. Enter ```tracert <name of AD FS server>```.
 
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+   Example: `tracert sts.contoso.com`
+
+The destination path used to reach the server appears.
+
+![Screenshot that shows tracert.](media/ad-fs-tshoot-dns/dns3.png)
+
+## Related content
+
+- [AD FS troubleshooting](ad-fs-tshoot-overview.md)

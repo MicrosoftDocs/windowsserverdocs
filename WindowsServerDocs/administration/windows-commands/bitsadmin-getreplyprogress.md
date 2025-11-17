@@ -2,10 +2,8 @@
 title: bitsadmin getreplyprogress
 description: Reference article for the bitsadmin getreplyprogress command, which retrieves the size and progress of the server upload-reply.
 ms.topic: reference
-ms.assetid: 7f7cb0b4-ad95-44fd-a35d-0ddf5fc0b0d0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To retrieve the upload-reply progress for the job named *myDownloadJob*:
 bitsadmin /getreplyprogress myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,23 +1,20 @@
 ---
 title: Manage Hyper-V Integration Services
-description: Describes how to turn integration services on and off and install them if needed
-ms.author: benarm
-author: BenjaminArmstrong
-ms.date: 01/18/2022
-ms.topic: article
-ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
+description: This article describes how to turn Hyper-V integration services on and off, and install them if needed.
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 02/18/2025
+ms.topic: how-to
 ---
 
 # Manage Hyper-V Integration Services
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11. Windows 10
-
-Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as *integration components*. You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
+Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as *integration components*. You can control whether or not individual convenience services operate for any given virtual machine. The driver components aren't intended to be serviced manually.
 
 For details about each integration service, see [Hyper-V Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
 > [!IMPORTANT]
-> Each service you want to use must be enabled in both the host and guest in order to function. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
+> Each service you want to use must be enabled in both the host and guest in order to function. When you enable a service in the host, it automatically starts running in the guest. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
 
 ## Turn an integration service on or off using Hyper-V Manager
 
@@ -72,13 +69,11 @@ The following examples demonstrate turning the guest file copy integration servi
 
 ## Checking the guest's integration services version
 
-Some features may not work correctly or at all if the guest's integration services are not current. To get the version information for Windows, sign in to the guest operating system, open a command prompt, and run this command:
+Some features may not work correctly or at all if the guest's integration services aren't current. To get the version information for Windows, sign in to the guest operating system, open a command prompt, and run this command:
 
-```
+```powershell
 REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesVersion
 ```
-
-Earlier guest operating systems will not have all available services. For example, Windows Server 2008 R2 guests cannot have the Hyper-V Guest Service Interface.
 
 ## Start and stop an integration service from a Windows guest
 
@@ -86,14 +81,14 @@ In order for an integration service to be fully functional, its corresponding se
 
 > [!IMPORTANT]
 > Stopping an integration service may severely affect the host's ability to manage your virtual machine. To work correctly, each integration service you want to use must be enabled on both the host and guest.
-> As a best practice, you should only control integration services from Hyper-V using the instructions above. The matching service in the guest operating system will stop or start automatically when you change its status in Hyper-V.
-> If you start a service in the guest operating system but it is disabled in Hyper-V, the service will stop. If you stop a service in the guest operating system that is enabled in Hyper-V, Hyper-V will eventually start it again. If you disable the service in the guest, Hyper-V will be unable to start it.
+> As a best practice, you should only control integration services from Hyper-V using the instructions in this article. The matching service in the guest operating system stops or starts automatically when you change its status in Hyper-V.
+> If you start a service in the guest operating system but it's disabled in Hyper-V, the service stops. If you stop a service in the guest operating system that is enabled in Hyper-V, Hyper-V starts it again. If you disable the service in the guest, Hyper-V is unable to start it.
 
 ### Use Windows Services to start or stop an integration service within a Windows guest
 
 1. Open Services manager by running ```services.msc``` as an Administrator or by double-clicking the Services icon in Control Panel.
 
-    ![Screen shot that shows the Windows Services pane](media/HVServices.png)
+    ![Screen shot that shows the Windows Services pane](./media/HVServices.png)
 
 1. Find the services that start with **Hyper-V**.
 
@@ -107,8 +102,7 @@ In order for an integration service to be fully functional, its corresponding se
     Get-Service -Name vmic* | FT -AutoSize
     ```
 
-1.  The output should look similar to this:
-
+1. The output should look similar to this:
 
     ```powershell
     Status  Name               DisplayName
@@ -123,7 +117,7 @@ In order for an integration service to be fully functional, its corresponding se
     Running vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&preserve-view=true) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7&preserve-view=true). For example, to turn off Windows PowerShell Direct, run:
+1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service). For example, to turn off Windows PowerShell Direct, run:
 
     ```powershell
     Stop-Service -Name vmicvmsession
@@ -139,7 +133,7 @@ Linux integration services are generally provided through the Linux kernel. The 
    lsmod | grep hv_utils
    ```
 
-2. The output should look similar to this:
+1. The output should look similar to this:
 
     ```bash
     Module                  Size   Used by
@@ -147,13 +141,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_vmbus               61440   8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc
     ```
 
-3. To find out if the required daemons are running, use this command.
+1. To find out if the required daemons are running, use this command.
 
     ```bash
     ps -ef | grep hv
     ```
 
-4. The output should look similar to this:
+1. The output should look similar to this:
 
     ```bash
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
@@ -166,13 +160,13 @@ Linux integration services are generally provided through the Linux kernel. The 
     user     43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv
     ```
 
-5. To see what daemons are available, run:
+1. To see what daemons are available, run:
 
     ```bash
     compgen -c hv_
     ```
 
-6. The output should look similar to this:
+1. The output should look similar to this:
 
     ```bash
     hv_vss_daemon
@@ -220,13 +214,7 @@ These examples demonstrate stopping and starting the KVP daemon, named `hv_kvp_d
 
 We recommend that you keep integration services up to date to get the best performance and most recent features for your virtual machines. This happens for Windows guests by default if they are set up to get important updates from Windows Update. Linux guests using current kernels contain integration services built in, but there may be optional updates available. You will receive the latest integration components when you update the kernel. For more information about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
-> [!NOTE]
-> The image file *Integration Services disk* (vmguest.iso) isn't included with Hyper-V starting with Windows Server 2016 and Windows 10 because it's no longer needed. Windows Server 2012 and older require the Data Exchange integration service. If the Data Exchange integration service can't be enabled, integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [Microsoft TechCommunity blog post](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247). If your Hyper-V host is running Windows Server 2012 R2 and older, see the next section for how to install or update integration services.
-
 ## Install or update integration services for Hyper-V hosts earlier than Windows Server 2016 and Windows 10
-
-> [!NOTE]
-> This isn't required for Windows Server 2016 and Windows 10 or newer.
 
 For Hyper-V hosts earlier than Windows Server 2016 and Windows 10, you'll need to **manually install or update** the integration services in the guest operating systems.
 
@@ -234,8 +222,8 @@ To manually install or update the integration services:
 
 1. Open Hyper-V Manager.
 
-2. Connect to the virtual machine. Right-click the virtual machine and select **Connect**.
+1. Connect to the virtual machine. Right-click the virtual machine and select **Connect**.
 
-3. From the Action menu of Virtual Machine Connection, select **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually from File Explorer.
+1. From the Action menu of Virtual Machine Connection, select **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually from File Explorer.
 
-4. After the installation finishes, integration services are available for use.
+1. After the installation finishes, integration services are available for use.

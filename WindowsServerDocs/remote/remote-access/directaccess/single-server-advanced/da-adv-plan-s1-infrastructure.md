@@ -1,16 +1,12 @@
 ---
 title: Step 1 Plan the Advanced DirectAccess Infrastructure
 description: Learn how to plan the infrastructure that is required for the deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Advanced DirectAccess Infrastructure
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The first step of planning for an advanced DirectAccess deployment on a single server is to plan the infrastructure that is required for the deployment. This topic describes the infrastructure planning steps. These planning tasks do not need to be completed in a specific order.
 
@@ -141,19 +137,33 @@ When you use additional firewalls, apply the following internal network firewall
 
 There are three scenarios that require certificates when you deploy a single DirectAccess server:
 
-- [1.3.1 Plan computer certificates for IPsec authentication](#131-plan-computer-certificates-for-ipsec-authentication)
-
-    Certificate requirements for IPsec include a computer certificate that is used by DirectAccess client computers when they establish the IPsec connection between the client and the DirectAccess server, and a computer certificate that is used by DirectAccess servers to establish IPsec connections with DirectAccess clients.
-
-    For DirectAccess in  Windows Server 2012  the use of these IPsec certificates is not mandatory. As an alternative the DirectAccess server can act as a Kerberos proxy to perform IPsec authentication without requiring certificates. If Kerberos protocol is used, it works over SSL, and the Kerberos proxy uses the certificate that is configured for IP-HTTPS for this purpose. Some enterprise scenarios (including multisite deployment and one-time password (OTP) client authentication) require the use of certificate authentication, and not the Kerberos protocol.
-
--   [1.3.2 Plan certificates for IP-HTTPS](#132-plan-certificates-for-ip-https)
-
-    When you configure Remote Access, the DirectAccess server is automatically configured to act as the IP-HTTPS listener. The IP-HTTPS site requires a website certificate, and client computers must be able to contact the certificate revocation list (CRL) site for the certificate.
-
--   [1.3.3 Plan website certificates for the network location server](#133-plan-website-certificates-for-the-network-location-server)
-
-    The network location server is a website that is used to detect whether client computers are located in the corporate network. The network location server requires a website certificate. DirectAccess clients must be able to contact the CRL site for the certificate.
+- [Step 1 Plan the Advanced DirectAccess Infrastructure](#step-1-plan-the-advanced-directaccess-infrastructure)
+  - [1.1 Plan network topology and settings](#11-plan-network-topology-and-settings)
+    - [1.1.1 Plan network adapters and IP addressing](#111-plan-network-adapters-and-ip-addressing)
+    - [1.1.2 Plan IPv6 intranet connectivity](#112-plan-ipv6-intranet-connectivity)
+    - [1.1.3 Plan for force tunneling](#113-plan-for-force-tunneling)
+  - [1.2 Plan firewall requirements](#12-plan-firewall-requirements)
+  - [1.3 Plan certificate requirements](#13-plan-certificate-requirements)
+    - [1.3.1 Plan computer certificates for IPsec authentication](#131-plan-computer-certificates-for-ipsec-authentication)
+    - [1.3.2 Plan certificates for IP-HTTPS](#132-plan-certificates-for-ip-https)
+    - [1.3.3 Plan website certificates for the network location server](#133-plan-website-certificates-for-the-network-location-server)
+  - [1.4 Plan DNS requirements](#14-plan-dns-requirements)
+    - [1.4.1 Plan for DNS server requirements](#141-plan-for-dns-server-requirements)
+    - [1.4.2 Plan for local name resolution](#142-plan-for-local-name-resolution)
+  - [1.5 Plan the network location server](#15-plan-the-network-location-server)
+    - [1.5.1 Plan certificates for the network location server](#151-plan-certificates-for-the-network-location-server)
+    - [1.5.2 Plan DNS for the network location server](#152-plan-dns-for-the-network-location-server)
+  - [1.6 Plan management servers](#16-plan-management-servers)
+  - [1.7 Plan Active Directory Domain Services](#17-plan-active-directory-domain-services)
+    - [1.7.1 Plan client authentication](#171-plan-client-authentication)
+    - [1.7.2 Plan multiple domains](#172-plan-multiple-domains)
+  - [1.8 Plan Group Policy Objects](#18-plan-group-policy-objects)
+    - [1.8.1 Configure automatically created GPOs](#181-configure-automatically-created-gpos)
+    - [1.8.2 Configure manually created GPOs](#182-configure-manually-created-gpos)
+    - [1.8.3 Manage GPOs in a multi-domain controller environment](#183-manage-gpos-in-a-multi-domain-controller-environment)
+    - [1.8.4 Manage Remote Access GPOs with limited permissions](#184-manage-remote-access-gpos-with-limited-permissions)
+    - [1.8.5 Recover from a deleted GPO](#185-recover-from-a-deleted-gpo)
+  - [Next steps](#next-steps)
 
 The certification authority (CA) requirements for each scenario are summarized in the following table.
 
@@ -306,7 +316,7 @@ DNS is used to resolve requests from DirectAccess client computers that are not 
 
 -   If the connection does not succeed, clients are assumed to be located on the Internet, and DirectAccess clients will use the name resolution policy table (NRPT) to determine which DNS server to use when resolving name requests.
 
-You can specify that clients use DirectAccess DNS64 to resolve names, or an alternative internal DNS server. When performing name resolution, the NRPT is used by DirectAccess clients to identify how to handle a request. Clients request an FQDN or single-label name such as <https://internal>. If a single-label name is requested, a DNS suffix is appended to make an FQDN. If the DNS query matches an entry in the NRPT, and DNS64 or a DNS server on the internal network is specified for the entry, the query is sent for name resolution using the specified server. If a match exists, but no DNS server is specified, this indicates an exemption rule, and normal name resolution is applied.
+You can specify that clients use DirectAccess DNS64 to resolve names, or an alternative internal DNS server. When performing name resolution, the NRPT is used by DirectAccess clients to identify how to handle a request. Clients request an FQDN or single-label name such as `https://internal`. If a single-label name is requested, a DNS suffix is appended to make an FQDN. If the DNS query matches an entry in the NRPT, and DNS64 or a DNS server on the internal network is specified for the entry, the query is sent for name resolution using the specified server. If a match exists, but no DNS server is specified, this indicates an exemption rule, and normal name resolution is applied.
 
 > [!NOTE]
 > Note that when a new suffix is added to the NRPT in the Remote Access Management Console, the default DNS servers for the suffix can be automatically discovered by clicking **Detect**.
@@ -396,7 +406,7 @@ You may need to create additional NRPT rules in the following cases:
 
 **Single label names**
 
-Single label names, such as <https://paycheck>, are sometimes used for intranet servers. If a single label name is requested, and a DNS suffix search list is configured, the DNS suffixes in the list will be appended to the single label name. For example, when a user on a computer that is a member of the corp.contoso.com domain types <https://paycheck> in the web browser, the FQDN that is constructed as the name is paycheck.corp.contoso.com. By default the appended suffix is based on the primary DNS suffix of the client computer.
+Single label names, such as `https://paycheck`, are sometimes used for intranet servers. If a single label name is requested, and a DNS suffix search list is configured, the DNS suffixes in the list will be appended to the single label name. For example, when a user on a computer that is a member of the corp.contoso.com domain types `https://paycheck` in the web browser, the FQDN that is constructed as the name is paycheck.corp.contoso.com. By default the appended suffix is based on the primary DNS suffix of the client computer.
 
 > [!NOTE]
 > In a disjoint name space scenario (where one or more domain computers has a DNS suffix that does not match the Active Directory domain to which the computers belong), you should ensure that the search list is customized to include all the required suffixes. By default, the Remote Access Wizard will configure the Active Directory DNS name as the primary DNS suffix on the client. Make sure to add the DNS suffix that is used by clients for name resolution.

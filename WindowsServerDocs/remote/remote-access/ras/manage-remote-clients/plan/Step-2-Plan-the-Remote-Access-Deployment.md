@@ -1,16 +1,12 @@
 ---
 title: Step 2 Plan the Remote Access Deployment
 description: Learn how to plan the settings that the Remote Access Setup Wizard will use.
-manager: brianlic
-ms.topic: article
-ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Remote Access Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After you plan for the infrastructure that you intend to use to set up your single Remote Access server for remote management of DirectAccess clients, you are ready to plan the settings that the Remote Access Setup Wizard will use.
 

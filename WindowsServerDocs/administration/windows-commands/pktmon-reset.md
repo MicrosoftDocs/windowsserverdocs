@@ -1,15 +1,15 @@
 ---
 title: pktmon reset
-description: Reference article for the pktmon reset command.
+description: Reference article for the pktmon reset command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon reset
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Reset counters to zero.
 
@@ -19,7 +19,7 @@ Reset counters to zero.
 pktmon reset [-counters]
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

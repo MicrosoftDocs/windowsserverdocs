@@ -2,10 +2,8 @@
 title: nslookup set class
 description: Reference article for the nslookup set class command, which changes the query class.
 ms.topic: reference
-ms.assetid: ed826400-40da-42b6-b7f0-95db73790723
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -27,6 +25,6 @@ set class=<class>
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,15 +2,13 @@
 title: tsdiscon
 description: Reference article for tsdiscon, which disconnects a session from a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 13139674-7dee-4965-8cac-32f4928e8b9a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # tsdiscon
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Disconnects a session from a Remote Desktop Session Host server. If you don't specify a session ID or session name, this command disconnects the current session.
 
@@ -62,7 +60,7 @@ To disconnect the session named *TERM04*, type:
 tsdiscon TERM04
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

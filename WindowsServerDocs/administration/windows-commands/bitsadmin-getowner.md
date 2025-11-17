@@ -2,10 +2,8 @@
 title: bitsadmin getowner
 description: Reference article for the bitsadmin getowner command, which retrieves the owner of the specified job.
 ms.topic: reference
-ms.assetid: 5203f84c-a879-4f31-ae3e-7ea74bd63ca5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -33,7 +31,7 @@ To display the owner for the job named *myDownloadJob*:
 bitsadmin /getowner myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: driverquery
 description: Reference article for the driverquery command, which enables an administrator to display a list of installed device drivers and their properties.
 ms.topic: reference
-ms.assetid: 92ca4b84-e4e2-405b-9f31-bf6db9f66839
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -66,6 +64,6 @@ To use the **driverquery** command on a remote server named *server1* using the 
 driverquery /s server1 /u maindom\user1 /p p@ssw3d
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

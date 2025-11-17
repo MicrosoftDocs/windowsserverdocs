@@ -1,49 +1,47 @@
 ---
 title: AD FS Troubleshooting - Loop Detection
-description:  This document describes how to troubleshoot loop detection
-author: billmath
-ms.author: billmath
-manager: mtillman
-ms.date: 02/21/2017
-ms.topic: article
+description: This article describes how to troubleshoot loop detection for Active Directory Federation Services (AD FS).
+ms.date: 02/13/2024
+ms.topic: troubleshooting-general
 ---
 
-# AD FS Troubleshooting - Loop Detection
+# AD FS troubleshooting: Loop detection
 
-Looping in AD FS occurs when a relying party continuously rejects a valid security token and redirects back to AD FS.
+Looping in Active Directory Federation Services (AD FS) occurs when a relying party continuously rejects a valid security token and redirects back to AD FS.
 
 ## Loop detection cookie
-To prevent this from happening, AD FS has implemented what is called a loop detection cookie. By default, AD FS writes a cookie to web passive clients named **MSISLoopDetectionCookie**. This cookie holds a timestamp value and a number of tokens issued value.  This allows AD FS to keep track of how often and how many times a client has visited the Federation Service within a specific timespan.
 
-If a passive client visits the Federation Service for a token five (5) times within 20 seconds, AD FS throws the following error:
+To prevent this problem from happening, AD FS implemented a loop detection cookie. By default, AD FS writes a cookie to web passive clients named `MSISLoopDetectionCookie`. This cookie holds a timestamp value and a value for the number of tokens issued. This information allows AD FS to keep track of how often and how many times a client visited the federation service within a specific timespan.
 
-**MSIS7042: The same client browser session has made '{0}' requests in the last '{1}' seconds. Contact your administrator for details.**
+If a passive client visits the federation service for a token five times within 20 seconds, AD FS throws the following error:
 
-Entering into infinite loops is often caused by a misbehaving relying party application that is not successfully consuming the token issued by AD FS, and the application is sending the passive client back to AD FS, repeatedly, for a new token.  AD FS will issue the passive client a new token each time, as long as they do not exceed 5 requests within 20 seconds.
+`MSIS7042: The same client browser session has made '{0}' requests in the last '{1}' seconds. Contact your administrator for details.`
 
-## Adjusting the loop detection cookie
-You can use PowerShell to change the number of tokens issued value and the timespan value.
+Entering into infinite loops is often caused by a misbehaving relying party application that isn't successfully consuming the token issued by AD FS. The application then sends the passive client back to AD FS, repeatedly, for a new token. AD FS issues the passive client a new token each time, with a limit of five requests within 20 seconds.
+
+## Adjust the loop detection cookie
+
+You can use PowerShell to change the value for the number of tokens issued and the timespan value.
 
 ```powershell
 Set-AdfsProperties -LoopDetectionMaximumTokensIssuedInterval 5  -LoopDetectionTimeIntervalInSeconds 20
 ```
-The minimum value for **LoopDetectionMaximumTokensIssuedInterval** is 1.
+The minimum value for `LoopDetectionMaximumTokensIssuedInterval` is 1.
 
-The minimum value for **LoopDetectionTimeIntervalInSeconds** is 5.
+The minimum value for `LoopDetectionTimeIntervalInSeconds` is 5.
 
-You can also disable loop detection when you are doing performance testing.
+You can also disable loop detection when you're doing performance testing.
 
 ```powershell
 Set-AdfsProperties -EnableLoopDetection $false
 ```
 
->[!IMPORTANT]
->It is not recommend to permanently disable loop detection as this prevents users from entering into infinite loop states.
+> [!IMPORTANT]
+> Don't disable loop detection permanently because it prevents users from entering into infinite loop states.
 
+## Related content
 
-## Next Steps
-
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+- [AD FS troubleshooting](ad-fs-tshoot-overview.md)
 
 
 

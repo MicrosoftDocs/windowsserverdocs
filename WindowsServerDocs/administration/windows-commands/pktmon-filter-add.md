@@ -2,14 +2,14 @@
 title: pktmon filter add
 description: Reference article for the pktmon filter add command.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/24/2021
 ---
 
 # pktmon filter add
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Pktmon filter add allows you to add a filter to control which packets are reported. For a packet to be reported, it must match all conditions specified in at least one filter. Up to 32 filters can be active at once.
 

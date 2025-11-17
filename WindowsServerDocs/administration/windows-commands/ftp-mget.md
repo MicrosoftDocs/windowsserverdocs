@@ -2,16 +2,14 @@
 title: ftp mget
 description: Reference article for the ftp mget command, which copies remote files to the local computer using the current file transfer type.
 ms.topic: reference
-ms.assetid: 6c85ae96-ec51-48a9-a227-7f02c7332c69
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # ftp mget
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies remote files to the local computer using the current file transfer type.
 
@@ -35,7 +33,7 @@ To copy remote files *a.exe* and *b.exe* to the local computer using the current
 mget a.exe b.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

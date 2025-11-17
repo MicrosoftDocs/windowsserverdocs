@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Authorize Hyper-V hosts using Admin-trusted attestation"
 title: Add host information for Admin-trusted attestation
-ms.topic: article
-ms.assetid: 87089ebc-b953-4aa3-96b5-966cf91acb02
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Authorize Hyper-V hosts using Admin-trusted attestation
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!IMPORTANT]
 > Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
@@ -46,6 +42,7 @@ To authorize a guarded host in AD mode:
    Add-HgsAttestationHostGroup -Name "<GuardedHostGroup>" -Identifier "<SID>"
    ```
 
-2. To verify the group was added, run [Get-HgsAttestationHostGroup](https://technet.microsoft.com/library/mt652172.aspx).
+2. To verify the group was added, run [Get-HgsAttestationHostGroup](/powershell/module/hgsattestation/get-hgsattestationhostgroup).
+
 
 

@@ -1,16 +1,14 @@
 ---
 title: Manage User Access Logging
 description: Describes how to manage User Access Logging
-ms.topic: article
-ms.assetid: 4f039017-4152-47eb-838e-bb6ef730b638
-author: brentfor
-ms.author: brentf
-manager: mtillman
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2017
 ---
 # Manage User Access Logging
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 This document describes how to manage User Access Logging (UAL).
 
@@ -252,3 +250,4 @@ After logging is enabled, 2 informational events get logged to the Windows Logs\
 ## <a name="BKMK_Links"></a>See also
 
 - [Get Started with User Access Logging](get-started-with-user-access-logging.md)
+

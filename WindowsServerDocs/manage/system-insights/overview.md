@@ -1,66 +1,47 @@
 ---
-title: System Insights overview
-description: System Insights is a new predictive analytics feature in Windows Server 2019. The System Insights predictive capabilities - each backed by a machine-learning model - locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your deployments.
-ms.topic: article
-author: gawatu
-ms.author: daknappe
-manager: mallikarjun.chadalapaka
-ms.date: 5/23/2018
+title: What is System Insights?
+description: Discover how System Insights uses predictive analytics in Windows Server to forecast and manage server resources.
+ms.topic: overview
+author: robinharwood
+ms.author: roharwoo
+ms.date: 06/02/2025
 ---
-# System Insights overview
+# What is System Insights?
 
->Applies to: Windows Server 2022, Windows Server 2019
+System Insights brings predictive analytics to Windows Server, enabling you to forecast and manage server resources proactively. By analyzing local system data with machine learning models, System Insights helps you anticipate potential issues and optimize resource usage—reducing the need for reactive troubleshooting. This overview explains how System Insights works, its key features, and how you can use it to improve server management.
 
-System Insights is a new predictive analytics feature in Windows Server 2019. The System Insights predictive capabilities - each backed by a machine-learning model - locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your deployments.
+System Insights is available on Windows Server 2019 and newer. It runs on both host and guest machines, on any hypervisor, and in any cloud.
 
-In Windows Server 2019, System Insights ships with four default capabilities focused on capacity forecasting, predicting future resource for compute, networking, and storage based on your previous usage patterns. System Insights also ships with an [extensible infrastructure](adding-and-developing-capabilities.md), so Microsoft and 3rd parties can add new predictive capabilities to System Insights without updating the operating system.
+System Insights is preinstalled on Windows Server.
 
-You can manage System Insights through an intuitive [Windows Admin Center](../windows-admin-center/overview.md) extension or [directly through PowerShell](/powershell/module/systeminsights/), and System Insights allows you to configure each predictive capability separately according to the needs of your deployment. All prediction results are published to the event log, which allows you to use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807&preserve-view=true) to easily aggregate and see predictions across a group of machines.
+## Available capabilities
 
-![System Insights extension in Windows Admin Center, showing CPU capacity forecasting capability with a graph plotting the forecast](media/cpu-forecast-2.png)
+System Insights provides four capabilities that are enabled by default:
 
-## Local functionality
-System Insights runs completely locally on Windows Server. Using new functionality introduced in Windows Server 2019, all of your data is collected, persisted, and analyzed directly on your machine, allowing you to realize predictive analytics capabilities without any cloud-connectivity.
+- CPU capacity forecasting - Forecasts CPU usage.
+- Networking capacity forecasting - Forecasts network usage for each network adapter.
+- Total storage consumption forecasting - Forecasts total storage consumption across all local drives.
+- Volume consumption forecasting - Forecasts storage consumption for each volume.
+
+[ ![Screenshot of System Insights extension and the available capabilities in Windows Admin Center.](media/system-insights-overview.png) ](media/system-insights-overview.png#lightbox)
+
+System Insights also has an [extensible infrastructure](adding-and-developing-capabilities.md), so Microsoft and third parties can add new predictive capabilities to System Insights without updating the operating system.
+
+## Manage System Insights
+
+You can manage System Insights through [Windows Admin Center](../windows-admin-center/overview.md), or [directly through PowerShell](/powershell/module/systeminsights/). Configure each predictive capability separately according to the needs of your deployment. All prediction results are published to the event log, so you can use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807&preserve-view=true) to easily aggregate and view predictions across a group of machines.
+
+## Local functionality of System Insights
+
+System Insights runs completely locally on Windows Server. All of your data is collected, persisted, and analyzed directly on your machine, so that you can realize predictive analytics capabilities without any cloud connectivity.
 
 Your system data is stored on your machine, and this data is analyzed by predictive capabilities that don't require retraining in the cloud. With System Insights, you can retain your data on your machine and still benefit from predictive analytics capabilities.
 
-## Get started
+## Related content
 
-<iframe src=https://www.youtube-nocookie.com/embed/AJxQkx5WSaA width=560 height=315 allowfullscreen></iframe>
-
->[!TIP]
->Watch these short videos to learn the information you need to get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
-
-### Requirements
-System Insights is available on any Windows Server 2019 instance. It runs on both host and guest machines, on any hypervisor, and in any cloud.
-
-### Install System Insights
->[!IMPORTANT]
->System Insights collects and stores up to a year's worth of data locally. If you would like to retain your data when upgrading your operating system, **make sure you use In-Place Upgrade**.
-
-#### Install the feature
-You can install System Insights using the extension within Windows Admin Center:
-
-![Day 0 experience for System Insights extension.](media/day-0-2.png)
-
-You can also install System Insights directly through Server Manager by adding the **System-Insights** feature, or by using PowerShell:
-
-```PowerShell
-Add-WindowsFeature System-Insights -IncludeManagementTools
-```
-
-## Provide feedback
-We'd love to hear your feedback to help us improve this feature. You can use the following channels to submit feedback:
-- **Feedback Hub**: Use the Feedback Hub tool in Windows 10 to file a bug or feedback. When doing so, please specify:
-    - **Category**: Server
-    - **Subcategory**: System Insights
-- **Windows Server Community**: Submit feature requests through our [Windows Server Community page](https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server).
-- **Email**: If you'd like to submit your feedback privately to the feature team, send an email to system-insights-feed@microsoft.com. Please keep in mind that we still may request you to use Feedback Hub or the Windows Server Community.
-
-## Additional References
 To learn more about System Insights, use the following resources:
 
-- [Understanding capabilities](understanding-capabilities.md)
-- [Managing capabilities](managing-capabilities.md)
-- [Adding and developing capabilities](adding-and-developing-capabilities.md)
+- [Understand capabilities](understanding-capabilities.md)
+- [Manage capabilities](managing-capabilities.md)
+- [Add and develop capabilities](adding-and-developing-capabilities.md)
 - [System Insights FAQ](faq.md)

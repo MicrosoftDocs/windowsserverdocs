@@ -1,66 +1,76 @@
 ---
 title: AD FS Troubleshooting - Claims Rules
-description:  This document describes how to troubleshoot claims rule syntax with AD FS
-author: billmath
-ms.author: billmath
-manager: mtillman
-ms.date: 03/01/2018
-ms.topic: article
+description: This article describes how to troubleshoot claims rule syntax with Active Directory Federation Services (AD FS).
+ms.date: 02/13/2024
+ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
-# AD FS Troubleshooting - Claims Rules Syntax
-A claim is a statement that one subject makes about itself or another subject.  Claims are issued by a relying party, and they are given one or more values and then packaged in security tokens that are issued by the AD FS server.  This article deals with the claims syntax and creation.  For information on claims issuance see [AD FS Troubleshooting - Claims Issuance](ad-fs-tshoot-claims-issuance.md).
+# AD FS troubleshooting: Claims rules syntax
 
->[!NOTE]
->You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [AD FS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
+A claim is a statement that one subject makes about itself or another subject. A relying party issues the claims. They're given one or more values and then packaged in security tokens that the Active Directory Federation Services (AD FS) server issues. This article deals with the claims syntax and creation. For information on claims issuance, see [Troubleshoot AD FS](ad-fs-tshoot-claims-issuance.md).
 
 ## How claim rules are processed
-Claim rules are processed through the [claims pipeline](../../ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md) using the [claims engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md). The claims engine is a logical component of the Federation Service that examines the set of incoming claims presented by a user, and will then, depending on the logic in each rule, produce an output set of claims.
+
+Claim rules are processed through the [claims pipeline](../../ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md) by using the [claims engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md). The claims engine is a logical component of AD FS that examines the set of incoming claims presented by a user. Depending on the logic in each rule, it produces an output set of claims.
 
 ## How to create a claim rule
-Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a [claim rule template](../../ad-fs/technical-reference/determine-the-type-of-claim-rule-template-to-use.md), start from scratch by authoring the rule using the [claim rule language](../../ad-fs/technical-reference/when-to-use-a-custom-claim-rule.md) or use Windows PowerShell to customize a rule.
 
-## Understanding the components of the claim rule language
-The claim rule language consists of the following components, separated by the “ =>” operator:
+Claim rules are created separately for each federated trust relationship within AD FS. They aren't shared across multiple trusts. You can:
 
-- A condition -  Used to check input claims and determine whether the issuance statement of the rule should be executed.  It represents a logical expression that must be evaluated to true to execute the rule body part.
+- Create a rule from a [claim rule template](../../ad-fs/technical-reference/determine-the-type-of-claim-rule-template-to-use.md).
+- Start from scratch by authoring the rule by using the [claim rule language](../../ad-fs/technical-reference/when-to-use-a-custom-claim-rule.md).
+- Use Windows PowerShell to customize a rule.
 
-- An issuance statement
+## Components of the claim rule language
 
-Example:
+The claim rule language consists of the following components, separated by the `" =>"` operator:
 
-```c:[type == "Name", value == "domain user"] => issue(type = "Role", value = "employee");```
+- A condition is used to check input claims and determine whether the issuance statement of the rule should be executed. It represents a logical expression that must be evaluated to true to run the rule body part.
+- An issuance statement.
 
-The following claim has the following:
-- condition - `c:[type == "Name", value == "domain user"] ` - evaluates the input claim of whether the windows account name is a domain user
-- issuance - `issue(type = "Role", value = "employee")` - if the condition is true, adds a new claim to the input claim with the role of employee.
+Here's an example:
 
-For more information on claims and the syntax see [The Role of the Claims Rule Language](../../ad-fs/technical-reference/the-role-of-the-claim-rule-language.md).
+```
+c:[type == "Name", value == "domain user"] => issue(type = "Role", value = "employee");
+```
+
+This claim has:
+
+- **Condition**: `c:[type == "Name", value == "domain user"]` evaluates the input claim of whether the Windows account name is a domain user.
+- **Issuance**: `issue(type = "Role", value = "employee")` adds a new claim to the input claim with the role of employee, if the condition is true.
+
+For more information on claims and the syntax, see [The role of the claim rule language](../../ad-fs/technical-reference/the-role-of-the-claim-rule-language.md).
 
 ## Claims rule editor
-Syntax checking is performed by the claims rule editor once you have completed the claim and click **OK**.  So if you have the incorrect syntax then the editor will let you know.
 
-![Screenshot of the A D F S Management dialog box showing a message stating that the custom claim rule syntax is not valid.](media/ad-fs-tshoot-claims/claims1.png)
+The claims rule editor performs syntax checking after you finish the claim and select **OK**. If you have the incorrect syntax, the editor informs you.
+
+![Screenshot that shows the A D F S Management dialog with a message stating that the custom claim rule syntax isn't valid.](media/ad-fs-tshoot-claims/claims1.png)
 
 ## Event logs
-When looking trying to troubleshoot a claim using the logs the best approach is to look for claims output.  You can look for 1000 and 1001 events in the event log.
 
-![Screenshot of the Event Properties dialog box showing the results of a 1000 event I D.](media/ad-fs-tshoot-claims/claims2.png)
+When you try to troubleshoot a claim by using the logs, the best approach is to look for claims output. Look for 1000 and 1001 events in the event log.
 
-## Creating a sample application
-You can also create a sample application the echoes your claims.  For example you can use a sample application and create a relying party that has the same claim you are trying to troubleshoot and see if the app has any issues with that claim.
+![Screenshot that shows the Event Properties dialog box with the results of a 1000 event I D.](media/ad-fs-tshoot-claims/claims2.png)
 
-![Screenshot of the sample application displayed in a browser.](media/ad-fs-tshoot-claims/claim4.png)
+## Create a sample application
 
-A good sample web app is available here.  This app is a simple web app that echoes back the claims that it receives from the relying party.  In order to use this you need to edit the web.config app by:
-- changing https://app1.contoso.com/sampapp to the URL the you will be using for hosting the sample app
-- changing all instances of sts.contoso.com to point you AD FS federation server
-- Replacing the thumbprint with your thumbprint
+You can also create a sample application that echoes your claims. For example, you can use a sample application and create a relying party that has the same claim that you're trying to troubleshoot and see if the app has any issues with that claim.
 
-![Screenshot of Visual Studio showing the web config file.](media/ad-fs-tshoot-claims/claims3.png)
+![Screenshot that shows the sample application in a browser.](media/ad-fs-tshoot-claims/claim4.png)
 
-The following [blog article](/archive/blogs/tangent_thoughts/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp) has excellent, in-depth instructions, for setting this up.
+A good sample web app is available. The app echoes the claims that it receives from the relying party. To use it, edit the web.config app:
 
-## Next Steps
+- Change `https://app1.contoso.com/sampapp` to the URL that's used for hosting the sample app.
+- Change all instances of `sts.contoso.com` to point to your AD FS server.
+- Replace the thumbprint with your thumbprint.
+- Replace the `decryptionKey` and the `validationKey` values with values that are appropriate for your scenario.
 
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+![Screenshot that shows the web config file in Visual Studio.](media/ad-fs-tshoot-claims/claims3.png)
+
+[This blog article](/archive/blogs/tangent_thoughts/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp) has excellent, in-depth instructions for setting up the app.
+
+## Related content
+
+- [AD FS troubleshooting](ad-fs-tshoot-overview.md)

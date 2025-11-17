@@ -1,16 +1,14 @@
 ---
 title: Configuring user access control and permissions
-description: Learn how to configure user access control and permissions using Active Directory or Azure AD (Project Honolulu)
-ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
-ms.date: 10/18/2021
+description: Learn how to configure user access control and permissions using Active Directory or Microsoft Entra ID (Project Honolulu)
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 06/26/2025
 ---
 # Configure User Access Control and Permissions
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
-
-If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center](../plan/user-access-options.md)
+If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center.](../plan/user-access-options.md)
 
 > [!NOTE]
 > Group based access in Windows Admin Center is not supported in workgroup environments or across non-trusted domains.
@@ -28,7 +26,7 @@ There is also an additional role specific to the management of CredSSP:
 **Windows Admin Center CredSSP Administrators** are registered with the Windows Admin Center CredSSP endpoint and have permissions to perform predefined CredSSP operations. This group is especially useful for installations of Windows Admin Center in desktop mode, where only the user account that installed Windows Admin Center is given these permissions by default.
 
 > [!NOTE]
-> Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server.
+> Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server. This is because most Windows Admin Center tools require administrative permissions to use.
 
 ## Active Directory or local machine groups
 
@@ -44,61 +42,69 @@ You can enforce **smartcard authentication** by specifying an additional _requir
 
 On the **Administrators** tab, you can control who can access Windows Admin Center as a gateway administrator. The local administrators group on the computer will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Windows Admin Center gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-If your organization uses Azure Active Directory (Azure AD), you can choose to add an **additional** layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, the user's **Windows account** must also have access to gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage Windows Admin Center user and administrator access permissions from the Azure portal, rather than from within the Windows Admin Center UI.
+## Microsoft Entra ID
 
-### Accessing Windows Admin Center when Azure AD authentication is enabled
+If your organization uses Microsoft Entra ID, you can choose to add an **additional** layer of security to Windows Admin Center by requiring Microsoft Entra authentication to access the gateway. In order to access Windows Admin Center, the user's **Windows account** must also have access to gateway server (even if Microsoft Entra authentication is used). When you use Microsoft Entra ID, you'll manage Windows Admin Center user and administrator access permissions from the Azure portal, rather than from within the Windows Admin Center UI.
 
-Depending on the browser used, some users accessing Windows Admin Center with Azure AD authentication configured will receive an additional prompt **from the browser** where they need to provide their Windows account credentials for the machine on which Windows Admin Center is installed. After entering that information, the users will get the additional Azure Active Directory authentication prompt, which requires the credentials of an Azure account that has been granted access in the Azure AD application in Azure.
+<a name='accessing-windows-admin-center-when-azure-ad-authentication-is-enabled'></a>
+
+### Accessing Windows Admin Center when Microsoft Entra authentication is enabled
+
+Depending on the browser used, some users accessing Windows Admin Center with Microsoft Entra authentication configured will receive an additional prompt **from the browser** where they need to provide their Windows account credentials for the machine on which Windows Admin Center is installed. After entering that information, the users will get the additional Microsoft Entra authentication prompt, which requires the credentials of an Azure account that has been granted access in the Microsoft Entra application in Azure.
 
 > [!NOTE]
-> Users who's Windows account has **Administrator rights** on the gateway machine will not be prompted for the Azure AD authentication.
+> Users whose Windows account has **Administrator rights** on the gateway machine will not be prompted for the Microsoft Entra authentication.
 
-### Configuring Azure Active Directory authentication for Windows Admin Center Preview
+<a name='configuring-azure-active-directory-authentication-for-windows-admin-center-preview'></a>
 
-Go to Windows Admin Center **Settings** > **Access** and use the toggle switch to turn on "Use Azure Active Directory to add a layer of security to the gateway". If you have not registered the gateway to Azure, you will be guided to do that at this time.
+### Configuring Microsoft Entra authentication for Windows Admin Center Preview
 
-By default, all members of the Azure AD tenant have user access to the Windows Admin Center gateway service. Only local administrators on the gateway machine have administrator access to the Windows Admin Center gateway. Note that the rights of local administrators on the gateway machine cannot be restricted - local admins can do anything regardless of whether Azure AD is used for authentication.
+Go to Windows Admin Center **Settings** > **Access** and use the toggle switch to turn on "Use Microsoft Entra ID to add a layer of security to the gateway". If you have not registered the gateway to Azure, you will be guided to do that at this time.
 
-If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
+By default, all members of the Microsoft Entra tenant have user access to the Windows Admin Center gateway service. Only local administrators on the gateway machine have administrator access to the Windows Admin Center gateway. Note that the rights of local administrators on the gateway machine cannot be restricted - local admins can do anything regardless of whether Microsoft Entra ID is used for authentication.
 
-1.	Go to your Windows Admin Center Azure AD application in the Azure portal by using the hyperlink provided in Access Settings. Note this hyperlink is only available when Azure Active Directory authentication is enabled.
-    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **WindowsAdminCenter** (the Azure AD app will be named WindowsAdminCenter-\<gateway name>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and select Apply, then try your search. Once you've found the application, go to **Users and groups**
+If you want to give specific Microsoft Entra users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
+
+1.	Go to your Windows Admin Center Microsoft Entra application in the Azure portal by using the hyperlink provided in Access Settings. Note this hyperlink is only available when Microsoft Entra authentication is enabled.
+    -	You can also find your application in the Azure portal by going to **Microsoft Entra ID** > **Enterprise applications** > **All applications** and searching **WindowsAdminCenter** (the Microsoft Entra app will be named WindowsAdminCenter-\<gateway name>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and select Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
 
-Once you turn on Azure AD authentication, the gateway service restarts and you must refresh your browser. You can update user access for the SME Azure AD application in the Azure portal at any time.
+Once you turn on Microsoft Entra authentication, the gateway service restarts and you must refresh your browser. You can update user access for the SME Microsoft Entra application in the Azure portal at any time.
 
-Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
+Users will be prompted to sign in using their Microsoft Entra identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
 
-Users and administrators can view their currently logged-in account and as well as sign out of this Azure AD account from the **Account** tab of Windows Admin Center Settings.
+Users and administrators can view their currently logged-in account and as well as sign out of this Microsoft Entra account from the **Account** tab of Windows Admin Center Settings.
 
-### Configuring Azure Active Directory authentication for Windows Admin Center
+<a name='configuring-azure-active-directory-authentication-for-windows-admin-center'></a>
 
-[To set up Azure AD authentication, you must first register your gateway with Azure](../azure/azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
+### Configuring Microsoft Entra authentication for Windows Admin Center
 
-If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
+[To set up Microsoft Entra authentication, you must first register your gateway with Azure](../azure/azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates a Microsoft Entra application from which you can manage gateway user and gateway administrator access.
 
-1.	Go to your SME Azure AD application in the Azure portal.
-    -	When you select **Change access control** and then select **Azure Active Directory** from the Windows Admin Center Access settings, you can use the hyperlink provided in the UI to access your Azure AD application in the Azure portal. This hyperlink is also available in the Access settings after you select save and have selected Azure AD as your access control identity provider.
-    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the Azure AD app will be named SME-\<gateway>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and select Apply, then try your search. Once you've found the application, go to **Users and groups**
+If you want to give specific Microsoft Entra users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
+
+1.	Go to your SME Microsoft Entra application in the Azure portal.
+    -	When you select **Change access control** and then select **Microsoft Entra ID** from the Windows Admin Center Access settings, you can use the hyperlink provided in the UI to access your Microsoft Entra application in the Azure portal. This hyperlink is also available in the Access settings after you select save and have selected Microsoft Entra ID as your access control identity provider.
+    -	You can also find your application in the Azure portal by going to **Microsoft Entra ID** > **Enterprise applications** > **All applications** and searching **SME** (the Microsoft Entra app will be named SME-\<gateway>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and select Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
 
-Once you save the Azure AD access control in the **Change access control** pane, the gateway service restarts and you must refresh your browser. You can update user access for the Windows Admin Center Azure AD application in the Azure portal at any time.
+Once you save the Microsoft Entra access control in the **Change access control** pane, the gateway service restarts and you must refresh your browser. You can update user access for the Windows Admin Center Microsoft Entra application in the Azure portal at any time.
 
-Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
+Users will be prompted to sign in using their Microsoft Entra identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
 
-Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign out of this Azure AD account.
+Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign out of this Microsoft Entra account.
 
 ### Conditional access and multi-factor authentication
 
-One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication.
+One of the benefits of using Microsoft Entra ID as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Microsoft Entra ID's powerful security features like conditional access and multi-factor authentication.
 
-[Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+[Learn more about configuring conditional access with Microsoft Entra ID.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
 ## Configure single sign-on
 
@@ -189,11 +195,10 @@ When you expand the zip archive, you'll see the following folder structure:
 - JustEnoughAdministration (directory)
 - Modules (directory)
     - Microsoft.SME.\* (directories)
-    - WindowsAdminCenter.Jea (directory)
 
 To configure support for role-based access control on a node, you need to perform the following actions:
 
-1.  Copy the **JustEnoughAdministration**, **Microsoft.SME.\***, and **WindowsAdminCenter.Jea** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
+1.  Copy the **JustEnoughAdministration** and **Microsoft.SME.\*** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Update **InstallJeaFeature.ps1** file to match your desired configuration for the RBAC endpoint.
 3.  Run `InstallJeaFeature.ps1` to compile the DSC resource.
 4.  Deploy your DSC configuration to all of your machines to apply the configuration.

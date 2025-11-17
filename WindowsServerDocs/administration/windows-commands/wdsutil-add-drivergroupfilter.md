@@ -2,10 +2,8 @@
 title: add-DriverGroupFilter
 description: Reference article for the add-DriverGroupFilter command, which adds a filter to a driver group on a server.
 ms.topic: reference
-ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -41,7 +39,7 @@ wdsutil /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufactu
 wdsutil /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /Policy:Include /Value:Name1 /FilterType:ChassisType /Policy:Exclude /Value:Tower /Value:MiniTower
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

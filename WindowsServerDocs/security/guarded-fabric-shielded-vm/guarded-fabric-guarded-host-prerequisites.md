@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Prerequisites for guarded hosts"
 title: Guarded host prerequisites
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Prerequisites for guarded hosts
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Review the host prerequisites for the mode of attestation you've chosen, then click the next step to add guarded hosts.
 
@@ -86,3 +83,5 @@ Hyper-V hosts must meet the following prerequisites for AD mode:
 **Next step:**
 > [!div class="nextstepaction"]
 > [Place guarded hosts in a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
+
+

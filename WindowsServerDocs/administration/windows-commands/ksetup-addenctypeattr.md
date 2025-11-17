@@ -2,10 +2,8 @@
 title: ksetup addenctypeattr
 description: Reference article for the ksetup addenctypeattr command, which adds the encryption type attribute to the list of possible types for the domain.
 ms.topic: reference
-ms.assetid: 32cc87d7-b9e1-4d14-9eb7-3b439c55aa3a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -62,7 +60,7 @@ To verify that the encryption type attribute was set as intended for the domain,
 ksetup /getenctypeattr corp.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,9 +1,9 @@
 ---
 title: Windows Admin Center SDK Case Study - Pure Storage
 description: Windows Admin Center SDK Case Study - Pure Storage
-ms.topic: article
-author: daniellee-msft
-ms.author: jol
+ms.topic: partner-tools
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 1/7/2019
 ---
 # Pure Storage Extension
@@ -43,5 +43,5 @@ In addition to viewing the disks, new volumes can be created and immediately mou
 Since releasing our Technical Preview, the customer feedback collected so far has been very positive and has also provided us insight into different features to add in future releases.
 
 Additional resources:
-- [Pure Storage extension announcement blog post](https://blog.purestorage.com/tech-preview-of-the-pure-storage-extension-for-windows-admin-center/)
+- [Pure Storage extension announcement blog post](https://podcasts.apple.com/us/podcast/windows-admin-center-extension-from-pure-storage/id1392639991?i=1000424316130)
 - [PureReport](https://itunes.apple.com/podcast/windows-admin-center-extension-from-pure-storage/id1392639991?i=1000424316130&mt=2) podcast

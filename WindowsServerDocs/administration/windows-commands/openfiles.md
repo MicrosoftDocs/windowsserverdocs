@@ -2,10 +2,8 @@
 title: openfiles
 description: Reference article for the openfiles command, which enables an administrator to query, display, or disconnect files and directories that have been opened on a system.
 ms.topic: reference
-ms.assetid: c3be561d-a11f-4bf1-9835-8e4e96fe98ec
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -164,6 +162,6 @@ To disable the **Maintain Objects List** global flag, type:
 openfiles /local off
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,10 +2,8 @@
 title: bitsadmin cache and info
 description: Reference article for the bitsadmin cache and info command, which dumps a specific cache entry.
 ms.topic: reference
-ms.assetid: 15975cbf-dba6-49ca-a725-d15ce1952de5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -33,7 +31,7 @@ To dump the cache entry with the recordID value of {6511FB02-E195-40A2-B595-E8E2
 bitsadmin /cache /info {6511FB02-E195-40A2-B595-E8E2F8F47702}
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

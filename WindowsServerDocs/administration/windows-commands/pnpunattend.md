@@ -2,10 +2,8 @@
 title: pnpunattend
 description: Reference article for the pnpunattend command, which audits the device drivers on a computer, as well as performs silent driver installations.
 ms.topic: reference
-ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
@@ -50,6 +48,6 @@ To command shows how to use the **PNPUnattend.exe** to audit a computer for poss
 pnpunattend auditsystem /s /l
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

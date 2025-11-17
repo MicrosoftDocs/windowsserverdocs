@@ -2,15 +2,13 @@
 title: wdsutil start-transportserver
 description: Reference article for Subcommand start-TransportServer, which starts all services for a Transport Server.
 ms.topic: reference
-ms.assetid: 0e93bc84-5b9e-4f9d-8cf0-1634417da0f6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil start-transportserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts all services for a Transport Server.
 
@@ -30,7 +28,7 @@ To start the server, type one of the following:
 wdsutil /start-TransportServer
 wdsutil /verbose /start-TransportServer /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
 - [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)

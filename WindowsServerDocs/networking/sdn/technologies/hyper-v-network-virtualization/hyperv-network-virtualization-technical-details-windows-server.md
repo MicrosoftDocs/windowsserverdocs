@@ -1,16 +1,13 @@
 ---
 title: Hyper-V Network Virtualization Technical Details in Windows Server
 description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server
-manager: grcusanz
-ms.topic: article
-ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
-ms.author: anpaul
-author: AnirbanPaul
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/27/2021
+ms.custom: sfi-image-nochange
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.
 
@@ -286,5 +283,5 @@ To learn more about HNVv2 see the following links:
 |       Content type       |                                                                                                                                              References                                                                                                                                              |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Community Resources**  |                                                                -   [Private Cloud Architecture Blog](https://blogs.technet.com/b/privatecloud)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)                                                                |
-|         **RFC**          |                                                                   -   [NVGRE Draft RFC](https://www.ietf.org/id/draft-sridharan-virtualization-nvgre-07.txt)<br />-   [VXLAN - RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                    |
+|         **RFC**          |                                                                   -   [NVGRE Draft RFC](/windows-hardware/drivers/network/overview-of-network-virtualization-using-generic-routing-encapsulation--nvgre--task-offload)<br />-   [VXLAN - RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                    |
 | **Related Technologies** | -   For Hyper-V Network Virtualization  technical details in  Windows Server 2012 R2 , see [Hyper-V Network Virtualization technical details](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134174(v=ws.11))<br />-   [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md) |

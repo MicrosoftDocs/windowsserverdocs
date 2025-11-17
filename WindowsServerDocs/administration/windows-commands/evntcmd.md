@@ -2,16 +2,14 @@
 title: evntcmd
 description: Reference article for the evntcmd command, which configures the translation of events to traps, trap destinations, or both based on information in a configuration file.
 ms.topic: reference
-ms.assetid: c1aabb74-76e7-4304-95a6-50ad87e92fd9
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # evntcmd
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Configures the translation of events to traps, trap destinations, or both based on information in a configuration file.
 
@@ -143,6 +141,6 @@ To stop sending trap messages within the community named *Private* to the same c
 #pragma delete_TRAP_DEST private localhost
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

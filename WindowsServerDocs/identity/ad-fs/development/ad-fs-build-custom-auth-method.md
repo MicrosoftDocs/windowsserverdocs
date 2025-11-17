@@ -1,23 +1,20 @@
 ---
 title: Build a Custom Authentication Method for AD FS in Windows Server
 description: This scenario describes how to build a custom authentication method for AD FS in Windows Server.
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 05/23/2019
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Build a Custom Authentication Method for AD FS in Windows Server
 
-This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
+This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](../operations/configure-additional-authentication-methods-for-ad-fs.md).
 
 > [!WARNING]
 > The example that you can build here is&nbsp;for educational purposes only. &nbsp;These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model.&nbsp; There is no authentication back end, error processing, or configuration data.
 
 ## Setting up the development box
 
-This walk-through uses Visual Studio 2012. The project can be built using any development environment that can create a .NET class for Windows. The project must target .NET 4.5 because the **BeginAuthentication** and **TryEndAuthentication** methods use the type **System.Security.Claims.Claim**, part of .NET Framework version 4.5.There is one reference required for the project:
+This walk-through uses Visual Studio 2012. The project can be built using any development environment that can create a .NET class for Windows. The project must target .NET 4.5 because the **BeginAuthentication** and **TryEndAuthentication** methods use the type **System.Security.Claims.Claim**, part of .NET Framework version 4.5. There is one reference required for the project:
 
 | Reference dll | Where to find it | Required for |
 |--|--|--|
@@ -201,7 +198,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
     Now you should be able to F12 (right click – Go To Definition) on IAuthenticationAdapter to see the set of required interface members.
 
-    Next, you can do a simple implementation of these.
+    Next, you can perform an implementation of these.
 
 11. Replace the entire contents of your class with the following:
 
@@ -248,97 +245,6 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     }
     ```
 
-12. We are not ready to build yet... there are two more interfaces to go.
-
-    Add two more classes to your project: one is for the metadata, and the other for the presentation form. You can add these within the same file as the class above.
-
-    ```csharp
-    class MyMetadata : IAuthenticationAdapterMetadata
-    {
-    }
-    class MyPresentationForm : IAdapterPresentationForm
-    {
-    }
-    ```
-
-13. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
-
-    ```csharp
-    class MyMetadata : IAuthenticationAdapterMetadata
-    {
-        //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
-        public string AdminName
-        {
-            get { return "My Example MFA Adapter"; }
-        }
-
-        //Returns an array of strings containing URIs indicating the set of authentication methods implemented by the adapter
-        /// AD FS requires that, if authentication is successful, the method actually employed will be returned by the
-        /// final call to TryEndAuthentication(). If no authentication method is returned, or the method returned is not
-        /// one of the methods listed in this property, the authentication attempt will fail.
-        public virtual string[] AuthenticationMethods
-        {
-            get { return new[] { "http://example.com/myauthenticationmethod1", "http://example.com/myauthenticationmethod2" }; }
-        }
-
-        /// Returns an array indicating which languages are supported by the provider. AD FS uses this information
-        /// to determine the best languagelocale to display to the user.
-        public int[] AvailableLcids
-        {
-            get
-            {
-                return new[] { new CultureInfo("en-us").LCID, new CultureInfo("fr").LCID};
-            }
-        }
-
-        /// Returns a Dictionary containing the set of localized friendly names of the provider, indexed by lcid.
-        /// These Friendly Names are displayed in the "choice page" offered to the user when there is more than
-        /// one secondary authentication provider available.
-        public Dictionary<int, string> FriendlyNames
-        {
-            get
-            {
-                Dictionary<int, string> _friendlyNames = new Dictionary<int, string>();
-                _friendlyNames.Add(new CultureInfo("en-us").LCID, "Friendly name of My Example MFA Adapter for end users (en)");
-                _friendlyNames.Add(new CultureInfo("fr").LCID, "Friendly name translated to fr locale");
-                return _friendlyNames;
-            }
-        }
-
-        /// Returns a Dictionary containing the set of localized descriptions (hover over help) of the provider, indexed by lcid.
-        /// These descriptions are displayed in the "choice page" offered to the user when there is more than one
-        /// secondary authentication provider available.
-        public Dictionary<int, string> Descriptions
-        {
-            get
-            {
-                Dictionary<int, string> _descriptions = new Dictionary<int, string>();
-                _descriptions.Add(new CultureInfo("en-us").LCID, "Description of My Example MFA Adapter for end users (en)");
-                _descriptions.Add(new CultureInfo("fr").LCID, "Description translated to fr locale");
-                return _descriptions;
-            }
-        }
-
-        /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
-        /// Note that although the property is an array, only the first element is currently used.
-        /// MUST BE ONE OF THE FOLLOWING
-        /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
-        /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
-        /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
-        /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
-        public string[] IdentityClaims
-        {
-            get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
-        }
-
-        //All external providers must return a value of "true" for this property.
-        public bool RequiresIdentity
-        {
-            get { return true; }
-        }
-    }
-    ```
-
     Next, the presentation form:
 
     ```csharp
@@ -367,7 +273,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     }
     ```
 
-14. Note the 'todo' for the **Resources.FormPageHtml** element above. You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the following to your existing IAuthenticationAdapter implementation:
+12. Note the 'todo' for the **Resources.FormPageHtml** element above. You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the following to your existing IAuthenticationAdapter implementation:
 
     ```csharp
     class MyAdapter : IAuthenticationAdapter
@@ -415,7 +321,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     }
     ```
 
-15. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
+13. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
 
     ```html
     <div id="loginArea">
@@ -443,11 +349,11 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     </div>
     ```
 
-16. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
+14. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
 
     ![Screenshot of the Add New Item dialog box showing Resource File selected.](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
 
-17. Then, within the **Resources.resx** file, choose **Add Resource...Add existing file**. Navigate to the text file (containing the html fragment) that you saved above.
+15. Then, within the **Resources.resx** file, choose **Add Resource...Add existing file**. Navigate to the text file (containing the html fragment) that you saved above.
 
     Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
 
@@ -475,7 +381,7 @@ The adapter should be built into a strongly named .NET assembly that can be inst
 
 ## Deploy the adapter to your AD FS test machine
 
-Before an external provider can be invoked by AD FS, it must be registered in the system. Adapter providers must provide an installer which performs the necessary installation actions including installation in the GAC, and the installer must support registration in AD FS. If that is not done, the administrator needs to execute the Windows PowerShell steps below. These steps can be used in the lab to enable testing and debugging.
+Before an external provider can be invoked by AD FS, it must be registered in the system. Adapter providers must provide an installer that performs the necessary installation actions including installation in the GAC, and the installer must support registration in AD FS. If that is not done, the administrator needs to execute the Windows PowerShell steps below. These steps can be used in the lab to enable testing and debugging.
 
 ### Prepare the test AD FS machine
 
@@ -485,11 +391,11 @@ Copy files and add to GAC.
 
 2. Install the AD FS role service and configure a farm with at least one node.
 
-    For detailed steps to setup a federation server in a lab environment, see the [Windows Server 2012 R2 AD FS Deployment Guide](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
+    For detailed steps to set up a federation server in a lab environment, see the [Windows Server 2012 R2 AD FS Deployment Guide](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
 3. Copy the Gacutil.exe tools to the server.
 
-    Gacutil.exe can be found in **%homedrive%Program Files (x86)Microsoft SDKsWindowsv8.0AbinNETFX 4.0 Tools** on a Windows 8 machine. You will need the **gacutil.exe** file itself as well as the **1033**, **en-US**, and the other localized resource folder below the **NETFX 4.0 Tools** location.
+    Gacutil.exe can be found in **%homedrive%Program Files (x86)Microsoft SDKsWindowsv8.0AbinNETFX 4.0 Tools** on a Windows 8 machine. You will need the **gacutil.exe** file itself and the **1033**, **en-US**, and the other localized resource folder below the **NETFX 4.0 Tools** location.
 
 4. Copy your provider file(s) (one or more strong name signed .dll files) to the same folder location as **gacutil.exe** (the location is just for convenience)
 
@@ -573,7 +479,7 @@ Once the above pre-requisites are met, open a Windows PowerShell command window 
    ```powershell
    Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
    ```
-   Example 2: to create MFA rules to require MFA for external requests to a specific relying party. (Note that individual providers cannot be connected to individual relying parties in AD FS in Windows Server 2012 R2).
+   Example 2: to create MFA rules to require MFA for external requests to a specific relying party. (**Note:** Individual providers cannot be connected to individual relying parties in AD FS in Windows Server 2012 R2).
 
     ```powershell
     $rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
@@ -604,7 +510,7 @@ Finally, perform the steps below to test your adapter:
 
     ![Screenshot of the the M F A choice page.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
 
-You now have a working implementation of the interface and you have the knowledge of how the model works. You can try as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
+You now have a working implementation of the interface and you have the knowledge of how the model works. You can try as an extra example to set break points in the BeginAuthentication and the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
 
 ## Update the adapter for successful authentication
 
@@ -668,7 +574,7 @@ public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authCont
 }
 ```
 
-Now you have to update the adapter on the test box. You must first undo the AD FS policy, then un-register from AD FS and restart AD FS, then remove the .dll from the GAC, then add the new .dll to the GAC, then register it in AD FS, restart AD FS, and re-configure AD FS policy.
+Now you have to update the adapter on the test box. You must first undo the AD FS policy, then unregister from AD FS and restart AD FS, then remove the .dll from the GAC, then add the new .dll to the GAC, then register it in AD FS, restart AD FS, and reconfigure AD FS policy.
 
 ## Deploy and configure the updated adapter on your test AD FS machine
 
@@ -684,11 +590,11 @@ Clear all MFA related checkboxes in the MFA UI, shown below, then click OK.
 
 Example:`PS C:> Unregister-AdfsAuthenticationProvider –Name “MyMFAAdapter”`
 
-Note that the value you pass for “Name” is the same value as “Name” you provided to the Register-AdfsAuthenticationProvider cmdlet. It is also the “Name” property that is output from Get-AdfsAuthenticationProvider.
+The value you pass for “Name” is the same value as “Name” you provided to the Register-AdfsAuthenticationProvider cmdlet. It is also the “Name” property that is output from Get-AdfsAuthenticationProvider.
 
-Note that before you unregister a provider, you must remove the provider from the AdfsGlobalAuthenticationPolicy (either by clearing the checkboxes you checked in AD FS management snap-in or by using Windows PowerShell.)
+Before you unregister a provider, you must remove the provider from the AdfsGlobalAuthenticationPolicy (either by clearing the checkboxes you checked in AD FS management snap-in or by using Windows PowerShell.)
 
-Note that the AD FS service must be restarted after this operation.
+The AD FS service must be restarted after this operation.
 
 ### Remove assembly from GAC
 
@@ -758,5 +664,6 @@ You should see a successful sign-in when entering _adfabric_ at the MFA authenti
 
 #### Other Resources
 
-[Additional Authentication Methods](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))
-[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))
+[Additional Authentication Methods](../operations/configure-additional-authentication-methods-for-ad-fs.md)
+
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications.md)

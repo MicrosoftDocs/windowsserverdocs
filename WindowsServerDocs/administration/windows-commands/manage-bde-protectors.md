@@ -2,16 +2,14 @@
 title: manage-bde protectors
 description: Reference article for the manage-bde protectors command, which manages the protection methods used for the BitLocker encryption key.
 ms.topic: reference
-ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/06/2018
 ---
 
 # manage-bde protectors
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 Manages the protection methods used for the BitLocker encryption key.
 
@@ -31,7 +29,7 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 | -disable | Disables protection, which will allow anyone to access encrypted data by making the encryption key available unsecured on drive. No key protectors are removed. Protection will be resumed the next time Windows is booted unless the optional **-disable** parameters are used to specify the reboot count. |
 | -enable | Enables protection by removing the unsecured encryption key from the drive. All configured key protectors on the drive will be enforced. |
 | -adbackup | Backs up recovery information for the drive specified to Active Directory Domain Services (AD DS). Append the **-id** parameter and specify the ID of a specific recovery key to back up. The **-id** parameter is required. |
-| -aadbackup | Backs up all recovery information for the drive specified to Azure Active Directory (Azure AD). Append the **-id** parameter and specify the ID of a specific recovery key to back up. The **-id** parameter is required. |
+| -aadbackup | Backs up all recovery information for the drive specified to Microsoft Entra ID. Append the **-id** parameter and specify the ID of a specific recovery key to back up. The **-id** parameter is required. |
 | `<drive>` | Represents a drive letter followed by a colon. |
 | -computername | Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command. |
 | `<name>` | Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address. |
@@ -153,7 +151,7 @@ To back up all recovery information for drive C to AD DS, type (where `-id` is t
 manage-bde -protectors -adbackup C: -id '{00000000-0000-0000-0000-000000000000}'
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

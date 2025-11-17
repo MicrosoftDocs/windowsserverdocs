@@ -2,10 +2,8 @@
 title: bitsadmin getnoprogresstimeout
 description: Reference article for the bitsadmin getnoprogresstimeout command, which retrieves the length of time, in seconds, that the service will try to transfer the file after a transient error occurs.
 ms.topic: reference
-ms.assetid: 9cd9b19b-cbb4-4352-8419-978080f016b6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -33,7 +31,7 @@ To retrieve the progress time out value for the job named *myDownloadJob*:
 bitsadmin /getnoprogresstimeout myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

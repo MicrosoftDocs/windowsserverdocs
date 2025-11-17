@@ -1,17 +1,13 @@
 ---
-ms.assetid: 2f4b6641-0ec2-4b1c-85fb-a1f1d16685c8
 title: Use BitLocker with Cluster Shared Volumes
 description: BitLocker on volumes within a cluster are managed based on how the cluster service "views" the volume to be protected. The volume can be a physical disk resource such as a logical unit number (LUN) on a storage area network (SAN) or network attached storage (NAS).
-ms.topic: article
-manager: femila
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/21/2021
 ---
 
 # Use BitLocker with Cluster Shared Volumes (CSV)
-
-> Applies to: Windows Server 2022, Azure Stack HCI, version 20H2
 
 ## BitLocker overview
 
@@ -27,7 +23,7 @@ the system was offline.
 
 On computers that don't have a TPM version 1.2 or later, you can still use
 BitLocker to encrypt the Windows operating system drive. However, this
-implementation will require the user to insert a USB startup key to start the
+implementation requires the user to insert a USB startup key to start the
 computer or resume from hibernation. Starting with Windows 8, you can use an
 operating system volume password to protect the volume on a
 computer without TPM. Neither option provides the pre-startup system
@@ -35,7 +31,7 @@ integrity verification offered by BitLocker with a TPM.
 
 In addition to the TPM, BitLocker gives you the option to lock the normal startup
 process until the user supplies a personal identification number (PIN) or
-inserts a removable device. This device could be a USB flash drive, that contains a startup
+inserts a removable device. This device could be a USB flash drive that contains a startup
 key. These additional security measures provide multi-factor authentication and
 assurance that the computer won't start or resume from hibernation until the
 correct PIN or startup key is presented.
@@ -43,9 +39,9 @@ correct PIN or startup key is presented.
 ## Cluster Shared Volumes overview
 
 Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server failover
-cluster or Azure Stack HCI to simultaneously have read-write access to the same logical unit number
+cluster or Azure Local to simultaneously have read-write access to the same logical unit number
 (LUN), or disk, that is provisioned as an NTFS volume. The disk can be provisioned as
-Resilient File System (ReFS). However, the CSV drive will be in redirected mode which means write access will be sent to the coordinator node. With CSV, clustered
+Resilient File System (ReFS). However, the CSV drive is in redirected mode, which means write access is sent to the coordinator node. With CSV, clustered
 roles can fail over quickly from one node to another without requiring a
 change in drive ownership, or dismounting and remounting a volume. CSV also help
 simplify the management of a potentially large number of LUNs in a failover
@@ -55,7 +51,7 @@ CSV provides a general-purpose, clustered file system that is layered above
 NTFS or ReFS. CSV applications include:
 
 - Clustered virtual hard disk (VHD/VHDX) files for clustered Hyper-V virtual machines
-- Scale out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS is not supported for a Scale-Out File Server in Windows Server 2012 R2 and below. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)).
+- Scale out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS isn't supported for a Scale-Out File Server in Windows Server 2012 R2 and earlier. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)).
 - Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI) Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server don't support the use of CSV.
 - Windows Server 2019 or higher Microsoft Distributed Transaction Control (MSDTC)
 
@@ -80,7 +76,7 @@ used to provide an entry point to other volumes. Mount points don't require the
 use of a drive letter. Volumes that lack drive letters don't appear in the
 BitLocker Control Panel item.
 
-BitLocker will unlock protected volumes without user intervention by attempting
+BitLocker unlocks protected volumes without user intervention by attempting
 protectors in the following order:
 
 1. Clear Key
@@ -108,7 +104,7 @@ uses the BitLocker protect/unprotect APIs to unlock or deny the request.
 
 ## New functionality
 
-In previous versions of Windows Server and Azure Stack HCI, the only supported
+In previous versions of Windows Server and Azure Local, the only supported
 encryption protector is the SID-based protector where the account being used is
 Cluster Name Object (CNO) that is created in Active Directory as part of the
 Failover Clustering creation. This is a secure design because the protector is
@@ -118,25 +114,24 @@ access to the CNO account.
 
 The downside is three-fold:
 
-1. This method obviously does not work when a Failover Cluster is created
+1. This method obviously doesn't work when a Failover Cluster is created
     without any access to an Active Directory controller in the datacenter.
 
 2. Volume unlock, as part of failover, may take too long (and possibly time
     out) if the Active Directory controller is unresponsive or slow.
 
-3. The online process of the drive will fail if an Active Directory controller
-    is not available.
+3. The online process of the drive fails if an Active Directory controller
+    isn't available.
 
-New functionality has been added that Failover Clustering will generate and
-maintain its own BitLocker Key protector for a volume. It will be encrypted
+New functionality has been added that Failover Clustering generates and
+maintains its own BitLocker Key protector for a volume. It will be encrypted
 and saved in the local cluster database. Since the cluster database is a
 replicated store backed by the system volume on every cluster node, the system
 volume on every cluster node should be BitLocker protected as well. Failover
-Clustering will not enforce it as some solutions may not want or need to encrypt
-the system volume. If the system drive is not Bitlockered, Failover Cluster will
-flag this as a warning event during the online and unlock process. Failover
-Cluster validation will log a message if it detects that this is an Active
-Directory-less or workgroup setup and the system volume is not encrypted.
+Clustering doesn't enforce it as some solutions may not want or need to encrypt
+the system volume. If the system drive isn't Bitlockered, Failover Cluster flags this as a warning event during the online and unlock process. Failover
+Cluster validation logs a message if it detects that this is an Active
+Directory-less or workgroup setup and the system volume isn't encrypted.
 
 ## Installing BitLocker encryption
 
@@ -181,7 +176,7 @@ BitLocker is a feature that must be added to all nodes of the Cluster.
     installation is complete.
 
 2. If the **Restart the destination server automatically if required** check
-    box is not selected, the **Results** pane of the **Add Roles and Features
+    box isn't selected, the **Results** pane of the **Add Roles and Features
     Wizard** will display the success or failure of the BitLocker feature
     installation. If required, a notification of additional action necessary to
     complete the feature installation, such as the restart of the computer, will
@@ -281,9 +276,9 @@ To enable BitLocker encryption, run:
 Enable-BitLocker -MountPoint "C:\\ClusterStorage\\Volume1" -RecoveryPasswordProtector
 ```
 
-Once entering the command, a warning will show that provides a numeric recovery
-password. Save the password in a secure location as it will also be needed in an
-upcoming step. The warning will look similar to this:
+Once entering the command, a warning appears and provides a numeric recovery
+password. Save the password in a secure location as it is also needed in an
+upcoming step. The warning looks similar to this:
 
 ```powershell
 
@@ -342,8 +337,8 @@ Get-ClusterSharedVolume -Name "Cluster Disk 1" | Resume-ClusterResource
 
 If the resource fails to come online, it could be a storage issue, an incorrect
 recovery password, or some issue. Verify the **BitlockerProtectorInfo** key has
-the proper information. If it does not, the commands previously given should be
-run again. If the problem is not with this key, we recommended getting with the
+the proper information. If it doesn't, the commands previously given should be
+run again. If the problem isn't with this key, we recommended getting with the
 proper group within your organization or the storage vendor to resolve the
 issue.
 
@@ -370,7 +365,7 @@ Put the disk resource into Maintenance Mode:
 Get-ClusterSharedVolume -Name "Cluster Disk 2" | Suspend-ClusterResource
 ```
 
-A dialog box will pop up
+A dialog box pops up
 
 ```powershell
 Suspend-ClusterResource
@@ -516,7 +511,7 @@ As mentioned previously, since the cluster database is a replicated store backed
 by the system volume on every cluster node, it is recommended the system volume
 on every cluster node should also be BitLocker protected. Failover Clustering
 will not enforce it as some solutions may not want or need to encrypt the system
-volume. If the system drive is not secured by BitLocker, Failover Cluster will flag this
+volume. If the system drive isn't secured by BitLocker, Failover Cluster will flag this
 as an event during the unlock/online process. The event shown would be similar
 to:
 
@@ -532,5 +527,6 @@ that the system volume be BitLocker protected as well.
 ResourceName: Cluster Disk 1
 `
 
-Failover Cluster validation will log a message if it detects that this is an
+Failover Cluster validation logs a message if it detects that this is an
 Active Directory-less or workgroup setup and the system volume is not encrypted.
+

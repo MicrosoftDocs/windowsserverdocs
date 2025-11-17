@@ -2,10 +2,8 @@
 title: bitsadmin util and version
 description: Reference article for the bitsadmin util and version command, which displays the version of BITS service.
 ms.topic: reference
-ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To display the version of the BITS Service.
 bitsadmin /util /version
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: delete partition
 description: Reference article for the delete partition command, which deletes the partition with focus.
 ms.topic: reference
-ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -45,7 +43,7 @@ To delete the partition with focus, type:
 delete partition
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

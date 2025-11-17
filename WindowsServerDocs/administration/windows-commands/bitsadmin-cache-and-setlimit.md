@@ -2,10 +2,8 @@
 title: bitsadmin cache and setlimit
 description: Reference article for the bitsadmin cache and setlimit command, which sets the cache size limit.
 ms.topic: reference
-ms.assetid: 46578835-d5ce-423b-be4d-62ddb9e1908d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -33,7 +31,7 @@ To set the cache size limit to 50%:
 bitsadmin /cache /setlimit 50
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

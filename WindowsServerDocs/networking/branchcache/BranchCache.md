@@ -1,16 +1,12 @@
 ---
 title: BranchCache
 description: This topic provides an overview of BranchCache in Windows Server 2016
-manager: brianlic
-ms.topic: article
-ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # BranchCache
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.
 
@@ -139,7 +135,7 @@ Because BranchCache does not require new hardware or network topology changes, i
 > Because some Web proxies cannot process non-standard Content-Encoding headers, it is recommended that you use BranchCache with Hyper Text Transfer Protocol Secure (HTTPS) and not HTTP.
 
 =======
-For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking).
+For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking).
 
 ## <a name="bkmk_version"></a>Content information versions
 
@@ -225,7 +221,7 @@ In the following operating systems, BranchCache does not support HTTP and SMB fu
 -   Windows 7 Pro, BITS support only
 
 > [!NOTE]
-> BranchCache is not available by default in the Windows Server 2008 or Windows Vista operating systems. On these operating systems, however, if you download and install the Windows Management Framework update, BranchCache functionality is available for the Background Intelligent Transfer Service (BITS) protocol only. For more information, and to download Windows Management Framework, see [Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0)](https://go.microsoft.com/fwlink/?LinkId=188677) at https://go.microsoft.com/fwlink/?LinkId=188677.
+> BranchCache is not available by default in the Windows Server 2008 or Windows Vista operating systems. On these operating systems, however, if you download and install the Windows Management Framework update, BranchCache functionality is available for the Background Intelligent Transfer Service (BITS) protocol only. For more information, and to download Windows Management Framework, see [Windows Management Framework (Windows PowerShell 2.0, WinRM 2.0, and BITS 4.0)](/powershell/scripting/windows-powershell/install/installing-the-windows-powershell-2.0-engine) at /powershell/scripting/windows-powershell/install/installing-the-windows-powershell-2.0-engine.
 
 ### Operating systems for BranchCache content server functionality
 
@@ -468,3 +464,4 @@ In a hosted cache environment where the hosted cache server is running  Windows 
 > Hosted cache servers that are running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 encrypt all data in the cache by default, so the use of additional encryption technologies is not required.
 
 Even if a client is configured in hosted cache mode, it will still cache data locally, and you might want to take steps to protect the local cache in addition to the cache on the hosted cache server.
+

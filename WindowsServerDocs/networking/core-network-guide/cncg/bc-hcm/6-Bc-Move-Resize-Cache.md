@@ -1,17 +1,13 @@
 ---
 title: Move and Resize the Hosted Cache (Optional)
 description: Learn how to move the hosted cache to the drive and folder that you prefer, and to specify the amount of disk space that the hosted cache server can use for the hosted cache.
-manager: brianlic
-ms.topic: article
-ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Move and Resize the Hosted Cache \(Optional\)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this procedure to move the hosted cache to the drive and folder that you prefer, and to specify the amount of disk space that the hosted cache server can use for the hosted cache.
 

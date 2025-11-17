@@ -2,16 +2,14 @@
 title: Remote Desktop Services (Terminal Services) command-line tools reference
 description: Reference article for the Remote Desktop Services (RDS) command-line tools.
 ms.topic: reference
-ms.assetid: 2f371848-5c48-470c-908c-afbc95d3a805
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # Remote Desktop Services (Terminal Services) command-line tools reference
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Learn about the available Remote Desktop Services (Terminal Services) command-line tools, with descriptions and links for more detailed information.
 
@@ -49,6 +47,6 @@ Learn about the available Remote Desktop Services (Terminal Services) command-li
 | [tskill](tskill.md) | Ends a process running in a session on an Remote Desktop Session Host server. |
 | [tsprof](tsprof.md) | Copies the Remote Desktop Services user configuration information from one user to another. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

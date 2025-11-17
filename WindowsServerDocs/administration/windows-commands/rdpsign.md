@@ -2,16 +2,14 @@
 title: rdpsign
 description: Reference article for the rdpsign command, which enables you to digitally sign a Remote Desktop Protocol (.rdp) file.
 ms.topic: reference
-ms.assetid: 4a6fa8ce-3d32-49a5-b056-bcc1a23391f5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # rdpsign
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables you to digitally sign a Remote Desktop Protocol (.rdp) file.
 

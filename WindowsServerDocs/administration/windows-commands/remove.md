@@ -2,10 +2,8 @@
 title: remove
 description: Reference article for the remove command, which removes a drive letter or mount point from a volume.
 ms.topic: reference
-ms.assetid: b0886140-da8b-4231-8cb2-f280874d99c0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -41,6 +39,6 @@ To remove the d:\ drive, type:
 remove letter=d
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,16 +2,14 @@
 title: logman create trace
 description: Reference article for the logman create trace command, which creates an event trace data collector.
 ms.topic: reference
-ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # logman create trace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Create an event trace data collector.
 
@@ -68,7 +66,7 @@ To create an event trace data collector called *trace_log*, using no fewer than 
 logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

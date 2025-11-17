@@ -2,16 +2,14 @@
 title: logman import and logman export
 description: Reference article for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 ms.topic: reference
-ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # logman import and logman export
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 
@@ -43,7 +41,7 @@ To import the XML file *c:\windows\perf_log.xml* from the computer *server_1* as
 logman import perf_log -s server_1 -xml c:\windows\perf_log.xml
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

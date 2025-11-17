@@ -2,16 +2,14 @@
 title: taskkill
 description: Reference article for the taskkill command, which ends one or more tasks or processes.
 ms.topic: reference
-ms.assetid: 2b71e792-08b6-46d4-95a5-cb6336a79524
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # taskkill
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. You can use the [tasklist command](tasklist.md) command to determine the process ID (PID) for the process to be ended.
 
@@ -94,7 +92,7 @@ To end all processes that have a process ID *greater than or equal to 1000*, reg
 taskkill /f /fi "PID ge 1000" /im *
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

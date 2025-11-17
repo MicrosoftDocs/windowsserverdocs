@@ -1,9 +1,9 @@
 ---
 title: Customize WebSocket validation for Windows Admin Center gateway
 description: Learn how administrators can customize the WebSocket validation for their Windows Admin Center (Project Honolulu) instance. 
-ms.topic: article
-author: trungtran-msft
-ms.author: wscontent
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/22/2021
 ---
 
@@ -42,3 +42,4 @@ On RDP TCP connection, Gateway only allows to use port 3389 (RDP) and port 2179 
 ## Possible side effect
 
 If user uses Windows Admin Center by IP address or something not described on the SSL certificate, user cannot access WebSocket because it's not trustable. If it needs to support, modify `HKLM\Software\Microsoft\ServerManagementGateway\WebSocketValidationOverride` registry value to set the IP address or just specify "`*`" to ignore validation.
+

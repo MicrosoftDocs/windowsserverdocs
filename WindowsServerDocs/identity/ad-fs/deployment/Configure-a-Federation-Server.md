@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Configure a Federation Server"
-ms.assetid: 434fd617-373a-405e-bae4-da324ea83efc
 title: Configure a Federation Server for Windows Server 2012 R2 AD FS
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Configure a Federation Server

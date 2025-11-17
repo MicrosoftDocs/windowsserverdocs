@@ -2,16 +2,14 @@
 title: extend
 description: Reference article for the extend command, which extends the volume or partition with focus and its file system into free (unallocated) space on a disk.
 ms.topic: reference
-ms.assetid: 2414e21d-fc0b-40e8-9e33-3e072f8ad76b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # extend
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Extends the volume or partition with focus and its file system into free (unallocated) space on a disk.
 
@@ -59,6 +57,6 @@ To extend the file system of a volume after it was extended, type:
 extend filesystem
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

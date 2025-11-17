@@ -2,14 +2,11 @@
 title: Checklist Deploy DFS Namespaces
 description: This article describes how to configure and deploy DFS Namespaces.
 ms.date: 6/5/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: checklist
+author: robinharwood
+ms.author: roharwoo
 ---
 # Checklist: Deploy DFS Namespaces
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Distributed File System (DFS) Namespaces and DFS Replication can be used to publish documents, software, and line-of-business data to users throughout an organization. Although DFS Replication alone is sufficient to distribute data, you can use DFS Namespaces to configure the namespace so that a folder is hosted by multiple servers, each of which holds an updated copy of the folder. This increases data availability and distributes the client load across servers.
 
@@ -33,3 +30,4 @@ To deploy DFS Namespaces, perform the following tasks:
 -   [Namespaces](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Checklist: Tune a DFS Namespace](checklist-tune-a-dfs-namespace.md)
 -   [Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v=ws.11))
+

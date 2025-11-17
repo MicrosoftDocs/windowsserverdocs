@@ -1,16 +1,12 @@
 ---
 title: DirectAccess Test Lab Guides
 description: This topic provides links to the test lab guides for DirectAccess in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # DirectAccess Test Lab Guides
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Following are links to the test lab guides for DirectAccess in Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012.
 

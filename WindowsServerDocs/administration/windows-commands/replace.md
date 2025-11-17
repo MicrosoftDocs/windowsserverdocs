@@ -2,10 +2,8 @@
 title: replace
 description: Reference article for the replace command, which can replace existing or add new files to a directory.
 ms.topic: reference
-ms.assetid: 6143661e-d90f-4812-b265-6669b567dd1f
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
@@ -72,6 +70,6 @@ To update all the versions of a file named *Phones.cli* (which appear in multipl
 replace a:\phones.cli c:\ /s
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

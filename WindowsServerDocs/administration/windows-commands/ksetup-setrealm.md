@@ -2,10 +2,8 @@
 title: ksetup setrealm
 description: Reference article for the ksetup setrealm command, which sets the name of a Kerberos realm.
 ms.topic: reference
-ms.assetid: ab268c40-276b-46ef-ab16-d5ce7667fbed
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To set the realm of this computer to a specific domain name, and to restrict acc
 ksetup /setrealm CONTOSO
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

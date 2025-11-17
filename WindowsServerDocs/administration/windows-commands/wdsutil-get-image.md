@@ -2,16 +2,14 @@
 title: wdsutil get-image
 description: Reference article for wdsutil get-image, which retrieves information about an image.
 ms.topic: reference
-ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves information about an image.
 
@@ -56,7 +54,7 @@ wdsutil /Get-Image:Windows Vista with Office imagetype:Install
 wdsutil /verbose /Get-Image:Windows Vista with Office /Server:MyWDSServer imagetype:Install imagegroup:ImageGroup1 /Filename:install.wim
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-image command](wdsutil-add-image.md)

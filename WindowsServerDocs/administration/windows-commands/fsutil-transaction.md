@@ -1,17 +1,15 @@
 ---
 title: fsutil transaction
 description: Reference article for the fsutil transaction command, which manages NTFS transactions.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: f2eefaaf-2817-4ac7-abac-d2b65fa971dc
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil transaction
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Manages NTFS transactions.
 
@@ -45,7 +43,7 @@ To display transaction information for file *c:\test.txt*, type:
 fsutil transaction fileinfo c:\test.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

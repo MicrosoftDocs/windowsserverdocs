@@ -2,16 +2,14 @@
 title: serverceipoptin
 description: Reference article for the serverceipoptin, which allows you to participate in the Customer Experience Improvement Program (CEIP).
 ms.topic: reference
-ms.assetid: 3d7d7fa7-0689-4797-b802-36fe260d21a0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # serverceipoptin
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Allows you to participate in the Customer Experience Improvement Program (CEIP).
 
@@ -50,6 +48,6 @@ To turn off your participation, type:
 serverceipoptin /disable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

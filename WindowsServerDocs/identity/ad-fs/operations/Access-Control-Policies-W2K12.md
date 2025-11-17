@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Access Control Policies in Windows Server 2012 R2 and Windows Server 2012 AD FS"
-ms.assetid: 5728847d-dcef-4694-9080-d63bfb1fe24b
 title: Access Control Policies in AD FS in Windows Server 2012 R2
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 06/05/2018
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Access Control Policies in Windows Server 2012 R2 and Windows Server 2012 AD FS

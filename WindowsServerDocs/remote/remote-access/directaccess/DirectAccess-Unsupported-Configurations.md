@@ -1,16 +1,12 @@
 ---
 title: DirectAccess Unsupported Configurations
 description: This topic provides a list of unsupported DirectAccess configurations in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # DirectAccess Unsupported Configurations
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.
 

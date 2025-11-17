@@ -2,16 +2,14 @@
 title: query session
 description: Reference article for the query session command, which displays information about sessions on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # query session
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about sessions on a Remote Desktop Session Host server. The list includes information not only about active sessions but also about other sessions that the server runs.
 
@@ -78,7 +76,7 @@ To display information about active session *modeM02*, type:
 query session modeM02
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

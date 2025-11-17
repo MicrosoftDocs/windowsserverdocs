@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: AD DS Simplified Administration"
-ms.assetid: f74eec9a-2485-4ee0-a0d8-cce01250a294
 title: AD DS Simplified Administration
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/09/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 # AD DS Simplified Administration
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains the capabilities and benefits of Windows Server 2012 domain controller deployment and administration, and the differences between previous operating system DC deployment and the new Windows Server 2012 implementation.
 
@@ -165,7 +162,7 @@ The AD Preparation code formerly housed in ADprep.exe is refactored into adprep.
 > [!IMPORTANT]
 > There is no 32-bit Adprep32.exe tool for Windows Server 2012. You must have at least one Windows Server 2008 x64, Windows Server 2008 R2, or Windows Server 2012 computer, running as a domain controller, member server, or in a workgroup, to prepare the forest and domain. Adprep.exe does not run on Windows Server 2003 x64.
 
-## <a name="BKMK_PrereuisiteChecking"></a>Prerequisite Checking
+## <a name="BKMK_PrerequisiteChecking"></a>Prerequisite Checking
 
 The prerequisite checking system built into ADDSDeployment Windows PowerShell managed code works in different modes, based on the operation. The tables below describe each test, when it is used, and an explanation of how and what it validates. These tables may be useful if there are issues where the validation fails and the error is not sufficient to troubleshoot the problem.
 
@@ -191,12 +188,12 @@ There is no need to run these cmdlets, ordinarily; they already automatically ex
 | VerifyADPrep<p>Prerequisites (forest) | LDAP | Discovers and contacts the Schema Master using the rootDSE namingContexts attribute and Schema naming context fsmoRoleOwner attribute. Determines which preparatory operations (forestprep, domainprep, or rodcprep) are required for AD DS installation. Validates the schema objectVersion is expected and if it requires further extension. |
 | VerifyADPrep<p>Prerequisites (domain and RODC) | LDAP | Discovers and contacts the Infrastructure Master using the rootDSE namingContexts attribute and the Infrastructure container fsmoRoleOwner attribute. In the case of an RODC installation, this test discovers the domain naming master and make sure it is online. |
 | CheckGroup<p>Membership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Domain Admins or Enterprise Admins group, depending on the operation (DA for adding or demoting a domain controller, EA for adding or removing a domain) |
-| CheckForestPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Schema Admins and Enterprise Admins groups and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers |
-| CheckDomainPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Domain Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers |
-| CheckRODCPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Enterprise Admins group and has the Manage Audit and Security Event Logs (SesScurityPrivilege) privilege on the existing domain controllers |
+| CheckForestPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Schema Admins and Enterprise Admins groups and has the Manage Audit and Security Event Logs (SesSecurityPrivilege) privilege on the existing domain controllers |
+| CheckDomainPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Domain Admins group and has the Manage Audit and Security Event Logs (SesSecurityPrivilege) privilege on the existing domain controllers |
+| CheckRODCPrep<p>GroupMembership | LDAP,<p>RPC over SMB (LSARPC) | Validate the user is a member of Enterprise Admins group and has the Manage Audit and Security Event Logs (SesSecurityPrivilege) privilege on the existing domain controllers |
 | VerifyInitSync<p>AfterReboot | LDAP | Validate that the Schema Master has replicated at least once since it restarted by setting a dummy value on rootDSE attribute becomeSchemaMaster |
-| VerifySFUHotFix<p>Applied | LDAP | Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<p>([https://support.microsoft.com/kb/821732](https://support.microsoft.com/kb/821732)) |
-| VerifyExchange<p>SchemaFixed | LDAP, WMI, DCOM, RPC | Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([https://support.microsoft.com/kb/314649](https://support.microsoft.com/kb/314649)) |
+| VerifySFUHotFix<p>Applied | LDAP | Validate the existing forest schema does not contain known problem SFU2 extension for the UID attribute  with OID 1.2.840.113556.1.4.7000.187.102<p>([Impact of Schema Changes - Win32 apps](/windows/win32/ad/impact-of-schema-changes)) |
+| VerifyExchange<p>SchemaFixed | LDAP, WMI, DCOM, RPC | Validate the existing forest schema does not still contain problem Exchange 2000 extensions ms-Exch-Assistant-Name, ms-Exch-LabeledURI, and ms-Exch-House-Identifier ([About schema extensions - Configuration Manager](/mem/configmgr/core/plan-design/network/schema-extensions)) |
 | VerifyWin2KSchema<p>Consistency | LDAP | Validate the existing forest schema has consistent (not incorrectly modified by a third party) core attributes and classes. |
 | DCPromo | DRSR over RPC,<p>LDAP,<p>DNS<p>RPC over SMB (SAMR) | Validate the command-line syntax passed to the promotion code and test promotion. Validate the forest or domain does not already exist if creating new. |
 | VerifyOutbound<p>ReplicationEnabled | LDAP, DRSR over SMB, RPC over SMB (LSARPC) | Validate the existing domain controller specified as the replication partner has outbound replication enabled by checking the NTDS Settings object's options attribute for NTDSDSA_OPT_DISABLE_OUTBOUND_REPL (0x00000004) |

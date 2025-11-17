@@ -2,16 +2,14 @@
 title: query user
 description: Reference article for the query user command, which displays information about user sessions on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # query user
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about user sessions on a Remote Desktop Session Host server. You can use this command to find out if a specific user is logged on to a specific Remote Desktop Session Host server. This command returns the following information:
 
@@ -68,7 +66,7 @@ To display information about the user *USER1* on server *Server1*, type:
 query user USER1 /server:Server1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

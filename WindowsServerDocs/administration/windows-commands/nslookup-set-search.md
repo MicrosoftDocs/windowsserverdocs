@@ -2,10 +2,8 @@
 title: nslookup set search
 description: Reference article for the nslookup set search command, which appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received.
 ms.topic: reference
-ms.assetid: 064ac660-8b04-4af9-8b2c-e4e0549771b8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -28,6 +26,6 @@ set [no]search
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

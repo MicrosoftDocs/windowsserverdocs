@@ -1,16 +1,10 @@
 ---
 title:  TLS - SSL (Schannel SSP) Overview
 description: Learn about the changes in functionality in the Schannel Security Support Provider (SSP).
-ms.topic: article
-ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
-author: justinha
-ms.author: justinha
-manager: brianlic
+ms.topic: concept-article
 ms.date: 05/16/2018
 ---
 # Overview of TLS - SSL (Schannel SSP)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 This topic for the IT professional describes the changes in functionality in the Schannel Security Support Provider (SSP), which includes the Transport Layer Security (TLS), the Secure Sockets Layer (SSL), and the Datagram Transport Layer Security (DTLS) authentication protocols, for  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, and Windows 8.
 
@@ -36,7 +30,7 @@ Devices that connect TLS to servers frequently need to reconnect due to session 
 > [!NOTE]
 > The client-side implementation of RFC 5077 was added in Windows 8.
 
-For information about stateless TLS session resumption, see the IETF document [RFC 5077.](http://www.ietf.org/rfc/rfc5077)
+For information about stateless TLS session resumption, see the IETF document [RFC 5077](https://datatracker.ietf.org/doc/rfc5077/).
 
 ### Application protocol negotiation
  Windows Server 2012 R2  and Windows 8.1 support client-side TLS application protocol negotiation so applications can leverage protocols as part of the HTTP 2.0 standard development and users can access online services such as Google and Twitter using apps running the SPDY protocol.

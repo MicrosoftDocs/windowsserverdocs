@@ -2,16 +2,14 @@
 title: ftp user
 description: Reference article for the ftp user command, which specifies a user to the remote computer.
 ms.topic: reference
-ms.assetid: 0a77bfeb-27a9-4f2f-a3c4-2fef529fb569
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # ftp user
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Specifies a user to the remote computer.
 
@@ -37,7 +35,7 @@ To specify *User1* with the password *Password1*, type:
 user User1 Password1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

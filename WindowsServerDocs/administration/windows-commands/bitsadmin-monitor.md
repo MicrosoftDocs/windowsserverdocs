@@ -2,10 +2,8 @@
 title: bitsadmin monitor
 description: Reference article for the bitsadmin monitor command, which monitors jobs in the transfer queue that are owned by the current user.
 ms.topic: reference
-ms.assetid: 2c424d27-e011-49c2-b579-a2c235467c39
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ To monitor the transfer queue for jobs owned by the current user and refreshes t
 bitsadmin /monitor /refresh 60
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

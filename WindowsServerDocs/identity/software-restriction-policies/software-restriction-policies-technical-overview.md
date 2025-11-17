@@ -1,16 +1,12 @@
 ---
 title: Software Restriction Policies Technical Overview
 description: Learn about software restriction policies, when and how to use the feature, and what changes have been implemented in past releases.
-ms.topic: article
-ms.assetid: dc7013b0-0efd-40fd-bd6d-75128adbd0b8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Software Restriction Policies Technical Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes software restriction policies, when and how to use the feature, what changes have been implemented in past releases, and provides links to additional resources to help you create and deploy software restriction policies beginning with Windows Server 2008 and Windows Vista.
 

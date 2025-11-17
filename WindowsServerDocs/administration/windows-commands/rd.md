@@ -2,10 +2,8 @@
 title: rd
 description: Reference article for the rd command, which deletes a directory.
 ms.topic: reference
-ms.assetid: 42e672f6-5bc2-4c16-af25-18e7ed2dd555
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -67,6 +65,6 @@ To run the previous example in quiet mode, type:
 rd /s /q test
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

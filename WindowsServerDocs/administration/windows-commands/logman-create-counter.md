@@ -2,16 +2,14 @@
 title: logman create counter
 description: Reference article for the logman create counter command, which creates a counter data collector.
 ms.topic: reference
-ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # logman create counter
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a counter data collector.
 
@@ -67,7 +65,7 @@ To create a counter called *perf_log* using the % Processor time counter from th
 logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

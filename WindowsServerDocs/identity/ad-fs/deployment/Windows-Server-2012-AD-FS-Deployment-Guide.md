@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Windows Server 2012 AD FS Deployment Guide"
-ms.assetid: e2ad9e80-a036-4bac-a4fb-afa83756aa1f
 title: Windows Server 2012 AD FS Deployment Guide
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: install-set-up-deploy
 ---
 
 # Windows Server 2012 AD FS Deployment Guide

@@ -1,16 +1,12 @@
 ---
 title: STEP 7 Test Connectivity When Returning to the Corpnet
 description: Learn how to test connectivity when returning to the corpnet on CLIENT1.
-manager: brianlic
-ms.topic: article
-ms.assetid: 5a7252d0-6db8-4a9d-98ee-75082ecd2929
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 7 Test Connectivity When Returning to the Corpnet
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Many of your users will move between remote locations and the corpnet, so it's important that when they return to the corpnet that they are able to access resources without having to make any configuration changes. Remote Access makes this possible because when the DirectAccess client returns to the corpnet, it is able to make a connection to the network location server. Once the HTTPS connection is successfully established to the network location server, the DirectAccess client disables the DirectAccess client configuration and uses a direct connection to corpnet.
 

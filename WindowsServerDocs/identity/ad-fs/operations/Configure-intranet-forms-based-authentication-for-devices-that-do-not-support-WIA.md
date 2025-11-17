@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Configuring intranet forms-based authentication for devices that do not support Windows Integrated Authentication (WIA)"
-ms.assetid: d562ef46-f240-48be-bbd4-fd88fc6bbbdc
 title: How to configure intranet forms-based authentication for devices that do not support Windows Integrated Authentication (WIA)
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Configuring intranet forms-based authentication for devices that do not support Windows Integrated Authentication (WIA)

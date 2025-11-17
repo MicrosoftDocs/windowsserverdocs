@@ -2,10 +2,8 @@
 title: delete shadows
 description: Reference article for the delete shadows command, which deletes shadow copies.
 ms.topic: reference
-ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -30,7 +28,7 @@ delete shadows [all | volume <volume> | oldest <volume> | set <setID> | id <shad
 | id `<shadowID>` | Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
 | exposed {`<drive>` \| `<mountpoint>`} | Deletes shadow copies exposed at the specified drive or mount point. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

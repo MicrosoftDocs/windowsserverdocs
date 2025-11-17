@@ -2,10 +2,8 @@
 title: wbadmin delete systemstatebackup
 description: Reference article for the wbadmin delete systemstatebackup command, which deletes the system state backups that you specify.
 ms.topic: reference
-ms.assetid: 707d37cb-448d-4542-b6ac-1fc89e749788
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -58,7 +56,7 @@ To delete the oldest system state backup stored on disk f:, type:
 wbadmin delete systemstatebackup -backupTarget:f:\ -deleteOldest
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

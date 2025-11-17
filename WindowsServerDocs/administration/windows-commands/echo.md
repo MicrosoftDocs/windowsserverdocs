@@ -2,11 +2,9 @@
 title: echo
 description: Reference article for the echo command, which displays messages or turns on or off the command echoing feature.
 ms.topic: reference
-ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: roharwoo
+author: robinharwood
+ms.date: 10/02/2023
 ---
 
 # echo
@@ -30,15 +28,21 @@ echo [on | off]
 
 #### Remarks
 
-- The `echo <message>` command is particularly useful when **echo** is turned off. To display a message that is several lines long without displaying any commands, you can include several `echo <message>` commands after the **echo off** command in your batch program.
+- The `echo <message>` command is more useful when **echo** is turned off. To display a message that is several lines long without displaying any commands, you can include several `echo <message>` commands after the **echo off** command in your batch program.
 
 - After **echo** is turned off, the command prompt doesn't appear in the Command Prompt window. To display the command prompt, type **echo on.**
 
 - If used in a batch file, **echo on** and **echo off** don't affect the setting at the command prompt.
 
-- To prevent echoing a particular command in a batch file, insert an `@` sign in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
+- If there's an empty variable in a batch file while using **echo**, it displays "ECHO is off". To prevent seeing this message, and produce a blank line instead, place a colon (`:`) between **echo** and the variable. For example, `echo:%var%`.
 
-- To display a pipe (`|`) or redirection character (`<` or `>`) when you are using **echo**, use a caret (`^`) immediately before the pipe or redirection character. For example, `^|`, `^>`, or `^<`). To display a caret, type two carets in succession (`^^`).
+- To prevent echoing a particular command in a batch file, insert an (`@`) sign in front of the command. To prevent echoing all commands in a batch file, include the **echo off** command at the beginning of the file.
+
+- To display an exclamation mark (`!`) in batch scripts, wrap the word or phrase in double quotes followed by a caret before the exclamation mark (`"Hello World^!"`). Alternatively, a double caret (`^^`) can be used without the need for double quotes (`Hello World^^!`).
+
+- To display a pipe (`|`), ampersand (`&`) or redirection character (`<` or `>`) when you're using **echo**, use a caret (`^`) immediately before that character. For example, `^|`, `^&`, `^>`, or `^<`. To display a caret, type two carets in succession (`^^`).
+
+- When inside a block terminated by parentheses (`()`), both opening and closing parentheses must also be escaped using the caret (`^`) immediately before each one. For example, `This is ^(now^) correct` will correctly display `This is (now) correct`.
 
 ### Examples
 
@@ -85,7 +89,7 @@ The following batch file searches the current directory for files with the .txt 
 if not exist *.txt (
 echo This directory contains no text files.
 ) else (
-   echo This directory contains the following text files:
+   echo This directory contains the following text file^(s^):
    echo.
    dir /b *.txt
    )
@@ -100,12 +104,13 @@ This directory contains no text files.
 If .txt files are found when the batch file is run the following output displays (for this example, assume the files File1.txt, File2.txt, and File3.txt exist):
 
 ```
-This directory contains the following text files:
+This directory contains the following text file(s):
+
 File1.txt
 File2.txt
 File3.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

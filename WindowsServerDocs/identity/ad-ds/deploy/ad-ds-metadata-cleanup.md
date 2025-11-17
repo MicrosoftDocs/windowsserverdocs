@@ -1,15 +1,12 @@
 ---
 title: Clean up AD DS server metadata
 description: Use built-in tools to clean up metadata from removed domain controllers
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 11/14/2018
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: how-to
 ---
 # Clean up Active Directory Domain Controller server metadata
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 Metadata cleanup is a required procedure after a forced removal of Active Directory Domain Services (AD DS). You perform metadata cleanup on a domain controller in the domain of the domain controller that you forcibly removed. Metadata cleanup removes data from AD DS that identifies a domain controller to the replication system. Metadata cleanup also removes File Replication Service (FRS) and Distributed File System (DFS) Replication connections and attempts to transfer or seize any operations master (also known as flexible single master operations or FSMO) roles that the retired domain controller holds.
 
@@ -87,3 +84,5 @@ As an alternative, you can clean up metadata by using ntdsutil.exe, a command-li
 
 * [Demoting Domain Controllers](Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 * [Ntdsutil command reference](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753343(v=ws.10))
+* [Clean Up Server Metadata reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816907(v=ws.10))
+* [Ntdsutil metadata cleanup reference](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731035(v=ws.10))

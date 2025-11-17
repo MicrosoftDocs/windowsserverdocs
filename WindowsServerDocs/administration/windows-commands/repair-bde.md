@@ -2,10 +2,8 @@
 title: repair-bde
 description: Reference article for the repair-bde command, which can try to reconstruct critical parts of a severely damaged drive and salvage recoverable data if the drive was encrypted by using BitLocker.
 ms.topic: reference
-ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -14,14 +12,14 @@ ms.date: 10/16/2017
 Attempts to reconstruct critical parts of a severely damaged drive and salvage recoverable data if the drive was encrypted by using BitLocker and if it has a valid recovery password or recovery key for decryption.
 
 > [!IMPORTANT]
-> If the BitLocker metadata data on the drive is corrupt, you must be able to supply a backup key package in addition to the recovery password or recovery key. If you used the default key back up setting for Active Directory Domain Services, your key package is backed up there. You can use the [BitLocker: Use BitLocker Recovery Password Viewer](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-recovery-password-viewer) to obtain the key package from AD DS.
+> If the BitLocker metadata data on the drive is corrupt, you must be able to supply a backup key package in addition to the recovery password or recovery key. If you used the default key back up setting for Active Directory Domain Services, your key package is backed up there. You can use the [BitLocker: Use BitLocker Recovery Password Viewer](/troubleshoot/windows-server/windows-security/bitlocker-recovery-password-viewer-tool) to obtain the key package from AD DS.
 >
 > Using the key package and either the recovery password or recovery key, you can decrypt portions of a BitLocker-protected drive, even if the disk is corrupted. Each key package works only for a drive with the corresponding drive identifier.
 
 ## Syntax
 
 ```
-repair-bde <inputvolume> <outputvolumeorimage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
+repair-bde <inputvolume> <outputvolumeorimage> [-rk] [-rp] [-pw] [-kp] [-lf] [-f] [{-?|/?}]
 ```
 
 > [!WARNING]
@@ -54,7 +52,7 @@ The following limitations exist for the this command:
 To attempt to repair drive C:, to write the content from drive C: to drive D: using the recovery key file (RecoveryKey.bek) stored on drive F:, and to write the results of this attempt to the log file (log.txt) on drive Z:, type:
 
 ```
-repair-bde C: D: -rk F:\RecoveryKey.bek –lf Z:\log.txt
+repair-bde C: D: -rk F:\RecoveryKey.bek -lf Z:\log.txt
 ```
 
 To attempt to repair drive C: and to write the content from drive C: to drive D: using the 48-digit recovery password specified, type:
@@ -78,6 +76,6 @@ To attempt to repair drive C: and to write the content from drive C: to drive D:
 repair-bde C: D: -pw
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

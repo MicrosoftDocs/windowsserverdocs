@@ -1,18 +1,12 @@
 ---
-ms.assetid: 46725afe-8652-4cd7-928c-93b98f7fbae3
 title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
-author: billmath
-ms.author: billmath
-manager: daveba
-ms.date: 04/01/2020
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 
 ---
 
 # Creating an AD FS Farm without domain admin privileges
-
->Applies to: Windows Server 2022, Windows Server 2019 and 2016
 
 ## Overview
 Starting with AD FS in Windows Server 2016, you can run the cmdlet Install-AdfsFarm as a local administrator on your federation server, provided your Domain Administrator has prepared Active Directory.  The script below in this article can be used to prepare AD.  The steps are as follows:
@@ -51,7 +45,7 @@ Next, create the farm:
 ```
 PS:\>$svcCred = (get-credential)
 PS:\>$localAdminCred = (get-credential)
-PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -ServiceAccountCredential $svcCred -Credential $localAdminCred -OverwriteConfiguration -AdminConfiguration $adminConfig -Verbose
+PS:\>Install-AdfsFarm -CertificateThumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 -FederationServiceName "fs.contoso.com" -ServiceAccountCredential $svcCred -Credential $localAdminCred -OverwriteConfiguration -AdminConfiguration $adminConfig -Verbose
 ```
 ## Using a gMSA as the AD FS Service Account
 ### Prepare AD
@@ -76,11 +70,11 @@ PS:\>$adminConfig = @{"DKMContainerDn"="CN=8065f653-af9d-42ff-aec8-56e02be4d5f3,
 Next, create the farm:
 Note that the local computer account and the AD FS admin account need to be granted retrieve password and delegate to account rights on the gMSA.
 ```
-PS:\>$localadminobj = get-aduser "localadmin"
-PS:\>$adfsnodecomputeracct = get-adcomputer "contoso_adfs_node"
-PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( add=$localadmin.sid.value, $computeracct.sid.value) -PrincipalsAllowedToDelegateToAccount @( add=$localadmin.sid.value, $computeracct.sid.value)
-PS:\>$localAdminCred = (get-credential)
-PS:\>Install-AdfsFarm -CertificateThumbprint 270D041785C579D75C1C981DA0F9C36ECFDB65E0 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
+PS:\>$localAdminObj = Get-ADUser "localadmin"
+PS:\>$adfsNodeComputerAcct = Get-ADComputer "contoso_adfs_node"
+PS:\>Set-ADServiceAccount -Identity fsgmsaacct -PrincipalsAllowedToRetrieveManagedPassword @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value) -PrincipalsAllowedToDelegateToAccount @( Add=$localAdminObj.SID.Value, $adfsNodeComputerAcct.SID.Value)
+PS:\>$localAdminCred = (Get-Credential)
+PS:\>Install-AdfsFarm -CertificateThumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 -FederationServiceName "fs.contoso.com" -Credential $localAdminCred -GroupServiceAccountIdentifier "contoso\fsgmsaacct$" -OverwriteConfiguration -AdminConfiguration $adminConfig
 ```
 
 ## Script for preparing AD

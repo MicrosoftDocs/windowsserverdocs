@@ -2,16 +2,14 @@
 title: repair
 description: Reference article for the repair command, which repairs RAID-5 volumes by replacing the failed disk region with a specified dynamic disk.
 ms.topic: reference
-ms.assetid: 9f84f661-f3cd-48c8-bf08-87819cf626fe
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # repair
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Repairs the RAID-5 volume with focus by replacing the failed disk region with the specified dynamic disk.
 
@@ -39,7 +37,7 @@ To replace the volume with focus by replacing it with dynamic disk 4, type:
 repair disk=4
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

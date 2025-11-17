@@ -1,16 +1,12 @@
 ---
 title: DirectAccess Capacity Planning
 description: You can use this topic for a report on Windows Server 2012 DirectAccess server performance to assist you with capacity planning for DirectAccess in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 456e5971-3aa7-4a24-bc5d-0c21fec7687e
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # DirectAccess Capacity Planning
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This document is a report on Windows Server 2012 DirectAccess server performance. Testing was performed to determine throughput capacity using high-end computer hardware and low-end computer hardware. High and low-end CPU performance was dependent on the network traffic throughput and the types of clients used. A typical DirectAccess deployment (and the basis for these tests) consists of 1/3 (30%) IPHTTPS clients, and 2/3 (70%) Teredo clients. Teredo clients outperform IPHTTPS clients in part because Windows Server 2012 utilizes Receive Side Scaling (RSS) which allows use of all CPU cores. In these tests, since RSS is enabled, Hyper threading is disabled. In addition, TCP/IP in Windows Server 2012 supports UDP traffic allowing Teredo clients to load balance across CPUs.
 

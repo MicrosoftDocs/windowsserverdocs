@@ -2,15 +2,13 @@
 title: bootcfg timeout
 description: Reference article for the bootcfg timeout command, which changes the operating system time-out value.
 ms.topic: reference
-ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # bootcfg timeout
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the operating system time-out value.
 
@@ -39,7 +37,7 @@ bootcfg /timeout 30
 bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /timeout 50
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

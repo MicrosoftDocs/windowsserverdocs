@@ -3,14 +3,14 @@ title: Roles, Role Services, and Features not in Server Core containers - Window
 description: Learn about the roles and features we removed from the Server Core container image for Windows Server.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
-ms.author: artemp
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/07/2018
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 # Roles, Role Services, and Features not in Server Core containers - Windows Server, version 1803
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server, version 1803
+
 
 In Windows Server, version 1803, we've [reduced the overall size of the Server Core container image to **1.58 GB**](https://blogs.technet.microsoft.com/virtualization/2018/01/22/a-smaller-windows-server-core-container-with-better-application-compatibility/). The way we've done this is by optimizing the architecture and removing things you don't need in a [Server Core container](/virtualization/windowscontainers/about/). Some were things that didn't work in containers, some were roles and features no one's been using.
 
@@ -135,3 +135,4 @@ Here's the complete list of features and roles removed from the Server Core cont
 <br>WSS-Product-Package
 
 </div>
+

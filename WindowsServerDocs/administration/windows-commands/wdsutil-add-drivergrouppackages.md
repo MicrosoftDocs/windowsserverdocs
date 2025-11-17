@@ -2,16 +2,14 @@
 title: wdsutil add-drivergrouppackages
 description: Reference article for the wdsutil add-drivergrouppackages command, which add driver group packages.
 ms.topic: reference
-ms.assetid: 29022f53-ce14-4b2d-a81a-679c18e022b2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil add-drivergrouppackages
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds driver group packages.
 
@@ -43,7 +41,7 @@ wdsutil /verbose /add-DriverGroupPackages /DriverGroup:printerdrivers /Filtertyp
 wdsutil /verbose /add-DriverGroupPackages /DriverGroup:DisplayDriversX86 /Filtertype:PackageClass /Operator:Equal /Value:Display /Filtertype:PackageArchitecture /Operator:Equal /Value:x86 /Filtertype:Packagedateadded /Operator:LessOrEqual /Value:2008/01/01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,16 +1,12 @@
 ---
 title: Geo-redundant RDS data centers in Azure
 description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
-ms.topic: article
-ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
-author: IngridAtMicrosoft
-ms.author: wscontent
-ms.date: 10/18/2021
-manager: femila
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 7/3/2024
 ---
 # Create a geo-redundant, multi-data center RDS deployment for disaster recovery
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can enable disaster recovery for your Remote Desktop Services deployment by leveraging multiple data centers in Azure. Unlike a standard highly available RDS deployment (as outlined in the [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md)), which uses data centers in a single Azure region (for example, Western Europe), a multi-data center deployment uses data centers in multiple geographic locations, increasing the availability of your deployment - one Azure data center might be unavailable, but it is unlikely that multiple regions would go down at the same time. By deploying a geo-redundant RDS architecture, you can enable failover in the case of catastrophic failure of an entire region.
 
@@ -107,7 +103,7 @@ The Active Directory servers in each deployment are replicas within the same For
 Provide a [per-user RD CAL](rds-client-access-license.md) for each named user that is authorized to access the geo-redundant deployment. Distribute the per user CALs evenly across the two RD License Servers in the active deployment. Then, duplicate these CALs to the two RD License Servers in the passive deployment. Because the CALs are duplicated between the active and passive deployment, at any given time only one deployment can be active with users connecting; otherwise, you violate the license agreement.
 
 ### Image Management
-As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template.
+As you update your RDSH images to provide software updates or new applications, you'll need to separately update the RDSH collections in each deployment to maintain a common user experience across both deployments. You can use the [Update RDSH collection template](https://github.com/Azure/RDS-Templates/tree/master/rds-update-rdsh-collection), but note that the passive deployment's RDS infrastructure and RDSH VMs must be running to run the template.
 
 ## Failover
 

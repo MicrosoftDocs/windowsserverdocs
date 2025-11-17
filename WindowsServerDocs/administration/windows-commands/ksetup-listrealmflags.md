@@ -2,10 +2,8 @@
 title: ksetup listrealmflags
 description: Reference article for the ksetup listrealmflags command, which lists the available realm flags that can be reported by ksetup.
 ms.topic: reference
-ms.assetid: aa96e4da-6b98-4c05-bccf-73cbf33258c2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -55,7 +53,7 @@ ksetup /setrealmflags CORP.CONTOSO.COM sendaddress tcpsupported delete ncsupport
 ksetup /setrealmflags CORP.CONTOSO.COM 0xF
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

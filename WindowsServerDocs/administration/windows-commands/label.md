@@ -2,10 +2,8 @@
 title: label
 description: Reference article for the label command, which creates, changes, or deletes the volume label (that is, the name) of a disk.
 ms.topic: reference
-ms.assetid: bbae8bdd-97d4-4566-9118-7c95aa07645f
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -66,6 +64,6 @@ To view and delete the current label for drive C, follow these steps:
 
 3. Press **Y** to delete the current label, or **N** if you want to keep the existing label.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

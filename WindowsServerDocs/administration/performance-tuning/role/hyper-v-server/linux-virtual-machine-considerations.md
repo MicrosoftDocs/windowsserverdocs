@@ -1,9 +1,9 @@
 ---
 title: Linux Virtual Machine Considerations
 description: Linux and BSD virtual machine
-ms.topic: article
-ms.author: asmahi
-author: phstee
+ms.topic: best-practice
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -42,7 +42,7 @@ net.ipv4.ip_local_port_range = 10240 65535
 net.ipv4.tcp_abort_on_overflow = 1
 ```
 
-A useful tool for network microbenchmarks is ntttcp, which is available on both Linux and Windows. The Linux version is open source and available from [ntttcp-for-linux on github.com](https://github.com/Microsoft/ntttcp-for-linux). The Windows version can be found in the [download center](https://gallery.technet.microsoft.com/NTttcp-Version-528-Now-f8b12769). When tuning workloads it is best to use as many streams as necessary to get the best throughput. Using ntttcp to model traffic, the `-P` parameter sets the number of parallel connections used.
+A useful tool for network microbenchmarks is ntttcp, which is available on both Linux and Windows. The Linux version is open source and available from [ntttcp-for-linux on github.com](https://github.com/Microsoft/ntttcp-for-linux). The Windows version can be found in the [download center](https://www.microsoft.com/download). When tuning workloads it is best to use as many streams as necessary to get the best throughput. Using ntttcp to model traffic, the `-P` parameter sets the number of parallel connections used.
 
 ## Linux Storage Performance
 

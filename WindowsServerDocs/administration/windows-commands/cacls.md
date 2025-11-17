@@ -2,10 +2,8 @@
 title: cacls
 description: Reference article for the cacls command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.topic: reference
-ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -58,7 +56,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 
 - You can specify more than one user.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

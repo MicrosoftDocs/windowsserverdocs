@@ -2,14 +2,14 @@
 title: vssadmin delete shadows
 description: A description of the vssadmin delete shadows command, which deletes a specified volume's shadow copies.
 ms.topic: reference
-author: JasonGerend
-ms.author: jgerend
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/18/2018
 ---
 
 # vssadmin delete shadows
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
 
 Deletes a specified volume's shadow copies. You can only delete shadow copies with the *client-accessible* type.
 
@@ -37,7 +37,7 @@ To delete the oldest shadow copy of volume C, type:
 vssadmin delete shadows /for=c: /oldest
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

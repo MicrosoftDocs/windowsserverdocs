@@ -2,10 +2,8 @@
 title: pnputil
 description: Reference article for the pnputil command, which adds driver packages, removes driver packages, and lists driver packages that are in the driver store, using the pnputil.exe utility.
 ms.topic: reference
-ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
@@ -26,7 +24,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 | -a | Specifies to add the identified INF file. |
 | -d | Specifies to delete the identified INF file. |
 | -e | Specifies to enumerate all third-party INF files. |
-| -f | Specifies to force the deletion of the identified INF file. Can't be used in conjunction with the **–i** parameter. |
+| -f | Specifies to force the deletion of the identified INF file. Can't be used in conjunction with the **-i** parameter. |
 | -i | Specifies to install the identified INF file. Can't be used in conjunction with  the **-f** parameter. |
 | /? | Displays help at the command prompt. |
 
@@ -53,7 +51,7 @@ pnputil.exe -i -a a:\usbcam\USBCAM.INF
 To enumerate all third-party drivers, type:
 
 ```
-pnputil.exe –e
+pnputil.exe -e
 ```
 
 To delete the INF file and driver named oem0.inf, type:
@@ -62,7 +60,7 @@ To delete the INF file and driver named oem0.inf, type:
 pnputil.exe -d oem0.inf
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

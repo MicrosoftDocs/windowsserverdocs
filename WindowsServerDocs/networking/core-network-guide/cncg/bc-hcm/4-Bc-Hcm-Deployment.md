@@ -1,17 +1,13 @@
 ---
 title: BranchCache Hosted Cache Mode Deployment
 description: Learn about detailed procedural topics that guide you through the BranchCache hosted cache mode deployment process.
-manager: brianlic
-ms.topic: article
-ms.assetid: c635fa48-d064-4b8b-9dce-9f26abfbcfa4
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # BranchCache Hosted Cache Mode Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this topic for links to detailed procedural topics that guide you through the BranchCache hosted cache mode deployment process.
 

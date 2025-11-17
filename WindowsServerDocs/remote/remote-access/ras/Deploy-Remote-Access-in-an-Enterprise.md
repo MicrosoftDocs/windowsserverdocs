@@ -1,16 +1,12 @@
 ---
 title: Deploy Remote Access in an Enterprise
 description: This topic provides an introduction to the DirectAccess scenario in Windows Server 2016 for the Enterprise.
-manager: brianlic
-ms.topic: article
-ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
-ms.author: jgerend
-author: JasonGerend
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in an Enterprise
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.
 

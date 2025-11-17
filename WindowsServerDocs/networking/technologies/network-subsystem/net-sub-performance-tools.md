@@ -1,17 +1,13 @@
 ---
 title: Performance Tools for Network Workloads
 description: Learn about performance tools including the Client to Server Traffic tool and TCP/IP Window Size. 
-ms.topic: article
-ms.assetid: c7789781-87e8-464e-981b-af887d01badd
-manager: dcscontentpm
-ms.author: v-tea
-author: Teresa-Motiv
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/27/2021
 ---
 
 # Performance Tools for Network Workloads
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 You can use this topic to learn about performance tools.
 

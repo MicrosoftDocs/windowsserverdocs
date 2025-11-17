@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Introducing Token Binding"
 title: Introducing Token Binding
-ms.topic: article
-ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
-author: justinha
-ms.author: Justinha
-ms.date: 11/09/2016
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
 ---
 
 # Introducing Token Binding
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows 10
 
 The Token Binding protocol allows applications and services to cryptographically bind their security tokens to the TLS layer to mitigate token theft and replay attacks.
 The long-lived, uniquely identifiable TLS [RFC5246] bindings can span multiple TLS sessions and connections.
@@ -40,4 +37,4 @@ For information about .NET Framework, see the following topics:
 
 - [Networking enhancements](https://blogs.msdn.microsoft.com/dotnet/2015/11/30/net-framework-4-6-1-is-now-available/#networking)
 
-- [.NET TokenBinding class](/dotnet/api/system.security.authentication.extendedprotection.tokenbinding?view=netframework-4.8)
+- [.NET TokenBinding class](/dotnet/api/system.security.authentication.extendedprotection.tokenbinding?view=netframework-4.8&preserve-view=true)

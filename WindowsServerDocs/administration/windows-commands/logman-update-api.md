@@ -2,16 +2,14 @@
 title: logman update api
 description: Reference article for the logman update api command, which updates the properties of an existing API tracking data collector.
 ms.topic: reference
-ms.assetid: 6f322e52-0f9f-42b1-bd64-8b8f8fe086fc
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # logman update api
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Updates the properties of an existing API tracing data collector.
 
@@ -64,7 +62,7 @@ To update an existing API trace counter called *trace_notepad*, for the executab
 logman update api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,16 +1,12 @@
 ---
 title: Step 2 Configure the Basic DirectAccess Server
 description: Learn how to configure the client and server settings required for a basic DirectAccess deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Basic DirectAccess Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](Plan-a-Basic-DirectAccess-Deployment.md).
 

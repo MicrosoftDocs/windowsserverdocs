@@ -1,22 +1,19 @@
 ---
-description: "Learn more about: Windows Server 2019 Gateway Performance"
-title: Windows Server 2019 Gateway Performance
-manager: grcusanz
+description: "Learn more about SDN gateway performance"
+title: SDN gateway performance
 ms.topic: how-to
-ms.author: anpaul
-author: AnirbanPaul
-ms.date: 11/04/2021
+ms.author: roharwoo
+author: robinharwood
+ms.date: 09/18/2023
 ---
 
-# Windows Server 2019 Gateway Performance
-
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
+# SDN gateway performance
 
 In Windows Server 2016, one of the customer concerns was the inability of SDN gateway to meet the throughput requirements of modern networks. The network throughput of IPsec and GRE tunnels had limitations with the single connection throughput for IPsec connectivity being about 300 Mbps and for GRE connectivity being about 2.5 Gbps.
 
-We have improved significantly in Windows Server 2019, with the numbers soaring to 1.8 Gbps and 15 Gbps for IPsec and GRE connections, respectively. All this, with significant reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
+Starting with Windows Server 2019, we have significantly improved SDN gateway performance, with the numbers soaring to 1.8 Gbps and 15 Gbps for IPsec and GRE connections, respectively. All this, with significant reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
 
-## Enable high performance with gateways in Windows Server 2019
+## Enable high performance with gateways
 
 For **GRE connections**, once you deploy/upgrade to Windows Server 2019 builds on the gateway VMs, you should automatically see the improved performance. No manual steps are involved.
 
@@ -27,6 +24,11 @@ For **IPsec connections**, by default, when you create the connection for you
    3. Restart the gateway VM.
       The active connections on this gateway failover to a redundant gateway VM.
    4. Repeat the previous steps for rest of the gateway VMs.
+
+The following requirements must be met for high performance IPsec connections to work:
+
+- Network Address Translation-Traversal (NAT-T) should be enabled on your on-premises gateway. When enabling high performance IPsec connections, SDN gateway configures a NAT rule, hence you also need to enable NAT-T on your on-premises gateway.
+- The on-premises gateway should allow User Datagram Protocol (UDP) packets on ports 500 and 4500 and protocol 50 and 51.
 
 >[!TIP]
 >For the best performance results, ensure that the cipherTransformationConstant and authenticationTransformConstant in quickMode settings of the IPsec connection uses the **GCMAES256** cipher suite.
@@ -86,6 +88,6 @@ New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -Virtua
 ## Testing Results
 
 We have done extensive performance testing for the SDN gateways in our test labs. In the tests, we have compared gateway network performance with Windows Server 2019 in SDN scenarios and non-SDN scenarios. You can find the results and test setup details captured in the blog article
-[here](https://blogs.technet.microsoft.com/networking/2018/08/15/high-performance-gateways/).
+[here](https://techcommunity.microsoft.com/t5/networking-blog/top-10-networking-features-in-windows-server-2019-6-high/ba-p/339766).
 
 ---

@@ -2,10 +2,8 @@
 title: forfiles
 description: Reference article for forfiles command, which selects and runs a command on a file or set of files.
 ms.topic: reference
-ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/20/2020
 ---
 
@@ -27,7 +25,7 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
 | /M `<searchmask>` | Searches files according to the specified search mask. The default searchmask is `*`. |
 | /S | Instructs the **forfiles** command to search in subdirectories recursively. |
 | /C `<command>` | Runs the specified command on each file. Command strings should be wrapped in double quotes. The default command is `"cmd /c echo @file"`. |
-| /D `[{+\|-}][{<date> | <days>}]` | Selects files with a last modified date within the specified time frame:<ul><li>Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the format MM/DD/YYYY.</li><li>Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</li><li>Valid values for *days* include any number in the range 0–32,768. If no sign is specified, **+** is used by default.</li></ul> |
+| /D `[{+\|-}][{<date> | <days>}]` | Selects files with a last modified date within the specified time frame:<ul><li>Selects files with a last modified date later than or equal to (**+**) or earlier than or equal to (**-**) the specified date, where *date* is in the same regional format as your Windows device, for example MM/DD/YYYY for English (United States).</li><li>Selects files with a last modified date later than or equal to (**+**) the current date plus the number of days specified, or earlier than or equal to (**-**) the current date minus the number of days specified.</li><li>Valid values for *days* include any number in the range 0-32,768. If no sign is specified, **+** is used by default.</li></ul> |
 | /? | Displays the help text in the cmd window. |
 
 #### Remarks
@@ -94,6 +92,6 @@ To list the file name extensions of all the files in the current directory in co
 forfiles /S /M *.* /C "cmd /c echo The extension of @file is 0x09@ext"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

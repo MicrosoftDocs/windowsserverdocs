@@ -2,10 +2,8 @@
 title: wecutil
 description: Reference article for the wecutil command, which lets you create and manage subscriptions to events that are forwarded from remote computers.
 ms.topic: reference
-ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/04/2020
 ---
 
@@ -149,6 +147,6 @@ To delete a subscription named *sub1*, type:
 wecutil ds sub1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

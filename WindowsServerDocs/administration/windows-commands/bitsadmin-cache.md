@@ -2,15 +2,13 @@
 title: bitsadmin cache
 description: Reference article for the bitsadmin cache command, which contains a list of the bitsadmin cache switches.
 ms.topic: reference
-ms.assetid: 9ae4a283-a187-4fe3-b05c-4b53732c27cb
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # bitsadmin cache
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Contains a list of the bitsadmin /cache switches.
 
@@ -46,7 +44,7 @@ bitsadmin /cache /setexpirationtime
 | [bitsadmin cache and getexpirationtime](bitsadmin-cache-and-getexpirationtime.md) | Retrieves the cache expiration time. |
 | [bitsadmin cache and setexpirationtime](bitsadmin-cache-and-setexpirationtime.md) | Sets the cache expiration time. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

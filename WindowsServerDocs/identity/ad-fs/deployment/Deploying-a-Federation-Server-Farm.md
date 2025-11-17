@@ -1,12 +1,8 @@
 ---
-ms.assetid: bbb5b68f-00ad-4715-8176-0c2769b706c4
 title: Deploying a Federation Server Farm for Windows Server 2012 R2 AD FS
 description: "Learn more about: Deploying a Federation Server Farm"
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: checklist
 ---
 
 # Deploying a Federation Server Farm
@@ -19,7 +15,7 @@ In order to deploy a federation server farm, complete the tasks in this checklis
 |--------|-------------|
 |Review important concepts and considerations as you prepare to deploy Active Directory Federation Services \(AD FS\).|![Icon for the AD FS Design Guide in Windows Server 2012 R2 link you can use in reference to deploying a federation server farm.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[AD FS Design Guide in Windows Server 2012 R2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)<p>![Icon for the Understanding Key AD FS Concepts link you can use in reference to deploying a federation server farm.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Understanding Key AD FS Concepts](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)|
 || **Note:** If you decide to use Microsoft SQL Server for your AD FS configuration store, ensure to deploy a functional instance of [SQL Server](/sql/sql-server/)<p>**Warning:** In Windows Server 2012 R2, if you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012.|
-|Join your computer to an Active Directory domain.|![Icon for the Join a Computer to a Domain link you can use in reference to deploying a federation server farm.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Join a Computer to a Domain](Join-a-Computer-to-a-Domain.md)|
+|Join your computer to an Active Directory domain.|![Icon for the Join a Computer to a Domain link you can use in reference to deploying a federation server farm.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Join a Computer to a Domain](../../ad-ds/manage/join-computer-to-domain.md)|
 |Enroll a Secure Socket Layer \(SSL\) certificate for AD FS.|![Icon for the Enroll an SSL Certificate for AD FS link you can use in reference to deploying a federation server farm.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Enroll an SSL Certificate for AD FS](Enroll-an-SSL-Certificate-for-AD-FS.md)|
 |Install the AD FS role service.|![Icon for the Install the AD FS Role Service link you can use in reference to deploying a federation server farm.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Install the AD FS Role Service](Install-the-AD-FS-Role-Service.md)|
 |Configure a federation server.|![Icon for the Configure a Federation Server link you can use in reference to deploying a federation server farm.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Configure a Federation Server](Configure-a-Federation-Server.md)|

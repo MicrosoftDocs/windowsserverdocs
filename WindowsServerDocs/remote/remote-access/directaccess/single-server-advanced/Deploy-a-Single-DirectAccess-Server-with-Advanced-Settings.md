@@ -1,16 +1,16 @@
 ---
 title: Deploy a Single DirectAccess Server with Advanced Settings
 description: Learn about the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.
-manager: brianlic
-ms.topic: article
-ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
-ms.author: jgerend
-author: JasonGerend
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
+>[!IMPORTANT]
+>Microsoft highly recommends that you use Always On VPN instead of DirectAccess for new deployments. For more information, see [Always on VPN](../../overview-always-on-vpn.md).
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.
 
@@ -139,5 +139,5 @@ The following table provides links to additional resources.
 |--------|-------|
 |**Deployment**|[DirectAccess Deployment Paths in Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<p>[Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|
 |**Tools and settings**|[Remote Access PowerShell cmdlets](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831379(v=ws.11))|
-|**Community resources**|[DirectAccess Survival Guide](/answers/topics/windows-server-infrastructure.html)<p>[DirectAccess Wiki entries](https://go.microsoft.com/fwlink/?LinkId=236871)|
+|**Community resources**|[DirectAccess Survival Guide](/answers/topics/windows-server-infrastructure.html)<p>[DirectAccess Wiki entries](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn636118(v=ws.11))|
 |**Related technologies**|[How IPv6 works](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))|

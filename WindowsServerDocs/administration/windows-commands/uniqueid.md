@@ -2,10 +2,8 @@
 title: uniqueid
 description: Reference article for uniqueid, which displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 ms.topic: reference
-ms.assetid: 64235a4a-b91c-46da-b9b0-68ee90571c2a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -46,7 +44,7 @@ To set the identifier of the GPT disk with focus to the GUID value baf784e7-6bbd
 uniqueid disk id=baf784e7-6bbd-4cfb-aaac-e86c96e166ee
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

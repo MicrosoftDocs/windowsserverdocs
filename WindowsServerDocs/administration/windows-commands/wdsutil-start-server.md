@@ -2,15 +2,13 @@
 title: wdsutil start-server
 description: Reference article for Subcommand start-Server, which starts all services for a Windows Deployment Services server.
 ms.topic: reference
-ms.assetid: 1e4343e2-0a16-4e65-8769-c09adaef5680
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil start-server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts all services for a Windows Deployment Services server.
 
@@ -30,7 +28,7 @@ To start the server, type one of the following:
 wdsutil /start-Server
 wdsutil /verbose /start-Server /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)
 - [wdsutil enable-server command](wdsutil-enable-server.md)

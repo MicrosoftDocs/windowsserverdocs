@@ -1,12 +1,10 @@
 ---
 title: Upgrade Windows Admin Center extensions to Angular 11
 description: Guide on how to upgrade existing Windows Admin Center extensions to Angular 11
-ms.technology: manage
-ms.topic: article
+ms.topic: upgrade-and-migration-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/01/2021
-ms.prod: windows-server
 ---
 
 # Upgrade existing Windows Admin Center extensions to Angular 11
@@ -59,7 +57,7 @@ Some of the errors you may receive while debugging in the build step may be hard
   - This type of error occurs at build time, typically before the upgraded repository has been successfully built at least once. To resolve, run `ng serve --prod`, after which these errors should no longer appear when building.
 
 - **Interface incorrectly extends another interface**
- [ ![Picture depicting the interface incorrectly extends another interface error.](./../../media/extend-guides-angular-11/error.png) ](./../../media/extend-guides-angular-11/error.png#lightbox)
+ ![Picture depicting the interface incorrectly extends another interface error.](../../media/extend-guides-angular-11/error.png)
   - This error occurs during the inlineCompile step of "gulp build" and occurs as the result of a mismatch in versions between the `@types/jasmine` package downloaded and what the `@types/jasminewd2` package requires. This error can be resolved by removing the `@types/jasminewd2` package.
 
 ### Output bundle file names

@@ -2,10 +2,8 @@
 title: bcdboot
 description: Reference article for the bcdboot command, which quickly set up a system partition, or repair the boot environment located on the system partition.
 ms.topic: reference
-ms.assetid: e62a250e-08e9-47f6-89d1-e6002560ab57
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -31,6 +29,6 @@ bcdboot <source> [/l] [/s]
 
 For information about where to find BCDboot and examples of how to use this command, see the [BCDboot Command-Line Options](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)) topic.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

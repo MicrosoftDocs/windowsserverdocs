@@ -2,16 +2,14 @@
 title: tftp
 description: Reference article for the tftp command, which transfers files to and from a remote computer.
 ms.topic: reference
-ms.assetid: 772f19a8-dafe-45cd-878a-f5691f6568ef
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # tftp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Transfers files to and from a remote computer, typically a computer running UNIX, that is running the Trivial File Transfer Protocol (tftp) service or daemon. tftp is typically used by embedded devices or systems that retrieve firmware, configuration information, or a system image during the boot process from a tftp server.
 
@@ -43,6 +41,6 @@ To copy the file *boot.img* from the remote computer *Host1*, type:
 tftp  -i Host1 get boot.img
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

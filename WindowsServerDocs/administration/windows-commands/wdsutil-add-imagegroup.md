@@ -2,16 +2,14 @@
 title: wdsutil add-imagegroup
 description: Reference article for the wdsutil add-imagegroup command, which adds an image group to a Windows Deployment Services server.
 ms.topic: reference
-ms.assetid: 6ca88671-51de-4924-b969-88f3dfd84270
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil add-imagegroup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds an image group to a Windows Deployment Services server.
 
@@ -40,7 +38,7 @@ wdsutil /add-ImageGroup imageGroup:ImageGroup2
 wdsutil /verbose /add-Imagegroup imageGroup:My Image Group /Server:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

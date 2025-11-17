@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Set-up Work Folders"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 3, Set Up Work Folders
-ms.topic: article
-manager: klaasl
-ms.author: jeffpatt
-author: JeffPatt24
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 4/5/2017
-ms.assetid: 5a43b104-4d02-4d73-a385-da1cfb67e341
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Set-up Work Folders
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the third step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:
 
@@ -194,7 +190,8 @@ Try
 #In case there are multiple certificates with the same subject, get the latest version
 $cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match $subject} | sort $_.NotAfter -Descending | select -first 1 
 $thumbprint = $cert.Thumbprint
-$Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY"
+$guid = New-Guid
+$Command = "http add sslcert ipport=0.0.0.0:443 certhash=$thumbprint appid={$guid} certstorename=MY"
 $Command | netsh
 }
 Catch
@@ -270,4 +267,6 @@ Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Se
 
 ## See Also
 [Work Folders Overview](Work-Folders-Overview.md)
+
+
 

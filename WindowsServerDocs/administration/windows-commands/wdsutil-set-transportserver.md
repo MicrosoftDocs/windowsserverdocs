@@ -2,15 +2,13 @@
 title: wdsutil set-transportserver
 description: Reference article for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
 ms.topic: reference
-ms.assetid: 7863225c-f4b2-4cd0-b929-78a454bef249
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil set-transportserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets configuration settings for a Transport Server.
 
@@ -51,7 +49,7 @@ To set the IPv4 address range, port range, and profile for the server, type:
 ```
 wdsutil /Set-TransportServer /Server:MyWDSServer /ObtainIpv4From:Range /start:239.0.0.1 /End:239.0.0.100 /startPort:12000 /EndPort:50000 /Profile:10mbps
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
 - [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)

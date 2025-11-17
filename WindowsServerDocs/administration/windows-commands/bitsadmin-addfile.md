@@ -2,10 +2,8 @@
 title: bitsadmin addfile
 description: Reference article for the bitsadmin addfile command, which adds a file to the specified job.
 ms.topic: reference
-ms.assetid: 1b31aa93-0364-465b-af36-754968825989
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -37,7 +35,7 @@ bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 
 Repeat this call for each file to add. If multiple jobs use *myDownloadJob* as their name, you must replace *myDownloadJob* with the job's GUID to uniquely identify the job.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

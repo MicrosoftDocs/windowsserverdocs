@@ -2,10 +2,8 @@
 title: detail partition
 description: Reference article for the detail partition command, which displays the properties of the selected partition.
 ms.topic: reference
-ms.assetid: 672a2c7a-1721-4845-9c23-7af50367170e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -27,7 +25,7 @@ To see the properties of the selected partition, type:
 detail partition
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

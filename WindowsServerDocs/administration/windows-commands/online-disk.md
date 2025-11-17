@@ -2,10 +2,8 @@
 title: online disk
 description: Reference article for the online disk command, which takes the offline disk to the online state.
 ms.topic: reference
-ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -43,6 +41,6 @@ To take the disk with focus online, type:
 online disk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

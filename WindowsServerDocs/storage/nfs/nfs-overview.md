@@ -1,112 +1,84 @@
 ---
-title: Network File System overview
-description: Explains what Network File System is.
-ms.topic: article
-author: JasonGerend
-ms.author: jgerend
-ms.date: 07/09/2018
+title: Network File System (NFS) Overview in Windows Server
+description: Learn about Network File System (NFS) in Windows Server, supported versions, and how it enables file sharing across platforms. Discover deployment benefits.
+ms.topic: overview
+ai-usage: ai-assisted
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 05/13/2025
 ---
-# Network File System overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# Network File System (NFS) overview
 
-This topic describes the Network File System role service and features included with the File and Storage Services server role in Windows Server. Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that include both Windows and non-Windows computers.
+Network File System (NFS) is a distributed file system protocol available in Windows Server that enables file sharing between Windows and non-Windows systems. It's based on the protocol specification [RFC 1094](https://datatracker.ietf.org/doc/html/rfc1094).
 
-## Feature description
+In Windows Server, NFS is implemented as part of the File and Storage Services role, providing robust interoperability between Windows-based systems and non-Windows platforms such as Linux and UNIX. This cross-platform compatibility is beneficial for organizations operating mixed IT environments, where seamless integration and data sharing between different operating systems are essential.
 
-Using the NFS protocol, you can transfer files between computers running Windows and other non-Windows operating systems, such as Linux or UNIX.
+Windows Server's NFS implementation includes both **Server for NFS** and **Client for NFS** components. Server for NFS enables Windows Server to act as a file server for Windows and non-Windows clients, allowing them to access shared files and directories using the NFS protocol. Client for NFS allows Windows-based systems to access files stored on NFS servers.
 
-NFS in Windows Server includes Server for NFS and Client for NFS. A computer running Windows Server can use Server for NFS to act as a NFS file server for other non-Windows client computers. Client for NFS allows a Windows-based computer running Windows Server to access files stored on a non-Windows NFS server.
+This article explains supported NFS versions, practical scenarios, management tools, and identity mapping and authentication.
 
-## Windows and Windows Server versions
+## Supported NFS versions and Windows operating systems
 
-Windows supports multiple versions ofthe NFS client and server, depending on operating system version and family.
+NFS is available in all supported versions of Windows Server and Windows client operating systems. The following table summarizes the supported NFS protocol versions and their corresponding Windows operating systems.
 
-| Operating Systems | NFS Server Versions |NFS Client Versions|
-| ----------------- | ------------------- | ----------------- |
-| Windows 7, Windows 8.1, Windows 10 | N/A | NFSv2, NFSv3 |
-| Windows Server 2008, Windows Server 2008 R2 | NFSv2, NFSv3 | NFSv2, NFSv3 |
-| Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 | NFSv2, NFSv3, NFSv4.1  | NFSv2, NFSv3 |
+| Operating system | Server for NFS | Client for NFS |
+|--|--|--|
+| Windows Server (all currently supported versions) | NFSv2, NFSv3, and NFSv4.1 | NFSv2 and NFSv3 |
+| Windows client (all currently supported versions) | N/A | NFSv2 and NFSv3 |
 
-## Practical applications
+## Scenarios for using Network File System
 
-Here are some ways you can use NFS:
+Here are some practical scenarios where Network File System (NFS) can be effectively utilized within your organization:
 
-- Use a Windows NFS file server to provide multi-protocol access to the same file share over both SMB and NFS protocols from multi-platform clients.
-- Deploy a Windows NFS file server in a predominantly non-Windows operating system environment to provide non-Windows client computers access to NFS file shares.
-- Migrate applications from one operating system to another by storing the data on file shares accessible through both SMB and NFS protocols.
+- **Multi-protocol file sharing**: Deploy a Windows Server configured as an NFS file server to provide simultaneous access to shared files and directories using both SMB (Server Message Block) and NFS protocols. This allows seamless collaboration between Windows-based clients and non-Windows clients, such as Linux and UNIX systems, enabling users across different platforms to access and modify shared resources without compatibility issues.
 
-## New and changed functionality
+- **Cross-platform file access in mixed environments**: In environments predominantly using non-Windows operating systems, such as Linux or UNIX, a Windows-based NFS file server can provide reliable and efficient file sharing capabilities. This setup allows non-Windows client computers to easily access, store, and manage data on Windows-hosted NFS shares, simplifying data management and improving interoperability across diverse IT infrastructures.
 
-New and changed functionality in Network File System includes support for the NFS version 4.1 and improved deployment and manageability. For information about functionality that is new or changed in Windows Server 2012, review the following table:
+- **Provision file shares in UNIX-based environments**: Deploy Windows file servers in predominantly UNIX-based environments to provide NFS file shares for UNIX-based clients. Use the Unmapped UNIX User Access (UUUA) option to simplify NFS deployment without requiring UNIX-to-Windows account mapping. UUUA creates custom security identifiers (SIDs) for unmapped users while using standard Windows SIDs for mapped accounts, enabling quick provisioning and efficient management of NFS shares.
 
-|Feature/functionality|New or updated|Description|
-|---|---|---|
-|[NFS version 4.1](#nfs-version-41)|New|Increased security, performance, and interoperability compared to NFS version 3.|
-|[NFS infrastructure](#nfs-infrastructure)|Updated|Improves deployment and manageability, and increases security.|
-|[NFS version 3 continuous availability](#nfs-version-3-continuous-availability)|Updated|Improves continuous availability on NFS version 3 clients.|
-|[Deployment and manageability improvements](#deployment-and-manageability-improvements)|Updated|Enables you to easily deploy and manage NFS with new Windows PowerShell cmdlets and a new WMI provider.|
+- **Simplified application migration**: Facilitate the migration of applications and workloads between different operating systems by using NFS file shares accessible through both SMB and NFS protocols. By storing application data on shared file systems, organizations can smoothly transition applications from one platform to another without extensive downtime or complex data migration processes, significantly reducing the complexity and risk associated with cross-platform migrations.
 
-## NFS version 4.1
+- **Centralized data management and backup**: Utilize NFS to centralize data storage and simplify backup and recovery processes. By consolidating data from multiple operating systems onto a single Windows-based NFS file server, organizations can streamline data management, enhance data protection strategies, and reduce administrative overhead associated with managing separate storage solutions for different platforms.
 
-NFS version 4.1 implements all of the required aspects, in addition to some of the optional aspects, of [RFC 5661](https://tools.ietf.org/html/rfc5661):
+- **High-performance computing (HPC) and research environments**: Deploy NFS in HPC clusters or research environments where multiple computing nodes require rapid and concurrent access to shared datasets. Windows Server's NFS implementation provides efficient data access and improved performance, enabling researchers and engineers to collaborate effectively and accelerate computational workloads.
 
-- **Pseudo file system**, a file system that separates physical and logical namespace and is compatible with NFS version 3 and NFS version 2. An alias is provided for the exported file system, which is part of the pseudo file system.
-- **Compound RPCs** combine relevant operations and reduce chattiness.
-- **Sessions and session trunking** enables just one semantic and allows continuous availability and better performance while utilizing multiple networks between NFS 4.1 clients and the NFS Server.
+- **Virtualization and container environments**: Use NFS file shares as persistent storage solutions for virtualization platforms and container orchestration systems, such as VMware, Hyper-V, Kubernetes, or Docker. NFS enables virtual machines and containers running on various operating systems to access shared storage resources seamlessly, simplifying storage provisioning, and management in dynamic, multi-platform environments.
 
-## NFS infrastructure
+## Managing and using Server for NFS and Client for NFS
 
-Improvements to the overall NFS infrastructure in Windows Server 2012 are detailed below:
+Windows Server provides graphical and command line tools and methods for effectively managing and utilizing both Server for NFS and Client for NFS components. Administrators can use:
 
-- The **Remote Procedure Call (RPC)/External Data Representation (XDR)** transport infrastructure, powered by the WinSock network protocol, is available for both Server for NFS and Client for NFS. This replaces Transport Device Interface (TDI), offers better support, and provides better scalability and Receive Side Scaling (RSS).
-- The **RPC port multiplexer** feature is firewall-friendly (less ports to manage) and simplifies deployment of NFS.
-- **Auto-tuned caches and thread pools** are resource management capabilities of the new RPC/XDR infrastructure that are dynamic, automatically tuning caches and thread pools based on workload. This completely removes the guesswork involved when tuning parameters, providing optimal performance as soon as NFS is deployed.
-- **New Kerberos privacy implementation and authentication options** with the addition of Kerberos privacy (Krb5p) support along with the existing krb5 and krb5i authentication options.
-- **Identity Mapping Windows PowerShell module** cmdlets make it easier to manage identity mapping, configure Active Directory Lightweight Directory Services (AD LDS), and set up UNIX and Linux passwd and flat files.
-- **Volume mount point** lets you access volumes mounted under an NFS share with NFS version 4.1.
-- The **Port Multiplexing** feature supports the RPC port multiplexer (port 2049), which is firewall-friendly and simplifies NFS deployment.
+- **Services for Network File System MMC snap-in**: This snap-in allows administrators to manage NFS shares, configure authentication methods, set permissions, and monitor active connections. It provides a centralized graphical interface for managing both Server for NFS and Client for NFS components.
 
-## NFS version 3 continuous availability
+- **Windows PowerShell cmdlets**: A comprehensive set of PowerShell cmdlets is available for managing NFS shares, configuring identity mapping, and monitoring NFS operations. These cmdlets enable administrators to automate tasks and streamline management processes.
 
-NFS version 3 clients can have fast and transparent planned failovers with more availability and reduced downtime. The failover process is faster for NFS version 3 clients because:
+- **Windows command-line tools**: Several command-line utilities are available for managing NFS shares and monitoring NFS operations.
 
-- The clustering infrastructure now allows one resource per network name instead of one resource per share, which significantly improves resources' failover time.
-- Failover paths within an NFS server are tuned for better performance.
-- Wildcard registration in an NFS server is no longer required, and the failovers are more fine-tuned.
-- Network Status Monitor (NSM) notifications are sent out after a failover process, and clients no longer need to wait for TCP timeouts to reconnect to the failed over server.
+## Identity mapping and authentication
 
-Note that Server for NFS supports transparent failover only when manually initiated, typically during planned maintenance. If an unplanned failover occurs, NFS clients lose their connections. Server for NFS also doesn't have any integration with the Resume Key filter. This means that if a local app or SMB session attempts to access the same file that an NFS client is accessing immediately after a planned failover, the NFS client might lose its connections (transparent failover wouldn't succeed).
+Identity mapping is crucial for ensuring proper access control and permissions management between Windows and non-Windows systems. Windows Server supports multiple identity mapping methods, including Active Directory, Active Directory Lightweight Directory Services (AD LDS), and local flat files. Administrators can configure identity mapping using graphical tools, command-line utilities, or PowerShell cmdlets.
 
-## Deployment and manageability improvements
+Authentication methods supported by Server for NFS include:
 
-Deploying and managing NFS has improved in the following ways:
+- **Anonymous authentication**: Allows access without explicit user authentication.
+- **AUTH_SYS (UNIX-style authentication)**: Uses UID and GID for authentication.
+- **Kerberos authentication**: Provides secure authentication using Kerberos v5, including `krb5`, `krb5i` (integrity), and `krb5p` (privacy).
 
-- Over forty new Windows PowerShell cmdlets make it easier to configure and manage NFS file shares. For more information, see [NFS Cmdlets in Windows PowerShell](/powershell/module/nfs/).
-- Identity mapping is improved with a local flat file mapping store and new Windows PowerShell cmdlets for configuring identity mapping.
-- The Server Manager graphical user interface is easier to use.
-- The new WMI version 2 provider is available for easier management.
-- The RPC port multiplexer (port 2049) is firewall-friendly and simplifies deployment of NFS.
+By using these management tools and authentication methods, administrators can effectively deploy, configure, and maintain robust NFS solutions within Windows Server environments.
 
-## Server Manager information
+To perform identity mapping, you need to deploy one of the following:
 
-In Server Manager - or the newer [Windows Admin Center](../../manage/windows-admin-center/overview.md) - use the Add Roles and Features Wizard to add the Server for NFS role service (under the File and iSCSI Services role). For general information about installing features, see [Install or Uninstall Roles, Role Services, or Features](</previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)>). Server for NFS tools include the Services for Network File System MMC snap-in to manage the Server for NFS and Client for NFS components. Using the snap-in, you can manage the Server for NFS components installed on the computer. Server for NFS also contains several Windows command-line administration tools:
+- A Windows domain controller running Active Directory Domain Services (AD DS) and a User Name Mapping service. The User Name Mapping service is installed as part of Server for NFS.
+  
+- A mapping file that contains the identity mapping information. The mapping file is stored on the computer that's running Server for NFS.
+  
+- An RFC 2307-compliant LDAP store, such as Active Directory Lightweight Directory Services (AD LDS), that contains the identity mapping information. The LDAP store is stored on the computer that's running Server for NFS.
 
-- **Mount** mounts a remote NFS share (also known as an export) locally and maps it to a local drive letter on the Windows client computer.
-- **Nfsadmin** manages configuration settings of the Server for NFS and Client for NFS components.
-- **Nfsshare** configures NFS share settings for folders that are shared using Server for NFS.
-- **Nfsstat** displays or resets statistics of calls received by Server for NFS.
-- **Showmount** displays mounted file systems exported by Server for NFS.
-- **Umount** removes NFS-mounted drives.
+- A User Name Mapping service that uses a password file and a group file. These files are stored on the computer that's running the User Name Mapping service.
 
-NFS in Windows Server 2012 introduces the NFS module for Windows PowerShell with several new cmdlets specifically for NFS. These cmdlets provide an easy way to automate NFS management tasks. For more information, see [NFS cmdlets in Windows PowerShell](/powershell/module/nfs/).
+To learn more about identity mapping, see [NFS Identity Mapping in Windows Server](https://techcommunity.microsoft.com/blog/filecab/nfs-identity-mapping-in-windows-server-2012/424602).
 
-## Additional information
+## Next step
 
-The following table provides additional resources for evaluating NFS.
-
-|Content type|References|
-|---|---|
-|Deployment|[Deploy Network File System](deploy-nfs.md)|
-|Operations|[NFS cmdlets in Windows PowerShell](/powershell/module/nfs/)|
-|Related technologies|[Storage in Windows Server](../storage.yml)|
+Learn how to [Deploy Network File System (NFS)](deploy-nfs.md).

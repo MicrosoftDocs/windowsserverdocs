@@ -1,0 +1,679 @@
+{
+  "redirections": [
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/plan/security-best-practices/Understanding-Active-Directory-Domain-Services--AD-DS--Functional-Levels.md.md",
+      "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/windows-time-service-top",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/accurate-time.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/accurate-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/How-the-Windows-Time-Service-Works.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/How-the-Windows-Time-Service-Works",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-Time-Service-Tools-and-Settings.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/Windows-Time-Service-Tools-and-Settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/Windows-Server-2016-Functional-Levels.md",
+      "redirect_url": "/windows-server/identity/ad-ds/active-directory-functional-levels",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/windows-time-service/Windows-2016-Accurate-Time.md",
+      "redirect_url": "/windows-server/networking/windows-time-service/accurate-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/powershell/Troubleshooting-Active-Directory-Replication-Problems.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep.exe.md",
+      "redirect_url": "/windows-server/identity/ad-ds/deploy/adprep/Changes-Made-by-Adprep",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Add-GC.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-add-gc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-authoritative-recovery-sysvol",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Backing-up-a-Full-Server.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-a-full-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Backing-up-System-State.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-backing-up-system-state",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Cleaning-Metadata.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleaning-metadata-of-removed-dcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-cleanup.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-cleanup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Configure-DNS.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-configure-dns",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Determine-how-to-Recover.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-determine-how-to-recover",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Devising-a-Plan.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Guide.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-devise-a-plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Identify-the-Problem.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-identify-the-problem",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Invaildate-RID-Pool.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-invaildate-rid-pool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Remove-GC.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-remove-gc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Reset-Computer-Account-DC.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-computer-account-dc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Reset-Trust.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Resetting-the-krbtgt-password.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Restore-Additional-DCs.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-restore-additional-dcs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Seizing-Operations-Master-Role.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-seizing-operations-master-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-recover-single-domain-multidomain-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Steps-For-Restoring.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-steps-for-restoring-the-forest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Verify-Replication.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Virtualization.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-verify-replication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Nonauthoritative-Restore.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-nonauthoritative-restore",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Perform-a-Full-Recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-full-server-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-perform-initial-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Prerequisties.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Procedures.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-procedures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/AD-Forest-Recovery-Raise-RID-Pool.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-raise-rid-pool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/ad-forest-recovery-faq.yml",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/adac/Active-Directory-Administrative-Center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/Active-Directory-Domain-Services.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/AD-DS-Getting-Started.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Executive-Summary.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/component-updates/Introduction.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/troubleshoot-domain-controller-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/whats-new-active-directory-domain-services-insider-preview.md",
+      "redirect_url": "/windows-server/get-started/whats-new-windows-server-2025",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/plan/Finding-Additional-Resources-for-Enabling-Advanced-Features.md",
+      "redirect_url": "/windows-server/identity/ad-ds/plan/enabling-advanced-features-for-ad-ds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/dc-locator-changes.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/dc-locator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-migrate-ad-fs-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-fed-server-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-fed-server-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-fed-server-proxy-r2.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-fed-server-proxy-r2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/verify-ad-fs-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/verify-ad-fs-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-wid-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-a-wid-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-a-sql-server-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-fed-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-the-ad-fs-fed-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-stand-alone-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-stand-alone-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-wid-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-wid-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-ad-fs-sql-farm.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-ad-fs-sql-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/migrate-the-ad-fs-web-agent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/migrate-the-ad-fs-web-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Relying-Party-Trust.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Relying-Party-Trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Claims-Provider-Trust.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Claims-Provider-Trust",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Interoperating-with-AD-FS-1.x.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Interoperating-with-AD-FS-1.x",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2012/identity/ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/AD-FS-2016-Operations.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-operations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/AD-FS-2016-Overview.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/Customize-Id-Token-AD-FS-2016.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/Enabling-OpenId-Connect-with-AD-FS-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/development/enabling-openId-connect-with-ad-fs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/AD-FS-Customization-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/ad-fs-customization-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/overview/AD-FS-2016-Requirements.md",
+      "redirect_url": "/windows-server/identity/ad-fs/overview/ad-fs-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/whats-new-active-directory-federation-services-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/technical-reference/WinServer2016expiry.md",
+      "redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Only-Perimeter-Network",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Both-Perimeter-Network-and-Internet-Clients",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/configure-ad-fs-extranet-lockout.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-extranet-lockout-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/auditing-enhancements-to-ad-fs-in-windows-server-2016.md",
+      "redirect_url": "/windows-server/identity/ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/plan-device-based-conditional-access-on-premises.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/plan-device-based-conditional-access-on-premises",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/set-up-geographic-redundancy-with-sql-server-replication.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/set-up-geographic-redundancy-with-sql-server-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/AD-FS-and-Azure-Multi-Factor-Authentication.md",
+      "redirect_url": "/windows-server/identity/ad-fs/operations/configure-ad-fs-and-azure-mfa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/customize-id-token-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Best-Practices-Securing-AD-FS.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Updates-for-Active-Directory-Federation-Services-AD-FS.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/updates-for-active-directory-federation-services-ad-fs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Using-Device-based-Conditional-Access-on-Premises.md",
+      "redirect_url": "/windows-server/identity/ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Azure-Active-Directory-Connect.md",
+      "redirect_url": "/azure/active-directory/hybrid/whatis-hybrid-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/native-client-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/single-page-application-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/enabling-oauth-confidential-clients-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/enabling-openid-connect-with-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/development/custom-id-tokens-in-ad-fs.md",
+      "redirect_url": "/azure/active-directory/develop/msal-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md",
+      "redirect_url": "/azure/active-directory/authentication/how-to-migrate-mfa-server-to-azure-mfa-with-federation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance.md",
+      "redirect_url": "/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/ad-fs/deployment/join-a-computer-to-a-domain.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/join-computer-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps.md",
+      "redirect_url": "/windows-server/identity/laps/laps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-management.md",
+      "redirect_url": "/windows-server/identity/laps/laps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-scenarios.md",
+      "redirect_url": "/windows-server/identity/laps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-concepts.md",
+      "redirect_url": "/windows-server/identity/laps/laps-concepts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/laps/laps-scenarios-deployment-migration.md",
+      "redirect_url": "/windows-server/identity/laps/laps-scenarios-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/securing-privileged-access/securing-privileged-access-reference-material.md",
+      "redirect_url": "/security/compass/privileged-access-access-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/securing-privileged-access/securing-privileged-access.md",
+      "redirect_url": "/security/compass/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/securing-privileged-access/privileged-access-workstations.md",
+      "redirect_url": "/security/compass/privileged-access-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-web-application-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/web-application-proxy/web-application-proxy-windows-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/Active-Directory-Federation-Services.md",
+      "redirect_url": "/windows-server/identity/ad-fs/ad-fs-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/software-restriction-policies/troubleshoot-software-restriction-policies.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/whats-new-active-directory-domain-services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/What-s-new-in-Active-Directory-Domain-Services.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/solution-guides/certificate-enrollment-certificate-key-based-renewal.md",
+      "redirect_url": "/windows-server/identity/ad-cs/certificate-enrollment-certificate-key-based-renewal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/Identity-and-Access-old.md",
+      "redirect_url": "/windows-server/identity/identity-and-access",
+      "redirect_document_id": false
+    }
+  ]
+}

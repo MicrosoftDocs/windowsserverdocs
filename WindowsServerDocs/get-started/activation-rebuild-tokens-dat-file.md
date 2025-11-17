@@ -1,11 +1,10 @@
 ---
 title: Rebuild the Tokens.dat file
-description: How to rebuild the Tokens.dat file when you troubleshoot Windows activation issues
+description: Provides a list of steps for how to rebuild the Tokens.dat file when troubleshooting Windows activation issues.
 ms.topic: troubleshooting
 ms.date: 06/22/2021
-author: Teresa-Motiv
-ms.author: v-tea
-manager: dcscontentpm
+author: dknappettmsft
+ms.author: daknappe
 ---
 
 # Rebuild the Tokens.dat file
@@ -75,3 +74,4 @@ After you rebuild the Tokens.dat file, you must reinstall your product key by us
 - Right-click **My Computer**, select **Properties**, and then select **Change product key**.
 
 For more information about KMS client setup keys, see [KMS client setup keys](kmsclientkeys.md).
+

@@ -2,10 +2,8 @@
 title: wbadmin enable backup
 description: Reference article for the wbadmin enable backup command, which creates and enables a daily backup schedule or modifies an existing backup schedule.
 ms.topic: reference
-ms.assetid: c0e57f8a-70fa-4c60-9754-e762e8ad8772
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -55,16 +53,16 @@ wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:E:,D:\mou
 To schedule daily backups of the D:\documents folder at 12:00 AM and 7:00 PM to the network location `\\backupshare\backup1`, using the network credentials for the **Backup Operator**, Aaren Ekelund (aekel), who's password is *$3hM9^5lp* and who is a member of the domain CONTOSOEAST, used to authenticate access to the network share, type:
 
 ```
-wbadmin enable backup –addtarget:\\backupshare\backup1 –include: D:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
+wbadmin enable backup -addtarget:\\backupshare\backup1 -include: D:\documents -user:CONTOSOEAST\aekel -password:$3hM9^5lp -schedule:00:00,19:00
 ```
 
 To schedule daily backups of volume T: and the D:\documents folder at 1:00 AM to drive H:, excluding the folder `d:\documents\~tmp`, and performing a full backup using the Volume Shadow Copy Service, type:
 
 ```
-wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
+wbadmin enable backup -addtarget:H: -include T:,D:\documents -exclude D:\documents\~tmp -vssfull -schedule:01:00
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

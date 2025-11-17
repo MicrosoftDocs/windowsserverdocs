@@ -2,10 +2,8 @@
 title: extract
 description: Reference article for the extract command, which extracts files from a source location.
 ms.topic: reference
-ms.assetid: 20dab03e-f6e1-4eb8-b8a1-fd6f1d97ee83
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 12/29/2020
 ---
 
@@ -69,6 +67,6 @@ Extrac32 [/Y] /C source destination
 | /L dir    | Location to place extracted files (default is current directory). |
 | /Y        | Do not prompt before overwriting an existing file. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

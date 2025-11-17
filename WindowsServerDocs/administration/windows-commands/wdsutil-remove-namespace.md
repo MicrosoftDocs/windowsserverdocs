@@ -2,16 +2,14 @@
 title: wdsutil remove-namespace
 description: Reference article for wdsutil remove-namespace, which removes a custom namespace.
 ms.topic: reference
-ms.assetid: 4eb758b6-8519-4e26-9fe0-2e19bb0e8702
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove-namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes a custom namespace.
 
@@ -36,7 +34,7 @@ To force termination of all clients, type:
 ```
 wdsutil /remove-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /force
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)
 - [wdsutil new-namespace command](wdsutil-new-namespace.md)

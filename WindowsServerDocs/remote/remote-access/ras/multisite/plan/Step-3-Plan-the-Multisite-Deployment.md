@@ -1,16 +1,12 @@
 ---
 title: Step 3 Plan the Multisite Deployment
 description: Learn how to plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Plan the Multisite Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After planning the multisite infrastructure, plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.
 

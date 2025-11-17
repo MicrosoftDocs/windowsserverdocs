@@ -3,9 +3,8 @@ title: Troubleshooting Windows volume activation
 description: Lists resources that provide information about best practices for volume activation, and information about troubleshooting activation issues
 ms.topic: troubleshooting
 ms.date: 09/24/2019
-author: Teresa-Motiv
-ms.author: v-tea
-manager: dcscontentpm
+author: dknappettmsft
+ms.author: daknappe
 ---
 
 # Troubleshooting Windows volume activation
@@ -62,3 +61,4 @@ The following articles provide guidance for addressing more specific activation 
 - [MAK activation: known issues](activation-troubleshoot-MAK-issues.md)
 - [Guidelines for troubleshooting DNS-related activation issues](common-troubleshooting-procedures-kms-dns.md)
 - [How to rebuild the Tokens.dat file](activation-rebuild-tokens-dat-file.md)
+

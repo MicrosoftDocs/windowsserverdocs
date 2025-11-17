@@ -2,10 +2,8 @@
 title: rsh
 description: Reference article for the rsh command, which runs commands on remote computers running the RSH service or daemon. This command has been deprecated and isn't guaranteed to be supported in Windows.
 ms.topic: reference
-ms.assetid: 9e3b2b29-208d-4257-8379-0b4738274146
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 

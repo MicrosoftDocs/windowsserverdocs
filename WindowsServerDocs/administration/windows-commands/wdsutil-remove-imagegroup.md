@@ -2,16 +2,14 @@
 title: wdsutil remove-imagegroup
 description: Reference article for wdsutil remove-imagegroup, which removes an image group from a server.
 ms.topic: reference
-ms.assetid: 5b2c9813-5df2-4272-8449-26f3bb16f82b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove-imagegroup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes an image group from a server.
 
@@ -32,7 +30,7 @@ To remove the image group, type one of the following:
 wdsutil /remove-ImageGroumediaGroup:ImageGroup1
 wdsutil /verbose /remove-ImageGroumediaGroup:My Image Group /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-imagegroup command](wdsutil-add-imagegroup.md)
 - [wdsutil get-allimagegroups command](wdsutil-get-allimagegroups.md)

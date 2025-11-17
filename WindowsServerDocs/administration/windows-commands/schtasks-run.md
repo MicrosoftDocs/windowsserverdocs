@@ -2,9 +2,8 @@
 title: schtasks run
 description: Reference article for the schtasks run command, which
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/16/2020
 ---
 
@@ -39,7 +38,7 @@ schtasks /run /tn <taskname> [/s <computer> [/u [<domain>\]<user> [/p <password>
 To start the *Security Script* task, type:
 
 ```
-schtasks /run /tn Security Script
+schtasks /run /tn "Security Script"
 ```
 
 To start the *Update* task on a remote computer, Svr01, type:
@@ -48,7 +47,7 @@ To start the *Update* task on a remote computer, Svr01, type:
 schtasks /run /tn Update /s Svr01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: wbadmin start recovery
 description: Reference article for the wbadmin start recovery command, which runs a recovery operation based on the parameters that you specify.
 ms.topic: reference
-ms.assetid: 52381316-a0fa-459f-b6a6-01e31fb21612
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -76,7 +74,7 @@ To run a recovery of the backup from April 30, 2020, taken at 9:00 A.M., of the 
 wbadmin start recovery -version:04/30/2020-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,16 +1,12 @@
 ---
 title: Enable Hash Publication for File Servers
 description: Learn how to enable BranchCache hash publication on one file server or on multiple file servers.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Enable Hash Publication for File Servers
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can enable BranchCache hash publication on one file server or on multiple file servers.
 

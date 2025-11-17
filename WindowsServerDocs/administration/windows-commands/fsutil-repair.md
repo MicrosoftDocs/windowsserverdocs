@@ -1,17 +1,15 @@
 ---
 title: fsutil repair
 description: Reference article for the fsutil repair command, which administers and monitors NTFS self-healing repair operations.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: 62d77150-1d9e-4069-ab4a-299f33024912
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil repair
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Administers and monitors NTFS self-healing repair operations. Self-healing NTFS attempts to correct corruptions of the NTFS file system online, without requiring **Chkdsk.exe** to be run. For more information, see [Self-healing NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10)).
 
@@ -61,7 +59,7 @@ To disable self-healing repair on drive C, type:
 fsutil repair set c: 0
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

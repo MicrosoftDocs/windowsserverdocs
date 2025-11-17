@@ -2,10 +2,8 @@
 title: wdsutil add-alldriverpackages
 description: Reference article for the wdsutil add-alldriverpackages command, which adds all driver packages that are stored in a folder to a server.
 ms.topic: reference
-ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -40,7 +38,7 @@ wdsutil /verbose /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers /Architectur
 wdsutil /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup:Printer Drivers
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

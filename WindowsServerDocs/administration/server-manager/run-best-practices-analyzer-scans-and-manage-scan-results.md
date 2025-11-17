@@ -1,16 +1,14 @@
 ---
 title: Run Best Practices Analyzer Scans and Manage Scan Results_1
 description: Learn how to run Best Practices Analyzer (BPA) scans either from Server Manager, by using the BPA GUI, or by using cmdlets in Windows PowerShell and learn how to manage the scan results.
-ms.topic: article
-ms.assetid: 232f1c80-88ef-4a39-8014-14be788c2766
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 01/25/2023
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 
@@ -189,7 +187,7 @@ You can exclude scan results by using the `Set-BPAResult` cmdlet with the `Exclu
 
 2.  Exclude specific results from a model scan by running the following command.
 
-    `Get-BPAResult -modelId <model ID> | Where { $_.<Field Name> -eq Value} | Set-BPAResult -Exclude $true`
+    `Get-BPAResult -modelId <model ID> | Where { $_.<Field Name> -eq "Value"} | Set-BPAResult -Exclude $true`
 
     The preceding command retrieves BPA scan result items for the model ID that is represented by *model ID*.
 
@@ -197,7 +195,7 @@ You can exclude scan results by using the `Set-BPAResult` cmdlet with the `Exclu
 
     The final section of the command, following the second pipe character, excludes the results that are filtered by the previous section of the cmdlet.
 
-    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq Information} | Set-BPAResult -Exclude $true`
+    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq "Information"} | Set-BPAResult -Exclude $true`
 
 #### Include scan results
 When you want to view scan results that were excluded, you can include those scan results. The **Include** setting is persistent; included results remain included in future scans of the same model on the same computer.
@@ -216,7 +214,7 @@ When you want to view scan results that were excluded, you can include those sca
 
 2.  Include specific results from a model scan by typing the following command, and then pressing **Enter**.
 
-    `Get-BPAResult -modelId <model Id> | Where { $_.<Field Name> -eq Value } | Set-BPAResult -Exclude $false`
+    `Get-BPAResult -modelId <model Id> | Where { $_.<Field Name> -eq "Value" } | Set-BPAResult -Exclude $false`
 
     The preceding command retrieves BPA scan result items for the model represented by *model Id*.
 
@@ -224,7 +222,7 @@ When you want to view scan results that were excluded, you can include those sca
 
     The final part of the command, after the second pipe character, includes results that are filtered by the second part of the cmdlet, by setting the value of the **-Exclude** parameter to **false**.
 
-    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq Information} | Set-BPAResult -Exclude $false`
+    **Example:**`Get-BPAResult -Microsoft/Windows/FileServices | Where { $_.Severity -eq "Information"} | Set-BPAResult -Exclude $false`
 
 ### View and export BPA scan results in Windows PowerShell
 To view and manage scan results by using Windows PowerShell cmdlets, see the following procedures. Before you can use any of the following procedures, run at least one BPA scan on at least one model or submodel.

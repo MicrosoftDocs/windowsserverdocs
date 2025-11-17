@@ -1,15 +1,13 @@
 ---
 description: "Learn more about: How to Configure Protected Accounts"
 title: How to Configure Protected Accounts
-ms.topic: article
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/12/2016
+ms.custom: sfi-image-nochange
 ---
 # How to Configure Protected Accounts
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Through Pass-the-hash (PtH) attacks, an attacker can authenticate to a remote server or service by using the underlying NTLM hash of a user's password (or other credential derivatives). Microsoft has previously [published guidance](https://www.microsoft.com/download/details.aspx?id=36036) to mitigate pass-the-hash attacks.  Windows Server 2012 R2  includes new features to help mitigate such attacks further. For more information about other security features that help protect against credential theft, see [Credentials Protection and Management](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11)). This topic explains how to configure the following new features:
 
@@ -19,9 +17,7 @@ Through Pass-the-hash (PtH) attacks, an attacker can authenticate to a remote se
 
 -   [Authentication policy silos](#authentication-policy-silos)
 
-There are additional mitigations built in to Windows 8.1 and Windows Server 2012 R2 to help protect against credential theft, which are covered in the following topics:
-
--   [Restricted Admin mode for Remote Desktop](https://blogs.technet.com/b/kfalde/archive/20../restricted-admin-mode-for-rdp-in-windows-8-1-2012-r2.aspx)
+There are additional mitigations built in to Windows 8.1 and Windows Server 2012 R2 to help protect against credential theft, which are covered in the following topic:
 
 -   [LSA Protection](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408187(v=ws.11))
 
@@ -459,3 +455,4 @@ This example first uses the **Get-ADComputer** cmdlet to get all computer accoun
 ```
 PS C:\>Get-ADComputer -Filter 'Name -like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo -AuthenticationPolicySilo Silo -AuthenticationPolicy AuthenticationPolicy02
 ```
+

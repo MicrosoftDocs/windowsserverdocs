@@ -2,10 +2,8 @@
 title: Diskraid
 description: Reference article for the Diskraid command-line tool, which enables you to configure and manage redundant array of independent (or inexpensive) disks (RAID) storage subsystems.
 ms.topic: reference
-ms.assetid: 20aef1e5-7641-47cf-b4eb-cda117f65b6e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -737,7 +735,7 @@ Press ENTER and output similar to the following is displayed:
 
 ```
 Microsoft Diskraid version 5.2.xxxx
-Copyright (©) 2003 Microsoft Corporation
+Copyright (Â©) 2003 Microsoft Corporation
 On computer: COMPUTER_NAME
 ```
 
@@ -768,6 +766,6 @@ To exit Diskraid, type the following at the Diskraid prompt:
 exit
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

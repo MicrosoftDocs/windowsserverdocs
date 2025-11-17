@@ -2,16 +2,14 @@
 title: relog
 description: Reference article for the relog command, which extracts performance counter information from the performance counter log files.
 ms.topic: reference
-ms.assetid: 7480f6c0-9953-4d70-9b1c-b27e09d8db13
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # relog
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Extracts performance counters from performance counter logs into other formats, such as text-TSV (for tab-delimited text), text-CSV (for comma-delimited text), binary-BIN, or SQL.
 
@@ -88,6 +86,6 @@ To resample existing trace logs into a database, type:
 relog "c:\perflogs\daily_trace_log.blg" -f sql -o "SQL:sql2016x64odbc!counter_log"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

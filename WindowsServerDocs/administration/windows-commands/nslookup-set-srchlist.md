@@ -2,16 +2,14 @@
 title: nslookup set srchlist
 description: Reference article for the nslookup set srchlist command, which changes the default Domain Name System (DNS) domain name and search list.
 ms.topic: reference
-ms.assetid: 8486266d-22ac-4ce5-aad6-1cd0c08110a2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nslookup set srchlist
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the default Domain Name System (DNS) domain name and search list. This command overrides the default DNS domain name and search list of the [nslookup set domain](nslookup-set-domain.md) command.
 
@@ -41,7 +39,7 @@ To set the DNS domain to *mfg.widgets.com* and the search list to the three name
 set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

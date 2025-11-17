@@ -2,10 +2,8 @@
 title: wbadmin restore catalog
 description: Reference article for the wbadmin restore catalog command, which recovers a backup catalog for the local computer from a storage location that you specify.
 ms.topic: reference
-ms.assetid: ce1e24a0-821d-4353-b09d-8f82c5c4ad56
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -46,7 +44,7 @@ To restore a catalog from a backup stored in the shared folder `\\<servername>\<
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

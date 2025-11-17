@@ -2,10 +2,8 @@
 title: convert mbr
 description: Reference article for the convert mbr command, which converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
 ms.topic: reference
-ms.assetid: a635a4c0-af73-4330-b021-51d483424537
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -39,7 +37,7 @@ To convert a basic disc from GPT partition style to MBR partition style, type>:
 convert mbr
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

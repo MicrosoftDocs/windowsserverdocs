@@ -2,10 +2,8 @@
 title: auditpol
 description: Reference article for the auditpol command, which displays information about and performs functions to manipulate audit policies.
 ms.topic: reference
-ms.assetid: a02cfb9d-732f-4e77-aeba-f18265daa3af
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -47,6 +45,6 @@ auditpol command [<sub-command><options>]
 | /resourceSACL | Configures global resource system access control lists (SACLs). **Note:** Applies only to Windows 7 and Windows Server 2008 R2. For more information, see [auditpol resourceSACL](auditpol-resourcesacl.md). |
 | /?| Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

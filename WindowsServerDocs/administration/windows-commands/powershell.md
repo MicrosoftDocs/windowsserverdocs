@@ -2,10 +2,8 @@
 title: PowerShell
 description: Reference article for the PowerShell command, which opens the PowerShell console from a command prompt.
 ms.topic: reference
-ms.assetid: 694fc970-0b6c-4046-b1b5-7eb1a0d26609
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
@@ -55,7 +53,7 @@ The **PowerShell.exe** command-line tool starts a Windows PowerShell session in 
 
 - Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, features that require a graphic user interface, such as the [Windows PowerShell Integrated Scripting Environment (ISE)](/previous-versions/hh849182(v=technet.10)), and the [Out-GridView](/powershell/module/microsoft.powershell.utility/out-gridview) and [Show-Command](/powershell/module/microsoft.powershell.utility/show-command) cmdlets, don't run on Server Core installations.
 
-## Additional References
+## Related links
 
 - [about_PowerShell.Exe](/powershell/module/microsoft.powershell.core/about/about_powershell_exe)
 

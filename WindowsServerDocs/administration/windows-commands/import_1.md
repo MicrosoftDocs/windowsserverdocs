@@ -2,10 +2,8 @@
 title: import diskpart
 description: Reference article for the import command, which imports a foreign disk group into the disk group of the local computer.
 ms.topic: reference
-ms.assetid: 4b9d2751-7637-4738-83b0-8c578eb28f27
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To import every disk that is in the same disk group as the disk with focus into 
 import
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

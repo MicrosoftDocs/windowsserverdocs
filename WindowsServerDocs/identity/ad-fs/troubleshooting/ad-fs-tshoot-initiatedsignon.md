@@ -1,64 +1,69 @@
 ---
-title: AD FS Troubleshooting - Idp-Initiated Sign On
-description:  This document describes how to troubleshoot the AD FS sign on page.
-author: billmath
-ms.author: billmath
-manager: mtillman
-ms.date: 01/03/2017
-ms.topic: article
+title: Troubleshoot AD FS IdP-Initiated Sign-In
+description: Learn how to use the sign-in page to troubleshoot Active Directory Federation Services (AD FS) authentication.
+ms.date: 05/19/2023
+ms.topic: troubleshooting-general
+ms.custom: sfi-image-nochange
 ---
 
-# AD FS Troubleshooting - Idp-Initiated Sign On
-The AD FS sign-on page can be used to test whether or not authentication is working.  This is done by navigating to the page and signing in.  Also, we can use the sign-in page to verify that all SAML 2.0 relying parties are listed.
+# Troubleshoot AD FS IdP-initiated sign-in
 
-## Enable the Idp-Initiated Sign on page
-By default, AD FS in Windows 2016 does not have the sign on page enabled.  In order to enable it you can use the PowerShell command Set-AdfsProperties.  Use the following procedure to enable the page:
+You can use the Active Directory Federation Services (AD FS) sign-in page to check if authentication is working. To do this test, you go to the page and sign in. Also, you can use the sign-in page to verify that all SAML 2.0 relying parties are listed.
 
-1.  Open Windows PowerShell
-2.  Enter:  `Get-AdfsProperties` and hit enter
-3.  Verify that **EnableIdpInitiatedSignonPage** is set to false
-![False](media/ad-fs-tshoot-initiatedsignon/idp2.png)
-4.  In PowerShell, enter:  `Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`
-5.  You will not see a confirmation so enter Get-AdfsProperties again and verify that **EnableIdpInitatedSignonPage** is set to true.
-![True](media/ad-fs-tshoot-initiatedsignon/idp4.png)
+## Enable the IdP-initiated sign-in page
+
+By default, AD FS in Windows 2016 doesn't have the sign-in page enabled. To enable the page, use the PowerShell command `Set-AdfsProperties`. Use the following procedure to enable the page:
+
+1. Open Windows PowerShell.
+1. Enter `Get-AdfsProperties`.
+1. Verify that the `EnableIdpInitiatedSignonPage` property is set to `False`.
+
+    :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp2.png" alt-text="Screenshot that shows PowerShell output highlighting that the EnableIdpInitiatedSignonPage property is set to false.":::
+
+1. In PowerShell, enter `Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`.
+1. PowerShell doesn't provide a confirmation for the `Set-AdfsProperties` command. To confirm that the `EnableIdpInitatedSignonPage` property is set to `True`, enter the `Get-AdfsProperties` command again and check the value for the property.
+
+    :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp4.png" alt-text="Screenshot that shows PowerShell output highlighting that the EnableIdpInitiatedSignonPage property is set to True.":::
 
 ## Test authentication
-Use the following procedure to test AD FS authentication with the Idp-Initiated Sign on page.
 
-1.  Open a web browser and navigate to the Idp sign on page.  Example:  https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx
-2.  You should be prompted to sign-in.  Enter your credentials.
-![Sign-on](media/ad-fs-tshoot-initiatedsignon/idp5.png)
-3.  If this was successful you should be signed in.
+Use the following procedure to test AD FS authentication with the Identity Provider (IdP)-initiated sign-in page.
 
+1. Open a web browser, and go to the IdP sign-in page. Your URL might look like `https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx`.
+1. You're prompted to sign in. Enter your credentials.
 
-## Test authentication using a seamless logon experience
+    :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp5.png" alt-text="Screenshot that shows the sign-in page and the dialog that prompts for credentials.":::
 
-You can test the seamless logon experience by making sure that the URL for your AD FS servers are added the local intranet zone of your internet options.  Use the following procedure:
+If the process succeeds, you're signed in.
 
-1. On a Windows 10 client, click start and type internet options and select internet options.
+## Test authentication with seamless sign-in
 
-1. Click the security tab, click on local intranet, and click the sites button.
+You can test the seamless sign-in experience by making sure that the URL for your AD FS servers is added to the local intranet zone of your internet options. Use the following procedure:
 
-    ![Screenshot of the Security tab of the Internet Properties dialog box showing the Local Intranet option highlighted.](media/ad-fs-tshoot-initiatedsignon/idp8.png)
+1. On a Windows 10 client, select **Start**, enter **internet options**, and select **Internet Options**.
 
-1. Click Advanced.
+1. Select the **Security** tab, and then select **Local intranet** > **Sites**.
 
-1. Enter your url and click Add.  Click close.
+    :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp8.png" alt-text="Screenshot that shows the Security tab of the Internet Properties dialog that shows the Local intranet option highlighted.":::
 
-    ![Add url](media/ad-fs-tshoot-initiatedsignon/idp9.png)
+1. Select **Advanced**.
 
-1. Click Ok.  Click Ok.  This should close the internet options.
+1. Enter your URL, and then select **Add** > **Close**.
 
-1. Open a web browser and navigate to the Idp sign on page.  Example:  https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx
+    ![Screenshot that shows the local intranet popup box requesting the URL to be added for authentication.](media/ad-fs-tshoot-initiatedsignon/idp9.png)
 
-1. Click the sign in button.  You should automatically sign in and not be prompted for credentials.
+1. Select **OK**. Then select **OK** to close the internet options.
 
-    ![Screenshot of the Sign in page showing that the user wasn't prompted for credentials.](media/ad-fs-tshoot-initiatedsignon/idp6.png)
+1. Open a web browser and go to the IdP sign-in page. Your URL might look like `https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx`.
 
-## Known Issues
+1. Select **Sign in**. You should automatically sign in and not be prompted for credentials.
 
-The AD FS sign-on page cannot be used to initiate a sign-on with a claims provider trust that is configured with a WS-Federation passive endpoint only. Register a relying party such as [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) to verify that a WS-Federation claims provider trust works as intended.
+    :::image type="content" source="media/ad-fs-tshoot-initiatedsignon/idp6.png" alt-text="Screenshot that shows the sign-in page showing that the user wasn't prompted for credentials.":::
 
-## Next Steps
+## Known issues
 
-- [AD FS Troubleshooting](ad-fs-tshoot-overview.md)
+The AD FS sign-in page can't be used to initiate a sign-in with a claims provider trust that's configured with a WS-Federation passive endpoint only.
+
+## Related content
+
+- [Troubleshooting AD FS](ad-fs-tshoot-overview.md)

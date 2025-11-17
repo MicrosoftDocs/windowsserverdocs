@@ -2,10 +2,8 @@
 title: ksetup mapuser
 description: Reference article for the ksetup mapuser command, which maps the name of a Kerberos principal to an account.
 ms.topic: reference
-ms.assetid: 84113e6e-89ff-488a-9cd0-f14bbf23b543
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -69,7 +67,7 @@ To map all accounts within the CONTOSO Kerberos realm to any existing account of
 ksetup /mapuser * *
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: autofmt
 description: Reference article for the autofmt command, which formats a drive or partition when called from the Windows Recovery Console.
 ms.topic: reference
-ms.assetid: 81f9abac-f927-41d8-8667-f056db4cb2af
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -16,7 +14,7 @@ Starts the Auto File System Format Utility, which formats a drive or partition w
 > [!IMPORTANT]
 > You cannot run **autofmt** directly from the command-line.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

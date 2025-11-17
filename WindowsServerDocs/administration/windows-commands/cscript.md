@@ -2,15 +2,13 @@
 title: cscript
 description: Reference article for the cscript command, which starts a script so that it runs in a command-line environment.
 ms.topic: reference
-ms.assetid: fba3cbca-594e-4663-bb22-4ee0f63a1ac6
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # cscript
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts a script to run in a command-line environment.
 
@@ -54,6 +52,6 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 
 - if you double-click a script file with an extension that has no association, the **Open With** dialog box appears. Select wscript or cscript, and then select **Always use this program to open this file type**. This registers wscript.exe or cscript as the default script host for files of this file type.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

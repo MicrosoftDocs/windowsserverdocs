@@ -1,123 +1,190 @@
 ---
 title: Improve performance of a file server with SMB Direct
-description: Describes the SMB Direct feature in Windows Server 2012 R2, Windows Server 2012, Windows Server 2016, and Azure Stack HCI, version 21H2.
-ms.topic: article
-author: JasonGerend
-ms.author: jgerend
-ms.date: 04/05/2018
+description: SMB Direct allows for faster file transfer and more efficient network usage by utilizing remote direct memory access (RDMA) technology in Windows.
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 01/16/2025
 ---
+
 # SMB Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, version 21H2
+Windows Server includes a feature called Server Message Block (SMB) Direct, which supports the use of network adapters that have Remote Direct Memory Access (RDMA) capability. Network adapters that have RDMA can function at full speed with lower latency without compromising CPU utilization. For workloads such as Hyper-V or Microsoft SQL Server, this feature enables a remote file server to resemble local storage. SMB Direct is automatically configured and enabled by default in Windows Server 2012 and future iterations.
 
-Windows Server includes a feature called SMB Direct, which supports the use of network adapters that have Remote Direct Memory Access (RDMA) capability. Network adapters that have RDMA can function at full speed with very low latency, while using very little CPU. For workloads such as Hyper-V or Microsoft SQL Server, this enables a remote file server to resemble local storage. SMB Direct includes:
+Using SMB Direct provides:
 
-- Increased throughput: Leverages the full throughput of high speed networks where the network adapters coordinate the transfer of large amounts of data at line speed.
-- Low latency: Provides extremely fast responses to network requests, and, as a result, makes remote file storage feel as if it is directly attached block storage.
-- Low CPU utilization: Uses fewer CPU cycles when transferring data over the network, which leaves more power available to server applications.
+- **Increased throughput**: Applies the full throughput of high speed networks where the network adapters coordinate the transfer of large amounts of data at line speed.
+- **Low latency**: Provides fast responses to network requests, which makes remote file storage feel like directly attached block storage.
+- **Low CPU utilization**: Uses fewer CPU cycles when transferring data over the network, which leaves more power available to server applications.
 
-SMB Direct is automatically configured by Windows Server.
+You can use SMB Direct in a failover cluster; however, you need to make sure that the cluster networks used for client access are adequate for SMB Direct. Failover clustering supports using multiple networks for client access, along with network adapters that are RSS (Receive Side Scaling)-capable and RDMA-capable.
 
-## SMB Multichannel and SMB Direct
-
-SMB Multichannel is the feature responsible for detecting the RDMA capabilities of network adapters to enable SMB Direct. Without SMB Multichannel, SMB uses regular TCP/IP with the RDMA-capable network adapters (all network adapters provide a TCP/IP stack along with the new RDMA stack).
-
-With SMB Multichannel, SMB detects whether a network adapter has the RDMA capability, and then creates multiple RDMA connections for that single session (two per interface). This allows SMB to use the high throughput, low latency, and low CPU utilization offered by RDMA-capable network adapters. It also offers fault tolerance if you are using multiple RDMA interfaces.
-
-You can team RDMA-capable network adapters using Switch Embedded Teaming (SET) starting with Windows Server 2016. After at least one RDMA network connection is created, the TCP/IP connection used for the original protocol negotiation is no longer used. However, the TCP/IP connection is retained in case the RDMA network connections fail.
-
-## SMB Encryption with SMB Direct
-
-Beginning in Windows Server 2022 and Windows 11, SMB Direct now supports encryption. Previously, enabling SMB encryption disabled direct data placement, making RDMA performance as slow as TCP. Now data is encrypted before placement, leading to relatively minor performance degradation while adding AES-128 and AES-256 protected packet privacy. For more information on configuring SMB encryption, review [SMB security enhancements](smb-security.md).
-
-Furthermore, Windows Server failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct and SMB Direct, you can decide to encrypt east-west communications within the cluster itself for higher security.
+> [!NOTE]
+> You can use SMB Direct on the Hyper-V management operating system to support using Hyper-V over SMB, and to provide storage to a virtual machine that uses the Hyper-V storage stack. However, RDMA-capable network adapters aren't directly exposed to a Hyper-V client. Even if you connect an RDMA-capable network adapter to a virtual switch, the virtual network adapters created by the switch can't support RDMA.
 
 ## Requirements
 
-SMB Direct requires the following:
+The following are SMB Direct requirements:
 
-- At least two computers running Windows Server 2012 or newer.
 - One or more network adapters with RDMA capability.
+- At least two computers running one or more of the following operating systems:
+  - Windows Server 2012 and later.
+  - Windows 10 Enterprise and later.
+  - Windows 10 Education and later.
+  - Windows 10 Pro for Workstations and later
+  - Windows 10 Pro 22H2 (clean install, not upgraded from older versions) and later.
 
-### Considerations when using SMB Direct
+> [!NOTE]
+> Windows 10 and Windows 11 family are restricted to client-only and can't act as an SMB Direct server.
 
-- You can use SMB Direct in a failover cluster; however, you need to make sure that the cluster networks used for client access are adequate for SMB Direct. Failover clustering supports using multiple networks for client access, along with network adapters that are RSS (Receive Side Scaling)-capable and RDMA-capable.
-- You can use SMB Direct on the Hyper-V management operating system to support using Hyper-V over SMB, and to provide storage to a virtual machine that uses the Hyper-V storage stack. However, RDMA-capable network adapters are not directly exposed to a Hyper-V client. If you connect an RDMA-capable network adapter to a virtual switch, the virtual network adapters from the switch will not be RDMA-capable.
-- If you disable SMB Multichannel, SMB Direct is also disabled. Since SMB Multichannel detects network adapter capabilities and determines whether a network adapter is RDMA-capable, SMB Direct cannot be used by the client if SMB Multichannel is disabled.
-- SMB Direct is not supported on Windows RT. SMB Direct requires support for RDMA-capable network adapters, which is available starting with Windows Server 2012.
-- SMB Direct is not supported on down-level versions of Windows Server. It is supported starting with Windows Server 2012.
+### SMB Multichannel
 
-## Enabling and disabling SMB Direct
+SMB Multichannel is the feature responsible for detecting the RDMA capabilities of network adapters to enable SMB Direct. Without SMB Multichannel, SMB uses regular TCP/IP with the RDMA-capable network adapters (all network adapters provide a TCP/IP stack along with the new RDMA stack).
 
-SMB Direct is enabled by default starting with Windows Server 2012. The SMB client automatically detects and uses multiple network connections if an appropriate configuration is identified.
+With SMB Multichannel, SMB detects whether a network adapter has RDMA capability, and creates multiple RDMA connections for that single session (two per interface). This feature allows SMB to use the high throughput, low latency, and low CPU utilization offered by RDMA-capable network adapters. It also offers fault tolerance if you're using multiple RDMA interfaces.
 
-### Disable SMB Direct
+You can team RDMA-capable network adapters using Switch Embedded Teaming (SET) starting with Windows Server 2016. After at least one RDMA network connection is created, the TCP/IP connection used for the original protocol negotiation is no longer used. However, the TCP/IP connection is retained in case the RDMA network connections fail.
 
-Typically, you will not need to disable SMB Direct, however, you can disable it by running one of the following Windows PowerShell scripts.
+Disabling SMB Multichannel also disables SMB Direct. SMB Multichannel detects network adapter capabilities and determines whether a network adapter is RDMA-capable. Client devices can't use SMB Direct if SMB Multichannel is disabled.
+
+### SMB Encryption
+
+Beginning in Windows Server 2022 and Windows 11, SMB Direct now supports encryption. Previously, enabling SMB encryption disabled direct data placement, making RDMA performance as slow as TCP. Now data is encrypted before placement, leading to relatively minor performance degradation while adding AES-128 and AES-256 protected packet privacy. For more information on configuring SMB encryption, see [SMB security enhancements](smb-security.md).
+
+Furthermore, Windows Server failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct and SMB Direct, you can decide to encrypt east-west communications within the cluster itself for higher security.
+
+## Disabling and enabling SMB Direct features
+
+The SMB client automatically detects and uses multiple network connections if an appropriate configuration is identified. As SMB Direct is enabled by default, once disabled, it needs to be manually re-enabled whenever needed.
+
+# [Disable](#tab/disable)
+
+Typically, you don't need to disable SMB Direct, however, you can disable it along with its features, by running the following Windows PowerShell commands.
+
+To disable SMB Direct, type:
+
+```powershell
+Disable-WindowsOptionalFeature -Online -FeatureName SMBDirect
+```
+
+To disable SMB Multichannel on the server-side, type:
+
+```powershell
+Set-SmbServerConfiguration -EnableMultiChannel $false
+```
+
+To disable SMB Multichannel on the client-side, type:
+
+```powershell
+Set-SmbClientConfiguration -EnableMultiChannel $false
+```
 
 To disable RDMA for a specific interface, type:
 
-```PowerShell
+```powershell
 Disable-NetAdapterRdma <name>
 ```
 
 To disable RDMA for all interfaces, type:
 
-```PowerShell
+```powershell
 Set-NetOffloadGlobalSetting -NetworkDirect Disabled
 ```
 
-When you disable RDMA on either the client or the server, the systems cannot use it. *Network Direct* is the internal name for Windows Server basic networking support for RDMA interfaces.
+When you disable RDMA on either the client or the server, the systems can't use it. _Network Direct_ is the internal name for Windows Server basic networking support for RDMA interfaces.
 
-### Re-enable SMB Direct
+# [Enable](#tab/enable)
 
-After disabling RDMA, you can re-enable it by running one of the following Windows PowerShell scripts.
+After disabling SMB Direct and its features, you can re-enable them by running the following Windows PowerShell commands.
 
-To re-enable RDMA for a specific interface, type:
+To enable SMB Direct, type:
 
-```PowerShell
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName SMBDirect
+```
+
+To enable SMB Multichannel on the server-side, type:
+
+```powershell
+Set-SmbServerConfiguration -EnableMultiChannel $true
+```
+
+To enable SMB Multichannel on the client-side, type:
+
+```powershell
+Set-SmbClientConfiguration -EnableMultiChannel $true
+```
+
+To enable RDMA for a specific interface, type:
+
+```powershell
 Enable-NetAdapterRDMA <name>
 ```
 
-To re-enable RDMA for all interfaces, type:
+To enable RDMA for all interfaces, type:
 
-```PowerShell
+```powershell
 Set-NetOffloadGlobalSetting -NetworkDirect Enabled
 ```
 
-You need to enable RDMA on both the client and the server to start using it again.
+RDMA must be enabled on both the client and the server to start using it again.
 
-## Test performance of SMB Direct
+---
 
-You can test how the performance is working by using one of the following procedures.
+To verify which state of operability SMB Direct is currently configured to, run the following cmdlet:
 
-### Compare a file copy with and without using SMB Direct
+```powershell
+Get-WindowsOptionalFeature -Online -FeatureName SMBDirect
+```
 
-Here's how to measure the increased throughput of SMB Direct:
+## Testing SMB Direct
 
-1. Configure SMB Direct
-2. Measure the amount of time to run a large file copy using SMB Direct.
-3. Disable RDMA on the network adapter, see [Enabling and disabling SMB Direct](#enabling-and-disabling-smb-direct).
-4. Measure the amount of time to run a large file copy without using SMB Direct.
-5. Re-enable RDMA on the network adapter, and then compare the two results.
-6. To avoid the impact of caching, you should do the following:
-    1. Copy a large amount of data (more data than memory is capable of handling).
-    2. Copy the data twice, with the first copy as practice and then timing the second copy.
-    3. Restart both the server and the client before each test to make sure they operate under similar conditions.
+You can test the performance of SMB Direct by measuring the throughput when running a large file copy. Before testing, verify that the network adapter supports RDMA using PowerShell.
 
-### Fail one of multiple network adapters during a file copy with SMB Direct
+On the server-side, type:
+
+```powershell
+Get-SmbServerNetworkInterface
+```
+
+On the client-side, type:
+
+```powershell
+Get-SmbClientNetworkInterface
+```
+
+Once the network adapter is verified RDMA-capable, perform the following actions:
+
+1. Disable RDMA on the network adapter, see [Disabling and Enabling SMB Direct features](#disabling-and-enabling-smb-direct-features).
+1. Measure the amount of time taken to run a large file copy without using SMB Direct.
+1. Re-enable RDMA on the network adapter, perform the same file copy, and then compare the two results.
+1. To avoid the impact of caching, perform the following actions:
+   1. Copy a large amount of data (more data than memory is capable of handling).
+   1. Copy the data twice, with the first copy as practice and then timing the second copy.
+   1. Restart both the server and the client before each test to ensure they operate under similar conditions.
+
+Additionally, you can observe the performance counters during testing using the same scenario utilizing the Performance Monitor tool by performing the following steps:
+
+1. Select **Start**, type **perfmon**, hit <kbd>Enter</kbd>.
+1. In the left pane, under **Monitoring Tools** > select **Performance Monitor**.
+1. In the right pane, select the green "**+**" icon to add a new counter.
+1. In the **Add Counters** dialog box, expand **SMB Direct Connection**.
+1. Select both **Bytes RDMA Read/sec** and **Bytes RDMA Written/sec**, select **Add**, then select **OK**.
+
+## SMB Direct failover capability
 
 Here's how to confirm the failover capability of SMB Direct:
 
 1. Ensure that SMB Direct is functioning in a multiple network adapter configuration.
-2. Run a large file copy. While the copying is run, simulate a failure of one of the network paths by disconnecting one of the cables (or by disabling one of the network adapters).
-3. Confirm that the file copying continues using one of the remaining network adapters, and that there are no file copy errors.
+1. Run a large file copy. During the copy process, simulate a failure of one of the network paths by disconnecting one of the cables or by disabling one of the network adapters.
+1. Confirm that the file copying continues using one of the remaining network adapters, and that there are no file copy errors.
 
->[!NOTE]
->To avoid failures of a workload that does not use SMB Direct, make sure there are no other workloads using the disconnected network path.
+> [!TIP]
+> To avoid failures of a workload that doesn't use SMB Direct, make sure there are no other workloads using the disconnected network path.
 
-## More information
+## See also
 
 - [Server Message Block overview](file-server-smb-overview.md)
 - [Increasing Server, Storage, and Network Availability: Scenario Overview](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
 - [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+

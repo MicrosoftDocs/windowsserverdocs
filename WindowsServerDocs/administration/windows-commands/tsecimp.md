@@ -2,10 +2,8 @@
 title: tsecimp
 description: Reference article for the tsecimp command, which imports assignment information from an Extensible Markup Language (XML) file into the TAPI server security file (Tsec.ini).
 ms.topic: reference
-ms.assetid: d7488ec6-0eff-45ff-89ee-9cbe752416bf
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -153,7 +151,7 @@ To add permanent device *1000* and to remove line *88888* from *User1's* access,
 </UserList>
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

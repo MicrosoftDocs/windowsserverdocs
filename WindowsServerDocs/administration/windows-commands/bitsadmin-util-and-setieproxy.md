@@ -2,10 +2,8 @@
 title: bitsadmin util and setieproxy
 description: Reference article for the bitsadmin util and setieproxy command, which sets the proxy settings to use when transferring files using a service account.
 ms.topic: reference
-ms.assetid: 0e9f31ba-3070-4ffd-a94c-388c8d78f688
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -43,14 +41,14 @@ bitsadmin /util /setieproxy localsystem AUTODETECT
 ```
 
 ```
-bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1,proxy2,proxy3 NULL
+bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1,proxy2,proxy3 NULL
 ```
 
 ```
-bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1:80
+bitsadmin /util /setieproxy localsystem MANUAL_PROXY proxy1:80
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

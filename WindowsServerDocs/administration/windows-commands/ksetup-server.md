@@ -2,10 +2,8 @@
 title: ksetup server
 description: Reference article for the ksetup server command, which allows you to specify a name for a computer running the Windows operating system, so changes made by the ksetup command update the target computer.
 ms.topic: reference
-ms.assetid: e3407111-ac92-457f-aa1f-a04fe9109d59
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -38,7 +36,7 @@ To make your **ksetup** configurations effective on the *IPops897* computer, whi
 ksetup /server IPops897.corp.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

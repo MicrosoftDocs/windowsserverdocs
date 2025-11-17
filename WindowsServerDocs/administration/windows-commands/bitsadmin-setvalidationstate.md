@@ -2,10 +2,8 @@
 title: bitsadmin setvalidationstate
 description: Reference article for the bitsadmin setvalidationstate command, which sets the content validation state of the given file within the job.
 ms.topic: reference
-ms.assetid: e8fc8e8c-171c-4681-8057-6986b018e576
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -35,7 +33,7 @@ To set the content validation state of file 2 to TRUE for the job named *myDownl
 bitsadmin /setvalidationstate myDownloadJob 2 TRUE
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

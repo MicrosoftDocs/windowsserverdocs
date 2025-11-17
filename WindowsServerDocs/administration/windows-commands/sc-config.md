@@ -2,11 +2,10 @@
 title: sc.exe config
 description: Reference article for the sc.exe config command, which changes service configurations by modifying the value of a service's entries in the registry and in the Service Control Manager database.
 ms.topic: reference
-ms.assetid: ad4d68a6-efe5-452b-8501-7f1f1c552a4a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/05/2018
+ms.custom: sfi-ropc-nochange
 ---
 
 # sc.exe config
@@ -51,6 +50,6 @@ To specify a binary path for the *NewService* service, type:
 sc.exe config NewService binpath= c:\windows\system32\NewServ.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

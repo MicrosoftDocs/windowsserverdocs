@@ -2,11 +2,9 @@
 title: takeown
 description: Reference article for the takeown command, which enables an administrator to recover access to a file that was previously denied.
 ms.topic: reference
-ms.assetid: 0683cd65-a6db-4cab-962b-45a0ff61f43c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 11/04/2025
 ---
 
 # takeown
@@ -29,7 +27,7 @@ takeown [/s <computer> [/u [<domain>\]<username> [/p [<password>]]]] /f <filenam
 | /f `<filename>` | Specifies the file name or directory name pattern. You can use the wildcard character `*` when specifying the pattern. You can also use the syntax `<sharename>\<filename>`. |
 | /a | Gives ownership to the Administrators group instead of the current user. If you don't specify this option, file ownership is given to the user who is currently logged on to the computer. |
 | /r | Performs a recursive operation on all files in the specified directory and subdirectories. |
-| /d `{Y | N}` | Suppresses the confirmation prompt that is displayed when the current user does not have the **List Folder** permission on a specified directory, and instead uses the specified default value. Valid values for the **/d** option are:<ul><li>**Y** - Take ownership of the directory.</li><li>**N** - Skip the directory.<p>**NOTE**<br>You must use this option in conjunction with the **/r** option.</li></ul> |
+| /d `{Y | N}` | Suppresses the confirmation prompt that is displayed when the current user does not have the **List Folder** and **Read** permissions on a specified directory, and instead uses the specified default value. Valid values for the **/d** option are:<ul><li>**Y** - Take ownership of the directory. The directory permissions are replaced with permission granting the user full control only.</li><li>**N** - Skip the directory.<p>**NOTE**<br>You must use this option in conjunction with the **/r** option.</li></ul> |
 | /? | Displays help at the command prompt. |
 
 ## Remarks
@@ -46,6 +44,6 @@ To take ownership of a file named *Lostfile*, type:
 takeown /f lostfile
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

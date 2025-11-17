@@ -2,16 +2,14 @@
 title: logman start and logman stop
 description: Reference article for the logman start and logman stop commands, which starts a data collector and sets the begin time to manual, or stops a Data Collector Set and sets the end time to manual.
 ms.topic: reference
-ms.assetid: a40006a1-876e-474b-aaf1-f365c730deea
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # logman start and logman stop
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The **logman start** command starts a data collector and sets the begin time to manual. The **logman stop** command stops a Data Collector Set and sets the end time to manual.
 
@@ -41,7 +39,7 @@ To start the data collector *perf_log*, on the remote computer *server_1*, type:
 logman start perf_log -s server_1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

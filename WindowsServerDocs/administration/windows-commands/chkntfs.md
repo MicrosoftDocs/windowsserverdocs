@@ -2,10 +2,8 @@
 title: chkntfs
 description: Reference article for the chkntfs command, which displays or modifies automatic disk checking when the computer is started.
 ms.topic: reference
-ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -83,6 +81,6 @@ chkntfs /c d:
 > [!IMPORTANT]
 > The **/c** command-line option is accumulative. If you type **/c** more than once, each entry remains. To ensure that only a particular volume is checked, reset the defaults to clear all previous commands, exclude all volumes from being checked, and then schedule automatic file checking on the desired volume.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

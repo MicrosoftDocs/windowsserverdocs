@@ -2,16 +2,14 @@
 title: wdsutil get-namespace
 description: Reference article for wdsutil get-namespace, which displays information about a custom namespace.
 ms.topic: reference
-ms.assetid: ea641bab-e97b-4909-918e-447730027dc1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about a custom namespace.
 
@@ -50,7 +48,7 @@ To view information about a namespace and the clients that are connected, type o
 - Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
 - Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)

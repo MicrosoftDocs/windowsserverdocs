@@ -1,16 +1,12 @@
 ---
 title: Create a VM and connect to a tenant virtual network or VLAN
 description: In this topic, we show you how to create a tenant VM and connect it to either a virtual network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network (VLAN).
-manager: grcusanz
-ms.topic: article
-ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
-ms.author: anpaul
-author: AnirbanPaul
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Create a VM and connect to a tenant virtual network or VLAN
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 In this topic, you create a tenant VM and connect it to either a virtual network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network (VLAN). You can use Windows PowerShell Network Controller cmdlets to connect to a virtual network or NetworkControllerRESTWrappers to connect to a VLAN.
 
@@ -24,7 +20,7 @@ The sections in this topic include example Windows PowerShell commands that cont
 
 2. If the VM requires network access on startup, do not start the VM until after setting the interface ID on the VM network adapter port. If you start the VM before setting the interface ID, and the network interface does not exist, the VM cannot communicate on the network in the Network Controller, and all policies applied.
 
-3. If you require custom ACLs for this network interface, then create the ACL now by using instructions in the topic [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
+3. If you require custom ACLs for this network interface, then create the ACL now by using instructions in the topic [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure/azure-local/manage/use-datacenter-firewall-powershell?context=/windows-server/context/windows-server-edge-networking)
 
 Ensure that you have already created a Virtual Network before using this example command. For more information, see [Create, Delete, or Update Tenant Virtual Networks](./create,-delete,-or-update-tenant-virtual-networks.md).
 
@@ -143,7 +139,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 3. Get the logical network subnet and create the network interface.
 
    ```PowerShell
-    $logicalnet = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "00000000-2222-1111-9999-000000000002"
+    $logicalnet = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1"
 
     $vmnicproperties = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
     $vmnicproperties.PrivateMacAddress = "00-1D-C8-B7-01-02"

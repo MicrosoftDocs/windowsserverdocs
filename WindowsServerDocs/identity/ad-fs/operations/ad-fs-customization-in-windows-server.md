@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: AD FS Customization in Windows Server 2016"
-ms.assetid: 25f5aff1-6abf-4dea-b531-f1d9943bc181
 title: AD FS Customization in Windows Server 2016
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: concept-article
 ---
 # AD FS Customization in Windows Server 2016
 

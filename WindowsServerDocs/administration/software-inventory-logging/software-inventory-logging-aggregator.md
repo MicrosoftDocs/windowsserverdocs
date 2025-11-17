@@ -1,17 +1,16 @@
 ---
 title: Software Inventory Logging Aggregator
 description: Describes how to install and manage Software Inventory Logging Aggregator-software-inventory-logging
-ms.topic: article
-ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
-author: brentfor
-ms.author: brentf
-manager: mtillman
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
+ms.custom: sfi-image-nochange
 ---
 
 # Software Inventory Logging Aggregator
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2
+
 
 ## What is Software Inventory Logging Aggregator?
 
@@ -471,8 +470,6 @@ With the `Set-SilAggregator` cmdlet you can:
 
 -   Note that the `–StartTime` and `–Endtime` parameters will show report data from the first of the month of start date and the last of the month of the end date.
 
-![Image of the completed Get-AggregatorData cmdlet](../media/software-inventory-logging/SILA_Get-SILAggregator.png)
-
 ### Get-SilVMHost
 
 -   This cmdlet outputs the list of physical hosts the SIL Aggregator is configured to poll, the most recent successful poll date and time, and the HostType (or OS manufacturer), and the HypervisorType (hypervisor manufacturer). See the Add-SilVMHost details for more information on HostType and HypervisorType.
@@ -587,6 +584,7 @@ When you want to start inventorying servers in your environment with a different
 ## See Also
 [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/download/details.aspx?id=49046)<br>
 [SIL Aggregator PowerShell cmdlets](/previous-versions/windows/powershell-scripting/mt548455(v=wps.640))<br>
-[SIL PowerShell cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)<br>
+[SIL PowerShell cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)<br>
 [An Overview of SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268301(v=ws.11))<br>
 [Managing SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383584(v=ws.11))
+

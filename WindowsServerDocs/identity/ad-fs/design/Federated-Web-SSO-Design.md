@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Federated Web SSO Design"
-ms.assetid: 09f335bb-896a-45dd-adc2-f215b8fba828
 title: Federated Web SSO Design
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: concept-article
 ---
 
 # Federated Web SSO Design

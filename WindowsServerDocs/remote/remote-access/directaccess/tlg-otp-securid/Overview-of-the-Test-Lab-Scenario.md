@@ -1,16 +1,12 @@
 ---
 title: Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
 description: Learn about extending the Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 test lab guide to demonstrate a Remote Access one-time password (OTP) configuration.
-manager: brianlic
-ms.topic: article
-ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Remote Access is a server role in the  Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or virtual private networks (VPNs) with the Routing and Remote Access Service (RRAS). This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate a Remote Access one-time password (OTP) configuration.
 

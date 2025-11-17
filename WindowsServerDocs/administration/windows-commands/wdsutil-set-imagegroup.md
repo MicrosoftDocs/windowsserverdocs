@@ -2,15 +2,13 @@
 title: wdsutil set-imagegroup
 description: Reference article for Subcommand set-ImageGroup, which changes the attributes of an image group.
 ms.topic: reference
-ms.assetid: 4d86946a-e261-4d41-8b0c-1ab0ba2e3430
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil set-imagegroup
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the attributes of an image group.
 
@@ -37,7 +35,7 @@ To specify various settings for an image group, type:
 wdsutil /verbose /Set-ImageGroupGroup:ImageGroup1 /Server:MyWDSServer /Name:New Image Group Name
 /Security:O:BAG:S-1-5-21-2176941838-3499754553-4071289181-513 D:AI(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA) (A;ID;0x1200a9;;;AU)(A;OICIIOID;GXGR;;;AU)
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-imagegroup command](wdsutil-add-imagegroup.md)
 - [wdsutil get-allimagegroups command](wdsutil-get-allimagegroups.md)

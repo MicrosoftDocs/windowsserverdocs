@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: The Role of the Claim Rule Language"
 title: The Role of the Claim Rule Language
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 07/07/2017
-ms.topic: article
-ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
+ms.date: 04/08/2025
+ms.topic: concept-article
 ---
 
 
@@ -58,8 +54,8 @@ Single -expression conditions are described in the following table. They are con
 
 |                                                                                                                   Condition description                                                                                                                    |                           Condition syntax example                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-|               This rule has a condition to check for an input claim with a specified claim type  ("<http://test/name>" ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set.               |         ``` c: [type == "http://test/name"] => issue(claim = c );```          |
-| This rule has a condition to check for an input claim with a specified claim type  ("<http://test/name>" ) and claim value  (“Terry” ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set. | ``` c: [type == "http://test/name", value == "Terry"] => issue(claim = c);``` |
+|               This rule has a condition to check for an input claim with a specified claim type  ("<`http://test/name`>" ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set.               |         ``` c: [type == "http://test/name"] => issue(claim = c );```          |
+| This rule has a condition to check for an input claim with a specified claim type  ("<`http://test/name`>" ) and claim value  (“Terry” ). If a matching claim is in the input claims, the rule copies the matching claim or claims to the output claims set. | ``` c: [type == "http://test/name", value == "Terry"] => issue(claim = c);``` |
 
 More -complex conditions are shown in the next section, including conditions to check for multiple claims, conditions to check the issuer of a claim, and conditions to check for values that match a regular expression pattern.
 
@@ -69,7 +65,7 @@ The following table provides an example of multiple -expression conditions.
 
 |                                                                                                                   Condition description                                                                                                                    |                                        Condition syntax example                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| This rule has a condition to check for two input claims, each with a specified claim type  ("<http://test/name>" and "<http://test/email>" ). If the two matching claims are in the input claims, the rule copies the name claim to the output claims set. | ``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );``` |
+| This rule has a condition to check for two input claims, each with a specified claim type  ("<`http://test/name`>" and "<`http://test/email`>" ). If the two matching claims are in the input claims, the rule copies the name claim to the output claims set. | ``` c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1 );``` |
 
 #### Regular -condition examples
 The following table provides an example of a regular, expression -based condition.

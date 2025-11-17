@@ -2,10 +2,8 @@
 title: where
 description: Reference article for where, which displays the location of files that match the given search pattern.
 ms.topic: reference
-ms.assetid: 0b3486a5-896b-4d92-84b8-e463a0b76487
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -54,6 +52,6 @@ To find all files named Notepad in drive C of the remote computer, Computer1, an
 where /r \\computer1\c notepad.*
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

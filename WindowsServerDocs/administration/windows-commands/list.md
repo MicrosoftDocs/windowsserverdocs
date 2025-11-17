@@ -2,10 +2,8 @@
 title: list
 description: Reference article for the list command, which displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs).
 ms.topic: reference
-ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -45,6 +43,6 @@ list volume
 list vdisk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

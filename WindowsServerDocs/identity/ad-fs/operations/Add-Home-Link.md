@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Add Home Link"
-ms.assetid: da035189-e87f-4597-9933-49bf391a8d5d
 title: Add Home Link
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Add Home Link

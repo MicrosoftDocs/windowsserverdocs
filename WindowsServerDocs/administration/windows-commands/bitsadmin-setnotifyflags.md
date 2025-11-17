@@ -2,10 +2,8 @@
 title: bitsadmin setnotifyflags
 description: Reference article for the bitsadmin setnotifyflags command, which sets the event notification flags for the specified job.
 ms.topic: reference
-ms.assetid: d5763d95-94a6-45ca-9e03-891c20047e06
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ To set the notification flags to generate an event when an error occurs, for a j
 bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

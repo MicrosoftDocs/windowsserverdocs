@@ -2,15 +2,13 @@
 title: bootcfg copy
 description: Reference article for the bootcfg copy command, which makes a copy of an existing boot entry, to which you can add command-line options.
 ms.topic: reference
-ms.assetid: 2a236c2a-8675-444d-b695-9cbc9aff643b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # bootcfg copy
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Makes a copy of an existing boot entry, to which you can add command-line options.
 
@@ -39,7 +37,7 @@ To copy boot entry 1 and enter \ABC Server\ as the description:
 bootcfg /copy /d \ABC Server\ /id 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

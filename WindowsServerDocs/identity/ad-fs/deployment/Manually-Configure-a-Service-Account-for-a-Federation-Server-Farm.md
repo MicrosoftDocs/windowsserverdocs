@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Manually Configure a Service Account for a Federation Server Farm"
-ms.assetid: 5a1ae56b-adcb-447e-9e34-c0629d7cb241
 title: Manually Configure a Service Account for a Federation Server Farm
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 
 # Manually Configure a Service Account for a Federation Server Farm
@@ -14,7 +10,7 @@ ms.author: billmath
 If you intend to configure a federation server farm environment in Active Directory Federation Services \(AD FS\), you must create and configure a dedicated service account in Active Directory Domain Services \(AD DS\) where the farm will reside. You then configure each federation server in the farm to use this account. You must complete the following tasks in your organization when you want to allow client computers on the corporate network to authenticate to any of the federation servers in an AD FS farm using Windows Integrated Authentication.
 
 > [!IMPORTANT]
-> As of AD FS 3.0 (Windows Server 2012 R2), AD FS supports the use of a [Group Managed Service Account](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) \(gMSA\) as the service account.  This is the recommended option, as it removes the need for managing the service account password over time.  This document covers the alternate case of using a traditional service account, such as in domains still running a Windows Server 2008 R2 or earlier domain functional level \(DFL\).
+> As of AD FS 3.0 (Windows Server 2012 R2), AD FS supports the use of a [Group Managed Service Account](../../ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md) \(gMSA\) as the service account.  This is the recommended option, as it removes the need for managing the service account password over time.  This document covers the alternate case of using a traditional service account, such as in domains still running a Windows Server 2008 R2 or earlier domain functional level \(DFL\).
 
 > [!NOTE]
 > You have to perform the tasks in this procedure only one time for the entire federation server farm. Later, when you create a federation server by using the AD FS Federation Server Configuration Wizard, you must specify this same account on the **Service Account** wizard page on each federation server in the farm.

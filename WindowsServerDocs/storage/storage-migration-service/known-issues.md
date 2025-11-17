@@ -1,17 +1,16 @@
 ---
 title: Storage Migration Service known issues
 description: Known issues and troubleshooting support for Storage Migration Service, such as how to collect logs for Microsoft Support.
-author: nedpyle
-ms.author: nedpyle
-manager: tiaascs
-ms.date: 06/11/2021
-ms.topic: article
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 04/24/2023
+ms.topic: troubleshooting-known-issue
 ---
 # Storage Migration Service known issues
 
-This topic contains answers to known issues when using [Storage Migration Service](overview.md) to migrate servers.
+This article contains answers to known issues when using [Storage Migration Service](overview.md) to migrate servers.
 
-Storage Migration Service is released in two parts: the service in Windows Server, and the user interface in Windows Admin Center. The service is available in Windows Server, Long-Term Servicing Channel, as well as Windows Server, Semi-Annual Channel; while Windows Admin Center is available as a separate download. We also periodically include changes in cumulative updates for Windows Server, released via Windows Update.
+Storage Migration Service is released in two parts: the service in Windows Server, and the user interface in Windows Admin Center. The service is available in Windows Server, Long-Term Servicing Channel, and Windows Server, Semi-Annual Channel; while Windows Admin Center is available as a separate download. We also periodically include changes in cumulative updates for Windows Server, released via Windows Update.
 
 For example, Windows Server, version 1903 includes new features and fixes for Storage Migration Service, which are also available for Windows Server 2019 and Windows Server, version 1809 by installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534).
 
@@ -32,7 +31,7 @@ Review the README for usage.
 
 When using the 1809 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you don't see the tool option for Storage Migration Service.
 
-The Windows Admin Center Storage Migration Service extension is version-bound to only manage Windows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. This behavior is by design.
+The Windows Admin Center Storage Migration Service extension is version-bound to only manage Windows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool doesn't appear. This behavior is by design.
 
 To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
 
@@ -52,25 +51,25 @@ To work around this issue for evaluation, install a retail, MSDN, OEM, or Volume
 
 We've fixed this issue in a later release of Windows Server.
 
-## Storage Migration Service times out downloading the transfer error CSV
+## Storage Migration Service times out downloading the transfer or errors CSV
 
-When using Windows Admin Center or PowerShell to download the transfer operations detailed errors-only CSV log, you receive error:
+When using Windows Admin Center or PowerShell to download the transfer operations detailed CSV log, you receive error:
 
 ```
 Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
 ```
 
-This issue is caused by an extremely large number of transferred files that can't be filtered in the default one minute timeout allowed by Storage Migration Service.
+This issue is caused by an extremely large number of transferred files that can't be filtered in the default one-minute timeout allowed by Storage Migration Service.
 
 To work around this issue:
 
-1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1 minute default to 10 minutes
+1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1-minute default to 10 hours.
 
     ```
     <bindings>
       <netTcpBinding>
         <binding name="NetTcpBindingSms"
-                 sendTimeout="00:10:00"
+                 sendTimeout="10:00:00"
     ```
 
 2. Restart the "Storage Migration Service" service on the orchestrator computer.
@@ -81,21 +80,26 @@ To work around this issue:
 
     `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
-5. On the Edit menu, point to New, and then click DWORD Value.
+5. On the Edit menu, point to New, and then select DWORD Value.
 
 6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
 
-7. Right-click "WcfOperationTimeoutInMinutes", and then click Modify.
+7. Right-click "WcfOperationTimeoutInMinutes", and then select Modify.
 
-8. In the Base data box, click "Decimal"
+8. In the Base data box, select "Decimal"
 
-9. In the Value data box, type "10", and then click OK.
+9. In the Value data box, type "600", and then select OK.
 
 10. Exit Registry Editor.
 
 11. Attempt to download the errors-only CSV file again.
 
-You may need to increase this timeout to more than 10 minutes if you are migrating an extremely large number of files. 
+If still seeing issues while using WAC, instead use PowerShell. Run one of the following commands on the Orchestrator computer, setting your own job name and source server FQDN values:
+
+   ```PowerShell
+   Get-SmsState -Name job -TransferFileDetail -computername sourcefqdn | export-csv -path log.csv
+   Get-SmsState -Name job -TransferFileDetail -ErrorsOnly -computername sourcefqdn | export-csv -path errlog.csv
+   ```
 
 ## Validation warnings for destination proxy and credential administrative privileges
 
@@ -108,7 +112,7 @@ The destination proxy is registered.
 Warning: The destination proxy wasn't found.
 ```
 
-If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destination computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.
+If you haven't installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, this behavior is by design. You also receive this message if the destination computer is Windows Server 2016 or Windows Server 2012 R2. We recommend migrating to a Windows Server 2019 computer with the proxy installed for improved transfer performance.
 
 ## Certain files don't inventory or transfer, error 5 "Access is denied"
 
@@ -136,7 +140,7 @@ at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.InitializeSour
 at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.TryTransfer()
 ```
 
-This issue is caused by a code defect in the Storage Migration Service where the backup privilege was not being invoked.
+This issue is caused by a code defect in the Storage Migration Service where the backup privilege wasn't being invoked.
 
 To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Build 17763.404)](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) on the orchestrator computer and the destination computer if the proxy service is installed there. Ensure that the source migration user account is a local administrator on the source computer and the Storage Migration Service orchestrator. Ensure that the destination migration user account is a local administrator on the destination computer and the Storage Migration Service orchestrator.
 
@@ -145,6 +149,7 @@ To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Bui
 When using the Storage Migration Service to transfer files to a new destination, then configuring DFS Replication to replicate that data with an existing server through preseeded replication or DFS Replication database cloning, all files experience a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using Storage Migration Service to transfer them. Examining the files with ICACLS or the DFS Replication database cloning debug log reveals:
 
 ### Source file
+
 ```
   icacls d:\test\Source:
 
@@ -158,6 +163,7 @@ When using the Storage Migration Service to transfer files to a new destination,
   icacls d:\test\thatcher.png /save out.txt /t thatcher.png
   D:AI(A;;FA;;;BA)(A;;0x1301bf;;;DU)(A;;0x1200a9;;;DD)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)**S:PAINO_ACCESS_CONTROL**
 ```
+
 ### DFSR Debug Log
 
 ```
@@ -226,7 +232,29 @@ at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate(
 at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
 ```
 
-This was a code defect that would manifest if your migration account does not have at least Read permissions to the SMB shares. This issue was first fixed in cumulative update [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062).
+This was a code defect that would manifest if your migration account doesn't have at least Read permissions to the SMB shares. This issue was first fixed in cumulative update [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062).
+
+Another possible cause might be insufficient access rights to the source file server. While examining the "Microsoft.StorageMigration.Proxy.Service.exe" process with Process Monitor, you might see the below result:
+```
+Date: 6/04/2022 15:36:09,1943419
+Thread: 1688
+Class: File System
+Operation: CreateFile
+Result: PRIVILEGE_NOT_HELD
+Path: \\srv1.contoso.com\F$\\public
+Duration: 0.0002573
+
+Desired Access: Read Attributes, Read Control, Synchronize, Access System Security
+Disposition: Open
+Options: Synchronous IO Non-Alert, Open For Backup
+Attributes: N
+ShareMode: Read, Write
+AllocationSize: n/a
+Impersonating: CONTOSO\ServiceAccount
+OpenResult: PRIVILEGE_NOT_HELD
+```
+The actual operation being performed needs the "Open For Backup"-privileges on the source file server. Verify that your user account used to access the source file server is granted the necessary permissions via the following Local Security Policy on this server or using a Group Policy Object:
+    `Security Settings > Local Policies > User Rights Assignment > Back up files and directories`
 
 ## Error 0x80005000 when running inventory
 
@@ -310,6 +338,7 @@ As an alternative workaround:
    ```PowerShell
    Register-SMSProxy -ComputerName <destination server> -Force
    ```
+
 ## Error "Dll was not found" when running inventory from a cluster node
 
 When attempting to run inventory with the Storage Migration Service and targeting a Windows Server failover cluster general use file server source, you receive the following errors:
@@ -335,7 +364,7 @@ This issue is resolved by the [KB4537818](https://support.microsoft.com/help/453
 
 Uninstalling Windows Server cumulative updates may prevent the Storage Migration Service from starting. To resolve this issue, you can back up and delete the Storage Migration Service database:
 
-1. Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
+1. Open an elevated cmd prompt, where you're a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
      ```DOS
      TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
@@ -406,27 +435,27 @@ Guidance: Confirm that the Netlogon service on the computer is reachable through
 
 Examining the source computer shows that the original IP address fails to change.
 
-This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address.
+This issue doesn't happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address.
 
 There are two solutions for this issue:
 
 1. This issue was first resolved by the [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) update. That earlier code defect prevented all use of static IP addresses.
 
-2. If you have not specified a default gateway IP address on the source computer's network interfaces, this issue will occur even with the KB4537818 update. To work around this issue, set a valid default IP address on the network interfaces using the Network Connections applet (NCPA.CPL) or Set-NetRoute Powershell cmdlet.
+2. If you haven't specified a default gateway IP address on the source computer's network interfaces, this issue occurs even with the KB4537818 update. To work around this issue, set a valid default IP address on the network interfaces using the Network Connections applet (NCPA.CPL) or [Set-NetRoute](/powershell/module/nettcpip/set-netroute) PowerShell cmdlet.
 
-## Slower than expected re-transfer performance
+## Slower than expected retransfer performance
 
-After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server. 
+After completing a transfer, then running a subsequent retransfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server. 
 
 This issue is resolved by [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390). To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.yml#optimizing-inventory-and-transfer-performance).
 
 ## Slower than expected inventory performance
 
-While inventorying a source server, you find the file inventory taking a very long time when there are many files or nested folders. Millions of files and folders may lead to inventories taking many hours even on fast storage configurations. 
+While inventorying a source server, you find the file inventory taking a long time when there are many files or nested folders. Millions of files and folders may lead to inventories taking many hours even on fast storage configurations. 
 
 This issue is resolved by [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390).
 
-## Data does not transfer, user renamed when migrating to or from a domain controller
+## Data doesn't transfer, user renamed when migrating to or from a domain controller
 
 After starting the transfer from or to a domain controller:
 
@@ -458,7 +487,7 @@ After starting the transfer from or to a domain controller:
         at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
     ```
 
-    This is expected behavior if you attempted to migrate from or to a domain controller with Storage Migration Service and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". DC migration is [not supported with Storage Migration Service](faq.yml). Because a DC doesn't have true local users and groups, Storage Migration Service treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts.
+    This is expected behavior if you attempted to migrate from or to a domain controller with Storage Migration Service and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". [DC migration isn't supported with Storage Migration Service](faq.yml#is-domain-controller-migration-supported-). Because a DC doesn't have true local users and groups, Storage Migration Service treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts.
 
 If you have already run transfer one ore more times:
 
@@ -472,7 +501,7 @@ If you have already run transfer one ore more times:
 
  3. For any groups returned with their original name, edit their "Group Name (pre-Windows 2000)" to remove the random character suffix added by Storage Migration Service.
 
- 4. For any disabled users or groups with names that now contain a suffix added by Storage Migration Service, you can delete these accounts. You can confirm that user accounts were added later because they will only contain the Domain Users group and will have a created date/time matching the Storage Migration Service transfer start time.
+ 4. For any disabled users or groups with names that now contain a suffix added by Storage Migration Service, you can delete these accounts. You can confirm that user accounts were added later because they'll only contain the Domain Users group and will have a created date/time matching the Storage Migration Service transfer start time.
 
     If you wish to use Storage Migration Service with domain controllers for transfer purposes, ensure you always select "Don't transfer users and groups" on the transfer settings page in Windows Admin Center.
 
@@ -530,12 +559,12 @@ Stack trace:
     at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
 ```
 
-At this stage, Storage Migration Service orchestrator is attempting remote registry reads to determine source machine configuration, but is being rejected by the source server saying the registry path does not exist. This can be caused by:
+At this stage, Storage Migration Service orchestrator is attempting remote registry reads to determine source machine configuration, but is being rejected by the source server saying the registry path doesn't exist. This can be caused by:
 
- - The Remote Registry service isn't running on the source computer.
- - firewall does not allow remote registry connections to the source server from the Orchestrator.
- - The source migration account does not have remote registry permissions to connect to the source computer.
- - The source migration account does not have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
+- The Remote Registry service isn't running on the source computer.
+- firewall doesn't allow remote registry connections to the source server from the Orchestrator.
+- The source migration account doesn't have remote registry permissions to connect to the source computer.
+- The source migration account doesn't have read permissions within the registry of the source computer, under "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" or under "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer"
 
 ## Cutover hangs on "38% Mapping network interfaces on the source computer..."
 
@@ -583,6 +612,7 @@ To work around this issue, use one of the following options:
 ## Inventory or transfer fail when using credentials from a different domain
 
 When attempting to run inventory or transfer with the Storage Migration Service and targeting a Windows Server while using migration credentials from a different domain than the targeted server, you receive the following errors
+
 ```
 Exception from HRESULT:0x80131505
 
@@ -608,7 +638,7 @@ This issue is caused by a code defect in the Storage Migration Service. To work 
 
 Consider the following scenario:
 
-You have a source server with a DNS Host Name and Active Directory name more than 15 unicode characters, such as "iamaverylongcomputername". By design, Windows did not let you set the legacy NetBIOS name to be set this long and warned when the server was named that the NetBIOS name would be truncated to 15 unicode wide characters (example: "iamaverylongcom"). When you attempt to inventory this computer, you receive in Windows Admin Center and the event log:
+You have a source server with a DNS Host Name and Active Directory name more than 15 unicode characters, such as "iamaverylongcomputername". By design, Windows didn't let you set the legacy NetBIOS name to be set this long and warned when the server was named that the NetBIOS name would be truncated to 15 unicode wide characters (example: "iamaverylongcom"). When you attempt to inventory this computer, you receive in Windows Admin Center and the event log:
 
 ```DOS
 "Element not found"
@@ -637,7 +667,7 @@ Guidance: Check the detailed error and make sure the inventory requirements are 
 
 This issue is caused by a code defect in the Storage Migration Service. The only workaround currently is to rename the computer to have the same name as the NetBIOS name, then use [NETDOM COMPUTERNAME /ADD](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) to add an alternate computer name that contains the longer name that was in use prior to starting Inventory. Storage Migration Service supports migrating alternate computer names.
 
-## Storage Migration Service inventory fails with "a parameter cannot be found that matches parameter name 'IncludeDFSN'" 
+## Storage Migration Service inventory fails with "a parameter can't be found that matches parameter name 'IncludeDFSN'" 
 
 When using the 2009 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you receive the following error when you attempt to inventory a source computer:
 
@@ -655,7 +685,7 @@ After installing the Windows Server 2019 November cumulative update [KB4586793](
 Error HRESULT E_FAIL has been returned from a call to a COM component
 ```
 
-It doesn't necessarily happen for all source computers. We are working to diagnose this issue. As a workaround, install the 1.115 or later Storage Migration Service tool in Windows Admin Center. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error. To work around it:
+It doesn't necessarily happen for all source computers. We're working to diagnose this issue. As a workaround, install the 1.115 or later Storage Migration Service tool in Windows Admin Center. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error. To work around it:
 
 1. Navigate to the "Adjust Settings" step of the Transfer phase.
 2. Enable "Override Transfer Validation".
@@ -696,7 +726,7 @@ Guidance: Check the detailed error and make sure the transfer requirements are m
 ========================
 
 ```
-If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms/smslogs) you also see:
+If you dump the SMS debug logs using the [Get-SMSLogs](https://aka.ms/smslogs) command, you also see:
 
 ```
 SMS Debug log:
@@ -727,17 +757,17 @@ SMS Proxy Debug log:
 
 This issue is caused by a limitation in the Storage Migration Service Proxy service when an entire NTFS volume has been configured with the Compression flag. To work around this issue, remove the compression flag from the destination volume:
 
-1. Open File Explorer, right-click the destination drive letter, and click Properties.
+1. Open File Explorer, right-click the destination drive letter, and select **Properties**.
 2. Uncheck "Compress this drive to save disk space"
 3. Rerun the transfer.
 
-Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them won't reduce transfer time.
+Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them doesn't reduce transfer time.
 
 ## An error requires resetting the Storage Migration Service database
 
 Under rare circumstances you may need to reset the Storage Migration Service database. To do this:
 
-1. Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
+1. Open an elevated cmd prompt, where you're a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
      ```CMD
      NET STOP SMS
@@ -764,6 +794,175 @@ Under rare circumstances you may need to reset the Storage Migration Service dat
      NET START SMS
      NET START SMSPROXY
 
+## Transfers halts with error: Unable to translate Unicode character 
+
+A running transfer halts. You receive event log error:
+
+```
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          
+Event ID:      3515
+Task Category: None
+Level:         Error
+Keywords:      
+User:          NETWORK SERVICE
+Computer:      
+Description:
+Couldn't transfer all of the files in the endpoint on the computer.
+Job: 
+Computer: 
+Destination Computer:
+Endpoint:
+State: Failed
+Source File Count: 833617
+Source File Size in KB: 45919696
+Succeeded File Count: 833438
+Succeeded File Size in KB: 45919696
+New File Count: 0
+New File Size in KB: 0
+Failed File Count: 179
+Error: -2146233087
+Error Message: The socket connection was aborted. This could be caused by an error processing your message or a receive timeout being exceeded by the remote host, or an underlying network resource issue. Local socket timeout was '00:00:59.9970000'.
+```
+
+Examining the [Storage Migration Service debug log](https://aka.ms/smslogs) shows:
+
+```
+03. 07. 2023-23:28:08.647 [Erro] ExceptionMessage : (Unable to translate Unicode character \uDB71 at index 1 to specified code page.), ExceptionToString: (System.Text.EncoderFallbackException: Unable to translate Unicode character \uDB71 at index 1 to specified code page.
+```
+
+This issue is caused by an unhandled unicode character that the Storage Migration Service can't translate. To locate the name of the file(s) with the invalid character, edit the following sample PowerShell script and run it on the source computer, then examine the results and rename or remove the files:
+
+```
+# Sample PowerShell script to find files with unhandled unicode characters
+
+$FolderPath = "C:\temp"
+$OutputFilePath = "C:\temp\invalid_char_results.txt"
+$UnhandledChar = "\uDB71"
+
+Get-ChildItem -path $FolderPath -Recurse | ForEach-Object {
+ if ($_ -is [System.IO.FileInfo]) {
+  if ($_.Name -match $UnhandledChar) {
+   Add-Content $outputFilePath "$($_.FullName)"
+  }
+ }
+}
+```
+
+## Cut over fails at 77% or 30%
+
+When you're performing cut over, the operation hangs at "77% - adding the destination computer to the domain" or "30% - Can't unjoin domain." The issue only happens when:
+
+- A user who isn't a member of a built-in admin group in AD created the source or destination computer account in Active Directory.
+
+    Or
+
+- The migration user account isn't the same user who created the source computer account.
+
+Windows updates released on and after October 11, 2022 contain extra protections to address [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042), these extra protections caused the issue. The protections were further updated with the March 14, 2023 monthly cumulative update, adding a workaround option for this issue. The protections intentionally prevent domain join operations from reusing an existing computer account in the target domain unless:
+
+- The user attempting the operation is the creator of the existing account.
+
+- The user attempting the operation is a member of Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators created the computer account.
+
+- The user attempting the operation is a member of the "Domain controller: Allow computer account reuse during domain join." Group Policy setting for the computer account.
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 - Use "Allow computer account re-use during domain join"
+
+1. Ensure all domain controllers, the source computer, destination computer, and SMS migration computer have installed the March 14, 2023 cumulative update and have been rebooted.
+1. Follow the steps in detailed in the Take Action section of [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8#bkmk_take_action).
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that was allowed to reuse computer accounts in step 2."
+
+### Solution 2 - Use the original account for migration
+
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is the same account that created or joined the source and destination computer to the domain.
+
+### Solution 3 (not recommended) - Use a high-privilege group
+
+1. In Windows Admin Center, go to **Server Manager > Storage Migration Service**, create or continue an existing job.
+1. On the **Cut over to the new servers > Adjust Settings** page, ensure the account used for *AD Credentials* is a member of one of the high-privilege Active Directory built-in groups Domain Administrators, Enterprise Administrators or Administrators.
+
+> [!IMPORTANT]
+> If you have followed Solution 1 and the unjoin operation fails "33% - can't unjoin domain" with error 0x6D1 "The procedure is out of range", the March 14, 2024 cumulative update has not been installed on the source computer, or it was installed but the computer was not restarted.
+
+## Cut over fails for Windows Server 2008 R2
+
+When you're performing cut over from a source computer running Windows Server 2008 R2 or older, you
+receive the error "Couldn’t rename the computer from the domain." Using the Storage Migration
+Service Helper [Get-SmsLog](https://aka.ms/smslogs) command shows error `0x6D1` and "Object
+reference not set to an instance of an object". The following example is the log file output from
+the PowerShell `Get-SmsLog` command.
+
+```Log
+Line 360: 04/02/2023-14:06:02.877 [Info] UnjoinDomain(isLocal=False, server='2008R2.corp.contoso.com')    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2151]
+Line 361: 04/02/2023-14:06:02.948 [Erro] Attempt #1 failed to unjoin machine '2008R2.corp.contoso' from the domain with credential 'corp\ned'. Error 0x6D1.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::UnjoinDomain::2184]
+Line 362: 04/02/2023-14:06:02.954 [Erro] Fatal exception during cutover stage processing. Source: 2008R2.corp.contoso.com, CutoverStage: UnjoinSource, ErrorCode: 0x80004003, Message: Object reference not set to an instance of an object.    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverOperation.cs::Run::1116]
+```
+
+Changes introduced in [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8) to combat [CVE-2022-38042](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-38042) cause this error.
+
+To resolve this issue, use one of the following solutions.
+
+### Solution 1 (using Windows Server 2008 R2 with valid ESU)
+
+For a source computer running Windows Server 2008 R2 with valid
+[Extended Support Updates](../../get-started/extended-security-updates-overview.md), first install
+the latest cumulative update. Once the cumulative update has been successfully installed, follow the
+steps detailed in the article
+[Cut over fails at 77% or 30%](#cut-over-fails-at-77-or-30)
+to resolve the issue.
+
+### Solution 2 (using Windows Server 2008 R2 without a valid ESU, Windows Server 2008 or Windows Server 2003)
+
+If your source computer is running Windows Server 2008 R2 without ESU, Windows Server 2008 or
+Windows Server 2003, you need to perform a manual cutover using the steps described in
+[How cutover works in Storage Migration Service](cutover.md), but with the following changes.
+
+1. Skip steps 3 and 4
+1. For step 5, you must sign in to the computer and remove it from the domain manually using
+   `SYSDM.CPL`, `NETDOM.exe`, or the `Remove-Compuer` PowerShell command. You can't remotely remove
+   the computer from the domain after
+   [KB5020276](https://support.microsoft.com/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8).
+
+### Transfer validation warning "The destination proxy wasn't found"
+
+If you didn't already have the SMS Proxy service installed on the destination server before starting the transfer, Windows Admin Center installs it automatically. But under certain circumstances it fails to register and display validation error "The destination proxy wasn't found".
+
+To resolve this issue, ensure the SMS Proxy service feature is installed on the destination server, then run the following PowerShell command on the Orchestrator server:
+
+```powershell
+Register-SMSProxy -ComputerName <destination server FQDN> -Force
+```
+
+Validation now passes.
+
+###  Missing disks on Windows Server 2008 R2 failover cluster source
+
+After inventorying a Windows Server 2008 R2 failover cluster source, you do not see all the clustered disks. This iscaused by the default file server role in Windows Server 2008 R2 will always pick one disk as a dependency, but not the remaining disks assigned to a file server role.
+
+To resolve this issue, ensure all the disks assigned to the file role are added as a dependency in the file server role. 
+
+1. Open failover cluster manager (cluadmin.msc).
+2. Right click on a clustered disk and click **Properties**
+3. On the Dependencies tab, add an **AND** line for the disk to the file server role.
+4. repeat for all other clustered disks.
+5. Close the snap-in and inventory the source again. All disks should now appear and be available for transfer. 
+
+### Cut over of Windows Server 2022 fails with error 5 at computer rename
+
+After you start the cut over process, the rename of a Windows Server 2022 source computer fails to complete at 41%. If migrating to a Windows Server 2022 destination computer, rename fails to complete at 75%. Examining the SMS debug logs shows `error 5: access denied`.
+
+This issue occurs after installing the [March 12, 2024 - KB5035857 Cumulative Update for Windows Server 2022](https://support.microsoft.com/help/5035857). A solution for this regression is currently under investigation.
+
+To work around this issue, use the steps in [Manual cutover](cutover.md#manual-cutover).
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
+
+

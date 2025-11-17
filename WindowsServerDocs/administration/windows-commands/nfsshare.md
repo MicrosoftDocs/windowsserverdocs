@@ -2,10 +2,8 @@
 title: nfsshare
 description: Reference article for the nfsshare command, which controls Network File System (NFS) shares.
 ms.topic: reference
-ms.assetid: 437a2615-335a-442f-9713-d50d5f3983a3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -40,7 +38,7 @@ nfsshare {<sharename> | <drive>:<path> | * } /delete
 
 - If *sharename* and `<drive>:<path>` are used, this command exports the folder identified by `<drive>:<path>` as *sharename*. If you use the **/delete** option, the specified folder stops being available to NFS clients.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

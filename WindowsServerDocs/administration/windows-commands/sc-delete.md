@@ -1,15 +1,13 @@
 ---
-title: sc.exe delete
-description: Reference article for the sc.exe delete command, which deletes a service subkey from the registry.
+title: sc delete
+description: Reference article for the sc delete command, which deletes a service subkey from the registry.
 ms.topic: reference
-ms.assetid: 2fe94fb3-e4d1-47b5-b999-39995ecbb644
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 08/15/2025
 ---
 
-# sc.exe delete
+# sc delete
 
 Deletes a service subkey from the registry. If the service is running or if another process has an open handle to the service, the service is marked for deletion.
 
@@ -19,15 +17,15 @@ Deletes a service subkey from the registry. If the service is running or if anot
 ## Syntax
 
 ```
-sc.exe [<servername>] delete [<servicename>]
+sc <server> delete [service name]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |--|--|
-| `<servername>` | Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\myserver). To run SC.exe locally, don't use this parameter. |
-| `<servicename>` | Specifies the service name returned by the **getkeyname** operation. |
+| `<server>` | Specifies the name of the remote server on which the service is located. The name must use the Universal Naming Convention (UNC) format (for example, \\\MyServer). To run `sc` locally, don't use this parameter. |
+| `<service name>` | Specifies the service name returned by the **getkeyname** operation. |
 | /? | Displays help at the command prompt. |
 
 ## Examples
@@ -35,9 +33,9 @@ sc.exe [<servername>] delete [<servicename>]
 To delete the service subkey **NewServ** from the registry on the local computer, type:
 
 ```
-sc.exe delete NewServ
+sc delete NewServ
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,147 +1,151 @@
 items:
 - name: Get started
+  href: index.yml
   expanded: true
   items:
-    - name: Get started with Windows Server
-      href: get-started-with-windows-server.md
-    - name: Overview
-      expanded: true
+  - name: Overview
+    expanded: true
+    items:
+    - name: What is Windows Server?
+      href: overview.md
+    - name: What's new in Windows Server
       items:
-        - name: What's new in Windows Server
-          items: 
-          - name: Windows Server 2022
-            href: whats-new-in-windows-server-2022.md
-          - name: Windows Server, versions 2004 and 20H2
-            href: whats-new-in-windows-server-2004-20h2.md
-          - name: Windows Server, versions 1903 and 1909
-            href: whats-new-in-windows-server-1903-1909.md
-          - name: Windows Server 2019
-            href: whats-new-in-windows-server-2019.md
-          - name: Windows Server 2016
-            href: whats-new-in-windows-server-2016.md
-        - name: Servicing channels comparison
-          href: servicing-channels-comparison.md
-        - name: Editions feature comparison
-          items:
-          - name: Windows Server 2022
-            href: editions-comparison-windows-server-2022.md
-          - name: Windows Server 2019
-            href: editions-comparison-windows-server-2019.md
-          - name: Windows Server 2016
-            href: editions-comparison-windows-server-2016.md
-        - name: Hardware requirements
-          href: hardware-requirements.md
-        - name: Features removed or no longer developed
-          items: 
-          - name: Windows Server 2022
-            href: removed-deprecated-features-windows-server-2022.md 
-          - name: Windows Server, version 1903 and 1909
-            href: removed-deprecated-features-windows-server-1903-1909.md
-          - name: Windows Server 2019
-            href: removed-deprecated-features-windows-server-2019.md
-          - name: Windows Server 2016
-            href: removed-deprecated-features-windows-server-2016.md
-        - name: Release information
-          href: windows-server-release-info.md
-        - name: Extended Security Updates
-          href: extended-security-updates-overview.md
-    - name: Concepts
+      - name: Windows Server 2025
+        href: whats-new-windows-server-2025.md
+      - name: Windows Server 2022
+        href: whats-new-in-windows-server-2022.md
+      - name: Windows Server 2019
+        href: whats-new-in-windows-server-2019.md
+      - name: Windows Server 2016
+        href: whats-new-in-windows-server-2016.md
+    - name: Windows Server Insiders Preview
+      href: get-started-with-windows-server-insiders-preview.md
+    - name: Editions & Licensing
       items:
-        - name: Install, upgrade, or migrate
-          href: install-upgrade-migrate.md
-          items:
-          - name: Server Core vs Server with Desktop Experience
-            href: install-options-server-core-desktop-experience.md
-          - name: Upgrade or migrate Windows Server Roles and Features
-            href: upgrade-migrate-roles-features.md
-          - name: Upgrade and conversion options
-            href: upgrade-conversion-options.md
-        - name: Activation
-          items:
-            - name: Automatic VM Activation
-              href: automatic-vm-activation.md
-            - name: KMS activation planning
-              href: kms-activation-planning.md
-        - name: Server Core App Compatibility Feature on Demand
-          href: server-core-app-compatibility-feature-on-demand.md
-        - name: Microsoft server applications compatibility
-          items:
-          - name: Windows Server 2022
-            href: application-compatibility-windows-server-2022.md
-          - name: Windows Server 2019
-            href: application-compatibility-windows-server-2019.md
-          - name: Windows Server 2016
-            href: application-compatibility-windows-server-2016.md
-        - name: Azure Hybrid Benefit for Windows Server
-          href: azure-hybrid-benefit.md
-    - name: How-to guides
+      - name: Editions feature comparison
+        href: editions-comparison.md
+      - name: Azure Edition
+        href: azure-edition.md
+      - name: Windows Server Pay-as-you-go
+        href: windows-server-pay-as-you-go.md
+      - name: Windows Server Annual Channel for Containers
+        href: annual-channel-for-containers.md
+    - name: System Requirements & Limits
       items:
-        - name: Activation
-          items:
-            - name: Create KMS host
-              href: kms-create-host.md
-            - name: KMS client activation
-              href: kms-client-activation-keys.md
-        - name: Get Extended Security Updates
-          href: extended-security-updates-deploy.md
-    - name: Nano Server
-      items: 
-      - name: Install Nano Server
-        href: Getting-started-with-Nano-Server.md
-      - name: Changes to Nano Server in the next release of Windows Server
-        href: nano-in-semi-annual-channel.md
-      - name: Nano Server Quick Start
-        href: Nano-Server-Quick-start.md
-      - name: Deploy Nano Server
-        href: Deploy-Nano-Server.md
-        items: 
-          - name: IIS on Nano Server
-            href: IIS-on-Nano-Server.md
-          - name: MPIO on Nano Server
-            href: MPIO-on-Nano-Server.md
-      - name: Manage Nano Server
-        href: Manage-Nano-Server.md
-        items: 
-          - name: Service and update Nano Server
-            href: Update-Nano-Server.md
-      - name: Developing on Nano Server
-        href: Developing-on-Nano-Server.md
-        items: 
-          - name: PowerShell on Nano Server
-            href: powershell-on-Nano-Server.md
-          - name: Developing PowerShell cmdlets for Nano Server
-            href: Developing-powershell-Cmdlets-for-Nano-Server.md
+      - name: Hardware requirements
+        href: hardware-requirements.md
+      - name: Locks and limits
+        href: locks-limits.md
+      - name: Features removed or no longer developed in Windows Server
+        href: removed-deprecated-features-windows-server.md
+    - name: Release Information
+      href: /windows/release-health/windows-server-release-info?context=/windows-server/context/windows-server-get-started
+      items:
+      - name: Windows Server 2025
+        items:
+        - name: Known issues and notifications
+          href: /windows/release-health/status-windows-server-2025?context=/windows-server/context/windows-server-get-started
+        - name: Resolved issues
+          href: /windows/release-health/resolved-issues-windows-server-2025?context=/windows-server/context/windows-server-get-started
+      - name: Windows Server 2022
+        items:
+        - name: Known issues and notifications
+          href: /windows/release-health/status-windows-server-2022?context=/windows-server/context/windows-server-get-started
+        - name: Resolved issues
+          href: /windows/release-health/resolved-issues-windows-server-2022?context=/windows-server/context/windows-server-get-started
+  - name: Plan
+    items:
+    - name: Install, upgrade, or migrate
+      href: install-upgrade-migrate.md
+    - name: Server Core vs Server with Desktop Experience
+      href: install-options-server-core-desktop-experience.md
+    - name: Servicing channels comparison
+      href: servicing-channels-comparison.md
+    - name: Microsoft server applications compatibility
+      href: application-compatibility.md
+    - name: Azure Hybrid Benefit for Windows Server
+      href: azure-hybrid-benefit.md
+    - name: Extended Security Updates
+      href: extended-security-updates-overview.md
+    - name: Secure Windows Server
+      items:
+      - name: Secured-core server
+        href: ../security/secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+      - name: Configure Secured-core Server
+        href: ../security/configure-secured-core-server.md?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: What is Hotpatch?
+      href: hotpatch.md
+  - name: Install & upgrade
+    items:
+    - name: Installation
+      items:
+      - name: Install Windows Server from installation media
+        href: install-windows-server.md
+      - name: Install Server Core App Compatibility
+        href: server-core-app-compatibility-feature-on-demand.md
+    - name: Upgrade
+      items:
+      - name: Upgrade Windows Server
+        href: upgrade-overview.md
+      - name: Perform an in-place upgrade
+        href: perform-in-place-upgrade.md
+      - name: Upgrade or migrate Windows Server Roles and Features
+        href: upgrade-migrate-roles-features.md
+      - name: Upgrade and conversion options
+        href: upgrade-conversion-options.md
+    - name: Manage Feature Updates with Group Policy
+      href: manage-feature-updates-group-policy.md
+  - name: Activation
+    items:
+    - name: Automatic VM Activation
+      href: automatic-vm-activation.md
+    - name: KMS activation planning
+      href: kms-activation-planning.md
+    - name: Create a KMS host
+      href: kms-create-host.md
+    - name: Replace a KMS host
+      href: kms-replace-host.md
+    - name: KMS client activation
+      href: kms-client-activation-keys.md
     - name: Troubleshooting
       items:
-      - name: Activation
-        items: 
-        - name: Troubleshooting Windows volume activation
-          href: activation-troubleshooting-guide.md
-        - name: Troubleshooting KMS
-          href: activation-troubleshoot-kms-general.md
-        - name: Slmgr.vbs options
-          href: activation-slmgr-vbs-options.md
-        - name: Solutions to common activation issues
-          items: 
-          - name: Resolve Windows activation error codes
-            href: activation-error-codes.md
-          - name: "KMS activation: known issues"
-            href: activation-troubleshoot-KMS-issues.md
-          - name: "MAK activation: known issues"
-            href: activation-troubleshoot-MAK-issues.md
-          - name: Troubleshooting DNS-related activation issues
-            href: common-troubleshooting-procedures-kms-dns.md
-          - name: Rebuild the Tokens.dat file
-            href: activation-rebuild-tokens-dat-file.md
-          - name: "Example: Troubleshooting ADBA clients that do not activate"
-            href: activation-troubleshoot-adba-clients.md
-      - name: Nano Server
-        href: Troubleshooting-Nano-Server.md
-    - name: Resources
+      - name: Troubleshooting Windows volume activation
+        href: activation-troubleshooting-guide.md
+      - name: Troubleshooting KMS
+        href: activation-troubleshoot-kms-general.md
+      - name: Slmgr.vbs options
+        href: activation-slmgr-vbs-options.md
+      - name: Solutions to common activation issues
+        items:
+        - name: 'KMS activation: known issues'
+          href: activation-troubleshoot-KMS-issues.md
+        - name: 'MAK activation: known issues'
+          href: activation-troubleshoot-MAK-issues.md
+        - name: Troubleshooting DNS-related activation issues
+          href: common-troubleshooting-procedures-kms-dns.md
+        - name: Rebuild the Tokens.dat file
+          href: activation-rebuild-tokens-dat-file.md
+  - name: Azure Arc enabled servers
+    items:
+    - name: Azure Connected Machine agent deployment options
+      href: /azure/azure-arc/servers/deployment-options?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Connect Windows Server to Azure Arc
+      href: /azure/azure-arc/servers/onboard-windows-server?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Get Extended Security Updates
+      href: extended-security-updates-deploy.md
+    - name: Deliver Extended Security Updates with Azure Arc
+      href: /azure/azure-arc/servers/deliver-extended-security-updates?toc=/windows-server/get-started/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Hotpatch
       items:
-      - name: Windows release health
-        href: /windows/release-health/
-      - name: Windows Server product page
-        href: https://www.microsoft.com/windows-server
-      - name: Windows Server license terms
-        href: ../windows-server-licensing/windows-server-licensing.md
+      - name: Enable Azure Edition Hotpatch from ISO
+        href: enable-hotpatch-azure-edition.md
+      - name: Enable Hotpatch for Azure Arc-enabled servers
+        href: enable-hotpatch-azure-arc-enabled-servers.md
+  - name: Resources
+    items:
+    - name: Windows release health
+      href: /windows/release-health/
+    - name: Windows Server product page
+      href: https://www.microsoft.com/windows-server
+    - name: Windows Server license terms
+      href: ../windows-server-licensing/windows-server-licensing.md

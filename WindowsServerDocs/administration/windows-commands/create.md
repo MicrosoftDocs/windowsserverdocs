@@ -2,10 +2,8 @@
 title: create
 description: Reference article for the create command, which creates a partition or shadow partition on a disk, a volume on one or more disks, or a virtual hard disk (VHD).
 ms.topic: reference
-ms.assetid: b45acde1-8f4f-4ec3-b905-d8188f884af8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -34,6 +32,6 @@ create volume
 | [create volume raid command](create-volume-raid.md) | Creates a RAID-5 volume using three or more specified dynamic disks. |
 | [create volume stripe command](create-volume-stripe.md) | Creates a striped volume using two or more specified dynamic disks. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

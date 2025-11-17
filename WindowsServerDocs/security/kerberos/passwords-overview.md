@@ -1,16 +1,12 @@
 ---
 title: Passwords Overview
 description: Learn about passwords as they are used in the Windows operating systems, and find links to documentation and discussions about the use of passwords in a credential management strategy.
-ms.topic: article
-ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Passwords Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional describes passwords as used in the Windows operating systems, and links to documentation and discussions about the use of passwords in a credential management strategy.
 
@@ -41,6 +37,8 @@ This table lists additional resources for password features, technology and cred
 |**Scenario documentation**|[Protecting your digital identity](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)|
 |**Operations**|[Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754217(v=ws.11))|
 |**Troubleshooting**|[Find out when your Password Expires \- Active Directory PowerShell Blog](https://blogs.msdn.com/b/adpowershell/archive/2010/08/09/9970198.aspx)|
-|**Security**| Windows Server 2008 R2  and  Windows 7 [Threats and Countermeasures Guide: Account Policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125920(v=ws.10))<p>Guidance to [change and create strong passwords](https://www.microsoft.com/security/online-privacy/passwords-create.aspx)|
-|**Tools and settings**|[Group Policy Settings Reference for Windows and Windows Server on the Microsoft Download Center](https://www.microsoft.com/download/en/details.aspx?amp;displaylang=en&displaylang=en&id=25250)|
+|**Security**| Windows Server 2008 R2  and  Windows 7 [Threats and Countermeasures Guide: Account Policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh125920(v=ws.10))<p>Guidance to [change and create strong passwords](https://support.microsoft.com/en-us/windows/create-and-use-strong-passwords-c5cebb49-8c53-4f5e-2bc4-fe357ca048eb)|
+|**Tools and settings**|[Group Policy Settings Reference for Windows and Windows Server on the Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=104005)|
 |**Community resources**|[Protecting your digital identity](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)<p>[Signing in to Windows 8 with a Windows Live ID](https://blogs.msdn.com/b/b8/archive/2011/09/26/signing-in-to-windows-8-with-a-windows-live-id.aspx)<p>[Signing in with a picture password](/archive/blogs/b8/signing-in-with-a-picture-password)<p>[Optimizing picture password security](/archive/blogs/b8/optimizing-picture-password-security)|
+
+

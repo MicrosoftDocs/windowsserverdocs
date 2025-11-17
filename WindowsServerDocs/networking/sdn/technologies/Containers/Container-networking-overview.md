@@ -1,16 +1,12 @@
 ---
 title: Container Networking Overview
 description: This topic is an overview of the networking stack for Windows Containers and includes links to additional guidance about creating, configuring, and managing container networks.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 318659e5-e4a5-4e46-99d6-211dfc46f6b8
-ms.author: anpaul
-author: AnirbanPaul
+ms.topic: overview
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Container Networking Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 In this topic, we give you an overview of the networking stack for Windows containers and we include links to additional guidance about creating, configuring, and managing container networks.
 

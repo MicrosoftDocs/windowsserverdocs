@@ -2,10 +2,8 @@
 title: bdehdcfg size
 description: Reference article for the bdehdcfg size command, which specifies the size of the system partition when a new system drive is being created.
 ms.topic: reference
-ms.assetid: 80f55b1d-a28d-4edf-9997-1fb918b7b5a1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To allocate 500 MB to the default system drive:
 bdehdcfg -target default -size 500
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

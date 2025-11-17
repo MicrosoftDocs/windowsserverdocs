@@ -2,10 +2,8 @@
 title: online volume
 description: Reference article for the online volume command, which takes the offline volume to the online state.
 ms.topic: reference
-ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -39,6 +37,6 @@ To take the volume with focus online, type:
 online volume
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

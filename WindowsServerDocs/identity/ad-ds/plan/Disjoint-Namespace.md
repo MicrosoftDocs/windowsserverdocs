@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: Disjoint Namespace"
-ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: Disjoint Namespace
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+
 ---
 
 # Disjoint Namespace
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A disjoint namespace occurs when one or more domain member computers have a primary Domain Name Service (DNS) suffix that does not match the DNS name of the Active Directory domain of which the computers are members. For example, a member computer that uses a primary DNS suffix of corp.fabrikam.com in an Active Directory domain named na.corp.fabrikam.com is using a disjoint namespace.
 
@@ -89,7 +86,7 @@ Before you modify a namespace, review the following considerations, which apply 
 
     For more information, see [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
 
-    - If you use Windows Server 2003-based computers with constrained delegation, those computers may require additional configuration to change SPNs. For more information, see article 936628 in the Microsoft Knowledge Base, [The SPN does not appear in the list of services that can be delegated to an account when you try to configure constrained delegation on a computer that is running Windows Server 2003](https://support.microsoft.com/help/936628) (404).
+    - If you use Windows Server 2003-based computers with constrained delegation, those computers may require you to manually edit the **msDS-AllowedToDelegateTo** attribute in Active Directory. For more information, see the [ms-DS-Allowed-To-Delegate-To attribute](/windows/win32/adschema/a-msds-allowedtodelegateto).
 
     - If you want to delegate permissions to modify SPNs to subordinate administrators, see [Delegating Authority to Modify SPNs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770439(v=ws.10)).
 

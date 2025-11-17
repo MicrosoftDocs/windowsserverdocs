@@ -1,15 +1,14 @@
 ---
 title: Packet Monitoring Extension in Windows Admin Center
-description: Use this page to operate and consume Packet Monitor (Pktmon) through Windows Admin Center.
+description: Describes how to operate and consume Packet Monitor (Pktmon) through Windows Admin Center to capture and display network traffic.
 ms.topic: how-to
-author: khdownie
-ms.author: v-kedow
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/27/2021
+ms.custom: sfi-image-nochange
 ---
 
 # Packet Monitoring Extension in Windows Admin Center
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack Hub, Azure, Azure Stack HCI, versions 21H2 and 20H2
 
 The Packet Monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate.
 
@@ -20,7 +19,7 @@ Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool f
 Windows Admin Center is a locally-deployed, browser-based management tool that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet. Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC.
 
 ## Before you start
-- To use the tool, the target server needs to be running Windows Server 2019 version 1903 (19H1) and above.
+- To use the tool, the target server needs to be running Windows Server 2019, version 1903 or later.
 - [Install Windows Admin Center](../../../manage/windows-admin-center/deploy/install.md).
 - Add a server to Windows Admin Center:
   1. Click **+ Add** under **All Connections**.

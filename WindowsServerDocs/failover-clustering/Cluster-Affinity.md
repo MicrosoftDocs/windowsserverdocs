@@ -1,15 +1,14 @@
 ---
 title: Cluster affinity
-manager: eldenc
-ms.topic: article
-author: johnmarlin-msft
-ms.author: johnmar
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/20/2021
 description: This article describes failover cluster affinity and antiaffinity levels
 ---
 # Cluster affinity
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+
 
 A failover cluster can hold many roles that can move between nodes and run. There are times when certain roles (that is, virtual machines, resource groups, and so on) should not run on the same node.  This could be because of resource consumption, memory usage, and so on.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
 
@@ -29,7 +28,7 @@ Get-ClusterGroup Group2 | fl AntiAffinityClassNames
     AntiAffinityClassNames : {}
 ```
 
-Because AntiAffinityClassNames are not defined as a default, these roles can run together or apart. The goal is to keep them to be separated. The value for AntiAffinityClassNames can be whatever you want them to be, they just have to be the same. Say that Group1 and Group2 are domain controllers running in virtual machines and they would be best served running on different nodes. Because these are domain controllers, I will use DC for the class name. To set the value, the PowerShell command and results would be:
+Because AntiAffinityClassNames are not defined as a default, these roles can run together or apart. The goal is to keep them separated. The value for AntiAffinityClassNames can be whatever you want them to be, they just have to be the same. Say that Group1 and Group2 are domain controllers running in virtual machines and they would be best served running on different nodes. Because these are domain controllers, I will use DC for the class name. To set the value, the PowerShell command and results would be:
 
 ```powershell
 $AntiAffinity = New-Object System.Collections.Specialized.StringCollection

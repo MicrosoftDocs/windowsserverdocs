@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Event ID 2088: DNS lookup failure occurred with replication success"
-ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: Event ID 2088 - DNS lookup failure occurred with replication success
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: troubleshooting-error-codes
 ---
 
 # Event ID 2088: DNS lookup failure occurred with replication success
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved.
 
@@ -51,7 +47,7 @@ metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498.
 
 2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \<source DC name>" or "ping \<source DC name>".
 
-3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on <https://www.microsoft.com/dns>
+3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using `DCDIAG.EXE`. For more information, see [Dcdiag](/windows-server/administration/windows-commands/dcdiag).
 
 dcdiag /test:dns
 

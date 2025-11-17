@@ -2,10 +2,8 @@
 title: exec
 description: Reference article for the exec command, which runs a script file on the local computer.
 ms.topic: reference
-ms.assetid: 364e8baf-576f-401b-a431-7d3c06621614
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -27,7 +25,7 @@ exec <scriptfile.cmd>
 | --------- | ----------- |
 | `<scriptfile.cmd>` | Specifies the script file to run. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

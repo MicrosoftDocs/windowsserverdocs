@@ -2,10 +2,8 @@
 title: delete volume
 description: Reference article for the delete volume command, which deletes the selected volume.
 ms.topic: reference
-ms.assetid: f625933d-0f47-409e-93b2-a3e234049a5d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To delete the volume with focus, type:
 delete volume
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

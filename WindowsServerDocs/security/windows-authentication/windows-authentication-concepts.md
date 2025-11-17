@@ -1,16 +1,12 @@
 ---
 title: Windows Authentication Concepts
 description: Learn about the concepts on which Windows authentication is based.
-ms.topic: article
-ms.assetid: 29d1db15-cae0-4e3d-9d8e-241ac206bb8b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/12/2016
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 09/24/2024
 ---
 # Windows Authentication Concepts
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This reference overview topic describes the concepts on which Windows authentication is based.
 
@@ -44,6 +40,10 @@ There is a difference between authentication and authorization. With authenticat
 Similarly, you can grant all users from a certain domain permissions to access a resource. Any user who belongs to that domain has access to the resource, just as Canada lets U.S. citizens enter Canada. However, U.S. citizens attempting to enter Brazil or India find that they cannot enter those countries merely by presenting a passport because both of those countries require visiting U.S. citizens to have a valid visa. Thus, authentication does not guarantee access to resources or authorization to use resources.
 
 ## Credentials
+
+> [!CAUTION]
+> When a user performs a local logon, their credentials are verified locally against a cached copy before being authenticated with an identity provider over the network. If the cache verification is successful, the user gains access to the desktop even if the device is offline. However, if the user changes their password in the cloud, the cached verifier is not updated, which means that they can still access their local machine using their old password.
+
 A passport and possibly associated visas are the accepted credentials for a traveler. However, those credentials might not let a traveler enter or access all resources within a country. For instance, additional credentials are required to attend a conference. In Windows, credentials can be managed to make it possible for account holders to access resources over the network without repeatedly having to supply their credentials. This type of access lets users be authenticated one time by the system to access all applications and data sources that they are authorized to use without entering another account identifier or password. The Windows platform capitalizes on the ability to use a single user identity (maintained by Active Directory) across the network by locally caching user credentials in the operating system's Local Security Authority (LSA). When a user logs on to the domain, Windows authentication packages transparently use the credentials to provide single sign-on when authenticating the credentials to network resources. For more information about credentials, see [Credentials Processes in Windows Authentication](credentials-processes-in-windows-authentication.md).
 
 A form of multi-factor authentication for the traveler might be the requirement to carry and present multiple documents to authenticate his identity such as a passport and conference registration information. Windows implements this form or authentication through smart cards, virtual smart cards, and biometric technologies.
@@ -63,7 +63,7 @@ For more information about accounts, see:
 
 -   [Active Directory Security Groups](/windows/security/identity-protection/access-control/active-directory-security-groups)
 
--   [Local Accounts](https://technet.microsoft.com/itpro/windows/keep-bastion.local-accounts)
+-   [Local Accounts](/windows/security/identity-protection/access-control/local-accounts)
 
 -   [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts)
 
@@ -96,4 +96,6 @@ Constrained delegation gives administrators the ability to specify and enforce a
 For more information about constrained delegation, see [Kerberos Constrained Delegation Overview](../kerberos/kerberos-constrained-delegation-overview.md).
 
 ## Additional References
-[Windows Logon and Authentication Technical Overview](https://technet.microsoft.com/library/dn269029.aspx)
+[Windows Logon and Authentication Technical Overview](/windows-server/security/windows-authentication/windows-authentication-technical-overview)
+
+

@@ -2,15 +2,13 @@
 title: bootcfg delete
 description: Reference article for the bootcfg delete command, which deletes an operating system entry in the operating systems section of the Boot.ini file.
 ms.topic: reference
-ms.assetid: 71382e29-9b39-41c8-9c23-cf0ff829440a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # bootcfg delete
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes an operating system entry in the [operating systems] section of the Boot.ini file.
 
@@ -39,7 +37,7 @@ bootcfg /delete /id 1
 bootcfg /delete /s srvmain /u maindom\hiropln /p p@ssW23 /id 3
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

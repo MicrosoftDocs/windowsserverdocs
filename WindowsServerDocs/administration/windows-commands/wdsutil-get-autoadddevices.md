@@ -2,16 +2,14 @@
 title:  wdsutil get-autoadddevices
 description: Reference article for wdsutil get-autoadddevices, which displays all computers that are in the Auto-add database on a Windows Deployment Services server.
 ms.topic: reference
-ms.assetid: 24b4b688-55b0-4bd9-a2f5-7ef4b3dfe2f2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-autoadddevices
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays all computers that are in the Auto-add database on a Windows Deployment Services server.
 
@@ -42,7 +40,7 @@ To see all of the rejected computers, type:
 wdsutil /verbose /Get-AutoaddDevices /Devicetype:RejectedDevices /Server:MyWDSServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil delete-autoadddevices command](wdsutil-delete-autoadddevices.md)

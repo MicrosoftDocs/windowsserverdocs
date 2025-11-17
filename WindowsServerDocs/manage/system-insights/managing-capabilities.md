@@ -1,57 +1,127 @@
 ---
-title: Managing capabilities
-description: System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings.
-ms.topic: article
-author: gawatu
-ms.author: daknappe
-manager: mallikarjun.chadalapaka
-ms.date: 6/05/2018
+title: Manage System Insights capabilities in Windows Admin Center
+description: Learn how to manage System Insights capabilities in Windows Admin Center or PowerShell. Adjust settings for each capability to optimize your deployment.
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
+ms.date: 06/04/2025
+ms.custom: sfi-image-nochange
 ---
-# Managing capabilities
+# Manage System Insights capabilities in Windows Admin Center
 
->Applies to: Windows Server 2022, Windows Server 2019
+System Insights capabilities can be managed and configured to meet your deployment needs. This article explains how to adjust settings for each capability using **PowerShell** or **Windows Admin Center**, with step-by-step examples and screenshots.
 
-In Windows Server 2019, System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings.
+## View capabilities
 
->[!TIP]
->You can also use these short videos to help you get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
+### [PowerShell](#tab/PowerShell)
 
-Though this section provides PowerShell examples, you can use the [System Insights PowerShell documentation](/powershell/module/systeminsights/) to see all of the cmdlets, parameters, and parameter sets within System Insights.
+You can list all of the available capabilities using the [Get-InsightsCapability](/powershell/module/systeminsights/get-insightscapability) cmdlet:
 
-## Viewing capabilities
-
-To get started, you can list all of the available capabilities using the **Get-InsightsCapability** cmdlet:
+1. Open PowerShell. Enter the following command:
 
 ```PowerShell
 Get-InsightsCapability
 ```
+
+![Screenshot of using the Get-InsightsCapability cmdlet in PowerShell.](media/get-insights-capability.png)
+
+### [Windows Admin Center](#tab/windows-admin-center)
+
 These capabilities are also visible in System Insights extension:
 
-![Overview page of System Insights listing available capabilities](media/overview-page-contoso.png)
+1. From Windows Admin Center, open Server Manager.
+1. Select your server.
+1. Select System Insights from the list of extensions.
 
-## Enabling and disabling a capability
-Each capability can be enabled or disabled. Disabling a capability prevents that capability from being invoked, and for non-default capabilities, disabling a capability stops all data collection for that capability. By default, all capabilities are enabled, and you can check the state of a capability using the **Get-InsightsCapability** cmdlet.
+[ ![Screenshot of System Insights extension and the available capabilities in Windows Admin Center.](media/system-insights-overview.png) ](media/system-insights-overview.png#lightbox)
 
-To enable or disable a capability, use the **Enable-InsightsCapability** and the **Disable-InsightsCapability** cmdlets:
+---
 
-```PowerShell
-Enable-InsightsCapability -Name "CPU capacity forecasting"
-Disable-InsightsCapability -Name "Networking capacity forecasting"
-```
-These settings can also be toggled by selected a capability in Windows Admin Center clicking the **Enable** or **Disable** buttons.
+## Enable and disable a capability
 
-### Invoking a capability
-Invoking a capability immediately runs the capability to retrieve a prediction, and administrators can invoke a capability any time by clicking the **Invoke** button in Windows Admin Center or by using the **Invoke-InsightsCapability** cmdlet:
+Each capability can be enabled or disabled. Disabling a capability prevents that capability from being invoked, and for non-default capabilities, disabling a capability stops all data collection for that capability. By default, all capabilities are enabled, and you can check the state of a capability before changing it.
 
-```PowerShell
-Invoke-InsightsCapability -Name "CPU capacity forecasting"
-```
+### [PowerShell](#tab/PowerShell)
 
->[!TIP]
->To make sure invoking a capability doesn't conflict with critical operations on your machine, consider scheduling predictions during off-business hours.
+To enable a capability, use the **Enable-InsightsCapability** cmdlet:
 
-## Retrieving capability results
-Once a capability has been invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [understanding capabilities document](understanding-capabilities.md).
+1. Open PowerShell, and enter the following command replacing the name of the capability with the capability of your choice.
+
+    ```PowerShell
+    Enable-InsightsCapability -Name "CPU capacity forecasting"
+    ```
+
+To disable a capability, use the **Disable-InsightsCapability** cmdlet:
+
+1. Open PowerShell, and enter the following command replacing the name of the capability with the capability of your choice.
+
+    ```PowerShell
+    Disable-InsightsCapability -Name "Networking capacity forecasting"
+    ```
+
+1. You're prompted to confirm the capability you're disabling.
+
+    [ ![Screenshot of using the Disable-InsightsCapability cmdlet in PowerShell.](media/disable-insights-capability.png) ](media/disable-insights-capability.png#lightbox)
+
+### [Windows Admin Center](#tab/windows-admin-center)
+
+These settings can be toggled by selecting a capability in Windows Admin Center.
+
+To enable a capability:
+
+1. Open the **Systems Insights** extension.
+1. Select the row of the capability you want to enable.
+1. Select **Enable** in the top menu.
+1. The capability is enabled.
+
+    [ ![Screenshot showing how to enable a capability in Windows Admin Center.](media/enable-capability.png) ](media/enable-capability.png#lightbox)
+
+To disable a capability:
+
+1. Open the **Systems Insights** extension.
+1. Select the name of the capability you want to disable.
+1. Select **Disable** in the top menu of the capability overview page.
+1. The capability is disabled.
+
+    [ ![Screenshot showing how to disable a capability in Windows Admin Center.](media/disable-capability.png) ](media/disable-capability.png#lightbox)
+
+---
+
+### Invoke a capability
+
+Invoking a capability immediately runs the capability to retrieve a prediction, and administrators can invoke a capability any time in Windows Admin Center, or by using the **Invoke-InsightsCapability** cmdlet. To make sure invoking a capability doesn't conflict with critical operations on your machine, consider scheduling predictions during off-business hours.
+
+### [PowerShell](#tab/PowerShell)
+
+1. Open PowerShell, and enter the following command replacing the name of the capability with the capability of your choice.
+
+    ```PowerShell
+    Invoke-InsightsCapability -Name "CPU capacity forecasting"
+    ```
+
+1. Confirm that you want to invoke the capability.
+
+    [ ![Screenshot of using the Invoke-InsightsCapability cmdlet in PowerShell.](media/invoke-insights-capability.png) ](media/invoke-insights-capability.png#lightbox)
+
+### [Windows Admin Center](#tab/windows-admin-center)
+
+1. Open the **Systems Insights** extension.
+
+1. Select the row of the capability you want to invoke.
+
+1. Select the **Invoke** button in Windows Admin Center.
+
+    [ ![Screenshot showing how to invoke the CPU capacity forecasting capability.](media/invoke-cpu-capacity-forecasting.png) ](media/invoke-cpu-capacity-forecasting.png#lightbox)
+
+1. A notification appears and shows the capability was successfully invoked.
+
+---
+
+## Retrieve capability results
+
+### [PowerShell](#tab/PowerShell)
+
+Once a capability is invoked, the most recent results are visible using **Get-InsightsCapability** or **Get-InsightsCapabilityResult**. These cmdlets output the most recent **Status** and **Status Description** of each capability, which describe the result of each prediction. The **Status** and **Status Description** fields are further described in the [understanding capabilities document](understanding-capabilities.md).
 
 Additionally, you can use the **Get-InsightsCapabilityResult** cmdlet to view the last 30 prediction results and to retrieve the data associated with the prediction:
 
@@ -64,11 +134,17 @@ Get-InsightsCapabilityResult -Name "CPU capacity forecasting" -History
 $Output = Get-Content (Get-InsightsCapabilityResult -Name "CPU capacity forecasting").Output -Encoding UTF8 | ConvertFrom-Json
 $Output.ForecastingResults
 ```
+
+### [Windows Admin Center](#tab/windows-admin-center)
+
 The System Insights extension automatically shows the prediction history and parses the results of the JSON result, giving you an intuitive, high-fidelity graph of each forecast:
 
-![Single capability page showing a forecasting graph and the prediction history](media/cpu-forecast-2.png)
+[ ![Screenshot showing a single capability page showing a forecasting graph and the prediction history](media/cpu-forecasting.png) ](media/cpu-forecasting.png#lightbox)
 
-### Using the event log to retrieve capability results
+---
+
+### Use the event log to retrieve capability results
+
 System Insights logs an event each time a capability finishes a prediction. These events are visible in the **Microsoft-Windows-System-Insights/Admin** channel, and System Insights publishes a different event ID for each status:
 
 | Prediction status | Event ID |
@@ -79,15 +155,15 @@ System Insights logs an event each time a capability finishes a prediction. Thes
 | Error | 149 |
 | None | 132 |
 
->[!TIP]
->Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807&preserve-view=true) to aggregate these events and see prediction results across a group of machines.
+Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome) to aggregate these events and see prediction results across a group of machines.
 
+## Set a capability schedule
 
-## Setting a capability schedule
-In addition to on-demand predictions, you can configure periodic predictions for each capability so that the specified capability is automatically invoked on a predefined schedule. Use the **Get-InsightsCapabilitySchedule** cmdlet to see capability schedules:
+In addition to on-demand predictions, you can configure periodic predictions for each capability so that the specified capability is automatically invoked on a predefined schedule. Each default capability is scheduled to run every day at 3am. You can, however, create custom schedules for each capability, and System Insights supports a variety of schedule types.
 
->[!TIP]
->Use the pipeline operator in PowerShell to see information for all capabilities returned by the **Get-InsightsCapability** cmdlet.
+### [PowerShell](#tab/PowerShell)
+
+Use the **Get-InsightsCapabilitySchedule** cmdlet to see capability schedules. Use the pipeline `|` in PowerShell to see information for all capabilities returned by the **Get-InsightsCapability** cmdlet.
 
 ```PowerShell
 Get-InsightsCapability | Get-InsightsCapabilitySchedule
@@ -100,7 +176,7 @@ Enable-InsightsCapabilitySchedule -Name "Total storage consumption forecasting"
 Disable-InsightsCapabilitySchedule -Name "Volume consumption forecasting"
 ```
 
-Each default capability is scheduled to run every day at 3am. You can, however, create custom schedules for each capability, and System Insights supports a variety of schedule types, which can be configured using the **Set-InsightsCapabilitySchedule** cmdlet:
+You can create custom schedules for each capability using the **Set-InsightsCapabilitySchedule** cmdlet:
 
 ```PowerShell
 Set-InsightsCapabilitySchedule -Name "CPU capacity forecasting" -Daily -DaysInterval 2 -At 4:00PM
@@ -108,17 +184,28 @@ Set-InsightsCapabilitySchedule -Name "Networking capacity forecasting" -Daily -D
 Set-InsightsCapabilitySchedule -Name "Total storage consumption forecasting" -Hourly -HoursInterval 2 -DaysOfWeek Monday, Wednesday, Friday
 Set-InsightsCapabilitySchedule -Name "Volume consumption forecasting" -Minute -MinutesInterval 30
 ```
->[!NOTE]
->Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the default capabilities [here](understanding-capabilities.md).
 
-You can also use Windows Admin Center to view and set schedules for each capability by clicking **Settings**. The current schedule is shown on the **Schedule** tab, and you can use the GUI tools to create a new schedule:
+Because the default capabilities analyze daily data, it's recommended to use daily schedules for these capabilities. Learn more about the [default capabilities](understanding-capabilities.md).
 
-![Settings page showing current schedule](media/schedule-page-contoso.png)
+### [Windows Admin Center](#tab/windows-admin-center)
 
-## Creating remediation actions
+You can also use Windows Admin Center to view and set schedules for each capability.
+
+1. Select the name of the capability you want to schedule.
+1. Select **Settings** on the capability overview page.
+1. The **Schedule** tab shows the current schedule, and can be updated to run on a different schedule.
+
+[ ![Settings page showing current schedule.](media/cpu-capacity-forecast-schedule.png) ](media/cpu-capacity-forecast-schedule.png#lightbox)
+
+---
+
+## Create remediation actions
+
 System Insights enables you to kick off custom remediation scripts based on the result of a capability. For each capability, you can configure a custom PowerShell script for each prediction status, allowing administrators to take corrective action automatically, rather than requiring manual intervention.
 
 Sample remediation actions include running disk cleanup, extending a volume, running deduplication, live migrating VMs, and setting up Azure File Sync.
+
+### [PowerShell](#tab/PowerShell)
 
 You can see the actions for each capability using the **Get-InsightsCapabilityAction** cmdlet:
 
@@ -128,9 +215,6 @@ Get-InsightsCapability | Get-InsightsCapabilityAction
 
 You can create new actions or delete existing actions using the **Set-InsightsCapabilityAction** and **Remove-InsightsCapabilityAction** cmdlets. Each action is run using credentials that are specified in the **ActionCredential** parameter.
 
->[!NOTE]
->In the initial System Insights release, you must specify remediation scripts outside of user directories. This will be fixed in an upcoming release.
-
 ```PowerShell
 $Cred = Get-Credential
 Set-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Warning -Action "C:\Users\Public\WarningScript.ps1" -ActionCredential $Cred
@@ -139,14 +223,23 @@ Set-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Critical -Ac
 Remove-InsightsCapabilityAction -Name "CPU capacity forecasting" -Type Warning
 ```
 
-You can also use Windows Admin Center to set remediation actions by using the **Actions** tab within the **Settings** page:
+### [Windows Admin Center](#tab/windows-admin-center)
 
-![Settings page where user can specify remediation actions](media/actions-page-contoso.png)
+You can also use Windows Admin Center to set remediation actions.
 
+1. Select the name of the capability you want to specify actions for.
+1. Select **Settings** on the capability overview page.
+1. The **Actions** tab shows the current actions. Browse example scripts, set scripts to run for each status, and enter credentials in this tab.
 
-## Additional References
+[ ![Settings page where user can specify remediation actions](media/cpu-capacity-forecast-actions.png) ](media/cpu-capacity-forecast-actions.png#lightbox)
+
+---
+
+## Related content
+
 To learn more about System Insights, use the following resources:
 
+- [System Insights PowerShell documentation](/powershell/module/systeminsights/)
 - [System Insights overview](overview.md)
 - [Understanding capabilities](understanding-capabilities.md)
 - [Adding and developing capabilities](adding-and-developing-capabilities.md)

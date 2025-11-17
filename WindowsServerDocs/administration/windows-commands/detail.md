@@ -2,10 +2,8 @@
 title: detail
 description: Reference article for the detail command, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
 ms.topic: reference
-ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -31,6 +29,6 @@ detail vdisk
 | [Detail volume](detail-volume.md) | Displays the disks on which the current volume resides. |
 | [Detail vdisk](detail-vdisk.md) | Displays the properties of the selected VHD. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

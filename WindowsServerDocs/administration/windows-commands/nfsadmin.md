@@ -2,16 +2,14 @@
 title: nfsadmin
 description: Reference article for the nfsadmin command, which manages both Server for NFS and Client for NFS.
 ms.topic: reference
-ms.assetid: 7375b2cf-c6b8-45b5-abf6-6c10e462defd
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nfsadmin
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 A command-line utility that administers Server for NFS or Client for NFS on the local or remote computer running Microsoft Services for Network File System (NFS). Used without parameters, nfsadmin server displays the current Server for NFS configuration settings and nfsadmin client displays the current Client for NFS configuration settings.
 
@@ -101,7 +99,7 @@ nfsadmin server config
 nfsadmin client config
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,0 +1,130 @@
+### YamlMime:Hub
+
+title: Virtualization documentation # < 60 chars
+summary: Virtualization in Windows Server is a foundational technology to run virtual machines (VMs) and containers to power your workloads. # < 160 chars
+
+metadata:
+  title: Virtualization documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Virtualization in Windows Server is a foundational technology to run virtual machines (VMs) and containers to power your workloads. # Required; article description that is displayed in search results. < 160 chars.
+  ms.topic: hub-page # Required
+  ms.author: roharwoo
+  author: robinharwood #Required; your GitHub user alias, with correct capitalization.
+  ms.service: windows-server
+  ms.date: 07/23/2025 #Required; mm/dd/yyyy format.
+
+# highlightedContent section (optional)
+# Maximum of 8 items
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: Hyper-V on Windows Server and Windows
+      itemType: overview
+      url: hyper-v/overview.md
+    # Card
+    - title: Install Hyper-V on Windows
+      itemType: how-to-guide
+      url: hyper-v/get-started/install-hyper-v.md
+    # Card
+    - title: Windows containers
+      itemType: overview
+      url: /virtualization/windowscontainers/about/
+    # Card
+    - title: Start using containers on Windows
+      itemType: how-to-guide
+      url: /virtualization/windowscontainers/quick-start/set-up-environment
+
+# conceptualContent section (optional)
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  # title: Virtualization on Windows # < 60 chars (optional)
+  # summary: Find related links to Containers and Hyper-V on Windows. # < 160 chars (optional)
+  sections:
+   - title: Hyper-V
+     items:
+      # Card
+      - title: Hyper-V hosts
+        links:
+          - text: Hyper-V overview
+            itemType: overview
+            url: hyper-v/overview.md
+          - text: System requirements
+            itemType: overview
+            url: hyper-v/host-hardware-requirements.md
+          - text: Install the Hyper-V role
+            itemType: get-started
+            url: hyper-v/get-started/install-hyper-v.md
+          - text: Create and configure a virtual switch
+            itemType: quickstart
+            url: hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines.md
+      # Card
+      - title: Run virtual machines
+        links:
+          - text: Supported Windows guest operating systems
+            itemType: reference
+            url: hyper-v/supported-windows-guest-operating-systems-for-hyper-v-on-windows.md
+          - text: Supported Linux and FreeBSD virtual machines
+            itemType: reference
+            url: hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md
+          - text: Create a virtual machine
+            itemType: how-to-guide
+            url: hyper-v/get-started/create-a-virtual-machine-in-hyper-v.md
+      # Card
+      - title: Hyper-V Management Tools
+        links:
+          - url: /windows-server/manage/windows-admin-center/use/manage-virtual-machines
+            itemType: how-to-guide
+            text: Windows Admin Center
+          - url: /system-center/vmm/overview
+            itemType: overview
+            text: System Center Virtual Machine Manager
+          - url: /powershell/module/hyper-v/index?view=win10-ps
+            itemType: reference
+            text: PowerShell
+      # Card
+      - title: Developer Resources
+        links:
+          - url: /virtualization/hyper-v-on-windows/reference/hyper-v-architecture
+            itemType: reference
+            text: Hyper-V architecture
+          - url: /virtualization/api/index
+            itemType: reference
+            text: Hyper-V APIs
+          - url: /virtualization/hyper-v-on-windows/reference/tlfs
+            itemType: reference
+            text: Hypervisor specifications
+      # Card
+      - title: Community
+        links:
+          - text: Hyper-V on Microsoft Q&A
+            itemType: learn
+            url: https://learn.microsoft.com/en-us/answers/tags/748/windows-business-windows-server-high-availability-virtualization-hyper-v
+   - title: Windows Containers
+     items:
+      # Card
+      - title: Containers on Windows or Azure
+        links:
+          - text: Windows and containers
+            itemType: overview
+            url: https://www.docker.com/docker-windows
+          - text: Containers vs. virtual machines
+            itemType: overview
+            url: https://www.docker.com/docker-windows
+          - text: Get Docker Desktop for Windows
+            itemType: overview
+            url: https://www.docker.com/docker-windows
+          - text: Azure Kubernetes Service (AKS)
+            itemType: overview
+            url: https://azure.microsoft.com/services/kubernetes-service/
+      # Card
+      - title: Run Containers
+        links:
+          - text: Prep Windows for containers
+            itemType: deploy
+            url: /virtualization/windowscontainers/quick-start/set-up-environment
+          - text: Run your first Windows container
+            itemType: get-started
+            url: /virtualization/windowscontainers/quick-start/run-your-first-container
+          - text: Set up Linux Containers on Windows
+            itemType: get-started
+            url: /virtualization/windowscontainers/deploy-containers/set-up-linux-containers

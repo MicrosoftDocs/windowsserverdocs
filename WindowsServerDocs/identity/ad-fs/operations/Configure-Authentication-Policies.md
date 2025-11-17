@@ -1,12 +1,9 @@
 ---
 description: "Learn more about: Configure Authentication Policies"
-ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Configure Authentication Policies
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Authentication Policies

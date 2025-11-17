@@ -2,10 +2,8 @@
 title: tcmsetup
 description: Reference article for the tcmsetup command, which sets up and disables the TAPI client.
 ms.topic: reference
-ms.assetid: 15e0c10f-996f-4301-92e5-943f7ee8212d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -41,7 +39,7 @@ tcmsetup  [/q] /c /d
 
 - The list of telephony servers that is created by this command replaces any existing list of telephony servers available to the client. You can't use this command to add to the existing list.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: ksetup domain
 description: Reference article for the ksetup domain command, which sets the domain name for all Kerberos operations.
 ms.topic: reference
-ms.assetid: 2ef766e3-6071-44f2-946b-22ea5b61a508
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -35,7 +33,7 @@ ksetup /mapuser principal@realm domain-user /domain domain-name
 
 After a successful connection, you'll receive a new TGT or an existing TGT will be refreshed.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

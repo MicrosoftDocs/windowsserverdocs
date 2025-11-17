@@ -1,11 +1,10 @@
 ---
 title: DHCP (Dynamic Host Configuration Protocol) Basics
 description: "Learn more about: DHCP (Dynamic Host Configuration Protocol) Basics"
-manager: dcscontentpm
 ms.date: 5/26/2020
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
+author: robinharwood
+ms.author: roharwoo
 ms.reviewer:
 ---
 # DHCP (Dynamic Host Configuration Protocol) Basics
@@ -16,7 +15,9 @@ Dynamic Host Configuration Protocol (DHCP) is a standard protocol defined by RFC
 
 - Subnet Mask
 
-- Default GatewayOther information can be provided as well, such as Domain Name Service (DNS) server addresses and Windows Internet Name Service (WINS) server addresses. The system administrator configures the DHCP server with the options that are parsed out to the client.
+- Default Gateway
+
+Other information can be provided as well, such as Domain Name Service (DNS) server addresses and Windows Internet Name Service (WINS) server addresses. The system administrator configures the DHCP server with the options that are parsed out to the client.
 
 ## More Information
 

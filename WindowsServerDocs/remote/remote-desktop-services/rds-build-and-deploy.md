@@ -1,12 +1,10 @@
 ---
 title: RDS - Build and deploy
 description: Steps to build a Remote Desktop deployment
-ms.author: elizapo
-ms.date: 04/18/2017
-ms.topic: article
-ms.assetid: 176ae424-96e9-4c78-88f5-da418e76c3d7
-author: lizap
-manager: dongill
+ms.author: daknappe
+ms.date: 7/3/2024
+ms.topic: install-set-up-deploy
+author: dknappettmsft
 ---
 # Build and deploy your Remote Desktop Services deployment
 
@@ -16,12 +14,12 @@ A Remote Desktop Services deployment is the infrastructure used to share apps an
 
 See [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md) for a detailed discussion of the different pieces that work together to make up your Remote Desktop Services deployment.
 
-Have an existing Remote Desktop deployment built on a previous version of Windows Server? Check out your options for moving to WIndows Server 2016, where you can take advantage of new and better functionality around performance and scale:
+Have an existing Remote Desktop deployment built on a previous version of Windows Server? Check out your options for moving to the latest version of Windows Server, where you can take advantage of new and better functionality around performance and scale:
 
-- [Migrate your RDS deployment to Windows Server 2016](migrate-rds-role-services.md)
-- [Upgrade your RDS deployment to Windows Server 2016](./upgrade-to-rds.md)
+- [Migrate your RDS deployment](migrate-rds-role-services.md)
+- [Upgrade your RDS deployment](./upgrade-to-rds.md)
 
-Want to create a new Remote Desktop deployment? Use the following information to deploy Remote Desktop in Windows Server 2016:
+Want to create a new Remote Desktop deployment? Use the following information to deploy Remote Desktop in Windows Server:
 
 - [Deploy the Remote Desktop Services infrastructure](rds-deploy-infrastructure.md)
 - [Create a session collection to hold the apps and resources you want to share](rds-create-collection.md)
@@ -32,6 +30,3 @@ Want to create a new Remote Desktop deployment? Use the following information to
    - [Add high availability to the RD Connection Broker infrastructure](rds-connection-broker-cluster.md)
    - [Add high availability to the RD Web and RD Gateway web front](rds-rdweb-gateway-ha.md)
    - [Deploy a two-node Storage Spaces Direct file system for UPD storage](rds-storage-spaces-direct-deployment.md)
-
-
-If you're a hosting partner interested in using Remote Desktop to provide apps and resources to customers or a customer looking for someone to host your apps, check out [Remote Desktop Services hosting partners](rds-hosting-partners.md) for information about an assessment you can take about using RDS in Azure as a hosting environment, as well as a list of partners who've passed it.

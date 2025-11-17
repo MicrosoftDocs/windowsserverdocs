@@ -2,10 +2,8 @@
 title: get-ImageFile
 description: Reference article for get-ImageFile, which retrieves information about the images contained in a Windows Image (.wim) file.
 ms.topic: reference
-ms.assetid: e1e296fb-20cf-4a60-9db4-4cbac7d4dab5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -37,6 +35,6 @@ To view detailed information, type:
 wdsutil /Verbose /Get-ImageFile /ImageFile:\\Server\Share\My Folder \install.wim /Detailed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

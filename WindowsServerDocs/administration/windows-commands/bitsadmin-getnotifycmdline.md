@@ -2,10 +2,8 @@
 title: bitsadmin getnotifycmdline
 description: Reference article for the bitsadmin getnotifycmdline command, which retrieves the command-line command that is run when the job finishes transferring data.
 ms.topic: reference
-ms.assetid: 90fa33e6-aca5-4a23-82bd-19a9f13f8416
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To retrieve the command-line command used by the service when the job named *myD
 bitsadmin /getnotifycmdline myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: reg load
 description: Reference article for the reg load command, which writes saved subkeys and entries into a different subkey in the registry.
 ms.topic: reference
-ms.assetid: 3b0b2b1b-f510-4108-9e9d-7057e924aa6e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -44,7 +42,7 @@ To load the file named TempHive.hiv to the key HKLM\TempHive, type:
 reg load HKLM\TempHive TempHive.hiv
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

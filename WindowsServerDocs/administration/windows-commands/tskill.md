@@ -2,16 +2,14 @@
 title: tskill
 description: Reference article for the tskill command, which ends a process running in a session on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 08986e6a-6900-4ece-85a1-8f73b14db1b3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # tskill
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Ends a process running in a session on a Remote Desktop Session Host server.
 
@@ -58,7 +56,7 @@ To end the process explorer running on session 5, type:
 tskill explorer /id:5
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

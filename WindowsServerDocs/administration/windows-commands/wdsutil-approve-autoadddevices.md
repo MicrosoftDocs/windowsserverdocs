@@ -2,16 +2,14 @@
 title: wdsutil approve-autoadddevices
 description: Reference article for the wdsutil approve-autoadddevices command, which approves computers that are pending administrative approval.
 ms.topic: reference
-ms.assetid: 8d76e8d3-ab35-429c-be7b-904f95d0782d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil approve-autoadddevices
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Approves computers that are pending administrative approval. When the Auto-add policy is enabled, administrative approval is required before unknown computers (those that are not pre-staged) can install an image. You can enable this policy using the **PXE Response** tab of the server s properties page.
 
@@ -58,7 +56,7 @@ To approve all pending computers, type:
 wdsutil /verbose /Approve-AutoaddDevices /RequestId:ALL
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

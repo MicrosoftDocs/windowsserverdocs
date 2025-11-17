@@ -1,0 +1,107 @@
+### YamlMime:Landing
+
+title: Remote Desktop Services
+summary: Remote Desktop Services let you deliver virtualized applications and provide secure remote and mobile desktop access through remote desktop sessions. # < 160 chars
+
+metadata:
+  title: Remote Desktop Services # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: This topic provides an overview of Remote Desktop Services and its assorted features in Windows Server. # Required; article description that is displayed in search results. < 160 chars.
+  ms.topic: landing-page # Required
+  ms.author: roharwoo
+  author: robinharwood
+  ms.date: 11/25/2024 #Required; mm/dd/yyyy format.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | tutorial | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card 
+  - title: About Remote Desktop Services
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Remote Desktop Services?
+            url: remote-desktop-services-overview.md
+
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Create virtual machines for Remote Desktop
+            url: create-virtual-machines-for-remote-desktop.md
+          - text: Supported configurations for Remote Desktop Services
+            url: rds-supported-config.md
+          - text: Supported security configurations for Windows 10 Virtual Desktop Infrastructure
+            url: rds-vdi-supported-config.md
+          - text: Planning poster for Remote Desktop Services
+            url: rds-poster.md
+
+  # Card
+  - title: Plan and Design
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Plan and Design your Remote Desktop Services environment
+            url: rds-plan-and-design.md
+      - linkListType: architecture
+        links:
+          - text: Remote Desktop Services architecture
+            url: desktop-hosting-logical-architecture.md
+          - text: Build anywhere
+            url: rds-plan-build-anywhere.md
+          - text: Network guidelines
+            url: network-guidance.md
+
+  # Card (Optional; Remove if not applicable.)
+  - title: Build and deploy
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Build and deploy your Remote Desktop Services deployment
+            url: rds-build-and-deploy.md
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy your Remote Desktop environment
+            url: rds-deploy-infrastructure.md
+          - text: Create a Remote Desktop Services collection
+            url: rds-create-collection.md
+          - text: License your RDS deployment with client access licenses
+            url: rds-client-access-license.md
+
+  # Card (Optional; Remove if not applicable.)
+  - title: Run and tune
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Run and tune your Remote Desktop Services environment
+            url: rds-run-and-tune.md
+      - linkListType: how-to-guide
+        links:
+          - text: Manage your personal desktop session collections
+            url: rds-manage-personal-collection.md
+          - text: Manage users in your RDS collection
+            url: rds-user-management.md
+          - text: Remote Desktop IP Virtualization
+            url: internet-protocol-virtualization.md
+          - text: Optimize Windows configuration for VDI desktops
+            url: remote-desktop-services-vdi-optimize-configuration.md
+
+  # Card (Optional; Remove if not applicable.)
+  - title: Access your Remote Desktop resources
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Get started with the Remote Desktop Connection app
+            url: ./clients/remote-desktop-connection-single-sign-on.md
+          - text: Enable Remote Desktop on your PC
+            url: ./clients/remote-desktop-allow-access.md
+          - text: Allow access to your PC from outside your network
+            url: ./clients/remote-desktop-allow-outside-access.md
+          - text: Uninstall and reinstall the Remote Desktop Connection app
+            url: ./clients/uninstall-remote-desktop-connection.md
+      - linkListType: reference
+        links:
+          - text: Available Remote Desktop clients
+            url: ./clients/remote-desktop-clients.md

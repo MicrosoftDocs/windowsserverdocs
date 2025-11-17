@@ -1,24 +1,22 @@
 ---
 title: Roles, Role Services, and Features included in Windows Server - Server Core
-description: What roles and features are included in the Server Core installation option of Windows Server?
+description: Learn about what roles and features are included in Windows Server Server Core.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: pronichkin
-ms.author: artemp
-ms.date: 02/23/2018
-ms.topic: conceptual
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 03/12/2025
+ms.topic: feature-guide
 ---
+
 # Roles, Role Services, and Features included in Windows Server - Server Core
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+This article describes the roles, role services, and features available in the Server Core installation option of Windows Server. This information can help you determine if the Server Core option suits your environment. Given the extensive list, you might want to search for a specific role or feature. If your search doesn't yield results, it means that particular role or feature isn't included in Server Core.
 
-We generally talk about [what's *not* in Server Core](server-core-removed-roles.md) - now we're going to try a different approach and tell you what's *included* and whether something is *installed by default*. The following roles, role services, and features are *in* the Server Core installation option of Windows Server. Use this information to help figure out if the Server Core option works for your environment. Because this is a large list, consider searching for the specific role or feature you're interested in - if that search doesn't return what you're looking for, it's not included in Server Core.
+For example, if you search for **Remote Desktop Session Host**, you won't find it on this page. That's because the RD Session Host is **not** included in the Server Core image. Proceed to the following section to see what's included in Server Core builds.
 
-For example, if you search for "Remote Desktop Session Host" - you won't find it on this page. That's because the RD Session Host is NOT included in the Server Core image.
+# [Roles](#tab/roles)
 
-Remember that you can [always look](server-core-removed-roles.md) at what's *not* included. This is just a different way to look at things.
-
-## Roles included in Server Core
 The Server Core installation option includes the following server roles.
 
 | Role                                            | Name                           | Installed by default? |
@@ -42,7 +40,8 @@ The Server Core installation option includes the following server roles.
 | Windows Server Essentials Experience            | ServerEssentialsRole           | N                     |
 | Windows Server Update Services                  | UpdateServices                 | N                     |
 
-## Role services included in Server Core
+# [Role services](#tab/roleservices)
+
 The Server Core installation option includes the following role services.
 
 | Role                                  | Role service                                                   | Name                    | Installed by default? |
@@ -73,7 +72,7 @@ The Server Core installation option includes the following role services.
 | Remote Access                         | DirectAccess and VPN (RAS)                                     | DirectAccess-VPN        | N                     |
 |                                       | Routing                                                        | Routing                 | N                     |
 |                                       | Web Application Proxy                                          | Web-Application-Proxy   | N                     |
-| Remote Desktop Services               | Remote Desktop Connection Broker*                               | RDS-Connection-Broker   | N                     |
+| Remote Desktop Services               | Remote Desktop Connection Broker<sup>1</sup>                   | RDS-Connection-Broker   | N                     |
 |                                       | Remote Desktop Licensing                                       | RDS-Licensing           | N                     |
 |                                       | Remote Desktop Virtualization Host                             | RDS-Virtualization      | N                     |
 | Web Server (IIS)                      | Web Server                                                     | Web-WebServer           | N                     |
@@ -130,7 +129,10 @@ The Server Core installation option includes the following role services.
 |                                       | WSUS Services                                                  | UpdateServices-Services | N                     |
 |                                       | SQL Server Connectivity                                        | UpdateServices-DB       | N                     |
 
-## Features included in Server Core
+<sup>1</sup>Indicates a service no longer available in Windows Server Core starting with Windows Server 2019, version 1803.
+
+# [Features](#tab/features)
+
 The Server Core installation option includes the following features.
 
 | Feature                                                | Name                               | Installed by default? |
@@ -233,6 +235,10 @@ The Server Core installation option includes the following features.
 | WinRM IIS Extension                                    | WinRM-IIS-Ext                      | N                     |
 | WINS Server                                            | WINS                               | N                     |
 | WoW64 Support                                          | WoW64-Support                      | Y                     |
-|                                                        |                                    |                       |
 
-*Services indicated with a * are no longer available in server core starting with Server 2019 1803.
+---
+
+## See also
+
+- [Roles, Role Services, and Features not in Windows Server - Server Core](server-core-removed-roles.md)
+

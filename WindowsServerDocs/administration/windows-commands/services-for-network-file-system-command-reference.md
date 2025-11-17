@@ -2,10 +2,8 @@
 title: Services for Network File System (NFS) command-line tools
 description: Reference article about Services for Network File System (NFS) command-line tools
 ms.topic: reference
-ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -25,6 +23,6 @@ Information and links to each of the associated NFS command-line tools:
 | [rpcinfo](rpcinfo.md) | List programs on remote computers. |
 | [showmount](showmount.md) | Display mounted directories. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

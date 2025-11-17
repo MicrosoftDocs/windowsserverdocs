@@ -2,10 +2,8 @@
 title: reset
 description: Reference article for the reset command, which resets DiskShadow.exe to the default state.
 ms.topic: reference
-ms.assetid: afbdab44-199c-4e11-884f-e96804965c21
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -22,7 +20,7 @@ Resets DiskShadow.exe to the default state. This command is especially useful in
 reset
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

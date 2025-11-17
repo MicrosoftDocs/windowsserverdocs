@@ -2,10 +2,8 @@
 title: detail disk
 description: Reference article for the detail disk command, which displays the properties of the selected disk and the volumes on that disk.
 ms.topic: reference
-ms.assetid: 6b09cf40-8d93-452b-b449-5242e62a4102
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -27,7 +25,7 @@ To see the properties of the selected disk, and information about the volumes in
 detail disk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

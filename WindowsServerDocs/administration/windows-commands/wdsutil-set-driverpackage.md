@@ -2,10 +2,8 @@
 title: Subcommand set-DriverPackage
 description: Reference article for Subcommand set-DriverPackage, which renames and/or enables or disables a driver package on a server.
 ms.topic: reference
-ms.assetid: 11804bb6-ca29-4461-8c63-5131748cd742
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -39,6 +37,6 @@ wdsutil /Set-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318} /Na
 wdsutil /Set-DriverPackage /DriverPackage:MyDriverPackage /Name:NewName /Enabled:Yes
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,10 +2,8 @@
 title: chcp
 description: Reference article for the chcp command, which changes the active console code page.
 ms.topic: reference
-ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -69,8 +67,8 @@ chcp 850
 
 If the specified code page is invalid, the following error message appears: `Invalid code page`
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-- [Code Page BitFields](https://docs.microsoft.com/windows/win32/intl/code-page-bitfields)
-- [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)
+- [Code Page BitFields](/windows/win32/intl/code-page-bitfields)
+- [Code Page Identifiers](/windows/win32/intl/code-page-identifiers)

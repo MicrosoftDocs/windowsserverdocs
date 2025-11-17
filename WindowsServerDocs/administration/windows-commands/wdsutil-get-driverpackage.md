@@ -2,10 +2,8 @@
 title: get-DriverPackage
 description: Reference article for get-DriverPackage, which displays information about a driver package on the server.
 ms.topic: reference
-ms.assetid: 94d231e4-ff01-48e7-9bc8-7b0d97a4339e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -38,6 +36,6 @@ wdsutil /Get-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}
 wdsutil /Get-DriverPackage /DriverPackage:MyDriverPackage /Show:All
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

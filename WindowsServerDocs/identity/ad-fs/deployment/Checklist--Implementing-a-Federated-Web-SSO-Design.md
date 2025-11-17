@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Checklist: Implementing a Federated Web SSO Design"
-ms.assetid: 6b49cde3-d2cb-4ece-b9b7-dc600e037495
 title: Checklist - Implementing a Federated Web SSO Design
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 02/13/2024
+ms.topic: checklist
 ---
 
 # Checklist: Implementing a Federated Web SSO Design
@@ -26,4 +22,4 @@ This parent checklist includes cross\-reference links to important concepts abou
 |According to your design plan, install one or more federation servers in each partner organization. **Note:** For the Federated Web SSO design, you need at least one federation server in the account partner organization and at least one federation server in the resource partner organization.|![Icon for the Checklist: Setting Up a Federation Server link you can use in reference to implementing a federated Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)|
 |\(Optional\) Determine whether or not your organization needs a federation server proxy. If your design plan calls for a proxy, you can install one or more federation server proxies in each partner organization.|![Icon for the Checklist: Setting Up a Federation Server Proxy link you can use in reference to implementing a federated Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)|
 |According to your design plan, share certificates, configure clients, and configure the trust relationships in both partner organizations so that they can communicate over a federation trust.|![Icon for the Checklist: Configuring the Account Partner Organization link you can use in reference to implementing a federated Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Configuring the Account Partner Organization](Checklist--Configuring-the-Account-Partner-Organization.md)<p>![Icon for the Checklist: Configuring the Resource Partner Organization link you can use in reference to implementing a federated Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Configuring the Resource Partner Organization](Checklist--Configuring-the-Resource-Partner-Organization.md)|
-|If you are an administrator in the resource partner organization, claims\-enable your Web browser application, Web service application, or Microsoft&reg; Office SharePoint&reg; Server application using WIF and the WIF SDK.|![Icon for the Windows Identity Foundation link you can use in reference to implementing a federated Web SSO design.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=122266)<p>![federated web sso](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266)|
+|If you are an administrator in the resource partner organization, claims\-enable your Web browser application, Web service application, or Microsoft&reg; Office SharePoint&reg; Server application using WIF and the WIF SDK.|![Icon for the Windows Identity Foundation link you can use in reference to implementing a federated Web SSO design.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation](/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation)<p>![federated web sso](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation SDK](/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation)|

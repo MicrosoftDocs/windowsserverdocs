@@ -2,10 +2,8 @@
 title: manage-bde setidentifier
 description: Reference article for the manage-bde setidentifier command, which sets the drive identifier field on the drive to the value specified in the Provide the unique identifiers for your organization Group Policy setting.
 ms.topic: reference
-ms.assetid: 7092d18f-4ac9-4c73-a20f-1246ca60e75e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -16,7 +14,7 @@ Sets the drive identifier field on the drive to the value specified in the **Pro
 ## Syntax
 
 ```
-manage-bde –setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
+manage-bde -setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
@@ -34,10 +32,10 @@ manage-bde –setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 To set BitLocker drive identifier field for C, type:
 
 ```
-manage-bde –setidentifier C:
+manage-bde -setidentifier C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

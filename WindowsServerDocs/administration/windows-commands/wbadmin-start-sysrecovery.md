@@ -2,10 +2,8 @@
 title: wbadmin start sysrecovery
 description: Reference article for the wbadmin start sysrecovery command, which performs a system recovery (bare metal recovery) using your specified parameters.
 ms.topic: reference
-ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -51,7 +49,7 @@ To start recovering the information from the backup that was run on April 30, 20
 wbadmin start sysrecovery -version:04/30/2020-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

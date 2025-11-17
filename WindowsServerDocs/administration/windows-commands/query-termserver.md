@@ -2,16 +2,14 @@
 title: query termserver
 description: Reference article for the query termserver command, which displays a list of all Remote Desktop Session Host servers on the network.
 ms.topic: reference
-ms.assetid: 3b89d3b4-236f-4376-90b6-939a0ec4b288
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # query termserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays a list of all Remote Desktop Session Host servers on the network. This command searches the network for all attached Remote Desktop Session Host servers and returns the following information:
 
@@ -64,7 +62,7 @@ To display the network and node address for the Remote Desktop Session Host serv
 query termserver Server3 /address
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

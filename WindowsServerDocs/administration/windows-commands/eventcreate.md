@@ -2,10 +2,8 @@
 title: eventcreate
 description: Reference article for the eventcreate command, which enables an administrator to create a custom event in a specified event log.
 ms.topic: reference
-ms.assetid: f2b1b26d-a70e-49a6-832b-91eb5a1a159a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -50,6 +48,6 @@ eventcreate /s server1 /s server2 /u user /p password /id 100 /t ERROR /d "Creat
 eventcreate /s server /u user /id 100 /t WARNING /d "Remote machine with partial user credentials"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

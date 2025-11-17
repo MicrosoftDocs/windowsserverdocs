@@ -2,15 +2,13 @@
 title: wdsutil start-multicasttransmission
 description: Reference article for Subcommand start-MulticastTransmission, which starts a Scheduled-Cast transmission of an image.
 ms.topic: reference
-ms.assetid: a1b2d459-1ece-49d4-997c-9d206c463b61
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil start-multicasttransmission
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts a Scheduled-Cast transmission of an image.
 
@@ -59,7 +57,7 @@ To start a boot image multicast transmission for Windows Server 2008 R2, type:
 wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemediatype:Boot /Architecture:x64
 /Filename:boot.wim\n\
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)
 - [wdsutil get-multicasttransmission command](wdsutil-get-multicasttransmission.md)

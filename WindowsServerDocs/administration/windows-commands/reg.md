@@ -2,10 +2,8 @@
 title: reg commands
 description: Reference article for the reg commands, which perform operations on registry subkey information and values in registry entries.
 ms.topic: reference
-ms.assetid: c97496b2-d1ff-4887-b5d2-6e1524be465a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -50,6 +48,6 @@ reg unload
 | [reg save](reg-save.md) | Saves a copy of specified subkeys, entries, and values of the registry in a specified file. |
 | [reg unload](reg-unload.md) | Removes a section of the registry that was loaded using the **reg load** operation. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

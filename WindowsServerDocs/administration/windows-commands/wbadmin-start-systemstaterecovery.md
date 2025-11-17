@@ -2,10 +2,8 @@
 title: wbadmin start systemstaterecovery
 description: Reference article for the wbadmin start systemstaterecovery command, which performs a system state recovery to a location, and from a backup, that you specify.
 ms.topic: reference
-ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -52,7 +50,7 @@ To start a system state recovery of the backup from 04/30/2020 at 9:00 A.M. that
 wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: gpupdate
 description: Reference article for the gpupdate command, which updates Group Policy settings.
 ms.topic: reference
-ms.assetid: 2fd4e567-2ce1-4637-b611-c2f0895e5708
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -39,6 +37,6 @@ To force a background update of all Group Policy settings, regardless of whether
 gpupdate /force
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

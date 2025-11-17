@@ -2,16 +2,14 @@
 title: cmstp
 description: Reference article for cmstp, which installs or removes a Connection Manager service profile.
 ms.topic: reference
-ms.assetid: 34aad544-11c3-4e85-8bbf-5bc5a971da93
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # cmstp
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Installs or removes a Connection Manager service profile. Used without optional parameters, **cmstp** installs a service profile with default settings appropriate to the operating system and to the user's permissions.
 
@@ -59,6 +57,6 @@ To silently uninstall the *fiction* service profile, type:
 fiction.exe /c:cmstp.exe fiction.inf /s /u
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

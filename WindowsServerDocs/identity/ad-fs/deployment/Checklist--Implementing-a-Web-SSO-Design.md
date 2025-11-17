@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Checklist: Implementing a Web SSO Design"
-ms.assetid: 30657638-5709-48c5-87aa-98f688e07b4c
 title: Checklist - Implementing a Web SSO Design
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 02/13/2024
+ms.topic: checklist
 ---
 
 # Checklist: Implementing a Web SSO Design
@@ -25,4 +21,4 @@ This parent checklist includes cross\-reference links to important concepts abou
 |According to your design plan, install one or more federation servers in the corporate network or in the perimeter network. **Note:** The Web SSO design requires only one federation server to function successfully. A single federation server acts in both the claims provider role and the relying party role.|![Icon for the Checklist: Setting Up a Federation Server link you can use in reference to implementing a Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)|
 |\(Optional\) Determine whether or not your organization needs a federation server proxy in the perimeter network.|![Icon for the Checklist: Setting Up a Federation Server Proxy link you can use in reference to implementing a Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)|
 |Depending on your Web SSO design plan and how you intend to use it, add the appropriate attribute store, relying party trusts, claims, and claim rules to the Federation Service.|![Icon for the Checklist: Configuring the Account Partner Organization link you can use in reference to implementing a Web SSO design.](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Checklist: Configuring the Account Partner Organization](Checklist--Configuring-the-Account-Partner-Organization.md)|
-|If you are an administrator in the resource partner organization, claims\-enable your Web browser application, Web service application, or Microsoft&reg; Office SharePoint&reg; Server application using WIF and the WIF SDK. **Note:**|![Icon for the Windows Identity Foundation link you can use in reference to implementing a Web SSO design.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=122266)<p>![web sso](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266)|
+|If you are an administrator in the resource partner organization, claims\-enable your Web browser application, Web service application, or Microsoft&reg; Office SharePoint&reg; Server application using WIF and the WIF SDK. **Note:**|![Icon for the Windows Identity Foundation link you can use in reference to implementing a Web SSO design.](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation](/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation)<p>![web sso](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation SDK](/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation)|

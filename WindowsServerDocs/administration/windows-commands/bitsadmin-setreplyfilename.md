@@ -2,10 +2,8 @@
 title: bitsadmin setreplyfilename
 description: Reference article for the bitsadmin setreplyfilename command, which specifies the path of the file that contains the server upload-reply.
 ms.topic: reference
-ms.assetid: c26d3342-0533-40b1-a13e-e09678232b25
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -37,7 +35,7 @@ To set the upload-reply filename file path for the job named *myDownloadJob*:
 bitsadmin /setreplyfilename myDownloadJob c:\upload-reply
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,16 +2,14 @@
 title: wdsutil remove-driverpackages
 description: Reference article for wdsutil remove-driverpackages, which removes driver packages from the server.
 ms.topic: reference
-ms.assetid: a527084b-305e-4d3d-95c3-4f5a5ea0637b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove-driverpackages
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes driver packages from the server.
 
@@ -42,6 +40,6 @@ wdsutil /remove-DriverPackages /Filtertype:PackageArchitecture /Operator:Equal
 wdsutil /verbose /remove-DriverPackages /Server:MyWdsServer
 /Filtertype:Packagedateadded /Operator:LessOrEqual /Value:2008/01/01
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil remove-driverpackage command](wdsutil-remove-driverpackage.md)

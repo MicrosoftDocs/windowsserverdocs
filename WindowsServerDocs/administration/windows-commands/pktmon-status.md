@@ -1,15 +1,15 @@
 ---
 title: pktmon status
-description: Reference article for the pktmon status command.
+description: Reference article for the pktmon status command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon status
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Query current Packet Monitor status.
 
@@ -25,7 +25,7 @@ pktmon status [--buffer-info]
 | ------------- | --------------- |
 | **-b, --buffer-info** | Display ETW buffer information. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

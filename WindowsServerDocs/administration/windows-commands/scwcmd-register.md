@@ -2,16 +2,14 @@
 title: scwcmd register
 description: Reference article for the scwcmd register command, which extends or customizes the Security Configuration Wizard (SCW) Security Configuration Database by registering a Security Configuration Database file that contains role, task, service, or port definitions.
 ms.topic: reference
-ms.assetid: fe4d126a-9f27-4076-b7b1-fbefa45f378a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # scwcmd register
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
+
 
 Extends or customizes the Security Configuration Wizard (SCW) Security Configuration Database by registering a Security Configuration Database file that contains role, task, service, or port definitions.
 
@@ -45,7 +43,7 @@ To unregister the Security Configuration Database *MyApp*, located at `\\kbserve
 scwcmd register /d /kbname:MyApp /kb:\\kbserver\kb
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

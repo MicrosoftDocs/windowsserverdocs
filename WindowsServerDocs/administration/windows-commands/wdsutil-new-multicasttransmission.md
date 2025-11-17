@@ -2,16 +2,14 @@
 title: wdsutil new-multicasttransmission
 description: Reference article for wdsutil new-multicasttransmission, which creates a new multicast transmission for an image.
 ms.topic: reference
-ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil new-multicasttransmission
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a new multicast transmission for an image. This command is equivalent to creating a transmission by using the Windows Deployment Services mmc snap-in (right-click the **Multicast Transmissions** node, and then click **create Multicast Transmission**). You should use this command when you have both the Deployment Server role service and the Transport Server role service installed (which is the default installation). If you have only the Transport Server role service installed, use [wdsutilnew-Namespace command](wdsutil-new-namespace.md).
 
@@ -85,7 +83,7 @@ wdsutil /New-MulticastTransmission /FriendlyName:WDS SchedCast Transmission /Ser
 /Transmissiontype:ScheduledCast /time:2006/11/20:17:00 /Clients:100
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)

@@ -1,17 +1,13 @@
 ---
 title: Export an NPS Configuration for Import on Another Server
 description: You can use this topic to learn how to export a Network Policy Server configuration in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 
 # Export an NPS Configuration for Import on Another Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can export the entire NPS configuration — including RADIUS clients and servers, network policy, connection request policy, registry, and logging configuration — from one NPS for import on another NPS.
 
@@ -22,6 +18,9 @@ Use one of the following tools to export the NPS configuration:
 
 > [!IMPORTANT]
 > Do not use this procedure if the source NPS database has a higher version number than the version number of the destination NPS database. You can view the version number of the NPS database from the display of the **netsh nps show config** command.
+
+> [!NOTE]
+> Importing a NPS configuration overwrites the existing configuration. It is not possible to add settings to the existing configuration by importing them.
 
 Because NPS configurations are not encrypted in the exported XML file, sending it over a network might pose a security risk, so take precautions when moving the XML file from the source server to the destination servers. For example, add the file to an encrypted, password protected archive file before moving the file. In addition, store the file in a secure location to prevent malicious users from accessing it.
 
@@ -106,3 +105,4 @@ To complete this procedure, you must be a member of the Administrators group.
 ## Additional references
 
 - [Network Shell (Netsh)](../netsh/netsh.md)
+

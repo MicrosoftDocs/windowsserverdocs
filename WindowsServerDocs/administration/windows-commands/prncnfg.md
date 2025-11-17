@@ -2,16 +2,14 @@
 title: prncnfg
 description: Reference article for the prncnfg command, which configures or displays configuration information about a printer.
 ms.topic: reference
-ms.assetid: 38a4e8fa-3122-495b-a125-35b926bc6415
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # prncnfg
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Configures or displays configuration information about a printer. This command is a Visual Basic script located in the `%WINdir%\System32\printing_Admin_Scripts\<language>` directory. To use this command at a command prompt, type **cscript** followed by the full path to the prncnfg file, or change directories to the appropriate folder. For example: `cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prncnfg`.
 
@@ -75,7 +73,7 @@ To change the name of a printer on the remote computer named *HRServer* from *co
 cscript prncnfg -x -S HRServer -P colorprinter_2 -z "colorprinter 3"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

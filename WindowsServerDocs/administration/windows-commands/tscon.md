@@ -2,15 +2,13 @@
 title: tscon
 description: Reference article for tscon, which connects to another session on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # tscon
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Connects to another session on a Remote Desktop Session Host server.
 
@@ -64,7 +62,7 @@ To connect the session named *TERM03* to the session named *TERM05*, and then to
 tscon TERM03 /v /dest:TERM05
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

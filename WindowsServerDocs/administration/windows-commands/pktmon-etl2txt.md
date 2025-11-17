@@ -1,15 +1,15 @@
 ---
 title: pktmon etl2txt
-description: Reference article for the pktmon etl2txt command.
+description: Reference article for the pktmon etl2txt command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon etl2txt
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Convert ETL log file to text format.
 
@@ -43,7 +43,7 @@ Where `<file>` is the ETL file to convert.
 | **-e, --no-ethernet** | Don't print ethernet header. |
 | **-l, --vxlan \<port\>** | Custom VXLAN port. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

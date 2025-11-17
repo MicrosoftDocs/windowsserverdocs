@@ -2,10 +2,8 @@
 title: PowerShell_ise
 description: Reference article for the PowerShell_ise command, which starts a Windows PowerShell Integrated Scripting Environment (ISE) session.
 ms.topic: reference
-ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -57,6 +55,6 @@ The **PowerShell_ISE.exe** tool starts a Windows PowerShell ISE session. When yo
 
 - Windows PowerShell runs on the Server Core installation option of Windows Server operating systems. However, because Windows PowerShell ISE requires a graphic user interface, it does not run on Server Core installations.
 
-## Additional References
+## Related links
 
 - [about_PowerShell_Ise.exe](/powershell/module/microsoft.powershell.core/about/about_powershell_exe)

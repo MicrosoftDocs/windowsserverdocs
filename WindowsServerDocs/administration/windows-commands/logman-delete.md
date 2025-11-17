@@ -2,16 +2,14 @@
 title: logman delete
 description: Reference article for the logman delete command, which deletes an existing data collector.
 ms.topic: reference
-ms.assetid: 8f3b2422-3dce-4fb4-adbb-8536b1d7da2b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # logman delete
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes an existing data collector.
 
@@ -40,7 +38,7 @@ To delete the data collector *perf_log*, type:
 logman delete perf_log
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

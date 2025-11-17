@@ -2,10 +2,8 @@
 title: setx
 description: Reference article for the setx command, which creates or modifies environment variables in the user or system environment, without requiring programming or scripting.
 ms.topic: reference
-ms.assetid: ef37482f-f8a8-4765-951a-2518faac3f44
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -160,6 +158,6 @@ To display the contents of the *Ipconfig.out* file, along with the contents' cor
 setx /s computer1 /u maindom\hiropln /p p@ssW23 /f ipconfig.out /x
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

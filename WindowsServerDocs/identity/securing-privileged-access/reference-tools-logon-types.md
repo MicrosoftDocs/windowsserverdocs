@@ -3,11 +3,10 @@ title: Administrative tools and logon types reference - Windows Server
 description: Identify the risk of credential exposure associated with different administrative tools
 
 ms.topic: reference
-ms.date: 12/15/2020
+ms.date: 05/30/2024
 
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: daveba
+ms.author: roharwoo
+author: robinharwood
 ms.reviewer: mas
 ---
 # Administrative tools and logon types
@@ -20,25 +19,25 @@ This table includes guidance for the most common administrative tools and connec
 
 |Connection method|Logon type|Reusable credentials on destination|Comments|
 |-----------|-------|--------------------|------|
-|Log on at console|Interactive|v|Includes hardware remote access / lights-out cards and network KVMs.|
+|Log on at console|Interactive|v|Includes hardware remote access / lights-out cards or network-based keyboard, video, and mouse (KVM) input.|
 |RUNAS|Interactive|v||
 |RUNAS /NETWORK|NewCredentials|v|Clones current LSA session for local access, but uses new credentials when connecting to network resources.|
-|Remote Desktop (success)|RemoteInteractive|v|If the remote desktop client is configured to share local devices and resources, those may be compromised as well.|
-|Remote Desktop (failure - logon type was denied)|RemoteInteractive|-|By default, if RDP logon fails credentials are only stored briefly. This may not be the case if the computer is compromised.|
+|Remote Desktop (success)|RemoteInteractive|v|If the remote desktop client is configured to share local devices and resources, those devices might be compromised as well.|
+|Remote Desktop (failure - logon type was denied)|RemoteInteractive|-|By default, if RDP logon fails credentials are only stored briefly. This might not be the case if the computer is compromised.|
 |Net use * \\\SERVER|Network|-||
 |Net use * \\\SERVER /u:user|Network|-||
 |MMC snap-ins to remote computer|Network|-|Example: Computer Management, Event Viewer, Device Manager, Services|
 |PowerShell WinRM|Network|-|Example: Enter-PSSession server|
 |PowerShell WinRM with CredSSP|NetworkClearText|v|New-PSSession server<br />-Authentication Credssp<br />-Credential cred|
-|PsExec without explicit creds|Network|-|Example: PsExec \\\server cmd|
-|PsExec with explicit creds|Network + Interactive|v|PsExec \\\server -u user -p pwd cmd<br />Creates multiple logon sessions.|
+|PsExec without explicit credentials|Network|-|Example: PsExec \\\server cmd|
+|PsExec with explicit credentials|Network + Interactive|v|PsExec \\\server -u user -p pwd cmd<br />Creates multiple logon sessions.|
 |Remote Registry|Network|-||
 |Remote Desktop Gateway|Network|-|Authenticating to Remote Desktop Gateway.|
-|Scheduled task|Batch|v|Password will also be saved as LSA secret on disk.|
-|Run tools as a service|Service|v|Password will also be saved as LSA secret on disk.|
+|Scheduled task|Batch|v|Password is also saved as LSA secret on disk.|
+|Run tools as a service|Service|v|Password is also saved as LSA secret on disk.|
 |Vulnerability scanners|Network|-|Most scanners default to using network logons, though some vendors may implement non-network logons and introduce more credential theft risk.|
 
-For web authentication, use the reference from the table below:
+For web authentication, use the reference from the following table:
 
 |Connection method|Logon type|Reusable credentials on destination|Comments|
 |-----------|-------|--------------------|------|
@@ -48,17 +47,17 @@ For web authentication, use the reference from the table below:
 Column Definitions:
 
 - **Logon type** - Identifies the logon type initiated by the connection.
-- **Reusable credentials on destination** - Indicates that the following credential types will be stored in LSASS process memory on the destination computer where the specified account is logged on locally:
+- **Reusable credentials on destination** - Indicates that the following credential types are stored in LSASS process memory on the destination computer where the specified account is logged on locally:
    - LM and NT hashes
    - Kerberos TGTs
    - Plaintext password (if applicable).
 
 The symbols in this table defined as follows:
 
-- (-) denotes when credentials are not exposed.
+- (-) denotes when credentials aren't exposed.
 - (v) denotes when credentials are exposed.
 
-For management applications that are not in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](/previous-versions/windows/it-pro/windows-server-2003/cc787567(v=ws.10)).
+For management applications that aren't in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](/previous-versions/windows/it-pro/windows-server-2003/cc787567(v=ws.10)).
 
 In Windows-based computers, all authentications are processed as one of several logon types, regardless of which authentication protocol or authenticator is used. This table includes most common logon types and their attributes relative to credential theft:
 

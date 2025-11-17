@@ -2,10 +2,8 @@
 title: wbadmin
 description: Reference article for the wbadmin commands, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
 ms.topic: reference
-ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -37,7 +35,7 @@ You must run **wbadmin** from an elevated command prompt, by right-clicking **Co
 | [wbadmin start systemstaterecovery](wbadmin-start-systemstaterecovery.md) | Runs a system state recovery. |
 | [wbadmin stop job](wbadmin-stop-job.md) | Stops the currently running backup or recovery operation. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

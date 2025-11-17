@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Upgrade a guarded fabric to Windows Server 2019"
 title: Upgrade a guarded fabric to Windows Server 2019
-ms.topic: article
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: upgrade-and-migration-article
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 11/21/2018
 ---
 
 # Upgrade a guarded fabric to Windows Server 2019
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes the steps necessary to upgrade an existing guarded fabric from Windows Server 2016, Windows Server version 1709 or Windows Server version 1803 to Windows Server 2019.
 
@@ -65,7 +62,7 @@ Set-HgsServerVersion  v2
 Before you upgrade your Hyper-V hosts to Windows Server 2019, ensure that your HGS cluster is already upgraded to Windows Server 2019 and that you've moved all VMs off the Hyper-V server.
 
 1.  If you are using Windows Defender Application Control code integrity policies on your server (always the case when using TPM attestation), ensure that the policy is either in audit mode or disabled before attempting to upgrade the server. [Learn how to disable a WDAC policy](/windows/security/threat-protection/windows-defender-application-control/disable-windows-defender-application-control-policies)
-2.  Follow the guidance in the [Windows Server upgrade content](../../upgrade/upgrade-overview.md) to upgrade your host to Windows Server 2019. If your Hyper-V host is part of a Failover Cluster, consider using a [Cluster Operating System Rolling Upgrade](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
+2.  Follow the guidance in the [Windows Server upgrade content](../../get-started/upgrade-overview.md) to upgrade your host to Windows Server 2019. If your Hyper-V host is part of a Failover Cluster, consider using a [Cluster Operating System Rolling Upgrade](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 3.  [Test and re-enable](/windows/security/threat-protection/windows-defender-application-control/audit-windows-defender-application-control-policies) your Windows Defender Application Control policy, if you had one enabled before the upgrade.
 4.  Run `Get-HgsClientConfiguration` to check if **IsHostGuarded = True**, meaning the host is successfully passing attestation with your HGS server.
 5.  If you're using TPM attestation, you may need to [re-capture the TPM baseline or code integrity policy](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md) after the upgrade to pass attestation.
@@ -94,3 +91,4 @@ Follow the steps below if you are currently running Active Directory-based attes
     ```powershell
     Set-HgsServer -TrustActiveDirectory
     ```
+

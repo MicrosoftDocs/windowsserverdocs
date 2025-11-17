@@ -2,10 +2,8 @@
 title: vol
 description: Reference article for the vol command, which displays the disk volume label and serial number, if they exist.
 ms.topic: reference
-ms.assetid: 398b3aa1-2442-42be-a4fb-78701080b0df
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -26,6 +24,6 @@ vol [<drive>:]
 | `<drive>:` | Specifies the drive that contains the disk for which you want to display the volume label and serial number. |
 | /? | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

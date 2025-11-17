@@ -2,16 +2,14 @@
 title: ftp send
 description: Reference article for the ftp send command, which copies a local file to the remote computer using the current file transfer type.
 ms.topic: reference
-ms.assetid: 000aa80a-60a0-4b51-815f-3237a4f3e0f4
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # ftp send
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies a local file to the remote computer using the current file transfer type.
 
@@ -45,7 +43,7 @@ To copy the local file *program.exe* to the remote computer, type:
 send program.exe
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

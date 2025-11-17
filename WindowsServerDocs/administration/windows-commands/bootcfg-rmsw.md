@@ -2,15 +2,13 @@
 title: bootcfg rmsw
 description: Reference article for the bootcfg rmsw command, which removes operating system load options for a specified operating system entry.
 ms.topic: reference
-ms.assetid: fd7e4248-880e-4e2b-929e-87f8d44b9a63
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # bootcfg rmsw
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes operating system load options for a specified operating system entry.
 
@@ -46,7 +44,7 @@ bootcfg /rmsw /ng /id 2
 bootcfg /rmsw /mm 96 /ng /s srvmain /u maindom\hiropln /p p@ssW23 /id 2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

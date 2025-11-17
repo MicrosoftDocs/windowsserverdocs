@@ -1,25 +1,21 @@
 ---
-title: Cluster to cluster Storage Replication
-manager: siroy
-ms.author: nedpyle
-ms.topic: how-to
-ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
-author: nedpyle
-ms.date: 04/26/2019
+title: Cluster-to-cluster storage replication
 description: How to use Storage Replica to replicate volumes in one cluster to another cluster running Windows Server.
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 04/16/2025
 ---
-# Cluster to cluster Storage Replication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+# Cluster to Cluster Storage Replication
 
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 
-You will configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it is not required.
+You'll configure these computers and storage in a cluster-to-cluster configuration, where one cluster replicates its own set of storage with another cluster and its set of storage. These nodes and their storage should be located in separate physical sites, although it isn't required.
 
 > [!IMPORTANT]
 > In this test, the four servers are an example. You can use any number of servers supported by Microsoft in each cluster, which is currently 8 for a Storage Spaces Direct cluster and 64 for a shared storage cluster.
 >
-> This guide does not cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview).
+> This guide doesn't cover configuring Storage Spaces Direct. For information about configuring Storage Spaces Direct, see [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md).
 
 This walkthrough uses the following environment as an example:
 
@@ -35,17 +31,17 @@ This walkthrough uses the following environment as an example:
 
 ## Prerequisites
 
-* Active Directory Domain Services forest (does not need to run Windows Server 2016).
+* Active Directory Domain Services forest (doesn't need to run Windows Server 2016).
 * 4-128 servers (two clusters of 2-64 servers) running Windows Server 2019 or Windows Server 2016, Datacenter Edition. If you're running Windows Server 2019, you can instead use Standard Edition if you're OK replicating only a single volume up to 2 TB in size.
-* Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX, Storage Spaces Direct, or iSCSI target. The storage should contain a mix of HDD and SSD media. You will make each storage set available only to each of the clusters, with no shared access between clusters.
+* Two sets of storage, using SAS JBODs, fibre channel SAN, Shared VHDX, Storage Spaces Direct, or iSCSI target. The storage should contain a mix of HDD and SSD media. You'll make each storage set available only to each of the clusters, with no shared access between clusters.
 * Each set of storage must allow creation of at least two virtual disks, one for replicated data and one for logs. The physical storage must have the same sector sizes on all the data disks. The physical storage must have the same sector sizes on all the log disks.
 * At least one ethernet/TCP connection on each server for synchronous replication, but preferably RDMA.
 * Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
-* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
-* The replicated storage cannot be located on the drive containing the Windows operating system folder.
-* There are important considerations & limitations for Storage Spaces Direct replication - please review the detailed information below.
+* A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication doesn't have a latency recommendation.
+* The replicated storage can't be located on the drive containing the Windows operating system folder.
+* There are important considerations & limitations for Storage Spaces Direct replication.
 
-Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.
+Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There's no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the steps below.
 
 ## Step 1: Provision operating system, features, roles, storage, and network
 
@@ -54,7 +50,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 2.  Add network information and join them to the domain, then restart them.
 
     > [!IMPORTANT]
-    > From this point on, always logon as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your Windows PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.
+    > From this point on, always sign in as a domain user who is a member of the built-in administrator group on all servers. Always remember to elevate your Windows PowerShell and CMD prompts going forward when running on a graphical server installation or on a Windows 10 computer.
 
 3.  Connect first set of JBOD storage enclosure, iSCSI target, FC SAN, or local fixed disk (DAS) storage to the server in site **Redmond**.
 
@@ -98,14 +94,14 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
     > -   All log disks must have the same sector sizes.
     > -   The log volumes should use flash-based storage, such as SSD.  Microsoft recommends that the log storage be faster than the data storage. Log volumes must never be used for other workloads.
     > -   The data disks can use HDD, SSD, or a tiered combination and can use either mirrored or parity spaces or RAID 1 or 10, or RAID 5 or RAID 50.
-    > -   The log volume must be at least 8GB by default and may be larger or smaller based on log requirements.
+    > -   The log size defaults to 8 GB if unspecified. Your log volume must be at least 10 GB or larger based on log requirements and organizational needs.
     > -   When using Storage Spaces Direct (Storage Spaces Direct) with an NVME or SSD cache, you see a greater than expected increase in latency when configuring Storage Replica replication between Storage Spaces Direct clusters. The change in latency is proportionally much higher than you see when using NVME and SSD in a performance + capacity configuration and no HDD tier nor capacity tier.
 
-    This issue occurs due to architectural limitations within SR's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using Storage Spaces Direct Storage Spaces Direct cache, all IO of SR logs, along with all recent read/write IO of applications, will occur in the cache and never on the performance or capacity tiers. This means that all SR activity happens on the same speed media - this configuration is not supported not recommended (see https://aka.ms/srfaq for log recommendations).
+    This issue occurs due to architectural limitations within SR's log mechanism combined with the extremely low latency of NVME when compared to slower media. When using Storage Spaces Direct Storage Spaces Direct cache, all IO of SR logs, along with all recent read/write IO of applications, occurs in the cache and never on the performance or capacity tiers. This means that all SR activity happens on the same speed media - this configuration isn't supported not recommended (see https://aka.ms/srfaq for log recommendations).
 
-    When using Storage Spaces Direct with HDDs, you cannot disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you will avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
+    When using Storage Spaces Direct with HDDs, you can't disable or avoid the cache. As a workaround, if using just SSD and NVME, you can configure just performance and capacity tiers. If using that configuration, and by placing the SR logs on the performance tier only with the data volumes they service being on the capacity tier only, you'll avoid the high latency issue described above. The same could be done with a mix of faster and slower SSDs and no NVME.
 
-    This workaround is of course not ideal and some customers may not be able to make use of it. The SR team is working on optimizations and updated log mechanism for the future to reduce these artificial bottlenecks that occur. There is no ETA for this, but when available to TAP customers for testing, this FAQ will be updated.
+    This workaround isn't ideal and some customers may not be able to make use of it. The SR team is working on optimizations and updated log mechanism for the future to reduce these artificial bottlenecks that occur.
 
 -   **For JBOD enclosures:**
 
@@ -131,7 +127,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 2. Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
-3. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+3. Start Windows PowerShell and use the `Test-SRTopology` cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test and a long running performance evaluation mode.
    For example,
 
    ```PowerShell
@@ -141,7 +137,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
    ```
 
      > [!IMPORTANT]
-     > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, simply copy some files into the source volume during the test or download and run [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:
+     > When using a test server with no write IO load on the specified source volume during the evaluation period,  consider adding a workload or it will not generate a useful report. You should test with production-like workloads in order to see real numbers and recommended log sizes. Alternatively, copy some files into the source volume during the test or download and run [DISKSPD](/azure/azure-local/manage/diskspd-overview?context=/windows-server/context/windows-server-storage) to generate write IOs. For instance, a sample with a low write IO workload for five minutes to the D: volume:
      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`
 
 4. Examine the **TestSrTopologyReport.html** report to ensure that you meet the Storage Replica requirements.
@@ -149,7 +145,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
    ![Screen showing replication topology report results](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)
 
 ## Step 2: Configure two Scale-Out File Server Failover Clusters
-You will now create two normal failover clusters. After configuration, validation, and testing, you will replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
+You'll now create two normal failover clusters. After configuration, validation, and testing, you'll replicate them using Storage Replica. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
 
 ### Graphical method
 
@@ -162,10 +158,10 @@ You will now create two normal failover clusters. After configuration, validatio
 4.  Configure a File Share Witness or Cloud Witness.
 
     > [!NOTE]
-    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
+    > Windows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
 
     > [!WARNING]
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage Quorum](../../failover-clustering/manage-cluster-quorum.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
+    > For more information about quorum witness configuration, see [Deploy a quorum witness](../../failover-clustering/deploy-quorum-witness.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 5.  Add one disk in the **Redmond** site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.
 
@@ -194,15 +190,12 @@ You will now create two normal failover clusters. After configuration, validatio
     ```
 
     > [!NOTE]
-    > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
-
-    > [!WARNING]
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage Quorum](../../failover-clustering/manage-cluster-quorum.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
+    > Windows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
 
 4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831718(v=ws.11))
 
 ## Step 3: Set up Cluster to Cluster Replication using Windows PowerShell
-Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools
+Now you'll set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools
 
 1. Grant the first cluster full access to the other cluster by running the **Grant-SRAccess** cmdlet on any node in the first cluster, or remotely.  Windows Server Remote Server Administration Tools
 
@@ -219,7 +212,7 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
 3. Configure the cluster-to-cluster replication, specifying the source and destination disks, the source and destination logs, the source and destination cluster names, and the log size. You can perform this command locally on the server or using a remote management computer.
 
    ```powershell
-   New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:
+   New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f: -LogType Raw
    ```
 
    > [!WARNING]
@@ -290,7 +283,7 @@ Now you will set up cluster-to-cluster replication using Windows PowerShell. You
 
 ## Step 4: Manage replication
 
-Now you will manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
+Now you'll manage and operate your cluster-to-cluster replication. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.
 
 1.  Use **Get-ClusterGroup** or **Failover Cluster Manager** to determine the current source and destination of replication and their status.  Windows Server Remote Server Administration Tools
 
@@ -357,9 +350,9 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
     ```
 
     > [!NOTE]
-    > Windows Server prevents role switching when initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Do not force switch directions until initial sync is complete.
+    > Windows Server prevents role switching when initial sync is ongoing, as it can lead to data loss if you attempt to switch before allowing initial replication to complete. Don't force switch directions until initial sync is complete.
 
-    Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.
+    Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction blocks write IOs on the previous source computer.
 
     > [!NOTE]
     > The destination cluster disk will always show as **Online (No Access)** when replicated.
@@ -386,4 +379,6 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
 -   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
--   [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+
+

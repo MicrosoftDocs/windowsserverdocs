@@ -2,16 +2,14 @@
 title: ftp open
 description: Reference article for the ftp open command, which connects to the specified ftp server.
 ms.topic: reference
-ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # ftp open
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Connects to the specified ftp server.
 
@@ -42,7 +40,7 @@ To connect to the ftp server at *ftp.microsoft.com* that is listening on TCP por
 open ftp.microsoft.com 755
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

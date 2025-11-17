@@ -2,16 +2,14 @@
 title: wdsutil get-server
 description: Reference article for wdsutil get-server, which retrieves information from the specified Windows Deployment Services server.
 ms.topic: reference
-ms.assetid: bef60db4-d58d-4304-ab4b-be53dd3271c3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves information from the specified Windows Deployment Services server.
 
@@ -43,7 +41,7 @@ To view detailed information about the server, type:
 wdsutil /verbose /Get-Server /Server:MyWDSServer /Show:All /detailed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)

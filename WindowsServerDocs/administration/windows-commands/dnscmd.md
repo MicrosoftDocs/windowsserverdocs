@@ -1,17 +1,15 @@
 ---
-title: dnscmd
+title: Dnscmd
 description: Reference article for the dnscmd command, which is a command-line interface for managing DNS servers.
 ms.topic: reference
-ms.assetid: e7f31cb5-a426-4e25-b714-88712b8defd5
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: roharwoo
+author: robinharwood
+ms.date: 03/21/2024
 ---
 
 # Dnscmd
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 A command-line interface for managing DNS servers. This utility is useful in scripting batch files to help automate routine DNS management tasks, or to perform simple unattended setup and configuration of new DNS servers on your network.
 
@@ -49,9 +47,9 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 ##### Remarks
 
-- The **ageallrecords** command is for backward compatibility between the current version of DNS and previous releases of DNS in which aging and scavenging were not supported. It adds a time stamp with the current time to resource records that do not have a time stamp, and it sets the current time on resource records that do have a time stamp.
+- The **ageallrecords** command is for backward compatibility between the current version of DNS and previous releases of DNS in which aging and scavenging weren't supported. It adds a time stamp with the current time to resource records that don't have a time stamp, and it sets the current time on resource records that do have a time stamp.
 
-- Record scavenging does not occur unless the records are time stamped. Name server (NS) resource records, start of authority (SOA) resource records, and Windows Internet Name Service (WINS) resource records are not included in the scavenging process, and they are not time stamped even when the **ageallrecords** command runs.
+- Record scavenging doesn't occur unless the records are time stamped. Name server (NS) resource records, start of authority (SOA) resource records, and Windows Internet Name Service (WINS) resource records aren't included in the scavenging process, and they aren't time stamped even when the **ageallrecords** command runs.
 
 - This command fails unless scavenging is enabled for the DNS server and the zone. For information about how to enable scavenging for the zone, see the **aging** parameter, within the syntax of the `dnscmd /config` command in this article.
 
@@ -61,7 +59,7 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 ### Examples
 
-[Example 1: Set the current time on a time stamp to resource records](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
+[Example 1: Set the current time on a time stamp to resource records.](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
 
 ## dnscmd /clearcache command
 
@@ -101,11 +99,11 @@ dnscmd [<servername>] /config <parameter>
 #### Parameters
 
 > [!NOTE]
-> This article contains references to the term slave, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+> This article contains references to the term slave, a term that Microsoft no longer uses. When the term is removed from the software, we'll remove it from this article.
 
 | Parameters | Description |
 | ---------- | ----------- |
-| `<servername>` | Specifies the DNS server that you are planning to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
+| `<servername>` | Specifies the DNS server that you're planning to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
 | `<parameter>` | Specify a setting and, as an option, a value. Parameter values use this syntax: *parameter* [*value*]. |
 | /addressanswerlimit`[0|5-28]` | Specifies the maximum number of host records that a DNS server can send in response to a query. The value can be zero (0), or it can be in the range of 5 through 28 records. The default value is zero (0). |
 | /bindsecondaries`[0|1]` | Changes the format of the zone transfer so that it can achieve maximum compression and efficiency. Accepts the values:<ul><li>**0** - Uses maximum compression and is compatible with BIND versions 4.9.4 and later only</li><li>**1** - Sends only one resource record per message to non-Microsoft DNS servers and is compatible with BIND versions earlier than 4.9.4. This is the default setting.</li></ul> |
@@ -115,38 +113,38 @@ dnscmd [<servername>] /config <parameter>
 | /defaultrefreshinterval `[0x1-0xFFFFFFFF|0xA8]` | Sets a period of time that is allowed for dynamic updates to DNS records. Zones on the server inherit this value automatically.<p>To change the default value, type a value in the range of **0x1-0xFFFFFFFF**. The default value from the server is **0xA8**. |
 | /disableautoreversezones `[0|1]` | Enables or disables the automatic creation of reverse lookup zones. Reverse lookup zones provide resolution of Internet Protocol (IP) addresses to DNS domain names. Accepts the values:<ul><li>**0** - Enables the automatic creation of reverse lookup zones. This is the default setting.</li><li>**1** - Disables the automatic creation of reverse lookup zones.</li></ul> |
 | /disablensrecordsautocreation `[0|1]` | Specifies whether the DNS server automatically creates name server (NS) resource records for zones that it hosts. Accepts the values:<ul><li>**0** - Automatically creates name server (NS) resource records for zones that the DNS server hosts.</li><li>**1** - Doesn't automatically create name server (NS) resource records for zones that the DNS server hosts.</li></ul> |
-| /dspollinginterval `[0-30]` | Specifies how often the DNS server polls AD DS for changes in active directory integrated zones. |
-| /dstombstoneinterval `[1-30]` |The amount of time in seconds to retain deleted records in AD DS. |
+| /dspollinginterval `<seconds>` | Specifies in seconds how often the DNS server polls AD DS for changes in the AD integrated zones. The minimum accepted value is **30** seconds. If a value isn't specified after this parameter, the default value is set to **0xB4** (3 minutes or 180 seconds). |
+| /dstombstoneinterval `<seconds>` | The amount of time in seconds to retain deleted records in AD DS. This value should be limited to the range from **0x3F480** (3 days or 259,200 seconds) to **0x49D400** (8 weeks or 4,147,200 seconds). The default value should be **0x127500** (14 days or 1,209,600 seconds) if no value is specified for the tombstoneLifetime attribute of the Directory Services object. |
 | /ednscachetimeout `[3600-15724800]` | Specifies the number of seconds that extended DNS (EDNS) information is cached. The minimum value is **3600**, and the maximum value is **15,724,800**. The default value is **604,800** seconds (one week). |
 | /enableednsprobes `[0|1]` | Enables or disables the server to probe other servers to determine if they support EDNS. Accepts the values:<ul><li>**0** - Disables active support for EDNS probes.</li><li>**1** - Enables active support for EDNS probes.</li></ul> |
 | /enablednssec `[0|1]` | Enables or disables support for DNS Security Extensions (DNSSEC). Accepts the values:<ul><li>**0** - Disables DNSSEC.</li><li>**1** - Enables DNSSEC.</li></ul> |
-| /enableglobalnamessupport `[0|1]` | Enables or disables support for the GlobalNames zone. The GlobalNames zone supports resolution of single-label DNS names across a forest. Accepts the values:<ul><li>**0** - Disables support for the GlobalNames zone. When you set the value of this command to 0, the DNS Server service does not resolve single-label names in the GlobalNames zone.</li><li>**1** - Enables support for the GlobalNames zone. When you set the value of this command to 1, the DNS Server service resolves single-label names in the GlobalNames zone.</li></ul> |
-| /enableglobalqueryblocklist `[0|1]` | Enables or disables support for the global query block list that blocks name resolution for names in the list. The DNS Server service creates and enables the global query block list by default when the service starts the first time. To view the current global query block list, use the dnscmd /info **/globalqueryblocklist** command. Accepts the values:<ul><li>**0** - Disables support for the global query block list. When you set the value of this command to 0, the DNS Server service responds to queries for names in the block list.</li><li>**1** - Enables support for the global query block list. When you set the value of this command to 1, the DNS Server service does not respond to queries for names in the block list.</li></ul> |
+| /enableglobalnamessupport `[0|1]` | Enables or disables support for the GlobalNames zone. The GlobalNames zone supports resolution of single-label DNS names across a forest. Accepts the values:<ul><li>**0** - Disables support for the GlobalNames zone. When you set the value of this command to 0, the DNS Server service doesn't resolve single-label names in the GlobalNames zone.</li><li>**1** - Enables support for the GlobalNames zone. When you set the value of this command to 1, the DNS Server service resolves single-label names in the GlobalNames zone.</li></ul> |
+| /enableglobalqueryblocklist `[0|1]` | Enables or disables support for the global query block list that blocks name resolution for names in the list. The DNS Server service creates and enables the global query block list by default when the service starts the first time. To view the current global query block list, use the dnscmd /info **/globalqueryblocklist** command. Accepts the values:<ul><li>**0** - Disables support for the global query block list. When you set the value of this command to 0, the DNS Server service responds to queries for names in the block list.</li><li>**1** - Enables support for the global query block list. When you set the value of this command to 1, the DNS Server service doesn't respond to queries for names in the block list.</li></ul> |
 | /eventloglevel `[0|1|2|4]` | Determines which events are logged in the DNS server log in Event Viewer. Accepts the values:<ul><li>**0** - Logs no events.</li><li>**1** - Logs only errors.</li><li>**2** - Logs only errors and warnings.</li><li>**4** - Logs errors, warnings, and informational events. This is the default setting.</li></ul> |
 | /forwarddelegations `[0|1]` | Determines how the DNS server handles a query for a delegated subzone. These queries can be sent either to the subzone that is referred to in the query or to the list of forwarders that is named for the DNS server. Entries in the setting are used only when forwarding is enabled. Accepts the values:<ul><li>**0** - Automatically sends queries that refer to delegated subzones to the appropriate subzone. This is the default setting.</li><li>**1** - Forwards queries that refer to the delegated subzone to the existing forwarders.</li></ul> |
 | /forwardingtimeout `[<seconds>]` | Determines how many seconds (**0x1-0xFFFFFFFF**) a DNS server waits for a forwarder to respond before trying another forwarder. The default value is **0x5**, which is 5 seconds. |
-| /globalneamesqueryorder `[0|1]` | Specifies whether the DNS Server service looks first in the GlobalNames zone or local zones when it resolves names. Accepts the values:<ul><li>**0** - The DNS Server service attempts to resolve names by querying the GlobalNames zone before it queries the zones for which it is authoritative.</li><li>**1** - The DNS Server service attempts to resolve names by querying the zones for which it is authoritative before it queries the GlobalNames zone.</li></ul> |
-| /globalqueryblocklist`[[<name> [<name>]...]` | Replaces the current global query block list with a list of the names that you specify. If you do not specify any names, this command clears the block list. By default, the global query block list contains the following items:<ul><li>isatap</li><li>wpad</li></ul>The DNS Server service can remove either or both of these names when it starts the first time, if it finds these names in an existing zone. |
-| /isslave `[0|1]` | Determines how the DNS server responds when queries that it forwards receive no response. Accepts the values:<ul><li>**0** - Specifies that the DNS server is not a subordinate. If the forwarder does not respond, the DNS server attempts to resolve the query itself. This is the default setting.</li><li>**1** - Specifies that the DNS server is a subordinate. If the forwarder does not respond, the DNS server terminates the search and sends a failure message to the resolver.</li></ul> |
-| /localnetpriority `[0|1]` | Determines the order in which host records are returned when the DNS server has multiple host records for the same name. Accepts the values:<ul><li>**0** - Returns the records in the order in which they are listed in the DNS database.</li><li>**1** - Returns the records that have similar IP network addresses first. This is the default setting.</li></ul> |
+| /globalneamesqueryorder `[0|1]` | Specifies whether the DNS Server service looks first in the GlobalNames zone or local zones when it resolves names. Accepts the values:<ul><li>**0** - The DNS Server service attempts to resolve names by querying the GlobalNames zone before it queries the zones for which it's authoritative.</li><li>**1** - The DNS Server service attempts to resolve names by querying the zones for which it's authoritative before it queries the GlobalNames zone.</li></ul> |
+| /globalqueryblocklist`[[<name> [<name>]...]` | Replaces the current global query block list with a list of the names that you specify. If you don't specify any names, this command clears the block list. By default, the global query block list contains the following items:<ul><li>isatap</li><li>wpad</li></ul>The DNS Server service can remove either or both of these names when it starts the first time, if it finds these names in an existing zone. |
+| /isslave `[0|1]` | Determines how the DNS server responds when queries that it forwards receive no response. Accepts the values:<ul><li>**0** - Specifies that the DNS server isn't a subordinate. If the forwarder doesn't respond, the DNS server attempts to resolve the query itself. This is the default setting.</li><li>**1** - Specifies that the DNS server is a subordinate. If the forwarder doesn't respond, the DNS server terminates the search and sends a failure message to the resolver.</li></ul> |
+| /localnetpriority `[0|1]` | Determines the order in which host records are returned when the DNS server has multiple host records for the same name. Accepts the values:<ul><li>**0** - Returns the records in the order in which they're listed in the DNS database.</li><li>**1** - Returns the records that have similar IP network addresses first. This is the default setting.</li></ul> |
 | /logfilemaxsize `[<size>]` | Specifies the maximum size in bytes (**0x10000-0xFFFFFFFF**) of the Dns.log file. When the file reaches its maximum size, DNS overwrites the oldest events. The default size is **0x400000**, which is 4 megabytes (MB). |
 | /logfilepath `[<path+logfilename>]` | Specifies the path of the Dns.log file. The default path is `%systemroot%\System32\Dns\Dns.log`. You can specify a different path by using the format `path+logfilename`. |
 | /logipfilterlist `<IPaddress> [,<IPaddress>...]` | Specifies which packets are logged in the debug log file. The entries are a list of IP addresses. Only packets going to and from the IP addresses in the list are logged. |
-| /loglevel `[<eventtype>]` | Determines which types of events are recorded in the Dns.log file. Each event type is represented by a hexadecimal number. If you want more than one event in the log, use hexadecimal addition to add the values, and then enter the sum. Accepts the values:<ul><li>**0x0** - The DNS server does not create a log. This is the default entry.</li><li>**0x10** - Logs queries and notifications.</li><li>**0x20** - Logs updates.</li><li>**0xFE** - Logs nonquery transactions.</li><li>**0x100** - Logs question transactions.</li><li>**0x200** - Logs answers.</li><li>**0x1000** - Logs send packets.</li><li>**0x2000** - Logs receive packets.</li><li>**0x4000** - Logs User Datagram Protocol (UDP) packets.</li><li>**0x8000** - Logs Transmission Control Protocol (TCP) packets.</li><li>**0xFFFF** - Logs all packets.</li><li>**0x10000** - Logs active directory write transactions.</li><li>**0x20000** - Logs active directory update transactions.</li><li>**0x1000000** - Logs full packets.</li><li>**0x80000000** - Logs write-through transactions.</li><li></ul> |
+| /loglevel `[<eventtype>]` | Determines which types of events are recorded in the Dns.log file. Each event type is represented by a hexadecimal number. If you want more than one event in the log, use hexadecimal addition to add the values, and then enter the sum. Accepts the values:<ul><li>**0x0** - The DNS server doesn't create a log. This is the default entry.</li><li>**0x10** - Logs queries and notifications.</li><li>**0x20** - Logs updates.</li><li>**0xFE** - Logs nonquery transactions.</li><li>**0x100** - Logs question transactions.</li><li>**0x200** - Logs answers.</li><li>**0x1000** - Logs send packets.</li><li>**0x2000** - Logs receive packets.</li><li>**0x4000** - Logs User Datagram Protocol (UDP) packets.</li><li>**0x8000** - Logs Transmission Control Protocol (TCP) packets.</li><li>**0xFFFF** - Logs all packets.</li><li>**0x10000** - Logs active directory write transactions.</li><li>**0x20000** - Logs active directory update transactions.</li><li>**0x1000000** - Logs full packets.</li><li>**0x80000000** - Logs write-through transactions.</li><li></ul> |
 | /maxcachesize | Specifies the maximum size, in kilobytes (KB), of the DNS server s memory cache. |
 | /maxcachettl `[<seconds>]` | Determines how many seconds (**0x0-0xFFFFFFFF**) a record is saved in the cache. If the **0x0** setting is used, the DNS server doesn't cache records. The default setting is **0x15180** (86,400 seconds or 1 day). |
 | /maxnegativecachettl `[<seconds>]` | Specifies how many seconds (**0x1-0xFFFFFFFF**) an entry that records a negative answer to a query remains stored in the DNS cache. The default setting is **0x384** (900 seconds). |
-| /namecheckflag `[0|1|2|3]` | Specifies which character standard is used when checking DNS names. Accepts the values:<ul><li>**0** - Uses ANSI characters that comply with Internet Engineering Task force (IETF) Request for Comments (Rfcs).</li><li>**1** - Uses ANSI characters that do not necessarily comply with IETF Rfcs.</li><li>**2** - Uses multibyte UCS Transformation format 8 (UTF-8) characters. This is the default setting.</li><li>**3** - Uses all characters.</li></ul> |
-| /norecursion `[0|1]` | Determines whether a DNS server performs recursive name resolution. Accepts the values:<ul><li>**0** - The DNS server performs recursive name resolution if it is requested in a query. This is the default setting.</li><li>**1** - The DNS server does not perform recursive name resolution.</li></ul> |
+| /namecheckflag `[0|1|2|3]` | Specifies which character standard is used when checking DNS names. Accepts the values:<ul><li>**0** - Uses ANSI characters that comply with Internet Engineering Task force (IETF) Request for Comments (Rfcs).</li><li>**1** - Uses ANSI characters that don't necessarily comply with IETF Rfcs.</li><li>**2** - Uses multibyte UCS Transformation format 8 (UTF-8) characters. This is the default setting.</li><li>**3** - Uses all characters.</li></ul> |
+| /norecursion `[0|1]` | Determines whether a DNS server performs recursive name resolution. Accepts the values:<ul><li>**0** - The DNS server performs recursive name resolution if it's requested in a query. This is the default setting.</li><li>**1** - The DNS server doesn't perform recursive name resolution.</li></ul> |
 | /notcp | This parameter is obsolete, and it has no effect in current versions of Windows Server. |
 | /recursionretry `[<seconds>]` | Determines the number of seconds (**0x1-0xFFFFFFFF**) that a DNS server waits before again trying to contact a remote server. The default setting is **0x3** (three seconds). This value should be increased when recursion occurs over a slow wide area network (WAN) link. |
 | /recursiontimeout `[<seconds>]` | Determines the number of seconds (**0x1-0xFFFFFFFF**) that a DNS server waits before discontinuing attempts to contact a remote server. The settings range from **0x1** through **0xFFFFFFFF**. The default setting is **0xF** (15 seconds). This value should be increased when recursion occurs over a slow WAN link. |
-| /roundrobin `[0|1]` | Determines the order in which host records are returned when a server has multiple host records for the same name. Accepts the values:<ul><li>**0** - The DNS server does not use round robin. Instead, it returns the first record to every query.</li><li>**1** - The DNS server rotates among the records that it returns from the top to the bottom of the list of matching records. This is the default setting.</li></ul> |
+| /roundrobin `[0|1]` | Determines the order in which host records are returned when a server has multiple host records for the same name. Accepts the values:<ul><li>**0** - The DNS server doesn't use round robin. Instead, it returns the first record to every query.</li><li>**1** - The DNS server rotates among the records that it returns from the top to the bottom of the list of matching records. This is the default setting.</li></ul> |
 | /rpcprotocol `[0x0|0x1|0x2|0x4|0xFFFFFFFF]` | Specifies the protocol that remote procedure call (RPC) uses when it makes a connection from the DNS server. Accepts the values:<ul><li>**0x0** - Disables RPC for DNS.</li><li>**0x01** - Uses TCP/IP</li><li>**0x2** - Uses named pipes.</li><li>**0x4** - Uses local procedure call (LPC).</li><li>**0xFFFFFFFF** - All protocols. This is the default setting.</li></ul> |
 | /scavenginginterval `[<hours>]` | Determines whether the scavenging feature for the DNS server is enabled, and sets the number of hours (**0x0-0xFFFFFFFF**) between scavenging cycles. The default setting is **0x0**, which disables scavenging for the DNS server. A setting greater than **0x0** enables scavenging for the server and sets the number of hours between scavenging cycles. |
 | /secureresponses `[0|1]` | Determines whether DNS filters records that are saved in a cache. Accepts the values:<ul><li>**0** - Saves all responses to name queries to a cache. This is the default setting.</li><li>**1** - Saves only the records that belong to the same DNS subtree to a cache.</li></ul> |
 | /sendport `[<port>]` | Specifies the port number (**0x0-0xFFFFFFFF**) that DNS uses to send recursive queries to other DNS servers. The default setting is **0x0**, which means that the port number is selected randomly. |
-| /serverlevelplugindll`[<dllpath>]` | Specifies the path of a custom plug-in. When Dllpath specifies the fully qualified path name of a valid DNS server plug-in, the DNS server calls functions in the plug-in to resolve name queries that are outside the scope of all locally hosted zones. If a queried name is out of the scope of the plug-in, the DNS server performs name resolution using forwarding or recursion, as configured. If Dllpath is not specified, the DNS server ceases to use a custom plug-in if a custom plug-in was previously configured. |
+| /serverlevelplugindll`[<dllpath>]` | Specifies the path of a custom plug-in. When Dllpath specifies the fully qualified path name of a valid DNS server plug-in, the DNS server calls functions in the plug-in to resolve name queries that are outside the scope of all locally hosted zones. If a queried name is out of the scope of the plug-in, the DNS server performs name resolution using forwarding or recursion, as configured. If Dllpath isn't specified, the DNS server ceases to use a custom plug-in if a custom plug-in was previously configured. |
 | /strictfileparsing `[0|1]` | Determines a DNS server's behavior when it encounters an erroneous record while loading a zone. Accepts the values:<ul><li>**0** - The DNS server continues to load the zone even if the server encounters an erroneous record. The error is recorded in the DNS log. This is the default setting.</li><li>**1** - The DNS server stops loading the zone, and it records the error in the DNS log.</li></ul> |
 | /updateoptions `<RecordValue>` | Prohibits dynamic updates of specified types of records. If you want more than one record type to be prohibited in the log, use hexadecimal addition to add the values, and then enter the sum. Accepts the values:<ul><li>**0x0** - Doesn't restrict any record types.</li><li>**0x1** - Excludes start of authority (SOA) resource records.</li><li>**0x2** - Excludes name server (NS) resource records.</li><li>**0x4** - Excludes delegation of name server (NS) resource records.</li><li>**0x8** - Excludes server host records.</li><li>**0x100** - During secure dynamic update, excludes start of authority (SOA) resource records.</li><li>**0x200** - During secure dynamic update, excludes root name server (NS) resource records.</li><li>**0x30F** - During standard dynamic update, excludes name server (NS) resource records, start of authority (SOA) resource records, and server host records. During secure dynamic update, excludes root name server (NS) resource records and start of authority (SOA) resource records. Allows delegations and server host updates.</li><li>**0x400** - During secure dynamic update, excludes delegation name server (NS) resource records.</li><li>**0x800** - During secure dynamic update, excludes server host records.</li><li>**0x1000000** - Excludes delegation signer (DS) records.</li><li>**0x80000000** - Disables DNS dynamic update.</li></ul> |
 | /writeauthorityns `[0|1]` | Determines when the DNS server writes name server (NS) resource records in the Authority section of a response. Accepts the values:<ul><li>**0** - Writes name server (NS) resource records in the Authority section of referrals only. This setting complies with Rfc 1034, Domain names concepts and facilities, and with Rfc 2181, Clarifications to the DNS Specification. This is the default setting.</li><li>**1** - Writes name server (NS) resource records in the Authority section of all successful authoritative responses.</li></ul> |
@@ -166,7 +164,7 @@ dnscmd /config <parameters>
 | ---------- | ----------- |
 | `<parameter>` | Specify a setting, a zone name, and, as an option, a value. Parameter values use this syntax: `zonename parameter [value]`. |
 | /aging `<zonename>`| Enables or disables scavenging in a specific zone. |
-| /allownsrecordsautocreation `<zonename>` `[value]` | Overrides the DNS server's name server (NS) resource record autocreation setting. Name server (NS) resource records that were previously registered for this zone are not affected. Therefore, you must remove them manually if you do not want them. |
+| /allownsrecordsautocreation `<zonename>` `[value]` | Overrides the DNS server's name server (NS) resource record autocreation setting. Name server (NS) resource records that were previously registered for this zone aren't affected. Therefore, you must remove them manually if you don't want them. |
 | /allowupdate `<zonename>` | Determines whether the specified zone accepts dynamic updates. |
 | /forwarderslave `<zonename>` | Overrides the DNS server **/isslave** setting. |
 | /forwardertimeout `<zonename>` | Determines how many seconds a DNS zone waits for a forwarder to respond before trying another forwarder. This value overrides the value that is set at the server level. |
@@ -351,7 +349,7 @@ dnscmd [<servername>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 
 ## dnscmd /exportsettings command
 
-Creates a text file that lists the configuration details of a DNS server. The text file is named *DnsSettings.txt*. It is located in the `%systemroot%\system32\dns` directory of the server. You can use the information in the file that **dnscmd /exportsettings** creates to troubleshoot configuration problems or to ensure that you have configured multiple servers identically.
+Creates a text file that lists the configuration details of a DNS server. The text file is named *DnsSettings.txt*. It's located in the `%systemroot%\system32\dns` directory of the server. You can use the information in the file that **dnscmd /exportsettings** creates to troubleshoot configuration problems or to ensure that you have configured multiple servers identically.
 
 ### Syntax
 
@@ -380,7 +378,7 @@ dnscmd [<servername>] /info [<settings>]
 | Parameters | Description |
 | ---------- | ----------- |
 | `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
-| `<settings>` | Any setting that the **info** command returns can be specified individually. If a setting is not specified, a report of common settings is returned. |
+| `<settings>` | Any setting that the **info** command returns can be specified individually. If a setting isn't specified, a report of common settings is returned. |
 
 #### Example
 
@@ -436,7 +434,7 @@ dnscmd [<servername>] /nodedelete <zonename> <nodename> [/tree] [/f]
 
 #### Example
 
-[Example 6: Delete the records from a node](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
+[Example 6: Delete the records from a node.](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
 
 ## dnscmd /recordadd command
 
@@ -487,7 +485,7 @@ dnscmd [<servername>] /recorddelete <zonename> <nodename> <rrtype> <rrdata> [/f]
 | `<nodename>` | Specifies a name of the host. |
 | `<rrtype>` | Specifies the type of resource record to be deleted. |
 | `<rrdata>` | Specifies the type of data that is expected. |
-| /f | Executes the command without asking for confirmation. Because nodes can have more than one resource record, this command requires you to be very specific about the type of resource record that you want to delete. If you specify a data type and you do not specify a type of resource record data, all records with that specific data type for the specified node are deleted. |
+| /f | Executes the command without asking for confirmation. Because nodes can have more than one resource record, this command requires you to be specific about the type of resource record that you want to delete. If you specify a data type and you don't specify a type of resource record data, all records with that specific data type for the specified node are deleted. |
 
 #### Examples
 
@@ -497,7 +495,7 @@ dnscmd /recorddelete test.contoso.com test MX 10 mailserver.test.contoso.com
 
 ## dnscmd /resetforwarders command
 
-Selects or resets the IP addresses to which the DNS server forwards DNS queries when it cannot resolve them locally.
+Selects or resets the IP addresses to which the DNS server forwards DNS queries when it can't resolve them locally.
 
 ### Syntax
 
@@ -514,15 +512,15 @@ dnscmd [<servername>] /resetforwarders <IPaddress> [,<IPaddress>]...][/timeout <
 | /timeout `<timeout>` | Sets the number of seconds that the DNS server waits for a response from the forwarder. By default, this value is five seconds. |
 | /slave | Prevents the DNS server from performing its own iterative queries if the forwarder fails to resolve a query. |
 | /noslave | Allows the DNS server to perform its own iterative queries if the forwarder fails to resolve a query. This is the default setting. |
-| /f | Executes the command without asking for confirmation. Because nodes can have more than one resource record, this command requires you to be very specific about the type of resource record that you want to delete. If you specify a data type and you do not specify a type of resource record data, all records with that specific data type for the specified node are deleted. |
+| /f | Executes the command without asking for confirmation. Because nodes can have more than one resource record, this command requires you to be specific about the type of resource record that you want to delete. If you specify a data type and you don't specify a type of resource record data, all records with that specific data type for the specified node are deleted. |
 
 ##### Remarks
 
-- By default, a DNS server performs iterative queries when it cannot resolve a query.
+- By default, a DNS server performs iterative queries when it can't resolve a query.
 
 - Setting IP addresses by using the **resetforwarders** command causes the DNS server to perform recursive queries to the DNS servers at the specified IP addresses. If the forwarders don't resolve the query, the DNS server can then perform its own iterative queries.
 
-- If the **/slave** parameter is used, the DNS server does not perform its own iterative queries. This means that the DNS server forwards unresolved queries only to the DNS servers in the list, and it does not attempt iterative queries if the forwarders do not resolve them. It is more efficient to set one IP address as a forwarder for a DNS server. You can use the **resetforwarders** command for internal servers in a network to forward their unresolved queries to one DNS server that has an external connection.
+- If the **/slave** parameter is used, the DNS server doesn't perform its own iterative queries. This means that the DNS server forwards unresolved queries only to the DNS servers in the list, and it doesn't attempt iterative queries if the forwarders don't resolve them. It's more efficient to set one IP address as a forwarder for a DNS server. You can use the **resetforwarders** command for internal servers in a network to forward their unresolved queries to one DNS server that has an external connection.
 
 - Listing a forwarder's IP address twice causes the DNS server to attempt to forward to that server twice.
 
@@ -576,7 +574,7 @@ dnscmd [<servername>] /startscavenging
 
 - Successful completion of this command starts a scavenge immediately. If the scavenge fails, no warning message appears.
 
-- Although the command to start the scavenge appears to complete successfully, the scavenge does not start unless the following preconditions are met:
+- Although the command to start the scavenge appears to complete successfully, the scavenge doesn't start unless the following preconditions are met:
 
     - Scavenging is enabled for both the server and the zone.
 
@@ -613,7 +611,7 @@ dnscmd [<servername>] /statistics [<statid>] [/clear]
 | Parameters | Description |
 | ---------- | ----------- |
 | `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
-| `<statid>` | Specifies which statistic or combination of statistics to display. The **statistics** command displays counters that begin on the DNS server when it is started or resumed. An identification number is used to identify a statistic. If no statistic ID number is specified, all statistics display. The numbers that can be specified, along with the corresponding statistic that displays, can include:<ul><li>**00000001** - Time</li><li>**00000002** - Query</li><li>**00000004** - Query2</li><li>**00000008** - Recurse</li><li>**00000010** - Master</li><li>**00000020** - Secondary</li><li>**00000040** - WINS</li><li>**00000100** - Update</li><li>**00000200** - SkwanSec</li><li>**00000400** - Ds</li><li>**00010000** - Memory</li><li>**00100000** - PacketMem</li><li>**00040000** - Dbase</li><li>**00080000** - Records</li><li>**00200000** - NbstatMem</li><li>**/clear** - Resets the specified statistics counter to zero.</li></ul> |
+| `<statid>` | Specifies which statistic or combination of statistics to display. The **statistics** command displays counters that begin on the DNS server when it's started or resumed. An identification number is used to identify a statistic. If no statistic ID number is specified, all statistics display. The numbers that can be specified, along with the corresponding statistic that displays, can include:<ul><li>**00000001** - Time</li><li>**00000002** - Query</li><li>**00000004** - Query2</li><li>**00000008** - Recurse</li><li>**00000010** - Master</li><li>**00000020** - Secondary</li><li>**00000040** - WINS</li><li>**00000100** - Update</li><li>**00000200** - SkwanSec</li><li>**00000400** - Ds</li><li>**00010000** - Memory</li><li>**00100000** - PacketMem</li><li>**00040000** - Dbase</li><li>**00080000** - Records</li><li>**00200000** - NbstatMem</li><li>**/clear** - Resets the specified statistics counter to zero.</li></ul> |
 
 #### Examples
 
@@ -710,7 +708,7 @@ dnscmd [<servername>] /zonechangedirectorypartition <zonename> {[<newpartitionna
 | `<zonetype>` | Specifies the type of directory partition that the zone will be moved to. |
 | /domain | Moves the zone to the built-in domain directory partition. |
 | /forest | Moves the zone to the built-in forest directory partition. |
-| /legacy | Moves the zone to the directory partition that is created for pre active directory domain controllers. These directory partitions are not necessary for native mode. |
+| /legacy | Moves the zone to the directory partition that is created for pre active directory domain controllers. These directory partitions aren't necessary for native mode. |
 
 ## dnscmd /zonedelete command
 
@@ -916,7 +914,7 @@ dnscmd [<servername>] /zoneresetmasters <zonename> [/local] [<IPaddress> [<IPadd
 
 ##### Remarks
 
-- This value is originally set when the secondary zone is created. Use the **zoneresetmasters** command on the secondary server. This value has no effect if it is set on the master DNS server.
+- This value is originally set when the secondary zone is created. Use the **zoneresetmasters** command on the secondary server. This value has no effect if it's set on the master DNS server.
 
 #### Examples
 
@@ -960,7 +958,7 @@ dnscmd dnssvr1.contoso.com /zoneresetscavengeservers test.contoso.com 10.0.0.1 1
 
 ## dnscmd /zoneresetsecondaries command
 
-Specifies a list of IP addresses of secondary servers to which a primary server responds when it is asked for a zone transfer.
+Specifies a list of IP addresses of secondary servers to which a primary server responds when it's asked for a zone transfer.
 
 ### Syntax
 
@@ -1108,6 +1106,6 @@ dnscmd [<servername>] /zonewriteback <zonename>
 dnscmd dnssvr1.contoso.com /zonewriteback test.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

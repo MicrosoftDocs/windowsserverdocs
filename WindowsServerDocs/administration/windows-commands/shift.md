@@ -2,10 +2,8 @@
 title: shift
 description: Reference article for the shift command, which changes the position of batch parameters in a batch file.
 ms.topic: reference
-ms.assetid: b56574e8-570a-4cc9-bbac-1b94fbf6a47a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -59,6 +57,6 @@ set todir=
 echo All done
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

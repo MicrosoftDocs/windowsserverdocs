@@ -1,19 +1,15 @@
 ---
 description: "Learn more about: Publishing Applications with SharePoint, Exchange and RDG"
-ms.assetid: 61ed00fd-51c7-4728-91fa-8501de9d8f28
 title: Publishing Applications with SharePoint, Exchange and RDG
-author: billmath
-manager: mtillman
-ms.author: billmath
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Publishing Applications with SharePoint, Exchange and RDG
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
-**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
+**This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
 This topic describes the tasks necessary to publish SharePoint Server, Exchange Server or Remote Desktop Gateway (RDP) through Web Application Proxy.
 

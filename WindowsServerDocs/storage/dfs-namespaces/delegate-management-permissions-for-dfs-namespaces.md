@@ -2,14 +2,11 @@
 title: Delegate Management Permissions for DFS Namespaces
 description: This article describes how to delegate management permissions for DFS namespaces, and which groups can execute namespace tasks by default
 ms.date: 6/5/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ---
 # Delegate management permissions for DFS Namespaces
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 The following table describes the groups that can perform basic namespace tasks by default, and the method for delegating the ability to perform these tasks:
 
@@ -24,4 +21,5 @@ The following table describes the groups that can perform basic namespace tasks 
 
 <br />
 
-\*Delegating management permissions to manage a stand-alone namespace does not grant the user the ability to view and manage security by using the **Delegation** tab unless the user is a member of the local Administrators group on the namespace server. This issue occurs because the DFS Management snap-in cannot retrieve the discretionary access control lists (DACLs) for the stand-alone namespace from the registry. To enable the snap-in to display delegation information, you must follow the steps in the Microsoft<sup>®</sup> Knowledge Base article: [KB314837: How to Manage Remote Access to the Registry](https://go.microsoft.com/fwlink?linkid=46803)
+\*Delegating management permissions to manage a stand-alone namespace does not grant the user the ability to view and manage security by using the **Delegation** tab unless the user is a member of the local Administrators group on the namespace server. This issue occurs because the DFS Management snap-in cannot retrieve the discretionary access control lists (DACLs) for the stand-alone namespace from the registry.
+

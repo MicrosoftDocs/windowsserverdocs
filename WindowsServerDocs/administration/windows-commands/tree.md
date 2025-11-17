@@ -2,10 +2,8 @@
 title: tree
 description: Reference article for tree, which displays the directory structure of a path, or of the disk in a drive, graphically.
 ms.topic: reference
-ms.assetid: 345d3192-401e-4a3b-a8ac-36a85c7be79d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -43,12 +41,12 @@ To display, one screen at a time, the files in all the directories on drive C, t
 tree c:\ /f | more
 ```
 
-To print a list of all the directories on drive C, type:
+To print a list of all the directories on drive C to a file, type:
 
 ```
-tree c:\ /f  prn
+tree c:\ /f > <driveletter>:\<filepath>\filename.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

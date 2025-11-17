@@ -1,33 +1,41 @@
 ---
 description: "Learn more about: Gateway bandwidth allocation"
 title: Gateway bandwidth allocation
-manager: grcusanz
 ms.topic: how-to
-ms.author: anpaul
-author: AnirbanPaul
-ms.date: 11/04/2021
+ms.author: roharwoo
+author: robinharwood
+ms.date: 01/04/2023
 ---
 
 # Gateway bandwidth allocation
 
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
+> 
 
 In Windows Server 2016, the individual tunnel bandwidth for IPsec, GRE, and L3 was a ratio of the total gateway capacity. Therefore, customers would provide the gateway capacity based on the standard TCP bandwidth expecting this out of the gateway VM.
 
-Also, maximum IPsec tunnel bandwidth on the gateway was limited to (3/20)\*Gateway Capacity provided by the customer. So, for example, if you set the gateway capacity to 100 Mbps, then the IPsec tunnel capacity would be 150 Mbps. The equivalent ratios for GRE and L3 tunnels are 1/5 and 1/2, respectively.
+Also, maximum IPsec tunnel bandwidth on the gateway was limited to (3/20)\*Gateway Capacity provided by the customer. So, for example, if you set the gateway capacity to 1000 Mbps, then the IPsec tunnel capacity would be 150 Mbps. The equivalent ratios for GRE and L3 tunnels are 1/5 and 1/2, respectively.
 
 Although this worked for the majority of the deployments, the fixed ratio model was not appropriate for high throughput environments. Even when the data transfer rates were high (say, higher than 40 Gbps), the maximum throughput of SDN gateway tunnels capped due to internal factors.
 
-In Windows Server 2019, for a tunnel type, the maximum throughput is fixed:
+In Windows Server 2019, for a tunnel type, the maximum throughput is fixed. Even if your gateway host/VM supports NICs with much higher throughput, the maximum available tunnel throughput is fixed. Another issue this takes care of is arbitrarily over-provisioning gateways, which happens when providing a very high number for the gateway capacity.
 
--   IPsec = 5 Gbps
+The maximum available throughput for different tunnel types are:
 
--   GRE = 15 Gbps
+- IPsec = 5 Gbps
 
--   L3 = 5 Gbps
+- GRE = 15 Gbps
 
-So, even if your gateway host/VM supports NICs with much higher throughput, the maximum available tunnel throughput is fixed. Another issue this takes care of is arbitrarily over-provisioning gateways, which happens when providing a very high
-number for the gateway capacity.
+- L3 = 5 Gbps
+
+> [!NOTE]
+> By default, IPsec bandwidth allocation uses [Windows Server 2016 behavior](#windows-server-2016-behavior) described later in this article. To get maximum throughput (5 Gbps), follow these steps on each gateway VM:
+> 1. Run the following command to enable the gatewayservice:
+>
+>     ```powershell
+>     Set-Service gatewayservice -StartupType Automatic -Status Running
+>     ```
+>
+> 1. Restart the gateway VM.
 
 ## Gateway capacity calculation
 

@@ -1,16 +1,12 @@
 ---
 title: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
 description: Learn how to use DNS policy for intelligent DNS responses based on the time of day.
-manager: brianlic
-ms.topic: article
-ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
 

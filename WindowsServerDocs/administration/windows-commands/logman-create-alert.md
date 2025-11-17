@@ -2,16 +2,14 @@
 title: logman create alert
 description: Reference article for the logman create alert command, which creates an alert data collector.
 ms.topic: reference
-ms.assetid: 93e6fc2b-5bf5-413b-84b4-be8b9dd3a57d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # logman create alert
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates an alert data collector.
 
@@ -66,7 +64,7 @@ logman create alert new_alert -th \Processor(_Total)\% Processor time>50
 > [!NOTE]
 > The defined threshold value is based on the value collected by the counter, so in this example, the value of 50 equates to 50% Processor time.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

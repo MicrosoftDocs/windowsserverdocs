@@ -1,16 +1,14 @@
 ---
 title: View Task details and Notifications
 description: Learn how to view the status of user tasks or requests, see if a task failed, and troubleshoot problems by accessing detailed error messages about task failures.
-ms.topic: article
-ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # View Task details and Notifications
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 In Server Manager in Windows Server 2012 R2 or Windows Server 2012, when you perform management tasks such as adding roles and features, starting services, refreshing data that is displayed in the Server Manager console, or creating a custom group of servers, a notification is displayed in the **Notifications** area of the Server Manager console header. Notifications, and the **Task details** dialog box that you can open from the **Notifications** menu by clicking the flag icon, display the status of user tasks or requests, show you if a task failed, and help you troubleshoot problems by pointing to detailed error messages about task failures.
 

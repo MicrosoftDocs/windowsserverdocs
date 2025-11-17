@@ -2,10 +2,8 @@
 title: dir
 description: Reference article for the dir command, which displays a list of a directory's files and subdirectories.
 ms.topic: reference
-ms.assetid: edcbf69b-eaa4-466e-b210-3dd8892f4d93
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -127,6 +125,6 @@ dir c:\*.txt /w/o/s/p
 
 The **dir** command displays, in wide format, an alphabetized list of the matching file names in each directory, and it pauses each time the screen fills until you press any key to continue.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

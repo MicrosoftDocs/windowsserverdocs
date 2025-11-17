@@ -2,9 +2,8 @@
 title: schtasks end
 description: Reference article for the schtasks end command, which stops only the instances of a program started by a scheduled task.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/16/2020
 ---
 
@@ -42,7 +41,7 @@ To stop the instance of Internet Explorer started by the *InternetOn* task on th
 schtasks /end /tn InternetOn /s Svr01
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

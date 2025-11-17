@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Replication error 1396 Logon Failure The target account name is incorrect"
-ms.assetid: 399a8bbe-3375-4bb0-b55b-5f46e7050028
 title: Replication error 1396 Logon Failure The target account name is incorrect
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: troubleshooting-error-codes
 ---
 
 # Replication error 1396 Logon Failure The target account name is incorrect
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ```
 <developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd">

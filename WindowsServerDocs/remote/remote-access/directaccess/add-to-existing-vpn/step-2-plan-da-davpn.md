@@ -1,16 +1,12 @@
 ---
 title: Step 2 Plan the DirectAccess Deployment
 description: Learn how to plan the settings for the Enable DirectAccesss Wizard.
-manager: brianlic
-ms.topic: article
-ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the DirectAccess Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After planning the Remote Access infrastructure, the next step in enabling DirectAccess is to plan the settings for the Enable DirectAccesss Wizard.
 

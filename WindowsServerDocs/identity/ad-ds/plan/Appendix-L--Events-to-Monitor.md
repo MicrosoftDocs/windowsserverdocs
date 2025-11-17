@@ -1,21 +1,28 @@
 ---
-description: "Learn more about: Appendix L: Events to Monitor"
-ms.assetid: 99a68050-8d19-4c58-ad86-e08a3dcdb4f7
 title: Appendix L - Events to Monitor
-ms.author: patricka
-author: PatAltimore
-ms.date: 02/28/2022
-ms.topic: article
+description: "Learn more about: Appendix L: Events to Monitor"
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 05/30/2025
+ms.topic: concept-article
 ---
-# Appendix L: Events to Monitor
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
+# Appendix L: Events to monitor
 
-The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.
+The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). All organizations should test these recommendations in their environments before creating alerts that require mandatory investigative responses. Every environment is different, and some of the events ranked with a potential criticality of High might occur due to other harmless events.
 
-The "Legacy Windows Event ID" column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier. The "Potential Criticality" column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the "Event Summary" column provides a brief description of the event.
+> [!NOTE]
+> The default logging behavior in Windows systems *varies* by version and edition, with many audit-related Group Policy Objects (GPO) set to **Not Configured** by default. This means the system relies on built-in settings for event logging. While critical events, like audit policy changes (Event ID 4719), are typically logged, other specific events (such as Event IDs 4618 and 4649) might require explicit audit policy configuration to be captured.
+>
+> For comprehensive logging, including relevant Event IDs, administrators should configure appropriate audit policies in **Computer Configuration\Security Settings\Advanced Audit Policy Configuration** and **Computer Configuration\Administrative Templates\Windows Components**, and other relevant sections of Group Policy.
+>
+> Given these variables, it's essential for organizations to review and, if necessary, adjust their Windows security audit configurations to align with their security and compliance goals. This ensures that significant events are captured in the Windows Event Viewer, effectively supporting security and compliance requirements.
 
-A potential criticality of High means that one occurrence of the event should be investigated. Potential criticality of Medium or Low means that these events should only be investigated if they occur unexpectedly or in numbers that significantly exceed the expected baseline in a measured period of time. All organizations should test these recommendations in their environments before creating alerts that require mandatory investigative responses. Every environment is different, and some of the events ranked with a potential criticality of High may occur due to other harmless events.
+## Event ID table
+
+In the following table, the "Current Windows Event ID" column lists the event ID as it's implemented in versions of Windows and Windows Server that are currently in mainstream support. The "Legacy Windows Event ID" column lists the corresponding event ID in legacy versions of Windows such as client computers running Windows XP or earlier and servers running Windows Server 2003 or earlier.
+
+The "Potential Criticality" column identifies whether the event should be considered of low, medium, or high criticality in detecting attacks, and the "Event Summary" column provides a brief description of the event. A potential criticality of High means that one occurrence of the event should be investigated. Potential criticality of Medium or Low means that these events should only be investigated if they occur unexpectedly or in numbers that significantly exceed the expected baseline in a measured period of time.
 
 |**Current Windows Event ID**|**Legacy Windows Event ID**|**Potential Criticality**|**Event Summary**|
 |--|--|--|--|
@@ -25,11 +32,11 @@ A potential criticality of High means that one occurrence of the event should be
 |4765|N/A|High|SID History was added to an account.|
 |4766|N/A|High|An attempt to add SID History to an account failed.|
 |4794|N/A|High|An attempt was made to set the Directory Services Restore Mode.|
-|4897|801|High|Role separation enabled:|
+|4897|801|High|Role separation enabled.|
 |4964|N/A|High|Special groups have been assigned to a new logon.|
-|5124|N/A|High|A security setting was updated on the OCSP Responder Service|
-|N/A|550|Medium to High|Possible denial-of-service (DoS) attack|
-|1102|517|Medium to High|The audit log was cleared|
+|5124|N/A|High|A security setting was updated on the OCSP Responder Service.|
+|N/A|550|Medium to High|Possible denial-of-service (DoS) attack.|
+|1102|517|Medium to High|The audit log was cleared.|
 |4621|N/A|Medium|Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be allowed to log on. Some auditable activity might not have been recorded.|
 |4675|N/A|Medium|SIDs were filtered.|
 |4692|N/A|Medium|Backup of data protection master key was attempted.|
@@ -46,7 +53,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4739|643|Medium|Domain Policy was changed.|
 |4754|658|Medium|A security-enabled universal group was created.|
 |4755|659|Medium|A security-enabled universal group was changed.|
-|4764|667|Medium|A security-disabled group was deleted|
+|4764|667|Medium|A security-disabled group was deleted.|
 |4764|668|Medium|A group's type was changed.|
 |4780|684|Medium|The ACL was set on accounts which are members of administrators groups.|
 |4816|N/A|Medium|RPC detected an integrity violation while decrypting an incoming message.|
@@ -81,10 +88,10 @@ A potential criticality of High means that one occurrence of the event should be
 |5035|N/A|Medium|The Windows Firewall Driver failed to start.|
 |5037|N/A|Medium|The Windows Firewall Driver detected critical runtime error. Terminating.|
 |5038|N/A|Medium|Code integrity determined that the image hash of a file is not valid. The file could be corrupt due to unauthorized modification or the invalid hash could indicate a potential disk device error.|
-|5120|N/A|Medium|OCSP Responder Service Started|
-|5121|N/A|Medium|OCSP Responder Service Stopped|
-|5122|N/A|Medium|A configuration entry changed in OCSP Responder Service|
-|5123|N/A|Medium|A configuration entry changed in OCSP Responder Service|
+|5120|N/A|Medium|OCSP Responder Service Started.|
+|5121|N/A|Medium|OCSP Responder Service Stopped.|
+|5122|N/A|Medium|A configuration entry changed in OCSP Responder Service.|
+|5123|N/A|Medium|A configuration entry changed in OCSP Responder Service.|
 |5376|N/A|Medium|Credential Manager credentials were backed up.|
 |5377|N/A|Medium|Credential Manager credentials were restored from a backup.|
 |5453|N/A|Medium|An IPsec negotiation with a remote computer failed because the IKE and AuthIP IPsec Keying Modules (IKEEXT) service is not started.|
@@ -92,8 +99,8 @@ A potential criticality of High means that one occurrence of the event should be
 |5483|N/A|Medium|IPsec Services failed to initialize RPC server. IPsec Services could not be started.|
 |5484|N/A|Medium|IPsec Services has experienced a critical failure and has been shut down. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.|
 |5485|N/A|Medium|IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.|
-|5827|N/A|Medium|The Netlogon service denied a vulnerable Netlogon secure channel connection from a machine account.
-|5828|N/A|Medium|The Netlogon service denied a vulnerable Netlogon secure channel connection using a trust account.
+|5827|N/A|Medium|The Netlogon service denied a vulnerable Netlogon secure channel connection from a machine account.|
+|5828|N/A|Medium|The Netlogon service denied a vulnerable Netlogon secure channel connection using a trust account.|
 |6145|N/A|Medium|One or more errors occurred while processing security policy in the Group Policy objects.|
 |6273|N/A|Medium|Network Policy Server denied access to a user.|
 |6274|N/A|Medium|Network Policy Server discarded the request for a user.|
@@ -103,11 +110,11 @@ A potential criticality of High means that one occurrence of the event should be
 |6278|N/A|Medium|Network Policy Server granted full access to a user because the host met the defined health policy.|
 |6279|N/A|Medium|Network Policy Server locked the user account due to repeated failed authentication attempts.|
 |6280|N/A|Medium|Network Policy Server unlocked the user account.|
-|-|640|Medium|General account database changed|
-|-|619|Medium|Quality of Service Policy changed|
-|24586|N/A|Medium|An error was encountered converting volume|
+|-|640|Medium|General account database changed.|
+|-|619|Medium|Quality of Service Policy changed.|
+|24586|N/A|Medium|An error was encountered converting volume.|
 |24592|N/A|Medium|An attempt to automatically restart conversion on volume %2 failed.|
-|24593|N/A|Medium|Metadata write: Volume %2 returning errors while trying to modify metadata. If failures continue, decrypt volume|
+|24593|N/A|Medium|Metadata write: Volume %2 returning errors while trying to modify metadata. If failures continue, decrypt volume.|
 |24594|N/A|Medium|Metadata rebuild: An attempt to write a copy of metadata on volume %2 failed and may appear as disk corruption. If failures continue, decrypt volume.|
 |4608|512|Low|Windows is starting up.|
 |4609|513|Low|Windows is shutting down.|
@@ -140,7 +147,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4663|567|Low|An attempt was made to access an object.|
 |4664|N/A|Low|An attempt was made to create a hard link.|
 |4665|N/A|Low|An attempt was made to create an application client context.|
-|4666|N/A|Low|An application attempted an operation:|
+|4666|N/A|Low|An application attempted an operation.|
 |4667|N/A|Low|An application client context was deleted.|
 |4668|N/A|Low|An application was initialized.|
 |4670|N/A|Low|Permissions on an object were changed.|
@@ -155,7 +162,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4694|N/A|Low|Protection of auditable protected data was attempted.|
 |4695|N/A|Low|Unprotection of auditable protected data was attempted.|
 |4696|600|Low|A primary token was assigned to process.|
-|4697|601|Low|Attempt to install a service|
+|4697|601|Low|Attempt to install a service.|
 |4698|602|Low|A scheduled task was created.|
 |4699|602|Low|A scheduled task was deleted.|
 |4700|602|Low|A scheduled task was enabled.|
@@ -216,7 +223,7 @@ A potential criticality of High means that one occurrence of the event should be
 |4777|N/A|Low|The domain controller failed to validate the credentials for an account.|
 |4778|682|Low|A session was reconnected to a Window Station.|
 |4779|683|Low|A session was disconnected from a Window Station.|
-|4781|685|Low|The name of an account was changed:|
+|4781|685|Low|The name of an account was changed.|
 |4782|N/A|Low|The password hash an account was accessed.|
 |4783|667|Low|A basic application group was created.|
 |4784|N/A|Low|A basic application group was changed.|
@@ -282,8 +289,8 @@ A potential criticality of High means that one occurrence of the event should be
 |4953|N/A|Low|A rule has been ignored by Windows Firewall because it could not parse the rule.|
 |4954|N/A|Low|Windows Firewall Group Policy settings have changed. The new settings have been applied.|
 |4956|N/A|Low|Windows Firewall has changed the active profile.|
-|4957|N/A|Low|Windows Firewall did not apply the following rule:|
-|4958|N/A|Low|Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer:|
+|4957|N/A|Low|Windows Firewall did not apply the following rule.|
+|4958|N/A|Low|Windows Firewall did not apply the following rule because the rule referred to items not configured on this computer.|
 |4979|N/A|Low|IPsec Main Mode and Extended Mode security associations were established.|
 |4980|N/A|Low|IPsec Main Mode and Extended Mode security associations were established.|
 |4981|N/A|Low|IPsec Main Mode and Extended Mode security associations were established.|
@@ -305,7 +312,7 @@ A potential criticality of High means that one occurrence of the event should be
 |5046|N/A|Low|A change has been made to IPsec settings. A Crypto Set was added.|
 |5047|N/A|Low|A change has been made to IPsec settings. A Crypto Set was modified.|
 |5048|N/A|Low|A change has been made to IPsec settings. A Crypto Set was deleted.|
-|5050|N/A|Low|An attempt to programmatically disable the Windows Firewall using a call to InetFwProfile.FirewallEnabled(False)|
+|5050|N/A|Low|An attempt to programmatically disable the Windows Firewall using a call to InetFwProfile.FirewallEnabled(False).|
 |5051|N/A|Low|A file was virtualized.|
 |5056|N/A|Low|A cryptographic self test was performed.|
 |5057|N/A|Low|A cryptographic primitive operation failed.|
@@ -322,9 +329,9 @@ A potential criticality of High means that one occurrence of the event should be
 |5068|N/A|Low|A cryptographic function provider operation was attempted.|
 |5069|N/A|Low|A cryptographic function property operation was attempted.|
 |5070|N/A|Low|A cryptographic function property modification was attempted.|
-|5125|N/A|Low|A request was submitted to the OCSP Responder Service|
-|5126|N/A|Low|Signing Certificate was automatically updated by the OCSP Responder Service|
-|5127|N/A|Low|The OCSP Revocation Provider successfully updated the revocation information|
+|5125|N/A|Low|A request was submitted to the OCSP Responder Service.|
+|5126|N/A|Low|Signing Certificate was automatically updated by the OCSP Responder Service.|
+|5127|N/A|Low|The OCSP Revocation Provider successfully updated the revocation information.|
 |5136|566|Low|A directory service object was modified.|
 |5137|566|Low|A directory service object was created.|
 |5138|N/A|Low|A directory service object was undeleted.|
@@ -377,33 +384,35 @@ A potential criticality of High means that one occurrence of the event should be
 |5888|N/A|Low|An object in the COM+ Catalog was modified.|
 |5889|N/A|Low|An object was deleted from the COM+ Catalog.|
 |5890|N/A|Low|An object was added to the COM+ Catalog.|
-|6008|N/A|Low|The previous system shutdown was unexpected|
+|6008|N/A|Low|The previous system shutdown was unexpected.|
 |6144|N/A|Low|Security policy in the Group Policy objects has been applied successfully.|
 |6272|N/A|Low|Network Policy Server granted access to a user.|
 |N/A|561|Low|A handle to an object was requested.|
-|N/A|563|Low|Object open for delete|
-|N/A|625|Low|User Account Type Changed|
-|N/A|613|Low|IPsec policy agent started|
-|N/A|614|Low|IPsec policy agent disabled|
-|N/A|615|Low|IPsec policy agent|
-|N/A|616|Low|IPsec policy agent encountered a potential serious failure|
-|24577|N/A|Low|Encryption of volume started|
-|24578|N/A|Low|Encryption of volume stopped|
-|24579|N/A|Low|Encryption of volume completed|
-|24580|N/A|Low|Decryption of volume started|
-|24581|N/A|Low|Decryption of volume stopped|
-|24582|N/A|Low|Decryption of volume completed|
-|24583|N/A|Low|Conversion worker thread for volume started|
-|24584|N/A|Low|Conversion worker thread for volume temporarily stopped|
-|24588|N/A|Low|The conversion operation on volume %2 encountered a bad sector error. Please validate the data on this volume|
+|N/A|563|Low|Object open for delete.|
+|N/A|625|Low|User Account Type Changed.|
+|N/A|613|Low|IPsec policy agent started.|
+|N/A|614|Low|IPsec policy agent disabled.|
+|N/A|615|Low|IPsec policy agent.|
+|N/A|616|Low|IPsec policy agent encountered a potential serious failure.|
+|24577|N/A|Low|Encryption of volume started.|
+|24578|N/A|Low|Encryption of volume stopped.|
+|24579|N/A|Low|Encryption of volume completed.|
+|24580|N/A|Low|Decryption of volume started.|
+|24581|N/A|Low|Decryption of volume stopped.|
+|24582|N/A|Low|Decryption of volume completed.|
+|24583|N/A|Low|Conversion worker thread for volume started.|
+|24584|N/A|Low|Conversion worker thread for volume temporarily stopped.|
+|24588|N/A|Low|The conversion operation on volume %2 encountered a bad sector error. Please validate the data on this volume.|
 |24595|N/A|Low|Volume %2 contains bad clusters. These clusters will be skipped during conversion.|
 |24621|N/A|Low|Initial state check: Rolling volume conversion transaction on %2.|
 |5049|N/A|Low|An IPsec Security Association was deleted.|
 |5478|N/A|Low|IPsec Services has started successfully.|
 
 > [!NOTE]
-> Refer to [Windows security audit events](https://www.microsoft.com/download/details.aspx?id=50034) for a list of many security event IDs and their meanings.
+> Refer to [Windows security audit events](https://www.microsoft.com/download/details.aspx?id=50034) for a list of security event IDs and their meanings.
 >
-> Run **wevtutil gp Microsoft-Windows-Security-Auditing /ge /gm:true** to get a very detailed listing of all security event IDs
+> Run `wevtutil gp Microsoft-Windows-Security-Auditing /ge /gm:true` to get a detailed listing of all security event IDs.
 
-For more information about Windows security event IDs and their meanings, see the Microsoft Support article [Description of security events in Windows 7 and in Windows Server 2008 R2](https://support.microsoft.com/kb/977519). You can also download [Security Audit Events for Windows 7 and Windows Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=21561) and [Windows 8 and Windows Server 2012 Security Event Details](https://www.microsoft.com/download/details.aspx?id=35753), which provide detailed event information for the referenced operating systems in spreadsheet format.
+## See also
+
+For more information about Windows security event IDs and their meanings, see the Microsoft Support article [Basic security audit policy settings](/windows/security/threat-protection/auditing/basic-security-audit-policy-settings). You can also download [Windows security audit events](https://www.microsoft.com/en-us/download/details.aspx?id=50034), which provide detailed event information for the referenced operating systems in spreadsheet format.

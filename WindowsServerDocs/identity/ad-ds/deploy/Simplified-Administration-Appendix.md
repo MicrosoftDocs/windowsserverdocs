@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Simplified Administration Appendix"
-ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
 title: Simplified Administration Appendix
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Simplified Administration Appendix
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 -   [Server Manager Add Servers Dialog (Active Directory)](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)
 
@@ -50,9 +46,9 @@ The Active Directory search returns the following attributes:
 ```
 
 ## <a name="BKMK_ServerMgrStatus"></a>Server Manager Remote Server Status
-Server Manager tests remote server accessibility using Address Routing Protocol. Any servers not responding to ARP requests are not listed, even if they are in the pool.
+Server Manager tests remote server accessibility using Address Routing Protocol. Any servers not responding to ARP requests aren't listed, even if they are in the pool.
 
-If ARP responds, then DCOM and WMI connections are made to the server to return status information. If RPC, DCOM, and WMI are unreachable, server manager cannot fully manage the server.
+If ARP responds, then DCOM and WMI connections are made to the server to return status information. If RPC, DCOM, and WMI are unreachable, server manager can't fully manage the server.
 
 ## <a name="BKMK_PSLoadModule"></a>Windows PowerShell Module Loading
 Windows PowerShell 3.0 implements dynamic module loading. Using the **Import-Module** cmdlet is typically no longer required; instead, simply invoking the cmdlet, alias, or function automatically loads the module.
@@ -86,7 +82,7 @@ dir
 See [An update is available to detect and prevent too much consumption of the global RID pool on a domain controller that is running Windows Server 2008 R2](https://support.microsoft.com/kb/2618669).
 
 ## <a name="BKMK_IFM"></a>Ntdsutil.exe Install from Media Changes
-Windows Server 2012 adds two additional options to the Ntdsutil.exe command-line tool for the **IFM (IFM Media Creation)** menu. These allow you to create IFM stores without first performing an offline defrag of the exported NTDS.DIT database file. When disk space is not a premium, this saves time creating the IFM.
+Windows Server 2012 adds two additional options to the Ntdsutil.exe command-line tool for the **IFM (IFM Media Creation)** menu. These allow you to create IFM stores without first performing an offline defrag of the exported NTDS.DIT database file. When disk space isn't a premium, this saves time creating the IFM.
 
 The following table describes the two new menu items:
 
@@ -95,6 +91,6 @@ The following table describes the two new menu items:
 |Create Full NoDefrag %s|Create IFM media without defragmenting for a full AD DC or an AD/LDS instance into folder %s|
 |Create Sysvol Full NoDefrag %s|Create IFM media with SYSVOL and without defragmenting for a full AD DC into folder %s|
 
-![Screenshot of a terminal window that shows the the process for creating IFM media.](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
+![Screenshot of a terminal window that shows the process for creating IFM media.](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
 
 ![Screenshot of a terminal window that shows the IFM media was successfully created.](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)

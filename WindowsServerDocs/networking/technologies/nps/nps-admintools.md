@@ -1,16 +1,12 @@
 ---
 title: Network Policy Server Management with Administration Tools
 description: You can use this topic to learn about the tools that you can use to manage Network Policy Server in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about the tools that you can use to manage your NPSs.
 
@@ -22,6 +18,9 @@ After you install NPS, you can administer NPSs:
 
 >[!NOTE]
 >In Windows Server 2016, you can manage the local NPS by using the NPS console. To manage both remote and local NPSs, you must use the NPS MMC snap\-in.
+
+> [!NOTE]
+> The NPS Console and the NPS MMC snap-in have a 256 character limit for all settings that take a string value. That includes all settings that can be configured using regular expressions. To configure string values that exceed 256 charactes you can use the NETSH NPS commands. Configured string values exceeding 256 characters cannot be edited in the NPS Console or the NPS MMC snap-in without invalidating them.
 
 The following sections provide instructions on how to manage your local and remote NPSs.
 
@@ -68,7 +67,7 @@ To complete this procedure, you must be a member of the Administrators group.
 
 You can use this procedure to manage a remote NPS by using Remote Desktop Connection.
 
-By using Remote Desktop Connection, you can remotely manage your NPSs running Windows Server 2016. You can also remotely manage NPSs from a computer running Windows 10 or earlier Windows client operating systems.
+By using Remote Desktop Connection, you can remotely manage your NPS Servers. You can also remotely manage NPSs from any current Windows client OS.
 
 You can use Remote Desktop connection to manage multiple NPSs by using one of two methods.
 
@@ -103,7 +102,7 @@ You can use commands in the Netsh NPS context to show and set the configuration 
 - Export the configuration of one NPS (the source server), including registry keys and the NPS configuration store, as a Netsh script.
 - Import the configuration to another NPS by using a Netsh script and the exported configuration file from the source NPS.
 
-You can run these commands from the Windows Server 2016 Command Prompt or from Windows PowerShell. You can also run netsh nps commands in scripts and batch files.
+You can run these commands from Command Prompt or from Windows PowerShell. You can also run netsh nps commands in scripts and batch files.
 
 **Administrative Credentials**
 
@@ -117,13 +116,13 @@ To perform this procedure, you must be a member of the Administrators group on t
 4. To view a list of available commands, type a question mark \(?\) and press ENTER.
 
 
-For more information about Netsh NPS commands, see [Netsh Commands for Network Policy Server in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754428(v=ws.10)), or download the entire [Netsh Technical Reference](https://gallery.technet.microsoft.com/Netsh-Technical-Reference-c46523dc?redir=0) from TechNet Gallery. This download is the full Network Shell Technical Reference for Windows Server 2008 and Windows Server 2008 R2. The format is Windows Help \(*.chm\) in a zip file. These commands are still present in Windows Server 2016 and Windows 10, so you can use netsh in these environments, although using Windows PowerShell is recommended.
+For more information about Netsh NPS commands, see [Netsh Commands for Network Policy Server in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754758(v=ws.10)). These commands are still present in the latest releases of Windows Server and Windows 11, so you can use netsh in these environments, although using Windows PowerShell is recommended.
 
 ## Use Windows PowerShell to manage NPSs
 
 You can use Windows PowerShell commands to manage NPSs. For more information, see the following Windows PowerShell command reference topics.
 
 - [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/). You can use these netsh commands in Windows Server 2012 R2 or later operating systems.
-- [NPS Module](/powershell/module/nps/). You can use these netsh commands in Windows Server 2016.
+- [NPS Module](/powershell/module/nps/). You can use these netsh commands in Windows Server 2016 and later.
 
 For more information about NPS administration, see [Manage Network Policy Server (NPS)](nps-manage-top.md).

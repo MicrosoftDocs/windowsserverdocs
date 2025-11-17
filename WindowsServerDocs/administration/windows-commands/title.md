@@ -2,10 +2,8 @@
 title: title
 description: Reference article for the title command, which creates a title for the Command Prompt window.
 ms.topic: reference
-ms.assetid: c0bbe8bd-201a-4b6c-b617-5d9809881dc8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -44,6 +42,6 @@ echo Files Updated.
 title Command Prompt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

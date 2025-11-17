@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Reviewing the Domain Models"
-ms.assetid: e727a33d-133b-43c9-b6a4-7c00f9cb6000
 title: Reviewing the Domain Models
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/08/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Reviewing the Domain Models
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following factors impact the domain design model that you select:
 

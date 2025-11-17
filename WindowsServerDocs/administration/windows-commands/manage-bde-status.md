@@ -2,10 +2,8 @@
 title: manage-bde status
 description: Reference article for the manage-bde status command, which provides information about all drives on the computer, regardless whether they are BitLocker protected.
 ms.topic: reference
-ms.assetid: 1444a360-fabf-4dd3-b67f-188e6ea3fa5b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -53,10 +51,10 @@ manage-bde -status [<drive>] [-protectionaserrorlevel] [-computername <name>] [{
 To display the status of drive C, type:
 
 ```
-manage-bde –status C:
+manage-bde -status C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

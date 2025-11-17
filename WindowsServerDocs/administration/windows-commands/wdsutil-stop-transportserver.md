@@ -2,15 +2,13 @@
 title: wdsutil stop-transportserver
 description: Reference article for stop-TransportServer
 ms.topic: reference
-ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil stop-transportserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Stops all services on a Transport Server.
 ## Syntax
@@ -29,7 +27,7 @@ To stop the services, type one of the following:
 wdsutil /Stop-TransportServer
 wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
 - [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)

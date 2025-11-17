@@ -2,16 +2,14 @@
 title: nslookup ls
 description: Reference article for the nslookup ls command, which lists DNS domain information.
 ms.topic: reference
-ms.assetid: f15f06fe-67e7-41a9-93b5-192ab14ab380
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nslookup ls
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Lists DNS domain information.
 
@@ -37,7 +35,7 @@ ls [<option>] <DNSdomain> [{[>] <filename>|[>>] <filename>}]
 
 - If your output is directed to a file, hash marks are added for every 50 records received from the server.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

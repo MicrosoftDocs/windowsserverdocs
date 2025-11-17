@@ -2,16 +2,14 @@
 title: wdsutil get-allimagegroups
 description: Reference article for the wdsutil get-allimagegroups command, which retrieves information about all image groups on a server and all images in those image groups.
 ms.topic: reference
-ms.assetid: 2ca06533-bcf5-4590-ac8e-263d6c9874f8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-allimagegroups
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Retrieves information about all image groups on a server and all images in those image groups.
 
@@ -40,7 +38,7 @@ wdsutil /get-allimagegroups
 wdsutil /verbose /get-allimagegroups /server:MyWDSServer /detailed
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

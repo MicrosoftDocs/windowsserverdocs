@@ -1,17 +1,13 @@
 ---
 title: Network-Related Performance Counters
 description: Learn about the counters that are relevant to managing network performance.
-ms.topic: article
-ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
-manager: dcscontentpm
-ms.author: v-tea
-author: Teresa-Motiv
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/27/2021
 ---
 
 # Network-Related Performance Counters
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.
 
@@ -128,3 +124,5 @@ The following performance counters are relevant to RSC performance.
     -   TCP RSC Exceptions/sec
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).
+
+

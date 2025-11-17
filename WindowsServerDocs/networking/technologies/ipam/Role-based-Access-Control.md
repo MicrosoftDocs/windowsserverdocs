@@ -1,16 +1,12 @@
 ---
 title: Role-based Access Control
 description: Learn how to use role-based access control in IPAM.
-manager: brianlic
-ms.topic: article
-ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 08/07/2020
 ---
 # Role-based Access Control
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides information about using role-based access control in IPAM.
 
@@ -35,6 +31,7 @@ You can configure access control so that users are restricted to the following p
 [Manage Role Based Access Control with Server Manager](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Server-Manager.md)
 [Manage Role Based Access Control with Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md)
 [Manage IPAM](Manage-IPAM.md)
+
 
 
 

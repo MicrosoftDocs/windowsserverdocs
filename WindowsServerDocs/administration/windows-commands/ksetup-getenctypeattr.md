@@ -2,10 +2,8 @@
 title: ksetup getenctypeattr
 description: Reference article for the ksetup getenctypeattr command, which retrieves the encryption type attribute for the domain.
 ms.topic: reference
-ms.assetid: 6c7ec002-355e-474d-bc27-27215049f1a8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -35,7 +33,7 @@ To verify the encryption type attribute for the domain, type:
 ksetup /getenctypeattr mit.contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

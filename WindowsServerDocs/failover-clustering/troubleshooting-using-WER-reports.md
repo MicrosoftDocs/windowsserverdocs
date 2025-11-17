@@ -1,14 +1,15 @@
 ---
 title: Troubleshooting a Failover Cluster using Windows Error Reporting
 description: Troubleshooting a Failover Cluster using WER Reports, with specific details on how to gather reports and diagnose common issues.
-ms.author: johnmar
-author: JohnMarlin-MSFT
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/21/2021
 ms.topic: troubleshooting
+ms.custom: sfi-image-nochange
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server, Azure Stack HCI, versions 21H2 and 20H2
+
 
 Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to help advanced administrators or Tier 3 support gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](/powershell/module/windowserrorreporting/) provides descriptions and syntax for all WindowsErrorReporting cmdlets.
 
@@ -284,7 +285,7 @@ Here's an example of the output:
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 ```
 
-Message Analyzer enables you to capture, display, and analyze protocol messaging traffic. It also lets you trace and assess system events and other messages from Windows components. You can download [Microsoft Message Analyzer from here](https://www.microsoft.com/download/details.aspx?id=44226). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
+Message Analyzer enables you to capture, display, and analyze protocol messaging traffic. It also lets you trace and assess system events and other messages from Windows components. You can download [Microsoft Message Analyzer from here](/message-analyzer/installing-and-upgrading-message-analyzer). When you load the logs into Message Analyzer, you will see the following providers and messages from the log channels.
 
 ![Loading logs into Message Analyzer](media/troubleshooting-using-WER-reports/loading-logs-into-message-analyzer.png)
 

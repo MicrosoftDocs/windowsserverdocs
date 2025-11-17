@@ -2,15 +2,13 @@
 title: bootcfg default
 description: Reference article for the bootcfg default command, which specifies the operating system entry to designate as the default.
 ms.topic: reference
-ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # bootcfg default
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Specifies the operating system entry to designate as the default.
 
@@ -39,7 +37,7 @@ bootcfg /default /id 2
 bootcfg /default /s srvmain /u maindom\hiropln /p p@ssW23 /id 2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

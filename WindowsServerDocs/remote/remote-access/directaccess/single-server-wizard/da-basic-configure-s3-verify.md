@@ -1,16 +1,12 @@
 ---
 title: Step 3 Verify Deployments
 description: Learn how to verify that you have correctly configured your basic DirectAccess deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Verify Deployments
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your basic DirectAccess deployment.
 

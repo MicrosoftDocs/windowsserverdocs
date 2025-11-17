@@ -2,10 +2,8 @@
 title: diskcopy
 description: Reference article for the diskcopy command, which copies the contents of the floppy disk in the source drive to a formatted or unformatted floppy disk in the destination drive.
 ms.topic: reference
-ms.assetid: 5fd21efa-52cc-4e70-a7fe-35125a435106
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/07/2018
 ---
 
@@ -90,7 +88,7 @@ To use floppy disk drive A to copy one floppy disk to another, first switch to t
 diskcopy a: a:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

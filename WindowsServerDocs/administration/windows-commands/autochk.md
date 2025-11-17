@@ -2,10 +2,8 @@
 title: autochk
 description: Reference article for the autochk command, which runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system.
 ms.topic: reference
-ms.assetid: 8787e6a3-f023-4ea5-b2d1-61c6876d8aff
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -30,7 +28,7 @@ Runs when the computer is started and prior to Windows Server starting to verify
 >
 > - Use the **chkntfs.exe** command-line tool with the **/t** parameter to change the autochk delay from 0 seconds to up to 3 days (259,200 seconds). However, a long delay means that the computer does not start until the time elapses or until you press a key to cancel **autochk**.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

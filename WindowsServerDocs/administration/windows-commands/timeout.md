@@ -2,10 +2,8 @@
 title: timeout
 description: Reference article for the timeout command, which pauses the command processor for the specified number of seconds.
 ms.topic: reference
-ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -53,6 +51,6 @@ To pause the command processor indefinitely until a key is pressed, type:
 timeout /t -1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

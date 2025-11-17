@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Additional Resources"
-ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Additional Resources
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
-ms.date: 08/07/2018
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/30/2024
 ms.topic: reference
 ---
 # Additional Resources
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 For detailed information about using Repadmin.exe to manage Active Directory replication, see the following resource:
 

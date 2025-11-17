@@ -2,16 +2,14 @@
 title: telnet set
 description: Reference article for the telnet set command, which sets options.
 ms.topic: reference
-ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # telnet: set
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets options. You can use the [telnet unset command](telnet-unset.md) to turn off an option that was previously set.
 
@@ -49,6 +47,6 @@ To set the log file and to begin logging to the local file *tnlog.txt*, type:
 set logfile tnlog.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

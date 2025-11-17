@@ -2,9 +2,8 @@
 title: bitsadmin getpriority
 description: Reference article for the bitsadmin getpriority command, which retrieves the priority of the specified job.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/01/2019
 ---
 
@@ -46,7 +45,7 @@ To retrieve the priority for the job named *myDownloadJob*:
 bitsadmin /getpriority myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

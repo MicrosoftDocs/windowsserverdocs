@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services"
-ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 
 # Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services

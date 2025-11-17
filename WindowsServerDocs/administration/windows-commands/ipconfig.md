@@ -2,10 +2,8 @@
 title: ipconfig
 description: Reference article for the ipconfig command, which displays all current TCP/IP network configuration values and refreshes Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.
 ms.topic: reference
-ms.assetid: 15071c2c-4815-4893-93b2-ab30232e312e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -81,6 +79,6 @@ To set the DHCP class ID for the Local Area Connection adapter to TEST, type:
 ipconfig /setclassid Local Area Connection TEST
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

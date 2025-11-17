@@ -2,10 +2,8 @@
 title: diskcomp
 description: Reference article for the diskcomp command, which compares the contents of two floppy disks.
 ms.topic: reference
-ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -131,6 +129,6 @@ goto exit
 :exit
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

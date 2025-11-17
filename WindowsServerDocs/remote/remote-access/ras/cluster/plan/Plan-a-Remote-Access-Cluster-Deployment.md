@@ -1,16 +1,12 @@
 ---
 title: Plan a Remote Access Cluster Deployment
 description: Learn about the planning steps required in order to deploy a cluster of Windows Server 2016 or Windows Server 2012 Remote Access servers.
-manager: brianlic
-ms.topic: article
-ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Plan a Remote Access Cluster Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the planning steps required in order to deploy a cluster of  Windows Server 2016 or Windows Server 2012 Remote Access servers.
 

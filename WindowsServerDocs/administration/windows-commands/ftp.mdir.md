@@ -2,16 +2,14 @@
 title: ftp mdir
 description: Reference article for the ftp mdir command, which displays a directory list of files and subdirectories in a remote directory.
 ms.topic: reference
-ms.assetid: 90eec45b-558b-4b8d-bbe4-b56d98e1ca70
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # ftp mdir
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays a directory list of files and subdirectories in a remote directory.
 
@@ -42,7 +40,7 @@ To save the combined directory listing of *dir1* and *dir2* in a local file call
 mdir dir1 dir2 dirlist.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

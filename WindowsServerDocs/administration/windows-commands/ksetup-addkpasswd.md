@@ -2,10 +2,8 @@
 title: ksetup addkpasswd
 description: Reference article for the ksetup addkpasswd command, which adds a Kerberos password (kpasswd) server address for a realm.
 ms.topic: reference
-ms.assetid: d3196995-1b38-48ff-ba08-911cfab77317
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -42,7 +40,7 @@ ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 
 To verify the KDC name is set, type `ksetup` and then view the output, looking for the text, **kpasswd =**. If you don't see the text, it means the mapping hasn't been configured.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

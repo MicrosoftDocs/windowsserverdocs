@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Determining the Number of Forests Required"
-ms.assetid: 173b72c1-ac83-4f42-abab-cf58f43769f0
 title: Determining the Number of Forests Required
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: how-to
 ---
 
 # Determining the Number of Forests Required
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To determine the number of forests that you must deploy, you need to carefully identify and evaluate the isolation and autonomy requirements for each group in your organization and map those requirements to the appropriate forest design models.
 

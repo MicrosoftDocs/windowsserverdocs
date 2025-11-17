@@ -2,16 +2,14 @@
 title: tsprof
 description: Reference article for the tsprof command, which copies the Remote Desktop Services user configuration information from one user to another.
 ms.topic: reference
-ms.assetid: 27047868-b706-4208-b7e0-1437a2325dd3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # tsprof
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Copies the Remote Desktop Services user configuration information from one user to another. The Remote Desktop Services user configuration information appears in the Remote Desktop Services extensions to Local Users and Groups and active directory Users and computers.
 
@@ -57,7 +55,7 @@ To set the Remote Desktop Services profile path for *LocalUser1* to a directory 
 tsprof /update /local /profile:c:\profiles LocalUser1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

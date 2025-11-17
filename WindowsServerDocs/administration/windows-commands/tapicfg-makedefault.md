@@ -2,15 +2,14 @@
 title: tapicfg makedefault
 description: Reference article for the tapicfg makedefault command, which sets the default TAPI application directory partition for the domain.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 09/29/2020
 ---
 
 # tapicfg makedefault
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sets the default TAPI application directory partition for the domain.
 
@@ -38,7 +37,7 @@ tapicfg makedefault /directory:<partitionname> [/domain:<domainname>]
 
 - You can use **tapicfg** to create or remove service connection points. If the TAPI application directory partition is renamed for any reason (for example, if you rename the domain in which it resides), you must remove the existing service connection point and create a new one that contains the new DNS name of the TAPI application directory partition to be published. Otherwise, TAPI clients are unable to locate and access the TAPI application directory partition. You can also remove a service connection point for maintenance or security purposes (for example, if you do not want to expose TAPI data on a specific TAPI application directory partition).
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

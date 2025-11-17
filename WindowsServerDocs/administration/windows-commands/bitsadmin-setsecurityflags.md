@@ -2,10 +2,8 @@
 title: bitsadmin setsecurityflags
 description: Reference article for the bitsadmin setsecurityflags command, which sets security flags for HTTP to determine if BITS should check the certificate revocation list, ignore certain certificate errors, and define the policy to use when a server redirects the HTTP request.
 ms.topic: reference
-ms.assetid: 0da5cbf5-5f7f-4833-bbbe-c4e8379a78ab
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ To set the security flags to enable a CRL check for the job named *myDownloadJob
 bitsadmin /setsecurityflags myDownloadJob 0x0001
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

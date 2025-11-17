@@ -1,16 +1,12 @@
 ---
 title: Steps for Configuring the DirectAccess Cluster-NLB Test Lab
 description: Learn how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.
-manager: brianlic
-ms.topic: article
-ms.assetid: e508d3ee-ffa6-463f-a3dd-9e35e745c005
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Steps for Configuring the DirectAccess Cluster-NLB Test Lab
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.
 

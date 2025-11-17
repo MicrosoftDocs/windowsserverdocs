@@ -1,43 +1,87 @@
 items:
-- name: Docs
+- name: Learn
   href: /
   items:
     - name: Windows Server
-      href: /windows-server/
-      
-### For linking to Azure Stack HCI topic and keeping the context in Windows Server TOC      
+      tocHref: /windows-server/
+      topicHref: /windows-server/
+      items:
+      - name: Administration
+        tocHref: /windows-server/administration/
+        topicHref: /windows-server/administration/
+      - name: Windows commands
+        tocHref: /windows-server/administration/windows-commands/
+        topicHref: /windows-server/administration/windows-commands/windows-commands/
+      - name: Performance tuning
+        tocHref: /windows-server/administration/performance-tuning/
+        topicHref: /windows-server/administration/performance-tuning/  
+      - name: Failover clustering
+        tocHref: /windows-server/failover-clustering/
+        topicHref: /windows-server/failover-clustering/failover-clustering-overview
+      - name: Get started
+        tocHref: /windows-server/get-started/
+        topicHref: /windows-server/get-started/get-started-with-windows-server
+      - name: Identity and access
+        tocHref: /windows-server/identity/
+        topicHref: /windows-server/identity/identity-and-access
+      - name: Management
+        tocHref: /windows-server/manage/windows-admin-center/
+        topicHref: /windows-server/manage/windows-admin-center/overview
+      - name: Networking
+        tocHref: /windows-server/networking/
+        topicHref: /windows-server/networking/
+      - name: Remote
+        tocHref: /windows-server/remote/
+        topicHref: /windows-server/remote/
+      - name: Remote Desktop Services
+        tocHref: /windows-server/remote/remote-desktop-services/
+        topicHref: /windows-server/remote/remote-desktop-services/index
+      - name: Remote Desktop Services
+        tocHref: /azure/virtual-desktop/
+        topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Remote Desktop Services
+        tocHref: /previous-versions/remote-desktop-client/
+        topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Remote Desktop Services
+        tocHref: /troubleshoot/windows-server/remote/remote-desktop-services-overview
+        topicHref: /windows-server/remote/remote-desktop-services/
+      - name: Security
+        tocHref: /windows-server/security/
+        topicHref: /windows-server/security/security-and-assurance
+      - name: Storage
+        tocHref: /windows-server/storage/
+        topicHref: /windows-server/storage/
+      - name: Disk management
+        tocHref: /windows-server/storage/disk-management/
+        topicHref: /windows-server/storage/disk-management/overview-of-disk-management
+      - name: Virtualization
+        tocHref: /windows-server/virtualization/
+        topicHref: /windows-server/virtualization/
+        items:
+        - name: Hyper-V
+          tocHref: /windows-server/virtualization/hyper-v/
+          topicHref: /windows-server/virtualization/hyper-v/
+
+### For linking to HCI topics and keeping the context in Windows Server TOC
 - name: Windows Server
-  tocHref: /azure-stack/
-  topicHref: /windows-server/index
-  items:
-  - name: Failover Clustering              # Original doc set name
-    tocHref: /azure-stack/hci/             # Destination doc set route
-    topicHref: /windows-server/failover-clustering/failover-clustering-overview      # Original doc set route
-    items:
-    - name: Manage                         # Destination doc set name
-      tocHref: /azure-stack/hci/manage/      # Destination doc set route
-      topicHref: /windows-server/failover-clustering/cluster-aware-updating    # Original doc set route
+  tocHref: /azure/azure-local/
+  topicHref: /windows-server/virtualization/hyper-v/
+
+### For linking to system center topics and keeping the context in Windows Server TOC
+- name: Windows Server
+  tocHref: /system-center/
+  topicHref: /windows-server/
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server
   tocHref: /azure/
   topicHref: /windows-server/index
+
+### For linking to the Credential Guard topics from Security
+- name: Windows Server
+  tocHref: /windows/      
+  topicHref: /windows-server/
   items:
-  - name: Management                       # Original doc set name
-    tocHref: /azure/azure-arc/             # Destination doc set route
-    topicHref: /windows-server/administration/      # Original doc set route
-  - name: Management                         # Destination doc set name
-    tocHref: /system-center/      # Destination doc set route
-    topicHref: /windows-server/administration/    # Original doc set route
-  - name: Management                         # Destination doc set name
-    tocHref: /azure/virtual-machines/      # Destination doc set route
-    topicHref: /windows-server/administration/    # Original doc set route
-  - name: Management                         # Destination doc set name
-    tocHref: /azure/automanage/      # Destination doc set route
-    topicHref: /windows-server/administration/    # Original doc set route
-  - name: Management                         # Destination doc set name
-    tocHref: /azure/security/      # Destination doc set route
-    topicHref: /windows-server/administration/    # Original doc set route
-  - name: Management                         # Destination doc set name
-    tocHref: /azure/virtual-network/      # Destination doc set route
-    topicHref: /windows-server/administration/    # Original doc set route
+  - name: Security
+    tocHref: /windows/security/
+    topicHref: /windows-server/security/security-and-assurance

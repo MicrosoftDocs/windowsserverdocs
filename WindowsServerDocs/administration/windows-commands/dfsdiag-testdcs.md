@@ -2,16 +2,14 @@
 title: dfsdiag testdcs
 description: Reference article for the dfsdiag testdcs command, which checks the configuration of domain controllers in the specified domain.
 ms.topic: reference
-ms.assetid: abb915ab-23eb-45d7-9a2e-b6b9a5756a70
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # dfsdiag testdcs
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Checks the configuration of domain controllers by performing the following tests on each domain controller in the specified domain:
 
@@ -41,7 +39,7 @@ To verify the configuration of domain controllers in the *contoso.com* domain, t
 dfsdiag /testdcs /domain:contoso.com
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

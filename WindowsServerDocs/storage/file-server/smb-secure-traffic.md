@@ -1,11 +1,10 @@
 ---
 title: Secure SMB Traffic in Windows Server
 description: How to secure SMB Traffic in Windows
-ms.topic: article
-author: PatAltimore
-ms.author: patricka
-ms.date: 12/07/2021
-ms.prod: windows-server
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
+ms.date: 10/25/2024
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
 ---
 # Secure SMB Traffic in Windows Server
@@ -27,7 +26,7 @@ SMB traffic protects devices inside your network by preventing access from the i
 If you want users to access their files inbound at the edge of your network, you can use SMB over
 QUIC. This uses UDP port 443 by default and provides a TLS 1.3-encrypted security tunnel like a VPN
 for SMB traffic. The solution requires Windows 11 and Windows Server 2022 Datacenter: Azure
-Edition file servers running on Azure Stack HCI. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
+Edition file servers running on Azure Local. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
 
 ## Block outbound SMB access
 
@@ -41,14 +40,18 @@ require it as part of a public cloud offering. The primary scenarios include Azu
 If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
 information about Azure Cloud and Office 365 IP address ranges, see:
+
 - Azure IP ranges and service tags:
-  [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063),
-  [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), or
-  [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are
-  updated weekly and include versioning both for the full file and each individual service tag. The
-  *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China)
-  and is grouped by region within that cloud. Service tags in the file will increase as Azure
-  services are added.
+
+  - [public cloud](https://www.microsoft.com/download/details.aspx?id=56519)
+  - [US government cloud](https://www.microsoft.com/download/details.aspx?id=57063)
+  - [Germany cloud](https://www.microsoft.com/download/details.aspx?id=57064)
+  - [China cloud](https://www.microsoft.com/download/details.aspx?id=57062).
+  
+  The JSON files are updated weekly and include versioning both for the full file and each
+  individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US
+  government, Germany, or China) and is grouped by region within that cloud. Service tags in the
+  file will increase as Azure services are added.
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 With Windows 11 and Windows Server 2022 Datacenter: Azure Edition, you can use SMB over QUIC to
@@ -87,7 +90,7 @@ file servers likely need to be accessed anywhere in the network. However, applic
 may be limited to a set of other application servers on the same subnet. You can use the following
 tools and features to help you inventory SMB access:
 
-- Use [Get-FileShares](https://www.powershellgallery.com/packages/AZSBTools) script to examine shares on servers and clients.
+- Use the `Get-FileShareInfo` command from the [AZSBTools](https://www.powershellgallery.com/packages/AZSBTools) module set to examine shares on servers and clients.
 - Enable an [audit trail of SMB inbound access](/windows/security/threat-protection/auditing/event-5140) using the registry key `Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\File Share`. Since the number of events may be large, consider enabling for a specified amount of time or use [Azure Monitor](https://azure.microsoft.com/services/monitor).
 
 Examining SMB logs lets you know which nodes are communicating with endpoints over SMB. You can
@@ -151,6 +154,12 @@ rules, which relies on Kerberos and domain membership for authentication. Window
 allows for more secure options like IPSEC.
 
 For more information about configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
+
+### Updated firewall rules
+
+Beginning with Windows 11, version 24H2 and Windows Server 2025, the built-in firewall rules doesn't contain the SMB NetBIOS ports anymore. In earlier versions of Windows Server, when you created a share, the firewall automatically enabled certain rules in the File and Printer Sharing group. In particular, the built-in firewall automatically used inbound NetBIOS ports 137 through 139. Shares made with SMB2 or later don't use NetBIOS ports 137-139. If you need to use an SMB1 server for legacy compatibility reasons, you must manually reconfigure the firewall to open those ports
+
+We made this change to improve network security. This change brings SMB firewall rules more in line with the standard behavior for the Windows Server *File Server* role. By default, the firewall rule only open the minimum number of ports required for sharing data. Administrators can reconfigure the rules to restore the legacy ports.
 
 ## Disable SMB Server if unused
 

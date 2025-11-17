@@ -1,16 +1,12 @@
 ---
 title: Plan to Enable DirectAccess
 description: Learn about DirectAccess infrastructure and DirectAccess deployment for Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 458a3bcf-50b6-47b2-b53c-1b8204c5189e
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 01/05/2021
 ---
 # Plan to Enable DirectAccess
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role. This section describes the planning steps that are required to deploy a single Remote Access server running  Windows Server 2016 with basic features.
 

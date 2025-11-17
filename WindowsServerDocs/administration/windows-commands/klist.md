@@ -2,10 +2,8 @@
 title: klist
 description: Reference article for the klist command, which displays a list of currently cached Kerberos tickets.
 ms.topic: reference
-ms.assetid: 4689b4a9-1740-47dd-9240-02105efca428
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -26,8 +24,8 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 
 | Parameter | Description |
 | --------- | ----------- |
-| -lh | Denotes the high part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **–lh** nor **–li** are present, the command defaults to the LUID of the user who is currently signed in. |
-| -li | Denotes the low part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **–lh** nor **–li** are present, the command defaults to the LUID of the user who is currently signed in. |
+| -lh | Denotes the high part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **-lh** nor **-li** are present, the command defaults to the LUID of the user who is currently signed in. |
+| -li | Denotes the low part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **-lh** nor **-li** are present, the command defaults to the LUID of the user who is currently signed in. |
 | tickets | Lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option. |
 | tgt | Displays the initial Kerberos TGT. |
 | purge | Allows you to delete all the tickets of the specified logon session. |
@@ -118,7 +116,7 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 
   - **purge_bind** - Allows you to remove cached, preferred domain controllers for the domains.
 
-  - **kdcoptions** - For the current list of options and their explanations, see [RFC 4120](http://www.ietf.org/rfc/rfc4120.txt).
+  - **kdcoptions** - For the current list of options and their explanations, see [RFC 4120](https://datatracker.ietf.org/doc/rfc4120/).
 
 ### Examples
 
@@ -129,7 +127,7 @@ klist
 ```
 
 ```
-klist –li 0x3e7
+klist -li 0x3e7
 ```
 
 To learn about the specifics of each ticket-granting-ticket that is cached on the computer for a logon session, type:
@@ -145,7 +143,7 @@ klist purge
 ```
 
 ```
-klist purge –li 0x3e7
+klist purge -li 0x3e7
 ```
 
 To diagnose a logon session and to locate a logonID for a user or a service, type:
@@ -188,6 +186,6 @@ To rediscover domain controllers, or to flush the cache before creating new doma
 klist purge_bind
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

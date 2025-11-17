@@ -2,10 +2,8 @@
 title: secedit configure
 description: Reference article for the secedit configure command, which allows you to configure the current system settings using security settings stored in a database.
 ms.topic: reference
-ms.assetid: a92e68ca-003c-4219-8655-0e7734f5fab3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -44,7 +42,7 @@ To incorporate changes required by the analysis process on the *SecContoso.inf* 
 secedit /configure /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

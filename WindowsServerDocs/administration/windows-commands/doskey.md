@@ -2,10 +2,8 @@
 title: doskey
 description: Reference article for the doskey command and Doskey.exe, which recalls previously entered command-line commands, edits command lines, and creates macros.
 ms.topic: reference
-ms.assetid: 4874fd43-d5ea-45f3-ae24-388ae925ed76
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -65,7 +63,7 @@ doskey [/reinstall] [/listsize=<size>] [/macros:[all | <exename>] [/history] [/i
   | END | Moves the insertion point to the end of the line. |
   | ESC | Clears the command from the display. |
   | F1 | Copies one character from a column in the template to the same column in the Command Prompt window. (The template is a memory buffer that holds the last command you typed.) |
-  | F2 | Searches forward in the template for the next key that you type after you press F2. Doskey.exe inserts the text from the template—up to, but not including, the character you specify. |
+  | F2 | Searches forward in the template for the next key that you type after you press F2. Doskey.exe inserts the text from the template up to, but not including, the character you specify. |
   | F3 | Copies the remainder of the template to the command line. Doskey.exe begins copying characters from the position in the template that corresponds to the position indicated by the insertion point on the command line. |
   | F4 | Deletes all characters from the current insertion point position up to, but not including, the next occurrence of the character that you type after you press F4. |
   | F5 | Copies the template into the current command line. |
@@ -177,6 +175,6 @@ To delete a macro called *vlist*, type:
 doskey vlist =
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

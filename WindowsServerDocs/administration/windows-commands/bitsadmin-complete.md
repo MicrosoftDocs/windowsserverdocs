@@ -2,10 +2,8 @@
 title: bitsadmin complete
 description: Reference article for the bitsadmin complete command, which completes the job.
 ms.topic: reference
-ms.assetid: a5e86677-8f7b-43b3-929e-97706c57e7f1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -35,7 +33,7 @@ bitsadmin /complete myDownloadJob
 
 If multiple jobs use *myDownloadJob* as their name, you must use the job's GUID to uniquely identify it for completion.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

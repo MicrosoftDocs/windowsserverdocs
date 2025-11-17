@@ -2,16 +2,14 @@
 title: macfile
 description: Reference article for the macfile command, which manages File Server for Macintosh servers, volumes, directories, and files.
 ms.topic: reference
-ms.assetid: e2ce586c-b316-41d3-90f8-4be0d074cc0e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # macfile
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Manages File Server for Macintosh servers, volumes, directories, and files. You can automate administrative tasks by including a series of commands in batch files and starting them manually or at predetermined times.
 
@@ -199,6 +197,6 @@ To remove the volume called *Sales Reports* on the local server, type:
 macfile volume /remove /name:Sales Reports
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

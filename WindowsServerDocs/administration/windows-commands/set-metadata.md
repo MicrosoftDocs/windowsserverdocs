@@ -2,10 +2,8 @@
 title: set metadata
 description: Reference article for the set metadata command, which sets the name and location of the shadow creation metadata file used to transfer shadow copies from one computer to another.
 ms.topic: reference
-ms.assetid: 67e6f60a-b42a-451a-95cf-b22ace7d50c2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -26,7 +24,7 @@ set metadata [<drive>:][<path>]<metadata.cab>
 | `[<drive>:][<path>]` | Specifies the location to create the metadata file. |
 | `<metadata.cab>` | Specifies the name of the cab file to store shadow creation metadata. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: manage-bde on
 description: Reference article for the manage-bde on command, which encrypts the drive and turns on BitLocker.
 ms.topic: reference
-ms.assetid: f6a12814-df74-416c-a04a-62ea8512263e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -16,7 +14,7 @@ Encrypts the drive and turns on BitLocker.
 ## Syntax
 
 ```
-manage-bde –on <drive> {[-recoverypassword <numericalpassword>]|[-recoverykey <pathtoexternaldirectory>]|[-startupkey <pathtoexternalkeydirectory>]|[-certificate]|
+manage-bde -on <drive> {[-recoverypassword <numericalpassword>]|[-recoverykey <pathtoexternaldirectory>]|[-startupkey <pathtoexternalkeydirectory>]|[-certificate]|
 [-tpmandpin]|[-tpmandpinandstartupkey <pathtoexternalkeydirectory>]|[-tpmandstartupkey <pathtoexternalkeydirectory>]|[-password]|[-ADaccountorgroup <domain\account>]}
 [-usedspaceonly][-encryptionmethod {aes128_diffuser|aes256_diffuser|aes128|aes256}] [-skiphardwaretest] [-discoveryvolumetype <filesystemtype>] [-forceencryptiontype <type>] [-removevolumeshadowcopies][-computername <name>]
 [{-?|/?}] [{-help|-h}]
@@ -38,7 +36,7 @@ manage-bde –on <drive> {[-recoverypassword <numericalpassword>]|[-recoverykey 
 | -tpmandstartupkey | Adds a TPM and startup key protector for the operating system drive. You can also use **-tsk** as an abbreviated version of this command. |
 | -tpmandpinandstartupkey | Adds a TPM, PIN, and startup key protector for the operating system drive. You can also use **-tpsk** as an abbreviated version of this command. |
 | -password | Adds a password key protector for the data drive. You can also use **-pw** as an abbreviated version of this command. |
-| -ADaccountorgroup | Adds a SID-based identity protector for the volume. The volume will automatically unlock if the user or computer has the proper credentials. When specifying a computer account, append a **$** to the computer name and specify **–service** to indicate that the unlock should happen in the content of the BitLocker server instead of the user. You can also use **-sid** as an abbreviated version of this command. |
+| -ADaccountorgroup | Adds a SID-based identity protector for the volume. The volume will automatically unlock if the user or computer has the proper credentials. When specifying a computer account, append a **$** to the computer name and specify **-service** to indicate that the unlock should happen in the content of the BitLocker server instead of the user. You can also use **-sid** as an abbreviated version of this command. |
 | -usedspaceonly | Sets the encryption mode to Used Space Only encryption. The sections of the volume containing used space will be encrypted but the free space will not. If this option is not specified, all used space and free space on the volume will be encrypted. You can also use **-used** as an abbreviated version of this command. |
 | -encryptionMethod | Configures the encryption algorithm and key size. You can also use **-em** as an abbreviated version of this command. |
 | -skiphardwaretest | Begins encryption without a hardware test. You can also use **-s** as an abbreviated version of this command. |
@@ -56,13 +54,13 @@ manage-bde –on <drive> {[-recoverypassword <numericalpassword>]|[-recoverykey 
 To turn on BitLocker for drive C, and to add a recovery password to the drive, type:
 
 ```
-manage-bde –on C: -recoverypassword
+manage-bde -on C: -recoverypassword
 ```
 
 To turn on BitLocker for drive C, add a recovery password to the drive, and to save a recovery key to drive E, type:
 
 ```
-manage-bde –on C: -recoverykey E:\ -recoverypassword
+manage-bde -on C: -recoverykey E:\ -recoverypassword
 ```
 
 To turn on BitLocker for drive C, using an external key protector (such as a USB key) to unlock the operating system drive, type:
@@ -77,16 +75,16 @@ manage-bde -on C: -startupkey E:\
 To turn on BitLocker for data drive E, and to add a password key protector, type:
 
 ```
-manage-bde –on E: -pw
+manage-bde -on E: -pw
 ```
 
 To turn on BitLocker for operating system drive C, and to use hardware-based encryption, type:
 
 ```
-manage-bde –on C: -fet hardware
+manage-bde -on C: -fet hardware
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

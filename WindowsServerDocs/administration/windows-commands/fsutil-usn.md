@@ -1,17 +1,15 @@
 ---
 title: fsutil usn
 description: Reference article for the fsutil usn command, which manages the update sequence number (USN) change journal.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: faad34aa-4ba1-4129-bc1f-08088399e2fa
+ms.author: daknappe
+author: dknappettmsft
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil usn
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Manages the update sequence number (USN) change journal. The USN change journal provides a persistent log of all changes made to files on the volume. As files, directories, and other NTFS objects are added, deleted, and modified, NTFS enters records into the USN change journal, one for each volume on the computer. Each record indicates the type of change and the object changed. New records are appended to the end of the stream.
 
@@ -109,7 +107,7 @@ To read the USN journal with a specific start USN, type:
 fsutil usn readjournal startusn=0xF00
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

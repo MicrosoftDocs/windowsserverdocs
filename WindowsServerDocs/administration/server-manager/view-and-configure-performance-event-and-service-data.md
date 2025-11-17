@@ -1,16 +1,14 @@
 ---
 title: View and Configure Performance Event and Service Data
 description: Learn how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.
-ms.topic: article
-ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # View and Configure Performance, Event, and Service Data
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 This topic describes how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.
 
@@ -205,3 +203,5 @@ The **Events** tile also lets you preview event properties in the bottom half of
 ## See Also
 [Server Manager](server-manager.md)
 [Filter, sort, and query Data in Server Manager Tiles](filter-sort-and-query-data-in-server-manager-tiles.md)
+
+

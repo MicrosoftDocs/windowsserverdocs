@@ -1,17 +1,15 @@
 ---
 title: exit
-description: Reference article for exit, which exits the command interpreter.
+description: Reference article for exit, which exits the diskpart command interpreter.
 ms.topic: reference
-ms.assetid: d3cee4a2-6210-46f0-b8e4-7381c3c4e530
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 10/12/2023
 ---
 
 # exit
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Exits the command interpreter or the current batch script.
 
@@ -37,6 +35,6 @@ To close the command interpreter, type:
 exit
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

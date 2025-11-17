@@ -1,20 +1,16 @@
 ---
 description: "Learn more about: Virtualized Domain Controller Additional Resources"
-ms.assetid: 47a7cede-f94a-4233-872b-fa65a5b9d8f1
 title: Virtualized Domain Controller Additional Resources
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Virtualized Domain Controller Additional Resources
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-
--   [AD DS Virtualization (Cloning and Virtualization safe improvements)](https://go.microsoft.com/fwlink/p/?LinkID=238316)
+-   AD DS Virtualization (Cloning and Virtualization safe improvements) <!--(/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj574191(v=ws.11))-->
 
 -   [Active Directory Replication Model Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc782376(v=ws.10))
 

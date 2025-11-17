@@ -1,16 +1,12 @@
 ---
 title: Configure Features on Demand in Windows Server
 description: Learn how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
-ms.topic: article
-ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # Configure Features on Demand in Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
 
@@ -59,6 +55,126 @@ This section describes how to set up a remote feature file shared folder (also c
     > Servers that are in workgroups cannot access external file shares, even if the computer account for the workgroup server has **Read** permissions on the external share. Alternate source locations that work for workgroup servers include installation media, Windows Update, and VHD or WIM files that are stored on the local workgroup server.
 
 3.  Copy the **Sources\SxS** folder from your Windows Server installation media to the shared folder that you created in step 1.
+
+### Install .NET Framework 3.5 and other features on-demand
+
+Starting with  Windows Server 2012  and Windows 8, the feature files for .NET Framework 3.5 (which includes .NET Framework 2.0 and .NET Framework 3.0) are not available on the local computer by default. The files have been removed. Files for features that have been removed in a Features on Demand configuration, along with feature files for .NET Framework 3.5, are available through Windows Update. By default, if feature files are not available on the destination server that is running  Windows Server 2012  or later releases, the installation process searches for the missing files by connecting to Windows Update. You can override the default behavior by configuring a Group Policy setting or specifying an alternate source path during installation, whether you are installing by using the add Roles and Features Wizard GUI or a command line.
+
+You can install .NET Framework 3.5 by doing one of the following.
+
+-   Use [To install .NET Framework 3.5 by running the Install-WindowsFeature cmdlet](#to-install-net-framework-35-by-running-the-install-windowsfeature-cmdlet) to add the `Source` parameter, and specify a source from which to get .NET Framework 3.5 feature files. If you do not add the `Source` parameter, the installation process first determines if a path to feature files has been specified by Group Policy settings, and if no such path is found, searches for missing feature files by using Windows Update.
+
+-   Use [To install .NET Framework 3.5 by using the add Roles and Features Wizard](#to-install-net-framework-35-by-using-the-add-roles-and-features-wizard) to specify an alternate source file location on the **Confirm installation options** page of the add Roles and Features Wizard.
+
+-   Use [To install .NET Framework 3.5 by using DISM](#to-install-net-framework-35-by-using-dism) to get files from Windows Update by default, or by specifying a source path to installation media.
+
+[Configure alternate sources for feature files in Group Policy](#configure-alternate-sources-for-feature-files-in-group-policy) for .NET Framework 3.5 or other features, if feature files are not found on the local computer.
+
+> [!IMPORTANT]
+> When you are installing feature files from a remote source, the source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer (local system) account of the destination server; granting user account access is not sufficient.
+>
+> Servers that are in workgroups cannot access external file shares, even if the computer account for the workgroup server has **Read** permissions on the external share. Alternate source locations that work for workgroup servers include installation media, Windows Update, and VHD or WIM files that are stored on the local workgroup server.
+>
+> You can specify a WIM file as an alternate feature file source when you are installing roles, role services, and features on a running, physical server. The source path for a WIM file should be in the following format, with **WIM** as a prefix, and the index in which the feature files are located as a suffix: **WIM:e:\sources\install.wim:4**. However, you cannot use a WIM file directly as a source for installing roles, role services, and features to an offline VHD; you must either mount the offline VHD and point to its mount path for source files, or you must point to a folder that contains a copy of the contents of the WIM file.
+
+### To install .NET Framework 3.5 by running the Install-WindowsFeature cmdlet
+
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.
+
+    > [!NOTE]
+    > if you are installing roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.
+
+    -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.
+
+    -   On the Windows **start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.
+
+    -   On a server that is running the Server Core installation option of  Windows Server 2012 R2  or  Windows Server 2012 , type **PowerShell** into a command prompt, and then press **Enter**.
+
+2.  type the following command, and then press **Enter**. In the following example, the source files are located in a side-by-side store (abbreviated to as **SxS**) in installation media on drive D.
+
+    ```
+    Install-WindowsFeature NET-Framework-Core -Source D:\Sources\SxS
+    ```
+
+    If you want the command to use Windows Update as a source for missing feature files, or if a default source has already been configured by using Group Policy, you do not need to add the `Source` parameter unless you want to specify a different source.
+
+### To install .NET Framework 3.5 by using the add Roles and Features Wizard
+
+1. On the **Manage** menu in Server Manager, click **add Roles and Features**.
+
+2. Select a destination server that is running Windows Server 2016.
+
+3. On the **select features** page of the add Roles and Features Wizard, select **.NET Framework 3.5**.
+
+4. If the local computer is allowed to do so by Group Policy settings, the installation process attempts to get missing feature files by using Windows Update. Click **Install**; you do not need to go on to the next step.
+
+   if Group Policy settings do not allow this, or you want to use another source for the .NET Framework 3.5 feature files, on the **Confirm installation selections** page of the wizard, click **Specify an alternate source path**.
+
+5. Provide a path to a side-by-side store (referred to as **SxS**) in installation media, or to a WIM file. In the following example, installation media is located on drive D.
+
+   **D:\Sources\SxS\\**
+
+   To specify a WIM file, add a **WIM:** prefix, and add the index of the image to use in the WIM file as a suffix, as shown in the following example.
+
+   **WIM:\\\\**<em>server_name</em>**\share\install.wim:3**
+
+6. Click **OK**, and then click **Install**.
+
+### To install .NET Framework 3.5 by using DISM
+
+1.  Do one of the following to open a Windows PowerShell session with elevated user rights.
+
+    > [!NOTE]
+    > if you are installing roles and features from a remote server, you do not need to run Windows PowerShell with elevated user rights.
+
+    -   On the Windows desktop, right-click **Windows PowerShell** on the taskbar, and then click **Run as Administrator**.
+
+    -   On the Windows **Start** screen, right-click the Windows PowerShell tile, and then on the app bar, click **Run as Administrator**.
+
+    -   On a server that is running the Server Core installation option, type **PowerShell** into a command prompt, and then press **Enter**.
+
+2.  Run one of the following DISM commands.
+
+    -   if the computer has access to Windows Update, or a default source file location has already been configured in Group Policy, run the following command.
+
+        ```
+        DISM /online /Enable-Feature /Featurename:NetFx3 /All
+        ```
+
+    -   if the computer has access to installation media, run a command similar to the following. In the following example, the operating system installation media is located on drive D. The `LimitAccess` parameter prevents the command from attempting to contact Windows Update or a server that is running WSUS.
+
+        ```
+        DISM /online /Enable-Feature /Featurename:NetFx3 /All /LimitAccess /Source:d:\sources\sxs
+        ```
+
+    > [!NOTE]
+    > The DISM command is case-sensitive.
+
+### Configure alternate sources for feature files in Group Policy
+The Group Policy setting described in this section specifies authorized source locations for .NET Framework 3.5 files, and other feature files that have been removed as part of a Features on Demand configuration. The policy setting **Specify settings for optional component installation and component repair** is located in the **computer Configuration\Administrative Templates\System** folder in the Group Policy Management Console or Local Group Policy editor.
+
+> [!NOTE]
+> You must be a member of the Administrators group to change Group Policy settings on the local computer. If Group Policy settings for the computer you want to manage are controlled at the domain level, you must be a member of the Domain Administrators group to change Group Policy settings.
+
+##### To configure a default alternate source path in Group Policy
+
+1. In Local Group Policy editor or Group Policy Management Console, open the following policy setting.
+
+   **computer Configuration\Administrative Templates\System\Specify settings for optional component installation and component repair**
+
+2. Select **Enabled** to enable the policy setting, if it is not already enabled.
+
+3. In the **Alternate source file path** text box in the **Options** area, specify a fully qualified path to a shared folder or a WIM file. To specify a WIM file as an alternate source file location, add the prefix **WIM:** to the path, and add the index of the image to use in the WIM file as a suffix. The following are examples of values that you can specify.
+
+   - path to a shared folder:  **\\\\**<em>server_name</em>**\share\\**<em>folder_name</em>
+
+   - path to a WIM file, in which **3** represents the index of the image in which the feature files are found:  **WIM:\\\\**<em>server_name</em>**\share\install.wim:3**
+
+4. if you do not want computers that are controlled by this policy setting to search for missing feature files in Windows Update, select **Never attempt to download payload from Windows Update**.
+
+5. If the computers that are controlled by this policy setting typically receive updates through WSUS, but you prefer to go through Windows Update and not WSUS to find missing feature files, select **Contact Windows Update directly to download repair content instead of Windows Server Update Services (WSUS)**.
+
+6. Click **OK** when you are finished changing this policy setting, and then close the Group Policy editor.
 
 ## <a name=BKMK_methods></a>Methods of removing feature files
 Two methods are available for removing feature files from Windows Server in a Features on Demand configuration.

@@ -1,15 +1,13 @@
 ---
 title: Install extension payload on a managed node
 description: Instructions about how to install extension payload on a managed node
-ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+ms.topic: install-set-up-deploy
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/18/2018
 ---
 
 # Install extension payload on a managed node
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Setup
 
@@ -159,3 +157,4 @@ Follow the [Publishing Extensions](../publish-extensions.md) guide if you have n
 ```
 
 Once this package is created, add a path to that feed. In Windows Admin Center go to Settings > Extensions > Feeds and add the path to where that package exists. When your extension is done being installed, you should be able to click the ```install``` button and the API will be called.
+

@@ -2,10 +2,8 @@
 title: bcdedit
 description: Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
 ms.topic: reference
-ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/27/2021
 ---
 
@@ -97,7 +95,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 | /dbgsettings | Specifies or displays the global debugger settings for the system. This command does not enable or disable the kernel debugger; use the **/debug** option for that purpose. To set an individual global debugger setting, use the **bcdedit /set** `<dbgsettings> <type> <value>` command. |
 | /debug | Enables or disables the kernel debugger for a specified boot entry. |
 
-## Additional References
+## Related links
 
 For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
 

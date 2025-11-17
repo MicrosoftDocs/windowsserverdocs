@@ -1,0 +1,899 @@
+{
+  "redirections": [
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Web-Application-Proxy-in-Windows-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/add-to-existing-vpn/Step-1-Configure-the-DirectAccess-Infrastructure_3.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/add-to-existing-vpn/Step-1-Plan-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/add-to-existing-vpn/Step-2-Plan-the-DirectAccess-Deployment_4.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/add-to-existing-vpn/Step-3-Verify-the-Deployment_5.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-advanced/Step-1-Configuring-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-advanced/Step-1-Plan-the-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-advanced/Step-2-Configuring-DirectAccess-Servers.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-advanced/Step-2-Plan-DirectAccess-Deployments.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-advanced/Step-3-Verify-the-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-wizard/Step-1-Configure-the-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-wizard/Step-1-Plan-Basic-DA-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-wizard/Step-2-Configure-the-DirectAccess-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-wizard/Step-2-Plan-the-DirectAccess-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/single-server-wizard/Step-3-Verify-Deployments.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/tlg-cluster-nlb/Configuration-Requirements_1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/tlg-cluster-nlb/Overview-of-the-Test-Lab-Scenario_5.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-8-Snapshot-the-Configuration.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/tlg-cluster-nlb/Steps-for-Configuring-the-Test-Lab.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/da-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/web-application-proxy/web-app-proxy-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-create-certificates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-configure-client",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-dns-firewall.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-nps.md",
+      "redirect_url": "/windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-ras.md",
+      "redirect_url": "/windows-server/remote/remote-access/get-started-install-ras-as-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-config-eap-tls-to-ignore-crl-checking.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-create-root-cert-for-vpn-auth-azure-ad.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-config-conditional-access-policy.md",
+      "redirect_url": "/Windows-server/remote//remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-deploy-cond-access-root-cert-to-on-premise-ad.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-create-oma-dm-based-vpnv2-profiles.md",
+      "redirect_url": "/Windows-server/remote/remote-access/how-to-aovpn-conditional-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-enhancements.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview.md",
+      "redirect_url": "/Windows-server/remote/remote-access/tutorial-aovpn-deploy-setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/vpn-map-da.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/overview-aovpn.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/vpn/always-on-vpn/index.md",
+      "redirect_url": "/Windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/Deploy-RA-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831379(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134227(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134170(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134220(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134161(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134154(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134229(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment-5.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134212(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134164(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134168(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134243(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618321(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618331(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Adding-Entry-Points.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-setting-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/web-application-proxy/Troubleshooting-Web-Application-Proxy.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-web-application-proxy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/directaccess/Troubleshooting-DirectAccess.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-directaccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/troubleshoot-always-on-vpn.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-always-on-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+      "redirect_url": "/powershell/module/remoteaccess/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds_vdi-recommendations-1909.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds_vdi-recommendations-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-1803.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-1803",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations-2004.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations-2004",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-vdi-recommendations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/remote/remote-desktop-services/rds-vdi-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDS-2016.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rds",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDSH-2016.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Upgrade-to-RDVH-2016.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdvh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-office-vdi-rdsh.md",
+      "redirect_url": "/deployoffice/rds-office-vdi-rdsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-outlook-data-fslogix.md",
+      "redirect_url": "/deployoffice/rds-outlook-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-onedrive-for-business.md",
+      "redirect_url": "/deployoffice/rds-onedrive-business-vdi",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-2-configure-load-balancing-on-the-rd-connection-brokers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-RD-Web-Access-and-Gateway-farm.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-Remote-Desktop-Connection-Broker-cluster.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-Remote-Desktop-Session-Host-farm-to-improve-availability.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-scale-rdsh-farm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/install-odbc-on-connection-broker.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Install-SQL-native-client-on-each-RD-Connection-Broker-server.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Prepare-the-RD-Connection-Broker-VM-for-Remote-Desktop.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Prepare-the-RDSH-virtual-machine.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Prepare-the-RD-Web-and-Gateway-VM-for-Remote-Desktop.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Validate-and-secure-your-Remote-Desktop-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-build-and-deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Add-the-RDSH-Server-create-a-collection-and-publish-the-RemoteApp-programs.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Add-the-RDSH-server-to-the-collection-farm.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-scale-rdsh-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-the-current-RD-Web-and-Gateway-virtual-machine-for-load-balancing.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-your-desktop-hosting-environment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-a-second-RD-Connection-Broker-virtual-machine.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Create-a-virtual-machine-for-the-Remote-Desktop-Session-Host-server.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Configure-trusted-certificates-on-RD-Connection-Broker-servers-and-clients.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-configure-your-environment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-android-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-ios-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-mac-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Deploy-your-Remote-Desktop-environment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-plan-graphics-rendering.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-plan-persistent-nonpersistent.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-plan-personal-pooled.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-plan-vdi-session.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-remotefx-vgpu.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Understanding-RDS-roles.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/desktop-hosting-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-no-licenses-available.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/cannot-connect-rds-no-license-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-workloads.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/virtual-machine-recs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop.md",
+      "redirect_url": "/azure/virtual-desktop/users/connect-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-admin.md",
+      "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-whatsnew.md",
+      "redirect_url": "/azure/virtual-desktop/whats-new-client-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windowsdesktop-supported-config.md",
+      "redirect_url": "/azure/virtual-desktop/users/client-features-windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-support.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-general-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-error-general-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/credential-limit.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/credential-limit-per-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-class-not-registered.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-error-class-not-registered",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/cannot-authenticate-must-authenticate-twice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/remote-desktop-service-currently-busy.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-service-currently-busy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/rdp-client-disconnects-cannot-reconnect-same-session",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/remote-laptop-disconnects-wireless-network.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-laptop-disconnects-wireless-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/poor-performance-application-problems-rdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/input-method-editor-error.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/input-method-editor-issue-remoteapp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/out-of-memory-error.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/out-of-memory-error-avd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-get-started.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-hosting-partners.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-in-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/rds-integrate-with-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/welcome-to-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-app-compare.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-features.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/rdp-files.md",
+      "redirect_url": "/azure/virtual-desktop/rdp-properties?context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-clients.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/connect-remote-desktop-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-windows-urdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/windows-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-windows?tabs=windows-urdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-android.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/android-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-android-chrome-os",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-ios.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/ios-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-mac.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/mac-whatsnew.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/whats-new-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-client-faq.yml",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-pc-connections-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-web-client.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-web-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-web-client-admin.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-web-client-admin",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/web-client-whatsnew.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/web-client-whats-new",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-privacy-settings.md",
+      "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/change-listening-port.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/change-listening-port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-allow-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-allow-outside-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-outside-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-connection-single-sign-on.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-connection-single-sign-on",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config.md",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/uninstall-remote-desktop-connection.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/uninstall-remote-desktop-connection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-uri.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-uri",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/clients/remote-desktop-supported-config.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-privacy-settings.md",
+      "redirect_url": "https://www.microsoft.com/privacy/privacystatement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-web-access-faq.yml",
+      "redirect_url": "/troubleshoot/windows-server/remote/remote-desktop-web-access-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Attach-additional-stations-to-your-MultiPoint-services-computer.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-attach-additional-stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Collect-hardware-and-device-drivers-needed-for-the-installation.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-hardware-device-drivers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Example-scenarios--MultiPoint-Services-user-accounts.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-users-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Hardware-Requirements-and-Performance-Recommendations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/hardware-and-performance-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Important-Information-about-Software-License-Compliance.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-software-license-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Install-Server-Backup-on-your-MultiPoint-services-computer.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-server-backup-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Install-software-on-your-MultiPoint-services-system.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-software-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Join-the-MultiPoint-services-computer-to-a-domain--optional-.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/join-multipoint-services-to-a-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Limit-users--access-to-the-server-in-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/limit-user-access-to-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/manage-client-access-licenses-with-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/manage-client-access-licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Selecting-Hardware-for-Your-MultiPoint-services-System.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/select-hardware-mps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Set-the-date--time--and-time-zone.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/set-the-date-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/multipoint-services/Task-Lists--Deploying-Windows-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/deploy-multipoint-services-task-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-overview.md",
+      "redirect_url": "/windows-server/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-server-administration-tools.md",
+      "redirect_url": "/windows-server/administration/install-remote-server-administration-tools",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/virtual-machine-recs.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/session-host-virtual-machine-sizing-guidelines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-services-overview.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/Tenant-on-premises-components.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/desktop-hosting-reference-architecture",
+      "redirect_document_id": false
+    }
+  ]
+}

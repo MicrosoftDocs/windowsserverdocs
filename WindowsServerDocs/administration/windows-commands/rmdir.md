@@ -2,10 +2,8 @@
 title: rmdir
 description: Reference article for the rmdir command, which deletes a directory.
 ms.topic: reference
-ms.assetid: e4d7162b-7132-413c-a416-6eb3dc032a26
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -67,6 +65,6 @@ To run the previous example in quiet mode, type:
 rmdir /s /q test
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -2,16 +2,14 @@
 title: rundll32 printui.dll,PrintUIEntry
 description: Reference article for the rundll32 printui.dll,PrintUIEntry command, which automates many printer configuration tasks.
 ms.topic: reference
-ms.assetid: 12fb48b6-5dd8-4cc0-8808-e6a681aceb84
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/25/2018
 ---
 
 # rundll32 printui.dll,PrintUIEntry
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Automates many printer configuration tasks. printui.dll is the executable file that contains the functions used by the printer configuration dialog boxes. These functions can also be called from within a script or a command-line batch file, or they can be run interactively from the command prompt.
 
@@ -143,7 +141,7 @@ To view the properties of a printer, printer3, type:
 rundll32 printui.dll PrintUIEntry /p /n\\printer3
 ```
 
-## Additional References
+## Related links
 
 - [rundll32](rundll32.md)
 

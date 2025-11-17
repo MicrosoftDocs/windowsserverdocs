@@ -2,10 +2,8 @@
 title: nslookup set debug
 description: Reference article for the nslookup set debug command, which turns debugging mode on and off.
 ms.topic: reference
-ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -28,6 +26,6 @@ set [no]debug
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

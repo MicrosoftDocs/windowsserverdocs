@@ -2,16 +2,14 @@
 title: gpt
 description: Reference article for the gpt command, which assigns the gpt attribute(s) to the partition with focus.
 ms.topic: reference
-ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # gpt
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 On basic GUID partition table (gpt) disks, this command assigns the gpt attribute(s) to the partition with focus. Gpt partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.
 
@@ -44,7 +42,7 @@ To prevent the computer from automatically assigning a drive letter to the parti
 gpt attributes=0x8000000000000000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

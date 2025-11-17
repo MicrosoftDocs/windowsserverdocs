@@ -1,16 +1,12 @@
 ---
 title: Prerequisites for Deploying DirectAccess
 description: This topic provides prerequisites for DirectAccess deployment in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 57c7e039-42ef-4909-867a-b5f669c9e74e
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Prerequisites for Deploying DirectAccess
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following table lists the prerequisites necessary for using the configuration wizards to deploy DirectAccess.
 

@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Identify Your AD FS Deployment Goals"
-ms.assetid: c81b8291-fba5-4b30-a43d-7feb2f4b66be
 title: Identify Your AD FS Deployment Goals
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: concept-article
 ---
 
 # Identify Your AD FS Deployment Goals

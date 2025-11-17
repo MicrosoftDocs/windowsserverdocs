@@ -1,16 +1,12 @@
 ---
 title: STEP 5 Verify OTP Health on EDGE1
 description: Learn how to verify that OTP is configured and functioning correctly using DirectAccess Server Health Monitoring on EDGE1.
-manager: brianlic
-ms.topic: article
-ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 5 Verify OTP Health on EDGE1
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following procedures verify that OTP is configured and functioning correctly using DirectAccess Server Health Monitoring on EDGE1.
 

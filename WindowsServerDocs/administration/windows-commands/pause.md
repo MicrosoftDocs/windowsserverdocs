@@ -2,10 +2,8 @@
 title: pause
 description: Reference article for the pause command, which suspends the processing of batch programs.
 ms.topic: reference
-ms.assetid: cab3afc3-d046-432f-a0bf-6282f0099032
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -46,6 +44,6 @@ goto begin
 
 In this example, all the files on the disk in Drive A are copied to the current directory. After the message prompts you to put a new disk in Drive A, the **pause** command suspends processing so that you can change disks and then press any key to resume processing. This batch program runs in an endless loop—the **goto begin** command sends the command interpreter to the Begin label of the batch file.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

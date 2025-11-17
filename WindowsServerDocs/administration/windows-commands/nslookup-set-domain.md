@@ -2,16 +2,14 @@
 title: nslookup set domain
 description: Reference article for the nslookup set domain command, which changes the default Domain Name System (DNS) domain name to the specified name.
 ms.topic: reference
-ms.assetid: 9d4d28e8-6e88-42cc-801f-94e9d8e051f4
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nslookup set domain
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the default Domain Name System (DNS) domain name to the specified name.
 
@@ -37,7 +35,7 @@ set domain=<domainname>
 
 - Use the [nslookup set srchlist](nslookup-set-srchlist.md) command to specify a different list and the [nslookup set all](nslookup-set-all.md) command to display the list.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

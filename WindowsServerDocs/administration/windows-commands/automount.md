@@ -2,16 +2,14 @@
 title: automount
 description: Reference article for the automount command, which enables or disables the automount feature.
 ms.topic: reference
-ms.assetid: 4635fc91-a477-4f17-8dcc-aa08854bfe45
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # automount
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
@@ -51,7 +49,7 @@ To disable the automount feature, type:
 automount disable
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

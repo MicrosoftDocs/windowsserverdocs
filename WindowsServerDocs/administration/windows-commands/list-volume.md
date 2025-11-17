@@ -2,9 +2,8 @@
 title: list volume
 description: Reference article for the list volume command, which displays a list of basic and dynamic volumes on all disks.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -32,6 +31,6 @@ To delete *volume 2*, type:
 delete volume=2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

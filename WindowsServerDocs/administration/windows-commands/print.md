@@ -2,10 +2,8 @@
 title: print
 description: Reference article for the print command, which sends a text file to a printer.
 ms.topic: reference
-ms.assetid: aa2325d5-a993-4ed3-b996-255165452db8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -46,7 +44,7 @@ To send the **report.txt** file, located in the **c:\accounting** directory, to 
 print /d:\\copyroom\printer1 c:\accounting\report.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,9 +2,8 @@
 title: bitsadmin gethttpmethod
 description: Reference article for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job.
 ms.topic: reference
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/01/2019
 ---
 
@@ -32,7 +31,7 @@ To retrieve the HTTP verb to use with the job named *myDownloadJob*:
 bitsadmin /gethttpmethod myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

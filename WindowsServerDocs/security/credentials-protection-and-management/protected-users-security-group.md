@@ -1,54 +1,96 @@
 ---
-title: Protected Users Security Group
-description: Learn about the Active Directory security group Protected Users feature, and how it works.
-ms.topic: article
-ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/12/2016
+title: Protected Users Security Group in Windows Server
+description: Learn about the Active Directory security group Protected Users feature and how it works in Windows Server.
+ms.topic: concept-article
+ms.author: daknappe
+author: dknappettmsft
+ms.date: 06/27/2025
 ---
-# Protected Users Security Group
+# Protected Users security group
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+Protected Users is a global security group for Active Directory that's designed to protect against credential theft attacks. The group triggers nonconfigurable protection on devices and host computers to prevent credentials from being cached when group members sign in.
 
-This topic for the IT professional describes the Active Directory security group Protected Users, and explains how it works. This group was introduced in  Windows Server 2012 R2 domain controllers.
+## Prerequisites
 
-## <a name="BKMK_ProtectedUsers"></a>Overview
+Your system must meet the following prerequisites before you can deploy a Protected Users group:
 
-This security group is designed as part of a strategy to manage credential exposure within the enterprise. Members of this group automatically have non-configurable protections applied to their accounts. Membership in the Protected Users group is meant to be restrictive and proactively secure by default. The only method to modify these protections for an account is to remove the account from the security group.
+- Hosts must be running one of the following operating systems:
+  
+  - Windows 10 or Windows 11
+  - Windows Server 2012 R2 or later with the most recent security updates installed
 
-> [!WARNING]
-> Accounts for services and computers should never be members of the Protected Users group. This group provides incomplete protection anyway, because the password or certificate is always available on the host. Authentication will fail with the error \"the user name or password is incorrect\" for any service or computer that is added to the Protected Users group.
+- The domain functional level must be Windows Server 2012 R2 or later. For more information about functional levels, see [Forest and domain functional levels](/windows-server/identity/ad-ds/active-directory-functional-levels).
 
-This domain-related, global group triggers non-configurable protection on devices and host computers running  Windows Server 2012 R2  and Windows 8.1 or later for users in domains with a primary domain controller running  Windows Server 2012 R2 . This greatly reduces the default memory footprint of credentials when users sign-in to computers with these protections.
+> [!NOTE]
+> The built-in domain Administrator, `S-1-5-<domain>-500`, is always exempt from authentication policies, even when they're assigned to an authentication policy silo. For more information, see [How to Configure Protected Accounts](/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
-For more information, see [How the Protected Users group works](#BKMK_HowItWorks) in this topic.
+- Protected Users global security group memberships restrict members to only use Advanced Encryption Standard (AES) for Kerberos. Members of the Protected Users group must be able to authenticate by using AES.
 
+## Protections applied by Active Directory
 
-## <a name="BKMK_Requirements"></a>Protected Users group requirements
-Requirements to provide device protections for members of the Protected Users group include:
+Becoming a member of the Protected Users group means Active Directory automatically applies certain preconfigured controls that the users won't be able to change unless they stop being group members.
 
-- The Protected Users global security group is replicated to all domain controllers in the account domain.
+### Device protections for signed in Protected Users
 
-- Windows 8.1 and Windows Server 2012 R2 added support by default. [Microsoft Security Advisory 2871997](/security-updates/SecurityAdvisories/2016/2871997) adds support to Windows 7, Windows Server 2008 R2 and Windows Server 2012.
+When the signed in user is a member of the Protected Users group, the group provides the following protections:
 
-Requirements to provide domain controller protection for members of the Protected Users group include:
+- Credential delegation (CredSSP) doesn't cache the user's plain text credentials even when the user enables the **Allow delegating default credentials** Group Policy setting.
 
-- Users must be in domains which are Windows Server 2012 R2 or higher domain functional level.
+- Windows Digest doesn't cache the user's plaintext credentials even when they've enabled Windows Digest.
 
-### Adding Protected User global security group to down-level domains
+- NTLM stops caching the user's plaintext credentials or NT one-way function (NTOWF).
 
-Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded.
+- Kerberos stops creating Data Encryption Standard (DES) or RC4 keys. Kerberos also doesn't cache the user's plaintext credentials, or long-term keys after acquiring the initial Ticket Granting Ticket (TGT).
 
-> [!Note]
-> The domain controllers will not support domain protections.
+- The system doesn't create a cached verifier at user sign-in or unlock, so member systems no longer support offline sign-in.
 
-Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+After you add a new user account to the Protected Users group, these protections activate when the new Protected User signs in to their device.
 
-### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
+### Domain controller protections for Protected Users
 
-The following table specifies the properties of the Protected Users group.
+Protected User accounts that authenticate to a domain running Windows Server are unable to do the following:
+
+- Authenticate with NTLM authentication.
+
+- Use DES or RC4 encryption types in Kerberos preauthentication.
+
+- Delegate with unconstrained or constrained delegation.
+
+- Renew Kerberos TGTs beyond their initial four-hour lifetime.
+
+The Protected Users group applies nonconfigurable settings to TGT expiration for every member account. Normally, the domain controller sets the TGT lifetime and renewal based on the following two domain policies:
+
+- Maximum lifetime for user ticket
+- Maximum lifetime for user ticket renewal
+
+For Protected Users members, the group automatically sets these lifetime limits to 240 minutes. The user can't change this limit unless they leave the group.
+
+## How the Protected Users group works
+
+You can add users to the Protected Users group by using the following methods:
+
+- UI tools, such as [Active Directory Administrative Center](../../identity/ad-ds\get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md) or [Active Directory Users and Computers](/troubleshoot/windows-server/system-management-components/remote-server-administration-tools).
+- PowerShell, by using the [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember) cmdlet.
+
+>[!IMPORTANT]
+>
+> - Never add accounts for services and computers to the Protected Users group. For those accounts, membership doesn't provide local protections because the password and certificate is always available on the host.
+>
+> - Don't add accounts that are already members of highly privileged groups, such as the Enterprise Admins or Domain Admins groups, until you can guarantee that adding them won't have negative consequences. Highly privileged users in Protected Users are subject to the same [limitations and restrictions](#protections-applied-by-active-directory) as regular users, and it's not possible to work around or change those settings. If you add all members of those groups to the Protected Users group, it's possible to accidentally lock out their accounts. It's important to test your system to make sure the mandatory setting changes won't interfere with account access for these privileged user groups.
+
+Members of the Protected Users group can only authenticate using Kerberos with AES. This method requires AES keys for the account in Active Directory. The built-in Administrator doesn't have an AES key unless the password for the domain running Windows Server 2008 or later changes. Any account that has its password changed by a domain controller running an earlier version of Windows Server is locked out of authentication.
+
+To avoid lockouts and missing AES keys, we recommend that you follow these guidelines:
+
+- Don't run tests in domains unless all domain controllers run Windows Server 2008 or later.
+
+- If you have migrated accounts from other domains, you need to reset the password so the accounts have AES hashes. Otherwise, these accounts become unable to authenticate.
+
+- Users need to change passwords after switching to a domain functional level of Windows Server 2008 or later. Doing so ensures that they have AES password hashes after they become members of the Protected Users group.
+
+### Protected Users group Active Directory properties
+
+The following table specifies the Active Directory properties of the Protected Users group.
 
 |Attribute|Value|
 |-------|-----|
@@ -57,67 +99,37 @@ The following table specifies the properties of the Protected Users group.
 |Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
-|Protected by ADMINSDHOLDER?|No|
+|Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|No default user rights|
 
-## <a name="BKMK_HowItWorks"></a>How Protected Users group works
-This section explains how the Protected Users group works when:
+## Event logs
 
-- Signed in a Windows device
+Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default. They're located under **Applications and Services Logs\Microsoft\Windows\Authentication**.
 
-- User account domain is in a Windows Server 2012 R2 or higher domain functional level
+To enable capturing these logs:
 
-### Device protections for signed in Protected Users
-When the signed in user is a member of the Protected Users group the following protections are applied:
+1. Right-click **Start** and then select **Event Viewer**.
 
-- Credential delegation (CredSSP) will not cache the user's plain text credentials even when the **Allow delegating default credentials** Group Policy setting is enabled.
+1. Open **Applications and Services Logs\Microsoft\Windows\Authentication**.
 
-- Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
+1. For each log that you want to enable, right-click the log name and then select **Enable Log**.
 
-> [!Note]
-> After installing [Microsoft Security Advisory 2871997](/security-updates/SecurityAdvisories/2016/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
-
-- NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
-
-- Kerberos will no longer create DES or RC4 keys. Also it will not cache the user's plain text credentials or long-term keys after the initial TGT is acquired.
-
-- A cached verifier is not created at sign-in or unlock, so offline sign-in is no longer supported.
-
-After the user account is added to the Protected Users group, protection will begin when the user signs in to the device.
-
-### Domain controller protections for Protected Users
-Accounts that are members of the Protected Users group that authenticate to a  Windows Server 2012 R2  domain are unable to:
-
-- Authenticate with NTLM authentication.
-
-- Use DES or RC4 encryption types in Kerberos pre-authentication.
-
-- Be delegated with unconstrained or constrained delegation.
-
-- Renew the Kerberos TGTs beyond the initial four-hour lifetime.
-
-Non-configurable settings to the TGTs expiration are established for every account in the Protected Users group. Normally, the domain controller sets the TGTs lifetime and renewal, based on the domain policies, **Maximum lifetime for user ticket** and **Maximum lifetime for user ticket renewal**. For the Protected Users group, 600 minutes is set for these domain policies.
-
-For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
-
-## Troubleshooting
-Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default, and are located under **Applications and Services Logs\Microsoft\Windows\Authentication**.
-
-|Event ID and Log|Description|
+|Event ID and log|Description|
 |----------|--------|
-|104<p>**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<p>The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<p>Displays the package name, user name, domain name, and server name.|
-|304<p>**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<p>An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<p>Displays the package name, user name, and domain name.|
-|100<p>**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<p>An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<p>Displays the account name and device name.|
-|104<p>**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<p>Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<p>(AES is acceptable.)|
-|303<p>**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
+|104<p>**ProtectedUser-Client**|Reason: The security package on the client doesn't contain the credentials.<br>The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package doesn't cache the credentials that are needed to authenticate to the server.<p>Displays the package name, user name, domain name, and server name.|
+|304<p>**ProtectedUser-Client**|Reason: The security package doesn't store the protected user's credentials.<br>An informational event is logged in the client to indicate that the security package doesn't cache the user's sign-in credentials. It's expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users members. Applications can still succeed if they prompt for credentials.<p>Displays the package name, user name, and domain name.|
+|100<p>**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account in the Protected Users security group.<br>An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<p>Displays the account name and device name.|
+|104<p>**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected Users security group.<br>Kerberos preauthentication failed because DES and RC4 encryption types can't be used when the account is a member of the Protected Users security group.<p>(AES is acceptable.)|
+|303<p>**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos TGT was successfully issued for a member of the Protected Users group.|
 
-
-## Additional resources
+## Related content
 
 - [Credentials Protection and Management](credentials-protection-and-management.md)
 
 - [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
 
 - [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md)
+
+

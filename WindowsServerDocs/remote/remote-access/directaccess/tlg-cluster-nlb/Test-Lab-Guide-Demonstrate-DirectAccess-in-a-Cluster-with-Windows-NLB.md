@@ -1,16 +1,12 @@
 ---
 title: Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB
 description: Learn how to extend the Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 test lab guide to demonstrate DirectAccess Network Load Balancing and cluster configuration.
-manager: brianlic
-ms.topic: article
-ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Remote Access is a server role in the  Windows Server 2016, Windows Server 2012 R2 andWindows Server 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or RRAS VPN. This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate DirectAccess Network Load Balancing and cluster configuration.
 
@@ -27,7 +23,7 @@ The following are known issues when configuring a cluster scenario:
 
     To resolve this issue:
 
-    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](https://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).
+    1.  Download the backup and restore scripts from [Back up and Restore Remote Access Configuration](/power-platform/admin/backup-restore-environments).
 
     2.  Back up your Remote Access GPOs using the downloaded script Backup-RemoteAccess.ps1
 

@@ -2,15 +2,13 @@
 title: wdsutil start-namespace
 description: Reference article for Subcommand start-Namespace, which starts a Scheduled-Cast namespace.
 ms.topic: reference
-ms.assetid: 2dd1c11e-6ab7-4129-9e3a-3f80e0ba59c0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil start-namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Starts a Scheduled-Cast namespace.
 
@@ -31,7 +29,7 @@ To start a namespace, type one of the following:
 wdsutil /start-Namespace /Namespace:Custom Auto 1
 wdsutil /start-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)
 - [wdsutil new-namespace command](wdsutil-new-namespace.md)

@@ -2,10 +2,8 @@
 title: copy
 description: Reference article for the copy command, which copies one or more files from one location to another.
 ms.topic: reference
-ms.assetid: 9624d4a1-349a-4693-ad00-1d1d4e59e9ac
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -52,7 +50,7 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
 
 - If **/b** precedes or follows a list of files on the command line, it applies to all listed files until **copy** encounters **/a**. In this case, **/a** applies to the file preceding **/a**.
 
-    The effect of **/b** depends on its position in the command–line string:
+    The effect of **/b** depends on its position in the command-line string:
         - If **/b** follows *source*, the **copy** command copies the entire file, including any end-of-file character (CTRL+Z).
         - If **/b** follows *destination*, the **copy** command doesn't add an end-of-file character (CTRL+Z).
 
@@ -146,7 +144,7 @@ To combine all files with the .txt extension, and then to combine all files with
 copy *.txt + *.ref Combined.doc
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

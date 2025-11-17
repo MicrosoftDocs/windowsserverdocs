@@ -2,16 +2,14 @@
 title: reset session
 description: Reference article for reset session command, which enables you to reset a session on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # reset session
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Enables you to reset (delete) a session on a Remote Desktop Session Host server. You should reset a session only when it malfunctions or appears to have stopped responding.
 
@@ -52,7 +50,7 @@ To reset the session that uses *session ID 3*, type:
 reset session 3
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

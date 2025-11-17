@@ -2,10 +2,8 @@
 title: ksetup setcomputerpassword
 description: Reference article for the ksetup setcomputerpassword command, which sets the password for the local computer.
 ms.topic: reference
-ms.assetid: e307d8f6-3b93-4c24-ac04-f31549f7dc7d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To change the computer account password on the local computer from *IPops897* to
 ksetup /setcomputerpassword IPop$897!
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

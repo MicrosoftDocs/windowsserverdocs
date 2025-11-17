@@ -2,16 +2,14 @@
 title: nslookup set
 description: Reference article for the nslookup set command, which changes configuration settings affecting how lookups behave.
 ms.topic: reference
-ms.assetid: 1fe5b36d-e93e-468b-abca-43b0204b32d1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nslookup set
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes configuration settings that affect how lookups function.
 
@@ -41,6 +39,6 @@ set all [class | d2 | debug | domain | port | querytype | recurse | retry | root
 | [nslookup set type](nslookup-set-type.md) | Changes the resource record type for the query. |
 | [nslookup set vc](nslookup-set-vc.md) | Specifies whether to use a virtual circuit when sending requests to the server. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

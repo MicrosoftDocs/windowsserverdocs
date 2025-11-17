@@ -2,16 +2,14 @@
 title: netcfg
 description: Reference article for the netcfg command, which installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 ms.topic: reference
-ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # netcfg
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 
@@ -84,6 +82,6 @@ To display binding paths containing *MS_TCPIP*, type:
 netcfg /b ms_tcpip
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

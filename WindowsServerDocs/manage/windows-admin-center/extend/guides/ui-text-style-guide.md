@@ -1,15 +1,13 @@
 ---
 title: Windows Admin Center UI text and design style guide
 description: Windows Admin Center UI text and design style guide SDK
-ms.topic: article
-author: jasongerend
-ms.author: jgerend
+ms.topic: contributor-guide
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 05/12/2021
 ---
 
 # Windows Admin Center UI text and design style guide
-
->Applies to: Windows Admin Center
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 
@@ -128,7 +126,7 @@ Almost never. Provide a help link only when:
 
 Never link directly to a web address—instead use a redirection service.
 
-Microsoft developers should use an FWLink except when it's a help link that users might have to manually type, in which case use an aka.ms link (as long as the target of the URL is a website that automatically recognizes the browser locale, such as Docs.microsoft.com)
+Microsoft developers should use an FWLink except when it's a help link that users might have to manually type, in which case use an `aka.ms` link (as long as the target of the URL is a website that automatically recognizes the browser locale, such as `learn.microsoft.com`).
 
 ### Text guidelines
 

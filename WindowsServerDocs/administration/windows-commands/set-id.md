@@ -2,16 +2,14 @@
 title: set id
 description: Reference article for the Diskpart set id command, which changes the partition type field for the partition with focus.
 ms.topic: reference
-ms.assetid: 5793d7ad-827e-4285-b2c6-ae60eeb0e886
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # set id (Diskpart)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the partition type field for the partition with focus. This command doesn't work on dynamic disks or on Microsoft Reserved partitions.
 
@@ -51,6 +49,6 @@ To set the type field to be a basic data partition, type:
 set id=ebd0a0a2-b9e5-4433-87c0-68b6b72699c7
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

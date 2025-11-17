@@ -2,15 +2,13 @@
 title: tzutil
 description: Reference article for the tzutil command, which displays the Windows Time Zone utility.
 ms.topic: reference
-ms.assetid: bcf6e007-c9b6-4df5-83c5-ed7b4b1b5913
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 # tzutil
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the Windows Time Zone utility.
 
@@ -53,6 +51,6 @@ To set the current time zone to Pacific Standard time and disable Daylight Savin
 tzutil /s "Pacific Standard time_dstoff"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

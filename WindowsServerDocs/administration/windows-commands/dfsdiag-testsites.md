@@ -2,16 +2,14 @@
 title: dfsdiag testsites
 description: Reference article for dfsdiag testsites, which checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers.
 ms.topic: reference
-ms.assetid: 39a0d415-7eb7-4a26-861b-7ff00c45dcda
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # dfsdiag testsites
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Checks the configuration of active directory Domain Services (AD DS) sites by verifying that servers that act as namespace servers or folder (link) targets have the same site associations on all domain controllers.
 
@@ -50,7 +48,7 @@ To check a namespace root to verify the site association, along with enumerating
 dfsdiag /testsites /DFSpath:\\contoso.com\namespace2 /recurse /full
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

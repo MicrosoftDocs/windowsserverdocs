@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Create the First Federation Server in a Federation Server Farm"
-ms.assetid: 5e334c4e-75a7-453c-83e8-5ab4243cc685
 title:  Create the First Federation Server in a Federation Server Farm
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 02/13/2024
+ms.topic: install-set-up-deploy
 ---
 
 # Create the First Federation Server in a Federation Server Farm

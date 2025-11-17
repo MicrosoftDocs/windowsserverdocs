@@ -2,10 +2,8 @@
 title: mkdir
 description: Reference article for the mkdir command, which creates a directory or subdirectory.
 ms.topic: reference
-ms.assetid: 033a57a2-5deb-4c98-aa78-61ce8df2a330
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -52,7 +50,7 @@ mkdir \Taxes\Property
 mkdir \Taxes\Property\Current
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

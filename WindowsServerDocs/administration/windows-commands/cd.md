@@ -2,16 +2,14 @@
 title: cd
 description: Reference article for the cd command, which displays the name of or changes the current directory.
 ms.topic: reference
-ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # cd
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the name of the current directory or changes the current directory. If used with only a drive letter (for example, `cd C:`), **cd** displays the names of the current directory in the specified drive. If used without parameters, **cd** displays the current drive and directory.
 
@@ -83,7 +81,7 @@ To verify the change to the directory, type:
 cd [<drive>:]
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

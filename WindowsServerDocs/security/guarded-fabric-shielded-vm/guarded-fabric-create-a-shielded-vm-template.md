@@ -1,17 +1,13 @@
 ---
 title: Create a Windows shielded VM template disk
 description: "Learn more about: Create a Windows shielded VM template disk"
-ms.topic: article
-ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
-manager: dongill
-author: IngridAtMicrosoft
-ms.author: inhenkel
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/29/2019
 ---
 
 # Create a Windows shielded VM template disk
-
->Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 
 As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](/system-center/vmm/library-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
@@ -168,3 +164,4 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 
 - [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
+

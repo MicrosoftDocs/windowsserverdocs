@@ -1,15 +1,15 @@
 ---
 title: pktmon unload
-description: Reference article for the pktmon unload command.
+description: Reference article for the pktmon unload command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon unload
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Stop the PktMon driver service and unload PktMon.sys. Effectively equivalent to 'sc.exe stop PktMon'. Measurement (if active) will immediately stop, and any state will be deleted (counters, filters, etc.).
 
@@ -19,7 +19,7 @@ Stop the PktMon driver service and unload PktMon.sys. Effectively equivalent to 
 pktmon unload
 ```
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

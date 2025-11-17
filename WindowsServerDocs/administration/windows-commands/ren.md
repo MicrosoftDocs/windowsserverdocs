@@ -2,16 +2,14 @@
 title: ren
 description: Reference article for the ren command, which renames a file or directory.
 ms.topic: reference
-ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # ren
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Renames files or directories.
 
@@ -54,7 +52,7 @@ To change the name of a directory from *Chap10* to *Part10*, type:
 ren chap10 part10
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: bitsadmin setpeercachingflags
 description: Reference article for the bitsadmin setpeercachingflags command, which sets flags that determine if the files of the job can be cached and served to peers and if the job can download content from peers.
 ms.topic: reference
-ms.assetid: 3f54a127-fb68-49a5-b843-664ec833df67
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ To allow the job named *myDownloadJob* to download content from peers:
 bitsadmin /setpeercachingflags myDownloadJob 1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

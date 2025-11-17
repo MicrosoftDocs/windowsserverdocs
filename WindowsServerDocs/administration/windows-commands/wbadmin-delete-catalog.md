@@ -2,10 +2,8 @@
 title: wbadmin delete catalog
 description: Reference article for the wbadmin delete catalog command, which deletes the backup catalog that is stored on the local computer.
 ms.topic: reference
-ms.assetid: d3041407-4577-4716-a39f-2c8ab48818d1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -33,7 +31,7 @@ wbadmin delete catalog [-quiet]
 
 - We strongly recommend you create a new backup after you delete a backup catalog.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -1,0 +1,84 @@
+{
+  "redirections": [
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/Upgrade-Option-Same-Hardware.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2019/failover-clustering/Upgrade-Option-Same-Hardware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/failover-clustering.md",
+      "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/simplified-smb-multichannel-and-multi-nic-cluster-networks.md",
+      "redirect_url": "/windows-server/failover-clustering/smb-multichannel",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-a-cloud-witness-for-a-failover-cluster.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-failover-clustering-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-overview.md",
+      "redirect_url": "/azure/azure-local/manage/vm-load-balancing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
+      "redirect_url": "/azure/azure-local/manage/vm-load-balancing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/health-service-overview.md",
+      "redirect_url": "/azure/azure-local/manage/health-service-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/health-service-actions.md",
+      "redirect_url": "/azure/azure-local/manage/health-service-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/health-service-settings.md",
+      "redirect_url": "/azure/azure-local/manage/health-service-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/system-events.md",
+      "redirect_url": "/troubleshoot/windows-server/high-availability/failover-clustering-system-log-events",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/whats-new-in-failover-clustering.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/deploy-cloud-witness.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/manage-cluster-quorum.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/clustering-change-history.md",
+      "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/configure-ad-accounts.md",
+      "redirect_url": "/windows-server/failover-clustering/configure-failover-cluster-accounts",
+      "redirect_document_id": true
+    }
+  ]
+}

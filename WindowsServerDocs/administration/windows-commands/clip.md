@@ -2,10 +2,9 @@
 title: clip
 description: Reference article for the clip command, which redirects the command output from the command line to the Windows clipboard.
 ms.topic: reference
-ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
+no-loc: [clip]
 ms.date: 10/16/2017
 ---
 
@@ -48,6 +47,6 @@ To copy the contents of a file called *readme.txt* to the Windows clipboard, typ
 clip < readme.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

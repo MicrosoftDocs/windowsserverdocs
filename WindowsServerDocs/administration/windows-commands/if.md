@@ -2,10 +2,8 @@
 title: if
 description: Reference article for the if command, which performs conditional processing in batch programs.
 ms.topic: reference
-ms.assetid: 698b3fb9-532b-4c2b-af7f-179f8dc57131
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 
@@ -117,7 +115,7 @@ To go to the okay label if the value of the ERRORLEVEL environment variable is l
 if %errorlevel% LEQ 1 goto okay
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

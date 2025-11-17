@@ -2,16 +2,14 @@
 title: logman update alert
 description: Reference article for the logman update alert command, which updates the properties of an existing alert data collector.
 ms.topic: reference
-ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # logman update alert
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Updates the properties of an existing alert data collector.
 
@@ -63,7 +61,7 @@ To update the existing alert called *new_alert*, setting the threshold value for
 logman update alert new_alert -th \Processor(_Total)\% Processor time>40
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

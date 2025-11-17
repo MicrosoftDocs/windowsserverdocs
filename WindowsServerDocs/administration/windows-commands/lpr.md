@@ -2,16 +2,14 @@
 title: lpr
 description: Reference article for the lpr command, which sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 ms.topic: reference
-ms.assetid: afc8790b-8b52-45c4-acdf-be0ffa9da534
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # lpr
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 
@@ -49,7 +47,7 @@ To print the *PostScript_file.ps* Adobe PostScript file to the *Laserprinter1* p
 lpr -S 10.0.0.45 -P Laserprinter1 -o l PostScript_file.ps
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,16 +2,14 @@
 title: query process
 description: Reference article for the query process command, which displays information about processes that are running on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.assetid: 36ce3ffc-0092-4eb1-a374-28e6616ca946
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # query process
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about processes that are running on a Remote Desktop Session Host server. You can use this command to find out which programs a specific user is running, and also which users are running a specific program. This command returns the following information:
 
@@ -69,7 +67,7 @@ To display information about the processes being used by *session ID 2*, type:
 query process /ID:2
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

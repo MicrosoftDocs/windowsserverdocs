@@ -2,10 +2,8 @@
 title: choice
 description: Reference article for the choice command, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
 ms.topic: reference
-ms.assetid: c65a9119-410b-4dcf-9fa7-4e07d2a7238b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -78,6 +76,6 @@ choice /c ync /t 5 /d n
 > [!NOTE]
 > In this example, if the user doesn't press a key within five seconds, **choice** selects **N** by default and returns an error value of `2`. Otherwise, **choice** returns the value corresponding to the user's choice.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

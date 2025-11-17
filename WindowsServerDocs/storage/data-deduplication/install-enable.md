@@ -1,16 +1,14 @@
 ---
-ms.assetid: 07d6b251-c492-4d9f-bcc4-031023695b24
 title: Installing and enabling Data Deduplication
-ms.topic: article
-author: wmgries
-manager: klaasl
-ms.author: wgries
+ms.topic: install-set-up-deploy
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 02/18/2022
 description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---
 
 # Install and enable Data Deduplication
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
+>
 
 This topic explains how to install [Data Deduplication](overview.md), evaluate workloads for deduplication, and enable Data Deduplication on specific volumes.
 
@@ -31,21 +29,21 @@ This topic explains how to install [Data Deduplication](overview.md), evaluate w
 To install Data Deduplication, run the following PowerShell command as an administrator:
 `Install-WindowsFeature -Name FS-Data-Deduplication`
 
-To install Data Deduplication in a Nano Server installation:
+To install Data Deduplication:
 
-1. Create a Nano Server installation with the Storage installed as described in [Getting Started with Nano Server](../../get-started/getting-started-with-nano-server.md).
-2. From a server running Windows Server 2016 in any mode other than Nano Server, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the Nano Server instance (replace 'MyNanoServer' with the real name of the Nano Server instance):
-	```PowerShell
-	Install-WindowsFeature -ComputerName <MyNanoServer> -Name FS-Data-Deduplication
+- From a server running Windows Server 2016 or later, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the server name (replace 'MyServer' with the real name of the server instance):
+
+    ```powershell
+    Install-WindowsFeature -ComputerName <MyServer> -Name FS-Data-Deduplication
     ```
-	<br />
-    <strong>-- OR --</strong>
-	<br />
-	Connect remotely to the Nano Server instance with PowerShell remoting and install Data Deduplication by using DISM:
 
-	```PowerShell
-	Enter-PSSession -ComputerName MyNanoServer
-	dism /online /enable-feature /featurename:dedup-core /all
+    Or
+
+- Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
+
+    ```powershell
+    Enter-PSSession -ComputerName MyServer
+    dism /online /enable-feature /featurename:dedup-core /all
     ```
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
@@ -131,7 +129,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 2. If you are running a recommended workload, you're done. For other workloads, see [Other considerations](#enable-dedup-sometimes-considerations).
 
 > [!Note]
-> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a Nano Server instance. To create a new CIM Session run [`New-CimSession`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)).
+> The Data Deduplication PowerShell cmdlets, including [`Enable-DedupVolume`](/powershell/module/deduplication/enable-dedupvolume), can be run remotely by appending the `-CimSession` parameter with a CIM Session. This is particularly useful for running the Data Deduplication PowerShell cmdlets remotely against a server instance. To create a new CIM Session run [`New-CimSession`](/powershell/module/cimcmdlets/new-cimsession).
 
 #### <a id="enable-dedup-sometimes-considerations"></a>Other considerations
 > [!Important]
@@ -146,7 +144,7 @@ Before enabling Data Deduplication, you must choose the [Usage Type](understand.
 Aside from workloads that are [known not to interoperate with Data Deduplication](interop.md), we fully support the data integrity of Data Deduplication with any workload. Recommended workloads are supported by Microsoft for performance as well. The performance of other workloads depends greatly on what they are doing on your server. You must determine what performance impacts Data Deduplication has on your workload, and if this is acceptable for this workload.
 
 **What are the volume sizing requirements for deduplicated volumes?**
-In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high-churn workload was 1-2 TB, and the absolute maximum recommended size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, see [What's new in Data Deduplication](whats-new.md#support-for-large-files).
+In Windows Server 2012 and Windows Server 2012 R2, volumes had to be carefully sized to ensure that Data Deduplication could keep up with the churn on the volume. This typically meant that the average maximum size of a deduplicated volume for a high-churn workload was 1-2 TB, and the absolute maximum recommended size was 10 TB. In Windows Server 2016, these limitations were removed. For more information, see [What's new in Data Deduplication](../../get-started/whats-new-in-windows-server-2016.md#support-for-large-volumes).
 
 **Do I need to modify the schedule or other Data Deduplication settings for recommended workloads?**
 No, the provided [Usage Types](understand.md#usage-type) were created to provide reasonable defaults for recommended workloads.
@@ -157,4 +155,6 @@ At a minimum, Data Deduplication should have 300 MB + 50 MB for each TB of logic
 Optimally, Data Deduplication should have 1 GB of memory for every 1 TB of logical data. For instance, if you are optimizing a 10 TB volume, you would optimally need 10 GB of memory allocated for Data Deduplication (`1 GB * 10`). This ratio will ensure the maximum performance for Data Deduplication jobs.
 
 **What are the storage requirements for Data Deduplication?**
-In Windows Server 2016, Data Deduplication can support volume sizes up to 64 TB. For more information, view [What's new in Data Deduplication](whats-new.md#support-for-large-files).
+In Windows Server 2016, Data Deduplication can support volume sizes up to 64 TB. For more information, view [What's new in Data Deduplication](../../get-started/whats-new-in-windows-server-2016.md#support-for-large-volumes).
+
+

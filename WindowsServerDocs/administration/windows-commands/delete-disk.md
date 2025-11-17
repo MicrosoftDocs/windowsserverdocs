@@ -2,10 +2,8 @@
 title: delete disk
 description: Reference article for the delete disk command, which deletes a missing dynamic disk from the list of disks.
 ms.topic: reference
-ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -37,7 +35,7 @@ To delete a missing dynamic disk from the list of disks, type:
 delete disk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

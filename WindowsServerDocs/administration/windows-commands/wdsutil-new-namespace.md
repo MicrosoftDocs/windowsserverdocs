@@ -2,16 +2,14 @@
 title: wdsutil new-namespace
 description: Reference article for wdsutil new-namespace, which creates and configures a new namespace.
 ms.topic: reference
-ms.assetid: 6df60703-30bd-4d59-a8d9-9fe3efe96add
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil new-namespace
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates and configures a new namespace. You should use this option when you have only the Transport Server role service installed. If you have both the Deployment Server role service and the Transport Server role service installed (which is the default), use [wdsutilnew-MulticastTransmission command](wdsutil-new-multicasttransmission.md). Note that you must register the content provider before you use this option.
 
@@ -56,7 +54,7 @@ wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namesp
 /Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allnamespaces command](wdsutil-get-allnamespaces.md)

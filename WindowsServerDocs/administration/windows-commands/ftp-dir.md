@@ -2,16 +2,14 @@
 title: ftp dir
 description: Reference article for the ftp dir command, which displays a list of directory files and subdirectories on a remote computer.
 ms.topic: reference
-ms.assetid: a29a92a5-7b79-4e6e-95cf-2ccb38bb6fb2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # ftp dir
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays a list of directory files and subdirectories on a remote computer.
 
@@ -42,7 +40,7 @@ To save a list of the current directory on the remote computer in the local file
 dir . dirlist.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

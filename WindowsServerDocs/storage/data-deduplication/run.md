@@ -1,23 +1,19 @@
 ---
 description: "Learn more about: Running Data Deduplication"
-ms.assetid: f15c02d7-1cbd-4eba-a571-0ea34ab93ef4
 title: Running Data Deduplication
-ms.topic: article
-author: wmgries
-manager: klaasl
-ms.author: wgries
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/18/2022
 ---
 # Running Data Deduplication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
-
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication jobs manually
 
 You can run every scheduled Data Deduplication job manually by using the following PowerShell cmdlets:
-* [`Start-DedupJob`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)): Starts a new Data Deduplication job
-* [`Stop-DedupJob`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)): Stops a Data Deduplication job already in progress (or removes it from the queue)
-* [`Get-DedupJob`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)): Shows all the active and queued Data Deduplication jobs
+* [`Start-DedupJob`](/powershell/module/deduplication/start-dedupjob/): Starts a new Data Deduplication job
+* [`Stop-DedupJob`](/powershell/module/deduplication/stop-dedupjob/): Stops a Data Deduplication job already in progress (or removes it from the queue)
+* [`Get-DedupJob`](/powershell/module/deduplication/get-dedupjob/): Shows all the active and queued Data Deduplication jobs
 
 All [settings that are available when you schedule a Data Deduplication job](advanced-settings.md#modifying-job-schedules-available-settings) are also available when you start a job manually except for the scheduling-specific settings. For example, to start an [Optimization](understand.md#job-info-optimization) job manually with high priority, maximum CPU usage, and maximum memory usage, execute the following PowerShell command with administrator privilege:
 
@@ -29,7 +25,7 @@ Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 
 
 ### <a id="monitoring-dedup-job-successes"></a>Job successes
 
-Because Data Deduplication uses a post-processing model, it is important that [Data Deduplication jobs](understand.md#job-info) succeed. An easy way to check the status of the most recent job is to use the [`Get-DedupStatus`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)) PowerShell cmdlet. Periodically check the following fields:
+Because Data Deduplication uses a post-processing model, it is important that [Data Deduplication jobs](understand.md#job-info) succeed. An easy way to check the status of the most recent job is to use the [`Get-DedupStatus`](/powershell/module/deduplication/get-dedupstatus/) PowerShell cmdlet. Periodically check the following fields:
 
 * For the [Optimization job](understand.md#job-info-optimization), look at `LastOptimizationResult` (0 = Success), `LastOptimizationResultMessage`, and `LastOptimizationTime` (should be recent).
 * For the [Garbage Collection job](understand.md#job-info-gc), look at `LastGarbageCollectionResult` (0 = Success), `LastGarbageCollectionResultMessage`, and `LastGarbageCollectionTime` (should be recent).
@@ -40,7 +36,7 @@ Because Data Deduplication uses a post-processing model, it is important that [D
 
 ### <a id="monitoring-dedup-optimization-rates"></a>Optimization rates
 
-One indicator of [Optimization job](understand.md#job-info-optimization) failure is a downward-trending optimization rate which might indicate that the Optimization jobs are not keeping up with the rate of changes, or churn. You can check the optimization rate by using the [`Get-DedupStatus`](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)) PowerShell cmdlet.
+One indicator of [Optimization job](understand.md#job-info-optimization) failure is a downward-trending optimization rate which might indicate that the Optimization jobs are not keeping up with the rate of changes, or churn. You can check the optimization rate by using the [`Get-DedupStatus`](/powershell/module/deduplication/get-dedupstatus/) PowerShell cmdlet.
 
 > [!Important]
 > `Get-DedupStatus` has two fields that are relevant to the optimization rate: `OptimizedFilesSavingsRate` and `SavingsRate`. These are both important values to track, but each has a unique meaning.
@@ -60,3 +56,4 @@ Start-DedupJob -Type Unoptimization -Volume <Desired-Volume>
 ## <a id="faq"></a>Frequently Asked Questions
 **Is there a System Center Operations Manager Management Pack available to monitor Data Deduplication?**
 Yes. Data Deduplication can be monitored through the System Center Management Pack for File Server. For more information, see the  [Guide for System Center Management Pack for File Server 2012 R2](https://download.microsoft.com/download/6/F/7/6F7A33B9-9383-48ED-9252-23C2C8AD1BDA/MPGuide_FileServer2012R2.doc) document.
+

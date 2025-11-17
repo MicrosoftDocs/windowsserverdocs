@@ -2,16 +2,14 @@
 title: logman create cfg
 description: Reference article for the logman create cfg command, which creates a configuration data collector.
 ms.topic: reference
-ms.assetid: bfc87093-3ff5-4e19-aa93-d185fb8e2239
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # logman create cfg
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Creates a configuration data collector.
 
@@ -67,7 +65,7 @@ To create a configuration data collector called cfg_log, which records all WMI o
 logman create cfg cfg_log -mgt root\wmi:select * FROM MSNdis_Vendordriverversion
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

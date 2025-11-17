@@ -7,10 +7,10 @@ metadata:
   title: Windows Server Security documentation
   description: An overview of Security in Windows Server.
   ms.topic: landing-page # Required
-  author: JasonGerend
-  ms.author: jgerend
+  author: robinharwood
+  ms.author: roharwoo
   ms.date: 5/19/2020
-  ms.prod: windows-server
+  ms.service: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -22,8 +22,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Windows Server Security Blog Post
-            url: https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/
+          - text: Windows Server 2025 Security Book
+            url: https://aka.ms/ws2025securitybook
           - text: Datacenter and Private Cloud Security Blog
             url: /archive/blogs/datacentersecurity/
           - text: Addressing emerging threats and landscape shifts
@@ -39,7 +39,7 @@ landingContent:
           - text: Shielded VM Demo
             url: https://www.youtube.com/watch?v=xip5Qtk-7d8
           - text: Shielded Virtual Machines in Windows Server video walkthrough
-            url: http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm
+            url: /shows/oemtv/1758
       - linkListType: how-to-guide
         links:
           - text: Guarded Fabric Deployment Guide

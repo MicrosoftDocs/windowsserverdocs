@@ -18,6 +18,14 @@ items:
           href:  /azure/azure-arc/servers/agent-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: Plan for deployment
           href:  /azure/azure-arc/servers/plan-at-scale-deployment?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Windows Server Azure Arc Management
+      items:
+        - name: Azure Site Recovery
+          href: ../manage/azure-arc/azure-site-recovery-for-windows-server.md
+        - name: Best Practices Assessment
+          href: ../manage/azure-arc/best-practices-assessment-for-windows-server.md
+        - name: Remote Support
+          href: ../manage/azure-arc/remote-support-for-windows-server.md  
     - name: Windows Admin Center 
       items:
         - name: Windows Admin Center Overview
@@ -66,8 +74,8 @@ items:
               href: server-manager/configure-remote-management-in-server-manager.md
             - name: Add Servers to Server Manager
               href: server-manager/add-servers-to-server-manager.md
-            - name: Install or Uninstall Roles, Role Services, or Features
-              href: server-manager/install-or-uninstall-roles-role-services-or-features.md
+            - name: Add or remove roles and features
+              href: server-manager/add-remove-roles-features.md
               items: 
                 - name: Configure Features on Demand in Windows Server
                   href: server-manager/configure-features-on-demand-in-windows-server.md
@@ -83,17 +91,20 @@ items:
               href: server-manager/filter-sort-and-query-data-in-server-manager-tiles.md
             - name: Keyboard Shortcuts for Server Manager
               href: server-manager/keyboard-shortcuts-for-server-manager.md
-        - name: Manage Server Core and remote systems Remote Server Administration Tools
-          href: ../remote/remote-server-administration-tools.md
+        - name: Install Remote Server Administration Tools
+          href: install-remote-server-administration-tools.md
         - name: Manage Windows with OpenSSH
-          href: OpenSSH/OpenSSH_Overview.md
           items: 
-            - name: Get started with OpenSSH
+            - name: What is OpenSSH for Windows?
+              href: OpenSSH/openssh-overview.md
+            - name: Get started with OpenSSH for Windows
               href: OpenSSH/OpenSSH_Install_FirstUse.md
-            - name: OpenSSH Server configuration
-              href: OpenSSH/OpenSSH_Server_Configuration.md
-            - name: Manage OpenSSH Keys
+            - name: Server configuration options
+              href: OpenSSH/openssh-server-configuration.md
+            - name: Key-based authentication
               href: OpenSSH/OpenSSH_KeyManagement.md
+            - name: Manage OpenSSH with Group Policy
+              href: OpenSSH/openssh-group-policy.md
         - name: Windows Server Update Services (WSUS)
           href: windows-server-update-services/get-started/windows-server-update-services-wsus.md
           items: 
@@ -108,7 +119,7 @@ items:
                   href: windows-server-update-services/deploy/2-configure-wsus.md
                 - name: "Step 3: Approve and Deploy Updates in WSUS"
                   href: windows-server-update-services/deploy/3-approve-and-deploy-updates-in-wsus.md
-                - name: "Step 4: Configure Group Policy Settings for Automatic Updates"
+                - name: "Step 4: Configure Group Policy settings for automatic updates"
                   href: windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates.md
             - name: Update Management with Windows Server Update Services
               href: windows-server-update-services/manage/update-management-with-windows-server-update-services.md
@@ -143,16 +154,16 @@ items:
             - name: System Insights
               href: ..\manage\system-insights\overview.md
               items: 
-                - name: Understanding capabilities
+                - name: Understand capabilities
                   href: ..\manage\system-insights\understanding-capabilities.md
-                - name: Managing capabilities
+                - name: Manage capabilities
                   href: ..\manage\system-insights\managing-capabilities.md
-                - name: Adding and developing capabilities
+                - name: Add and develop capabilities
                   href: ..\manage\system-insights\adding-and-developing-capabilities.md
                   items: 
-                    - name: Adding, removing, and updating capabilities
+                    - name: Add, remove, and update capabilities
                       href: ..\manage\system-insights\add-remove-update-capabilities.md
-                    - name: Choosing capability data sources
+                    - name: Choose capability data sources
                       href: ..\manage\system-insights\data-sources.md
                 - name: FAQ
                   href: ..\manage\system-insights\faq.md
@@ -205,9 +216,9 @@ items:
     - name: Microsoft Learn
       items: 
         - name: Manage hybrid infrastructure with Azure Arc
-          href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+          href: /training/paths/manage-hybrid-infrastructure-with-azure-arc
         - name: Windows Server deployment, configuration, and administration
-          href: /learn/paths/windows-server-deployment-configuration-administration/
+          href: /training/paths/windows-server-deployment-configuration-administration/
         - name: Manage Windows Servers and workloads in a hybrid environment
-          href: /learn/paths/manage-windows-servers-workloads-hybrid-environment/
+          href: /training/paths/manage-windows-servers-workloads-hybrid-environment/
       

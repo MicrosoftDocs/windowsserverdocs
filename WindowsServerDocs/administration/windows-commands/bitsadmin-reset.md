@@ -2,10 +2,8 @@
 title: bitsadmin reset
 description: Reference article for the bitsadmin reset command, which cancels all jobs in the transfer queue owned by the current user.
 ms.topic: reference
-ms.assetid: 0e4f9d1d-072c-493f-8d7a-f6d713c3ef29
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -36,7 +34,7 @@ To cancel all the jobs in the transfer queue for the current user.
 bitsadmin /reset
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

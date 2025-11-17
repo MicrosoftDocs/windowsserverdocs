@@ -1,15 +1,15 @@
 ---
 title: pktmon list
-description: Reference article for the pktmon list command.
+description: Reference article for the pktmon list command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: khdownie
-ms.author: v-kedow
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 06/24/2021
 ---
 
 # pktmon list
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+
 
 Lists all active networking components that can be monitored, allowing you to examine the networking stack layout. The command shows networking components (drivers) arranged by adapters bindings.
 
@@ -27,7 +27,7 @@ pktmon list [--all] [--include-hidden] [--json]
 | **-i, --include-hidden** | Show components that are hidden by default. |
 | **--json** | Output the list in JSON format. Implies -i and -a. |
 
-## Additional References
+## Related links
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)

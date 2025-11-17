@@ -2,14 +2,14 @@
 title: vssadmin
 description: Reference article for the vssadmin commands, which displays current volume shadow copy backups and all installed shadow copy writers and providers.
 ms.topic: reference
-author: JasonGerend
-ms.author: jgerend
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/18/2018
 ---
 
 # vssadmin
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
 
 Displays current volume shadow copy backups and all installed shadow copy writers and providers. Select a command name in the following table view its command syntax.
 
@@ -20,6 +20,6 @@ Displays current volume shadow copy backups and all installed shadow copy writer
 | [vssadmin list writers](vssadmin-list-writers.md) | Lists all subscribed volume shadow copy writers on the system. | Client and Server |
 | [vssadmin resize shadowstorage](vssadmin-resize-shadowstorage.md) | Resizes the maximum size for a shadow copy storage association. | Client and Server |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

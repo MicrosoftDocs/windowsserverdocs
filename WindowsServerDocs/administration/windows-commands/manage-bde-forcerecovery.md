@@ -2,10 +2,8 @@
 title: manage-bde forcerecovery
 description: Reference article for the manage-bde forcerecovery command, which forces a BitLocker-protected drive into recovery mode on restart.
 ms.topic: reference
-ms.assetid: eecae37c-c9a3-46c5-b615-a0ace1f1d778
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -16,7 +14,7 @@ Forces a BitLocker-protected drive into recovery mode on restart. This command d
 ## Syntax
 
 ```
-manage-bde –forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
+manage-bde -forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
@@ -34,10 +32,10 @@ manage-bde –forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 To cause BitLocker to start in recovery mode on drive C, type:
 
 ```
-manage-bde –forcerecovery C:
+manage-bde -forcerecovery C:
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: remove-DriverGroupPackage
 description: Reference article for remove-DriverGroupPackage, which removes a driver package from a driver group on a server.
 ms.topic: reference
-ms.assetid: 2e48616d-d6a4-45f0-a5c6-efe62bf6a0ed
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -38,6 +36,6 @@ wdsutil /Remove-DriverGroupPackage /DriverGroup:PrinterDrivers /PackageId:{4D36E
 wdsutil /Remove-DriverGroupPackage /DriverGroup:PrinterDrivers /DriverPackage:XYZ
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

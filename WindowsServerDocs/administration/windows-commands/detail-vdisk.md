@@ -2,16 +2,14 @@
 title: detail vdisk
 description: Reference article for the detail vdisk command, which displays the properties of the selected virtual hard disk (VHD).
 ms.topic: reference
-ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # detail vdisk
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays the properties of the selected virtual hard disk (VHD). Before you begin, you must select a VHD for this operation to succeed. Use the [select vdisk](select-vdisk.md) command to select a VHD and shift the focus to it.
 
@@ -29,7 +27,7 @@ To see details about the selected VHD, type:
 detail vdisk
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

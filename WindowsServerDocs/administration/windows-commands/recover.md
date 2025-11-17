@@ -2,10 +2,8 @@
 title: recover
 description: Reference article for the recover command, which recovers readable information from a bad or defective disk.
 ms.topic: reference
-ms.assetid: cf9be2e3-90c8-4773-a201-dc503b91948e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -36,6 +34,6 @@ To recover the file *story.txt* in the *\fiction* directory on drive D, type:
 recover d:\fiction\story.txt
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

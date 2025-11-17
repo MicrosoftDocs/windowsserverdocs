@@ -2,10 +2,8 @@
 title: get-AllServers
 description: Reference article for get-AllServers, which retrieves information about all Windows Deployment Services servers.
 ms.topic: reference
-ms.assetid: fe2e3c69-8f2e-457d-af55-d249ebf70f53
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -41,6 +39,6 @@ To view detailed information about all servers, type:
 wdsutil /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

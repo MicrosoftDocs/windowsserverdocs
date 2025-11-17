@@ -1,23 +1,21 @@
 ---
 description: "Learn more about: AD FS Deployment"
-ms.assetid: d31006b1-c468-4196-be5a-9b293622e710
 title: AD FS 2016 Deployment
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: install-set-up-deploy
 ---
 # AD FS Deployment
 
 
-This document contains a list of all of the documentation for deploying AD FS for Windows Server 2016. This includes the following:
+[!INCLUDE [Migrate to Azure AD](../../../includes/adfs-to-azure-ad-upgrade.md)]
+
+This document contains a list of all of the documentation for deploying AD FS for Windows Server 2016. 
 
 * [Best Practices for Securing AD FS](deployment/Best-Practices-Securing-AD-FS.md)
 
-* [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](/azure/active-directory/hybrid/whatis-hybrid-identity)
+* [Deploy Microsoft Entra Connect Health to Monitor your on-premises identity infrastructure in the cloud](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
-* [Plan Device-based Conditional Access on-Premises](deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
+* [Plan Device-based Conditional Access on-premises](deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
 * [Required Updates for AD FS and WAP](deployment/updates-for-active-directory-federation-services-ad-fs.md)
 

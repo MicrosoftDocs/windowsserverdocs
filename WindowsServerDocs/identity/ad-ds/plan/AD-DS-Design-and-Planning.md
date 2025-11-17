@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: AD DS Design and Planning"
-ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS Design and Planning
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: best-practice
 ---
 
 # AD DS Design and Planning
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 By deploying Windows Server Active Directory Domain Services (AD DS) in your environment, you can take advantage of the centralized, delegated administrative model and single sign-on (SSO) capability that AD DS provides. After you identify the deployment tasks and current environment for your organization, you can create the AD DS deployment strategy that meets your organization's needs.
 
@@ -19,7 +15,7 @@ By deploying Windows Server Active Directory Domain Services (AD DS) in your env
 
 This guide provides recommendations to help you develop an AD DS deployment strategy based on the requirements of your organization and the particular design that you want to create. This guide is intended for use by infrastructure specialists or system architects. Before you read this guide, you should have a good understanding of how AD DS works on a functional level. You should also have a good understanding of the organizational requirements that will be reflected in your AD DS deployment strategy.
 
-This guide describes sets of tasks for several possible starting points of a  Windows Server 2008  AD DS deployment. The guide helps you determine the most appropriate deployment strategy for your environment.
+This guide describes sets of tasks for several possible starting points of a Windows Server AD DS deployment. The guide helps you determine the most appropriate deployment strategy for your environment.
 
 Although the strategies that are presented in this guide are appropriate for almost all server operating system deployments, they have been tested and validated specifically for environments that contain fewer than 100,000 users and fewer than 1,000 sites, with network connections of a minimum of 28.8 kilobits per second (Kbps). If your environment does not meet these criteria, consider using a consulting firm that has experience deploying AD DS in more complex environments.
 

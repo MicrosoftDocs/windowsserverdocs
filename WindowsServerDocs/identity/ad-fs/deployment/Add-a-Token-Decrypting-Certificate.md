@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Add a Token-Decrypting Certificate"
-ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: Add a Token-Decrypting Certificate
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Add a Token-Decrypting Certificate

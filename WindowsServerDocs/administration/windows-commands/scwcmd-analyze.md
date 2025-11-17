@@ -2,16 +2,14 @@
 title: scwcmd analyze
 description: Reference article for the scwcmd analyze command, which determines whether a computer is in compliance with a policy.
 ms.topic: reference
-ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # scwcmd analyze
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
+
 
 Determines whether a computer is in compliance with a policy. Results are returned in an .xml file.
 
@@ -65,7 +63,7 @@ To analyze a security policy for the *WebServers OU* against the file *webpolicy
 scwcmd analyze /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolicy.xml /u:DomainAdmin
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: reg copy
 description: Reference article for the reg copy command, which copies a registry entry to a specified location on the local or remote computer.
 ms.topic: reference
-ms.assetid: 3fe74213-39ec-4b2d-ba3d-086243eac997
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -54,6 +52,6 @@ To copy all values under the key MyCo on the computer named ZODIAC to the key My
 reg copy \\ZODIAC\HKLM\Software\MyCo HKLM\Software\MyCo1
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

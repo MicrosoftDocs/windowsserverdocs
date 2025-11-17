@@ -2,16 +2,14 @@
 title: nslookup set querytype
 description: Reference article for the nslookup set querytype command, which changes the resource record type for the query.
 ms.topic: reference
-ms.assetid: 5af54ac5-fc1a-4af6-977b-f8e97c8eba90
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nslookup set querytype
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the resource record type for the query. For information about resource record types, see [Request for Comment (Rfc) 1035](https://tools.ietf.org/html/rfc1035).
 
@@ -32,7 +30,7 @@ set querytype=<resourcerecordtype>
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

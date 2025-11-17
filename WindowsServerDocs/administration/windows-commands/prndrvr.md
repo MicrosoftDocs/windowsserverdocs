@@ -2,16 +2,14 @@
 title: prndrvr
 description: Reference article for the prndrvr command, which adds, deletes, and lists printer drivers.
 ms.topic: reference
-ms.assetid: 82b09e3e-bd38-4df1-9953-b0e9ee2565a3
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # prndrvr
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Adds, deletes, and lists printer drivers. This command is a Visual Basic script located in the `%WINdir%\System32\printing_Admin_Scripts\<language>` directory. To use this command at a command prompt, type **cscript** followed by the full path to the prndrvr file, or change directories to the appropriate folder. For example: `cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prndrvr`.
 
@@ -66,7 +64,7 @@ To delete a version 3 Windows x64 printer driver for Laser printer model 1, type
 cscript prndrvr -a -m Laser printer model 1 -v 3 -e Windows x64
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

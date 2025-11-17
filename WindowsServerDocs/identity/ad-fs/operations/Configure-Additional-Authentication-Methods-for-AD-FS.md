@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Configure Additional Authentication Methods for AD FS"
-ms.assetid: ddfbbda3-30ca-4537-af12-667efc6f63ff
 title: Configure Additional Authentication Methods for AD FS
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 07/26/2019
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 
 # Configure Additional Authentication Methods for AD FS
 
-In order to enable multi-factor authentication (MFA), you must select at least one extra authentication method. By default, in Active Directory Federation Services (AD FS) in Windows Server, you can select Certificate Authentication (in other words, smart card-based authentication) as an extra authentication method.
+In order to enable multifactor authentication (MFA), you must select at least one extra authentication method. By default, in Active Directory Federation Services (AD FS) in Windows Server, you can select Certificate Authentication (in other words, smart card-based authentication) as an extra authentication method.
 
 > [!NOTE]
 > If you select Certificate Authentication, ensure that the smart card certificates have been provisioned securely and have pin requirements.
@@ -20,9 +16,9 @@ Did you know that Microsoft Azure provides similar functionality in the cloud? L
 
 Create a hybrid identity solution in Microsoft Azure:
 
-- [Learn about Azure Active Directory Multi-Factor Authentication.](/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Learn about Microsoft Entra multifactor authentication.](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [Manage identities for single-forest hybrid environments using cloud authentication.](/previous-versions/windows/it-pro/solutions-guidance/dn550986(v=ws.11))
-- [Manage Risk with Additional multi-factor authentication for Sensitive Applications.](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11))
+- [Manage Risk with Additional multifactor authentication for Sensitive Applications.](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11))
 
 ## Microsoft and third-party authentication methods
 
@@ -33,23 +29,23 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |Provider|Offering|Link to learn more|
 |-|-|-|
 |Akamai Technologies|Akamai MFA|[Integrating Akamai MFA with Microsoft AD FS](https://techdocs.akamai.com/mfa/docs/adsf)|
-|aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft AD FS SSO|[aPersona ASM AD FS Adapter](https://www.apersona.com/adfs)|
-|Cyphercor Inc.|LoginTC Multi-Factor Authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
+|aPersona|aPersona Adaptive multifactor authentication for Microsoft AD FS SSO|[aPersona ASM AD FS Adapter](https://www.apersona.com/adfs)|
+|Cyphercor Inc.|LoginTC multifactor authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
 |Futurae|Futurae Authentication Suite for AD FS|[Futurae Strong Authentication](https://futurae.com)|
 |Green Rocket Security|GreenRADIUS MFA Adapter for AD FS|[GreenRADIUS MFA for AD FS](https://www.greenrocketsecurity.com/2fa-for-adfs/)|
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Microsoft Corp.|Microsoft Azure MFA|[Configure Azure MFA as authentication provider with AD FS](configure-ad-fs-and-azure-mfa.md)|
-Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://www.mideye.com/support/administrators/documentation/integration/microsoft-adfs/)|
+Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://docs.mideye.com/6.4/integrations/microsoft-adfs/)|
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Defender AD FS|[Defender AD FS Adapter](https://www.oneidentity.com/products/defender/)|
-|Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://documentation.pingidentity.com/pingid/pingidAdminGuide/index.shtml#pid_c_PingIDforADFSSSO.html)|
+|Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrate_with_ad_fs.html)|
 |RSA|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation)|
-|SecureMFA|SecureMFA OTP Provider| [AD FS Multi Factor Authentication Providers](https://www.securemfa.com/)|
+|SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
 |Swisscom|Mobile ID Authentication Service and Signature Services|[Mobile ID Authentication Service](http://swisscom.ch/mid)|
 |Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/)|
-|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://www.thalesdocs.com/sta/Content/STA/SEdocs/AuthADFS.htm)|
-|Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona Multi-factor Authentication](https://www.trusona.com/solution-overview/)|
+|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html)|
+|Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona multifactor authentication](https://www.trusona.com/solution-overview/)|
 
 ## Custom Authentication Method for AD FS in Windows Server
 
@@ -57,4 +53,5 @@ We now provide instructions for building your own custom authentication method f
 
 ## See Also
 
-[Manage Risk with Additional multi-factor authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+[Manage Risk with Additional multifactor authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+

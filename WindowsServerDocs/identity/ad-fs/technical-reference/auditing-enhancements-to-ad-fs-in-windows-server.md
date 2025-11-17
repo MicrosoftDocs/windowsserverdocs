@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Auditing Enhancements to AD FS in Windows Server 2016"
-ms.assetid: 208928eb-bb17-4984-a312-23fff43133e3
 title: Auditing Enhancements to AD FS in Windows Server 2016
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 10/25/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Auditing Enhancements to AD FS in Windows Server 2016

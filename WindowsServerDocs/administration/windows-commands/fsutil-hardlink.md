@@ -1,17 +1,15 @@
 ---
 title: fsutil hardlink
 description: Reference article for the fsutil hardlink command, which creates a hard link between an existing file and a new file.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: 835fc6f1-cc84-4189-b29a-dde90792469e
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil hardlink
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Creates a hard link between an existing file and a new file. A hard link is a directory entry for a file. Every file can be considered to have at least one hard link.
 
@@ -33,7 +31,7 @@ fsutil hardlink list <filename>
 | \<existingfilename> | Specifies the file that you want to create a hard link from. |
 | list | Lists the hard links to *filename*. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

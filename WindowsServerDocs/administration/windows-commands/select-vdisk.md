@@ -2,16 +2,14 @@
 title: select vdisk
 description: Reference article for the select vdisk command, which selects the specified virtual hard disk (VHD) and shifts the focus to it.
 ms.topic: reference
-ms.assetid: 8808872a-3523-4205-a6c6-83fa738ee37a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # select vdisk
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Selects the specified virtual hard disk \(VHD\) and shifts the focus to it.
 
@@ -36,7 +34,7 @@ To shift the focus to the VHD named *c:\test\test.vhd*, type:
 select vdisk file=c:\test\test.vhd
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

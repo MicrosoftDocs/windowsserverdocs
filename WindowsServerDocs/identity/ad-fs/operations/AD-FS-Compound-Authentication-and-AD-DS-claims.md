@@ -1,11 +1,9 @@
 ---
 title: Compound Authentication and Active Directory Domain Services claims in Active Directory Federation Services
 description: The following document discusses compound authentication and AD DS claims in AD FS.
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 09/07/2017
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # Compound authentication and AD DS claims in AD FS
 Windows Server 2012 enhances Kerberos authentication by introducing compound authentication.  Compound authentication enables a Kerberos Ticket-Granting Service (TGS) request to include two identities:
@@ -83,7 +81,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 2. In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
 3. Enter the following information in the claim description
    - Display Name: 'Windows device group'
-   - Claim Description: '<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>' `
+   - Claim Description: `'<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>'` `
 4. Place a check in both boxes.
 5. Click **OK**.
 

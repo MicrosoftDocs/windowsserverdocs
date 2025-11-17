@@ -1,19 +1,20 @@
 ---
 title: Use Regular Expressions in NPS
 description: This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
-manager: brianlic
-ms.topic: article
-ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
-ms.author: jgerend
-author: jasongerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/16/2019
 ---
 
 # Use Regular Expressions in NPS
 
->Applies to: Windows Server 2022,  Windows Server 2019, Windows Server 2016
-
 This topic explains the use of regular expressions for pattern matching in NPS in Windows Server. You can use this syntax to specify the conditions of network policy attributes and RADIUS realms.
+
+> [!NOTE]
+> The NPS Console and the NPS MMC snap-in have a 256 character limit for all settings that take a string value. That includes all settings that can be configured using regular expressions.
+> To configure string values that exceed 256 characters, use NETSH NPS commands. 
+> Configured string values exceeding 256 characters can't be edited in the NPS Console or the NPS MMC snap-in without invalidating them.
 
 ## Pattern-matching reference
 
@@ -64,6 +65,10 @@ The following examples describe the use of the pattern-matching syntax to specif
     `192\.168\.1\..+`
 
 ## Examples for manipulation of the realm name in the User Name attribute
+
+> [!Note]  
+> Realm manipulation does not work with PEAP.    
+> The desired behaviour might be accomplished by either switching to EAP-TLS or EAP-MSCHAPv2 for authentication or [adding an UPN suffix to the domain](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772007(v=ws.11)) for each additional domain name you need to resolve.
 
 The following examples describe the use of the pattern-matching syntax to manipulate realm names for the User Name attribute, which is located on the **Attribute** tab in the properties of a connection request policy.
 

@@ -1,15 +1,13 @@
 ---
 title: Pktmon command formatting
-description: Use this page to understand pktmon command formatting and output.
+description: Provides an overview of Pktmon command formatting with a quick start guide and provides guidance on usage.
 ms.topic: how-to
-author: khdownie
-ms.author: v-kedow
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/27/2021
 ---
 
 # Pktmon command formatting
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack Hub, Azure, Azure Stack HCI, versions 21H2 and 20H2
 
 Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Windows 10 and Windows Server 2019 (Version 1809 and later). You can use this topic to learn how to understand pktmon syntax, command formatting, and output. For a complete list of commands, see [pktmon syntax](../../../administration/windows-commands/pktmon.md). 
 

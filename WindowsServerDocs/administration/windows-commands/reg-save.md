@@ -2,10 +2,8 @@
 title: reg save
 description: Reference article for the reg save command, which saves a copy of specified subkeys, entries, and values of the registry in a specified file.
 ms.topic: reference
-ms.assetid: b326482b-c8af-467d-a20c-0481eeda3d5c
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -47,7 +45,7 @@ To save the hive MyApp into the current folder as a file named AppBkUp.hiv, type
 reg save HKLM\Software\MyCo\MyApp AppBkUp.hiv
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

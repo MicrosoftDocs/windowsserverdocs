@@ -1,119 +1,88 @@
 ---
-description: "Learn more about: Identifying Your Functional Level Upgrade"
-ms.assetid: 231158d8-5e81-4630-b8d5-93fee16e0cd3
-title: Identifying Your Functional Level Upgrade
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+description: Upgrade your domain and forest functional level in Active Director Domain Services for Windows Server
+title: Learn about upgrading your domain and forest functional levels in Active Directory Domain Services.
+author: robinharwood
+ms.author: roharwoo
+ms.date: 10/25/2024
+ms.topic: concept-article
 ---
 
-# Identifying Your Functional Level Upgrade
+# Identifying your functional level upgrade
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+In this article learn about the process for upgrading your domain and forest functional levels in Active Directory Domain Services.
 
-Before you can raise domain and forest functional levels, you have to evaluate your current environment and identify the functional level requirement that best meets the needs of your organization. Assess your current environment by identifying the domains in your forest, the domain controllers that are located in each domain, the operating system and service packs that each domain controller is running, and the date that you plan to upgrade the domain controllers. If you plan to retire a domain controller, make sure that you understand the full impact that doing so will have on your environment.
+Before you can raise domain and forest functional levels, evaluate your current environment and identify your target functional level. Assess your current environment by identifying:
 
-The following circumstances might prevent you from upgrading an earlier version of the Windows Server operating system to the  Windows Server 2008  or  Windows Server 2008 R2  functional level:
+- The domains in your forest
 
-- Insufficient hardware
+- The domain controllers that are located in each domain
 
-- A domain controller running an antivirus program that is incompatible with  Windows Server 2008  or  Windows Server 2008 R2
+- The operating system and updates that each domain controller is running
 
-- Use of a version-specific program that does not run on  Windows Server 2008  or  Windows Server 2008 R2
+- When you plan to upgrade the domain controllers.
 
-- The need to upgrade a program with the latest service pack
+If you plan to retire a domain controller, make sure that you understand the full impact that doing so will have on your environment.
 
-Documenting this information can help you identify the steps to take to ensure that you have a fully functional  Windows Server 2008  or  Windows Server 2008 R2  environment.
+Consider the following items when assessing your current environment:
 
-After you assess your current environment, you have to identify the functional level upgrade that applies to your organization. These options are available:
+- Your domain controllers meet or exceed the hardware requirements for the operating system that you plan to upgrade to. To learn more about hardware requirements, see [Perform a Feature Update of Windows Server](../../../get-started/perform-in-place-upgrade.md).
 
-- Windows 2000 native-mode environment to  Windows Server 2008  or  Windows Server 2008 R2
+- Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 
-- Windows Server 2003 forest to  Windows Server 2008  or  Windows Server 2008 R2
+- Identify all your domain controllers hosting the Global Catalog (GC) and Flexible Single Master Operation (FSMO) roles. Create and verify backups of these Active Directory Domain Services domain controllers before making changes.
 
-- New  Windows Server 2008  forest
+- Check for any incompatible software or applications that might prevent you from upgrading to a newer version of Windows Server.
 
-- New  Windows Server 2008 R2  forest
+- Check for removed features to make sure that none are being used. To learn more about removed features, see [Features removed or no longer developed in Windows Server](../../../get-started/removed-deprecated-features-windows-server.md).
 
-## Upgrading functional levels in a native Windows 2000 Active Directory forest
-In a Windows 2000 native environment that consists only of Windows 2000-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
+Documenting this information can help you identify the steps to take to ensure that you have a fully functional Windows Server environment.
 
-- Windows 2000 native domain functional level
+After you assess your current environment, identify the target functional level upgrade. To learn more about the functional levels, see [Forest and Domain Functional Levels](../active-directory-functional-levels.md).
 
-- Windows 2000 forest functional level
+This article discusses the following upgrade options:
 
-To use all the forest-level and domain-level features in  Windows Server 2008  or  Windows Server 2008 R2 , you have to upgrade this Windows 2000 environment to  Windows Server 2008  or  Windows Server 2008 R2 . You can perform this upgrade in either of the following ways:
+- Upgrade to a Windows Server 2025 forest
 
-- Introduce newly installed  Windows Server 2008 -based or  Windows Server 2008 R2 -based domain controllers into the forest, and then retire all domain controllers running Windows 2000.
+- Upgrade to a Windows Server 2016 forest
 
-- Perform an in-place upgrade of all existing domain controllers running Windows 2000 in the forest to domain controllers running Windows Server 2003. Then, perform an in-place upgrade of those domain controllers to  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
+## Upgrade functional levels to Windows Server 2025
 
-    > [!IMPORTANT]
-    >  Windows Server 2008 R2  is an x64-based operating system. If your server is running an x64-based version of Windows Server 2003, you can successfully perform an in-place upgrade of this computer's operating system to  Windows Server 2008 R2 . If your server is running an x86-based version of Windows Server 2003, you cannot upgrade this computer to  Windows Server 2008 R2 .
+In an environment consisting of only Windows Server 2025-based domain controllers, the functional levels default to Windows Server 2025. If your Active Directory Domain Services environment contains a mix of Windows Server releases, your functional levels might be set to a lower level.
 
-To use the  Windows Server 2008  or  Windows Server 2008 R2  domain-level features without upgrading your entire Windows 2000 forest to  Windows Server 2008  or  Windows Server 2008 R2 , raise only the domain functional level to  Windows Server 2008  or  Windows Server 2008 R2 .
+To use all the forest-level and domain-level features in Windows Server 2025, you have to upgrade to the Windows Server 2025 forest and domain functional levels. To upgrade your domain controllers to Windows Server 2025, you must meet the following prerequisites:
 
-> [!NOTE]
-> Before you raise the domain functional level, you must upgrade all Windows 2000-based domain controllers in that domain to  Windows Server 2008  or  Windows Server 2008 R2 .
+- For new Active Directory forests, the minimum domain and forest functional level that can be set is Windows Server 2016.
 
-After you replace all the Windows 2000-based domain controllers in the forest with domain controllers that run  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows 2000 native or higher to  Windows Server 2008  or  Windows Server 2008 R2 .
+- Existing domains must be at the Windows Server 2016 domain and forest functional levels to promote a Windows Server 2025 domain controller.
 
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+You can upgrade the functional levels by using the following options:
 
-## Upgrading functional levels in a Windows Server 2003 Active Directory forest
-In a Windows Server 2003 environment that consists of only Windows Server 2003-based domain controllers, the functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
+- Set up a new Active Directory domain with the new domain and forest functional levels when promoting the first Domain Controller for the new domain
 
-- Windows 2000 native domain functional level
+- Introduce new Windows Server 2025 domain controllers into the forest, then retire or upgrade all domain controllers running an older version of Windows Server. After you've upgraded or retired all domain controllers running an older version of Windows Server, you can raise the domain and forest functional levels to Windows Server 2025.
 
-- Windows 2000 forest functional level
+- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/perform-in-place-upgrade.md). Then raise the domain and forest functional levels to Windows Server 2025.
 
-To use all the forest-level and domain-level features in  Windows Server 2008  or  Windows Server 2008 R2 , you have to upgrade this Windows Server 2003 environment to  Windows Server 2008  or  Windows Server 2008 R2 . You can perform this upgrade in either of the following ways:
+A Windows Server 2025 domain controller can only be added to an existing domain that is running Windows Server 2016 Domain Functional Level or newer version. You must also ensure that all hardware and software requirements for Windows Server 2025 are met.
 
-- Introduce a newly installed  Windows Server 2008 -based or  Windows Server 2008 R2 -based domain controller into the forest, and then retire all domain controllers running Windows Server 2003 or upgrade them to  Windows Server 2008  or  Windows Server 2008 R2 .
+## Upgrade functional levels in a Windows Server 2016 Active Directory forest
 
-- Perform an in-place upgrade of all existing domain controllers running Windows Server 2003 to domain controllers running  Windows Server 2008  or  Windows Server 2008 R2 . For more information, see [Upgrading Active Directory Domains to Windows Server 2008 and Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
+In an environment that consisting of Windows Server 2016, 2019 and 2022-based domain controllers, the functional levels are set by default to the Windows Server 2016 domain and forest functional level. The Windows Server 2016 domain and forest functional level is the most recent functional level for Windows Server 2019 and 2022. The functional level remains at these levels until you raise them manually after an upgrade to Windows Server 2025 or later.
 
-> [!IMPORTANT]
-> Windows Server 2008 R2  is an x64-based operating system. If your server is running an x64-based version of Windows Server 2003, you can successfully perform an in-place upgrade of this computer's operating system to  Windows Server 2008 R2 . If your server is running an x86-based version of Windows Server 2003, you cannot upgrade this computer to run  Windows Server 2008 R2 .
+To use all the forest-level and domain-level features in Windows Server 2016, you have to upgrade to the Windows Server 2016 forest and domain functional levels. To upgrade your domain controllers to Windows Server 2016, you must meet the following prerequisites:
 
-To use all the  Windows Server 2008  or  Windows Server 2008 R2  domain-level features without upgrading your entire Windows Server 2003 forest to  Windows Server 2008  or  Windows Server 2008 R2 , raise only the domain functional level to  Windows Server 2008  or  Windows Server 2008 R2 .
+- All domain controllers must be running Windows Server 2016, Windows Server 2019, or Windows Server 2022.
 
-> [!NOTE]
-> Before you raise the domain functional level, you must upgrade all Windows Server 2003-based domain controllers in that domain to  Windows Server 2008  or  Windows Server 2008 R2 .
+- The Active Directory forest functional level must be at least Windows Server 2012.
 
-After you upgrade all the Windows Server 2003-based domain controllers in the forest to  Windows Server 2008  or  Windows Server 2008 R2 , you can raise the forest functional level to  Windows Server 2008  or  Windows Server 2008 R2 . Doing so automatically raises the functional level of all domains in the forest that are set to Windows Server 2003 to  Windows Server 2008  or  Windows Server 2008 R2 .
+There are two upgrade options to choose from, as follows:
 
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+- Set up a new Active Directory domain with the new domain and forest functional levels when promoting the first Domain Controller for the new domain
 
-## Upgrading functional levels in a new Windows Server 2008 forest
-When you install the first domain controller in a new  Windows Server 2008  forest, functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
+- Introduce new Windows Server 2016, 2019 or 2022 domain controllers into the forest, then retire or upgrade all domain controllers running an older version of Windows Server. After you've upgraded or retired all domain controllers running an older version of Windows Server, you can raise the domain and forest functional levels to Windows Server 2016.
 
-- Windows 2000 native domain functional level
+- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/perform-in-place-upgrade.md). Then raise the domain and forest functional levels to Windows Server 2016.
 
-- Windows 2000 forest functional level
+## Upgrade functional levels in a previous version of Windows Server
 
-Functional levels are set at these default levels to give you the option of adding Windows 2000 or Windows Server 2003-based domain controllers to your new  Windows Server 2008  forest. After you create a forest root domain, the domain functional level for each domain that you add to the  Windows Server 2008  forest is set to Windows 2000 native. However, if you want all domain controllers in your new  Windows Server 2008  environment to run  Windows Server 2008 , set the forest functional level, and then the domain functional level, to  Windows Server 2008  when you install the first domain controller in your forest. Doing this saves time and enables all the forest-level and domain-level features in  Windows Server 2008 .
-
-> [!IMPORTANT]
-> If the forest operates at the  Windows Server 2008  functional level and you attempt to install Active Directory on a Windows Server 2003-based member server or a Windows 2000-based member server, the installation fails.
-
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
-
-## Upgrading functional levels in a new Windows Server 2008 R2 forest
-When you install the first domain controller in a new  Windows Server 2008 R2  forest, functional levels are set by default to the following levels, and they remain at these levels until you raise them manually:
-
-- Windows Server 2003 domain functional level
-
-- Windows Server 2003 forest functional level
-
-Functional levels are set at these default levels to give you the option of adding Windows Server 2003-based domain controllers to your new  Windows Server 2008 R2  forest. After you create a forest root domain, the domain functional level for each domain that you add to the  Windows Server 2008 R2  forest is set to Windows Server 2003. However, if you want all domain controllers in your new  Windows Server 2008 R2  environment to run  Windows Server 2008 R2 , set the forest functional level, and then the domain functional level, to  Windows Server 2008 R2  when you install the first domain controller in your forest. Doing this saves time and enables all forest-level and domain-level features in  Windows Server 2008 R2 .
-
-> [!IMPORTANT]
-> If the forest operates at the  Windows Server 2008 R2  functional level and you attempt to install Active Directory on a  Windows Server 2008 -based or Windows Server 2003-based member server, or on a Windows 2000-based member server, the installation fails.
-
-For more information about raising forest and domain functional levels, and for procedures to perform those tasks, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
-
-> [!NOTE]
-> Although ADMT v3.1 must be installed on Windows Server 2008, you can use ADMT v3.1 to migrate objects to a domain that is hosted by one or more  Windows Server 2008 R2 domain controllers. For more information, see article 976659 in the Microsoft Knowledge Base, [Known issues that may occur when you use ADMT 3.1 to migrate to a domain that contains Windows Server 2008 R2 domain controllers](https://support.microsoft.com/help/976659/).
+If you're looking to identify functional levels for a previous version of Windows Server, see [Identifying your functional level upgrade](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754209(v=ws.10)).

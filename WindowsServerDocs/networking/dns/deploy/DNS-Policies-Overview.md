@@ -1,16 +1,12 @@
 ---
 title: DNS Policies Overview
 description: Learn how to use DNS Policy for Geo-Location based traffic management, intelligent DNS responses based on the time of day, to manage a single DNS server configured for split\-brain deployment, applying filters on DNS queries, and more.
-manager: brianlic
-ms.topic: article
-ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
-ms.author: jgerend
-author: JasonGerend
-ms.date: 01/05/2021
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 06/23/2022
 ---
 # DNS Policies Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about DNS Policy, which is new in Windows Server 2016. You can use DNS Policy for Geo-Location based traffic management, intelligent DNS responses based on the time of day, to manage a single DNS server configured for split\-brain deployment, applying filters on DNS queries, and more. The following items provide more detail about these capabilities.
 
@@ -131,7 +127,7 @@ Add-DnsServerQueryResolutionPolicy -Name "NorthAmericaPolicy" -Action ALLOW -Cli
 Add-DnsServerQueryResolutionPolicy -Name "EuropePolicy" -Action ALLOW -ClientSubnet "eq,EuropeSubnet" -ZoneScope "EuropeZoneScope,1" -ZoneName contoso.com
 ```
 
-The first two lines of the script create client subnet objects for North America and Europe. The two lines after that create a zone scope within the contoso.com domain, one for each region. The two lines after that create a record in each zone that associates ww.contoso.com to different IP address, one for Europe, another one for North America. Finally, the last lines of the script create two DNS Query Resolution Policies, one to be applied to the North America subnet, another to the Europe subnet.
+The first two lines of the script create client subnet objects for North America and Europe. The two lines after that create a zone scope within the contoso.com domain, one for each region. The two lines after that create a record in each zone that associates www.contoso.com to different IP address, one for Europe, another one for North America. Finally, the last lines of the script create two DNS Query Resolution Policies, one to be applied to the North America subnet, another to the Europe subnet.
 
 ### Block queries for a domain
 You can use a DNS Query Resolution Policy to block queries to a domain. The example below blocks all queries to treyresearch.net:

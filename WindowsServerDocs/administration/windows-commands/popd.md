@@ -2,16 +2,14 @@
 title: popd
 description: Reference article for the pnputil command, which changes the current directory to the directory that was most recently stored by the pushd command.
 ms.topic: reference
-ms.assetid: 8a4c52d5-9fd1-4eac-9c0c-5767b25728ed
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 07/11/2018
 ---
 
 # popd
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 The **popd** command changes the current directory to the directory that was most recently stored by the **pushd** command.
 
@@ -45,7 +43,7 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

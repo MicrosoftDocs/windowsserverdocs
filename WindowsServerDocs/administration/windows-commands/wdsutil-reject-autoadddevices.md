@@ -2,16 +2,14 @@
 title: wdsutil reject-autoadddevices
 description: Reference article for wdsutil reject-autoadddevices, which rejects computers that are pending administrative approval.
 ms.topic: reference
-ms.assetid: ea25a4b2-5fad-4360-9c47-c2c9df7ea31f
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil reject-autoadddevices
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Rejects computers that are pending administrative approval. When the Auto-add policy is enabled, administrative approval is required before unknown computers (those that are not prestaged) can install an image. You can enable this policy using the **PXE Response** tab of the server s properties page.
 
@@ -42,7 +40,7 @@ To reject all computers, type:
 wdsutil /verbose /Reject-AutoaddDevices /Server:MyWDSServer /RequestId:ALL
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil approve-autoadddevices command](wdsutil-approve-autoadddevices.md)

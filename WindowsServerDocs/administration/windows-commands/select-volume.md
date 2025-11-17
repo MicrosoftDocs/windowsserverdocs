@@ -2,16 +2,14 @@
 title: select volume
 description: Reference article for the select volume command, which selects the specified volume and shifts the focus to it.
 ms.topic: reference
-ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # select volume
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Selects the specified volume and shifts the focus to it. This command can also be used to display the volume that currently has the focus in the selected disk.
 
@@ -64,7 +62,7 @@ To display the volume that currently has the focus in the selected disk, type:
 select volume
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

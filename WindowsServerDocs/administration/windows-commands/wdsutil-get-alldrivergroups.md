@@ -2,16 +2,14 @@
 title: wdsutil get-alldrivergroups
 description: Reference article for the wdsutil get-alldrivergroups command, which displays information about all the driver groups on a server.
 ms.topic: reference
-ms.assetid: f245ba53-f150-41b1-8418-38dcf0410a05
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil get-alldrivergroups
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Displays information about all the driver groups on a server.
 
@@ -40,7 +38,7 @@ wdsutil /get-alldrivergroups /server:MyWdsServer /show:All
 wdsutil /get-alldrivergroups [/show:packagemetadata]
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 -

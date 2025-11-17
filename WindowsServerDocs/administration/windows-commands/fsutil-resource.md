@@ -1,17 +1,15 @@
 ---
 title: fsutil resource
 description: Reference article for the fsutil resource command, which manages a Transactional Resource Manager and its behavior.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: b198d8ca-a5b7-430f-8911-5cbb9f50484c
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil resource
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Creates a Secondary Transactional Resource Manager, starts or stops a Transactional Resource Manager, or displays information about a Transactional Resource Manager, and modifies the following behavior:
 
@@ -79,7 +77,7 @@ To specify that the default Transactional Resource Manager will clean the transa
 fsutil resource setautoreset true c:\
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

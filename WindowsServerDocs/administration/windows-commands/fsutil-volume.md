@@ -1,17 +1,15 @@
 ---
 title: fsutil volume
 description: Reference article for the fsutil volume command, which dismounts a volume, or queries the hard disk drive to determine how much free space is currently available on the hard disk drive or which file is using a particular cluster.
-manager: dmoss
-ms.author: toklima
-author: toklima
-ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---
 
 # fsutil volume
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+
 
 Dismounts a volume, or queries the hard disk drive to determine how much free space is currently available on the hard disk drive or which file is using a particular cluster.
 
@@ -23,7 +21,7 @@ fsutil volume [diskfree] <volumepath>
 fsutil volume [dismount] <volumepath>
 fsutil volume [filelayout] <volumepath> <fileID>
 fsutil volume [list]
-fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] … …
+fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] …
 ```
 
 ### Parameters
@@ -80,7 +78,7 @@ To find the file(s) that are using the clusters, specified by the logical cluste
 fsutil volume querycluster C: 50 0x2000
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

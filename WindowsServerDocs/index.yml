@@ -4,206 +4,208 @@ title: Windows Server documentation
 summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
 
 metadata:
-  title: Windows Server Documentation - Microsoft Docs
+  title: Windows Server documentation
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
-  author: JasonGerend
-  manager: femila
   ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 08/19/2021
-  ms.author: jgerend
+  ms.author: roharwoo
+  author: robinharwood
+  ms.date: 05/28/2025
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
 
 highlightedContent:
   items:
     - title: Get started with Windows Server
       itemType: get-started
       url: ./get-started/get-started-with-windows-server.md
-    - title: What's new in Windows Server 2022?
+    - title: What's new in Windows Server?
       itemType: whats-new
-      url: ./get-started/whats-new-in-windows-server-2022.md
-    - title: Windows Admin Center
-      itemType: overview
-      url: ./manage/windows-admin-center/overview.md
-    - title: Hyper-converged infrastructure
-      itemType: overview
-      url: ./hyperconverged/index.yml
-    - title: Connect to Azure hybrid services
-      itemType: how-to-guide
-      url: ./manage/windows-admin-center/azure/index.md
-    - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
+      url: ./get-started/whats-new-windows-server-2025.md
+    - title: Windows Insider Program
+      itemType: download
+      url: ./get-started/get-started-with-windows-server-insiders-preview.md
+    - title: Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates-overview.md
-    - title: Windows Insider Program for Windows Server
-      itemType: get-started
-      url: /windows-insider/business/server-get-started
-    - title: Azure Automanage for Windows Server Services
-      itemType: get-started
-      url: /azure/automanage/automanage-windows-server-services-overview
 
 conceptualContent:
-  items:
-    - title: Upgrade Windows Server
-      links:
-        - url: ./upgrade/upgrade-2016-to-2019.md
-          itemType: how-to-guide
-          text: Upgrade Windows Server 2016
-        - url: ./upgrade/upgrade-2012r2-to-2019.md
-          itemType: how-to-guide
-          text: Upgrade Windows Server 2012 R2
-        - url: ./upgrade/upgrade-2012-to-2016.md
-          itemType: how-to-guide
-          text: Upgrade Windows Server 2012
-        - url: ./upgrade/upgrade-2008r2-to-2012r2.md
-          itemType: how-to-guide
-          text: Upgrade Windows Server 2008 R2
-      footerLink:
-        url: ./upgrade/upgrade-overview.md
-        text: See more
-
-    - title: Identity and access
-      links:
-        - url: ./identity/ad-ds/ad-ds-getting-started.md
-          itemType: overview
-          text: Getting started with Active Directory Domain Services (AD DS)
-        - url: ./identity/active-directory-federation-services.md
-          itemType: overview
-          text: Active Directory Federation Services (AD FS)
-        - url: /security/compass/overview
-          itemType: concept
-          text: Securing privileged access
-      footerLink:
-        url: ./identity/identity-and-access.yml
-        text: See more
-
-    - title: Failover Clustering
-      links:
-        - url: ./failover-clustering/whats-new-in-failover-clustering.md
-          itemType: whats-new
-          text: What's new in Failover Clustering
-        - url: ./failover-clustering/create-failover-cluster.md
-          itemType: how-to-guide
-          text: Create a failover cluster
-        - url: ./failover-clustering/cluster-aware-updating.md
-          itemType: overview
-          text: Cluster-Aware Updating overview
-      footerLink:
-        url: ./failover-clustering/failover-clustering-overview.md
-        text: See more
-
-    - title: Management
-      links:
-        - url: ./manage/windows-admin-center/overview.md
-          itemType: overview
-          text: Use Windows Admin Center to manage your environment
-        - url: ./manage/system-insights/overview.md
-          itemType: overview
-          text: System Insights overview
-        - url: ./administration/performance-tuning/index.md
-          itemType: overview
-          text: Performance tuning guidelines for Windows Server 2016
-      footerLink:
-        url: ./administration/manage-windows-server.yml
-        text: See more
-
-    - title: Networking
-      links:
-        - url: ./networking/what-s-new-in-networking.md
-          itemType: whats-new
-          text: What's new in networking
-        - url: ./networking/sdn/index.yml
-          itemType: overview
-          text: Software-defined Networking (SDN) overview
-        - url: /azure-stack/hci/concepts/network-controller-overview
-          itemType: overview
-          text: Network controller
-      footerLink:
-        url: ./networking/index.yml
-        text: See more
-
-    - title: Remote
-      links:
-        - url: ./remote/remote-desktop-services/welcome-to-rds.md
-          itemType: overview
-          text: Remote Desktop Services overview
-        - url: ./remote/remote-desktop-services/clients/remote-desktop-clients.md
-          itemType: overview
-          text: Remote Desktop clients
-        - url: ./remote/remote-desktop-services/clients/remote-desktop-allow-access.md
-          itemType: how-to-guide
-          text: Remote Desktop - Allow access to your PC
-      footerLink:
-        url: ./remote/index.yml
-        text: See more
-
-    - title: Security and assurance
-      links:
-        - url: ./security/windows-authentication/windows-authentication-overview.md
-          itemType: overview
-          text: Windows Authentication overview
-        - url: ./security/windows-authentication/windows-authentication-overview.md
-          itemType: overview
-          text: Secured-core server
-        - url: ./security/secured-core-server.md
-          itemType: how-to-guide
-          text: Getting started with group-managed service accounts
-        - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md
-          itemType: overview
-          text: Credentials processes in Windows Authentication
-      footerLink:
-        url: ./security/security-and-assurance.yml
-        text: See more
-
-    - title: Storage
-      links:
-        - url: ./storage/whats-new-in-storage.md
-          itemType: whats-new
-          text: What's new in storage
-        - url: ./storage/disk-management/overview-of-disk-management.md
-          itemType: overview
-          text: Disk management overview
-        - url: /azure-stack/hci/concepts/quorum
-          itemType: overview
-          text: Understanding cluster and pool quorum
-      footerLink:
-        url: ./storage/storage.yml
-        text: See more
-
-    - title: Troubleshoot
-      links:
-        - url: ./manage/windows-admin-center/support/troubleshooting.md
-          itemType: how-to-guide
-          text: Troubleshoot Windows Admin Center
-        - url: ./failover-clustering/troubleshooting-using-wer-reports.md
-          itemType: how-to-guide
-          text: Troubleshoot failover clustering using Windows Error Reporting
-        - url: ./storage/disk-management/troubleshooting-disk-management.md
-          itemType: how-to-guide
-          text: Troubleshoot disk management
-      footerLink:
-        url: ./troubleshoot/windows-server-troubleshooting.md
-        text: See more
-
-    - title: Virtualization
-      links:
-        - url: /virtualization/windowscontainers/
-          itemType: overview
-          text: Containers on Windows overview
-        - url: ./virtualization/hyper-v/hyper-v-on-windows-server.md
-          itemType: overview
-          text: Hyper-V on Windows Server
-        - url: ./virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md
-          itemType: overview
-          text: Hyper-V Virtual Switch overview
-      footerLink:
-        url: ./virtualization/virtualization.yml
-        text: See more
-
-additionalContent:
   sections:
-    - items:
-      - title: Windows Server 2012 R2 and Windows Server 2012 (Archive)
-        summary: Archive of technical content for IT professionals administering Windows Server 2012 R2 and Windows Server 2012.
-        url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
-      - title: Windows Server Essentials
-        summary: Technical content for for IT professionals administering Windows Server Essentials, the cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
-        url: /windows-server-essentials/get-started/get-started
+    - title: Key areas
+      items:
+    # Card
+      - title: Identity
+        links:
+          - text: Active Directory Domain Services (AD DS)
+            itemType: overview
+            url: ./identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview.md
+          - text: Active Directory Federation Services (AD FS)
+            itemType: overview
+            url: ./identity/ad-fs/ad-fs-overview.md
+          - text: Active Directory Certificate Services (AD CS)
+            itemType: overview
+            url: ./identity/ad-cs/index.yml
+          - text: Windows Local Administrator Password Solution (LAPS)
+            itemType: overview
+            url: ./identity/laps/laps-overview.md
+        footerLink:
+          text: See more
+          url: ./identity/identity-and-access.yml
+      # Card
+      - title: Files and Storage
+        links:
+          - text: Server Message Block (SMB)
+            itemType: overview
+            url: ./storage/file-server/file-server-smb-overview.md
+          - text: Storage Spaces Direct
+            itemType: overview
+            url: ./storage/storage-spaces/storage-spaces-direct-overview.md
+          - text: Disk Management
+            itemType: overview
+            url: ./storage/disk-management/overview-of-disk-management.md
+          - text: Distributed File System (DFS)
+            itemType: overview
+            url: ./storage/dfs-namespaces/dfs-overview.md
+        footerLink:
+          text: See more
+          url: ./storage/storage.yml
+      # Card
+      - title: Security
+        links:
+          - text: Secured-core server
+            itemType: overview
+            url: ./security/secured-core-server.md
+          - text: Windows authentication
+            itemType: overview
+            url: ./security/windows-authentication/windows-authentication-overview.md
+          - text: Credentials Protection and Management
+            itemType: overview
+            url: ./security/credentials-protection-and-management/credentials-protection-and-management.md
+          - text: TLS/SSL
+            itemType: overview
+            url: ./security/tls/tls-ssl-schannel-ssp-overview.md
+        footerLink:
+          text: See more
+          url: ./security/security-and-assurance.yml
+      # Card
+      - title: Manage
+        links:
+          - text: Windows Admin Center
+            itemType: overview
+            url: ./manage/windows-admin-center/overview.md
+          - text: Azure Arc
+            itemType: overview
+            url: /azure/azure-arc/servers/overview
+          - text: OpenSSH
+            itemType: overview
+            url: ./administration/openssh/openssh-overview.md
+          - text: Windows Server Update Services (WSUS)
+            itemType: overview
+            url: ./administration/windows-server-update-services/get-started/windows-server-update-services-wsus.md
+        footerLink:
+          text: See more
+          url: ./administration/manage-windows-server.yml
+      # Card
+      - title: Network
+        links:
+          - text: Domain Name System (DNS)
+            itemType: overview
+            url: ./networking/dns/dns-overview.md
+          - text: Dynamic Host Configuration Protocol (DHCP)
+            itemType: overview
+            url: ./networking/technologies/dhcp/dhcp-top.md
+          - text: Network Policy Server (NPS)
+            itemType: overview
+            url: ./networking/technologies/nps/nps-top.md
+          - text: Software Defined Networking (SDN)
+            itemType: overview
+            url: ./networking/sdn/index.yml
+        footerLink:
+          text: See more
+          url: ./networking/index.yml
+      # Card
+      - title: Remote Desktop
+        links:
+          - text: Remote Desktop Services (RDS)
+            itemType: overview
+            url: ./remote/remote-desktop-services/remote-desktop-services-overview.md
+          - text: Peer-to-peer Remote Desktop connections
+            itemType: overview
+            url: ./remote/remote-desktop-services/remotepc/remote-desktop-allow-access.md
+          - text: Windows App
+            itemType: overview
+            url: /windows-app/
+          - text: Remote Desktop client
+            itemType: overview
+            url: ./remote/remote-desktop-services/clients/remote-desktop-clients.md
+        footerLink:
+          text: See more
+          url: ./remote/remote-desktop-services/index.yml
+      # Card
+      - title: Virtualization
+        links:
+          - text: Hyper-V
+            itemType: overview
+            url: ./virtualization/hyper-v/hyper-v-on-windows-server.md
+          - text: Containers
+            itemType: overview
+            url: /virtualization/windowscontainers/
+        footerLink:
+          text: See more
+          url: ./virtualization/index.yml
+      # Card
+      - title: Clustering
+        links:
+          - text: Failover Clustering
+            itemType: overview
+            url: ./failover-clustering/failover-clustering-overview.md
+          - text: Workgroup Clusters
+            itemType: overview
+            url: ./failover-clustering/create-workgroup-cluster.md
+          - text: Cluster-Aware Updating (CAU)
+            itemType: overview
+            url: ./failover-clustering/cluster-aware-updating.md
+          - text: Quorum witness
+            itemType: overview
+            url: ./failover-clustering/what-is-quorum-witness.md
+        footerLink:
+          text: See more
+          url: ./failover-clustering/failover-clustering-overview.md
+
+productDirectory:
+  title: Windows Server and Azure
+  summary: Discover some of the ways you can enhance Windows Server with Azure services
+  items:
+    # Card
+    - title: Azure Arc
+      imageSrc: ./media/index/azure-arc-icon.svg
+      summary: Simplify governance and management by delivering a consistent multicloud and on-premises management platform.
+      url: /azure/azure-arc/servers/overview
+    # Card
+    - title: Hotpatch
+      imageSrc: ./media/index/hotpatch-icon.svg
+      summary: Install security updates without having to restart Windows Server.
+      url: ./get-started/hotpatch.md
+    # Card
+    - title: Pay-as-you-go licensing
+      imageSrc: ./media/index/cost-budget-icon.svg
+      summary: An alternative to perpetual licensing, only pay for as much as you use.
+      url: ./get-started/windows-server-pay-as-you-go.md
+    # Card
+    - title: Azure Site Recovery
+      imageSrc: ./media/index/recovery-services-vault-icon.svg
+      summary: Help ensure business continuity by keeping business apps and workloads running during outages.
+      url: /azure/site-recovery/site-recovery-overview
+
+tools:
+  title: Command reference
+  summary: Reference content for PowerShell and Windows Commands for Windows Server
+  items:
+    # Card
+    - title: PowerShell modules reference
+      imageSrc: ./media/index/powershell-icon.svg
+      url: /powershell/windows/get-started
+    # Card
+    - title: Windows Commands reference
+      imageSrc: ./media/index/command-prompt-icon.svg
+      url: ./administration/windows-commands/windows-commands.md

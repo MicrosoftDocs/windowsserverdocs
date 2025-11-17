@@ -2,11 +2,9 @@
 title: Windows commands
 description: Reference
 ms.topic: reference
-ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
-author: jasongerend
-ms.author: jgerend
-manager: dongill
-ms.date: 01/04/2022
+author: robinharwood
+ms.author: roharwoo
+ms.date: 07/29/2025
 ---
 
 # Windows Commands
@@ -23,29 +21,24 @@ PowerShell was designed to extend the capabilities of the Command shell to run P
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
-A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced.
+A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced. Windows Commands also include command redirection operators. To learn more of their use, see [Using command redirection operators](/previous-versions/windows/it-pro/windows-xp/bb490982(v=technet.10)).
 
 > [!NOTE]
 > You can also download and install [PowerShell Core](/powershell/scripting/install/installing-powershell), the open source version of PowerShell.
 
 ## Command shell file and directory name automatic completion
 
-You can configure the Command shell to automatically complete file and directory names on a computer or user session when a specified control character is pressed. By default this control character is configured to be the **tab** key for both file and directory names, although they can be different. To change this control character, run `regedit.exe` and navigate to either of the registry keys and entries below, depending on whether you wish to change the value for the current user only, or for all users of the computer.
+You can configure the Command shell to automatically complete file and directory names on a computer or user session when a specified control character is pressed. By default this control character is configured to be the **tab** key for both file and directory names, although they can be different. To change this control character, run `regedit.exe` and navigate to either of the following registry keys and entries, depending on whether you wish to change the value for the current user only, or for all users of the computer.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
-```
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\CompletionChar
-HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
-```
-
-```
+```registry
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
 ```
 
-Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it is not a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can be specified by hexadecimal or decimal value.
+Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it isn't a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can also be specified by hexadecimal or decimal value.
 
 You can also enable or disable file and directory name completion per instance of a Command shell by running `cmd.exe` with the parameter and switch `/F:ON` or `/F:OFF`. If name completion is enabled with the `/F:ON` parameter and switch, the two control characters used are `Ctrl-D` for directory name completion and `Ctrl-F` for file name completion. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
@@ -61,6 +54,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [add](add.md)
 - [add alias](add-alias.md)
 - [add volume](add-volume.md)
+- [adprep](adprep.md)
 - [append](append.md)
 - [arp](arp.md)
 - [assign](assign.md)
@@ -260,7 +254,6 @@ To find information about a specific command, in the following A-Z menu, select 
   - [convert gpt](convert-gpt.md)
   - [convert mbr](convert-mbr.md)
 - [copy](copy.md)
-- [cprofile](cprofile.md)
 - [create](create.md)
   - [create partition efi](create-partition-efi.md)
   - [create partition extended](create-partition-extended.md)
@@ -276,7 +269,9 @@ To find information about a specific command, in the following A-Z menu, select 
 ### D
 
 - [date](date.md)
+- [dcdiag](dcdiag.md)
 - [dcgpofix](dcgpofix.md)
+- [dcpromo](dcpromo.md)
 - [defrag](defrag.md)
 - [del](del.md)
 - [delete](delete.md)
@@ -309,6 +304,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [dnscmd](dnscmd.md)
 - [doskey](doskey.md)
 - [driverquery](driverquery.md)
+- [dtrace](dtrace.md)
 
 ### E
 
@@ -318,8 +314,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [end restore](end-restore.md)
 - [erase](erase.md)
 - [eventcreate](eventcreate.md)
-- [eventquery](eventquery.md)
-- [eventtriggers](eventtriggers.md)
 - [Evntcmd](evntcmd.md)
 - [exec](exec.md)
 - [exit](./exit.md)
@@ -345,6 +339,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [fsutil](fsutil.md)
   - [fsutil 8dot3name](fsutil-8dot3name.md)
   - [fsutil behavior](fsutil-behavior.md)
+  - [fsutil devdrv](fsutil-devdrv.md)
   - [fsutil dirty](fsutil-dirty.md)
   - [fsutil file](fsutil-file.md)
   - [fsutil fsinfo](fsutil-fsinfo.md)
@@ -427,7 +422,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [import (shadowdisk)](import.md)
 - [import (diskpart)](import_1.md)
 - [inactive](inactive.md)
-- [inuse](inuse.md)
 - [ipconfig](ipconfig.md)
 - [ipxroute](ipxroute.md)
 - [irftp](irftp.md)
@@ -542,13 +536,55 @@ To find information about a specific command, in the following A-Z menu, select 
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
+- [netdom](netdom.md)
+  - [netdom add](netdom-add.md)
+  - [netdom computername](netdom-computername.md)
+  - [netdom join](netdom-join.md)
+  - [netdom move](netdom-move.md)
+  - [netdom movent4bdc](netdom-movent4bdc.md)
+  - [netdom query](netdom-query.md)
+  - [netdom remove](netdom-remove.md)
+  - [netdom renamecomputer](netdom-renamecomputer.md)
+  - [netdom reset](netdom-reset.md)
+  - [netdom resetpwd](netdom-resetpwd.md)
+  - [netdom trust](netdom-trust.md)
+  - [netdom verify](netdom-verify.md)
 - [net print](net-print.md)
+- [net user](net-user.md)
 - [netsh](netsh.md)
+  - [netsh add](netsh-add.md)
+  - [netsh advfirewall](netsh-advfirewall.md)
+  - [netsh branchcache](netsh-branchcache.md)
+  - [netsh bridge](netsh-bridge.md)
+  - [netsh delete](netsh-delete.md)
+  - [netsh dhcpclient](netsh-dhcpclient.md)
+  - [netsh dnsclient](netsh-dnsclient.md)
+  - [netsh dump](netsh-dump.md)
+  - [netsh exec](netsh-exec.md)
+  - [netsh http](netsh-http.md)
+  - [netsh interface](netsh-interface.md)
+  - [netsh ipsec](netsh-ipsec.md)
+  - [netsh lan](netsh-lan.md)
+  - [netsh mbn](netsh-mbn.md)
+  - [netsh namespace](netsh-namespace.md)
+  - [netsh netio](netsh-netio.md)
+  - [netsh nlm](netsh-nlm.md)
+  - [netsh ras](netsh-ras.md)
+  - [netsh rpc](netsh-rpc.md)
+  - [netsh set](netsh-set.md)
+  - [netsh show](netsh-show.md)
+  - [netsh trace](netsh-trace.md)
+  - [netsh wcn](netsh-wcn.md)
+  - [netsh wfp](netsh-wfp.md)
+  - [netsh winhttp](netsh-winhttp.md)
+  - [netsh winsock](netsh-winsock.md)
+  - [netsh wlan](netsh-wlan.md)
 - [netstat](netstat.md)
 - [nfsadmin](nfsadmin.md)
 - [nfsshare](nfsshare.md)
 - [nfsstat](nfsstat.md)
 - [nlbmgr](nlbmgr.md)
+- [nltest](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11))
 - [nslookup](nslookup.md)
   - [nslookup exit Command](nslookup-exit-command.md)
   - [nslookup finger Command](nslookup-finger-command.md)
@@ -598,6 +634,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [pentnt](pentnt.md)
 - [perfmon](perfmon.md)
 - [ping](ping.md)
+- [pktmon](pktmon.md)
 - [pnpunattend](pnpunattend.md)
 - [pnputil](pnputil.md)
 - [popd](popd.md)
@@ -615,6 +652,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [pushd](pushd.md)
 - [pushprinterconnections](pushprinterconnections.md)
 - [pwlauncher](pwlauncher.md)
+- [pwsh](/powershell/module/microsoft.powershell.core/about/about_pwsh)
 
 ### Q
 
@@ -630,12 +668,19 @@ To find information about a specific command, in the following A-Z menu, select 
 
 ### R
 
-- [rcp](rcp.md)
 - [rd](rd.md)
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
 - [recover disk group](recover_1.md)
 - [refsutil](refsutil.md)
+  - [refsutil compression](refsutil-compression.md)
+  - [refsutil dedup](refsutil-dedup.md)
+  - [refsutil fixboot](refsutil-fixboot.md)
+  - [refsutil iometrics](refsutil-iometrics.md)
+  - [refsutil leak](refsutil-leak.md)
+  - [refsutil salvage](refsutil-salvage.md)
+  - [refsutil streamsnapshot](refsutil-streamsnapshot.md)
+  - [refsutil triage](refsutil-triage.md)
 - [reg](reg.md)
   - [reg add](reg-add.md)
   - [reg compare](reg-compare.md)
@@ -655,6 +700,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [remove](remove.md)
 - [ren](ren.md)
 - [rename](rename.md)
+- [repadmin](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770963(v=ws.11))
 - [repair](repair.md)
   - [repair bde](repair-bde.md)
 - [replace](replace.md)
@@ -713,6 +759,8 @@ To find information about a specific command, in the following A-Z menu, select 
   - [set metadata](set-metadata.md)
   - [set option](set-option.md)
   - [set verbose](set-verbose.md)
+- [setlocal](setlocal.md)
+- [setspn](setspn.md)
 - [setx](setx.md)
 - [sfc](sfc.md)
 - [shadow](shadow.md)
@@ -741,7 +789,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [sxstrace](sxstrace.md)
 - [sysocmgr](sysocmgr.md)
 - [systeminfo](systeminfo.md)
-
 
 ### T
 
@@ -822,7 +869,6 @@ To find information about a specific command, in the following A-Z menu, select 
 - [whoami](whoami.md)
 - [winnt](winnt.md)
 - [winnt32](winnt32.md)
-- [winpop](winpop.md)
 - [winrs](winrs.md)
 - [winsat mem](winsat-mem.md)
 - [winsat mfmedia](winsat-mfmedia.md)

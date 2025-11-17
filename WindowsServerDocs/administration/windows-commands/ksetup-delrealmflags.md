@@ -2,10 +2,8 @@
 title: ksetup delrealmflags
 description: Reference article for the ksetup delrealmflags command, which removes realm flags from the specified realm.
 ms.topic: reference
-ms.assetid: 22053041-1eb4-47f5-bed9-3d5681bcde7d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -59,7 +57,7 @@ ksetup /delrealmflags CONTOSO ncsupported delegate
 
 To verify the realm flags have been removed, type `ksetup` and then view the output, looking for the text, **Realm flags =**.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

@@ -2,10 +2,8 @@
 title: systeminfo
 description: Reference article for the systeminfo command, which displays detailed configuration information about a computer and its operating system, including operating system configuration, security information, product ID, and hardware properties (such as RAM, disk space, and network cards).
 ms.topic: reference
-ms.assetid: 39954968-3c2e-4d3e-9d89-c9c43347461e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -50,6 +48,6 @@ To remotely view configuration information (in list format) for a computer named
 systeminfo /s srvmain2 /u maindom\hiropln /p p@ssW23 /fo list
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

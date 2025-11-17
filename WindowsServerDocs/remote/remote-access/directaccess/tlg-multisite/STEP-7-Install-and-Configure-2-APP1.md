@@ -1,17 +1,13 @@
 ---
 title: STEP 7 Install and Configure 2-APP1
 description: Learn how to install and configure 2-APP1.
-manager: brianlic
-ms.topic: article
-ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # STEP 7 Install and Configure 2-APP1
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 2-APP1 provides web and file sharing services. 2-APP1 configuration consists of the following:
 

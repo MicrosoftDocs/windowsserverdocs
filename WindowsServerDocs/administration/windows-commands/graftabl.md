@@ -2,10 +2,8 @@
 title: graftabl
 description: Reference article for the graftabl command, which enables Windows operating systems to display an extended character set in graphics mode.
 ms.topic: reference
-ms.assetid: b08351d4-3d24-490c-86f6-1252da11d923
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -65,7 +63,7 @@ To load the graphics character set for code page 850 (multilingual) into memory,
 graftabl 850
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

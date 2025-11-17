@@ -1,16 +1,14 @@
 ---
 description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
-author: gawatu
-ms.author: jgerend
-manager: dmoss
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 10/16/2018
-ms.topic: article
-ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
+ms.topic: concept-article
 ---
 
 # ReFS integrity streams
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>
 
 Integrity streams is an optional feature in ReFS that validates and maintains data integrity using checksums. While ReFS always uses checksums for metadata, ReFS doesn't, by default, generate or validate checksums for file data. Integrity streams is an optional feature that allows users to utilize checksums for file data. When integrity streams are enabled, ReFS can clearly determine if data is valid or corrupt. Additionally, ReFS and Storage Spaces can jointly correct corrupt metadata and data automatically.
 
@@ -90,4 +88,5 @@ PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 
 -   [ReFS overview](refs-overview.md)
 -   [ReFS block cloning](block-cloning.md)
--   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+-   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+

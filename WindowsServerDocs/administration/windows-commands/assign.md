@@ -1,17 +1,16 @@
 ---
 title: assign
+no-loc: [assign]
 description: Reference article for the assign command, which assigns a drive letter or mount point to the volume with focus.
 ms.topic: reference
-ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # assign
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Assigns a drive letter or mount point to the volume with focus. You can also use this command to change the drive letter associated with a removable drive. If no drive letter or mount point is specified, the next available drive letter is assigned. If the drive letter or mount point is already in use, an error is generated.
 
@@ -42,7 +41,7 @@ To assign the letter E to the volume in focus, type:
 assign letter=e
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

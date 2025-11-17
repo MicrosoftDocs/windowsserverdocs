@@ -2,10 +2,8 @@
 title: tpmvscmgr
 description: Reference article for tpmvscmgr, which is a command-line tool that lets users with Administrative credentials create and delete TPM virtual smart cards on a computer.
 ms.topic: reference
-ms.assetid: 8b2c8ff4-5c5d-446d-99e7-4daa1b36a163
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -83,6 +81,6 @@ tpmvscmgr.exe destroy /instance <instance ID>
 
 Where `<instanceID>` is the value printed on the screen when the user created the card. Specifically, for the first card created, the instance ID is *ROOT\SMARTCARDREADER\0000*.
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

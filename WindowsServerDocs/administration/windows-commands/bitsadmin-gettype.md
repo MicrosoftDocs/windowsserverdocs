@@ -2,10 +2,8 @@
 title: bitsadmin gettype
 description: Reference article for the bitsadmin gettype command, which retrieves the job type of the specified job.
 ms.topic: reference
-ms.assetid: bec16f04-3e95-4587-889e-3de6ad03c9c8
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -44,7 +42,7 @@ To retrieve the job type for the job named *myDownloadJob*:
 bitsadmin /gettype myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

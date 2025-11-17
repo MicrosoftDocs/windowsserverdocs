@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Set-up Web Application Proxy"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 4, Set Up Web Application Proxy
-ms.topic: article
-manager: klaasl
-ms.author: jeffpatt
-author: JeffPatt24
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 06/24/2017
-ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 4, Set-up Web Application Proxy
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the fourth step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:
 
@@ -147,4 +143,5 @@ Next step: [Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Se
 
 ## See Also
 [Work Folders Overview](Work-Folders-Overview.md)
+
 

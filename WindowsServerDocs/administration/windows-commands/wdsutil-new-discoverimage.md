@@ -2,10 +2,8 @@
 title: new-DiscoverImage
 description: Reference article for new-DiscoverImage, which creates a new discover image from an existing boot image.
 ms.topic: reference
-ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -51,6 +49,6 @@ wdsutil /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
 /Name:New WinPE image /Description:WinPE image for WDS Client discovery /Overwrite:No
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

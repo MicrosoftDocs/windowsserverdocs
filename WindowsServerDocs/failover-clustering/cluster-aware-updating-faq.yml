@@ -1,18 +1,14 @@
 ### YamlMime:FAQ
 metadata:
-  ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
   title: Cluster-Aware Updating - Frequently Asked Questions
   ms.topic: faq
-  manager: lizross
-  ms.author: jgerend
-  author: JasonGerend
+  author: dknappettmsft
+  ms.author: daknappe
   ms.date: 10/21/2021
   description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
-  ms.prod: windows-server
+  ms.service: windows-server
 title: "Cluster-Aware Updating: Frequently Asked Questions"
-summary: |
-  > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
-  
+summary: |  
   [Cluster-Aware Updating](cluster-aware-updating.md) \(CAU\) is a feature that coordinates software updates on all servers in a failover cluster in a way that doesn't impact the service availability any more than a planned failover of a cluster node. For some applications with continuous availability features \(such as Hyper\-V with live migration, or an SMB 3.x file server with SMB Transparent Failover\), CAU can coordinate automated cluster updating with no impact on service availability.
   
 
@@ -22,7 +18,7 @@ sections:
       - question: |
           Does CAU support updating Storage Spaces Direct clusters?
         answer: |
-          Yes. CAU supports updating [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
+          Yes. CAU supports updating [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage) clusters regardless of the deployment type: hyper-converged or converged. Specifically, CAU orchestration ensures that suspending each cluster node waits for the underlying clustered storage space to be healthy.
           
       - question: |
           Does CAU work with Windows Server 2008 R2 or Windows 7?
@@ -66,7 +62,7 @@ sections:
           
           **Self\-updating** Enables the cluster to update itself according to a defined profile and a regular schedule, such as during a monthly maintenance window. You can also start a Self\-Updating Run on demand at any time. To enable self\-updating mode, you must add the CAU clustered role to the cluster. The CAU self\-updating feature performs like any other clustered workload, and it can work seamlessly with the planned and unplanned failovers of an update coordinator computer.
           
-          **Remote\-updating** Enables you to start an Updating Run at any time from a computer running Windows or Windows Server. You can start an Updating run through the Cluster-Aware Updating window or by using the **Invoke\-CauRun** PowerShell cmdlet. Remote\-updating is the default updating mode for CAU. You can use Task Scheduler to run the [Invoke-CauRun](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/invoke-caurun) cmdlet on a desired schedule from a remote computer that is not one of the cluster nodes.
+          **Remote\-updating** Enables you to start an Updating Run at any time from a computer running Windows or Windows Server. You can start an Updating run through the Cluster-Aware Updating window or by using the **Invoke\-CauRun** PowerShell cmdlet. Remote\-updating is the default updating mode for CAU. You can use Task Scheduler to run the [Invoke-CauRun](/powershell/module/clusterawareupdating/invoke-caurun) cmdlet on a desired schedule from a remote computer that is not one of the cluster nodes.
           
       - question: |
           Can I schedule updates to apply during a backup?
@@ -208,3 +204,4 @@ sections:
           Additional References
         answer: |
           -   [Cluster\-Aware Updating Overview](cluster-aware-updating.md)
+

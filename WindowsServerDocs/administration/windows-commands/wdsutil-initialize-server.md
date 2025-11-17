@@ -2,16 +2,14 @@
 title: wdsutil initialize-server
 description: Reference article for wdsutil initialize-server, which configures a Windows Deployment Services server for initial use after the server role has been installed.
 ms.topic: reference
-ms.assetid: 68a26ad9-5eb2-4490-b782-b7cd46b8000d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil initialize-server
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Configures a Windows Deployment Services server for initial use after the server role has been installed. After you run this command, you should use the [wdsutil add-Image command](wdsutil-add-image.md) command to add images to the server.
 
@@ -43,7 +41,7 @@ To initialize the server and set the remoteInstall shared folder to the C: drive
 wdsutil /verbose /Progress /Initialize-Server /Server:MyWDSServer /remInst:C:\remoteInstall
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-server command](wdsutil-disable-server.md)

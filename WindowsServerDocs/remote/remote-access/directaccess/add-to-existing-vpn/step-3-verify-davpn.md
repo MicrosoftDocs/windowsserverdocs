@@ -1,16 +1,12 @@
 ---
 title: Step 3 Verify the Remote Access (VPN) Deployment
 description: Learn how to verify that you have correctly configured your DirectAccess deployment.
-manager: brianlic
-ms.topic: article
-ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Step 3 Verify the Remote Access (VPN) Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your DirectAccess deployment.
 

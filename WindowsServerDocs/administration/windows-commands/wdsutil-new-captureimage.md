@@ -2,10 +2,8 @@
 title: new-CaptureImage
 description: Reference article for new-CaptureImage, which creates a new capture image from an existing boot image.
 ms.topic: reference
-ms.assetid: 2dfd08f0-be59-4715-96e6-c498305873f4
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -50,6 +48,6 @@ wdsutil /Verbose /Progress /New-CaptureImage /Server:MyWDSServer /Image:WinPE bo
 /DestinationImage /FilePath:\\Server\Share\WinPECapture.wim /Name:New WinPE image /Description:WinPE image with capture utility /Overwrite:No /UnattendFilePath:\\Server\Share\WDSCapture.inf
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

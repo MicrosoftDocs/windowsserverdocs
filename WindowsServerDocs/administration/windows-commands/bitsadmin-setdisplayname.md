@@ -2,10 +2,8 @@
 title: bitsadmin setdisplayname
 description: Reference article for the bitsadmin setdisplayname command, which sets the display name of the specified job.
 ms.topic: reference
-ms.assetid: 13706c53-fb5f-4879-b5ca-82531361d6e1
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ To set the display name for the job to *myDownloadJob*:
 bitsadmin /setdisplayname myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

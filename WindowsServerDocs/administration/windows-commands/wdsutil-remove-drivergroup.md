@@ -2,10 +2,8 @@
 title: remove-DriverGroup
 description: Reference article for remove-DriverGroup, which removes a driver group from a server.
 ms.topic: reference
-ms.assetid: 1fefe9df-9782-433c-8abe-3f1a35e50da2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -36,6 +34,6 @@ wdsutil /Remove-DriverGroup /DriverGroup:PrinterDrivers
 wdsutil /Remove-DriverGroup /DriverGroup:PrinterDrivers /Server:MyWdsServer
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

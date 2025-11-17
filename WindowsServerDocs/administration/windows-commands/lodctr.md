@@ -2,16 +2,14 @@
 title: lodctr
 description: Reference article for the lodctr command, which allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 ms.topic: reference
-ms.assetid: 5a849abd-6b31-4833-bc8a-306c05eca29a
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
-ms.date: 10/16/2017
+ms.author: roharwoo
+author: robinharwood
+ms.date: 10/22/2025
 ---
 
 # lodctr
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 
@@ -35,6 +33,7 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 #### Remarks
 
 - If the information that you supply contains spaces, use quotation marks around the text (for example, "file name 1").
+- An exit code of **0** indicates the command line syntax was correct. It doesn't mean the operation was successful. Check the output from the command for potential error messages.
 
 ### Examples
 
@@ -44,6 +43,6 @@ To save the current performance registry settings and explanatory text to file *
 lodctr /s:"perf backup1.txt"
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

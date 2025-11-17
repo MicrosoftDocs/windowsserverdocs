@@ -2,10 +2,8 @@
 title: mapadmin
 description: Reference article for the mapadmin command, which manages User Name Mapping for Microsoft Services for Network File System.
 ms.topic: reference
-ms.assetid: b17332c7-8622-4223-9c43-2fb9cf4d992d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -66,6 +64,6 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 
     - For UNIX groups, use the formats: `<NISdomain>\<groupname>`, `<groupname>@<NISdomain>`, `<groupname>@PCNFS`, or `PCNFS\<groupname>`
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

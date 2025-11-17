@@ -1,14 +1,16 @@
 ---
 title: Troubleshooting DNS Servers
 description: This article introduces how to troubleshoot DNS issue from server-side.
-manager: dcscontentpm
-ms.topic: article
-ms.author: delhan
-ms.date: 8/8/2019
-author: Deland-Han
+ms.topic: troubleshooting-general
+ms.author: roharwoo
+ms.date: 06/20/2025
+author: robinharwood
 ---
 
 # Troubleshooting DNS servers
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806264" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DNS issues.
 
 This article discusses how to troubleshoot issues on DNS servers.
 
@@ -23,10 +25,13 @@ This article discusses how to troubleshoot issues on DNS servers.
    ```cmd
    nslookup <name> <IP address of the DNS server>
    ```
+
    For example:
+
    ```cmd
    nslookup app1 10.0.0.1
    ```
+
    If you get a failure or time-out response, see [Checking for recursion problems](#checking-for-recursion-problems).
 
 4. Flush the resolver cache. To do this, run the following command in an administrative Command Prompt window:
@@ -34,10 +39,15 @@ This article discusses how to troubleshoot issues on DNS servers.
    ```cmd
    dnscmd /clearcache
    ```
+
    Or, in an administrative PowerShell window, run the following cmdlet:
+
    ```powershell
    Clear-DnsServerCache
    ```
+
+   > [!NOTE]
+   > If the server is functioning as a DNS client (for example, when it needs to resolve names for its own operations), use `Clear-DnsClientCache` to clear the local DNS client cache. If you are troubleshooting issues related to the server's role as a DNS server (serving DNS records to other clients), use `Clear-DnsServerCache` to clear the server's authoritative cache and prevent it from providing outdated DNS information.
 
 5. Repeat step 3.
 
@@ -92,7 +102,7 @@ The problem might be caused by user error when users enter data into the zone. O
 
    If the name is not correct on the primary server, go to step 4.
 
-2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than than the serial number on the secondary server.
+2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than the serial number on the secondary server.
 
 3. On the secondary server, force a zone transfer from within the DNS console or by running the following command:
 

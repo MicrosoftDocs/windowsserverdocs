@@ -2,16 +2,14 @@
 title: ftp literal
 description: Reference article for the ftp literal command, which sends verbatim arguments to the remote ftp server.
 ms.topic: reference
-ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
 # ftp literal
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.
 
@@ -38,7 +36,7 @@ To send a **quit** command to the remote ftp server, type:
 literal quit
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

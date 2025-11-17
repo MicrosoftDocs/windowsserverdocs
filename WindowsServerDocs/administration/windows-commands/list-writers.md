@@ -2,10 +2,8 @@
 title: list writers
 description: Reference article for the list writers command, which lists writers that are on the system.
 ms.topic: reference
-ms.assetid: 1c30cbc4-f568-4fa7-b564-66c41d3ca82d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -57,6 +55,6 @@ Listing writer status ...
 8 writers listed.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

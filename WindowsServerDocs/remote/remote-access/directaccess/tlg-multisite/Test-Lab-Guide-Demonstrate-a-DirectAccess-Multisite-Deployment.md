@@ -1,16 +1,12 @@
 ---
 title: Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment
 description: Learn about extending the Test Lab Guide - Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 to demonstrate Remote Access in a multisite scenario.
-manager: brianlic
-ms.topic: article
-ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Remote Access is a server role in the  Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012 operating systems that enables remote users to securely access internal network resources using DirectAccess or RRAS VPN. This guide contains step-by-step instructions for extending the [Test Lab Guide: Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004) to demonstrate Remote Access in a multisite scenario.
 

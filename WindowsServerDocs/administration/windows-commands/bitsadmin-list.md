@@ -2,10 +2,8 @@
 title: bitsadmin list
 description: Reference article for the bitsadmin list command, which lists the transfer jobs owned by the current user.
 ms.topic: reference
-ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ To retrieve information about jobs owned by the current user.
 bitsadmin /list
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

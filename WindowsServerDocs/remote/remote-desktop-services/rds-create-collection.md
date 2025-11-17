@@ -1,16 +1,12 @@
 ---
 title: Create a Remote Desktop Services collection
 description: Learn how to create a Remote Desktop Services session collection.
-ms.author: elizapo
-ms.date: 10/22/2019
-ms.topic: article
-ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60
-author: lizap
-manager: dongill
+ms.author: daknappe
+ms.date: 7/3/2024
+ms.topic: how-to
+author: dknappettmsft
 ---
 # Create a Remote Desktop Services collection for desktops and apps to run
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following steps to create a Remote Desktop Services session collection. A session collection holds the apps and desktops you want to make available to users. After you create the collection, publish it so users can access it.
 

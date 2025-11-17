@@ -2,9 +2,8 @@
 title: tpmtool
 description: Reference article for the tpmtool command, which gets information about the Trusted Platform Module.
 ms.topic: reference
-author: ashleytqy
-ms.author: asteoh
-manager: raigner
+author: dknappettmsft
+ms.author: daknappe
 ms.date: 05/07/2019
 ---
 
@@ -58,7 +57,7 @@ tpmtool drivertracing start
 tpmtool drivertracing stop
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

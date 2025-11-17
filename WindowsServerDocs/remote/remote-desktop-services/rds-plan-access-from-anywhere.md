@@ -1,16 +1,12 @@
 ---
 title: Remote Desktop Services - Access from anywhere
 description: Planning information for an RD Gateway
-ms.topic: article
-ms.assetid: 5c38fab1-3586-4b7a-8bf0-7d85a8d5361d
-author: lizap
-ms.author: elizapo
-ms.date: 11/03/2016
-manager: dongill
+ms.topic: concept-article
+author: dknappettmsft
+ms.author: daknappe
+ms.date: 7/3/2024
 ---
 # Remote Desktop Services - Access from anywhere
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 End users can connect to internal network resources securely from outside the corporate firewall through RD Gateway.
 

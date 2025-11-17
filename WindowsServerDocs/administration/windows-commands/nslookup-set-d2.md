@@ -2,10 +2,8 @@
 title: nslookup set d2
 description: Reference article for the nslookup set d2 command, which turns the verbose debugging mode on or off.
 ms.topic: reference
-ms.assetid: 19e8325c-632f-4287-b4cc-10f5d59e4074
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -28,6 +26,6 @@ set [no]d2
 | /? | Displays help at the command prompt. |
 | /help | Displays help at the command prompt. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

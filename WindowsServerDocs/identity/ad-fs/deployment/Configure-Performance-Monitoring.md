@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Configure Performance Monitoring"
-ms.assetid: 67d8a8d7-2fbd-4ed7-bb41-75769f942024
 title: Configure Performance Monitoring
-author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
-ms.author: billmath
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Configure Performance Monitoring

@@ -2,16 +2,14 @@
 title: wdsutil remove-drivergrouppackages
 description: Reference article for wdsutil remove-drivergrouppackages, which removes driver packages from a driver group on a server.
 ms.topic: reference
-ms.assetid: 7b499635-6285-491c-8854-5665489f4364
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove-drivergrouppackages
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Removes driver packages from a driver group on a server.
 
@@ -40,6 +38,6 @@ wdsutil /verbose /remove-DriverGroupPackages /DriverGroup:DisplayDrivers
 /Filtertype:PackageArchitecture /Operator:Equal /Value:x86
 /Filtertype:Packagedateadded /Operator:LessOrEqual /Value:2008/01/01
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil remove-drivergrouppackage command](wdsutil-remove-drivergrouppackage.md)

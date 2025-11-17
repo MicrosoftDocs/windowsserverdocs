@@ -1,17 +1,13 @@
 ---
 title: Deploy Network Policy Server
 description: This topic provides links to Network Policy Server deployment content for Windows Server 2016, and includes links to additional guidance about NPS.
-manager: brianlic
-ms.topic: article
-ms.assetid: 6cfb50e0-7088-4295-97c5-14ff8776cbf8
-ms.author: jgerend
-author: JasonGerend
+ms.topic: install-set-up-deploy
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 
 # Deploy Network Policy Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for information about deploying Network Policy Server.
 
@@ -35,4 +31,4 @@ To deploy NPS for wireless access, you can use the guide [Deploy Password-Based 
 
 You can use NPS to process connection requests for Always On Virtual Private Network \(VPN\) connections for remote employees that are using computers and devices running Windows 10.
 
-For more information, see the [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](../../../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md).
+For more information, see the [Remote Access Always On VPN Deployment Tutorial for Windows Server 2016 and Windows 10](../../../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md).

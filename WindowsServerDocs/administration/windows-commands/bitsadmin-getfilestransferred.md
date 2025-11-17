@@ -2,10 +2,8 @@
 title: bitsadmin getfilestransferred
 description: Reference article for the bitsadmin getfilestransferred command, which retrieves the number of files transferred for the specified job.
 ms.topic: reference
-ms.assetid: e282815c-938b-4ac0-a09d-9baafb656dcb
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -33,7 +31,7 @@ To retrieve the number of files transferred in the job named *myDownloadJob*:
 bitsadmin /getfilestransferred myDownloadJob
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

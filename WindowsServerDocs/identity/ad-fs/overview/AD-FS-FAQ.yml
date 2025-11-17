@@ -1,14 +1,13 @@
 ### YamlMime:FAQ
 metadata:
-  ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
   title: Active Directory Federation Services (AD FS) FAQ
   description: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS).
-  author: billmath
+  author: robinharwood
   ms.author:  billmath
-  manager: mtillman
   ms.date: 11/02/2020
   ms.topic: faq
-  ms.prod: windows-server
+  ms.service: windows-server
+  ms.custom: sfi-ropc-nochange
 title: Frequently asked questions (FAQ) about AD FS
 summary: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS). It's divided into sections that are based on the type of question.
 
@@ -48,7 +47,7 @@ sections:
         answer: |
           Yes, but as a side effect:
           
-          - You'll need to manually manage updates of token signing certificates because Azure AD won't be able to access the federation metadata. For more information on manually updating token signing certificates, see [Renew federation certificates for Office 365 and Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+          - You'll need to manually manage updates of token signing certificates because Microsoft Entra ID won't be able to access the federation metadata. For more information on manually updating token signing certificates, see [Renew federation certificates for Office 365 and Microsoft Entra ID](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
           - You won't be able to use legacy auth flows (for example, the ExO proxy auth flow).
           
       - question: |
@@ -157,7 +156,7 @@ sections:
           ```
           
       - question: |
-          Can I pass a resource value as part of the scope value, in the same way that requests are made against Azure AD?
+          Can I pass a resource value as part of the scope value, in the same way that requests are made against Microsoft Entra ID?
         answer: |
           With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can be organized as a space-separated list where each entry is structured as resource/scope. 
           
@@ -205,7 +204,7 @@ sections:
         answer: |
           AD FS shows only one authentication method on the sign-in screen when an application explicitly requires a specific authentication URI that maps to a configured and enabled authentication method. The method is conveyed in the **wauth** parameter in WS-Federation requests. It's conveyed in the **RequestedAuthnCtxRef** parameter in SAML protocol requests. Only the requested authentication method is displayed. (For example, password sign-in.)
           
-          When you use AD FS with Azure AD, it's common for applications to send the **prompt=login** parameter to Azure AD. Azure AD by default translates this parameter to requesting a fresh password-based sign-in to AD FS. This scenario is the most common reason you might see a password sign-in on AD FS in your network or not see an option to sign in with your certificate. You can easily resolve this problem by making a change to the federated domain settings in Azure AD.
+          When you use AD FS with Microsoft Entra ID, it's common for applications to send the **prompt=login** parameter to Microsoft Entra ID. Microsoft Entra ID by default translates this parameter to requesting a fresh password-based sign-in to AD FS. This scenario is the most common reason you might see a password sign-in on AD FS in your network or not see an option to sign in with your certificate. You can easily resolve this problem by making a change to the federated domain settings in Microsoft Entra ID.
           
           For more information, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
           
@@ -284,11 +283,6 @@ sections:
           The AD FS UserInfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS doesn't support additional claims requested via the UserInfo endpoint. If you need more claims in an ID token, see [Custom ID tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
           
       - question: |
-          Why do I see a lot of 1021 errors on my AD FS servers?
-        answer: |
-          This event is usually logged for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused when the client erroneously tries to get an access token for the Azure AD Graph service. Because the resource isn't on AD FS, event 1021 occurs on the AD FS servers. It's safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
-
-      - question: |
           Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
         answer: |
           This group is created only when a Windows Server 2016 domain controller with the FSMO PDC role exists in the domain. To resolve the error, you can create the group manually. Take these steps to add the required permissions after you add the service account as a member of the group:
@@ -304,7 +298,7 @@ sections:
       - question: |
           Why does modern authentication from Android devices fail if the server doesn't send all the intermediate certificates in the chain with the SSL cert?
         answer: |
-          For apps that use the Android ADAL library, authentication to Azure AD might fail for federated users. The app will get an **AuthenticationException** when it tries to show the sign-in page. In the Chrome browser, the AD FS sign-in page might be described as unsafe.
+          For apps that use the Android ADAL library, authentication to Microsoft Entra ID might fail for federated users. The app will get an **AuthenticationException** when it tries to show the sign-in page. In the Chrome browser, the AD FS sign-in page might be described as unsafe.
           
           For all versions and all devices, Android doesn't support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This limitation applies to the Chrome browser as well. Any server authentication certificate that's missing intermediate certificates will cause this error if the entire certificate chain isn't passed from AD FS.
           
@@ -431,4 +425,43 @@ sections:
            - You have a mixed-mode farm. 
            - AD FS 2019 provides the farm max behavior level information to the primary federation server and isn't recognized by federation server version 2016. 
           
-           AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
+           AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
+
+      - question: |
+          How do I resolve the AD FS Admin event logs error: “Received invalid Oauth request. The client <NAME> is forbidden to access the resource with scope ugs"?
+          
+        answer: |
+          To resolve the issue, follow these steps:
+          
+          1. Launch the AD FS management console.
+          1. Go to **Services** > **Scope Descriptions**.
+          1. In "**Scope Descriptions**, select **More options**, then select **Add Scope Description**.
+          1. Under **Name**, enter **ugs**, then select **Apply** > **OK**.
+          1. Launch PowerShell as Administrator.
+          1. Run the command `Get-AdfsApplicationPermission`. Look for the `ScopeNames :{openid, aza}` that has the `ClientRoleIdentifier` value. Make a note of the `ObjectIdentifier` value.
+          1. Run the command `Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'`.
+          1. Restart the AD FS service.
+          1. On the client, restart the client. You should be prompted to configure Windows Hello for Business.
+          1. If the configuration window doesn't pop up, then you need to collect trace logs and troubleshoot further.
+
+      - question: |
+          Can I pass a resource value as part of the scope value like a typical request against Azure AD?
+          
+        answer: |
+          Yes, but only in Windows Server 2019 or later. You can organize the scope parameter as a space-separated list where each entry is structured as a resource or scope, such as `<create a valid sample request>`.
+
+      - question: |
+           Does AD FS support the PKCE extension?
+          
+        answer: |
+          Yes, but only in Windows Server 2019 or later. AD FS supports Proof Key for Code Exchange (PKCE) for the OAuth Authorization Code Grant flow.
+
+      - question: |
+           How do I get the security identifier (SID) extension in certificates enrolled via AD FS to satisfy the strong mapping criteria enforced at the Key Distribution Center (KDC)?
+          
+        answer: |
+          AD FS enrolls for logon certificates on behalf of authenticated accounts under certain Windows Hello For Business scenarios, as documented in [Configure single sign-on for Azure Virtual Desktop using AD FS](/azure/virtual-desktop/configure-adfs-sso).
+          By default, these certificates don't contain SID extension and are denied by KDC. For more information about the KDC requirements, see [KB5014754: Certificate-based authentication changes on Windows domain controllers](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16).
+          Updates are available for AD FS on Windows Server 2019, Windows Server 2022, and Windows Server 2025 to ensure that issued certificates include the SID extension to satisfy strong mapping requirements.
+          To enable this behavior, install the latest Windows Updates on all AD FS servers of the farm, and run the following cmdlet on the primary AD FS server:
+            - `Set-AdfsCertificateAuthority -EnrollmentAgent -AddSIDCertificateExtension $true`

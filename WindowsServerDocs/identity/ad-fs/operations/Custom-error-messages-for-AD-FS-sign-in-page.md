@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Custom error messages for AD FS sign-in page"
-ms.assetid: 1df78c2a-5054-4b54-8310-c48ea62e6e0b
 title: Custom error messages for AD FS sign-in page
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 
 # Custom error messages for AD FS sign-in page

@@ -2,10 +2,8 @@
 title: load metadata
 description: Reference article for the load metadata command, which loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore.
 ms.topic: reference
-ms.assetid: 2c535487-668b-44fc-babb-ff59cf7d190e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -40,7 +38,7 @@ To load a metadata file called metafile.cab from the default location, type:
 load metadata metafile.cab
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

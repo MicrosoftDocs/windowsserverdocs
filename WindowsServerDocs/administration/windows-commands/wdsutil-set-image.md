@@ -2,15 +2,13 @@
 title: wdsutil set-image
 description: Reference article for wdsutil set-image, which changes the attributes of an image.
 ms.topic: reference
-ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil set-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the attributes of an image.
 
@@ -62,7 +60,7 @@ wdsutil /Set-Imagmedia:Windows Vista with Officemediatype:Install /Description:N
 wdsutil /verbose /Set-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /Name:New name /Description:New description /UserFilter:O:BAG:DUD:AI(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;AU) /Enabled:Yes /UnattendFile:\\server\share\unattend.xml /OverwriteUnattend:Yes
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-image command](wdsutil-add-image.md)
 - [wdsutil copy-image command](wdsutil-copy-image.md)

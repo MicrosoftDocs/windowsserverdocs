@@ -2,10 +2,8 @@
 title: dispdiag
 description: Reference article for the dispdiag command, which logs display information to a file.
 ms.topic: reference
-ms.assetid: 5079e1dd-b57c-44ed-970f-e6b409369e03
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -29,6 +27,6 @@ dispdiag [-testacpi] [-d] [-delay <seconds>] [-out <filepath>]
 | -out `<filepath>`  | Specifies path and filename to save collected data. This must be the last parameter. |
 | -? | Displays available command parameters and provides help for using them. |
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

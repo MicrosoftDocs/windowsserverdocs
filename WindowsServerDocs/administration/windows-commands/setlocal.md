@@ -2,10 +2,8 @@
 title: setlocal
 description: Reference article for the setlocal command, which starts localization of environment variables in a batch file.
 ms.topic: reference
-ms.assetid: e4e4b6d3-3f1a-4851-a782-25ee2470e16e
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -65,6 +63,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

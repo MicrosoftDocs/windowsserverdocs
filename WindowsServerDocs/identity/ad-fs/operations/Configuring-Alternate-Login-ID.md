@@ -1,12 +1,9 @@
 ---
 description: "Learn more about: Configuring Alternate Login ID"
-ms.assetid: f0cbdd78-f5ae-47ff-b5d3-96faf4940f4a
 title: Configuring Alternate Login ID
-author: billmath
-ms.author: billmath
-manager: mtillman
-ms.date: 11/14/2018
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
+ms.custom: sfi-ropc-nochange
 ---
 
 # Configuring Alternate Login ID
@@ -19,29 +16,31 @@ In most scenarios, users use their UPN (User Principal Names) to login to their 
 > [!NOTE]
 > Microsoft's recommended best practices are to match UPN to primary SMTP address. This article addresses the small percentage of customers that cannot remediate UPN's to match.
 
-For example, they can use their email ID for sign-in and it can be different from their UPN. This is particularly common in scenarios where their UPN is non-routable. Consider a user Jane Doe with UPN `jdoe@contoso.local` and email address `jdoe@contoso.com`. Jane might not be even aware of the UPN as she has always used her email ID for signing in. Use of any other sign-in method instead of UPN constitutes alternate ID. For more information on how the UPN is created, see [Azure AD UserPrincipalName population](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+For example, they can use their email ID for sign-in and it can be different from their UPN. This is particularly common in scenarios where their UPN is non-routable. Consider a user Jane Doe with UPN `jdoe@contoso.local` and email address `jdoe@contoso.com`. Jane might not be even aware of the UPN as she has always used her email ID for signing in. Use of any other sign-in method instead of UPN constitutes alternate ID. For more information on how the UPN is created, see [Microsoft Entra UserPrincipalName population](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
 Active Directory Federation Services (AD FS) enables federated applications using AD FS to sign in using alternate ID. This enables administrators to specify an alternative to the default UPN to be used for sign-in. AD FS already supports using any form of user identifier that is accepted by Active Directory Domain Services (AD DS). When configured for alternate ID, AD FS allows users to sign in using the configured alternate ID value, such as email ID. Using the alternate ID enables you to adopt SaaS providers like Office 365 without modifying your on-premises UPNs. It also enables you to support line-of-business service applications with consumer-provisioned identities.
 
-## Alternate ID in Azure AD
+<a name='alternate-id-in-azure-ad'></a>
+
+## Alternate ID in Microsoft Entra ID
 
 An organization may have to use alternate ID in the following scenarios:
-1. The on-premises domain name is non-routable, such as `contoso.local`, and as a result the default user principal name is non-routable (`jdoe@contoso.local`). Existing UPN cannot be changed due to local application dependencies or company policies. Azure AD and Office 365 require all domain suffixes associated with Azure AD directory to be fully internet routable.
+1. The on-premises domain name is non-routable, such as `contoso.local`, and as a result the default user principal name is non-routable (`jdoe@contoso.local`). Existing UPN cannot be changed due to local application dependencies or company policies. Microsoft Entra ID and Office 365 require all domain suffixes associated with Microsoft Entra directory to be fully internet routable.
 2. The on-premises UPN is not same as the user's email address and to sign-in to Office 365, users use email address and UPN cannot be used due to organizational constraints.
-   In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs.
+   In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Microsoft Entra ID without modifying your on-premises UPNs.
 
 ## Configure alternate logon ID
 
-Using Azure AD Connect
-We recommend using Azure AD connect to configure alternate logon ID for your environment.
+Using Microsoft Entra Connect
+We recommend using Microsoft Entra Connect to configure alternate logon ID for your environment.
 
-- For new configuration of Azure AD Connect, see Connect to Azure AD for detailed instruction on how to configure alternate ID and AD FS farm.
-- For existing Azure AD Connect installations, see Changing the user sign-in method for instructions on changing sign-in method to AD FS
+- For new configuration of Microsoft Entra Connect, see Connect to Microsoft Entra ID for detailed instruction on how to configure alternate ID and AD FS farm.
+- For existing Microsoft Entra Connect installations, see Changing the user sign-in method for instructions on changing sign-in method to AD FS
 
-When Azure AD Connect is provided details about AD FS environment, it automatically checks for the presence of the right KB on your AD FS and configures AD FS for alternate ID including all necessary right claim rules for Azure AD federation trust. There is no additional step required outside wizard to configure alternate ID.
+When Microsoft Entra Connect is provided details about AD FS environment, it automatically checks for the presence of the right KB on your AD FS and configures AD FS for alternate ID including all necessary right claim rules for Microsoft Entra federation trust. There is no additional step required outside wizard to configure alternate ID.
 
 > [!NOTE]
-> Microsoft recommends using Azure AD Connect to configure alternate logon ID.
+> Microsoft recommends using Microsoft Entra Connect to configure alternate logon ID.
 
 ### Manually configure alternate ID
 
@@ -114,15 +113,15 @@ Using Alternate ID can cause extra prompts for authentication if these additiona
 
 With the following additional configuration, the user experience is improved significantly, and you can achieve near zero prompts for authentication for Alternate ID users in your organization.
 
-##### Step 1. Update to required Office version
+##### Step 1: Update to required Office version
 
 Office version 1712 (build no 8827.2148) and above have updated the authentication logic to handle the Alternate ID scenario. In order to leverage the new logic, the client machines need to be updated to Office version 1712 (build no 8827.2148) and above.
 
-##### Step 2. Update to required Windows version
+##### Step 2: Update to required Windows version
 
 Windows version 1709 and above have updated the authentication logic to handle the Alternate ID scenario. In order to leverage the new logic, the client machines need to be updated to Windows version 1709 and above.
 
-##### Step 3. Configure registry for impacted users using group policy
+##### Step 3: Configure registry for impacted users using group policy
 
 The office applications rely on information pushed by the directory administrator to identify the Alternate ID environment. The following registry keys need to be configured to help office applications authenticate the user with Alternate ID without showing any extra prompts.
 
@@ -136,12 +135,12 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 ![Authentication flow](media/Configure-Alternate-Login-ID/alt1a.png)
 
-1. a: User is provisioned in Azure AD using Alternate ID
+1. a: User is provisioned in Microsoft Entra ID using Alternate ID
    </br>b: Directory administrator pushes required regkey settings to impacted client machines
 2. User authenticates on the local machine and opens an office application
 3. Office application takes the local session credentials
-4. Office application authenticates to Azure AD using domain hint pushed by administrator and local credentials
-5. Azure AD successfully authenticates the user by directing to correct federation realm and issue a token
+4. Office application authenticates to Microsoft Entra ID using domain hint pushed by administrator and local credentials
+5. Microsoft Entra ID successfully authenticates the user by directing to correct federation realm and issue a token
 
 ## Applications and user experience after the additional configuration
 
@@ -168,14 +167,14 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 ## Additional Details and Considerations
 
-- Azure AD offers different features related to 'Alternate login ID'
-    - The ADFS Alternate Login ID [configuration](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#manually-configure-alternate-id) feature for Federated<sup>1</sup> identity infrastructure environments described in this article.
-    - The Azure AD Connect Sync [configuration](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) that defines which on-premises attribute is used as Azure AD username (userPrincipalName) for Federated<sup>1</sup> OR Managed<sup>2</sup> identity infrastructure environments, which is partially covered in this article.
-    - The [Sign-in to Azure AD with email as an alternate login ID](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin) feature for Managed<sup>2</sup> identity infrastructure environments.
+- Microsoft Entra ID offers different features related to 'Alternate login ID'
+    - The AD FS Alternate Login ID [configuration](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#manually-configure-alternate-id) feature for Federated<sup>1</sup> identity infrastructure environments described in this article.
+    - The Microsoft Entra Connect Sync [configuration](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) that defines which on-premises attribute is used as Microsoft Entra username (userPrincipalName) for Federated<sup>1</sup> OR Managed<sup>2</sup> identity infrastructure environments, which is partially covered in this article.
+    - The [Sign-in to Microsoft Entra ID with email as an alternate login ID](/azure/active-directory/authentication/howto-authentication-use-email-signin) feature for Managed<sup>2</sup> identity infrastructure environments.
 
 - The Alternate login ID feature described in this article is available for Federated<sup>1</sup> identity infrastructure environments. It is not supported in the following scenarios:
-    - An AlternateLoginID attribute with non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
-    - Managed environments that do not have AD FS deployed. Please either refer to the Azure AD Connect Sync [documentation](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) or to the [Sign-in to Azure AD with email as an alternate login ID](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin) documentation. If you decide to adjust the Azure AD Connect Sync configuration in a Managed<sup>2</sup> identity infrastructure environment, the [Applications and user experience after the additional configuration](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#applications-and-user-experience-after-the-additional-configuration) section of this articel may still be applicable while the specific ADFS configuration is no longer applicable since no ADFS is deployed in a Managed<sup>2</sup> identity infrastructure environment.
+    - An AlternateLoginID attribute with non-routable domains (e.g. Contoso.local) that cannot be verified by Microsoft Entra ID.
+    - Managed environments that do not have AD FS deployed. Please either refer to the Microsoft Entra Connect Sync [documentation](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) or to the [Sign-in to Microsoft Entra ID with email as an alternate login ID](/azure/active-directory/authentication/howto-authentication-use-email-signin) documentation. If you decide to adjust the Microsoft Entra Connect Sync configuration in a Managed<sup>2</sup> identity infrastructure environment, the [Applications and user experience after the additional configuration](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#applications-and-user-experience-after-the-additional-configuration) section of this article may still be applicable while the specific AD FS configuration is no longer applicable since no AD FS is deployed in a Managed<sup>2</sup> identity infrastructure environment.
 
 - When enabled, the alternate login ID feature is only available for username/password authentication across all the user name/password authentication protocols supported by AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth).
 
@@ -195,7 +194,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 <sup>1</sup> A **Federated** identity infrastructure environment represents an environment with an identity provider such as AD FS or other third-party IDP.
 
-<sup>2</sup> A **Managed** identity infrastructure environment represents an environment with Azure AD as the identity provider deployed with either [password hash sync (PHS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-phs) or [pass-through authentication (PTA)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta).
+<sup>2</sup> A **Managed** identity infrastructure environment represents an environment with Microsoft Entra ID as the identity provider deployed with either [password hash sync (PHS)](/azure/active-directory/hybrid/whatis-phs) or [pass-through authentication (PTA)](/azure/active-directory/hybrid/how-to-connect-pta).
 
 ## Events and Performance Counters
 

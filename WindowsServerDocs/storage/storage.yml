@@ -1,16 +1,15 @@
 ### YamlMime:Landing
 
 title: Windows Server Storage documentation
-summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. Applies to: Windows Server 2019, Windows Server 2016.'
-
+summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads.'
 metadata:
   title: Windows Server Storage documentation
   description: Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. 
   ms.topic: landing-page # Required
-  author: JasonGerend
-  ms.author: jgerend
+  author: robinharwood
+  ms.author: roharwoo
   ms.date: 07/15/2020 
-  ms.prod: windows-server
+  ms.service: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -55,7 +54,7 @@ landingContent:
           - text: DFS Namespaces
             url: dfs-namespaces/dfs-overview.md
           - text: DFS Replication
-            url: dfs-replication/dfsr-overview.md
+            url: dfs-replication/dfs-replication-overview.md
           - text: File Server Resource Manager
             url: fsrm/fsrm-overview.md
           - text: iSCSI Target Server
@@ -88,7 +87,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Azure Storage
-            url: https://azure.microsoft.com/documentation/services/storage/
+            url: /azure/storage/
           - text: Azure StorSimple
             url: https://www.microsoft.com/cloud-platform/azure-storsimple
           - text: Azure Shared Disk

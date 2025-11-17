@@ -6,16 +6,13 @@ summary: Networking is a foundational part of the Software Defined Datacenter (S
 metadata:
   title: Networking documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016. # Required; article description that is displayed in search results. < 160 chars.
-  layout: LandingPage
-  ms.technology: networking
+  ms.subservice: networking
   ms.topic: landing-page # Required
-  manager: dougkim
   author: AnirbanPaul #Required; your GitHub user alias, with correct capitalization.
   ms.author: anpaul #Required; microsoft alias of author; optional team alias.
   ms.date: 06/11/2020 #Required; mm/dd/yyyy format.
-  ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
   ms.localizationpriority: medium
-  ms.prod: windows-server
+  ms.service: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -48,15 +45,15 @@ landingContent:
           - text: Software Defined Networking (SDN)
             url: sdn/index.yml
           - text: Network Controller
-            url: /azure-stack/hci/concepts/network-controller-overview
+            url: /azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking
           - text: Software Load Balancing (SLB) for SDN
-            url: /azure-stack/hci/concepts/software-load-balancer
+            url: /azure/azure-local/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking
           - text: RAS Gateway for SDN
-            url: /azure-stack/hci/concepts/gateway-overview
+            url: /azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking
           - text: Network Function Virtualization
             url: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
           - text: Datacenter Firewall Overview
-            url: /azure-stack/hci/concepts/datacenter-firewall-overview
+            url: /azure/azure-local/concepts/datacenter-firewall-overview?context=/windows-server/context/windows-server-edge-networking
       - linkListType: deploy
         links:
           - text: Deploy a SDN infrastructure using scripts
@@ -80,7 +77,7 @@ landingContent:
           - text: Hyper-V Network Virtualization
             url: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
           - text: Hyper-V Virtual Switch
-            url: ../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+            url: ../virtualization/hyper-v/virtual-switch.md
           - text: IP Address Management (IPAM)
             url: technologies/ipam/ipam-top.md
           - text: Network Load Balancing (NLB)
@@ -110,9 +107,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Web Application Proxy in Windows Server 2016
-            url: ../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md
+            url: ../remote/remote-access/web-application-proxy/web-app-proxy-windows-server.md
           - text: Remote Access Always On VPN Deployment Guide
-            url: ../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
+            url: ../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment.md
 
   # Card
   - title: High-Performance Networking

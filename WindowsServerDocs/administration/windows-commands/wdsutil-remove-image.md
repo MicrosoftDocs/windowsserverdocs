@@ -2,16 +2,14 @@
 title: wdsutil remove-image
 description: Reference article for wdsutil remove-image, which deletes an image from a server.
 ms.topic: reference
-ms.assetid: ce5e2384-2264-4b22-92af-74eec8c10ae0
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove-image
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Deletes an image from a server.
 
@@ -48,9 +46,9 @@ To remove an install image, type:
 wdsutil /remove-Image:Windows Vista with Officemediatype:Install
 ```
 ```
-wdsutil /verbose /remove-Image:Windows Vista with Office /Server:MyWDSServemediatype:Instal ImageGroup:ImageGroup1 /Filename:install.wim
+wdsutil /verbose /remove-Image:Windows Vista with Office /Server:MyWDSServemediatype:Install ImageGroup:ImageGroup1 /Filename:install.wim
 ```
-## Additional References
+## Related links
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil add-image command](wdsutil-add-image.md)
 - [wdsutil copy-image command](wdsutil-copy-image.md)

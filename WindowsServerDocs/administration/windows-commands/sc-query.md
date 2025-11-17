@@ -2,10 +2,8 @@
 title: Sc.exe query
 description: Reference article for the sc.exe query command, which obtains and displays information about the specified service, driver, type of service, or type of driver.
 ms.topic: reference
-ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 10/16/2017
 ---
 
@@ -104,6 +102,6 @@ To display information for drivers in the *Network Driver Interface Specificatio
 sc.exe query type= driver group= NDIS
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,16 +1,12 @@
 ---
 title: STEP 6 Install and Configure 2-DC1
 description: Learn how to install and configure 2-DC1.
-manager: brianlic
-ms.topic: article
-ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: daknappe
+author: dknappettmsft
 ms.date: 08/07/2020
 ---
 # STEP 6 Install and Configure 2-DC1
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 2-DC1 provides the following services:
 

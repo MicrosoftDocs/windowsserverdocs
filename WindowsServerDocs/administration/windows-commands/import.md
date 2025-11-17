@@ -2,10 +2,8 @@
 title: import diskshadow
 description: Reference article for the import command, which imports a transportable shadow copy from a loaded metadata file into the system.
 ms.topic: reference
-ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 
@@ -47,7 +45,7 @@ IMPORT
 #The shadow copy will now be loaded into the system.
 ```
 
-## Additional References
+## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
