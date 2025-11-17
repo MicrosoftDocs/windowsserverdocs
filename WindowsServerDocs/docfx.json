@@ -352,6 +352,21 @@
           "✅ Windows Admin Center",
           "✅ Windows Admin Center Preview"
         ],
+        "manage/windows-admin-center/install-virtualization-mode.md": [
+          "✅ Windows Admin Center Preview"
+        ],
+        "manage/windows-admin-center/virtualization-mode-overview.md": [
+          "✅ Windows Admin Center Preview"
+        ],
+        "manage/windows-admin-center/add-virtualization-mode-resources.md": [
+          "✅ Windows Admin Center Preview"
+        ],
+        "manage/windows-admin-center/manage-virtualization-mode-virtual-machines.md": [
+          "✅ Windows Admin Center Preview"
+        ],
+        "manage/windows-admin-center/virtualization-mode-known-issues.md": [
+          "✅ Windows Admin Center Preview"
+        ],
         "manage/windows-admin-center/azure/manage-hci-clusters.md": [
           "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
         ],

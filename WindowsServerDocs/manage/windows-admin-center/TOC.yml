@@ -5,6 +5,8 @@
     items:
     - name: What is Windows Admin Center?
       href: understand/what-is.md
+    - name: What is Virtualization Mode? (preview)
+      href: virtualization-mode-overview.md
     - name: FAQ
       href: understand/faq.yml
     - name: Case studies
@@ -65,6 +67,16 @@
       href: use/manage-aws-machines.md
     - name: Migrate VMware virtual machines to Hyper-V
       href: use/migrate-vmware-to-hyper-v.md  
+    - name: Virtualization Mode (preview)
+      items:
+      - name: Install Virtualization Mode
+        href: install-virtualization-mode.md
+      - name: Add resources in Virtualization Mode
+        href: add-virtualization-mode-resources.md
+      - name: Manage virtual machines in Virtualization Mode
+        href: manage-virtualization-mode-virtual-machines.md
+      - name: Known issues in Virtualization Mode
+        href: virtualization-mode-known-issues.md
   - name: Connect to Azure
     items:
     - name: Azure hybrid services
