@@ -73,7 +73,7 @@ To open a volume and add files to the volume in Windows Admin Center:
 
 Deduplication is managed per volume. Deduplication uses a post-processing model, which means that you won't see savings until it runs. When it does, it works over all files, even files that were there from before.
 
-To learn more, see [Enable volume encryption, deduplication,](volume-encryption-deduplication.md)
+To learn more, see [Enable volume encryption and deduplication](volume-encryption-deduplication.md).
 
 ## Create volumes using Windows PowerShell
 
