@@ -92,7 +92,7 @@ To add a resource to a resource group, follow these steps:
 
    Or
 
-   - To create a new network intent template, follow these steps:
+   - To create a new network intent template, follow these steps. To learn more about network intent templates, see [Network intent templates](virtualization-mode-overview.md#network-intent-templates).
 
       1. Select **Network intent template**.
       1. From the **Add new network intent template** window, enter a **Network intent name**, then select the **Network intent type** from the dropdown.

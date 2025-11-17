@@ -74,7 +74,7 @@ The following diagram illustrates the architecture of Windows Admin Center Virtu
 
 The architecture efficiently orchestrates large-scale virtualization environments, so it doesn't affect the availability or performance of the managed Hyper-V hosts and clusters during normal operations.
 
-Virtualization Mode introduces the concepts of Resource Groups and Host Profiles to help organize and manage virtualization resources at scale.
+Virtualization Mode introduces the concepts of resource groups and host profiles to help organize and manage virtualization resources at scale.
 
 ### Resource groups
 
@@ -94,6 +94,12 @@ Profile types:
 - Compute: Hosts provide compute virtualization.
 - Storage: Storage systems for virtual machines (SAN, NAS, or hyperconverged using Storage Spaces Direct). The storage profile isn't available at this time.
 - Networking: Software Defined Networking (SDN) services for virtual machines. The networking profile isn't available at this time.
+
+### Network intent templates
+
+Windows Admin Center vMode introduces a new concept called a _Network intent template_, which is an abstracted, predefined intent that you didn't yet apply to a network adapter or associate with a cluster or standalone host. A Network Intent Template essentially serves as a blueprint that you can use to create intents after you specify which NICs the template should apply to.
+
+Currently, you apply Network intent templates to the specific nodes in the Add Resource workflow but the template isn't saved after exiting the workflow. To onboard other nodes in the Add Resource workflow, you need to recreate the template.
 
 ## Next steps
 
