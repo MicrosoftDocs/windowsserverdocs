@@ -47,7 +47,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | --- | :---: | :---: | :---: |
 | **Account Management** |  |  |  |
 | Audit Application Group Management |  |  |  |
-| Audit Computer Account Management |  | `Yes | No` | `Yes | Yes` |
+| Audit Computer Account Management |  | `Yes | No` | `Yes | No` |
 | Audit Distribution Group Management |  |  |  |
 | Audit Other Account Management Events |  | `Yes | No` | `Yes | Yes` |
 | Audit Security Group Management |  | `Yes | No` | `Yes | Yes` |
