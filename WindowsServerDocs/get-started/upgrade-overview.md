@@ -58,11 +58,11 @@ In this table you can see the supported upgrade paths, based on the version you'
 | Upgrade from / to | Windows   Server 2012 R2 | Windows   Server 2016 | Windows   Server 2019 | Windows   Server 2022 | Windows   Server 2025|
 |--|--|--|--|--|--|
 | Windows   Server 2012 | Yes | Yes | - | - | - |
-| Windows   Server 2012 R2 | - | Yes | Yes | - | Yes |
-| Windows   Server 2016 | - | - | Yes | Yes | Yes |
+| Windows   Server 2012 R2 | - | Yes | Yes | - | - |
+| Windows   Server 2016 | - | - | Yes | Yes | - |
 | Windows   Server 2019 | - | - | - | Yes | Yes |
 | Windows   Server 2022 | - | - | - | - | Yes |
-| Windows   Server 2025 | - | - | - | - | Yes |
+| Windows   Server 2025 | - | - | - | - | - |
 
 You can upgrade in several ways:
 
