@@ -118,7 +118,11 @@ Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin 
 
 ## Port configuration on the target server
 
-Windows Admin Center uses the SMB file sharing protocol for some file copying tasks, such as when importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445.  You can use the Firewall tool in Windows Admin Center to verify the incoming rule for ‘File Server Remote Management (SMB-In)' is set to allow access on this port.
+Windows Admin Center uses the SMB file sharing protocol for some file copying tasks, such as when importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445. You can use the Firewall tool in Windows Admin Center to verify the incoming rule for ‘File Server Remote Management (SMB-In)' is set to allow access on this port.
+
+In addition to file sharing, certain operations in Windows Admin Center rely on the EventLog Remoting Protocol, which depends on RPC for message transport. When RPC is used by the EventLog Remoting Protocol, it utilizes named pipes as its transport mechanism. Named pipes, in turn, rely on the Server Message Block (SMB) Protocol.
+
+The EventLog Remoting Protocol is often used in conjunction with the Windows Remote Registry Protocol, because several aspects of the event log configuration are managed by modifying the registry rather than through the EventLog Remoting Protocol itself.
 
 > [!Tip]
 > Ready to install Windows Admin Center? [Download now](../overview.md#download-now)
