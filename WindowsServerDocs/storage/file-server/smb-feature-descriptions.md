@@ -112,9 +112,9 @@ The following tables show the SMB features available across different versions, 
 | [SMB directory leasing](#smb-directory-leasing) | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 <sup>1</sup> Windows 10 version 1607 and later.
-<sup>2</sup> Windows 10 version 1709 and later.
-<sup>3</sup> Windows 10 Enterprise, Education, and Pro for Workstations editions only.
-<sup>4</sup> Windows 10 version 1809 and later.
+<br><sup>2</sup> Windows 10 version 1709 and later.
+<br><sup>3</sup> Windows 10 Enterprise, Education, and Pro for Workstations editions only.
+<br><sup>4</sup> Windows 10 version 1809 and later.
 
 #### [SMB dialect version](#tab/smb-dialect)
 
