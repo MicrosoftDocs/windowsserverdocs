@@ -12,7 +12,7 @@ ms.date: 11/27/2025
 
 Learn how to create a virtual machine by using Hyper-V Manager and Windows PowerShell and what options you have when you create a virtual machine in Hyper-V Manager.
 
-## Prerquisites
+## Prerequisites
 
 Before you create a virtual machine, make sure you have the following prerequisites:
 
@@ -92,11 +92,11 @@ To create a virtual machine with Windows PowerShell using [New-VM](/powershell/m
 1. Use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet to create the  virtual machine. See the following examples:
 
    > [!NOTE]
-   > If you move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the **-Version** parameter with **[New-VM](/powershell/module/hyper-v/new-vm)** to set the virtual machine configuration version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2 or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).
+   > Use the **-Version** parameter if you need to move this virtual machine to a host running an older Windows Server version. See [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).
 
    - **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, use the following command where,
      - **-Name** is the name that you provide for the virtual machine that you're creating.
-     - **-MemoryStartupBytes** is the amount of memory that is available to the virtual machine at start up.
+     - **-MemoryStartupBytes** is the amount of memory that's available to the virtual machine at startup.
      - **-BootDevice** is the device that the virtual machine boots to when it starts, like the network adapter (NetworkAdapter) or virtual hard disk (VHD).
      - **-VHDPath** is the path to the virtual machine disk that you want to use.
      - **-Path** is the path to store the virtual machine configuration files.
