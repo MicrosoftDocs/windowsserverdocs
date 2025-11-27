@@ -4,7 +4,7 @@ description: Learn how to deploy host networking with Network ATC for Windows Se
 #customer intent: As a network administrator, I want to deploy host networking using Network ATC so that I can manage compute, storage, and management networks across all cluster nodes using the same adapters.
 author: robinharwood
 ms.topic: how-to
-ms.date: 07/18/2025
+ms.date: 11/20/2025
 ms.author: roharwoo
 ms.custom:
   - ai-gen-docs-bap
@@ -250,18 +250,6 @@ Get-NetQosTrafficClass | Remove-NetQosTrafficClass
 Get-NetQosPolicy | Remove-NetQosPolicy -Confirm:$false
 Get-NetQosFlowControl | Disable-NetQosFlowControl
 ```
-
-### Error: Network Symmetry Check Failure
-
-You might encounter a situation where functionally symmetric adapters have different component ID strings. It might occur if a substring is added to an adapter's component ID during an upgrade or when combining OCP and PCI NICs within the same intent. To work around this issue, you can disable the component ID based symmetry check by setting the `NicSymmetryCheckEnabled` registry key to 0. This setting allows Network ATC to proceed with the deployment without checking for symmetry based on component IDs. You should only use this workaround if you're certain that the adapters are functionally symmetric.
-
-```powershell
-Stop-Service -Name NetworkATC
-New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Services\NetworkATC' -Name "NicSymmetryCheckEnabled" -Value 0 -PropertyType DWord
-Start-Service -Name NetworkATC
-```
-
-After you disable the component ID based symmetry check, you can continue with the intent deployment.
 
 ### Error: RDMANotOperational
 
