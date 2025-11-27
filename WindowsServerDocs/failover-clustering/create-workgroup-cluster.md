@@ -92,7 +92,7 @@ A consistent administrator user account must be created on each node. The userna
 
 1. If the nonbuiltin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
     ```PowerShell
-    New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​
+    New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name LocalAccountTokenFilterPolicy -Value 1​
     ```
 
 ---
@@ -176,7 +176,7 @@ The following steps show how to install the Failover Clustering feature in Power
 
 1. Run the PowerShell command:
     ```PowerShell
-    Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
+    Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
     ```
 
 1. Once the installation process is done, verify installation was successful by running these commands:
@@ -265,7 +265,7 @@ If you prefer to create a workgroup cluster using PowerShell, follow these steps
 
 1. After validation passes, create the workgroup cluster using the following command:
     ```PowerShell
-    New-Cluster –Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS
+    New-Cluster -Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS
     ```
 
 1. After the cluster is successfully created, you can do things such as verify cluster [quorum configuration](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
