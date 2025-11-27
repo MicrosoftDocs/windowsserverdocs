@@ -72,7 +72,7 @@ The following tables show the SMB features available across different versions, 
 | [File Normalized Name Information API](#file-normalized-name-information-api) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | [SMB Directory Leasing](#smb-directory-leasing) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-<sup>1</sup> Windows Server 2022 Datacenter: Azure Edition only.
+1. Windows Server 2022 Datacenter: Azure Edition only.
 
 #### [Windows client](#tab/windows-client)
 
@@ -111,10 +111,10 @@ The following tables show the SMB features available across different versions, 
 | [File Normalized Name Information API](#file-normalized-name-information-api) | ✅ | ✅ | ✅<sup>1</sup> | ❌ | ❌ |
 | [SMB directory leasing](#smb-directory-leasing) | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-<sup>1</sup> Windows 10 version 1607 and later.
-<br><sup>2</sup> Windows 10 version 1709 and later.
-<br><sup>3</sup> Windows 10 Enterprise, Education, and Pro for Workstations editions only.
-<br><sup>4</sup> Windows 10 version 1809 and later.
+1. Windows 10 version 1607 and later.
+1. Windows 10 version 1709 and later.
+1. Windows 10 Enterprise, Education, and Pro for Workstations editions only.
+1. Windows 10 version 1809 and later.
 
 #### [SMB dialect version](#tab/smb-dialect)
 
