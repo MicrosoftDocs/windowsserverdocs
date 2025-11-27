@@ -82,6 +82,8 @@ items:
       items:
       - name: SMB overview
         href: file-server/file-server-smb-overview.md
+      - name: SMB features
+        href: file-server/smb-feature-descriptions.md
       - name: SMB security hardening
         href: file-server/smb-security-hardening.md
       - name: SMB signing
