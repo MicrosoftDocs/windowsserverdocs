@@ -23,6 +23,9 @@ This document provides an overview of how to use these tools on Windows to begin
 > [!NOTE]
 > Windows OpenSSH doesn't support the `AuthorizedKeysCommand` and `AuthorizedKeysCommandUser` directives. Meaning you can't dynamically fetch SSH keys from Active Directory using these directives as you might on Linux system. For more information about the supported configuration options, see [OpenSSH Server configuration for Windows Server and Windows](openssh-server-configuration.md).
 
+> [!IMPORTANT]
+> Key-based authentication in OpenSSH for Windows only works with local Windows accounts and Active Directory (domain) accounts. It doesn't work with Microsoft Entra ID accounts. When using Microsoft Entra ID accounts, you must rely on password-based authentication methods instead.
+
 ## Key pairs
 
 Key pairs refer to the public and private key files that are used by certain authentication protocols.
