@@ -1,17 +1,11 @@
 ---
-title: Persistent memory health management in Azure Local and Windows Server
-description: This article provides information about error handling and health management specific to persistent memory (PMem) devices in Azure Local and Windows Server.
+title: Persistent memory health management for Storage Spaces Direct in Windows Server
+description: This article provides information about error handling and health management specific to persistent memory (PMem) devices in Windows Server.
 author: robinharwood
 ms.author: roharwoo
+ms.reviewer: robhindman
 ms.topic: how-to
 ms.date: 02/10/2025
-appliesto: [
-			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
-			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
-			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
-			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
-		   ]
 ---
 
 # Persistent memory health management

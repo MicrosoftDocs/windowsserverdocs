@@ -66,15 +66,29 @@ As an alternative, you can clean up metadata by using ntdsutil.exe, a command-li
 
 4. At the `metadata cleanup:` prompt, type the following command, and then press **Enter**:
 
+   `connections`
+
+5. At the `server connections:` prompt, type the following command, and then press **Enter**:
+
+   `connect to server <ServerName>`
+
+   Where `<ServerName>` is the fully qualified domain name (FQDN) or NetBIOS name of the domain controller you want to use to perform the metadata cleanup. This domain controller must be a replication partner of the removed domain controller.
+
+6. At the `server connections:` prompt, type the following command, and then press **Enter**:
+
+   `quit`
+
+7. At the `metadata cleanup:` prompt, type the following command, and then press **Enter**:
+
    `remove selected server <ServerName>`
 
-5. In **Server Remove Configuration Dialog**, review the information and warning, and then click **Yes** to remove the server object and metadata.
+8. In **Server Remove Configuration Dialog**, review the information and warning, and then click **Yes** to remove the server object and metadata.
 
    At this point, Ntdsutil confirms that the domain controller was removed successfully. If you receive an error message that indicates that the object cannot be found, the domain controller might have been removed earlier.
 
-6. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press **Enter**.
+9. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press **Enter**.
 
-7. To confirm removal of the domain controller:
+10. To confirm removal of the domain controller:
 
    Open Active Directory Users and Computers. In the domain of the removed domain controller, click **Domain Controllers**. In the details pane, an object for the domain controller that you removed should not appear.
 
