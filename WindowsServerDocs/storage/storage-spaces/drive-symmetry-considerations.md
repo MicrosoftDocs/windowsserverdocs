@@ -1,26 +1,20 @@
 ---
-title: Drive symmetry considerations for Azure Local and Windows Server clusters
+title: Drive symmetry considerations for Storage Spaces Direct in Windows Server
 description: This article explains drive symmetry constraints in Storage Spaces Direct. It also provides examples of supported and unsupported configurations.
 author: robinharwood
 ms.author: roharwoo
+ms.reviewer: robhindman
 ms.topic: concept-article
 ms.date: 02/10/2025
-appliesto: [
-            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
-            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
-            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
-            "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
-            "✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
-           ]
 ---
 
-# Drive symmetry considerations for Azure Local and Windows Server clusters
+# Drive symmetry considerations for Storage Spaces Direct in Windows Server
 
-Azure Local and Windows Server clusters work best when every server has exactly the same drives.
+Storage Spaces Direct works best when every server has exactly the same drives.
 
 In reality, we recognize this isn't always practical. Today, you may buy spacious 3 TB hard drives; next year, it may become impossible to find drives that small. Therefore, some amount of mixing-and-matching is expected and supported. Keep in mind, however, that more symmetry is always better.
 
-Storage Spaces Direct is the underlying storage virtualization technology behind Azure Local and Windows Server. This article explains the constraints and provides examples of supported and unsupported configurations in Storage Spaces Direct.
+Storage Spaces Direct is a underlying storage virtualization technology used in Windows Server to create highly available and scalable software-defined storage. It uses local drives in each server to create a storage pool that can be shared across the cluster. This article explains the constraints and provides examples of supported and unsupported configurations in Storage Spaces Direct.
 
 ## Constraints
 

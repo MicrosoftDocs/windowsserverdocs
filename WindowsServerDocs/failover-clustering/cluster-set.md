@@ -5,12 +5,10 @@ author: robinharwood
 ms.topic: how-to
 ms.date: 09/08/2022
 ms.author: roharwoo
-ms.reviewer: stevenek
+ms.reviewer: robhindman
 ---
 
 # Deploy a cluster set
-
-> Applies to: Windows Server 2019
 
 This article provides information on how to deploy a cluster set for Windows Server Failover Clusters using PowerShell. A cluster set is a group of multiple failover clusters that are clustered together. By using a cluster set, you can increase the number of server nodes in a single Software Defined Data Center (SDDC) cloud by orders of magnitude.
 
