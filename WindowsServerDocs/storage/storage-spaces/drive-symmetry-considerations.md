@@ -17,7 +17,7 @@ In reality, we recognize this isn't always practical. Today, you may buy spaciou
 Storage Spaces Direct is an underlying storage virtualization technology used in Windows Server to create highly available and scalable software-defined storage. It uses local drives in each server to create a storage pool that can be shared across the cluster. This article explains the constraints and provides examples of supported and unsupported configurations in Storage Spaces Direct.
 
 > [!NOTE]
-> Looking for Azure Local? See the [Azure Local system requirements](/azure/azure-local/concepts/system-requirements-23h2?view=azloc-2511&tabs=azure-public) article for drive requirements specific to Azure Local.
+> Looking for Azure Local? See the [Azure Local system requirements](/azure/azure-local/concepts/system-requirements-23h2) article for drive requirements specific to Azure Local.
 
 ## Constraints
 
