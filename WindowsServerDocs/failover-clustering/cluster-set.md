@@ -65,7 +65,7 @@ The following provides a summary of each of the elements shown:
 
 ### Management cluster
 
-The management cluster hosts the highly-available management plane and the namespace referral scale-out file server (SOFS) for the cluster set. A management cluster is logically decoupled from individual member clusters that run VM workloads. This makes the cluster set management plane resilient to any localized cluster-wide failures, such as loss of power of a member cluster.
+The management cluster hosts the highly available management plane and the namespace referral scale-out file server (SOFS) for the cluster set. A management cluster is logically decoupled from individual member clusters that run VM workloads. This makes the cluster set management plane resilient to any localized cluster-wide failures, such as loss of power of a member cluster.
 
 ### Cluster set namespace referral SOFS
 
