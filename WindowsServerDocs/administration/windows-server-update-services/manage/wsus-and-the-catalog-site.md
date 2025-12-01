@@ -59,10 +59,10 @@ Use the following instructions to import updates into WSUS:
    C:\temp\ImportUpdateToWSUS.ps1 [-WsusServer] <String> [-PortNumber] <Int32> [-UseSsl] [-UpdateId] <String> [-UpdateIdFilePath] <string> [<CommonParameters>]
    ```
 
-    **Example 1**: While signed into a WSUS server that uses the default port, import a single update by using the following syntax:
+    **Example 1**: Import a single update into a WSUS server by specifying the server name and port number:
    
     ```powershell
-    .\ImportUpdateToWSUS.ps1 -UpdateId 12345678-90ab-cdef-1234-567890abcdef
+    .\ImportUpdateToWSUS.ps1 -WsusServer WSUSServer.contoso.com -PortNumber 8530 -UpdateId 12345678-90ab-cdef-1234-567890abcdef
     ```
 
    **Example 2**: Using a remote computer, import multiple updates into a WSUS server by using SSL with the following syntax:
