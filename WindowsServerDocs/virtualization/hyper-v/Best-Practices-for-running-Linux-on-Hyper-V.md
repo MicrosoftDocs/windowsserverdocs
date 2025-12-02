@@ -61,6 +61,9 @@ Linux virtual machines deployed using failover clustering should be configured w
 
 Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific network card with enhanced performance. If both legacy and Hyper-V-specific network adapters are attached to a virtual machine, the network names in the output of **ifconfig -a** might show random values such as **_tmp12000801310**. To avoid this issue, remove all legacy network adapters when using Hyper-V-specific network adapters in a Linux virtual machine.
 
+> [!IMPORTANT]
+> Hyper-V supports up to 64 virtual Ethernet adapters per guest. However, when more than 2 vCPUs are assigned to a Linux guest, the VM might not see the maximum of 64 virtual Ethernet adapters. For more information about Hyper-V scale limits, see [Hyper-V maximum scale limits in Windows Server](maximum-scale-limits.md).
+
 ## Use I/O scheduler noop/none for better disk I/O performance
 
 The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older 'blk' subsystem and one set is for the newer 'blk-mq' subsystem. In either case, with today’s solid state disks it's recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the 'blk' subsystem, this is the "noop" scheduler. For Linux kernels using the 'blk-mq' subsystem, this is the "none" scheduler.
