@@ -12,6 +12,10 @@ ms.author: roharwoo
 > The VM Conversion extension is currently in PREVIEW.
 > This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
+> [!IMPORTANT]
+> As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center pre-release extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
+> Microsoft is not obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
+
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
 In this article, you learn how to install and configure the extension, follow the synchronization and migration workflow, and find answers to common questions.
