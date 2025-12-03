@@ -40,7 +40,7 @@ If you install the CA Web Enrollment pages on a computer that's not the target C
 
 > [!NOTE]
 >
-> - If the CA Web Enrollment pages don't install successfully on a migrated CA, it's possible the setup status in the registry isn't configured properly. For more information, see [Certification Authority Web Enrollment Configuration Failed 0x80070057 (WIN32: 87)](/answers/questions/183368/the-error-was-received-in-the-certificate-authorit).
+> - If the CA Web Enrollment pages don't install successfully on a migrated CA, it's possible the setup status in the registry isn't configured properly. For more information, see [Certification Authority Web Enrollment Configuration Failed 0x80070057 (WIN32: 87)](https://learn.microsoft.com/en-us/archive/technet-wiki/12035.ad-certification-authority-web-enrollment-configuration-failed-0x80070057-win32-87).
 >
 > - The CA Web Enrollment role service pages require that you secure them with secure sockets layer (SSL) or transport layer security (TLS). If you don't, you see the following error message: **In order to complete the certificate enrollment, the website for the CA must be configured to use HTTPS authentication**. To learn about configuring HTTPS authentication, see [Active Directory Certificate Services (AD CS): Error: "In order to complete certificate enrollment, the website for the CA must be configured to use HTTPS authentication](https://social.technet.microsoft.com/wiki/contents/articles/12039.active-directory-certificate-services-ad-cs-error-in-order-to-complete-certificate-enrollment-the-web-site-for-the-ca-must-be-configured-to-use-https-authentication.aspx).
 
