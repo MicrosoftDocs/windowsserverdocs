@@ -291,12 +291,19 @@ items:
   - name: Edge networking
     items:
     - name: Network ATC
-      href: /azure/azure-local/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
       items:
+      - name: Network ATC overview
+        href: /azure/azure-local/concepts/network-atc-overview?context=/windows-server/context/windows-server-edge-networking&pivots=windows-server
       - name: Deploy host networking with Network ATC
         href: network-atc/network-atc.md
       - name: Manage Network ATC
         href: network-atc/manage-network-atc.md
+    - name: Network HUD (preview)
+      items:
+      - name: What is Network HUD?
+        href: network-hud-overview.md
+      - name: Install Network HUD
+        href: install-network-hud.md
     - name: Software Defined Networking (SDN)
       href: sdn/index.yml
       items:

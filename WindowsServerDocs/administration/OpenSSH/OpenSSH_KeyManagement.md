@@ -20,6 +20,8 @@ By comparison, Linux environments commonly use public/private key pairs to drive
 
 This document provides an overview of how to use these tools on Windows to begin using key-based authentication with Secure Shell (SSH). If you're not familiar with SSH key management, we strongly recommend that you review [NIST document IR 7966](http://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.7966.pdf), titled _Security of Interactive and Automated Access Management Using Secure Shell (SSH)_.
 
+Key-based authentication in OpenSSH for Windows works with local Windows accounts and Active Directory (domain) accounts. Microsoft Entra ID accounts don't support key-based authentication.
+
 > [!NOTE]
 > Windows OpenSSH doesn't support the `AuthorizedKeysCommand` and `AuthorizedKeysCommandUser` directives. Meaning you can't dynamically fetch SSH keys from Active Directory using these directives as you might on Linux system. For more information about the supported configuration options, see [OpenSSH Server configuration for Windows Server and Windows](openssh-server-configuration.md).
 

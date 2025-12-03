@@ -191,6 +191,9 @@
       href: kerberos/domain-joined-device-public-key-authentication.md
     - name: Kerberos Constrained delegation
       href: kerberos/kerberos-constrained-delegation-overview.md
+    - name: Detect and remediate RC4 usage
+      href: ./kerberos/detect-remediate-rc4-kerberos.md
+      displayName: RC4 Security Kerberos
     - name: Preventing Kerberos change password that uses RC4 secret keys
       href: kerberos/preventing-kerberos-change-password-that-uses-rc4-secret-keys.md
     - name: Configuring Kerberos for IP Addresses
