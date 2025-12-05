@@ -45,7 +45,7 @@ To install the Network File System role as a standalone server, perform the foll
 
 #### [GUI](#tab/gui)
 
-Here's how to install the DNS Server role using Server Manager from the Windows desktop.
+Here's how to install the Server for NFS role using Server Manager from the Windows desktop.
 
 1. From the Windows desktop, open the **Start** menu, then select the **Server Manager** tile.
 
@@ -66,22 +66,19 @@ Here's how to install the DNS Server role using Server Manager from the Windows 
 1. On the **Select features** page, you can leave the default selections, and then select on the
    **Next** button.
 
-1. On the **DNS Server** page, review the role description and things to note, select **Next** to
-   continue.
-
 1. On the **Confirm installation selections** page, review the selected roles and features, and then
    select on the **Install** button to begin the installation process.
 
-1. Once the installation is complete, select **Close**. The installation doesn't require a reboot.
+1. Once the installation is complete, select **Close**. Installation may or may not require a reboot.
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to install the DNS Server role using the
+Here's how to install the Server for NFS role using the
 [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) command.
 
 1. Run PowerShell on your computer in an elevated session.
 
-1. To install the DNS role, run the following command. The installation doesn't require a reboot.
+1. To install the NFS role, run the following command. The installation doesn't require a reboot.
 
    ```powershell
    Install-WindowsFeature -Name FS-NFS-Service -IncludeManagementTools
