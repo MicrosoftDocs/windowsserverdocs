@@ -51,6 +51,11 @@ Before using a CSV in a failover cluster, review the network, storage, and other
 
   In Windows Server 2012, a disk or storage space for a CSV must be a basic disk that is partitioned with NTFS. In Windows Server 2012 R2, a disk or storage space for a CSV must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2016 and later, and Azure Local, a disk or storage space for a CSV must be either a basic disk or GUID Partition Table (GPT) disk that is partitioned with NTFS or ReFS. A best practice is to also review the guidelines that are provided by your storage vendor.
 
+  For optimal performance and functionality, use the following file system guidelines when formatting disks before adding them to CSV:
+
+  - **SAN volumes**: Format with NTFS before adding to CSV. NTFS enables Direct I/O mode for SAN-attached storage, which provides better performance. CSVs formatted with ReFS on SANs operate in redirected I/O mode.
+  - **Storage Spaces Direct (S2D) volumes**: Format with ReFS before adding to CSV. ReFS provides data integrity features, block cloning, and optimizations specifically designed for Storage Spaces Direct workloads.
+
   - In Windows Server 2012, you can't use a disk as a CSV formatted as FAT, FAT32, or ReFS.
 
   - In Windows Server 2012 R2 and later, you can't use a disk as a CSV formatted as FAT or FAT32.

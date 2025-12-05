@@ -21,7 +21,7 @@ To manage CSVs, ensure the following prerequisites are met:
 
 - Your cluster configuration must have at least two nodes configured in a failover cluster. All nodes must be joined to the same Active Directory (AD) domain.
 
-- At least one shared disk (LUN) must be accessible by all cluster nodes and configured as a cluster disk using NTFS or ReFS. If you're using iSCSI or Fibre Channel for shared storage, ensure that multipath I/O (MPIO) is properly configured to provide redundancy and optimal performance.
+- At least one shared disk (LUN) must be accessible by all cluster nodes and configured as a cluster disk using NTFS or ReFS. Format SAN volumes with NTFS and Storage Spaces Direct (S2D) volumes with ReFS for optimal performance. If you're using iSCSI or Fibre Channel for shared storage, ensure that multipath I/O (MPIO) is properly configured to provide redundancy and optimal performance.
 
 - At least two network interfaces per node are recommended, one for cluster communication and one for client access. Ensure that the network settings allow for proper communication between nodes, including correct IP addresses and subnet configurations. Make sure firewalls are configured to permit necessary cluster traffic.
 
