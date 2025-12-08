@@ -61,7 +61,7 @@ In most cases, attached storage should contain multiple, separate disks configur
 
 Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-storage). The other disks contain required files for clustered roles.
 
-You should also consider these additional storage requirements:
+You should also consider these other storage requirements:
 
 - When you use native disk support included in failover clustering, you should only use basic disks, not dynamic disks.
 - We recommend you format disk partitions with New Technology File System (NTFS). If you use Cluster Shared Volumes (CSV), you must format the partitions for each CSV with NTFS or Resilient File System (ReFS) based on the following guidelines:

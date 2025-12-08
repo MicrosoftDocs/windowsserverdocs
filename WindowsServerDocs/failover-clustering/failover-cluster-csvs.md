@@ -52,7 +52,7 @@ Before using a CSV in a failover cluster, review the network, storage, and other
   For optimal performance and functionality, use the following file system guidelines when formatting disks before adding them to CSV:
 
   - **SAN volumes**: Format with NTFS before adding to CSV. NTFS enables Direct I/O mode for SAN-attached storage, which provides better performance. CSVs formatted with ReFS on SANs operate in redirected I/O mode.
-  - **Storage Spaces Direct (S2D) volumes**: Format with ReFS before adding to CSV. ReFS provides data integrity features, block cloning, and optimizations specifically designed for Storage Spaces Direct workloads.
+  - **Storage Spaces Direct (S2D) volumes**: Format with ReFS before adding to CSV. ReFS provides data integrity features, block cloning, and optimizations designed for Storage Spaces Direct workloads.
 
   - In Windows Server 2012, you can't use a disk as a CSV formatted as FAT, FAT32, or ReFS.
 
