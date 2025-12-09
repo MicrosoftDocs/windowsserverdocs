@@ -61,13 +61,16 @@ In most cases, attached storage should contain multiple, separate disks configur
 
 Some clusters have a disk that functions as the *disk witness*, which is a disk in cluster storage that holds the cluster configuration database. Failover clusters only have disk witnesses if the disk witness is supposed to be part of the specified quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-storage). The other disks contain required files for clustered roles.
 
-You should also consider these additional storage requirements:
+You should also consider these other storage requirements:
 
 - When you use native disk support included in failover clustering, you should only use basic disks, not dynamic disks.
-- We recommend you format disk partitions with New Technology File System (NTFS). If you use Cluster Shared Volumes (CSV), you must format the partitions for each CSV with NTFS.
+- We recommend you format disk partitions with New Technology File System (NTFS). If you use Cluster Shared Volumes (CSV), you must format the partitions for each CSV with NTFS or Resilient File System (ReFS) based on the following guidelines:
+
+  - **SAN volumes**: Format with NTFS before adding to CSV. NTFS enables Direct I/O mode for better performance.
+  - **Storage Spaces Direct (S2D) volumes**: Format with ReFS before adding to CSV. ReFS provides data integrity features and optimizations for Storage Spaces Direct.
 
   >[!NOTE]
-  >If you have a disk witness for your quorum configuration, you can format the disk with either NTFS or Resilient File System (ReFS).
+  >If you have a disk witness for your quorum configuration, you can format the disk with either NTFS or ReFS.
 
 - For the partition style of the disk, you can use either a Master Boot Record (MBR) or a GUID Partition Table (GPT).
 
