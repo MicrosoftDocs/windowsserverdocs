@@ -142,7 +142,7 @@ Contact application and storage array vendors for support details on Fiber Chann
 | Page file support | ✅ | ✅ |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
-2. CSV won't use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D), or SAN.
+2. ReFS-formatted CSVs don't use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D), or SAN. For SAN storage, format CSVs with NTFS to use Direct I/O.
 3. Available on Windows Server 2025 only.
 4. Storage Spaces only.
 
