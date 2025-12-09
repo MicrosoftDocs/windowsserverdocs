@@ -645,3 +645,48 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
 ---
+
+## [Version 1.8.5](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.5) (December 2025)
+
+## New Features & Enhancements
+
+### Secure Boot Configuration Reliability
+- Implemented logic to power off the VM automatically before applying Secure Boot settings.
+- Resolves failures that occurred when Secure Boot was configured on a running VM.
+
+### Early Change ID Validation
+- Added pre-validation for missing disk Change IDs.
+- Provides clear and early error messaging, avoiding unexpected failures later in the workflow.
+
+### Power State Alignment
+- Ensures the destination VM's power state consistently matches the source VM’s final power state after migration.
+    - If the source VM is off and migration succeeds → destination VM remains off.
+    - If the source VM is off and migration fails → source VM remains off.
+
+### Enhanced Synchronization Experience
+- Introduced asynchronous file-path validation in the Synchronization Confirmation dialog.
+- Reduces UI blocking and improves responsiveness during sync initiation.
+
+### Telemetry Improvements
+- Added additional telemetry signals to improve:
+    - Performance analysis
+    - Workflow reliability tracking
+    - Troubleshooting efficiency
+
+### Security Improvements
+- Implemented log sanitization in the PowerShell layer to mask sensitive data.
+- Ensures secure handling of credentials across logs and event traces.
+
+### VM List Component Update
+- Reduced the VM synchronization and migration limit from 50 to 10 to improve reliability.
+- Updated corresponding error and guidance messages to reflect the new threshold.
+
+---
+
+## Bug Fixes
+
+- Fixed an issue where powering on a VM resulted in the error: “Validation failed for one or more fields.”
+- Resolved an issue causing: “Failed to create destination VM: cpuCount must be a positive number.”
+- Addressed a problem where closing the browser mid-migration caused workflows to appear stuck at 80% when returning to Windows Admin Center. The Import VM step now automatically resumes and completes correctly.
+
+---
