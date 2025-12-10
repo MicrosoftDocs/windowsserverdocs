@@ -88,7 +88,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
   - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist)
   - [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
 
-- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
+- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *'C:\Program Files\WindowsAdminCenter\Service\VDDK'*.
 
     > [!NOTE]
     > Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
@@ -306,7 +306,7 @@ All conversion traffic must be proxied through the WAC gateway as part of the cu
 ### VM conversion logs
 
 1. Connect to the Windows Admin Center server.
-1. Find the file located at `C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt`.
+1. Find the file located at `C:\Program Files\WindowsAdminCenter\Service\VMConversion_log.txt`.
 
 ## Frequently asked questions
 
@@ -338,7 +338,7 @@ All conversion traffic must be proxied through the WAC gateway as part of the cu
 
 - Does the tool support virtual machines running on a virtual storage area network (vSAN)?
 
-    No, the tool doesn't support virtual machines running on vSAN?
+    No, the tool doesn't support virtual machines running on vSAN.
 
 - Is this tool available in Windows Admin Center in the Azure portal?
 
@@ -588,7 +588,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
 - **Bulk VM Migration with Queuing Support**
 
-    To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
+    To migrate multiple VMs, select up to **10 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
 
     >[!NOTE]  
     >Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
