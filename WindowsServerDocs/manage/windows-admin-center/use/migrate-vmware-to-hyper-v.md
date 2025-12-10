@@ -278,7 +278,7 @@ To improve performance in multi-site or distributed environments, deploy **site-
 - Reduced latency and network congestion.
 - Maintains centralized management while enabling **localized execution** of VM conversions.
 
-> **Note**  
+> [!Note]
 > This architecture is recommended for organizations with multiple datacenters, branch offices, or globally distributed VMware and Hyper-V infrastructures.
 
 ### Direct ESXi-to-Hyper-V Transfer
