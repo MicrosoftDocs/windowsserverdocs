@@ -15,16 +15,6 @@ CSV offers a clustered file system that operates on top of NTFS or ReFS. Typical
 
 - Clustered virtual hard disk (VHD/VHDX) files for a clustered Hyper-V virtual machine (VM).
 
-- Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V VM files and Microsoft SQL Server data. ReFS isn't supported for a Scale-Out File Server in Windows Server 2012 R2 and previous releases. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](sofs-overview.md).
-
-- Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI). CSVs don't support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
-
-- Windows Server 2019 or higher Microsoft Distributed Transaction Control (MSDTC).
-
-In later releases of Windows Server, CSV functionality is enhanced. For example, dependencies on Active Directory Domain Services (AD DS) were removed. Support was added for the functional improvements in `chkdsk` for interoperability with antivirus and backup applications, and for integration with general storage features such as BitLocker-encrypted volumes and Storage Spaces. For an overview of CSV functionality that was introduced in Windows Server 2012, see [What's New in Failover Clustering in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)).
-
-Windows Server 2012 R2 introduced additional functionality, such as:
-
 - Distributed CSV ownership with improved diagnosability
 
 - Increased resiliency through availability of the Server service
@@ -32,6 +22,14 @@ Windows Server 2012 R2 introduced additional functionality, such as:
 - Greater flexibility in the amount of physical memory that you can allocate to CSV cache
 
 - Enhanced interoperability that includes support for ReFS and deduplication.
+
+- Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V VM files and Microsoft SQL Server data. ReFS isn't supported for a Scale-Out File Server in Windows Server 2012 R2 and previous releases. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](sofs-overview.md).
+
+- Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI). CSVs don't support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
+
+- Windows Server 2019 or higher Microsoft Distributed Transaction Control (MSDTC).
+
+To learn more about CSV functionality introduced in previous versions, see [What's New in Failover Clustering in Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)).
 
 For information about using data deduplication on CSVs for Virtual Desktop Infrastructure (VDI) scenarios, see blog posts [Deploying Data Deduplication for VDI storage in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deploying-data-deduplication-for-vdi-storage-in-windows-server/ba-p/424777) and [Extending Data Deduplication to new workloads in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/extending-data-deduplication-to-new-workloads-in-windows-server/ba-p/424787).
 
@@ -50,6 +48,11 @@ Before using a CSV in a failover cluster, review the network, storage, and other
 - **File system format**
 
   In Windows Server 2012, a disk or storage space for a CSV must be a basic disk that is partitioned with NTFS. In Windows Server 2012 R2, a disk or storage space for a CSV must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2016 and later, and Azure Local, a disk or storage space for a CSV must be either a basic disk or GUID Partition Table (GPT) disk that is partitioned with NTFS or ReFS. A best practice is to also review the guidelines that are provided by your storage vendor.
+
+  For optimal performance and functionality, use the following file system guidelines when formatting disks before adding them to CSV:
+
+  - **SAN volumes**: Format with NTFS before adding to CSV. NTFS enables Direct I/O mode for SAN-attached storage, which provides better performance. CSVs formatted with ReFS on SANs operate in redirected I/O mode.
+  - **Storage Spaces Direct (S2D) volumes**: Format with ReFS before adding to CSV. ReFS provides data integrity features, block cloning, and optimizations designed for Storage Spaces Direct workloads.
 
   - In Windows Server 2012, you can't use a disk as a CSV formatted as FAT, FAT32, or ReFS.
 
