@@ -138,7 +138,7 @@ For Linux guests, Hyper-V drivers must be installed before initiating migration.
 
 > [!Note]
 > **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
-> This helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
+> Co-locating the gateway helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
 
 ---
 ## Install the VM Conversion (Preview) extension in Windows Admin Center
