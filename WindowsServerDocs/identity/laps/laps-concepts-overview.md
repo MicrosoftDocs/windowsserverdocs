@@ -234,7 +234,7 @@ This feature is only supported when backing passwords up to Active Directory. Mi
 > Windows LAPS rollback detection and mitigation can only work if the machine still has a valid computer account password and is capable of authenticating to Active Directory. That condition may or may not be true depending on the mismatched state caused by the rollback. If the machine is no longer capable of authenticating, other recovery steps will be required such as resetting the machine account password. The Windows LAPS account on the reverted machine may still be useful if the Windows LAPS password history feature has been enabled.
 
 > [!IMPORTANT]
-> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
+> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. This feature requires the `msLAPS-CurrentPasswordVersion` schema attribute, which is only available when using the Windows Server 2025 forest schema. This attribute is automatically included when you promote the first Windows Server 2025 domain controller in your forest; it's not installed by running the `Update-LapsADSchema` cmdlet.
 
 ## See also
 
