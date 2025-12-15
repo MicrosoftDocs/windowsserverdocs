@@ -136,6 +136,11 @@ RHEL-based operating systems:
 
 For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
+> [!Note]
+> **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
+> This helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
+
+---
 ## Install the VM Conversion (Preview) extension in Windows Admin Center
 
 Complete the following steps to install the **VM Conversion** extension.
@@ -248,9 +253,9 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ---
 
-> [!Note]
+[!Note]
 > **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
-> Co-locating the gateway helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
+> This helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
 
 ---
 
