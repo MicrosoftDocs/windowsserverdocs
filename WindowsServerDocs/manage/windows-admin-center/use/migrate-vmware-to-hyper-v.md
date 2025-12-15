@@ -248,43 +248,9 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ---
 
-## Optimize VM Conversion for Geographically Distributed Environments
-
-The current Windows Admin Center (WAC) VM conversion workflow uses a centralized data-flow architecture.  
-While this works well for single-site deployments, it can introduce performance limitations in geographically distributed environments.
-
-### Current Data Flow Architecture
-
-During VMware-to-Hyper-V conversion, data flows through the following path:
-
-1. **VMware VDDK** reads VM disk data from ESXi hosts via vCenter.
-2. The data stream is sent to the **centralized Windows Admin Center gateway**.
-3. WAC uses Microsoft APIs to write the data to the **destination Hyper-V host**.
-
-This design can lead to:
-- Increased WAN traffic  
-- Higher latency during sync  
-- Slower disk transfer performance when the WAC gateway is in a different region than source or destination hosts
-
-### Recommended Deployment Model: Distributed WAC Architecture
-
-To improve performance in multi-site or distributed environments, deploy **site-local WAC gateways** at each geographical location.
-
-**Benefits of a distributed model include:**
-
-- Conversion and sync traffic remains **within the same site**  
-  (for example: *Alabama → Alabama*), avoiding cross-region WAN routing.
-- Improved data throughput during VM sync and copy operations.
-- Reduced latency and network congestion.
-- Maintains centralized management while enabling **localized execution** of VM conversions.
-
 > [!Note]
-> This architecture is recommended for organizations with multiple datacenters, branch offices, or globally distributed VMware and Hyper-V infrastructures.
-
-### Direct ESXi-to-Hyper-V Transfer
-
-At this time, **direct ESXi → Hyper-V host-to-host transfer** without routing data through the Windows Admin Center gateway is **not supported**.  
-All conversion traffic must be proxied through the WAC gateway as part of the current design.
+> **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
+> Co-locating the gateway helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
 
 ---
 
