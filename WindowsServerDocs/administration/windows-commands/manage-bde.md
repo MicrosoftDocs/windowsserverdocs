@@ -4,7 +4,7 @@ description: Reference article for the manage-bde command, which turns on or tur
 ms.topic: reference
 ms.author: daknappe
 author: dknappettmsft
-ms.date: 10/16/2017
+ms.date: 12/15/2025
 ---
 
 # manage-bde
@@ -20,6 +20,9 @@ Turns on or turns off BitLocker, specifies unlock mechanisms, updates recovery m
 manage-bde [-status] [-on] [-off] [-pause] [-resume] [-lock] [-unlock] [-autounlock] [-protectors] [-tpm]
 [-setidentifier] [-forcerecovery] [-changepassword] [-changepin] [-changekey] [-keypackage] [-upgrade] [-wipefreespace] [{-?|/?}] [{-help|-h}]
 ```
+
+> [!NOTE]
+> Each subcommand has its own syntax, parameters, and examples. Select a subcommand link in the following table to view its detailed usage information.
 
 ### Parameters
 
