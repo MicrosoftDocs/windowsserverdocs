@@ -153,6 +153,9 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
+> [!IMPORTANT]
+> The `msLAPS-CurrentPasswordVersion` attribute is only available when using the Windows Server 2025 forest schema. This attribute is automatically included when you promote the first Windows Server 2025 domain controller in your forest; it's not installed by running the `Update-LapsADSchema` cmdlet. If your forest doesn't have at least one Windows Server 2025 domain controller, this attribute won't be available and the [OS image rollback detection and mitigation](laps-concepts-overview.md#windows-laps-os-image-rollback-detection-and-mitigation) feature won't function.
+
 ## Extended rights
 
 Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write various attributes that are described in the preceding sections.
