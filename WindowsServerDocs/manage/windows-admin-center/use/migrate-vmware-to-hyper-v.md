@@ -88,7 +88,7 @@ Before you begin, review the prerequisites and ensure your environment meets the
   - [Microsoft Visual C++ Redistributable](/cpp/windows/latest-supported-vc-redist)
   - [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
 
-- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *C:\Program Files\WindowsAdminCenter\Service\VDDK*.
+- Download [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/). Extract the contents, and copy to the directory: *'C:\Program Files\WindowsAdminCenter\Service\VDDK'*.
 
     > [!NOTE]
     > Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
@@ -136,6 +136,11 @@ RHEL-based operating systems:
 
 For Linux guests, Hyper-V drivers must be installed before initiating migration. The Hyper-V drivers are essential to ensure successful post-migration boot.
 
+> [!Note]
+> **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
+> Co-locating the gateway helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
+
+---
 ## Install the VM Conversion (Preview) extension in Windows Admin Center
 
 Complete the following steps to install the **VM Conversion** extension.
@@ -246,6 +251,14 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     > Migration requires the user to stay signed in with an active browser session. If the session is closed or times out, the
     > migration may pause or stop progressing.
 
+---
+
+[!Note]
+> **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
+> This helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
+
+---
+
 ## View logs
 
 ### Browser console logs
@@ -264,7 +277,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 ### VM conversion logs
 
 1. Connect to the Windows Admin Center server.
-1. Find the file located at `C:\ProgramFiles\WindowsAdminCenter\Service\VMConversion_log.txt`.
+1. Find the file located at `C:\Program Files\WindowsAdminCenter\Service\VMConversion_log.txt`.
 
 ## Frequently asked questions
 
@@ -296,7 +309,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 - Does the tool support virtual machines running on a virtual storage area network (vSAN)?
 
-    No, the tool doesn't support virtual machines running on vSAN?
+    No, the tool doesn't support virtual machines running on vSAN.
 
 - Is this tool available in Windows Admin Center in the Azure portal?
 
@@ -546,7 +559,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
 - **Bulk VM Migration with Queuing Support**
 
-    To migrate multiple VMs, select up to **50 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
+    To migrate multiple VMs, select up to **10 virtual machines per operation**. Queuing improves performance and stability during large-scale migrations.  
 
     >[!NOTE]  
     >Ensure you remain signed in to Windows Admin Center -> VM Conversion Extension -> vCenter, and refresh your session every 2 hours.  
@@ -643,5 +656,50 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 ## Bug fixes
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
+
+---
+
+## [Version 1.8.5](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.5) (December 2025)
+
+## New Features & Enhancements
+
+### Secure Boot Configuration Reliability
+- Implemented logic to power off the VM automatically before applying Secure Boot settings.
+- Resolves failures that occurred when Secure Boot was configured on a running VM.
+
+### Early Change ID Validation
+- Added pre-validation for missing disk Change IDs.
+- Provides clear and early error messaging, avoiding unexpected failures later in the workflow.
+
+### Power State Alignment
+- Ensures the destination VM's power state consistently matches the source VM’s final power state after migration.
+    - If the source VM is off and migration succeeds → destination VM remains off.
+    - If the source VM is off and migration fails → source VM remains off.
+
+### Enhanced Synchronization Experience
+- Introduced asynchronous file-path validation in the Synchronization Confirmation dialog.
+- Reduces UI blocking and improves responsiveness during sync initiation.
+
+### Telemetry Improvements
+- Added additional telemetry signals to improve:
+    - Performance analysis
+    - Workflow reliability tracking
+    - Troubleshooting efficiency
+
+### Security Improvements
+- Implemented log sanitization in the PowerShell layer to mask sensitive data.
+- Ensures secure handling of credentials across logs and event traces.
+
+### VM List Component Update
+- Reduced the VM synchronization and migration limit from 50 to 10 to improve reliability.
+- Updated corresponding error and guidance messages to reflect the new threshold.
+
+---
+
+## Bug Fixes
+
+- Fixed an issue where powering on a VM resulted in the error: “Validation failed for one or more fields.”
+- Resolved an issue causing: “Failed to create destination VM: cpuCount must be a positive number.”
+- Addressed a problem where closing the browser mid-migration caused workflows to appear stuck at 80% when returning to Windows Admin Center. The Import VM step now automatically resumes and completes correctly.
 
 ---
