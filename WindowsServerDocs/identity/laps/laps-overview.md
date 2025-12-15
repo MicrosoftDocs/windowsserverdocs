@@ -24,6 +24,9 @@ Windows LAPS is available on the following OS platforms:
   - [Windows 11 21H2 - April 11 2023 Update](https://support.microsoft.com/help/5025224) and later.
   - [Windows 10 - April 11 2023 Update](https://support.microsoft.com/help/5025221) and later.
 
+> [!NOTE]
+> The [Automatic Account Management](/windows/client-management/mdm/laps-csp#automaticaccountmanagementenabled) CSP settings require Windows 11 24H2 or later. These settings don't function properly on earlier versions of Windows.
+
 ### Windows Server
 
 - Windows Server 2025 and later.
