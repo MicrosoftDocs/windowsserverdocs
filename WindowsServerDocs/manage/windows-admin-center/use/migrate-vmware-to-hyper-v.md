@@ -13,8 +13,8 @@ ms.author: roharwoo
 > This document provides information about a prerelease product that might change substantially before its release. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 > [!IMPORTANT]
-> As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center pre-release extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
-> Microsoft is not obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
+> As a preview extension, the VM Conversion extension is governed by the [Windows Admin Center prerelease extension software license terms](/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula).
+> Microsoft isn't obligated under this agreement to provide any support services for the software. Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
 You can use Windows Admin Center to migrate VMware virtual machines from vCenter to Hyper-V with the **VM Conversion extension**. This lightweight tool enables online replication with minimal downtime for both Windows and Linux virtual machines. The conversion tool is easy and fast to set up, at no cost to customers.
 
@@ -253,12 +253,6 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
 
 ---
 
-[!Note]
-> **Best practice:** For optimal performance and reliability in geographically distributed environments, deploy the Windows Admin Center gateway in the same site as the ESXi and Hyper-V hosts involved in VM conversion.  
-> This helps minimize WAN traffic, reduce latency, and ensure a smoother VM migration experience.
-
----
-
 ## View logs
 
 ### Browser console logs
@@ -415,7 +409,7 @@ Complete the following steps to migrate VMware virtual machines to Hyper-V in Wi
     Write-Output "Stopping VM '$VMName'..."
     Stop-VM -Name $VMName -Force
     
-    # Retrieve the VM's system settings data using its name
+    # Retrieve the VMs system settings data using its name
     $vmSettingsData = Get-CimInstance -Namespace "root\virtualization\v2" -Query "select * from Msvm_VirtualSystemSettingData where ElementName = '$VMName'" -ErrorAction Stop
     
     # Ensure BIOS GUID has { } format
@@ -528,27 +522,117 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 - Ensure there are no **failed virtual machines** present on the same destination server.
 
-### Issue 4: Static IP migration failure for Windows VMs
+### Issue 4: Static IP Configuration Is Not Preserved Without Guest Credentials
+
+**Scenario:**
+
+The VM Conversion tool can automatically migrate static IP settings for Windows virtual machines when guest operating system credentials are provided.
+
+If the user does not provide guest credentials, the tool cannot migrate static IP settings automatically.
 
 **Symptom:**
 
-Static IP configuration doesn't migrate successfully for a Windows VM.
+After migration, the virtual machine:
+- Receives a DHCP-assigned IP address, or
+- Does not retain its original static IP configuration
 
-**Resolution:**
+**Cause:**
 
-1. Download the [**static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download), which contains scripts for both Windows and Linux VMs.
+Automatic static IP migration requires access to the guest operating system to read and reapply network settings.
 
-1. Extract the package to a specified path inside the guest VM **after synchronization and before migration**.
+When guest credentials are not provided due to security or compliance requirements, the VM Conversion tool cannot capture static IP configuration during migration.
 
-1. Open a PowerShell window as Administrator.
+**Resolution: Manual Static IP Migration (Guest Credentials Not Required)**
 
-1. Navigate to the extracted path.
+Use the following workflow to preserve static IP configuration without providing guest credentials.
 
-1. Run the following command:
+> [!IMPORTANT]  
+> Complete these steps **after synchronization and before starting migration**.  
+> Running the script after migration does not preserve the static IP configuration.
+
+1. Download the [**Static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download).  
+   The package includes scripts for **Windows and Linux** virtual machines.
+
+2. After synchronization completes, copy the package to a location inside the **source guest virtual machine** and extract the contents.
+
+3. Open **PowerShell as Administrator** inside the guest virtual machine.
+
+4. Navigate to the extracted folder.
+
+5. Run the following command to capture the static IP configuration:
 
    ```powershell
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
+
+### Issue 5: Synchronization Fails Due to an Invalid Change ID
+
+**Error Message:**
+
+> The generated Change ID is invalid. Please verify the Change ID and try again.
+
+**When This Issue Occurs:**
+
+This issue occurs during **synchronization** when the VM Conversion extension cannot retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
+
+The VM Conversion extension relies on **VMware Changed Block Tracking (CBT)** to identify incremental disk changes. If the Change ID is missing, stale, or invalid, synchronization cannot continue.
+
+**Possible Causes:**
+
+This issue can occur for one or more of the following reasons:
+
+- Changed Block Tracking (CBT) is disabled or not fully enabled on the source virtual machine.
+- Snapshot-related issues, including:
+  - Orphaned or stale snapshots
+  - Snapshot chain corruption
+- Unsupported disk configurations, such as:
+  - Independent disks (persistent or non-persistent)
+  - Physical mode RDMs
+- Recent virtual machine operations, including:
+  - Storage vMotion
+  - Virtual disk resize
+  - Virtual machine restore from backup
+- CBT metadata corruption caused by host crashes or unexpected power events.
+
+**What to Check:**
+
+Before retrying synchronization, verify the following:
+
+1. Ensure CBT is enabled on the source virtual machine:
+   - `ctkEnabled` is set to `true` at the virtual machine level.
+   - `ctkEnabled` is set to `true` for each virtual disk.
+2. Verify that no active snapshots exist:
+   - Remove or consolidate snapshots if required.
+3. Validate disk configuration:
+   - Ensure disks are not configured as **Independent**.
+   - Verify RDMs use **Virtual Compatibility Mode**, if applicable.
+4. Review recent virtual machine operations:
+   - Check for recent storage migrations, disk changes, or restore operations.
+
+**How to Fix the Issue:**
+
+If the issue persists after completing the checks above, regenerate CBT metadata by performing the following steps:
+
+1. Disable Changed Block Tracking (CBT) on the source virtual machine.
+2. Power off the virtual machine.
+3. Re-enable Changed Block Tracking (CBT).
+4. Power on the virtual machine.
+5. Allow the system to generate a new Change ID.
+6. Retry the synchronization operation.
+
+>[!Note]  
+>Power cycling the virtual machine is required to regenerate valid CBT metadata.
+
+**Learn More**
+
+For more information about CBT limitations and troubleshooting guidance, see the following Broadcom documentation:
+
+- [Troubleshooting Changed Block Tracking (CBT) – Broadcom Knowledge Base](https://knowledge.broadcom.com/external/article/320557/changed-block-tracking-cbt-on-virtual-ma.html)
+- [Troubleshooting Changed Block Tracking (CBT) – VDDK Programming Guide](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/virtual-disk-development-kit-programming-guide/error-codes-and-open-source/troubleshooting-changed-block-tracking-cbt.html)
+
+**Best Practice**
+
+Validate CBT health on the source virtual machine before starting synchronization, especially after snapshot operations or virtual machine configuration changes.
 
 ---
 
@@ -631,7 +715,7 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
   A new banner now appears, prompting users to stay signed in and refresh their session every 2 hours during migration to ensure continuity.
 
 - **Quick Access to Documentation:**  
-  The **“Open in New Window”** icon on the landing page now links directly to the official guide —  
+  The **“Open in New Window”** icon on the landing page now links directly to the official guide—
   [Migrate VMware Virtual Machines to Hyper-V in Windows Admin Center (Preview)](../use/migrate-vmware-to-hyper-v.md).
 
 ## Other Improvements
@@ -668,11 +752,11 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 - Resolves failures that occurred when Secure Boot was configured on a running VM.
 
 ### Early Change ID Validation
-- Added pre-validation for missing disk Change IDs.
+- Added prevalidation for missing disk Change IDs.
 - Provides clear and early error messaging, avoiding unexpected failures later in the workflow.
 
 ### Power State Alignment
-- Ensures the destination VM's power state consistently matches the source VM’s final power state after migration.
+- Ensures the destination VMs power state consistently matches the source VM’s final power state after migration.
     - If the source VM is off and migration succeeds → destination VM remains off.
     - If the source VM is off and migration fails → source VM remains off.
 
@@ -698,8 +782,8 @@ Static IP configuration doesn't migrate successfully for a Windows VM.
 
 ## Bug Fixes
 
-- Fixed an issue where powering on a VM resulted in the error: “Validation failed for one or more fields.”
-- Resolved an issue causing: “Failed to create destination VM: cpuCount must be a positive number.”
+- Fixed an issue where powering on a VM resulted in the error: 'Validation failed for one or more fields.'
+- Resolved an issue causing: 'Failed to create destination VM: cpuCount must be a positive number.'
 - Addressed a problem where closing the browser mid-migration caused workflows to appear stuck at 80% when returning to Windows Admin Center. The Import VM step now automatically resumes and completes correctly.
 
 ---
