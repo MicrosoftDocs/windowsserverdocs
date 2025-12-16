@@ -528,27 +528,107 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 - Ensure there are no **failed virtual machines** present on the same destination server.
 
-### Issue 4: Static IP migration failure for Windows VMs
+### Issue 4: Static IP configuration is not preserved when guest credentials are not provided
 
-**Symptom:**
+**Scenario**
 
-Static IP configuration doesn't migrate successfully for a Windows VM.
+The VM Conversion tool can automatically migrate static IP configuration for Windows virtual machines when guest OS credentials are provided.  
+If the user chooses **not to share the guest username and password** with the VM Conversion tool, static IP settings are **not migrated automatically**.
 
-**Resolution:**
+**Symptom**
 
-1. Download the [**static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download), which contains scripts for both Windows and Linux VMs.
+After migration, the virtual machine:
+- Receives a DHCP-assigned IP address, or
+- Loses its original static IP configuration
 
-1. Extract the package to a specified path inside the guest VM **after synchronization and before migration**.
+**Cause**
 
-1. Open a PowerShell window as Administrator.
+Automatic static IP migration requires access to the guest operating system to read and apply network configuration.  
+When guest credentials are not supplied due to security or compliance restrictions, the tool cannot capture static IP details during migration.
 
-1. Navigate to the extracted path.
+---
 
-1. Run the following command:
+### Resolution: Manual static IP migration (no guest credentials required)
+
+To preserve static IP configuration without providing guest credentials, use the manual migration workflow below.
+
+> [!IMPORTANT]  
+> These steps **must be completed after synchronization and before starting the migration**.  
+> Running the script after migration will not preserve the static IP configuration.
+
+1. Download the [**Static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download).  
+   The package includes scripts for both **Windows and Linux** virtual machines.
+
+2. After synchronization completes, copy and extract the package to a location **inside the source guest VM**.
+
+3. Open a **PowerShell session as Administrator** inside the guest VM.
+
+4. Navigate to the extracted folder.
+
+5. Run the following command to capture the static IP configuration:
 
    ```powershell
    .\Prepare-MigratedVM.ps1 -StaticIPMigration -Verbose
    ```
+
+## Issue 5: Synchronization Failure – Invalid Change ID
+
+### Error Message
+> The generated Change ID is invalid. Please verify the Change ID and try again.
+
+### Description
+This error occurs when the synchronization workflow is unable to retrieve or validate the **Change ID** for one or more virtual disks. Change IDs are required for **VMware Changed Block Tracking (CBT)** to identify incremental disk changes during synchronization. If the Change ID is missing, stale, or invalid, the synchronization operation cannot proceed.
+
+### Common Causes
+The most common reasons for an invalid or missing Change ID include:
+
+- Changed Block Tracking (CBT) is disabled or misconfigured on the source virtual machine.
+- Snapshot-related inconsistencies, such as:
+  - Orphaned or stale snapshots
+  - Snapshot chain corruption
+- Unsupported disk configurations, including:
+  - Independent disks (persistent or non-persistent)
+  - Physical mode RDMs
+- Recent virtual machine operations, such as:
+  - Storage vMotion
+  - Virtual disk resize
+  - Virtual machine restore from backup
+- CBT metadata corruption caused by host crashes or unexpected power events.
+
+### Verification Steps
+1. Confirm that CBT is enabled on the source virtual machine:
+   - `ctkEnabled` is set to `true` at the virtual machine level.
+   - `ctkEnabled` is set to `true` for each virtual disk.
+2. Check for existing snapshots:
+   - Ensure there are no active snapshots.
+   - Consolidate snapshots if required.
+3. Validate disk eligibility:
+   - Ensure disks are not configured as **Independent**.
+   - Verify RDMs are configured in **Virtual Compatibility Mode**, if applicable.
+4. Review recent virtual machine operations:
+   - Identify any recent storage migrations, disk changes, or restore operations.
+
+### Resolution Steps
+If the issue persists after verification, perform the following steps:
+
+1. Disable Changed Block Tracking (CBT) on the virtual machine.
+2. Power off the virtual machine.
+3. Re-enable Changed Block Tracking (CBT).
+4. Power on the virtual machine.
+5. Allow a new Change ID to be generated.
+6. Retry the synchronization operation.
+
+> **Note**  
+> Power cycling the virtual machine is required to regenerate valid CBT metadata.
+
+### Additional Guidance
+For detailed information on CBT limitations, supported disk types, and advanced troubleshooting steps, see the following documentation:
+
+- [Troubleshooting Changed Block Tracking (CBT) – Broadcom KB](https://knowledge.broadcom.com/external/article/320557/changed-block-tracking-cbt-on-virtual-ma.html)
+- [Troubleshooting Changed Block Tracking (CBT) – VDDK Programming Guide](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/virtual-disk-development-kit-programming-guide/error-codes-and-open-source/troubleshooting-changed-block-tracking-cbt.html)
+
+### Recommendation
+As a best practice, validate CBT health before initiating synchronization, especially after virtual machine configuration changes or snapshot operations.
 
 ---
 
