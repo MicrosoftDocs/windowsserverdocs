@@ -19,6 +19,11 @@ Windows Admin Center Virtualization Mode is a purpose-built management experienc
 
 Unlike administration mode, which focuses on general system management, Virtualization Mode focuses on fabric management. It supports parallel operations and contextual views for compute, storage, and network resources. This mode is optimized for large-scale, cluster-based environments and integrates lifecycle management, global search, and role-based access control.
 
+Watch the following video to get an overview of Windows Admin Center Virtualization Mode.
+</br></br>
+
+> [!VIDEO 872cf385-a09d-439e-8afc-39f78348fd57]
+
 Virtualization Mode offers the following key capabilities:
 
 - Search across navigation objects with contextual filtering.
