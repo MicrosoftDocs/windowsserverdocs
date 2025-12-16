@@ -522,25 +522,25 @@ Cancellation isn't supported directly in the extension. As a workaround:
 
 - Ensure there are no **failed virtual machines** present on the same destination server.
 
-### Issue 4: Static IP Configuration Isn't Preserved Without Guest Credentials
+### Issue 4: Static IP Configuration Is Not Preserved Without Guest Credentials
 
 **Scenario:**
 
 The VM Conversion tool can automatically migrate static IP settings for Windows virtual machines when guest operating system credentials are provided.
 
-If the user doesn't provide guest credentials, the tool can't migrate static IP settings automatically.
+If the user does not provide guest credentials, the tool cannot migrate static IP settings automatically.
 
 **Symptom:**
 
 After migration, the virtual machine:
 - Receives a DHCP-assigned IP address, or
-- Doesn't retain its original static IP configuration
+- Does not retain its original static IP configuration
 
 **Cause:**
 
 Automatic static IP migration requires access to the guest operating system to read and reapply network settings.
 
-When guest credentials aren't provided due to security or compliance requirements, the VM Conversion tool can't capture static IP configuration during migration.
+When guest credentials are not provided due to security or compliance requirements, the VM Conversion tool cannot capture static IP configuration during migration.
 
 **Resolution: Manual Static IP Migration (Guest Credentials Not Required)**
 
@@ -548,7 +548,7 @@ Use the following workflow to preserve static IP configuration without providing
 
 > [!IMPORTANT]  
 > Complete these steps **after synchronization and before starting migration**.  
-> Running the script after migration doesn't preserve the static IP configuration.
+> Running the script after migration does not preserve the static IP configuration.
 
 1. Download the [**Static IP migration package (.zip)**](https://aka.ms/hci-migrate-static-ip-download).  
    The package includes scripts for **Windows and Linux** virtual machines.
@@ -573,9 +573,9 @@ Use the following workflow to preserve static IP configuration without providing
 
 **When This Issue Occurs:**
 
-This issue occurs during **synchronization** when the VM Conversion extension can't retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
+This issue occurs during **synchronization** when the VM Conversion extension cannot retrieve or validate the **Change ID** for one or more virtual disks on the source VMware virtual machine.
 
-The VM Conversion extension relies on **VMware Changed Block Tracking (CBT)** to identify incremental disk changes. If the Change ID is missing, stale, or invalid, synchronization can't continue.
+The VM Conversion extension relies on **VMware Changed Block Tracking (CBT)** to identify incremental disk changes. If the Change ID is missing, stale, or invalid, synchronization cannot continue.
 
 **Possible Causes:**
 
@@ -604,7 +604,7 @@ Before retrying synchronization, verify the following:
 2. Verify that no active snapshots exist:
    - Remove or consolidate snapshots if required.
 3. Validate disk configuration:
-   - Ensure disks aren't configured as **Independent**.
+   - Ensure disks are not configured as **Independent**.
    - Verify RDMs use **Virtual Compatibility Mode**, if applicable.
 4. Review recent virtual machine operations:
    - Check for recent storage migrations, disk changes, or restore operations.
