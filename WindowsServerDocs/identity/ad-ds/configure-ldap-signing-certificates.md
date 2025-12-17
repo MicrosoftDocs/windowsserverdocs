@@ -144,7 +144,7 @@ Use the Certreq.exe utility to create a certificate request that meets LDAPS req
    - For Microsoft Enterprise CA: Use the CA's web enrollment interface or submit through the Certification Authority console
    - For third-party CA: Follow your provider's certificate request submission process
 
-### Install the certificate
+#### Install the certificate
 
 After receiving the issued certificate from your certification authority, install it on the domain controller.
 
