@@ -534,7 +534,11 @@
                 - name: LDAP client performance counters
                   href: ad-ds/ldap-client-performance-counters.md
             - name: LDAP signing
-              href: ad-ds/ldap-signing.md
+              items:
+                - name: LDAP signing overview
+                  href: ad-ds/ldap-signing.md
+                - name: Configure certificates for LDAP
+                  href: ad-ds/configure-ldap-signing-certificates.md
         - name: AD DS Troubleshooting
           href: ad-ds/manage/AD-DS-Troubleshooting.md
           items:
