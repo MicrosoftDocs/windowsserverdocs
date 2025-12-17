@@ -539,6 +539,8 @@
                   href: ad-ds/ldap-signing.md
                 - name: Configure certificates for LDAP
                   href: ad-ds/configure-ldap-signing-certificates.md
+                - name: Manage LDAP signing using Group Policy
+                  href: manage-ldap-signing-group-policy.md
         - name: AD DS Troubleshooting
           href: ad-ds/manage/AD-DS-Troubleshooting.md
           items:

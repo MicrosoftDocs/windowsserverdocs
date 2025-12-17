@@ -28,48 +28,40 @@ Before configuring LDAPS certificates, ensure you have:
 
   - Third-party certificate provider (such as DigiCert, Let's Encrypt, or Verisign)
 
-- The Active Directory fully qualified domain name (FQDN) of each domain controller requiring LDAPS
-
-- The root CA certificate installed in the Trusted Root Certification Authorities store on all domain controllers and client computers that will establish LDAPS connections
-
 - Firewall rules configured to allow inbound connections on TCP port 636 for LDAPS (or TCP port 3269 for global catalog LDAPS traffic)
 
-### Understand certificate requirements
-
-LDAPS certificates must meet specific technical requirements to function correctly with Active Directory Domain Services.
-
-#### Certificate store location
-
-The certificate must be installed in one of the following locations:
-
-- **Local Computer's Personal certificate store** (programmatically known as the MY store): Supported on all Windows Server versions
-- **NT Directory Services (NTDS) certificate store** (Windows Server 2008 and later): Recommended for modern deployments
-
-Active Directory preferentially checks the NTDS store first, making it the recommended option for Windows Server 2008 and later. Using the NTDS store provides several advantages:
-
-- **Preferential selection**: Active Directory checks the NTDS store first, making it easier to control which certificate is used when multiple valid certificates exist in the Local Computer's store
-- **Automatic detection**: Active Directory detects new certificates dropped into the NTDS store and updates SSL certificates without requiring a domain controller restart
-- **Manual refresh capability**: You can trigger certificate updates using the renewServerCertificate rootDSE operation without restarting the domain controller
-
-To use the NTDS certificate store, install certificates into the Personal certificate store for the NTDS service instead of the Local Computer's Personal store.
-
-#### Required certificate properties
-
-Regardless of which certificate store you use, certificates must meet these requirements:
+LDAPS certificates must meet the following requirements:
 
 - **Enhanced Key Usage extension**: Must include Server Authentication (1.3.6.1.5.5.7.3.1) object identifier
+
 - **Subject or Subject Alternative Name**: Must contain the domain controller's Active Directory FQDN (for example, dc01.contoso.com) in either the Common Name (CN) field or as a DNS entry in the Subject Alternative Name extension
+
 - **Private key**: Must be present in the Local Computer's store, correctly associated with the certificate, and must not have strong private key protection enabled
+
 - **Cryptographic provider**: Must use the Schannel cryptographic service provider (CSP) to generate the key
+
 - **Trust chain**: Must be issued by a CA that both the domain controller and LDAPS clients trust
 
 Domain controllers and clients establish trust by configuring them to trust the root CA to which the issuing CA chains.
 
 ## Create the certificate request
 
+You can create and install LDAPS certificates using either a Microsoft Enterprise CA or a third-party CA. The certificate must be installed in one of the following locations:
+
+- **Local Computer's Personal certificate store**
+- **NT Directory Services (NTDS) certificate store**
+
+Active Directory preferentially checks the NTDS store first. Using the NTDS store provides several advantages:
+
+- **Preferential selection**: Active Directory checks the NTDS store first, making it easier to control which certificate is used when multiple valid certificates exist in the Local Computer's store
+- **Automatic detection**: Active Directory detects new certificates dropped into the NTDS store and updates SSL certificates without requiring a domain controller restart
+- **Manual refresh capability**: You can trigger certificate updates using the renewServerCertificate rootDSE operation without restarting the domain controller
+
+To use the NTDS certificate store, import certificates into the Personal certificate store for the NTDS service instead of the Local Computer's Personal store.
+
 ### [Microsoft Enterprise CA](#tab/microsoft-enterprise-ca)
 
-If your domain controller has access to a Microsoft Enterprise Certificate Authority, you can request a certificate using the built-in Domain Controller certificate template. To learn more about certificate templates, see [Manage certificate templates](../ad-cs/manage-certificate-templates.md).
+If your domain controller has access to a Microsoft Enterprise Certificate Authority, you can request a certificate using the built-in Domain Controller certificate template. To learn more about certificate templates, see [Manage certificate templates](../ad-cs/manage-certificate-templates.md). To request and install the certificate, follow these steps:
 
 1. On the domain controller, press **Windows key + R**, type **certlm.msc**, and press **Enter**.
 
@@ -193,4 +185,3 @@ After installing the certificate and restarting the domain controller, verify th
 5. Select **OK**.
 
 When the connection succeeds, RootDSE information appears in the right pane, confirming LDAPS is functioning. If the connection fails, verify the certificate properties match the requirements and check that the domain controller was restarted after certificate installation.
-
