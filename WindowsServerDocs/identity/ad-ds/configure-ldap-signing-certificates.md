@@ -67,7 +67,7 @@ Domain controllers and clients establish trust by configuring them to trust the 
 
 ## Create the certificate request
 
-### [Microsoft Enterprise CA](#tab/microsoft_enterprise_ca)
+### [Microsoft Enterprise CA](#tab/microsoft-enterprise-ca)
 
 If your domain controller has access to a Microsoft Enterprise Certificate Authority, you can request a certificate using the built-in Domain Controller certificate template. To learn more about certificate templates, see [Manage certificate templates](../ad-cs/manage-certificate-templates.md).
 
@@ -91,7 +91,7 @@ The certificate is automatically installed in the Local Computer's Personal cert
 
 After enrollment completes, restart the domain controller to enable LDAPS.
 
-### [Third-party CA](#tab/third_party_ca)
+### [Third-party CA](#tab/third-party-ca)
 
 Use the Certreq.exe utility to create a certificate request that meets LDAPS requirements.
 
