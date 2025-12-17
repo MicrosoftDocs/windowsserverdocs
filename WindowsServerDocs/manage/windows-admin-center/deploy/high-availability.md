@@ -13,6 +13,9 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 
 [Learn about other Windows Admin Center deployment options.](../plan/installation-options.md)
 
+> [!IMPORTANT]
+> Direct upgrades from high availability deployments in Windows Admin Center versions 2311 and older to versions 2410 and newer are not supported due to architectural changes. To upgrade, you must uninstall and reinstall Windows Admin Center. 
+
 ## Prerequisites
 
 - High-availability deployment script from [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the script to your local machine and then copy the script as needed based on the guidance in this article.
