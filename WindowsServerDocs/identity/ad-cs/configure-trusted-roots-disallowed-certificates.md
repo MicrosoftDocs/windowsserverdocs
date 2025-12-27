@@ -428,7 +428,7 @@ domain. These settings must be reconfigured, if you want to change them.
 
 - Enable or disable the Windows Auto-Update of the trusted CTL:
 
-  - **Key**: `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\DisableRootAutoUpdate`
+  - **Key**: `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot`
   - **Type**: `REG_DWORD`
   - **Name**: `DisableRootAutoUpdate`
   - **Data**: `0` to enabled or `1` to disable.
@@ -444,7 +444,7 @@ domain. These settings must be reconfigured, if you want to change them.
 
 - Set the shared CTL file location (HTTP or the FILE path):
 
-  - **Key**: `HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\RootDirUrl`
+  - **Key**: `HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
   - **Type**: `REG_SZ`
   - **Name**: `RootDirUrl`
   - **Data**: Enter a valid HTTP or file URI.
