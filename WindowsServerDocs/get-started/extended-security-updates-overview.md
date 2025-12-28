@@ -39,7 +39,7 @@ The following table lists the Extended Security Update duration for each version
 | Product version | Hosted | ESU duration | ESU end date |
 |--|--|--|--|
 | Windows Server 2012<br />Windows Server 2012 R2 | Azure* | Three years | October 13, 2026 |
-| Windows Server 2012<br />Windows Server 2012 R2 | Not in Azure | Three years | October 13, 2026 |
+| Windows Server 2012<br />Windows Server 2012 R2 | Not in Azure | Three years | October 10, 2023 |
 
 \* Includes the [Azure Stack portfolio of products](https://azure.microsoft.com/overview/azure-stack/) that extend Azure services and capabilities to your environment of choice.
 
