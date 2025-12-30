@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 Run the following command to join the existing HGS cluster.
 
 

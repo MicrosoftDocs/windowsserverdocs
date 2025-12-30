@@ -1,3 +1,9 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
+
 ## Standard configuration considerations
 
 Always On VPN has many standard configuration options. However, it is essential that you include the following information when creating your VPN configuration:
