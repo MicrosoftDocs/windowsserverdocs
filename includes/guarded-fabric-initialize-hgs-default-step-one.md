@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 Clients can easily contact any HGS node by using the failover clustering distributed network name (DNN). 
 You'll need to choose a DNN. 
 This name will be registered in the HGS DNS service. 
