@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 The Host Guardian Service should be installed in a separate Active Directory forest.
 Ensure that the HGS machine is **not** joined to a domain before you start and sign in as the local machine Administrtor.
 
