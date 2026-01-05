@@ -611,17 +611,48 @@ Before retrying synchronization, verify the following:
 
 **How to Fix the Issue:**
 
-If the issue persists after completing the checks above, regenerate CBT metadata by performing the following steps:
+If synchronization fails due to an invalid Change ID, regenerate CBT metadata on the source VMware virtual machine using one of the following methods.
 
-1. Disable Changed Block Tracking (CBT) on the source virtual machine.
+### Option 1: Regenerate CBT using PowerCLI
+
+You can also reset CBT programmatically using **VMware PowerCLI**, which is useful for automation scenarios or environments where GUI access is limited.
+
+#### Prerequisites
+
+- VMware PowerCLI installed
+- Network access to the vCenter Server
+- Sufficient permissions to reconfigure virtual machines
+
+#### PowerCLI script
+
+```powershell
+Connect-VIServer -Server "<vCenterServer>" -User "<Username>" -Password "<Password>" -Force
+
+$vm = Get-VM "<VMName>" | Get-View
+$vmConfigSpec = New-Object VMware.Vim.VirtualMachineConfigSpec
+
+# Disable CBT
+$vmConfigSpec.changeTrackingEnabled = $false
+$vm.ReconfigVM($vmConfigSpec)
+
+# Re-enable CBT
+$vmConfigSpec.changeTrackingEnabled = $true
+$vm.ReconfigVM($vmConfigSpec)
+
+Disconnect-VIServer -Server "<vCenterServer>" -Force -Confirm:$false
+```
+
+### Option 2: Regenerate CBT using the vSphere Client (GUI)
+
+1. Disable **Changed Block Tracking (CBT)** on the source virtual machine.
 2. Power off the virtual machine.
-3. Re-enable Changed Block Tracking (CBT).
+3. Re-enable **Changed Block Tracking (CBT)**.
 4. Power on the virtual machine.
 5. Allow the system to generate a new Change ID.
 6. Retry the synchronization operation.
 
->[!Note]  
->Power cycling the virtual machine is required to regenerate valid CBT metadata.
+> [!NOTE]  
+> Power cycling the virtual machine is required to regenerate valid CBT metadata.
 
 **Learn More**
 
