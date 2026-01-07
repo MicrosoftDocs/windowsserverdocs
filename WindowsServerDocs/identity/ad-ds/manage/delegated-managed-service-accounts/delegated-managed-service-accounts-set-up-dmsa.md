@@ -64,7 +64,7 @@ The following instructions allow users to create a new dMSA without migrating fr
    Set-ADServiceAccount @params
    ```
 
-1. The **msDS-DelegatedMSAState** property value for the dMSA must be set to **3**. To view the current property value, run:
+1. The **msDS-DelegatedMSAState** property value for the dMSA must be set to **3** if this is a standalone dMSA (no migration). If there will be a migration the property value must be set to **0** (default value). To view the current property value, run:
 
    ```powershell
    $params = @{
