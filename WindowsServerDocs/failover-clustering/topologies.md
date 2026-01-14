@@ -71,7 +71,7 @@ A simple cluster places all cluster nodes within a single fault domain, typicall
 
 The following diagram illustrates a simple cluster topology with all nodes in the default subnet site fault domain.
 
-:::image type="content" source="media/topologies/simple-cluster.png" alt-text="Diagram that shows a simple cluster topology with all nodes in the default subnet site fault domain." lightbox="media/topologies/simple-cluster.png":::
+:::image type="content" source="./media/topologies/simple-cluster.png" alt-text="Diagram that shows a simple cluster topology with all nodes in the default subnet site fault domain." lightbox="./media/topologies/simple-cluster.png":::
 
 This topology is ideal for single datacenter deployments, workloads that require high performance with minimal latency, organizations with limited physical infrastructure, and development and test environments. It's the simplest configuration to deploy and manage, making it an excellent starting point for many organizations.
 
@@ -83,7 +83,7 @@ An S2D campus cluster is a two-rack configuration within the same physical locat
 
 The following diagram illustrates an S2D campus cluster topology with nodes distributed across two rack fault domains within the same physical location.
 
-:::image type="content" source="media/topologies/storage-spaces-direct-campus-cluster.png" alt-text="Diagram that shows an S2D campus cluster topology with nodes distributed across two rack fault domains." lightbox="media/topologies/storage-spaces-direct-campus-cluster.png":::
+:::image type="content" source="./media/topologies/storage-spaces-direct-campus-cluster.png" alt-text="Diagram that shows an S2D campus cluster topology with nodes distributed across two rack fault domains." lightbox="./media/topologies/storage-spaces-direct-campus-cluster.png":::
 
 Campus clusters require Windows Server 2025 with the December cumulative update installed ([KB5072033](https://support.microsoft.com/en-gb/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1)). Campus clusters only support two rack fault domains within the same physical location connected by LAN. This topology differs significantly from stretch clusters, which span geographically separated sites connected by WAN and use Storage Replica for replication between sites. This topology provides rack-level resiliency for Hyper-V VMs, SQL Server FCI, File Servers, SAP, and other applications.
 
@@ -131,7 +131,7 @@ In an S2D stretch cluster configuration, each site operates its own independent 
 
 The following diagram illustrates an S2D stretch cluster topology with nodes and storage pools at each geographic site, connected via WAN.
 
-:::image type="content" source="media/topologies/storage-spaces-direct-stretch-cluster.png" alt-text="Diagram that shows an S2D stretch cluster topology with nodes and storage pools at each geographic site." lightbox="media/topologies/storage-spaces-direct-stretch-cluster.png":::
+:::image type="content" source="./media/topologies/storage-spaces-direct-stretch-cluster.png" alt-text="Diagram that shows an S2D stretch cluster topology with nodes and storage pools at each geographic site." lightbox="./media/topologies/storage-spaces-direct-stretch-cluster.png":::
 
 Network requirements differ based on replication mode. Synchronous replication requires [less than 5 ms round-trip latency](../storage/storage-replica/stretch-cluster-replication-using-shared-storage.md#prerequisites) over the WAN connection. This ensures good performance. Asynchronous replication can work with higher latency. However, asynchronous replication means you might lose more data during a failure (larger RPO). Both modes require a dedicated high-bandwidth WAN connection between sites, and each site should have a network path to the witness to ensure proper quorum management.
 
@@ -143,7 +143,7 @@ A SAN stretch cluster relies on the storage area network vendor's replication ca
 
 The following diagram illustrates a SAN stretch cluster topology with replicated SAN storage at each geographic site, connected via WAN.
 
-:::image type="content" source="media/topologies/storage-area-network-stretch-cluster.png" alt-text="Diagram that shows a SAN stretch cluster topology with replicated SAN storage at each geographic site." lightbox="media/topologies/storage-area-network-stretch-cluster.png":::
+:::image type="content" source="./media/topologies/storage-area-network-stretch-cluster.png" alt-text="Diagram that shows a SAN stretch cluster topology with replicated SAN storage at each geographic site." lightbox="./media/topologies/storage-area-network-stretch-cluster.png":::
 
 When implementing a SAN stretch cluster, review the SAN vendor's interoperability requirements and supported configurations. Different SAN vendors have varying requirements for network latency, bandwidth, and configuration parameters. Ensure your SAN solution is validated for stretch cluster scenarios and meets your specific disaster recovery objectives.
 
@@ -155,7 +155,7 @@ Multi-cluster topology involves deploying multiple independent failover clusters
 
 The following diagram illustrates a multi-cluster topology with two independent SQL  clusters at separate geographic sites, connected via WAN and replicated at the application layer.
 
-:::image type="content" source="media/topologies/multi-cluster.png" alt-text="Diagram that shows a multi-cluster topology with two independent failover clusters at separate sites." lightbox="media/topologies/multi-cluster.png":::
+:::image type="content" source="./media/topologies/multi-cluster.png" alt-text="Diagram that shows a multi-cluster topology with two independent failover clusters at separate sites." lightbox="./media/topologies/multi-cluster.png":::
 
 Clusters replicate data between each other using methods such as:
 
@@ -196,6 +196,6 @@ A topology that looks ideal on paper might prove difficult to operate if it exce
 
 ## Related content
 
-- [Overview of Azure Local rack aware clustering (Preview)](/azure/azure-local/concepts/rack-aware-cluster-overview?view=azloc-2511)
+- [Overview of Azure Local rack aware clustering (Preview)](/azure/azure-local/concepts/rack-aware-cluster-overview)
 - [Storage Spaces Direct overview](../storage/storage-spaces/storage-spaces-direct-overview.md)
 - [Failover Clustering](failover-clustering-overview.md)
