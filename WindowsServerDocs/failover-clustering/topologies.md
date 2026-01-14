@@ -1,5 +1,5 @@
 ---
-title: Failover Clustering topology overview
+title: Failover Clustering topologies in Windows Server
 description: Learn about the different failover cluster topologies available in Windows Server, including single rack, campus, stretch, and multi-cluster configurations.
 author: robinharwood
 ms.author: roharwoo
@@ -10,7 +10,7 @@ ai-usage: ai-assisted
 #CustomerIntent: As a IT administrator, I want to understand the different failover cluster topologies so that I can choose the right configuration for my business requirements.
 ---
 
-# Failover Clustering topology overview
+# Failover Clustering topologies
 
 Windows Server Failover Clustering supports multiple deployment topologies to meet different business requirements for high availability and disaster recovery for your applications, services, and data. These topologies provide the reliability, resilience, and uptime critical across on-premises, hybrid, public cloud, private cloud, and sovereign cloud environments.
 
@@ -61,7 +61,7 @@ The following table compares key characteristics of each failover clustering top
 | **Storage configuration** | Single pool (SAN/NAS/S2D) | Single S2D pool spanning racks | Separate S2D pools per site | SAN LUNs replicated between sites | Independent storage per cluster |
 | **Storage replication method** | None | S2D Rack Level Nested Mirror | Storage Replica | SAN vendor replication | Application-level or Storage Replica|
 | **Fault domains** | Nodes only | 2 fault domains | 2 fault domains | 2 fault domains | Independent clusters |
-| **Protects against** | Node failure | Node + fault domain failure | Node + rack + site failure | Node + rack + site failure | Site + cluster failure |
+| **Protects against** | Node failure | Node + rack failure | Node + rack + site failure | Node + rack + site failure | Site + cluster failure |
 | **Deployment complexity** | Low | Medium | High | High | High |
 | **Primary use case** | Single datacenter HA | Campus/multi-building HA | Metro-area DR | Metro-area DR | Multi-region DR |
 
@@ -79,7 +79,7 @@ However, this topology has important limitations. It provides no protection agai
 
 ## S2D campus cluster
 
-An S2D campus cluster is a two-rack configuration within the same physical location—such as a factory, hospital, college campus, or datacenter—connected by low-latency local area network (LAN) infrastructure. Campus clusters provide rack-level resiliency using Storage Spaces Direct (S2D) with either two-copy or four-copy volumes, known as Rack Level Nested Mirror (RLNM). This approach means data is intelligently distributed across racks. The topology is designed to protect against rack-level failures while maintaining low latency between nodes.
+An S2D campus cluster is a two-rack configuration within the same physical location, such as a factory, hospital, college campus, or datacenter connected by low-latency local area network (LAN) infrastructure. Campus clusters provide rack-level resiliency using Storage Spaces Direct (S2D) with either two-copy or four-copy volumes, known as Rack Level Nested Mirror (RLNM). This approach means data is intelligently distributed across racks. The topology is designed to protect against rack-level failures while maintaining low latency between nodes.
 
 The following diagram illustrates an S2D campus cluster topology with nodes distributed across two rack fault domains within the same physical location.
 
@@ -87,26 +87,25 @@ The following diagram illustrates an S2D campus cluster topology with nodes dist
 
 Campus clusters require Windows Server 2025 with the December cumulative update installed ([KB5072033](https://support.microsoft.com/en-gb/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1)). Campus clusters only support two rack fault domains within the same physical location connected by LAN. This topology differs significantly from stretch clusters, which span geographically separated sites connected by WAN and use Storage Replica for replication between sites. This topology provides rack-level resiliency for Hyper-V VMs, SQL Server FCI, File Servers, SAP, and other applications.
 
-This configuration requires exactly two rack fault domains defined in the cluster, with a single Storage Spaces Direct (S2D) storage pool spanning both racks. All flash storage (SSD or NVMe) is required—HDDs aren't supported. The Rack Level Nested Mirror (RLNM) feature ensures data copies are intelligently distributed across racks: two-copy volumes place one copy in each rack, while four-copy volumes place two copies in each rack. The recommended 2+2 configuration (two nodes per rack) with four-copy volumes provides rack and node resiliency, meaning the cluster can survive losing an entire rack and a node simultaneously.
+The configuration requires exactly two rack fault domains with a single Storage Spaces Direct (S2D) storage pool spanning both racks. All-flash storage (SSD or NVMe) is required—HDDs aren't supported. Rack Level Nested Mirror (RLNM) distributes data copies across racks: two-copy volumes place one copy in each rack, while four-copy volumes place two copies in each rack.
 
-From a networking perspective, the campus cluster uses LAN connectivity and works best with 1 ms latency or less between racks. RDMA NICs and switches are recommended as they can achieve 30% CPU savings. The configuration requires two strands of dark fiber cable between racks, with redundant top-of-rack (TOR) switches recommended to avoid single points of failure. Each rack should ideally have a separate network path to the cluster quorum resource.
+The campus cluster uses LAN connectivity and works best with 1 ms latency or less between racks. RDMA NICs and switches are recommended for up to 30% CPU savings. The configuration requires two strands of dark fiber cable between racks, with redundant top-of-rack (TOR) switches to avoid single points of failure. Each rack should have a separate network path to the cluster quorum resource.
 
 This topology is well-suited for campus environments including factories, business parks, hospitals, school and college campuses, vessels and cruise ships, and stadiums. It's also ideal for organizations meeting NIS2 requirements for separate data rooms, or any location with two buildings or rooms connected by fiber.
 
-Campus clusters support symmetric node distributions (nodes per rack fault domain) with two and four-copy volumes recommended. For example, 1+1, 2+2, 3+3, and so on, up to a [maximum of 16 nodes in a S2D cluster (8+8)](../storage/storage-spaces/storage-spaces-direct-overview.md). Some common configurations include:
+Campus clusters support symmetric node distributions (nodes per rack fault domain) with two and four-copy volumes recommended. For example, 1+1, 2+2, 3+3, and so on, up to a [maximum of 16 nodes (8+8)](../storage/storage-spaces/storage-spaces-direct-overview.md).
 
-- **1+1**: One node per rack fault domain, the minimum configuration. The 1+1 configuration uses nested two-way mirror with four-copy volumes for maximum data resiliency. To learn more about nested mirror, see [Nested resiliency for Storage Spaces Direct](../storage/storage-spaces/nested-resiliency.md).
-- **2+2**: Two nodes per rack fault domain, the recommended configuration for balanced cost and resiliency. The 2+2 configuration supports two-copy and four-copy volumes, with four-copy recommended. A 2+2 configuration with four-copy volumes is recommended as it provides the best balance between cost, performance, and resiliency, allowing the cluster to survive losing an entire fault domain and a node simultaneously.
+Common configurations include:
 
-The number of data copies determines the cluster's resiliency:
+- **1+1**: One node per rack fault domain, the minimum configuration. This configuration uses a nested two-way mirror with four-copy volumes for maximum data resiliency. To learn more nest mirrors, see [Nested resiliency for Storage Spaces Direct](../storage/storage-spaces/nested-resiliency.md).
+- **2+2**: Two nodes per rack fault domain, using any combination of two-copy or four-copy volumes.
 
-- **Two-copy volumes**: Place one copy in each fault domain, providing minimum resiliency.
-- **Three-copy volumes**: Distribute copies across both fault domains with enhanced resiliency. We recommend to use four-copy volumes for improved resiliency.
-- **Four-copy volumes**: Place two copies in each fault domain, providing maximum resiliency and allowing the cluster to survive an entire fault domain plus a node failure.
+> [!TIP]
+> A 2+2 configuration with four-copy volumes provides the best balance between cost, performance, and resiliency, allowing the cluster to survive losing an entire rack (fault domain) and a node simultaneously.
 
 To learn more about the different volume resiliency options, see [Fault tolerance and storage efficiency on Azure Local and Windows Server clusters](../storage/storage-spaces/fault-tolerance.md).
 
-For quorum, place the witness resource (File Share Witness, Disk Witness, Cloud Witness, or USB Witness) in a third location, separate from the two racks.
+For the cluster quorum, place the witness resource (File Share Witness, Disk Witness, Cloud Witness, or USB Witness) in a third location, separate from the two racks.
 
 S2D campus clusters are also known as rack-aware clusters for Azure Local. S2D campus clusters provide the same functionality and benefits as Azure Local rack aware cluster, but have specific deployment and configuration requirements. To learn more about Azure Local rack aware clustering, see [Overview of Azure Local rack aware clustering](/azure/azure-local/concepts/rack-aware-cluster-overview).
 
