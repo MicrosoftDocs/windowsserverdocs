@@ -189,4 +189,4 @@ When the connection succeeds, RootDSE information appears in the right pane, con
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Manage LDAP signing using Group Policy](manage-ldap-signing-group-policy.md)
+> [Manage LDAP signing using Group Policy for Active Directory Domain Service](../manage-ldap-signing-group-policy.md)
