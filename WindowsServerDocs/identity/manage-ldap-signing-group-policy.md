@@ -75,7 +75,35 @@ After you configure this setting, client computers request LDAP signing based on
 
 ### Domain controllers
 
-Domain controllers check the server LDAP signing requirement to decide if they accept unsigned LDAP binds. You usually set this requirement through the Default Domain Controllers Policy.
+Domain controllers check the server LDAP signing requirement to decide if they accept unsigned LDAP binds. You usually set this requirement through the Default Domain Controllers Policy. Select the operating system version that matches your domain controllers to see the appropriate configuration steps.
+
+#### [Windows Server 2025](#tab/windows-server-2025)
+
+Starting with Windows Server 2025, all new Active Directory deployments require LDAP signing by default. This default is configured through the **Domain controller: LDAP server signing requirements enforcement** Group Policy setting, which is separate from the **Domain controller: LDAP server signing requirements** policy.
+
+The **Domain controller: LDAP server signing requirements enforcement** policy takes precedence over and overrides the **Domain controller: LDAP server signing requirements** policy. When both policies are configured, the enforcement policy setting is applied. This configuration ensures that new deployments automatically have stronger security defaults while allowing administrators to explicitly modify the behavior if needed.
+
+To configure LDAP signing enforcement on Windows Server 2025:
+
+1. Open **Microsoft Management Console** by selecting **Start** > **Run**, typing **mmc.exe**, and selecting **OK**.
+1. Select **File** > **Add/Remove Snap-in**.
+1. Select **Group Policy Management Editor**, and then select **Add**.
+1. Select **Browse** next to Group Policy Object.
+1. In the **Browse for a Group Policy Object** dialog, select **Default Domain Controllers Policy** under your domain, and then select **OK**.
+1. Select **Finish**, and then select **OK**.
+1. Go to **Default Domain Controllers Policy** > **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies** > **Security Options**.
+1. Right-click **Domain controller: LDAP server signing requirements enforcement**, and select **Properties**.
+1. Turn on **Define this policy setting**, and choose one of the following options:
+   - **Default:** Not Configured which has the same effect as Enabled (default for new deployments).
+   - **Enabled:** LDAP signing will be enforced regardless of what is set in the LDAP signing policy.
+   - **Disabled:** The setting from the LDAP Signing Policy will be used.
+1. Select **OK**.
+1. Select **Yes** in the confirmation dialog.
+
+> [!IMPORTANT]
+> If you're upgrading from an earlier version of Windows Server to Windows Server 2025, existing LDAP signing policies are preserved to prevent disruption. Review your current policy settings and update them as appropriate for your security requirements.
+
+#### [Windows Server 2022 and earlier](#tab/windows-server-2022)
 
 To set up LDAP signing on domain controllers:
 
@@ -92,6 +120,8 @@ To set up LDAP signing on domain controllers:
    - **Require signing**: Domain controller rejects unsigned LDAP binds (recommended)
 1. Select **OK**.
 1. Select **Yes** in the confirmation dialog.
+
+---
 
 Group Policy applies this setting during the next policy refresh cycle. To apply it immediately, run `gpupdate /force` on your domain controllers. When set to **Require signing**, domain controllers reject LDAP simple binds over non-SSL/TLS connections and SASL binds that don't request signing.
 

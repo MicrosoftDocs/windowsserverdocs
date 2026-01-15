@@ -3,7 +3,7 @@ title: LDAP signing for Active Directory Domain Services on Windows Server
 description: Understand the role of LDAP signing and channel binding in verifying data integrity and preventing session hijacking in Active Directory.
 #customer intent: As an IT admin, I want to understand how to enable LDAP signing so that I can secure LDAP communications in my Active Directory environment.
 ms.topic: concept-article
-ms.date: 12/18/2025
+ms.date: 01/15/2026
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: roharwoo
@@ -47,17 +47,7 @@ When you enable channel binding:
 
 ## Default security behavior
 
-The default LDAP security settings vary depending on your Windows Server version and deployment type.
-
-### Windows Server 2019 and earlier
-
-In Windows Server 2019 and earlier, LDAP security features are available but not enforced by default:
-
-- **LDAP signing**: Optional by default; domain controllers accept both signed and unsigned LDAP binds.
-- **LDAP channel binding**: Set to "Never" by default; domain controllers don't require Channel Binding Tokens.
-- **Client behavior**: Windows clients prefer encrypted connections but fall back to unencrypted if necessary.
-
-This permissive default allows compatibility with legacy applications and devices but requires administrators to manually enable security features to protect against man-in-the-middle attacks and session hijacking.
+The default LDAP security settings vary depending on your Windows Server version and deployment type. You can configure LDAP signing and channel binding through Group Policy settings on domain controllers and client computers. For more information about managing these policies, see [Manage LDAP signing using Group Policy](../manage-ldap-signing-group-policy.md).
 
 ### Windows Server 2025 and later
 
@@ -70,6 +60,16 @@ Windows Server 2025 and later significantly strengthens the default security pos
 
 These enhanced defaults protect new environments immediately upon deployment and are compatible with clients that support modern security features.
 
+### Windows Server 2019 and earlier
+
+In Windows Server 2019 and earlier, LDAP security features are available but not enforced by default:
+
+- **LDAP signing**: Optional by default; domain controllers accept both signed and unsigned LDAP binds.
+- **LDAP channel binding**: Set to "Never" by default; domain controllers don't require Channel Binding Tokens.
+- **Client behavior**: Windows clients prefer encrypted connections but fall back to unencrypted if necessary.
+
+This permissive default allows compatibility with legacy applications and devices but requires administrators to manually enable security features to protect against man-in-the-middle attacks and session hijacking.
+
 ### Upgrade considerations
 
 When you upgrade from earlier Windows Server versions to Windows Server 2025:
@@ -78,41 +78,7 @@ When you upgrade from earlier Windows Server versions to Windows Server 2025:
 - **Gradual enforcement recommended**: Evaluate client compatibility by using event monitoring before enabling signing or channel binding requirements.
 - **Migration path**: Start with "When supported" for channel binding and "Negotiate signing" for signing, then move to full enforcement after validating compatibility.
 
-For more information about the evolution of these requirements and specific deployment timelines, see [2020, 2023, and 2024 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
-
-## Group policy settings
-
-You can configure LDAP signing and channel binding through Group Policy settings on domain controllers and client computers.
-
-### LDAP signing policies
-
-**Domain controller policy:**
-
-- **Path**: Default Domain Controller Policy > Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options
-- **Setting**: Domain controller: LDAP server signing requirements
-- **Options**:
-  - **None**: Doesn't require signing (vulnerable to attacks)
-  - **Require signing**: Rejects unsigned LDAP binds
-
-**Client policy:**
-
-- **Path**: Local Computer Policy > Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options
-- **Setting**: Network security: LDAP client signing requirements
-- **Options**:
-  - **None**: Client doesn't request signing
-  - **Negotiate signing**: Client requests signing if server supports it
-  - **Require signing**: Client requires signing for all LDAP traffic
-
-### LDAP channel binding policy
-
-**Domain controller policy:**
-
-- **Path**: Default Domain Controller Policy > Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options
-- **Setting**: Domain controller: LDAP server channel binding token requirements
-- **Options**:
-  - **Never**: Doesn't require channel binding
-  - **When supported**: Accepts channel binding when clients provide it
-  - **Always**: Requires channel binding for all connections
+For more information about the history of LDAP signing and channel binding policy changes in Windows, see [2020, 2023, and 2024 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
 
 ## Event monitoring
 

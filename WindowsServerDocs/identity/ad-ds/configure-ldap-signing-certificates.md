@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.service: windows-server
 ms.topic: how-to
-ms.date: 12/18/2025
+ms.date: 01/15/2026
 ai-usage: ai-assisted
 #CustomerIntent: As a domain administrator, I want to configure LDAP over SSL certificates so that LDAP communications with my domain controllers are encrypted and secure.
 ---
