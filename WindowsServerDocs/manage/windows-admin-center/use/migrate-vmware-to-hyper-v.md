@@ -706,7 +706,7 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
     During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
 
-### Bug Fixes
+### Bug fixes - Version 1.8.0
 
 - Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
 - Corrected VM listing issue where VMs already present in **Hyper-V Manager** were incorrectly marked as failed.  
@@ -768,7 +768,7 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
 ---
 
-## Bug fixes
+## Bug fixes - Version 1.8.4
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
@@ -811,7 +811,7 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
 ---
 
-## Bug Fixes
+## Bug fixes - Version 1.8.5
 
 - Fixed an issue where powering on a VM resulted in the error: 'Validation failed for one or more fields.'
 - Resolved an issue causing: 'Failed to create destination VM: cpuCount must be a positive number.'
@@ -827,7 +827,7 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
 - Enhanced VM creation to correctly refresh and apply CPU, memory, and operating system settings when values were incomplete or invalid.
 
-## Bug fixes
+## Bug fixes - Version 1.8.6
 
 - Fixed an issue that could block migrations when required change tracking information was missing.
 
