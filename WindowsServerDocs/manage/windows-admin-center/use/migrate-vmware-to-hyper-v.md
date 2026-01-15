@@ -706,7 +706,7 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
     During synchronization, VM disks are created as **thick (fixed)** or **thin (dynamic)** to match the **source VM’s configuration**, optimizing storage use, and simplifying post-migration management.
 
-### Bug Fixes
+### Bug fixes - Version 1.8.0
 
 - Resolved migration error: *Physical network adapter 'Ethernet' not found*.  
 - Corrected VM listing issue where VMs already present in **Hyper-V Manager** were incorrectly marked as failed.  
@@ -768,7 +768,7 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
 ---
 
-## Bug fixes
+## Bug fixes - Version 1.8.4
 - Fixed an issue where the **Submit** button in the vCenter credentials dialog could remain disabled after a failure.  
 - Resolved a problem where migrations could get stuck at **80% progress**.  
 
@@ -811,10 +811,30 @@ Validate CBT health on the source virtual machine before starting synchronizatio
 
 ---
 
-## Bug Fixes
+## Bug fixes - Version 1.8.5
 
 - Fixed an issue where powering on a VM resulted in the error: 'Validation failed for one or more fields.'
 - Resolved an issue causing: 'Failed to create destination VM: cpuCount must be a positive number.'
 - Addressed a problem where closing the browser mid-migration caused workflows to appear stuck at 80% when returning to Windows Admin Center. The Import VM step now automatically resumes and completes correctly.
 
 ---
+
+## [Version 1.8.6](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions/NuGet/msft.sme.vm-conversion/overview/1.8.6) (January 2026)
+
+## Improvements
+
+- Improved pre-check validation by ensuring Change Block Tracking (CBT) is enabled before synchronization readiness checks.
+
+- Enhanced VM creation to correctly refresh and apply CPU, memory, and operating system settings when values were incomplete or invalid.
+
+## Bug fixes - Version 1.8.6
+
+- Fixed an issue that could block migrations when required change tracking information was missing.
+
+- Resolved a synchronization issue that could occur when VMware credentials contained a single quote (').
+
+- Fixed an intermittent issue where the UI incorrectly reported that PowerCLI was not installed when it was already available.
+
+---
+
+
