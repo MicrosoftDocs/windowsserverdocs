@@ -4,7 +4,7 @@ description: Learn about the features and enhancements in Windows Server 2025 th
 ms.topic: whats-new
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 02/28/2025
+ms.date: 01/15/2026
 ---
 
 # What's new in Windows Server 2025
@@ -104,6 +104,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 - **Active Directory schema updates**: Three new log database files are introduced that extend the Active Directory schema: `sch89.ldf`, `sch90.ldf`, and `sch91.ldf`. The AD LDS equivalent schema updates are in `MS-ADAM-Upgrade3.ldf`. To learn more about previous schema updates, see [Windows Server Active Directory schema updates](../identity/ad-ds/deploy/Schema-Updates.md).
 - **Active Directory object repair**: Enterprise administrators can now repair objects with the missing core attributes `SamAccountType` and `ObjectCategory`. Enterprise administrators can reset the `LastLogonTimeStamp` attribute on an object to the current time. These operations are achieved through a new [RootDSE](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) modify operation feature on the affected object called `fixupObjectState`.
 - **Channel binding audit support**: You can now enable events 3074 and 3075 for Lightweight Directory Access Protocol (LDAP) channel binding. When the channel binding policy is modified to a more secure setting, an administrator can identify devices in the environment that don't support or fail channel binding. These audit events are also available in Windows Server 2022 and later via [KB4520412](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a).
+- **Default LDAP signing enforcement**: All new Active Directory deployments require LDAP signing by default through the "Domain controller: LDAP server signing requirements enforcement" Group Policy setting. This policy takes precedence over the "Domain controller: LDAP server signing requirements" policy. To learn more, see [LDAP signing for Active Directory Domain Services](../identity/ad-ds/ldap-signing.md).
 - **DC-location algorithm improvements**: The DC discovery algorithm provides new functionality with improvements to mapping of short NetBIOS-style domain names to DNS-style domain names. To learn more, see [Locating domain controllers in Windows and Windows Server](../identity/ad-ds/manage/dc-locator.md).
 
   > [!NOTE]
