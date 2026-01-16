@@ -4,7 +4,7 @@ description: Learn about the features and enhancements in Windows Server 2025 th
 ms.topic: whats-new
 author: dknappettmsft
 ms.author: daknappe
-ms.date: 02/28/2025
+ms.date: 01/15/2026
 ---
 
 # What's new in Windows Server 2025
@@ -135,7 +135,7 @@ The latest enhancements to Active Directory Domain Services (AD DS) and Active D
 - **Kerberos changes for Algorithms used for Ticket Granting Tickets**: The Kerberos Distribution Center will no longer issue Ticket Granting Tickets using RC4 encryption, such as RC4-HMAC(NT).
 - **Kerberos changes for supported encryption type configuration**: Kerberos no longer honors the legacy registry key REG_DWORD `SupportedEncryptionTypes` found in the path `HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Lsa\Kerberos\Parameters`, Microsoft recommends using group policy instead. To learn more about the group policy settings, see [Network security: Configure encryption types allowed for Kerberos](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-configure-encryption-types-allowed-for-kerberos).
 - **LAN Manager GPO setting**: The GPO setting **Network security: Don't store LAN Manager hash value on next password change** is no longer present and doesn't apply to new versions of Windows.
-- **LDAP encryption by default**: All LDAP client communication after a Simple Authentication and Security Layer (SASL) bind uses LDAP sealing by default. To learn more about SASL, see [SASL Authentication](/openspecs/windows_protocols/ms-adts/989e0748-0953-455d-9d37-d08dfbf3998b).
+- **LDAP encryption by default**: All new Active Directory deployments require [LDAP signing (sealing) by default](../identity/ad-ds/ldap-signing.md) for all LDAP client communication after a [Simple Authentication and Security Layer (SASL)](/openspecs/windows_protocols/ms-adts/989e0748-0953-455d-9d37-d08dfbf3998b) bind. To learn more about the signing behavior, see [LDAP signing for Active Directory Domain Services](../identity/ad-ds/ldap-signing.md).
 - **LDAP support for Transport Layer Security (TLS) 1.3**: LDAP uses the latest SCHANNEL implementation and supports TLS 1.3 for LDAP over TLS connections. Using TLS 1.3 eliminates obsolete cryptographic algorithms and enhances security over older versions. TLS 1.3 aims to encrypt as much of the handshake as possible. To learn more, see [Protocols in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and [TLS Cipher Suites in Windows Server 2022](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 - **Legacy Security Account Manager (SAM) remote procedure call (RPC) password change behavior**: Secure protocols such as Kerberos are the preferred way to change domain user passwords. On DCs, the latest SAM RPC password change method [SamrUnicodeChangePasswordUser4](/openspecs/windows_protocols/ms-samr/bbc1c5e5-9b81-4038-b2b9-c87d3569ed38) by using Advanced Encryption Standard (AES) is accepted by default when it's called remotely. The following legacy SAM RPC methods are blocked by default when they're called remotely:
 
