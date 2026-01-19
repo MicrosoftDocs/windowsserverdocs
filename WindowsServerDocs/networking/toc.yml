@@ -170,6 +170,8 @@ items:
         href: dns/network-ports.md
       - name: Message formats
         href: dns/message-formats.md
+      - name: DNS Encryption using DNS over HTTPS
+        href: dns/dns-encryption-dns-over-https.md
       - name: DNS processes
         items:
         - name: Queries and lookups
