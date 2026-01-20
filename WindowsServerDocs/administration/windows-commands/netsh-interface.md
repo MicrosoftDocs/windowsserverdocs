@@ -294,13 +294,13 @@ netsh interface portproxy add v6tov4 [listenport=]<integer>|<servicename> [conne
 netsh interface portproxy add v6tov6 [listenport=]<integer>|<servicename> [connectaddress=]<IPv6 address>|<hostname>
                                      [connectport=]<integer>|<servicename> [listenaddress=]<IPv6 address>|<hostname>
                                      [protocol=]tcp
-netsh interface portproxy deleted v4tov4 [listenport=]<integer>|<servicename> [listenaddress=]<IPv4 address>|<hostname>
+netsh interface portproxy delete v4tov4 [listenport=]<integer>|<servicename> [listenaddress=]<IPv4 address>|<hostname>
                                          [protocol=]tcp
-netsh interface portproxy deleted v4tov6 [listenport=]<integer>|<servicename> [listenaddress=]<IPv4 address>|<hostname>
+netsh interface portproxy delete v4tov6 [listenport=]<integer>|<servicename> [listenaddress=]<IPv4 address>|<hostname>
                                          [protocol=]tcp
-netsh interface portproxy deleted v6tov4 [listenport=]<integer>|<servicename> [listenaddress=]<IPv6 address>|<hostname>
+netsh interface portproxy delete v6tov4 [listenport=]<integer>|<servicename> [listenaddress=]<IPv6 address>|<hostname>
                                          [protocol=]tcp
-netsh interface portproxy deleted v6tov6 [listenport=]<integer>|<servicename> [listenaddress=]<IPv6 address>|<hostname>
+netsh interface portproxy delete v6tov6 [listenport=]<integer>|<servicename> [listenaddress=]<IPv6 address>|<hostname>
                                          [protocol=]tcp
 netsh interface portproxy dump
 netsh interface portproxy reset
