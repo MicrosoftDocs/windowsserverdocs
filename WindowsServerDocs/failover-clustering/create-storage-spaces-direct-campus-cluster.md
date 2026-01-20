@@ -13,17 +13,19 @@ ms.topic: how-to
 
 Learn how to create a Storage Spaces Direct campus cluster on Windows Server 2025 and later. A campus cluster distributes data across two physical racks in separate rooms or buildings within the same campus, providing rack-level resiliency for your workloads.
 
-> [!NOTE]
-> A campus cluster is different from a stretch cluster. Campus clusters use LAN connectivity within the same location with S2D replication, while stretch clusters span geographically distant sites connected by WAN and use Storage Replica for replication.
+In this article, you'll create a four node campus cluster with two nodes in each rack-level fault domain. The cluster will use Storage Spaces Direct (S2D) for storage and ReFS for the file system. Adapt the instructions as needed for your specific requirements and deployment.
 
-For more information about campus cluster architecture, supported configurations, and how it compares to other topologies, see [Failover Clustering topologies](topologies.md).
+Campus clusters are different from stretch clusters. Campus clusters use LAN connectivity within the same location with S2D replication, while stretch clusters span geographically distant sites connected by WAN and use Storage Replica for replication.
+
+For more information about the campus cluster architecture, supported configurations, and how it compares to other topologies, see [Failover Clustering topologies](topologies.md).
 
 ## Prerequisites
 
 Before you create a campus cluster, ensure you meet the following requirements:
 
 - Windows Server 2025 with the 2025-12 Security Update (KB5072033) installed on every node in the failover cluster.
-- All capacity drives must be flash-based (SSD or NVMe). Don't use HDDs.
+- All capacity drives must be the same type. Flash-based (SSD or NVMe) drives are recommended for optimal performance.
+- A minimum of four nodes, with at least two nodes in each rack-level fault domain.
 - You must define exactly two rack-level fault domains and place the cluster nodes in these two racks.
 - Follow your hardware OEM's guidelines for any shared or direct attached storage including driver versions.
 - Place the quorum resource (File Share Witness, Disk Witness, Cloud Witness, or USB Witness) in a third location, separate from the campus cluster racks.
