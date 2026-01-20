@@ -22,18 +22,18 @@ For more information about campus cluster architecture, supported configurations
 
 Before you create a campus cluster, ensure you meet the following requirements:
 
-- **Windows Server 2025** with the 2025-12 Security Update (KB5072033) installed on every node in the failover cluster.
-- **Flat S2D storage** - All capacity drives must be flash-based (SSD or NVMe). Don't use HDDs.
-- **Exactly two RACK fault domains** - You must define exactly two rack-level fault domains and place the cluster nodes in these two racks.
-- **Hardware OEM guidelines** - Follow your hardware OEM's guidelines for the deployment.
-- **Cluster quorum resource** - Place the quorum resource (File Share Witness, Disk Witness, Cloud Witness, or USB Witness) in a third room, separate from the data rooms containing the racks.
+- Windows Server 2025 with the 2025-12 Security Update (KB5072033) installed on every node in the failover cluster.
+- All capacity drives must be flash-based (SSD or NVMe). Don't use HDDs.
+- You must define exactly two rack-level fault domains and place the cluster nodes in these two racks.
+- Follow your hardware OEM's guidelines for any shared or direct attached storage including driver versions.
+- Place the quorum resource (File Share Witness, Disk Witness, Cloud Witness, or USB Witness) in a third location, separate from the campus cluster racks.
 
 For optimal performance and resiliency, use the following configurations:
 
 - Each rack has a separate network path to the cluster quorum resource.
 - Use redundant top-of-rack (TOR) switches, core switches, and dedicated networks for S2D storage traffic to minimize single points of failure and maximize workload uptime and durability.
 - Network latency of 1 ms or less between racks. Use the [PsPing](/sysinternals/downloads/psping) utility to measure network latency.
-- RDMA NICs and switches, which can achieve up to 30% CPU savings.
+- RDMA NICs and switches, which can achieve CPU savings on your cluster.
 
 ## Create the failover cluster
 
