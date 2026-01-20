@@ -8,6 +8,8 @@
   items:
   - name: Create a failover cluster
     href: create-failover-cluster.md
+  - name: Create a Storage Spaces Direct campus cluster
+    href: create-storage-spaces-direct-campus-cluster.md
   - name: Deploy a two-node file server
     href: deploy-two-node-clustered-file-server.md
   - name: Recover a failover cluster without quorum
