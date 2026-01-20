@@ -20,7 +20,7 @@ This page is updated monthly, so revisit it regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
-## Version 0.69.0.0 - January 2026
+## Version 0.70.0.0 - January 2026
 
 ### Fixed
 - Fixed an issue where connection was failing on Windows Server versions earlier than 2025.
