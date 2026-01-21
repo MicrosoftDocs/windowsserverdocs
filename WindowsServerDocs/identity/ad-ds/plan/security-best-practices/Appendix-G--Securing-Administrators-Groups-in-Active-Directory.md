@@ -11,7 +11,7 @@ ms.topic: best-practice
 
 
 ## Appendix G: Securing Administrators Groups in Active Directory
-As is the case with the Enterprise Admins (EA) and Domain Admins (DA) groups, membership in the built-in Administrators (BA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the Administrators group with the exception of the Built-in Administrator account for the domain, if it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+As is the case with the Enterprise Admins (EA) and Domain Admins (DA) groups, membership in the built-in Administrators (BA) group should be required only in build or disaster recovery scenarios. There should be no day-to-day user accounts in the Administrators group.
 
 Administrators are, by default, the owners of most of the AD DS objects in their respective domains. Membership in this group may be required in build or disaster recovery scenarios in which ownership or the ability to take ownership of objects is required. Additionally, DAs and EAs inherit a number of their rights and permissions by virtue of their default membership in the Administrators group. Default group nesting for privileged groups in Active Directory should not be modified, and each domain's Administrators group should be secured as described in the step-by-step instructions that follow.
 
@@ -20,7 +20,7 @@ Administrators are, by default, the owners of most of the AD DS objects in their
 
 For the Administrators group in each domain in the forest:
 
-1.  Remove all members from the Administrators group, with the possible exception of the built-in Administrator account for the domain, provided it has been secured as described in [Appendix D: Securing Built-In Administrator Accounts in Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md).
+1.  Remove all day-to-day members from the Administrators group. Do not remove the default members.
 
 2.  In GPOs linked to OUs containing member servers and workstations in each domain, the BA group should be added to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\ User Rights Assignment**:
 
