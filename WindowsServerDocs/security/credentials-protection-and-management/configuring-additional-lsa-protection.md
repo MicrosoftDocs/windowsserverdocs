@@ -232,7 +232,7 @@ You can use the [Local Security Authority (LSA) Protected Process Opt-out tool](
 
 > [!NOTE]
 > The Download Center offers two files named *LsaPplConfig.efi*. The smaller file is for x86-based systems and the larger file is for x64-based systems.
-1. Disable the registry key (GP for the registry key, if applicable) and wait for the change to propagate to clients.The corresponding registry key is HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\RunAsPPL.
+1. Disable the registry key (Group Policy for the registry key, if applicable) and wait for the change to propagate to clients.The corresponding registry key is `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\RunAsPPL`.
 2. Download the Local Security Authority (LSA) Protected Process Opt-out / LSAPPLConfig.efi tool files from the download center link above and store the efi tool that corresponds to your machines architecture on a local disk, for example at C: drive's root
 3. Open a Command Prompt as an Administrator and run the following commands to bootstrap the tool:
 ```
@@ -275,6 +275,7 @@ Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by def
 
 - [Credentials protection and management](credentials-protection-and-management.md)
 - [Partner Center for Windows Hardware](/windows-hardware/drivers/dashboard/)
+
 
 
 
