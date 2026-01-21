@@ -4,16 +4,16 @@ description: How to configure persistent memory devices for Hyper-V VMs
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 12/08/2020
+ms.date: 01/21/2026
 ---
 
 # Cmdlets for configuring persistent memory devices for Hyper-V VMs
 
-This article provides system administrators and IT Pros with information about configuring Hyper-V VMs with persistent memory (aka storage class memory or NVDIMM). JEDEC-compliant NVDIMM-N persistent memory devices are supported in Windows Server 2016 and Windows 10 and provide byte-level access to very low latency non-volatile devices. VM persistent memory devices are supported in Windows Server 2019.
+This article provides system administrators and IT Pros with information about configuring Hyper-V VMs with persistent memory (also known as storage class memory or NVDIMM). JEDEC-compliant NVDIMM-N persistent memory devices are supported in Windows Server 2016 and Windows 10 and provide byte-level access to very low latency nonvolatile devices. VM persistent memory devices are supported in Windows Server 2019.
 
 ## Create a persistent memory device for a VM
 
-Use the **[New-VHD](/powershell/module/hyper-v/new-vhd)** cmdlet to create a persistent memory device for a VM. The device must be created on an existing NTFS DAX volume.  The new filename extension (.vhdpmem) is used to specify that the device is a persistent memory device. Only the fixed VHD file format is supported.
+Use the **[New-VHD](/powershell/module/hyper-v/new-vhd)** cmdlet to create a persistent memory device for a VM. The device must be created on an existing NTFS DAX volume. The new filename extension (.vhdpmem) is used to specify that the device is a persistent memory device. Only the fixed VHD file format is supported.
 
 **Example:** `New-VHD D:\VMPMEMDevice1.vhdpmem -Fixed -SizeBytes 4GB`
 
@@ -39,5 +39,3 @@ Persistent memory devices within a Hyper-V VM appear as a persistent memory devi
 
 >[!NOTE]
 >Persistent memory is only supported for Hyper-V Gen2 VMs. Live Migration and Storage Migration are not supported for VMs with persistent memory. Production checkpoints of VMs do not include persistent memory state.
-
-

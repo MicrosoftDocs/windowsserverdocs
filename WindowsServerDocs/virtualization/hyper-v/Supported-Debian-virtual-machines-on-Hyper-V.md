@@ -72,8 +72,6 @@ The following feature distribution map indicates the features that are present i
 
 1. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian backports repository](https://wiki.debian.org/Backports).
 
-1. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
-
 ## See also
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
@@ -89,4 +87,3 @@ The following feature distribution map indicates the features that are present i
 * [Feature descriptions for Linux and FreeBSD virtual machines on Hyper-V](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md)
 
 * [Best practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
-
