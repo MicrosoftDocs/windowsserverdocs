@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.service: windows-server
 ms.topic: concept-article
-ms.date: 01/14/2026
+ms.date: 01/21/2026
 ai-usage: ai-assisted
 #CustomerIntent: As a IT administrator, I want to understand the different failover cluster topologies so that I can choose the right configuration for my business requirements.
 ---
@@ -28,9 +28,9 @@ Windows Server Failover Clustering supports several topologies, each with its ow
 
 The following sections provide an overview of each topology, including their use cases, benefits, and limitations.
 
-## Understanding fault domains
+## Failover clustering fault domains
 
-Before exploring specific topologies, it's important to understand the concept of fault domains. A fault domain is a logical grouping of hardware components that share a common point of failure. When one component in a fault domain fails, it can potentially affect all other components in that same domain.
+Before exploring specific topologies, it's important to understand the concept of fault domains in a failover cluster. A fault domain is a logical grouping of hardware components that share a common point of failure. When one component in a fault domain fails, it can potentially affect all other components in that same domain.
 
 Common examples of fault domains include:
 
@@ -57,9 +57,9 @@ The following table compares key characteristics of each failover clustering top
 |---|---|---|---|---|---|
 | **Geographic scope** | Single fault domain | Same physical location | Separate geographic sites | Separate geographic sites | Multiple separate sites |
 | **Network type** | LAN | LAN | LAN or WAN | LAN or WAN | Determined by workload requirement |
-| **Typical latency** | <1 ms | ≤1 ms | <5 ms (sync)<br/>Variable (async) | Determined by SAN vendor | Variable (workload determined) |
+| **Optimal latency** | ≤1 ms | ≤1 ms | [≤1-5 ms (sync)<br/>Variable (async)](../storage/storage-replica/storage-replica-overview.md#storage-replica-prerequisites) | Determined by SAN vendor | Variable (workload determined) |
 | **Storage configuration** | Single pool (SAN/NAS/Storage Spaces Direct) | Single Storage Spaces Direct pool spanning racks | Separate Storage Spaces Direct pools per site | SAN LUNs replicated between sites | Independent storage per cluster |
-| **Storage replication method** | None | Storage Spaces Direct Rack Level Nested Mirror | Storage Replica | SAN vendor replication | Application-level or Storage Replica|
+| **Storage replication method** | None | Storage Spaces Direct Rack Level Nested Mirror | Storage Replica | SAN vendor replication | Application-level or Storage Replica |
 | **Fault domains** | Nodes only | 2 fault domains | 2 fault domains | 2 fault domains | Independent clusters |
 | **Protects against** | Node failure | Node + rack failure | Node + rack + site failure | Node + rack + site failure | Site + cluster failure |
 | **Deployment complexity** | Low | Medium | High | High | High |
@@ -87,13 +87,13 @@ The following diagram illustrates a Storage Spaces Direct campus cluster topolog
 
 Campus clusters require Windows Server 2025 with the December cumulative update installed ([KB5072033](https://support.microsoft.com/en-gb/topic/december-9-2025-kb5072033-os-build-26100-7462-fca31d8d-5fe8-4b5e-9591-6641ef1d26a1)). Campus clusters only support two rack fault domains within the same physical location connected by LAN. This topology differs significantly from stretch clusters, which span geographically separated sites connected by WAN and use Storage Replica for replication between sites. This topology provides rack-level resiliency for Hyper-V VMs, SQL Server FCI, File Servers, SAP, and other applications.
 
-The configuration requires exactly two rack fault domains with a single Storage Spaces Direct (S2D) storage pool spanning both racks. All-flash storage (SSD or NVMe) is required—HDDs aren't supported. Rack Level Nested Mirror (RLNM) distributes data copies across racks: two-copy volumes place one copy in each rack, while four-copy volumes place two copies in each rack.
+The configuration requires exactly two rack fault domains with a single Storage Spaces Direct (S2D) storage pool spanning both racks. Rack Level Nested Mirror (RLNM) distributes data copies across racks: two-copy volumes place one copy in each rack, while four-copy volumes place two copies in each rack. All capacity drives must be the same type. Flash-based (SSD or NVMe) drives are recommended for optimal performance. Caching tiers and HDDs aren't recommended.
 
-The campus cluster uses LAN connectivity and requires with 1 ms latency or less between racks. RDMA NICs and switches are recommended to reduce CPU overhead. The configuration works best with redundant strands of dark fiber cable between racks, and highly available top-of-rack (TOR) switches to avoid single points of failure. Each rack should have a separate network path to the cluster quorum resource.
+The campus cluster uses LAN connectivity and requires 1 ms latency or less between racks. RDMA NICs and switches are recommended to reduce CPU overhead. The configuration works best with redundant strands of dark fiber cable between racks, and highly available top-of-rack (TOR) switches to avoid single points of failure. Each rack should have a separate network path to the cluster quorum resource.
 
 This topology is well-suited for campus environments including factories, business parks, hospitals, school and college campuses, vessels and cruise ships, and stadiums. It's also ideal for organizations meeting NIS2 requirements for separate data rooms, or any location with two buildings or rooms connected by fiber.
 
-Campus clusters support symmetric node distributions (nodes per rack fault domain) with two and four-copy volumes recommended. For example, 1+1, 2+2, 3+3, and so on, up to a [maximum of 16 nodes (8+8)](../storage/storage-spaces/storage-spaces-direct-overview.md).
+Campus clusters support symmetric node distributions (nodes per rack fault domain) with two and four-copy volumes recommended. For example, 1+1, 2+2, 3+3, and so on, up to a maximum of 10 nodes (5+5).
 
 Common configurations include:
 
@@ -108,6 +108,8 @@ To learn more about the different volume resiliency options, see [Fault toleranc
 For the cluster quorum, place the witness resource (File Share Witness, Disk Witness, Cloud Witness, or USB Witness) in a third location, separate from the two racks.
 
 Storage Spaces Direct campus clusters are also known as rack-aware clusters for Azure Local. Storage Spaces Direct campus clusters provide the same functionality and benefits as Azure Local rack aware cluster, but have specific deployment and configuration requirements. To learn more about Azure Local rack aware clustering, see [Overview of Azure Local rack aware clustering](/azure/azure-local/concepts/rack-aware-cluster-overview).
+
+You can also learn more about Storage Spaces Direct campus clusters in our announcement blog, [Announcing Support for S2D Campus Cluster on Windows Server 2025](https://techcommunity.microsoft.com/blog/failoverclustering/announcing-support-for-s2d-campus-cluster-on-windows-server-2025/4477075).
 
 ## Stretch cluster
 
