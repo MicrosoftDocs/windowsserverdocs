@@ -70,7 +70,7 @@ The built-in cryptographic providers support specific key lengths and hash algor
 | Microsoft Base Smart Card Crypto Provider | - 1024<br>- 2048<br>- 4096 |	- SHA1<br>- MD2<br>- MD4<br>- MD5 |
 | Microsoft Enhanced Cryptographic Provider v1.0 | - 512<br>- 1024<br>- 2048<br>- 4096 |	- SHA1<br>- MD2<br>- MD4<br>- MD5 |
 | Microsoft Strong Cryptographic Provider | - 512<br>- 1024<br>- 2048<br>- 4096 | - SHA1<br>- MD2<br>- MD4<br>- MD5 |
-| RSA#Microsoft Software Key Storage Provider | - 512<br>- 1024<br>- 2048<br>- 4096 | - SHA1<br>- SHA256<br>- SHA384<br>- SHA512<br>- MD2<br>- MD4<br>- MD5 |
+| RSA#Microsoft Software Key Storage Provider | - 512<br>- 1024<br>- 2048<br>- 4096<br>- 8192<br>- 16384 | - SHA1<br>- SHA256<br>- SHA384<br>- SHA512<br>- MD2<br>- MD4<br>- MD5 |
 | DSA#Microsoft Software Key Storage Provider | - 512<br>- 1024<br>- 2048 |	SHA1 |
 | ECDSA_P256#Microsoft Software Key Storage Provider | 256 | - SHA1<br>- SHA256<br>- SHA384<br>- SHA512 |
 | ECDSA_P384#Microsoft Software Key Storage Provider | 384 | - SHA1<br>- SHA256<br>- SHA384<br> - SHA512 |
@@ -137,4 +137,6 @@ Consider these guidelines when you configure CDP extension URLs:
 
 ## Next steps
 
-To learn more about deploying AD CS, see [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/).
+To learn more about deploying AD CS, see [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/).  
+
+To learn more about CNG Key Storage and Retrieval, see [Key Storage and Retrieval](https://learn.microsoft.com/windows/win32/seccng/key-storage-and-retrieval)
