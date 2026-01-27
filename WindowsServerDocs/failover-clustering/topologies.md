@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.service: windows-server
 ms.topic: concept-article
-ms.date: 01/21/2026
+ms.date: 01/27/2026
 ai-usage: ai-assisted
 #CustomerIntent: As a IT administrator, I want to understand the different failover cluster topologies so that I can choose the right configuration for my business requirements.
 ---
@@ -15,6 +15,8 @@ ai-usage: ai-assisted
 Windows Server Failover Clustering supports multiple deployment topologies to meet different business requirements for high availability and disaster recovery for your applications, services, and data. These topologies provide the reliability, resilience, and uptime critical across on-premises, hybrid, public cloud, private cloud, and sovereign cloud environments.
 
 The topology you choose depends on factors such as your physical infrastructure, network latency requirements, budget constraints, and recovery objectives. Understanding these topologies helps you design the right solution for your workloads.
+
+You can also use failover clustering in Azure Local deployments to provide high availability within edge locations. For more information about Azure Local, see [What are hyperconverged deployments of Azure Local?](/azure/azure-local/overview/hyperconverged-overview)
 
 ## Topologies
 
@@ -39,7 +41,7 @@ Common examples of fault domains include:
 - **Room or data center level**: Building-wide systems like main power feeds, cooling systems, or physical security
 - **Site level**: Geographic location-specific risks such as natural disasters, regional power outages, or network connectivity issues
 
-When you design a failover cluster, understanding and planning for fault domains is crucial for achieving your desired level of availability and resilience. A well-designed cluster should be able to continue operating even when an entire fault domain fails. For example:
+When you design a failover cluster, understanding and planning for fault domains is crucial for achieving your desired level of availability and resilience. A well-designed cluster continues operating even when an entire fault domain fails. For example:
 
 - A simple cluster with all nodes in one rack can survive individual node failures, but not a rack-level failure.
 - A campus cluster with nodes distributed across two racks can survive the failure of an entire rack.
@@ -58,22 +60,42 @@ The following table compares key characteristics of each failover clustering top
 | **Geographic scope** | Single fault domain | Same physical location | Separate geographic sites | Separate geographic sites | Multiple separate sites |
 | **Network type** | LAN | LAN | LAN or WAN | LAN or WAN | Determined by workload requirement |
 | **Optimal latency** | ≤1 ms | ≤1 ms | [≤1-5 ms (sync)<br/>Variable (async)](../storage/storage-replica/storage-replica-overview.md#storage-replica-prerequisites) | Determined by SAN vendor | Variable (workload determined) |
-| **Storage configuration** | Single pool (SAN/NAS/Storage Spaces Direct) | Single Storage Spaces Direct pool spanning racks | Separate Storage Spaces Direct pools per site | SAN LUNs replicated between sites | Independent storage per cluster |
+| **Storage configuration** | SAN, NAS, or iSCSI target / Single Storage Spaces Direct pool / combined | Single Storage Spaces Direct pool spanning racks | Separate Storage Spaces Direct pools per site | SAN LUNs replicated between sites | Independent storage per cluster |
 | **Storage replication method** | None | Storage Spaces Direct Rack Level Nested Mirror | Storage Replica | SAN vendor replication | Application-level or Storage Replica |
 | **Fault domains** | Nodes only | 2 fault domains | 2 fault domains | 2 fault domains | Independent clusters |
 | **Protects against** | Node failure | Node + rack failure | Node + rack + site failure | Node + rack + site failure | Site + cluster failure |
 | **Deployment complexity** | Low | Medium | High | High | High |
 | **Primary use case** | Single datacenter HA | Campus/multi-building HA | Metro-area DR | Metro-area DR | Multi-region DR |
 
+### Storage configurations
+
+Windows Server Failover Clustering supports multiple storage architectures. You can combine these architectures with different cluster topologies to meet your performance, scalability, and availability requirements. Your choice of storage architecture affects how compute and storage resources scale, data resiliency, and overall cluster behavior.
+
+The main storage architectures include:
+
+- **SAN or NAS storage**: External shared storage accessed over the network, allowing compute and storage to scale independently.
+
+- **Hyperconverged**: Storage Spaces Direct pools local disks across cluster nodes with symmetric scaling of compute and storage.
+
+- **Disaggregated Storage Spaces Direct**: Separate compute and storage clusters with independent scaling of each tier.
+
+- **Hyperconverged with SAN storage**: Combines Storage Spaces Direct with external SAN storage in the same cluster.
+
+- **Mixed architectures**: Multiple storage types serving the same compute cluster for flexible scaling strategies.
+
+For detailed information about each storage architecture, including scaling characteristics, planning considerations, and deployment guidance, see [Failover Clustering storage architectures](storage-architectures.md).
+
 ## Simple cluster (single fault domain)
 
 A simple cluster places all cluster nodes within a single fault domain, typically in the same physical rack in a data center room. This topology is the most common and straightforward failover cluster topology. All nodes are in one rack, with shared storage that can be SAN, NAS, Storage Spaces Direct (S2D), or S2D with SAN coexistence. This configuration provides node-level redundancy and protection against individual server failures while maintaining the lowest network latency between nodes.
 
-The following diagram illustrates a simple cluster topology with all nodes in the default subnet site fault domain.
+The following diagram illustrates an example simple cluster topology with all nodes in the default subnet site fault domain using a disaggregated storage configuration.
 
 :::image type="content" source="./media/topologies/simple-cluster.png" alt-text="Diagram that shows a simple cluster topology with all nodes in the default subnet site fault domain." lightbox="./media/topologies/simple-cluster.png":::
 
 This topology is ideal for single datacenter deployments, workloads that require high performance with minimal latency, organizations with limited physical infrastructure, and development and test environments. It's the simplest configuration to deploy and manage, making it an excellent starting point for many organizations.
+
+In a simple cluster, you can combine Storage Spaces Direct with shared storage solutions like SAN or NAS solutions, or use Storage Spaces Direct alone. To learn more about combining storage solutions, see [Hyperconverged with SAN storage](storage-architectures.md#hyperconverged-with-san-storage).
 
 However, this topology has important limitations. It provides no protection against failure that could affect the whole fault domain. For example, if the fault domain is the rack-level, failures such as power distribution problems or top-of-rack switch failures could affect the availability of your cluster. It also offers no protection against wider data center or site-level disasters. The rack infrastructure itself represents a single point of failure that organizations must accept when choosing this topology.
 
@@ -81,7 +103,7 @@ However, this topology has important limitations. It provides no protection agai
 
 A Storage Spaces Direct campus cluster is a two-rack configuration within the same physical location, such as a factory, hospital, college campus, or datacenter connected by low-latency local area network (LAN) infrastructure. Campus clusters provide rack-level resiliency using Storage Spaces Direct (S2D) with either two-copy or four-copy volumes, known as Rack Level Nested Mirror (RLNM). This approach means data is intelligently distributed across racks. The topology is designed to protect against rack-level failures while maintaining low latency between nodes.
 
-The following diagram illustrates a Storage Spaces Direct campus cluster topology with nodes distributed across two rack fault domains within the same physical location.
+The following diagram illustrates an example Storage Spaces Direct campus cluster topology with nodes distributed across two rack fault domains within the same physical location.
 
 :::image type="content" source="./media/topologies/storage-spaces-direct-campus-cluster.png" alt-text="Diagram that shows a Storage Spaces Direct campus cluster topology with nodes distributed across two rack fault domains." lightbox="./media/topologies/storage-spaces-direct-campus-cluster.png":::
 
@@ -113,14 +135,14 @@ You can also learn more about Storage Spaces Direct campus clusters in our annou
 
 ## Stretch cluster
 
-A stretch cluster, also known as a geo-cluster or multi-site cluster, extends a failover cluster across two geographically separated physical sites connected by high-speed wide area network (WAN) infrastructure. This topology provides site-level disaster recovery capability by maintaining complete, independent infrastructure at each location. The key distinction from a campus cluster is that stretch clusters span separate geographic locations connected via WAN, whereas campus clusters use LAN connectivity within a single location.
+A stretch cluster, also known as a geo-cluster or multi-site cluster, extends a failover cluster across two geographically separated physical sites connected by high-speed wide area network (WAN) infrastructure. The key distinction from a campus cluster is that stretch clusters span separate geographic locations connected via WAN, whereas campus clusters use LAN connectivity within a single location.
 
 You can implement stretch clusters using two different storage architectures:
 
 - **Storage Spaces Direct stretch cluster**: Each site maintains its own Storage Spaces Direct storage pool, with Storage Replica providing replication between sites
 - **SAN stretch cluster**: Uses shared or replicated SAN storage with vendor-specific replication technology
 
-Both stretch cluster variants are designed for disaster recovery across metropolitan areas, providing geographic redundancy for critical workloads. They're well-suited for organizations with multiple data center locations or those with compliance requirements mandating off-site data protection.
+Both stretch cluster variants are designed for disaster recovery across metropolitan areas, by maintaining complete, independent infrastructure at each location. They're well-suited for organizations with multiple data center locations or those with compliance requirements mandating off-site data protection.
 
 For the cluster quorum, use a File Share Witness or Cloud Witness. The witness must be accessible from both sites to enable automatic failover and determine site majority during network partitions.
 
@@ -130,14 +152,14 @@ Stretch cluster topologies are more complex to configure and manage than single-
 
 In a Storage Spaces Direct stretch cluster configuration, each site operates its own independent Storage Spaces Direct storage pool. Storage Replica handles replication between sites, and you can configure it as synchronous or asynchronous depending on the distance and latency between locations.
 
-The following diagram illustrates a Storage Spaces Direct stretch cluster topology with nodes and storage pools at each geographic site, connected via WAN.
+The following diagram illustrates an example Storage Spaces Direct stretch cluster topology with nodes and storage pools at each geographic site, connected via WAN.
 
 :::image type="content" source="./media/topologies/storage-spaces-direct-stretch-cluster.png" alt-text="Diagram that shows a Storage Spaces Direct stretch cluster topology with nodes and storage pools at each geographic site." lightbox="./media/topologies/storage-spaces-direct-stretch-cluster.png":::
 
 
 TODO: the only requirement is latency and performance, rather than topology
 
-Network requirements differ based on replication mode. Synchronous replication requires [less than 5 ms round-trip latency](../storage/storage-replica/stretch-cluster-replication-using-shared-storage.md#prerequisites) over the WAN connection. This ensures good performance. Asynchronous replication can work with higher latency. However, asynchronous replication means you might lose more data during a failure (larger RPO). Both modes require a dedicated high-bandwidth WAN connection between sites, and each site should have a network path to the witness to ensure proper quorum management.
+Network requirements differ based on replication mode. Synchronous replication requires [less than 5 ms round-trip latency](../storage/storage-replica/stretch-cluster-replication-using-shared-storage.md#prerequisites) over the WAN connection. This requirement ensures good performance. Asynchronous replication can work with higher latency. However, asynchronous replication means you might lose more data during a failure (larger RPO). Both modes require a dedicated high-bandwidth WAN connection between sites, and each site should have a network path to the witness to ensure proper quorum management.
 
 This configuration requires Windows Server Datacenter edition for Storage Replica functionality. Network bandwidth and reliability are critical for maintaining successful replication and cluster health.
 
@@ -145,7 +167,7 @@ This configuration requires Windows Server Datacenter edition for Storage Replic
 
 A SAN stretch cluster relies on the storage area network vendor's replication capabilities to maintain data synchronization between sites. The SAN handles replication at the storage layer, presenting replicated LUNs to cluster nodes at both sites.
 
-The following diagram illustrates a SAN stretch cluster topology with replicated SAN storage at each geographic site, connected via WAN.
+The following diagram illustrates an example of a SAN stretch cluster topology with replicated SAN storage at each geographic site, connected via WAN.
 
 :::image type="content" source="./media/topologies/storage-area-network-stretch-cluster.png" alt-text="Diagram that shows a SAN stretch cluster topology with replicated SAN storage at each geographic site." lightbox="./media/topologies/storage-area-network-stretch-cluster.png":::
 
@@ -157,7 +179,7 @@ SAN stretch clusters require careful coordination with storage administrators an
 
 Multi-cluster topology involves deploying multiple independent failover clusters that work together through application-level replication or coordination. This topology differs fundamentally from a single stretched cluster. In this approach, two or more independent failover clusters each operate autonomously, with application-level replication between clusters and no shared quorum or cluster resources.
 
-The following diagram illustrates a multi-cluster topology with two independent SQL  clusters at separate geographic sites, connected via WAN and replicated at the application layer.
+The following diagram illustrates an example of a multi-cluster topology with two independent SQL  clusters at separate geographic sites, connected via WAN and replicated at the application layer.
 
 :::image type="content" source="./media/topologies/multi-cluster.png" alt-text="Diagram that shows a multi-cluster topology with two independent failover clusters at separate sites." lightbox="./media/topologies/multi-cluster.png":::
 
@@ -185,8 +207,6 @@ You need to carefully consider multiple factors across business, infrastructure,
 From a business perspective, start by defining your Recovery Time Objective (RTO) - how quickly services must be restored after a failure - and your Recovery Point Objective (RPO) - how much data loss is acceptable to your organization. These metrics directly influence topology selection. Additionally, consider your budget for hardware, networking, and licensing, as more resilient topologies typically require greater investment. Compliance and regulatory requirements might mandate specific configurations, such as geographically separated data centers or specific data protection standards.
 
 Infrastructure factors also shape your decision. Consider the number and location of data centers or rooms you have access to. Evaluate network links and latency between sites. Review existing storage systems that you can reuse. Assess power and cooling backup at each location. A campus with two nearby buildings connected by fiber supports different topologies than distant data centers.
-
-A campus with two nearby buildings connected by fiber supports different topologies than geographically distant data centers.
 
 Workload characteristics play a crucial role in topology selection. Evaluate your applications' I/O patterns and performance requirements, as latency-sensitive workloads might not tolerate the overhead of geographic replication.
 
