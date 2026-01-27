@@ -34,6 +34,8 @@ There are several requirements and things to consider before you begin to use GP
 
 - You need a Windows Server Failover cluster running Windows Server 2025 or later.
 
+  - Windows Server 2025 Datacenter edition is required for using DDA with GPU Pools in clustered VMs.
+
 ::: zone-end
 
 - You must have a familiarity with Failover clustering and Hyper-V.

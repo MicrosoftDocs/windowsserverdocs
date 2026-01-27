@@ -8,7 +8,7 @@ ms.date: 02/19/2025
 ---
 # Deploy graphics devices by using Discrete Device Assignment
 
-Learn how to use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM) with PowerShell. Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
+Learn how to use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM) on standalone (non-clustered) Hyper-V hosts with PowerShell. Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
 This article takes you through the steps to use a device with DDA:
 
@@ -20,7 +20,10 @@ This article takes you through the steps to use a device with DDA:
 
 Before you can use DDA to deploy graphics devices, you need to have the following.
 
-- A Hyper-V host running Windows Server 2016 or later.
+- A Hyper-V host running Windows Server 2016 or later (Standard or Datacenter edition for standalone hosts).
+
+  > [!IMPORTANT]
+  > Deploying graphics devices to clustered virtual machines? Learn about using DDA with GPU Pools in clustered environments. See [Use GPUs with Discrete Device Assignment in clustered VMs](use-gpu-with-clustered-vm.md).
 
 - A VM running one of the following operating systems:
 
