@@ -9,26 +9,38 @@ ms.date: 10/16/2017
 
 # rundll32
 
-Loads and runs 32-bit dynamic-link libraries (DLLs). There are no configurable settings for Rundll32. Help information is provided for a specific DLL you run with the **rundll32** command.
-
-You must run the **rundll32** command from an elevated command prompt. To open an elevated command prompt, click **Start**, right-click **Command Prompt**, and then click **Run as administrator**.
+Loads and runs procedures from dynamic-link libraries (DLLs) conforming to a specific interface (see remarks).
 
 ## Syntax
 
 ```
-rundll32 <DLLname>
+rundll32 <dllName>,<procedureName> [<arguments>[ ...]]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |--|--|
-| [Rundll32 printui.dll,PrintUIEntry](rundll32-printui.md) | Displays the printer user interface. |
+| `<dllName>` | The DLL from which to run the procedure from. |
+| `<procedureName>` | The name of the procedure to run. |
+| `<arguments>` | Parameters to pass into the procedure `lpCmdLine`. |
+
+### Example
+
+```
+rundll32 devmgr,DeviceProperties_RunDLL /DeviceID root\system\0000
+```
 
 ## Remarks
 
-Rundll32 can only call functions from a DLL explicitly written to be called by Rundll32.
+Rundll32 assumes the procedure has an interface conforming with the [WinMain entry point](/windows/win32/learnwin32/winmain--the-application-entry-point).
+
+The ```,``` separator between the DLL name and the procedure can alternatively be a space (" ").
+
+The ```procedureName``` can also alternatively be an ordinal, e.g. (```#2```) for ordinal 2.
 
 ## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Rundll32 printui.dll,PrintUIEntry](rundll32-printui.md)
+- [DeviceProperties_RunDLL](/windows-hardware/drivers/install/deviceproperties-rundll-function-prototype)
