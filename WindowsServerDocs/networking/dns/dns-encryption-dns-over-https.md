@@ -6,10 +6,10 @@ author: robinharwood
 ms.author: roharwoo
 ms.reviewer: canasjorge
 ms.topic: concept-article
-ms.date: 01/19/2026
+ms.date: 01/28/2026
 ---
 
-# DNS encryption using DNS over HTTPS in Windows
+# DNS encryption using DNS over HTTPS
 
 Traditional DNS uses unencrypted UDP or TCP messages on port 53, which exposes DNS traffic to passive monitoring, traffic analysis, and active manipulation by attackers. DNS encryption protects DNS query and response traffic from being observed, modified, or tampered with while in transit over a network.
 
@@ -17,13 +17,17 @@ DNS over HTTPS (DoH) is a standards‑based mechanism that encrypts DNS traffic 
 
 ## How DNS over HTTPS works
 
-DNS over HTTPS doesn't change the fundamental DNS query and response model. Instead, it changes how DNS messages are transported across the network.
+DNS over HTTPS doesn't change the fundamental DNS query and response model. Instead, it changes how DNS messages are transported across the network. When you enable DoH on a DNS Server, DoH becomes an additional encrypted communication option, and the DNS Server continues to answer traditional DNS queries unless you explicitly disable that capability.
+
+An example of the DoH communication flow is as shown in the following diagram.
+
+:::image type="content" source="../media/dns-encryption-dns-over-https/overview.png" alt-text="Diagram that shows the DNS over HTTPS communication flow between a client and server." lightbox="../media/dns-encryption-dns-over-https/overview.png":::
 
 When you enable DoH:
 
 - The DNS server listens to HTTPS traffic.
 
-- You configure a DoH-capable client (such as a Windows 11 client) to use the DoH server.
+- You configure a [DoH-capable client (such as a Windows 11 client)](doh-client-support.md) to use the DoH server.
 
 - The DoH client establishes a TLS connection to the DoH server.
 
@@ -32,6 +36,18 @@ When you enable DoH:
 - The DNS server processes the query as usual.
 
 - The DNS response is returned inside the HTTPS response.
+
+- Upstream DNS communication from the DoH server to authoritative DNS servers remains unchanged.
+
+When configuring DNS over HTTPS, consider the following:
+
+- Upstream DNS communication (forwarders, conditional forwarders, authoritative servers) remains unencrypted
+
+- DNS zone transfers remain unencrypted
+
+- You can't create a DNS query filter that only matches DoH queries
+
+- Policies with a Transport Protocol query filter don't match DoH queries (for example, a policy with Transport Protocol filter set to `EQ, TCP` doesn't match DoH)
 
 ## Security benefits of DNS over HTTPS
 
@@ -55,15 +71,11 @@ Additionally, the DoH standard allows server implementations the freedom to conf
 
 ## DNS encryption and DNSSEC
 
-DNS encryption, such as DoH, and DNSSEC address different threat models and are complementary technologies.
+DNS encryption, such as DoH, and DNSSEC address different threat models and are complementary technologies. DNS encryption protects DNS traffic on the wire, while DNSSEC ensures that DNS data is cryptographically verified from an authoritative source.
 
-DNS encryption protects DNS traffic on the wire, while DNSSEC ensures that DNS data is cryptographically verified from an authoritative source.
+Using DoH together with DNSSEC provides defense in depth by combining encrypted transport with authenticated DNS data. To learn more about DNSSEC, see [What is DNSSEC?](dnssec-overview.md).
 
-Using DoH together with DNSSEC provides defense in depth by combining encrypted transport with authenticated DNS data.
+## Next steps
 
-## Related content
-
-To learn more about securing DNS, see:
-
-- [What is DNSSEC?](dnssec-overview.md)
-- [Secure DNS Client over HTTPS (DoH)](doh-client-support.md)
+> [!div class="nextstepaction"]
+> [Enable DNS over HTTPS on Windows DNS Server](enable-dns-over-https-server.md)

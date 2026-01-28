@@ -194,12 +194,16 @@ items:
           href: dns/validate-dnssec-responses.md
         - name: Key Master
           href: dns/dnssec-key-master.md
+      - name: DNS encryption using DNS over HTTPS
+        href: dns/dns-encryption-dns-over-https.md
     - name: How-to guides
       items:
       - name: Manage DNS zones
         href: dns/manage-dns-zones.md
       - name: Manage DNS resource records
         href: dns/manage-resource-records.md
+      - name: Enable DNS over HTTPS in DNS Server
+        href: dns/enable-dns-over-https-server.md
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
       - name: Enable DNS Logging and Diagnostics
