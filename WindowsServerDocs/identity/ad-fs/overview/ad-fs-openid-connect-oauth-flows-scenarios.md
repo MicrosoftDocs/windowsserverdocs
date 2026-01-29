@@ -47,12 +47,12 @@ To initially sign the user in to your app, you can send an OpenID Connect auth
 // Line breaks for legibility only
 
 https://adfs.contoso.com/adfs/oauth2/authorize?
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
+client_id=<client_id>
 &response_type=id_token+token
-&redirect_uri=http%3A%2F%2Flocalhost%2Fmyapp%2F
+&redirect_uri=<redirect_uri>
 &scope=openid
 &response_mode=fragment
-&state=12345
+&state=<state>
 ```
 
 |Parameter|Required/optional|Description|
@@ -79,12 +79,12 @@ A successful response, when `response_mode=fragment and response_type=id_tok
 // Line breaks for legibility only
 
 GET https://localhost/myapp/#
-access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZEstZnl0aEV...
+access_token=<access_token>
 &token_type=Bearer
-&expires_in=3599
+&expires_in=<expires_in>
 &scope=openid
-&id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZstZnl0aEV1Q...
-&state=12345
+&id_token=<id_token>
+&state=<state>
 ```
 
 |Parameter|Description|
@@ -121,13 +121,13 @@ The authorization code flow begins with the client directing the user to the /
 // Line breaks for legibility only
 
 https://adfs.contoso.com/adfs/oauth2/authorize?
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
+client_id=<client_id>
 &response_type=code
-&redirect_uri=http%3A%2F%2Flocalhost%2Fmyapp%2F
+&redirect_uri=<redirect_uri>
 &response_mode=query
-&resource=https://webapi.com/
+&resource=<resource>
 &scope=openid
-&state=12345
+&state=<state>
 ```
 
 |Parameter|Required/optional|Description|
@@ -153,8 +153,8 @@ A successful response, when response_mode=query is used, looks like this:
 
 ```
 GET https://adfs.contoso.com/common/oauth2/nativeclient?
-code=AwABAAAAvPM1KaPlrEqdFSBzjqfTGBCmLdgfSTLEMPGYuNHSUYBrq...
-&state=12345
+code=<code>
+&state=<state>
 ```
 
 |Parameter|Description|
@@ -173,11 +173,11 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com/
 Content-Type: application/x-www-form-urlencoded
 
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
-&code=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq3n8b2JRLk4OxVXr...
-&redirect_uri=http%3A%2F%2Flocalhost%2Fmyapp%2F
+client_id=<client_id>
+&code=<code>
+&redirect_uri=<redirect_uri>
 &grant_type=authorization_code
-&client_secret=JqQX2PNo9bpM0uEihUPzyrh    // NOTE: Only required for confidential clients (web apps)
+&client_secret=<client_secret>    // NOTE: Only required for confidential clients (web apps)
 ```
 
 |Parameter|Required/optional|Description|
@@ -195,12 +195,12 @@ A successful token response looks like this:
 
 ```
 {
-    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...",
+    "access_token": "<access_token>",
     "token_type": "Bearer",
-    "expires_in": 3599,
-    "refresh_token": "AwABAAAAvPM1KaPlrEqdFSBzjqfTGAMxZGUTdM0t4B4...",
-    "refresh_token_expires_in": 28800,
-    "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIyZDRkMTFhMi1mODE0LTQ2YTctOD...",
+    "expires_in": <expires_in>,
+    "refresh_token": "<refresh_token>",
+    "refresh_token_expires_in": <refresh_token_expires_in>,
+    "id_token": "<id_token>",
 }
 ```
 
@@ -218,7 +218,7 @@ A successful token response looks like this:
 ```http
 GET /v1.0/me/messages
 Host: https://webapi.com
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...
+Authorization: Bearer <access_token>
  ```
 
 ### Refresh the token grant flow
@@ -236,10 +236,10 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
-&refresh_token=OAAABAAAAiL9Kn2Z27UubvWFPbm0gLWQJVzCTE9UkP3pSx1aXxUjq...
+client_id=<client_id>
+&refresh_token=<refresh_token>
 &grant_type=refresh_token
-&client_secret=JqQX2PNo9bpM0uEihUPzyrh      // NOTE: Only required for confidential clients (web apps)
+&client_secret=<client_secret>      // NOTE: Only required for confidential clients (web apps)
 ```
 
 |Parameter|Required/optional|Description|
@@ -257,12 +257,12 @@ A successful token response looks like this:
 
 ```
 {
-    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...",
+    "access_token": "<access_token>",
     "token_type": "Bearer",
-    "expires_in": 3599,
-    "refresh_token": "AwABAAAAvPM1KaPlrEqdFSBzjqfTGAMxZGUTdM0t4B4...",
-    "refresh_token_expires_in": 28800,
-    "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIyZDRkMTFhMi1mODE0LTQ2YTctOD...",
+    "expires_in": <expires_in>,
+    "refresh_token": "<refresh_token>",
+    "refresh_token_expires_in": <refresh_token_expires_in>,
+    "id_token": "<id_token>",
 }
 ```
 
@@ -403,10 +403,10 @@ Host: adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer
-&client_id=https://webapi.com/
-&client_secret=BYyVnAt56JpLwUcyo47XODd
-&assertion=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIm…
-&resource=https://secondwebapi.com/
+&client_id=<client_id>
+&client_secret=<client_secret>
+&assertion=<assertion>
+&resource=<resource>
 &requested_token_use=on_behalf_of
 &scope=openid
 ```
@@ -440,10 +440,10 @@ Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer
-&client_id= https://webapi.com/
+&client_id=<client_id>
 &client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer
-&client_assertion=eyJhbGciOiJSUzI1NiIsIng1dCI6Imd4OHRHeXN5amNS…
-&resource=https://secondwebapi.com/
+&client_assertion=<client_assertion>
+&resource=<resource>
 &requested_token_use=on_behalf_of
 &scope= openid
 ```
@@ -470,11 +470,11 @@ The following example shows a success response to a request for an access token 
 {
   "token_type": "Bearer",
   "scope": openid,
-  "expires_in": 3269,
-  "access_token": "eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFCbmZpRy1t"
-  "id_token": "aWRfdG9rZW49ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOa"
-  "refresh_token": "OAQABAAAAAABnfiG…"
-  "refresh_token_expires_in": 28800,
+  "expires_in": <expires_in>,
+  "access_token": "<access_token>"
+  "id_token": "<id_token>"
+  "refresh_token": "<refresh_token>"
+  "refresh_token_expires_in": <refresh_token_expires_in>,
 }
 ```
 
@@ -487,7 +487,7 @@ Now the middle-tier service can use the token acquired in the previous response 
 ```http
 GET /v1.0/me HTTP/1.1
 Host: https://secondwebapi.com
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IkFRQUJBQUFBQUFCbmZpRy1tQ…
+Authorization: Bearer <access_token>
 ```
 
 ## Client credentials grant flow
@@ -518,8 +518,8 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
-&client_secret=qWgdYAmab0YSkuL1qKv5bPX
+client_id=<client_id>
+&client_secret=<client_secret>
 &grant_type=client_credentials
 ```
 
@@ -540,9 +540,9 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-&client_id=00001111-aaaa-2222-bbbb-3333cccc4444
-&client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer
-&client_assertion=eyJhbGciOiJSUzI1NiIsIng1dCI6Imd4OHRHeXN5amNScUtqRlBuZDdSRnd2d1pJMCJ9.eyJ{a lot of characters here}M8U3bSUKKJDEg
+&client_id=<client_id>
+&client_assertion_type=<client_assertion_type>
+&client_assertion=<client_assertion>
 &grant_type=client_credentials
 ```
 
@@ -561,7 +561,7 @@ Now that you've acquired a token, use the token to make requests to the resource
 ```http
 GET /v1.0/me/messages
 Host: https://webapi.com
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik5HVEZ2ZEstZnl0aEV1Q...
+Authorization: Bearer <access_token>
 ```
 
 ## Resource owner password credentials grant flow (not recommended)
@@ -588,10 +588,10 @@ POST /adfs/oauth2/token HTTP/1.1
 Host: https://adfs.contoso.com
 Content-Type: application/x-www-form-urlencoded
 
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
+client_id=<client_id>
 &scope= openid
-&username=myusername@contoso.com
-&password=SuperS3cret
+&username=<username>
+&password=<password>
 &grant_type=password
 ```
 
@@ -611,11 +611,11 @@ The following example shows a successful token response:
 {
     "token_type": "Bearer",
     "scope": "openid",
-    "expires_in": 3599,
-    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn...",
-    "refresh_token": "AwABAAAAvPM1KaPlrEqdFSBzjqfTGAMxZGUTdM0t4B4...",
-    "refresh_token_expires_in": 28800,
-    "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIyZDR..."
+    "expires_in": <expires_in>,
+    "access_token": "<access_token>",
+    "refresh_token": "<refresh_token>",
+    "refresh_token_expires_in": <refresh_token_expires_in>,
+    "id_token": "<id_token>"
 }
 ```
 
@@ -654,7 +654,7 @@ The client must first check with the authentication server for a device and user
 POST https://adfs.contoso.com/adfs/oauth2/devicecode
 Content-Type: application/x-www-form-urlencoded
 
-client_id=00001111-aaaa-2222-bbbb-3333cccc4444
+client_id=<client_id>
 scope=openid
 ```
 
@@ -687,8 +687,8 @@ POST https://adfs.contoso.com /adfs/oauth2/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type: urn:ietf:params:oauth:grant-type:device_code
-client_id: 00001111-aaaa-2222-bbbb-3333cccc4444
-device_code: GMMhmHCXhWEzkobqIHGG_EnNYYsAkukHspeYUk9E8
+client_id: <client_id>
+device_code: <device_code>
 ```
 
 |Parameter|Required/optional|Description|
