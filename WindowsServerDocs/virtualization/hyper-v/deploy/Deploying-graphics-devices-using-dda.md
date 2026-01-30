@@ -4,7 +4,7 @@ description: Learn how to use DDA to deploy graphics devices in Windows Server a
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 02/19/2025
+ms.date: 01/30/2026
 ---
 # Deploy graphics devices by using Discrete Device Assignment
 
@@ -16,14 +16,14 @@ This article takes you through the steps to use a device with DDA:
 1. [Dismount the device from the host partition](#dismount-the-device-from-the-host-partition)
 1. [Assign the device to the guest VM](#assign-the-device-to-the-guest-vm)
 
+> [!IMPORTANT]
+> Deploying graphics devices to clustered virtual machines? Learn about using DDA with GPU Pools in clustered environments. See [Use GPUs with Discrete Device Assignment in clustered VMs](use-gpu-with-clustered-vm.md).
+
 ## Prerequisites
 
 Before you can use DDA to deploy graphics devices, you need to have the following.
 
-- A Hyper-V host running Windows Server 2016 or later (Standard or Datacenter edition for standalone hosts).
-
-  > [!IMPORTANT]
-  > Deploying graphics devices to clustered virtual machines? Learn about using DDA with GPU Pools in clustered environments. See [Use GPUs with Discrete Device Assignment in clustered VMs](use-gpu-with-clustered-vm.md).
+- A Hyper-V host running Windows Server 2016 or later.
 
 - A VM running one of the following operating systems:
 
