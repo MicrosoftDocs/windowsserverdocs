@@ -204,6 +204,8 @@ items:
         href: dns/manage-resource-records.md
       - name: Enable DNS over HTTPS in DNS Server
         href: dns/enable-dns-over-https-server.md
+      - name: Monitor DNS over HTTPS in DNS Server
+        href: dns/monitor-dns-over-https.md
       - name: Secure DNS Client over HTTPS (DoH)
         href: dns/doh-client-support.md
       - name: Enable DNS Logging and Diagnostics
