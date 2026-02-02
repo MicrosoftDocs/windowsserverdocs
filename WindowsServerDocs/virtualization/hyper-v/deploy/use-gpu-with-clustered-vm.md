@@ -4,7 +4,7 @@ description: Learn how to use GPUs with clustered virtual machines (VMs) to prov
 author: dknappettmsft
 ms.author: daknappe
 ms.topic: how-to
-ms.date: 06/23/2025
+ms.date: 01/30/2026
 zone_pivot_groups: windows-os
 #customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Local.
 ---
@@ -33,6 +33,8 @@ There are several requirements and things to consider before you begin to use GP
 :::zone pivot="windows-server"
 
 - You need a Windows Server Failover cluster running Windows Server 2025 or later.
+
+- Windows Server 2025 Datacenter edition is required for using DDA with GPU Pools in clustered VMs.
 
 ::: zone-end
 
