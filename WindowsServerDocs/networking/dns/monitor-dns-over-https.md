@@ -1,12 +1,13 @@
 ---
-title: Monitor DNS over HTTPS events and performance in DNS Server on Windows Server 
+title: Monitor DNS over HTTPS events and performance in DNS Server on Windows Server
 description: Learn how to monitor DNS over HTTPS (DoH) activity using event logs and performance counters in DNS Server on Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.reviewer: canasjorge
+ms.reviewer: canasjorge,sruthytv
 ms.date: 02/03/2026
 #customer intent: As a network administrator, I want to monitor DNS over HTTPS activity on my DNS Server so that I can track encrypted DNS query performance and operations.
+ai-usage: ai-assisted
 ---
 
 # Monitor DNS over HTTPS in DNS Server (Preview)
@@ -32,13 +33,13 @@ Before you begin, make sure you have:
 
 ## View server logs
 
-DoH server audit logs are enabled by default. These logs don't significantly affect DNS server performance. DNS server audit events enable startup, shutdown, and change tracking on the DNS server. To view DoH server logs:
+The system enables DoH server audit logs by default. These logs don't significantly affect DNS server performance. DNS server audit events enable startup, shutdown, and change tracking on the DNS server. To view DoH server logs:
 
 1. Select the **Start** button, type **Event viewer**, and open **Event viewer** from the best match list.
 
 1. In Event Viewer, go to **Applications and Services > DNS Server**.
 
-1. To filter for DoH-specific events, right-click **DNS Server**, select **Filter Current Log**, and in the filter dialog, enter the following DoH event IDs in the **<All Event IDs>** field: `597, 598, 599, 600, 601, 602, 603`. Select **OK** to apply the filter.
+1. To filter for DoH-specific events, right-click **DNS Server**, select **Filter Current Log**, and in the filter dialog, enter the following DoH event IDs in the **All Event IDs** field: `597, 598, 599, 600, 601, 602, 603`. Select **OK** to apply the filter.
 
 ## Server events
 
@@ -52,8 +53,8 @@ The following table summarizes DoH server audit events.
 | 825 | DoH create URL failed | DNS over HTTPS | Error | `The DNS server could not register the URL: %1 for the DNS-over-HTTPS (DoH) server and failed with error code %2.` |
 | 826 | DoH create request queue failed | DNS over HTTPS | Error | `The DNS server could not create the HTTP request queue for DNS-over-HTTPS (DoH) and failed with error code %1.` |
 | 827 | DoH configuration | DNS over HTTPS | Informational | `The configuration for DNS-over-HTTPS (DoH) server are: %1` |
-| 828 | DoH server shutdown | DNS over HTTPS | Informational | `The DNS-over-HTTPS (DoH) server has shut down gracefully.` |
-| 829 | DoH server shutdown error | DNS over HTTPS | Error | `The DNS-over-HTTPS (DoH) server has shut down due to an error and failed with error code %1.` |
+| 828 | DoH server shut down | DNS over HTTPS | Informational | `The DNS-over-HTTPS (DoH) server has shut down gracefully.` |
+| 829 | DoH server shut down error | DNS over HTTPS | Error | `The DNS-over-HTTPS (DoH) server has shut down due to an error and failed with error code %1.` |
 
 ## View analytical events
 

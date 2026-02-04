@@ -4,9 +4,10 @@ description: Secure DNS traffic with DNS over HTTPS (DoH) for DNS Server on Wind
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.reviewer: canasjorge
+ms.reviewer: canasjorge,sruthytv
 ms.date: 02/03/2026
 #customer intent: As a network administrator, I want to enable DNS over HTTPS on my DNS Server so that I can encrypt DNS traffic between clients and the server.
+ai-usage: ai-assisted
 ---
 
 # Enable DNS over HTTPS in DNS Server (preview)
@@ -19,7 +20,7 @@ This article explains how to enable DNS over HTTPS (DoH) in the DNS Server servi
 
 Traditional DNS traffic is unencrypted, which exposes DNS queries to eavesdropping, interception, and manipulation by attackers on your network. If you need to protect DNS communication between clients and your DNS server, enabling DoH encrypts that traffic using HTTPS, preventing unauthorized observation or tampering.
 
-To learn more about how DoH works, see [DNS encryption using DNS over HTTPS](dns-encryption-dns-over-https.md).
+For more information about how DoH works, see [DNS encryption using DNS over HTTPS](dns-encryption-dns-over-https.md).
 
 ## Prerequisites
 
@@ -37,7 +38,7 @@ Before you begin, ensure you have:
 
 - Firewall rules configured to allow inbound connections on TCP port 443 for DoH
 
-- To enable DNS over HTTPS on the DNS Server service, request access by using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview) through an opt-in process. Once requested, follow the instructions you receive provided before continuing.
+- To enable DNS over HTTPS on the DNS Server service, request access by using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview) through an opt-in process. Once requested, follow the instructions you receive before continuing.
 
 - Administrative or equivalent access to the Windows Server hosting the DNS Server service
 
@@ -113,9 +114,28 @@ Confirm that your certificate is properly bound to the correct IP address and po
 
 1. Verify the output shows your IP address and port, and that the certificate hash matches your thumbprint.
 
+## Configure firewall rules
+
+DoH uses TCP port 443 for encrypted DNS traffic. Configure Windows Firewall to allow inbound connections on this port.
+
+1. To create a firewall rule that allows inbound DoH traffic, run the following command:
+
+   ```powershell
+   New-NetFirewallRule -DisplayName "DNS over HTTPS" -Direction Inbound -Protocol TCP -LocalPort 443 -Action Allow
+   ```
+
+1. Verify the firewall rule was created by running the following command:
+
+   ```powershell
+   Get-NetFirewallRule -DisplayName "DNS over HTTPS"
+   ```
+
+> [!NOTE]
+> If you configured DoH to use a different port, replace `443` with your custom port number. If you're using a hardware firewall or network security group, ensure it also allows inbound TCP traffic on the same port.
+
 ## Enable the DoH service
 
-After binding the certificate, enable the DoH service on your DNS Server.
+After you bind the certificate and configure firewall rules, enable the DoH service on your DNS Server.
 
 1. Enable DoH and set the URI template using the [Set-DnsServerEncryptionProtocol](/powershell/module/dnsserver/Set-DnsServerEncryptionProtocol) command. Replace `dns.contoso.com` with the hostname that matches the SAN on your certificate:
 

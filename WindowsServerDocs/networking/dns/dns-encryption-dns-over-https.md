@@ -7,6 +7,7 @@ ms.author: roharwoo
 ms.reviewer: canasjorge
 ms.topic: concept-article
 ms.date: 02/03/2026
+ai-usage: ai-assisted
 ---
 
 # DNS encryption using DNS over HTTPS
