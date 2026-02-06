@@ -7,7 +7,7 @@ ms.date: 05/12/2025
 ms.topic: concept-article
 
 ---
-# Domain-wide schema updates
+# Domain-wide updates
 
 You can review the following set of changes to help understand and prepare for the schema updates performed by adprep /domainprep in Windows Server.
 
