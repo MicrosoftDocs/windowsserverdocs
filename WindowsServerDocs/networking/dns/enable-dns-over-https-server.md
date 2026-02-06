@@ -38,9 +38,9 @@ Before you begin, ensure you have:
 
 - Firewall rules configured to allow inbound connections on TCP port 443 for DoH
 
-- To enable DNS over HTTPS on the DNS Server service, request access by using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview) through an opt-in process. Once requested, follow the instructions you receive before continuing.
-
 - Administrative or equivalent access to the Windows Server hosting the DNS Server service
+
+- To enable DNS over HTTPS on the DNS Server service, request access by using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview). Once requested, follow the instructions you receive before continuing.
 
 DoH certificates must meet the following requirements:
 
@@ -50,7 +50,7 @@ DoH certificates must meet the following requirements:
 
 - **Private key**: Must be present in the Local Computer's store, correctly associated with the certificate, and must not have strong private key protection enabled
 
-- **Trust chain**: Must be issued by a CA that both the domain controller and DNS clients trust
+- **Trust chain**: Must be issued by a CA that both the DNS server and DNS clients trust
 
 For more complex certificate setups, see [Certificates and Public Keys](/windows/win32/seccrypto/certificates-and-public-keys) and [Working with Certificates](/dotnet/framework/wcf/feature-details/working-with-certificates).
 
@@ -60,13 +60,13 @@ If you already have a certificate on the server, go to [Bind the certificate](#b
 
 1. Place the certificate's `.pfx` file (containing both certificate and private key) on the server hosting the DNS Server.
 
-1. Open PowerShell as an administrator and run the following command to import the certificate:
+1. Open PowerShell as an administrator and run the following command to import the certificate, making sure to replace `<pfxpath>` with the path to your `.pfx` file and `<pfxpassword>` with the password for the `.pfx` file:
 
    ```powershell
    Import-PfxCertificate `
-       -FilePath "C:\path\yourcert.pfx" `
+       -FilePath "<pfxpath>" `
        -CertStoreLocation "Cert:\LocalMachine\My" `
-       -Password (Read-Host -AsSecureString "PFX Password")
+       -Password (Read-Host -AsSecureString "<pfxpassword>")
    ```
 
 1. When prompted, enter the password for your certificate.
@@ -100,7 +100,7 @@ After importing the certificate, bind it to the server port so the DNS Server ca
    ```
 
 > [!TIP]
-> To have the DNS Server service respond to DoH traffic on a specific IP address instead of all addresses, replace `0.0.0.0` with your desired IP address. The IP address must resolve to the SAN in your certificate. You can also replace `443` with a different port number.
+> To have the DNS Server service respond to DoH traffic on a specific IP address instead of all addresses, replace `0.0.0.0` with your desired IP address. The IP address must either be or resolve to the host contained in the SAN of your certificate. You can also replace `443` with a different port number.
 
 ## Verify the certificate binding
 
@@ -116,7 +116,9 @@ Confirm that your certificate is properly bound to the correct IP address and po
 
 ## Configure firewall rules
 
-DoH uses TCP port 443 for encrypted DNS traffic. Configure Windows Firewall to allow inbound connections on this port.
+DoH uses a different TCP port than unencrypted DNS, so you need to configure your firewall to allow inbound traffic on the port you specified when binding the certificate. By default, DoH uses TCP port 443 unless you specified a different port in the URI template and certificate binding steps.
+
+Configure Windows Firewall to allow inbound connections on the configured DoH port using the following steps:
 
 1. To create a firewall rule that allows inbound DoH traffic, run the following command:
 
@@ -133,11 +135,11 @@ DoH uses TCP port 443 for encrypted DNS traffic. Configure Windows Firewall to a
 > [!NOTE]
 > If you configured DoH to use a different port, replace `443` with your custom port number. If you're using a hardware firewall or network security group, ensure it also allows inbound TCP traffic on the same port.
 
-## Enable the DoH service
+## Enable the DoH
 
-After you bind the certificate and configure firewall rules, enable the DoH service on your DNS Server.
+After you bind the certificate and configure firewall rules, enable the DoH on your DNS Server.
 
-1. Enable DoH and set the URI template using the [Set-DnsServerEncryptionProtocol](/powershell/module/dnsserver/Set-DnsServerEncryptionProtocol) command. Replace `dns.contoso.com` with the hostname that matches the SAN on your certificate:
+1. Enable DoH and set the URI template using the [Set-DnsServerEncryptionProtocol](/powershell/module/dnsserver/Set-DnsServerEncryptionProtocol) command. Replace `dns.contoso.com` with the hostname (or IP address) contained in the SAN on your certificate:
 
    ```powershell
    Set-DnsServerEncryptionProtocol -EnableDoH $true -UriTemplate "https://dns.contoso.com:443/dns-query"
@@ -170,7 +172,7 @@ Test that DoH is working correctly by verifying the configuration and testing fr
 
 To confirm that DoH is functioning correctly, test DNS resolution from a DoH-capable client.
 
-1. Configure a DoH client to use your DoH server with the same URI template you configured. For client configuration steps, see [Secure DNS Client over HTTPS (DoH)](doh-client-support.md).
+1. Configure a DoH client to use encryption for your DNS server with the same URI template you configured. For client configuration steps, see [Secure DNS Client over HTTPS (DoH)](doh-client-support.md).
 
 1. From the configured DoH client, test DNS resolution using the [Resolve-DnsName](/powershell/module/dnsclient/Resolve-DnsName) command. Replace `contoso.com` with a domain you want to resolve:
 

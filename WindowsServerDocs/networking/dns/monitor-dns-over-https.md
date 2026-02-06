@@ -33,7 +33,7 @@ Before you begin, make sure you have:
 
 ## View server logs
 
-The system enables DoH server audit logs by default. These logs don't significantly affect DNS server performance. DNS server audit events enable startup, shutdown, and change tracking on the DNS server. To view DoH server logs:
+The system enables audit logs by default. These logs don't significantly affect DNS server performance. DNS server audit events enable startup, shutdown, and change tracking on the DNS server. To view DoH logs:
 
 1. Select the **Start** button, type **Event viewer**, and open **Event viewer** from the best match list.
 
@@ -43,22 +43,22 @@ The system enables DoH server audit logs by default. These logs don't significan
 
 ## Server events
 
-The following table summarizes DoH server audit events.
+The following table summarizes DoH audit events.
 
 | Event ID | Type | Category | Level | Event text |
 |----------|------|----------|-------|------------|
 | 822 | DoH URL registered | DNS over HTTPS | Informational | `Successfully started HTTP server for DNS-over-HTTPS (DoH) server. The DoH server is listening on following URL(s): %1` |
-| 823 | DoH server initialization failed | DNS over HTTPS | Error | `The DNS server could not initialize the HTTP server for DNS-over-HTTPS (DoH) and failed with error code %1.` |
-| 824 | DoH server sessions failed | DNS over HTTPS | Error | `The DNS server could not create the HTTP server session for DNS-over-HTTPS (DoH) and failed with error code %1.` |
+| 823 | DoH initialization failed | DNS over HTTPS | Error | `The DNS server could not initialize the HTTP server for DNS-over-HTTPS (DoH) and failed with error code %1.` |
+| 824 | DoH sessions failed | DNS over HTTPS | Error | `The DNS server could not create the HTTP server session for DNS-over-HTTPS (DoH) and failed with error code %1.` |
 | 825 | DoH create URL failed | DNS over HTTPS | Error | `The DNS server could not register the URL: %1 for the DNS-over-HTTPS (DoH) server and failed with error code %2.` |
 | 826 | DoH create request queue failed | DNS over HTTPS | Error | `The DNS server could not create the HTTP request queue for DNS-over-HTTPS (DoH) and failed with error code %1.` |
 | 827 | DoH configuration | DNS over HTTPS | Informational | `The configuration for DNS-over-HTTPS (DoH) server are: %1` |
-| 828 | DoH server shut down | DNS over HTTPS | Informational | `The DNS-over-HTTPS (DoH) server has shut down gracefully.` |
-| 829 | DoH server shut down error | DNS over HTTPS | Error | `The DNS-over-HTTPS (DoH) server has shut down due to an error and failed with error code %1.` |
+| 828 | DoH shut down | DNS over HTTPS | Informational | `The DNS-over-HTTPS (DoH) server has shut down gracefully.` |
+| 829 | DoH shut down error | DNS over HTTPS | Error | `The DNS-over-HTTPS (DoH) server has shut down due to an error and failed with error code %1.` |
 
 ## View analytical events
 
-Event logging for DoH is enabled by default. You can view DoH-specific events that track encrypted query and response activity using the following steps:
+Analytical events aren't enabled by default, you need to enable them to view DoH-specific analytical events. DoH analytical events provide detailed information about encrypted DNS query and response activity, such as query names, types, response codes, and processing times. You can view DoH-specific events that track encrypted query and response activity using the following steps:
 
 To enable DNS diagnostic logging:
 

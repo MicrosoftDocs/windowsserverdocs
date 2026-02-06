@@ -24,17 +24,15 @@ When you enable DoH:
 
 - The DNS server listens to HTTPS traffic.
 
-- You configure a [DoH-capable client (such as a Windows 11 client)](doh-client-support.md) to use the DoH server.
+- You configure a [DoH-capable client (such as a Windows 11 client)](doh-client-support.md) to use encrypted queries to a DNS server.
 
-- The DoH client establishes a TLS connection to the DoH server.
+- The DoH client establishes a TLS connection to the DNS server.
 
 - The client sends DNS queries inside an HTTPS request.
 
 - The DNS server processes the query as usual.
 
 - The DNS response is returned inside the HTTPS response.
-
-- Upstream DNS communication from the DoH server to authoritative DNS servers remains unchanged.
 
 ## DNS over HTTPS for DNS Server (preview)
 
@@ -50,13 +48,13 @@ An example of the DoH communication flow is as shown in the following diagram.
 
 When configuring DNS over HTTPS for DNS Server, consider the following during the preview:
 
-- Upstream DNS communication (forwarders, conditional forwarders, authoritative servers) remains unencrypted
+- Upstream DNS communication (forwarders, conditional forwarders, authoritative servers) remains unencrypted.
 
-- DNS zone transfers remain unencrypted
+- DNS zone transfers remain unencrypted.
 
-- You can't create a DNS query filter that only matches DoH queries
+- You can't create a DNS query filter that only matches DoH queries.
 
-- Policies with a Transport Protocol query filter don't match DoH queries (for example, a policy with Transport Protocol filter set to `EQ, TCP` doesn't match DoH)
+- Policies with a Transport Protocol query filter don't match DoH queries. For example, a policy with Transport Protocol filter set to `EQ, TCP` doesn't match DoH.
 
 ## Security benefits of DNS over HTTPS
 
@@ -66,13 +64,13 @@ DNS over HTTPS provides the following security and privacy benefits:
 
 - **Integrity**. TLS protects DNS messages from modification during transit.
 
-- **Authentication**. DNS clients can validate the identity of the DoH server using standard HTTPS certificate validation.
+- **Authentication**. DNS clients can validate the identity of the DNS server using standard HTTPS certificate validation.
 
 - **Resistance to traffic analysis**. DNS traffic blends with other HTTPS traffic, reducing exposure to DNS‑specific filtering or manipulation. This approach improves privacy and resistance to interception.
 
 ## DNS over HTTPS protocols and standards
 
-IETF defines DNS over HTTPS in [RFC 8484 – DNS Queries over HTTPS (DoH)](https://www.rfc-editor.org/rfc/rfc8484.txt).
+The IETF defines DNS over HTTPS in [RFC 8484 – DNS Queries over HTTPS (DoH)](https://www.rfc-editor.org/rfc/rfc8484.txt).
 
 RFC 8484 specifies how to send and receive DNS messages using HTTP over TLS. The DoH standard supports both GET and POST methods and defines media types for DNS messages. This approach allows DNS traffic to benefit from modern HTTPS features such as encryption, authentication, and connection reuse.
 
@@ -80,9 +78,9 @@ Additionally, the DoH standard allows server implementations the freedom to conf
 
 ## DNS encryption and DNSSEC
 
-DNS encryption, such as DoH, and DNSSEC address different threat models and are complementary technologies. DNS encryption protects DNS traffic on the wire, while DNSSEC ensures that DNS data is cryptographically verified for integrity and from an authoritative source.
+DNS encryption, such as DoH, and DNSSEC address different threat models and are complementary technologies. DNS encryption protects DNS traffic on the wire, while DNSSEC ensures that DNS data is cryptographically verified for integrity and comes from an authoritative source.
 
-Using DoH together with DNSSEC provides defense in depth by combining encrypted transport with authenticated DNS data. To learn more about DNSSEC, see [What is DNSSEC?](dnssec-overview.md).
+By using DoH together with DNSSEC, you get defense in depth by combining encrypted transport with authenticated DNS data. For more information about DNSSEC, see [What is DNSSEC?](dnssec-overview.md)
 
 ## Next steps
 

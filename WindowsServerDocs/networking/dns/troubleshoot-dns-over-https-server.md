@@ -16,7 +16,7 @@ ai-usage: ai-assisted
 > DNS over HTTPS (DoH) for DNS Server on Windows Server is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Are your clients unable to connect to your DoH server, or are encrypted DNS queries failing without a clear reason? This article helps you identify and fix common DNS over HTTPS (DoH) problems on Windows DNS Server. Whether you're dealing with certificate binding errors, port conflicts, or performance issues, you'll find step-by-step guidance to get DoH working correctly.
+Are your clients unable to connect to your DNS server using DoH, or are encrypted DNS queries failing without a clear reason? This article helps you identify and fix common DNS over HTTPS (DoH) problems on Windows DNS Server. Whether you're dealing with certificate binding errors, port conflicts, or performance issues, you'll find step-by-step guidance to get DoH working correctly.
 
 Start with the troubleshooting checklist to quickly pinpoint your problem, then follow the symptom-specific sections for detailed resolution steps. This article applies to Windows Server 2025 and later versions with the DoH preview feature enabled.
 
@@ -24,65 +24,68 @@ Start with the troubleshooting checklist to quickly pinpoint your problem, then 
 
 Before you troubleshoot DoH problems, make sure that you have:
 
-- Windows Server 2025 with the 2026-02 Security Update [KB5075899](https://support.microsoft.com/help/5075899) or later installed
+- Windows Server 2025 with the 2026-02 Security Update [KB5075899](https://support.microsoft.com/help/5075899) or later installed.
 
-- DNS over HTTPS on the DNS Server service is enabled using the instructions provided after requesting access using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview) through an opt-in process.
+- DNS over HTTPS on the DNS Server service is enabled using the instructions provided after requesting access using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview).
 
-- Administrative or equivalent access to the Windows Server hosting the DNS Server service
+- Administrative or equivalent access to the Windows Server hosting the DNS Server service.
 
 DoH certificates must meet the following requirements:
 
 - **Enhanced Key Usage extension**: Must include Server Authentication (1.3.6.1.5.5.7.3.1) object identifier
 
-- **Subject or Subject Alternative Name**: A signed certificate with a Subject Alternative Name (SAN) with the fully qualified domain name that matches the hostname in your DoH URI template
+- **Subject or Subject Alternative Name**: A signed certificate with a Subject Alternative Name (SAN) with the fully qualified domain name or IP address that matches your configured DoH URI template
 
 - **Private key**: Must be present in the Local Computer's store, correctly associated with the certificate, and must not have strong private key protection enabled
 
-- **Trust chain**: Must be issued by a CA that both the domain controller and DNS clients trust
+- **Trust chain**: Must be issued by a CA that the DNS clients trust
 
 ## Troubleshooting checklist
 
 Work through this checklist to identify your DoH problem. Each check links to detailed resolution steps.
 
-### 1. Verify DoH service status
+### 1. Verify DoH status
 
 ✅ DoH is enabled: `Get-DnsServerEncryptionProtocol` shows `EnableDoh : True`
 
 ✅ DNS service is running: `Get-Service DNS` shows `Running`
 
-✅ Port 443 is listening: `netstat -an | findstr :443` shows `LISTENING`
+✅ Configured port is listening: `netstat -an | findstr :<port>` shows `LISTENING`. The default port is 443.
 
-To resolve service configuration problems, see [Symptom: DoH service not configured or running](#symptom-doh-service-not-configured-or-running).
+To resolve service configuration problems, see [Symptom: DoH not configured or running](#symptom-doh-not-configured-or-running).
 
-### 2. Verify DoH service initialization
+### 2. Verify DoH initialization
 
 ✅ Event ID 822 appears in DNS Server event log after service restart
 
 ✅ No error events (823, 825, 826) in event log
 
-✅ Certificate is bound to port 443: `netsh http show sslcert`
+✅ Certificate is bound to your configured port: `netsh http show sslcert`
 
-To resolve initialization failures, see [Symptom: DoH service fails to start](#symptom-doh-service-fails-to-start).
+To resolve initialization failures, see [Symptom: DoH fails to initialize](#symptom-doh-fails-to-initialize).
 
 ### 3. Verify client connectivity
 
-✅ Clients can reach DoH server on port 443 (test with browser)
+✅ Clients can reach DNS server on the configured DoH port (test with browser), by default 443
 
-✅ Firewall allows inbound TCP port 443
+✅ Firewall allows inbound TCP on the configured DoH port
 
 ✅ Clients trust the server certificate (no certificate warnings)
 
-To resolve connectivity problems, see [Symptom: Clients can't connect to DoH server](#symptom-clients-cant-connect-to-doh-server).
+To resolve connectivity problems, see [Symptom: Clients can't connect using DoH](#symptom-clients-cant-connect-using-doh).
 
 ### 4. Verify query processing
 
-✅ Event ID 597 (queries received) appears in the Analytical log
+✅ Event ID 597 (queries received) appears in the Analytical log.
 
 ✅ Event ID 598 (responses sent) appears in the Analytical log
 
 ✅ No event ID 599 (response failures) or event ID 600 (queries rejected)
 
 To resolve query processing problems, see [Symptom: DoH queries fail or time out](#symptom-doh-queries-fail-or-time-out).
+
+> [!TIP]
+> If event ID 597 doesn't appear, troubleshoot client connectivity first. See [Symptom: Clients can't connect using DoH](#symptom-clients-cant-connect-using-doh).
 
 ### 5. Verify performance
 
@@ -92,9 +95,9 @@ To resolve query processing problems, see [Symptom: DoH queries fail or time out
 
 ✅ Query latency is acceptable
 
-To resolve performance problems, see [Symptom: DoH performance issues](#symptom-doh-performance-issues).
+To resolve performance problems, see [Symptom: DoH performance problems](#symptom-doh-performance-problems).
 
-## Symptom: DoH service not configured or running
+## Symptom: DoH not configured or running
 
 You attempt to use DoH but clients continue using unencrypted DNS, or you can't verify DoH is enabled on the server.
 
@@ -129,7 +132,7 @@ Get-Service DNS
 
 The output should show `Status: Running`.
 
-To verify port 443 is listening, run the following command:
+To verify your configured port is listening, run the following command. Replace `443` with your configured port if different:
 
 ```cmd
 netstat -an | findstr :443
@@ -159,7 +162,7 @@ If DoH wasn't previously configured, see [Enable DNS over HTTPS on Windows DNS S
 
 ---
 
-## Symptom: DoH service fails to start
+## Symptom: DoH fails to initialize
 
 DoH is enabled but the service doesn't initialize properly. Clients can't connect using DoH.
 
@@ -197,13 +200,7 @@ netsh http show sslcert
 
 Look for an entry that matches your IP address and port (for example, `0.0.0.0:443`). Confirm it shows the thumbprint of your DNS server's certificate.
 
-If the certificate isn't bound or an incorrect certificate is bound, run the following command to bind the correct certificate:
-
-```cmd
-netsh http add sslcert ipport=0.0.0.0:443 certhash=<YourCertThumbprint> appid="{<NewGUID>}"
-```
-
-Replace `<YourCertThumbprint>` with your certificate's thumbprint and `<NewGUID>` with a new GUID.
+If the certificate isn't bound or shows an incorrect thumbprint, see [Bind the certificate](enable-dns-over-https-server.md#bind-the-certificate) for steps to bind the correct certificate.
 
 Ensure the certificate meets these requirements:
 
@@ -270,13 +267,13 @@ Restart-Service -Name DNS
 
 ---
 
-## Symptom: Clients can't connect to DoH server
+## Symptom: Clients can't connect using DoH
 
 You configure and start DoH on the server, but clients can't connect or they get certificate errors.
 
 **Common causes:**
 
-- Network/firewall blocking port 443
+- Network/firewall blocking the configured DoH port, by default 443
 
 - Certificate trust issues
 
@@ -286,11 +283,11 @@ You configure and start DoH on the server, but clients can't connect or they get
 
 Test connectivity from a client machine by opening a web browser and navigating to your DoH URI (for example, `https://dns.contoso.com/dns-query`). You should see either:
 
-- A blank page or minimal response (indicates the server is listening)
+- A blank page or minimal response indicates the server is listening and network connectivity is working.
 
-- A certificate error (indicates certificate trust issues)
+- A certificate error indicates certificate trust issues, but confirms network connectivity and firewall rules are correct.
 
-- Connection timeout (indicates network/firewall issues)
+- A connection timeout indicates network or firewall issues preventing access to the DNS server using DoH.
 
 To check firewall rules on the DNS server, run the following command:
 
@@ -304,13 +301,21 @@ Verify client certificate trust by examining certificate details in the browser.
 
 ### Network connectivity
 
-To ensure Windows Firewall allows inbound connections on port 443, run the following command:
+First, verify network connectivity from the client to the DNS server over HTTPS. Run the following command, replacing the port if you configured a nondefault port:
+
+```powershell
+Test-NetConnection -ComputerName dns.contoso.com -Port 443
+```
+
+If `TcpTestSucceeded` returns `False`, check network routing and firewall rules between the client and server.
+
+To create a new Windows Firewall on the server to allow inbound connections, run the following command. Replace `443` with your configured port if different:
 
 ```powershell
 New-NetFirewallRule -DisplayName "DNS over HTTPS" -Direction Inbound -Protocol TCP -LocalPort 443 -Action Allow
 ```
 
-If you're using a hardware firewall or network security group, make sure it allows inbound TCP port 443 to the DNS server.
+If you're using a hardware firewall or network security group, make sure it allows inbound TCP traffic on your configured DoH port to the DNS server.
 
 ### Certificate trust
 
@@ -324,7 +329,7 @@ If you use a private certificate authority (CA):
 
 Alternatively, use a certificate signed by a publicly trusted CA that clients already trust.
 
-To test network connectivity to the DoH server from a client, run the following command:
+To test network connectivity to the DNS server's DoH port from a client, run the following command. Replace `443` with your configured port if different:
 
 ```powershell
 Test-NetConnection -ComputerName dns.contoso.com -Port 443
@@ -344,19 +349,21 @@ Verify the client's DoH configuration matches your server's URI exactly:
 
 - If you use a nondefault port, ensure clients specify it
 
-If you configure clients but they still use unencrypted DNS, check that the DNS server IP address in client network settings matches your DoH server.
+If you configure clients but they still use unencrypted DNS, check that the DNS server IP address in client network settings matches your DNS server with DoH enabled.
 
 ---
 
 ## Symptom: DoH queries fail or time out
 
-Clients connect to the DoH server, but queries fail or don't receive responses.
+Clients connect to the DNS server, but queries fail or don't receive responses.
 
 **Common causes:**
 
 - Upstream DNS resolution problems (event ID 599)
 
 - Client protocol incompatibility (event ID 600)
+
+- Client DoH configuration issues
 
 - DNS server configuration problems
 
@@ -437,6 +444,16 @@ To verify that no DNS policies are interfering, run the following command:
 ```powershell
 Get-DnsServerQueryResolutionPolicy
 ```
+
+### Client DoH configuration
+
+If queries fail from specific clients but work from others, verify the client's DoH configuration. Common issues include:
+
+- Incorrect DoH URI template
+- DNS server IP address not matching the DNS server used for DoH
+- Client not configured to use DoH
+
+For client configuration guidance, see [Secure DNS Client over HTTPS (DoH)](doh-client-support.md).
 
 ### Server configuration
 
@@ -541,7 +558,7 @@ To reduce DoH-specific latency:
 
 1. **Review certificate chain length**: Shorter certificate chains validate faster. Ensure intermediate certificates are properly configured to avoid extra lookups.
 
-1. **Check network paths**: High network latency between clients and the DoH server directly affects query time. Use `Test-NetConnection` or `traceroute` to find network bottlenecks.
+1. **Check network paths**: High network latency between clients and the DNS server directly affects query time. Use `Test-NetConnection` or `traceroute` to find network bottlenecks.
 
 ### Resource constraints
 
@@ -553,7 +570,7 @@ If the server is under-provisioned:
 
 1. Consider:
    - Vertical scaling (larger VM or physical server).
-   - Horizontal scaling (multiple DoH servers behind a load balancer).
+   - Horizontal scaling (multiple DNS servers behind a load balancer).
    - Optimizing DNS zone configurations to reduce zone transfer overhead.
 
 To monitor long-term trends and plan capacity, run the following command:
