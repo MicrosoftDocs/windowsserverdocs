@@ -6,7 +6,7 @@ ai-usage: ai-assisted
 ms.author: daknappe
 author: dknappettmsft
 ms.reviewer: mapalko
-ms.date: 11/27/2025
+ms.date: 02/06/2026
 ---
 
 # Detect and remediate RC4 usage in Kerberos
@@ -35,8 +35,6 @@ The Kerberos RC4 default encryption type can be abused to carry out an attack me
 
 > [!IMPORTANT]
 > Microsoft plans to disable RC4 use as the default assumed supported encryption type for Active Directory domain controllers by the end of the second quarter of 2026. To learn more about how to prepare for disabling RC4, see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/help/5073381).
-
-](https://support.microsoft.com/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc)
 
 ## Prerequisites
 
