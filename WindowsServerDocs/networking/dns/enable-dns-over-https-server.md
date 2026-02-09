@@ -46,7 +46,7 @@ DoH certificates must meet the following requirements:
 
 - **Enhanced Key Usage extension**: Must include Server Authentication (1.3.6.1.5.5.7.3.1) object identifier
 
-- **Subject or Subject Alternative Name**: A signed certificate with a Subject Alternative Name (SAN) with the fully qualified domain name that matches the hostname in your DoH URI template
+- **Subject or Subject Alternative Name**: A signed certificate with a Subject Alternative Name (SAN) with the fully qualified domain name or IP address that matches your configured DoH URI template
 
 - **Private key**: Must be present in the Local Computer's store, correctly associated with the certificate, and must not have strong private key protection enabled
 
@@ -142,7 +142,7 @@ After you bind the certificate and configure firewall rules, enable the DoH on y
 1. Enable DoH and set the URI template using the [Set-DnsServerEncryptionProtocol](/powershell/module/dnsserver/Set-DnsServerEncryptionProtocol) command. Replace `dns.contoso.com` with the hostname (or IP address) contained in the SAN on your certificate:
 
    ```powershell
-   Set-DnsServerEncryptionProtocol -EnableDoH $true -UriTemplate "https://dns.contoso.com:443/dns-query"
+   Set-DnsServerEncryptionProtocol -EnableDoh $true -UriTemplate "https://dns.contoso.com:443/dns-query"
    ```
 
    > [!NOTE]

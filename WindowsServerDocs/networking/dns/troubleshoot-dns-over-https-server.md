@@ -58,7 +58,7 @@ To resolve service configuration problems, see [Symptom: DoH not configured or r
 
 ✅ Event ID 822 appears in DNS Server event log after service restart
 
-✅ No error events (823, 825, 826) in event log
+✅ No error events (823, 824, 825, 826) in event log
 
 ✅ Certificate is bound to your configured port: `netsh http show sslcert`
 
@@ -176,13 +176,15 @@ DoH is enabled but the service doesn't initialize properly. Clients can't connec
 
 **How to diagnose:**
 
-Check Windows Event Viewer for DNS Server events. Go to **Applications and Services** > **Logs** > **Microsoft** > **Windows** > **DNS-Server**.
+Check Windows Event Viewer for DNS Server events. Go to **Applications and Services** > **DNS Server**.
 
 For complete event details, see [Monitor DNS over HTTPS - Server Events](monitor-dns-over-https.md#server-events).
 
 Check for these specific events:
 
 - **Event ID 823 (DNS_EVENT_HTTP_SERVER_INIT_FAILED)**: HTTP server initialization failed, typically due to certificate binding problems or port conflicts.
+
+- **Event ID 824 (DNS_EVENT_HTTP_SERVER_SESSION_FAILED)**: HTTP server session creation failed, typically due to resource constraints.
 
 - **Event ID 825 (DNS_EVENT_HTTP_CREATE_URL_FAILED)**: URL registration failed due to invalid URI format or port conflicts.
 
@@ -371,7 +373,7 @@ Clients connect to the DNS server, but queries fail or don't receive responses.
 
 Enable analytical logging to capture detailed per-query events:
 
-1. Open Event Viewer and go to **Applications and Services** > **Logs** > **Microsoft** > **Windows** > **DNS-Server**.
+1. Open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DNS-Server**.
 
 1. Right-click **Analytical** and select **Enable Log**.
 
@@ -427,11 +429,11 @@ Resolve-DnsName -Name microsoft.com -Server localhost
 
 For traditional DNS troubleshooting, see [Troubleshooting DNS servers](troubleshoot/troubleshoot-dns-server.md).
 
-### Client compatibility (event ID 600)
+###  Query rejection (event ID 600)
 
 Event ID 600 indicates rejected queries. Common causes include:
 
-- **HTTP version incompatibility**: DoH requires HTTP/2. Ensure clients support HTTP/2.
+- **HTTP request incompatibility**: The DNS server rejected the request due to unsupported or invalid HTTP request characteristics.
 
 - **Malformed requests**: The query doesn't conform to RFC 8484.
 
@@ -485,18 +487,11 @@ DoH works but you see high latency, dropped queries, or poor performance compare
 
 **How to diagnose:**
 
-For detailed performance monitoring procedures, see [Monitor DNS over HTTPS - Monitor Performance](monitor-dns-over-https.md#monitor-performance).
+Enable monitoring for the following counters using [Monitor DNS over HTTPS - Monitor Performance](monitor-dns-over-https.md#monitor-performance):
 
-Open Performance Monitor (perfmon.exe) and add DNS performance counters:
-
-1. Go to **Performance** > **Monitoring Tools** > **Performance Monitor**
-
-1. Add counters from the **DNS** performance object
-
-1. Monitor these DoH-specific counters:
-   - DoH Requests Received/sec
-   - DoH Responses Sent/sec
-   - DoH Requests Dropped/sec
+- DoH Requests Received/sec
+- DoH Responses Sent/sec
+- DoH Requests Dropped/sec
 
 Key indicators of performance problems:
 
@@ -576,7 +571,7 @@ If the server is under-provisioned:
 To monitor long-term trends and plan capacity, run the following command:
 
 ```powershell
-Get-Counter '\DNS\DoH Requests Received/sec' -Continuous
+Get-Counter '\DNS-over-HTTPS\DoH Requests Received/sec' -Continuous
 ```
 
 For capacity planning guidance, see [Monitor DNS over HTTPS - Monitor Performance](monitor-dns-over-https.md#monitor-performance).
@@ -640,9 +635,9 @@ Key performance counters to monitor over time:
 
 ```powershell
 Get-Counter -Counter @(
-    '\DNS\DoH Requests Received/sec',
-    '\DNS\DoH Responses Sent/sec',
-    '\DNS\DoH Requests Dropped/sec',
+    '\DNS-over-HTTPS\DoH Requests Received/sec',
+    '\DNS-over-HTTPS\DoH Responses Sent/sec',
+    '\DNS-over-HTTPS\DoH Requests Dropped/sec',
     '\Processor(_Total)\% Processor Time',
     '\Memory\Available MBytes'
 ) -SampleInterval 5 -MaxSamples 60

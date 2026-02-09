@@ -62,7 +62,7 @@ Analytical events aren't enabled by default, you need to enable them to view DoH
 
 To enable DNS diagnostic logging:
 
-1. From the **Applications and Services > Logs > Microsoft > Windows > DNS-Server** node, right-select DNS-Server, select **View**, and then select **Show Analytic and Debug Logs**. The Analytical log is displayed.
+1. From the **Applications and Services Logs > Microsoft > Windows > DNS-Server** node, right-select DNS-Server, select **View**, and then select **Show Analytic and Debug Logs**. The Analytical log is displayed.
 
 1. Right-click **Analytical** and then select **Properties**.
 
