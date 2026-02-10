@@ -38,9 +38,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 > [!NOTE]
 > The ```Deploy-GatewayV2Ha.ps1``` script supports ```-WhatIf``` and ```-Verbose``` parameters
 
-### Examples
-
-#### Install with a signed certificate
+### Example
 
 ```powershell
 .\Deploy-GatewayV2Ha.ps1 -ClusterStorage "C:\ClusterStorage\Volume1\Gateway" -ClientAccessPoint gateway-ha
