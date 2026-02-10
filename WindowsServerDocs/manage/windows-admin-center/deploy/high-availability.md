@@ -81,3 +81,10 @@ To uninstall the HA deployment of Windows Admin Center from your failover cluste
 ## Troubleshooting
 
 Logs are saved in the temp folder of the CSV. For example, `C:\ClusterStorage\Volume1\temp`.
+
+You can also manually run diagnostics by passing the ```-CollectDiagnostics``` parameter.
+
+```powershell
+.\Deploy-GatewayV2Ha.ps1 -CollectDiagnostics -ClusterStorage "C:\ClusterStorage\Volume1\Gateway"
+-ClientAccessPoint "gateway-ha" -DiagnosticsLookbackHours 24 -DiagnosticsOutputPath "C:\Temp\wac-ha-diag"
+```
