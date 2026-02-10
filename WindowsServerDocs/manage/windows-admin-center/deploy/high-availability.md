@@ -55,7 +55,7 @@ Use the same ```Deploy-GatewayV2Ha.ps1``` script to update your HA deployment, w
 When a new version of Windows Admin Center is released, run the ```Deploy-GatewayV2Ha.ps1``` script again with the updated executable specified in the ```InstallerPath``` parameter:
 
 ```powershell
-.\Deploy-GatewayV2Ha.ps1 -Upgrade -ClusterStorage "C:\ClusterStorage\Volume1\Gateway" -ClientAccessPoint gateway-ha \
+.\Deploy-GatewayV2Ha.ps1 -Upgrade -ClusterStorage "C:\ClusterStorage\Volume1\Gateway" -ClientAccessPoint gateway-ha
 -InstallerPath "C:\Installers\ServerManagementGateway.exe" -CertificateThumbprint "0123..." -Verbose
 ```
 
@@ -66,7 +66,7 @@ You may also update the certificate at the same time you update the Windows Admi
 You can update the certificate used by a HA deployment of Windows Admin Center at any time by using the ```-UpdateCertificate``` flag.
 
 ```powershell
-.\Deploy-GatewayV2Ha.ps1 -UpdateCertificate -ClusterStorage "C:\ClusterStorage\Volume1\Gateway" \
+.\Deploy-GatewayV2Ha.ps1 -UpdateCertificate -ClusterStorage "C:\ClusterStorage\Volume1\Gateway"
 -ClientAccessPoint gateway-ha -CertificateThumbprint "0123..." -Verbose
 ```
 
