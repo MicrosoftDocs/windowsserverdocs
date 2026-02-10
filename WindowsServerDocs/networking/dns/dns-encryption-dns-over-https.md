@@ -52,6 +52,8 @@ When configuring DNS over HTTPS for DNS Server, consider the following during th
 
 - DNS zone transfers remain unencrypted.
 
+- DNS dynamic updates remain unencrypted by default.
+
 - You can't create a DNS query filter that only matches DoH queries.
 
 - Policies with a Transport Protocol query filter don't match DoH queries. For example, a policy with Transport Protocol filter set to `EQ, TCP` doesn't match DoH.

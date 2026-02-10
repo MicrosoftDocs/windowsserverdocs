@@ -66,7 +66,7 @@ To resolve initialization failures, see [Symptom: DoH fails to initialize](#symp
 
 ### 3. Verify client connectivity
 
-✅ Clients can reach DNS server on the configured DoH port (test with browser), by default 443
+✅ Clients can reach DNS server on the configured DoH port (test using a browser), by default 443
 
 ✅ Firewall allows inbound TCP on the configured DoH port
 
@@ -164,7 +164,7 @@ If DoH wasn't previously configured, see [Enable DNS over HTTPS on Windows DNS S
 
 ## Symptom: DoH fails to initialize
 
-DoH is enabled but the service doesn't initialize properly. Clients can't connect using DoH.
+You enable DoH but the service doesn't initialize properly. Clients can't connect using DoH.
 
 **Common causes:**
 
@@ -275,21 +275,21 @@ You configure and start DoH on the server, but clients can't connect or they get
 
 **Common causes:**
 
-- Network/firewall blocking the configured DoH port, by default 443
+- Network or firewall blocking the configured DoH port, which is 443 by default.
 
-- Certificate trust issues
+- Certificate trust problems.
 
-- Client using wrong URI or configuration
+- Client using wrong URI or configuration.
 
 **How to diagnose:**
 
-Test connectivity from a client machine by opening a web browser and navigating to your DoH URI (for example, `https://dns.contoso.com/dns-query`). You should see either:
+Test connectivity from a client machine by opening a web browser and going to your DoH URI (for example, `https://dns.contoso.com/dns-query`). You should see one of the following results:
 
 - A blank page or minimal response indicates the server is listening and network connectivity is working.
 
-- A certificate error indicates certificate trust issues, but confirms network connectivity and firewall rules are correct.
+- A certificate error indicates certificate trust problems, but confirms network connectivity and firewall rules are correct.
 
-- A connection timeout indicates network or firewall issues preventing access to the DNS server using DoH.
+- A connection timeout indicates network or firewall problems that prevent access to the DNS server by using DoH.
 
 To check firewall rules on the DNS server, run the following command:
 
@@ -311,7 +311,7 @@ Test-NetConnection -ComputerName dns.contoso.com -Port 443
 
 If `TcpTestSucceeded` returns `False`, check network routing and firewall rules between the client and server.
 
-To create a new Windows Firewall on the server to allow inbound connections, run the following command. Replace `443` with your configured port if different:
+To create a new Windows Firewall rule on the server to allow inbound connections, run the following command. Replace `443` with your configured port if different:
 
 ```powershell
 New-NetFirewallRule -DisplayName "DNS over HTTPS" -Direction Inbound -Protocol TCP -LocalPort 443 -Action Allow
@@ -323,11 +323,11 @@ If you're using a hardware firewall or network security group, make sure it allo
 
 If you use a private certificate authority (CA):
 
-1. Make sure your DNS clients trust that CA
+1. Make sure your DNS clients trust that CA.
 
-1. Install the root CA certificate on client machines
+1. Install the root CA certificate on client machines.
 
-1. Verify the certificate chain is complete on the server
+1. Verify the certificate chain is complete on the server.
 
 Alternatively, use a certificate signed by a publicly trusted CA that clients already trust.
 
@@ -349,7 +349,7 @@ Verify the client's DoH configuration matches your server's URI exactly:
 
 - The DoH template must match: `https://dns.contoso.com:443/dns-query`
 
-- If you use a nondefault port, ensure clients specify it
+- If you use a nondefault port, ensure clients specify it.
 
 If you configure clients but they still use unencrypted DNS, check that the DNS server IP address in client network settings matches your DNS server with DoH enabled.
 
@@ -365,7 +365,7 @@ Clients connect to the DNS server, but queries fail or don't receive responses.
 
 - Client protocol incompatibility (event ID 600)
 
-- Client DoH configuration issues
+- Client DoH configuration problems
 
 - DNS server configuration problems
 
@@ -401,7 +401,7 @@ Look for patterns:
 
 **How to resolve:**
 
-### Upstream DNS issues (event ID 599)
+### Upstream DNS problems (event ID 599)
 
 If you see event ID 599 with `SERVFAIL` or similar errors, check the upstream DNS configuration on the DNS server. Run the following command:
 
@@ -433,11 +433,13 @@ For traditional DNS troubleshooting, see [Troubleshooting DNS servers](troublesh
 
 Event ID 600 indicates rejected queries. Common causes include:
 
-- **HTTP request incompatibility**: The DNS server rejected the request due to unsupported or invalid HTTP request characteristics.
+- **HTTP request incompatibility**: The DNS server rejects the request due to unsupported or invalid HTTP request characteristics.
 
 - **Malformed requests**: The query doesn't conform to RFC 8484.
 
 - **DNS policy restrictions**: A DNS policy might be dropping queries.
+
+- **Server-side request requirements not met**: DoH isn't enabled on the receiving interface or there's a URI template mismatch or server-side validation, configuration, or policy checks.
 
 Check the event details for the rejection reason. If clients use incompatible HTTP versions, update the client software or use different DoH client applications.
 
@@ -469,7 +471,7 @@ If queries fail for reasons other than those listed earlier in this article, che
 
 For comprehensive DNS troubleshooting, see [Troubleshoot DNS servers](troubleshoot/troubleshoot-dns-server.md).
 
-Remember to disable the Analytical log when troubleshooting is complete to avoid excessive event generation.
+To avoid excessive event generation, disable the Analytical log when troubleshooting is complete.
 
 ---
 
@@ -495,11 +497,11 @@ Enable monitoring for the following counters using [Monitor DNS over HTTPS - Mon
 
 Key indicators of performance problems:
 
-- **DoH Requests Dropped/sec > 0**: The server discards queries
+- **DoH Requests Dropped/sec > 0**: The server discards queries.
 
-- **Requests Received/sec much higher than Responses Sent/sec**: Many queries don't get answers
+- **Requests Received/sec much higher than Responses Sent/sec**: Many queries don't get answers.
 
-- **High or spiking CPU usage** during DoH query processing
+- **High or spiking CPU usage** during DoH query processing.
 
 Also monitor system resources:
 
@@ -561,7 +563,7 @@ If the server is under-provisioned:
 
 1. Monitor baseline resource usage during normal operations.
 
-1. Identify peak usage times and correlate with query volume.
+1. Identify peak usage times and correlate them with query volume.
 
 1. Consider:
    - Vertical scaling (larger VM or physical server).
