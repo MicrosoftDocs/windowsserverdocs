@@ -388,6 +388,19 @@
         "networking/*network-hud*.md": [
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
         ],
+        "networking/dns/dns-encryption-dns-over-https.md": [
+          "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+          "✅ <a href=\"https://learn.microsoft.com/windows/release-health/supported-versions-windows-client\" target=\"_blank\">Windows 11</a>"
+        ],
+        "networking/dns/enable-dns-over-https-server.md": [
+          "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
+        ],
+        "networking/dns/monitor-dns-over-https.md": [
+          "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
+        ],
+        "networking/dns/troubleshoot-dns-over-https-server.md": [
+          "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
+        ],
         "networking/sdn/**/*.md": [
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
