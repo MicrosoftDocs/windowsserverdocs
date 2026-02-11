@@ -99,11 +99,11 @@ Before you begin, review the prerequisites and ensure your environment meets the
 
 ### vCenter or ESXi host prerequisites
 
-None.
+Verify that the vCenter account is assigned snapshot roles.
 
 ### Windows Server host prerequisites
 
-None.
+WinRM needs a Http listner.
 
 ### Supported vCenter versions
 
