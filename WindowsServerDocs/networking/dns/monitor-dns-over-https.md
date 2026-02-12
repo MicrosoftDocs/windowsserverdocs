@@ -5,7 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: canasjorge,sruthytv
-ms.date: 02/03/2026
+ms.date: 02/12/2026
 #customer intent: As a network administrator, I want to monitor DNS over HTTPS activity on my DNS Server so that I can track encrypted DNS query performance and operations.
 ai-usage: ai-assisted
 ---
@@ -26,10 +26,10 @@ DoH encrypts DNS traffic by encapsulating DNS messages within HTTPS. To learn mo
 
 Before you begin, make sure you have:
 
-- Windows Server 2025 with the 2026-02 Security Update or later installed
-- DNS over HTTPS enabled and configured on your DNS Server (see [Enable DNS over HTTPS in DNS Server](enable-dns-over-https-server.md))
-- Administrator or equivalent access to the Windows Server hosting the DNS Server service
-- Basic understanding of Windows Event Viewer and Performance Monitor
+- Windows Server 2025 with the 2026-02 Security Update (([KB5075899](https://support.microsoft.com/help/5075899))) or later installed.
+- DNS over HTTPS enabled and configured on your DNS Server (see [Enable DNS over HTTPS in DNS Server](enable-dns-over-https-server.md)).
+- Administrator or equivalent access to the Windows Server hosting the DNS Server service.
+- Basic understanding of Windows Event Viewer and Performance Monitor.
 
 ## View server logs
 

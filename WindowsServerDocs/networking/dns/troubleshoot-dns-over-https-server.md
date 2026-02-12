@@ -3,7 +3,7 @@ title: Troubleshoot DNS over HTTPS in DNS Server on Windows Server
 description: Learn how to troubleshoot DNS over HTTPS (DoH) issues on Windows DNS Server including service configuration, certificate binding, client connectivity, and query processing problems.
 ms.topic: troubleshooting-general
 ms.author: roharwoo
-ms.date: 02/03/2026
+ms.date: 02/12/2026
 author: robinharwood
 ms.reviewer: canasjorge,sruthytv
 #customer intent: As a DNS administrator, I want to troubleshoot DNS over HTTPS issues so that I can resolve DoH configuration and encrypted DNS query problems.
@@ -24,7 +24,7 @@ Start with the troubleshooting checklist to quickly pinpoint your problem, then 
 
 Before you troubleshoot DoH problems, make sure that you have:
 
-- Windows Server 2025 with the 2026-02 Security Update (KB5075899) or later installed.
+- Windows Server 2025 with the 2026-02 Security Update (([KB5075899](https://support.microsoft.com/help/5075899))) or later installed.
 
 - DNS over HTTPS on the DNS Server service is enabled using the instructions provided after requesting access using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview).
 

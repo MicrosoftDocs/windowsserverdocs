@@ -6,7 +6,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.reviewer: canasjorge
 ms.topic: concept-article
-ms.date: 02/03/2026
+ms.date: 02/12/2026
 ai-usage: ai-assisted
 ---
 
@@ -40,7 +40,7 @@ When you enable DoH:
 > DNS over HTTPS (DoH) for DNS Server on Windows Server is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
-Beginning with the 2026-02 Security Update (KB5075899) for Windows Server 2025, you can enable DNS over HTTPS (DoH) on the DNS Server service to encrypt DNS traffic between DoH-capable clients and your DNS server.
+Beginning with the 2026-02 Security Update ([KB5075899](https://support.microsoft.com/help/5075899)) for Windows Server 2025, you can enable DNS over HTTPS (DoH) on the DNS Server service to encrypt DNS traffic between DoH-capable clients and your DNS server.
 
 An example of the DoH communication flow is as shown in the following diagram.
 
