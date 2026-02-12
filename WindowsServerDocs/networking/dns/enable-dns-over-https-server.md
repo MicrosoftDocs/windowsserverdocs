@@ -5,7 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: canasjorge,sruthytv
-ms.date: 02/03/2026
+ms.date: 02/12/2026
 #customer intent: As a network administrator, I want to enable DNS over HTTPS on my DNS Server so that I can encrypt DNS traffic between clients and the server.
 ai-usage: ai-assisted
 ---
@@ -26,7 +26,7 @@ For more information about how DoH works, see [DNS encryption using DNS over HTT
 
 Before you begin, ensure you have:
 
-- Windows Server 2025 with the 2026-02 Security Update (KB5075899) or later installed
+- Windows Server 2025 with the 2026-02 Security Update ([KB5075899](https://support.microsoft.com/help/5075899)) or later installed
 
 - Access to a certification authority (CA):
 
