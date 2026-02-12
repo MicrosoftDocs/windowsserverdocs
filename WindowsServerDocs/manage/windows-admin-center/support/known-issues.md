@@ -61,6 +61,15 @@ If you encounter an issue not described on this page, let us know at the [Window
 
 - If you add an extension feed that is inaccessible, no warning or error message appears.
 
+### Extension development
+The entries shown using the DeploymentShare API are not always accurate. Shares can get orphaned if deleted with methods that do not use the DeploymentShare API. 
+
+You can view a list of all shares created by the API by navigating to your installation's `inventory.json` file. The file can be found in two locations:
+- `C:\Users\Public`, where C represents the drive where the OS is installed, for Administrator shares.
+- `C:\Users\<user>`, where C represents the drive where the OS is installers, for user shares.
+
+There is not a programmatic way to clean up this file at this time. To clean the file, manually remove the wrong entries from the `inventory.json` file. 
+
 ### Extensions not supported
 
 Even with an added extension feed, the following extensions currently don't work with the modernized gateway build 2410:
