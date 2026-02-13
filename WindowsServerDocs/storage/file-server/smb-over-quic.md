@@ -164,11 +164,11 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ---
 
-If you want to apply control to SMB over client, you can use Client Access Control. To learn more how to restrict which clients can access SMB over QUIC servers, see [Configure SMB over QUIC client access control](configure-smb-over-quic-client-access-control.md).
+If you want to control/restrict which clients are allowed to access SMB over QUIC servers, you can use [Client Access Control](configure-smb-over-quic-client-access-control.md).
 
 ### Step 3: Connect to SMB shares
 
-1. Join your Windows client device to your domain. Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **or** added to the HOST files for your Windows client. Ensure that the server's certificate subject alternative names are published to DNS **or** added to the HOSTS files for your Windows client.
+1. Join your Windows client device to your domain. Ensure that the server's certificate subject alternative names are published to DNS **or** added to the HOSTS files for your Windows client.
 1. Move your Windows client device to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
 1. In Windows File Explorer, in the Address Bar, type the UNC path to a share on the file server and confirm you can access data in the share. Alternatively, you can use `NET USE /TRANSPORT:QUIC` or `New-SmbMapping -TransportType QUIC` with a UNC path. Examples:
 
