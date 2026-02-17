@@ -112,7 +112,7 @@ RDS in Windows Server supports two main single sign-on (SSO) experiences:
 
 Using the Remote Desktop application, you can store credentials either as part of the connection info ([Mac](clients/remote-desktop-mac.md)) or as part of managed accounts ([iOS](clients/remote-desktop-ios.md#manage-your-user-accounts), [Android](clients/remote-desktop-android.md#manage-your-user-accounts), Windows) securely through the mechanisms unique to each OS.
 
-To connect to desktops and RemoteApps with SSO through the inbox Remote Desktop Connection client on Windows, you must connect to the RD Web page through Internet Explorer. The following configuration options are required on the server side. No other configurations are supported for Web SSO.
+To connect to desktops and RemoteApps with SSO through the inbox Remote Desktop Connection client on Windows, you must connect to the RD Web page through Internet Explorer Mode in Microsoft Edge. The following configuration options are required on the server side. No other configurations are supported for Web SSO.
 
 - RD Web set to form-based authentication (Default)
 - RD Gateway set to password authentication (Default)
