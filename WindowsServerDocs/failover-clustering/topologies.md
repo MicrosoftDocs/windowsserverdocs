@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.service: windows-server
 ms.topic: concept-article
-ms.date: 01/27/2026
+ms.date: 02/24/2026
 ai-usage: ai-assisted
 #CustomerIntent: As a IT administrator, I want to understand the different failover cluster topologies so that I can choose the right configuration for my business requirements.
 ---
@@ -57,13 +57,13 @@ The following table compares key characteristics of each failover clustering top
 
 | Characteristic | Simple Cluster | Storage Spaces Direct Campus Cluster | Storage Spaces Direct Stretch Cluster | SAN Stretch Cluster | Multi-Cluster |
 |---|---|---|---|---|---|
-| **Geographic scope** | Single fault domain | Same physical location | Separate geographic sites | Separate geographic sites | Multiple separate sites |
+| **Geographic scope** | Single fault domain | Same physical location, separate buildings | Separate geographic sites | Separate geographic sites | Multiple separate sites |
 | **Network type** | LAN | LAN | LAN or WAN | LAN or WAN | Determined by workload requirement |
 | **Optimal latency** | ≤1 ms | ≤1 ms | [≤1-5 ms (sync)<br/>Variable (async)](../storage/storage-replica/storage-replica-overview.md#storage-replica-prerequisites) | Determined by SAN vendor | Variable (workload determined) |
 | **Storage configuration** | SAN, NAS, or iSCSI target / Single Storage Spaces Direct pool / combined | Single Storage Spaces Direct pool spanning racks | Separate Storage Spaces Direct pools per site | SAN LUNs replicated between sites | Independent storage per cluster |
 | **Storage replication method** | None | Storage Spaces Direct Rack Level Nested Mirror | Storage Replica | SAN vendor replication | Application-level or Storage Replica |
 | **Fault domains** | Nodes only | 2 fault domains | 2 fault domains | 2 fault domains | Independent clusters |
-| **Protects against** | Node failure | Node + rack failure | Node + rack + site failure | Node + rack + site failure | Site + cluster failure |
+| **Protects against** | Node failure, Node + disk | Rack + node failure (2+2 configuration) | Site failure | Site failure | Site + cluster failure |
 | **Deployment complexity** | Low | Medium | High | High | High |
 | **Primary use case** | Single datacenter HA | Campus/multi-building HA | Metro-area DR | Metro-area DR | Multi-region DR |
 
@@ -155,9 +155,6 @@ In a Storage Spaces Direct stretch cluster configuration, each site operates its
 The following diagram illustrates an example Storage Spaces Direct stretch cluster topology with nodes and storage pools at each geographic site, connected via WAN.
 
 :::image type="content" source="./media/topologies/storage-spaces-direct-stretch-cluster.png" alt-text="Diagram that shows a Storage Spaces Direct stretch cluster topology with nodes and storage pools at each geographic site." lightbox="./media/topologies/storage-spaces-direct-stretch-cluster.png":::
-
-
-TODO: the only requirement is latency and performance, rather than topology
 
 Network requirements differ based on replication mode. Synchronous replication requires [less than 5 ms round-trip latency](../storage/storage-replica/stretch-cluster-replication-using-shared-storage.md#prerequisites) over the WAN connection. This requirement ensures good performance. Asynchronous replication can work with higher latency. However, asynchronous replication means you might lose more data during a failure (larger RPO). Both modes require a dedicated high-bandwidth WAN connection between sites, and each site should have a network path to the witness to ensure proper quorum management.
 
