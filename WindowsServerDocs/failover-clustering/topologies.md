@@ -36,10 +36,10 @@ Before exploring specific topologies, it's important to understand the concept o
 
 Common examples of fault domains include:
 
-- **Node level**: Individual server failures due to hardware issues, operating system problems, or maintenance
+- **Node level**: Individual server failures due to hardware problems, operating system problems, or maintenance
 - **Rack level**: Shared infrastructure within a rack, such as power distribution units (PDUs), top-of-rack (TOR) network switches, or cooling systems
 - **Room or data center level**: Building-wide systems like main power feeds, cooling systems, or physical security
-- **Site level**: Geographic location-specific risks such as natural disasters, regional power outages, or network connectivity issues
+- **Site level**: Geographic location-specific risks such as natural disasters, regional power outages, or network connectivity problems
 
 When you design a failover cluster, understanding and planning for fault domains is crucial for achieving your desired level of availability and resilience. A well-designed cluster continues operating even when an entire fault domain fails. For example:
 
