@@ -49,7 +49,7 @@ The following sections provide an overview into some of the key enterprise-grade
 
 ### Extensibility and integration
 
-An important aspect of Hyper-V is its extensibility and integration with other Windows Server features and other Microsoft and third-party products and services to create a comprehensive virtualization solution ready for enterprise deployments.
+An important aspect of Hyper-V is its extensibility and integration with other Windows Server features and other Microsoft and non-Microsoft products and services to create a comprehensive virtualization solution ready for enterprise deployments.
 
 For example, Hyper-V works seamlessly with Windows Server Failover Clustering to provide high availability, connects to a range of storage providers for flexible storage options, supports Azure integration for hybrid cloud scenarios, and integrates with Windows Admin Center or System Center Virtual Machine Manager for advanced management.
 
@@ -108,6 +108,8 @@ High performance and scalability help meet demanding enterprise workloads:
 A range of management tools and automation capabilities simplify operations and enhance productivity:
 
 - **Windows Admin Center** provides modern web-based management with hyperconverged infrastructure monitoring, performance analytics, and streamlined troubleshooting workflows accessible from any device.
+
+- **Windows Admin Center Virtualization Mode** is a purpose-built management experience for virtualization infrastructure, enabling centralized administration of Hyper-V hosts, clusters, storage, and networking at scale. Unlike Windows Admin Center administration mode, which focuses on general server management, Virtualization Mode focuses on fabric management for large-scale environments. To learn more, see [Windows Admin Center Virtualization Mode overview](/windows-server/manage/windows-admin-center/virtualization-mode-overview) and the [Introducing Windows Admin Center Virtualization Mode blog post](https://techcommunity.microsoft.com/blog/windowsservernewsandbestpractices/introducing-windows-admin-center-virtualization-mode-vmode/4471024).
 
 - **Hyper-V Manager** provides intuitive graphical management for day-to-day operations, while the Hyper-V module for Windows PowerShell enables advanced scripting and automation scenarios.
 

@@ -62,6 +62,8 @@
     href: configure-live-migration-smb-bandwidth.md
 - name: Concepts
   items:
+  - name: Failover Clustering topology overview
+    href: topologies.md
   - name: Cluster and pool quorum
     href: /azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering
   - name: Scale-Out File Server for application data

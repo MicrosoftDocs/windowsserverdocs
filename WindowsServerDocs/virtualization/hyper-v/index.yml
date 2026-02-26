@@ -53,6 +53,18 @@ landingContent:
             url: get-started/create-a-virtual-machine-in-Hyper-V.md
 
   # Card
+  - title: Advanced management
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows Admin Center Virtualization Mode
+            url: /windows-server/manage/windows-admin-center/virtualization-mode-overview
+      - linkListType: whats-new
+        links:
+          - text: Introducing Windows Admin Center Virtualization Mode
+            url: https://techcommunity.microsoft.com/blog/windowsservernewsandbestpractices/introducing-windows-admin-center-virtualization-mode-vmode/4471024
+
+  # Card
   - title: Use a guarded fabric to provide a secure environment for VMs
     linkLists:
       - linkListType: overview

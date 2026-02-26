@@ -787,6 +787,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [`subcommand stop transportserver`](./wdsutil-stop-transportserver.md)
 - [`subst`](subst.md)
 - [`sxstrace`](sxstrace.md)
+- [`sysmon`](sysmon.md)
 - [`sysocmgr`](sysocmgr.md)
 - [`systeminfo`](systeminfo.md)
 

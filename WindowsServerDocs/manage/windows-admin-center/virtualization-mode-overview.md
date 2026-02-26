@@ -60,7 +60,7 @@ Virtualization Mode includes the following tools and features:
 
 | Host profile | Tools and features |
 |-------------|-----------------------|
-| Compute (hosts) | - Overview dashboard<br>- Settings<br>- Updates<br>- Virtual Machines<br>- Servers<br>- Volumes<br>- VM Conversion<br>- Hyper-V Replica<br>- GPU-P |
+| Compute (hosts) | - Overview dashboard<br>- Settings<br>- Updates<br>- Virtual Machines<br>- Servers<br>- Volumes<br>- Hyper-V Replica<br>- GPU-P |
 | Compute (servers) | - Dashboard<br>- Settings<br>- Events<br>- Firewall<br>- Updates<br>- Virtual Machines<br>- Networks<br>- Storage |
 | Storage | Profile not available at this time. |
 | Networking | Profile not available at this time. |

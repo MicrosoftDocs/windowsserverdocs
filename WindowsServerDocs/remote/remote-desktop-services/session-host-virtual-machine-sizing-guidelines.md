@@ -154,3 +154,4 @@ It's also better to use a large number of smaller VMs instead of a few large VMs
 ## Related content
 
 - [Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts](rds-rdsh-performance-counters.md).
+- [Windows Server 2025 Capacity Planning whitepaper (PDF)](https://download.microsoft.com/download/41af4cc7-8c9d-4c12-b148-d4454c2edaea/Windows%20Server%202025%20Capacity%20Planning%20Whitepaper.pdf) for deeper planning guidance on Windows Server 2025 Remote Desktop Services deployments.
