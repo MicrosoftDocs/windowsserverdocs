@@ -46,7 +46,7 @@ $parameters = @{
   ClientAccessPoint = gateway-ha
   StaticAddress = '10.0.0.50'
   InstallerPath = "C:\Installers\WindowsAdminCenter2511.exe"
-  CertificateThumbprint = "0123456789ABCDEF0123456789ABCDEF01234567"
+  CertificateThumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
 }
 Deploy-GatewayV2Ha @parameters
 ```
@@ -65,7 +65,7 @@ $parameters = @{
   ClientAccessPoint = gateway-ha
   StaticAddress = '10.0.0.50'
   InstallerPath = "C:\Installers\WindowsAdminCenter2511new.exe"
-  CertificateThumbprint = "0123456789ABCDEF0123456789ABCDEF01234567"
+  CertificateThumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
 }
 Deploy-GatewayV2Ha @parameters
 ```
@@ -81,7 +81,7 @@ $parameters = @{
   UpdateCertificate = $true
   ClusterStorage = "C:\ClusterStorage\Volume1\Gateway"
   ClientAccessPoint = gateway-ha
-  CertificateThumbprint = "0123456789ABCDEF0123456789ABCDEF01234567"
+  CertificateThumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
 }
 Deploy-GatewayV2Ha @parameters
 ```
