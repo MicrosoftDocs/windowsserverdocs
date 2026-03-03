@@ -130,7 +130,7 @@ and
 
 ## Next steps
 
-- [Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022](editions-comparison-windows-server-2022.md)
+- [Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 or newer](editions-comparison-windows-server-2022.md)
 - [Hotpatch for new virtual machines](hotpatch.md)
 - [Enable Hotpatch for Azure Edition virtual machines built from ISO](enable-hotpatch-azure-edition.md)
 - [SMB over QUIC](../storage/file-server/smb-over-quic.md)
