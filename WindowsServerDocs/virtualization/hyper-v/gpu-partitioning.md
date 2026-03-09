@@ -40,7 +40,7 @@ Your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA 
 
 Examples of processors that support IOMMU DMA bit tracking include:
 
-- AMD EPYC 7002 and later (Milan)
+- AMD EPYC 7003 and later (Milan)
 - 4th Gen Intel Xeon SP (Sapphire Rapids)
 
 ### Supported guest operating systems
@@ -64,6 +64,11 @@ The following GPUs support GPU partitioning:
 - NVIDIA L4
 - NVIDIA L40
 - NVIDIA L40S
+- NVIDIA RTX Pro 6000 Blackwell Server Edition
+- AMD V710
+
+> [!NOTE]
+> AMD V710 doesn't currently support live migration with GPU partitioning on Windows Server 2025.
 
 To use live migration with GPU partitioning, you must use the driver included in the NVIDIA vGPU Software v18.x or later. The NVIDIA driver provides the necessary support for GPU partitioning and live migration capabilities.
 
