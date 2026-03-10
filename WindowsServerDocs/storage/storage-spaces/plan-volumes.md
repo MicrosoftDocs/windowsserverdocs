@@ -36,9 +36,9 @@ All volumes are accessible by all servers in the cluster at the same time. Once 
 
 ## Choosing how many volumes to create
 
-The number of volumes created is determined by the size of the pool and the maximum supportable volume size, and will be a minimum of 1 per node.
+The number of volumes you create depends on the size of the pool and the maximum supported volume size. You need at least one volume per node.
 
-## Choosing the filesystem
+## Choosing the file system
 
 We recommend using the new [Resilient File System (ReFS)](/windows-server/storage/refs/refs-overview) for Storage Spaces Direct. ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. It supports nearly all key NTFS features, including Data Deduplication in Windows Server version 1709 and later. See the ReFS [feature comparison table](/windows-server/storage/refs/refs-overview#feature-comparison) for details.
 
