@@ -464,6 +464,16 @@
       "source_path": "WindowsServerDocs/get-started/get-started-with-windows-server.md",
       "redirect_url": "/windows-server/get-started/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/perform-in-place-upgrade.md",
+      "redirect_url": "/windows-server/get-started/upgrade-in-place",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/perform-in-place-upgrade-windows-update.md",
+      "redirect_url": "/windows-server/get-started/upgrade-in-place",
+      "redirect_document_id": true
     }
   ]
 }

@@ -33,7 +33,7 @@ At a high level, a rolling upgrade consists of these steps:
 
 1. Transfer workloads off of the first node.
 
-1. Perform the Windows Server feature update via an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md).
+1. Perform the Windows Server feature update via an [upgrade](../get-started/upgrade-in-place.md) or [clean install](../get-started/install-windows-server.md).
 
 1. Repeat steps 2 through 3 for every other node in the cluster.
 
@@ -162,7 +162,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
 ## Step 3: Install the new version of Windows Server
 
-1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
+1. Perform an [upgrade](../get-started/upgrade-in-place.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
 
 1. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch that uses the newer Switch Embedded Teaming (SET) technology to bind to multiple network adapters. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
 

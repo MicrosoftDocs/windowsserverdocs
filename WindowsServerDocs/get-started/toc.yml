@@ -88,7 +88,7 @@ items:
       - name: Upgrade Windows Server
         href: upgrade-overview.md
       - name: Perform an in-place upgrade
-        href: perform-in-place-upgrade.md
+        href: upgrade-in-place.md
       - name: Upgrade or migrate Windows Server Roles and Features
         href: upgrade-migrate-roles-features.md
       - name: Upgrade and conversion options

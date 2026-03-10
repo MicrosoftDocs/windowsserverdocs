@@ -88,5 +88,5 @@ started:
 - [Install, upgrade, or migrate to Windows Server](install-upgrade-migrate.md)
 - [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md)
 - [Upgrade and conversion options for Windows Server](upgrade-conversion-options.md)
-- [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md)
+- [Perform an in-place upgrade of Windows Server](upgrade-in-place.md)
 

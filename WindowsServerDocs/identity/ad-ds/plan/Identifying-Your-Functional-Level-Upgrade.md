@@ -25,7 +25,7 @@ If you plan to retire a domain controller, make sure that you understand the ful
 
 Consider the following items when assessing your current environment:
 
-- Your domain controllers meet or exceed the hardware requirements for the operating system that you plan to upgrade to. To learn more about hardware requirements, see [Perform a Feature Update of Windows Server](../../../get-started/perform-in-place-upgrade.md).
+- Your domain controllers meet or exceed the hardware requirements for the operating system that you plan to upgrade to. To learn more about hardware requirements, see [Perform a Feature Update of Windows Server](../../../get-started/upgrade-in-place.md).
 
 - Your Active Directory domain is operational and free from replication errors. To learn more about replication errors, see [Diagnose Active Directory replication failures](/troubleshoot/windows-server/active-directory/diagnose-replication-failures).
 
@@ -61,7 +61,7 @@ You can upgrade the functional levels by using the following options:
 
 - Introduce new Windows Server 2025 domain controllers into the forest, then retire or upgrade all domain controllers running an older version of Windows Server. After you've upgraded or retired all domain controllers running an older version of Windows Server, you can raise the domain and forest functional levels to Windows Server 2025.
 
-- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/perform-in-place-upgrade.md). Then raise the domain and forest functional levels to Windows Server 2025.
+- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/upgrade-in-place.md). Then raise the domain and forest functional levels to Windows Server 2025.
 
 A Windows Server 2025 domain controller can only be added to an existing domain that is running Windows Server 2016 Domain Functional Level or newer version. You must also ensure that all hardware and software requirements for Windows Server 2025 are met.
 
@@ -81,7 +81,7 @@ There are two upgrade options to choose from, as follows:
 
 - Introduce new Windows Server 2016, 2019 or 2022 domain controllers into the forest, then retire or upgrade all domain controllers running an older version of Windows Server. After you've upgraded or retired all domain controllers running an older version of Windows Server, you can raise the domain and forest functional levels to Windows Server 2016.
 
-- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/perform-in-place-upgrade.md). Then raise the domain and forest functional levels to Windows Server 2016.
+- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/upgrade-in-place.md). Then raise the domain and forest functional levels to Windows Server 2016.
 
 ## Upgrade functional levels in a previous version of Windows Server
 

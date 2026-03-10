@@ -25,7 +25,7 @@ An in-place OS upgrade (feature update) performs a feature update of your Window
 
 You can perform an in-place upgrade from media. Upgrading your installation using media involves downloading and preparing media such as an ISO, USB, or DVD disk.
 
-For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md).
+For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md).
 
 ## Cluster operating system rolling upgrade (feature update)
 

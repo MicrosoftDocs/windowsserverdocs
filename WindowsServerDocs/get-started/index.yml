@@ -64,7 +64,7 @@ landingContent:
           - text: Upgrade Windows Server
             url: upgrade-overview.md
           - text: Perform an in-place upgrade
-            url: perform-in-place-upgrade.md
+            url: upgrade-in-place.md
       - linkListType: how-to-guide
         links:
           - text: Upgrade and conversion options
