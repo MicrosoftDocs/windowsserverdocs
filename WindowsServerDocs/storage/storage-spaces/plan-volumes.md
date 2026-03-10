@@ -36,7 +36,7 @@ All volumes are accessible by all servers in the cluster at the same time. Once 
 
 ## Choosing how many volumes to create
 
-The number of volumes you create depends on the size of the pool and the maximum supported volume size. You need at least one volume per node. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
+The number of volumes you create depends on the size of the pool and the maximum supported volume size. You need at least one volume per node. This configuration allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
 
 We recommend limiting the total number of volumes to 64 volumes per cluster.
 
