@@ -36,7 +36,7 @@ This article walks you through the in-place upgrade process by running Windows S
 > [!IMPORTANT]
 > While most Windows Server roles support an in-place upgrade, Active Directory Domain Controllers are an exception. Although an in-place upgrade might work, don't upgrade servers that run the Active Directory Domain Services role. For more information, see [Upgrade domain controllers to a newer version of Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
-Depending on whether you upgrade by using installation media or Windows Update, you need to **meet additional prerequisites**.
+Depending on whether you upgrade by using installation media or Windows Update, **meet additional prerequisites**.
 
 # [Installation media](#tab/media)
 
