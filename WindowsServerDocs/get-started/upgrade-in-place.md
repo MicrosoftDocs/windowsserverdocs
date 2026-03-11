@@ -142,7 +142,7 @@ Alternatively, you can set the value manually in Registry Editor:
 
 1. Create a new `DWORD` value named `AllowWindowsServerFeatureUpdate` and set it to `1`.
 
-### Upgrade using Windows Update
+### Upgrade by using Windows Update
 
 When you meet all the prerequisites and see the Windows Server feature update in Windows Update, proceed with the in-place upgrade.
 

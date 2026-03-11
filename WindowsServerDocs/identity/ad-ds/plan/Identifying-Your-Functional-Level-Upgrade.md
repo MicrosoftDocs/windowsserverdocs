@@ -81,7 +81,7 @@ There are two upgrade options to choose from, as follows:
 
 - Introduce new Windows Server 2016, 2019 or 2022 domain controllers into the forest, then retire or upgrade all domain controllers running an older version of Windows Server. After you've upgraded or retired all domain controllers running an older version of Windows Server, you can raise the domain and forest functional levels to Windows Server 2016.
 
-- Perform a Feature Update of all existing domain controllers running an older version of Windows Server. To learn more about performing a Feature Update, see [Perform a Feature Update of Windows Server](../../../get-started/upgrade-in-place.md). Then raise the domain and forest functional levels to Windows Server 2016.
+- Perform a feature update of all existing domain controllers running an older version of Windows Server. To learn more about performing a feature update, see [Perform a Feature Update of Windows Server](../../../get-started/upgrade-in-place.md). Then raise the domain and forest functional levels to Windows Server 2016.
 
 ## Upgrade functional levels in a previous version of Windows Server
 
