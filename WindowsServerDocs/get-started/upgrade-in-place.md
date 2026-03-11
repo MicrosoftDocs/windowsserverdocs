@@ -11,7 +11,7 @@ ms.date: 03/11/2026
 
 # Perform an in-place upgrade of Windows Server
 
-An in-place upgrade moves your server from an older version of Windows Server to a newer one while keeping your settings, server roles, and data intact. When you need to stay on a supported version or use the latest security and performance features, upgrading in place avoids rebuilding your environment.
+An in-place upgrade moves your server from an older version of Windows Server to a newer version while keeping your settings, server roles, and data intact. When you need to stay on a supported version or use the latest security and performance features, upgrading in place avoids rebuilding your environment.
 
 This article walks you through the in-place upgrade process by running Windows Server Setup from installation media or by using the feature update in Windows Update.
 
@@ -33,10 +33,16 @@ This article walks you through the in-place upgrade process by running Windows S
   - Isn't running in Azure.
   - Isn't clustered. If you're running a cluster, use the [Cluster-Aware Updating](../failover-clustering/cluster-aware-updating.md) feature or a [cluster operating system rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) instead.
 
+- A valid product key and activation method. Keys and methods can vary depending on the distribution channel that you received the Windows Server media from, such as a Commercial Licensing program, a retail channel, or an OEM.
+
+- A location to store files away from your server, such as a USB flash drive or network location.
+
+- If Configuration Manager is installed on a Windows Server 2012 or Windows Server 2012 R2 server, follow the preupgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
+
 > [!IMPORTANT]
 > While most Windows Server roles support an in-place upgrade, Active Directory Domain Controllers are an exception. Although an in-place upgrade might work, don't upgrade servers that run the Active Directory Domain Services role. For more information, see [Upgrade domain controllers to a newer version of Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
-Depending on whether you upgrade by using installation media or Windows Update, **meet additional prerequisites**.
+Depending on whether you upgrade by using installation media or Windows Update, you need to **meet additional prerequisites**.
 
 # [Installation media](#tab/media)
 
@@ -45,9 +51,6 @@ The installation media upgrade method applies to non-Azure servers only. To upgr
 - Installation media (ISO image, USB drive, or DVD) for the version of Windows Server that you want to upgrade to.
   - For information about available Windows Server versions and supported upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to)
   - You can get installation media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, or the Microsoft 365 admin center.
-- A valid product key and activation method. Keys and methods can vary depending on the distribution channel that you received the Windows Server installation media from, such as a Commercial Licensing program, a retail channel, or an OEM.
-- A location to store files away from your server, such as a USB flash drive or network location.
-- If Configuration Manager is installed on a Windows Server 2012 or Windows Server 2012 R2 server, follow the preupgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
 
 # [Windows Update](#tab/windows-update)
 
