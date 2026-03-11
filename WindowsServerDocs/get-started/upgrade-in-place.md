@@ -79,7 +79,7 @@ To collect your information:
 
    The `Get-ComputerInfo` command requires PowerShell 5.1 or later. If your Windows Server version doesn't include PowerShell 5.1, open Registry Editor and find the `BuildLabEx` and `EditionID` values under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`.
 
-1. Open File Explorer, go to the directory you noted down, and copy the files to a USB flash drive or network location off your computer.
+1. Open File Explorer, go to the directory you noted, and copy the files to a USB flash drive or network location off your computer.
 
 Back up your server operating system, apps, and VMs after collecting your system information. Shut down or migrate any VMs currently running on the server. Make sure no VMs are running during the upgrade.
 
