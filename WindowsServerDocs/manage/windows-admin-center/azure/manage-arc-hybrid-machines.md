@@ -215,6 +215,9 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 
 ## Proxy configuration
 
+> [!IMPORTANT]
+> All Windows Admin Center extension versions are currently experiencing issues with proxy configurations. 
+
 If the machine connects through a proxy server to communicate over the internet, review the following requirements to understand the network configuration required.
 
 The Windows Admin Center extension can communicate through a proxy server by using the HTTPS protocol. Use the extensions settings for configuration as described in the following steps. Authenticated proxies aren't supported.
