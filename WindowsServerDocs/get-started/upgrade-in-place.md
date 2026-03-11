@@ -11,7 +11,7 @@ ms.date: 03/11/2026
 
 # Perform an in-place upgrade of Windows Server
 
-An in-place upgrade moves your server from an older version of Windows Server to a newer one while keeping your settings, server roles, and data intact. When you need to stay on a supported version or use the latest security and performance features, upgrading in place lets you do so without rebuilding your environment.
+An in-place upgrade moves your server from an older version of Windows Server to a newer one while keeping your settings, server roles, and data intact. When you need to stay on a supported version or use the latest security and performance features, upgrading in place avoids rebuilding your environment.
 
 This article walks you through the in-place upgrade process by running Windows Server Setup from installation media or by using the feature update in Windows Update.
 
@@ -36,28 +36,25 @@ This article walks you through the in-place upgrade process by running Windows S
 > [!IMPORTANT]
 > While most Windows Server roles support an in-place upgrade, Active Directory Domain Controllers are an exception. Although an in-place upgrade might work, don't upgrade servers that run the Active Directory Domain Services role. For more information, see [Upgrade domain controllers to a newer version of Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
-Select the tab for your upgrade method to see any additional prerequisites.
+Depending on whether you upgrade by using installation media or Windows Update, you need to **meet additional prerequisites**.
 
 # [Installation media](#tab/media)
 
-> [!NOTE]
-> The installation media upgrade method applies to non-Azure servers only. To upgrade Windows Server in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade) or use the Windows Update method.
+The installation media upgrade method applies to non-Azure servers only. To upgrade Windows Server in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade) or use the Windows Update method.
 
 - Installation media (ISO image, USB drive, or DVD) for the version of Windows Server that you want to upgrade to.
   - For information about available Windows Server versions and supported upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to)
   - You can get installation media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, or the Microsoft 365 admin center.
 - A valid product key and activation method. Keys and methods can vary depending on the distribution channel that you received the Windows Server installation media from, such as a Commercial Licensing program, a retail channel, or an OEM.
 - A location to store files away from your server, such as a USB flash drive or network location.
-
-> [!NOTE]
-> If you're doing an in-place upgrade of a Windows Server 2012 or Windows Server 2012 R2 server with Configuration Manager installed, follow the preupgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
+- If Configuration Manager is installed on a Windows Server 2012 or Windows Server 2012 R2 server, follow the preupgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
 
 # [Windows Update](#tab/windows-update)
 
 To upgrade to Windows Server 2025 or later by using Windows Update, you need:
 
-- Windows Server 2019 or Windows Server 2022 on all target devices.
-- The required cumulative update installed on all target devices. Install the correct update for your operating system and restart the server if required.
+- Windows Server 2019 or Windows Server 2022 on all servers you want to upgrade.
+- The required cumulative update installed on all servers you want to upgrade. Install the correct update for your operating system and restart the server if required.
   - [2026-03 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems (KB5078766)](https://support.microsoft.com/help/5078766) or later for Windows Server 2022
   - [2026-03 Cumulative Update for Microsoft server operating system for x64-based Systems (KB5078752)](https://support.microsoft.com/help/5078752) or later for Windows Server 2019
 
@@ -77,12 +74,7 @@ To collect your information:
    ipconfig /all | Out-File -FilePath ipconfig.txt
    ```
 
-   > [!TIP]
-   > The `Get-ComputerInfo` command requires PowerShell 5.1 or later. If your Windows Server version doesn't include PowerShell, look in the registry for the information that the `Get-ComputerInfo` command returns:
-   >
-   > 1. Open Registry Editor.
-   > 1. Go to the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` key.
-   > 1. Copy the Windows Server `BuildLabEx` and `EditionID` values.
+   The `Get-ComputerInfo` command requires PowerShell 5.1 or later. If your Windows Server version doesn't include PowerShell 5.1, open Registry Editor and find the `BuildLabEx` and `EditionID` values under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`.
 
 1. Open File Explorer, go to the directory you noted down, and copy the files to a USB flash drive or network location off your computer.
 
@@ -90,7 +82,7 @@ Back up your server operating system, apps, and VMs after collecting your system
 
 ## Perform the in-place upgrade
 
-Select the tab for the upgrade method you want to use.
+You can perform the in-place upgrade by using installation media or Windows Update.
 
 # [Installation media](#tab/media)
 
@@ -98,14 +90,11 @@ Run Windows Server Setup from your installation media to do the in-place upgrade
 
 To do the in-place upgrade by using installation media:
 
-1. Mount or insert the installation media. Open File Explorer, go to the root of the installation media, and then open `setup.exe`. For example, if you mounted an ISO image or inserted a DVD as drive D, the file path is `D:\setup.exe`.
+1. Mount or insert the installation media. Open File Explorer, go to the root of the installation media, and then open `setup.exe`. For example, if you mounted an ISO image or inserted a DVD as drive D, the file path is `D:\setup.exe`. If **User Account Control** prompts you to allow Setup to make changes, select **Yes**.
 
-   > [!IMPORTANT]
-   > Depending on your security settings, the **User Account Control** dialog might prompt you to allow the setup to make changes to your device. If you agree to the conditions, select **Yes**.
+1. By default, Setup automatically downloads updates for the installation. If you're okay with the default settings, select **Next** to continue.
 
-1. By default, the setup automatically downloads updates for the installation. If you're okay with the default settings, select **Next** to continue.
-
-   If you don't want the setup to automatically download updates, select **Change how Setup downloads updates**, select the appropriate option for your environment, and then select **Next**.
+   If you don't want Setup to automatically download updates, select **Change how Setup downloads updates**, select the appropriate option for your environment, and then select **Next**.
 
 1. If prompted, enter your product key, and then select **Next**.
 
@@ -115,7 +104,7 @@ To do the in-place upgrade by using installation media:
 
 1. Select **Keep files, settings, and apps** to do an in-place upgrade, and then select **Next**.
 
-1. After the setup finishes analyzing your device, it displays the **Ready to install** screen. To start the in-place upgrade, select **Install**.
+1. After Setup finishes analyzing your device, it displays the **Ready to install** screen. To start the in-place upgrade, select **Install**.
 
 The in-place upgrade starts, and the screen displays the progress. After the in-place upgrade finishes, your server restarts.
 
@@ -137,7 +126,7 @@ Add the following registry value to enable the feature update.
 Alternatively, you can set the value manually in Registry Editor:
 
 1. Open Registry Editor.
-### Upgrade by using Windows Update
+
 1. Go to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`.
 
 1. Create a new `DWORD` value named `AllowWindowsServerFeatureUpdate` and set it to `1`.
@@ -173,7 +162,7 @@ After the server restarts, verify the upgrade succeeded by checking the Windows 
 
 1. Ensure all applications are running and client connections are successful.
 
-If your server isn't working as expected after the in-place upgrade, analyze the setup log files in the `C:\Windows\Panther` directory. Also download the [`SetupDiag`](/windows/deployment/upgrade/setupdiag) tool to analyze the setup log files.
+If your server isn't working as expected after the in-place upgrade, analyze the Setup log files in the `C:\Windows\Panther` directory. Also download the [`SetupDiag`](/windows/deployment/upgrade/setupdiag) tool to analyze the Setup log files.
 
 If you need technical assistance, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
