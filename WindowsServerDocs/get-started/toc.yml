@@ -93,8 +93,6 @@ items:
         href: upgrade-migrate-roles-features.md
       - name: Upgrade and conversion options
         href: upgrade-conversion-options.md
-    - name: Manage Feature Updates with Group Policy
-      href: manage-feature-updates-group-policy.md
   - name: Activation
     items:
     - name: Automatic VM Activation

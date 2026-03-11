@@ -61,8 +61,6 @@ To upgrade to Windows Server 2025 or later by using Windows Update, you need:
   - [2026-03 Cumulative Update for Microsoft server operating system version 21H2 for x64-based Systems (KB5078766)](https://support.microsoft.com/help/5078766) or later for Windows Server 2022
   - [2026-03 Cumulative Update for Microsoft server operating system for x64-based Systems (KB5078752)](https://support.microsoft.com/help/5078752) or later for Windows Server 2019
 
-For Group Policy deployments from an Active Directory Domain Services domain, you also need membership in the Group Policy Administrators group or equivalent, rights to the target organizational unit (OU) where the Group Policy Object (GPO) is applied, and a machine with the Active Directory Remote Server Administration Tools (RSAT) installed.
-
 ---
 
 ## Collect pre-upgrade diagnostic information
@@ -182,7 +180,6 @@ If you need technical assistance, contact [Microsoft Support](https://support.mi
 ## Related content
 
 - [Overview of Windows Server upgrades](upgrade-overview.md)
-- [Manage Feature Updates with Group Policy on Windows Server](manage-feature-updates-group-policy.md)
 - [Add or remove roles and features](../administration/server-manager/add-remove-roles-features.md)
 - [Windows Server management overview](../administration/overview.md)
 - [Get started with Windows Admin Center](../manage/windows-admin-center/use/get-started.md)
