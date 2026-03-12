@@ -23,7 +23,7 @@ By using Windows Admin Center in the Azure portal, you can manage the Windows Se
 
 By using the Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP) – you can manage everything natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Server Manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
 
-This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center in the Azure portal  and use it to manage your hybrid machine. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
+This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center in the Azure portal  and use it to manage your hybrid machine. It also answers frequently asked questions, and provides a list of known problems and tips for troubleshooting in case something doesn't work.
 
 :::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-arc-overview.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for Arc-enabled server, displaying the Windows admin Center Overview page." lightbox="../../media/manage-vm/windows-admin-center-in-azure-arc-overview.png":::
 
