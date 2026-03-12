@@ -19,7 +19,7 @@ ms.custom:
 > [!IMPORTANT]
 > Versions 1.35 and 1.36 of the Azure Connected Machine Agent (Arc agent) break connection to Windows Admin Center. Later versions of the Arc agent (1.37+) fix this problem. You can [download the current version here](https://aka.ms/AzureConnectedMachineAgent).
 
-Using Windows Admin Center in the Azure portal allows you to manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine. To learn more about Arc-enables servers, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview).
+By using Windows Admin Center in the Azure portal, you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere without needing a VPN, public IP address, or other inbound connectivity to your machine. To learn more about Arc-enabled servers, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview).
 
 With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management  no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Server Manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
 
