@@ -10,7 +10,7 @@ ms.custom:
   - sfi-image-nochange
 ---
 
-# Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
+# Manage Azure Arc-enabled servers by using Windows Admin Center in Azure
 
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.
