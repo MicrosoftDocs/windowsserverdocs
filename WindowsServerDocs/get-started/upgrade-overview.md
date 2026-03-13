@@ -62,7 +62,6 @@ In this table you can see the supported upgrade paths, based on the version you'
 | Windows   Server 2016 | - | - | Yes | Yes | Yes |
 | Windows   Server 2019 | - | - | - | Yes | Yes |
 | Windows   Server 2022 | - | - | - | - | Yes |
-| Windows   Server 2025 | - | - | - | - | Yes |
 
 You can upgrade in several ways:
 
