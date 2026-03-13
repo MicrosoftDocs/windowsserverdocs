@@ -38,7 +38,7 @@ To use GPU partitioning with live migration, you need to have a supported CPU, o
 
 Your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
 
-AMD EPYC 7002 (Rome) processors support GPU partitioning, however they don't support live migration with GPU partitioning. To use live migration with GPU partitioning, your hosts must use processors that support IOMMU DMA bit tracking. Examples of processors that support IOMMU DMA bit tracking for live migration with GPU partitioning include:
+AMD EPYC 7002 (Rome) processors support GPU partitioning, but they don't support live migration with GPU partitioning. To use live migration with GPU partitioning, your hosts must use processors that support IOMMU DMA bit tracking. Examples of processors that support IOMMU DMA bit tracking for live migration with GPU partitioning include:
 
 - AMD EPYC 7003 and later (Milan)
 - 4th Gen Intel Xeon SP (Sapphire Rapids)
@@ -68,7 +68,7 @@ The following GPUs support GPU partitioning:
 - AMD V710
 
 > [!NOTE]
-> The AMD V710 GPU supports live migration where the entire GPU is assigned to a single VM, but it doesn't support live migration with GPU partitioning.
+> The AMD V710 GPU supports live migration when you assign the entire GPU to a single VM, but it doesn't support live migration with GPU partitioning.
 
 To use live migration with GPU partitioning, you must use the driver included in the NVIDIA vGPU Software v18.x or later. The NVIDIA driver provides the necessary support for GPU partitioning and live migration capabilities.
 
