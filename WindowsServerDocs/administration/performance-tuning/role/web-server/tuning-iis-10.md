@@ -55,9 +55,7 @@ The following are some useful settings for the HTTP.sys kernel-mode cache:
     A non-zero value that specifies the maximum memory that is available to the kernel-mode cache. The default value, 0, enables the system to automatically adjust how much memory is available to the cache.
 
     **Note**
-    Specifying the size sets only the maximum, and the system might not let the cache grow to the maximum set size.
-
-    Â 
+    Specifying the size sets only the maximum, and the system might not let the cache grow to the maximum set size. 
 
 -   **UriMaxUriBytes** Default value: 262144 bytes (256 KB)
 
@@ -110,7 +108,7 @@ In Windows Server 2022, HTTP.sys manages connections automatically. The followi
 
 ## User-mode settings
 
-The settings in this section affect the IISÂ 10.0 worker process behavior. Most of these settings can be found in the following XML configuration file:
+The settings in this section affect the IIS 10.0 worker process behavior. Most of these settings can be found in the following XML configuration file:
 
 %SystemRoot%\\system32\\inetsrv\\config\\applicationHost.config
 
@@ -132,7 +130,7 @@ The ideal CPU setting is different from the worker process NUMA node assignment 
 
 ## User-mode cache behavior settings
 
-This section describes the settings that affect caching behavior in IISÂ 10.0. The user-mode cache is implemented as a module that listens to the global caching events that are raised by the integrated pipeline. To completely disable the user-mode cache, remove the FileCacheModule (cachfile.dll) module from the list of installed modules in the system.webServer/globalModules configuration section in applicationHost.config.
+This section describes the settings that affect caching behavior in IIS 10.0. The user-mode cache is implemented as a module that listens to the global caching events that are raised by the integrated pipeline. To completely disable the user-mode cache, remove the FileCacheModule (cachfile.dll) module from the list of installed modules in the system.webServer/globalModules configuration section in applicationHost.config.
 
 **system.webServer/caching**
 
@@ -170,7 +168,7 @@ To completely disable compression, remove StaticCompressionModule and DynamicCom
 
 ### Tuning the default document list
 
-The default document module handles HTTP requests for the root of a directory and translates them into requests for a specific file, such as Default.htm or Index.htm. On average, aroundÂ 25 percent of all requests on the Internet go through the default document path. This varies significantly for individual sites. When an HTTP request does not specify a file name, the default document module searches the list of allowed default documents for each name in the file system. This can adversely affect performance, especially if reaching the content requires making a network round trip or touching a disk.
+The default document module handles HTTP requests for the root of a directory and translates them into requests for a specific file, such as Default.htm or Index.htm. On average, around 25 percent of all requests on the Internet go through the default document path. This varies significantly for individual sites. When an HTTP request does not specify a file name, the default document module searches the list of allowed default documents for each name in the file system. This can adversely affect performance, especially if reaching the content requires making a network round trip or touching a disk.
 
 You can avoid the overhead by selectively disabling default documents and by reducing or ordering the list of documents. For websites that use a default document, you should reduce the list to only the default document types that are used. Additionally, order the list so that it begins with the most frequently accessed default document file name.
 
@@ -219,7 +217,7 @@ The following settings relate to application pool and site tunings.
 
 | Attribute | Description | Default |
 |--|--|--|
-| allowSubDirConfig | Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IISÂ 10.0 can know that, unless **/&lt;name&gt;.htm** is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content. | True |
+| allowSubDirConfig | Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IIS 10.0 can know that, unless **/&lt;name&gt;.htm** is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content. | True |
 
 ## Managing IIS 10.0 modules
 
@@ -385,7 +383,7 @@ The following issues can affect IIS performance:
 
 -   Installation of filters that are not cache-aware
 
-    The installation of a filter that is not HTTP-cache-aware causes IIS to completely disable caching, which results in poor performance. ISAPI filters that were written before IISÂ 6.0 can cause this behavior.
+    The installation of a filter that is not HTTP-cache-aware causes IIS to completely disable caching, which results in poor performance. ISAPI filters that were written before IIS 6.0 can cause this behavior.
 
 -   Common Gateway Interface (CGI) requests
 
