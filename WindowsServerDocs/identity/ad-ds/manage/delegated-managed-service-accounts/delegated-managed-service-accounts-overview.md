@@ -35,7 +35,7 @@ A quick concept of the migration flow process for a dMSA involves the following 
 1. The CG policy can be configured to protect the machines identity.
 1. An administrator starts and completes migration of the service account.
 1. The service account refreshes the Ticket Granting Server (TGT).
-1. The service account adds the machine identity to allow principles.
+1. The service account adds the machine identity to allow principals.
 1. The original service account becomes disabled.
 
 Take note of the following when migrating dMSAs:
