@@ -20,17 +20,21 @@ Before using the MSMQ Message Backup/Restore utility you must close all local ap
 ## Syntax
 
 ```
-mqbkup {/b | /r} <folder path_to_storage_device>
+mqbkup [-b | -r] <folder path_to_storage_device> [-y] [-c msmq_resource_name] [-p new_storage_path] [-s]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 | ------- | -------- |
-| /b | Specifies backup operation. |
-| /r | Specifies restore operation. |
+| -b | Specifies backup operation. |
+| -r | Specifies restore operation. |
 | `<folder path_to_storage_device>` | Specifies the path where the MSMQ message files and registry settings are stored. |
-| /? | Displays help at the command prompt. |
+| -y | don't prompt (Yes to all questions) |
+| -c | cluster resource; please specify the MSMQ resource name |
+| -p | restore storage to new_storage_path |
+| -s | only restore system configuration |
+| -? | Displays help at the command prompt. |
 
 #### Remarks
 
