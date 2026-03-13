@@ -69,6 +69,10 @@ TCP/IP in Windows Server 2016 is the following:
 
 TCP/IP provides basic TCP/IP utilities that enable Windows-based computers to connect and share information with other Microsoft and non-Microsoft systems, including:
 
+- Windows Server 2022
+
+- Windows 11
+
 - Windows Server 2016
 
 - Windows 10
@@ -223,10 +227,10 @@ This deployment requires one physical server, one virtual switch, two virtual se
 
 On your physical server, in Hyper-V Manager, create the following items.
 
-1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs will receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
+1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
 1. One VM running Windows Server 2016 configured as a domain controller with Active Directory Domain Services that is connected to the Internal virtual switch you created. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](../../core-network-guide/core-network-guide.md#BKMK_deployADDNS01).
-1. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
-1. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
+1. One VM running Windows Server 2016 that you configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
+1. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 **Standalone DHCP server deployment**
 
@@ -234,9 +238,9 @@ This deployment requires one physical server, one virtual switch, one virtual se
 
 On your physical server, in Hyper-V Manager, create the following items.
 
-1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs will receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
-2. One VM running Windows Server 2016 that you will configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
-3. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
+1. One **Internal** virtual switch. Do not create an **External** virtual switch, because if your Hyper\-V host is on a subnet that includes a DHCP server, your test VMs receive an IP address from your DHCP server. In addition, the test DHCP server that you deploy might assign IP addresses to other computers on the subnet where the Hyper\-V host is installed.
+2. One VM running Windows Server 2016 that you configure as a DHCP server by using this guide and  that is connected to the Internal virtual switch you created.
+3. One VM running a Windows client operating system  that is connected to the Internal virtual switch you created and that you use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 ### Test Lab requirements with physical servers
 
@@ -248,8 +252,8 @@ This deployment requires one hub or switch, two physical servers and one physica
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
 2. One physical computer running Windows Server 2016 configured as a domain controller with Active Directory Domain Services. To match this guide, this server must have a statically configured IP address of 10.0.0.2. For information on deploying AD DS, see the section **Deploying DC1** in the Windows Server 2016 [Core Network Guide](../../core-network-guide/core-network-guide.md#BKMK_deployADDNS01).
-3. One physical computer running Windows Server 2016 that you will configure as a DHCP server by using this guide.
-4. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
+3. One physical computer running Windows Server 2016 that you configure as a DHCP server by using this guide.
+4. One physical computer running a Windows client operating system that you use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 > [!NOTE]
 > If you do not have enough test machines for this deployment, you can use one test machine for both AD DS and DHCP - however this configuration is not recommended for a production environment.
@@ -259,8 +263,8 @@ This deployment requires one hub or switch, two physical servers and one physica
 This deployment requires one hub or switch, one physical server, and one physical client:
 
 1. One Ethernet hub or switch to which you can connect the physical computers with Ethernet cables
-2. One physical computer running Windows Server 2016 that you will configure as a DHCP server by using this guide.
-3. One physical computer running a Windows client operating system that you will use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
+2. One physical computer running Windows Server 2016 that you configure as a DHCP server by using this guide.
+3. One physical computer running a Windows client operating system that you use to verify that your DHCP server is dynamically allocating IP addresses and DHCP options to DHCP clients.
 
 
 ## <a name="bkmk_deploy"></a>Deploy DHCP
@@ -304,7 +308,7 @@ If you have not already done so, you can use the following Windows PowerShell co
 
 You can use the following commands to assign a static IP address to the DHCP server, and to configure the DHCP server TCP/IP properties with the correct DNS server IP address. You must also replace interface names and IP addresses in this example with the values that you want to use to configure your computer.
 
-```
+```powershell
 New-NetIPAddress -IPAddress 10.0.0.3 -InterfaceAlias "Ethernet" -DefaultGateway 10.0.0.1 -AddressFamily IPv4 -PrefixLength 24
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 10.0.0.2
 ```
@@ -318,7 +322,7 @@ For more information about these commands, see the following topics.
 
 You can use the following commands to rename and then restart the computer.
 
-```
+```powershell
 Rename-Computer -Name DHCP1
 Restart-Computer
 ```
@@ -332,13 +336,13 @@ For more information about these commands, see the following topics.
 
 If you are installing your DHCP server in an Active Directory domain environment, you must join the computer to the domain. Open Windows PowerShell with Administrator privileges, and then run the following command after replacing the domain NetBios name **CORP** with a value that is appropriate for your environment.
 
-```
+```powershell
 Add-Computer CORP
 ```
 
 When prompted, type the credentials for a domain user account that has permission to join a computer to the domain.
 
-```
+```powershell
 Restart-Computer
 ```
 
@@ -350,7 +354,7 @@ For more information about the Add-Computer command, see the following topic.
 
 After the computer restarts, open Windows PowerShell with Administrator privileges, and then install DHCP by running the following command.
 
-```
+```powershell
 Install-WindowsFeature DHCP -IncludeManagementTools
 ```
 
@@ -364,13 +368,13 @@ To create security groups, you must run a Network Shell \(netsh\) command in Win
 
 When you run the following netsh command on the DHCP server, the **DHCP Administrators** and **DHCP Users** security groups are created in **Local Users and Groups** on the DHCP server.
 
-```
+```powershell
 netsh dhcp add securitygroups
 ```
 
 The following command restarts the DHCP service on the local computer.
 
-```
+```powershell
 Restart-Service dhcpserver
 ```
 
@@ -391,13 +395,13 @@ You can use the following command to add the DHCP server to the list of authoriz
 > [!NOTE]
 > If you do not have a domain environment, do not run this command.
 
-```
+```powershell
 Add-DhcpServerInDC -DnsName DHCP1.corp.contoso.com -IPAddress 10.0.0.3
 ```
 
 To verify that the DHCP server is authorized in Active Directory, you can use the following command.
 
-```
+```powershell
 Get-DhcpServerInDC
 ```
 
@@ -430,15 +434,15 @@ For more information about this command, see the following topic.
 
 ### Set server level DNS dynamic update configuration settings \(Optional\)
 
-If you want the DHCP server to perform DNS dynamic updates for DHCP client computers, you can run the following command to configure this setting. This is a server level setting, not a scope level setting, so it will affect all scopes that you configure on the server. This example command also configures the DHCP server to delete DNS resource records for clients when the client least expires.
+If you want the DHCP server to perform DNS dynamic updates for DHCP client computers, you can run the following command to configure this setting. This is a server level setting, not a scope level setting, so it affects all scopes that you configure on the server. This example command also configures the DHCP server to delete DNS resource records for clients when the client least expires.
 
-```
+```powershell
 Set-DhcpServerv4DnsSetting -ComputerName "DHCP1.corp.contoso.com" -DynamicUpdates "Always" -DeleteDnsRRonLeaseExpiry $True
 ```
 
 You can use the following command to configure the credentials that the DHCP server uses to register or unregister client records on a DNS server. This example saves a credential on a DHCP server. The first command uses **Get-Credential** to create a **PSCredential** object, and then stores the object in the **$Credential** variable. The command prompts you for user name and password, so ensure that you provide credentials for an account that has permission to update resource records on your DNS server.
 
-```
+```powershell
 $Credential = Get-Credential
 Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.contoso.com"
 ```
@@ -452,7 +456,7 @@ For more information about these commands, see the following topics.
 
 After DHCP installation is completed, you can use the following commands to configure and activate the Corpnet scope, create an exclusion range for the scope, and configure the DHCP options default gateway, DNS server IP address, and DNS domain name.
 
-```
+```powershell
 Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 -State Active
 Add-DhcpServerv4ExclusionRange -ScopeID 10.0.0.0 -StartRange 10.0.0.1 -EndRange 10.0.0.15
 Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.0.1 -ScopeID 10.0.0.0 -ComputerName DHCP1.corp.contoso.com
@@ -469,7 +473,7 @@ For more information about these commands, see the following topics.
 
 If you have a second subnet that is connected to the first subnet with a router where DHCP forwarding is enabled, you can use the following commands to add a second scope, named Corpnet2 for this example. This example also configures an exclusion range and the IP address for the default gateway \(the router IP address on the subnet\) of the Corpnet2 subnet.
 
-```
+```powershell
 Add-DhcpServerv4Scope -name "Corpnet2" -StartRange 10.0.1.1 -EndRange 10.0.1.254 -SubnetMask 255.255.255.0 -State Active
 Add-DhcpServerv4ExclusionRange -ScopeID 10.0.1.0 -StartRange 10.0.1.1 -EndRange 10.0.1.15
 Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -ComputerName DHCP1.corp.contoso.com
@@ -482,7 +486,7 @@ If you have additional subnets that are serviced by this DHCP server, you can re
 
 ## <a name="bkmk_verify"></a>Verify Server Functionality
 
-To verify that your DHCP server is providing dynamic allocation of IP addresses to DHCP clients, you can connect another computer to a serviced subnet. After you connect the Ethernet cable to the network adapter and power on the computer, it will request an IP address from your DHCP server. You can verify successful configuration by using the **ipconfig /all** command and reviewing the results, or by performing connectivity tests, such as attempting to access Web resources with your browser or file shares with Windows Explorer or other applications.
+To verify that your DHCP server is providing dynamic allocation of IP addresses to DHCP clients, you can connect another computer to a serviced subnet. After you connect the Ethernet cable to the network adapter and power on the computer, it requests an IP address from your DHCP server. You can verify successful configuration by using the **ipconfig /all** command and reviewing the results, or by performing connectivity tests, such as attempting to access Web resources with your browser or file shares with Windows Explorer or other applications.
 
 If the client does not receive an IP address from your DHCP server, perform the following troubleshooting steps.
 
@@ -511,7 +515,7 @@ The following reference provides command descriptions and syntax for all DHCP Se
 
 Following is a simple list of commands and example values that are used in this guide.
 
-```
+```powershell
 New-NetIPAddress -IPAddress 10.0.0.3 -InterfaceAlias "Ethernet" -DefaultGateway 10.0.0.1 -AddressFamily IPv4 -PrefixLength 24
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 10.0.0.2
 Rename-Computer -Name DHCP1
@@ -536,13 +540,13 @@ Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.co
 
 rem At prompt, supply credential in form DOMAIN\user, password
 
-rem Configure scope Corpnet
+# Configure scope Corpnet
 Add-DhcpServerv4Scope -name "Corpnet" -StartRange 10.0.0.1 -EndRange 10.0.0.254 -SubnetMask 255.255.255.0 -State Active
 Add-DhcpServerv4ExclusionRange -ScopeID 10.0.0.0 -StartRange 10.0.0.1 -EndRange 10.0.0.15
 Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.0.1 -ScopeID 10.0.0.0 -ComputerName DHCP1.corp.contoso.com
 Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2
 
-rem Configure scope Corpnet2
+# Configure scope Corpnet2
 Add-DhcpServerv4Scope -name "Corpnet2" -StartRange 10.0.1.1 -EndRange 10.0.1.254 -SubnetMask 255.255.255.0 -State Active
 Add-DhcpServerv4ExclusionRange -ScopeID 10.0.1.0 -StartRange 10.0.1.1 -EndRange 10.0.1.15
 Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -ComputerName DHCP1.corp.contoso.com
