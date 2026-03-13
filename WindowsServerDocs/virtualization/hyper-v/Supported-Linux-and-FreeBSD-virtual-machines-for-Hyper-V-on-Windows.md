@@ -50,3 +50,5 @@ The goal of this content is to provide information that helps facilitate your Li
 * [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
+
+* [Best practices for validating Linux Images using Penguinator on Hyper-V](Best-practices-for-validating-Linux-Images-on-Hyper-V.md)
