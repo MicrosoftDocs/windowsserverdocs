@@ -76,6 +76,8 @@ set /a <variable>=<expression>
 
 - If you call a variable value from a batch file, enclose the value with percent signs (**%**). For example, if your batch program creates an environment variable named *BAUD*, you can use the string associated with *BAUD* as a replaceable parameter by typing **%baud%** at the command prompt.
 
+- Ensure there are no spaces before or after the '=' sign. If there is a space before the '=' sign, the environment variable name will be suffixed with a space. If there is a space after the '=' sign, the value will be prefixed with a space. 
+
 ## Examples
 
 To set the value *TEST^1* for the environment variable named `testVar`, type:
