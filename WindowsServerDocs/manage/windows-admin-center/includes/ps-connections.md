@@ -5,15 +5,15 @@ ms.date: 12/29/2025
 
 ```powershell
 # Load the module
-Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
-# Available cmdlets: Export-Connection, Import-Connection
+Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.ConnectionTools\Microsoft.WindowsAdminCenter.ConnectionTools.psd1"
+# Available cmdlets: Export-WACConnection, Import-WACConnection
 
 # Export connections (including tags) to a .csv file
-Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
+Export-WACConnection -Endpoint "https://wac.contoso.com" -FileName "WAC-connections.csv"
 # Import connections (including tags) from a .csv file
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file by using the -prune switch parameter 
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -prune
+Import-WACConnection -Endpoint "https://wac.contoso.com" -FileName "WAC-connections.csv"
+# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file by using the -Prune switch parameter 
+Import-WACConnection -Endpoint "https://wac.contoso.com" -FileName "WAC-connections.csv" -Prune
 ```
 
 ### CSV file format for importing connections
@@ -26,6 +26,7 @@ The format of the CSV file starts with the following four headings, followed by 
 
   | Connection type | Connection string |
   |------|-------------------------------|
+  | Windows PC | `msft.sme.connection-type.windows-client`|
   | Windows Server | `msft.sme.connection-type.server` |
   | Failover cluster | `msft.sme.connection-type.cluster` |
 
