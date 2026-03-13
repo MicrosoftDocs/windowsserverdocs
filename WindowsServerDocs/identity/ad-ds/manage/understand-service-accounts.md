@@ -85,8 +85,8 @@ Service accounts are used to control the service's access to local and network r
 | Criterion | sMSA | gMSA | dMSA | Virtual accounts |
 |-|:-:|:-:|:-:|:-:|
 | App runs on a single server | Yes | Yes | Yes | Yes |
-| App runs on multiple servers | No | Yes | No | No |
-| App runs behind a load balancer | No | Yes | No | No |
+| App runs on multiple servers | No | Yes | Yes | No |
+| App runs behind a load balancer | No | Yes | Yes | No |
 | App runs on Windows Server | Yes | No | No | Yes |
 | Requirement to restrict service account to single server | Yes | No | Yes | No |
 | Supports machine account linked to device identity | No | No | Yes | No |
