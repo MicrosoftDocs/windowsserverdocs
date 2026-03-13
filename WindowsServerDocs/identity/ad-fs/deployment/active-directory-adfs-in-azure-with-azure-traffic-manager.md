@@ -26,7 +26,7 @@ The basic design principles will be same as listed in Design principles in the a
 * **Network Security Groups:** As storage accounts, Network Security Groups created in a region cannot be used in another geographical region. Therefore, you will need to create new network security groups similar to those in the first geographical region for INT and DMZ subnet in the new geographical region.
 * **DNS Labels for public IP addresses:** Azure Traffic Manager can refer to endpoints ONLY via DNS labels. Therefore, you are required to create DNS labels for the External Load Balancers' public IP addresses.
 * **Azure Traffic Manager:** Microsoft Azure Traffic Manager allows you to control the distribution of user traffic to your service endpoints running in different datacenters around the world. Azure Traffic Manager works at the DNS level. It uses DNS responses to direct end-user traffic to globally-distributed endpoints. Clients then connect to those endpoints directly. With different routing options of Performance, Weighted and Priority, you can easily choose the routing option best suited for your organization's needs.
-* **V-net to V-net connectivity between two regions:** You do not need to have connectivity between the virtual networks itself. Since each virtual network has access to domain controllers and has AD FS and WAP server in itself, they can work without any connectivity between the virtual networks in different regions.
+* **V-net to V-net connectivity between two regions:** Federation servers on an AD FS farm communicate with other servers in the farm and the Web Application Proxy (WAP) servers via HTTP port 80 for configuration synchronization.
 
 ## Steps to integrate Azure Traffic Manager
 ### Deploy AD FS in the new geographical region
