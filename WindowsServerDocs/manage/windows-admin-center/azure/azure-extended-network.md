@@ -92,7 +92,7 @@ Deployment is driven through Windows Admin Center.
 
     ![Screenshot showing the available extensions tab of Settings](../media/azure-extended-network/installed-extensions.png)
 
-3. On the **Available extensions** tab, select **Extended network**, and then select **Install**.
+3. On the **Available extensions** tab, select **Azure Extended Network**, and then select **Install**.
 
     After a few seconds, you should see a message indicating a successful installation.
 
