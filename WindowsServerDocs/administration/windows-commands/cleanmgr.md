@@ -45,7 +45,7 @@ The options for the files that you can specify for Disk Cleanup by using **/sage
 
 - **Old Chkdsk Files** - When Chkdsk checks a disk for errors, Chkdsk might save lost file fragments as files in the root folder on the disk. These files are unnecessary.
 
-- **Recycle Bin** - The Recycle Bin contains files that you have deleted from the computer. These files aren't permanently removed until you empty the Recycle Bin. This option includes a View Files button that opens the Recycle Bin.<p>**Note:** A Recycle Bin may appear in more than one drive, for example, not just in %SystemRoot%.
+- **Recycle Bin** - The Recycle Bin contains files that you have deleted from the computer. These files aren't permanently removed until you empty the Recycle Bin. This option includes a View Files button that opens the Recycle Bin.<p>**Note:** A Recycle Bin may appear in more than one drive, for example, not just in %SystemDrive%.
 
 - **Temporary Files** - Programs sometimes store temporary information in a Temp folder. Before a program quits, the program usually deletes this information. You can safely delete temporary files that haven't been modified within the last week.
 
@@ -55,7 +55,7 @@ The options for the files that you can specify for Disk Cleanup by using **/sage
 
 - **Compress Old Files** - Windows can compress files that you haven't used recently. Compressing files saves disk space, but you can still use the files. No files are deleted. Because files are compressed at different rates, the displayed amount of disk space that you'll gain is approximate. An Options button permits you to specify the number of days to wait before Disk Cleanup compresses an unused file.
 
-- **Catalog Files for the Content Indexer** - The Indexing service speeds up and improves file searches by maintaining an index of the files that are on the disk. These Catalog files remain from a previous indexing operation and can be deleted safely.<p>**Note:** Catalog File may appear in more than one drive, for example, not just in `%SystemRoot%`.
+- **Catalog Files for the Content Indexer** - The Indexing service speeds up and improves file searches by maintaining an index of the files that are on the disk. These Catalog files remain from a previous indexing operation and can be deleted safely.<p>**Note:** Catalog File may appear in more than one drive, for example, not just in `%SystemDrive%`.
 
 >[!NOTE]
 > If you specify cleaning up the drive that contains the Windows installation, all of these options are available on the **Disk Cleanup** tab. If you specify any other drive, only the Recycle Bin and the Catalog files for content index options are available on the **Disk Cleanup** tab.
