@@ -9,7 +9,7 @@ ms.date: 10/16/2017
 
 # print
 
-Sends a text file to a printer. A file can print in the background if you send it to a printer connected to a serial or parallel port on the local computer.
+Sends a text file to a printer. If you need to print a file that cannot be opened from a command line (e-mail, picture, document, etc.), you must use a different program. A file can print in the background if you send it to a printer connected to a serial or parallel port on the local computer.
 
 > [!NOTE]
 > You can perform many configuration tasks from the command prompt by using the [Mode command](mode.md), including configuring a printer connected to a parallel or a serial port, displaying printer status, or preparing a printer for code page switching.
