@@ -39,13 +39,14 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://docs.mideye.com/6.4/integrations/microsoft-adfs/)|
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Defender AD FS|[Defender AD FS Adapter](https://www.oneidentity.com/products/defender/)|
-|Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrate_with_ad_fs.html)|
-|RSA|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation)|
-|SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
+| Ping Identity | PingID MFA Adapter for AD FS | [PingID MFA Adapter for AD FS](https://docs.pingidentity.com/pingid/pingid_integrations/pid_integrate_with_ad_fs.html) |
+| RSA | RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services | [RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation) |
+| SecureMFA | SecureMFA OTP Provider | [AD FS multifactor authentication Providers](https://www.securemfa.com/) |
 | Swisscom | Mobile ID Authentication Service and Signature Services | [Mobile ID Authentication Service](http://swisscom.ch/mid) |
 | Symantec | Symantec Validation and ID Protection Service (VIP) | [Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/) |
 | Thales | SafeNet Trusted Access (STA) | [Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html) |
-| Trusona | Essential (passwordless MFA) and Executive (Essential + Identity Proofing) | [Trusona multifactor authentication](https://www.trusona.com/) |
+| Trusona | Essential (passwordless MFA) and Executive (Essential + Identity Proofing) | [Trusona multifactor authentication](https://www.trusona.com/) |
+
 
 ## Custom Authentication Method for AD FS in Windows Server
 
