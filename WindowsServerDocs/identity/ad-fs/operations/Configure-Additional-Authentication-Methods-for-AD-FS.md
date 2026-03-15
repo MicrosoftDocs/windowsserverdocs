@@ -44,7 +44,7 @@ Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentic
 |SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
 | Swisscom | Mobile ID Authentication Service and Signature Services | [Mobile ID Authentication Service](http://swisscom.ch/mid) |
 | Symantec | Symantec Validation and ID Protection Service (VIP) | [Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/) |
-|Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html)|
+| Thales | SafeNet Trusted Access (STA) | [Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html) |
 |Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona multifactor authentication](https://www.trusona.com/)|
 
 ## Custom Authentication Method for AD FS in Windows Server
