@@ -43,7 +43,7 @@ Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentic
 |RSA|RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services|[RSA SecurID Authentication Agent for Microsoft Active Directory Federation Services](https://community.rsa.com/t5/securid-authentication-agent-for/tkb-p/auth-agent-ad-fs-documentation)|
 |SecureMFA|SecureMFA OTP Provider| [AD FS multifactor authentication Providers](https://www.securemfa.com/)|
 | Swisscom | Mobile ID Authentication Service and Signature Services | [Mobile ID Authentication Service](http://swisscom.ch/mid) |
-|Symantec|Symantec Validation and ID Protection Service (VIP)|[Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/)|
+| Symantec | Symantec Validation and ID Protection Service (VIP) | [Symantec Validation and ID Protection Service (VIP)](https://vip.symantec.com/) |
 |Thales|SafeNet Trusted Access (STA)|[Authentication with AD Federation Services](https://thalesdocs.com/sta/operator/community_content/auth_adfs/index.html)|
 |Trusona|Essential (passwordless MFA) and Executive (Essential + Identity Proofing)| [Trusona multifactor authentication](https://www.trusona.com/)|
 
