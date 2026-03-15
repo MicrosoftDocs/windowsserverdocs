@@ -26,12 +26,15 @@ You can also configure and enable Microsoft and third-party authentication metho
 
 Below is an alphabetical list of Microsoft and third-party providers with MFA offerings currently available for AD FS in Windows Server.
 
-|Provider|Offering|Link to learn more|
+| Provider | Offering | Link to learn more |
 |-|-|-|
-| Akamai Technologies | Akamai MFA | [Integrating Akamai MFA with Microsoft AD FS](https://techdocs.akamai.com/mfa/docs/adsf) |
-| aPersona | aPersona Adaptive multifactor authentication for Microsoft AD FS SSO | [aPersona ASM AD FS Adapter](https://www.apersona.com/adfs) |
+| Akamai Technologies | Akamai MFA | [Integrating Akamai MFA with Microsoft AD FS](https://techdocs.akamai.com/mfa/docs/adsf) |
+
+| aPersona | aPersona Adaptive multifactor authentication for Microsoft AD FS SSO | [aPersona ASM AD FS Adapter](https://www.apersona.com/adfs) |
+
 | Cyphercor Inc. | LoginTC multifactor authentication for AD FS | [LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html) |
-| Duo Security | Duo MFA Adapter for AD FS | [Duo Authentication for AD FS](https://duo.com/docs/adfs) |
+| Duo Security | Duo MFA Adapter for AD FS | [Duo Authentication for AD FS](https://duo.com/docs/adfs) |
+
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
 | Futurae | Futurae Authentication Suite for AD FS | [Futurae Strong Authentication](https://futurae.com) |
 
