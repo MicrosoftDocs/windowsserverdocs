@@ -30,12 +30,15 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |-|-|-|
 |Akamai Technologies|Akamai MFA|[Integrating Akamai MFA with Microsoft AD FS](https://techdocs.akamai.com/mfa/docs/adsf)|
 |aPersona|aPersona Adaptive multifactor authentication for Microsoft AD FS SSO|[aPersona ASM AD FS Adapter](https://www.apersona.com/adfs)|
-|Cyphercor Inc.|LoginTC multifactor authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
+| Cyphercor Inc. | LoginTC multifactor authentication for AD FS | [LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html) |
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
-|Futurae|Futurae Authentication Suite for AD FS|[Futurae Strong Authentication](https://futurae.com)|
-| Green Rocket Security | GreenRADIUS MFA Adapter for AD FS | [GreenRADIUS MFA for AD FS](https://www.greenrocketsecurity.com/2fa-for-adfs/) |
-| inWebo Technologies | inWebo Enterprise Authentication service | [inWebo Enterprise Authentication](http://www.inwebo.com) |
-| Microsoft Corp. | Microsoft Azure MFA | [Configure Azure MFA as authentication provider with AD FS](configure-ad-fs-and-azure-mfa.md) |
+| Futurae | Futurae Authentication Suite for AD FS | [Futurae Strong Authentication](https://futurae.com) |
+| Green Rocket Security | GreenRADIUS MFA Adapter for AD FS | [GreenRADIUS MFA for AD FS](https://www.greenrocketsecurity.com/2fa-for-adfs/) |
+
+| inWebo Technologies | inWebo Enterprise Authentication service | [inWebo Enterprise Authentication](http://www.inwebo.com) |
+
+| Microsoft Corp. | Microsoft Azure MFA | [Configure Azure MFA as authentication provider with AD FS](configure-ad-fs-and-azure-mfa.md) |
+
 | Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://docs.mideye.com/6.4/integrations/microsoft-adfs/) |
 
 | Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm) |
