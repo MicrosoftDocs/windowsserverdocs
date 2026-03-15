@@ -24,7 +24,7 @@ Create a hybrid identity solution in Microsoft Azure:
 
 You can also configure and enable Microsoft and third-party authentication methods in AD FS in Windows Server. Once installed and registered with AD FS, you can enforce MFA as part of the global or per-relying-party authentication policy.
 
-Below is an alphabetical list of Microsoft and third-party providers with MFA offerings currently available for AD FS in Windows Server.
+The following table lists Microsoft and third-party providers with MFA offerings currently available for AD FS in Windows Server.
 
 | Provider | Offering | Link to learn more |
 |-|-|-|
