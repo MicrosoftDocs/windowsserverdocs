@@ -122,15 +122,15 @@ Add the following registry value to enable the feature update.
 1. Open an elevated PowerShell prompt and run the following command:
 
    ```powershell
-   New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate"
-   New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" -Name "AllowWindowsServerFeatureUpdate" -PropertyType DWord -Value 1
+   New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate"
+   New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate" -Name "AllowWindowsServerFeatureUpdate" -PropertyType DWord -Value 1
    ```
 
 Alternatively, you can set the value manually in Registry Editor:
 
 1. Open Registry Editor.
 
-1. Go to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate`.
+1. Go to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate`.
 
 1. Create a new `DWORD` value named `AllowWindowsServerFeatureUpdate` and set it to `1`.
 
