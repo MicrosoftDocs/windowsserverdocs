@@ -14,6 +14,8 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Windows Admin Center Virtualization Mode is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> Issues, questions, and feedback not covered in this documentation can be filed [here](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
 Windows Admin Center Virtualization Mode is a purpose-built management experience for virtualization infrastructure. It enables IT professionals to centrally administer Hyper-V hosts, clusters, storage, and networking at scale.
 
