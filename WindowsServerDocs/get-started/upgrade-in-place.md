@@ -11,9 +11,9 @@ ms.date: 03/11/2026
 
 # Perform an in-place upgrade of Windows Server
 
-An in-place upgrade moves your server from an older version of Windows Server to a newer version while keeping your settings, server roles, and data intact. When you need to stay on a supported version or use the latest security and performance features, upgrading in place avoids rebuilding your environment.
+An in-place upgrade moves your server from an older version of Windows Server to a newer version while keeping your settings, server roles, and data intact. For example, you can upgrade from Windows Server 2012 R2 to Windows Server 2025. When you upgrade in place, your environment stays running on a supported version with the latest security and performance features, all without rebuilding.
 
-This article walks you through the in-place upgrade process by running Windows Server Setup from installation media or by using the feature update in Windows Update.
+This article shows you how to upgrade by using Windows Server Setup from installation media or the feature update in Windows Update.
 
 ## Prerequisites
 
