@@ -32,7 +32,7 @@ The following table lists Microsoft and non-Microsoft providers with MFA offerin
 | aPersona | aPersona Adaptive multifactor authentication for Microsoft AD FS SSO | [aPersona ASM AD FS Adapter](https://www.apersona.com/adfs) |
 | Cyphercor Inc. | LoginTC multifactor authentication for AD FS | [LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html) |
 | Duo Security | Duo MFA Adapter for AD FS | [Duo Authentication for AD FS](https://duo.com/docs/adfs) |
-|Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
+| Duo Security | Duo MFA Adapter for AD FS | [Duo Authentication for AD FS](https://duo.com/docs/adfs) |
 | Futurae | Futurae Authentication Suite for AD FS | [Futurae Strong Authentication](https://futurae.com) |
 | Green Rocket Security | GreenRADIUS MFA Adapter for AD FS | [GreenRADIUS MFA for AD FS](https://www.greenrocketsecurity.com/2fa-for-adfs/) |
 | inWebo Technologies | inWebo Enterprise Authentication service | [inWebo Enterprise Authentication](http://www.inwebo.com) |
@@ -49,7 +49,7 @@ The following table lists Microsoft and non-Microsoft providers with MFA offerin
 | Trusona | Essential (passwordless MFA) and Executive (Essential + Identity Proofing) | [Trusona multifactor authentication](https://www.trusona.com/) |
 
 
-## Custom Authentication Method for AD FS in Windows Server
+## Custom authentication method for AD FS in Windows Server
 
 We now provide instructions for building your own custom authentication method for AD FS in Windows Server. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](../development/ad-fs-build-custom-auth-method.md).
 
