@@ -18,7 +18,7 @@ Create a hybrid identity solution in Microsoft Azure:
 
 - [Learn about Microsoft Entra multifactor authentication.](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [Manage identities for single-forest hybrid environments using cloud authentication.](/previous-versions/windows/it-pro/solutions-guidance/dn550986(v=ws.11))
-- [Manage Risk with Additional multifactor authentication for Sensitive Applications.](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11))
+- [Manage risk with additional multifactor authentication for sensitive applications.](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280946(v=ws.11))
 
 ## Microsoft and non-Microsoft authentication methods
 
