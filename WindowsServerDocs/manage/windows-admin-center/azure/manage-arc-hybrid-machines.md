@@ -382,7 +382,6 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't yet available.
-- As of November 1st, 2024, some existing customers are unable to use Windows Admin Center for Azure Arc.
 
 ## Frequently asked questions
 
