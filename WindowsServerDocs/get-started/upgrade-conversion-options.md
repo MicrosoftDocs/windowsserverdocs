@@ -10,7 +10,7 @@ ms.topic: how-to
 
 # Convert Windows Server editions and license types
 
-After installing Windows Server, you can convert between editions (for example, evaluation to retail, or Standard to Datacenter) and switch between licensing types (retail, volume-licensed, and OEM). This article provides the step-by-step procedures for each conversion scenario.
+After you install Windows Server, you can convert between editions (for example, evaluation to retail, or Standard to Datacenter) and switch between licensing types (retail, volume-licensed, and OEM). This article provides step-by-step procedures for each conversion scenario.
 
 For information about supported in-place upgrade paths and restrictions, see [Plan your Windows Server upgrade](install-upgrade-migrate.md).
 

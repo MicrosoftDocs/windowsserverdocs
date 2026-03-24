@@ -10,7 +10,7 @@ ms.date: 03/23/2026
 
 # Plan your Windows Server upgrade
 
-When you move to a newer version of Windows Server, you choose from several approaches — in-place upgrade, clean install, migration, cluster rolling upgrade, or edition conversion — each with different trade-offs for downtime, complexity, and hardware requirements. Upgrading keeps your servers secure, supported, and able to use the latest features and performance improvements.
+When you move to a newer version of Windows Server, choose from several approaches: in-place upgrade, clean install, migration, cluster rolling upgrade, or edition conversion. Each approach has different trade-offs for downtime, complexity, and hardware requirements. Upgrading keeps your servers secure, supported, and able to use the latest features and performance improvements.
 
 This article explains the available upgrade methods, shows the supported in-place upgrade paths by version, and lists the restrictions that apply.
 
@@ -36,13 +36,13 @@ Use the following table to decide which method fits your scenario:
 | **Clean install** | Installs Windows Server on a new server or overwrites the existing OS. | You want a fresh start, your hardware is new, or an in-place upgrade isn't supported for your current configuration. | [Install Windows Server](install-windows-server.md) |
 | **Migration** | Moves roles or features from a source server to a different destination server running Windows Server. | You're moving to new hardware, or you need to migrate one role or feature at a time without upgrading the OS in-place. | [Upgrade and migrate roles and features](upgrade-migrate-roles-features.md) |
 | **Cluster OS rolling upgrade** | Upgrades cluster node operating systems one at a time without stopping Hyper-V or Scale-Out File Server workloads. Clusters can only upgrade one version at a time. For failover clusters running on Azure Local, use the [Lifecycle Manager (LCM)](/azure/azure-local/upgrade/about-upgrades-23h2) instead. | You're running a failover cluster and need to maintain availability during the upgrade. | [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) |
-| **License conversion** | Converts one edition of Windows Server to another edition of the same release using a command and a product key (for example, Standard to Datacenter). | You need to change your Windows Server edition or switch between retail, volume-licensed, and OEM licenses. | [Convert Windows Server editions and license types](upgrade-conversion-options.md) |
+| **License conversion** | Converts one edition of Windows Server to another edition of the same release by using a command and a product key (for example, Standard to Datacenter). | You need to change your Windows Server edition or switch between retail, volume-licensed, and OEM licenses. | [Convert Windows Server editions and license types](upgrade-conversion-options.md) |
 
 ## Supported in-place upgrade paths by version
 
-We recommend upgrading to the latest version of Windows Server to get the latest features, security updates, and best performance.
+Upgrade to the latest version of Windows Server to get the latest features, security updates, and best performance.
 
-Beginning with Windows Server 2025, nonclustered systems can upgrade up to four versions at a time. You can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later. With Windows Server 2022 and earlier, nonclustered systems can upgrade up to two versions at a time. If you're using a [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md), you can only upgrade one version at a time.
+Starting with Windows Server 2025, nonclustered systems can upgrade up to four versions at a time. You can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later. By using Windows Server 2022 and earlier versions, nonclustered systems can upgrade up to two versions at a time. If you're using a [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md), you can only upgrade one version at a time.
 
 The following table shows the supported in-place upgrade paths based on your current version:
 

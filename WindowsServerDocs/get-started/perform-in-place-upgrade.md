@@ -24,7 +24,7 @@ Before you start upgrading, complete the following prerequisites:
 
 - The setup media for the version of Windows Server that you want to upgrade to.
   - For information about available Windows Server versions and supported upgrade paths, see [Supported in-place upgrade paths by version](install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version).
-  - You can obtain setup media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, and the Microsoft 365 admin center.
+  - You can get setup media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, or the Microsoft 365 admin center.
 - A valid product key and activation method. Keys and methods can vary depending on the distribution channel you receive Windows Server media from. Examples of channels include a Commercial Licensing program, a retail channel, or an OEM.
 - A location to store files away from your computer, such as a USB flash drive or network location.
 - Knowledge of:
