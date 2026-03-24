@@ -1,34 +1,26 @@
 ---
-title: Upgrade and conversion options for Windows Server
-description: Discover conversion paths for Windows Server to switch between editions, including evaluation, retail, and volume licensing scenarios.
+title: Convert Windows Server editions and license types
+description: Learn how to convert Windows Server evaluation versions to retail, upgrade Standard to Datacenter edition, and switch between retail, volume-licensed, and OEM licenses using DISM and slmgr commands.
 ms.author: roharwoo
 author: robinharwood
-ms.date: 08/18/2025
-ms.topic: upgrade-and-migration-article
-#customer intent: As a Windows Server administrator, I want to understand upgrade and conversion options, so that I can plan and execute updates or changes to my server environment efficiently and correctly.
+ms.date: 03/23/2026
+ms.topic: how-to
+# customer intent: As a Windows Server administrator, I want to convert my Windows Server edition or license type so I can switch to the right edition or licensing model for my environment.
 ---
 
-# Upgrade and conversion options for Windows Server
+# Convert Windows Server editions and license types
 
-You can perform an in-place upgrade (feature update) to move Windows Server to newer versions. You can also convert installations to different editions or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
+After installing Windows Server, you can convert between editions (for example, evaluation to retail, or Standard to Datacenter) and switch between licensing types (retail, volume-licensed, and OEM). This article provides the step-by-step procedures for each conversion scenario.
 
-The process of performing an upgrade (feature update) or converting Windows Server installations varies greatly. The variation depends on the version and edition you install, how you license it, and the pathway you choose. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: in-place upgrade, clean install, cluster operating system (OS) rolling update, migration, and license conversion. You can learn more about these terms at [Install, update, or migrate to Windows Server](install-upgrade-migrate.md).
+For information about supported in-place upgrade paths and restrictions, see [Plan your Windows Server upgrade](install-upgrade-migrate.md).
 
-## Upgrade of licensed versions of Windows Server
+## Prerequisites
 
-The following general guidelines are for in-place upgrade (feature update) paths where Windows Server is **already licensed**, that is, not evaluation:
+Before you convert your Windows Server edition or license type, make sure you have:
 
-- Upgrades from 32-bit to 64-bit architectures aren't supported. Since Windows Server 2008 R2 all releases of Windows Server are 64-bit only.
-- Upgrades from one language to another aren't supported.
-- If the server is an Active Directory domain controller, you can't convert it to a retail version. See [Upgrade Domain Controllers to Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md) for important information.
-- Upgrades from prerelease versions (previews) of Windows Server aren't supported. Perform a clean install of Windows Server.
-- Upgrades that switch from a Server Core installation to a Server with Desktop Experience installation or vice versa aren't supported.
-- Upgrades from a previous Windows Server installation to an evaluation copy of Windows Server aren't supported. Evaluation versions should be installed as clean installs.
-- When you upgrade from a previous version to a new version, the default is to retain the existing operating system edition. For example, the default is to upgrade from Standard (previous version) to Standard (new version), from Datacenter (previous version) to Datacenter (new version), or from Datacenter: Azure Edition (previous version) to Datacenter: Azure Edition (new version).
-- Alternatively, you can change to certain other editions when upgrading. You can change from Standard to Datacenter or to Datacenter: Azure Edition, or change from Datacenter to Datacenter: Azure Edition. You can't change from Datacenter to Standard edition or from Datacenter: Azure Edition to either Standard or Datacenter editions when upgrading.
-
-> [!NOTE]
-> If your server uses Network Interface Card (NIC) Teaming, disable NIC Teaming before you upgrade. You can re-enable it after the upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
+- The product key for the target edition or license type.
+- An elevated command prompt or PowerShell session on the server you want to convert.
+- Administrative access to the server.
 
 ## Convert an evaluation version to a retail version
 
@@ -128,11 +120,9 @@ At any time after installing Windows Server, you can freely convert between a re
 slmgr.vbs /ipk <product key>
 ```
 
-## See also
+## Related content
 
-For more information about upgrading Windows Server, see the following articles:
-
-- [Overview of Windows Server upgrades](upgrade-overview.md)
-- [Server Core vs Server with Desktop Experience install options](install-options-server-core-desktop-experience.md)
+- [Plan your Windows Server upgrade](install-upgrade-migrate.md)
 - [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md)
+- [Server Core vs Server with Desktop Experience install options](install-options-server-core-desktop-experience.md)
 - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)

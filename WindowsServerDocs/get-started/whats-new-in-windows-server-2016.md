@@ -12,7 +12,7 @@ ms.date: 04/08/2025
 This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 
 > [!IMPORTANT]
-> Windows Server 2016 reaches end of support with a final monthly update on January 12, 2027. [Upgrade to a newer version of Windows Server](upgrade-overview.md) before end of support. If you can't upgrade before the deadline, see [Plan for Windows Server 2016 and Windows 10 2016 LTSB end of support](https://techcommunity.microsoft.com/blog/windows-itpro-blog/plan-for-windows-server-2016-and-windows-10-2016-ltsb-end-of-support/4496136) for how to stay protected.
+> Windows Server 2016 reaches end of support with a final monthly update on January 12, 2027. [Upgrade to a newer version of Windows Server](install-upgrade-migrate.md) before end of support. If you can't upgrade before the deadline, see [Plan for Windows Server 2016 and Windows 10 2016 LTSB end of support](https://techcommunity.microsoft.com/blog/windows-itpro-blog/plan-for-windows-server-2016-and-windows-10-2016-ltsb-end-of-support/4496136) for how to stay protected.
 
 ## Compute
 
