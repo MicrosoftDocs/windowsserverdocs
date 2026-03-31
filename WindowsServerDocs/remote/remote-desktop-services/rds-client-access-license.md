@@ -65,18 +65,18 @@ The RDS CAL for your users or devices must be compatible with the version of Win
 
 The following table shows which version of Windows Server for RDS CALs and session hosts are compatible with each other.
 
-| Session host Window Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
+| Session host Windows Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
 |--|--|--|--|--|
 | Windows Server 2025 | Yes | No | No | No |
 | Windows Server 2022 | Yes | Yes | No | No |
 | Windows Server 2019 | Yes | Yes | Yes | No |
 | Windows Server 2016 | Yes | Yes | Yes | Yes |
 
-You must also install your RDS CALs on a Remote Desktop Licensing server running a compatible version of Windows Server. You can install RDS CALs on a license server running the same version of Windows Server as the RDS CALs or earlier. For example, if you have RDS CALs for Windows Server 2022, you can install them on a license server running Windows Server 2022 or earlier, but you can't use it to install RDS CALs for Windows Server 2025.
+You must also install your RDS CALs on a Remote Desktop Licensing server running a compatible version of Windows Server. You can install RDS CALs on a license server running the same version of Windows Server as the RDS CALs or later. For example, if you have RDS CALs for Windows Server 2022, you can install them on a license server running Windows Server 2022 or later, but you can't use it to install RDS CALs for Windows Server 2025.
 
 The following table shows which RDS CAL and license server versions are compatible with each other.
 
-| License server Window Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
+| License server Windows Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
 |--|--|--|--|--|
 | Windows Server 2025 | Yes | Yes | Yes | Yes |
 | Windows Server 2022 | No | Yes | Yes | Yes |
