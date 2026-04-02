@@ -61,7 +61,7 @@ You can use the Remote Desktop Licensing Manager to track and generate reports o
 
 ## RDS CAL version compatibility
 
-The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, if you have RDS CALs for Windows Server 2022, you can connect to a session host running Windows Server 2022 or earlier, but you can't use it to connect to a session host running Windows Server 2025.
+The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device connects to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, if you have RDS CALs for Windows Server 2022, you can connect to a session host running Windows Server 2022 or earlier, but you can't use them to connect to a session host running Windows Server 2025.
 
 The following table shows which versions of Windows Server for RDS CALs and session hosts are compatible with each other.
 
