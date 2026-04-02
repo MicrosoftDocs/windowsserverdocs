@@ -72,7 +72,7 @@ If you need to keep your servers on-premises instead of migrating to Azure and t
 - Build new servers with a supported version of Windows Server and migrate your applications and data.
 - [Upgrade in-place](install-upgrade-migrate.md) to a supported version of Windows Server.
 
-In-place upgrades typically upgrade Windows Server through at least one version, sometimes even two versions. For example, Windows Server 2012 R2 can upgrade in-place to Windows Server 2025. As you upgrade, you can also migrate to Azure at any time. For more information about your on-premises upgrade options, see [supported upgrade paths for Windows Server](install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version).
+Starting with Windows Server 2025, nonclustered in-place upgrades support up to four versions at a time. For example, you can upgrade directly from Windows Server 2012 R2 to Windows Server 2025. As you upgrade, you can also migrate to Azure at any time. For more information about your on-premises upgrade options, see [supported upgrade paths for Windows Server](install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version).
 
 ## Upgrade SQL Server in parallel with your Windows Servers
 
@@ -82,4 +82,4 @@ If you're running a version of SQL Server that reached or is reaching the end of
 
 - Learn [how to get Extended Security Updates (ESU) for Windows Server](extended-security-updates-deploy.md).
 
-- [Plan your Windows Server upgrade](install-upgrade-migrate.md).
+- [Plan your Windows Server upgrade](install-upgrade-migrate.md).
