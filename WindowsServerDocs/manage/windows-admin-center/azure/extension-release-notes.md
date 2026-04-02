@@ -15,10 +15,15 @@ The Windows Admin Center Azure extension (seen as "AdminCenter" in Azure) receiv
 - Known issues
 - Bug fixes
 
-This page is updated monthly, so revisit it regularly.
+This page is updated monthly, so check back regularly.
 
 > [!NOTE]
-> This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, navigate to [release history](/windows-server/manage/windows-admin-center/support/release-history).
+> This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
+
+## Version 0.72.0.0 - April 2026
+
+### Fixed
+- Reinstated the fix for an issue where installation fails on WDAC-enforced devices, including Azure Local devices.
 
 ## Version 0.70.0.0 - January 2026
 
@@ -29,7 +34,6 @@ This page is updated monthly, so revisit it regularly.
 ## Version 0.66.0.0 - September 2025
 
 ### Fixed
-- Reinstated the fix for an issue where installation would fail on WDAC-enforced devices, including Azure Local devices.
 - Modified installation logic to reduce occurrence of timeout issues.
 
 > [!WARNING]
