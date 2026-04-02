@@ -15,7 +15,7 @@ The Windows Admin Center Azure extension (seen as "AdminCenter" in Azure) receiv
 - Known issues
 - Bug fixes
 
-This page is updated monthly, so revisit it regularly.
+This page is updated monthly, so check back regularly.
 
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
