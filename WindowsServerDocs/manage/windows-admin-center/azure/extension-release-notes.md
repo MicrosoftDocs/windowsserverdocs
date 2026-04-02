@@ -23,7 +23,7 @@ This page is updated monthly, so revisit it regularly.
 ## Version 0.72.0.0 - April 2026
 
 ### Fixed
-- Reinstated the fix for an issue where installation would fail on WDAC-enforced devices, including Azure Local devices.
+- Reinstated the fix for an issue where installation fails on WDAC-enforced devices, including Azure Local devices.
 
 ## Version 0.70.0.0 - January 2026
 
