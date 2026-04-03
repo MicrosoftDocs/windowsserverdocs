@@ -15,7 +15,7 @@ This article describes the steps necessary to upgrade an existing guarded fabric
 
 When you run a guarded fabric on Windows Server 2019, you can take advantage of several new features:
 
-**Host Key Attestation** is our newest attestation mode, designed to make it easier to run shielded VMs when your Hyper-V hosts do not have TPM 2.0 devices available for TPM attestation. Host Key Attestation uses key pairs to authenticate hosts with HGS, removing the requirement for hosts to be joined to an Active Directory domain, eliminating the AD trust between HGS and the corporate forest, and reducing the number of open firewall ports. Host Key Attestation replaces Active Directory attestation, which is deprecated in Windows Server 2019.
+**Host Key Attestation** is our newest attestation mode, designed to make it easier to run shielded VMs when your Hyper-V hosts don't have TPM 2.0 devices available for TPM attestation. Host Key Attestation uses key pairs to authenticate hosts with HGS, removing the requirement for hosts to be joined to an Active Directory domain, eliminating the AD trust between HGS and the corporate forest, and reducing the number of open firewall ports. Host Key Attestation replaces Active Directory attestation, which is deprecated in Windows Server 2019.
 
 **V2 Attestation Version** - To support Host Key Attestation and new features in the future, we've introduced versioning to HGS. A fresh install of HGS on Windows Server 2019 will result in the server using v2 attestation, which means it can support Host Key attestation for Windows Server 2019 hosts and still support v1 hosts on Windows Server 2016. In-place upgrades to 2019 will remain at version v1 until you manually enable v2. Most cmdlets now have a -HgsVersion parameter that lets you specify if you want to work with legacy or modern attestation policies.
 
@@ -34,20 +34,20 @@ Before you upgrade your guarded fabric to Windows Server 2019, review the follow
 |**WS2016 Hyper-V Host** | Supported | Supported<sup>1</sup>|
 |**WS2019 Hyper-V Host** | Unsupported<sup>2</sup> | Supported|
 
-<sup>1</sup> Windows Server 2016 hosts can only attest against Windows Server 2019 HGS servers using the v1 attestation protocol. New features that are exclusively available in the v2 attestation protocol, including Host Key Attestation, are not supported for Windows Server 2016 hosts.
+<sup>1</sup> Windows Server 2016 hosts can only attest against Windows Server 2019 HGS servers using the v1 attestation protocol. New features that are exclusively available in the v2 attestation protocol, including Host Key Attestation, aren't supported for Windows Server 2016 hosts.
 
 <sup>2</sup> Microsoft is aware of an issue preventing Windows Server 2019 hosts using TPM attestation from successfully attesting against a Windows Server 2016 HGS server. This limitation will be addressed in a future update for Windows Server 2016.
 
 ## Upgrade HGS to Windows Server 2019
 
-We recommend upgrading your HGS cluster to Windows Server 2019 before you upgrade your Hyper-V hosts to ensure that all hosts, whether they are running Windows Server 2016 or 2019, can continue to attest successfully.
+We recommend upgrading your HGS cluster to Windows Server 2019 before you upgrade your Hyper-V hosts to ensure that all hosts, whether they're running Windows Server 2016 or 2019, can continue to attest successfully.
 
-Upgrading your HGS cluster will require you to temporarily remove one node from the cluster at a time while it is upgraded. This will reduce the capacity of your cluster to respond to requests from your Hyper-V hosts and could result in slow response times or service outages for your tenants. Ensure you have sufficient capacity to handle your attestation and key release requests before upgrading an HGS server.
+Upgrading your HGS cluster will require you to temporarily remove one node from the cluster at a time while it's upgraded. This will reduce the capacity of your cluster to respond to requests from your Hyper-V hosts and could result in slow response times or service outages for your tenants. Ensure you have sufficient capacity to handle your attestation and key release requests before upgrading an HGS server.
 
 To upgrade your HGS cluster, perform the following steps on each node of your cluster, one node at a time:
 
 1.  Remove the HGS server from your cluster by running `Clear-HgsServer` in an elevated PowerShell prompt. This cmdlet will remove the HGS replicated store, HGS websites, and node from the failover cluster.
-2.  If your HGS server is a domain controller (default configuration), you will need to run `adprep /forestprep` and `adprep /domainprep` on the first node being upgraded to prepare the domain for an OS upgrade. See the [Active Directory Domain Services upgrade documentation](../../identity/ad-ds/deploy/upgrade-domain-controllers.md#supported-in-place-upgrade-paths) for more information.
+2.  If your HGS server is a domain controller (default configuration), you'll need to run `adprep /forestprep` and `adprep /domainprep` on the first node being upgraded to prepare the domain for an OS upgrade. See the [Active Directory Domain Services upgrade documentation](../../identity/ad-ds/deploy/upgrade-domain-controllers.md#supported-in-place-upgrade-paths) for more information.
 3.  Perform an [in-place upgrade](../../get-started/install-upgrade-migrate.md) to Windows Server 2019.
 4.  Run [Initialize-HgsServer](guarded-fabric-configure-additional-hgs-nodes.md) to join the node back to the cluster.
 
@@ -71,7 +71,7 @@ Before you upgrade your Hyper-V hosts to Windows Server 2019, ensure that your H
 
 ## Switch to Host Key Attestation
 
-Follow the steps below if you are currently running Active Directory-based attestation and want to upgrade to Host Key Attestation. Note that Active Directory-based attestation is deprecated in Windows Server 2019 and may be removed in a future release.
+Follow the steps below if you're currently running Active Directory-based attestation and want to upgrade to Host Key Attestation. Note that Active Directory-based attestation is deprecated in Windows Server 2019 and may be removed in a future release.
 
 1.  Ensure that your HGS server is operating in v2 attestation mode by running the following command. Existing v1 hosts will continue to attest even when the HGS server is upgraded to v2.
 
@@ -79,7 +79,7 @@ Follow the steps below if you are currently running Active Directory-based attes
     Set-HgsServerVersion v2
     ```
 
-2.  [Generate host keys](guarded-fabric-create-host-key.md) from each of your Hyper-V hosts and register them with HGS. Because HGS is still operating in Active Directory mode, you will receive a warning that the new host keys are not immediately effective. This is intentional, as you do not want to change to host key mode until all of your hosts can attest with host keys successfully.
+2.  [Generate host keys](guarded-fabric-create-host-key.md) from each of your Hyper-V hosts and register them with HGS. Because HGS is still operating in Active Directory mode, you'll receive a warning that the new host keys aren't immediately effective. This is intentional, as you don't want to change to host key mode until all of your hosts can attest with host keys successfully.
 
 3.  Once host keys have been registered for every host, you can configure HGS to use host key attestation mode:
 
