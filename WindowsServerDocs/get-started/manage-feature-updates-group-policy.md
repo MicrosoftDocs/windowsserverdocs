@@ -87,7 +87,7 @@ You have now enabled the Windows Server 2025 optional feature update on your tar
 
 Learn more about upgrading to Windows Server 2025 and the policy setting available in the following articles:
 
-- [In-place OS upgrade (feature update)](install-upgrade-migrate.md#in-place-os-upgrade-feature-update)
+- [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md)
 
 - [Configure Windows Update for Business via Group Policy](/windows/deployment/update/waas-wufb-group-policy)
 
