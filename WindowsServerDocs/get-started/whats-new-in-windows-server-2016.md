@@ -276,7 +276,7 @@ Windows Server 2016 includes the following cloud scale fundamentals:
 
 ### TCP performance improvements
 
-The default Initial Congestion Window (ICW) has increased from 4 to 10 and TCP Fast Open (TFO) is implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
+The default Initial Congestion Window (ICW) increases from 4 to 10 and TCP Fast Open (TFO) is implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to transfer in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
 In order to improve TCP behavior when recovering from packet loss, TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK) are implemented. TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
 
