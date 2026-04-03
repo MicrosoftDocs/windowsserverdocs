@@ -17,7 +17,7 @@ Administrators can add new federation servers to an existing Windows Server farm
 
 Before you can upgrade the farm behavior level, you must meet the following prerequisites:
 
-- Determine [which version of Windows Server to upgrade to](../../../get-started/upgrade-overview.md).
+- Determine [which version of Windows Server to upgrade to](../../../get-started/install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version).
 
 - Deploy the target Windows Server version on a new computer, apply all Windows Updates, and install the Active Directory Federation Service server role. For more information, see [Add a federation server to an existing federation server farm](Configure-a-Federation-Server.md#add-a-federation-server-to-an-existing-federation-server-farm).
 
