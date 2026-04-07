@@ -28,7 +28,7 @@ icacls directory [/substitute SidOld SidNew [...]] [/restore aclfile] [/C] [/L] 
 | --------- | ----------- |
 | `<name>` | Specifies the file for which to display or modify DACLs. |
 | `<directory>` | Specifies the directory for which to display or modify DACLs. |
-| /t | Performs the operation on all specified files in the current directory and its subdirectories. |
+| /t | Performs the operation on all files and directories in `<directory>` including `<directory>`. |
 | /c | Continues the operation even if file errors occur. Error messages are still shown. |
 | /l | Performs the operation on a symbolic link instead of its destination. |
 | /q | Suppresses success messages. |
