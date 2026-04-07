@@ -4,7 +4,7 @@ description: Learn how to upgrade Windows Server in place using installation med
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 03/11/2026
+ms.date: 04/14/2026
 # Customer intent: As a server administrator, I want to perform an in-place upgrade of Windows Server
 # so that my server remains supported and I can use the latest features.
 ---
@@ -30,7 +30,6 @@ This article shows you how to upgrade by using Windows Server Setup from install
 
 - A server that:
   - Meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
-  - Isn't running in Azure.
   - Isn't clustered. If you're running a cluster, use the [Cluster-Aware Updating](../failover-clustering/cluster-aware-updating.md) feature or a [cluster operating system rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) instead.
 
 - A valid product key and activation method. Keys and methods can vary depending on the distribution channel that you received the Windows Server media from, such as a Commercial Licensing program, a retail channel, or an OEM.
@@ -87,6 +86,9 @@ Back up your server operating system, apps, and VMs after collecting your system
 
 You can perform the in-place upgrade by using installation media or Windows Update.
 
+> [!TIP]
+> Select the appropriate tab for your environment and follow the instructions to perform the in-place upgrade.
+
 # [Installation media](#tab/media)
 
 Run Windows Server Setup from your installation media to do the in-place upgrade. This procedure applies to non-Azure, nonclustered servers running Windows Server 2012 R2 or later. During the upgrade, your server restarts several times.
@@ -133,6 +135,8 @@ Alternatively, you can set the value manually in Registry Editor:
 1. Go to `HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate`.
 
 1. Create a new `DWORD` value named `AllowWindowsServerFeatureUpdate` and set it to `1`.
+
+   :::image type="content" source="media/upgrade-in-place/registry.png" alt-text="Screenshot of Registry Editor showing the AllowWindowsServerFeatureUpdate DWORD value set to 1 under the WindowsUpdate key.":::
 
 ### Upgrade by using Windows Update
 
