@@ -10,16 +10,20 @@ ms.custom:
   - sfi-image-nochange
 ---
 
-# Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
+# Manage Azure Arc-enabled servers by using Windows Admin Center in Azure
 
 > [!IMPORTANT]
-> Version 1.36 and 1.35 of the Azure Connected Machine Agent (Arc agent) breaks connection to Windows Admin Center. This has been fixed in later versions of the Arc agent (1.37+) The current version can be [downloaded here](https://aka.ms/AzureConnectedMachineAgent).
+> Windows Admin Center in the Azure portal is currently in preview.
+> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-Using Windows Admin Center in the Azure portal allows you to manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine. To learn more about Arc-enables servers, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview).
+> [!IMPORTANT]
+> Versions 1.35 and 1.36 of the Azure Connected Machine Agent (Arc agent) break connection to Windows Admin Center. Later versions of the Arc agent (1.37+) fix this problem. You can [download the current version here](https://aka.ms/AzureConnectedMachineAgent).
 
-With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management  no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Server Manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
+By using Windows Admin Center in the Azure portal, you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere without needing a VPN, public IP address, or other inbound connectivity to your machine. To learn more about Arc-enabled servers, see [What is Azure Arc-enabled servers?](/azure/azure-arc/servers/overview).
 
-This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center in the Azure portal  and use it to manage your hybrid machine. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
+By using the Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP) – you can manage everything natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Server Manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
+
+This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center in the Azure portal  and use it to manage your hybrid machine. It also answers frequently asked questions, and provides a list of known problems and tips for troubleshooting in case something doesn't work.
 
 :::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-arc-overview.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for Arc-enabled server, displaying the Windows admin Center Overview page." lightbox="../../media/manage-vm/windows-admin-center-in-azure-arc-overview.png":::
 
@@ -136,10 +140,6 @@ To use Windows Admin Center in the Azure portal, the Windows Admin Center agent 
 - Windows Server 2016 or later
 - 3 GB of RAM or more
 - Azure Arc agent version 1.13.21320.014 or later
-- You must use Windows Server Pay-as-you-go or Software Assurance license types
-
-> [!IMPORTANT]
-> As of November 1st, 2024, Windows Admin Center for Azure Arc requires your hybrid machine to have a Pay-as-you-go or Software Assurance license type to use. All new installations of the Windows Admin Center agent must adhere to this requirement. Machines with Windows Admin Center for Azure Arc installed prior to November 1st, 2024, may continue to use Windows Admin Center for Azure Arc for up to 12 months without updates until November 1st, 2025. 
 
 ### Networking requirements
 
@@ -215,7 +215,10 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 
 ## Proxy configuration
 
-If the machine connects through a proxy server to communicate over the internet, review the following requirements to understand the network configuration required.
+> [!IMPORTANT]
+> All Windows Admin Center extension versions are currently experiencing issues with proxy configurations. 
+
+If the machine connects through a proxy server to communicate over the internet, review the following requirements to understand the network configuration you need.
 
 The Windows Admin Center extension can communicate through a proxy server by using the HTTPS protocol. Use the extensions settings for configuration as described in the following steps. Authenticated proxies aren't supported.
 
@@ -379,8 +382,6 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Chrome incognito mode isn't supported.
 - Azure portal desktop app isn't supported.
 - Detailed error messages for failed connections aren't yet available.
-- As of November 1st, 2024, some existing customers are unable to use Windows Admin Center for Azure Arc.
-- As of November 1st, 2024, some customers are unable to install or use Windows Admin Center for Azure Arc, even with proper license attestation.
 
 ## Frequently asked questions
 

@@ -129,6 +129,9 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 7 Enterprise N   | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
 | Windows 7 Enterprise E   | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
 
+> [!NOTE]
+> Windows 7 Ultimate isn't listed because it wasn't available as a Volume Licensing edition. Windows 7 Ultimate was sold only as a retail or OEM product and therefore **can't be activated by using KMS**. To activate Windows 7 Ultimate, use the product key that came with your retail or OEM copy of Windows.
+
 # [Windows Vista](#tab/windowsvista)
 
 | Operating system edition | KMS Client Product Key        |

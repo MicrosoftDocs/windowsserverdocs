@@ -55,7 +55,7 @@ items:
           href: /windows/release-health/resolved-issues-windows-server-2022?context=/windows-server/context/windows-server-get-started
   - name: Plan
     items:
-    - name: Install, upgrade, or migrate
+    - name: Plan your Windows Server upgrade
       href: install-upgrade-migrate.md
     - name: Server Core vs Server with Desktop Experience
       href: install-options-server-core-desktop-experience.md
@@ -85,13 +85,11 @@ items:
         href: server-core-app-compatibility-feature-on-demand.md
     - name: Upgrade
       items:
-      - name: Upgrade Windows Server
-        href: upgrade-overview.md
       - name: Perform an in-place upgrade
         href: upgrade-in-place.md
       - name: Upgrade or migrate Windows Server Roles and Features
         href: upgrade-migrate-roles-features.md
-      - name: Upgrade and conversion options
+      - name: Convert editions and license types
         href: upgrade-conversion-options.md
   - name: Activation
     items:

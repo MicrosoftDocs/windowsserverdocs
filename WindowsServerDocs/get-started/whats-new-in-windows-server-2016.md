@@ -11,6 +11,9 @@ ms.date: 04/08/2025
 
 This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 
+> [!IMPORTANT]
+> Windows Server 2016 reaches end of support with a final monthly update on January 12, 2027. [Upgrade to a newer version of Windows Server](install-upgrade-migrate.md) before end of support. If you can't upgrade before the deadline, see [Plan for Windows Server 2016 and Windows 10 2016 LTSB end of support](https://techcommunity.microsoft.com/blog/windows-itpro-blog/plan-for-windows-server-2016-and-windows-10-2016-ltsb-end-of-support/4496136) for how to stay protected.
+
 ## Compute
 
 The [Virtualization area](../virtualization/index.yml) includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
@@ -109,7 +112,7 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 
 - You can switch Attestation modes on a running Host Guardian Service. Now you can switch on the fly between the less secure but simpler Active Directory-based attestation and TPM-based attestation.
 
-- End-to-end diagnostics tooling based on Windows PowerShell that is able to detect misconfigurations or errors in both guarded Hyper-V hosts and the Host Guardian Service.
+- End-to-end diagnostics tooling based on Windows PowerShell that's able to detect misconfigurations or errors in both guarded Hyper-V hosts and the Host Guardian Service.
 
 - A recovery environment that offers a means to securely troubleshoot and repair shielded virtual machines within the fabric in which they normally run while offering the same level of protection as the shielded virtual machine itself.
 
@@ -273,7 +276,7 @@ Windows Server 2016 includes the following cloud scale fundamentals:
 
 ### TCP performance improvements
 
-The default Initial Congestion Window (ICW) have increased from 4 to 10 and TCP Fast Open (TFO) is implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
+The default Initial Congestion Window (ICW) increases from 4 to 10 and TCP Fast Open (TFO) is implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to transfer in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
 In order to improve TCP behavior when recovering from packet loss, TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK) are implemented. TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
 
@@ -639,7 +642,7 @@ RDS and Windows Server 2016 are compatible with many Windows 10 applications, cr
 
 ### Azure SQL Database
 
-The Remote Desktop (RD) Connection Broker can now store all deployment information, such as connection states and user-host mappings, in a shared Azure Structured Query Language (SQL) Database. This feature lets you use a highly available environment without having to use an SQL Server Always On Availability Group. For more information, see [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](https://techcommunity.microsoft.com/t5/microsoft-security-and/new-windows-server-2016-capability-use-azure-sql-db-for-your/ba-p/249787).
+The Remote Desktop (RD) Connection Broker can now store all deployment information, such as connection states and user-host mappings, in a shared Azure Structured Query Language (SQL) Database. This feature lets you use a highly available environment without having to use a SQL Server Always On Availability Group. For more information, see [Use Azure SQL DB for your Remote Desktop Connection Broker high availability environment](https://techcommunity.microsoft.com/t5/microsoft-security-and/new-windows-server-2016-capability-use-azure-sql-db-for-your/ba-p/249787).
 
 ### Graphical improvements
 

@@ -61,13 +61,13 @@ landingContent:
         links:
           - text: Install Windows Server from installation media
             url: install-windows-server.md
-          - text: Upgrade Windows Server
-            url: upgrade-overview.md
+          - text: Plan your Windows Server upgrade
+            url: install-upgrade-migrate.md
           - text: Perform an in-place upgrade
             url: upgrade-in-place.md
       - linkListType: how-to-guide
         links:
-          - text: Upgrade and conversion options
+          - text: Convert editions and license types
             url: upgrade-conversion-options.md
           - text: Install Server Core App Compatibility
             url: server-core-app-compatibility-feature-on-demand.md
