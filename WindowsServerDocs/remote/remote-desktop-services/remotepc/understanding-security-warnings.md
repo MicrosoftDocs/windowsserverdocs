@@ -6,6 +6,16 @@ ai-usage: ai-assisted
 ms.author: phfavrod
 author: PhilemonRed
 ms.date: 04/07/2026
+appliesto: [
+             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2012 R2</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2012</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/windows11-release-information\" target=\"_blank\">Windows 11</a>",
+             "✅ <a href=\"https://learn.microsoft.com/windows/release-health/release-information\" target=\"_blank\">Windows 10</a>"
+            ]
 ---
 
 # Understanding security warnings when opening Remote Desktop (RDP) files
@@ -154,4 +164,29 @@ This warning means your organization's RDP files are unsigned. Contact your IT d
 No. This update only affects connections started by opening an RDP file. If you type a computer name directly into Remote Desktop Connection, the experience is unchanged.
 
 ### I'm seeing this warning from Azure Virtual Desktop or Windows 365. Is it safe?
+
 RDP files from Microsoft services like Azure Virtual Desktop and Windows 365 are typically signed by Microsoft. You shouldn't see the new security dialog when connecting to these services. If you do, don't proceed - contact your IT department to investigate.
+
+### I'm an app developer. My app uses the Remote Desktop ActiveX Control. How do I control this dialog?
+
+If your application relies on the Remote Desktop ActiveX Control (`mstscax.dll`), you can use [IMsRdpExtendedSettings Property](/windows/win32/termserv/imsrdpextendedsettings-property) to control the dialog behavior. The `RedirectionWarningDialogVersion` property lets you configure whether to disable the new version of the security dialog after the update.
+
+### I'm an IT administrator. How do I temporarily revert the new security dialog?
+
+> [!WARNING]
+> If you use Registry Editor incorrectly, you might cause serious problems that might require you to reinstall your operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
+
+If the update causes temporary disruptions in your environment, you can revert to the previous dialog behavior by setting a registry value.
+
+1. Select **Start**, type **Registry Editor**, then open it.
+
+1. Navigate to and modify the key: `HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services\Client` with the following values:
+
+   - **Name**: RedirectionWarningDialogVersion
+
+   - **Type**: REG_DWORD
+
+   - **Data**: 1
+
+> [!WARNING]
+> A future Windows update might remove support for this setting, even on older versions of Windows. Plan to transition your environment to work with the new security dialog.
