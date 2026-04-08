@@ -20,7 +20,7 @@ Remote Desktop lets you connect to a computer in another location, such as your 
 
 An RDP file tells the Remote Desktop Connection app how to connect to a remote computer. Depending on its settings, the file can also share parts of your local device, such as your clipboard, drives, or camera, with the remote computer.
 
-Malicious actors exploit this by sending RDP files through phishing emails. When a victim opens the file, their device silently connects to a server controlled by the attacker and shares local resources, giving the attacker access to files, credentials, and more.
+Malicious actors misuse this capability by sending RDP files through phishing emails. When a victim opens the file, their device silently connects to a server controlled by the attacker and shares local resources, giving the attacker access to files, credentials, and more.
 
 > [!IMPORTANT]
 > Never open an RDP file you weren't expecting, even if the email looks legitimate. When in doubt, contact your IT department.
