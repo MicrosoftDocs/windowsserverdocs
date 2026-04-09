@@ -33,7 +33,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 ## Install Windows Admin Center on a failover cluster
 
 1. Copy the `Deploy-GatewayV2Ha.Deploy.ps1` script to a node in your cluster. Download or copy the Windows Admin Center `.exe` to the same node.
-2. Connect to the node via RDP, navigate to the folder containing the script, and run the `Deploy-GatewayV2Ha.Deploy.ps1` script as administrator with the following parameters:
+1. Connect to the node via RDP, go to the folder containing the script, and run the `Deploy-GatewayV2Ha.Deploy.ps1` script as an administrator with the following parameters:
     - `-clusterStorage`: the local path of the Cluster Shared Volume to store Windows Admin Center data.
     - `-clientAccessPoint`: choose a name that you'll use to access Windows Admin Center. For example, if you run the script with the parameter `-clientAccessPoint contosoWindowsAdminCenter`, you access the Windows Admin Center service by visiting `https://contosoWindowsAdminCenter.<domain>.com`
     - `-staticAddress`: Optional. One or more static addresses for the cluster generic service.
