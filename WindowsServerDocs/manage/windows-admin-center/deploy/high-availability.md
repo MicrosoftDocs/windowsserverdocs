@@ -43,7 +43,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
     - `-HttpsPort`: Optional. If you don't specify a port, the gateway service is deployed on port 443 (HTTPS). To use a different port, specify in this parameter. If you use a custom port besides 443, you access the Windows Admin Center by going to `https://\<clientAccessPoint\>:<port>`.
 
 > [!NOTE]
-> The ```Deploy-GatewayV2Ha.Deploy.ps1``` script supports ```-WhatIf``` and ```-Verbose``` parameters
+> The `Deploy-GatewayV2Ha.Deploy.ps1` script supports `-WhatIf` and `-Verbose` parameters.
 
 > [!IMPORTANT]
 > To perform further lifecycle operations on your high availability install, ensure all scripts from the `Deploy-GatewayV2Ha.zip` file are present on all nodes. 
