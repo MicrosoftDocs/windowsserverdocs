@@ -463,7 +463,7 @@ The cluster deployment feature in Windows Admin Center 2007 doesn't support remo
 Windows Admin Center has disabled certain commands, such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open**, because it doesn't currently support them.
 
 ### Incorrect deletions in Volumes tool
-Instances of Windows Admin Center with installed versions of Cluster Manager lower than 5.2.6 might experience problems with volume deletion operations. To prevent data loss, [update the Cluster manager extension](../configure/using-extensions#installing-an-extension) to version 5.2.6 or ensure you’re using Windows Admin Center version 2511 build 2.6.6.18 or higher. Don't delete your volumes in Windows Admin Center unless the Cluster manager extension is updated.
+Instances of Windows Admin Center with installed versions of Cluster Manager lower than 5.2.6 might experience problems with volume deletion operations. To prevent data loss, update the Cluster manager extension to version 5.2.6 or ensure you’re using Windows Admin Center version 2511 build 2.6.6.18 or higher. Don't delete your volumes in Windows Admin Center unless the Cluster manager extension is updated.
 
 ## Azure services
 
