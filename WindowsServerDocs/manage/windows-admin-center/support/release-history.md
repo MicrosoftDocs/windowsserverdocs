@@ -8,7 +8,7 @@ ms.date: 01/06/2020
 ---
 # Windows Admin Center release history
 
-Here's a listing of our latest released features:
+Here's a list of the latest released features:
 
 - Version [2511](https://aka.ms/wac2511) is the most recently available (GA) release - it includes the restoration of HA deployment, installer enhancements, improvements to core tools like virtual machine management and Remote Desktop, as well as many improvements and bug fixes. This version has been updated several times to address security improvements and critical bugs. For more information, see the announcement [blog post](https://aka.ms/wac2511).
 - Version [2410](https://aka.ms/wac2410) includes an upgrade of the backend from .NET 4.6.2 to .NET 8, improvements to the virtual machines and security tools, and many improvements and bug fixes. A minor build update released on February 25, 2025, makes quality improvements around localization, installation, and the "All Connections" page. By using this software release, you accept the updated Microsoft Software License Terms for Windows Admin Center - [here](https://aka.ms/wac-product-ga-eula).
