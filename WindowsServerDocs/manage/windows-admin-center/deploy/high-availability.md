@@ -80,7 +80,7 @@ $parameters = @{
 Deploy-GatewayV2Ha.Deploy @parameters
 ```
 
-You may also update the certificate at the same time you update the Windows Admin Center platform with a new `.exe` file.
+You can also update the certificate when you update the Windows Admin Center platform by using a new `.exe` file.
 
 ### Update the certificate used by Windows Admin Center
 
