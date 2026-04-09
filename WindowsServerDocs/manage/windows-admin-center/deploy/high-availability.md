@@ -112,7 +112,7 @@ Deploy-GatewayV2Ha.Uninstall @parameters
 
 Logs are saved in the temp folder of the CSV. For example, `C:\ClusterStorage\Volume1\temp`.
 
-If needed, you can run diagnostics by passing ```Diagnostics``` using the ```-Mode``` flag in the `Deploy-GatewayV2Ha.Inspect.ps1` script. The following is an example of running the diagnostic collection for the last 24 hours on a cluster:
+If needed, you can run diagnostics by passing `Diagnostics` using the `-Mode` flag in the `Deploy-GatewayV2Ha.Inspect.ps1` script. The following example shows running the diagnostic collection for the last 24 hours on a cluster:
 
 ```powershell
 $parameters = @{
