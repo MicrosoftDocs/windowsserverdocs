@@ -40,7 +40,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
     - `-InstallerPath`: The path for the Windows Admin Center `.exe` file.
     - `-CertificateThumbprint`: TLS certificate thumbprint present on every node.
     - `-generateSslCert`: Optional. If you don't want to provide a signed certificate, include this parameter flag to generate a self-signed certificate. The self-signed certificate expires in 60 days.
-    - `-HttpsPort`: Optional. If you don't specify a port, the gateway service is deployed on port 443 (HTTPS). To use a different port, specify in this parameter. If you use a custom port besides 443, you'll access the Windows Admin Center by going to `https://\<clientAccessPoint\>:<port>`.
+    - `-HttpsPort`: Optional. If you don't specify a port, the gateway service is deployed on port 443 (HTTPS). To use a different port, specify in this parameter. If you use a custom port besides 443, you access the Windows Admin Center by going to `https://\<clientAccessPoint\>:<port>`.
 
 > [!NOTE]
 > The ```Deploy-GatewayV2Ha.Deploy.ps1``` script supports ```-WhatIf``` and ```-Verbose``` parameters
