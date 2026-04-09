@@ -20,7 +20,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 
 - High-availability deployment scripts from the [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the scripts to your local machine, and then copy the deployment script as needed based on the guidance in this article.
 - A failover cluster of two or more nodes running on Windows Server 2016 or later. [Learn more about deploying a Failover Cluster](../../../failover-clustering/failover-clustering-overview.md).
-- A cluster shared volume (CSV) for Windows Admin Center to store persistent data that can be accessed by all the nodes in the cluster. 10 GB is sufficient for your CSV.
+- A cluster shared volume (CSV) for Windows Admin Center to store persistent data that all the nodes in the cluster can access. 10 GB is sufficient for your CSV.
 - A certificate thumbprint from a certificate from a valid certificate authority (CA) with the private key installed on every node.
 
 > [!NOTE]
