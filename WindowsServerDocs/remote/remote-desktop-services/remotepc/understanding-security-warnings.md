@@ -180,7 +180,7 @@ If the update causes temporary disruptions in your environment, you can revert t
 
 1. Select **Start**, type **Registry Editor**, then open it.
 
-1. Navigate to and modify the key: `HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services\Client` with the following values:
+1. Go to and modify the key: `HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services\Client` with the following values:
 
    - **Name**: RedirectionWarningDialogVersion
 
