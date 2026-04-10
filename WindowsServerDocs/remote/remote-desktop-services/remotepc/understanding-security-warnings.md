@@ -174,7 +174,7 @@ If your application relies on the Remote Desktop ActiveX Control (`mstscax.dll`)
 ### I'm an IT administrator. How do I temporarily revert the new security dialog?
 
 > [!WARNING]
-> If you use Registry Editor incorrectly, you might cause serious problems that might require you to reinstall your operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
+> If you use Registry Editor incorrectly, you might cause serious problems that might require you to reinstall the operating system. Microsoft can't guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk.
 
 If the update causes temporary disruptions in your environment, you can revert to the previous dialog behavior by setting a registry value.
 
