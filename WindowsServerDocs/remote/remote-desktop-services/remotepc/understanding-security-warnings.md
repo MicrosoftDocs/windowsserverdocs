@@ -178,7 +178,7 @@ If your application relies on the Remote Desktop ActiveX Control (`mstscax.dll`)
 
 If the update causes temporary disruptions in your environment, you can revert to the previous dialog behavior by setting a registry value.
 
-1. Select **Start**, type **Registry Editor**, then open it.
+1. Select **Start**, type **Registry Editor**, and then open it.
 
 1. Go to and modify the key: `HKLM\Software\Policies\Microsoft\Windows NT\Terminal Services\Client` with the following values:
 
