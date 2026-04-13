@@ -294,7 +294,7 @@ Alternatively, you can also disable RC4 on domain controllers by setting the fol
 - Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\services\KDC`
 - Value name: `DefaultDomainSupportedEncTypes`
 - Type: `REG_DWORD`
-- Value data: `0x38`
+- Value data: `0x18`
 
 ## Identify authentication failures after disabling RC4
 
