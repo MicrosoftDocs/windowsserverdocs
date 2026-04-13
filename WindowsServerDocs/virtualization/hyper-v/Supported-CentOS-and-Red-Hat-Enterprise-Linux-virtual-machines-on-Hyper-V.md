@@ -22,7 +22,7 @@ uninstall the LIS downloadable packages, update the kernel, reboot, and then ins
 
 In this section:
 
-- [RHEL 10.x Series](#rhel-10x-series)
+- [RHEL/CentOS 10.x Series](#rhelcentos-10x-series)
 
 - [RHEL/CentOS 9.x Series](#rhelcentos-9x-series)
 
@@ -40,7 +40,7 @@ In this section:
 
 - (*blank*) - Feature not available
 
-## RHEL 10.x Series
+## RHEL/CentOS 10.x Series
 
 | **Feature** | **Host OS** | **10.x** |
 |--|--|--|
