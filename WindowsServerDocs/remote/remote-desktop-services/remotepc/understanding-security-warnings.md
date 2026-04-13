@@ -41,7 +41,7 @@ Pausing to think before you click is the single most effective defense against p
 * **Don't open unexpected RDP files.** If you receive one you weren't expecting, don't open it - even if the email looks legitimate. Verify with the sender through a separate channel (like a phone call).
 * **Check the remote computer address.** If you don't recognize the computer name or address in the dialog, don't connect.
 * **Only enable redirections you need.** Leave all others unchecked.
-* **Pay attention to dialog and whether the publisher can be verified.** Verify the publisher even when the file is signed.
+* **Pay attention to the dialog and whether the publisher can be verified.** Verify the publisher even when the file is signed.
 * **Report suspicious RDP files to your IT security team.**
 
 ## The first-launch dialog
@@ -82,51 +82,6 @@ When you open an RDP file, it can request access to resources on your local devi
 
 The following list explains each redirection type and the risk it poses. Older versions of Windows support a different set of redirections, so not all of these might be available on your device.
 
-### Clipboard
-
-* **What it does:** Shares the contents of your clipboard (anything you copy and paste) between your device and the remote computer.
-* **Risk:** A cyberattacker could read anything you copy on your local device - including passwords, sensitive text, or confidential information. The cyberattacker could also place malicious content in your clipboard, which you might then paste into a local application.
-
-### Printers
-
-* **What it does:** Makes your local printers available from the remote computer, so remote applications can print to your local printers.
-* **Risk:** A cyberattacker who controls a remote session could send print jobs to your printers, potentially wasting resources or printing misleading documents that appear to be local.
-
-### Microphones and other audio recording devices
-
-* **What it does:** Shares your local microphone and audio recording devices with the remote computer, so remote applications can record audio from your environment.
-* **Risk:** With access to your microphone, an attacker can eavesdrop on conversations, meetings, or other audio in your environment without your knowledge.
-
-### Smart cards or Windows Hello for Business
-
-* **What it does:** Allows the remote computer to use smart cards or Windows Hello for Business credentials that you connect or configure on your local device.
-* **Risk:** An attacker can use your redirected smart card or Windows Hello for Business credentials to authenticate as you on the remote system or on other systems accessible from the remote computer. This action can lead to unauthorized access to your organization's resources using your identity.
-
-### WebAuthn (Windows Hello or security keys)
-
-* **What it does:** Allows the remote computer to use your local FIDO2 security keys or Windows Hello passkeys to complete web authentication challenges.
-* **Risk:** Authentication prompts might be redirected from a malicious remote session to the local device and used for phishing.
-
-> [!NOTE]
-> When a WebAuthn request is redirected through a remote session, Windows displays this information in the authentication prompt. If you see an indication that the request is coming from a remote connection and you didn't expect it, don't approve the request.
->
-> ![A screenshot of the authentication prompt with the message "Requested from a remote session by Remote Desktop Connection (Microsoft Windows)"](../media/webauthn-redir-warning.png)
-
-### Ports
-
-* **What it does:** Shares your local serial (COM) and parallel (LPT) ports with the remote computer.
-* **Risk:** An attacker could access devices connected to these ports, such as specialized hardware or legacy peripherals, and potentially read or send data through them.
-
-### Location
-
-* **What it does:** Shares your device's geographic location with the remote computer.
-* **Risk:** An attacker could determine your physical location, which might be sensitive depending on your role or context (for example, military, law enforcement, or executive personnel).
-
-### Point-of-service devices
-
-* **What it does:** Shares point-of-service (POS) devices, such as barcode scanners and receipt printers, that you connect to your local device.
-* **Risk:** An attacker could interact with POS equipment, potentially interfering with transactions or reading financial data from connected devices.
-
 ### Drives
 
 * **What it does:** Makes your local drives (hard drives, USB drives, network-mapped drives) accessible from the remote computer. The remote computer can read files from and write files to your local drives.
@@ -135,13 +90,55 @@ The following list explains each redirection type and the risk it poses. Older v
   * Plant malware on your local drives. For example, the attacker could write a malicious program to your Startup folder, which runs the next time you sign in.
   * Access network shares that are mapped as drives on your device, potentially reaching other systems in your organization.
 
+### Clipboard
+
+* **What it does:** Shares the contents of your clipboard (anything you copy and paste) between your device and the remote computer.
+* **Risk:** A cyberattacker could read anything you copy on your local device - including passwords, sensitive text, or confidential information. The cyberattacker could also place malicious content in your clipboard, which you might then paste into a local application.
+
+### Smart cards or Windows Hello for Business
+
+* **What it does:** Allows the remote computer to use smart cards or Windows Hello for Business credentials that you connect or configure on your local device.
+* **Risk:** An attacker can use your redirected smart card or Windows Hello for Business credentials to authenticate as you on the remote system or on other systems accessible from the remote computer. This action can lead to unauthorized access to your organization's resources using your identity.
+
+### WebAuthn (Windows Hello or security keys)
+
+* **What it does:** Allows the remote computer to use your local FIDO2 security keys or passkeys to complete web authentication challenges.
+* **Risk:** Authentication prompts might be redirected from a malicious remote session to the local device and used for phishing.
+
 > [!NOTE]
-> Avoid redirecting your system drive (often associated with the letter C:).
+> When a WebAuthn request is redirected through a remote session, Windows displays this information in the authentication prompt. If you see an indication that the request is coming from a remote connection and you didn't expect it, don't approve the request.
+>
+> ![A screenshot of the authentication prompt with the message "Requested from a remote session by Remote Desktop Connection (Microsoft Windows)"](../media/webauthn-redir-warning.png)
+
+### Microphones and other audio recording devices
+
+* **What it does:** Shares your local microphone and audio recording devices with the remote computer, so remote applications can record audio from your environment.
+* **Risk:** With access to your microphone, an attacker can eavesdrop on conversations, meetings, or other audio in your environment without your knowledge.
 
 ### Cameras and other video capture devices
 
 * **What it does:** Shares your local cameras and video capture devices with the remote computer, so remote applications can record video from your environment.
 * **Risk:** An attacker with access to your camera can see your surroundings, read documents on your desk, observe your screen, or conduct visual surveillance without your awareness.
+
+### Location
+
+* **What it does:** Shares your device's geographic location with the remote computer.
+* **Risk:** An attacker could determine your physical location, which might be sensitive depending on your role or context (for example, military, law enforcement, or executive personnel).
+
+### Printers
+
+* **What it does:** Makes your local printers available from the remote computer, so remote applications can print to your local printers.
+* **Risk:** A cyberattacker who controls a remote session could send print jobs to your printers, potentially wasting resources or printing misleading documents that appear to be local.
+
+### Ports
+
+* **What it does:** Shares your local serial (COM) and parallel (LPT) ports with the remote computer.
+* **Risk:** An attacker could access devices connected to these ports, such as specialized hardware or legacy peripherals, and potentially read or send data through them.
+
+### Point-of-service devices
+
+* **What it does:** Shares point-of-service (POS) devices, such as barcode scanners and receipt printers, that you connect to your local device.
+* **Risk:** An attacker could interact with POS equipment, potentially interfering with transactions or reading financial data from connected devices.
 
 ### Other supported Plug and Play (PnP) devices
 
