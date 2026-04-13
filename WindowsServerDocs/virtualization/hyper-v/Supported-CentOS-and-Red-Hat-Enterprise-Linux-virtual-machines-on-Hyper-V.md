@@ -279,6 +279,6 @@ This series only has 64-bit kernels.
     Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
 - [Red Hat Hardware
-    Certification](https://catalog.redhat.com/en/search?q=microsoft)
+    Certification](https://catalog.redhat.com/search?q=microsoft)
 
 
