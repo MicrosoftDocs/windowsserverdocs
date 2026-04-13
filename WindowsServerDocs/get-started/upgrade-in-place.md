@@ -86,10 +86,10 @@ Back up your server operating system, apps, and VMs after collecting your system
 
 You can perform the in-place upgrade by using installation media or Windows Update.
 
-> [!TIP]
-> Select the appropriate tab for your environment and follow the instructions to perform the in-place upgrade.
-
 # [Installation media](#tab/media)
+
+> [!TIP]
+> Looking for a way to upgrade without installation media? Use the Windows Update method to upgrade without needing installation media. For instructions, see [Upgrade by using Windows Update](#tabpanel_2_windows-update)
 
 Run Windows Server Setup from your installation media to do the in-place upgrade. This procedure applies to non-Azure, nonclustered servers running Windows Server 2012 R2 or later. During the upgrade, your server restarts several times.
 
