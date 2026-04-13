@@ -66,7 +66,7 @@ In this section:
 | PAE Kernel Support | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI |  |
 | Configuration of MMIO gap | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | Dynamic Memory - Hot-Add | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9, 10 |
-| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9,10 |
+| Dynamic Memory - Ballooning | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ Note 9, 10 |
 | Runtime Memory Resize | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) |  |  |
 | Hyper-V-specific video device | Windows Server 2025, 2022, 2019, 2016 <br/>Azure Stack HCI | ✔ |
