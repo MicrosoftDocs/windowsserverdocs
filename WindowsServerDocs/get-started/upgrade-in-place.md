@@ -144,6 +144,8 @@ When you meet all the prerequisites and see the Windows Server feature update in
 
 1. Open **Settings**, and then select **Windows Update**. Verify that the feature update offer banner is visible.
 
+   :::image type="content" source="media/upgrade-in-place/windows-update-feature-update.png" alt-text="Screenshot of the Windows Update settings page showing the Windows Server 2025 feature update available with a Download and install link.":::
+
 1. Select **Download and Install** to begin the feature update process.
 
 1. Review the **Important Information** for pricing, best practices, licenses, and privacy.
