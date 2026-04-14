@@ -1,15 +1,15 @@
 ---
 title: Active Directory Forest Recovery - Determine how to recover the forest 
 description: Recovering an entire Active Directory forest involves restoring at least one Domain Controller (DC) in every domain from available backup. Recovering the forest restores each domain in the forest to its state at the time of the last trusted backup. Consequently, the restore operation will result in the loss of at least the following Active Directory data...
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/10/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Determine how to recover the forest
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 Recovering an entire Active Directory forest involves restoring at least one
 Domain Controller (DC) in every domain from an available backup. Recovering the
@@ -75,7 +75,7 @@ The target DC can run any version of Windows Server. For more information about 
 
 ## Determine which domain controllers to restore
 
-The ease of the restore process is an important factor when deciding which domain controller to restore. Haveing a dedicated DC for each domain that is the preferred DC for a restore is recommended. A dedicated restore DC makes it easier to reliably plan and execute the forest recovery because you use the same source configuration that was used to perform restore tests. You can script the recovery and avoid contending with different configurations, such as whether the DC holds operations master roles, or whether it's a GC or DNS server.
+The ease of the restore process is an important factor when deciding which domain controller to restore. Having a dedicated DC for each domain that is the preferred DC for a restore is recommended. A dedicated restore DC makes it easier to reliably plan and execute the forest recovery because you use the same source configuration that was used to perform restore tests. You can script the recovery and avoid contending with different configurations, such as whether the DC holds operations master roles, or whether it's a GC or DNS server.
 
 > [!NOTE]
 > Restoring an operations master role holder in the interest of simplicity isn't recommended, as you always seize all roles. There is the case of a SYSVOL recovery using a backup taken from the PDC Emulator operation master, as typically the PDC has the best copy of SYSVOL data.
@@ -88,8 +88,8 @@ A good backup is a backup that can be restored successfully, was taken a few day
 - A DC that has a good full server backup.
 - A DC running Domain Name System (DNS) role and hosting the forest and domain(s) zone.
 - A DC configured as a Global Catalog (GC).
-- A DC that **isn't** confitured to use BitLocker Network Unlock, if you use Windows Deployment Services.
-    Using BitLocker Network Unlock for the first DC that you restore from backup during a forest recovery isn't supported. On DCs where you have deployed Windows Deployement Services (WDS),,BitLocker Network Unlock as the **only** key protector **can't** be used because the first DC would require Active Directory and WDS to be working in order to unlock. Before you restore the first DC, Active Directory isn't yet available for WDS, so it can't unlock.
+- A DC that **isn't** configured to use BitLocker Network Unlock, if you use Windows Deployment Services.
+    Using BitLocker Network Unlock for the first DC that you restore from backup during a forest recovery isn't supported. On DCs where you have deployed Windows Deployment Services (WDS),,BitLocker Network Unlock as the **only** key protector **can't** be used because the first DC would require Active Directory and WDS to be working in order to unlock. Before you restore the first DC, Active Directory isn't yet available for WDS, so it can't unlock.
 
     To determine if a DC is configured to use BitLocker Network Unlock, check that a Network Unlock certificate is identified in the following registry key:
 
@@ -169,8 +169,9 @@ If you're using a hub-and-spoke network architecture, you can concentrate first 
 
 ## Compromised AD database
 
-If the AD database of a writable DC is compromised, a new KDS Root Key should be created after the recovery and all Group Managed Service Accounts (gMSA) should be recreated depending on the compromission scenario. The details are described here: [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack).
+If the AD database of a writable DC is compromised, a new KDS Root Key should be created after the recovery and all Group Managed Service Accounts (gMSA) should be recreated depending on the compromising scenario. The details are described here: [How to recover from a Golden gMSA attack](/troubleshoot/windows-server/windows-security/recover-from-golden-gmsa-attack).
 
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+

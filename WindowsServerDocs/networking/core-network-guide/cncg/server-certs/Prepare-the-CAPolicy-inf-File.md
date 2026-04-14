@@ -1,16 +1,14 @@
 ---
 title: Prepare the CAPolicy.inf File
 description:  The CAPolicy.inf contains various settings that are used when installing the Active Directory Certification Service (AD CS) or when renewing the CA certificate.
-manager: alanth
-ms.topic: article
-ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/11/2023
 ---
 
 # CAPolicy.inf Syntax
-> Applies To: Windows Server 2016
+> 
 
 The CAPolicy.inf is a configuration file that defines the extensions, constraints, and other configuration settings that are applied to a root CA certificate and all certificates issued by the root CA. The CAPolicy.inf file must be installed on a host server before the setup routine for the root CA begins. When the security restrictions on a root CA are to be modified, the root certificate must be renewed and an updated CAPolicy.inf file must be installed on the server before the renewal process begins.
 

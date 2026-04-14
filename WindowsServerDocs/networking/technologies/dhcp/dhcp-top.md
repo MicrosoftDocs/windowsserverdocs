@@ -1,28 +1,21 @@
 ---
-title: Dynamic Host Configuration Protocol (DHCP)
-description: This topic provides a brief overview of Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-ms.author: jgerend
-author: JasonGerend
-ms.date: 08/07/2020
+title: What is DHCP Server in Windows Server?
+description: Discover how Windows Server DHCP simplifies automated IP management, reduces configuration errors, and enhances network efficiency with this powerful protocol.
+ms.topic: overview
+ms.author: roharwoo
+author: robinharwood
+ai-usage: ai-assisted
+ms.date: 05/13/2025
+#customer intent: As a network administrator, I want to understand the benefits of using DHCP in Windows Server so that I can automate IP address management and reduce configuration errors.
 ---
-# Dynamic Host Configuration Protocol (DHCP)
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+# What is Dynamic Host Configuration Protocol (DHCP) Server in Windows Server?
 
-You can use this topic for a brief overview of DHCP in Windows Server 2016.
+Dynamic Host Configuration Protocol (DHCP) Server in Windows Server automates the assignment and management of IP addresses and related network configurations. By centralizing these tasks, DHCP Server reduces manual effort, minimizes errors, and ensures efficient use of IP address resources across your network.
 
-> [!NOTE]
-> In addition to this topic, the following DHCP documentation is available.
->
-> - [What's New in DHCP](What-s-New-in-DHCP.md)
-> - [Deploy DHCP Using Windows PowerShell](dhcp-deploy-wps.md)
+Windows Server includes DHCP Server as an optional networking server role that you can deploy to manage and offer IP addresses leases and other information to DHCP clients. All Windows-based client operating systems include the DHCP client as part of TCP/IP, and DHCP client is enabled by default.
 
 Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information such as the subnet mask and default gateway. RFCs 2131 and 2132 define DHCP as an Internet Engineering Task Force (IETF) standard based on Bootstrap Protocol (BOOTP), a protocol with which DHCP shares many implementation details. DHCP allows hosts to obtain required TCP/IP configuration information from a DHCP server.
-
-Windows Server 2016 includes DHCP Server, which is an optional networking server role that you can deploy on your network to lease IP addresses and other information to DHCP clients. All Windows-based client operating systems include the DHCP client as part of TCP/IP, and DHCP client is enabled by default.
 
 ## Why use DHCP?
 
@@ -46,7 +39,7 @@ A DHCP-enabled client, upon accepting a lease offer, receives:
 
 - Requested DHCP options, which are additional parameters that a DHCP server is configured to assign to clients. Some examples of DHCP options are Router (default gateway), DNS Servers, and DNS Domain Name.
 
-## Benefits of DHCP
+## Benefits of DHCP Server
 
 DHCP provides the following benefits.
 
@@ -54,13 +47,36 @@ DHCP provides the following benefits.
 
 - **Reduced network administration**. DHCP includes the following features to reduce network administration:
 
-    - Centralized and automated TCP/IP configuration.
+  - Centralized and automated TCP/IP configuration.
 
-    - The ability to define TCP/IP configurations from a central location.
+  - The ability to define TCP/IP configurations from a central location.
 
-    - The ability to assign a full range of additional TCP/IP configuration values by means of DHCP options.
+  - The ability to assign a full range of additional TCP/IP configuration values by means of DHCP options.
 
-    - The efficient handling of IP address changes for clients that must be updated frequently, such as those for portable devices that move to different locations on a wireless network.
+  - The efficient handling of IP address changes for clients that must be updated frequently, such as those for portable devices that move to different locations on a wireless network.
 
-    - The forwarding of initial DHCP messages by using a DHCP relay agent, which eliminates the need for a DHCP server on every subnet.
+  - The forwarding of initial DHCP messages by using a DHCP relay agent, which eliminates the need for a DHCP server on every subnet.
 
+## DHCP Server features
+
+DHCP Server in Windows Server includes the following features:
+
+- **DHCP policies**. This feature allows you to create policies that apply DHCP options and setting based on client characteristics, such as MAC address or vendor class.
+
+- **DHCP audit logging**. This feature allows you to track DHCP server activity, including lease assignments and renewals.
+
+- **DHCP server management**. This feature allows you to manage DHCP servers using Windows PowerShell, the DHCP console, or the Windows Admin Center.
+
+- **DHCP server authorization**. This feature allows you to authorize DHCP servers in Active Directory, preventing unauthorized servers from providing IP addresses to clients.
+
+- **DHCP server integration with DNS**. Dynamic DNS automatically update DNS records when DHCP leases are assigned or renewed, ensuring that clients can resolve hostnames to IP addresses.
+
+- **DHCP server integration with IPv4 and IPv6**. This feature allows you to assign both IPv4 and IPv6 addresses to clients using DHCP, providing support for both IP addressing standards.
+
+- **DHCP failover**. This feature allows two DHCP servers to share a single scope, providing redundancy and load balancing.
+
+- **DHCP server integration with IPAM**. This feature allows you to manage DHCP servers using IP Address Management (IPAM), providing a centralized location for managing IP address assignments and leases.
+
+## Get started with DHCP
+
+To learn how to install and configure DHCP in Windows Server, see [Quickstart: Install and configure DHCP Server](quickstart-install-configure-dhcp-server.md).

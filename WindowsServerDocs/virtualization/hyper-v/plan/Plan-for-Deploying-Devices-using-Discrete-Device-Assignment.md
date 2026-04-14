@@ -1,15 +1,13 @@
 ---
-title: Plan for deploying devices by using Discrete Device Assignment
+title: Deploy devices by using Discrete Device Assignment
 description: Learn how Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.
-ms.topic: article
-ms.author: wscontent
+ms.topic: install-set-up-deploy
+ms.author: roharwoo
 author: robinharwood
-ms.date: 06/08/2023
+ms.date: 02/19/2025
 ---
 
-# Plan for deploying devices by using Discrete Device Assignment
-
-> Applies to: Windows Server 2022, Microsoft Hyper-V Server 2019, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
+# Deploy devices by using Discrete Device Assignment
 
 Discrete Device Assignment allows physical Peripheral Component Interconnect Express (PCIe) hardware to be directly accessible from within a virtual machine (VM). This article discusses the type of devices that can be used, host system requirements, limitations imposed on the VMs, and security implications.
 
@@ -23,13 +21,12 @@ Discrete Device Assignment is supported for Generation 1 or 2 VMs. The guests su
 
 - Windows 10 or later
 - Windows Server 2016 or later
-- Windows Server 2012 R2 with the [Update to add Discrete Device Assignment support for Azure](https://support.microsoft.com/kb/3133690).
 
 For more information, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
 ## System requirements
 
-Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
+Your system must meet the [Hardware Requirements for Windows Server](../../../get-started/hardware-requirements.md) and [System Requirements for Hyper-V on Windows Server](../host-hardware-requirements.md). Discrete Device Assignment also requires server class hardware that's capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support Access Control Services (ACS), which enables Hyper-V to force all PCIe traffic through the Input-Output Memory Management Unit.
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings. If the same capabilities are required for SR-IOV support and in the BIOS, you might need to set "Enable SR-IOV." Reach out to your system vendor if you're unable to identify the correct setting in your BIOS.
 
@@ -120,6 +117,8 @@ Before you use the script, ensure you have the Hyper-V role installed and you ru
 
 If the system is incorrectly configured to support Discrete Device Assignment, the tool displays an error message with details about the issue. If the system is correctly configured, the tool enumerates all devices located on the PCIe Bus.
 
-For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being compatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
+For each device it finds, the tool displays whether it's able to be used with Discrete Device Assignment. If a device is identified as being incompatible with Discrete Device Assignment, the script provides a reason. When a device is successfully identified as being compatible, the device's Location Path is displayed. Additionally, if that device requires [MMIO space](#mmio-space), it's displayed as well.
 
 :::image type="content" source="./images/hyper-v-surveydda-ps1.png" alt-text="Screenshot of the requirements displayed in SurveyDDA.ps1.":::
+
+

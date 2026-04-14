@@ -2,14 +2,11 @@
 title: Enable Access-based Enumeration on a Namespace
 description: This article describes how to enable access-based enumeration on a namespace.
 ms.date: 6/5/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ---
 # Enable access-based enumeration on a namespace
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Access-based enumeration hides files and folders that users do not have permissions to access. By default, this feature is not enabled for DFS namespaces. You can enable access-based enumeration of DFS folders by using DFS Management. To control access-based enumeration of files and folders in folder targets, you must enable access-based enumeration on each shared folder by using Share and Storage Management.
 
@@ -99,3 +96,4 @@ You can control which users and groups can view individual DFS folders either by
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
 -   [Installing DFS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11))
 -   [Using Inherited Permissions with Access-Based Enumeration](using-inherited-permissions-with-access-based-enumeration.md)
+

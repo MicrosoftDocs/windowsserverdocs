@@ -1,0 +1,1299 @@
+{
+  "redirections": [
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-and-vlans.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/create-a-new-nic-team.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-optimization-technologies.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/Plan-Software-Defined-Networking.md",
+      "redirect_url": "/windows-server/networking/sdn/plan/Deploy-a-Software-Defined-Network-Infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-and-optimization-technologies.md",
+      "redirect_url": "/windows-server/networking/technologies/network-offload-and-optimization-technologies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/network-offload.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/windows-server-2016-supported-networking-scenarios.md",
+      "redirect_url": "/windows-server/networking/windows-server-supported-networking-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-2016-software-defined-networking-stack.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/da-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/Remote-Access.md",
+      "redirect_url": "/windows-server/remote/remote-access/Remote-Access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/bgp/BGP-Windows-PowerShell-Command-Reference.md",
+      "redirect_url": "/powershell/module/remoteaccess/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/bgp/Border-Gateway-Protocol-BGP.md",
+      "redirect_url": "/windows-server/remote/remote-access/bgp/Border-Gateway-Protocol-BGP",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess-Capacity-Planning.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess-Capacity-Planning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess-Known-Issues.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess-Known-Issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess-Offline-Domain-Join.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess-Offline-Domain-Join",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess-Test-Lab-Guides.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess-Test-Lab-Guides",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess-Unsupported-Configurations.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess-Unsupported-Configurations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/DirectAccess.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/DirectAccess",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/Troubleshooting-DirectAccess.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-directaccess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access-VPN-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/Add-DirectAccess-to-an-Existing-Remote-Access-VPN-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Enable-DirectAccess.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/Enable-DirectAccess",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Plan-to-Enable-DirectAccess.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/Plan-to-Enable-DirectAccess",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-1-Configure-the-DirectAccess-Infrastructure_3.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-1-Plan-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-2-Plan-the-DirectAccess-Deployment_4.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/add-to-existing-vpn/Step-3-Verify-the-Deployment_5.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-DirectAccess.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-DirectAccess",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Step-1-Configuring-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Step-1-Plan-the-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Step-2-Configuring-DirectAccess-Servers.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Step-2-Plan-DirectAccess-Deployments.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-advanced/Step-3-Verify-the-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-DirectAccess.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-DirectAccess",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Step-1-Configure-the-DirectAccess-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Step-1-Plan-Basic-DA-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Step-2-Configure-the-DirectAccess-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Step-2-Plan-the-DirectAccess-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/single-server-wizard/Step-3-Verify-Deployments.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/Configuration-Requirements_1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/Overview-of-the-Test-Lab-Scenario_5.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-1-Complete-the-DirectAccess-Configuration.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-1-Complete-the-DirectAccess-Configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-2-Configure-EDGE1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-2-Configure-EDGE1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-3-Install-and-Configure-EDGE2.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-3-Install-and-Configure-EDGE2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-4-Create-the-Network-Load-Balanced-Remote-Access-Cluster.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-4-Create-the-Network-Load-Balanced-Remote-Access-Cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-5-Test-DirectAccess-Connectivity-from-the-Internet-and-Through-the-Cluster.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-5-Test-DirectAccess-Connectivity-from-the-Internet-and-Through-the-Cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-6-Test-DirectAccess-Client-Connectivity-from-Behind-a-NAT-Device.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-6-Test-DirectAccess-Client-Connectivity-from-Behind-a-NAT-Device",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-7-Test-Connectivity-When-Returning-to-the-Corpnet.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/STEP-7-Test-Connectivity-When-Returning-to-the-Corpnet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/STEP-8-Snapshot-the-Configuration.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/Steps-for-Configuring-the-Test-Lab.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/Configuration-Requirements.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/Configuration-Requirements",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/Overview-of-the-Test-Lab-Scenario_4.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/Overview-of-the-Test-Lab-Scenario_4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-1-Complete-DirectAccess-Configuration.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-1-Complete-DirectAccess-Configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-10-Install-and-Configure-2-EDGE1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-10-Install-and-Configure-2-EDGE1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-11-Configure-the-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-11-Configure-the-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-12-Test-DirectAccess-Connectivity.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-12-Test-DirectAccess-Connectivity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-13-Test-DirectAccess-Connectivity-from-Behind-a-NAT-Device.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-13-Test-DirectAccess-Connectivity-from-Behind-a-NAT-Device",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-14-Snapshot-the-Configuration.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-14-Snapshot-the-Configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-2-Install-and-Configure-ROUTER1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-2-Install-and-Configure-ROUTER1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-3-Install-and-Configure-CLIENT2.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-3-Install-and-Configure-CLIENT2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-4-Configure-APP1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-4-Configure-APP1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-5-Configure-DC1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-5-Configure-DC1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-6-Install-and-Configure-2-DC1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-6-Install-and-Configure-2-DC1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-7-Install-and-Configure-2-APP1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-7-Install-and-Configure-2-APP1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-8-Configure-INET1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-8-Configure-INET1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/STEP-9-Configure-EDGE1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/STEP-9-Configure-EDGE1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/Steps-for-Configuring-the-Test-Lab-4.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/Steps-for-Configuring-the-Test-Lab-4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-multisite/Test-Lab-Guide-Demonstrate-a-DirectAccess-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-multisite/Test-Lab-Guide-Demonstrate-a-DirectAccess-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/Overview-of-the-Test-Lab-Scenario.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/Overview-of-the-Test-Lab-Scenario",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-1-Complete-the-DirectAccess-Configuration_5.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-1-Complete-the-DirectAccess-Configuration_5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-2-Configure-APP1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-2-Configure-APP1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-3-Configure-DC1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-3-Configure-DC1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-4-Install-and-Configure-RSA-and-EDGE1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-4-Install-and-Configure-RSA-and-EDGE1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-5-Verify-OTP-Health-on-EDGE1.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-5-Verify-OTP-Health-on-EDGE1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-6-Test-DirectAccess-Connectivity-from-the-Homenet-Subnet.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-6-Test-DirectAccess-Connectivity-from-the-Homenet-Subnet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/STEP-7-Test-DirectAccess-Connectivity-from-the-Internet.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/STEP-7-Test-DirectAccess-Connectivity-from-the-Internet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/Steps-for-Configuring-the-Test-Lab-2.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/Steps-for-Configuring-the-Test-Lab-2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/directaccess/tlg-otp-securid/Test-Lab-Guide-Demonstrate-DirectAccess-with-OTP-Authentication-and-RSA-SecurID.md",
+      "redirect_url": "/windows-server/remote/remote-access/directaccess/tlg-otp-securid/Test-Lab-Guide-Demonstrate-DirectAccess-with-OTP-Authentication-and-RSA-SecurID",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/Deploy-Remote-Access-in-an-Enterprise.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/Deploy-Remote-Access-in-an-Enterprise",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/Manage-Remote-Access.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/Manage-Remote-Access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/Remote-Access-Server-Role-Documentation.md",
+      "redirect_url": "/windows-server/remote/remote-access/overview-always-on-vpn",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/Deploy-Remote-Access-In-Cluster.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/Deploy-Remote-Access-In-Cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/configure/Configure-a-Remote-Access-Cluster.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/configure/Configure-a-Remote-Access-Cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/configure/Step-2-Prepare-Cluster-Servers.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/configure/Step-2-Prepare-Cluster-Servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/configure/Step-4-Verify-the-Cluster.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/configure/Step-4-Verify-the-Cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/plan/Plan-a-Remote-Access-Cluster-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/plan/Plan-a-Remote-Access-Cluster-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/plan/Step-2-Plan-Cluster-Servers.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/plan/Step-2-Plan-Cluster-Servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/cluster/plan/Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/cluster/plan/Step-3-Plan-a-Load-Balanced-Cluster-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/Manage-DirectAccess-Clients-Remotely.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/Manage-DirectAccess-Clients-Remotely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-Remote-Management-of-DirectAccess-Clients.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-Remote-Management-of-DirectAccess-Clients",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-Remote-Access-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-Remote-Access-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-Remote-Access-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-Remote-Access-Server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/install/Step-3-Verify-the-Deployment_2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-Remote-Management-of-DirectAccess-Clients.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-Remote-Management-of-DirectAccess-Clients",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-Remote-Access-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-Remote-Access-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-Remote-Access-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-Remote-Access-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Generate-a-usage-report-for-remote-clients-using-historical-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Identify-and-resolve-Remote-Access-server-operations-problems.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Identify-and-resolve-Remote-Access-server-operations-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Monitor-connected-remote-clients-for-activity-and-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-Remote-Access-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Monitor-the-configuration-distribution-status-of-the-Remote-Access-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-Remote-Access-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Monitor-the-existing-load-on-the-Remote-Access-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/monitoring-and-accounting/Use-Remote-Access-Monitoring-and-Accounting.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/monitoring-and-accounting/Use-Remote-Access-Monitoring-and-Accounting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multi-forest/Configure-a-Multi-Forest-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multi-forest/Configure-a-Multi-Forest-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multi-forest/Deploy-Remote-Access-in-a-Multi-Forest-Environment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multi-forest/Deploy-Remote-Access-in-a-Multi-Forest-Environment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multi-forest/Plan-a-Multi-Forest-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multi-forest/Plan-a-Multi-Forest-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/Deploy-Multiple-Remote-Access-Servers-in-a-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/Deploy-Multiple-Remote-Access-Servers-in-a-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-Remote-Access-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/configure/Step-4-Verify-the-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/configure/Step-4-Verify-the-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-multisite-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Adding-Entry-Points.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-adding-entry-points",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Enabling-Multisite.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-enabling-multisite",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-General-Issues.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-general-issues-related-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-setting-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/Deploy-RA-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831379(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134229(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-Remote-Access-Deployment-5.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/otp/configure/Step-1-Implement-a-Single-Server-Remote-Access-Deployment-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134164(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-3-Configure-the-Remote-Access-Server-for-OTP.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/otp/configure/Step-3-Configure-the-Remote-Access-Server-for-OTP",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/configure/Step-4-Verify-DirectAccess-with-OTP.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/otp/configure/Step-4-Verify-DirectAccess-with-OTP",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Plan-Remote-Access-with-OTP-Authentication.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/otp/plan/Plan-Remote-Access-with-OTP-Authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134170(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134220(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134161(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-Remote-Access-Server.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-Remote-Access-Server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618321(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/troubleshoot/Troubleshooting-Authentication-Issues.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618331(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/troubleshoot/Troubleshooting-Enabling-OTP.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj618327(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras-gateway/gre-tunneling-windows-server.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras-gateway/gre-tunneling-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras-gateway/RAS-Gateway.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras-gateway/RAS-Gateway",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/create-security-policies-extended-port-access-control-lists",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/Networking.md",
+      "redirect_url": "/windows-server/networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/branchcache/deploy/Configure-Windows-Server-Update-Services--WSUS--Content-Servers.md",
+      "redirect_url": "/windows-server/networking/branchcache/deploy/configure-wsus-content-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/branchcache/deploy/Deploy-Hosted-Cache-Servers--Optional-.md",
+      "redirect_url": "/windows-server/networking/branchcache/deploy/deploy-hosted-cache-servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/branchcache/deploy/Enable-BranchCache-on-a-File-Share--Optional-.md",
+      "redirect_url": "/windows-server/networking/branchcache/deploy/enable-bc-on-file-share",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/branchcache/deploy/Prehashing-and-Preloading-Content-on-Hosted-Cache-Servers--Optional-.md",
+      "redirect_url": "/windows-server/networking/branchcache/deploy/prehashing-and-preloading",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Secondary-Deployments.md",
+      "redirect_url": "/windows-server/networking/dns/deploy/primary-secondary-geo-location",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md",
+      "redirect_url": "/windows-server/networking/dns/deploy/primary-geo-location",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/deploy/Scenario--Use-DNS-Policy-for-Intelligent-DNS-Responses-Based-on-the-Time-of-Day.md",
+      "redirect_url": "/windows-server/networking/dns/deploy/dns-tod-intelligent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/Domain-Name-System--DNS-.md",
+      "redirect_url": "/windows-server/networking/dns/dns-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/Manage-Tenant-Workloads-and-Virtual-Networks.md",
+      "redirect_url": "/windows-server/networking/sdn/manage/manage-sdn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/use-acls-for-traffic-flow.md",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/configure-datacenter-firewall-acls.md",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-firewall-auditing.md",
+      "redirect_url": "/azure/azure-local/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/plan-a-software-defined-network-infrastructure.md",
+      "redirect_url": "/azure/azure-local/concepts/plan-software-defined-networking-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller.md",
+      "redirect_url": "/azure/azure-local/concepts/network-controller-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/installation-and-preparation-requirements-for-deploying-network-controller.md",
+      "redirect_url": "/azure/azure-local/concepts/network-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/ras-gateway-for-sdn.md",
+      "redirect_url": "/azure/azure-local/concepts/gateway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/what-s-new-in-ras-gateway.md",
+      "redirect_url": "/azure/azure-local/concepts/gateway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/Software-Defined-Networking--SDN-.md",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md",
+      "redirect_url": "/azure/azure-local/concepts/software-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md",
+      "redirect_url": "/azure/azure-local/concepts/software-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md",
+      "redirect_url": "/azure/azure-local/concepts/datacenter-firewall-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dhcp/Dynamic-Host-Configuration-Protocol--DHCP-.md",
+      "redirect_url": "/windows-server/networking/technologies/dhcp/dhcp-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/ipam/IP-Address-Management--IPAM-.md",
+      "redirect_url": "/windows-server/networking/technologies/ipam/ipam-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/NIC-Teaming-and-Virtual-Local-Area-Networks--VLANs-.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/NIC-Teaming-in-Virtual-Machines--VMs-.md",
+      "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vpn-stub.md",
+      "redirect_url": "/windows-server/remote/remote-access/vpn/vpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vswitch-stub.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-single.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-datacenter.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-app-switch-config.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-app-troubleshoot.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-install.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-manage.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-plan.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-enable.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-manage.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-faq.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-wps.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-resolve-issues.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/set-for-sdn.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements#set/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/troubleshoot/disable-dns-client-side-caching.md",
+      "redirect_url": "/troubleshoot/windows-client/networking/support-policy-for-dns-client-side-caching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/software-defined-networking.md",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/contact-sdn-team.md",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/Azure_and_Sdn.md",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/Sc-Tech-for-Sdn.md",
+      "redirect_url": "/azure/azure-local/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-mac-address-use-and-management.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/create-a-new-nic-team-on-a-host.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/troubleshooting-nic-teaming.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-settings.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md",
+      "redirect_url": "/azure/azure-local/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/Networking-old.md",
+      "redirect_url": "/windows-server/networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-security-top.md",
+      "redirect_url": "/azure/azure-local/manage/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-manage-certs.md",
+      "redirect_url": "/azure/azure-local/manage/sdn-manage-certs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/nc-security.md",
+      "redirect_url": "/azure/azure-local/manage/nc-security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/kerberos-with-spn.md",
+      "redirect_url": "/azure/azure-local/manage/kerberos-with-spn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/pktmon/pktmon-pcapng-support.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md",
+      "redirect_url": "/troubleshoot/windows-server/software-defined-networking/troubleshoot-windows-server-software-defined-networking-stack",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/windows-time-service/support-boundary.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/support-boundary-high-accuracy-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/What-s-New-in-DNS-Server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/What-s-New-in-DNS-Client.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/sdn-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dhcp/What-s-New-in-DHCP.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/What-s-New-in-Networking.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/ipam/What-s-New-in-IPAM.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/resource-record-types.md",
+      "redirect_url": "/windows-server/networking/dns/dns-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/dns/dns-top.md",
+      "redirect_url": "/windows-server/networking/dns/dns-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller-high-availability.md",
+      "redirect_url": "/windows-server/networking/sdn/technologies/network-controller/network-controller-service-fabric",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Refresh-Group-Policy.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-policy/group-policy-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Verify-Server-Enrollment-of-a-Server-Certificate.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-Server-Certificate-Autoenrollment.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/core-network-guide/cncg/server-certs/Configure-the-Server-Certificate-Template.md",
+      "redirect_url": "/windows-server/networking/core-network-guide/cncg/server-certs/configure-server-certificate-template-remote-access-network-policy-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-contexts.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-wins.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-http.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-http",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-PowerShell.md",
+      "redirect_url": "/azure/azure-local/deploy/sdn-express-23h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/deploy/Deploy-Network-Controller-using-Windows-powershell.md",
+      "redirect_url": "/azure/azure-local/deploy/sdn-express-23h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-bridge.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-bridge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-interface-portproxy.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-interface",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/netsh/netsh-mbn.md",
+      "redirect_url": "/windows-server/administration/windows-commands/netsh-mbn",
+      "redirect_document_id": false
+    }
+  ]
+}

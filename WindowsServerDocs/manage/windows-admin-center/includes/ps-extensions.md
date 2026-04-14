@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 ```powershell
 # Add the module to the current session
 Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ExtensionTools"

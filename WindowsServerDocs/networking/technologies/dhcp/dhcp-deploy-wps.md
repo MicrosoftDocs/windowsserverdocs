@@ -1,22 +1,18 @@
 ---
 title: Deploy DHCP Using Windows PowerShell
 description: You can use this topic to deploy a Windows Server 2016 Internet Protocol (IP) version 4 DHCP server that provides automatic IP addresses and DHCP options to IPv4 DHCP clients connected to one or more subnets on your network.
-ms.topic: article
-ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
-manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/04/2021
 ---
 
 # Deploy DHCP Using Windows PowerShell
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
-
 This guide provides instructions on how to use Windows PowerShell to deploy an Internet Protocol (IP) version 4 Dynamic Host Configuration Protocol \(DHCP\)  server that automatically assigns IP addresses and DHCP options to IPv4 DHCP clients that are connected to one or more subnets on your network.
 
 > [!NOTE]
-> To download this document in Word format from TechNet Gallery, see [Deploy DHCP Using Windows PowerShell in Windows Server 2016](https://gallery.technet.microsoft.com/Deploy-DHCP-Using-Windows-246dd293).
+> To download this document in Word format from TechNet Gallery, see [Deploy DHCP Using Windows PowerShell in Windows Server 2016](/windows-server/networking/technologies/dhcp/dhcp-deploy-wps).
 
 Using DHCP servers to assign IP addresses saves in administrative overhead because you do not need to manually configure the TCP/IP v4 settings for every network adapter in every computer on your network. With DHCP, TCP/IP v4 configuration is performed automatically when a computer or other DHCP client is connected to your network.
 

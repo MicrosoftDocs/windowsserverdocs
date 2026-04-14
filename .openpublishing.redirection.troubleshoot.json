@@ -1,0 +1,39 @@
+{
+   "redirections": [
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/windows-server-troubleshooting.md",
+         "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/troubleshooting-cluster-event-id-1135.md",
+         "redirect_url": "/troubleshoot/windows-server/high-availability/troubleshoot-cluster-event-id-1135",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/problem-nodes-failover-cluster.md",
+         "redirect_url": "/troubleshoot/windows-server/high-availability/problem-nodes-failover-cluster",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/nodes-failover-cluster-vmware.md",
+         "redirect_url": "/troubleshoot/windows-server/high-availability/nodes-failover-cluster-vmware",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/iaas-sql-failover-cluster.md",
+         "redirect_url": "/troubleshoot/windows-server/high-availability/iaas-sql-failover-cluster-network-thresholds",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/general-guidance-to-troubleshoot-dhcp.md",
+         "redirect_url": "/troubleshoot/windows-server/networking/general-guidance-troubleshoot-dhcp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "WindowsServerDocs/troubleshoot/troubleshoot-problems-on-dhcp-client.md",
+         "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-problems-dhcp-client",
+         "redirect_document_id": false
+      }
+   ]
+}

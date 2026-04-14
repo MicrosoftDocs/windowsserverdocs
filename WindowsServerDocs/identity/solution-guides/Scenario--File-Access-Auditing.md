@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Scenario: File Access Auditing"
-ms.assetid: 7be1f2cb-02d5-4209-ba79-edf496a88f47
 title: Scenario File Access Auditing
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 02/13/2024
+ms.topic: example-scenario
 ---
 
 # Scenario: File Access Auditing
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Security Auditing is one of the most powerful tools to help maintain the security of an enterprise. One of the key goals of security audits is regulatory compliance. Industry standards such as Sarbanes Oxley, Health Insurance Portability and Accountability Act (HIPAA), and Payment Card Industry (PCI) require enterprises to follow a strict set of rules related to data security and privacy. Security audits help establish the presence of such policies and prove compliance with these standards. Additionally, security audits help detect anomalous behavior, identify and mitigate gaps in security policies, and deter irresponsible behavior by creating a trail of user activity that can be used for forensic analysis.
 

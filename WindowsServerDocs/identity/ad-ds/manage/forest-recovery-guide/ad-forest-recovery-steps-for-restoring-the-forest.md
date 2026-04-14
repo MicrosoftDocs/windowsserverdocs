@@ -1,15 +1,15 @@
 ---
 title: AD Forest Recovery - Steps for Restoring the forest
 description: This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Steps to restore the forest
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.
 
@@ -50,3 +50,5 @@ these steps to account for such factors as:
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

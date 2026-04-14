@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Reviewing DNS Concepts"
-ms.assetid: 133474ee-316d-4b1c-acc6-ad5434a064d5
 title: Reviewing DNS Concepts
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/08/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: how-to
 ---
 
 # Reviewing DNS Concepts
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Domain Name System (DNS) is a distributed database that represents a namespace. The namespace contains all of the information needed for any client to look up any name. Any DNS server can answer queries about any name within its namespace. A DNS server answers queries in one of the following ways:
 

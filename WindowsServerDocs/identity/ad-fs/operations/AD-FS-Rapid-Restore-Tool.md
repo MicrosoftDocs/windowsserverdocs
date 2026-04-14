@@ -1,13 +1,11 @@
 ---
 title: Active Directory Federation Services Rapid Restore tool
 description: "Learn about the Active Directory Federation Services (AD FS) Rapid Restore tool and restore AD FS data without a full backup or export an AD FS configuration."
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
-ms.custom: inhenkel
-ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
+ms.date: 04/08/2025
+ms.topic: how-to
+ms.custom:
+  - inhenkel
+  - sfi-ropc-nochange
 ---
 
 # Active Directory Federation Services Rapid Restore tool
@@ -55,7 +53,7 @@ The `RngCryptoServiceProvider` Class generates the salt (binary blob) used by AE
 To get started with the AD FS Rapid Restore tool, first review the following system and tool requirements.
 
 - The tool works for AD FS in Windows Server 2016 and later.
-- The tool requires .NET framework 4.0 or later.
+- The tool requires .NET framework 4.6 or later.
 - If you use a WID, the tool must run on the primary AD FS server. Use the `Get-AdfsSyncProperties` cmdlet to check if your server is the primary server.
 - A restore must run on an AD FS server of the same version as the backup server, and use the same Active Directory account as the AD FS service account.
 

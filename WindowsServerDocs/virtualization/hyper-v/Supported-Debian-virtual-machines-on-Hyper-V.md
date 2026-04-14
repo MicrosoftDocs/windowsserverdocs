@@ -1,15 +1,12 @@
 ---
 title: Supported Debian virtual machines on Hyper-V
 description: Learn about the Debian and Linux integration services and features included in each version and known issues and workarounds for each distribution.
-ms.topic: article
-ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
-ms.author: wscontent
-author: kkkashan
-ms.date: 09/26/2023
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 06/19/2025
 ---
 # Supported Debian virtual machines on Hyper-V
-
-> Applies to: Azure Stack HCI, Windows Server 2022, Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 This article outlines the support offered for Debian virtual machines (VMs) on Hyper-V.
 
@@ -17,49 +14,49 @@ This article outlines the support offered for Debian virtual machines (VMs) on H
 
 The following feature distribution map indicates the features that are present in each version of Windows Server. The known issues and workarounds for each distribution are listed after the table.
 
-* **Built in** - Linux integration services (LIS) are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution. Don't install the Microsoft package. The kernel module version numbers for the built-in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is out of date.
+* **Built-in LIS** - Linux integration services (LIS) are included as part of this Linux distribution. The Microsoft-provided LIS download package doesn't work for this distribution. Don't install the Microsoft package. The kernel module version numbers for the built-in LIS (as shown by **lsmod**, for example) are different from the version number on the Microsoft-provided LIS download package. A mismatch doesn't indicate that the built-in LIS is out of date.
 
 * &#10004; - Feature available
 
 * (*blank*) - Feature not available
 
-| **Feature** | **Windows Server version** | **11 (Bullseye)** | **10.0-10.3 (Buster)** |
-|--|--|--|--|
-| **Availability** |  | Built in | Built in |
-| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| Windows Server 2016 Accurate Time | 2019, 2016 | ✔ Note 4 | ✔ Note 4 |
-| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** |  |  |  |
-| Jumbo frames | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| VLAN tagging and trunking | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| Live Migration | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| Static IP Injection | 2019, 2016, 2012 R2 |  |  |
-| vRSS | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 |
-| TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 |
-| SR-IOV | 2019, 2016 | ✔ Note 4 | ✔ Note 4 |
-| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |  |
-| VHDX resize | 2019, 2016, 2012 R2 | ✔ Note 1 | ✔ Note 1 |
-| Virtual Fibre Channel | 2019, 2016, 2012 R2 |  |  |
-| Live virtual machine backup | 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 |
-| TRIM support | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 |
-| SCSI WWN | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 |
-| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** |  |  |  |
-| PAE Kernel Support | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| Configuration of MMIO gap | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| Dynamic Memory - Hot-Add | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 |
-| Dynamic Memory - Ballooning | 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 |
-| Runtime Memory Resize | 2019, 2016 | ✔ Note 4 | ✔ Note 4 |
-| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** |  |  |  |
-| Hyper-V-specific video device | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** |  |  |  |
-| Key-Value Pair | 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 |
-| Non-Maskable Interrupt | 2019, 2016, 2012 R2 | ✔ | ✔ |
-| File copy from host to guest | 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 |
-| lsvmbus command | 2019, 2016, 2012 R2 |  |  |
-| Hyper-V Sockets | 2019, 2016 | ✔ Note 4 | ✔ Note 4 |
-| PCI Passthrough/DDA | 2019, 2016 | ✔ Note 4 | ✔ Note 4 |
-| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |  |  |  |
-| Boot using UEFI | 2019, 2016, 2012 R2 | ✔ Note 3 | ✔ Note 3 |
-| Secure boot | 2019, 2016 | ✔ | ✔ |
+| **Feature** | **Windows Server Hyper-V version** | **12 (Bookworm)** | **11 (Bullseye)** | **10 (Buster)** |
+|--|--|--|--|--|
+| **Availability** |  | Built-in LIS | Built-in LIS | Built-in LIS |
+| **[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)** | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| Windows Server 2016 Accurate Time | 2025, 2022, 2019, 2016 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| **[Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)** |  |  |  |  |
+| Jumbo frames | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| VLAN tagging and trunking | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| Live Migration | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| Static IP Injection | 2025, 2022, 2019, 2016, 2012 R2 |  |  |  |
+| vRSS | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| TCP Segmentation and Checksum Offloads | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| SR-IOV | 2025, 2022, 2019, 2016 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| **[Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)** |  |  |  |  |
+| VHDX resize | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 1 | ✔ Note 1 | ✔ Note 1 |
+| Virtual Fibre Channel | 2025, 2022, 2019, 2016, 2012 R2 |  |  |  |
+| Live virtual machine backup | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| TRIM support | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| SCSI WWN | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| **[Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)** |  |  |  |  |
+| PAE Kernel Support | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| Configuration of MMIO gap | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| Dynamic Memory - Hot-Add | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| Dynamic Memory - Ballooning | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| Runtime Memory Resize | 2025, 2022, 2019, 2016 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| **[Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)** |  |  |  |  |
+| Hyper-V-specific video device | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| **[Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)** |  |  |  |  |
+| Key-Value Pair | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| Non-Maskable Interrupt | 2025, 2022, 2019, 2016, 2012 R2 | ✔ | ✔ | ✔ |
+| File copy from host to guest | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 2 | ✔ Note 2 | ✔ Note 2 |
+| lsvmbus command | 2025, 2022, 2019, 2016, 2012 R2 |  |  |  |
+| Hyper-V Sockets | 2025, 2022, 2019, 2016 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| PCI Passthrough/DDA | 2025, 2022, 2019, 2016 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| **[Generation 2 virtual machines](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |  |  |  |  |
+| Boot using UEFI | 2025, 2022, 2019, 2016, 2012 R2 | ✔ Note 3 | ✔ Note 3 | ✔ Note 3 |
+| Secure boot | 2025, 2022, 2019, 2016 | ✔ | ✔ | ✔ |
 
 ## Notes
 
@@ -74,8 +71,6 @@ The following feature distribution map indicates the features that are present i
    ```
 
 1. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian backports repository](https://wiki.debian.org/Backports).
-
-1. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
 
 ## See also
 

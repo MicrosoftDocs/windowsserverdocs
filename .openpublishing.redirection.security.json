@@ -1,0 +1,214 @@
+{
+  "redirections": [
+    {
+      "source_path": "WindowsServerDocs/security/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016.md",
+      "redirect_url": "/windows-server/tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server-2016.md",
+      "redirect_url": "/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/windows-defender/automatic-exclusions-for-windows-defender.md",
+      "redirect_url": "/windows/security/threat-protection/microsoft-defender-antivirus/configure-server-exclusions-microsoft-defender-antivirus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/windows-defender/windows-defender-events.md",
+      "redirect_url": "/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-configure-the-first-hgs-node.md",
+      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-configure-the-first-hgs-node",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/securing-privileged-access/privileged-access-workstations.md",
+      "redirect_url": "/security/compass/privileged-access-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/securing-privileged-access/securing-privileged-access-reference-material.md",
+      "redirect_url": "/security/compass/privileged-access-access-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/securing-privileged-access/securing-privileged-access.md",
+      "redirect_url": "/security/compass/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/administer-software-restriction-policies.md",
+      "redirect_url": "/windows-server/identity/software-restriction-policies/administer-software-restriction-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/determine-allow-deny-list-and-application-inventory-for-software-restriction-policies.md",
+      "redirect_url": "/windows-server/identity/software-restriction-policies/determine-allow-deny-list-and-application-inventory-for-software-restriction-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/software-restriction-policies-technical-overview.md",
+      "redirect_url": "/windows-server/identity/software-restriction-policies/software-restriction-policies-technical-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/software-restriction-policies.md",
+      "redirect_url": "/windows-server/identity/software-restriction-policies/software-restriction-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/troubleshoot-software-restriction-policies.md",
+      "redirect_url": "/troubleshoot/windows-server/group-policy/troubleshoot-software-restriction-policies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus.md",
+      "redirect_url": "/windows-server/identity/software-restriction-policies/use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/software-restriction-policies/work-with-software-restriction-policies-rules.md",
+      "redirect_url": "/windows-server/identity/software-restriction-policies/work-with-software-restriction-policies-rules",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/trusted-platform-module/user-account-control/how-user-account-control-works.md",
+      "redirect_url": "/windows-server/security/user-account-control/how-user-account-control-works",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/security/set-up-hgs-for-always-encrypted-in-sql-server.md",
+      "redirect_url": "/sql/relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan?view=sql-server-ver15",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-add-hgs-to-an-existing-domain.md",
+      "redirect_url": "/windows-server/virtualization/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs#add-the-hgs-role",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-appendixes-additional-configuration-options.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-create-vm-move-to-guarded-fabric.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configuration-scenarios-for-shielded-vms-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-deployment-prerequisites.md",
+      "redirect_url": "/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview#deployment-tasks-for-guarded-fabrics-and-shielded-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/tls/tls---ssl--schannel-ssp--overview.md",
+      "redirect_url": "/windows-server/security/tls/tls-ssl-schannel-ssp-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/tls/what-s-new-in-tls---ssl--schannel-ssp-overview.md",
+      "redirect_url": "/windows-server/security/tls/what-s-new-in-tls-ssl-schannel-ssp-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/windows-authentication/winlogon-automatic-restart-sign-on--arso-.md",
+      "redirect_url": "/windows-server/security/windows-authentication/winlogon-automatic-restart-sign-on-arso",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-diagnostics.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-diagnostics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hgs.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-fabric-hgs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-hosts.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-guarded-hosts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-shielded-vms.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-shielded-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/credentials-protection-and-management/whats-new-in-credential-protection.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/kerberos/whats-new-in-kerberos-authentication.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/delegated-managed-service-accounts/delegated-managed-service-accounts-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/active-directory-domain-services-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/active-directory-domain-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/customize-the-active-directory-administrative-center-navigation-pane.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/advanced-ad-ds-management-using-active-directory-administrative-center--level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/group-managed-service-accounts-overview.md",
+      "redirect_url": "/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/manage-different-domains-in-active-directory-administrative-center.md",
+      "redirect_url": "/windows-server/identity/ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/group-managed-service-accounts/what-s-new-for-managed-service-accounts.md",
+      "redirect_url": "/windows-server/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831451(v=ws.11)",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/security/security-and-assurance-old.md",
+      "redirect_url": "/windows-server/security/security-and-assurance",
+      "redirect_document_id": false
+    }
+  ]
+}

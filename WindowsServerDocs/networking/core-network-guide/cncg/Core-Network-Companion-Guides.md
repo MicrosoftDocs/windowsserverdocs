@@ -1,17 +1,13 @@
 ---
 title: Core Network Companion Guides
 description: This topic provides an overview of the companion guides to the Windows Server 2016 Core Network Guide
-manager: brianlic
-ms.topic: article
-ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Core network companion guidance
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 While the Windows Server 2016 [Core Network Guide](../core-network-guide.md) provides instructions on how to deploy a new Active Directory&reg; forest with a new root domain and the supporting networking infrastructure, Companion Guides provide you with the ability to add features to your network.
 

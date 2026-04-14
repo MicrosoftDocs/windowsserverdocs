@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: When to Use a Pass Through or Filter Claim Rule"
-ms.assetid: 606df285-259c-4c6b-8583-9aca1d614c43
 title: When to Use a Pass Through or Filter Claim Rule
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 

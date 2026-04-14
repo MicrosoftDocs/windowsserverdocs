@@ -2,8 +2,8 @@
 title: Add the required metadata tags to your Windows Server-related article
 description: A list of the information you must add as metadata tags to the top of your Windows Server-related articles. The required tags are subject to change, based on both your reporting and team requirements.
 author: eross-msft
-ms.author: lizross
-ms.date: 05/06/2019
+ms.author: roharwoo
+ms.date: 05/07/2019
 ---
 
 # Add the required metadata tags to your Windows Server-related article

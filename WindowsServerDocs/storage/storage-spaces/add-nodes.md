@@ -1,16 +1,19 @@
 ---
-ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
-ms.author: cosdar
-manager: dongill
-ms.topic: article
-author: cosmosdarwin
+ms.author: roharwoo
+ms.topic: how-to
+author: robinharwood
 ms.date: 11/06/2017
 description: How to add servers or drives to a Storage Spaces Direct cluster
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 # Adding servers or drives to Storage Spaces Direct
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to add servers or drives to Storage Spaces Direct.
 
@@ -84,7 +87,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 ![adding a fourth server to a three-node cluster](media/add-nodes/Scaling-3-to-4.png)
 
-With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance).
+With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage).
 
 If you're coming from a smaller deployment, you have several good options to begin creating dual parity volumes. You can use whichever you prefer.
 
@@ -135,7 +138,7 @@ As you scale beyond four servers, new volumes can benefit from ever-greater pari
 
 However, any pre-existing volumes will *not* be "converted" to the new, wider encoding. One good reason is that to do so would require a massive calculation affecting literally *every single bit* in the entire deployment. If you would like pre-existing data to become encoded at the higher efficiency, you can migrate it to new volume(s).
 
-For more details, see [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance).
+For more details, see [Fault tolerance and storage efficiency](/azure/azure-local/concepts/fault-tolerance?context=/windows-server/context/windows-server-storage).
 
 ### Adding servers when using chassis or rack fault tolerance
 
@@ -172,7 +175,7 @@ To scale up, connect the drives and verify that Windows discovers them. They sho
 Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 ```
 
-Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959). At this point, you're finished and ready to [extend your volumes](/azure-stack/hci/manage/extend-volumes) or [create new ones](/azure-stack/hci/manage/create-volumes).
+Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959). At this point, you're finished and ready to [extend your volumes](/azure/azure-local/manage/manage-volumes?context=/windows-server/context/windows-server-storage) or [create new ones](/azure/azure-local/manage/create-volumes?context=/windows-server/context/windows-server-storage).
 
 If the drives don't appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management** or with the **Reset-PhysicalDisk** cmdlet.
 
@@ -196,3 +199,4 @@ You can manually optimize a storage pool with the [Optimize-StoragePool](/powers
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool
 ```
+

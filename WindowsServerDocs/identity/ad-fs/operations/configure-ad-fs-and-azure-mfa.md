@@ -1,12 +1,11 @@
 ---
 title: Configure AD FS and Microsoft Entra multifactor authentication
 description: Learn more about configuring Microsoft Entra multifactor authentication as authentication provider using AD FS.
-ms.author: wscontent
-author: billmath
-manager: amycolannino
-ms.date: 01/18/2024
-ms.topic: article
-ms.custom: has-azure-ad-ps-ref
+ms.date: 03/13/2024
+ms.topic: how-to
+ms.custom:
+  - has-azure-ad-ps-ref
+  - sfi-image-nochange
 ---
 
 # Configure Microsoft Entra multifactor authentication as authentication provider using AD FS
@@ -15,7 +14,7 @@ The information in this article applies to Windows 2016 and later.
 
 If your organization is federated with Microsoft Entra ID, you can use Microsoft Entra multifactor authentication to secure Active Directory Federation Services (AD FS) resources, both on-premises and in the cloud. Microsoft Entra multifactor authentication enables you to eliminate passwords and provide a more secure way to authenticate. With AD FS, you can configure Microsoft Entra multifactor authentication for primary authentication or use it as an extra authentication provider.
 
-Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Microsoft Entra multifactor authentication adapter integrates directly with Microsoft Entra ID and doesn't require an on premises Azure Multi-Factor Authentication Server. The Microsoft Entra multifactor authentication adapter is built into Windows Server 2016. No other installation is required.
+Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Microsoft Entra multifactor authentication adapter integrates directly with Microsoft Entra ID and doesn't require an on premises Azure Multifactor Authentication Server. The Microsoft Entra multifactor authentication adapter is built into Windows Server 2016. No other installation is required.
 
 <a name='register-users-for-azure-ad-multi-factor-authentication-by-using-ad-fs'></a>
 
@@ -78,8 +77,10 @@ The following prerequisites are required when you use Microsoft Entra multifacto
       - `https://login.microsoftonline.com`
 - Your on-premises environment must be [federated with Microsoft Entra ID](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs).
 - [Microsoft Azure Active Directory module for Windows PowerShell](/powershell/module/azuread/).
-- Global administrator permissions on your instance of Microsoft Entra ID to configure it by using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
+- You'll need either an account that has the [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role on your instance of Microsoft Entra ID to configure it by using PowerShell.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Configure the AD FS Servers
 
@@ -118,6 +119,7 @@ In order to enable the AD FS servers to communicate with the Azure multifactor a
 > In order to complete this step you need to connect to your instance of Microsoft Entra ID with Microsoft Graph PowerShell by using `Connect-MgGraph`. These steps assume you've already connected via PowerShell. 
 
 ```powershell
+Connect-MgGraph -Scopes 'Application.ReadWrite.All'
 $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
 $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
 $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($certBase64))
@@ -125,7 +127,7 @@ $newKey = @(@{
     CustomKeyIdentifier = $null
     DisplayName = $certX509.Subject
     EndDateTime = $null
-    Key = [System.Text.Encoding]::ASCII.GetBytes($certBase64)
+    Key = $certX509.GetRawCertData()
     KeyId = [guid]::NewGuid()
     StartDateTime = $null
     Type = "AsymmetricX509Cert"
@@ -155,7 +157,7 @@ Open PowerShell, and enter your own *tenantId* with the `Set-AdfsAzureMfaTenant`
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
-:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
+:::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ad-fs-azure-mfa-5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
 
 Windows Server without the latest service pack doesn't support the `-Environment` parameter for the `Set-AdfsAzureMfaTenant` cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or if you aren't in the Azure Government cloud:
 
@@ -207,6 +209,7 @@ By default, when you configure AD FS with Microsoft Entra multifactor authentica
    > In order to complete this step you need to connect to your instance of Microsoft Entra ID with Microsoft Graph PowerShell by using `Connect-MgGraph`. These steps assume you've already connected via PowerShell. 
 
     ```powershell
+    Connect-MgGraph -Scopes 'Application.ReadWrite.All'
     $servicePrincipalId = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").Id
     $keyCredentials = (Get-MgServicePrincipal -Filter "appid eq '981f26a1-7f43-403b-a875-f8b09b8cd720'").KeyCredentials
     $certX509 = [System.Security.Cryptography.X509Certificates.X509Certificate2]([System.Convert]::FromBase64String($newcert))
@@ -214,7 +217,7 @@ By default, when you configure AD FS with Microsoft Entra multifactor authentica
         CustomKeyIdentifier = $null
         DisplayName = $certX509.Subject
         EndDateTime = $null
-        Key = [System.Text.Encoding]::ASCII.GetBytes($newcert)
+        Key = $certX509.GetRawCertData()
         KeyId = [guid]::NewGuid()
         StartDateTime = $null
         Type = "AsymmetricX509Cert"
@@ -245,9 +248,9 @@ Description:
 The tenant certificate for Azure MFA has been renewed.
 
 TenantId: contoso.onmicrosoft.com.
-Old thumbprint: 7CC103D60967318A11D8C51C289EF85214D9FC63.
+Old thumbprint: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00.
 Old expiration date: 9/15/2019 9:43:17 PM.
-New thumbprint: 8110D7415744C9D4D5A4A6309499F7B48B5F3CCF.
+New thumbprint: BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11.
 New expiration date: 2/27/2020 2:16:07 AM.
 ```
 

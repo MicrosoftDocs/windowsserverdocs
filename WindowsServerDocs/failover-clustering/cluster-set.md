@@ -1,16 +1,14 @@
 ---
 title: Deploy a cluster set for Windows Server Failover Clusters
 description: Learn how to deploy a cluster set
-author: jasongerend
+author: robinharwood
 ms.topic: how-to
 ms.date: 09/08/2022
-ms.author: jgerend
-ms.reviewer: stevenek
+ms.author: roharwoo
+ms.reviewer: robhindman
 ---
 
 # Deploy a cluster set
-
-> Applies to: Windows Server 2019
 
 This article provides information on how to deploy a cluster set for Windows Server Failover Clusters using PowerShell. A cluster set is a group of multiple failover clusters that are clustered together. By using a cluster set, you can increase the number of server nodes in a single Software Defined Data Center (SDDC) cloud by orders of magnitude.
 
@@ -67,7 +65,7 @@ The following provides a summary of each of the elements shown:
 
 ### Management cluster
 
-The management cluster hosts the highly-available management plane and the namespace referral scale-out file server (SOFS) for the cluster set. A management cluster is logically decoupled from individual member clusters that run VM workloads. This makes the cluster set management plane resilient to any localized cluster-wide failures, such as loss of power of a member cluster.
+The management cluster hosts the highly available management plane and the namespace referral scale-out file server (SOFS) for the cluster set. A management cluster is logically decoupled from individual member clusters that run VM workloads. This makes the cluster set management plane resilient to any localized cluster-wide failures, such as loss of power of a member cluster.
 
 ### Cluster set namespace referral SOFS
 
@@ -364,3 +362,5 @@ System state backup will back up the cluster state and metadata. Using Windows S
 ## Next steps
 
 - Learn more about [Storage Replica](/windows-server/storage/storage-replica/storage-replica-overview).
+
+

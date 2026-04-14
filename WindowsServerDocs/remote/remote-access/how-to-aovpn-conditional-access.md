@@ -1,15 +1,14 @@
 ---
 title: Configure conditional access for VPN connectivity using Microsoft Entra ID
 description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
-ms.topic: article
+ms.topic: how-to
 ms.date: 10/31/2023
-ms.author: wscontent
-author: anaharris-ms
+ms.author: roharwoo
+author: robinharwood
+ms.custom: sfi-image-nochange
 ---
 
 # Conditional access for VPN connectivity using Microsoft Entra ID
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
 
 In this how-to guide, you'll learn how to grant VPN users access your resources using [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal). With Microsoft Entra Conditional Access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Microsoft Entra connected application.
 
@@ -18,6 +17,11 @@ In this how-to guide, you'll learn how to grant VPN users access your resources 
 Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
 
 - [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
+  - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
+    - Read Conditional Access policies and configurations
+      - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+    - Create or modify Conditional Access policies
+      - [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator)
 - [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
 
 - You've completed [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md) or you already have setup the Always On VPN infrastructure in your environment.
@@ -73,7 +77,7 @@ When a user attempts a VPN connection, the VPN client makes a call into the Web 
 The VPN client then sends the certificate issued by Microsoft Entra ID to the VPN for credential validation. 
 
 > [!NOTE]
-> Microsoft Entra ID uses the most recently created certificate in the VPN connectivity blade as the Issuer. Microsoft Entra Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16). VPN connection leaf certificates now include a [SID extension](https://learn.microsoft.com/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user’s SID obtained from the onPremisesSecurityIdentifier attribute.
+> Microsoft Entra ID uses the most recently created certificate in the VPN connectivity blade as the Issuer. Microsoft Entra Conditional Access VPN connection leaf certificates now support strong certificate mappings, a certificate-based authentication requirement introduced by [KB5014754](https://support.microsoft.com/kb/5014754). VPN connection leaf certificates now include a [SID extension](/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) of (1.3.6.1.4.1.311.25.2), which contains an encoded version of the user's SID obtained from the onPremisesSecurityIdentifier attribute.
 
 **To create root certificates:**
 
@@ -95,7 +99,7 @@ Create a Conditional Access policy that is assigned to VPN users group and scope
 
 - **Users**: VPN Users
 - **Cloud App**: VPN Server
-- **Grant (access control)**: 'Require multi-factor authentication'. Other controls can be used if desired.
+- **Grant (access control)**: 'Require multifactor authentication'. Other controls can be used if desired.
 
 **Procedure:**
 This step covers creation of the most basic Conditional Access policy.  If desired, additional Conditions and Controls can be used.

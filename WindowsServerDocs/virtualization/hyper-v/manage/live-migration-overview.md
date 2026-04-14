@@ -1,10 +1,9 @@
 ---
 title: Live Migration Overview
 description: Gives overview of live migration functionality in Windows Server 2016.
-ms.topic: article
-ms.assetid: 5cc875ab-05c4-439e-b27d-6bfc77054660
-ms.author: benarm
-author: BenjaminArmstrong
+ms.topic: overview
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/27/2017
 ---
 
@@ -31,3 +30,4 @@ If you're using older versions of Windows Server, or need details on features in
 In Windows Server 2016, there are fewer restrictions on live migration deployment.  It now works without Failover Clustering.  Other functionality remains unchanged from previous releases of Live Migration.  For more details on configuring and using live migration without Failover Clustering:
 * [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md)
 * [Use live migration without Failover Clustering to move a virtual machine](use-live-migration-without-failover-clustering-to-move-a-virtual-machine.md)
+

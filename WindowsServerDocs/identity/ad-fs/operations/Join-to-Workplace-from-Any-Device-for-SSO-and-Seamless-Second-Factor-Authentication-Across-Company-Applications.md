@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications"
-ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications

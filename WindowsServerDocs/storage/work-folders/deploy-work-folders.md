@@ -1,15 +1,12 @@
 ---
-ms.assetid: d2429185-9720-4a04-ad94-e89a9350cdba
 title: Deploying Work Folders
-ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+ms.topic: install-set-up-deploy
+author: robinharwood
+ms.author: roharwoo
 ms.date: 6/24/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---
 # Deploying Work Folders
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This article discusses the steps needed to deploy Work Folders. It assumes that you've already read [Planning a Work Folders deployment](plan-work-folders.md).
 
@@ -75,10 +72,10 @@ Add-WindowsFeature FS-SyncShareService
 
 - Utilize the IIS management console on a server that has it installed. From within the console, connect to the file server you want to manage, and then select the Default Web Site for that server. The Default Web Site will appear disabled, but you can still edit the bindings for the site and select the certificate to bind it to that web site.
 
-- Use the netsh command to bind the certificate to the Default Web Site https interface. The command is as follows:
+- Use the netsh command to bind the certificate to the Default Web Site https interface. Run the following command to bind the certificate. Make sure to replace the `<Cert thumbprint>` with the thumbprint of the certificate you want to bind, the `<IP address>` with the IP address of the server, and the `<App GUID>` with a GUID that you generate. You can generate a GUID using the [New-Guid](/powershell/module/microsoft.powershell.utility/new-guid) cmdlet in Windows PowerShell.
 
-    ```
-    netsh http add sslcert ipport=<IP address>:443 certhash=<Cert thumbprint> appid={CE66697B-3AA0-49D1-BDBD-A25C8359FD5D} certstorename=MY
+    ```cmd
+    netsh http add sslcert ipport=<IP address>:443 certhash=<Cert thumbprint> appid={App GUID} certstorename=MY
     ```
 
 ## Step 5: Create security groups for Work Folders
@@ -193,7 +190,7 @@ DsAcls $ADGroupPath /I:S /G ""$GroupName":RPWP;msDS-SyncServerUrl;user"
 
 9. Review your selections and complete the wizard to create the sync share.
 
-You can create sync shares using Windows PowerShell by using the [New-SyncShare](/powershell/module/syncshare/new-syncshare?view=windowsserver2022-ps) cmdlet. Below is an example of this method:
+You can create sync shares using Windows PowerShell by using the [New-SyncShare](/powershell/module/syncshare/new-syncshare) cmdlet. Below is an example of this method:
 
 ```powershell
 New-SyncShare "HR Sync Share" K:\Share-1 –User "HR Sync Share Users"
@@ -291,3 +288,4 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
 |**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
 |**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/)|
+

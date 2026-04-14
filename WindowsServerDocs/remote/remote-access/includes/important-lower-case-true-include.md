@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 >[!IMPORTANT]
 >Any other combination of upper or lower case for 'true' in the following tags results in a partial configuration of the VPN profile:
 >

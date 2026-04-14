@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Walkthrough: Workplace Join to an Android device"
-ms.assetid: a33bd54c-e6db-4b58-8264-c0f34bd8ba39
 title: Walkthrough - Workplace Join to an Android device
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 # Walkthrough: Workplace Join to an Android device
 

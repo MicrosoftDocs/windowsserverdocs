@@ -1,18 +1,13 @@
 ---
 description: "Learn more about: Planning Domain Controller Placement"
-ms.assetid: 692bd2af-deee-44cf-9af9-f364677e267f
 title: Planning Domain Controller Placement
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Planning Domain Controller Placement
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After you have gathered all of the network information that will be used to design your site topology, plan where you want to place domain controllers, including forest root domain controllers, regional domain controllers, operations master role holders, and global catalog servers.
 

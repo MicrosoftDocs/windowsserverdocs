@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 If you provided any certificates to HGS using thumbprints, you will be instructed to grant HGS read access to the private key of those certificates. 
 On a server with Desktop Experience installed, complete the following steps:
 

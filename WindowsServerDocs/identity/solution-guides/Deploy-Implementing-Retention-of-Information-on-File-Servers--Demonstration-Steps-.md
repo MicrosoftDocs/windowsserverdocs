@@ -3,14 +3,11 @@ description: "Learn more about: Deploy Implementing Retention of Information on 
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 author: robinharwood
 ms.author: roharwoo
-manager: femila
 ms.date: 04/01/2022
 ms.topic: how-to
 ---
 
 # Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can set retention periods for folders and put files on legal hold by using File Classification Infrastructure and File Server Resource Manager.
 
@@ -177,3 +174,4 @@ To manually classify a file:
 - [Plan for Retention of Information on File Servers](plan-retention-information-file-servers.md)
 
 - [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
+

@@ -1,15 +1,13 @@
 ---
 title: Develop a solution extension
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
+ms.topic: how-to
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 09/18/2018
 ---
 
 # Develop a solution extension
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Solutions primarily define a unique type of object you wish to manage through Windows Admin Center.  These solutions/connection types are included with Windows Admin Center by default:
 

@@ -1,18 +1,13 @@
 ---
 description: "Learn more about: TPM Key Attestation"
-ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # TPM Key Attestation
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

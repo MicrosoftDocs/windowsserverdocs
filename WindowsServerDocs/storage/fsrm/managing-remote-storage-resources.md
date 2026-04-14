@@ -2,15 +2,12 @@
 title: Managing Remote Storage Resources
 description: This article describes how to manage storage resources on a remote computer
 ms.date: 7/7/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Managing Remote Storage Resources
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 To manage storage resources on a remote computer, you have two options:
 
@@ -31,3 +28,4 @@ This section includes the following topics:
 
 -   [Connect to a Remote Computer](connect-to-remote-computer.md)
 -   [Command-Line Tools](command-line-tools.md)
+

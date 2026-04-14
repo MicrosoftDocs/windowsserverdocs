@@ -1,16 +1,12 @@
 ---
 title: Understand the usage of virtual networks and VLANs
 description: In this topic, you learn about Hyper-V network virtualization virtual networks and how they differ from virtual local area networks (VLANs). With Hyper-V network virtualization, you create overlay virtual networks, also called virtual networks.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
-ms.author: anpaul
-author: AnirbanPaul
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Understand the usage of virtual networks and VLANs
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 In this topic, you learn about Hyper-V network virtualization virtual networks and how they differ from virtual local area networks (VLANs). With Hyper-V network virtualization, you create overlay virtual networks, also called virtual networks.
 

@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Appendix F: Securing Domain Admins Groups in Active Directory"
-ms.assetid: 017b88a6-f29b-4787-99b6-b5c8eaf8c3df
 title: Appendix F - Securing Domain Admins Groups in Active Directory
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: best-practice
 ---
 
 # Appendix F: Securing Domain Admins Groups in Active Directory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix F: Securing Domain Admins Groups in Active Directory
@@ -171,7 +167,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 6.  The following screenshot shows the error message that should appear.
 
-    ![Screenshot that shows the error message that should appear while you're attempting to accsss the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
+    ![Screenshot that shows the error message that should appear while you're attempting to access the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
 
 ##### Verify "Deny log on as a batch job" GPO Settings
 

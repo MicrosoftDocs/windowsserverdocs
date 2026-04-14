@@ -1,15 +1,13 @@
 ---
 title: Develop a tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
+ms.topic: how-to
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 09/18/2018
 ---
 
 # Develop a tool extension
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 A tool extension is the primary way that users interact with Windows Admin Center to manage a connection, such as a server or cluster. When you click on a connection in the Windows Admin Center home screen and connect, you will then be presented with a list of tools in the left navigation pane. When you click on a tool, the tool extension is loaded and displayed in the right pane.
 

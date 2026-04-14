@@ -1,16 +1,12 @@
 ---
 title: Configure Encryption for a Virtual Network
 description: Learn how to create the encryption certificate, create the certificate credential, and configuring a virtual network for encryption.
-manager: grcusanz
 ms.topic: how-to
-ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/02/2021
 ---
 # Configure Encryption for a Virtual Subnet
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.' It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
@@ -25,7 +21,7 @@ Once you enable encryption on a subnet, all network traffic within that subnet i
 >When communicating with another VM on the same subnet, whether its currently connected or connected at a later time, the traffic gets encrypted automatically.
 
 >[!TIP]
->If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell).
+>If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure/azure-local/manage/use-datacenter-firewall-powershell?context=/windows-server/context/windows-server-edge-networking).
 
 
 ## Step 1: Create the Encryption Certificate
@@ -96,7 +92,7 @@ Each host must have an encryption certificate installed. You can use the same ce
     Thumbprint                                Subject
     ----------                                -------
     84857CBBE7A1C851A80AE22391EB2C39BF820CE7  CN=MyNetwork
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00  CN=EncryptedVirtualNetworks
     ```
 
 1. Export the certificate to a file.<p>You need two copies of the certificate, one with the private key and one without.
@@ -174,13 +170,13 @@ Each host must have an encryption certificate installed. You can use the same ce
 
     Thumbprint                                Subject
     ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00  CN=EncryptedVirtualNetworks
 
     PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\root
 
     Thumbprint                                Subject
     ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00  CN=EncryptedVirtualNetworks
     ```
 
 7. Make note of the Thumbprint.<p>You must make a note of the thumbprint because you need it to create the certificate credential object in the network controller.
@@ -191,7 +187,7 @@ After you install the certificate on each of the Hyper-V hosts connected to the 
 
 ```
 ///Replace with the thumbprint from your certificate
-$thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"
+$thumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
 
 $uri = "https://nc.contoso.com"
 

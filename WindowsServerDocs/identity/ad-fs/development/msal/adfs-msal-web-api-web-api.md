@@ -1,15 +1,13 @@
 ---
 title: AD FS MSAL Web API calling Web API (On Behalf of Scenario)
 description: Learn how to build a Web API calling another Web API.
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+ms.date: 04/08/2025
 ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Scenario: Web API calling Web API (On Behalf Of Scenario)
->Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
+>
 
 Learn how to build a Web API calling another Web API On Behalf Of the user.
 

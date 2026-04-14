@@ -1,18 +1,15 @@
 ---
-title: Configure a Server Core installation of Windows Server and Azure Stack HCI with the Server Configuration tool (SConfig)
-description: In Windows Server and Azure Stack HCI, you can use the Server Configuration tool (SConfig) to configure and manage several common aspects of server lifecycle. It includes network configuration, Active Directory domain membership, installation of Microsoft updates, and operating system activation
-ms.topic: article
+title: Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)
+description: In Windows Server and Azure Local, you can use the Server Configuration tool (SConfig) to configure and manage several common aspects of server lifecycle. It includes network configuration, Active Directory domain membership, installation of Microsoft updates, and operating system activation
+ms.topic: how-to
 author: Orin-Thomas
-ms.author: inhenkel
-manager: femila
+ms.author: roharwoo
 ms.date: 08/18/2021
-ms.prod: windows-server
-ms.assetid: e6cac074-c6fc-46dd-9664-fa0342c0a5e8
 ---
 
-# Configure a Server Core installation of Windows Server and Azure Stack HCI with the Server Configuration tool (SConfig)
+# Configure a Server Core installation of Windows Server and Azure Local with the Server Configuration tool (SConfig)
 
-You can use the Server Configuration tool (SConfig) to configure and manage a Windows Server instance or Azure Stack HCI. When Windows Server is installed with the Server Core installation option, SConfig is the primary way to configure and manage common aspects of the operating system, including:
+You can use the Server Configuration tool (SConfig) to configure and manage a Windows Server instance or Azure Local. When Windows Server is installed with the Server Core installation option, SConfig is the primary way to configure and manage common aspects of the operating system, including:
 
 - Network configuration
 - Active Directory domain membership
@@ -26,8 +23,8 @@ You can use the Server Configuration tool (SConfig) to configure and manage a Wi
 
 Here are some things to keep in mind about SConfig:
 
-- Starting with Windows Server 2022 (deployed with the Server Core installation option) and Azure Stack HCI automatically run SConfig after user signs in, unless AutoLaunch is disabled. On previous versions of Windows Server, SConfig needs to be launched using `SConfig.cmd`.
-- Also starting with Windows Server 2022 and Azure Stack HCI, SConfig is based on PowerShell and will restart automatically if you accidentally close the existing PowerShell window.
+- Starting with Windows Server 2022 (deployed with the Server Core installation option) and Azure Local automatically run SConfig after user signs in, unless AutoLaunch is disabled. On previous versions of Windows Server, SConfig needs to be launched using `SConfig.cmd`.
+- Also starting with Windows Server 2022 and Azure Local, SConfig is based on PowerShell and will restart automatically if you accidentally close the existing PowerShell window.
 - You must be a member of the local Administrators group to use SConfig.
 - You can use SConfig in the following scenarios:
   - you have signed in locally
@@ -36,7 +33,7 @@ Here are some things to keep in mind about SConfig:
 
 ## Start SConfig
 
-SConfig starts automatically starting with Windows Server 2022 (deployed in Server Core installation option) and Azure Stack HCI. To run SConfig on previous versions of Windows Server, follow these steps: It is also possible to run SConfig on Windows Server installed with the Server with Desktop Experience installation option using these steps:
+SConfig starts automatically starting with Windows Server 2022 (deployed in Server Core installation option) and Azure Local. To run SConfig on previous versions of Windows Server, follow these steps: It is also possible to run SConfig on Windows Server installed with the Server with Desktop Experience installation option using these steps:
 
 1. Launch PowerShell.
 1. Type `SConfig`, and then press `Enter`. The Server configuration tool interface opens.
@@ -44,7 +41,7 @@ SConfig starts automatically starting with Windows Server 2022 (deployed in Serv
    :::image type="content" source="../media/sconfig-main-page.png" alt-text="SConfig user interface":::
 
 > [!NOTE]
-> Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` also works in Windows Server 2022 and Azure Stack HCI, just like it did in previous versions. However, this method is [no longer being developed](../../get-started/removed-deprecated-features-windows-server-2022.md) and may be removed in the future versions of the operating system. The recommended way to manually launch SConfig if required is by running `SConfig` in a PowerShell window.
+> Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` also works in Windows Server 2022 and Azure Local, just like it did in previous versions. However, this method is [no longer being developed](../../get-started/removed-deprecated-features-windows-server-2022.md) and may be removed in the future versions of the operating system. The recommended way to manually launch SConfig if required is by running `SConfig` in a PowerShell window.
 
 ## Join a domain or workgroup
 
@@ -114,7 +111,7 @@ The **Download only** option will scan for updates, download any that are availa
 When **Manual updates** is selected, the system will not check for updates automatically.
 
 > [!NOTE]
-> Action center is only available on Windows Server installed with the Server with Desktop Experience installation option, and it is only visible while you're signed in to the server. On Server Core and Azure Stack HCI, you won't receive any notifications.
+> Action center is only available on Windows Server installed with the Server with Desktop Experience installation option, and it is only visible while you're signed in to the server. On Server Core and Azure Local, you won't receive any notifications.
 
 ### Configure updates
 
@@ -135,7 +132,7 @@ You can choose to search for updates from the following categories:
 > [!NOTE]
 > The [terminology for update types](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) (but not necessarily release cadence and schedule) is unified with Windows 10 and Windows 11. Hence, *Feature updates* is another name for what used to be known as operating system upgrades. Regular monthly updates, including security updates, are referred to as *Quality updates*.
 >
-> [Feature updates from Microsoft Update](/azure-stack/hci/manage/preview-channel) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO). From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage an automation solution such as mentioned earlier. SConfig does not specifically facilitate these scenarios.
+> [Feature updates from Microsoft Update](/azure/azure-local/deploy/download-23h2-software) are currently only available for Azure Local. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO). From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage an automation solution such as mentioned earlier. SConfig does not specifically facilitate these scenarios.
 
 The search returns any available updates within the category. You will be presented with the option of installing all available updates, a specific update, or none of the available updates.
 
@@ -193,14 +190,14 @@ This option lets you configure whether anonymized statistical information about 
 1. To change the telemetry setting, type `Y` for Yes or `N` for No and press `Enter`.
 
 > [!NOTE]
-> Windows Server and Azure Stack HCI have different default configuration regarding to telemetry. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Stack HCI, see [Azure Stack HCI data collection](/azure-stack/hci/concepts/data-collection). Please note that you cannot configure Azure Stack HCI data collection in SConfig. To learn more about Microsoft's approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
+> Windows Server and Azure Local have different default configuration regarding to telemetry. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Local, see [Azure Local telemetry and diagnostics extension](/azure/azure-local/concepts/telemetry-and-diagnostics-overview). Please note that you cannot configure Azure Local data collection in SConfig. To learn more about Microsoft's approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
 
 ## Windows activation
 
-This option lets you display current license and activation status, install a product key, and activate Windows Server
+This option lets you display current license and activation status, install a product key, and activate Windows Server.
 
 > [!NOTE]
-> Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure-stack/hci/manage/manage-azure-registration#unregister-azure-stack-hci-by-using-powershell) is a different process.
+> Activation is only needed for Windows Server. This menu item is not available on Azure Local as [Azure Local deployment](/azure/azure-local/deploy/deployment-introduction) is a different process.
 
 1. From the SConfig main menu, type `11` and press `Enter` to enter the **Windows activation** settings page.
 2. Choose one of the following options:
@@ -230,7 +227,7 @@ This menu item closes the SConfig menu and returns to an interactive PowerShell 
 > [!NOTE]
 > As a general rule, every setting available in the operating system can be controlled using command line tools or scripts. However, many of these settings are more conveniently managed remotely using graphical tools such as Windows Admin Center, Server Manager and System Center.
 
-To exit to PowerShell from SConfig main menu, type `15` and press `Enter`. To return to Server configuration tool, type `SConfig`, and then press `Enter`. Alternatively, starting with Windows Server 2022 and Azure Stack HCI, type `exit`. It will close the current PowerShell window and open a new instance of SConfig automatically.
+To exit to PowerShell from SConfig main menu, type `15` and press `Enter`. To return to Server configuration tool, type `SConfig`, and then press `Enter`. Alternatively, starting with Windows Server 2022 and Azure Local, type `exit`. It will close the current PowerShell window and open a new instance of SConfig automatically.
 
 > [!NOTE]
 > If you happened to manually launch SConfig from a Command Prompt session (as opposite to a PowerShell session), then exiting SConfig via menu option `15` will get you back to Command prompt. Even though the menu item says **Exit to command line (PowerShell)**, in this specific case, there is no interactive PowerShell session left.
@@ -239,7 +236,7 @@ To exit to PowerShell from SConfig main menu, type `15` and press `Enter`. To re
 
 Before Windows Server 2022, the default shell on Server Core was Command Prompt (CMD). It launched by default when user signed in to Server Core. From there, you could either launch SConfig, or run arbitrary command-line tools.
 
-Starting with Windows Server 2022 (when deployed with the Server Core installation option) and Azure Stack HCI, the default shell is PowerShell. It starts by default, and SConfig is launched automatically within the PowerShell window. If you exit SConfig by using menu option `15`, you get to the interactive PowerShell session.
+Starting with Windows Server 2022 (when deployed with the Server Core installation option) and Azure Local, the default shell is PowerShell. It starts by default, and SConfig is launched automatically within the PowerShell window. If you exit SConfig by using menu option `15`, you get to the interactive PowerShell session.
 
 However, if PowerShell is uninstalled, the default shell falls back to CMD. Unlike in previous versions of the operating system, if PowerShell is uninstalled, SConfig won't run either automatically or manually. You will only be able to use the classic command-line tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart).
 
@@ -253,12 +250,13 @@ You can explicitly transition to Command Prompt by typing `cmd` in PowerShell an
 > [!NOTE]
 > If you intend to *reload* an existing PowerShell session (e.g. for module updates to take effect), launching SConfig and exiting it won't be sufficient. This is because SConfig itself is a PowerShell application which runs within an existing PowerShell session. Exiting SConfig will get you into the original session.
 >
-> Instead, to reload a PowerShell session, type `exit` and press `Enter`. This will close the existing PowerShell window, and a new one will be started automatically. Note that reloading a PowerShell session is specific to Server Core installations of Windows Server and Azure Stack HCI. On Server with Desktop Experience installations of Windows Server, you will have to manually launch a new PowerShell window.
+> Instead, to reload a PowerShell session, type `exit` and press `Enter`. This will close the existing PowerShell window, and a new one will be started automatically. Note that reloading a PowerShell session is specific to Server Core installations of Windows Server and Azure Local. On Server with Desktop Experience installations of Windows Server, you will have to manually launch a new PowerShell window.
 
 ## Disable SConfig from starting automatically
 
-SConfig launches automatically starting with Windows Server 2022 (when deployed with the Server Core installation option) and on Azure Stack HCI. You can stop SConfig from launching automatically by running the following command in PowerShell:
+SConfig launches automatically starting with Windows Server 2022 (when deployed with the Server Core installation option) and on Azure Local. You can stop SConfig from launching automatically by running the following command in PowerShell:
 
 ```powershell
 Set-SConfig -AutoLaunch $False
 ```
+

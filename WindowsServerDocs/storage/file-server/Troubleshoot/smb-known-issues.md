@@ -1,10 +1,9 @@
 ---
 title: SMB known issues
 description: List of the SMB known issues.
-author: Deland-Han
-manager: dcscontentpm
-ms.topic: article
-ms.author: delhan
+author: robinharwood
+ms.topic: troubleshooting-known-issue
+ms.author: roharwoo
 ms.date: 12/25/2019
 ---
 
@@ -25,3 +24,4 @@ The following topics describe some common troubleshooting issues that can occur 
 - [Troubleshoot the Event ID 50 Error Message](troubleshoot-event-id-50-error.md)
 
 - [SMB Multichannel troubleshooting](smb-multichannel-troubleshooting.md)
+

@@ -2,10 +2,9 @@
 title: SMB - File and printer sharing ports should be open
 description: Learn how to keep file and printer sharing ports open for Server Message Block (SMB)-based network services and resolve the Best Practices Analyzer scan issue.
 ms.date: 03/20/2023
-author: JasonGerend
-manager: elizapo
-ms.author: jgerend
-ms.topic: conceptual
+author: robinharwood
+ms.author: roharwoo
+ms.topic: troubleshooting-problem-resolution
 ---
 
 # SMB: File and printer sharing ports should be open
@@ -52,3 +51,4 @@ To open the firewall ports and enable file and printer sharing, complete the fol
 - [Understanding shared folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))
 
 <!-- Alterate path to related link -- https://technet.microsoft.com/library/cc731402.aspx -->
+

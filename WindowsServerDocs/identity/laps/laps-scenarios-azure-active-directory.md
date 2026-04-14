@@ -2,9 +2,10 @@
 title: Get started with Windows LAPS and Microsoft Entra ID
 description: Learn how to get started with Windows Local Administrator Password Solution (Windows LAPS) and Microsoft Entra ID.
 author: jay98014
-ms.author: jsimmons
-ms.date: 07/04/2022
-ms.topic: conceptual
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: get-started
+ms.custom: sfi-image-nochange
 ---
 
 # Get started with Windows LAPS and Microsoft Entra ID
@@ -13,9 +14,13 @@ Learn how to get started with Windows Local Administrator Password Solution (Win
 
 ## Supported Azure clouds
 
-See [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
+See [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps) and [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview) for information on which specific clouds are supported.
 
 <a name='enable-laps-in-the-azure-ad-device-settings'></a>
+
+## Review Microsoft Entra ID permissions
+
+Review the membership of the built-in Microsoft Entra roles that, by default, have access to Windows LAPS passwords stored in Microsoft Entra ID. These roles are highly privileged.
 
 ## Enable LAPS in the Microsoft Entra device settings
 
@@ -122,7 +127,7 @@ You're almost there! First, sign in to Microsoft Graph. Then, use the `Get-LapsA
 To sign in to Microsoft Graph, use the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID and the application ID of the Microsoft Entra application you created earlier. Run the cmdlet once to sign in. For example:
 
 ```powershell
-PS C:\> Connect-MgGraph -Environment Global -TenantId acca2622-272f-413f-865f-a67416923a6b -ClientId 1c2e514c-2ef1-486d-adbb-8da208457957
+PS C:\> Connect-MgGraph -Environment Global -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee -ClientId 00001111-aaaa-2222-bbbb-3333cccc4444
 ```
 
 ```output
@@ -219,7 +224,7 @@ While not required for Windows LAPS to operate, whenever you extend your on-prem
 ## See also
 
 - [Introducing Windows Local Administrator Password Solution with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/introducing-windows-local-administrator-password-solution-with/ba-p/1942487)
-- [Windows Local Administrator Password Solution in Microsoft Entra ID (preview)](https://aka.ms/cloudlaps)
+- [Windows Local Administrator Password Solution in Microsoft Entra ID](https://aka.ms/cloudlaps)
 - [Microsoft Intune](/mem/intune)
 - [Microsoft Intune support for Windows LAPS](/mem/intune/protect/windows-laps-overview)
 - [Windows LAPS CSP](/windows/client-management/mdm/laps-csp)

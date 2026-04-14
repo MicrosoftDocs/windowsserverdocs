@@ -1,15 +1,12 @@
 ---
 title: AD FS 2016 Single Sign On Settings
 description: "Learn more about: AD FS single sign-on Settings"
-ms.topic: article
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+ms.topic: how-to
+ms.date: 04/08/2025
 ---
 # AD FS single sign-on settings
 
-Applies to: Windows Server (All supported versions)
+
 
 Single sign-on (SSO) allows users to authenticate once and access multiple resources without being prompted for more credentials. This article describes the default AD FS behavior for SSO and the configuration settings that let you customize this behavior.
 

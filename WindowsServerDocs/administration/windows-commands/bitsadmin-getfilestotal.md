@@ -2,10 +2,8 @@
 title: bitsadmin getfilestotal
 description: Reference article for the bitsadmin getfilestotal command, which retrieves the number of files in the specified job.
 ms.topic: reference
-ms.assetid: c5de113e-f29c-4cd3-9392-0e300018d516
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

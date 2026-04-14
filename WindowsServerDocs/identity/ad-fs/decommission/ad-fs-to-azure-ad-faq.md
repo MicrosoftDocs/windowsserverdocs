@@ -1,11 +1,8 @@
 ---
 description: "FAQ for migrating from AD FS to Microsoft Entra ID"
 title: AD FS to Microsoft Entra FAQ
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: faq
 ---
 
 

@@ -1,11 +1,8 @@
 ---
 description: "Learn more about: AD FS Decommission"
 title: AD FS Decommission Reference
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: upgrade-and-migration-article
 ---
 # AD FS Decommission
 
@@ -15,7 +12,7 @@ A detailed guide on information you need to know to decommission your AD FS serv
 |:-----------|:-------------|
 |[AD FS decommission guide](../ad-fs/decommission/adfs-decommission-guide.md)|Detailed guide to decommissioning your AD FS servers.|
 |[AD FS migration workshop](https://aka.ms/adfs2azureadworkshop)|Attend a workshop on how to successfully migrate off of AD FS.|
-|[AD FS migration wizard](https://aka.ms/ADFS2AAD/Guide)|Provides custom guidance on migrating to Microsoft Entra ID.|
+|[AD FS migration wizard](/entra/identity/enterprise-apps/migrate-ad-fs-application-howto)|Provides custom guidance on migrating to Microsoft Entra ID.|
 |[AD FS to Microsoft Entra FAQ](../ad-fs/decommission/ad-fs-to-azure-ad-faq.md)|FAQ for moving from AD FS to Microsoft Entra ID.|
 
 <a name='resources-for-migrating-authentication-from-ad-fs-to-azure-active-directory'></a>

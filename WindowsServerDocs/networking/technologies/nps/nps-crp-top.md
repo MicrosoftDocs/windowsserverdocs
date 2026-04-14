@@ -1,17 +1,13 @@
 ---
 title: Connection Request Processing
 description: This topic provides an overview of Network Policy Server connection request processing in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 849d661a-42c1-4f93-b669-6009d52aad39
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Connection Request Processing
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about connection request processing in Network Policy Server in Windows Server 2016.
 
@@ -92,3 +88,4 @@ When NPS is used as a RADIUS proxy between a RADIUS client and a RADIUS server, 
 10. The RADIUS server sends an Accounting-Response to the NPS RADIUS proxy, where it is forwarded to the access server.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
+

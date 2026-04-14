@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 Locate your HGS guardian certificates. 
 You will need one signing certificate and one encryption certificate to initialize the HGS cluster.
 The easiest way to provide certificates to HGS is to create a password-protected PFX file for each certificate which contains both the public and private keys.

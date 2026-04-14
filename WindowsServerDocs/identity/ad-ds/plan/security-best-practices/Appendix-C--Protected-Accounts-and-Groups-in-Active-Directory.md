@@ -1,17 +1,16 @@
 ---
 description: "Learn more about: Appendix C: Protected Accounts and Groups in Active Directory"
-ms.assetid: 5b2876ac-fe7d-4054-bfba-b692e57bc0d2
 title: Appendix C - Protected Accounts and Groups in Active Directory
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 01/30/2024
-ms.topic: article
-ms.custom: inhenkel, orthomas
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: best-practice
+ms.custom:
+  - inhenkel
+  - orthomas
+  - sfi-image-nochange
 ---
 # Appendix C: Protected Accounts and Groups in Active Directory
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Appendix C: Protected Accounts and Groups in Active Directory
 
@@ -31,6 +30,8 @@ The following security accounts and groups are protected in Active Directory Dom
 - Domain Admins
 - Domain Controllers
 - Enterprise Admins
+- Enterprise Key Admins
+- Key Admins
 - Krbtgt
 - Print Operators
 - Read-only Domain Controllers

@@ -1,14 +1,14 @@
 ---
 title: Cross Domain Cluster Migration in Windows Server 2016/2019
 description: This article describes moving a Windows Server 2019 cluster from one domain to another
-ms.topic: article
-ms.author: wscontent
+ms.topic: how-to
 author: robinharwood
+ms.author: roharwoo
 ms.date: 11/02/2023
 ---
 # Failover Cluster domain migration
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 
 This article provides an overview for moving Windows Server failover clusters from one domain to another.
 
@@ -81,6 +81,12 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
 2. Sign in to the first server with a domain user or administrator account that has Active Directory permissions to the Cluster Name Object (CNO), Virtual Computer Objects (VCO), has access to the Cluster, and open PowerShell.
 3. Ensure all Cluster Network Name resources are in an offline state and run the following command to remove the Active Directory objects that the cluster might have.
 
+   > [!NOTE]
+   >
+   > - If you can't delete cluster name objects using the `-Cluster CLUSCLUS` option, either remove the `-Cluster` option or execute `-Cluster <Node Name>`
+   >
+   > - If you can't delete cluster name objects using the `-DeleteComputerObjects` option, update the CNO object permissions to give the VCO account full control of the CNO in advance.
+
    ```powershell
    Remove-ClusterNameAccount -Cluster CLUSCLUS -DeleteComputerObjects
    ```
@@ -112,6 +118,9 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
 
    Start-ClusterResource -Name FS-CLUSCLUS
    ```
+    >[!NOTE]
+    >
+    > If the subsequent [New-ClusterNameAccount](/powershell/module/failoverclusters/new-clusternameaccount) fails, bring the Cluster Name and all other cluster Network Name resources to an offline state before retrying.
 
 8. Change the cluster to be a part of the new domain with associated active directory objects. The following command recreates the name objects in Active Directory and the network name resources must be in an online state:
 
@@ -120,7 +129,10 @@ In the following steps, a cluster is being moved from the Contoso.com domain to 
    ```
 
     >[!NOTE]
-    >If you don't have any additional groups with network names, such as a Hyper-V Cluster with only virtual machines, the `-UpgradeVCOs` parameter isn't needed.
+    >
+    > - If you don't have any additional groups with network names, such as a Hyper-V Cluster with only virtual machines, the `-UpgradeVCOs` parameter isn't needed.
+    >
+    > - If the VCO is not created when running [New-ClusterNameAccount](/powershell/module/failoverclusters/new-clusternameaccount), please use the _Repair_ function on the Cluster Network Name resources from the Failover Cluster Manager.
 
 9. Use **Active Directory Users and Computers** to check the new domain and ensure the associated computer objects were created. If they have, then bring the remaining resources in the groups online.
 
@@ -137,3 +149,4 @@ If you're using the new USB witness feature, you'll be unable to add the cluster
 ```
 New-ClusternameAccount : Cluster name account cannot be created. This cluster contains a file share witness with invalid permissions for a cluster of type AdministrativeAccesssPoint ActiveDirectoryAndDns. To proceed, delete the file share witness. After this you can create the cluster name account and recreate the file share witness. The new file share witness will be automatically created with valid permissions.
 ```
+

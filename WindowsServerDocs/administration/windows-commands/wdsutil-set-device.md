@@ -2,15 +2,13 @@
 title: wdsutil set-device
 description: Reference article for wdsutil set-device, which changes the attributes of a prestaged computer.
 ms.topic: reference
-ms.assetid: 401567f8-eaeb-4a2d-b811-140bb007028d
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # wdsutil set-device
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the attributes of a prestaged computer. A prestaged computer is a computer that has been linked to a computer account object in active directory Domain Servers (AD DS). Prestaged clients are also called known computers. You can configure properties on the computer account to control the installation for the client. For example, you can configure the network boot program and the unattend file that the client should receive, as well as the server from which the client should download the network boot program.
 

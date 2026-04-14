@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Certificate Requirements for Federation Servers"
-ms.assetid: 9831b421-8fb7-4e15-ac27-c013cbca6d05
 title: Certificate Requirements for Federation Servers
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: concept-article
 ---
 
 # Certificate Requirements for Federation Servers

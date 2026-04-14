@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Identifying Forest Design Requirements"
-ms.assetid: 7d957ebb-3476-49d8-b00b-6e93b4a94778
 title: Identifying Forest Design Requirements
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 # Identifying Forest Design Requirements
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 To create a forest design for your organization, you must identify the business requirements that your directory structure needs to accommodate. This involves determining how much autonomy the groups in your organization need to manage their network resources and whether or not each group needs to isolate their resources on the network from other groups.
 

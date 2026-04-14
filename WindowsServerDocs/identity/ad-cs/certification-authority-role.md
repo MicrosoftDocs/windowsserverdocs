@@ -2,7 +2,7 @@
 title: What is the Certification Authority Role Service in Windows Server?
 description: You can use this article to understand the Active Directory Certificate Services Certification Authority role.
 author: Orin-Thomas
-ms.topic: conceptual
+ms.topic: concept-article
 ms.author: orthomas
 contributor: orthomas
 ms.date: 06/20/2023

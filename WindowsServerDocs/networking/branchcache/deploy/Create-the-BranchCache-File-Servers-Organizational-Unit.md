@@ -1,16 +1,12 @@
 ---
 title: Create the BranchCache File Servers Organizational Unit
 description: Learn how to create an organizational unit (OU) in Active Directory Domain Services (AD DS) for BranchCache file servers.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: 2cda192f-6b45-4e6c-88d9-70ca179ddb94
-ms.author: jgerend
-author: JasonGerend
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Create the BranchCache File Servers Organizational Unit
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to create an organizational unit (OU) in Active Directory Domain Services (AD DS) for BranchCache file servers.
 

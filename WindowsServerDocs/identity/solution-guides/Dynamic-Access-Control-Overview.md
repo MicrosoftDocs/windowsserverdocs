@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Dynamic Access Control Overview"
-ms.assetid: 9ee8a6cb-7550-46e2-9c11-78d0545c3a97
 title: Dynamic Access Control Overview
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Dynamic Access Control Overview
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2, Windows Server 2012
 
 This overview topic for the IT professional describes Dynamic Access Control and its associated elements, which were introduced in  Windows Server 2012  and Windows 8.
 

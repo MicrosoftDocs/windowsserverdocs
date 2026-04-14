@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)"
-ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 12/15/2021
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 
 # Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains the AD DS replication and topology management cmdlets in more detail, and provides additional examples. For an introduction, see [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md).
 

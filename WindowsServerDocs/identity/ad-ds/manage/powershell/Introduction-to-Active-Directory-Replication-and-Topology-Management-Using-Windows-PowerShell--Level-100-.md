@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)"
-ms.assetid: c54b544f-cc32-4837-bb2d-a8656b22f3de
 title: Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: how-to
+
 ---
 
 # Introduction to Active Directory Replication and Topology Management Using Windows PowerShell (Level 100)
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell for Active Directory includes the ability to manage replication, sites, domains and forests, domain controllers, and partitions. Users of prior management tools such as the Active Directory Sites and Services snap-in and repadmin.exe will notice that similar functionality is now available from within the Windows PowerShell for Active Directory context. In addition, the cmdlets are compatible with the existing Windows PowerShell for Active Directory cmdlets, thus creating a streamlined experience and allowing customers to easily create automation scripts.
 

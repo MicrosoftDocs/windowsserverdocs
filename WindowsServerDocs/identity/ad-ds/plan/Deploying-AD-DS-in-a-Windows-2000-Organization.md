@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Deploying AD DS in a Windows 2000 Organization"
-ms.assetid: 7530cafe-98d7-46c9-95d9-e49d39caa021
 title: Deploying AD DS in a Windows 2000 Organization
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Deploying AD DS in a Windows 2000 Organization
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If your organization is currently running Windows 2000 Active Directory, you can deploy  Windows Server 2008  Active Directory Domain Services (AD DS) by either performing an in-place upgrade of some or all of your domain controllers' operating systems to  Windows Server 2008  or by introducing domain controllers running  Windows Server 2008  into your environment.
 

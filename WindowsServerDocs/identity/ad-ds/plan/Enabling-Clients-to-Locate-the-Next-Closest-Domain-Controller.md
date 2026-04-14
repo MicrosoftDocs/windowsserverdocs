@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Enabling Clients to Locate the Next Closest Domain Controller"
-ms.assetid: 7dd905ea-4235-4519-8400-31b4fa0ed1bf
 title: Enabling Clients to Locate the Next Closest Domain Controller
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/08/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Enabling Clients to Locate the Next Closest Domain Controller
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If you have a domain controller that runs Windows Server 2008 or newer, you can make it possible for client computers that run Windows Vista or newer or Windows Server 2008 or newer to locate domain controllers more efficiently by enabling the **Try Next Closest Site** Group Policy setting. This setting improves the Domain Controller Locator (DC Locator) by helping to streamline network traffic, especially in large enterprises that have many branch offices and sites.
 

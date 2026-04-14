@@ -1,16 +1,12 @@
 ---
 title: Use DNS Policy for Application Load Balancing
 description: Learn how to learn how to configure DNS policy to perform application load balancing.
-manager: brianlic
-ms.topic: article
-ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Application Load Balancing
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy to perform application load balancing.
 

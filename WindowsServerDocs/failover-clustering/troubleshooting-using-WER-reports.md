@@ -1,14 +1,15 @@
 ---
 title: Troubleshooting a Failover Cluster using Windows Error Reporting
 description: Troubleshooting a Failover Cluster using WER Reports, with specific details on how to gather reports and diagnose common issues.
-ms.author: wscontent
+ms.author: roharwoo
 author: robinharwood
 ms.date: 10/21/2021
 ms.topic: troubleshooting
+ms.custom: sfi-image-nochange
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server, Azure Stack HCI, versions 21H2 and 20H2
+
 
 Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to help advanced administrators or Tier 3 support gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](/powershell/module/windowserrorreporting/) provides descriptions and syntax for all WindowsErrorReporting cmdlets.
 

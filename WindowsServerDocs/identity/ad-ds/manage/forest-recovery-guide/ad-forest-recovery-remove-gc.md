@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: AD Forest Recovery - Removing the global catalog"
 title: AD Forest Recovery - Remove the global catalog
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
-ms.assetid: 60087a62-11e6-4750-a70e-510f35315688
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Remove the global catalog
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
  Use the following procedure to remove the global catalog from a DC.
 

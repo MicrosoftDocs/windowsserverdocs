@@ -40,11 +40,13 @@
          "recommendations": true
       },
       "fileMetadata": {
-         "ms.prod": {
+         "ms.subservice": {
+            "**/*.md": "essentials"
+         },
+         "ms.service": {
             "**/*.md": "windows-server"
          },
-         "ms.technology": {
-            "**/*.md": "essentials"
+         "ms.prod": {
          }
       },
        "template": [],

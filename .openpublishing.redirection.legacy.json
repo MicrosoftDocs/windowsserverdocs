@@ -1,0 +1,2714 @@
+{
+  "redirections": [
+    {
+      "source_path": "EssentialsDocs/get-started/azure-site-recovery-services-integration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/azure-site-recovery-services-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/azure-virtual-network-integration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/azure-virtual-network-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/get-started.md",
+      "redirect_url": "/windows-server/get-started/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/hardware-limits.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/hardware-limits",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/release-notes.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/release-notes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/support-for-larger-deployments.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/support-for-larger-deployments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/what-s-new-19.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/what-s-new-19",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/what-s-new.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/get-started/what-s-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-a-Tab-to-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-a-Tab-to-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Health-Alerts.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Health-Alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Third-Level-Domain-Names.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Third-Level-Domain-Names",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Add-Windows-Server-Essentials-as-a-Member-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Add-Windows-Server-Essentials-as-a-Member-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Additional-Customizations.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Additional-Customizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Assessment-and-Deployment-Kit-for-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Assessment-and-Deployment-Kit-for-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Automate-Installation-of-Add-Ins-During-Setup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Automate-Installation-of-Add-Ins-During-Setup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Before-You-Install-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Before-You-Install-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Build-Multi-Language-Client-Restore-Media.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Build-Multi-Language-Client-Restore-Media",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Change-Media-Streaming-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Change-Media-Streaming-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Change-the-Order-and-Grouping-of-Tabs.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Change-the-Order-and-Grouping-of-Tabs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Configure-Server-Storage.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Configure-Server-Storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Configure-Support-for-a-Wireless-Network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Configure-Support-for-a-Wireless-Network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Simple-Customized-Image.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-a-Simple-Customized-Image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-an-Image-By-Using-Answer-Files.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-an-Image-By-Using-Answer-Files",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-the-Cfg.ini-File.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-the-Cfg.ini-File",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-the-Oobe.xml-File-Including-Logo-and-EULA.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-the-Oobe.xml-File-Including-Logo-and-EULA",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Creating-and-Customizing-the-Image.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Creating-and-Customizing-the-Image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-and-Deploy-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-and-Deploy-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Disk-Partitions.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Disk-Partitions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Server-Backup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Server-Backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Shared-Folders.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Shared-Folders",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-Storage-Spaces.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-Storage-Spaces",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Customize-the-Image.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Customize-the-Image",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Define-Display-Settings.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Define-Display-Settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Getting-Started-with-the-Windows-Server-Essentials-ADK",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Hardware-Requirements-for-the-Target-Computer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Hardware-Requirements-for-the-Target-Computer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Hosted-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Hosted-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-Add-Ins.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-Add-Ins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-and-Configure-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-and-Configure-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-or-Remove-Language-Packs.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-or-Remove-Language-Packs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Install-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Install-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Manage-Domain-Names-and-Domain-Name-Providers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Manage-Domain-Names-and-Domain-Name-Providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Preconfiguring-a-Router.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Preconfiguring-a-Router",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Prepare-the-Technician-Computer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Prepare-the-Technician-Computer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Preparing-the-Image-for-Deployment.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Preparing-the-Image-for-Deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Replace-the-List-of-Domain-Name-Providers.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Replace-the-List-of-Domain-Name-Providers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Set-the-WinSAT-Score-on-the-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Set-the-WinSAT-Score-on-the-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Testing-the-Customer-Experience.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/install/Testing-the-Customer-Experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Configure-DirectAccess-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Configure-DirectAccess-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Anywhere-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Applications-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Applications-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Backup-and-Restore-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-BranchCache-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-BranchCache-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Devices-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Devices-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Digital-Media-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Digital-Media-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Email-Service-Integration-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Microsoft-Online-Services-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Office-365-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Office-365-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Online-Accounts-for-Users.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Online-Accounts-for-Users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Online-Backup-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Online-Backup-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Server-Backup-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Server-Backup-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Server-Folders-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Server-Folders-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Server-Storage-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Server-Storage-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-SharePoint-Online-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-SharePoint-Online-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-System-Health-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-System-Health-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-User-Accounts-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-User-Accounts-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-VPN-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-VPN-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Manage-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Manage-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Overview-of-the-Dashboard-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Remote-desktop-options.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Remote-desktop-options",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Restore-a-full-system-from-an-existing-client-computer-backup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Restore-a-full-system-from-an-existing-client-computer-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Restore-or-repair-your-server-running-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Restore-or-repair-your-server-running-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/manage/Set-up-or-customize-server-backup.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/manage/Set-up-or-customize-server-backup",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Configure-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Configure-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Install-Windows-Server-Essentials-in-migration-mode.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Install-Windows-Server-Essentials-in-migration-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Join-computers-to-the-new-Windows-Server-Essentials-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Join-computers-to-the-new-Windows-Server-Essentials-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Join-computers-to-the-new-Windows-Server-Essentials-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Join-computers-to-the-new-Windows-Server-Essentials-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Server-Data-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Server-Essentials-to-New-Hardware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Install-the-Windows-Server-Essentials-Log-Collector.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Install-the-Windows-Server-Essentials-Log-Collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Run-the-Windows-Server-Essentials-Log-Collector.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Run-the-Windows-Server-Essentials-Log-Collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Support-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Support-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-File-History-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-File-History-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Windows-Server-Essentials-installation.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Windows-Server-Essentials-installation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Troubleshoot-your-firewall-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/support/Use-the-Windows-Server-Essentials-Log-Collector.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/support/Use-the-Windows-Server-Essentials-Log-Collector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Get-Connected-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Get-Connected-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Play-Digital-Media-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Play-Digital-Media-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-Remote-Web-Access-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-Shared-Folders-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-Shared-Folders-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Use-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Use-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/use/Work-Remotely-in-Windows-Server-Essentials.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-essentials/use/Work-Remotely-in-Windows-Server-Essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2003-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2008-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-SBS-2011-Standard-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md",
+      "redirect_url": "/windows-server-essentials/migrate/Move-Windows-Server-2008-Foundation-to-the-Destination-Server-for-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/get-started/system-requirements.md",
+      "redirect_url": "/windows-server-essentials/get-started/hardware-limits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "EssentialsDocs/index.md",
+      "redirect_url": "/windows-server-essentials/get-started/get-started",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "EssentialsDocs/install/Create-a-Bootable-USB-Flash-Drive.md",
+      "redirect_url": "/windows-server/get-started/install-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/Compute.md",
+      "redirect_url": "/windows-server/virtualization/virtualization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/Get-started-with-Setup-and-Boot-Event-Collection.md",
+      "redirect_url": "/windows-server/administration/Get-started-with-Setup-and-Boot-Event-Collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/Linux-Package-Repository-for-Microsoft-Software.md",
+      "redirect_url": "/linux/packages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/failover-clustering/deploy-a-cloud-witness-for-a-failover-cluster.md",
+      "redirect_url": "/windows-server/failover-clustering/deploy-quorum-witness",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/failover-clustering/failover-clustering.md",
+      "redirect_url": "/windows-server/failover-clustering/failover-clustering-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/failover-clustering/simplified-smb-multichannel-and-multi-nic-cluster-networks.md",
+      "redirect_url": "/windows-server/failover-clustering/smb-multichannel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/failover-clustering/whats-new-failover-clustering-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Best-practices-for-running-FreeBSD-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Best-practices-for-running-FreeBSD-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Best-Practices-for-running-Linux-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Best-Practices-for-running-Linux-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/features-terminology",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Hyper-V-feature-compatibility-by-generation-and-guest.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Hyper-V-feature-compatibility-by-generation-and-guest",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Hyper-V-Technology-Overview.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-Debian-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-Debian-virtual-machines-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-FreeBSD-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-FreeBSD-virtual-machines-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-Oracle-Linux-virtual-machines-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-SUSE-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-SUSE-virtual-machines-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-Ubuntu-virtual-machines-on-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-Ubuntu-virtual-machines-on-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/What-s-new-in-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-Replica-server-must-be-configured-to-accept-replication-requests.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-Replica-server-must-be-configured-to-accept-replication-requests",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-team-bound-to-a-virtual-switch-should-only-have-one-exposed-team-interface.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-team-bound-to-a-virtual-switch-should-only-have-one-exposed-team-interface",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-7-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-7-and-configured-with-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-8-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-8-and-configured-with-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-8.1-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-8.1-and-configured-with-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2008-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2008-and-configured-with-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2008-R2-and-configured-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2008-R2-and-configured-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2012-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2012-and-configured-with-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2012-R2-and-configured-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Server-2012-R2-and-configured-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Vista-and-configured-with-Dynamic-Memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-machine-running-Windows-Vista-and-configured-with-Dynamic-Memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/A-virtual-SAN-should-be-associated-with-a-physical-host-bus-adapter.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/A-virtual-SAN-should-be-associated-with-a-physical-host-bus-adapter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/All-networks-for-live-migration-traffic-should-have-a-link-speed-of-at-least-1-G.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/All-networks-for-live-migration-traffic-should-have-a-link-speed-of-at-least-1-G",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/All-virtual-network-adapters-should-be-enabled.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/All-virtual-network-adapters-should-be-enabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/At-least-one-network-for-live-migration-traffic-should-have-a-link-speed-at-least.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/At-least-one-network-for-live-migration-traffic-should-have-a-link-speed-at-least",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Authorization-entries-should-have-distinct-trust-group-names-for-primary-servers.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Authorization-entries-should-have-distinct-trust-group-names-for-primary-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-alignment-inconsistencies-between-virtual-blocks-and-physical-disk-sectors.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-alignment-inconsistencies-between-virtual-blocks-and-physical-disk-sectors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-configuring-virtual-machines-to-allow-unfiltered-SCSI-commands.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-configuring-virtual-machines-to-allow-unfiltered-SCSI-commands",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-enabling-storage-Quality-of-Service-when-using-a-differencing-virtual-hard.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-enabling-storage-Quality-of-Service-when-using-a-differencing-virtual-hard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-enabling-virtual-machines-configured-with-virtual-Fibre-Channel-adapters.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-enabling-virtual-machines-configured-with-virtual-Fibre-Channel-adapters",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-installing-RemoteFX-on-a-computer-configured-as-a-domain-controller.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-installing-RemoteFX-on-a-computer-configured-as-a-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-mapping-one-storage-path-to-multiple-resource-pools.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-mapping-one-storage-path-to-multiple-resource-pools",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-pausing-a-virtual-machine.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-pausing-a-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-storing-Smart-Paging-files-on-a-system-disk.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-storing-Smart-Paging-files-on-a-system-disk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-using-checkpoints-on-a-virtual-machine-server-workload-production.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-using-checkpoints-on-a-virtual-machine-server-workload-production",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-using-VHD-format-differencing-virtual-hard-disks-on-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-using-VHD-format-differencing-virtual-hard-disks-on-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Avoid-using-virtual-hard-disks-with-sector-size-less-than-size-of-physical.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Avoid-using-virtual-hard-disks-with-sector-size-less-than-size-of-physical",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Best-Practices-Analyzer-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Best-Practices-Analyzer-for-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Certificate-based-authentication-configured-but-certificate-not-installed.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Certificate-based-authentication-configured-but-certificate-not-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Certificate-based-authentication-is-recommended-for-replication.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Certificate-based-authentication-is-recommended-for-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Compression-is-recommended-for-replication-traffic.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Compression-is-recommended-for-replication-traffic",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-a-policy-to-throttle-the-replication-traffic-on-the-network.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-a-policy-to-throttle-the-replication-traffic-on-the-network",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-a-virtual-machine-with-a-SCSI-controller-to-hot-plug-and-unplug.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-a-virtual-machine-with-a-SCSI-controller-to-hot-plug-and-unplug",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-7.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-7",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-8.1.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-8.1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-8.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2008-R2.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2008-R2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2008.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2008",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2012-R2.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2012-R2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2012.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Server-2012",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Vista.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-at-least-the-required-amount-of-memory-for-Windows-Vista",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-guest-operating-systems-for-VSS-based-backups-for-app-consistent.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-guest-operating-systems-for-VSS-based-backups-for-app-consistent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-SCSI-controllers-only-when-supported-by-the-guest-operating-system.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-SCSI-controllers-only-when-supported-by-the-guest-operating-system",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-the-Failover-TCPIP-settings-that-you-want-the-Replica-virtual-machine.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-the-Failover-TCPIP-settings-that-you-want-the-Replica-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-the-server-with-a-sufficient-amount-of-dynamic-MAC-addresses.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-the-server-with-a-sufficient-amount-of-dynamic-MAC-addresses",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-virtual-machines-running-Windows-7-with-no-more-than-4-virtual-process.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-virtual-machines-running-Windows-7-with-no-more-than-4-virtual-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-virtual-machines-running-Windows-Vista-with-1-or-2-virtual-processors.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-virtual-machines-running-Windows-Vista-with-1-or-2-virtual-processors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Configure-virtual-machines-to-use-SR-IOV-only-when-supported-by-the-guest.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Configure-virtual-machines-to-use-SR-IOV-only-when-supported-by-the-guest",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Display-adapters-should-be-enabled-in-virtual-machines-to-provide-video.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Display-adapters-should-be-enabled-in-virtual-machines-to-provide-video",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Domain-membership-is-recommended-for-servers-running-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Domain-membership-is-recommended-for-servers-running-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Dynamic-Memory-is-enabled-but-not-responding-on-some-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Dynamic-Memory-is-enabled-but-not-responding-on-some-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Enable-all-integration-services-in-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Enable-all-integration-services-in-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Enable-all-virtual-network-adapters-configured-for-a-virtual-machine.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Enable-all-virtual-network-adapters-configured-for-a-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-differencing.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-differencing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-dynamically.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Ensure-sufficient-physical-disk-space-is-available-when-virtual-machines-use-dynamically",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Ensure-that-all-mandatory-virtual-switch-extensions-are-available.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Ensure-that-all-mandatory-virtual-switch-extensions-are-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Ensure-that-the-virtual-function-driver-operates-correctly.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Ensure-that-the-virtual-function-driver-operates-correctly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Hyper-V-should-be-the-only-enabled-role.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Hyper-V-should-be-the-only-enabled-role",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Integration-services-must-be-installed-before-primary-or-Replica-virtual-machine.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Integration-services-must-be-installed-before-primary-or-Replica-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/More-than-one-network-adapter-should-be-available.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/More-than-one-network-adapter-should-be-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Offer-all-available-integration-services-to-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Offer-all-available-integration-services-to-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/One-or-more-network-adapters-should-be-configured-as-the-destination-for-Port.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/One-or-more-network-adapters-should-be-configured-as-the-destination-for-Port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/One-or-more-network-adapters-should-be-configured-as-the-source-for-Port.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/One-or-more-network-adapters-should-be-configured-as-the-source-for-Port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/PVLAN-configuration-on-a-virtual-switch-must-be-consistent.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/PVLAN-configuration-on-a-virtual-switch-must-be-consistent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Recovery-snapshots-should-be-removed-after-failover.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Recovery-snapshots-should-be-removed-after-failover",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Replica-servers-should-be-configured-to-identify-specific-primary-servers.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Replica-servers-should-be-configured-to-identify-specific-primary-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Replication-is-paused-for-one-or-more-virtual-machines-on-this-server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Replication-is-paused-for-one-or-more-virtual-machines-on-this-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Reserve-one-or-more-external-virtual-networks-exclusive-for-virtual-machine.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Reserve-one-or-more-external-virtual-networks-exclusive-for-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Resynchronization-of-replication-should-be-scheduled-for-off-peak-hours.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Resynchronization-of-replication-should-be-scheduled-for-off-peak-hours",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Serial-ports-should-not-be-configured-on-generation-2-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Serial-ports-should-not-be-configured-on-generation-2-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Storage-controllers-should-be-enabled-in-virtual-machines-to-provide-access.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Storage-controllers-should-be-enabled-in-virtual-machines-to-provide-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Test-failover-should-be-attempted-after-initial-replication-is-complete.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Test-failover-should-be-attempted-after-initial-replication-is-complete",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Test-failovers-should-be-carried-out-at-least-monthly-to-verify-that-failover.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Test-failovers-should-be-carried-out-at-least-monthly-to-verify-that-failover",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-Hyper-V-Virtual-Machine-Management-service-must-be-running.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-Hyper-V-Virtual-Machine-Management-service-must-be-running",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-Hyper-V-Virtual-Machine-Management-service-should-be-configured-to-start.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-Hyper-V-Virtual-Machine-Management-service-should-be-configured-to-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-number-of-running-or-configured-virtual-machines-must-be-within-limits.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-number-of-running-or-configured-virtual-machines-must-be-within-limits",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-number-of-running-virtual-machines-configured-for-SR-IOV-should-not-exceed.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-number-of-running-virtual-machines-configured-for-SR-IOV-should-not-exceed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-team-interface-bound-to-a-virtual-switch-should-be-in-default-mode.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-team-interface-bound-to-a-virtual-switch-should-be-in-default-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/The-WFP-virtual-switch-extension-should-be-enabled-if-required-by-third-parties.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/The-WFP-virtual-switch-extension-should-be-enabled-if-required-by-third-parties",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/To-participate-in-replication-servers-in-clusters-must-have-Hyper-V-Replica-Broker.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/To-participate-in-replication-servers-in-clusters-must-have-Hyper-V-Replica-Broker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Use-all-virtual-functions-for-networking-when-they-are-available.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Use-all-virtual-functions-for-networking-when-they-are-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Use-at-least-SMB-protocol-version-3.0-configured-for-continuous-availability-file-shares.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Use-at-least-SMB-protocol-version-3.0-configured-for-continuous-availability-file-shares",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Use-at-least-SMB-protocol-version-3.0-for-file-shares-that-store-files-for-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Use-at-least-SMB-protocol-version-3.0-for-file-shares-that-store-files-for-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Use-RAM-that-provides-error-correction.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Use-RAM-that-provides-error-correction",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/VHD-format-dynamic-virtual-hard-disks-not-recommended-in-production.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/VHD-format-dynamic-virtual-hard-disks-not-recommended-in-production",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Virtual-hard-disks-with-paging-files-should-be-excluded-from-replication.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Virtual-hard-disks-with-paging-files-should-be-excluded-from-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Virtual-machines-should-be-backed-up-at-least-once-every-week.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Virtual-machines-should-be-backed-up-at-least-once-every-week",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Virtual-machines-with-virtual-Fibre-Channel-adapter-should-be-configured.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Virtual-machines-with-virtual-Fibre-Channel-adapter-should-be-configured",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/VMQ-should-be-enabled-on-VMQ-capable-physical-network-adapters-external.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/VMQ-should-be-enabled-on-VMQ-capable-physical-network-adapters-external",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-10-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-10-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-10-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-10-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-7-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-7-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-8-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-8-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-8-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-8-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-8.1-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-8.1-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-8.1-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-8.1-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-hypervisor-must-be-running.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-hypervisor-must-be-running",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2008-R2-should-be-configured-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-R2-should-be-configured-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2008-R2-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-R2-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2008-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2008-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2008-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2012-R2-should-be-configured-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-R2-should-be-configured-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2012-R2-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-R2-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2012-should-be-configured-with-at-least-minimum-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-should-be-configured-with-at-least-minimum-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Server-2012-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Server-2012-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-least-minimum-amount-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-least-minimum-amount-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/windows-server-2016-should-configured-with-recommended-amount-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/windows-server-should-be-configured-with-recommended-amount-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-at-least-the-minimum-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-at-least-the-minimum-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-the-recommended-amount-of-memory.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/best-practices-analyzer/Windows-Vista-should-be-configured-with-the-recommended-amount-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/configure-virtual-local-areal-networks-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-area-networks-for-hyper-v",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/Deploy-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/configure-virtual-local-areal-networks-for-hyper-v",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/Deploying-graphics-devices-using-dda.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/Deploying-graphics-devices-using-dda",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/Deploying-storage-devices-using-dda.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/Deploying-storage-devices-using-dda",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/Export-and-import-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/Export-and-import-virtual-machines",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/get-started/Create-a-virtual-machine-in-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Create-a-virtual-machine-in-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Create-a-virtual-switch-for-Hyper-V-virtual-machines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/get-started/Get-started-with-Hyper-V-on-Windows.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/get-started/Install-the-Hyper-V-role-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/get-started/Install-Hyper-V",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/learn-more/Generation-1-virtual-machine-security-settings-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/generation-1-virtual-machine-security-features",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/generation-2-virtual-machine-security-features",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/learn-more/hyper-v-virtual-machine-connect.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/virtual-machine-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/use-local-resources-virtual-machine-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/About-dump-encryption.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/About-dump-encryption",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/checkpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Create-VHDSet-file.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/Create-VHDSet-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Enable-or-disable-checkpoints-in-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/checkpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Manage-Hyper-V-integration-services.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/Manage-Hyper-V-integration-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/persistent-memory-cmdlets",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/powershell-direct",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Remotely-manage-Hyper-V-hosts.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/Remotely-manage-Hyper-V-hosts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Set-up-Hyper-V-Replica.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/Set-up-Hyper-V-Replica",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/plan/Plan-for-Hyper-V-networking-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-networking-in-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/plan/plan-for-hyper-v-security-in-Windows-Server-2016.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-security-in-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/plan-hyper-v-scalability-in-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Add-RD-Web-and-Gateway-server-to-the-RDS-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Add-RD-Web-and-Gateway-server-to-the-RDS-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Add-the-RD-Connection-Broker-server-to-the-deployment-and-configure-high-availability.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Add-the-RDSH-Server-create-a-collection-and-publish-the-RemoteApp-programs.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Add-the-RDSH-server-to-the-collection-farm.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-scale-rdsh-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Azure-services-and-considerations-for-desktop-hosting.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Azure-services-and-considerations-for-desktop-hosting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Configure-the-current-RD-Web-and-Gateway-virtual-machine-for-load-balancing.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Configure-trusted-certificates-on-RD-Connection-Broker-servers-and-clients.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Configure-your-desktop-hosting-environment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Create-a-second-RD-Connection-Broker-virtual-machine.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Create-a-virtual-machine-for-the-Remote-Desktop-Session-Host-server.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Create-an-Azure-internal-load-balancer-for-Remote-Desktop-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-2-configure-load-balancing-on-the-rd-connection-brokers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Create-an-Azure-SQL-database-for-the-RD-Connection-Broker.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Create-virtual-machines-for-Remote-Desktop.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Create-virtual-machines-for-Remote-Desktop",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-a-basic-desktop-hosting-environment-using-Azure-IaaS.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-a-RD-Web-Access-and-Gateway-farm.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-a-Remote-Desktop-Connection-Broker-cluster.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-a-Remote-Desktop-Session-Host-farm-to-improve-availability.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-scale-rdsh-farm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-RemoteApp-programs.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Deploy-RemoteApp-programs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Deploy-your-Remote-Desktop-environment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Desktop-hosting-logical-architecture.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Desktop-Hosting-Reference-Architecture.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-Hosting-Reference-Architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Desktop-hosting-service.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Host-desktops-and-apps-in-Remote-Desktop-Services.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/install-odbc-on-connection-broker.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Install-SQL-native-client-on-each-RD-Connection-Broker-server.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster#step-1-configure-the-database-for-the-connection-broker",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/migrate-rds-cals.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/migrate-rds-cals",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/migrate-rds-role-services.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/migrate-rds-role-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Prepare-the-RD-Connection-Broker-VM-for-Remote-Desktop.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Prepare-the-RD-Web-and-Gateway-VM-for-Remote-Desktop.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Prepare-the-RDSH-virtual-machine.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-prepare-vms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Prepare-your-virtual-machines-for-Remote-Desktop.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Prepare-your-virtual-machines-for-Remote-Desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-activate-license-server.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-activate-license-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-build-and-deploy.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-build-and-deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-client-access-license.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-client-access-license",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-get-started.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-get-support.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-graphics-virtualization.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-graphics-virtualization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-hosting-partners.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-in-azure.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Desktop-hosting-logical-architecture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-install-cals.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-install-cals",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-personal-session-desktops.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-personal-session-desktops",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-access-from-anywhere.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-access-from-anywhere",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-and-design.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-build-anywhere.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-build-anywhere",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-cater-to-users.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-cater-to-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-choose-how-you-pay.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-choose-how-you-pay",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-connect-from-any-device.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-connect-from-any-device",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-graphics-rendering.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-high-availability.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-high-availability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-mfa.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-mfa",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-persistent-nonpersistent.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-personal-pooled.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-secure-data-storage.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-secure-data-storage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-plan-vdi-session.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-plan-and-design",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-poster.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-poster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-remotefx-vgpu.md",
+      "redirect_url": "/previous-versions/windows-server/it-pro/windows-server-2016/virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-run-and-tune.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-run-and-tune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-storage-spaces-direct-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-storage-spaces-direct-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-supported-config.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-supported-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-track-cals.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-track-cals",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-user-management.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-user-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-vdi-supported-config.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-vdi-supported-config",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/rds-whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2016",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Tenant-on-premises-components.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Tenant-on-premises-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Understanding-RDS-roles.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/desktop-hosting-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Understanding-the-desktop-hosting-environment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Understanding-the-desktop-hosting-environment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Upgrade-to-RDS-2016.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Upgrade-to-RDSH-2016.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdsh",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Upgrade-to-RDVH-2016.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/upgrade-to-rdvh",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Use-an-Azure-SQL-database-to-enable-high-availability-for-your-Connection-Broker.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Validate-and-secure-your-Remote-Desktop-deployment.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/rds-build-and-deploy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/Welcome-to-rds.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/Welcome-to-rds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-allow-access.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-allow-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-android-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-android.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-app-compare.md",
+      "redirect_url": "/azure/virtual-desktop/compare-remote-desktop-clients?pivots=remote-desktop-services&context=/windows-server/context/windows-server-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.yml",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-clients.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/connect-remote-desktop-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-ios-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-ios.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-mac-faq.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-mac.md",
+      "redirect_url": "/previous-versions/remote-desktop-client/remote-desktop-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-supported-config.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remotepc/remote-desktop-supported-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-uri.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/remote-desktop-uri",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Add-or-Remove-Computers.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Add-or-Remove-Computers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Add-printers.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Add-printers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Allow-one-account-to-have-multiple-sessions.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Allow-one-account-to-have-multiple-sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Application-Considerations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Application-Considerations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Attach-additional-stations-to-your-MultiPoint-services-computer.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-attach-additional-stations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Block-or-Unblock-a-Station.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Block-or-Unblock-a-Station",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Block-or-Unblock-USB-Storage.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Block-or-Unblock-USB-Storage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Collect-hardware-and-device-drivers-needed-for-the-installation.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-hardware-device-drivers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Common-MultiPoint-services-Usage-Scenarios.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Common-MultiPoint-services-Usage-Scenarios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Configure-Disk-Protection-in-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Configure-Disk-Protection-in-MultiPoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Configure-group-policies-for-a-domain-deployment.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Configure-group-policies-for-a-domain-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Configure-stations-for-automatic-logon.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Configure-stations-for-automatic-logon",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Create-a-MultiPoint-Dashboard-User-Account.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Create-a-MultiPoint-Dashboard-User-Account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Create-a-Standard-User-Account.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Create-a-Standard-User-Account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Create-an-Administrative-User-Account.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Create-an-Administrative-User-Account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Create-local-user-accounts.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Create-local-user-accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Create-Windows-10-Enterprise-virtual-desktops-for-stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Deploy-a-new-MultiPoint-Services-system.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Deploy-a-new-MultiPoint-Services-system",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/deploy-multipoint-services-task-list.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/deploy-multipoint-services-task-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Deploying-MultiPoint-Services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Deploying-MultiPoint-Services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Edit-Server-Settings.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Edit-Server-Settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Enable-file-sharing-in-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Enable-file-sharing-in-multipoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Enable-or-Disable-Disk-Protection.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Enable-or-Disable-Disk-Protection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/End-a-User-Session.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/End-a-User-Session",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Example-scenarios--MultiPoint-Services-user-accounts.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-users-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Getting-Started-with-MultiPoint-Services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Getting-Started-with-MultiPoint-Services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Glossary.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Glossary",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/hardware-and-performance-recommendations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/hardware-and-performance-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Hardware-Requirements-and-Performance-Recommendations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/hardware-and-performance-recommendations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Important-Information-about-Software-License-Compliance.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-software-license-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Install-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Install-MultiPoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/install-server-backup-on-multipoint.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-server-backup-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Install-Server-Backup-on-your-MultiPoint-services-computer.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-server-backup-on-multipoint",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/install-software-on-multipoint.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-software-on-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Install-software-on-your-MultiPoint-services-system.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/install-software-on-multipoint",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Install-updates.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Install-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Introducing-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Introducing-MultiPoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/join-multipoint-services-to-a-domain.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/join-multipoint-services-to-a-domain",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Join-the-MultiPoint-services-computer-to-a-domain--optional-.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/join-multipoint-services-to-a-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Keep-Files-Private.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Keep-Files-Private",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Launch-or-Close-Applications-on-a-Station.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Launch-or-Close-Applications-on-a-Station",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/limit-user-access-to-multipoint.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/limit-user-access-to-multipoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Limit-users--access-to-the-server-in-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/limit-user-access-to-multipoint",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Limit-Web-Access.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Limit-Web-Access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Log-off-or-Disconnect-User-Sessions.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Log-off-or-Disconnect-User-Sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Log-Off-User-Sessions.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Log-Off-User-Sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/manage-client-access-licenses-with-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/manage-client-access-licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-Client-Access-Licenses.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-Client-Access-Licenses",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-MultiPoint-Systems-Using-MultiPoint-Dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-Station-Hardware.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-Station-Hardware",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-System-Tasks-Using-MultiPoint-Manager.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-System-Tasks-Using-MultiPoint-Manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-User-Accounts.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-User-Accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-User-Desktops-Using-MultiPoint-Dashboard.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-User-Desktops-Using-MultiPoint-Dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-User-Files.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-User-Files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-User-Stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-User-Stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Manage-Virtual-Desktops.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Manage-Virtual-Desktops",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Managing-MultiPoint-Services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Managing-MultiPoint-Services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Managing-Your-MultiPoint-Services-System.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Managing-Your-MultiPoint-Services-System",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-attach-additional-stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-attach-additional-stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-hardware-device-drivers.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-hardware-device-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-services-migrate.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-services-migrate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-services-migration-preparation.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-services-migration-preparation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-services-migration-steps.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-services-migration-steps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-services-migration-worksheet.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-services-migration-worksheet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-services-post-migration-steps.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-services-post-migration-steps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/MultiPoint-services-Site-Planning.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/MultiPoint-services-Site-Planning",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/MultiPoint-services-Stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/MultiPoint-services-Stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/MultiPoint-services-Virtualization-Support.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/MultiPoint-services-Virtualization-Support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/MultiPoint-Services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/MultiPoint-Services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-software-license-compliance.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-software-license-compliance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/multipoint-users-scenario.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/multipoint-users-scenario",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Network-Considerations-and-User-Accounts.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Network-Considerations-and-User-Accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Optional-configuration-tasks-for-a-MultiPoint-services-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Planning-a-MultiPoint-Services-Deployment.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Planning-a-MultiPoint-Services-Deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Predeployment-Checklist.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Predeployment-Checklist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Prepare-your-MultiPoint-services-system-for-users.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Prepare-your-MultiPoint-services-system-for-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Privacy-and-Security-Considerations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Privacy-and-Security-Considerations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Project-a-Station-to-Other-Stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Project-a-Station-to-Other-Stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Protecting-the-System-Volume-with-Disk-Protection.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Protecting-the-System-Volume-with-Disk-Protection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Remap-All-Stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Remap-All-Stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Remap-Selected-MultiPoint-Systems.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Remap-Selected-MultiPoint-Systems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Restart-or-Shut-Down-MultiPoint-Systems.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Restart-or-Shut-Down-MultiPoint-Systems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Restart-or-Shut-Down.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Restart-or-Shut-Down",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Save-and-Share-Files-on-a-USB-Flash-Drive.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Save-and-Share-Files-on-a-USB-Flash-Drive",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Save-Connection-Settings-to-File.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Save-Connection-Settings-to-File",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/select-hardware-mps.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/select-hardware-mps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Selecting-Hardware-for-Your-MultiPoint-services-System.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/select-hardware-mps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-the-date--time--and-time-zone.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/set-the-date-time",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/set-the-date-time.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/set-the-date-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-up-a-direct-video-connected-station-in-MultiPoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-up-a-split-screen-station-in-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-up-a-split-screen-station-in-multipoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-up-a-Station-for-Automatic-Logon.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-up-a-Station-for-Automatic-Logon",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-Up-a-Station.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-Up-a-Station",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-up-a-USB-zero-client-connected-station-in-MultiPoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-up-an-RDP-over-LAN-connected-station-in-multipoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Set-up-the-physical-computer-and-primary-station.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Set-up-the-physical-computer-and-primary-station",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Share-Files.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Share-Files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Show-All-Stations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Show-All-Stations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Split-a-User-Station.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Split-a-User-Station",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Storing-Files-with-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Storing-Files-with-MultiPoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Suspend-and-Leave-User-Session-Active.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Suspend-and-Leave-User-Session-Active",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Switch-Between-Modes.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Switch-Between-Modes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/System-administration-in-multipoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/System-administration-in-multipoint-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Take-Control-of-a-User-Session.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Take-Control-of-a-User-Session",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Task-Lists--Deploying-Windows-MultiPoint-services.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/deploy-multipoint-services-task-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Troubleshooting.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Update-and-install-device-drivers-if-needed.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Update-and-install-device-drivers-if-needed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Update-or-Delete-a-User-Account.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Update-or-Delete-a-User-Account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Use-IM.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Use-IM",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/User-Account-Considerations.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/User-Account-Considerations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Variables-Affecting-MultiPoint-services-System-Performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/View-Hardware-Status.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/View-Hardware-Status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/View-User-Connection-Status.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/View-User-Connection-Status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Work-with-USB-Devices.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Work-with-USB-Devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/multipoint-services/Work-with-Video-Devices.md",
+      "redirect_url": "/windows-server/remote/multipoint-services/Work-with-Video-Devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/system-requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/editions-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison?pivots=windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/removed-features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/install-upgrade-migrate.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/get-started-with-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/sconfig-on-ws2022.md",
+      "redirect_url": "/windows-server/administration/server-core/server-core-sconfig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/server-core-app-compatibility.md",
+      "redirect_url": "/windows-server/get-started/server-core-app-compatibility-feature-on-demand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/vm-activation.md",
+      "redirect_url": "/windows-server/get-started/automatic-vm-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/Additional-Software.md",
+      "redirect_url": "/legal/windows-server/Additional-Software",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/WinServer2016expiry.md",
+      "redirect_url": "/legal/windows-server/WinServer2016expiry",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/WinServer2016licenseterms.md",
+      "redirect_url": "/legal/windows-server/WinServer2016licenseterms",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/system-insights-capabilities-eula.md",
+      "redirect_url": "/legal/windows-server/system-insights-capabilities-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/licensing/system-insights-eula.md",
+      "redirect_url": "/legal/windows-server/system-insights-eula",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/compute/hyper-v/system-requirements-for-hyper-v-on-windows.md",
+      "redirect_url": "/windows-server/hyper-v/host-hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-insider/index.md",
+      "redirect_url": "/windows-insider/at-work/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/azure-hybrid-services/index.md",
+      "redirect_url": "/windows-server/manage/windows-admin-center/azure/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/azure-stack-hci/index.md",
+      "redirect_url": "/azure-stack/operator/azure-stack-hci-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "HyperVServerDocs/index.md",
+      "redirect_url": "/windows-server/virtualization/hyper-v/hyper-v-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/technologies/hpn/hpn-insider-preview.md",
+      "redirect_url": "/windows-server//networking/what-s-new-in-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/upgrade/upgrade-overview.md",
+      "redirect_url": "/windows-server/get-started/upgrade-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/upgrade/upgrade-2008r2-to-2012r2.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/upgrade/upgrade-2012r2-to-2019.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/upgrade/upgrade-2012-to-2016.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/upgrade/upgrade-2016-to-2019.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/hyperconverged/index.yml",
+      "redirect_url": "/windows-server/index",
+      "redirect_document_id": true
+    }
+  ]
+}

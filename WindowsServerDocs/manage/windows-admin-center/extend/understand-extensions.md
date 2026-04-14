@@ -1,14 +1,13 @@
 ---
 title: Understanding Windows Admin Center Extensions
 description: Understanding Windows Admin Center SDK Extensions (Project Honolulu)
-ms.topic: article
-author: daniellee-msft
-ms.author: jol
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/18/2018
+ms.custom: sfi-image-nochange
 ---
 # Understanding Windows Admin Center Extensions
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In case you're not yet familiar with how Windows Admin Center works, let's start with the high-level architecture. Windows Admin Center is composed of two main components:
 

@@ -1,16 +1,20 @@
 ---
 description: "Learn more about: Performance history for virtual machines"
 title: Performance history for virtual machines
-ms.author: cosdar
-manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.author: roharwoo
+ms.topic: concept-article
+author: robinharwood
 ms.date: 09/07/2018
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Performance history for virtual machines
-
->Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual machines (VM). Performance history is available for every running, clustered VM.
 
@@ -71,3 +75,4 @@ Get-VM <Name> | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+

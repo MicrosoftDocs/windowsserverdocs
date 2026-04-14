@@ -1,16 +1,12 @@
 ---
 title: Hyper-V Network Virtualization Overview in Windows Server
 description: This topic provides an overview of Hyper-V Network Virtualization in Windows Server 2019 and 2016
-manager: grcusanz
-ms.topic: article
-ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
-ms.author: anpaul
-author: AnirbanPaul
+ms.topic: overview
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/27/2021
 ---
 # Hyper-V Network Virtualization Overview in Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 In Windows Server and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
 
@@ -119,7 +115,7 @@ The following is a list of the key functionality, benefits, and capabilities of 
 
 -   **Policy-based configuration**
 
-    Network virtualization policies in Windows Server 2016 are configured through the Microsoft Network Controller. The network controller has a RESTful northbound API, and Windows PowerShell interface to configure policy. For more information about the Microsoft Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+    Network virtualization policies in Windows Server 2016 are configured through the Microsoft Network Controller. The network controller has a RESTful northbound API, and Windows PowerShell interface to configure policy. For more information about the Microsoft Network Controller, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).
 
 ## <a name="BKMK_SOFT"></a>Software requirements
 Hyper-V Network Virtualization using the Microsoft Network Controller requires Windows Server 2016 and the Hyper-V role.
@@ -132,4 +128,4 @@ To learn more about Hyper-V Network Virtualization in Windows Server 2016 see th
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Community Resources**  |     -   [Private Cloud Architecture Blog](/archive/blogs/privatecloud/cloud-datacenter-network-architecture-in-the-windows-server-8-era)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)     |
 |         **RFC**          |                                                                                                     -   VXLAN - [RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                                                      |
-| **Related Technologies** | -   [Network Controller](/azure-stack/hci/concepts/network-controller-overview)<br />-   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) ( Windows Server 2012 R2 ) |
+| **Related Technologies** | -   [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking)<br />-   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) ( Windows Server 2012 R2 ) |

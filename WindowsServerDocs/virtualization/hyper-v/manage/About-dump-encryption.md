@@ -1,9 +1,9 @@
 ---
 title: About dump encryption
 description: Describes how to encrypt dump files and troubleshoot encryption.
-ms.topic: article
-ms.author: benarm
-author: BenjaminArmstrong
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.asset: b78ab493-e7c3-41f5-ab36-29397f086f32
 ms.date: 11/03/2016
 ---
@@ -52,3 +52,4 @@ If dump encryption is enabled on a system but no dumps are being generated, plea
 | Unsupported Public Key Size | Currently, only 2048 Bit RSA keys are supported. Configure a key that matches this requirement |
 
 Also check if the value `GuardedHost` under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\ForceDumpsDisabled` is set to a value other than 0. This disables crash dumps completely. If this is the case, set it to 0.
+

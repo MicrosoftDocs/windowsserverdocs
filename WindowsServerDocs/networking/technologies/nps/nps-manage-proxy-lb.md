@@ -1,17 +1,13 @@
 ---
 title: NPS Proxy Server Load Balancing
 description: Learn about NPS proxy server load balancing and the methods you can use to balance the load of connection requests sent to your NPSs.
-ms.topic: article
-ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
-manager: brianlic
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # NPS Proxy Server Load Balancing
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS might receive too many connection requests at one time, resulting in degraded performance or an overload. When an NPS is overloaded, it is a good idea to add more NPSs to your network and to configure load balancing. When you evenly distribute incoming connection requests among multiple NPSs to prevent the overloading of one or more NPSs, it is called load balancing.
 
@@ -56,3 +52,4 @@ To configure NPS to act as a proxy server and forward connection requests from R
 4. On the NPS proxy, for each RADIUS server that you add to a remote RADIUS server group, click the RADIUS server **Load Balancing** tab, and then configure **Priority**, **Weight**, and **Advanced settings**.
 
 5. On the NPS proxy, configure connection request policies to forward authentication and accounting requests to remote RADIUS server groups. You must create one connection request policy per remote RADIUS server group. For more information, see [Configure Connection Request Policies](./nps-crp-configure.md).
+

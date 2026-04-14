@@ -2,10 +2,8 @@
 title: nslookup exit
 description: Reference article for the nslookup exit command, which exits the nslookup command-line tool.
 ms.topic: reference
-ms.assetid: 970ece99-fc5e-4103-9f97-ca080af1f212
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

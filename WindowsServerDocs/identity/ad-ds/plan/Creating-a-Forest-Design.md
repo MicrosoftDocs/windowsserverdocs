@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Creating a Forest Design"
-ms.assetid: e92bdf05-d888-4935-af6a-8ded6ad13fab
 title: Creating a Forest Design
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Creating a Forest Design
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creating a forest design involves first identifying the groups within your organization that have the resources available to host an Active Directory forest and then defining your forest design requirements. Finally, you need to determine the number of forests that you require to meet the needs of your organization.
 

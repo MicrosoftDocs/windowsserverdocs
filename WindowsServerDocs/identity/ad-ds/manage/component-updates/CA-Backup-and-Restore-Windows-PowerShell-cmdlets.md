@@ -1,17 +1,16 @@
 ---
 description: "Learn more about: CA Backup and Restore Windows PowerShell cmdlets"
-ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
-author: xelu86
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+ms.topic: how-to
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # CA Backup and Restore Windows PowerShell cmdlets
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 >
 > **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 >
@@ -94,4 +93,5 @@ A nonpassword protected backup is taken if the ConvertTo-SecureString function f
 1.  Use the commands in this lesson to backup the CA database and private key secured with a password.
 
 2.  Hold off on the restore of the CA at this time.
+
 

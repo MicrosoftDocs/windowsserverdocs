@@ -1,15 +1,15 @@
 ---
 title: Configure Network Device Enrollment Service to use a domain user account for Active Directory Certificate Services
 description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service with certificates based on Simple Certificate Enrollment Protocol (SCEP)
-author: gswashington
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.topic: how-to
 ms.date: 04/03/2023
 ---
 
 # Configure Network Device Enrollment Service to use a domain user account
 
-Applies To: Windows Server (All supported versions)
+
 
 It's recommended that you configure NDES to specify a user account, which requires extra steps. If
 you select the built-in application pool identity, no other configuration is required.
@@ -214,7 +214,7 @@ aren't supported.
 
 Now that you've configured the role service, you can learn detailed information about NDES
 configuration and operation see
-[Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](https://social.technet.microsoft.com/wiki/contents/articles/9063.network-device-enrollment-service-ndes-in-active-directory-certificate-services-ad-cs.aspx).
+[Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](/archive/technet-wiki/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes).
 
 > [!TIP]
 > If you make configuration changes for NDES or to the certificate templates that are used by NDES,

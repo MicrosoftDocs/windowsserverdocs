@@ -1,11 +1,8 @@
 ---
 description: "Learn more about: Controlling Access to Organizational Data with Active Directory Federation Services"
 title: Client Access Control policies in AD FS
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 # Controlling Access to Organizational Data with Active Directory Federation Services

@@ -1,15 +1,13 @@
 ---
 title: Settings
 description: Learn about settings in Windows Admin Center (Project Honolulu). User settings let users change their language/region and other preferences. Gateway settings let administrators configure the gateway.
-ms.topic: article
-author: IngridAtMicrosoft
-ms.author: wscontent
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/12/2018
 ---
 
 # Windows Admin Center Settings
-
->Applies to: Windows Admin Center
 
 Windows Admin Center settings consist of user-level and gateway-level settings. A change to a user-level setting only affects the current user's profile, while a change to a gateway-level setting affects all users on that Windows Admin Center gateway.
 
@@ -76,3 +74,4 @@ Using the **Updates** tab, users can see which version of Windows Admin Center i
 Using the **Shared Connections** tab, administrators can configure a single list of connections to be shared across all users of the Windows Admin Center gateway. [Learn more about configuring connections once for all users of a gateway.](shared-connections.md)
 
 For **WebSocket validation**, administrators can now validate their WebSocket connections and customize these settings to various conditions. [Learn more about WebSocket validation](websocket-validation.md)
+

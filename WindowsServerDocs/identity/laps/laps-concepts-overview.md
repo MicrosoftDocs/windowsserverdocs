@@ -2,9 +2,10 @@
 title: Windows LAPS architecture
 description: Documents basic design concepts for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: jsimmons
-ms.date: 12/25/2023
-ms.topic: conceptual
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom: sfi-image-nochange, sfi-ga-nochange
 ---
 
 # Key concepts in Windows LAPS
@@ -137,7 +138,7 @@ The middle circle (yellow) is composed of security principals that are granted p
 The inner circle (red) applies only when password encryption is enabled. The inner circle is composed of groups or users that are granted decryption permissions for encrypted password attributes on computer objects in the directory. Like the permission in the middle circle, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for members of the Domain Admins group.
 
 > [!IMPORTANT]
-> Consider customizing your security layers to match the sensitivity of the managed machines in your organization. For example, it might be acceptable for front-line IT worker devices to be accessible to help desk administrators, but you likely will want to set tighter boundaries for corporate executive laptops.
+> Consider customizing your security layers to match the sensitivity of the managed machines in your organization. For example, it might be acceptable for frontline IT worker devices to be accessible to help desk administrators, but you likely will want to set tighter boundaries for corporate executive laptops.
 
 ### Password encryption
 
@@ -171,7 +172,7 @@ Backing up DSRM passwords to Microsoft Entra ID isn't supported.
 > [!IMPORTANT]
 > When DSRM password backup is enabled, the current DSRM password for any domain controller is retrievable if at least one domain controller in that domain is accessible.
 >
-> But consider a catastrophic scenario in which all the domain controllers in a domain are down. In this scenario, no DSRM passwords will be available. For this reason, we recommend that you use Windows LAPS DSRM support as only the first component of a larger domain backup and recovery strategy. We strongly recommend that DSRM passwords be regularly extracted from the directory and backed up to a secure store outside Windows Server Active Directory. Windows LAPS doesn't include an external store backup strategy.
+> Consider a catastrophic scenario in which all the domain controllers in a domain are down. In that situation, as long as you have been maintaining regular backups per Active Directory best practices, you can still recover DSRM passwords from backups using the procedure outlined in [Retrieve passwords during Active Directory disaster recovery scenarios](laps-scenarios-windows-server-active-directory.md#retrieve-passwords-during-windows-server-active-directory-disaster-recovery-scenarios).
 
 ## Password reset after authentication
 
@@ -193,13 +194,31 @@ When Windows is started in safe mode, DSRM mode, or in any other non-normal boot
 
 The Windows LAPS-managed account is exempted when the "Interactive logon: Require Windows Hello for Business or smart card" policy (also known as SCForceOption) is enabled. See [Additional smart card Group Policy settings and registry keys](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#additional-smart-card-group-policy-settings-and-registry-keys).
 
-Windows LAPS integration with the smart-card-auth-only policy is available on the following OS platforms with the specified update or later installed:
+## How a Windows LAPS policy is applied to a new client device
 
-- [Windows 11 22H2 - October 10 2023 Update](https://support.microsoft.com/help/5031354)
-- [Windows 11 21H2 - October 10 2023 Update](https://support.microsoft.com/help/5031358)
-- [Windows 10 - October 10 2023 Update](https://support.microsoft.com/help/5031356)
-- [Windows Server 2022 - October 10 2023 Update](https://support.microsoft.com/help/5031364)
-- [Windows Server 2019 - October 10 2023 Update](https://support.microsoft.com/help/5031361)
+The following sections describe how a Windows LAPS policy is applied to a new client device.
+
+### New OS install scenario with a Windows LAPS policy
+
+Windows LAPS is built into the Windows operating system. It's a Windows baseline security feature and can't be uninstalled. It's important therefore to be aware of the effect that a Windows LAPS policy may have during a new OS install.
+
+The primary factor to be aware of is that Windows LAPS is always "on". As soon as a Windows LAPS policy is applied to the device, Windows LAPS immediately begins to enforce the policy. This behavior can cause disruptions if at some point your OS deployment workflow involves domain-joining a device into an OU with an enabled Windows LAPS policy. If the Windows LAPS policy targets the same local account that the deployment workflow is logged in with, the resultant immediate modification of the local account password will likely break the workflow (for example after a reboot during automatic sign-in).
+
+The first technique to mitigate this issue is to use a clean "staging" Organizational Unit (OU). A staging OU is considered a temporary home for the device's account that applies a bare minimum set of required policies, and shouldn't apply a Windows LAPS policy. Only at the conclusion of the OS deployment workflow is the device's account is moved to its final destination OU. Microsoft recommends the use of a clean staging OU as a generic best practice.
+
+A second technique is to configure the Windows LAPS policy to target a different account than the one used by the OS deployment workflow. As a best practice any local accounts that are unneeded at the end of the OS deployment workflow should be deleted.
+
+### New OS install scenario with a legacy LAPS policy
+
+This scenario has the same basic concerns as [New OS install scenario with a Windows LAPS policy](#new-os-install-scenario-with-a-windows-laps-policy), but has some special issues related to Windows LAPS' support for legacy LAPS emulation mode.
+
+Again, the primary factor to be aware of is that Windows LAPS is always "on". As soon as a legacy LAPS policy is applied to the device - and assuming all [legacy LAPS emulation mode](laps-scenarios-legacy.md) criteria are met - Windows LAPS immediately begins to enforce the policy. This behavior can cause disruptions if at some point your OS deployment workflow involves domain-joining a device into an OU with an enabled legacy LAPS policy. If the legacy LAPS policy targets the same local account that the deployment workflow is logged in with, the resultant immediate modification of the local account password will likely break the workflow (for example after a reboot during automatic sign-in).
+
+The first technique to mitigate this issue is to use a clean "staging" Organizational Unit (OU). A staging OU is considered a temporary home for the device's account that applies a bare minimum set of required policies, and shouldn't apply a legacy LAPS policy. Only at the conclusion of the OS deployment workflow is the device's account is moved to its final destination OU. Microsoft recommends the use of a clean staging OU as a generic best practice.
+
+A second technique is to configure the legacy LAPS policy to target a different account than the one used by the OS deployment workflow. As a best practice any local accounts that are unneeded at the end of the OS deployment workflow should be deleted.
+
+A third technique is to [Disable legacy LAPS emulation mode](laps-scenarios-legacy.md#disabling-legacy-microsoft-laps-emulation-mode) at the beginning of the OS deployment workflow, and enable it (if needed) at the end of the OS deployment workflow.
 
 ## Windows LAPS OS image rollback detection and mitigation
 
@@ -207,12 +226,15 @@ When a live OS image is reverted to an earlier version, the result is often a â€
 
 Once the problem occurs, the IT admin is unable to sign into the device using the persisted Windows LAPS password. The problem isn't resolved until Windows LAPS rotates the password - but that might not occur for days or weeks depending on the current password expiration date.
 
-Windows LAPS solves this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
+Windows LAPS mitigates this problem by writing a random GUID to the directory at the same time a new password is being persisted, followed by saving a local copy. The GUID is stored in the msLAPS-CurrentPasswordVersion attribute. During every processing cycle, the msLAPS-CurrentPasswordVersion guid is queried and compared to the local copy. If the two GUIDs are different, the password is immediately rotated.
 
 This feature is only supported when backing passwords up to Active Directory. Microsoft Entra ID isn't supported.
 
 > [!IMPORTANT]
-> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 Insider Preview Build 26040 and later. The feature will not work until the latest Update-LapsADSchema PowerShell cmdlet is run, which adds the new msLAPS-CurrentPasswordVersion schema attribute to the Active Directory schema.
+> Windows LAPS rollback detection and mitigation can only work if the machine still has a valid computer account password and is capable of authenticating to Active Directory. That condition may or may not be true depending on the mismatched state caused by the rollback. If the machine is no longer capable of authenticating, other recovery steps will be required such as resetting the machine account password. The Windows LAPS account on the reverted machine may still be useful if the Windows LAPS password history feature has been enabled.
+
+> [!IMPORTANT]
+> The Windows LAPS OS image rollback detection and mitigation feature is supported in Windows 11 24H2, Windows Server 2025 and later. This feature requires the `msLAPS-CurrentPasswordVersion` schema attribute, which is only available when using the Windows Server 2025 forest schema. This attribute is automatically included when you promote the first Windows Server 2025 domain controller in your forest; it's not installed by running the `Update-LapsADSchema` cmdlet.
 
 ## See also
 

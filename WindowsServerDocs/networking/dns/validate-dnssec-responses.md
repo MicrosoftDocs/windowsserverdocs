@@ -1,10 +1,10 @@
 ---
 title: Validate and secure DNS responses using DNSSEC on DNS Server in Windows Server
 description: Learn how to use DNSSEC resource records to validate and secure DNS responses.
-ms.topic: conceptual
-ms.author: wscontent
+ms.topic: concept-article
+ms.author: roharwoo
 author: robinharwood
-ms.date: 06/05/2023
+ms.date: 02/17/2025
 ---
 
 # Validate and secure DNS responses using DNSSEC
@@ -59,7 +59,7 @@ DNSSEC-related flags (bits) are used in a DNS query and response to determine if
 
 - **DO**: The DO bit is included in a DNS query and is an abbreviation for "DNSSEC OK". If the DO bit is set (`DO=1`), then the client is DNSSEC-aware, and it's safe for the DNS server to return DNSSEC data in a response. If the DO bit isn't set (`DO=0`), then the client isn't DNSSEC-aware, and the DNS server can't include any DNSSEC data in a DNS response. DNS clients can still be protected using DNSSEC even if they're not DNSSEC-aware. In this context, a DNS client is any computer that sends a DNS query. When a recursive DNS server sends a query to the authoritative DNS server, the recursive DNS server must indicate that it's DNSSEC-aware so that the authoritative DNS server sends DNSSEC data in the response.
 - **AD**: The AD bit is included in a DNS response and is an abbreviation for "authenticated data". If the AD bit is set (`AD=1`), then it means the DNS response is authentic because it was validated using DNSSEC. A nonvalidating DNSSEC-aware computer, such as one running Windows 8, doesn't perform DNSSEC validation but can be configured to require that DNS responses are authentic. If the AD bit isn't set (`AD=0`), the DNS response wasn't validated. The AD bit might not be set either because validation wasn't attempted, or because validation failed.
-- **CD**: The CD bit is included in a DNS query and is an abbreviation for "checking disabled". If the CD bit is set (`CD=1`) in a query, then it means a DNS response should be sent whether or not validation was successfully performed. If the CD bit is't set (`CD=0`), then a DNS response isn't be sent if validation was required and failed. If the CD bit is clear (`CD=0`), this means "checking enabled" and DNSSEC validation can occur. The CD bit might be set (`CD=1`) in a query because the host is capable of performing DNSSEC validation, such as a recursive DNS server running Windows Server 2012 or later. A nonvalidating stub resolver, such as a computer running Windows DNS client is always set `CD=0`.
+- **CD**: The CD bit is included in a DNS query and is an abbreviation for "checking disabled". If the CD bit is set (`CD=1`) in a query, then it means a DNS response should be sent whether or not validation was successfully performed. If the CD bit isn't set (`CD=0`), then a DNS response isn't sent if validation was required and failed. If the CD bit is clear (`CD=0`), this means "checking enabled" and DNSSEC validation can occur. The CD bit might be set (`CD=1`) in a query because the host is capable of performing DNSSEC validation, and doesn't require upstream validation, such as a recursive DNS server running Windows Server 2012 or later. A nonvalidating stub resolver, such as a computer running Windows DNS client issues queries with the CD bit cleared `CD=0`. For more information, see [RFC4035, section 3.2.2](https://datatracker.ietf.org/doc/html/rfc4035#section-3.2.2).
 
 A fourth important flag (bit) that can be present in a DNS packet header is the AA bit. This flag isn't new with DNSSEC, but it can be used when DNSSEC is deployed:
 

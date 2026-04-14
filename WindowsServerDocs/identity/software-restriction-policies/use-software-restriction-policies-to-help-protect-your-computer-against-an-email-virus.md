@@ -1,16 +1,12 @@
 ---
 title: Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus
 description: Learn how to set application control polices using Software Restriction Policies (SRP) to help protect your computer against e-mail virus beginning with Windows Server 2008 and Windows Vista.
-ms.topic: article
-ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Use Software Restriction Policies to Help Protect Your Computer Against an Email Virus
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides information how to set application control polices using Software Restriction Policies (SRP) to help protect your computer against e-mail virus beginning with Windows Server 2008 and Windows Vista.
 

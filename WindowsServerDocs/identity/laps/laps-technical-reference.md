@@ -2,8 +2,8 @@
 title: Windows LAPS schema and rights extensions for Windows Server Active Directory
 description: Get details about schema and rights extensions to deploy and manage Windows Local Administrator Password Solution (Windows LAPS) in Windows Server Active Directory.
 author: jay98014
-ms.author: jsimmons
-ms.date: 07/04/2022
+ms.author: roharwoo
+ms.date: 05/12/2025
 ms.topic: reference
 ---
 
@@ -153,6 +153,9 @@ SearchFlags: 904
 AttributeSecurityGuid: f3531ec6-6330-4f8e-8d39-7a671fbac605 (ms-LAPS-Encrypted-Password-Attributes)
 ```
 
+> [!IMPORTANT]
+> The `msLAPS-CurrentPasswordVersion` attribute is only available when using the Windows Server 2025 forest schema. This attribute is automatically included when you promote the first Windows Server 2025 domain controller in your forest; it's not installed by running the `Update-LapsADSchema` cmdlet. If your forest doesn't have at least one Windows Server 2025 domain controller, this attribute won't be available and the [OS image rollback detection and mitigation](laps-concepts-overview.md#windows-laps-os-image-rollback-detection-and-mitigation) feature won't function.
+
 ## Extended rights
 
 Windows LAPS extends the `ms-LAPS-Encrypted-Password-Attributes` rights in Windows Server Active Directory. You can use the `ms-LAPS-Encrypted-Password-Attributes` extended rights to grant managed devices SELF permissions to read and write various attributes that are described in the preceding sections.
@@ -175,7 +178,6 @@ Like Windows LAPS, legacy Microsoft LAPS also requires you to use schema extensi
 |`msLAPS-EncryptedPasswordHistory`|Doesn't apply|
 |`msLAPS-EncryptedDSRMPassword`|Doesn't apply|
 |`msLAPS-EncryptedDSRMPasswordHistory`|Doesn't apply|
-|`ms-LAPS-Encrypted-Password-Attributes`|Doesn't apply|
 
 ## Next steps
 
