@@ -20,6 +20,11 @@ This page is updated monthly, so check back regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.76.0.0 - April 2026
+
+### Fixed
+- The version of the Cluster manager extension, used to manage Azure Local, has been incremented to version 5.2.6 to address a [known issue](/windows-server/manage/windows-admin-center/support/known-issues#incorrect-deletions-in-volumes-tool).
+
 ## Version 0.72.0.0 - April 2026
 
 ### Fixed
