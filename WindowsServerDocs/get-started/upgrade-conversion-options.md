@@ -122,7 +122,9 @@ slmgr.vbs /ipk <product key>
 
 ## Related content
 
-- [Plan your Windows Server upgrade](install-upgrade-migrate.md)
-- [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md)
+For more information about upgrading Windows Server, see the following articles:
+
+- [Overview of Windows Server upgrades](upgrade-overview.md)
 - [Server Core vs Server with Desktop Experience install options](install-options-server-core-desktop-experience.md)
+- [Perform an in-place upgrade of Windows Server](upgrade-in-place.md)
 - [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
