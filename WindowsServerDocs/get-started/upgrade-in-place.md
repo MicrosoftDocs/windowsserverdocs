@@ -41,7 +41,7 @@ This article shows you how to upgrade by using Windows Server Setup from install
 > [!IMPORTANT]
 > While most Windows Server roles support an in-place upgrade, Active Directory Domain Controllers are an exception. Although an in-place upgrade might work, don't upgrade servers that run the Active Directory Domain Services role. For more information, see [Upgrade domain controllers to a newer version of Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
-Depending on whether you upgrade by using installation media or Windows Update, you need to **meet additional prerequisites**.
+Depending on whether you upgrade by using installation media or Windows Update, you need to meet additional prerequisites. Select the tab for your upgrade method:
 
 # [Installation media](#tab/media)
 
@@ -84,12 +84,12 @@ Back up your server operating system, apps, and VMs after collecting your system
 
 ## Perform the in-place upgrade
 
-You can perform the in-place upgrade by using installation media or Windows Update.
+You can perform the in-place upgrade by using installation media or Windows Update. Select the tab for your upgrade method:
 
 # [Installation media](#tab/media)
 
 > [!TIP]
-> Looking for a way to upgrade without installation media? Use the Windows Update method to upgrade without needing installation media. For instructions, see [Upgrade by using Windows Update](#tabpanel_2_windows-update)
+> Looking for a way to upgrade without installation media? Use the Windows Update tab to upgrade without needing installation media.
 
 Run Windows Server Setup from your installation media to do the in-place upgrade. This procedure applies to non-Azure, nonclustered servers running Windows Server 2012 R2 or later. During the upgrade, your server restarts several times.
 
