@@ -17,6 +17,8 @@ This article shows you how to upgrade by using Windows Server Setup from install
 
 ## Prerequisites
 
+- Determine the Windows Server versions and supported upgrade path you want to use, see [Supported in-place upgrade paths by version](install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version)
+
 - Administrative rights on the target server.
 
 - A full backup of your server, including the operating system, apps, data, and any VMs. Perform a restore test to confirm the backup is valid and recoverable. You can use Windows Server Backup or a partner backup solution.
@@ -48,8 +50,8 @@ Depending on whether you upgrade by using installation media or Windows Update, 
 The installation media upgrade method applies to non-Azure servers only. To upgrade Windows Server in an Azure virtual machine (VM), see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade) or use the Windows Update method.
 
 - Installation media (ISO image, USB drive, or DVD) for the version of Windows Server that you want to upgrade to.
-  - For information about available Windows Server versions and supported upgrade paths, see [Which version of Windows Server should I upgrade to?](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to)
-  - You can get installation media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, or the Microsoft 365 admin center.
+
+- You can get installation media for your target version of Windows Server from an original equipment manufacturer (OEM), a retail distribution channel, a Visual Studio subscription, or the Microsoft 365 admin center.
 
 # [Windows Update](#tab/windows-update)
 
@@ -121,12 +123,12 @@ Use the Windows Server feature update in Windows Update to perform the in-place 
 
 Add the following registry value to enable the feature update.
 
-1. Open an elevated PowerShell prompt and run the following command:
+Open an elevated PowerShell prompt and run the following command:
 
-   ```powershell
-   New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate"
-   New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate" -Name "AllowWindowsServerFeatureUpdate" -PropertyType DWord -Value 1
-   ```
+```powershell
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowWindowsServerFeatureUpdate" -Name "AllowWindowsServerFeatureUpdate" -PropertyType DWord -Value 1
+```
 
 Alternatively, you can set the value manually in Registry Editor:
 
@@ -177,7 +179,7 @@ If you need technical assistance, contact [Microsoft Support](https://support.mi
 
 ## Related content
 
-- [Overview of Windows Server upgrades](upgrade-overview.md)
+- [Plan your Windows Server upgrade](install-upgrade-migrate.md)
 - [Add or remove roles and features](../administration/server-manager/add-remove-roles-features.md)
 - [Windows Server management overview](../administration/overview.md)
 - [Get started with Windows Admin Center](../manage/windows-admin-center/use/get-started.md)

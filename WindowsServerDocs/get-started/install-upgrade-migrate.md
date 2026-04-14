@@ -4,7 +4,7 @@ description: Explore Windows Server upgrade options including in-place upgrade, 
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 03/23/2026
+ms.date: 04/14/2026
 # customer intent: As a server administrator, I want to understand my upgrade options and supported paths so I can plan the right approach for moving to a newer version of Windows Server.
 ---
 
@@ -47,6 +47,10 @@ Starting with Windows Server 2025, nonclustered systems can upgrade up to four v
 
 For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md).
 
+Select the tab for your upgrade method to see the supported paths:
+
+# [Installation media](#tab/media)
+
 | Upgrade from / to | Windows Server 2012 R2 | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 | Windows Server 2025 |
 |--|--|--|--|--|--|
 | **Windows Server 2012** | Yes | Yes | No | No | No |
@@ -55,6 +59,17 @@ For step-by-step instructions for how to perform an in-place upgrade, see [Perfo
 | **Windows Server 2019** | No | No | No | Yes | Yes |
 | **Windows Server 2022** | No | No | No | No | Yes |
 | **Windows Server 2025** | No | No | No | No | Yes |
+
+# [Windows Update](#tab/windows-update)
+
+To upgrade using Windows Update, you must have the required cumulative update installed. For prerequisites, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md#prerequisites).
+
+| Upgrade from / to | Windows Server 2025 |
+|--|--|
+| **Windows Server 2019** | Yes |
+| **Windows Server 2022** | Yes |
+
+---
 
 ## Upgrade restrictions for licensed versions of Windows Server
 
