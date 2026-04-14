@@ -17,7 +17,7 @@ This article shows you how to upgrade by using Windows Server Setup from install
 
 ## Prerequisites
 
-- Determine the Windows Server versions and supported upgrade path you want to use, see [Supported in-place upgrade paths by version](install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version)
+- To determine the Windows Server versions and supported upgrade paths, see [Supported in-place upgrade paths by version](install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version).
 
 - Administrative rights on the target server.
 
