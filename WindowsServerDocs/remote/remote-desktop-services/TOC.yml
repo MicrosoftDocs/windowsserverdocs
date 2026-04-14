@@ -195,5 +195,7 @@
         href: remotepc/remote-desktop-connection-single-sign-on.md
       - name: Uninstall and reinstall Remote Desktop Connection
         href: remotepc/uninstall-remote-desktop-connection.md
+      - name: Understand security warnings when opening RDP files
+        href: remotepc/understanding-security-warnings.md
     - name: Remote PC connections FAQ
       href: remotepc/remote-pc-connections-faq.yml
