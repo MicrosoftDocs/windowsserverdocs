@@ -86,13 +86,11 @@ items:
     - name: Upgrade
       items:
       - name: Perform an in-place upgrade
-        href: perform-in-place-upgrade.md
+        href: upgrade-in-place.md
       - name: Upgrade or migrate Windows Server Roles and Features
         href: upgrade-migrate-roles-features.md
       - name: Convert editions and license types
         href: upgrade-conversion-options.md
-    - name: Manage Feature Updates with Group Policy
-      href: manage-feature-updates-group-policy.md
   - name: Activation
     items:
     - name: Automatic VM Activation
