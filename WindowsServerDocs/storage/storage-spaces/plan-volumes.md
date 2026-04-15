@@ -4,7 +4,7 @@ description: How to plan storage volumes on Azure Local and Windows Server clust
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
-ms.date: 02/11/2025
+ms.date: 03/09/2026
 appliesto: [
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
             "✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
@@ -36,11 +36,11 @@ All volumes are accessible by all servers in the cluster at the same time. Once 
 
 ## Choosing how many volumes to create
 
-We recommend making the number of volumes a multiple of the number of servers in your cluster. For example, if you have 4 servers, you'll experience more consistent performance with 4 total volumes than with 3 or 5. This allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
+The number of volumes you create depends on the size of the pool and the maximum supported volume size, with a minimum of one volume per node. This configuration allows the cluster to distribute volume "ownership" (one server handles metadata orchestration for each volume) evenly among servers.
 
 We recommend limiting the total number of volumes to 64 volumes per cluster.
 
-## Choosing the filesystem
+## Choosing the file system
 
 We recommend using the new [Resilient File System (ReFS)](/windows-server/storage/refs/refs-overview) for Storage Spaces Direct. ReFS is the premier filesystem purpose-built for virtualization and offers many advantages, including dramatic performance accelerations and built-in protection against data corruption. It supports nearly all key NTFS features, including Data Deduplication in Windows Server version 1709 and later. See the ReFS [feature comparison table](/windows-server/storage/refs/refs-overview#feature-comparison) for details.
 
