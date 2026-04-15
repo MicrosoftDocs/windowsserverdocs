@@ -2,7 +2,7 @@
 title: Configure conditional access for VPN connectivity using Microsoft Entra ID
 description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
 ms.topic: how-to
-ms.date: 10/31/2023
+ms.date: 04/15/2026
 ms.author: roharwoo
 author: robinharwood
 ms.custom: sfi-image-nochange
@@ -63,7 +63,8 @@ To learn more about NPS CRL registry settings, see [Configure Network Policy Ser
 <a name='create-root-certificates-for-vpn-authentication-with-azure-ad'></a>
 ## Create root certificates for VPN authentication with Microsoft Entra ID
 
-In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID, which automatically creates a Cloud app called VPN Server in the tenant. To configure conditional access for VPN connectivity, you need to:
+<!-- [CHANGED] Updated intro paragraph to clarify VPN Server app creation timing and admin consent requirement -->
+In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID. When the first certificate is created, Microsoft Entra ID automatically creates a cloud app called **VPN Server** in the tenant. An administrator must grant admin consent for this application once before VPN connectivity is fully operational. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal.
 2. Download the VPN certificate.
@@ -81,7 +82,8 @@ The VPN client then sends the certificate issued by Microsoft Entra ID to the VP
 
 **To create root certificates:**
 
-1. Sign in to your [Azure portal](https://portal.azure.com) as a global administrator.
+<!-- [CHANGED] Updated sign-in role from global administrator to least-privilege role per SFI guidance -->
+1. Sign in to your [Azure portal](https://portal.azure.com) as at least a [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
 2. On the left menu, click **Microsoft Entra ID**.
 3. On the **Microsoft Entra ID** page, in the **Manage** section, click **Security**.
 4. On the **Security** page, in the **Protect** section, click **Conditional Access**.
@@ -90,6 +92,13 @@ The VPN client then sends the certificate issued by Microsoft Entra ID to the VP
 7. On the **New** page, perform the following steps:
     a. For **Select duration**, select either 1, 2 or 3 years.
     b. Select **Create**.
+
+<!-- [CHANGED] Added new step 8: admin consent flow for first-time VPN certificate creation -->
+1. If this is the first VPN certificate created in your tenant, a warning banner appears requesting admin consent for the **VPN Server** application. Select **Grant admin consent**, sign in with an account that has at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role, and accept the requested permissions. This is a one-time action per tenant — subsequent certificate operations don't require consent again.
+
+<!-- [CHANGED] Added note about VPN Server app permissions and consent status -->
+> [!NOTE]
+> When the first VPN certificate is created, Microsoft Entra ID creates a **VPN Server** application in your tenant that requires the **Read directory data** permission. An administrator with at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role must grant admin consent before VPN connectivity is fully operational. If the consent banner isn't visible, consent has already been granted for your tenant.
 
 ## Configure the conditional access policy
 
