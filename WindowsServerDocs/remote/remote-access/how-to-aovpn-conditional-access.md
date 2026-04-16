@@ -14,7 +14,7 @@ In this how-to guide, you'll learn how to grant VPN users access your resources 
 
 ## Prerequisites
 
-Before you start configuring Conditional Access for your VPN, you must have completed the following prerequisites:
+Before you start configuring Conditional Access for your VPN, complete the following prerequisites:
 
 - [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
   - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
@@ -29,7 +29,7 @@ Before you start configuring Conditional Access for your VPN, you must have comp
 
 ## Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
-An EAP-TLS client cannot connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Microsoft Entra ID do not have a CRL because they are short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well.
+An EAP-TLS client can't connect unless the NPS server completes a revocation check of the certificate chain (including the root certificate). Cloud certificates issued to the user by Microsoft Entra ID don't have a CRL because they're short-lived certificates with a lifetime of one hour. EAP on NPS needs to be configured to ignore the absence of a CRL. Since the authentication method is EAP-TLS, this registry value is only needed under EAP\13. If other EAP authentication methods are used, then the registry value should be added under those as well.
 
 In this section, you'll add `IgnoreNoRevocationCheck` and `NoRevocationCheck`. By default, `IgnoreNoRevocationCheck` and `NoRevocationCheck` are set to 0 (disabled).
 
@@ -52,7 +52,7 @@ To learn more about NPS CRL registry settings, see [Configure Network Policy Ser
 
 6. Double-click **NoRevocationCheck** and set the Value data to **1**.
 
-7. Select **OK** and reboot the server. Restarting the RRAS and NPS services does not suffice.
+7. Select **OK** and reboot the server. Restarting the RRAS and NPS services isn't enough.
 
 |Registry Path  |EAP Extension  |
 |---------|---------|
@@ -63,7 +63,6 @@ To learn more about NPS CRL registry settings, see [Configure Network Policy Ser
 <a name='create-root-certificates-for-vpn-authentication-with-azure-ad'></a>
 ## Create root certificates for VPN authentication with Microsoft Entra ID
 
-<!-- [CHANGED] Updated intro paragraph to clarify VPN Server app creation timing and admin consent requirement -->
 In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID. When the first certificate is created, Microsoft Entra ID automatically creates a cloud app called **VPN Server** in the tenant. An administrator must grant admin consent for this application once before VPN connectivity is fully operational. To configure conditional access for VPN connectivity, you need to:
 
 1. Create a VPN certificate in the Azure portal.
@@ -71,9 +70,9 @@ In this section, you configure conditional access root certificates for VPN auth
 3. Deploy the certificate to your VPN and NPS servers.
 
 > [!IMPORTANT]
-> Once a VPN certificate is created in the Azure portal, Microsoft Entra ID will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client.
+> Once you create a VPN certificate in the Azure portal, Microsoft Entra ID immediately starts using it to issue short-lived certificates to the VPN client. To avoid any problems with credential validation for the VPN client, it's critical to immediately deploy the VPN certificate to the VPN server.
 
-When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Microsoft Entra ID issues a token in the form of a short-lived (1-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client. 
+When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Microsoft Entra ID issues a token in the form of a short-lived (one-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes off control to the VPN client. 
 
 The VPN client then sends the certificate issued by Microsoft Entra ID to the VPN for credential validation. 
 
@@ -82,23 +81,21 @@ The VPN client then sends the certificate issued by Microsoft Entra ID to the VP
 
 **To create root certificates:**
 
-<!-- [CHANGED] Updated sign-in role from global administrator to least-privilege role per SFI guidance -->
 1. Sign in to your [Azure portal](https://portal.azure.com) as at least a [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
-2. On the left menu, click **Microsoft Entra ID**.
-3. On the **Microsoft Entra ID** page, in the **Manage** section, click **Security**.
-4. On the **Security** page, in the **Protect** section, click **Conditional Access**.
-5. On the **Conditional Access | Policies** page, in the **Manage** section, click **VPN Connectivity**.
-6. On the **VPN connectivity** page, click **New certificate**.
-7. On the **New** page, perform the following steps:
-    a. For **Select duration**, select either 1, 2 or 3 years.
+1. On the left menu, select **Microsoft Entra ID**.
+1. On the **Microsoft Entra ID** page, in the **Manage** section, select **Security**.
+1. On the **Security** page, in the **Protect** section, select **Conditional Access**.
+1. On the **Conditional Access | Policies** page, in the **Manage** section, select **VPN Connectivity**.
+1. On the **VPN connectivity** page, select **New certificate**.
+1. On the **New** page, perform the following steps:
+    a. For **Select duration**, select either 1, 2, or 3 years.
     b. Select **Create**.
+1. For the first VPN certificate you create in your tenant, a warning banner appears requesting admin consent for the **VPN Server** application. Select **Grant admin consent**, sign in with an account that has at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role, and accept the requested permissions. This is a one-time action per tenant. Subsequent certificate operations don't require consent again.
 
-<!-- [CHANGED] Added new step 8: admin consent flow for first-time VPN certificate creation -->
-1. If this is the first VPN certificate created in your tenant, a warning banner appears requesting admin consent for the **VPN Server** application. Select **Grant admin consent**, sign in with an account that has at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role, and accept the requested permissions. This is a one-time action per tenant — subsequent certificate operations don't require consent again.
+:::image type="content" source="../media/Always-On-Vpn/grant-consent.png" alt-text="Screenshot of Microsoft Entra admin portal showing a warning banner to grant admin consent for the VPN Server application." lightbox="../media/Always-On-Vpn/grant-consent.png":::
 
-<!-- [CHANGED] Added note about VPN Server app permissions and consent status -->
 > [!NOTE]
-> When the first VPN certificate is created, Microsoft Entra ID creates a **VPN Server** application in your tenant that requires the **Read directory data** permission. An administrator with at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role must grant admin consent before VPN connectivity is fully operational. If the consent banner isn't visible, consent has already been granted for your tenant.
+> Microsoft Entra ID creates a **VPN Server** application in your tenant when you create the first VPN certificate. This application requires the **Read directory data** permission. An administrator with at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role must grant admin consent before VPN connectivity is fully operational. If the consent banner doesn't appear, consent was already granted for your tenant.
 
 ## Configure the conditional access policy
 
@@ -176,8 +173,8 @@ In this section, you deploy a trusted root certificate for VPN authentication to
 
 2. Log on to a domain-joined computer with Enterprise Admin rights and run these commands from an Administrator command prompt to add the cloud root certificate(s) into the *Enterprise NTauth* store:
 
-   >[!NOTE]
-   >For environments where the VPN server is not joined to the Active Directory domain, the cloud root certificates must be added to the _Trusted Root Certification Authorities_ store manually.
+   > [!NOTE]
+   > For environments where the VPN server isn't joined to the Active Directory domain, the cloud root certificates must be added to the _Trusted Root Certification Authorities_ store manually.
 
    | Command | Description |
    | --- | --- |
@@ -188,8 +185,8 @@ In this section, you deploy a trusted root certificate for VPN authentication to
 3. Verify that the root certificates are present in the Enterprise NTauth store and show as trusted:
    1. Log on to a server with Enterprise Admin rights that has the **Certificate Authority Management Tools** installed.
 
-   >[!NOTE]
-   >By default the **Certificate Authority Management Tools** are installed Certificate Authority servers. They can be installed on other members servers as part of the **Role Administration Tools** in Server Manager.
+       >[!NOTE]
+       >By default the **Certificate Authority Management Tools** are installed Certificate Authority servers. They can be installed on other members servers as part of the **Role Administration Tools** in Server Manager.
 
    1. On the VPN server, in the Start menu, enter **pkiview.msc** to open the Enterprise PKI dialog.
    1. From the Start menu, enter **pkiview.msc** to open the Enterprise PKI dialog.
@@ -207,8 +204,8 @@ In this section, you'll create OMA-DM based VPNv2 profiles using Intune to deplo
 
 2. In the policy editor, select **Properties** > **Settings** > **Base VPN**. Extend the existing **EAP Xml** to include a filter that gives the VPN client the logic it needs to retrieve the Microsoft Entra Conditional Access certificate from the user's certificate store instead of leaving it to chance allowing it to use the first certificate discovered.
 
-    >[!NOTE]
-    >Without this, the VPN client could retrieve the user certificate issued from the on-premises certificate authority, resulting in a failed VPN connection.
+    > [!NOTE]
+    > Without this, the VPN client could retrieve the user certificate issued from the on-premises certificate authority, resulting in a failed VPN connection.
 
     ![Intune portal](../media/Always-On-Vpn/intune-eap-xml.png)
 
@@ -234,7 +231,7 @@ In this section, you'll create OMA-DM based VPNv2 profiles using Intune to deplo
 
 ## Force MDM Policy Sync on the Client
 
-If the VPN profile does not show up on the client device, under Settings\\Network & Internet\\VPN, you can force MDM policy to sync.
+If the VPN profile doesn't show up on the client device, under Settings\\Network & Internet\\VPN, you can force MDM policy to sync.
 
 1. Sign in to a domain-joined client computer as a member of the **VPN Users** group.
 
@@ -248,10 +245,10 @@ If the VPN profile does not show up on the client device, under Settings\\Networ
 
 ## Next steps
 
-You are done configuring the VPN profile to use Microsoft Entra Conditional Access.
+You're done configuring the VPN profile to use Microsoft Entra Conditional Access.
 
 - To learn more about how conditional access works with VPNs, see [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
 
 - To learn more about the advanced VPN features, see [Advanced VPN Features](vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features).
 
-- To see an overview of VPNv2 CSP, see [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp):  This topic provides you with an overview of VPNv2 CSP.
+- To see an overview of VPNv2 CSP, see [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
