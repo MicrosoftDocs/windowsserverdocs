@@ -61,7 +61,7 @@ Before you can apply a security baseline for the first time, you need to install
 1. Run the following command to install the OSConfig module:
 
    ```powershell
-   Install-Module -Name Microsoft.OSConfig -Scope AllUsers -Repository PSGallery -Force
+   Install-Module -Name Microsoft.OSConfig -Scope AllUsers -Force
    ```
 
    If you're prompted to install or update the NuGet provider, select **Yes**.
@@ -85,7 +85,7 @@ _Alternatively_, you can use the [Save-Module](/powershell/module/powershellget/
 1. Run the following command to save the OSConfig module on the local device replacing **Server01** with your device name or IP address:
 
    ```powershell
-   Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public" -Repository PSGallery
+   Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public"
    Get-ChildItem -Path "\\Server01\Public"
    ```
 
