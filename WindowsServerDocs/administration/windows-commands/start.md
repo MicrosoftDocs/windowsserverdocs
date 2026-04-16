@@ -45,7 +45,7 @@ start <"title"> [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
 #### Remarks
 
-- You can run non-executable files through their file association by typing the name of the file as a command. This applies to any file type that has a registered association, including URLs, which are automatically detected and opened in the default browser, and documents such as .txt or .pdf files, which are opened in their associated application.
+- You can run non-executable files through their file association by typing the name of the file as a command. This applies to any file type that has a registered association, including URLs, which are automatically detected and opened in the default browser, and documents such as `.txt` or `.pdf` files, which are opened in their associated application.
 
 - If you run a command that contains the string CMD as the first token without an extension or path qualifier, CMD is replaced with the value of the COMSPEC variable. This prevents users from picking up `cmd` from the current directory.
 
@@ -76,7 +76,7 @@ start /max start /?
 To open a URL in the default browser, type:
 
 ```cmd
-start "Google" "https://www.google.com"
+start "Bing" "https://www.bing.com"
 ```
 
 ## Related links
