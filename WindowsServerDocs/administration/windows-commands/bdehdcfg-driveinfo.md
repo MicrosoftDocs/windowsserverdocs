@@ -32,7 +32,7 @@ bdehdcfg -driveinfo <drive_letter>
 To display the drive information for the C: drive:
 
 ```
-bdehdcfg  driveinfo C:
+bdehdcfg -driveinfo C:
 ```
 
 ## Related links
