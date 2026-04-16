@@ -51,9 +51,9 @@ Before you convert partition styles, back up or move the data off the disk.
    > [!NOTE]
    > If your disk doesn't have any partitions or volumes, skip to step **3** to convert your disk.
 
-   1. Type **list disk** and hit **Enter**. Note of the disk number that you want to convert.
+   1. Type **list disk** and hit **Enter**. Note the disk number that you want to convert.
 
-   1. Type **select disk**, provide the disk number you want to convert, then hit **Enter**.
+   1. Type **select disk \<disk number\>**, replacing `<disk number>` with the number noted in the previous step, then hit **Enter**. To verify the details of the selected disk, type **detail disk** and hit **Enter**. The `detail disk` command displays information about the currently selected disk and doesn't accept a disk number as an argument.
 
    1. Type **clean** to delete all partitions and volumes on the disk.
 
