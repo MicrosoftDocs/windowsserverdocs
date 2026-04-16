@@ -15,7 +15,7 @@ You can use Windows Local Administrator Password Solution (Windows LAPS) to mana
 
 ## Domain functional level and domain controller operating system version requirements
 
-If your domain functional level (DFL) is earlier than 2016, you can't enable Windows LAPS password encryption, which means:
+If your domain functional level (DFL) is earlier than 2016, you can't enable Windows LAPS password encryption. This limitation means:
 
 - You can configure clients to store passwords only in clear text, secured by Windows Server Active Directory access control lists (ACLs).
 - You can't configure domain controllers to manage their local DSRM account.
