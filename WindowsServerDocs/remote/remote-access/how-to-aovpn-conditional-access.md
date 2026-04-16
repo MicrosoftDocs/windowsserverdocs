@@ -63,7 +63,7 @@ To learn more about NPS CRL registry settings, see [Configure Network Policy Ser
 <a name='create-root-certificates-for-vpn-authentication-with-azure-ad'></a>
 ## Create root certificates for VPN authentication with Microsoft Entra ID
 
-In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID. When you create the first certificate, Microsoft Entra ID automatically creates a cloud app called **VPN Server** in the tenant. An administrator must grant admin consent for this application once before VPN connectivity is fully operational. To configure conditional access for VPN connectivity, you need to:
+In this section, you configure conditional access root certificates for VPN authentication with Microsoft Entra ID. When you create the first certificate, Microsoft Entra ID automatically creates a cloud app called **VPN Server** in the tenant. An administrator must grant admin consent for this application once before VPN connectivity is fully operational. To configure conditional access for VPN connectivity, complete the following steps:
 
 1. Create a VPN certificate in the Azure portal.
 2. Download the VPN certificate.
