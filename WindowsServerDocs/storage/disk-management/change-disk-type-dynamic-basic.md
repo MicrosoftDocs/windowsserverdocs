@@ -53,7 +53,7 @@ Before you convert partition styles, back up or move the data off the disk.
 
    1. Type `list disk` and hit **Enter**. Note the disk number that you want to convert.
 
-   1. Type `select disk <disk number>`, replace `<disk number>` with the number you noted in the previous step, and then hit **Enter**.
+   1. Type `select disk <disk number>`, replace `<disk number>` with the number you noted in the previous step, and then press **Enter**.
 
       > [!NOTE]
       > To verify the details of the currently selected disk, type `detail disk` and hit **Enter**. The `detail disk` command displays information about the currently selected disk and doesn't accept a disk number as an argument.
