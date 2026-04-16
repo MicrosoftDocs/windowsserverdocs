@@ -90,6 +90,12 @@ To reinstall the Remote Desktop Connection app using the GUI:
 
 To reinstall the Remote Desktop Connection app using the Command Prompt:
 
+1. Download the installer for the Remote Desktop Connection app from the following links and save it somewhere you can remember. Select the version that matches your computer's architecture:
+
+   - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2247659) *(most common)*
+   - [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2247660)
+   - [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2247577)
+
 1. Open Command Prompt as an administrator. You can use Windows Terminal with a Command Prompt profile.
 
 1. Change to the directory where you saved the installer for the Remote Desktop Connection app.
@@ -97,7 +103,7 @@ To reinstall the Remote Desktop Connection app using the Command Prompt:
 1. Run the following command to install the Remote Desktop Connection app:
 
    ```cmd
-   mstsc-x64-setup.exe
+   setup.exe
    ```
 
 1. When the installation completes, you get the confirmation message **Remote Desktop Connection was successfully installed**.
