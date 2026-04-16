@@ -57,7 +57,10 @@ Before you convert partition styles, back up or move the data off the disk.
 
    1. To verify the details of the currently selected disk, type `detail disk` and press **Enter**. The `detail disk` command displays information about the currently selected disk and doesn't accept a disk number as an argument.
 
-   1. Type `clean` to delete all partitions and volumes on the disk.
+   1. Type `clean` and press **Enter** to delete all partitions and volumes on the disk.
+
+      > [!CAUTION]
+      > The `clean` command permanently destroys all data on the selected disk. Ensure you have backed up or moved all important data before running this command.
 
 1. Type `convert basic` or `convert dynamic`, and then press **Enter**.
 
