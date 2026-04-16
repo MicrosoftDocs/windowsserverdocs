@@ -190,7 +190,7 @@ We recommend you use the fixed file type when you need optimal resiliency and pe
 
 When you create a dynamic VHD file, the system allocates space for it on-demand. Blocks in the file start as allocated blocks, and no space in the file backs the unallocated blocks. When a block receives its first write, the virtualization stack then must allocate space for the block in the VHD file, then update the metadata. This allocation increases the number of disk I/Os required for the write, increasing CPU usage. Reads and writes to existing blocks incur disk access and CPU overhead when looking up the blocks' mapping in the metadata.
 
-If you're using a VHDX file, we recommend you use the dynamic file type when you aren't actively monitoring storage on the hosting volume. Make sure you have enough disk space when expanding the VHD file at runtime.
+If you're using a VHDX file, use the dynamic file type when you actively monitor storage on the hosting volume. Make sure you have enough disk space when expanding the VHD file at runtime.
 
 ### Differencing file type
 
