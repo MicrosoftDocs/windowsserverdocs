@@ -17,12 +17,11 @@ This guide shows how to grant VPN users access to your resources by using [Micro
 
 Before you start configuring Conditional Access for your VPN, complete the following prerequisites:
 
-- [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- Review [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal).
   - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
-    - Read Conditional Access policies and configurations according to [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader).
-    - Create or modify Conditional Access policies according to [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
-- [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access)
-
+    - Have [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader) access to read Conditional Access policies and configurations.
+    - Have [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) access to create or modify Conditional Access policies.
+- Configure [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
 - Set up the Always On VPN infrastructure in your environment, or complete [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
 - Configure your Windows client computer with a VPN connection by using Intune. For details, see [Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune](how-to-aovpn-client-intune.md).
 
