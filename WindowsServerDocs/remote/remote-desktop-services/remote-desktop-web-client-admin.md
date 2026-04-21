@@ -131,9 +131,9 @@ When a new version of the Remote Desktop web client is available, follow these s
 
    This replaces the client for all users when they relaunch the web page.
 
-## How to update the RD Broker certificate
+## Update the RD Broker certificate
 
-When the RD Broker certificate is renewed or replaced, you must update the web client with the new certificate. If you skip this step, users will receive an "unexpected server authentication certificate was received" error when they try to connect.
+When you renew or replace the RD Broker certificate, update the web client with the new certificate. If you skip this step, users receive an "unexpected server authentication certificate was received" error when they try to connect.
 
 1. On the RD Connection Broker server, export the updated certificate as a `.cer` file and copy it to the RD Web Access server.
 
