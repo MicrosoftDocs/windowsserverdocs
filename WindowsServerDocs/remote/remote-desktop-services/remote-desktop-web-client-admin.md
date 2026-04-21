@@ -82,6 +82,9 @@ To install the web client for the first time, follow these steps:
    Import-RDWebClientBrokerCert <.cer file path>
    ```
 
+   > [!IMPORTANT]
+   > You must rerun this cmdlet whenever the RD Broker certificate is updated or renewed. If you renew the certificate and don't rerun this command, users receive an "unexpected server authentication certificate was received" error when trying to connect.
+
 1. Finally, run this cmdlet to publish the Remote Desktop web client:
 
    ```PowerShell
@@ -127,6 +130,26 @@ When a new version of the Remote Desktop web client is available, follow these s
    ```
 
    This replaces the client for all users when they relaunch the web page.
+
+## Update the RD Broker certificate
+
+When you renew or replace the RD Broker certificate, update the web client with the new certificate. If you skip this step, users receive an "unexpected server authentication certificate was received" error when they try to connect.
+
+1. On the RD Connection Broker server, export the updated certificate as a `.cer` file and copy it to the RD Web Access server.
+
+1. On the RD Web Access server, open an elevated PowerShell prompt.
+
+1. Run the following cmdlet with the bracketed value replaced with the path of the new `.cer` file:
+
+   ```PowerShell
+   Import-RDWebClientBrokerCert <.cer file path>
+   ```
+
+1. Publish the updated configuration to users:
+
+   ```PowerShell
+   Publish-RDWebClientPackage -Type Production -Latest
+   ```
 
 ## How to uninstall the Remote Desktop web client
 
