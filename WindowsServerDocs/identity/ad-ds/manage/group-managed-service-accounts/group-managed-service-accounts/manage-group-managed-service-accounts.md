@@ -4,7 +4,7 @@ description: Learn how to manage and use Group Managed Service Accounts (gMSA) i
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 07/01/2025
+ms.date: 04/16/2026
 ---
 
 # Manage group Managed Service Accounts
@@ -237,6 +237,16 @@ Alternatively, you can run the following commands.
    ```
 
 ---
+
+## Install a gMSA on your system
+
+After creating a gMSA and adding the member hosts to the security group, you must install the gMSA on each host computer where the service runs. To install a gMSA, open an elevated PowerShell window and run the following command replacing `<gMSAName>` with your value:
+
+```powershell
+Install-ADServiceAccount -Identity <gMSAName>
+```
+
+For more information about the `Install-ADServiceAccount` cmdlet, see [Install-ADServiceAccount](/powershell/module/activedirectory/install-adserviceaccount).
 
 ## Uninstall a gMSA from your system
 
