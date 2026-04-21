@@ -96,6 +96,8 @@ To configure the file share witness on a domain-joined Windows device, follow th
 
 1. In the **Advanced Security Settings** screen, under the **Permissions** tab, select **Add**.
 
+1. Select **Select a principal**, and then enter the name or locate the Cluster Name Object (CNO) for the cluster or suitable Active Directory group containing the CNO. Select **OK**.
+
 1. Under **Basic permissions**, select **Modify**, **Read & execute**, **List folder contents**, and **Read**. Then select **OK**.
 
 1. Confirm and configure any other folder permissions to meet your organization's requirements. Select **OK** for each dialog until you return to the **Shared Folder Permissions** screen.
