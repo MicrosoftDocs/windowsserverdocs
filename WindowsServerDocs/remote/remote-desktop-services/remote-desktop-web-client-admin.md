@@ -83,7 +83,7 @@ To install the web client for the first time, follow these steps:
    ```
 
    > [!IMPORTANT]
-   > You must rerun this cmdlet whenever the RD Broker certificate is updated or renewed. If you renew the certificate and don't rerun this command, users will receive an "unexpected server authentication certificate was received" error when trying to connect.
+   > You must rerun this cmdlet whenever the RD Broker certificate is updated or renewed. If you renew the certificate and don't rerun this command, users receive an "unexpected server authentication certificate was received" error when trying to connect.
 
 1. Finally, run this cmdlet to publish the Remote Desktop web client:
 
