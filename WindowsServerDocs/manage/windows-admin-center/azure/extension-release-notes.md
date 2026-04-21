@@ -88,7 +88,7 @@ This page is updated monthly, so check back regularly.
 - Added support for installation when TLS 1.3 is enabled.
 
 ### Fixed
-- Fixed an issue where momentarily losing access to IMDS or HIMDS does not result in Windows Admin Center installation failure.
+- Fixed an issue where momentarily losing access to IMDS or HIMDS doesn't result in Windows Admin Center installation failure.
 
 ## Version 0.0.0.329 - November 2023
 
