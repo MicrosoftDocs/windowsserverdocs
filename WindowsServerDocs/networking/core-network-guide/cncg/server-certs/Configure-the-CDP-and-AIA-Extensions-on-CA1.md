@@ -49,7 +49,7 @@ To perform this procedure, you must be a member of Domain Admins.
 
     -   **Publish Delta CRLs to this location**
 
-10. Change **Select extension** to **Authority Information Access (AIA)**, and in the **Specify locations from which users can obtain a certificate revocation list (CRL)**, do the following:
+10. Change **Select extension** to **Authority Information Access (AIA)**, and in the **Specify locations from which users can obtain a certificate for this CA**, do the following:
 
     1.  Select the entry that starts with the path `ldap:///CN=<CATruncatedName>,CN=AIA,CN=Public Key Services`, and then click **Remove**. In **Confirm removal**, click **Yes**.
 
