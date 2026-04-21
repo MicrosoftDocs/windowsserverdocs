@@ -4,7 +4,7 @@ description: Explore Windows Server upgrade options including in-place upgrade, 
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 03/23/2026
+ms.date: 04/14/2026
 # customer intent: As a server administrator, I want to understand my upgrade options and supported paths so I can plan the right approach for moving to a newer version of Windows Server.
 ---
 
@@ -45,7 +45,11 @@ Upgrade to the latest version of Windows Server to get the latest features, secu
 
 Starting with Windows Server 2025, nonclustered systems can upgrade up to four versions at a time. You can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later. For Windows Server 2022 and earlier, nonclustered systems can upgrade up to two versions at a time. If you're using a [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md), you can only upgrade one version at a time.
 
-The following table shows the supported in-place upgrade paths based on your current version:
+For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md).
+
+Select the tab for your upgrade method to see the supported paths:
+
+# [Installation media](#tab/media)
 
 | Upgrade from / to | Windows Server 2012 R2 | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 | Windows Server 2025 |
 |--|--|--|--|--|--|
@@ -55,6 +59,17 @@ The following table shows the supported in-place upgrade paths based on your cur
 | **Windows Server 2019** | No | No | No | Yes | Yes |
 | **Windows Server 2022** | No | No | No | No | Yes |
 | **Windows Server 2025** | No | No | No | No | Yes |
+
+# [Windows Update](#tab/windows-update)
+
+To upgrade using Windows Update, you must have the required cumulative update installed. For prerequisites, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md#prerequisites).
+
+| Upgrade from / to | Windows Server 2025 |
+|--|--|
+| **Windows Server 2019** | Yes |
+| **Windows Server 2022** | Yes |
+
+---
 
 ## Upgrade restrictions for licensed versions of Windows Server
 

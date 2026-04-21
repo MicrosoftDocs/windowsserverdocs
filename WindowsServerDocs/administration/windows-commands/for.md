@@ -159,7 +159,7 @@ In the preceding example, each file that has the .doc or .txt extension in the c
 To parse a file, ignoring commented lines, type:
 
 ```
-for /f eol=; tokens=2,3* delims=, %i in (myfile.txt) do @echo %i %j %k
+for /f "eol=; tokens=2,3* delims=," %i in (myfile.txt) do @echo %i %j %k
 ```
 
 This command parses each line in *myfile.txt*. It ignores lines that begin with a semicolon and passes the second and third token from each line to the **for** body (tokens are delimited by commas or spaces). The body of the **for** statement references **%i** to get the second token, **%j** to get the third token, and **%k** to get all of the remaining tokens. If the file names that you supply contain spaces, use quotation marks around the text (for example, File Name). To use quotation marks, you must use **usebackq**. Otherwise, the quotation marks are interpreted as defining a literal string to parse.
