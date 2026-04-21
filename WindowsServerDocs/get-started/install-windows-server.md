@@ -88,7 +88,7 @@ $isoMountPointDriveLetter = Read-Host "Enter ISO mount point drive letter (Ex: F
 # Copy ISO files to USB drive
 $source = "$($isoMountPointDriveLetter):\"
 $destination = "$($usbDriveLetter):\"
-robocopy $source $destination /COPYALL /Z /E /SEC /R:3 /W:3 /XF "$($isoMountPointDriveLetter):\sources\install.wim"
+robocopy $source $destination /E /Z /R:3 /W:3 /XF "$($isoMountPointDriveLetter):\sources\install.wim"
 
 # Split install.wim file
 Write-Host "[--- Splitting install.wim ---]"
