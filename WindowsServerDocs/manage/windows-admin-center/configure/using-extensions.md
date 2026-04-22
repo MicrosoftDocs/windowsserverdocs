@@ -11,7 +11,7 @@ ms.date: 01/14/2021
 Windows Admin Center is an extensible platform where each connection type and tool is an extension that you can install, uninstall, and update individually. You can search for new extensions published by Microsoft and other developers, and install and update them individually without having to update the entire Windows Admin Center installation. You can also configure a separate NuGet feed or file share and distribute extensions to use internally within your organization.
 
 > [!IMPORTANT]
-> If outbound connectivity is restricted by your firewall or proxy server, make sure your [network URLs are configured properly](../deploy/networking-requirements). If your network isn't configured properly, you won't receive extension updates.
+> If outbound connectivity is restricted by your firewall or proxy server, make sure your [network URLs are configured properly](../deploy/network-requirements.md). If your network isn't configured properly, you won't receive extension updates.
 
 ## Installing an extension
 
