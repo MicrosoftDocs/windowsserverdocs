@@ -10,6 +10,9 @@ ms.date: 01/14/2021
 
 Windows Admin Center is built as an extensible platform where each connection type and tool is an extension that you can install, uninstall, and update individually. You can search for new extensions published by Microsoft and other developers, and install and update them individually without having to update the entire Windows Admin Center installation. You can also configure a separate NuGet feed or file share and distribute extensions to use internally within your organization.
 
+> [!IMPORTANT]
+> If outbound connectivity is restricted by your firewall or proxy server, make sure your [network URLs are configured properly](../deploy/networking-requirements.md). If your network is not configured properly, you will not receive extension updates.
+
 ## Installing an extension
 
 Windows Admin Center shows extensions available from the specified NuGet feed. By default, Windows Admin Center points to the Microsoft official NuGet feed which hosts extensions published by Microsoft and other developers.
@@ -67,7 +70,7 @@ There are scripts available on the Internet for downloading NuGet packages from 
 1. Edit the first line of the script to your NuGet feed's v2 URL. If you're downloading packages from the Windows Admin Center official feed, use the following URL:
 
     ```powershell
-    $feedUrlBase = "https://aka.ms/sme-extension-feed"
+    $feedUrlBase = "https://aka.ms/wac-public-extensions"
     ```
 
 1. Run the script and it downloads all the NuGet packages from the feed to the following local folder: %USERPROFILE%\Documents\NuGetLocal
