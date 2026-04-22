@@ -9,16 +9,16 @@ ms.date: 01/12/2023
 
 # Windows Admin Center network requirements
 
-This article describes the networking requirements for using Windows Admin center to manage your servers and clusters.
+This article describes the networking requirements for using Windows Admin Center to manage your servers and clusters.
 
 ## Networking configuration
 
-Windows Admin Center communicates outbound securely to endpoints over TCP port 443. By default, the Windows Admin Center gateway and browser uses the default route to the internet to perform actions. You can optionally configure the gateway to use a proxy server if your network requires it.
+Windows Admin Center communicates outbound securely to endpoints over TCP port 443. By default, the Windows Admin Center gateway and browser use the default route to the internet to perform actions. You can optionally configure the gateway to use a proxy server if your network requires it.
 
-Endpoints need to be opened on two sources:
+You need to open endpoints on two sources:
 
-- The gateway - this is the server or client machine where the Windows Admin Center gateway (.msi) is installed.
-- The browser - this is the machine where the Windows Admin Center web service is being accessed from.
+- The gateway - this server or client machine is where you install the Windows Admin Center gateway (.exe).
+- The browser - this machine is where you access the Windows Admin Center web service.
 
 If your firewall or proxy server restricts outbound connectivity, make sure it doesn't block the URLs listed in the following section.
 
