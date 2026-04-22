@@ -98,7 +98,7 @@ Additionally, the way plug-ins work changed with version 2410. Instead of develo
 
 Extensions not included in the Windows Admin Center installer, including external partner extensions, aren't available unless you add them using an extension feed.
 
-The following extensions are included when you install of Windows Admin Center:
+When you install Windows Admin Center, you get the following extensions:
 
 - Apps & features
 - Azure Backup
