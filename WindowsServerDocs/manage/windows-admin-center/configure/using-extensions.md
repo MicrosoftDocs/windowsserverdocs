@@ -52,7 +52,7 @@ If you install Windows Admin Center on a computer that isn't connected to the in
 
 ### Manually download extension packages
 
-1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions)
+1. On another computer that has internet connectivity, open a web browser and go to the following URL: [https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_artifacts/feed/wac-public-extensions)
 
    You might need to create a Microsoft account and sign in to view the extension packages.
 
