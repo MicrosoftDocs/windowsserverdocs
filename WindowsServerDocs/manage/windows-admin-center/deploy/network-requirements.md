@@ -20,7 +20,7 @@ Endpoints need to be opened on two sources:
 - The gateway - this is the server or client machine where the Windows Admin Center gateway (.msi) is installed.
 - The browser - this is the machine where the Windows Admin Center web service is being accessed from.
 
-If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below are not blocked.
+If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below aren't blocked.
 
 ## Gateway URLs
 
@@ -38,10 +38,10 @@ If outbound connectivity is restricted by your firewall or proxy server, make su
 | `management.usgovcloudapi.net` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure US Government Cloud |
 | `graph.windows.net` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure US Government Cloud |
 | `management.core.usgovcloudapi.net` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure US Government Cloud |
-| `login.partner.microsoftonline.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
-| `management.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
-| `graph.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
-| `management.core.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
+| `login.partner.microsoftonline.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
+| `management.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
+| `graph.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
+| `management.core.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
 
 ### Browser URLs
 
@@ -60,10 +60,10 @@ If outbound connectivity is restricted by your firewall or proxy server, make su
 | `management.usgovcloudapi.net` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure US Government Cloud |
 | `graph.windows.net` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure US Government Cloud |
 | `portal.azure.us` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure US Government Cloud |
-| `login.partner.microsoftonline.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
-| `management.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
-| `graph.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
-| `portal.azure.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
+| `login.partner.microsoftonline.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
+| `management.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
+| `graph.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
+| `portal.azure.cn` | Azure endpoints for communication | When using Azure Hybrid Services in Azure operated by 21Vianet |
 
 ## Next steps
 
