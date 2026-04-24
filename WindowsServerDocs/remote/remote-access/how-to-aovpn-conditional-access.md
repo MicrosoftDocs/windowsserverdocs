@@ -2,11 +2,13 @@
 title: Configure conditional access for VPN connectivity using Microsoft Entra ID
 description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
 ms.topic: how-to
-ms.date: 04/16/2026
+ms.date: 04/24/2026
 ms.author: roharwoo
-ms.reviewer: reshmabhagat_microsoft
+ms.reviewer: reshb05
 author: robinharwood
-ms.custom: sfi-image-nochange
+ms.custom:
+ - sfi-image-nochange
+ - sfi-ga-nochange
 ---
 
 # Conditional access for VPN connectivity using Microsoft Entra ID
@@ -19,8 +21,8 @@ Before you start configuring Conditional Access for your VPN, complete the follo
 
 - Review [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal).
   - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
-    - Have [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader) access to read Conditional Access policies and configurations.
-    - Have [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) access to create or modify Conditional Access policies.
+    - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader) access to read Conditional Access policies and configurations.
+    - [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) access to create or modify Conditional Access policies.
 - Configure [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
 - Set up the Always On VPN infrastructure in your environment, or complete [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
 - Configure your Windows client computer with a VPN connection by using Intune. For details, see [Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune](how-to-aovpn-client-intune.md).
@@ -82,7 +84,7 @@ The VPN client then sends the certificate issued by Microsoft Entra ID to the VP
 
 ### Create root certificates
 
-1. Sign in to your [Azure portal](https://portal.azure.com) as at least a [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
+1. Sign in to your [Azure portal](https://portal.azure.com) as a [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 1. On the left menu, select **Microsoft Entra ID**.
 
@@ -98,12 +100,13 @@ The VPN client then sends the certificate issued by Microsoft Entra ID to the VP
     1. For **Select duration**, select 1, 2, or 3 years.
     1. Select **Create**.
 
-1. For the first VPN certificate you create in your tenant, a warning banner appears requesting admin consent for the **VPN Server** application. Select **Grant admin consent**, sign in with an account that has at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role, and accept the requested permissions. You must take this action only once per tenant. Subsequent certificate operations don't require consent again.
+    > [!NOTE]
+    > Microsoft Entra ID creates a **VPN Server** application in your tenant when you create the first VPN certificate. This application requires the **Read directory data** permission.
 
-:::image type="content" source="../media/Always-On-Vpn/grant-consent.png" alt-text="Screenshot of Microsoft Entra admin portal showing a warning banner to grant admin consent for the VPN Server application." lightbox="../media/Always-On-Vpn/grant-consent.png":::
+1. For the first VPN certificate you create in your tenant, a warning banner appears requesting admin consent for the **VPN Server** application. Select **Grant admin consent** (requires the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role) and accept the requested permissions. You must take this action only once per tenant. Subsequent certificate operations don't require consent again.
 
 > [!NOTE]
-> Microsoft Entra ID creates a **VPN Server** application in your tenant when you create the first VPN certificate. This application requires the **Read directory data** permission. An administrator with at least the [Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role must grant admin consent before VPN connectivity is fully operational. If the consent banner doesn't appear, consent was already granted for your tenant.
+> If you don't see the consent banner, an administrator already granted consent for your tenant.
 
 ## Configure the conditional access policy
 
