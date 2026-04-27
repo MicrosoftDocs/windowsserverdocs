@@ -4,7 +4,7 @@ description: Upgrade Windows Server with confidence. Learn about supported upgra
 ms.topic: upgrade-and-migration-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 05/23/2025
+ms.date: 04/27/2026
 ---
 
 # Upgrade and migrate roles and features in Windows Server
@@ -39,7 +39,7 @@ Windows Server Migration Tools enables you to migrate server roles, features, op
 |Server Role|Upgradeable in-place?|Migration Supported?|Can migration be completed without downtime?|
 |-------------------|----------|--------------|----------|
 |Active Directory Certificate Services|    Yes|    [Yes](../identity/ad-cs/migrate-certification-authority.md)|    No|
-|Active Directory Domain Services|    [Yes](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers)|    [Yes](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers)|    Yes|
+|Active Directory Domain Services|    [Not recommended](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers). Use clean OS install to get AD performance and feature improvements.|    [Yes](/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers)|    Yes|
 |Active Directory Federation Services|    No|    Yes|    No (new nodes need to be added to the farm)|
 |Active Directory Lightweight Directory Services|    Yes|    Yes|    Yes|
 |Active Directory Rights Management Services|    Yes|    [Yes](../identity/ad-rms/adrms-deploy.md)|    No|

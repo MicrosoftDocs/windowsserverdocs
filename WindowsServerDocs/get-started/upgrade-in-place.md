@@ -41,7 +41,7 @@ This article shows you how to upgrade by using Windows Server Setup from install
 - If Configuration Manager is installed on a Windows Server 2012 or Windows Server 2012 R2 server, follow the preupgrade and post-upgrade instructions at [Upgrade on-premises infrastructure that supports Configuration Manager](/mem/configmgr/core/servers/manage/upgrade-on-premises-infrastructure#before-upgrade).
 
 > [!IMPORTANT]
-> While most Windows Server roles support an in-place upgrade, Active Directory Domain Controllers are an exception. Although an in-place upgrade might work, don't upgrade servers that run the Active Directory Domain Services role. For more information, see [Upgrade domain controllers to a newer version of Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
+> Don't use in-place upgrade for servers that run Active Directory Domain Services (AD DS). Although an in-place upgrade is technically possible, it doesn't deliver the AD performance and feature improvements included in Windows Server 2025 and later. Instead, use a clean OS install to promote new domain controllers and demote the older ones. For more information, see [Upgrade domain controllers to a newer version of Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
 Depending on whether you upgrade by using installation media or Windows Update, you need to meet additional prerequisites. Select the tab for your upgrade method:
 
