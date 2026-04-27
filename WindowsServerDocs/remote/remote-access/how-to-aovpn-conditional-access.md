@@ -1,17 +1,18 @@
 ---
-title: Configure conditional access for VPN connectivity using Microsoft Entra ID
-description: Learn how to configure conditional access for VPN connectivity using Microsoft Entra ID.
+title: Configure Conditional Access for VPN connectivity using Microsoft Entra ID
+description: Learn how to configure Conditional Access for VPN connectivity using Microsoft Entra ID.
 ms.topic: how-to
-ms.date: 04/24/2026
+ms.date: 04/27/2026
 ms.author: roharwoo
 ms.reviewer: reshb05
 author: robinharwood
 ms.custom:
  - sfi-image-nochange
  - sfi-ga-nochange
+ - msecd-doc-authoring-1012
 ---
 
-# Conditional access for VPN connectivity using Microsoft Entra ID
+# Configure Conditional Access for VPN connectivity using Microsoft Entra ID
 
 This guide shows how to grant VPN users access to your resources by using [Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal). By using Microsoft Entra Conditional Access for virtual private network (VPN) connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that you can use to create access rules for any Microsoft Entra connected application.
 
@@ -19,13 +20,13 @@ This guide shows how to grant VPN users access to your resources by using [Micro
 
 Before you start configuring Conditional Access for your VPN, complete the following prerequisites:
 
-- Review [Conditional access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal).
+- Review [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal).
   - Administrators who interact with Conditional Access must have one of the following role assignments depending on the tasks they're performing. To follow the [Zero Trust principle of least privilege](/security/zero-trust/), consider using [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-configure) to just-in-time activate privileged role assignments.
     - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader) access to read Conditional Access policies and configurations.
     - [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) access to create or modify Conditional Access policies.
-- Configure [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
+- Configure [VPN and Conditional Access](/windows/access-protection/vpn/vpn-conditional-access).
 - Set up the Always On VPN infrastructure in your environment, or complete [Tutorial: Deploy Always On VPN - Setup infrastructure for Always On VPN](tutorial-aovpn-deploy-setup.md).
-- Configure your Windows client computer with a VPN connection by using Intune. For details, see [Deploy Always On VPN profile to Windows 10 or newer clients with Microsoft Intune](how-to-aovpn-client-intune.md).
+- Configure your Windows client computer with a VPN connection by using Intune. For details, see [Deploy Always On VPN profile to Windows clients with Microsoft Intune](how-to-aovpn-client-intune.md).
 
 ## Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
@@ -59,7 +60,6 @@ To learn more about NPS CRL registry settings, see [Configure Network Policy Ser
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13     |EAP-TLS         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 
-
 <a name='create-root-certificates-for-vpn-authentication-with-azure-ad'></a>
 
 ## Create root certificates for VPN authentication with Microsoft Entra ID
@@ -75,7 +75,7 @@ In this section, you configure conditional access root certificates for VPN auth
 > [!IMPORTANT]
 > When you create a VPN certificate in the Azure portal, Microsoft Entra ID immediately starts using it to issue short-lived certificates to the VPN client. To avoid any problems with credential validation for the VPN client, it's critical to immediately deploy the VPN certificate to the VPN server.
 
-When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows 10 client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Microsoft Entra ID issues a token in the form of a short-lived (one-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes control to the VPN client.
+When a user attempts a VPN connection, the VPN client makes a call into the Web Account Manager (WAM) on the Windows client. WAM makes a call to the VPN Server cloud app. When the Conditions and Controls in the Conditional Access policy are satisfied, Microsoft Entra ID issues a token in the form of a short-lived (one-hour) certificate to the WAM. The WAM places the certificate in the user's certificate store and passes control to the VPN client.
 
 The VPN client then sends the certificate issued by Microsoft Entra ID to the VPN for credential validation. 
 
@@ -96,19 +96,16 @@ The VPN client then sends the certificate issued by Microsoft Entra ID to the VP
 
 1. On the **VPN connectivity** page, select **New certificate**.
 
-1. On the **New** page, perform the following steps:
+1. On the **New** page:
     1. For **Select duration**, select 1, 2, or 3 years.
     1. Select **Create**.
-
-    > [!NOTE]
-    > Microsoft Entra ID creates a **VPN Server** application in your tenant when you create the first VPN certificate. This application requires the **Read directory data** permission.
 
 1. For the first VPN certificate you create in your tenant, a warning banner appears requesting admin consent for the **VPN Server** application. Select **Grant admin consent** (requires the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role) and accept the requested permissions. You must take this action only once per tenant. Subsequent certificate operations don't require consent again.
 
 > [!NOTE]
-> If you don't see the consent banner, an administrator already granted consent for your tenant.
+> If you don't see the consent banner, the VPN Server application has the required permissions.
 
-## Configure the conditional access policy
+## Configure the Conditional Access policy
 
 In this section, you configure the conditional access policy for VPN connectivity. When you create the first root certificate in the **VPN connectivity** pane, you automatically create a **VPN Server** cloud application in the tenant.
 
@@ -133,7 +130,7 @@ This step covers creation of the most basic Conditional Access policy. If desir
 
     :::image type="content" source="../media/Always-On-Vpn/assignments-users-groups.png" alt-text="Screenshot of the Users and groups option.":::
 
-1. On the **Users and groups** page, perform the following steps:
+1. On the **Users and groups** page:
 
     :::image type="content" source="../media/Always-On-Vpn/select-users-groups.png" alt-text="Screenshot of the Users and groups page with Select users and groups option highlighted.":::
 
@@ -145,7 +142,7 @@ This step covers creation of the most basic Conditional Access policy. If desir
 
     1. On the **Users and groups** page, select **Done**.
 
-1. On the **New** page, perform the following steps:
+1. On the **New** page:
 
     :::image type="content" source="../media/Always-On-Vpn/select-cloud-apps.png" alt-text="Screenshot of the Assignments interface after selecting Cloud apps, highlighting selectable app options.":::
 
@@ -161,7 +158,7 @@ This step covers creation of the most basic Conditional Access policy. If desir
 
     :::image type="content" source="../media/Always-On-Vpn/select-grant.png" alt-text="Screenshot of the Grant option.":::
 
-1. On the **Grant** page, perform the following steps:
+1. On the **Grant** page:
 
     :::image type="content" source="../media/Always-On-Vpn/grant-controls.png" alt-text="Screenshot of Grant controls showing Require multi-factor authentication highlighted as part of policy setup.":::
 
@@ -175,7 +172,7 @@ This step covers creation of the most basic Conditional Access policy. If desir
 
 1. On the **New** page, select **Create**.
 
-## Deploy conditional access root certificates to on-premises AD
+## Deploy Conditional Access root certificates to on-premises AD
 
 In this section, you deploy a trusted root certificate for VPN authentication to your on-premises AD.
 
@@ -258,9 +255,7 @@ If the VPN profile doesn't show up on the client device, under **Settings** > **
 
 1. Select **Sync** and verify the VPN profile appears under **Settings** > **Network & internet** > **VPN**.
 
-## Next steps
-
-You're done configuring the VPN profile to use Microsoft Entra Conditional Access.
+## Related content
 
 - To learn more about how conditional access works with VPNs, see [VPN and conditional access](/windows/access-protection/vpn/vpn-conditional-access).
 
