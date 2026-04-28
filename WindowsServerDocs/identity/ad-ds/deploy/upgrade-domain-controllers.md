@@ -3,7 +3,7 @@ title: Upgrade domain controllers to a newer version of Windows Server
 description: This article describes how to upgrade from an earlier version of Windows Server to a later version.
 ms.author: roharwoo
 author: robinharwood
-ms.date: 05/28/2025
+ms.date: 04/27/2026
 ms.topic: upgrade-and-migration-article
 ms.custom: sfi-image-nochange
 ---
@@ -13,7 +13,7 @@ This article provides background information about Active Directory Domain Servi
 
 ## Prerequisites
 
-The recommended way to upgrade a domain is to promote new servers to DCs that run a newer version of Windows Server and demote the older DCs as needed. This method is preferable to upgrading the operating system of an existing DC, which is also known as an in-place upgrade.
+The recommended way to upgrade a domain is to use a clean OS install to promote new servers to DCs that run a newer version of Windows Server and demote the older DCs as needed. This method is preferable to upgrading the operating system of an existing DC, which is also known as an in-place upgrade. A clean OS install ensures you get the full Active Directory performance improvements included in new versions of Windows Server.
 
 Follow these general steps before you promote a server to a DC that runs a newer version of Windows Server:
 
