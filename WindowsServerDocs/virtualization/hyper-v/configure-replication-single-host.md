@@ -5,12 +5,12 @@ ms.topic: how-to
 ai-usage: ai-assisted
 ms.author: roharwoo
 author: robinharwood
-ms.date: 11/10/2025
+ms.date: 04/28/2026
 ---
 
 # Enable Hyper-V Replica on a single host
 
-Hyper-V Replica helps you protect your workloads by replicating virtual machines (VMs) between Hyper-V hosts running Windows Server. This article explains how to enable Hyper-V Replica on a single host by using Hyper-V Manager, PowerShell, or Windows Admin Center - Virtualization mode.
+Hyper-V Replica helps you protect your workloads by replicating virtual machines (VMs) between Hyper-V hosts running Windows Server. This article explains how to enable Hyper-V Replica on a single host by using Windows Admin Center - Virtualization mode, Hyper-V Manager, or PowerShell.
 
 You can replicate between clusters, single hosts, or a combination of both. If you use a certificate for authentication, there's no Active Directory dependency between the hosts. Single hosts can either be domain members or be in a workgroup.
 
@@ -44,7 +44,39 @@ Before you can replicate VMs to a single Hyper-V host, you need to enable Hyper-
 
 To ensure that you can fail a VM back to the original primary host or cluster after a failover event, configure both primary and replica hosts and clusters for replication.
 
-Use Hyper-V Manager, PowerShell, or Windows Admin Center - Virtualization mode to enable and configure Hyper-V Replica. Select the relevant tab for instructions.
+Use Windows Admin Center - Virtualization mode, Hyper-V Manager, or PowerShell to enable and configure Hyper-V Replica. Select the relevant tab for instructions.
+
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+> [!IMPORTANT]
+> Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> Hyper-V hosts must be running Windows Server 2022 or later.
+>
+> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
+
+To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the left pane, select the host you want to configure as the replica server.
+
+1. In the list of tools, select **Settings**.
+
+1. In the **Settings** pane, under Hyper-V Host Settings, select **Replication** and make the following changes:
+
+   1. Check the box **Enable this computer as a Replica server**.
+
+   1. For **Authentication and Ports**, check the box for the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select**, then you're prompted to select the certificate that matches the requirements.
+
+   1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, you need to specify where the replicated VHDs should be stored on the replica host.
+
+      If you select **Allow replication from the specified servers**, select **Add**. In **Add Authorization Entry**, specify the FQDN of a primary host, a location to store replica files, and a trust group. A trust group is a free-form text field that you can use to group primary servers. Select **OK**.
+
+   1. Select **Save** to save your settings.
+
+   :::image type="content" source="media/configure-replication-single-host/replication-settings-windows-admin-center.png" alt-text="Screenshot of Replication Configuration settings in Windows Admin Center showing options to enable Replica server, authentication, and authorization." lightbox="media/configure-replication-single-host/replication-settings-windows-admin-center.png":::
 
 ### [Hyper-V Manager](#tab/hyper-v-manager)
 
@@ -68,7 +100,7 @@ To enable and configure Hyper-V Replica by using Hyper-V Manager:
 
    1. Select **OK** to save your settings.
 
-   :::image type="content" source="media/configure-replication-single-host/replication-settings-hyper-v-manager.png" alt-text="A screenshot of the Replication Configuration settings in Hyper-V Manager showing options to enable the server as a Replica and configure authentication and authorization." lightbox="media/configure-replication-single-host/replication-settings-hyper-v-manager.png":::
+   :::image type="content" source="media/configure-replication-single-host/replication-settings-hyper-v-manager.png" alt-text="Screenshot of Replication Configuration settings in Hyper-V Manager showing options to enable Replica server, authentication, and authorization." lightbox="media/configure-replication-single-host/replication-settings-hyper-v-manager.png":::
 
 ### [PowerShell](#tab/powershell)
 
@@ -94,49 +126,13 @@ To enable and configure Hyper-V Replica by using PowerShell, use cmdlets in the 
    Get-VMReplicationServer
    ```
 
-   Here's an example of the output you should see. The value for the **State** parameter should be  `Online`.
+   Here's an example of the output you should see. The value for the **State** parameter should be `Online`.
 
    ```output
    RepEnabled AuthType KerbAuthPort CertAuthPort AllowAnyServer
    ---------- -------- ------------ ------------ --------------
    True       Kerb     80           443          True
    ```
-
-### [Windows Admin Center](#tab/windows-admin-center)
-
-> [!IMPORTANT]
-> Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
->
-> During the preview, configuring Hyper-V Replica by using Windows Admin Center - Virtualization mode is available for the following scenarios:
->
-> - Configuring a single host as a replica server and configuring replication for VMs from a single host to another single host. Failover clusters aren't supported at this time.
-> - Replication and failover of VMs is from a primary host to a replica host only. Performing a test failover or configuring reverse replication or extended replication isn't supported at this time.
-> - Hyper-V hosts must be running Windows Server 2022 or later.
->
-> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
-
-To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the left pane, select the host you want to configure as the replica server.
-
-1. In the list of tools, select **Settings**.
-
-1. In the **Settings** pane, under Hyper-V Host Settings, select **Replication** and make the following changes:
-
-   1. Check the box **Enable this computer as a Replica server**.
-
-   1. For **Authentication and Ports**, check the box for the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select**, then you're prompted to select the certificate that matches the requirements.
-
-   1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, you need to specify where the replicated VHDs should be stored on the replica host.
-
-      If you select **Allow replication from the specified servers**, select **Add**. In **Add Authorization Entry**, specify the FQDN of a primary host, a location to store replica files, and a trust group. A trust group is a free-form text field that you can use to group primary servers. Select **OK**.
-
-   1. Select **Save** to save your settings.
-
-   :::image type="content" source="media/configure-replication-single-host/replication-settings-windows-admin-center.png" alt-text="A screenshot of the Replication Configuration settings in Hyper-V Manager showing options to enable the server as a Replica and configure authentication and authorization." lightbox="media/configure-replication-single-host/replication-settings-windows-admin-center.png":::
 
 ---
 
