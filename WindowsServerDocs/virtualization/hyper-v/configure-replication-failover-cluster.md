@@ -83,15 +83,9 @@ To enable and configure the Hyper-V Replica Broker by using Windows Admin Center
 
    1. For **Available Networks**, select the network to use for the broker and enter an IP address if DHCP isn't available.
 
-   <!-- :::image type="content" source="media/configure-replication-failover-cluster/windows-admin-center-broker-config.png" alt-text="Screenshot of the Configure Hyper-V Replica Broker pane showing Client Access Point settings for broker name, credentials, and network." lightbox="media/configure-replication-failover-cluster/windows-admin-center-broker-config.png"::: -->
-
 1. Select **Next** to view the **Summary**, which shows the broker name, IP address, and organizational unit (OU). Review the information and select **Configure**.
 
-   <!-- :::image type="content" source="media/configure-replication-failover-cluster/windows-admin-center-broker-summary.png" alt-text="Screenshot of the Hyper-V Replica Broker summary page showing broker name, IP address, and OU path." lightbox="media/configure-replication-failover-cluster/windows-admin-center-broker-summary.png"::: -->
-
 1. A notification confirms the broker role is being configured. Wait for the configuration to complete. Once completed, the **Replication** settings page shows the broker name and state.
-
-   <!-- :::image type="content" source="media/configure-replication-failover-cluster/windows-admin-center-broker-notification.png" alt-text="Screenshot of the notification in Windows Admin Center confirming the Hyper-V Replica Broker role is being configured on the cluster." lightbox="media/configure-replication-failover-cluster/windows-admin-center-broker-notification.png"::: -->
 
 1. After the broker is configured, configure the replication settings for the cluster. On the **Replication** settings page, make the following changes:
 
@@ -102,8 +96,6 @@ To enable and configure the Hyper-V Replica Broker by using Windows Admin Center
    1. For **Authorization and Storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, specify where the replicated VHDs should be stored. For a cluster, this location needs to be accessible by all nodes, such as a Cluster Shared Volume (CSV) at `C:\ClusterStorage\Volume1`. Select **Browse** to select a storage location.
 
       If you select **Allow replication from the specified servers**, select **Add** to specify the FQDN of a primary host, a location to store replica files, and a trust group.
-
-   <!-- :::image type="content" source="media/configure-replication-failover-cluster/windows-admin-center-replication-settings.png" alt-text="Screenshot of the Replication settings page in Windows Admin Center showing authentication, port, authorization, and storage settings." lightbox="media/configure-replication-failover-cluster/windows-admin-center-replication-settings.png"::: -->
 
 1. Select **Save** to save your settings.
 

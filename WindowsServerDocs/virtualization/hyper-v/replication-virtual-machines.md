@@ -509,8 +509,6 @@ To configure static IP injection by using Windows Admin Center - Virtualization 
 
 1. To configure IPv6 settings, select the **IPv6 TCP/IP Settings** sub-tab and enter the corresponding IPv6 address information.
 
-   <!-- :::image type="content" source="media/replication-failover-virtual-machines/replication-vm-windows-admin-center-networking-ipv4.png" alt-text="Screenshot of the Networking tab in Windows Admin Center VM replication settings showing IPv4 TCP/IP address, subnet, gateway, and DNS fields." lightbox="media/replication-failover-virtual-machines/replication-vm-windows-admin-center-networking-ipv4.png"::: -->
-
 1. Select **Save replication settings** to apply the changes.
 
 ### [Hyper-V Manager](#tab/hyper-v-manager)
@@ -635,8 +633,6 @@ To configure extended replication by using Windows Admin Center - Virtualization
 
 1. Scroll to the **Replication** section, select **Extend Replication** to open the **Extended Replication** configuration.
 
-   <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-action-bar.png" alt-text="Screenshot of the Replication section in Windows Admin Center showing the Extend Replication button in the action bar." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-action-bar.png"::: -->
-
 1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
 
    1. For **Replica server**, enter either the NetBIOS or FQDN of the Hyper-V host or cluster you're extending replication to.
@@ -645,21 +641,16 @@ To configure extended replication by using Windows Admin Center - Virtualization
 
    1. For **Authentication type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the extended replica host. If you're using certificate-based authentication, select **Select** to choose the certificate. If you want to compress the data that is transmitted over the network, check the box.
 
-   <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-connection.png" alt-text="Screenshot of the Replication Connection tab in the Extended Replication wizard showing server, port, authentication, and compression options." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-connection.png"::: -->
-
 1. For the **Replication Configuration** tab, complete the following information, then select **Initial Replication** to continue:
 
    1. For **Configure replication frequency**, select **5 minutes** or **15 minutes**. Extended replication doesn't support a 30-second frequency.
 
    1. For **Configure additional recovery points**, select **Maintain only the latest recovery point** or **Create additional hourly recovery points**.
 
-   <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-configuration.png" alt-text="Screenshot of the Replication Configuration tab in the Extended Replication wizard showing replication frequency and recovery point options." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-configuration.png"::: -->
-
 1. For the **Initial Replication** tab, select the initial replication method, and then select **Review** to continue.
 
 1. Review the summary information, and then select **Enable Replication**.
 
-   <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-review.png" alt-text="Screenshot of the Review tab in the Extended Replication wizard summarizing connection, configuration, and initial replication settings." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-review.png"::: -->
 
 ---
 

@@ -509,19 +509,11 @@ To run a test failover using Windows Admin Center - Virtualization mode:
 
 1. Scroll to the **Replication** section, then select **Test Failover**.
 
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-test-failover-button.png" alt-text="Screenshot of the Replication section in Windows Admin Center showing the Test Failover button in the action bar for a replica VM." lightbox="media/replication-failover/windows-admin-center-test-failover-button.png"::: -->
-
 1. In the pane that opens, select the recovery point to use from the drop-down list, then select **Failover**.
-
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-test-failover-recovery-point.png" alt-text="Screenshot of the Test Failover pane in Windows Admin Center showing the recovery point selection list and Failover button." lightbox="media/replication-failover/windows-admin-center-test-failover-recovery-point.png"::: -->
 
 1. The host creates a duplicate test VM. The VM name is the original VM name with ` - Test` appended. The duplicate VM isn't connected to a network by default. Start the VM and perform tests that you require to verify that it functions correctly.
 
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-test-vm-running.png" alt-text="Screenshot of the Virtual machines inventory in Windows Admin Center showing the test VM created from the replica with a Running state." lightbox="media/replication-failover/windows-admin-center-test-vm-running.png"::: -->
-
 1. When you finish testing, in the **Replication** section select **Cancel Test Failover**. In the confirmation dialog, select **Yes** to delete the test VM and discard its data.
-
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-cancel-test-failover.png" alt-text="Screenshot of the Cancel Test Failover confirmation dialog in Windows Admin Center asking whether to stop the test failover and delete the test VM." lightbox="media/replication-failover/windows-admin-center-cancel-test-failover.png"::: -->
 
 ### Reverse replication using Windows Admin Center - Virtualization mode
 
@@ -535,8 +527,6 @@ To configure reverse replication by using Windows Admin Center - Virtualization 
 
 1. Scroll to the **Replication** section, select **Reverse Replication** to open the **Reverse Replication** wizard.
 
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-reverse-replication-button.png" alt-text="Screenshot of the Replication section in Windows Admin Center after failover showing the Reverse Replication button and Failover Complete state." lightbox="media/replication-failover/windows-admin-center-reverse-replication-button.png"::: -->
-
 1. For the **Replication Connection** tab, complete the following information, then select **Replication Configuration** to continue:
 
    1. For **Replica server**, enter the FQDN or NetBIOS name of the original primary host or Hyper-V Replica Broker.
@@ -545,15 +535,11 @@ To configure reverse replication by using Windows Admin Center - Virtualization 
 
    1. For **Authentication type**, select the correct authentication method. If you're using certificate-based authentication, select **Select** to choose the certificate. If you want to compress data, check the box.
 
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-reverse-replication-connection.png" alt-text="Screenshot of the Replication Connection tab in the Reverse Replication wizard showing replica server, port, and authentication settings." lightbox="media/replication-failover/windows-admin-center-reverse-replication-connection.png"::: -->
-
 1. For the **Replication Configuration** tab, configure the replication frequency and recovery point settings, then select **Initial Replication** to continue.
 
 1. For the **Initial Replication** tab, select the initial replication method, then select **Review**.
 
 1. Review the summary information, then select **Enable Replication**.
-
-   <!-- :::image type="content" source="media/replication-failover/windows-admin-center-reverse-replication-review.png" alt-text="Screenshot of the Review tab in the Reverse Replication wizard summarizing the connection, configuration, and initial replication settings." lightbox="media/replication-failover/windows-admin-center-reverse-replication-review.png"::: -->
 
 1. Reverse replication begins. The replication health returns to **Ok** and changes are replicated to the original primary host. To return to the original replication direction, you can perform a planned failover.
 
