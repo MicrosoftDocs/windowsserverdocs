@@ -84,7 +84,7 @@ To replicate a virtual machine by using Hyper-V Manager:
 
    - **Send initial copy over the network**: this method is the default option.
    - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored.
-   - **Use an existing virtual machine on the Replica server as the initial copy**: restore the VM on the replica server and use it as the basis for replication, then replicate only the changes. You can find the process to import the initial copy in the section [Send initial copy using external media](#send-initial-copy-using-external-media).
+   - **Use an existing virtual machine on the Replica server as the initial copy**: restore the VM on the replica server and use it as the basis for replication, then replicate only the changes. You can find the process to import the initial copy in the section [Send initial copy using external media](#send-initial-copy-by-using-external-media).
 
    If you select **Send initial copy over the network** or **Use an existing virtual machine on the Replica server as the initial copy**, you can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
 
@@ -100,7 +100,7 @@ To replicate a virtual machine by using Hyper-V Manager:
 
 1. To monitor the initial replication progress, see the section [Monitor replication progress](#monitor-replication-progress). You can change replication settings later if you need to in the **Replication** section of the VM settings.
 
-   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
+   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
 
 ### [Failover Cluster Manager](#tab/failover-cluster-manager)
 
@@ -137,7 +137,7 @@ To replicate a virtual machine by using Failover Cluster Manager:
 1. For **Choose Initial Replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list, and then select **Next**.
 
    - **Send initial copy over the network**: this method is the default option.
-   - **Send initial copy using external media**: select **Browse** and specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-using-external-media).
+   - **Send initial copy using external media**: select **Browse** and specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-by-using-external-media).
    - **Use an existing virtual machine on the Replica server as the initial copy**: restore the VM on the replica server and use it as the basis for replication, then replicate only the changes.
 
    If you select **Send initial copy over the network** or **Use an existing virtual machine on the Replica server as the initial copy**, you can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
@@ -150,7 +150,7 @@ To replicate a virtual machine by using Failover Cluster Manager:
 
 1. To monitor the initial replication progress, see the section [Monitor replication progress](#monitor-replication-progress). You can change replication settings later if you need to in the **Replication** section of the VM settings.
 
-   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
+   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
 
 ### [PowerShell](#tab/powershell)
 
@@ -185,7 +185,7 @@ To replicate a virtual machine by using PowerShell, use the `Enable-VMReplicatio
       Start-VMInitialReplication -VMName $parameters.VMName
       ```
 
-   1. To send the initial replica by using external media, run the following command, then follow the process in the section [Send initial copy using external media](#send-initial-copy-using-external-media) to learn how to import it to the replica server.
+   1. To send the initial replica by using external media, run the following command, then follow the process in the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) to learn how to import it to the replica server.
 
       ```powershell
       Start-VMInitialReplication -VMName $parameters.VMName -DestinationPath '<Path to store initial copy on external media>'
@@ -205,7 +205,7 @@ To replicate a virtual machine by using PowerShell, use the `Enable-VMReplicatio
    contoso-vm-01 Replicating Normal Primary 300          hyperv01      cluster02rep  80          Kerberos Simple
    ```
 
-   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
+   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
 
 ### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
 
@@ -250,7 +250,7 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
    For **Configure initial replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list:
 
    - **Send initial copy over the network**: this method is the default option. You can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
-   - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-using-external-media).
+   - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-by-using-external-media).
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png" alt-text="Screenshot of the Initial Replication tab showing method choices for network transfer or external media and scheduling settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png":::
 
@@ -264,7 +264,7 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
 
 1. To monitor the initial replication progress, see the section [Monitor replication progress](#monitor-replication-progress). You can change replication settings later if you need to in the **Replication** section of the VM settings.
 
-   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM.
+   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM.
 
 ---
 
