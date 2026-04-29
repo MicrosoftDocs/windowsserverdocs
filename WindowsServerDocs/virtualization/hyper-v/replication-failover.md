@@ -58,6 +58,124 @@ You need to run a failover operation for each VM. You can only run one failover 
 
 Select the relevant tab for instructions.
 
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+> [!IMPORTANT]
+> Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
+
+Failing over a virtual machine by using Windows Admin Center - Virtualization mode depends on the type of failover you want to perform.
+
+### Planned failover using Windows Admin Center
+
+To run a planned failover using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, expand the host that contains the **primary** VM you want to perform a planned failover, then select the VM to enter its overview.
+
+1. Shut down the VM if it's running. You must shut down the VM to perform a planned failover.
+
+1. In the **Replication** section, select **Planned Failover**.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-monitor-replication.png" alt-text="Screenshot of Windows Admin Center showing the VM replication overview with replication state, recovery points, and action buttons." lightbox="media/replication-failover/windows-admin-center-monitor-replication.png":::
+
+1. In the pane that opens, review the summary of the planned failover, then select **Fail Over**. The failover process begins and the replication state is **Prepared for planned failover**. If you want to cancel the planned failover at this point, select **Cancel Planned Failover**.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-planned-replication-checks.png" alt-text="Screenshot of Windows Admin Center showing the Planned Failover summary pane with prerequisite checks and replication direction details." lightbox="media/replication-failover/windows-admin-center-planned-replication-checks.png":::
+
+1. In the resources pane, select the host which has the replica VM.
+
+1. From the list of tools for the host, select **Virtual machines**, then select the replica VM to enter its overview.
+
+1. In the **Replication** section, select **Failover**.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover.png" alt-text="Screenshot of Windows Admin Center showing the Replication section for a VM with the Planned Failover action highlighted." lightbox="media/replication-failover/windows-admin-center-replication-failover.png":::
+
+1. In the pane that opens, check the box whether you want to **Start the Replica virtual machine after failover**, depending on your requirements. By default, the replica VM starts after failover. Don't forget to attach the VM to a network if necessary. Then select **Fail Over** to begin the process. Once the failover is complete, in the **replication** section the replication state changes to **Failover Complete**.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover-checks.png" alt-text="Screenshot of the Planned Failover summary pane in Windows Admin Center showing prerequisite checks and the Fail Over button." lightbox="media/replication-failover/windows-admin-center-replication-failover-checks.png":::
+
+1. To complete the planned failover, in the **Replication** section select **Remove Recovery Points**. For the confirmation, select **Yes**. This action removes the recovery points and merges the replica checkpoint. At this point, failover is complete. To reverse the replication direction, see [Reverse replication using Windows Admin Center - Virtualization mode](#reverse-replication-using-windows-admin-center---virtualization-mode).
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover-complete.png" alt-text="Screenshot of Windows Admin Center after planned failover showing replication state updated and reverse replication option." lightbox="media/replication-failover/windows-admin-center-replication-failover-complete.png":::
+
+1. Start the VM if it isn't already running. Don't forget to attach the VM to a network if necessary.
+
+### Unplanned failover using Windows Admin Center
+
+To run a test failover using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, select the host that contains the **replica** VM you want to perform an unplanned failover.
+
+1. From the list of tools for the host, select **Virtual machines**, then select the replica VM to enter its overview.
+
+1. In the **Replication** section, select **Failover**.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover.png" alt-text="Screenshot of Windows Admin Center showing the VM Replication panel with Failover action for unplanned failover." lightbox="media/replication-failover/windows-admin-center-replication-failover.png":::
+
+1. In the pane that opens, review the summary of the unplanned failover, select a **recovery point to use** from the drop-down list, then select **Fail Over**. The failover process begins.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-unplanned-recovery-point.png" alt-text="Screenshot of the Failover pane in Windows Admin Center showing the recovery point selection list for an unplanned failover." lightbox="media/replication-failover/windows-admin-center-unplanned-recovery-point.png":::
+
+1. The process creates a checkpoint for the replica VM. You should start the VM and perform tests that you require to verify that the recovery point you chose functions correctly. Don't forget to attach the VM to a network if necessary.
+
+   If you need to select a different recovery point, you can cancel the failover by selecting **Cancel Planned Failover**. Then you can choose a different recovery point.
+
+1. Once you test the VM and don't need to revert to a different recovery point, you need to complete the failover. In the **Replication** section, select **Remove Recovery Points**. This action removes the recovery points and merges the checkpoint, which means you can't revert to an earlier recovery point. If you want to keep extra recovery points, you can first export the replica VM before completing failover.
+
+   :::image type="content" source="media/replication-failover/windows-admin-center-replication-unplanned-failover.png" alt-text="Screenshot of the context menu option to remove recovery points after an unplanned failover in Windows Admin Center." lightbox="media/replication-failover/windows-admin-center-replication-unplanned-failover.png":::
+
+   At this point failover is complete, however the replication health shows as **Warning** because that replication direction isn't configured. To configure reverse replication, see [Reverse replication using Windows Admin Center - Virtualization mode](#reverse-replication-using-windows-admin-center---virtualization-mode).
+
+### Test failover using Windows Admin Center - Virtualization mode
+
+To run a test failover using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, expand the host that contains the **replica** VM you want to test, then select the VM to enter its overview.
+
+1. Scroll to the **Replication** section, then select **Test Failover**.
+
+1. In the pane that opens, select the recovery point to use from the drop-down list, then select **Failover**.
+
+1. The host creates a duplicate test VM. The VM name is the original VM name with ` - Test` appended. The duplicate VM isn't connected to a network by default. Start the VM and perform tests that you require to verify that it functions correctly.
+
+1. When you finish testing, in the **Replication** section select **Cancel Test Failover**. In the confirmation dialog, select **Yes** to delete the test VM and discard its data.
+
+### Reverse replication using Windows Admin Center - Virtualization mode
+
+After a planned or unplanned failover is complete, you can reverse the replication direction so that changes made on the new primary (formerly the replica) are replicated back to the original primary host or cluster. This step is necessary to restore bidirectional protection.
+
+To configure reverse replication by using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, expand the host that contains the VM where failover is complete (the VM that is now running as the primary), then select the VM to enter its overview.
+
+1. Scroll to the **Replication** section, select **Reverse Replication** to open the **Reverse Replication** wizard.
+
+1. For the **Replication Connection** tab, complete the following information, then select **Replication Configuration** to continue:
+
+   1. For **Replica server**, enter the FQDN or NetBIOS name of the original primary host or Hyper-V Replica Broker.
+
+   1. For **Replica server port**, enter the port number.
+
+   1. For **Authentication type**, select the correct authentication method. If you're using certificate-based authentication, select **Select** to choose the certificate. If you want to compress data, check the box.
+
+1. For the **Replication Configuration** tab, configure the replication frequency and recovery point settings, then select **Initial Replication** to continue.
+
+1. For the **Initial Replication** tab, select the initial replication method, then select **Review**.
+
+1. Review the summary information, then select **Enable Replication**.
+
+1. Reverse replication begins. The replication health returns to **Ok** and changes are replicated to the original primary host. To return to the original replication direction, you can perform a planned failover.
+
 ### [Hyper-V Manager](#tab/hyper-v-manager)
 
 Failing over a virtual machine by using Hyper-V Manager depends on the type of failover you want to perform.
@@ -423,123 +541,5 @@ Once the primary VM is available again, you should replicate the changes made to
    ```
 
    The roles of the replica VM and the primary VM have now swapped. To return to the original replication direction, you can perform a planned failover, as described in the [Planned failover](#planned-failover-using-powershell) section.
-
-### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
-
-> [!IMPORTANT]
-> Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
->
-> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
-
-Failing over a virtual machine by using Windows Admin Center - Virtualization mode depends on the type of failover you want to perform.
-
-### Planned failover using Windows Admin Center
-
-To run a planned failover using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the resources pane, expand the host that contains the **primary** VM you want to perform a planned failover, then select the VM to enter its overview.
-
-1. Shut down the VM if it's running. You must shut down the VM to perform a planned failover.
-
-1. In the **Replication** section, select **Planned Failover**.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-monitor-replication.png" alt-text="Screenshot of Windows Admin Center showing the VM replication overview with replication state, recovery points, and action buttons." lightbox="media/replication-failover/windows-admin-center-monitor-replication.png":::
-
-1. In the pane that opens, review the summary of the planned failover, then select **Fail Over**. The failover process begins and the replication state is **Prepared for planned failover**. If you want to cancel the planned failover at this point, select **Cancel Planned Failover**.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-planned-replication-checks.png" alt-text="Screenshot of Windows Admin Center showing the Planned Failover summary pane with prerequisite checks and replication direction details." lightbox="media/replication-failover/windows-admin-center-planned-replication-checks.png":::
-
-1. In the resources pane, select the host which has the replica VM.
-
-1. From the list of tools for the host, select **Virtual machines**, then select the replica VM to enter its overview.
-
-1. In the **Replication** section, select **Failover**.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover.png" alt-text="Screenshot of Windows Admin Center showing the Replication section for a VM with the Planned Failover action highlighted." lightbox="media/replication-failover/windows-admin-center-replication-failover.png":::
-
-1. In the pane that opens, check the box whether you want to **Start the Replica virtual machine after failover**, depending on your requirements. By default, the replica VM starts after failover. Don't forget to attach the VM to a network if necessary. Then select **Fail Over** to begin the process. Once the failover is complete, in the **replication** section the replication state changes to **Failover Complete**.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover-checks.png" alt-text="Screenshot of the Planned Failover summary pane in Windows Admin Center showing prerequisite checks and the Fail Over button." lightbox="media/replication-failover/windows-admin-center-replication-failover-checks.png":::
-
-1. To complete the planned failover, in the **Replication** section select **Remove Recovery Points**. For the confirmation, select **Yes**. This action removes the recovery points and merges the replica checkpoint. At this point, failover is complete. To reverse the replication direction, see [Reverse replication using Windows Admin Center - Virtualization mode](#reverse-replication-using-windows-admin-center---virtualization-mode).
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover-complete.png" alt-text="Screenshot of Windows Admin Center after planned failover showing replication state updated and reverse replication option." lightbox="media/replication-failover/windows-admin-center-replication-failover-complete.png":::
-
-1. Start the VM if it isn't already running. Don't forget to attach the VM to a network if necessary.
-
-### Unplanned failover using Windows Admin Center
-
-To run a test failover using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the resources pane, select the host that contains the **replica** VM you want to perform an unplanned failover.
-
-1. From the list of tools for the host, select **Virtual machines**, then select the replica VM to enter its overview.
-
-1. In the **Replication** section, select **Failover**.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover.png" alt-text="Screenshot of Windows Admin Center showing the VM Replication panel with Failover action for unplanned failover." lightbox="media/replication-failover/windows-admin-center-replication-failover.png":::
-
-1. In the pane that opens, review the summary of the unplanned failover, select a **recovery point to use** from the drop-down list, then select **Fail Over**. The failover process begins.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-unplanned-recovery-point.png" alt-text="Screenshot of the Failover pane in Windows Admin Center showing the recovery point selection list for an unplanned failover." lightbox="media/replication-failover/windows-admin-center-unplanned-recovery-point.png":::
-
-1. The process creates a checkpoint for the replica VM. You should start the VM and perform tests that you require to verify that the recovery point you chose functions correctly. Don't forget to attach the VM to a network if necessary.
-
-   If you need to select a different recovery point, you can cancel the failover by selecting **Cancel Planned Failover**. Then you can choose a different recovery point.
-
-1. Once you test the VM and don't need to revert to a different recovery point, you need to complete the failover. In the **Replication** section, select **Remove Recovery Points**. This action removes the recovery points and merges the checkpoint, which means you can't revert to an earlier recovery point. If you want to keep extra recovery points, you can first export the replica VM before completing failover.
-
-   :::image type="content" source="media/replication-failover/windows-admin-center-replication-unplanned-failover.png" alt-text="Screenshot of the context menu option to remove recovery points after an unplanned failover in Windows Admin Center." lightbox="media/replication-failover/windows-admin-center-replication-unplanned-failover.png":::
-
-   At this point failover is complete, however the replication health shows as **Warning** because that replication direction isn't configured. To configure reverse replication, see [Reverse replication using Windows Admin Center - Virtualization mode](#reverse-replication-using-windows-admin-center---virtualization-mode).
-
-### Test failover using Windows Admin Center - Virtualization mode
-
-To run a test failover using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the resources pane, expand the host that contains the **replica** VM you want to test, then select the VM to enter its overview.
-
-1. Scroll to the **Replication** section, then select **Test Failover**.
-
-1. In the pane that opens, select the recovery point to use from the drop-down list, then select **Failover**.
-
-1. The host creates a duplicate test VM. The VM name is the original VM name with ` - Test` appended. The duplicate VM isn't connected to a network by default. Start the VM and perform tests that you require to verify that it functions correctly.
-
-1. When you finish testing, in the **Replication** section select **Cancel Test Failover**. In the confirmation dialog, select **Yes** to delete the test VM and discard its data.
-
-### Reverse replication using Windows Admin Center - Virtualization mode
-
-After a planned or unplanned failover is complete, you can reverse the replication direction so that changes made on the new primary (formerly the replica) are replicated back to the original primary host or cluster. This step is necessary to restore bidirectional protection.
-
-To configure reverse replication by using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the resources pane, expand the host that contains the VM where failover is complete (the VM that is now running as the primary), then select the VM to enter its overview.
-
-1. Scroll to the **Replication** section, select **Reverse Replication** to open the **Reverse Replication** wizard.
-
-1. For the **Replication Connection** tab, complete the following information, then select **Replication Configuration** to continue:
-
-   1. For **Replica server**, enter the FQDN or NetBIOS name of the original primary host or Hyper-V Replica Broker.
-
-   1. For **Replica server port**, enter the port number.
-
-   1. For **Authentication type**, select the correct authentication method. If you're using certificate-based authentication, select **Select** to choose the certificate. If you want to compress data, check the box.
-
-1. For the **Replication Configuration** tab, configure the replication frequency and recovery point settings, then select **Initial Replication** to continue.
-
-1. For the **Initial Replication** tab, select the initial replication method, then select **Review**.
-
-1. Review the summary information, then select **Enable Replication**.
-
-1. Reverse replication begins. The replication health returns to **Ok** and changes are replicated to the original primary host. To return to the original replication direction, you can perform a planned failover.
 
 ---

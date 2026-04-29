@@ -48,6 +48,65 @@ You need to enable replication for each VM you want to replicate. You can replic
 
 Select the relevant tab for instructions.
 
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+> [!IMPORTANT]
+> Configuring Hyper-V Replica by using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
+
+To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, expand the host that contains the VM you want to replicate, and then select the VM to enter its overview.
+
+1. On the menu bar, select **Manage**, and then select **Configure Replication** to open the **Enable Replication** pane.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-manage-menu.png" alt-text="Screenshot of Windows Admin Center - Virtualization mode showing the Manage menu expanded with Configure Replication selected." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-manage-menu.png":::
+
+1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
+
+   1. For **Replica Server**, enter either the NetBIOS or FQDN of the Hyper-V host you're replicating to.
+
+   1. For **Replica server port**, enter the port number you configured on the replica host for Hyper-V Replica.
+
+   1. For **Authentication Type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the replica host. If you're using certificate-based authentication, select **Select Certificate**, and then select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-connection.png" alt-text="Screenshot of the Replication Connection tab in Windows Admin Center showing replica server, port, authentication, and compression options." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-connection.png":::
+
+1. For the **Replication Configuration** tab, complete the following information, then select **Initial Replication** to continue:
+
+   1. For **Choose replication VHDs**, make sure the checkboxes for the VHDs you want to replicate are selected, and clear the checkboxes for any VHDs that you want to exclude from replication.
+
+   1. For **Replication Frequency**, specify how often changes should be synchronized from the primary to replica clusters or hosts from **30 seconds**, **5 minutes**, or **15 minutes**.
+
+   1. For **Configure additional Recovery Points**, select **Maintain only the latest recovery point** or **Create additional hourly recovery points** and the number of extra recovery points you want to create in hours. When you create extra hourly recovery points, you can also check the box **Volume Shadow Copy Service (VSS) snapshot frequency** if you want recovery points to provide application-consistent recovery points for VMs running VSS-aware applications.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-configuration.png" alt-text="Screenshot of the Replication Configuration tab showing virtual hard disk selection, replication frequency, and recovery point settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-configuration.png":::
+
+1. For the **Initial Replication** tab, complete the following information, then select **Review** to continue:
+
+   For **Configure initial replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list:
+
+   - **Send initial copy over the network**: this method is the default option. You can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
+   - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-by-using-external-media).
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png" alt-text="Screenshot of the Initial Replication tab showing method choices for network transfer or external media and scheduling settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png":::
+
+1. Review the summary information, and then select **Enable Replication**.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-review.png" alt-text="Screenshot of the Review tab summarizing the chosen Hyper-V Replica settings before enabling replication." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-review.png":::
+
+1. You can check that replication enabled successfully in the **Notifications** pane.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-notifications.png" alt-text="Screenshot of the Notifications pane confirming that Hyper-V VM replication was enabled successfully." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-notifications.png":::
+
+1. To monitor the initial replication progress, see the section [Monitor replication progress](#monitor-replication-progress). You can change replication settings later if you need to in the **Replication** section of the VM settings.
+
+   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM.
+
 ### [Hyper-V Manager](#tab/hyper-v-manager)
 
 To replicate a virtual machine by using Hyper-V Manager:
@@ -207,65 +266,6 @@ To replicate a virtual machine by using PowerShell, use the `Enable-VMReplicatio
 
    If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM. Once the export is complete, safely eject the external media and transport it to the replica server.
 
-### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
-
-> [!IMPORTANT]
-> Configuring Hyper-V Replica by using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
->
-> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
-
-To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the resources pane, expand the host that contains the VM you want to replicate, and then select the VM to enter its overview.
-
-1. On the menu bar, select **Manage**, and then select **Configure Replication** to open the **Enable Replication** pane.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-manage-menu.png" alt-text="Screenshot of Windows Admin Center - Virtualization mode showing the Manage menu expanded with Configure Replication selected." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-manage-menu.png":::
-
-1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
-
-   1. For **Replica Server**, enter either the NetBIOS or FQDN of the Hyper-V host you're replicating to.
-
-   1. For **Replica server port**, enter the port number you configured on the replica host for Hyper-V Replica.
-
-   1. For **Authentication Type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the replica host. If you're using certificate-based authentication, select **Select Certificate**, and then select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-connection.png" alt-text="Screenshot of the Replication Connection tab in Windows Admin Center showing replica server, port, authentication, and compression options." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-connection.png":::
-
-1. For the **Replication Configuration** tab, complete the following information, then select **Initial Replication** to continue:
-
-   1. For **Choose replication VHDs**, make sure the checkboxes for the VHDs you want to replicate are selected, and clear the checkboxes for any VHDs that you want to exclude from replication.
-
-   1. For **Replication Frequency**, specify how often changes should be synchronized from the primary to replica clusters or hosts from **30 seconds**, **5 minutes**, or **15 minutes**.
-
-   1. For **Configure additional Recovery Points**, select **Maintain only the latest recovery point** or **Create additional hourly recovery points** and the number of extra recovery points you want to create in hours. When you create extra hourly recovery points, you can also check the box **Volume Shadow Copy Service (VSS) snapshot frequency** if you want recovery points to provide application-consistent recovery points for VMs running VSS-aware applications.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-configuration.png" alt-text="Screenshot of the Replication Configuration tab showing virtual hard disk selection, replication frequency, and recovery point settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-configuration.png":::
-
-1. For the **Initial Replication** tab, complete the following information, then select **Review** to continue:
-
-   For **Configure initial replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list:
-
-   - **Send initial copy over the network**: this method is the default option. You can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
-   - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-by-using-external-media).
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png" alt-text="Screenshot of the Initial Replication tab showing method choices for network transfer or external media and scheduling settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png":::
-
-1. Review the summary information, and then select **Enable Replication**.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-review.png" alt-text="Screenshot of the Review tab summarizing the chosen Hyper-V Replica settings before enabling replication." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-review.png":::
-
-1. You can check that replication enabled successfully in the **Notifications** pane.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-notifications.png" alt-text="Screenshot of the Notifications pane confirming that Hyper-V VM replication was enabled successfully." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-notifications.png":::
-
-1. To monitor the initial replication progress, see the section [Monitor replication progress](#monitor-replication-progress). You can change replication settings later if you need to in the **Replication** section of the VM settings.
-
-   If you chose to send the initial copy by using external media, see the section [Send initial copy using external media](#send-initial-copy-by-using-external-media) for the process to import the initial copy. A placeholder VM is created on the replica site and its replication health state is **Warning**. The replica contents for the VM are stored on your external media in a subfolder for the VM.
-
 ---
 
 > [!IMPORTANT]
@@ -284,6 +284,26 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
 If you send the initial copy by using external media, such as a hard disk or USB drive, the process creates a placeholder VM on the replica site with a checkpoint. The process stores the replica contents for the VM on your external media in a subfolder for the VM. You transport the initial copy to the replica server, then import it to the placeholder VM.
 
 You can enable replication by using Hyper-V Manager, Failover Cluster Manager, PowerShell, or Windows Admin Center - Virtualization mode. Select the relevant tab for instructions.
+
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+To send the initial copy by using external media and import it by using Windows Admin Center - Virtualization mode:
+
+1. Follow the steps in the section [Replicate a virtual machine](#replicate-a-virtual-machine) by using Windows Admin Center - Virtualization mode. The process creates a placeholder VM on the replica site and sets its replication state to **Initial replication in progress**. The process stores the replica contents for the VM on your external media in a subfolder for the VM. Safely eject the external media and transport it to the replica server.
+
+1. In **Windows Admin Center - Virtualization mode**, from the left pane, select the host to which you're replicating the VM.
+
+1. From the list of tools for the host, select **Virtual machines**, and then select the placeholder VM to enter its overview.
+
+1. In the **Replication** section, select **Import Initial Replica**.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica.png" alt-text="Screenshot of the placeholder VM Replication section in Windows Admin Center with the Import Initial Replica action highlighted." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica.png":::
+
+1. In the pane that opens, enter the file path to the location where the initial copy is stored. You can also select **Browse** to go to the location. Select **Complete Initial Replication**.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica-location.png" alt-text="Screenshot of the Import Initial Replica pane showing the file path field and Complete Initial Replication button." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica-location.png":::
+
+1. The process applies the initial checkpoint to the placeholder VM and changes the replication health state to **Ok**. Replication continues at the specified frequency. To monitor continued replication progress, see the section [Monitor replication progress](#monitor-replication-progress).
 
 ### [Hyper-V Manager](#tab/hyper-v-manager)
 
@@ -356,26 +376,6 @@ To send the initial copy by using external media and import it by using PowerShe
 
    See the section [Monitor replication progress](#monitor-replication-progress) to monitor continued replication progress.
 
-### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
-
-To send the initial copy by using external media and import it by using Windows Admin Center - Virtualization mode:
-
-1. Follow the steps in the section [Replicate a virtual machine](#replicate-a-virtual-machine) by using Windows Admin Center - Virtualization mode. The process creates a placeholder VM on the replica site and sets its replication state to **Initial replication in progress**. The process stores the replica contents for the VM on your external media in a subfolder for the VM. Safely eject the external media and transport it to the replica server.
-
-1. In **Windows Admin Center - Virtualization mode**, from the left pane, select the host to which you're replicating the VM.
-
-1. From the list of tools for the host, select **Virtual machines**, and then select the placeholder VM to enter its overview.
-
-1. In the **Replication** section, select **Import Initial Replica**.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica.png" alt-text="Screenshot of the placeholder VM Replication section in Windows Admin Center with the Import Initial Replica action highlighted." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica.png":::
-
-1. In the pane that opens, enter the file path to the location where the initial copy is stored. You can also select **Browse** to go to the location. Select **Complete Initial Replication**.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica-location.png" alt-text="Screenshot of the Import Initial Replica pane showing the file path field and Complete Initial Replication button." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica-location.png":::
-
-1. The process applies the initial checkpoint to the placeholder VM and changes the replication health state to **Ok**. Replication continues at the specified frequency. To monitor continued replication progress, see the section [Monitor replication progress](#monitor-replication-progress).
-
 ---
 
 ## Monitor replication progress
@@ -389,6 +389,16 @@ You can monitor the progress of the initial replication and ongoing replication 
 - **Critical**: Replication stalls or fails. The RPO is at risk as changes aren't applying. Investigate immediately, such as check connectivity, storage capacity and performance, authentication and certificates, and event logs. Resume or resynchronize as required.
 
 Select the relevant tab for instructions.
+
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+To monitor replication progress by using Windows Admin Center - Virtualization mode:
+
+1. In **Windows Admin Center - Virtualization mode**, from the left pane, expand the host that contains the VM you're replicating, and then select the VM to enter its overview.
+
+1. In the **Replication** section, view summary replication information, such as the replication health, last synchronized time, and primary and replica host FQDNs.
+
+   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-monitor-replication.png" alt-text="Screenshot of the VM overview Replication section in Windows Admin Center showing replication health, sync time, and server details." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-monitor-replication.png":::
 
 ### [Hyper-V Manager](#tab/hyper-v-manager)
 
@@ -459,16 +469,6 @@ To monitor replication progress by using PowerShell, use the [Get-VMReplication]
    ```powershell
    Reset-VMReplicationStatistics -VMName '<VM name>'
    ```
-
-### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
-
-To monitor replication progress by using Windows Admin Center - Virtualization mode:
-
-1. In **Windows Admin Center - Virtualization mode**, from the left pane, expand the host that contains the VM you're replicating, and then select the VM to enter its overview.
-
-1. In the **Replication** section, view summary replication information, such as the replication health, last synchronized time, and primary and replica host FQDNs.
-
-   :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-monitor-replication.png" alt-text="Screenshot of the VM overview Replication section in Windows Admin Center showing replication health, sync time, and server details." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-monitor-replication.png":::
 
 ---
 
@@ -587,6 +587,34 @@ You can enable extended replication by using Windows Admin Center - Virtualizati
 
 Select the relevant tab for instructions.
 
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+To configure extended replication by using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, expand the host that contains the virtual machine you want to configure extended replication for, and then select the virtual machine to enter its overview.
+
+1. Scroll to the **Replication** section, select **Extend Replication** to open the **Extended Replication** configuration.
+
+1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
+
+   1. For **Replica server**, enter either the NetBIOS or FQDN of the Hyper-V host or cluster you're extending replication to.
+
+   1. For **Replica server port**, enter the port number you configured on the extended replica host for Hyper-V Replica.
+
+   1. For **Authentication type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the extended replica host. If you're using certificate-based authentication, select **Select** to choose the certificate. If you want to compress the data that is transmitted over the network, check the box.
+
+1. For the **Replication Configuration** tab, complete the following information, then select **Initial Replication** to continue:
+
+   1. For **Configure replication frequency**, select **5 minutes** or **15 minutes**. Extended replication doesn't support a 30-second frequency.
+
+   1. For **Configure additional recovery points**, select **Maintain only the latest recovery point** or **Create additional hourly recovery points**.
+
+1. For the **Initial Replication** tab, select the initial replication method, and then select **Review** to continue.
+
+1. Review the summary information, and then select **Enable Replication**.
+
 ### [Hyper-V Manager](#tab/hyper-v-manager)
 
 To configure extended replication by using Hyper-V Manager:
@@ -622,35 +650,6 @@ The process to configure extended replication is the same as replicating a VM to
 
 - You can't specify which virtual hard disks to replicate. The virtual hard disks that are replicated to the first replica server are used for extended replication.
 - The replication frequency can only be 5 minutes or 15 minutes.
-
-### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
-
-To configure extended replication by using Windows Admin Center - Virtualization mode:
-
-1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
-
-1. In the resources pane, expand the host that contains the virtual machine you want to configure extended replication for, and then select the virtual machine to enter its overview.
-
-1. Scroll to the **Replication** section, select **Extend Replication** to open the **Extended Replication** configuration.
-
-1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
-
-   1. For **Replica server**, enter either the NetBIOS or FQDN of the Hyper-V host or cluster you're extending replication to.
-
-   1. For **Replica server port**, enter the port number you configured on the extended replica host for Hyper-V Replica.
-
-   1. For **Authentication type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the extended replica host. If you're using certificate-based authentication, select **Select** to choose the certificate. If you want to compress the data that is transmitted over the network, check the box.
-
-1. For the **Replication Configuration** tab, complete the following information, then select **Initial Replication** to continue:
-
-   1. For **Configure replication frequency**, select **5 minutes** or **15 minutes**. Extended replication doesn't support a 30-second frequency.
-
-   1. For **Configure additional recovery points**, select **Maintain only the latest recovery point** or **Create additional hourly recovery points**.
-
-1. For the **Initial Replication** tab, select the initial replication method, and then select **Review** to continue.
-
-1. Review the summary information, and then select **Enable Replication**.
-
 
 ---
 
