@@ -126,7 +126,7 @@ To run an unplanned failover using Hyper-V Manager:
 
    :::image type="content" source="media/replication-failover/unplanned-failover-remove-recovery-points.png" alt-text="Screenshot of the context menu option to remove recovery points after an unplanned failover in Hyper-V Manager." lightbox="media/replication-failover/unplanned-failover-remove-recovery-points.png":::
 
-   At this point failover is complete, however the replication health shows as **Warning** because that replication direction isn't configured.
+   At this point failover is complete, but the replication health shows as **Warning** because that replication direction isn't configured.
 
 #### Reverse replication after unplanned failover using Hyper-V Manager
 
@@ -230,7 +230,7 @@ To run an unplanned failover using Failover Cluster Manager, follow these steps:
 
    :::image type="content" source="media/replication-failover/unplanned-failover-remove-recovery-points.png" alt-text="Screenshot of the context menu option to remove recovery points after an unplanned failover in Failover Cluster Manager." lightbox="media/replication-failover/unplanned-failover-remove-recovery-points.png":::
 
-    At this point failover is complete, however the replication health shows as **Warning** because that replication direction isn't configured.
+    At this point failover is complete, but the replication health shows as **Warning** because that replication direction isn't configured.
 
 #### Reverse replication after unplanned failover using Failover Cluster Manager
 
@@ -274,7 +274,7 @@ Failing over a virtual machine by using PowerShell depends on the type of failov
 
 To run a test failover by using PowerShell:
 
-1. Open a PowerShell session as an administrator on the host in the **replica** cluster or the **replica** single host with the VM, or connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
+1. Open a PowerShell session as an administrator on the host in the **replica** cluster or the **replica** single host with the VM. Or, connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
 
 1. Initiate a test failover by running the following command. Confirm the action when prompted. By default, the latest recovery point is used. To use a different recovery point, you can combine `Get-VMSnapshot` and pipe it to the `Start-VMFailover` cmdlet. For an example, see [Start-VMFailover](/powershell/module/hyper-v/start-vmfailover).
 
@@ -312,7 +312,7 @@ To run a planned failover using PowerShell:
    Start-VMFailover -VMName '<VM Name>' -Prepare
    ```
 
-1. Open a PowerShell session as an administrator on the host in the **replica** cluster or the **replica** single host with the VM, or connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
+1. Open a PowerShell session as an administrator on the host in the **replica** cluster or the **replica** single host with the VM. Or, connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
 
 1. Initiate the planned failover by running the following command. Confirm the action when prompted. The latest recovery point is used by default. To use a different recovery point, you can combine `Get-VMSnapshot` and pipe it to the `Start-VMFailover` cmdlet. For an example, see [Start-VMFailover](/powershell/module/hyper-v/start-vmfailover).
 
@@ -336,7 +336,7 @@ To run a planned failover using PowerShell:
 
 To run an unplanned failover using PowerShell:
 
-1. Open a PowerShell session as an administrator on the host in the **replica** cluster or the **replica** single host with the VM, or connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
+1. Open a PowerShell session as an administrator on the host in the **replica** cluster or the **replica** single host with the VM. Or, connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
 
 1. Initiate an unplanned failover by running the following command. Confirm the action when prompted. The latest recovery point is used by default. To use a different recovery point, you can combine `Get-VMSnapshot` and pipe it to the `Start-VMFailover` cmdlet. For an example, see [Start-VMFailover](/powershell/module/hyper-v/start-vmfailover).
 
@@ -430,8 +430,7 @@ Once the primary VM is available again, you should replicate the changes made to
 > Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 >
-> Hyper-V hosts must be running Windows Server 2022 or later.
->
+
 > For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
 
 Failing over a virtual machine by using Windows Admin Center - Virtualization mode depends on the type of failover you want to perform.

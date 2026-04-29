@@ -39,7 +39,7 @@ Before you begin, make sure you meet the following prerequisites:
 
 ## Replicate a virtual machine
 
-You need to enable replication for each VM you want to replicate. You can replicate a VM using the following combinations:
+You need to enable replication for each VM you want to replicate. You can replicate a VM by using the following combinations:
 
 - Hyper-V Manager on clusters or single hosts.
 - Failover Cluster Manager on clusters only.
@@ -56,13 +56,13 @@ To replicate a virtual machine by using Hyper-V Manager:
 
 1. In the resources pane, select the host that contains the VM you want to replicate.
 
-1. Right-click the VM you want to replicate, then select **Enable Replication**. In the **Enable Replication** screen, if you see **Before You Begin**, select **Next**.
+1. Right-click the VM you want to replicate, and then select **Enable Replication**. In the **Enable Replication** screen, if you see **Before You Begin**, select **Next**.
 
 1. For **Specify Replica Server**, in the **Replica Server** box, enter either the NetBIOS or FQDN of the Replica server. If the Replica server is part of a failover cluster, enter the name of the Hyper-V Replica Broker. Then select **Next**. The connection to the replica server is verified to retrieve the authentication and port settings you configured for the replica server.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-specify-replica-server.png" alt-text="Screenshot of the Enable Replication wizard showing the Specify Replica Server page with the Replica Server name field." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-specify-replica-server.png":::
 
-1. Review the replica server settings. If you're using certificate-based authentication, select **Select Certificate**, then you're prompted to select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box. Select **Next**.
+1. Review the replica server settings. If you're using certificate-based authentication, select **Select Certificate**, and then you're prompted to select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box. Select **Next**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-specify-connection-parameters.png" alt-text="Screenshot of the connection parameters page showing authentication method, certificate selection, compression option, and port settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-specify-connection-parameters.png":::
 
@@ -80,7 +80,7 @@ To replicate a virtual machine by using Hyper-V Manager:
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-configure-additional-recovery-points.png" alt-text="Screenshot of the Configure Additional Recovery Points page with options for latest point only, hourly points, and VSS snapshot frequency." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-configure-additional-recovery-points.png":::
 
-1. For **Choose Initial Replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list, then select **Next**.
+1. For **Choose Initial Replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list, and then select **Next**.
 
    - **Send initial copy over the network**: this method is the default option.
    - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored.
@@ -90,7 +90,7 @@ To replicate a virtual machine by using Hyper-V Manager:
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-choose-initial-replication-method.png" alt-text="Screenshot of the Choose Initial Replication page showing network transfer, external media, existing VM options, and scheduling settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-choose-initial-replication-method.png":::
 
-1. Review the summary information, then select **Finish**.
+1. Review the summary information, and then select **Finish**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-summary.png" alt-text="Screenshot of the summary page listing the selected replication settings before finishing the wizard." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-summary.png":::
 
@@ -108,15 +108,15 @@ To replicate a virtual machine by using Failover Cluster Manager:
 
 1. Open **Failover Cluster Manager** on a device you use to manage the **primary** cluster or a **primary** single host with the VM, or on one of the hosts in the cluster where Windows Server with Desktop Experience is installed.
 
-1. In the resources pane, expand the name of the cluster you want to replicate to, then select **Roles**.
+1. In the resources pane, expand the name of the cluster you want to replicate to, and then select **Roles**.
 
-1. Right-click the VM you want to replicate, select **Replication**, then select **Enable Replication**. In the **Enable Replication** screen, if you see **Before You Begin**, select **Next**.
+1. Right-click the VM you want to replicate, select **Replication**, and then select **Enable Replication**. In the **Enable Replication** screen, if you see **Before You Begin**, select **Next**.
 
 1. For **Specify Replica Server**, in the **Replica Server** box, enter either the NetBIOS or FQDN of the Replica server. If the Replica server is part of a failover cluster, enter the name of the Hyper-V Replica Broker. Then select **Next**. The connection to the replica server is verified to retrieve the authentication and port settings you configured for the replica server.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-specify-replica-server.png" alt-text="Screenshot of the Enable Replication wizard showing the Specify Replica Server page with the Replica Server name field." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-specify-replica-server.png":::
 
-1. Review the replica server settings. If you're using certificate-based authentication, select **Select Certificate**, then you're prompted to select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box. Select **Next**.
+1. Review the replica server settings. If you're using certificate-based authentication, select **Select Certificate**, and then you're prompted to select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box. Select **Next**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-specify-connection-parameters.png" alt-text="Screenshot of the connection parameters page showing authentication method, certificate selection, compression option, and port settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-specify-connection-parameters.png":::
 
@@ -134,17 +134,17 @@ To replicate a virtual machine by using Failover Cluster Manager:
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-configure-additional-recovery-points.png" alt-text="Screenshot of the Configure Additional Recovery Points page with options for latest point only, hourly points, and VSS snapshot frequency." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-configure-additional-recovery-points.png":::
 
-1. For **Choose Initial Replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list, then select **Next**.
+1. For **Choose Initial Replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list, and then select **Next**.
 
    - **Send initial copy over the network**: this method is the default option.
-   - **Send initial copy using external media**: select **Browse** and specify a folder location on local or external media where the initial copy can be stored. You can find the process to import the initial copy in the section [Send initial copy using external media](#send-initial-copy-using-external-media).
+   - **Send initial copy using external media**: select **Browse** and specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-using-external-media).
    - **Use an existing virtual machine on the Replica server as the initial copy**: restore the VM on the replica server and use it as the basis for replication, then replicate only the changes.
 
    If you select **Send initial copy over the network** or **Use an existing virtual machine on the Replica server as the initial copy**, you can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-choose-initial-replication-method.png" alt-text="Screenshot of the Choose Initial Replication page showing network transfer, external media, existing VM options, and scheduling settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-choose-initial-replication-method.png":::
 
-1. Review the summary information, then select **Finish**. A dialog box appears to indicate that replication was successfully enabled.
+1. Review the summary information, and then select **Finish**. A dialog box appears to indicate that replication was successfully enabled.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-summary.png" alt-text="Screenshot of the summary page listing the selected replication settings before finishing the wizard." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-summary.png":::
 
@@ -210,10 +210,8 @@ To replicate a virtual machine by using PowerShell, use the `Enable-VMReplicatio
 ### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
 
 > [!IMPORTANT]
-> Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
+> Configuring Hyper-V Replica by using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
->
-> Hyper-V hosts must be running Windows Server 2022 or later.
 >
 > For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
 
@@ -221,19 +219,19 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
 
 1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
 
-1. In the resources pane, expand the host that contains the VM you want to replicate, then select the VM to enter its overview.
+1. In the resources pane, expand the host that contains the VM you want to replicate, and then select the VM to enter its overview.
 
-1. On the menu bar, select **Manage**, then select **Configure Replication** to open the **Enable Replication** pane.
+1. On the menu bar, select **Manage**, and then select **Configure Replication** to open the **Enable Replication** pane.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-manage-menu.png" alt-text="Screenshot of Windows Admin Center - Virtualization mode showing the Manage menu expanded with Configure Replication selected." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-manage-menu.png":::
 
-1. For the **Replication Connection** tab, complete the following information, then select **Replication Configuration** to continue:
+1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
 
    1. For **Replica Server**, enter either the NetBIOS or FQDN of the Hyper-V host you're replicating to.
 
    1. For **Replica server port**, enter the port number you configured on the replica host for Hyper-V Replica.
 
-   1. For **Authentication Type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the replica host. If you're using certificate-based authentication, select **Select Certificate**, then you're prompted to select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box.
+   1. For **Authentication Type**, select the correct value from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)** based on the authentication method you configured on the replica host. If you're using certificate-based authentication, select **Select Certificate**, and then select the certificate for the primary host that matches the requirements. If you want to compress the data that is transmitted over the network, check the box.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-connection.png" alt-text="Screenshot of the Replication Connection tab in Windows Admin Center showing replica server, port, authentication, and compression options." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-replication-connection.png":::
 
@@ -252,11 +250,11 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
    For **Configure initial replication**, select the initial replication method. The total size of the initial copy is displayed. Select an option from the following list:
 
    - **Send initial copy over the network**: this method is the default option. You can optionally specify whether to start replication immediately, or start replication at a specified time and date up to seven days in the future.
-   - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored. You can find the process to import the initial copy in the section [Send initial copy using external media](#send-initial-copy-using-external-media).
+   - **Send initial copy using external media**: specify a folder location on local or external media where the initial copy can be stored. To learn about the process to import the initial copy, see [Send initial copy using external media](#send-initial-copy-using-external-media).
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png" alt-text="Screenshot of the Initial Replication tab showing method choices for network transfer or external media and scheduling settings." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-initial-replication.png":::
 
-1. Review the summary information, then select **Enable Replication**.
+1. Review the summary information, and then select **Enable Replication**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-review.png" alt-text="Screenshot of the Review tab summarizing the chosen Hyper-V Replica settings before enabling replication." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-review.png":::
 
@@ -281,7 +279,7 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
 >
 > - If a VM runs an application that saves data across virtual hard disks, you can ensure that all virtual hard disks selected for replication are replicated to the same point in time. An example of where this approach is useful is when an application has one virtual hard disk dedicated for application data, and another virtual hard disk dedicated for application log files. To use this feature, configure VM replication by using PowerShell with the `Enable-VMReplication` cmdlet and add the parameter `EnableWriteOrderPreservationAcrossDisks`. For more information, see [Enable-VMReplication](/powershell/module/hyper-v/enable-vmreplication#-enablewriteorderpreservationacrossdisks).
 
-### Send initial copy using external media
+### Send initial copy by using external media
 
 If you send the initial copy by using external media, such as a hard disk or USB drive, the process creates a placeholder VM on the replica site with a checkpoint. The process stores the replica contents for the VM on your external media in a subfolder for the VM. You transport the initial copy to the replica server, then import it to the placeholder VM.
 
@@ -313,7 +311,7 @@ To send the initial copy by using external media and import it by using Failover
 
 1. Open **Failover Cluster Manager** on a device you use to manage the cluster with the VM, or one of the hosts in the cluster where Windows Server with Desktop Experience is installed.
 
-1. In the resources pane, expand the name of the cluster you want to replicate to, then select **Roles**.
+1. In the resources pane, expand the name of the cluster you want to replicate to, and then select **Roles**.
 
 1. Right-click the placeholder VM, then select **Import Initial Replica**.
 
@@ -366,17 +364,17 @@ To send the initial copy by using external media and import it by using Windows 
 
 1. In **Windows Admin Center - Virtualization mode**, from the left pane, select the host to which you're replicating the VM.
 
-1. From the list of tools for the host, select **Virtual machines**, then select the placeholder VM to enter its overview.
+1. From the list of tools for the host, select **Virtual machines**, and then select the placeholder VM to enter its overview.
 
 1. In the **Replication** section, select **Import Initial Replica**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica.png" alt-text="Screenshot of the placeholder VM Replication section in Windows Admin Center with the Import Initial Replica action highlighted." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica.png":::
 
-1. In the pane that opens, enter the file path to the location where the initial copy is stored. You can also select **Browse** to navigate to the location. Select **Complete Initial Replication**.
+1. In the pane that opens, enter the file path to the location where the initial copy is stored. You can also select **Browse** to go to the location. Select **Complete Initial Replication**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica-location.png" alt-text="Screenshot of the Import Initial Replica pane showing the file path field and Complete Initial Replication button." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-import-initial-replica-location.png":::
 
-1. The process applies the initial checkpoint to the placeholder VM and changes the replication health state to **Ok**. Replication continues at the specified frequency. See the section [Monitor replication progress](#monitor-replication-progress) to monitor continued replication progress.
+1. The process applies the initial checkpoint to the placeholder VM and changes the replication health state to **Ok**. Replication continues at the specified frequency. To monitor continued replication progress, see the section [Monitor replication progress](#monitor-replication-progress).
 
 ---
 
@@ -398,13 +396,13 @@ To monitor replication progress by using Hyper-V Manager:
 
 1. Back in **Hyper-V Manager**, select a host.
 
-1. In the central pane, add a column for **Replication Health** to show the high-level health status of replication for each VM. Right-click on any column heading, select **Add/Remove Columns**. In the list of **Available Columns**, select **Replication Health**, then select **Add** to move it to **Displayed Columns**. Select **OK**.
+1. In the central pane, add a column for **Replication Health** to show the high-level health status of replication for each VM. Right-click on any column heading, select **Add/Remove Columns**. In the list of **Available Columns**, select **Replication Health**, and then select **Add** to move it to **Displayed Columns**. Select **OK**.
 
-1. View summary replication information, such as the last synchronized time and primary and replica host FQDNs. Select the VM, then in the bottom pane select the **Replication** tab.
+1. View summary replication information, such as the last synchronized time and primary and replica host FQDNs. Select the VM, and then in the bottom pane select the **Replication** tab.
 
    :::image type="content" source="media/replication-failover-virtual-machines/monitor-replication-summary-hyper-v-manager.png" alt-text="Screenshot of Hyper-V Manager with a VM selected and the Replication tab showing health status, sync time, and replica server info." lightbox="media/replication-failover-virtual-machines/monitor-replication-summary-hyper-v-manager.png":::
 
-1. To view more detailed replication information, right-click the VM and select **Replication**, then **View Replication Health**. You can reset the replication statistics if needed by selecting **Reset Statistics**.
+1. To view more detailed replication information, right-click the VM and select **Replication**, and then **View Replication Health**. You can reset the replication statistics if needed by selecting **Reset Statistics**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/monitor-replication-detail.png" alt-text="Screenshot of the Replication Health dialog showing Hyper-V Replica metrics including state, health, statistics, and recovery points." lightbox="media/replication-failover-virtual-machines/monitor-replication-detail.png":::
 
@@ -412,19 +410,19 @@ To monitor replication progress by using Hyper-V Manager:
 
 To monitor replication progress by using Failover Cluster Manager:
 
-1. In **Failover Cluster Manager**, select the name of your cluster, then select **Roles**.
+1. In **Failover Cluster Manager**, select the name of your cluster, and then select **Roles**.
 
-1. View summary replication information, such as the last synchronized time and primary and replica host FQDNs. Select the VM, then in the bottom pane select the **Replication** tab.
+1. View summary replication information, such as the last synchronized time and primary and replica host FQDNs. Select the VM, and then in the bottom pane select the **Replication** tab.
 
    :::image type="content" source="media/replication-failover-virtual-machines/monitor-replication-summary-failover-cluster-manager.png" alt-text="Screenshot of Failover Cluster Manager Roles view with a clustered VM selected showing replication health, sync time, and server details." lightbox="media/replication-failover-virtual-machines/monitor-replication-summary-failover-cluster-manager.png":::
 
-1. To view more detailed replication information, right-click the VM and select **Replication**, then **View Replication Health**. You can reset the replication statistics if needed by selecting **Reset Statistics**.
+1. To view more detailed replication information, right-click the VM and select **Replication**, and then **View Replication Health**. You can reset the replication statistics if needed by selecting **Reset Statistics**.
 
    :::image type="content" source="media/replication-failover-virtual-machines/monitor-replication-detail.png" alt-text="Screenshot of the Replication Health dialog in Failover Cluster Manager showing Hyper-V Replica status, health, statistics, and recovery points." lightbox="media/replication-failover-virtual-machines/monitor-replication-detail.png":::
 
 ### [PowerShell](#tab/powershell)
 
-To monitor replication progress with PowerShell, use the [Get-VMReplication](/powershell/module/hyper-v/get-vmreplication) cmdlet, as shown in the following examples. Replace placeholder `<values>` with your own values.
+To monitor replication progress by using PowerShell, use the [Get-VMReplication](/powershell/module/hyper-v/get-vmreplication) cmdlet, as shown in the following examples. Replace placeholder `<values>` with your own values.
 
 1. Return to the existing PowerShell session where you enabled replication.
 
@@ -466,9 +464,9 @@ To monitor replication progress with PowerShell, use the [Get-VMReplication](/po
 
 To monitor replication progress by using Windows Admin Center - Virtualization mode:
 
-1. In **Windows Admin Center - Virtualization mode**, from the left pane, expand the host that contains the VM you're replicating, then select the VM to enter its overview.
+1. In **Windows Admin Center - Virtualization mode**, from the left pane, expand the host that contains the VM you're replicating, and then select the VM to enter its overview.
 
-1. In the **Replication** section, you can view summary replication information, such as the replication health, last synchronized time, and primary and replica host FQDNs.
+1. In the **Replication** section, view summary replication information, such as the replication health, last synchronized time, and primary and replica host FQDNs.
 
    :::image type="content" source="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-monitor-replication.png" alt-text="Screenshot of the VM overview Replication section in Windows Admin Center showing replication health, sync time, and server details." lightbox="media/replication-failover-virtual-machines/enable-replication-vm-windows-admin-center-monitor-replication.png":::
 
@@ -495,7 +493,7 @@ To configure static IP injection by using Windows Admin Center - Virtualization 
 
 1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
 
-1. In the resources pane, expand the host that contains the **replica** VM, then select the VM to enter its overview.
+1. In the resources pane, expand the host that contains the **replica** VM, and then select the VM to enter its overview.
 
 1. From the list of tools for the VM, select **Settings**.
 
@@ -505,7 +503,7 @@ To configure static IP injection by using Windows Admin Center - Virtualization 
 
 1. To configure IPv4 settings, on the **IPv4 TCP/IP Settings** sub-tab:
 
-   1. Check the box **Use the following IPv4 address scheme for the virtual machine**.
+   1. Select the check box for **Use the following IPv4 address scheme for the virtual machine**.
 
    1. Enter the **IPv4 Address**, **Subnet Mask**, **Default Gateway**, **Preferred DNS Server**, and optionally an **Alternate DNS Server**.
 
@@ -523,9 +521,9 @@ To configure static IP injection by using Hyper-V Manager:
 
 1. In the resources pane, select the host that contains the **replica** VM.
 
-1. Right-click the replica VM, then select **Settings**.
+1. Right-click the replica VM, and then select **Settings**.
 
-1. In the **Settings** dialog, select **Network Adapter**, then select **Failover TCP/IP**.
+1. In the **Settings** dialog, select **Network Adapter**, and then select **Failover TCP/IP**.
 
 1. To configure IPv4 settings:
 
@@ -543,11 +541,11 @@ To configure static IP injection by using Failover Cluster Manager:
 
 1. Open **Failover Cluster Manager** on a device you use to manage the cluster with the **replica** VM.
 
-1. In the resources pane, expand the name of the cluster, then select **Roles**.
+1. In the resources pane, expand the name of the cluster, and then select **Roles**.
 
-1. Right-click the replica VM, then select **Settings**.
+1. Right-click the replica VM, and then select **Settings**.
 
-1. In the **Settings** dialog, select **Network Adapter**, then select **Failover TCP/IP**.
+1. In the **Settings** dialog, select **Network Adapter**, and then select **Failover TCP/IP**.
 
 1. To configure IPv4 settings:
 
@@ -599,7 +597,7 @@ To configure extended replication by using Hyper-V Manager:
 
 1. In the resources pane, select the host that contains the VM you want to configure extended replication for.
 
-1. Right-click the VM you want to configure extended replication for, then select **Replication** > **Extend Replication**.
+1. Right-click the VM you want to configure extended replication for, and then select **Replication** > **Extend Replication**.
 
 1. The process to configure extended replication is similar to replicating a VM to the first replica location. Follow the process in the section [Replicate a virtual machine](#replicate-a-virtual-machine) with the following exceptions:
    - You can't specify which virtual hard disks to replicate. The virtual hard disks that are replicated to the first replica server are used for extended replication.
@@ -612,9 +610,9 @@ To configure extended replication by using Failover Cluster Manager:
 
 1. Open **Failover Cluster Manager** on a device you use to manage the cluster with the VM, or one of the hosts in the cluster where Windows Server with Desktop Experience is installed.
 
-1. In the resources pane, expand the name of the cluster you want to replicate to, then select **Roles**.
+1. In the resources pane, expand the name of the cluster you want to replicate to, and then select **Roles**.
 
-1. Right-click the VM you want to replicate, then select **Replication** > **Extend Replication**.
+1. Right-click the VM you want to replicate, and then select **Replication** > **Extend Replication**.
 
 1. The process to configure extended replication is similar to replicating a VM to the first replica location. Follow the process in the section [Replicate a virtual machine](#replicate-a-virtual-machine) with the following exceptions:
    - You can't specify which virtual hard disks to replicate. The virtual hard disks that are replicated to the first replica server are used for extended replication.
@@ -633,13 +631,13 @@ To configure extended replication by using Windows Admin Center - Virtualization
 
 1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
 
-1. In the resources pane, expand the host that contains the virtual machine you want to configure extended replication for, then select the virtual machine to enter its overview.
+1. In the resources pane, expand the host that contains the virtual machine you want to configure extended replication for, and then select the virtual machine to enter its overview.
 
 1. Scroll to the **Replication** section, select **Extend Replication** to open the **Extended Replication** configuration.
 
    <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-action-bar.png" alt-text="Screenshot of the Replication section in Windows Admin Center showing the Extend Replication button in the action bar." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-action-bar.png"::: -->
 
-1. For the **Replication Connection** tab, complete the following information, then select **Replication Configuration** to continue:
+1. For the **Replication Connection** tab, enter the following information, and then select **Replication Configuration** to continue:
 
    1. For **Replica server**, enter either the NetBIOS or FQDN of the Hyper-V host or cluster you're extending replication to.
 
@@ -657,9 +655,9 @@ To configure extended replication by using Windows Admin Center - Virtualization
 
    <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-configuration.png" alt-text="Screenshot of the Replication Configuration tab in the Extended Replication wizard showing replication frequency and recovery point options." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-configuration.png"::: -->
 
-1. For the **Initial Replication** tab, select the initial replication method, then select **Review** to continue.
+1. For the **Initial Replication** tab, select the initial replication method, and then select **Review** to continue.
 
-1. Review the summary information, then select **Enable Replication**.
+1. Review the summary information, and then select **Enable Replication**.
 
    <!-- :::image type="content" source="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-review.png" alt-text="Screenshot of the Review tab in the Extended Replication wizard summarizing connection, configuration, and initial replication settings." lightbox="media/replication-failover-virtual-machines/extended-replication-vm-windows-admin-center-review.png"::: -->
 

@@ -49,11 +49,10 @@ Use Windows Admin Center - Virtualization mode, Hyper-V Manager, or PowerShell t
 ### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
 
 > [!IMPORTANT]
-> Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
+> Configuring Hyper-V Replica by using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 >
-> Hyper-V hosts must be running Windows Server 2022 or later.
->
+
 > For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
 
 To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:
@@ -66,11 +65,11 @@ To enable and configure Hyper-V Replica by using Windows Admin Center - Virtuali
 
 1. In the **Settings** pane, under Hyper-V Host Settings, select **Replication** and make the following changes:
 
-   1. Check the box **Enable this computer as a Replica server**.
+   1. Select the check box **Enable this computer as a Replica server**.
 
-   1. For **Authentication and Ports**, check the box for the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select**, then you're prompted to select the certificate that matches the requirements.
+   1. For **Authentication and Ports**, select the check box for the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select**, and then choose the certificate that matches the requirements.
 
-   1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, you need to specify where the replicated VHDs should be stored on the replica host.
+   1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, specify where the replicated VHDs should be stored on the replica host.
 
       If you select **Allow replication from the specified servers**, select **Add**. In **Add Authorization Entry**, specify the FQDN of a primary host, a location to store replica files, and a trust group. A trust group is a free-form text field that you can use to group primary servers. Select **OK**.
 
@@ -90,11 +89,11 @@ To enable and configure Hyper-V Replica by using Hyper-V Manager:
 
 1. Under the **Server** section, select **Replication Configuration** in the left pane and make the following changes:
 
-   1. Check the box **Enable this computer as a Replica server**.
+   1. Select the check box **Enable this computer as a Replica server**.
 
-   1. For **Authentication and ports**, check the box for the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select Certificate**, then you're prompted to select the certificate that matches the requirements.
+   1. For **Authentication and ports**, select the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select Certificate**, and then select the certificate that matches the requirements.
 
-   1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, you need to specify where the replicated VHDs should be stored on the replica host.
+   1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, specify where the replicated VHDs should be stored on the replica host.
 
       If you select **Allow replication from the specified servers**, select **Add**. In **Add Authorization Entry**, specify the FQDN of a primary host, a location to store replica files, and a trust group. A trust group is a free-form text field that you can use to group primary servers. Select **OK**.
 
@@ -142,7 +141,7 @@ To allow replication between the primary and replica clusters and hosts, traffic
 
 You can enable the rules by using your preferred method of managing the Windows Firewall, such as centrally using Group Policy, or locally on each node by using the Windows Firewall with Advanced Security console or PowerShell. For more information about managing the Windows Firewall and how-to guides, see [Windows Firewall tools](/windows/security/operating-system-security/network-security/windows-firewall/tools).
 
-The rules you need to enable depend on the authentication method you chose when you configured the Hyper-V Replica Broker role:
+The rules you need to enable depend on the authentication method you choose when you configure the Hyper-V Replica Broker role:
 
 - Enable `Hyper-V Replica HTTP Listener (TCP-In)` for Kerberos (HTTP) authentication.
 - Enable `Hyper-V Replica HTTPS Listener (TCP-In)` for certificate-based (HTTPS) authentication.
