@@ -74,7 +74,7 @@ To run a planned failover using Windows Admin Center - Virtualization mode:
 
 1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
 
-1. In the resources pane, expand the host that contains the **primary** VM you want to perform a planned failover, then select the VM to enter its overview.
+1. In the resources pane, expand the host that contains the **primary** VM you want to perform a planned failover, and then select the VM to enter its overview.
 
 1. Shut down the VM if it's running. You must shut down the VM to perform a planned failover.
 
@@ -82,19 +82,19 @@ To run a planned failover using Windows Admin Center - Virtualization mode:
 
    :::image type="content" source="media/replication-failover/windows-admin-center-monitor-replication.png" alt-text="Screenshot of Windows Admin Center showing the VM replication overview with replication state, recovery points, and action buttons." lightbox="media/replication-failover/windows-admin-center-monitor-replication.png":::
 
-1. In the pane that opens, review the summary of the planned failover, then select **Fail Over**. The failover process begins and the replication state is **Prepared for planned failover**. If you want to cancel the planned failover at this point, select **Cancel Planned Failover**.
+1. In the pane that opens, review the summary of the planned failover, and then select **Fail Over**. The failover process begins and the replication state is **Prepared for planned failover**. If you want to cancel the planned failover at this point, select **Cancel Planned Failover**.
 
    :::image type="content" source="media/replication-failover/windows-admin-center-planned-replication-checks.png" alt-text="Screenshot of Windows Admin Center showing the Planned Failover summary pane with prerequisite checks and replication direction details." lightbox="media/replication-failover/windows-admin-center-planned-replication-checks.png":::
 
-1. In the resources pane, select the host which has the replica VM.
+1. In the resources pane, select the host that has the replica VM.
 
-1. From the list of tools for the host, select **Virtual machines**, then select the replica VM to enter its overview.
+1. From the list of tools for the host, select **Virtual machines**, and then select the replica VM to enter its overview.
 
 1. In the **Replication** section, select **Failover**.
 
    :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover.png" alt-text="Screenshot of Windows Admin Center showing the Replication section for a VM with the Planned Failover action highlighted." lightbox="media/replication-failover/windows-admin-center-replication-failover.png":::
 
-1. In the pane that opens, check the box whether you want to **Start the Replica virtual machine after failover**, depending on your requirements. By default, the replica VM starts after failover. Don't forget to attach the VM to a network if necessary. Then select **Fail Over** to begin the process. Once the failover is complete, in the **replication** section the replication state changes to **Failover Complete**.
+1. In the pane that opens, check the box if you want to **Start the Replica virtual machine after failover**, depending on your requirements. By default, the replica VM starts after failover. Don't forget to attach the VM to a network if necessary. Then select **Fail Over** to begin the process. Once the failover is complete, in the **replication** section the replication state changes to **Failover Complete**.
 
    :::image type="content" source="media/replication-failover/windows-admin-center-replication-failover-checks.png" alt-text="Screenshot of the Planned Failover summary pane in Windows Admin Center showing prerequisite checks and the Fail Over button." lightbox="media/replication-failover/windows-admin-center-replication-failover-checks.png":::
 
