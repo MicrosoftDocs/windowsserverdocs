@@ -52,7 +52,6 @@ Use Windows Admin Center - Virtualization mode, Hyper-V Manager, or PowerShell t
 > Configuring Hyper-V Replica by using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 >
-
 > For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
 
 To enable and configure Hyper-V Replica by using Windows Admin Center - Virtualization mode:

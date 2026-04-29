@@ -430,7 +430,6 @@ Once the primary VM is available again, you should replicate the changes made to
 > Configuring Hyper-V Replica using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 >
-
 > For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
 
 Failing over a virtual machine by using Windows Admin Center - Virtualization mode depends on the type of failover you want to perform.
