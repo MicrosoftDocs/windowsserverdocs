@@ -145,47 +145,51 @@ To add a resource to a resource group, follow these steps:
 
 1. For the **Storage** tab, select your storage configuration from the **Storage options** dropdown, and then select **Next** to continue. You can select multiple storage options. To learn more about storage architectures, see [Storage architectures for failover clusters](../../failover-clustering/storage-architectures.md). The following options are available:
 
-   <details>
-   <summary><b>SAN storage</b> — Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).</summary>
+   - **SAN storage**: Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).
 
-   When you select **SAN storage**, the wizard scans for available SAN disks on the cluster and sorts them into three categories:
+     <details>
+     <summary>SAN storage configuration details</summary>
 
-   - **Ready**: These disks are already configured as a CSV and ready for use. The table displays the **CSV** name, **Friendly Name**, **Serial Number**, **Storage Target**, **Status**, and **Partitioned** columns.
+     When you select **SAN storage**, the wizard scans for available SAN disks on the cluster and sorts them into three categories:
 
-   - **Auto configure**: These disks can be automatically set up as CSVs. Enter a **CSV** name for each disk you want to configure, and the wizard performs the following steps:
+     - **Ready**: These disks are already configured as a CSV and ready for use. The table displays the **CSV** name, **Friendly Name**, **Serial Number**, **Storage Target**, **Status**, and **Partitioned** columns.
 
-     1. Initializes and brings the disk online.
-     1. Creates a GPT partition and formats it with NTFS.
-     1. Adds the disk to the failover cluster.
-     1. Adds the disk as a Cluster Shared Volume with the name you specify.
-     1. Ensures the file system path matches the CSV name (for example, `C:\ClusterStorage\CSV01`).
-     1. Configures the CSV Block Cache to the recommended value.
+     - **Auto configure**: These disks can be automatically set up as CSVs. Enter a **CSV** name for each disk you want to configure, and the wizard performs the following steps:
 
-     If you don't want the wizard to configure a disk, leave the **CSV** name blank and the wizard skips it.
+       1. Initializes and brings the disk online.
+       1. Creates a GPT partition and formats it with NTFS.
+       1. Adds the disk to the failover cluster.
+       1. Adds the disk as a Cluster Shared Volume with the name you specify.
+       1. Ensures the file system path matches the CSV name (for example, `C:\ClusterStorage\CSV01`).
+       1. Configures the CSV Block Cache to the recommended value.
 
-   - **Manual configure**: These disks require manual intervention before they can be configured as CSVs. Hover over the information icon to see the reason, such as the disk not being available on every cluster node.
+       If you don't want the wizard to configure a disk, leave the **CSV** name blank and the wizard skips it.
 
-   Select **Refresh** to rescan for disks. Expand the **More information on SAN storage** section at the bottom of the page for more details about disk requirements.
+     - **Manual configure**: These disks require manual intervention before they can be configured as CSVs. Hover over the information icon to see the reason, such as the disk not being available on every cluster node.
 
-   </details>
+     Select **Refresh** to rescan for disks. Expand the **More information on SAN storage** section at the bottom of the page for more details about disk requirements.
 
-   <details>
-   <summary><b>File server storage</b> — Configure Server Message Block (SMB) file shares for VM storage.</summary>
+     </details>
 
-   When you select **File server storage**, you configure SMB file shares for your VM storage:
+   - **File server storage**: Configure Server Message Block (SMB) file shares for VM storage.
 
-   1. Enter the SMB file share path. The wizard validates that the share exists and has access.
+     <details>
+     <summary>File server storage configuration details</summary>
 
-   1. For Windows-based file servers, the Virtualization Mode agent is installed so you can manage the file server from the **Storage** view after the wizard completes.
+     When you select **File server storage**, you configure SMB file shares for your VM storage:
 
-   1. Optionally, select whether you want Virtualization Mode to configure access permissions for the file share. When selected, permissions are updated to include all systems needed for live migration.
+     1. Enter the SMB file share path. The wizard validates that the share exists and has access.
 
-   1. Optionally, select whether you want Virtualization Mode to enable SMB delegation. When selected, Virtualization Mode attempts to enable constrained delegation for live migration. If the necessary Active Directory permissions aren't available, the deployment status informs you so you can configure delegation manually.
+     1. For Windows-based file servers, the Virtualization Mode agent is installed so you can manage the file server from the **Storage** view after the wizard completes.
 
-   > [!NOTE]
-   > For non-Windows-based file servers, the permissions and delegation options aren't available.
+     1. Optionally, select whether you want Virtualization Mode to configure access permissions for the file share. When selected, permissions are updated to include all systems needed for live migration.
 
-   </details>
+     1. Optionally, select whether you want Virtualization Mode to enable SMB delegation. When selected, Virtualization Mode attempts to enable constrained delegation for live migration. If the necessary Active Directory permissions aren't available, the deployment status informs you so you can configure delegation manually.
+
+     > [!NOTE]
+     > For non-Windows-based file servers, the permissions and delegation options aren't available.
+
+     </details>
 
    - **Hyperconverged storage**: Not available in this preview release.
    - **Use existing storage already configured on the system**: Skip storage configuration if you already configured storage or plan to configure it later.
