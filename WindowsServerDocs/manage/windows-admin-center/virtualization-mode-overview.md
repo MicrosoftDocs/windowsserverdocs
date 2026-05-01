@@ -106,7 +106,7 @@ Profile types:
 
 Windows Admin Center Virtualization Mode introduces a concept called a _Network intent template_, which is an abstracted, predefined intent that you didn't yet apply to a network adapter or associate with a cluster or standalone host. A network intent template serves as a blueprint that you can use to create intents after you specify which NICs the template should apply to.
 
-Network intent templates persist across sessions. After you create a template in the Add Resource workflow, it's saved and available for reuse the next time you onboard new hosts or clusters. You can select a saved template from the dropdown without recreating it. For more information about configuring network intent templates during onboarding, see [Add resources in Virtualization Mode](add-virtualization-mode-resources.md#networking).
+Network intent templates persist across sessions. After you create a template in the Add Resource workflow, it's saved and available for reuse the next time you onboard new hosts or clusters. You can select a saved template from the dropdown without recreating it. For more information about configuring network intent templates during onboarding, see [Add resources in Virtualization Mode](add-virtualization-mode-resources.md#add-resources).
 
 You can also manage network intent templates outside of the Add Resource workflow. Select the **Network** view in the top navigation bar to browse, create, edit, and delete your network intent templates.
 
