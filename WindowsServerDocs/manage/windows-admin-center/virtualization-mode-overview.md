@@ -24,7 +24,7 @@ Unlike administration mode, which focuses on general system management, Virtuali
 To get an overview of Windows Admin Center Virtualization Mode, watch the following video.
 </br></br>
 
-> [!VIDEO 542bfe98-b9d7-4e53-95e4-7a4e594214a6]
+> [!VIDEO 872cf385-a09d-439e-8afc-39f78348fd57]
 
 Virtualization Mode offers the following key capabilities:
 

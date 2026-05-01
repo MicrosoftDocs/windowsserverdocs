@@ -143,16 +143,10 @@ To add a resource to a resource group, follow these steps:
    > [!TIP]
    > You can also view and manage your network intent templates outside of the Add Resource wizard. Select the **Network** view in the top navigation bar to browse, create, edit, and delete network intent templates.
 
-1. For the **Storage** tab, select your storage configuration from the **Storage options** dropdown, and then select **Next** to continue. You can select multiple storage options. The following options are available:
+1. For the **Storage** tab, select your storage configuration from the **Storage options** dropdown, and then select **Next** to continue. You can select multiple storage options. To learn more about storage architectures, see [Storage architectures for failover clusters](../../failover-clustering/storage-architectures.md). The following options are available:
 
-   - **SAN storage**: Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).
-   - **File server storage**: Configure Server Message Block (SMB) file shares for VM storage.
-   - **Hyperconverged storage**: Not available in this preview release.
-   - **Use existing storage already configured on the system**: Skip storage configuration if you already configured storage or plan to configure it later.
-
-   To learn more about storage architectures, see [Storage architectures for failover clusters](../../failover-clustering/storage-architectures.md).
-
-   #### [SAN storage](#tab/san-storage)
+   <details>
+   <summary><b>SAN storage</b> — Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).</summary>
 
    When you select **SAN storage**, the wizard scans for available SAN disks on the cluster and sorts them into three categories:
 
@@ -173,7 +167,10 @@ To add a resource to a resource group, follow these steps:
 
    Select **Refresh** to rescan for disks. Expand the **More information on SAN storage** section at the bottom of the page for more details about disk requirements.
 
-   #### [File server storage](#tab/file-server-storage)
+   </details>
+
+   <details>
+   <summary><b>File server storage</b> — Configure Server Message Block (SMB) file shares for VM storage.</summary>
 
    When you select **File server storage**, you configure SMB file shares for your VM storage:
 
@@ -188,7 +185,10 @@ To add a resource to a resource group, follow these steps:
    > [!NOTE]
    > For non-Windows-based file servers, the permissions and delegation options aren't available.
 
-   ---
+   </details>
+
+   - **Hyperconverged storage**: Not available in this preview release.
+   - **Use existing storage already configured on the system**: Skip storage configuration if you already configured storage or plan to configure it later.
 
 1. For the **Compute** tab, configure the following Hyper-V host settings for your systems, and then select **Next** to continue.
 
