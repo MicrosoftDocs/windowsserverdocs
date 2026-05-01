@@ -145,8 +145,8 @@ To add a resource to a resource group, follow these steps:
 
 1. For the **Storage** tab, select your storage configuration from the **Storage options** dropdown, and then select **Next** to continue. You can select multiple storage options. The following options are available:
 
-   - [**SAN storage**](#tab/san-storage): Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).
-   - **File server storage**: Configure Server Message Block (SMB) file shares for VM storage. For more information, see the [File server storage](#tab/file-server-storage) tab.
+   - **SAN storage**: Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).
+   - **File server storage**: Configure Server Message Block (SMB) file shares for VM storage.
    - **Hyperconverged storage**: Not available in this preview release.
    - **Use existing storage already configured on the system**: Skip storage configuration if you already configured storage or plan to configure it later.
 
