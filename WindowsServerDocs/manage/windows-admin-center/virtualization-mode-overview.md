@@ -64,7 +64,7 @@ Virtualization Mode includes the following tools and features:
 |-------------|-----------------------|
 | Compute (hosts) | - Overview dashboard<br>- Settings<br>- Updates<br>- Virtual Machines<br>- Servers<br>- Volumes<br>- Hyper-V Replica<br>- GPU-P |
 | Compute (servers) | - Dashboard<br>- Settings<br>- Events<br>- Firewall<br>- Updates<br>- Virtual Machines<br>- Networks<br>- Storage |
-| Storage | The Storage view displays onboarded storage devices and their linked compute systems. The storage host profile isn't available at this time. |
+| Storage | The Storage view displays onboarded storage devices and their linked compute systems. |
 | Networking | The Network view lets you browse, create, edit, and delete network intent templates. The networking host profile isn't available at this time. |
 
 To learn about the tools available to Administration Mode for non-virtualization scenarios, see [Manage Servers with Windows Admin Center](use/manage-servers.md).
