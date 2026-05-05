@@ -67,7 +67,7 @@ The following GPUs support GPU partitioning:
 - NVIDIA L40
 - NVIDIA L40S
 - NVIDIA RTX Pro 6000 Blackwell Server Edition
-- AMD V710
+- AMD Radeon PRO V710
 
 To use live migration with GPU partitioning for NVIDIA GPUs, you must use the driver included in the NVIDIA vGPU Software v18.x or later. The NVIDIA driver provides the necessary support for GPU partitioning and live migration capabilities.
 
