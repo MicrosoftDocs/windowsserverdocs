@@ -76,10 +76,6 @@ To enable and configure the Hyper-V Replica Broker by using Windows Admin Center
 
    1. For **Broker Name**, enter the name you want to use for the Hyper-V Replica Broker. The name is limited to 15 characters and must be unique in your Active Directory domain.
 
-   1. Check the box **Check Active Directory for name collisions** to verify the name is available.
-
-   1. For **Domain Username** and **Domain Password**, enter the credentials for a domain account that has permission to create computer objects in Active Directory, or that matches a prestaged computer account.
-
    1. For **Available Networks**, select the network to use for the broker and enter an IP address if DHCP isn't available.
 
 1. Select **Next** to view the **Summary**, which shows the broker name, IP address, and organizational unit (OU). Review the information and select **Configure**.
