@@ -22,7 +22,7 @@ Some of the features that this article describes are available only in Windows A
 > Looking to acquire a hyper-converged infrastructure? We recommend [these Windows Server SDN solutions](https://microsoft.com/wssd) from our partners. They're designed, assembled, and validated against our reference architecture to help ensure compatibility and reliability, so you get up and running quickly.
 
 > [!IMPORTANT]
-> Windows Admin Center no longer officially supports the management of Azure Local infrastructure. To read about how to deploy and manage Azure Local infrastructure, see the [Azure Local documentation](/azure/azure-local/overview.md).
+> Windows Admin Center no longer officially supports the management of Azure Local infrastructure. To read about how to deploy and manage Azure Local infrastructure, see the [Azure Local documentation](/azure/azure-local/overview).
 
 ## Key features
 
