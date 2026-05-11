@@ -4,7 +4,7 @@ description: Learn about Active Directory Certificate Services (AD CS) in Window
 author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 04/25/2025
+ms.date: 05/12/2026
 #customer intent: As a security professional, I want to explore the key features of AD CS so that I can determine how it supports encryption, authentication, and digital signatures.
 ---
 
@@ -38,6 +38,8 @@ AD CS provides the following important features:
 
 - **Certificate Enrollment Web Service:** Certificate Enrollment Web Service enables users and computers to perform certificate enrollment through a web service. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer isn't a member of a domain or when a domain member isn't connected to the domain.
 
+- **Post-quantum cryptography (PQC) support:** AD CS supports Module-Lattice-Based Digital Signature Algorithm (ML-DSA), a NIST-standardized post-quantum digital signature algorithm. You can configure CAs, certificate templates, and OCSP responders to use ML-DSA for signing operations. To get started, see [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
+
 ## Benefits
 
 You can use AD CS to enhance security by binding the identity of a person, computer, or service to a
@@ -57,6 +59,7 @@ Encrypting File System (EFS), smart card sign in, Secure Socket Layer/Transport 
 
 ## Next steps
 
+- [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md)
 - [What is the Certification Authority Role Service?](certification-authority-role.md)
 - [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/)
 - [All AD CS role services run on any version](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))
