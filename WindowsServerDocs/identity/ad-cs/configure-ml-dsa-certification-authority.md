@@ -118,9 +118,7 @@ The setup steps for a subordinate CA are similar to the root CA, with two key di
 
 ### Install and configure the subordinate CA
 
-Install AD CS on the subordinate CA server and configure it to use an ML-DSA provider and obtain its certificate from the root CA.
-
-1. Install the AD CS role on the Subordinate CA server by following the same installation steps as for the [Root CA](#install-the-ad-cs-role).
+1. Install the AD CS role on the subordinate CA server by following the same installation steps as for the [Root CA](#install-the-ad-cs-role).
 
 1. Open the configuration wizard and select **Subordinate CA** as the CA type.
 
