@@ -1,37 +1,31 @@
 ---
-title: Configure certificate templates for ML-DSA (preview) in Windows Server
-description: Learn how to configure AD CS certificate templates to use ML-DSA (preview) post-quantum cryptography for code signing, TLS, and client authentication.
+title: Configure certificate templates for ML-DSA in Windows Server
+description: Learn how to configure AD CS certificate templates to use ML-DSA post-quantum cryptography for code signing, TLS, and client authentication.
 #customer intent: As a Windows Server PKI administrator, I want to configure certificate templates for ML-DSA so that I can issue post-quantum certificates for code signing, TLS, and client authentication.
 author: robinharwood
 ms.topic: how-to
 ms.author: roharwoo
+ms.reviewer: Tjha
 ms.date: 05/12/2026
-ai-usage: ai-assisted
+ai-usage: ai-generated
 ---
 
-# Configure certificate templates for ML-DSA (preview)
+# Configure certificate templates for ML-DSA
 
-This article describes how to configure Active Directory Certificate Services (AD CS) certificate templates to use Module-Lattice-Based Digital Signature Algorithm (ML-DSA) (preview) as the public key algorithm. After configuring certificate templates, users and computers with appropriate permissions can enroll for ML-DSA certificates.
-
-> [!IMPORTANT]
-> ML-DSA support in AD CS is currently in PREVIEW. This information relates to a prerelease feature that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+This article describes how to configure Active Directory Certificate Services (AD CS) certificate templates to use Module-Lattice-Based Digital Signature Algorithm (ML-DSA) as the public key algorithm. After configuring certificate templates, users and computers with appropriate permissions can enroll for ML-DSA certificates.
 
 ML-DSA is a signature-only algorithm and doesn't support encryption operations. This limitation means you must configure the certificate template for signing, and Application Policies (EKU) and Key Usage extensions must not include encryption-related options.
 
-Before you configure certificate templates, make sure you have a CA hierarchy that uses ML-DSA. For more information, see [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
-
 ## Prerequisites
-
-Before you begin, make sure you meet the following requirements:
 
 - A Root CA and Subordinate CA configured with ML-DSA. See [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
 - Membership in **Domain Admins** or equivalent to manage certificate templates.
 - Access to the **Certificate Templates** console on a computer with AD CS management tools installed.
 - For client enrollment testing: a domain-joined client running Windows 11, version 24H2 or 25H2, with the latest cumulative update installed.
 
-## Template requirements for ML-DSA
+## Review ML-DSA template requirements
 
-A certificate template must meet two requirements to support ML-DSA (preview) as the public key algorithm:
+A certificate template must meet two requirements to support ML-DSA as the public key algorithm:
 
 - **Cryptography Next Generation (CNG) provider**: Set the provider category to **Key Storage Provider**, not a legacy Cryptographic Service Provider (CSP). Only CNG providers support post-quantum algorithms like ML-DSA.
 - **Signature purpose**: Set the **Purpose** under **Request Handling** to **Signature**. ML-DSA supports only signing operations, not encryption.
@@ -66,7 +60,7 @@ When configuring templates for ML-DSA, ensure the following extensions are compa
 
 ## Configure a code signing template with ML-DSA
 
-To create an ML-DSA (preview) code signing template, duplicate the built-in **Code Signing** template.
+To create an ML-DSA code signing template, duplicate the built-in **Code Signing** template.
 
 1. Open the **Certificate Templates** console. Right-click the **Code Signing** template, and then select **Duplicate Template**.
 
@@ -92,7 +86,7 @@ To create an ML-DSA (preview) code signing template, duplicate the built-in **Co
 
 ## Configure a TLS certificate template with ML-DSA
 
-Configure an ML-DSA (preview) TLS certificate template by duplicating the built-in **Web Server** template. Because the default Web Server template uses **Signature and encryption** as its purpose, you must change the purpose to **Signature** for ML-DSA compatibility.
+Configure an ML-DSA TLS certificate template by duplicating the built-in **Web Server** template. Because the default Web Server template uses **Signature and encryption** as its purpose, you must change the purpose to **Signature** for ML-DSA compatibility.
 
 1. Open the **Certificate Templates** console. Right-click the **Web Server** template, and then select **Duplicate Template**.
 
@@ -123,9 +117,11 @@ You can configure client TLS certificate templates, such as **User** and **Compu
 
 ## Enroll for an ML-DSA certificate
 
-After you configure and publish an ML-DSA (preview) template on the issuing CA, users with the appropriate permissions can enroll for ML-DSA certificates. The following sections describe two enrollment methods.
+After you configure and publish an ML-DSA template on the issuing CA, users with the appropriate permissions can enroll for ML-DSA certificates. The following sections describe two enrollment methods.
 
 ### Enroll by using certmgr.msc
+
+Use the graphical certificate enrollment tool to request a certificate from the published ML-DSA template.
 
 1. Sign in to the client machine as a user with **Enroll** permissions on the published template.
 
@@ -201,7 +197,7 @@ This method uses an INF file and the `certreq.exe` tool to request a certificate
 
 ## Verify the issued ML-DSA certificate
 
-After enrollment, verify that the CA issued the ML-DSA (preview) certificate correctly:
+After enrollment, verify that the CA issued the ML-DSA certificate correctly:
 
 1. Open `certmgr.msc` or `certlm.msc` and go to **Personal** > **Certificates**.
 
@@ -218,6 +214,7 @@ After enrollment, verify that the CA issued the ML-DSA (preview) certificate cor
 
 ## Related content
 
+- [What is ML-DSA support in AD CS?](ml-dsa-overview.md)
 - [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md)
 - [Configure OCSP responders to use ML-DSA](configure-ml-dsa-ocsp-responder.md)
 - [Manage certificate templates](manage-certificate-templates.md)

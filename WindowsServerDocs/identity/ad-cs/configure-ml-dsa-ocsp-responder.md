@@ -1,35 +1,29 @@
 ---
-title: Configure OCSP responders to use ML-DSA (preview) in Windows Server
-description: Learn how to configure ML-DSA (preview) post-quantum OCSP response signing in Active Directory Certificate Services (AD CS) for certificate revocation checking.
+title: Configure OCSP responders to use ML-DSA in Windows Server
+description: Learn how to configure ML-DSA post-quantum OCSP response signing in Active Directory Certificate Services (AD CS) for certificate revocation checking.
 #customer intent: As a Windows Server PKI administrator, I want to configure my OCSP responder to use ML-DSA so that certificate revocation checking supports post-quantum cryptography.
 author: robinharwood
 ms.topic: how-to
 ms.author: roharwoo
+ms.reviewer: Tjha
 ms.date: 05/12/2026
-ai-usage: ai-assisted
+ai-usage: ai-generated
 ---
 
-# Configure OCSP responders to use ML-DSA (preview)
+# Configure OCSP responders to use ML-DSA
 
-This article describes how to configure an Online Certificate Status Protocol (OCSP) responder to sign responses by using Module-Lattice-Based Digital Signature Algorithm (ML-DSA) (preview) in Active Directory Certificate Services (AD CS). When you configure OCSP with ML-DSA, you enable revocation checking for ML-DSA certificates by using post-quantum signed responses.
-
-> [!IMPORTANT]
-> ML-DSA support in AD CS is currently in PREVIEW. This information relates to a prerelease feature that might be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
-
-The process involves three steps: create an ML-DSA OCSP Response Signing certificate template, install the Online Responder role service, and configure the revocation provider with the ML-DSA signing certificate.
+This article describes how to configure an Online Certificate Status Protocol (OCSP) responder to sign responses by using Module-Lattice-Based Digital Signature Algorithm (ML-DSA) in Active Directory Certificate Services (AD CS). When you configure OCSP with ML-DSA, you enable revocation checking for ML-DSA certificates by using post-quantum signed responses.
 
 ## Prerequisites
 
-Before you begin, make sure the following requirements are met:
-
 - A Subordinate CA configured with ML-DSA and issuing certificates. See [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
-- A domain-joined member server for the OCSP responder, running Windows Server 2025 with the latest cumulative update installed and the ML-DSA feature enabled. See [Enable the ML-DSA feature](configure-ml-dsa-certification-authority.md#enable-the-ml-dsa-feature).
+- A domain-joined member server for the OCSP responder, running Windows Server 2025 with the latest cumulative update installed.
 - An account with permissions to install and configure AD CS role services.
 - Membership in **Domain Admins** or equivalent to manage certificate templates.
 
 ## Create an OCSP Response Signing template with ML-DSA
 
-Before configuring the OCSP responder, create an OCSP Response Signing certificate template that uses ML-DSA (preview).
+Before configuring the OCSP responder, create an OCSP Response Signing certificate template that uses ML-DSA.
 
 1. Open the **Certificate Templates** console on a machine with AD CS management tools installed.
 
@@ -50,7 +44,7 @@ Before configuring the OCSP responder, create an OCSP Response Signing certifica
 
 ## Install the Online Responder role service
 
-Install the Online Responder role service on the OCSP responder server for your ML-DSA (preview) CA hierarchy.
+Install the Online Responder role service on the OCSP responder server for your ML-DSA CA hierarchy.
 
 1. Sign in to the OCSP responder server by using an account with permissions to install and configure role services.
 
@@ -62,7 +56,7 @@ Install the Online Responder role service on the OCSP responder server for your 
 
 ## Configure the OCSP revocation provider
 
-Configure the revocation provider to associate the OCSP responder with your ML-DSA (preview) Subordinate CA and specify the ML-DSA signing certificate template.
+Configure the revocation provider to associate the OCSP responder with your ML-DSA Subordinate CA and specify the ML-DSA signing certificate template.
 
 1. Open the **Online Responder Management** console (`ocsp.msc`).
 
@@ -92,7 +86,7 @@ Configure the revocation provider to associate the OCSP responder with your ML-D
 
 ## Update the AIA extension on the subordinate CA
 
-To direct clients to use the OCSP responder for ML-DSA (preview) certificate revocation checking, add the OCSP URL to the Authority Information Access (AIA) extension on the subordinate CA.
+To direct clients to use the OCSP responder for ML-DSA certificate revocation checking, add the OCSP URL to the Authority Information Access (AIA) extension on the subordinate CA.
 
 1. On the subordinate CA, open the **Certification Authority** console (`certsrv.msc`).
 
@@ -115,7 +109,7 @@ To direct clients to use the OCSP responder for ML-DSA (preview) certificate rev
 
 ## Validate ML-DSA OCSP responses
 
-After configuration, verify that the OCSP responder correctly returns ML-DSA (preview) signed responses.
+After configuration, verify that the OCSP responder correctly returns ML-DSA signed responses.
 
 ### Verify by using `certutil`
 
@@ -153,6 +147,7 @@ To confirm the OCSP response uses an ML-DSA signature, inspect the signing certi
 
 ## Related content
 
+- [What is ML-DSA support in AD CS?](ml-dsa-overview.md)
 - [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md)
 - [Configure certificate templates for ML-DSA](configure-ml-dsa-certificate-templates.md)
-- [What is Active Directory Certificate Services?](active-directory-certificate-services-overview.md)
+- [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md)
