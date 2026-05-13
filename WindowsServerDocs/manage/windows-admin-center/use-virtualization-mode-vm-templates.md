@@ -27,6 +27,8 @@ This article walks you through converting a VM to a template, deploying new VMs 
 
 - An account with the _Gateway Administrator_ role or equivalent permissions and local Administrator rights on each Hyper-V host.
 
+- At least one existing VM on a managed Hyper-V host. The VM must be shut down before you can convert it to a template. For more information about creating VMs, see [Manage virtual machines in Windows Admin Center Virtualization Mode](manage-virtualization-mode-virtual-machines.md).
+
 ## Convert a VM to a template
 
 When you convert a VM to a template, you make it read-only and a `{Template}{Read-only}` prefix is automatically added to its name in the resource pane. The original VM isn't available as a running VM after conversion.
