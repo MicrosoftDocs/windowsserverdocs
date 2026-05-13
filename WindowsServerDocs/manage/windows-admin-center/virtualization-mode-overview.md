@@ -30,7 +30,8 @@ Virtualization Mode offers the following key capabilities:
 
 - Search across navigation objects with contextual filtering.
 - Support for SAN, NAS, hyperconverged, and scale-out file server architectures.
-- VM templates, integrated disaster recovery with Hyper-V Replica, and onboarding of Arc-enabled resources (future capability).
+- VM templates for standardized provisioning. For more information about creating and deploying VM templates, see [Use VM templates in Virtualization Mode](use-virtualization-mode-vm-templates.md).
+- Integrated disaster recovery with Hyper-V Replica and onboarding of Arc-enabled resources (future capability).
 - Software-defined storage and networking (not available at this time).
 
 ## Operational modes
