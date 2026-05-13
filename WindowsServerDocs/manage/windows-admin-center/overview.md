@@ -29,7 +29,7 @@ Here are a few things you can use Windows Admin Center for:
 
 - **Work with hybrid solutions**: Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services. For details, see [Azure hybrid services](azure/index.md).
 
-- **Streamline hyperconverged management**: Streamline management of Azure Local or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage HCI](use/manage-hyper-converged.md).
+- **Streamline hyperconverged management**: Streamline management of Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking, and more. For more information, see [Manage HCI](use/manage-hyper-converged.md). For Azure Local management, see the [Azure Local documentation](/azure/azure-local/overview).
 
 Here's a video to give you an overview, followed by a poster giving more details:
 > [!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
