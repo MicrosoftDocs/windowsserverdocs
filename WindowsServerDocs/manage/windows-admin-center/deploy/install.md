@@ -109,6 +109,17 @@ To install Windows Admin Center on your machine running the Windows Server Core 
    ```powershell
    Start-Service -Name WindowsAdminCenter
    ```
+> [!TIP]
+> The following can also be used in the `-ArgumentList` parameter:
+> - /Silent
+> - /VerySilent
+> - /HTTPSPortNumber
+> - /CertificateThumbprint
+>
+> To specify the HTTPS port number and certificate thumbprint on install through PowerShell, run the following command:
+> ```powershell
+> .\WindowsAdminCenter2511.exe /HTTPSPortNumber=1234 /CertificateThumbprint=“1234abcd4567efgh”
+> ```
 
 You've now installed Windows Admin Center on your machine.
 
