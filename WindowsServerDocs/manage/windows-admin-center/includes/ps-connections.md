@@ -5,16 +5,26 @@ ms.date: 12/29/2025
 
 ```powershell
 # Load the module
-Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
-# Available cmdlets: Export-Connection, Import-Connection
+Import-Module "$env:'Program Files'\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.ConnectionTools"
+# Available cmdlets: Export-WACConnection, Import-WACConnection
 
 # Export connections (including tags) to a .csv file
-Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
+Export-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 # Import connections (including tags) from a .csv file
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
+Import-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv" -AccessKey "<key string>"
 # Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file by using the -prune switch parameter 
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -prune
+Import-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv" -AccessKey "<key string>" -prune
 ```
+> [!IMPORTANT]
+> The `-AccessKey` field is required when importing connections, but is not required for exporting connections. Your Windows Admin Center access key can be found in the **Advanced** tab in Windows Admin Center settings.
+>
+> When using form login to access Windows Admin Center, credentials are also required to import and export connections. You can pass credentials using the following command:
+> ```powerShell
+> # Export connections using credentials
+> Export-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv" -AccessKey "<key string>" -Credentials (Get-Credential)
+> # Import connections using credentials
+> Import-WACConnection -Endpoint "https://wac.contoso.com" -FileName "WAC-connections.csv" -AccessKey "<key string>" -Credentials (Get-Credential)
+> ```
 
 ### CSV file format for importing connections
 
