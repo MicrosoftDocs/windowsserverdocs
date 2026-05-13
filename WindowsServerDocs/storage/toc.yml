@@ -249,6 +249,8 @@ items:
       href: refs/block-cloning.md
     - name: Integrity streams
       href: refs/integrity-streams.md
+    - name: Deploy a ReFS boot volume using Setup unattend
+      href: refs/refs-boot-windows-server-unattend.md
     - name: ReFSUtil
       href: ../administration/windows-commands/refsutil.md
   - name: Storage Migration Service
