@@ -24,12 +24,7 @@ The guided in-product steps create a Microsoft Entra app in your directory, whic
 The Microsoft Entra app created is used for all points of Azure integration in Windows Admin Center, including [Microsoft Entra authentication to the gateway](../configure/user-access-control.md#azure-active-directory). Windows Admin Center automatically configures the permissions needed to create and manage Azure resources on your behalf:
 
 - Microsoft Graph
-    - Application.Read.All
     - Application.ReadWrite.All
-    - Directory.AccessAsUser.All
-    - Directory.Read.All
-    - Directory.ReadWrite.All
-    - User.Read
 - Azure Service Management
     - user_impersonation
 
