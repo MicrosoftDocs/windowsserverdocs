@@ -110,7 +110,7 @@ To install Windows Admin Center on your machine running the Windows Server Core 
    Start-Service -Name WindowsAdminCenter
    ```
 > [!TIP]
-> The following can also be used in the `-ArgumentList` parameter:
+> The following options can be used in the `-ArgumentList` parameter:
 > - /Silent
 > - /VerySilent
 > - /HTTPSPortNumber
