@@ -16,15 +16,14 @@ Import-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv" -
 Import-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv" -AccessKey "<key string>" -prune
 ```
 > [!IMPORTANT]
-> The `-AccessKey` field is required when importing connections, but is not required for exporting connections. Your Windows Admin Center access key can be found in the **Advanced** tab in Windows Admin Center settings.
+> The `-AccessKey` field is required when importing connections, but it's not required for exporting connections. Your can find your Windows Admin Center access key can be found in the **Advanced** tab in Windows Admin Center settings.
 >
-> When using form login to access Windows Admin Center, credentials are also required to import and export connections. You can pass credentials using the following command:
-> ```powerShell
-> # Export connections using credentials
+> When you use form login authentication to access Windows Admin Center, you need to provide credentials to import and export connections. You can pass credentials by using the following command:
+> ```powershell
+> # Export connections by using credentials
 > Export-WACConnection "https://wac.contoso.com" -fileName "WAC-connections.csv" -AccessKey "<key string>" -Credentials (Get-Credential)
-> # Import connections using credentials
+> # Import connections by using credentials
 > Import-WACConnection -Endpoint "https://wac.contoso.com" -FileName "WAC-connections.csv" -AccessKey "<key string>" -Credentials (Get-Credential)
-> ```
 
 ### CSV file format for importing connections
 
