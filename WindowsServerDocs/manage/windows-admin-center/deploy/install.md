@@ -48,7 +48,7 @@ To install Windows Admin Center on your machine running the Windows Server Deskt
 
 1. On **Welcome to the Windows Admin Center setup wizard**, select **Next** to continue.
 
-1. On **License Terms and Privacy Statement**, if you agree to the terms select **I accept these terms and understand the privacy statement**, and then select **Next** to prepare your environment and start the installation process.
+1. On **License Terms and Privacy Statement**, if you agree to the terms, select **I accept these terms and understand the privacy statement**, and then select **Next** to prepare your environment and start the installation process.
 
     ![Screenshot of the Windows Admin Center v2 Installer with two installation modes for express or custom setup.](../media/windows-admin-center-v2-installation-mode.png)
 
