@@ -27,7 +27,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
 | Windows 11                         | Local client |
-| Windows 11 ARM Client              | Local client |
+| Windows 11 ARM64 Client            | Local client |
 | Windows Server Semi-Annual Channel | Gateway server, managed server, failover cluster |
 | Windows Server 2025                | Gateway server, managed server, failover cluster |
 | Windows Server 2022                | Gateway server, managed server, failover cluster |
@@ -56,7 +56,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
 | Windows 11 | Yes (via Computer Management) | N/A |
-| Windows 11 ARM client | Yes (via Computer Management) | N/A |
+| Windows 11 ARM64 client | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
 | Windows Server 2025 | Yes | Yes |
 | Windows Server 2022 | Yes | Yes |
