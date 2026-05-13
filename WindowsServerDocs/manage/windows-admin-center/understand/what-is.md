@@ -65,7 +65,7 @@ Windows Admin Center has many points of [integration with Azure services](../azu
 
 ### Windows Admin Center in Azure
 
-Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers (preview) and Azure VMs.
+By using Windows Admin Center in the Azure portal, you can manage the Windows Server operating system of your Arc-enabled servers (preview) and Azure VMs.
 
 You can securely manage your machines from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
