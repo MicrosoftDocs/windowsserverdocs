@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 
 A hyper-converged infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](/azure/azure-local/concepts/storage-spaces-direct-overview), [Software Defined Networking (SDN)](/azure/azure-local/concepts/software-defined-networking), and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
-You can use Windows Admin Center to manage and monitor a hyper-converged infrastructure that's running Windows Server 2016 or higher. Windows Admin Center is the next-generation management tool for Windows Server. It's the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an internet connection.
+You can use Windows Admin Center to manage and monitor a hyper-converged infrastructure that's running Windows Server 2016 or later. Windows Admin Center is the next-generation management tool for Windows Server. It's the successor to traditional "in-box" tools like Server Manager. It's free and can be installed and used without an internet connection.
 
 ![Screenshot of a hyper-converged cluster dashboard in Windows Admin Center.](../media/manage-hyper-converged/hci-dashboard-v1809.png)
 
