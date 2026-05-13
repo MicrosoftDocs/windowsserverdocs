@@ -12,7 +12,7 @@ ms.date: 11/04/2019
 You can use Windows Admin Center [version 1910](../overview.md) or later to deploy a hyperconverged infrastructure by using two or more suitable Windows servers. This feature takes the form of a multistage workflow that guides you through installing features, configuring networking, creating the cluster, and deploying Storage Spaces Direct and/or software-defined networking (SDN).
 
 > [!IMPORTANT]
-> Windows Admin Center no longer officially supports the deployment of the Azure Stack HCI OS. To read about how to deploy Azure Local infrastructure, see the [Azure Local documentation](/azure/azure-local/deploy/create-cluster).
+> Azure Stack HCI OS deployment isn't supported on Windows Admin Center. To read about how to deploy Azure Local infrastructure, see the [Azure Local documentation](/azure/azure-local/deploy/create-cluster).
 
 ## Undo and start over
 
