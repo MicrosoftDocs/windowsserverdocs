@@ -65,7 +65,7 @@ As described previously, any AD FS user who isn't registered (hasn't yet configu
 
 The following prerequisites are required when you use Microsoft Entra multifactor authentication for authentication with AD FS:
 
-- [An Azure subscription with Microsoft Entra ID](https://azure.microsoft.com/pricing/free-trial/).
+- [An Azure subscription with Microsoft Entra ID](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
 
 > [!NOTE]

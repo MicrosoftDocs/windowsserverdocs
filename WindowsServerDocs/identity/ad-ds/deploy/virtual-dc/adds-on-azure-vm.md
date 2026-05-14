@@ -32,7 +32,7 @@ We use the [Azure portal](https://portal.azure.com) and [Azure CLI](/cli/azure/o
 
 The Azure CLI is used to create and manage Azure resources from the command line or in scripts. This tutorial details using the Azure CLI to deploy virtual machines running Windows Server 2019. Once deployment is complete, we connect to the servers and install AD DS.
 
-If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free) before you begin.
+If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 ### Using Azure CLI
 
