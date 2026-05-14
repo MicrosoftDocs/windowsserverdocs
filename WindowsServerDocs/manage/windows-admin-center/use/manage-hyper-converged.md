@@ -21,9 +21,6 @@ Some of the features that this article describes are available only in Windows A
 > [!TIP]
 > Looking to acquire a hyper-converged infrastructure? We recommend [these Windows Server SDN solutions](https://microsoft.com/wssd) from our partners. They're designed, assembled, and validated against our reference architecture to help ensure compatibility and reliability, so you get up and running quickly.
 
-> [!IMPORTANT]
-> Azure Local infrastructure management isn't supported in Windows Admin Center. Learn about how to [deploy and manage Azure Local infrastructure](/azure/azure-local/overview).
-
 ## Key features
 
 Highlights of Windows Admin Center for hyper-converged infrastructures include:
