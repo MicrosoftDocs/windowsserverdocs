@@ -21,20 +21,20 @@ ML-DSA is a signature-only algorithm and doesn't support encryption operations. 
 - A Root CA and Subordinate CA configured with ML-DSA. See [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
 - Membership in **Domain Admins** or equivalent to manage certificate templates.
 - Access to the **Certificate Templates** console on a computer with AD CS management tools installed.
-- For client enrollment testing: a domain-joined client running Windows 11, version 24H2 or 25H2, with the latest cumulative update installed.
+- For client enrollment testing: a domain-joined client running Windows 11, version 24H2 or 25H2 with the 2026-05 Security update ([KB5089549](https://support.microsoft.com/help/5089549)) or later installed.
 
 ## Review ML-DSA template requirements
 
 A certificate template must meet two requirements to support ML-DSA as the public key algorithm:
 
-- **Cryptography Next Generation (CNG) provider**: Set the provider category to **Key Storage Provider**, not a legacy Cryptographic Service Provider (CSP). Only CNG providers support post-quantum algorithms like ML-DSA.
+- **Cryptography Next Generation (CNG) provider**: Set the provider to a non-legacy Cryptographic Service Provider (CSP), such as **Key Storage Provider**. PQC algorithms like ML-DSA are only supported by CNG providers.
 - **Signature purpose**: Set the **Purpose** under **Request Handling** to **Signature**. ML-DSA supports only signing operations, not encryption.
 
 To make CNG providers available in the template, set both the **Certification Authority** and **Certificate Recipient** compatibility settings to at least **Windows Server 2008**.
 
-### Built-in templates with signature purpose
+### Built-in templates compatible with ML-DSA
 
-The following built-in templates have their **Purpose** set to **Signature** by default. You can select ML-DSA algorithms after you set the **Provider Category** to **Key Storage Provider** on the **Cryptography** tab:
+The following built-in templates have their **Purpose** set to **Signature** by default.  As a result, ML-DSA algorithms are available after setting **Key Storage Provider** on the **Cryptography** tab.
 
 - User Signature Only
 - Authenticated Session
@@ -49,18 +49,18 @@ The following built-in templates have their **Purpose** set to **Signature** by 
 - Cross Certification Authority
 - OCSP Response Signing
 
-For any other template, change the **Purpose** to **Signature** on the **Request Handling** tab before configuring ML-DSA.
+To use any other template, change the **Purpose** to **Signature** on the **Request Handling** tab before configuring ML-DSA.
 
 ### Extension compatibility
 
-When configuring templates for ML-DSA, ensure the following extensions are compatible:
+When configuring templates for ML-DSA, also ensure the following extensions are compatible:
 
 - **Application Policies (EKU)**: Don't include encryption-related OIDs such as **Encrypting File System** or **Secure E-mail**.
 - **Key Usage**: Don't include encryption options such as **Allow key exchange only with key encryption**.
 
 ## Configure a code signing template with ML-DSA
 
-To create an ML-DSA code signing template, duplicate the built-in **Code Signing** template.
+To create an ML-DSA code signing template, duplicate the built-in **Code Signing** template. The built-in template defaults to a compatibility setting of Windows Server 2003, which doesn't support CNG providers. The duplicated template lets you update the compatibility settings so ML-DSA algorithms become available.
 
 1. Open the **Certificate Templates** console. Right-click the **Code Signing** template, and then select **Duplicate Template**.
 
@@ -74,7 +74,7 @@ To create an ML-DSA code signing template, duplicate the built-in **Code Signing
 
 1. On the **Cryptography** tab:
    - Set **Provider Category** to **Key Storage Provider**.
-   - Set **Algorithm name** to an ML-DSA parameter set (for example, **ML-DSA-44**). The **Minimum key size** and **Request hash** fields update automatically.
+   - Set **Algorithm name** to an ML-DSA parameter set (for example, **ML-DSA:44**). The **Minimum key size** and **Request hash** fields update automatically.
 
    <!-- SCREENSHOT: Show the Cryptography tab with Provider Category set to Key Storage Provider, Algorithm name set to ML-DSA-44, showing the auto-populated key size and NoHash fields. The ML-DSA options in the Algorithm name dropdown are new and readers need to confirm they appear. -->
 
@@ -83,6 +83,8 @@ To create an ML-DSA code signing template, duplicate the built-in **Code Signing
 1. Select **OK** to save the template.
 
 1. In the **Certification Authority** console on the issuing CA, right-click **Certificate Templates**, select **New** > **Certificate Template to Issue**, and then select the template you created.
+
+After you publish the template, see [Enroll for an ML-DSA certificate](#enroll-for-an-ml-dsa-certificate) to request a certificate.
 
 ## Configure a TLS certificate template with ML-DSA
 
@@ -102,16 +104,13 @@ Configure an ML-DSA TLS certificate template by duplicating the built-in **Web S
 
 1. On the **Cryptography** tab:
    - Set **Provider Category** to **Key Storage Provider**.
-   - Set **Algorithm name** to the desired ML-DSA parameter set (for example, **ML-DSA-65**).
+   - Set **Algorithm name** to the desired ML-DSA parameter set (for example, **ML-DSA:65**).
 
 1. On the **Extensions** tab, verify that **Application Policies** includes only **Server Authentication** and doesn't include encryption-related policies.
 
 1. On the **Security** tab, grant **Enroll** permissions to the appropriate computer accounts or groups.
 
 1. Select **OK** to save the template, and then publish it on the issuing CA.
-
-> [!NOTE]
-> For Web Server templates, enroll by using the **Local Computer** certificate store (`certlm.msc`) instead of the current user store. Grant permissions to the computer object that needs the certificate.
 
 You can configure client TLS certificate templates, such as **User** and **Computer**, the same way. Make sure the **Application Policies (EKU)** extension doesn't include **Encrypting File System** or **Secure E-mail**.
 
@@ -129,14 +128,15 @@ Use the graphical certificate enrollment tool to request a certificate from the 
 
 1. Expand **Personal**, right-click **Certificates**, and then select **All Tasks** > **Request New Certificate**.
 
-1. In the **Certificate Enrollment** wizard, select the published ML-DSA template (for example, **PQC Code Signing**), and then select **Enroll**.
+1. In the **Certificate Enrollment** wizard, select the published ML-DSA template (for example, **PQC Code Signing** or **PQC Web Server**), and then select **Enroll**.
 
 1. After enrollment succeeds, open the issued certificate and verify on the **Details** tab:
    - **Signature algorithm**: Shows the issuing CA's ML-DSA parameter set.
    - **Public key**: Shows the template's ML-DSA parameter set and key size.
 
    <!-- SCREENSHOT: Show the issued certificate Details tab with ML-DSA Signature algorithm and Public key values. Confirms successful enrollment with PQC. -->
-
+   > [!NOTE]
+   > For Web Server templates, enroll by using the **Local Computer** certificate store (`certlm.msc`) instead of the current user store (`certmgr.msc`). Grant permissions to the computer object that needs the certificate.
 ### Enroll by using an INF file and certreq
 
 This method uses an INF file and the `certreq.exe` tool to request a certificate. It's useful for scripted or automated scenarios.
