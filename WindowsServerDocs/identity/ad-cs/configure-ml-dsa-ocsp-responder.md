@@ -10,16 +10,20 @@ ms.date: 05/12/2026
 ai-usage: ai-generated
 ---
 
-# Configure OCSP responders to use ML-DSA
+# Configure Online Responders (OCSP) to use ML-DSA
 
-This article describes how to configure an Online Certificate Status Protocol (OCSP) responder to sign responses by using Module-Lattice-Based Digital Signature Algorithm (ML-DSA) in Active Directory Certificate Services (AD CS). When you configure OCSP with ML-DSA, you enable revocation checking for ML-DSA certificates by using post-quantum signed responses.
+This article describes how to configure an Online Responder (OCSP) to sign responses by using Module-Lattice-Based Digital Signature Algorithm (ML-DSA) in Active Directory Certificate Services (AD CS). When you configure OCSP with ML-DSA, you enable revocation checking for ML-DSA certificates by using post-quantum signed responses.
 
 ## Prerequisites
 
 - A Subordinate CA configured with ML-DSA and issuing certificates. See [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
-- A domain-joined member server for the OCSP responder, running Windows Server 2025 with the latest cumulative update installed.
-- - The Online Responder role service installed on the server designated for OCSP in your ML-DSA CA hierarchy. The installation steps are the same as for any Online Responder deployment. For detailed guidance, see [Implementing an OCSP Responder: Configuring OCSP for use with Enterprise CAs](https://techcommunity.microsoft.com/blog/askds/implementing-an-ocsp-responder-part-iii---configuring-ocsp-for-use-with-enterpri/396584).
+
+- A domain-joined member server for the Online Responder, running Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed.
+
+- The Online Responder role service installed on the server designated for OCSP in your ML-DSA CA hierarchy. The installation steps are the same as for any Online Responder deployment. For detailed guidance, see [Implementing an OCSP Responder: Configuring OCSP for use with Enterprise CAs](https://techcommunity.microsoft.com/blog/askds/implementing-an-ocsp-responder-part-iii---configuring-ocsp-for-use-with-enterpri/396584).
+
 - An account with permissions to install and configure AD CS role services.
+
 - Membership in **Domain Admins** or equivalent to manage certificate templates.
 
 ## Create an OCSP Response Signing template with ML-DSA
@@ -34,10 +38,10 @@ Before configuring the OCSP responder, create an OCSP Response Signing certifica
 
 1. On the **Cryptography** tab:
    - Set **Provider Category** to **Key Storage Provider**.
-   - Set **Algorithm name** to the desired ML-DSA parameter set (for example, **ML-DSA-65**).
+   - Set **Algorithm name** to the desired ML-DSA parameter set (for example, **ML-DSA:65**).
    - The **Minimum key size** and **Request hash** fields update automatically.
 
-1. On the **Security** tab, grant **Enroll** and **Autoenroll** permissions to the computer account of the OCSP responder server.
+1. On the **Security** tab, grant **Enroll** and **Autoenroll** permissions to the computer account of the OCSP responder.
 
 1. Select **OK** to save the template.
 
@@ -45,7 +49,7 @@ Before configuring the OCSP responder, create an OCSP Response Signing certifica
 
 ## Configure the OCSP revocation provider
 
-Configure the revocation provider to associate the OCSP responder with your ML-DSA Subordinate CA and specify the ML-DSA signing certificate template.
+The revocation provider configuration is where ML-DSA-specific settings apply. You associate the Online Responder with your ML-DSA Subordinate CA and specify the ML-DSA signing certificate template.
 
 1. Open the **Online Responder Management** console (`ocsp.msc`).
 
