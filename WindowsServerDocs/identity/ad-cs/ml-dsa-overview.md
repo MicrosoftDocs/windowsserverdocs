@@ -63,7 +63,7 @@ ML-DSA support requires minimum OS versions for both CA servers and clients.
 
 ## Certificate template requirements
 
-All ML-DSA leaf certificate templates—code signing, TLS, user/computer, and OCSP response signing—must meet the following requirements. For configuration steps, see [Configure certificate templates for ML-DSA](configure-ml-dsa-certificate-templates.md).
+All ML-DSA leaf certificate templates - code signing, TLS, user/computer, and OCSP response signing - must meet the following requirements. For configuration steps, see [Configure certificate templates for ML-DSA](configure-ml-dsa-certificate-templates.md).
 
 | Setting | Requirement |
 |---|---|

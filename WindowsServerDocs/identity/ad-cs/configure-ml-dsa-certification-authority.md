@@ -51,7 +51,7 @@ When you select an ML-DSA provider during CA configuration, the hash algorithm d
 
 After you install the AD CS role and Certification Authority role service, the next step is to configure the CA with an ML-DSA cryptographic provider. The configuration process involves selecting the CA type (Root CA), choosing to create a new private key, and then selecting the desired ML-DSA provider that corresponds to the parameter set you chose.
 
-### Configure the Root CA with ML-DSA
+### Configure the root CA with ML-DSA
 
 After the role installs, configure the root CA with an ML-DSA cryptographic provider. 
 
