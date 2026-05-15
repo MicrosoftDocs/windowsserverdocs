@@ -49,11 +49,11 @@ When you select an ML-DSA provider during CA configuration, the hash algorithm d
 
 ## Set up the Root CA
 
-After the AD CS role and Certification Authority role service are installed, the next step is to configure the CA with an ML-DSA cryptographic provider. The configuration process involves selecting the CA type (Root CA), choosing to create a new private key, and then selecting the desired ML-DSA provider that corresponds to the parameter set you chose.
+After you install the AD CS role and Certification Authority role service, the next step is to configure the CA with an ML-DSA cryptographic provider. The configuration process involves selecting the CA type (Root CA), choosing to create a new private key, and then selecting the desired ML-DSA provider that corresponds to the parameter set you chose.
 
-### Configure the root CA with ML-DSA
+### Configure the Root CA with ML-DSA
 
-After the role installs, configure the Root CA with an ML-DSA cryptographic provider. 
+After the role installs, configure the root CA with an ML-DSA cryptographic provider. 
 
 1. After installation, select the **Configure Active Directory Certificate Services** link in Server Manager.
 
@@ -83,7 +83,7 @@ After the role installs, configure the Root CA with an ML-DSA cryptographic prov
 
    <!-- SCREENSHOT: Show the Results page with "Configuration succeeded" for the Certification Authority role service. Shows what success looks like. -->
 
-Alternatively, configure the Root CA by using PowerShell. The following example uses ML-DSA-87:
+Alternatively, configure the root CA by using PowerShell. The following example uses ML-DSA-87:
 
 ```powershell
 # KeyLength is specified in bits. For ML-DSA-87: 2592 bytes x 8 = 20736 bits  
@@ -107,7 +107,7 @@ Install-AdcsCertificationAuthority `
 
 Replace `<your-root-ca-name>` with the common name for your root CA.
 
-### Verify the Root CA certificate
+### Verify the root CA certificate
 
 Confirm the root CA certificate uses the ML-DSA algorithm you selected.
 
@@ -125,14 +125,14 @@ Confirm the root CA certificate uses the ML-DSA algorithm you selected.
 
 The CA service automatically publishes certificate revocation lists (CRLs) when it starts and signs them by using the configured ML-DSA algorithm.
 
-## Set up the Subordinate CA
+## Set up the subordinate CA
 
-The Subordinate CA is configured as an Enterprise CA (domain-joined) so it can use Active Directory for certificate enrollment and template management. The setup steps for a subordinate CA are similar to the Root CA, with two key differences:
+Configure the subordinate CA as an Enterprise CA (domain-joined) so it can use Active Directory for certificate enrollment and template management. The setup steps for a subordinate CA are similar to the root CA, with two key differences:
 
 - Select **Subordinate CA** as the CA type.
-- You can choose a different ML-DSA parameter set from the Root CA. Each CA in the hierarchy can use a distinct ML-DSA configuration.
+- You can choose a different ML-DSA parameter set from the root CA. Each CA in the hierarchy can use a distinct ML-DSA configuration.
 
-### Install and configure the Subordinate CA
+### Install and configure the subordinate CA
 
 1. Install the AD CS role on the subordinate CA server by following the same installation steps as for the [Root CA](#install-the-ad-cs-role).
 
@@ -144,15 +144,15 @@ The Subordinate CA is configured as an Enterprise CA (domain-joined) so it can u
 
 1. On the **Cryptography for CA** page, select an ML-DSA cryptographic provider. For example, **ML-DSA:65#Microsoft Software Key Storage Provider**.
 
-1. On the Certificate Request page, select one of the following:  
+1. On the **Certificate Request** page, select one of the following options:  
 
-   - **Send a certificate request to a parent CA**, and then choose the previously configured Root CA—if the Root CA is online and reachable.  
+   - **Send a certificate request to a parent CA**, and then choose the previously configured Root CA - if the Root CA is online and reachable.  
 
-   - **Save a certificate request to a file on the target machine**—if the Root CA is offline (standalone). Submit the request manually to the Root CA, retrieve the issued certificate, and install it.
+   - **Save a certificate request to a file on the target machine** - if the Root CA is offline (standalone). Submit the request manually to the Root CA, retrieve the issued certificate, and install it.
 
 1. Complete the remaining pages by using the default settings, and then select **Configure**.
 
-### Verify the Subordinate CA certificate
+### Verify the subordinate CA certificate
 
 Confirm the subordinate CA certificate shows the expected ML-DSA algorithms for both the signature and public key.
 
