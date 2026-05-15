@@ -10,13 +10,13 @@ ms.date: 05/12/2026
 ai-usage: ai-generated
 ---
 
-# Post-quantum cryptography in AD CS overview
+# Post-Quantum Cryptography in AD CS overview
 
-Post-quantum cryptography (PQC) in Active Directory Certificate Services (AD CS) is a set of capabilities that let AD CS issue and manage certificates by using algorithms designed to resist attacks from quantum-capable computers.
+Post-Quantum Cryptography (PQC) in Active Directory Certificate Services (AD CS) enables issuing and managing certificates with algorithms designed to resist attacks from quantum-capable computers.
 
 AD CS currently supports ML-DSA. Microsoft plans to add ML-KEM, Composite ML-DSA, and Composite ML-KEM support in future releases. This article describes the scope of PQC support in AD CS and the foundational requirements that apply across algorithms.
 
-## Why post-quantum cryptography matters
+## Why Post-Quantum Cryptography matters
 
 Certificates issued by AD CS protect critical enterprise operations, including domain authentication, code signing, Transport Layer Security (TLS), and device enrollment. Today, many of these certificates rely on asymmetric public-key algorithms such as RSA and Elliptic Curve Digital Signature Algorithm (ECDSA), which might be vulnerable to sufficiently powerful quantum computers. The risk is already real for two reasons:
 
@@ -42,7 +42,7 @@ AD CS adopts the post-quantum algorithms standardized by the National Institute 
 | **Composite ML-DSA** | [IETF draft](https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-sigs/) | Classical + PQ digital signatures | Planned (Phase 2) |
 | **Composite ML-KEM** | [IETF draft](https://datatracker.ietf.org/doc/draft-ietf-lamps-pq-composite-kem/) | Classical + PQ key encapsulation | Planned (Phase 2) |
 
-Microsoft plans to extend support across all relevant AD CS role services, including the Certificate Enrollment Policy Web Service (CEP), Certificate Enrollment Web Service (CES), the Network Device Enrollment Service (NDES), and the Online Certificate Status Protocol (OCSP) responder.
+Microsoft plans to extend support across all relevant AD CS role services, including the Certificate Enrollment Policy Web Service (CEP), Certificate Enrollment Web Service (CES), the Network Device Enrollment Service (NDES), and the Online Responder (OCSP).
 
 ## Platform requirements
 
@@ -53,8 +53,8 @@ PQC support in AD CS depends on the following prerequisites. These requirements 
 
 | Component | OS version |
 |---|---|
-| Server | Windows Server 2025 or later |
-| Client | Windows 11, version 24H2 or later |
+| CA server | Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed. |
+| Client | Windows 11, version 24H2 with the 2026-05 Security update ([KB5089549](https://support.microsoft.com/help/5089549)) or later installed. |
 
 ## Related content
 

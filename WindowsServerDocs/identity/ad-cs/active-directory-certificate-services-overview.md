@@ -38,7 +38,7 @@ AD CS provides the following important features:
 
 - **Certificate Enrollment Web Service:** Certificate Enrollment Web Service enables users and computers to perform certificate enrollment through a web service. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer isn't a member of a domain or when a domain member isn't connected to the domain.
 
-- **Post-quantum cryptography (PQC) support:** AD CS supports Module-Lattice-Based Digital Signature Algorithm (ML-DSA), a NIST-standardized post-quantum digital signature algorithm. You can configure CAs, certificate templates, and OCSP responders to use ML-DSA for signing operations. To learn more, see [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md).
+- **Post-Quantum Cryptography (PQC) support:** AD CS supports Module-Lattice-Based Digital Signature Algorithm (ML-DSA), a NIST-standardized post-quantum digital signature algorithm. You can configure CAs, certificate templates, and Online Responders to use ML-DSA for signing operations. To learn more, see [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md).
 
 ## Benefits
 
