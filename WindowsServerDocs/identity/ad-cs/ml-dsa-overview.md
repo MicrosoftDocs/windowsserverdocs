@@ -71,7 +71,7 @@ All ML-DSA leaf certificate templates - code signing, TLS, user/computer, and OC
 | **Compatibility settings** | Set both **Certification Authority** and **Certificate Recipient** to **Windows Server 2008** or later so that CNG providers appear in the provider list. |
 | **Request handling - Purpose** | Set to **Signature**. ML-DSA doesn't support encryption. |
 | **Application Policies (EKU)** | Must **not** include **Encrypting File System** or **Secure E-mail**. |
-| **Key Usage** | Must **not** include **Key encipherment** or **Allow key exchange only with key encryption**. |
+| **Key Usage** | Must **not** include **Key encipherment** or **Key Agreement**. |
 
 > [!NOTE]
 > Not all third-party applications, devices, or services recognize ML-DSA certificates. Validate compatibility in a test environment before deploying to production.
