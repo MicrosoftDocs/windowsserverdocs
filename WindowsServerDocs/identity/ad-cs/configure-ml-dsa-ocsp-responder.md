@@ -67,7 +67,7 @@ The revocation provider configuration is where ML-DSA-specific settings apply. Y
    - Set the **Certification authority** to the Subordinate CA configured with ML-DSA.
    - Set the **Certificate Template** to the ML-DSA OCSP Response Signing template you created (for example, *PQCOCSPResponseSigning*).
 
-   <!-- SCREENSHOT: Show the Select Signing Certificate page with Automatically select a signing certificate chosen, Auto-Enroll checked, and the PQC OCSP template selected. This wizard page has several options and it's important to show the correct combination. -->
+   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/select-signing-certificate.png" alt-text="Screenshot of the Select Signing Certificate page with auto-enroll selected and the PQCOCSPResponseSigning template chosen.":::
 
 1. Select **Finish** to complete the configuration.
 
@@ -75,7 +75,7 @@ The revocation provider configuration is where ML-DSA-specific settings apply. Y
    - **Signing Certificate**: OK
    - **Revocation Provider Status**: The ML-DSA revocation provider is successfully configured.
 
-   <!-- SCREENSHOT: Show the Online Responder Management console with the revocation configuration showing Signing Certificate OK and successful provider status. Confirms the OCSP responder is working with the ML-DSA certificate. -->
+   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/revocation-configuration-status.png" alt-text="Screenshot of the Online Responder Management console showing Signing Certificate OK and successful revocation provider status.":::
 
 ## Update the AIA extension on the subordinate CA
 
@@ -93,7 +93,7 @@ To direct clients to use the OCSP responder for ML-DSA certificate revocation ch
 
 1. Clear **Include in the AIA extension of issued certificates** for the OCSP URL entry.
 
-   <!-- SCREENSHOT: Show the Extensions tab of the CA Properties dialog with the AIA extension selected, the OCSP URL added, and the correct checkboxes enabled/cleared. The checkbox combination is not intuitive. -->
+   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/aia-extension-properties.png" alt-text="Screenshot of the CA Properties Extensions tab showing the Authority Information Access extension with the OCSP responder URL added.":::
 
 1. Select **OK** and restart the CA service when prompted.
 

@@ -77,11 +77,9 @@ After the role installs, configure the root CA with an ML-DSA cryptographic prov
 
    The **Key Length** field displays the public key size in bits for the selected parameter set. The **Hash algorithm** defaults to **NoHash**.
 
-   <!-- SCREENSHOT: Show the Cryptography for CA page with an ML-DSA provider selected, showing the Key Length and NoHash fields. This is the key decision point where the reader selects the PQC algorithm. -->
+   :::image type="content" source="media/configure-ml-dsa-certification-authority/cryptography-for-ca.png" alt-text="Screenshot of the AD CS Cryptography for CA page with the ML-DSA-87 provider selected, showing a key length of 20736 and NoHash as the hash algorithm.":::
 
 1. Complete the remaining pages by using the default settings, and then select **Configure** to finish setup.
-
-   <!-- SCREENSHOT: Show the Results page with "Configuration succeeded" for the Certification Authority role service. Shows what success looks like. -->
 
 Alternatively, configure the root CA by using PowerShell. The following example uses ML-DSA-87:
 
@@ -121,7 +119,7 @@ Confirm the root CA certificate uses the ML-DSA algorithm you selected.
 
    Because the root CA certificate is self-signed, both the signature algorithm and public key algorithm use the same ML-DSA parameter set.
 
-   <!-- SCREENSHOT: Show the certificate Details tab with Signature algorithm and Public key fields highlighted showing ML-DSA values. Confirms the reader's CA is correctly configured. -->
+   :::image type="content" source="media/configure-ml-dsa-certification-authority/root-ca-certificate-details.png" alt-text="Screenshot of the root CA certificate Details tab showing ML-DSA-87 as both the signature algorithm and the public key algorithm.":::
 
 The CA service automatically publishes certificate revocation lists (CRLs) when it starts and signs them by using the configured ML-DSA algorithm.
 
@@ -166,11 +164,11 @@ Confirm the subordinate CA certificate shows the expected ML-DSA algorithms for 
    - **Signature algorithm**: Shows the Root CA's ML-DSA parameter set (for example, ML-DSA-87), because the Root CA signs the subordinate CA certificate.
    - **Public key**: Shows the subordinate CA's own ML-DSA parameter set (for example, ML-DSA-65).
 
-   <!-- SCREENSHOT: Show the subordinate CA certificate Details tab with different ML-DSA values for Signature algorithm and Public key, demonstrating the mixed-algorithm hierarchy. -->
+   :::image type="content" source="media/configure-ml-dsa-certification-authority/subordinate-ca-certificate-details.png" alt-text="Screenshot of the subordinate CA certificate Details tab showing ML-DSA-87 as the signature algorithm and ML-DSA-65 as the public key algorithm.":::
 
 1. On the **Certification Path** tab, verify the chain displays both the Root CA and subordinate CA certificates.
 
-   <!-- SCREENSHOT: Show the Certification Path tab with the two-tier chain (Root CA > subordinate CA) to confirm the hierarchy is correct. -->
+   :::image type="content" source="media/configure-ml-dsa-certification-authority/subordinate-ca-certification-path.png" alt-text="Screenshot of the Certification Path tab showing a two-tier certificate chain with the root CA and subordinate CA.":::
 
 ## Related content
 
