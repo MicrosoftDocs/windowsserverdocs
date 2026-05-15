@@ -1,7 +1,7 @@
 ---
-title: Post-quantum cryptography in AD CS overview
-description: Learn about post-quantum cryptography support in Active Directory Certificate Services, including algorithms available today and those planned for future releases.
-#customer intent: As an AD CS administrator, I want to understand Microsoft's approach to post-quantum cryptography in AD CS so that I can plan a multi-phase adoption.
+title: Post-Quantum Cryptography in AD CS overview
+description: Learn about Post-Quantum Cryptography support in Active Directory Certificate Services, including algorithms available today and those planned for future releases.
+#customer intent: As an AD CS administrator, I want to understand Microsoft's approach to Post-Quantum Cryptography in AD CS so that I can plan a multi-phase adoption.
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: Tjha
@@ -14,7 +14,7 @@ ai-usage: ai-generated
 
 Post-Quantum Cryptography (PQC) in Active Directory Certificate Services (AD CS) enables issuing and managing certificates with algorithms designed to resist attacks from quantum-capable computers.
 
-AD CS currently supports ML-DSA. Microsoft plans to add ML-KEM, Composite ML-DSA, and Composite ML-KEM support in future releases. This article describes the scope of PQC support in AD CS and the foundational requirements that apply across algorithms.
+AD CS currently supports ML-DSA. This article describes the scope of PQC support in AD CS and the foundational requirements that apply across algorithms.
 
 ## Why Post-Quantum Cryptography matters
 

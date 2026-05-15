@@ -47,7 +47,7 @@ Configure Web Server, User, and Computer templates to issue ML-DSA certificates 
 Configure Online Responders with ML-DSA OCSP response signing certificates. For more information, see [Configure OCSP responders to use ML-DSA](configure-ml-dsa-ocsp-responder.md).
 
 > [!NOTE]
-> You can enroll ML-DSA certificates through the Certificates Microsoft Management Console (MMC) snap-in and `certreq.exe`. Enrollment through the Network Device Enrollment Service (NDES) isn't available yet, but a future release will add this support.
+> You can enroll ML-DSA certificates through the Certificates Microsoft Management Console (MMC) snap-in and `certreq.exe`. Enrollment through the Network Device Enrollment Service (NDES) isn't currently available.
 
 ## Platform requirements
 

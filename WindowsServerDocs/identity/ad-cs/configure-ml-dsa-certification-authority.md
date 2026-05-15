@@ -59,9 +59,9 @@ After the role installs, configure the root CA with an ML-DSA cryptographic prov
 
 1. On the Setup Type page, select one of the following:  
 
-  - **Enterprise:** if the server is domain-joined. Suitable for lab and test environments.  
+   - **Enterprise:** if the server is domain-joined. Suitable for lab and test environments.  
 
-  - **Standalone:** if the server isn't domain-joined. Recommended for production.  
+   - **Standalone:** if the server isn't domain-joined. Recommended for production.  
   
 1. On the **CA Type** page, select **Root CA**.
 
