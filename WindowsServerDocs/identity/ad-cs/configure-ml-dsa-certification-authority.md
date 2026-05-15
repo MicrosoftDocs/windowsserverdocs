@@ -132,11 +132,13 @@ Configure the subordinate CA as an Enterprise CA (domain-joined) so it can use A
 - Select **Subordinate CA** as the CA type.
 - You can choose a different ML-DSA parameter set from the root CA. Each CA in the hierarchy can use a distinct ML-DSA configuration.
 
-### Install and configure the subordinate CA
+### Configure the subordinate CA
 
-1. Install the AD CS role on the subordinate CA server by following the same installation steps as for the [Root CA](#install-the-ad-cs-role).
+After installing the AD CS role and Certification Authority role service on the subordinate CA server, configure it with an ML-DSA provider and submit a certificate request to the root CA.
 
-1. Open the configuration wizard and on the **Setup Type** page, select **Enterprise**.  
+1. After installation, select the **Configure Active Directory Certificate Services** link in Server Manager.
+
+1. On the **Setup Type** page, select **Enterprise**.
 
 1. On the **CA Type** page, select **Subordinate CA**.  
 
