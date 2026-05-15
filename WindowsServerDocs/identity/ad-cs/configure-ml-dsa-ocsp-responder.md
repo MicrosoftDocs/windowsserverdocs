@@ -18,6 +18,7 @@ This article describes how to configure an Online Certificate Status Protocol (O
 
 - A Subordinate CA configured with ML-DSA and issuing certificates. See [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
 - A domain-joined member server for the OCSP responder, running Windows Server 2025 with the latest cumulative update installed.
+- - The Online Responder role service installed on the server designated for OCSP in your ML-DSA CA hierarchy. The installation steps are the same as for any Online Responder deployment. For detailed guidance, see [Implementing an OCSP Responder: Configuring OCSP for use with Enterprise CAs](https://techcommunity.microsoft.com/blog/askds/implementing-an-ocsp-responder-part-iii---configuring-ocsp-for-use-with-enterpri/396584).
 - An account with permissions to install and configure AD CS role services.
 - Membership in **Domain Admins** or equivalent to manage certificate templates.
 
@@ -41,18 +42,6 @@ Before configuring the OCSP responder, create an OCSP Response Signing certifica
 1. Select **OK** to save the template.
 
 1. In the **Certification Authority** console on the Subordinate CA configured with ML-DSA, right-click **Certificate Templates**, select **New** > **Certificate Template to Issue**, and then select the template you created.
-
-## Install the Online Responder role service
-
-Install the Online Responder role service on the OCSP responder server for your ML-DSA CA hierarchy.
-
-1. Sign in to the OCSP responder server by using an account with permissions to install and configure role services.
-
-1. Open **Server Manager**, select **Add Roles and Features**, and then select **Active Directory Certificate Services** on the **Server Roles** page.
-
-1. On the **Role Services** page, select only **Online Responder**.
-
-1. Complete the wizard with the default options to install the role service.
 
 ## Configure the OCSP revocation provider
 
