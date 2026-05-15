@@ -12,7 +12,7 @@ ai-usage: ai-generated
 
 # Configure a certification authority to use ML-DSA
 
-This article describes how to configure Active Directory Certificate Services (AD CS) certification authorities (CAs) to use Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for post-quantum cryptography (PQC). ML-DSA is a digital signature algorithm standardized by the National Institute of Standards and Technology (NIST), designed to resist both classical and quantum computing attacks.
+This article describes how to configure Active Directory Certificate Services (AD CS) certification authorities (CAs) to use Module-Lattice-Based Digital Signature Algorithm (ML-DSA) for Post-Quantum Cryptography (PQC). ML-DSA is a digital signature algorithm standardized by the National Institute of Standards and Technology (NIST), designed to resist quantum computing attacks.
 
 By completing the steps in this article, you set up a two-tier public key infrastructure (PKI) hierarchy with a Root CA and Subordinate CA, both using ML-DSA as the signature algorithm.
 
@@ -20,9 +20,20 @@ By completing the steps in this article, you set up a two-tier public key infras
 
 Before you begin, make sure you meet the following requirements:
 
-- A domain controller running Windows Server 2025 or later.
-- Two domain-joined member servers for the Root CA and Subordinate CA, both running Windows Server 2025 with the latest cumulative update installed. To verify installed updates, see [Windows Server 2025 update history](https://support.microsoft.com/topic/windows-server-2025-update-history).
+- A domain controller running the latest Windows Server release. Windows Server 2025 or later is recommended.
+
+- Two servers running Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed for the Root CA and Subordinate CA. 
+
+  - The **Subordinate CA** server must be domain-joined.
+
+  - The **Root CA** server can be either domain-joined (Enterprise Root CA) or non-domain joined (Standalone Root CA). See the following note.
+
+  > [!NOTE]
+  > This article shows both Enterprise and Standalone Root CA configurations. For production environments, a Standalone Root CA that is taken offline after issuing the Subordinate CA certificate is the recommended best practice. For general two-tier PKI architecture guidance, see [AD CS Two Tier PKI Hierarchy Deployment](https://techcommunity.microsoft.com/blog/microsoft-security-blog/step-by-step-2-tier-pki-lab/4413982) and [AD CS design guide](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831348(v=ws.11)).
+
 - An account with permissions to install and configure the Certificate Services role on each CA server.
+
+- AD CS role and Certification Authority role service installed on the Root CA server. For detailed steps, see [Install Active Directory Certificate Services using Server Manager](/windows-server/networking/core-network-guide/cncg/server-certs/install-the-certification-authority#install-active-directory-certificate-services-using-server-manager).
 
 ## Choose an ML-DSA parameter set
 
@@ -38,36 +49,31 @@ When you select an ML-DSA provider during CA configuration, the hash algorithm d
 
 ## Set up the Root CA
 
-To set up the Root CA, install the AD CS role and then configure it with an ML-DSA cryptographic provider. Sign in to the Root CA server by using an account with permissions to install and configure the Certificate Services role. ML-DSA doesn't require any extra privileges beyond the standard AD CS installation permissions.
-
-### Install the AD CS role
-
-Install the AD CS role and the Certification Authority role service on the Root CA server.
-
-1. Open **Server Manager**, select **Add Roles and Features**, and then select **Active Directory Certificate Services** on the **Server Roles** page.
-
-1. On the **Role Services** page, select **Certification Authority**, and then complete the wizard to install the role.
-
-Alternatively, run the following PowerShell command:
-
-```powershell
-Add-WindowsFeature Adcs-Cert-Authority -IncludeManagementTools
-```
+After the AD CS role and Certification Authority role service are installed, the next step is to configure the CA with an ML-DSA cryptographic provider. The configuration process involves selecting the CA type (Root CA), choosing to create a new private key, and then selecting the desired ML-DSA provider that corresponds to the parameter set you chose.
 
 ### Configure the root CA with ML-DSA
 
-After the role installs, configure the CA as an enterprise root CA with an ML-DSA cryptographic provider.
+After the role installs, configure the Root CA with an ML-DSA cryptographic provider. 
 
 1. After installation, select the **Configure Active Directory Certificate Services** link in Server Manager.
 
+1. On the Setup Type page, select one of the following:  
+
+  - **Enterprise:** if the server is domain-joined. Suitable for lab and test environments.  
+
+  - **Standalone:** if the server isn't domain-joined. Recommended for production.  
+  
 1. On the **CA Type** page, select **Root CA**.
 
 1. On the **Private Key** page, select **Create a new private key**.
 
 1. On the **Cryptography for CA** page, select one of the following ML-DSA cryptographic providers:
-   - **ML-DSA:44#Microsoft Software Key Storage Provider**
-   - **ML-DSA:65#Microsoft Software Key Storage Provider**
-   - **ML-DSA:87#Microsoft Software Key Storage Provider**
+
+   - `ML-DSA:44#Microsoft Software Key Storage Provider`
+
+   - `ML-DSA:65#Microsoft Software Key Storage Provider`
+
+   - `ML-DSA:87#Microsoft Software Key Storage Provider`
 
    The **Key Length** field displays the public key size in bits for the selected parameter set. The **Hash algorithm** defaults to **NoHash**.
 
@@ -77,21 +83,31 @@ After the role installs, configure the CA as an enterprise root CA with an ML-DS
 
    <!-- SCREENSHOT: Show the Results page with "Configuration succeeded" for the Certification Authority role service. Shows what success looks like. -->
 
-Alternatively, configure the root CA by using PowerShell. The following example uses ML-DSA-87:
+Alternatively, configure the Root CA by using PowerShell. The following example uses ML-DSA-87:
 
 ```powershell
-# KeyLength is specified in bits. For ML-DSA-87: 2592 bytes x 8 = 20736 bits
-Install-AdcsCertificationAuthority `
-    -CAType EnterpriseRootCA `
-    -CACommonName "<your-root-ca-name>" `
-    -KeyLength 20736 `
-    -HashAlgorithm NoHash `
-    -CryptoProviderName "ML-DSA:87#Microsoft Software Key Storage Provider"
+# KeyLength is specified in bits. For ML-DSA-87: 2592 bytes x 8 = 20736 bits  
+
+# For Standalone Root CA (recommended for production)  
+Install-AdcsCertificationAuthority `  
+    -CAType StandaloneRootCA `  
+    -CACommonName "<your-root-ca-name>" `  
+    -KeyLength 20736 `  
+    -HashAlgorithm NoHash `  
+    -CryptoProviderName "ML-DSA:87#Microsoft Software Key Storage Provider"  
+    
+# For Enterprise Root CA (lab and test environments)  
+Install-AdcsCertificationAuthority `  
+    -CAType EnterpriseRootCA `  
+    -CACommonName "<your-root-ca-name>" `  
+    -KeyLength 20736 `  
+    -HashAlgorithm NoHash `  
+    -CryptoProviderName "ML-DSA:87#Microsoft Software Key Storage Provider"  
 ```
 
 Replace `<your-root-ca-name>` with the common name for your root CA.
 
-### Verify the root CA certificate
+### Verify the Root CA certificate
 
 Confirm the root CA certificate uses the ML-DSA algorithm you selected.
 
@@ -109,28 +125,34 @@ Confirm the root CA certificate uses the ML-DSA algorithm you selected.
 
 The CA service automatically publishes certificate revocation lists (CRLs) when it starts and signs them by using the configured ML-DSA algorithm.
 
-## Set up the subordinate CA
+## Set up the Subordinate CA
 
-The setup steps for a subordinate CA are similar to the root CA, with two key differences:
+The Subordinate CA is configured as an Enterprise CA (domain-joined) so it can use Active Directory for certificate enrollment and template management. The setup steps for a subordinate CA are similar to the Root CA, with two key differences:
 
 - Select **Subordinate CA** as the CA type.
-- You can choose a different ML-DSA parameter set from the root CA. Each CA in the hierarchy can use a distinct ML-DSA configuration.
+- You can choose a different ML-DSA parameter set from the Root CA. Each CA in the hierarchy can use a distinct ML-DSA configuration.
 
-### Install and configure the subordinate CA
+### Install and configure the Subordinate CA
 
 1. Install the AD CS role on the subordinate CA server by following the same installation steps as for the [Root CA](#install-the-ad-cs-role).
 
-1. Open the configuration wizard and select **Subordinate CA** as the CA type.
+1. Open the configuration wizard and on the **Setup Type** page, select **Enterprise**.  
+
+1. On the **CA Type** page, select **Subordinate CA**.  
 
 1. Select **Create a new private key**.
 
 1. On the **Cryptography for CA** page, select an ML-DSA cryptographic provider. For example, **ML-DSA:65#Microsoft Software Key Storage Provider**.
 
-1. On the **Certificate Request** page, select **Send a certificate request to a parent CA**, and then choose the previously configured Root CA. If the Root CA is offline, select **Save a certificate request to a file on the target machine**, and then submit the request manually.
+1. On the Certificate Request page, select one of the following:  
+
+   - **Send a certificate request to a parent CA**, and then choose the previously configured Root CA—if the Root CA is online and reachable.  
+
+   - **Save a certificate request to a file on the target machine**—if the Root CA is offline (standalone). Submit the request manually to the Root CA, retrieve the issued certificate, and install it.
 
 1. Complete the remaining pages by using the default settings, and then select **Configure**.
 
-### Verify the subordinate CA certificate
+### Verify the Subordinate CA certificate
 
 Confirm the subordinate CA certificate shows the expected ML-DSA algorithms for both the signature and public key.
 
