@@ -22,7 +22,7 @@ The following instructions assist in managing NPS certificates in deployments wh
 In Network Policy Server (NPS) on Windows Server, the server certificate that you bind to a network policy isn't updated automatically when it expires. When the certificate applied to a policy expires, an administrator must manually update each policy that uses certificate-based authentication to reference a new, non-expired certificate. Until you update the policy, clients that rely on that policy can't successfully authenticate.
 
 >[!NOTE]
->This manual step isn't required on NPS servers configured for certificate autoenrollment. By using autoenrollment, the server certificate is renewed automatically before it expires, and NPS continues to use therenewed certificate without administrator intervention.
+>This manual step isn't required on NPS servers configured for certificate autoenrollment. By using autoenrollment, the server certificate is renewed automatically before it expires, and NPS continues to use the renewed certificate without administrator intervention.
 
 You must repeat the following procedure for every network policy that's configured to use certificate-based authentication (for example, EAP-TLS, PEAP-TLS, or PEAP-MS-CHAP v2).
 
