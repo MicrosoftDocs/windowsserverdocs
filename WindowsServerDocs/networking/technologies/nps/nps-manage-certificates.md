@@ -17,6 +17,40 @@ If you deploy a certificate-based authentication method, such as Extensible Auth
 
 The following instructions assist in managing NPS certificates in deployments where the trusted root CA is a third-party CA, such as Verisign, or is a CA that you have deployed for your public key infrastructure \(PKI\) by using Active Directory Certificate Services \(AD CS\).
 
+## Handling certificate expiration
+
+In Network Policy Server (NPS) on Windows Server, the server certificate that you bind to a network policy isn't updated automatically when it expires. When the certificate applied to a policy expires, an administrator must manually update each policy that uses certificate-based authentication to reference a new, non-expired certificate. Until you update the policy, clients that rely on that policy can't successfully authenticate.
+
+>[!NOTE]
+>This manual step isn't required on NPS servers configured for certificate autoenrollment. By using autoenrollment, the server certificate is renewed automatically before it expires, and NPS continues to use the renewed certificate without administrator intervention.
+
+You must repeat the following procedure for every network policy that's configured to use certificate-based authentication (for example, EAP-TLS, PEAP-TLS, or PEAP-MS-CHAP v2).
+
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
+
+### To update the certificate on a network policy
+
+1. Open the **Network Policy Server** console.
+
+1. In the console tree, expand **Policies**, and then select **Network Policies**.
+
+1. In the details pane, right-click the policy that you want to update, and then select **Properties**.
+
+1. Select the **Constraints** tab, and then select **Authentication Methods**.
+
+1. In the **EAP Types** list, select the EAP type that uses the expiring certificate, and then select **Edit**.
+
+1. From the **Certificate issued to** drop-down list, select the new (non-expired) certificate, and then select **OK**.
+
+1. Select **Apply**, and then select **OK** to close the policy properties.
+
+1. Repeat the previous steps for each network policy that's configured for certificate-based authentication.
+
+1. Restart the **Network Policy Server** (IAS) service for the change to take effect. From an elevated command prompt, run:
+
+   ```cmd
+   net stop ias && net start ias
+   
 ## Change the Cached TLS Handle Expiry
 
 During the initial authentication processes for EAP\-TLS, PEAP\-TLS, and PEAP\-MS\-CHAP v2, the NPS caches a portion of the connecting client's TLS connection properties. The client also caches a portion of the NPS's TLS connection properties.
