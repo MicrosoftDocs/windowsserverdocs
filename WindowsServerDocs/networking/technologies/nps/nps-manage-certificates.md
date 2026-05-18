@@ -84,6 +84,40 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 6. Type the amount of time, in milliseconds, that you want NPSs to cache the TLS handle of a client computer after the first successful authentication attempt by the client.
 
+## Handling certificate expiration
+
+In Network Policy Server \(NPS\) on Windows Server, the server certificate that's bound to a network policy isn't updated automatically when it expires. When the certificate applied to a policy expires, an administrator must manually update each policy that uses certificate-based authentication to reference a new, non-expired certificate. Until the policy is updated, clients that rely on that policy can't successfully authenticate.
+
+>[!NOTE]
+>This manual step isn't required on NPSs configured for certificate autoenrollment. With autoenrollment, the server certificate is renewed automatically before it expires, and NPS continues to use the renewedcertificate without administrator intervention.
+
+You must repeat the following procedure for every network policy that's configured to use certificate-based authentication \(for example, EAP\-TLS, PEAP\-TLS, or PEAP\-MS\-CHAP v2\).
+
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
+
+### To update the certificate on a network policy
+
+1. Open the **Network Policy Server** console.
+
+2. In the console tree, expand **Policies**, and then click **Network Policies**.
+
+3. In the details pane, right-click the policy that you want to update, and then click **Properties**.
+
+4. Click the **Constraints** tab, and then click **Authentication Methods**.
+
+5. In the **EAP Types** list, select the EAP type that uses the expiring certificate, and then click **Edit**.
+
+6. From the **Certificate issued to** drop-down list, select the new \(non-expired\) certificate, and then click **OK**.
+
+7. Click **Apply**, and then click **OK** to close the policy properties.
+
+8. Repeat the previous steps for each network policy that's configured for certificate-based authentication.
+
+9. Restart the **Network Policy Server** \(IAS\) service for the change to take effect. From an elevated command prompt, run:
+
+   ```cmd
+   net stop ias && net start ias
+
 ## Obtain the SHA-1 Hash of a Trusted Root CA Certificate
 
 Use this procedure to obtain the Secure Hash Algorithm (SHA-1) hash of a trusted root certification authority (CA) from a certificate that is installed on the local computer. In some circumstances, such as when deploying Group Policy, it is necessary to designate a certificate by using the SHA-1 hash of the certificate.
