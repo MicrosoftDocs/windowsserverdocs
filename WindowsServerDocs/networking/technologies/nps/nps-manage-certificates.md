@@ -50,7 +50,23 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
    ```cmd
    net stop ias && net start ias
-   
+### To validate the certificate bound to a network policy
+
+To confirm which certificate a network policy is currently using, export the NPS configuration, locate the policy by name, and read the thumbprint of the configured certificate from the EAP configuration blob.
+
+1. From an elevated PowerShell prompt, run the following snippet. Set `$PolicyName` to the name of the network policy you want to validate.
+
+   ```powershell
+   $PolicyName = "EAP configured network policy"  # Change this to your policy name (case-insensitive)
+   $NPSConfigPath = "$env:TEMP\nps-config.xml"
+   Export-NpsConfiguration -Path $NPSConfigPath
+   $blob = (([xml](Get-Content "$env:TEMP\nps-config.xml" -Raw)).SelectNodes("//RadiusProfiles//*[@name]") | Where-Object { $_.name -ieq $PolicyName }).Properties.msEAPConfiguration.'#text'
+   $found = [regex]::Matches($blob, '14000000([0-9a-f]{40})') | ForEach-Object { $_.Groups[1].Value.ToUpper() } | Select-Object -Unique
+   if (-not $found) { "No certificate thumbprint found in policy '$PolicyName'" } elseif ($found.Count -eq 1) { "Bound certificate thumbprint:$found" } else { "WARNING: multiple candidate thumbprints found, manual review of $NPSConfigPath needed:`n$($found -join "`n")" }
+   ```
+
+1. Compare the returned thumbprint against the thumbprint of the certificate you expect the policy to use (for example, in the **Certificates** snap-in under the **Local Computer** > **Personal** store). If they match, the policy is bound to the expected certificate.
+
 ## Change the Cached TLS Handle Expiry
 
 During the initial authentication processes for EAP\-TLS, PEAP\-TLS, and PEAP\-MS\-CHAP v2, the NPS caches a portion of the connecting client's TLS connection properties. The client also caches a portion of the NPS's TLS connection properties.
