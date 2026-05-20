@@ -55,8 +55,8 @@ ML-DSA support requires minimum OS versions for both CA servers and clients.
 
 | Component | Minimum version |
 |---|---|
-| CA server | Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed. |
-| Client | Windows 11, version 24H2 with the 2026-05 Security update ([KB5089549](https://support.microsoft.com/help/5089549)) or later installed. |
+| AD CS servers | Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed. |
+| Client | Windows 11, version 24H2 with the 2025-10 non-security update ([KB5067036](https://support.microsoft.com/help/5067036)) or later installed. |
 
 > [!IMPORTANT]
 > You must **newly install** ML-DSA CAs. ML-DSA doesn't support in-place migration of existing CAs. Build a new CA hierarchy in parallel with your existing hierarchy to evaluate and test post-quantum certificate issuance, without disrupting current operations.
@@ -71,7 +71,7 @@ All ML-DSA leaf certificate templates - code signing, TLS, user/computer, and OC
 | **Compatibility settings** | Set both **Certification Authority** and **Certificate Recipient** to **Windows Server 2008** or later so that CNG providers appear in the provider list. |
 | **Request handling - Purpose** | Set to **Signature**. ML-DSA doesn't support encryption. |
 | **Application Policies (EKU)** | Must **not** include **Encrypting File System** or **Secure E-mail**. |
-| **Key Usage** | Must **not** include **Key encipherment** or **Key Agreement**. |
+| **Key Usage** | Must **not** include **Key Encipherment** or **Key Agreement**. |
 
 > [!NOTE]
 > Not all third-party applications, devices, or services recognize ML-DSA certificates. Validate compatibility in a test environment before deploying to production.

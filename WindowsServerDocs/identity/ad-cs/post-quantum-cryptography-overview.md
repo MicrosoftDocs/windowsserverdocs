@@ -53,8 +53,8 @@ PQC support in AD CS depends on the following prerequisites. These requirements 
 
 | Component | OS version |
 |---|---|
-| CA server | Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed. |
-| Client | Windows 11, version 24H2 with the 2026-05 Security update ([KB5089549](https://support.microsoft.com/help/5089549)) or later installed. |
+| AD CS servers | Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed. |
+| Client | Windows 11, version 24H2 with the 2026-05 non-security update ([KB5067036](https://support.microsoft.com/help/5067036)) or later installed. |
 
 ## Related content
 
