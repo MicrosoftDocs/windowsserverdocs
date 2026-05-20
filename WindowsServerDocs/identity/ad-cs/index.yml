@@ -27,6 +27,10 @@ landingContent:
         links:
           - text: What is Active Directory Certificate Services?
             url: active-directory-certificate-services-overview.md
+          - text: Post-quantum cryptography in AD CS overview
+            url: post-quantum-cryptography-overview.md
+          - text: What is ML-DSA support in AD CS?
+            url: ml-dsa-overview.md
 
       
   # Card
@@ -46,6 +50,12 @@ landingContent:
             url: network-device-enrollment-service-overview.md
       - linkListType: how-to-guide
         links:
+          - text: Configure a certification authority to use ML-DSA
+            url: configure-ml-dsa-certification-authority.md
+          - text: Configure certificate templates for ML-DSA
+            url: configure-ml-dsa-certificate-templates.md
+          - text: Configure Online Responders (OCSP) to use ML-DSA
+            url: configure-ml-dsa-online-responder.md
           - text: Configure Network Device Enrollment Service to use a domain user account
             url: create-domain-user-account-ndes-service-account.md
           - text: Disable weak cryptographic algorithms
