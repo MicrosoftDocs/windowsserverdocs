@@ -10,7 +10,7 @@ ms.date: 10/30/2025
 # Enable Hotpatch for Azure Arc-enabled servers
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available for a monthly subscription fee. To learn more about pricing, see [Tired of all the restarts? Get hotpatching for Windows Server](https://www.microsoft.com/en-us/windows-server/blog/2025/04/24/tired-of-all-the-restarts-get-hotpatching-for-windows-server/).
+> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available at no extra cost. To learn more, see [Simplified access to Hotpatching enabled by Azure Arc for Windows Server 2025](https://techcommunity.microsoft.com/blog/AzureArcBlog/simplified-access-to-hotpatching-enabled-by-azure-arc-for-windows-server-2025/4521251).
 
 Hotpatch allows you to update your Windows Server installation without requiring your users to restart after installation. This feature minimizes downtime spent on updates and keeps your users running their workloads uninterrupted. For more information about how Hotpatch works, see [Hotpatch for Windows Server](hotpatch.md).
 
@@ -140,15 +140,20 @@ You can optionally automate hotpatch installation using update management tools 
 
 ## Known issues
 
-### Multiple updates released in October 2025
+There are no known issues at this time. All past issues are mitigated.
+
+<details>
+  <summary>Multiple updates released in October 2025</summary>
 
 In October 2025, Microsoft released several updates that were offered to some Windows Server customers. If you enrolled in hotpatch or plan to enroll, and plan to install hotpatch updates in November and December 2025, ensure your Windows Server machines are running on **exactly** one of the following update levels.
 - [October 14, 2025 - **KB5066835** (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e)
 - [October 24, 2025 - **KB5070893** (OS Build 26100.6905) Security Update for Windows Server Update Services](https://support.microsoft.com/topic/78f3720c-9511-4deb-b0d7-7bed2016fefd)
 
 If you have one of the other October updates installed, this will result in regular non-hotpatch updates until, and including, the next baseline month that is currently scheduled for January 2026. These updates require a reboot each month. In particular, the following update, if installed, makes the machine incompatible with upcoming hotpatches: [October 23, 2025 - **KB5070881** (OS Build 26100.6905) Out-of-band](https://support.microsoft.com/topic/8e7ac742-6785-4677-87e4-b73dd8ac0122), and so does any other update not explicitly listed in this section.
+</details>
 
-### Feature licensing issue in October 2025 updates
+<details>
+  <summary>Feature licensing issue in October 2025 updates</summary>
 
 An issue was identified with the October 2025 security updates for Windows Server 2025. This may impact customers running [October 14, 2025 - KB5066835 (OS Build 26100.6899)](https://support.microsoft.com/topic/6cdcc1c3-cfbf-41a3-8f0d-0c4a9d2b7d1e) update or later. Due to this issue, the following unexpected behavior can be observed.
 
@@ -202,6 +207,7 @@ try {
 }
 Restart-Computer -Confirm
 ```
+</details>
 
 ## Next steps
 
