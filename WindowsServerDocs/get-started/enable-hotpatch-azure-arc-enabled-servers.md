@@ -140,7 +140,7 @@ You can optionally automate hotpatch installation using update management tools 
 
 ## Known issues
 
-There are no known issues at this moment. All past issues have been mitigated.
+There are no known issues at this time. All past issues are mitigated.
 
 <details>
   <summary>Multiple updates released in October 2025</summary>
