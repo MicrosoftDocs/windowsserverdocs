@@ -109,7 +109,7 @@ Azure Local can orchestrate Hotpatch updates for VMs using the following tools:
 
 - Group Policy configures Windows Update client settings.
 
-- SCONFIG configures Windows Update client settings for Server Core.
+- [SConfig](https://aka.ms/sconfig) configures Windows Update client settings for Server Core.
 
 - Non-Microsoft patch management solutions.
 
@@ -121,7 +121,7 @@ Azure Arc-connected machines can install and manage Hotpatch updates using the f
 
 - Group Policy configures Windows Update client settings.
 
-- SCONFIG configures Windows Update client settings for Server Core.
+- [SConfig](https://aka.ms/sconfig) configures Windows Update client settings for Server Core.
 
 - Non-Microsoft patch management solutions.
 
