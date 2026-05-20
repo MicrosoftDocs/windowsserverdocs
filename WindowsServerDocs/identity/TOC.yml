@@ -1076,7 +1076,7 @@
                   href: ad-cs/configure-ml-dsa-certification-authority.md
                 - name: Configure certificate templates for ML-DSA
                   href: ad-cs/configure-ml-dsa-certificate-templates.md
-                - name: Configure OCSP responders to use ML-DSA
+                - name: Configure Online responders to use ML-DSA
                   href: ad-cs/configure-ml-dsa-ocsp-responder.md
             - name: Configure Network Device Enrollment Service to use a domain user account
               href: ad-cs/create-domain-user-account-ndes-service-account.md
