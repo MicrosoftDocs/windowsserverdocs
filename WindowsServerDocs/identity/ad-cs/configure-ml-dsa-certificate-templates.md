@@ -222,6 +222,6 @@ After enrollment, verify that the CA issued the ML-DSA certificate correctly:
 
 - [What is ML-DSA support in AD CS?](ml-dsa-overview.md)
 - [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md)
-- [Configure OCSP responders to use ML-DSA](configure-ml-dsa-ocsp-responder.md)
+- [Configure Online Responders (OCSP) to use ML-DSA](configure-ml-dsa-online-responder.md)
 - [Manage certificate templates](manage-certificate-templates.md)
 - [Certificate template concepts](certificate-template-concepts.md)

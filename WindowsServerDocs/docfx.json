@@ -305,7 +305,7 @@
         "identity/ad-cs/configure-ml-dsa-certificate-templates.md": [
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
         ],
-        "identity/ad-cs/configure-ml-dsa-ocsp-responder.md": [
+        "identity/ad-cs/configure-ml-dsa-online-responder.md": [
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
         ],
         "identity/ad-cs/certificate-trust.md": [

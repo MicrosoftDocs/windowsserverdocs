@@ -44,7 +44,7 @@ Configure Web Server, User, and Computer templates to issue ML-DSA certificates 
 
 ### OCSP response signing
 
-Configure Online Responders with ML-DSA OCSP response signing certificates. For more information, see [Configure OCSP responders to use ML-DSA](configure-ml-dsa-ocsp-responder.md).
+Configure Online Responders with ML-DSA OCSP response signing certificates. For more information, see [Configure Online Responders (OCSP) to use ML-DSA](configure-ml-dsa-online-responder.md).
 
 > [!NOTE]
 > You can enroll ML-DSA certificates through the Certificates Microsoft Management Console (MMC) snap-in and `certreq.exe`. Enrollment through the Network Device Enrollment Service (NDES) isn't currently available.
@@ -81,4 +81,4 @@ All ML-DSA leaf certificate templates - code signing, TLS, user/computer, and OC
 - [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md)
 - [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md)
 - [Configure certificate templates for ML-DSA](configure-ml-dsa-certificate-templates.md)
-- [Configure Online Responders (OCSP) to use ML-DSA](configure-ml-dsa-ocsp-responder.md)
+- [Configure Online Responders (OCSP) to use ML-DSA](configure-ml-dsa-online-responder.md)

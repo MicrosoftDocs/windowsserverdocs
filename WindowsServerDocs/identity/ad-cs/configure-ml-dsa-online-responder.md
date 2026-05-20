@@ -1,5 +1,5 @@
 ---
-title: Configure OCSP responders to use ML-DSA in Windows Server
+title: Configure Online Responders (OCSP) to use ML-DSA in Windows Server
 description: Learn how to configure ML-DSA post-quantum OCSP response signing in Active Directory Certificate Services (AD CS) for certificate revocation checking.
 #customer intent: As a Windows Server PKI administrator, I want to configure my OCSP responder to use ML-DSA so that certificate revocation checking supports post-quantum cryptography.
 author: robinharwood
@@ -40,7 +40,7 @@ Before configuring the OCSP responder, create an OCSP Response Signing certifica
    - Set **Algorithm name** to the desired ML-DSA parameter set (for example, **ML-DSA:65**).
    - The **Minimum key size** and **Request hash** fields update automatically.
 
-   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/ocsp-template-cryptography-ml-dsa-65.png" alt-text="Screenshot of the OCSP Response Signing template Cryptography tab with Provider Category set to Key Storage Provider and Algorithm name set to ML-DSA:65.":::
+   :::image type="content" source="media/configure-ml-dsa-online-responder/ocsp-template-cryptography-ml-dsa-65.png" alt-text="Screenshot of the OCSP Response Signing template Cryptography tab with Provider Category set to Key Storage Provider and Algorithm name set to ML-DSA:65.":::
 
 1. On the **Security** tab, grant **Enroll** and **Autoenroll** permissions to the computer account of the OCSP responder.
 
@@ -68,7 +68,7 @@ The revocation provider configuration is where ML-DSA-specific settings apply. Y
    - Set the **Certification authority** to the Subordinate CA configured with ML-DSA.
    - Set the **Certificate Template** to the ML-DSA OCSP Response Signing template you created (for example, *PQCOCSPResponseSigning*).
 
-   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/select-signing-certificate.png" alt-text="Screenshot of the Select Signing Certificate page with auto-enroll selected and the PQCOCSPResponseSigning template chosen.":::
+   :::image type="content" source="media/configure-ml-dsa-online-responder/select-signing-certificate.png" alt-text="Screenshot of the Select Signing Certificate page with auto-enroll selected and the PQCOCSPResponseSigning template chosen.":::
 
 1. Select **Finish** to complete the configuration.
 
@@ -76,7 +76,7 @@ The revocation provider configuration is where ML-DSA-specific settings apply. Y
    - **Signing Certificate**: OK
    - **Revocation Provider Status**: The ML-DSA revocation provider is successfully configured.
 
-   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/revocation-configuration-status.png" alt-text="Screenshot of the Online Responder Management console showing Signing Certificate OK and successful revocation provider status.":::
+   :::image type="content" source="media/configure-ml-dsa-online-responder/revocation-configuration-status.png" alt-text="Screenshot of the Online Responder Management console showing Signing Certificate OK and successful revocation provider status.":::
 
 ## Update the AIA extension on the subordinate CA
 
@@ -94,7 +94,7 @@ To direct clients to use the OCSP responder for ML-DSA certificate revocation ch
 
 1. Clear **Include in the AIA extension of issued certificates** for the OCSP URL entry.
 
-   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/aia-extension-properties.png" alt-text="Screenshot of the CA Properties Extensions tab showing the Authority Information Access extension with the OCSP responder URL added.":::
+   :::image type="content" source="media/configure-ml-dsa-online-responder/aia-extension-properties.png" alt-text="Screenshot of the CA Properties Extensions tab showing the Authority Information Access extension with the OCSP responder URL added.":::
 
 1. Select **OK** and restart the CA service when prompted.
 

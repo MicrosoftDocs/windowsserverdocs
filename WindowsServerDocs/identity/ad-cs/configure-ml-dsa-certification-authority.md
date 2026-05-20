@@ -176,6 +176,6 @@ Confirm the subordinate CA certificate shows the expected ML-DSA algorithms for 
 
 - [What is ML-DSA support in AD CS?](ml-dsa-overview.md)
 - [Configure certificate templates for ML-DSA](configure-ml-dsa-certificate-templates.md)
-- [Configure OCSP responders to use ML-DSA](configure-ml-dsa-ocsp-responder.md)
+- [Configure Online Responders (OCSP) to use ML-DSA](configure-ml-dsa-online-responder.md)
 - [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md)
 - [PKI design considerations using AD CS](pki-design-considerations.md)

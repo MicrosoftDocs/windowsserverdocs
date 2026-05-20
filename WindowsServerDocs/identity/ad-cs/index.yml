@@ -54,8 +54,8 @@ landingContent:
             url: configure-ml-dsa-certification-authority.md
           - text: Configure certificate templates for ML-DSA
             url: configure-ml-dsa-certificate-templates.md
-          - text: Configure OCSP responders to use ML-DSA
-            url: configure-ml-dsa-ocsp-responder.md
+          - text: Configure Online Responders (OCSP) to use ML-DSA
+            url: configure-ml-dsa-online-responder.md
           - text: Configure Network Device Enrollment Service to use a domain user account
             url: create-domain-user-account-ndes-service-account.md
           - text: Disable weak cryptographic algorithms
