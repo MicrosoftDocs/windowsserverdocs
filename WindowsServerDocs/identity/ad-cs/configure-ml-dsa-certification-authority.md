@@ -144,6 +144,8 @@ After installing the AD CS role and Certification Authority role service on the 
 
 1. On the **Cryptography for CA** page, select an ML-DSA cryptographic provider. For example, **ML-DSA:65#Microsoft Software Key Storage Provider**.
 
+   :::image type="content" source="media/configure-ml-dsa-certification-authority/cryptography-for-subordinate-ca.png" alt-text="Screenshot of the AD CS Cryptography for CA page for the subordinate CA with the ML-DSA-65 provider selected, showing a key length of 15616 and NoHash as the hash algorithm.":::
+
 1. On the **Certificate Request** page, select one of the following options:  
 
    - **Send a certificate request to a parent CA**, and then choose the previously configured Root CA - if the Root CA is online and reachable.  

@@ -40,6 +40,8 @@ Before configuring the OCSP responder, create an OCSP Response Signing certifica
    - Set **Algorithm name** to the desired ML-DSA parameter set (for example, **ML-DSA:65**).
    - The **Minimum key size** and **Request hash** fields update automatically.
 
+   :::image type="content" source="media/configure-ml-dsa-ocsp-responder/ocsp-template-cryptography-ml-dsa-65.png" alt-text="Screenshot of the OCSP Response Signing template Cryptography tab with Provider Category set to Key Storage Provider and Algorithm name set to ML-DSA:65.":::
+
 1. On the **Security** tab, grant **Enroll** and **Autoenroll** permissions to the computer account of the OCSP responder.
 
 1. Select **OK** to save the template.
