@@ -56,7 +56,7 @@ ML-DSA support requires minimum OS versions for both CA servers and clients.
 | Component | Minimum version |
 |---|---|
 | AD CS servers | Windows Server 2025 with the 2026-05 Security update ([KB5087539](https://support.microsoft.com/help/5087539)) or later installed. |
-| Client | Windows 11, version 24H2 with the 2025-10 non-security update ([KB5067036](https://support.microsoft.com/help/5067036)) or later installed. |
+| Client | Windows 11, version 24H2 and version 25H2 with the 2025-10 non-security update ([KB5067036](https://support.microsoft.com/help/5067036)) or later installed. |
 
 > [!IMPORTANT]
 > You must **newly install** ML-DSA CAs. ML-DSA doesn't support in-place migration of existing CAs. Build a new CA hierarchy in parallel with your existing hierarchy to evaluate and test post-quantum certificate issuance, without disrupting current operations.
@@ -81,4 +81,4 @@ All ML-DSA leaf certificate templates - code signing, TLS, user/computer, and OC
 - [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md)
 - [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md)
 - [Configure certificate templates for ML-DSA](configure-ml-dsa-certificate-templates.md)
-- [Configure OCSP responders to use ML-DSA](configure-ml-dsa-ocsp-responder.md)
+- [Configure Online Responders (OCSP) to use ML-DSA](configure-ml-dsa-ocsp-responder.md)
