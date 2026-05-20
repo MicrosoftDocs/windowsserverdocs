@@ -44,7 +44,7 @@ For more information about the available images, see [Windows Server](https://ak
 ### Azure Arc-connected machines
 
 > [!IMPORTANT]
-> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available at no additional cost. To learn more, see [Simplified access to Hotpatching enabled by Azure Arc for Windows Server 2025](https://techcommunity.microsoft.com/blog/AzureArcBlog/simplified-access-to-hotpatching-enabled-by-azure-arc-for-windows-server-2025/4521251).
+> Azure Arc-enabled Hotpatch for Windows Server 2025 is now available at no extra cost. To learn more, see [Simplified access to Hotpatching enabled by Azure Arc for Windows Server 2025](https://techcommunity.microsoft.com/blog/AzureArcBlog/simplified-access-to-hotpatching-enabled-by-azure-arc-for-windows-server-2025/4521251).
 
 Azure Arc-connected Windows Server 2025 machines can receive Hotpatches if you enable the feature on Azure Arc Portal. To start using Azure Arc-enabled Hotpatch, connect Azure Arc to machines using one of the following editions:
 
