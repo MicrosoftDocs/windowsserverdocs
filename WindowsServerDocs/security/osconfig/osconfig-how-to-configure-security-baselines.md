@@ -287,4 +287,3 @@ Provide us **OSConfig security baseline** as the feedback title. Under **Choose 
 ## Related content
 
 - [Configure App Control for Business with OSConfig](osconfig-how-to-configure-app-control-for-business.md)
-
