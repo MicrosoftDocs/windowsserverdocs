@@ -1,5 +1,6 @@
 ---
 title: Post-Quantum Cryptography in AD CS overview
+titleSuffix: Windows Server
 description: Learn about Post-Quantum Cryptography support in Active Directory Certificate Services, including algorithms available today and those planned for future releases.
 #customer intent: As an AD CS administrator, I want to understand Microsoft's approach to Post-Quantum Cryptography in AD CS so that I can plan a multi-phase adoption.
 author: robinharwood
