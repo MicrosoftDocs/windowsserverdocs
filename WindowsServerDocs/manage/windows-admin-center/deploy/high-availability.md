@@ -9,12 +9,12 @@ ms.date: 06/23/2025
 
 # Deploy Windows Admin Center with high availability
 
-You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway. The solution provided is an active-passive solution, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node so that you can continue managing the servers in your environment seamlessly.
+You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway. This solution is  active-passive, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node so that you can continue managing the servers in your environment seamlessly.
 
 Learn about [other Windows Admin Center deployment options](../plan/installation-options.md).
 
 > [!IMPORTANT]
-> Direct upgrades from high-availability deployments in Windows Admin Center versions 2311 and older to versions 2410 and newer aren't supported because of architectural changes. To upgrade, you must uninstall and reinstall Windows Admin Center.
+> Windows Admin Center versions 2311 and older don't support direct upgrades from high-availability deployments to versions 2410 and newer because of architectural changes. To upgrade, you must uninstall and reinstall Windows Admin Center.
 
 ## Prerequisites
 

@@ -74,7 +74,7 @@ To install Windows Admin Center on your machine running the Windows Server deskt
 
 ### [Server Core](#tab/server-core)
 
-To install Windows Admin Center on your machine running the Windows Server Core experience or by using Windows PowerShell, follow these steps:
+To install Windows Admin Center on a machine running the Windows Server Core experience or by using Windows PowerShell, follow these steps:
 
 1. Sign in to your machine. If you're on Server Core, from the `SConfig` menu, enter option **15**, and then select <kbd>Enter</kbd>
    to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and start PowerShell.

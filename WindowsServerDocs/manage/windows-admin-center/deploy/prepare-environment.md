@@ -9,27 +9,27 @@ ms.date: 06/07/2019
 
 # Prepare your environment for Windows Admin Center
 
-Some server versions need more preparation before they're ready for you to manage with Windows Admin Center:
+Some server versions need more preparation before they're ready for you to manage by using Windows Admin Center:
 
 - [Windows Server 2012 and 2012 R2](#prepare-windows-server-2012-and-2012-r2)
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
-There are also some scenarios where you might need to modify [port configuration on the target server](#port-configuration-on-the-target-server) before you can manage with Windows Admin Center.
+There are also some scenarios where you might need to modify [port configuration on the target server](#port-configuration-on-the-target-server) before you can manage by using Windows Admin Center.
 
 ## Prepare Windows Server 2012 and 2012 R2
 
 ### Install Windows Management Framework version 5.1 or higher
 
-Windows Admin Center requires Windows PowerShell features that aren't included by default in Windows Server 2012 and 2012 R2. To manage Windows Server 2012 or 2012 R2 with Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher on those servers.
+Windows Admin Center requires Windows PowerShell features that aren't included by default in Windows Server 2012 and 2012 R2. To manage Windows Server 2012 or 2012 R2 by using Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher on those servers.
 
 Enter `$PSVersiontable` in PowerShell to verify that Windows Management Framework is installed and that the version is 5.1 or higher. If it isn't installed, [download and install Windows Management Framework 5.1](/powershell/scripting/wmf/setup/install-configure).
 
 ## Prepare Microsoft Hyper-V Server 2016
 
-To manage Microsoft Hyper-V Server 2016 with Windows Admin Center, you need to enable some server roles.
+To manage Microsoft Hyper-V Server 2016 by using Windows Admin Center, you need to enable some server roles.
 
-### Manage Microsoft Hyper-V Server 2016 with Windows Admin Center
+### Manage Microsoft Hyper-V Server 2016 by using Windows Admin Center
 
 1. Enable remote management.
 1. Enable the File Server role.
@@ -62,13 +62,13 @@ To enable Hyper-V module for PowerShell features:
 
    ![Screenshot that shows Roles and features with Hyper-V roles selected.](../media/prepare-environment/prepare-your-environment-image-2.png)
 
-Microsoft Hyper-V Server 2016 is now ready for management with Windows Admin Center.
+Microsoft Hyper-V Server 2016 is now ready for management by using Windows Admin Center.
 
 ## Prepare Microsoft Hyper-V Server 2012 R2
 
-To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, you need to enable some server roles. You also need to install Windows Management Framework version 5.1 or higher.
+To manage Microsoft Hyper-V Server 2012 R2 by using Windows Admin Center, you need to enable some server roles. You also need to install Windows Management Framework version 5.1 or higher.
 
-### Manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center
+### Manage Microsoft Hyper-V Server 2012 R2 by using Windows Admin Center
 
 1. Install Windows Management Framework version 5.1 or higher.
 1. Enable remote management.
@@ -77,7 +77,7 @@ To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, you need t
 
 ### Step 1: Install Windows Management Framework 5.1
 
-Windows Admin Center requires PowerShell features that aren't included by default in Microsoft Hyper-V Server 2012 R2. To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher.
+Windows Admin Center requires PowerShell features that aren't included by default in Microsoft Hyper-V Server 2012 R2. To manage Microsoft Hyper-V Server 2012 R2 by using Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher.
 
 Enter `$PSVersiontable` in PowerShell to verify that Windows Management Framework is installed and that the version is 5.1 or higher.
 
@@ -110,7 +110,7 @@ To enable the Hyper-V module for PowerShell features:
 
    ![Screenshot that shows the Roles and features pane with Hyper-V Module for Windows PowerShell selected.](../media/prepare-environment/prepare-your-environment-image-2.png)
 
-Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin Center.
+Microsoft Hyper-V Server 2012 R2 is now ready for management by using Windows Admin Center.
 
 ## Port configuration on the target server
 
