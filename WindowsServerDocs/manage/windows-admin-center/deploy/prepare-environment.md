@@ -15,7 +15,7 @@ Some server versions need more preparation before they're ready for you to manag
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
-There are also some scenarios where you might need to modify [port configuration on the target server](#port-configuration-on-the-target-server) before you can manage with Windows Admin Center.
+You might also need to modify [port configuration on the target server](#port-configuration-on-the-target-server) before you can manage it by using Windows Admin Center.
 
 ## Prepare Windows Server 2012 and 2012 R2
 
