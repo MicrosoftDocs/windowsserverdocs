@@ -11,8 +11,7 @@ ms.date: 05/28/2025
 This article explains how to install Windows Admin Center on a Windows PC or a Windows Server remote server so that multiple users can use Windows Admin Center in a web browser.
 
 > [!TIP]
-> New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../overview.md) or [download now](https://www.microsoft.com/evalcenter/download-windows-admin-center).
+> New to Windows Admin Center? Learn more about [Windows Admin Center](../overview.md) or [download now](https://www.microsoft.com/evalcenter/download-windows-admin-center).
 
 ## Determine your installation type
 

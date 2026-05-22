@@ -23,9 +23,7 @@ There are also some scenarios where you might need to modify [port configuration
 
 Windows Admin Center requires Windows PowerShell features that aren't included by default in Windows Server 2012 and 2012 R2. To manage Windows Server 2012 or 2012 R2 with Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher on those servers.
 
-Enter `$PSVersiontable` in PowerShell to verify that Windows Management Framework is installed and that the version is 5.1 or higher.
-
-If it isn't installed, [download and install Windows Management Framework 5.1](/powershell/scripting/wmf/setup/install-configure).
+Enter `$PSVersiontable` in PowerShell to verify that Windows Management Framework is installed and that the version is 5.1 or higher. If it isn't installed, [download and install Windows Management Framework 5.1](/powershell/scripting/wmf/setup/install-configure).
 
 ## Prepare Microsoft Hyper-V Server 2016
 

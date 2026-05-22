@@ -1,6 +1,6 @@
 ---
 title: Deploy Windows Admin Center with High Availability
-description: Deploy Windows Admin Center with High Availability (Project Honolulu).
+description: Deploy Windows Admin Center with high availability (Project Honolulu).
 ms.topic: install-set-up-deploy
 author: davannaw-msft
 ms.author: dawhite
@@ -11,7 +11,7 @@ ms.date: 06/23/2025
 
 You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway. The solution provided is an active-passive solution, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node so that you can continue managing the servers in your environment seamlessly.
 
-[Learn about other Windows Admin Center deployment options.](../plan/installation-options.md)
+Learn about [other Windows Admin Center deployment options](../plan/installation-options.md).
 
 > [!IMPORTANT]
 > Direct upgrades from high-availability deployments in Windows Admin Center versions 2311 and older to versions 2410 and newer aren't supported because of architectural changes. To upgrade, you must uninstall and reinstall Windows Admin Center.
@@ -19,7 +19,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 ## Prerequisites
 
 - High-availability deployment scripts from the [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the scripts to your local machine. Then copy the deployment script as needed based on the guidance in this article.
-- A failover cluster of two or more nodes running on Windows Server 2016 or later. [Learn more about how to deploy a failover cluster](../../../failover-clustering/failover-clustering-overview.md).
+- A failover cluster of two or more nodes running on Windows Server 2016 or later. Learn more about [how to deploy a failover cluster](../../../failover-clustering/failover-clustering-overview.md).
 - A cluster shared volume (CSV) for Windows Admin Center to store persistent data that all the nodes in the cluster can access. Your CSV needs only 10 GB.
 - A certificate thumbprint from a certificate from a valid certificate authority (CA) with the private key installed on every node.
 
