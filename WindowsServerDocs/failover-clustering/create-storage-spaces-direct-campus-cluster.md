@@ -5,7 +5,7 @@ description: Learn how to deploy a Storage Spaces Direct campus cluster for high
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: robhind
-ms.date: 01/20/2026
+ms.date: 05/29/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
