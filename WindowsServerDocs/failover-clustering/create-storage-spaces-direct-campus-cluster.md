@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 # Create a Storage Spaces Direct campus cluster
 
-A campus cluster is a failover cluster that distributes nodes and data across two physical racks in separate rooms or buildings within the same campus. This topology keeps your workloads available when an entire rack goes offline, for example because of a power, network, or cooling outage.
+A campus cluster is a failover cluster that distributes nodes and data across two physical racks in separate rooms or buildings within the same campus. This topology keeps your workloads available when an entire rack goes offline, such as because of a power, network, or cooling outage.
 
 This article shows you how to create a four-node (2+2) Storage Spaces Direct campus cluster on Windows Server 2025 or later, with two nodes in each rack-level fault domain. The cluster uses Storage Spaces Direct for storage and Resilient File System (ReFS) for the file system.
 
@@ -162,7 +162,7 @@ Failover Cluster Manager doesn't support configuring rack-level fault domains th
 
 ## Enable Storage Spaces Direct on the campus cluster
 
-After you define the two rack fault domains, enable Storage Spaces Direct on the campus cluster. Enabling Storage Spaces Direct creates the storage pool and configures it for rack-level fault tolerance.
+After you define the two rack fault domains, enable Storage Spaces Direct on the campus cluster. When you enable Storage Spaces Direct, it creates the storage pool and configures it for rack-level fault tolerance.
 
 #### [PowerShell](#tab/powershell)
 
