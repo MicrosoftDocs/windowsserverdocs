@@ -2,8 +2,8 @@
 title: netsh add
 description: Reference article for the netsh add command that adds a helper dll.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/24/2025
 ---
 

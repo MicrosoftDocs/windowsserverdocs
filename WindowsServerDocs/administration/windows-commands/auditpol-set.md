@@ -2,8 +2,8 @@
 title: auditpol set
 description: Reference article for the auditpol set command, which sets the per-user audit policy, system audit policy, or auditing options.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # auditpol set

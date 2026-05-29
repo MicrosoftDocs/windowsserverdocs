@@ -2,8 +2,8 @@
 title: bitsadmin geterrorcount
 description: Reference article for the bitsadmin geterrorcount command, which retrieves a count of the number of times the specified job generated a transient error.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

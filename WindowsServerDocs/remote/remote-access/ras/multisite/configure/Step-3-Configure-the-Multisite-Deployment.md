@@ -2,8 +2,8 @@
 title: Step 3 Configure the Multisite Deployment
 description: Learn about the steps required to set up the  Remote Access multisite deployment.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 3 Configure the Multisite Deployment

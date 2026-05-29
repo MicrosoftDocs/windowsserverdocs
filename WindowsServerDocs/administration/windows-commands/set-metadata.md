@@ -2,8 +2,8 @@
 title: set metadata
 description: Reference article for the set metadata command, which sets the name and location of the shadow creation metadata file used to transfer shadow copies from one computer to another.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: sort
 description: Reference article for the sort command, which reads input, sorts data, and writes the results to the screen, to a file, or to another device.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/07/2022
 ---
 

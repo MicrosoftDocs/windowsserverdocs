@@ -1,8 +1,8 @@
 ---
 title: Schema updates in Windows Server
 description: Schema changes made by Adprep.exe listed by operating system version.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/06/2025
 ms.topic: concept-article
 ---

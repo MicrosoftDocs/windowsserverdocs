@@ -2,8 +2,8 @@
 title: STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
 description: Learn how to test Teredo connectivity and IP-HTTPS connectivity on both client computers.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 13 Test DirectAccess Connectivity from Behind a NAT Device

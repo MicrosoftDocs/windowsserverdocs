@@ -2,8 +2,8 @@
 title: RAS Gateway
 description: This topic, which is intended for Information Technology (IT) professionals, provides overview information about RAS Gateway, including RAS Gateway deployment modes and features in Windows Server 2016.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/23/2018
 ---
 

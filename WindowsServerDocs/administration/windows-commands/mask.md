@@ -2,8 +2,8 @@
 title: mask
 description: Reference article for the mask command, which removes hardware shadow copies that were imported by using the import command.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

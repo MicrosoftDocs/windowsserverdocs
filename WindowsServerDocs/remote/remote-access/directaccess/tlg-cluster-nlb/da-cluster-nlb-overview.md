@@ -2,8 +2,8 @@
 title: Overview of the DirectAccess Cluster-NLB Test Lab Scenario
 description: Learn about the DirectAccess Cluster-NLB test lab Scenario and the three subnets it consists of.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Overview of the DirectAccess Cluster-NLB Test Lab Scenario

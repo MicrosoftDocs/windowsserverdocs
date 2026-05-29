@@ -2,8 +2,8 @@
 title: chkdsk
 description: Reference article for the chkdsk command, which checks the file system and file system metadata of a volume for logical and physical errors.
 ms.topic: reference
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/23/2025
 ---
 

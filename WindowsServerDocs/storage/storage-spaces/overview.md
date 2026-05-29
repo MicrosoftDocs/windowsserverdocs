@@ -3,8 +3,8 @@ title: Storage Spaces overview
 description: Discover how Storage Spaces in Windows Server simplifies storage management, provides redundancy, and supports flexible virtual disks. Learn how to optimize your organization’s storage.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/12/2025
 ---
 

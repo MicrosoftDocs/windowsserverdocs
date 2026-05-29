@@ -2,8 +2,8 @@
 title: Slmgr.vbs Options for Obtaining Volume Activation Information
 description: Provides a list of options available for the Slmgr.vbs script and describes usage cases.
 ms.topic: best-practice
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/07/2025
 ---
 

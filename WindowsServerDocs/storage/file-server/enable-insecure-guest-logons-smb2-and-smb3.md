@@ -2,8 +2,8 @@
 title: Enable insecure guest logons in SMB2 and SMB3 for Windows client and Windows Server
 description: This article describes how to enable guest logons policy in SMB2 and SMB3 for Windows client and Windows Server devices using Group Policy and PowerShell.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/13/2025
 ---
 

@@ -1450,6 +1450,8 @@
       href: subst.md
     - name: sxstrace
       href: sxstrace.md
+    - name: sysmon
+      href: sysmon.md
     - name: sysocmgr
       href: sysocmgr.md
     - name: systeminfo

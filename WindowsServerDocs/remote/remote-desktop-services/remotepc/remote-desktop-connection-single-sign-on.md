@@ -3,8 +3,8 @@ title: Connect to a Remote PC with Single Sign-On Using Microsoft Entra Authenti
 description: Learn how to connect to remote PCs seamlessly with Microsoft Entra single sign-on authentication using Remote Desktop Connection (MSTSC). Follow our step-by-step guide.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/07/2025
 ---
 

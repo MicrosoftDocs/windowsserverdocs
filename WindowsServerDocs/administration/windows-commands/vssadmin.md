@@ -2,8 +2,8 @@
 title: vssadmin
 description: Reference article for the vssadmin commands, which displays current volume shadow copy backups and all installed shadow copy writers and providers.
 ms.topic: reference
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/18/2018
 ---
 

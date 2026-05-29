@@ -2,8 +2,8 @@
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Set-up Work Folders"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 3, Set Up Work Folders
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 4/5/2017
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 3, Set-up Work Folders

@@ -2,8 +2,8 @@
 title: Unregister an NPS from an Active Directory Domain
 description: Learn how to unregister an NPS from an Active Directory Domain so you can move an NPS to another domain, replace an NPS, or retire an NPS.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

@@ -2,8 +2,8 @@
 title: set commands
 description: Reference article for the set commands, which sets the context, options, verbose mode, and metadata file for shadow copy creation.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

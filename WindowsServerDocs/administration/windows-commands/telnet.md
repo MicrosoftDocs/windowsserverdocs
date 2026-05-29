@@ -2,8 +2,8 @@
 title: telnet
 description: Reference article for the telnet command, which communicates with a computer running the telnet server service.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 6/21/2022
 ---
 

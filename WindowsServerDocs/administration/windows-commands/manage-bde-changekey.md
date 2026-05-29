@@ -2,8 +2,8 @@
 title: manage-bde changekey
 description: Reference article for the manage-bde changekey command, which modifies the startup key for an operating system drive.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

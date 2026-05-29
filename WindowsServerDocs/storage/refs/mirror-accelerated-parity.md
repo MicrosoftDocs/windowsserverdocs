@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Mirror-accelerated parity"
 title: Mirror-accelerated parity
-ms.author: daknappe
+ms.author: roharwoo
 ms.topic: concept-article
-author: dknappettmsft
+author: robinharwood
 ms.date: 10/17/2018
 ---
 # Mirror-accelerated parity

@@ -2,8 +2,8 @@
 title: set
 description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/06/2023
 ---
 

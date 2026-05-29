@@ -2,8 +2,8 @@
 title: prnport
 description: Reference article for the prnport command, which creates, deletes, and lists standard TCP/IP printer ports, in addition to displaying and changing port configuration.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

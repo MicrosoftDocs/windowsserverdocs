@@ -2,8 +2,8 @@
 title: Windows Admin Center SDK Case Study - NEC
 description: Windows Admin Center SDK Case Study - NEC
 ms.topic: partner-tools
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/01/2019
 ms.custom: sfi-image-nochange
 ---

@@ -3,8 +3,8 @@ title: Configure RD Connection Broker for High Availability
 description: Learn to configure the Remote Desktop Connection Broker for high availability in Remote Desktop Services.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/02/2025
 ms.custom: sfi-ropc-nochange
 ---

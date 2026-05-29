@@ -2,8 +2,8 @@
 title: STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration
 description: Learn how to create and save a snapshot of the DirectAccess Cluster-NLB configuration test lab.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration

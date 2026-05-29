@@ -2,8 +2,8 @@
 title: Step 3 Configure a Load-Balanced Cluster
 description: Learn how to configure load-balancing on the single server, configure the required certificates, and deploy the cluster.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 3 Configure a Load-Balanced Cluster

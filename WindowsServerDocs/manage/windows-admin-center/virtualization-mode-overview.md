@@ -4,7 +4,7 @@ description: Learn what Windows Admin Center Virtualization Mode is. See how it 
 author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 11/17/2025
+ms.date: 05/01/2026
 ai-usage: ai-assisted
 #customer intent: As a virtualization operator, I want to understand what Windows Admin Center Virtualization Mode is, so that I can efficiently administer distributed Hyper-V resources at scale.
 ---
@@ -14,12 +14,14 @@ ai-usage: ai-assisted
 > [!IMPORTANT]
 > Windows Admin Center Virtualization Mode is currently in PREVIEW.
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> To file issues, questions, and feedback not covered in this documentation, visit [the Windows Admin Center feedback platform](https://github.com/MicrosoftDocs/Windows-Admin-Center-Ideas-and-Feedback).
 
-Windows Admin Center Virtualization Mode is a purpose-built management experience for virtualization infrastructure. It enables IT professionals to centrally administer Hyper-V hosts, clusters, storage, and networking at scale.
+Windows Admin Center Virtualization Mode is a purpose-built management experience for virtualization infrastructure. IT professionals can use it to centrally administer Hyper-V hosts, clusters, storage, and networking at scale.
 
 Unlike administration mode, which focuses on general system management, Virtualization Mode focuses on fabric management. It supports parallel operations and contextual views for compute, storage, and network resources. This mode is optimized for large-scale, cluster-based environments and integrates lifecycle management, global search, and role-based access control.
 
-Watch the following video to get an overview of Windows Admin Center Virtualization Mode.
+To get an overview of Windows Admin Center Virtualization Mode, watch the following video.
 </br></br>
 
 > [!VIDEO 872cf385-a09d-439e-8afc-39f78348fd57]
@@ -28,7 +30,7 @@ Virtualization Mode offers the following key capabilities:
 
 - Search across navigation objects with contextual filtering.
 - Support for SAN, NAS, hyperconverged, and scale-out file server architectures.
-- VM templates, integrated disaster recovery with Hyper-V Replica, and onboarding of Arc-enabled resources (future capability).
+- VM templates for standardized provisioning. For more information about creating and deploying VM templates, see [Use VM templates in Virtualization Mode](use-virtualization-mode-vm-templates.md).
 - Software-defined storage and networking (not available at this time).
 
 ## Operational modes
@@ -60,10 +62,10 @@ Virtualization Mode includes the following tools and features:
 
 | Host profile | Tools and features |
 |-------------|-----------------------|
-| Compute (hosts) | - Overview dashboard<br>- Settings<br>- Updates<br>- Virtual Machines<br>- Servers<br>- Volumes<br>- VM Conversion<br>- Hyper-V Replica<br>- GPU-P |
+| Compute (hosts) | - Overview dashboard<br>- Settings<br>- Updates<br>- Virtual Machines<br>- Servers<br>- Volumes<br>- Hyper-V Replica<br>- GPU-P |
 | Compute (servers) | - Dashboard<br>- Settings<br>- Events<br>- Firewall<br>- Updates<br>- Virtual Machines<br>- Networks<br>- Storage |
-| Storage | Profile not available at this time. |
-| Networking | Profile not available at this time. |
+| Storage | The Storage view displays onboarded storage devices and their linked compute systems. |
+| Networking | The Network view lets you browse, create, edit, and delete network intent templates. The networking host profile isn't available at this time. |
 
 To learn about the tools available to Administration Mode for non-virtualization scenarios, see [Manage Servers with Windows Admin Center](use/manage-servers.md).
 
@@ -97,14 +99,16 @@ Host profiles indicate the service a system provides to virtual machines within 
 Profile types:
 
 - Compute: Hosts provide compute virtualization.
-- Storage: Storage systems for virtual machines (SAN, NAS, or hyperconverged using Storage Spaces Direct). The storage profile isn't available at this time.
-- Networking: Software Defined Networking (SDN) services for virtual machines. The networking profile isn't available at this time.
+- Storage: Storage systems for virtual machines (SAN, NAS, or hyperconverged using Storage Spaces Direct). The Storage view displays onboarded storage devices linked to your compute systems. The storage host profile isn't available at this time.
+- Networking: Software Defined Networking (SDN) services for virtual machines. The Network view lets you manage network intent templates. The networking host profile isn't available at this time.
 
 ### Network intent templates
 
-Windows Admin Center vMode introduces a new concept called a _Network intent template_, which is an abstracted, predefined intent that you didn't yet apply to a network adapter or associate with a cluster or standalone host. A Network Intent Template essentially serves as a blueprint that you can use to create intents after you specify which NICs the template should apply to.
+Windows Admin Center Virtualization Mode introduces a concept called a _Network intent template_, which is an abstracted, predefined intent that you didn't yet apply to a network adapter or associate with a cluster or standalone host. A network intent template serves as a blueprint that you can use to create intents after you specify which NICs the template should apply to.
 
-Currently, you apply Network intent templates to the specific nodes in the Add Resource workflow but the template isn't saved after exiting the workflow. To onboard other nodes in the Add Resource workflow, you need to recreate the template.
+Network intent templates persist across sessions. After you create a template in the Add Resource workflow, it's saved and available for reuse the next time you onboard new hosts or clusters. You can select a saved template from the dropdown without recreating it. For more information about configuring network intent templates during onboarding, see [Add resources in Virtualization Mode](add-virtualization-mode-resources.md#add-resources).
+
+You can also manage network intent templates outside of the Add Resource workflow. Select the **Network** view in the top navigation bar to browse, create, edit, and delete your network intent templates.
 
 ## Next steps
 

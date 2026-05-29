@@ -2,8 +2,8 @@
 title: Use live migration with workgroup clusters in Windows Server
 description: This article provides an overview of live migration functionality with workgroup clusters in Windows Server 2025.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/24/2024
 ---
 

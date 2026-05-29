@@ -2,8 +2,8 @@
 title: Step 2 Configure the Multisite Infrastructure
 description: Learn about how, to configure a multisite deployment, there are a number of steps required to modify network infrastructure settings.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Multisite Infrastructure

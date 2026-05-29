@@ -3,8 +3,8 @@ title: Change Remote Desktop listening port on Windows and Windows Server
 description: Learn to change the Remote Desktop listening port on Windows and Windows Server for enhanced security or configuration.
 ms.topic: how-to
 ai-usage: ai-assisted
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/30/2025
 ---
 

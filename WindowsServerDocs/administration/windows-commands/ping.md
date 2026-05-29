@@ -2,8 +2,8 @@
 title: ping
 description: Reference article for the ping command, which verifies network connectivity.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/15/2023
 ---
 

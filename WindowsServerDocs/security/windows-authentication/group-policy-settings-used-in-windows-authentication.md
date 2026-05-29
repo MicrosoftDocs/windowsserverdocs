@@ -2,8 +2,8 @@
 title: Group Policy Settings Used in Windows Authentication
 description: Learn about the use and impact of Group Policy settings in the authentication process.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Group Policy Settings Used in Windows Authentication

@@ -2,8 +2,8 @@
 title: Migrate a Certification Authority in Windows Server
 description: Learn how to migrate your Certification Authority with step-by-step instructions and best practices.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/22/2025
 #customer intent: As a system administrator, I want to migrate the Certification Authority so that I can ensure continuity of certificate services.
 ---
@@ -220,8 +220,6 @@ By default, the CRL validity period is equal to the CRL publishing period plus 1
 ## Remove the CA role service from the source server
 
 It's important to remove the CA role service from the source server after completing backup procedures and before installing the CA role service on the destination server. Enterprise CAs and standalone CAs that are domain members store in Active Directory Domain Services (AD DS) configuration data that is associated with the common name of the CA. Removing the CA role service also removes the CAs configuration data from AD DS. Because the source CA and destination CA share the same common name, removing the CA role service from the source server after installing the CA role service on the destination server removes configuration data that is required by destination CA and interferes with its operation.
-
-The CA database, private key, and certificate aren't removed from the source server by removing the CA role service. Therefore, reinstalling the CA role service on the source server restores the source CA if migration fails and performing a rollback is required.
 
 > [!WARNING]
 > Although it isn't recommended, some administrators may choose to leave the CA role service installed on the source server to enable the source CA to be brought online quickly if migration fails. If you choose not to remove the CA role service from the source server before installing the CA role service on the destination server, it's important that you disable the Active Directory Certificate Services service (Certsvc) and shut down the source server before installing the CA role service on the destination server. Don't remove the CA role service from the source server after completing the migration to the destination server.

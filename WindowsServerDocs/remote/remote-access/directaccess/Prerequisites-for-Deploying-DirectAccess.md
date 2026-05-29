@@ -2,8 +2,8 @@
 title: Prerequisites for Deploying DirectAccess
 description: This topic provides prerequisites for DirectAccess deployment in Windows Server 2016.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Prerequisites for Deploying DirectAccess

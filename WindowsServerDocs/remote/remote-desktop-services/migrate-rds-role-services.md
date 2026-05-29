@@ -1,10 +1,10 @@
 ---
 title: Migrate your Remote Desktop Services deployment
 description: This article describes how to migrate your Remote Desktop Services deployment to the newest Windows Server version.
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: upgrade-and-migration-article
-author: dknappettmsft
+author: robinharwood
 ---
 # Migrate your Remote Desktop Services deployment to a newer Windows Server version
 

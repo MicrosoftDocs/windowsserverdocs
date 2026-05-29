@@ -2,8 +2,8 @@
 title: tree
 description: Reference article for tree, which displays the directory structure of a path, or of the disk in a drive, graphically.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

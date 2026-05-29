@@ -3,8 +3,8 @@ title: SMBv1 Not Installed by Default in Windows Server and Windows
 description: Discover SMBv1 protocol changes in Windows Server and Windows, explore alternatives for legacy compatibility, and learn best practices.
 ms.topic: troubleshooting
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/18/2025
 ---
 

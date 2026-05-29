@@ -2,8 +2,8 @@
 title: set verbose
 description: Reference article for the set verbose command, which specifies whether verbose output is provided during shadow copy creation.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

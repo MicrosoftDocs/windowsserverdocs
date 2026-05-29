@@ -2,8 +2,8 @@
 title: Set up a NAT network
 description: Learn how to create a network address translation (NAT) virtual network using PowerShell, and then connect a virtual machine.
 keywords: windows 10, windows 11, hyper-v
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/22/2025
 ms.topic: how-to
 ---

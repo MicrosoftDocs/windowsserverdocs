@@ -2,8 +2,8 @@
 title: pushd
 description: Reference article for the pushd command, which stores the current directory for use by the popd command, and then changes to the specified directory.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

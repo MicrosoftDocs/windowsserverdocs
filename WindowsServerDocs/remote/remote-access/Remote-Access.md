@@ -2,8 +2,8 @@
 title: Remote Access
 description: This topic provides an overview of the Remote Access services in Windows Server.
 ms.topic: overview
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/28/2022
 ---
 

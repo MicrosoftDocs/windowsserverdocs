@@ -2,8 +2,8 @@
 title: telnet open
 description: Reference article for the telnet open command, which connects to a telnet server.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

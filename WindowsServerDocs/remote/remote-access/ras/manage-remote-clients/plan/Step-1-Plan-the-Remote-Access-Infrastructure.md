@@ -2,8 +2,8 @@
 title: Step 1 Plan the Remote Access Infrastructure
 description: Learn about the steps for planning an infrastructure that you can use to set up a single Remote Access server for remote management of DirectAccess clients.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Remote Access Infrastructure

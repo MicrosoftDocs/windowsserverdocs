@@ -2,8 +2,8 @@
 title: Register an NPS in an Active Directory Domain
 description: Learn how to register a server running Network Policy Server in Windows Server 2016 in the NPS default domain or in another domain.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

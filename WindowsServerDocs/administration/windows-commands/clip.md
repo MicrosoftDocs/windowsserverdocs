@@ -2,8 +2,8 @@
 title: clip
 description: Reference article for the clip command, which redirects the command output from the command line to the Windows clipboard.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 no-loc: [clip]
 ms.date: 10/16/2017
 ---

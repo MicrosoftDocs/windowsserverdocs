@@ -2,8 +2,8 @@
 title: tskill
 description: Reference article for the tskill command, which ends a process running in a session on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: Overview of the Test Lab Scenario OTP Authentication and RSA SecurID
 description: Learn about extending the Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 test lab guide to demonstrate a Remote Access one-time password (OTP) configuration.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario OTP Authentication and RSA SecurID

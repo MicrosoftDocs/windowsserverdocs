@@ -3,8 +3,8 @@ title: dcdiag
 description: DCDiag is used to diagnose Active Directory domain controller health and as a troubleshooting tool by performing several network connectivity tests.
 ms.topic: reference
 ms.date: 11/14/2023
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
 ms.contributor: nedpyle
 ---

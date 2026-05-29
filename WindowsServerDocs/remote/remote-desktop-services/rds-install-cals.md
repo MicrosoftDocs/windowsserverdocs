@@ -3,8 +3,8 @@ title: Install Remote Desktop Services client access licenses
 description: Learn how to install Remote Desktop Services client access licenses (CALs), ready to license your session hosts.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/29/2025
 ---
 

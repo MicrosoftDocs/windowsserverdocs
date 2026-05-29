@@ -2,8 +2,8 @@
 description: "Learn more about: Create OS specialization answer file"
 title: Create OS specialization answer file
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ms.custom: sfi-image-nochange
 ---

@@ -2,8 +2,8 @@
 title: manage-bde resume
 description: Reference article for the manage-bde resume command, which resumes BitLocker encryption or decryption after it has been paused.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

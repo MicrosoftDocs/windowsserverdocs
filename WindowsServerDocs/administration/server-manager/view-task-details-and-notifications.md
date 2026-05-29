@@ -2,8 +2,8 @@
 title: View Task details and Notifications
 description: Learn how to view the status of user tasks or requests, see if a task failed, and troubleshoot problems by accessing detailed error messages about task failures.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # View Task details and Notifications

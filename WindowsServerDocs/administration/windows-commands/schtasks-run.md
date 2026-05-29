@@ -2,8 +2,8 @@
 title: schtasks run
 description: Reference article for the schtasks run command, which
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/16/2020
 ---
 

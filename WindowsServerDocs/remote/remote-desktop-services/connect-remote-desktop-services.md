@@ -2,8 +2,8 @@
 title: Connect to Remote Desktop Services in Windows Server
 description: Learn how you can connect to a remote session from Remote Desktop Services in Windows Server using Windows App or the Remote Desktop client.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/19/2025
 ---
 

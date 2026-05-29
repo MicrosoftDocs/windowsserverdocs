@@ -2,8 +2,8 @@
 title: Configure Firewalls for RADIUS Traffic
 description: This topic provides an overview of how to configure firewalls to allow RADIUS traffic for Network Policy Server in Windows Server 2016.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 

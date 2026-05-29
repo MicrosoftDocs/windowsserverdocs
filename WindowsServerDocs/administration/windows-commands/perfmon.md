@@ -2,8 +2,8 @@
 title: perfmon
 description: Reference article for the perfmon command, which starts the Windows Reliability and Performance Monitor in a specific standalone mode.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/25/2018
 ---
 

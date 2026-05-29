@@ -2,8 +2,8 @@
 title: title
 description: Reference article for the title command, which creates a title for the Command Prompt window.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

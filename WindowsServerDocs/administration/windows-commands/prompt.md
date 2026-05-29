@@ -2,8 +2,8 @@
 title: prompt
 description: Reference article for the prompt command, which customizes your Cmd.exe command prompt.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

@@ -3,8 +3,8 @@ title: Configure Certificate Auto-Enrollment for Network Policy Server
 description: Learn how to configure server and user certificate auto-enrollment for NPS using Group Policy. Ensure secure, automated certificate management.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/30/2025
 ---
 

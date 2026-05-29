@@ -2,8 +2,8 @@
 title: query commands
 description: Reference article for the query commands, which displays information about processes, sessions, and Remote Desktop Session Host servers.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

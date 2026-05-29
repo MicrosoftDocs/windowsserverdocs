@@ -2,8 +2,8 @@
 title: Manage Certificates Used with NPS
 description: This topic provides information about using server certificates with Network Policy Server in Windows Server 2016.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
@@ -16,6 +16,56 @@ If you deploy a certificate-based authentication method, such as Extensible Auth
 - Be issued by a certification authority \(CA\) that is trusted by client computers. A CA is trusted when its certificate exists in the Trusted Root Certification Authorities certificate store for the current user and local computer.
 
 The following instructions assist in managing NPS certificates in deployments where the trusted root CA is a third-party CA, such as Verisign, or is a CA that you have deployed for your public key infrastructure \(PKI\) by using Active Directory Certificate Services \(AD CS\).
+
+## Handling certificate expiration
+
+In Network Policy Server (NPS) on Windows Server, the server certificate that you bind to a network policy isn't updated automatically when it expires. When the certificate applied to a policy expires, an administrator must manually update each policy that uses certificate-based authentication to reference a new, non-expired certificate. Until you update the policy, clients that rely on that policy can't successfully authenticate.
+
+>[!NOTE]
+>This manual step isn't required on NPS servers configured for certificate autoenrollment. By using autoenrollment, the server certificate is renewed automatically before it expires, and NPS continues to use the renewed certificate without administrator intervention.
+
+You must repeat the following procedure for every network policy that's configured to use certificate-based authentication (for example, EAP-TLS, PEAP-TLS, or PEAP-MS-CHAP v2).
+
+Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.
+
+### To update the certificate on a network policy
+
+1. Open the **Network Policy Server** console.
+
+1. In the console tree, expand **Policies**, and then select **Network Policies**.
+
+1. In the details pane, right-click the policy that you want to update, and then select **Properties**.
+
+1. Select the **Constraints** tab, and then select **Authentication Methods**.
+
+1. In the **EAP Types** list, select the EAP type that uses the expiring certificate, and then select **Edit**.
+
+1. From the **Certificate issued to** drop-down list, select the new (non-expired) certificate, and then select **OK**.
+
+1. Select **Apply**, and then select **OK** to close the policy properties.
+
+1. Repeat the previous steps for each network policy that's configured for certificate-based authentication.
+
+1. Restart the **Network Policy Server** (IAS) service for the change to take effect. From an elevated command prompt, run:
+
+   ```cmd
+   net stop ias && net start ias
+### To validate the certificate bound to a network policy
+
+To confirm which certificate a network policy is currently using, export the NPS configuration, locate the policy by name, and read the thumbprint of the configured certificate from the EAP configuration blob.
+
+1. From an elevated PowerShell prompt, run the following snippet. Set `$PolicyName` to the name of the network policy you want to validate.
+
+   ```powershell
+   $PolicyName = "EAP configured network policy"  # Change this to your policy name (case-insensitive)
+   $NPSConfigPath = "$env:TEMP\nps-config.xml"
+   Export-NpsConfiguration -Path $NPSConfigPath
+   $blob = (([xml](Get-Content "$env:TEMP\nps-config.xml" -Raw)).SelectNodes("//RadiusProfiles//*[@name]") | Where-Object { $_.name -ieq $PolicyName }).Properties.msEAPConfiguration.'#text'
+   $found = [regex]::Matches($blob, '14000000([0-9a-f]{40})') | ForEach-Object { $_.Groups[1].Value.ToUpper() } | Select-Object -Unique
+   if (-not $found) { "No certificate thumbprint found in policy '$PolicyName'" } elseif ($found.Count -eq 1) { "Bound certificate thumbprint:$found" } else { "WARNING: multiple candidate thumbprints found, manual review of $NPSConfigPath needed:`n$($found -join "`n")" }
+   ```
+
+1. Compare the returned thumbprint against the thumbprint of the certificate you expect the policy to use (for example, in the **Certificates** snap-in under the **Local Computer** > **Personal** store). If they match, the policy is bound to the expected certificate.
 
 ## Change the Cached TLS Handle Expiry
 

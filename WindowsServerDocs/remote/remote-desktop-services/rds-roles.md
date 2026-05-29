@@ -1,10 +1,10 @@
 ---
 title: Remote Desktop Services roles
 description: Learn about the roles within a Remote Desktop Services environment in Windows Server.
-author: dknappettmsft
+author: robinharwood
 ms.date: 7/3/2024
 ms.topic: concept-article
-ms.author: daknappe
+ms.author: roharwoo
 ---
 # Remote Desktop Services roles
 

@@ -2,8 +2,8 @@
 title: rundll32 printui.dll,PrintUIEntry
 description: Reference article for the rundll32 printui.dll,PrintUIEntry command, which automates many printer configuration tasks.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/25/2018
 ---
 

@@ -2,8 +2,8 @@
 title: Setting up Update Synchronizations
 description: Windows Server Update Service (WSUS) topic - How to setup and configure Update Synchronizations
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

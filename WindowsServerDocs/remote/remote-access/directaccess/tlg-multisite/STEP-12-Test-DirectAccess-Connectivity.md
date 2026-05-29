@@ -2,8 +2,8 @@
 title: STEP 12 Test DirectAccess Connectivity
 description: Learn how to make sure client computers that are located on the Internet or Homenet networks have the correct group policy settings.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 12 Test DirectAccess Connectivity

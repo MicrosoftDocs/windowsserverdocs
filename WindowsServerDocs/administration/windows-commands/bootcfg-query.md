@@ -2,8 +2,8 @@
 title: bootcfg query
 description: Reference article for the bootcfg query command, which queries and displays the boot loader and operating system section entries from Boot.ini.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # bootcfg query

@@ -2,8 +2,8 @@
 title: subst
 description: Reference article for the subst command, which associates a path with a drive letter.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

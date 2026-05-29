@@ -3,8 +3,8 @@ title: Hyper-V Generation 2 Virtual Machine Security Features
 description: Discover Hyper-V generation 2 VM security features to protect data and prevent tampering. Learn about secure booting, encryption, and shielding options.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/01/2025
 ---
 

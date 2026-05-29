@@ -2,8 +2,8 @@
 metadata:
   title: Storage Migration Service frequently asked questions (FAQ)
   description: Frequently asked questions about Storage Migration Service, such as what files are excluded from transfers when migrating from one server to another.
-  author: dknappettmsft
-  ms.author: daknappe
+  author: robinharwood
+  ms.author: roharwoo
   ms.date: 08/14/2024
   ms.topic: faq
   ms.service: windows-server

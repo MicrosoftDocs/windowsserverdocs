@@ -2,8 +2,8 @@
 title: print
 description: Reference article for the print command, which sends a text file to a printer.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

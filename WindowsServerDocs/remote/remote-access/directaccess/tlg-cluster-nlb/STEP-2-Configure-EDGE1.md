@@ -2,8 +2,8 @@
 title: STEP 2 Configure EDGE1
 description: Learn how to configure DirectAccess on the EDGE1 server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 2 Configure EDGE1

@@ -2,8 +2,8 @@
 title: Plan for retention of information on file servers
 description: Plan how you can retain information on file servers.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/01/2022
 ---
 

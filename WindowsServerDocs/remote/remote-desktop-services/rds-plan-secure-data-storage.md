@@ -2,8 +2,8 @@
 title: Remote Desktop Services - Secure data storage
 description: Planning information for securely storing data by using user profile disks (UPDs) in RDS.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Remote Desktop Services - Secure data storage with UPDs

@@ -1,8 +1,8 @@
 ---
 description: Learn more about securing domain controllers against attack.
 title: Securing Domain Controllers Against Attack
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/09/2025
 ms.topic: concept-article
 ms.reviewer: rickys

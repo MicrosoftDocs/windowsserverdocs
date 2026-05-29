@@ -2,8 +2,8 @@
 title: Print command-line tool reference
 description: Reference article for using the print command-line tools.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

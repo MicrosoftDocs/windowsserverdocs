@@ -3,8 +3,8 @@ title: Configure security baselines for Windows Server 2025
 description: Learn how to deploy security baselines using OSConfig to enforce granular security settings to better protect and harden your Windows Server 2025 environment.
 ms.topic: how-to
 ms.product: windows-server
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral, Simon Jäger
 ms.date: 03/11/2025
 ---
@@ -61,7 +61,7 @@ Before you can apply a security baseline for the first time, you need to install
 1. Run the following command to install the OSConfig module:
 
    ```powershell
-   Install-Module -Name Microsoft.OSConfig -Scope AllUsers -Repository PSGallery -Force
+   Install-Module -Name Microsoft.OSConfig -Scope AllUsers -Force
    ```
 
    If you're prompted to install or update the NuGet provider, select **Yes**.
@@ -85,7 +85,7 @@ _Alternatively_, you can use the [Save-Module](/powershell/module/powershellget/
 1. Run the following command to save the OSConfig module on the local device replacing **Server01** with your device name or IP address:
 
    ```powershell
-   Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public" -Repository PSGallery
+   Save-Module -Name Microsoft.OSConfig -Path "\\Server01\Public"
    Get-ChildItem -Path "\\Server01\Public"
    ```
 
@@ -287,4 +287,3 @@ Provide us **OSConfig security baseline** as the feedback title. Under **Choose 
 ## Related content
 
 - [Configure App Control for Business with OSConfig](osconfig-how-to-configure-app-control-for-business.md)
-

@@ -3,8 +3,8 @@ title: License Remote Desktop Services with Client Access Licenses (CALs)
 description: Learn about Remote Desktop Services Client Access Licenses (CALs). Understand CAL types, compatibility, and ensure compliance.
 ms.topic: concept-article
 ai-usage: ai-assisted 
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/16/2025
 ---
 
@@ -61,22 +61,22 @@ You can use the Remote Desktop Licensing Manager to track and generate reports o
 
 ## RDS CAL version compatibility
 
-The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device is connecting to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, if you have RDS CALs for Windows Server 2022, you can connect to a session host running Windows Server 2022 or earlier, but you can't use it to connect to a session host running Windows Server 2025.
+The RDS CAL for your users or devices must be compatible with the version of Windows Server that the user or device connects to. You can't use RDS CALs for earlier versions to access later versions of Windows Server, but you can use later versions of RDS CALs to access earlier versions of Windows Server. For example, if you have RDS CALs for Windows Server 2022, you can connect to a session host running Windows Server 2022 or earlier, but you can't use them to connect to a session host running Windows Server 2025.
 
-The following table shows which version of Windows Server for RDS CALs and session hosts are compatible with each other.
+The following table shows which versions of Windows Server for RDS CALs and session hosts are compatible with each other.
 
-| Session host Window Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
+| Session host Windows Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
 |--|--|--|--|--|
 | Windows Server 2025 | Yes | No | No | No |
 | Windows Server 2022 | Yes | Yes | No | No |
 | Windows Server 2019 | Yes | Yes | Yes | No |
 | Windows Server 2016 | Yes | Yes | Yes | Yes |
 
-You must also install your RDS CALs on a Remote Desktop Licensing server running a compatible version of Windows Server. You can install RDS CALs on a license server running the same version of Windows Server as the RDS CALs or earlier. For example, if you have RDS CALs for Windows Server 2022, you can install them on a license server running Windows Server 2022 or earlier, but you can't use it to install RDS CALs for Windows Server 2025.
+You must also install your RDS CALs on a Remote Desktop Licensing server running a compatible version of Windows Server. You can install RDS CALs on a license server running the same version of Windows Server as the RDS CALs or later. For example, if you have RDS CALs for Windows Server 2022, you can install them on a license server running Windows Server 2022 or later, but you can't use it to install RDS CALs for Windows Server 2025.
 
 The following table shows which RDS CAL and license server versions are compatible with each other.
 
-| License server Window Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
+| License server Windows Server version | Windows Server 2025 RDS CAL | Windows Server 2022 RDS CAL | Windows Server 2019 RDS CAL | Windows Server 2016 RDS CAL |
 |--|--|--|--|--|
 | Windows Server 2025 | Yes | Yes | Yes | Yes |
 | Windows Server 2022 | No | Yes | Yes | Yes |

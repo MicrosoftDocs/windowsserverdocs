@@ -2,8 +2,8 @@
 title: wmic
 description: Reference article for wmic, which displays WMI information inside an interactive command shell.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/19/2025
 ---
 

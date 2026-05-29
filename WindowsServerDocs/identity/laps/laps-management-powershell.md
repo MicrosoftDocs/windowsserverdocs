@@ -2,7 +2,7 @@
 title: Windows LAPS PowerShell Cmdlets Overview
 description: Explore Windows LAPS PowerShell cmdlets to manage passwords securely. Learn key features, benefits, and usage.
 author: jay98014
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 05/06/2025
 ms.topic: concept-article
 ai-usage: ai-assisted

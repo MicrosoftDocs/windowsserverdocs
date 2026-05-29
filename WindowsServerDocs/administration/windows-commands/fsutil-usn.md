@@ -1,8 +1,8 @@
 ---
 title: fsutil usn
 description: Reference article for the fsutil usn command, which manages the update sequence number (USN) change journal.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---

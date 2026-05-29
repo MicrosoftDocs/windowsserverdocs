@@ -2,8 +2,8 @@
 title: type
 description: Reference article for the type command, which displays the contents of a text file.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2020
 ---
 

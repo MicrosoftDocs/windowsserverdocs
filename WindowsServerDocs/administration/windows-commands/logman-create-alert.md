@@ -2,8 +2,8 @@
 title: logman create alert
 description: Reference article for the logman create alert command, which creates an alert data collector.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

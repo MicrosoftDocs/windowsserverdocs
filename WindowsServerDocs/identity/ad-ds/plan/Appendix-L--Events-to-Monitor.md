@@ -1,8 +1,8 @@
 ---
 title: Appendix L - Events to Monitor
 description: "Learn more about: Appendix L: Events to Monitor"
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/30/2025
 ms.topic: concept-article
 ---

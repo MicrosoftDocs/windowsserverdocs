@@ -2,8 +2,8 @@
 title: bitsadmin takeownership
 description: Reference article for the bitsadmin takeownership command, which lets a user with administrative privileges take ownership of the specified job.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

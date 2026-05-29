@@ -2,8 +2,8 @@
 title: merge vdisk
 description: Reference article for the merge vdisk command, which merges a differencing virtual hard disk (VHD) with its corresponding parent VHD.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

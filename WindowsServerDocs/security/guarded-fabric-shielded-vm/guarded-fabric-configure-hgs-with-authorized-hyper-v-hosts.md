@@ -2,8 +2,8 @@
 description: "Learn more about: Deploy guarded hosts"
 title: Deploy guarded hosts
 ms.topic: install-set-up-deploy
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

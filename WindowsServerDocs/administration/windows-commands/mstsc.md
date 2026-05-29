@@ -2,8 +2,8 @@
 title: mstsc
 description: Reference article for the mstsc command, which creates connections to Remote Desktop Session Host servers or other remote computers and edits an existing Remote Desktop Connection (.rdp) configuration file
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/19/2022
 ---
 

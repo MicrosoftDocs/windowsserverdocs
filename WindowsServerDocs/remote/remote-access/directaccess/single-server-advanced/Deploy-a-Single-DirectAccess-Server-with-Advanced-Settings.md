@@ -2,8 +2,8 @@
 title: Deploy a Single DirectAccess Server with Advanced Settings
 description: Learn about the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings

@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Windows Time Service"
 title: Windows Time Service
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/08/2018
 ms.topic: concept-article
 ---

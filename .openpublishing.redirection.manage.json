@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/use/migrate-vmware-to-hyper-v.md",
+      "redirect_url": "/windows-server/manage/windows-admin-center/use/vm-conversion-extension-overview",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/management/get-started-with-smt.md",
       "redirect_url": "https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog",
       "redirect_document_id": false

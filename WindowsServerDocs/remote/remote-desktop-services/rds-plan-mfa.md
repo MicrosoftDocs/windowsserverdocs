@@ -3,8 +3,8 @@ title: Plan Multifactor Authentication for Remote Desktop Services
 description: Learn how to plan and deploy Multifactor Authentication (MFA) with Remote Desktop Services (RDS) to enhance security and reduce unauthorized access risks.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/30/2025
 ---
 

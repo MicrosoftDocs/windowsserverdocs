@@ -1,8 +1,8 @@
 ---
 title: Network recommendations for a Hyper-V cluster
 description: Best-practice guidance for planning, isolating, and optimizing networking for a Windows Server Hyper-V failover cluster, including QoS, NIC Teaming, VMQ, and converged networking.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: best-practice
 ms.date: 10/27/2025
 #CustomerIntent: As a virtualization admin, I want network configuration recommendations for a Windows Server Hyper-V cluster so I can design a reliable and performant environment.

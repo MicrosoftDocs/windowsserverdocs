@@ -3,8 +3,8 @@ title: Hyper-V Replica overview
 description: Replicate virtual machines between Hyper-V hosts using Hyper-V Replica as part of a business continuity and disaster recovery (BCDR) strategy.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/10/2025
 ---
 

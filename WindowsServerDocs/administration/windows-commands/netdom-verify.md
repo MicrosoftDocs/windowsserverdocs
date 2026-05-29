@@ -2,8 +2,8 @@
 title: Netdom verify
 description: Netdom verify is a command-line utility that verifies the secure channel between a specified computer and a domain controller in Windows Server.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

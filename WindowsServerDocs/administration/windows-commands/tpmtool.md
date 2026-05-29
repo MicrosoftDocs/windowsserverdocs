@@ -2,8 +2,8 @@
 title: tpmtool
 description: Reference article for the tpmtool command, which gets information about the Trusted Platform Module.
 ms.topic: reference
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/07/2019
 ---
 

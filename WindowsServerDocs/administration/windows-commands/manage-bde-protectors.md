@@ -2,8 +2,8 @@
 title: manage-bde protectors
 description: Reference article for the manage-bde protectors command, which manages the protection methods used for the BitLocker encryption key.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/06/2018
 ---
 

@@ -2,8 +2,8 @@
 title: wdsutil disable-server
 description: Reference article for the wdsutil disable-server command, which disables all services for a Windows Deployment Services server.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

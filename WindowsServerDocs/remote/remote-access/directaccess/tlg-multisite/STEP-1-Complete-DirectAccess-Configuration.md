@@ -2,8 +2,8 @@
 title: Step 1 Complete the DirectAccess Configuration
 description: Learn How to complete the Test Lab Guide.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

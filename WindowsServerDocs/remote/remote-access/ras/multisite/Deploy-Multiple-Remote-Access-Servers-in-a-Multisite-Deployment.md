@@ -2,8 +2,8 @@
 title: Deploy Multiple Remote Access Servers in a Multisite Deployment
 description: Learn about the enterprise scenario for deploying Remote Access servers in a multisite configuration.
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment

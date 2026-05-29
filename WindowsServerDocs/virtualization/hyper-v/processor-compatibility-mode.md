@@ -3,8 +3,8 @@ title: Processor compatibility for Hyper-V virtual machines
 description: Learn about processor compatibility mode in Hyper-V, which limits processor features in a virtual machine to enable VM migration between hosts with different processors.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/06/2025
 ---
 

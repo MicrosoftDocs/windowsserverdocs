@@ -75,6 +75,9 @@ conceptualContent:
           - url: /windows-server/manage/windows-admin-center/use/manage-virtual-machines
             itemType: how-to-guide
             text: Windows Admin Center
+          - url: /windows-server/manage/windows-admin-center/virtualization-mode-overview
+            itemType: overview
+            text: Windows Admin Center Virtualization Mode
           - url: /system-center/vmm/overview
             itemType: overview
             text: System Center Virtual Machine Manager

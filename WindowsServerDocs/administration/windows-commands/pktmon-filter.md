@@ -2,8 +2,8 @@
 title: pktmon filter
 description: Reference article for the pktmon filter command that provides a listing of parameters and what they do.
 ms.topic: reference
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/24/2021
 ---
 

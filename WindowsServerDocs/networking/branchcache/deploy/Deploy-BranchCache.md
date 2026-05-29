@@ -2,8 +2,8 @@
 title: Deploy BranchCache
 description: Learn how to deploy BranchCache in distributed and hosted cache modes.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Deploy BranchCache

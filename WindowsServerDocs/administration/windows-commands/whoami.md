@@ -2,8 +2,8 @@
 title: whoami
 description: Reference article for whoami, which displays user, group and privileges information for the user who is currently logged on to the local system.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/23/2025
 ---
 

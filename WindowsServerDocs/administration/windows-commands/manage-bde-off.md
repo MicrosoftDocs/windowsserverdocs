@@ -2,8 +2,8 @@
 title: manage-bde off
 description: Reference article for the manage-bde off command, which decrypts the drive and turns off BitLocker.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

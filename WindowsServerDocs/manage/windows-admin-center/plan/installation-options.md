@@ -18,7 +18,7 @@ We don't recommend using Windows Admin Center for local management of the same s
 
 | Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| [Install](../deploy/install.md) on a local Windows 10 or 11 client that has connectivity to the managed servers. Great for quick start, testing, ad-hoc or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server. Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of remotely managing the server or a cluster in which it's a member node. Great for distributed scenarios. | [Deploy](#high-availability) in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+| [Install](../deploy/install.md) on a local Windows 11 client that has connectivity to the managed servers. Great for quick start, testing, ad-hoc, or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server. Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of remotely managing the server or a cluster in which it's a member node. Great for distributed scenarios. | [Deploy](#high-availability) in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## Installation: Supported operating systems
 
@@ -27,7 +27,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
 | Windows 11                         | Local client |
-| Windows 10                         | Local client |
+| Windows 11 ARM64 Client            | Local client |
 | Windows Server Semi-Annual Channel | Gateway server, managed server, failover cluster |
 | Windows Server 2025                | Gateway server, managed server, failover cluster |
 | Windows Server 2022                | Gateway server, managed server, failover cluster |
@@ -56,17 +56,13 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
 | Windows 11 | Yes (via Computer Management) | N/A |
-| Windows 10 | Yes (via Computer Management) | N/A |
+| Windows 11 ARM64 client | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
 | Windows Server 2025 | Yes | Yes |
 | Windows Server 2022 | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
 | Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Microsoft Hyper-V Server 2016 | Yes | Yes |
-| Windows Server 2012 R2 | Yes | Yes |
-| Microsoft Hyper-V Server 2012 R2 | Yes | Yes |
-| Windows Server 2012 | Yes | Yes |
-| Azure Local, version 22H2 and higher | Yes | Yes |
 
 Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
 

@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2018
 ms.topic: concept-article
 ---

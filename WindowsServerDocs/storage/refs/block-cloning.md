@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Block cloning on ReFS"
 title: Block cloning on ReFS
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 09/23/2024
 ms.topic: concept-article
 ---

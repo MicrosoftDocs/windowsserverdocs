@@ -2,8 +2,8 @@
 description: "Learn more about: Managing the Host Guardian Service"
 title: Managing the Host Guardian Service
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 

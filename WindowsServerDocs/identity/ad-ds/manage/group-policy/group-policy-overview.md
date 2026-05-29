@@ -3,7 +3,7 @@ title: Group Policy overview for Windows Server
 description: Learn about what Group Policy does and how it works with Active Directory Domain Services in Windows.
 author: orin-thomas
 ms.topic: overview
-ms.author: daknappe
+ms.author: roharwoo
 contributor: orthomas
 ms.date: 06/10/2025
 #customer intent: As an IT administrator, I want to understand Group Policy so that I can manage user and computer settings effectively.
@@ -15,12 +15,12 @@ Group Policy enables configuration and settings management of user and computer 
 
 ## What is a Group Policy
 
-Group policy can represent policy settings in the locally in the file system or in Active Directory Domain Services (AD DS). When used with Active Directory (AD), Group Policy settings are contained in a Group Policy Object (GPO). A GPO is a virtual collection of policy settings, security permissions, and scope of management (SOM) that you can apply to users and computers in AD. A GPO consists of two main components: the Group Policy container and the Group Policy template. The Group Policy container is stored in the domain partition of Active Directory, while the Group Policy template is located in the SYSVOL folder on each domain controller (DC).
+Group Policy is a feature of Windows that provides centralized management and configuration of operating systems, applications, and user settings. You can store Group Policy settings locally in the file system or in Active Directory Domain Services (AD DS). When you use Group Policy with Active Directory (AD), you store Group Policy settings in a Group Policy Object (GPO). A GPO is a virtual collection of policy settings, security permissions, and scope of management (SOM) that you can apply to users and computers in AD. A GPO consists of two main components: the Group Policy container and the Group Policy template. The Group Policy container is stored in the domain partition of Active Directory, while the Group Policy template is located in the SYSVOL folder on each domain controller (DC).
 
 
 These components are replicated across DCs via AD replication and either the File Replication Service (FRS) or Distributed File System Replication (DFSR).
 
-GPOs include configurations for both computer and user settings. Computer configurations apply system-wide and manage settings like power management and firewall rules. User configurations affect only the current user, with options such as Internet Explorer settings and Folder Redirection. GPOs can be linked to various levels within the AD hierarchy, such as sites, domains, and organizational units (OUs), which define their scope of application.
+Policy settings are categorized into those that apply to a computer and those that apply to a user. Computer configurations apply system-wide and manage settings like power management and firewall rules. User configurations affect only the current user, with options such as Internet Explorer settings and Folder Redirection. You can link GPOs to various levels within the AD hierarchy, such as sites, domains, and organizational units (OUs), which define their scope of application.
 
 Policy settings are applied at computer startup and user sign in. The Group Policy service determines applicable GPOs by querying the AD based on site, domain, and OU membership. A [Client-side extension](#client-side-extensions) (CSE) applies the specific settings dictated by the GPOs, managing tasks like registry updates and security configurations. Policy settings are applied to computers when they start up and to users when they sign in. When a computer starts up, the Group Policy service checks AD to determine which GPOs are linked and applicable to the computer object, including:
 

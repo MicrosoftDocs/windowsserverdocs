@@ -2,8 +2,8 @@
 title: Delegated Managed Service Accounts overview in Windows Server 2025
 description: Learn about delegated Managed Service Accounts (DMSA) that authenticate specific machine identities mapped in Active Directory along with Credential Guard to ensure device credentials isolation in Windows Server 2025.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.contributor: mariamgewida
 ms.date: 05/30/2025
 ---

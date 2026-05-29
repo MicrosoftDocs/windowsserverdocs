@@ -2,8 +2,8 @@
 title: Configure Windows Server Update Services (WSUS) Content Servers
 description: Learn how to configure Windows Server Update Services (WSUS) Content Servers to store update files on the local computer.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Configure Windows Server Update Services (WSUS) Content Servers

@@ -2,8 +2,8 @@
 title: Deploying the Host Guardian Service
 description: "Learn more about: Deploying the Host Guardian Service"
 ms.topic: install-set-up-deploy
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/14/2020
 ---
 

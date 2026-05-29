@@ -2,9 +2,9 @@
 title: Manage Group Managed Service Accounts
 description: Learn how to manage and use Group Managed Service Accounts (gMSA) in Windows Server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
-ms.date: 07/01/2025
+ms.author: roharwoo
+author: robinharwood
+ms.date: 04/16/2026
 ---
 
 # Manage group Managed Service Accounts
@@ -65,6 +65,8 @@ For Kerberos authentication to work with services using gMSAs, the following are
 - For the Kerberos ticket lifetime settings, configure the ticket expiration and renewal policies in line with your security and operational requirements.
 
 - All systems involved in the authentication process must have synchronized clocks. Kerberos is sensitive to time configuration, and discrepancies can cause authentication failures.
+
+- All systems that log on as, or install using a gMSA must support the Kerberos encryption types required by gMSA. Systems that don't meet this requirement can't log on or install gMSA.
 
 If you're managing AD from a computer that isn't a domain controller, install the Remote Server Administration Tools (RSAT) to access the necessary management features. RSAT provides the AD module for PowerShell. After installing RSAT, open PowerShell as an administrator and run `Import-Module ActiveDirectory` to enable AD management cmdlets. This allows administrators to manage AD remotely and securely, minimizing the load on domain controllers.
 
@@ -235,6 +237,16 @@ Alternatively, you can run the following commands.
    ```
 
 ---
+
+## Install a gMSA on your system
+
+After creating a gMSA and adding the member hosts to the security group, you must install the gMSA on each host computer where the service runs. To install a gMSA, open an elevated PowerShell window and run the following command replacing `<gMSAName>` with your value:
+
+```powershell
+Install-ADServiceAccount -Identity <gMSAName>
+```
+
+For more information about the `Install-ADServiceAccount` cmdlet, see [Install-ADServiceAccount](/powershell/module/activedirectory/install-adserviceaccount).
 
 ## Uninstall a gMSA from your system
 

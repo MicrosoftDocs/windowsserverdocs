@@ -2,8 +2,8 @@
 title: rundll32
 description: Reference article for the rundll32 command, which loads and runs 32-bit dynamic-link libraries (DLLs).
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

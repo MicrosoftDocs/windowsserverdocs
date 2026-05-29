@@ -61,7 +61,7 @@ To create a **hot standby failover** relationship, use the command:
 Add-DhcpServerv4Failover -ComputerName "dhcp1.contoso.com" -Name "dc1-dhcp1" -PartnerServer "dhcp2.contoso.com" -ServerRole Standby -ScopeId 10.10.10.0,10.20.20.0
 ```
 
-**dhcpserver.contoso.com** is the standby DHCP server service, and **dhcpserver2.contoso.com** is the active DHCP server service in the failover relationship.
+**dhcp2.contoso.com** is the standby DHCP server service, and **dhcp1.contoso.com** is the active DHCP server service in the failover relationship.
 
 ### [DHCP console](#tab/dhcp-console)
 

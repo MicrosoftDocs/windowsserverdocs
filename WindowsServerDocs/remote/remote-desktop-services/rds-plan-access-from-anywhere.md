@@ -2,8 +2,8 @@
 title: Remote Desktop Services - Access from anywhere
 description: Planning information for an RD Gateway
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Remote Desktop Services - Access from anywhere

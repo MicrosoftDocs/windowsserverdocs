@@ -2,8 +2,8 @@
 description: Learn more about Simplified SMB Multichannel and Multi-NIC Cluster Networks.
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/24/2025
 ---
 

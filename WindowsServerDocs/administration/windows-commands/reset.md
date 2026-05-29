@@ -2,8 +2,8 @@
 title: reset
 description: Reference article for the reset command, which resets DiskShadow.exe to the default state.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

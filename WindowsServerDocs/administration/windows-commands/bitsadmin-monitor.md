@@ -2,8 +2,8 @@
 title: bitsadmin monitor
 description: Reference article for the bitsadmin monitor command, which monitors jobs in the transfer queue that are owned by the current user.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

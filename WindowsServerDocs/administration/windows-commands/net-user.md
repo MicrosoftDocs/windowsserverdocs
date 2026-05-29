@@ -2,8 +2,8 @@
 title: net user
 description: Reference article for the net user command, which adds, deletes, modifies, and displays user account information.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/06/2025
 ---
 

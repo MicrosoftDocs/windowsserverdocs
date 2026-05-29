@@ -2,8 +2,8 @@
 title: System key utility technical overview
 description: Describes the system key utility (Syskey), which protects the Security Accounts Manager (SAM) database in Windows operating systems.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 3/17/2021
 ---
 # System key utility technical overview

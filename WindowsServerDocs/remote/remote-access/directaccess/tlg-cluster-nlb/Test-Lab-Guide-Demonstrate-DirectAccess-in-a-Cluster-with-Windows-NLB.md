@@ -2,8 +2,8 @@
 title: Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB
 description: Learn how to extend the Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 test lab guide to demonstrate DirectAccess Network Load Balancing and cluster configuration.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB

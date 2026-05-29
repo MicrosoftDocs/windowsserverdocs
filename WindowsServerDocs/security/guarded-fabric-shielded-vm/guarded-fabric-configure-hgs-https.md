@@ -2,8 +2,8 @@
 description: "Learn more about: Configure HGS for HTTPS communications"
 title: Configure HGS for HTTPS communications
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

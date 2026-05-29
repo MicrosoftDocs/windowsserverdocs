@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Storage Quality of Service"
 title: Storage Quality of Service
-ms.author: daknappe
+ms.author: roharwoo
 ms.topic: how-to
-author: dknappettmsft
+author: robinharwood
 ms.date: 10/10/2016
 ---
 

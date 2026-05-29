@@ -1,8 +1,8 @@
 ---
 title: refsutil compression
 description: Reference article for the refsutil compression tool, which queries or modifies compression settings on a Resilient File System (ReFS) volume in Windows.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/02/2025
 ms.topic: reference
 ---

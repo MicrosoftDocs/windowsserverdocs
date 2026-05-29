@@ -3,8 +3,8 @@ title: Credentials Processes in Windows Authentication
 description: Discover how Windows authentication processes credentials to secure user access and safeguard sensitive information.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/30/2025
 ---
 

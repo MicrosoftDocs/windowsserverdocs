@@ -2,8 +2,8 @@
 title: bitsadmin suspend
 description: Reference article for the bitsadmin suspend command, which suspends the specified job.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # bitsadmin suspend

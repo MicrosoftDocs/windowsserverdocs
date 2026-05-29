@@ -2,8 +2,8 @@
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Overview"
 title: Deploy Work Folders with AD FS and Web Application Proxy Overview
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 4/5/2017
 ms.custom: sfi-image-nochange
 ---

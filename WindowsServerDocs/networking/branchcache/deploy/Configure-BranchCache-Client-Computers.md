@@ -2,8 +2,8 @@
 title: Configure BranchCache Client Computers
 description: Learn how to configure domain member and non-domain member client computers as BranchCache distributed cache or hosted cache mode clients.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/05/2021
 ---
 # Configure BranchCache Client Computers

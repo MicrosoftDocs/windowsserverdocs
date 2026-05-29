@@ -3,8 +3,8 @@ title: Network Connectivity Status Indicator troubleshooting guide for Windows
 description: 'This guide demonstrates how to perform diagnostics using the Network Connectivity Status Indicator (NCSI) to troubleshoot and determine Internet connectivity.'
 ms.topic: troubleshooting-general
 ms.date: 06/06/2023
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.contributors: rnitsch
 ---
 

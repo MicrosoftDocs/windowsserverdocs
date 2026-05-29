@@ -2,8 +2,8 @@
 title: Install and Configure Content Servers
 description: Learn how to install and configure content servers.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Install and Configure Content Servers

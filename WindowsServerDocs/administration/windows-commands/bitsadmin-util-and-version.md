@@ -2,8 +2,8 @@
 title: bitsadmin util and version
 description: Reference article for the bitsadmin util and version command, which displays the version of BITS service.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

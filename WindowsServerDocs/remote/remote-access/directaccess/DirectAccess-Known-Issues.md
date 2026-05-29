@@ -2,8 +2,8 @@
 title: DirectAccess Known Issues
 description: This topic provides a link to Microsoft Technical Support documents for DirectAccess in Windows Server 2016.
 ms.topic: troubleshooting-known-issue
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/19/2023
 ---
 # DirectAccess Known Issues

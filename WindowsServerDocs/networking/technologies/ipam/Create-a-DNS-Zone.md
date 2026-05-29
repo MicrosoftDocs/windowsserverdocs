@@ -2,8 +2,8 @@
 title: Create a DNS Zone
 description: Learn how to create a DNS zone by using the IPAM client console.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # Create a DNS Zone

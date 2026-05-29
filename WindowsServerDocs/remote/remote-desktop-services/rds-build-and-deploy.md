@@ -1,10 +1,10 @@
 ---
 title: RDS - Build and deploy
 description: Steps to build a Remote Desktop deployment
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: install-set-up-deploy
-author: dknappettmsft
+author: robinharwood
 ---
 # Build and deploy your Remote Desktop Services deployment
 

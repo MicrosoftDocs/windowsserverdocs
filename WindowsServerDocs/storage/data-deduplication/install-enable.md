@@ -1,8 +1,8 @@
 ---
 title: Installing and enabling Data Deduplication
 ms.topic: install-set-up-deploy
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/18/2022
 description: How to install Data Deduplication on Windows Server, determine whether a workload is a good candidate for deduplication, and enable deduplication on volumes.
 ---

@@ -3,8 +3,8 @@ title: Network Adapter Performance Tuning in Windows Server
 description: Learn how to tune network adapter performance in Windows Server. Optimize throughput, configure offload features, and improve network performance with proven tuning techniques.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/07/2025
 ---
 

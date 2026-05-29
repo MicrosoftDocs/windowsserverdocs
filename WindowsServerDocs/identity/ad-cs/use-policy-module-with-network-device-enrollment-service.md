@@ -1,9 +1,9 @@
 ---
 title: Use a policy module with Network Device Enrollment Service
 description: Learn about the policy module and how it works. Understand how to install and uninstall the policy module for the Network Device Enrollment Service.
-author: dknappettmsft
+author: robinharwood
 ms.topic: how-to
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 02/06/2025
 ---
 

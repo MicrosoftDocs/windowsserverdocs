@@ -2,8 +2,8 @@
 title: STEP 9 Configure EDGE1
 description: Learn how to configure the DNS servers on EDGE1 and configure routing between subnets.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 9 Configure EDGE1

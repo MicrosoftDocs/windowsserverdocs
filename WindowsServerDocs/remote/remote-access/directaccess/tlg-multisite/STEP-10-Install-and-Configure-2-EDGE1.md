@@ -2,8 +2,8 @@
 title: STEP 10 Install and Configure 2-EDGE1
 description: Learn how to install and configure 2-EDGE1.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 10 Install and Configure 2-EDGE1

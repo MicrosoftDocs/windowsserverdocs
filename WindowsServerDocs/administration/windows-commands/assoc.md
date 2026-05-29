@@ -3,8 +3,8 @@ title: assoc
 no-loc: [assoc]
 description: Reference article for the assoc command, which displays or modifies file name extension associations.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

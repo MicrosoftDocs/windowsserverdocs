@@ -2,8 +2,8 @@
 title: "Data Exchange: Using key-value pairs to share information between the host and guest on Hyper-V"
 description: Learn how the Hyper-V Data Exchange (KVP) integration service lets you share small bits of metadata between a virtual machine and the Hyper-V host using key-value pairs.
 keywords: hyper-v, integration services, data exchange, kvp, key value pair
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/27/2025
 ms.topic: how-to
 ---

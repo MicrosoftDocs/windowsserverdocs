@@ -2,8 +2,8 @@
 title: Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment
 description: Learn about extending the Test Lab Guide - Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 to demonstrate Remote Access in a multisite scenario.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment

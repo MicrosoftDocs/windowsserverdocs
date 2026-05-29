@@ -2,8 +2,8 @@
 title: bitsadmin setaclflag
 description: Reference article for the bitsadmin setaclflag command, which sets the access control list (ACL) propagations flags.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

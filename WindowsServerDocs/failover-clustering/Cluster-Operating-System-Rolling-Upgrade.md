@@ -3,8 +3,8 @@ title: Upgrade the OS of a Windows Server failover cluster by performing a clust
 description: Manually upgrade the operating system of a Windows Server failover cluster without stopping workloads by upgrading one node at a time in a rolling OS upgrade. This article describes the stages of the rolling upgrade process, limitations, and frequently asked questions (FAQs).
 # customer intent: As an IT professional, I want to learn how to upgrade the OS of a Windows Server failover cluster by manually performing a cluster OS rolling upgrade.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 3/19/2025
 ms.custom: sfi-image-nochange
 ---
@@ -33,7 +33,7 @@ At a high level, a rolling upgrade consists of these steps:
 
 1. Transfer workloads off of the first node.
 
-1. Perform the Windows Server feature update via an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md).
+1. Perform the Windows Server feature update through an [upgrade](../get-started/upgrade-in-place.md) or [clean install](../get-started/install-windows-server.md).
 
 1. Repeat steps 2 through 3 for every other node in the cluster.
 
@@ -162,7 +162,7 @@ Perform the following steps on one node in the cluster (you repeat this process 
 
 ## Step 3: Install the new version of Windows Server
 
-1. Perform an [upgrade](../get-started/perform-in-place-upgrade.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
+1. Perform an [upgrade](../get-started/upgrade-in-place.md) or [clean install](../get-started/install-windows-server.md) of the newer version of Windows Server on the node.
 
 1. If you upgraded to Windows Server 2022 or newer and removed an LBFO team before upgrading, create a new Hyper-V virtual switch that uses the newer Switch Embedded Teaming (SET) technology to bind to multiple network adapters. You can use Windows Admin Center, Hyper-V Manager, or the [New-VMSwitch](/powershell/module/hyper-v/New-VMSwitch) PowerShell cmdlet.
 

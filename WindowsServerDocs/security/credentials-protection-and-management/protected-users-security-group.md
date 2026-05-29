@@ -2,8 +2,8 @@
 title: Protected Users Security Group in Windows Server
 description: Learn about the Active Directory security group Protected Users feature and how it works in Windows Server.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/27/2025
 ---
 # Protected Users security group

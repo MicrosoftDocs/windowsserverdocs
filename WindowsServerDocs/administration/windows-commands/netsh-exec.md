@@ -2,8 +2,8 @@
 title: netsh exec
 description: Reference article for the netsh exec command that runs a script file containing a series of netsh commands to automate network configuration tasks.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/25/2025
 ---
 

@@ -2,8 +2,8 @@
 title: Protect your RDS deployment - Disaster recovery
 description: Learn about your disaster recovery options for Remote Desktop Services
 ms.topic: solution-overview
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Configure disaster recovery for Remote Desktop Services

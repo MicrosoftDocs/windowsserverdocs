@@ -3,8 +3,8 @@ title: What's New in the Remote Desktop Web Client
 description: Learn about recent changes to the Remote Desktop web client, including new features, improvements, and fixes. Discover what's new and stay updated.
 ms.topic: whats-new
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/11/2025
 ---
 

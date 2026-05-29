@@ -2,8 +2,8 @@
 title: Deploy Remote Access in a Multi-Forest Environment
 description: Learn about the planning and configuration steps for a multi-forest deployment; including when one-time password (OTP) authentication is used.
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Multi-Forest Environment

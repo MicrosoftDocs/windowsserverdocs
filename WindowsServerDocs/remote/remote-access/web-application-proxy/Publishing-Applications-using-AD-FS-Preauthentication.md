@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Publishing Applications using AD FS Preauthentication"
 title: Publishing Applications using AD FS Preauthentication
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/13/2016
 ms.topic: how-to
 ---

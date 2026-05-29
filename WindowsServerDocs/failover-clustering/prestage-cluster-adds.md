@@ -2,8 +2,8 @@
 title: Prestage cluster computer objects in Active Directory Domain Services
 description: Learn how to prestage cluster computer objects in AD DS, grant permissions, and manage cluster roles for secure and efficient failover clustering.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/29/2025
 ---
 

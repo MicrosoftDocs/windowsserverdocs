@@ -3,8 +3,8 @@ title: Remote Desktop Services overview in Windows Server
 description: Provides an overview of Remote Desktop Services.
 ms.topic: overview
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/30/2025
 ---
 

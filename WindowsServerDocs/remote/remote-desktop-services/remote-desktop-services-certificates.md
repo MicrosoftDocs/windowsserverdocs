@@ -2,8 +2,8 @@
 title: Use certificates in Remote Desktop Services
 description: How to create and use authentication certificates for Remote Desktop Services.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/14/2025
 ---
 

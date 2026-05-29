@@ -1,10 +1,10 @@
 ---
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop session hosts
 description: Learn about performance counters you can use to diagnose app performance problems, such as an app running slowly, on Remote Desktop sessions.
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: how-to
-author: dknappettmsft
+author: robinharwood
 ---
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts

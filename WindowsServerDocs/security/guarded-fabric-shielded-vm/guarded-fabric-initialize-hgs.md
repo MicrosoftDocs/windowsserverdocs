@@ -2,8 +2,8 @@
 description: "Learn more about: Initialize the Host Guardian Service (HGS)"
 title: Initialize HGS
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

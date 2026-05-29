@@ -2,8 +2,8 @@
 title: sc.exe config
 description: Reference article for the sc.exe config command, which changes service configurations by modifying the value of a service's entries in the registry and in the Service Control Manager database.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/05/2018
 ms.custom: sfi-ropc-nochange
 ---

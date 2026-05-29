@@ -2,8 +2,8 @@
 title: Recover a failover cluster without quorum in Windows Server
 description: How to recover a failover cluster without quorum in a disaster recovery scenario in Windows Server.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/27/2025
 ---
 

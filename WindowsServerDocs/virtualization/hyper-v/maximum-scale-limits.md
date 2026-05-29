@@ -3,8 +3,8 @@ title: Hyper-V Maximum Scale Limits in Windows Server
 description: View Hyper-V maximum scale limits for virtual machines and hosts in Windows Server. Use them to plan capacity and support demanding workloads.
 ms.topic: limits-and-quotas
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/17/2025
 ---
 

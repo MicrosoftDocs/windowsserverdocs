@@ -2,8 +2,8 @@
 title: Manage Virtual Hard Disks (VHD)
 description: Manage virtual hard disks (VHDs) with the Disk Management utility in Windows, where you can view, create, attach, and detach a VHD.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/24/2025
 #customer intent: As an administrator, I want to use Disk Management in Windows to manage VHDs, so I can create, view, attach, and detach VHDs.
 ---

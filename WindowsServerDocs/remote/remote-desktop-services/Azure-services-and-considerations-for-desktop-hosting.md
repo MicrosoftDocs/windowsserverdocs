@@ -1,10 +1,10 @@
 ---
 title: Azure services and considerations for desktop hosting
 description: Learn about considerations unique to Azure with a Remote Desktop hosting solution.
-author: dknappettmsft
+author: robinharwood
 ms.date: 7/3/2024
 ms.topic: reference-architecture
-ms.author: daknappe
+ms.author: roharwoo
 ---
 # Azure services and considerations for desktop hosting
 

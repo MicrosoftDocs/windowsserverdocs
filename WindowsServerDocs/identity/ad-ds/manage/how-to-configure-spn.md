@@ -2,8 +2,8 @@
 title: How to configure SPN for Windows Server
 description: Learn how to configure Service Principal Names (SPN) for Active Directory service accounts in Windows Server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 03/24/2025
 ---
 

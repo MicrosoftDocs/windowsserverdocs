@@ -2,8 +2,8 @@
 title: retain
 description: Reference article for the retain command, which prepares an existing dynamic volume for use as a boot or system volume.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

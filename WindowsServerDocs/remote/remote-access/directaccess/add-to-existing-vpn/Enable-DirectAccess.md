@@ -2,8 +2,8 @@
 title: Enable DirectAccess
 description: Learn about the configuration steps required in order to deploy a single Windows Server 2016 or Windows Server 2012 Remote Access server with basic settings.
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Enable DirectAccess

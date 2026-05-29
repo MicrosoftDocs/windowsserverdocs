@@ -2,8 +2,8 @@
 title: uniqueid
 description: Reference article for uniqueid, which displays or sets the GUID partition table (GPT) identifier or master boot record (MBR) signature for the disk with focus.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

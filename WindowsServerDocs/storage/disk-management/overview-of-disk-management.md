@@ -3,8 +3,8 @@ title: Overview of Disk Management
 description: Learn how to use the Disk Management system utility in Windows to initialize drives, extend volumes, shrink partitions, and change drive letters.
 ms.date: 06/24/2025
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 #customer intent: As an administrator, I want to explore the Disk Management utility in Windows, so I can initialize drives, extend volumes, shrink partitions, and change drive letters.
 ---
 

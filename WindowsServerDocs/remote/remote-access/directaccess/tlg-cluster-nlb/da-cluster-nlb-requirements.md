@@ -2,8 +2,8 @@
 title: DirectAccess Cluster-NLB Test Lab Configuration Requirements
 description: Learn about the DirectAccess Cluster-NLB test lab configuration requirements.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # DirectAccess Cluster-NLB Test Lab Configuration Requirements

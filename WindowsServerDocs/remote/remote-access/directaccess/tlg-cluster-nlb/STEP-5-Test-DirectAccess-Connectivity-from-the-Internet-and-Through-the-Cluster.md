@@ -2,8 +2,8 @@
 title: STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 description: Learn how to test DirectAccess connectivity from the internet and through the cluster.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster

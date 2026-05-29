@@ -2,8 +2,8 @@
 title: Plan Deployment for Remote Management of DirectAccess Clients
 description: Learn about the planning steps for deploying a single Remote Access server running that can be used for remote management of DirectAccess clients.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Plan Deployment for Remote Management of DirectAccess Clients

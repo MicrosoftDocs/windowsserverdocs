@@ -2,8 +2,8 @@
 title: rem
 description: Reference article for the rem command, which records comments in a script, batch, or config.sys file.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: Monitor the operations status of the Remote Access server and its components
 description: Learn how to use the management console in the Remote Access server to monitor its operations status.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Monitor the operations status of the Remote Access server and its components

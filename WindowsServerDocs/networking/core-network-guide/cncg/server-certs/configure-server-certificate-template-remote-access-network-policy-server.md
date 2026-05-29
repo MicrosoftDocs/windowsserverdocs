@@ -3,8 +3,8 @@ title: Configure the Server Certificate Template for Network Remote Access
 description: Learn how to configure the server certificate template in Active Directory Certificate Services for Remote Access and Network Policy Server. 
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/17/2025
 ---
 

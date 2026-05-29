@@ -3,8 +3,8 @@ title: Network Connectivity Status Indicator overview for Windows
 description: The Network Connectivity Status Indicator (NCSI) helps to detect network connectivity and troubleshoot via network probing and passive polling.
 ms.topic: concept-article
 ms.date: 02/25/2025
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.contributors: rnitsch
 ---
 

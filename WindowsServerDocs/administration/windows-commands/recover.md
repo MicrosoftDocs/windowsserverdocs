@@ -2,8 +2,8 @@
 title: recover
 description: Reference article for the recover command, which recovers readable information from a bad or defective disk.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

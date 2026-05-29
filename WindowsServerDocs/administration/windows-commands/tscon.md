@@ -2,8 +2,8 @@
 title: tscon
 description: Reference article for tscon, which connects to another session on a Remote Desktop Session Host server.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # tscon

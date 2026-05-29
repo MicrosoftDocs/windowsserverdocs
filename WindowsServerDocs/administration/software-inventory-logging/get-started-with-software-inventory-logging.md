@@ -2,8 +2,8 @@
 title: Get Started with Software Inventory Logging
 description: Describes how to install and start using Software Inventory Logging
 ms.topic: get-started
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging

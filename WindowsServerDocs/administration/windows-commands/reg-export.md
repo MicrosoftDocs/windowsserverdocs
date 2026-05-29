@@ -2,8 +2,8 @@
 title: reg export
 description: Reference article for the reg export command, which copies the specified subkeys, entries, and values of the local computer into a file for transfer to other servers.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: Supported Ubuntu virtual machines on Hyper-V
 description: Lists the Ubuntu/Linux integration services and features included in each version of Windows Server.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/19/2025
 ---
 # Supported Ubuntu virtual machines on Hyper-V

@@ -2,8 +2,8 @@
 title: bootcfg addsw
 description: Reference article for the bootcfg addsw command, which adds operating system load options for a specified operating system entry.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # bootcfg addsw

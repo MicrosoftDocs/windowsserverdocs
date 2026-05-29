@@ -2,8 +2,8 @@
 title: PowerShell
 description: Reference article for the PowerShell command, which opens the PowerShell console from a command prompt.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

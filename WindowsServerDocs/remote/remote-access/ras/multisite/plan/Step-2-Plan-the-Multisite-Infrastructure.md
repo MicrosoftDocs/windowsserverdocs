@@ -2,8 +2,8 @@
 title: Step 2 Plan the Multisite Infrastructure
 description: Learn how to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Multisite Infrastructure

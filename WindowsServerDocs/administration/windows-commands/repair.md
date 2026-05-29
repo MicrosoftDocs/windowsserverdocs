@@ -2,8 +2,8 @@
 title: repair
 description: Reference article for the repair command, which repairs RAID-5 volumes by replacing the failed disk region with a specified dynamic disk.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

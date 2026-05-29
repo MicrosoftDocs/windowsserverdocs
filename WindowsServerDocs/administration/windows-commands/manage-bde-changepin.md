@@ -2,8 +2,8 @@
 title: manage-bde changepin
 description: Reference article for the manage-bde changepin command, which modifies the PIN for an operating system drive.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

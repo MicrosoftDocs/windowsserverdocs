@@ -1,15 +1,17 @@
 ---
 description: "Learn more about: Web Application Proxy in Windows Server"
 title: Web Application Proxy in Windows Server
-ms.author: daknappe
-author: dknappettmsft
-ms.date: 07/13/2016
+ms.author: roharwoo
+author: robinharwood
+ms.date: 04/16/2026
 ms.topic: concept-article
 ---
 
 # Web Application Proxy in Windows Server
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Microsoft Entra application proxy content](/entra/identity/app-proxy/overview-what-is-app-proxy).**
+
+Web Application Proxy is a Remote Access role service in Windows Server. It functions as a reverse proxy, enabling users outside the corporate network to securely access web applications and services hosted on internal servers. Web Application Proxy integrates with Active Directory Federation Services (AD FS) to provide preauthentication, ensuring that only authenticated users can access published applications. It supports publishing applications for both AD FS preauthentication and pass-through authentication scenarios.
 
 The content in this section describes what's new and changed in the Web Application Proxy for Windows Server. The new features and changes listed here are the ones most likely to have the greatest impact as you work with the Preview.
 

@@ -2,8 +2,8 @@
 title: Step 4 Verify the Cluster
 description: Learn how to verify that you have correctly configured your DirectAccess cluster deployment.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 4 Verify the Cluster

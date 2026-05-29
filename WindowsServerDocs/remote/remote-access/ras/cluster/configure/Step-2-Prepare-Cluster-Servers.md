@@ -2,8 +2,8 @@
 title: Step 2 Prepare Cluster Servers
 description: Learn how to prepare additional servers to add to the cluster.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Prepare Cluster Servers

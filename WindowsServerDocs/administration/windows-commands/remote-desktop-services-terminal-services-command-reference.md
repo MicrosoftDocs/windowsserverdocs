@@ -2,8 +2,8 @@
 title: Remote Desktop Services (Terminal Services) command-line tools reference
 description: Reference article for the Remote Desktop Services (RDS) command-line tools.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

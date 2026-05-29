@@ -2,8 +2,8 @@
 title: ftp quit
 description: Reference article for the ftp quit command, which ends the ftp session with the remote computer, and then exits.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: tzutil
 description: Reference article for the tzutil command, which displays the Windows Time Zone utility.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # tzutil

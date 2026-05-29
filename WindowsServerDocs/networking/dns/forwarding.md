@@ -4,7 +4,7 @@ description: Learn about DNS forwarding, including delegation, conditional forwa
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/13/2025
+ms.date: 05/13/2026
 ai-usage: ai-assisted # Used for image alt text
 ---
 
@@ -54,6 +54,8 @@ The forwarder a DNS Server uses depends on the server’s configuration. By defa
 
 > [!TIP]
 > Beginning with Windows Server 2022, if no forwarder responds from the list of forwarders, the DNS server uses only the first one on the dynamic list until the DNS server service restarts.
+>
+> To restore the previous behavior where the DNS server cycles through all forwarders, you can disable dynamic forwarder reordering by running the PowerShell command `Set-DnsServerForwarder -EnableReordering $false`. For more information, see [Set-DnsServerForwarder](/powershell/module/dnsserver/set-dnsserverforwarder).
 
 ## Forwarders and delegation
 

@@ -2,8 +2,8 @@
 title: diskperf
 description: Reference article for the diskperf command, which can be used to remotely enable or disable physical or logical disk performance counters on computers running Windows.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

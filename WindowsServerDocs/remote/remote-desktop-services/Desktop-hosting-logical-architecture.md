@@ -3,8 +3,8 @@ title: Remote Desktop Services Architecture in Azure - Deployment Patterns and B
 description: Explore proven Remote Desktop Services architecture patterns for Azure deployments. Learn basic and highly available RDS configurations with Azure PaaS integration.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/07/2025
 ---
 

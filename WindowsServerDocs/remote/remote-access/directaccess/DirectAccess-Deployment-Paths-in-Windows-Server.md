@@ -2,8 +2,8 @@
 title: DirectAccess Deployment Paths in Windows Server
 description: This topic provides a listing of the documentation for the two main DirectAccess deployment paths in Windows Server 2016 asic and Advanced.
 ms.topic: overview
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

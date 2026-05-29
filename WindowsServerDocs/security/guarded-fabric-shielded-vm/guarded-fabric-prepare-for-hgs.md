@@ -2,8 +2,8 @@
 description: "Learn more about: Review prerequisites for the Host Guardian Service"
 title: Review HGS prerequisites
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

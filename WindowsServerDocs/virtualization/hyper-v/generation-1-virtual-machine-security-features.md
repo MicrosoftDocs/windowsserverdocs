@@ -2,8 +2,8 @@
 title: Generation 1 virtual machine security settings for Hyper-V
 description: Describes the security settings available in Hyper-V Manager for generation 1 virtual machines
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/04/2016
 ---
 # Generation 1 virtual machine security settings

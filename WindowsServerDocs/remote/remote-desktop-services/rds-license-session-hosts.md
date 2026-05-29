@@ -2,8 +2,8 @@
 title: License Remote Desktop session hosts
 description: Learn how to install and configure licenses for Remote Desktop session hosts in Windows Server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/06/2025
 ms.custom: sfi-image-nochange
 ---

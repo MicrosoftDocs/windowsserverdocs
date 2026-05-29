@@ -2,8 +2,8 @@
 title: sxstrace
 description: Reference article for the systrace command, which helps to diagnose side-by-side problems.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

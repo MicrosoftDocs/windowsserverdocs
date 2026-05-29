@@ -2,8 +2,8 @@
 title: shift
 description: Reference article for the shift command, which changes the position of batch parameters in a batch file.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

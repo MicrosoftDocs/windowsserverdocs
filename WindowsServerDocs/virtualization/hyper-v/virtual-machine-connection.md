@@ -2,8 +2,8 @@
 title: Hyper-V Virtual Machine Connection
 description: Describes Virtual Machine Connection, and includes details on how to do common tasks, such as send Ctrl-Alt-Delete to the virtual machine.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/26/2025
 ---
 

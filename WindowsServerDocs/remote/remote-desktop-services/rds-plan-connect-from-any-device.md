@@ -2,8 +2,8 @@
 title: Remote Desktop Services - Connect from any device
 description: Learn about the different ways users can connect to Remote Desktop.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Remote Desktop Services - Connect from any device

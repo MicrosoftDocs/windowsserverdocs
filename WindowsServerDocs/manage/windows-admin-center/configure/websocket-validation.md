@@ -2,8 +2,8 @@
 title: Customize WebSocket validation for Windows Admin Center gateway
 description: Learn how administrators can customize the WebSocket validation for their Windows Admin Center (Project Honolulu) instance. 
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/22/2021
 ---
 

@@ -2,8 +2,8 @@
 title: timeout
 description: Reference article for the timeout command, which pauses the command processor for the specified number of seconds.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: popd
 description: Reference article for the pnputil command, which changes the current directory to the directory that was most recently stored by the pushd command.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

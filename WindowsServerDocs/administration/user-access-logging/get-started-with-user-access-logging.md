@@ -2,8 +2,8 @@
 title: Get Started with User Access Logging
 description: Describes the User Access Logging feature and how to start using it.
 ms.topic: get-started
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/16/2017
 ---
 

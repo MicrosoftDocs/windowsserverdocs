@@ -2,8 +2,8 @@
 title: reg compare
 description: Reference article for the reg compare command, which compares specified registry subkeys or entries.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

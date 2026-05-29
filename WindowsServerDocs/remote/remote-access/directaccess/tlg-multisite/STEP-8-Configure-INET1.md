@@ -2,8 +2,8 @@
 title: STEP 8 Configure INET1
 description: Learn how to configure a DNS entry for 2-EDGE1 on INET1.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

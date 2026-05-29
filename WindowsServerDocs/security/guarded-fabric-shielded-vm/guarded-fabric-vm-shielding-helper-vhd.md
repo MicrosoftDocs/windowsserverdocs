@@ -2,8 +2,8 @@
 description: "Learn more about: Shielded VMs - Preparing a VM Shielding Helper VHD"
 title: Shielded VMs - Preparing a VM Shielding Helper VHD
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

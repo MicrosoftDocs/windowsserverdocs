@@ -1,8 +1,8 @@
 ---
 description: Find out about Active Directory Domain Services, a directory service that makes network resource data available to authorized network users and administrators.
 title: Active Directory Domain Services overview
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/10/2025
 ms.topic: overview
 

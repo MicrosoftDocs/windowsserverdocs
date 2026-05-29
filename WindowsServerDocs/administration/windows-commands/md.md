@@ -2,8 +2,8 @@
 title: md
 description: Reference article for the md command, which creates a directory or subdirectory.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

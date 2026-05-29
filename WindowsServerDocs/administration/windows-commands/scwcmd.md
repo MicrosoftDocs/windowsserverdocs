@@ -2,8 +2,8 @@
 title: scwcmd
 description: Reference article for the scwcmd.exe command-line tool included with the Security Configuration Wizard (SCW).
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: servermanagercmd
 description: Reference article for the servermanagercmd command, which installs and removes roles, role services, and features.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

@@ -2,8 +2,8 @@
 title: Step 2 Configure the DirectAccess-VPN Server
 description: Learn how to configure the client and server settings required for a basic Remote Access deployment using the Enable DirectAccess Wizard.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 #  Step 2 Configure the DirectAccess-VPN Server

@@ -2,8 +2,8 @@
 title: Step 1 Implement a Single Server Remote Access Deployment
 description: Learn how to implement an advanced single server deployment and then plan to add servers to each multisite entry point.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

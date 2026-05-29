@@ -1,8 +1,8 @@
 ---
 title: Deploying Work Folders
 ms.topic: install-set-up-deploy
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 6/24/2017
 description: How to deploy Work Folders, including installing the server role, creating sync shares, and creating DNS records.
 ---

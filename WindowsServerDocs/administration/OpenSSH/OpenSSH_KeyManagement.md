@@ -161,7 +161,7 @@ $authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ecdsa.pub
 $remotePowershell = "powershell New-Item -Force -ItemType Directory -Path $env:USERPROFILE\.ssh; Add-Content -Force -Path $env:USERPROFILE\.ssh\authorized_keys -Value '$authorizedKey'"
 
 # Connect to your server and run the PowerShell command by using the $remotePowerShell variable.
-ssh username@domain1@contoso.com $remotePowershell
+ssh username@domain@hostname $remotePowershell
 ```
 
 ### Administrative user
@@ -178,16 +178,16 @@ You can use the following code to copy the public key to the server and configur
 $authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\id_ecdsa.pub
 
 # Generate the PowerShell command to run remotely that copies the public key file generated previously on your client to the authorized_keys file on your server.
-$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '''$authorizedKey''';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""Administrators:F"" /grant ""SYSTEM:F"""
+$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '$authorizedKey';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""Administrators:F"" /grant ""SYSTEM:F"""
 
 # Connect to your server and run the PowerShell command by using the $remotePowerShell variable.
-ssh username@domain1@contoso.com $remotePowershell
+ssh username@domain@hostname $remotePowershell
 ```
 
 For non-English localized versions of the operating system, the script needs to be modified to reflect group names accordingly. To prevent errors that can occur when you grant permissions to group names, you can use the security identifier (SID) in place of the group name. You can retrieve the SID by running `Get-LocalGroup | Select-Object Name, SID`. When you use the SID in place of the group name, it must be preceded by an asterisk (__\*__). In the following example, the __Administrators__ group uses the SID `S-1-5-32-544`:
 
 ```powershell
-$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '''$authorizedKey''';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""*S-1-5-32-544:F"" /grant ""SYSTEM:F"""
+$remotePowershell = "powershell Add-Content -Force -Path $env:ProgramData\ssh\administrators_authorized_keys -Value '$authorizedKey';icacls.exe ""$env:ProgramData\ssh\administrators_authorized_keys"" /inheritance:r /grant ""*S-1-5-32-544:F"" /grant ""SYSTEM:F"""
 ```
 
 These steps complete the configuration required to use key-based authentication with OpenSSH on Windows.

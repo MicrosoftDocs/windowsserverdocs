@@ -2,8 +2,8 @@
 title: rd
 description: Reference article for the rd command, which deletes a directory.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: rpcinfo
 description: Reference article for the rpcinfo command, which lists the programs on a remote computer.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

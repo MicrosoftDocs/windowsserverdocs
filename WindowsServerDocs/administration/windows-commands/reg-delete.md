@@ -2,8 +2,8 @@
 title: reg delete
 description: Reference article for the reg delete command, which deletes a key, subkey, or entries from the registry.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/20/2022
 ---
 

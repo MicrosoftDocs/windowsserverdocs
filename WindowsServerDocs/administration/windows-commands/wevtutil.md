@@ -2,8 +2,8 @@
 title: wevtutil
 description: Reference article for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/26/2022
 ---
 
@@ -40,7 +40,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |{qe \| query-events} \<Path> [/lf:\<Logfile>] [/sq:\<Structquery>] [/q:\<Query>] [/bm:\<Bookmark>] [/sbm:\<Savebm>] [/rd:\<Direction>] [/f:\<Format>] [/l:\<Locale>] [/c:\<Count>] [/e:\<Element>]|Reads events from an event log, from a log file, or using a structured query. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** parameter, \<Path> must be a path to a file that contains a structured query.|
 |{gli \| get-loginfo} \<Logname> [/lf:\<Logfile>]|Displays status information about an event log or log file. If the **/lf** option is used, \<Logname> is a path to a log file. You can run **wevtutil el** to obtain a list of log names.|
 |{epl \| export-log} \<Path> \<Exportfile> [/lf:\<Logfile>] [/sq:\<Structquery>] [/q:\<Query>] [/ow:\<Overwrite>]|Exports events from an event log, from a log file, or using a structured query to the specified file. By default, you provide a log name for \<Path>. However, if you use the **/lf** option, then \<Path> must be a path to a log file. If you use the **/sq** option, \<Path> must be a path to a file that contains a structured query. \<Exportfile> is a path to the file where the exported events will be stored.|
-|{al \| archive-log} \<Logpath> [/l:\<Locale>]|Archives the specified log file in a self-contained format. A subdirectory with the name of the locale is created and all locale-specific information is saved in that subdirectory. After the directory and log file are created by running **wevtutil al**, events in the file can be read whether the publisher is installed or not.|
+|{al \| archive-log} \<Logpath> [/l:\<Locale>]|Archives the specified log file in a self-contained format. A subdirectory with the name of the locale is created and all locale-specific information is saved in that subdirectory. After the directory and log file are created by running **wevtutil al**, events in the file can be read whether the publisher is installed or not. **Note** Files in the locale-specific subdirectory will be overwritten. Make sure the location is trusted and does not contain untrusted symlinks or junctions to critical files. |
 |{cl \| clear-log} \<Logname> [/bu:\<Backup>]|Clears events from the specified event log. The **/bu** option can be used to back up the cleared events.|
 
 ## Options

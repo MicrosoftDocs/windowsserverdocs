@@ -3,10 +3,10 @@ title: Detect and Remediate RC4 Usage in Kerberos
 description: Learn how to detect and limit or disable RC4 usage in Kerberos to enhance security in Active Directory domain environments.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.reviewer: mapalko
-ms.date: 11/27/2025
+ms.date: 02/06/2026
 ---
 
 # Detect and remediate RC4 usage in Kerberos
@@ -34,7 +34,7 @@ This update adds the capability to set a registry value to control the default s
 The Kerberos RC4 default encryption type can be abused to carry out an attack method known as *Kerberoasting*, which targets service tickets in Microsoft Active Directory. In Kerberoasting, attackers capture these tickets and crack their encryption offline to steal user credentials, potentially compromising the security of the entire network. Changing the encryption type of Kerberos to use AES-SHA1 by default instead of RC4 helps protect customers against this attack.
 
 > [!IMPORTANT]
-> Microsoft plans to disable RC4 use as the default encryption type for Active Directory domain controllers by the end of the second quarter of 2026.
+> Microsoft plans to disable RC4 use as the default assumed supported encryption type for Active Directory domain controllers by the end of the second quarter of 2026. To learn more about how to prepare for disabling RC4, see [How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833](https://support.microsoft.com/help/5073381).
 
 ## Prerequisites
 
@@ -294,7 +294,7 @@ Alternatively, you can also disable RC4 on domain controllers by setting the fol
 - Key: `HKEY_LOCAL_MACHINE\System\CurrentControlSet\services\KDC`
 - Value name: `DefaultDomainSupportedEncTypes`
 - Type: `REG_DWORD`
-- Value data: `0x38`
+- Value data: `0x18`
 
 ## Identify authentication failures after disabling RC4
 
@@ -387,3 +387,5 @@ To work through either of these scenarios, follow these steps:
    ```
 
 1. Follow the steps in the section [The processed msDS-SupportedEncryptionTypes value doesn't include the AES-SHA1 bits](#the-processed-msds-supportedencryptiontypes-value-doesnt-include-the-aes-sha1-bits) to determine supported encryption type for the target device. In this example, the `msDS-SupportedEncryptionTypes` value for `vm01.contoso.com` is `0x4`, which indicates that only RC4 is configured for the account.
+
+

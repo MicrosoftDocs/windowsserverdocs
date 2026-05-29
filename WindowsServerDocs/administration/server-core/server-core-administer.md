@@ -3,8 +3,8 @@ title: Administer Server Core installation
 description: Learn how to administer a Server Core installation of Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/24/2025
 ms.topic: how-to
 ---

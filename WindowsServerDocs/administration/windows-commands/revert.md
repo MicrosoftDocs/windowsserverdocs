@@ -2,8 +2,8 @@
 title: revert
 description: Reference article for the revert command, which reverts a volume back to a specified shadow copy.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

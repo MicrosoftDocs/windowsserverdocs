@@ -2,8 +2,8 @@
 title: Install and Configure Basic DirectAccess
 description: Learn about the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with basic settings.
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Install and Configure Basic DirectAccess

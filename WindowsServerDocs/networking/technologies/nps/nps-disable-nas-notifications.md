@@ -2,8 +2,8 @@
 title: Disable NAS Notification Forwarding in NPS
 description: Learn how to disable the forwarding of start and stop messages from network access servers to members of a remote RADIUS server group configured in NPS.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

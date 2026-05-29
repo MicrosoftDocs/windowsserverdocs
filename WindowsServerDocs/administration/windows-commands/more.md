@@ -2,8 +2,8 @@
 title: more
 description: Reference article for the more command, which displays one screen of output at a time.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/26/2019
 ---
 

@@ -2,8 +2,8 @@
 title: tracert
 description: Reference article for tracert, which determines the path taken to a destination, by sending Internet Control Message Protocol (ICMP) echo requests or ICMPv6 messages to the destination with incrementally increasing time to Live (TTL) field values.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/27/2023
 ---
 

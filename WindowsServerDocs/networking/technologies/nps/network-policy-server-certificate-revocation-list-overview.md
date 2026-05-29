@@ -2,8 +2,8 @@
 title: Network Policy Server Certificate Revocation List overview in Windows Server
 description: This article provides information about Certificate Revocation handling by the NPS (Network Policy Server) in a Windows Server environment.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/31/2023
 ms.contributor: alalve
 ---

@@ -2,8 +2,8 @@
 title: time
 description: Reference article for the time command, which displays or sets the system time.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

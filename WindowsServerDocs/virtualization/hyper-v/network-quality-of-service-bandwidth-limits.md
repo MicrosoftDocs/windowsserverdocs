@@ -1,8 +1,8 @@
 ---
 title: Network QoS Minimum Bandwidth Best Practices for Hyper-V
 description: Guidance and best practices for configuring Hyper-V Quality of Service (QoS) minimum bandwidth on Windows Server.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: best-practice
 ms.date: 10/28/2025
 ---

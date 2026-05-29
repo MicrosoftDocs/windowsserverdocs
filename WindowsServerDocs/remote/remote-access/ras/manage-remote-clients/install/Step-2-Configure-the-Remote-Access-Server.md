@@ -2,8 +2,8 @@
 title: Step 2 Configure the Remote Access Server
 description: Learn how to configure the client and server settings that are required for remote management of DirectAccess clients.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Remote Access Server

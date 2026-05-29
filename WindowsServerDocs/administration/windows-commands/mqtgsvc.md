@@ -2,8 +2,8 @@
 title: mqtgsvc
 description: Reference article for the mqtgsvc command, which monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

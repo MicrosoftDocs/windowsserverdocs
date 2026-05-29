@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Health Service reports"
 title: Health Service reports
-ms.author: daknappe
+ms.author: roharwoo
 ms.topic: how-to
-author: dknappettmsft
+author: robinharwood
 ms.date: 10/05/2017
 ---
 

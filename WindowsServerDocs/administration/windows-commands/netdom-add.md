@@ -2,8 +2,8 @@
 title: Netdom add
 description: Netdom add is a command-line utility that adds a workstation or server account to a domain in Windows Server.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

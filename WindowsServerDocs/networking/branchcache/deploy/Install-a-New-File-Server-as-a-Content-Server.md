@@ -2,8 +2,8 @@
 title: Install a New File Server as a Content Server
 description: Learn how to install the File Services server role and the BranchCache for Network Files role service on a computer running  Windows Server 2016.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Install a New File Server as a Content Server

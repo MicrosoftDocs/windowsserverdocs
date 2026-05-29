@@ -2,8 +2,8 @@
 title: reg save
 description: Reference article for the reg save command, which saves a copy of specified subkeys, entries, and values of the registry in a specified file.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

@@ -2,8 +2,8 @@
 title: Step 1 Complete the DirectAccess Configuration with OTP Authentication
 description: Learn about completing the Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 test lab guide.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

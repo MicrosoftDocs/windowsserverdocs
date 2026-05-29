@@ -3,8 +3,8 @@ title: Guidelines for troubleshooting KMS
 description: This guide provides information about the KMS service, and suggests tools and approaches for troubleshooting activation issues in Windows Server.
 ms.topic: troubleshooting
 ms.date: 09/15/2025
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.custom: sfi-image-nochange
 ---
 

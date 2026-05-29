@@ -3,8 +3,8 @@ title: Distributed File System (DFS) Replication
 description: Learn how Distributed File System (DFS) Replication in Windows Server synchronizes folders across multiple servers and sites.
 ms.topic: overview
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/28/2025
 ---
 

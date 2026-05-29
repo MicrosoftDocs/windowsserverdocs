@@ -2,8 +2,8 @@
 title: netsh dump
 description: Reference article for the netsh dump command that allows exporting network configuration settings to a text file.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/25/2025
 ---
 

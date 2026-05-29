@@ -2,8 +2,8 @@
 title: select vdisk
 description: Reference article for the select vdisk command, which selects the specified virtual hard disk (VHD) and shifts the focus to it.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

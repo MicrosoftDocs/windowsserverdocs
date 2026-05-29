@@ -2,8 +2,8 @@
 title: Enable Remote Desktop on your PC
 description: Learn how to use Remote Desktop to connect to and control your PC from a remote device.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/18/2025
 ---
 

@@ -2,8 +2,8 @@
 title: move
 description: Reference article for the move command, which moves one or more files from one directory to another directory.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/15/2025
 ---
 

@@ -3,7 +3,7 @@ title: Prepare for Windows Local Administrator Password Solution (LAPS) Deployme
 description: Prepare to deploy and migrate Windows Local Administrator Password Solution (Windows LAPS) with recommended scenarios. Start your migration today.
 ms.topic: how-to
 author: jay98014
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 05/16/2025
 ---
 

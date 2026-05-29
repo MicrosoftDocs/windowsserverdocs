@@ -2,8 +2,8 @@
 title: cipher
 description: Reference article for the cipher command, which displays or alters the encryption of directories and files on NTFS volumes.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 no-loc: [cipher]
 ---

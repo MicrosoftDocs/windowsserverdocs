@@ -2,8 +2,8 @@
 description: "Learn more about: Initialize HGS using Admin-trusted attestation"
 title: Initialize HGS using Admin-trusted attestation
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

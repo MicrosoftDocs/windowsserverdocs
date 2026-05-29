@@ -3,8 +3,8 @@ title: Active Directory Privileged Accounts and Groups Guide
 description: Discover Active Directory privileged accounts and groups including Enterprise Admins, Domain Admins, and built-in security groups. Learn rights, permissions, and security best practices for AD administration.
 ms.topic: reference
 ai-usage: ai-assisted
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/04/2025
 ---
 

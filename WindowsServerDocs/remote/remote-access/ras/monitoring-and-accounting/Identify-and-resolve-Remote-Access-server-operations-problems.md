@@ -2,8 +2,8 @@
 title: Identify and resolve Remote Access server operations problems
 description: Learn how to identify Remote Access server operations issues, their root causes, and the resolution required to fix the issues.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Identify and resolve Remote Access server operations problems

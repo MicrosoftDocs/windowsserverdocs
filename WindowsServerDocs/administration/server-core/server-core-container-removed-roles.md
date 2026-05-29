@@ -3,8 +3,8 @@ title: Roles, Role Services, and Features not in Server Core containers - Window
 description: Learn about the roles and features we removed from the Server Core container image for Windows Server.
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/07/2018
 ms.topic: concept-article
 ---

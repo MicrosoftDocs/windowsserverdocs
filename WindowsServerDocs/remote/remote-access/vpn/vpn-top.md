@@ -3,8 +3,8 @@ title: Virtual Private Networking (VPN)
 description: Learn how you can use RAS Gateway as a single-tenant VPN server.
 ms.topic: overview
 ms.date: 11/05/2018
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ---
 
 # Virtual Private Networking (VPN)

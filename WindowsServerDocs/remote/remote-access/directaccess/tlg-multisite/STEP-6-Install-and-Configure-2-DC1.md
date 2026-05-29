@@ -2,8 +2,8 @@
 title: STEP 6 Install and Configure 2-DC1
 description: Learn how to install and configure 2-DC1.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 6 Install and Configure 2-DC1

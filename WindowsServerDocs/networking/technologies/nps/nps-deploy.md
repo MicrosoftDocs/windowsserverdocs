@@ -2,8 +2,8 @@
 title: Deploy Network Policy Server
 description: This topic provides links to Network Policy Server deployment content for Windows Server 2016, and includes links to additional guidance about NPS.
 ms.topic: install-set-up-deploy
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 

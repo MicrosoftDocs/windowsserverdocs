@@ -2,8 +2,8 @@
 title: dcgpofix
 description: Reference article for the dcgpofix command, which recreates the default Group Policy Objects (GPOs) for a domain.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/16/2024
 ---
 

@@ -2,8 +2,8 @@
 description: "Learn more about: Planning a Guarded Fabric"
 title: Planning a guarded fabric and shielded VMs
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 

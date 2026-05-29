@@ -3,8 +3,8 @@ title: Security guidelines for system services in Windows Server 2016
 description: Provides security guidelines and recommendations for disabling services in Windows Server 2016 with Desktop Experience.
 ms.topic: best-practice
 ms.date: 08/22/2024
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ---
 
 # Guidance on disabling system services on Windows Server 2016 with Desktop Experience

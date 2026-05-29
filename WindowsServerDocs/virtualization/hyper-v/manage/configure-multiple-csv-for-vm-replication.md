@@ -2,8 +2,8 @@
 title: Configure multiple CSV for VM replication in Windows Server
 description: Configure multiple CSV for VM replication using Hyper-V Replica to increase scalability and fault tolerance in Windows Server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/15/2025
 ---
 

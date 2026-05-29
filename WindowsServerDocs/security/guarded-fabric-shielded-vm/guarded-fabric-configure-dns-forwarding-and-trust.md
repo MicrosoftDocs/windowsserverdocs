@@ -2,8 +2,8 @@
 description: "Learn more about: Configure DNS forwarding in the HGS domain and a one-way trust with the fabric domain"
 title: Configure DNS forwarding and domain trust
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

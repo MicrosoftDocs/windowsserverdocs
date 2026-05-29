@@ -2,8 +2,8 @@
 title: DHCP failover in Windows Server
 description: Learn how DHCP Failover replicates IP address leases and settings in DHCP scopes from a primary DHCP server to a failover partner server.
 ms.topic: overview
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/11/2025
 ---
 

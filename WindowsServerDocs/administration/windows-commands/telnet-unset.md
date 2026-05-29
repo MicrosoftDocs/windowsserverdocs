@@ -2,8 +2,8 @@
 title: telnet unset
 description: Reference article for the telnet unset command, which turns off previously set options.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

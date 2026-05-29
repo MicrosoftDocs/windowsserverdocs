@@ -2,8 +2,8 @@
 title: expand
 description: Reference article for the expand command, which expands one or more compressed files.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/01/2022
 ---
 

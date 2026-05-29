@@ -3,8 +3,8 @@ title: Optimizing Windows configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows Virtual Desktop Infrastructure (VDI) environments.
 ms.service: windows-server
 ms.subservice: remote-desktop-services
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: concept-article
 ms.date: 8/15/2025
 ---

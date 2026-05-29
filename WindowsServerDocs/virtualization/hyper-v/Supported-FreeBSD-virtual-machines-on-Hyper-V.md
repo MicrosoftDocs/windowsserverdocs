@@ -2,8 +2,8 @@
 title: Supported FreeBSD virtual machines on Hyper-V
 description: Lists the FreeBSD/Linux integration services and features included in each version
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/19/2025
 ---
 # Supported FreeBSD virtual machines on Hyper-V

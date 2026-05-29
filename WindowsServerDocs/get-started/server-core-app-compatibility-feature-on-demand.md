@@ -3,8 +3,8 @@ title: Install Server Core Application Compatibility Feature on Demand
 description: Learn how to install the Application Compatibility Feature on Demand to enhance the compatibility of applications with Server Core installations of Windows Server.
 ms.topic: how-to
 ai-usage: ai-assisted
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/01/2025
 ---
 

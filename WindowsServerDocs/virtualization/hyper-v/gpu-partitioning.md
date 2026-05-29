@@ -38,10 +38,12 @@ To use GPU partitioning with live migration, you need to have a supported CPU, o
 
 Your cluster hosts need to have Input/Output Memory Management Unit (IOMMU) DMA bit tracking capable processors. For example, processors supporting Intel VT-D or AMD-Vi. If you use Windows Server and live migration without IOMMU enabled processors, the VMs are automatically restarted where GPU resources are available.
 
-Examples of processors that support IOMMU DMA bit tracking include:
+Examples of processors that support IOMMU DMA bit tracking for live migration with GPU partitioning include:
 
-- AMD EPYC 7002 and later (Milan)
+- AMD EPYC 7003 and later (Milan)
 - 4th Gen Intel Xeon SP (Sapphire Rapids)
+
+AMD EPYC 7002 (Rome) processors support GPU partitioning, but they don't support live migration with GPU partitioning.
 
 ### Supported guest operating systems
 
@@ -64,8 +66,10 @@ The following GPUs support GPU partitioning:
 - NVIDIA L4
 - NVIDIA L40
 - NVIDIA L40S
+- NVIDIA RTX Pro 6000 Blackwell Server Edition
+- AMD Radeon PRO V710
 
-To use live migration with GPU partitioning, you must use the driver included in the NVIDIA vGPU Software v18.x or later. The NVIDIA driver provides the necessary support for GPU partitioning and live migration capabilities.
+To use live migration with GPU partitioning for NVIDIA GPUs, you must use the driver included in the NVIDIA vGPU Software v18.x or later. The NVIDIA driver provides the necessary support for GPU partitioning and live migration capabilities.
 
 We recommend working with your Original Equipment Manufacturer (OEM) partners to plan and order systems tailored to your workloads. Additionally, consult GPU Independent Hardware Vendors (IHVs) to ensure you have the appropriate configurations and necessary software for your setup. However, we support more GPUs if you want to use GPU acceleration via Discrete Device Assignment (DDA). Reach out to your OEM partners and IHVs to get a list of GPUs that support DDA. For more information about using GPU acceleration via DDA, see [Discrete Device Assignment (DDA)](deploy/Deploying-graphics-devices-using-dda.md).
 

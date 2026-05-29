@@ -2,8 +2,8 @@
 title: regini
 description: Reference article for the regini command, which modifies the registry from the command line or a script, and applies changes that were preset in one or more text files.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

@@ -2,8 +2,8 @@
 title: Accelerated Networking for Windows Server
 description: How to set up and validate Accelerated Networking on your virtual machines using PowerShell and Windows Admin Center.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 11/03/2025
 ---
 

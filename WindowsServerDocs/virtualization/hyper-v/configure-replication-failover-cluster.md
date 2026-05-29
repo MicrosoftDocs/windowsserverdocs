@@ -3,14 +3,14 @@ title: Enable Hyper-V Replica on a failover cluster
 description: Learn how to configure replication for virtual machines going to Hyper-V hosts in a failover cluster using Hyper-V Replica.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
-ms.date: 11/10/2025
+ms.author: roharwoo
+author: robinharwood
+ms.date: 04/28/2026
 ---
 
 # Enable Hyper-V Replica on a failover cluster
 
-Hyper-V Replica helps you protect your workloads by replicating virtual machines (VMs) between Hyper-V hosts running Windows Server. This article explains how to enable Hyper-V Replica on a failover cluster.
+Hyper-V Replica helps you protect your workloads by replicating virtual machines (VMs) between Hyper-V hosts running Windows Server. This article explains how to enable Hyper-V Replica on a failover cluster by using Windows Admin Center - Virtualization mode, Failover Cluster Manager, or PowerShell.
 
 You can replicate between clusters, single hosts, or a combination of both. If you use a certificate for authentication, there's no Active Directory dependency between the hosts. Single hosts can either be domain members or be in a workgroup.
 
@@ -50,7 +50,51 @@ The Hyper-V Replica Broker is a clustered role that acts as the target for repli
 
 To ensure you can fail a VM back to the original primary cluster or host after a failover event, configure both primary and replica clusters and hosts for replication.
 
-Use Failover Cluster Manager or PowerShell to enable and configure the Hyper-V Replica Broker role. Select the relevant tab for instructions.
+Use Windows Admin Center - Virtualization mode, Failover Cluster Manager, or PowerShell to enable and configure the Hyper-V Replica Broker role. Select the relevant tab for instructions.
+
+### [Windows Admin Center - Virtualization mode](#tab/windows-admin-center)
+
+> [!IMPORTANT]
+> Configuring Hyper-V Replica by using *Windows Admin Center - Virtualization mode* is currently in PREVIEW.
+> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+>
+> For more information about Windows Admin Center - Virtualization mode, see [Windows Admin Center - Virtualization mode overview](../../manage/windows-admin-center/virtualization-mode-overview.md).
+
+To enable and configure the Hyper-V Replica Broker by using Windows Admin Center - Virtualization mode:
+
+1. Go to your URL for **Windows Admin Center - Virtualization mode** and sign in.
+
+1. In the resources pane, select the cluster you want to replicate to.
+
+1. From the list of tools for the cluster, select **Settings**.
+
+1. Under **Hyper-V Host Settings**, select **Replication**.
+
+1. Select **Configure Hyper-V Replica Broker** to open the broker configuration pane.
+
+1. For the **Client Access Point**, complete the following information:
+
+   1. For **Broker Name**, enter the name you want to use for the Hyper-V Replica Broker. The name is limited to 15 characters and must be unique in your Active Directory domain.
+
+   1. For **Available Networks**, select the network to use for the broker and enter an IP address if DHCP isn't available.
+
+1. Select **Next** to view the **Summary**, which shows the broker name, IP address, and organizational unit (OU). Review the information and select **Configure**.
+
+1. A notification confirms the broker role is being configured. Wait for the configuration to complete. Once completed, the **Replication** settings page shows the broker name and state.
+
+1. After the broker is configured, configure the replication settings for the cluster. On the **Replication** settings page, make the following changes:
+
+   1. Check the box **Enable this computer as a Replica server**. The broker name and state are displayed at the top of the page.
+
+   1. For **Authentication and Ports**, check the box for the authentication method you want to use from **Use Kerberos authentication (HTTP)** or **Use Certificate-based authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select** to choose the certificate that matches the requirements.
+
+   1. For **Authorization and Storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, specify where the replicated VHDs should be stored. For a cluster, this location needs to be accessible by all nodes, such as a Cluster Shared Volume (CSV) at `C:\ClusterStorage\Volume1`. Select **Browse** to select a storage location.
+
+      If you select **Allow replication from the specified servers**, select **Add** to specify the FQDN of a primary host, a location to store replica files, and a trust group.
+
+1. Select **Save** to save your settings.
+
+1. Verify the Hyper-V Replica Broker state is **Online** before you attempt to replicate VMs to the cluster.
 
 ### [Failover Cluster Manager](#tab/failover-cluster-manager)
 
@@ -58,29 +102,29 @@ To enable and configure the Hyper-V Replica Broker cluster role by using Failove
 
 1. Open **Failover Cluster Manager** on a device you use to manage the cluster that you want to replicate to, or on one of the nodes in the cluster.
 
-1. In the left pane, expand the name of your cluster you want to replicate to, then select **Roles**.
+1. In the left pane, expand the name of your cluster you want to replicate to, and then select **Roles**.
 
 1. In the right **Actions** pane, select **Configure Role**. In the **High Availability Wizard**, if you see **Before You Begin**, select **Next**.
 
-1. For **Select Role**, select **Hyper-V Replica Broker**, then select **Next**.
+1. For **Select Role**, select **Hyper-V Replica Broker**, and then select **Next**.
 
-   :::image type="content" source="media/configure-replication-failover-cluster/high-availability-wizard-select-role.png" alt-text="A screenshot of the High Availability Wizard in Failover Cluster Manager on the Select Role page highlighting the Hyper-V Replica Broker role option." lightbox="media/configure-replication-failover-cluster/high-availability-wizard-select-role.png":::
+   :::image type="content" source="media/configure-replication-failover-cluster/high-availability-wizard-select-role.png" alt-text="Screenshot of the High Availability Wizard in Failover Cluster Manager on the Select Role page highlighting the Hyper-V Replica Broker role option." lightbox="media/configure-replication-failover-cluster/high-availability-wizard-select-role.png":::
 
-1. For **Client Access Point**, enter the name you want to use for the Hyper-V Replica Broker, then select **Next**. The name is used as the NetBIOS name for the role and is limited to 15 characters. This name must be unique in your Active Directory domain.
+1. For **Client Access Point**, enter the name you want to use for the Hyper-V Replica Broker, and then select **Next**. The name is the NetBIOS name for the role and is limited to 15 characters. This name must be unique in your Active Directory domain.
 
-   :::image type="content" source="media/configure-replication-failover-cluster/high-availability-wizard-client-access-point.png" alt-text="A screenshot of the High Availability Wizard showing the Client Access Point page where the Hyper-V Replica Broker name is entered." lightbox="media/configure-replication-failover-cluster/high-availability-wizard-client-access-point.png":::
+   :::image type="content" source="media/configure-replication-failover-cluster/high-availability-wizard-client-access-point.png" alt-text="Screenshot of the High Availability Wizard showing the Client Access Point page where the Hyper-V Replica Broker name is entered." lightbox="media/configure-replication-failover-cluster/high-availability-wizard-client-access-point.png":::
 
-1. For **Confirmation**, review the information, then select **Next**. The Hyper-V Replica Broker role is configured. Initially, the role attempts to obtain an IP address from DHCP. You can change this setting later if you want to use a static IP address. If DHCP isn't available on the subnet, the role doesn't come online until you assign a static IP address.
+1. For **Confirmation**, review the information, and then select **Next**. The Hyper-V Replica Broker role is configured. Initially, the role attempts to obtain an IP address from DHCP. You can change this setting later if you want to use a static IP address. If DHCP isn't available on the subnet, the role doesn't come online until you assign a static IP address.
 
-1. View the **Summary**, then select **Finish**. You can also view a log of the actions performed by selecting **View Report**, which opens in a browser window.
+1. View the **Summary**, and then select **Finish**. You can also view a log of the actions performed by selecting **View Report**, which opens in a browser window.
 
-1. Back in the **Roles** pane, right-click the new **Hyper-V Replica Broker** role, then select **Replication Settings**.
+1. Back in the **Roles** pane, right-click the new **Hyper-V Replica Broker** role, and then select **Replication Settings**.
 
 1. In the **Hyper-V Replica Broker Configuration** dialog box, make the following changes:
 
-   1. Check the box **Enable this cluster as a Replica server**.
+   1. Select **Enable this cluster as a Replica server**.
 
-   1. Check the box for the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based Authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select Certificate**, then you're prompted to select the certificate that matches the requirements.
+   1. Select the authentication method you want to use from **Use Kerberos (HTTP)** or **Use certificate-based Authentication (HTTPS)**. Change the port if you don't want to use the default ports. If you're using certificate-based authentication, select **Select Certificate**, and then you're prompted to select the certificate that matches the requirements.
 
    1. For **Authorization and storage**, select either **Allow replication from any authenticated server** to allow the replica server to accept VM replication traffic from any primary server that authenticates successfully, or **Allow replication from the specified servers** to accept traffic only from the primary servers you specifically select. For both options, you need to specify where the replicated VHDs should be stored on the replica Hyper-V cluster. For a cluster, this location needs to be accessible by all nodes in the cluster, such as a Cluster Shared Volume (CSV) at `C:\ClusterStorage\Volume1\Replica`.
 
@@ -88,11 +132,11 @@ To enable and configure the Hyper-V Replica Broker cluster role by using Failove
 
    1. Select **OK** to save your settings.
 
-   :::image type="content" source="media/configure-replication-failover-cluster/replica-broker-configuration.png" alt-text="A screenshot of the Hyper-V Replica Broker Configuration dialog displaying authentication, authorization, and storage path settings for replication." lightbox="media/configure-replication-failover-cluster/replica-broker-configuration.png":::
+   :::image type="content" source="media/configure-replication-failover-cluster/replica-broker-configuration.png" alt-text="Screenshot of the Hyper-V Replica Broker Configuration dialog displaying authentication, authorization, and storage path settings for replication." lightbox="media/configure-replication-failover-cluster/replica-broker-configuration.png":::
 
 ### [PowerShell](#tab/powershell)
 
-To enable and configure the Hyper-V Replica Broker cluster role with PowerShell, use cmdlets in the [FailoverClusters](/powershell/module/failoverclusters/) module, as shown in the following examples. Replace placeholder `<values>` with your own values.
+To enable and configure the Hyper-V Replica Broker cluster role by using PowerShell, use cmdlets in the [FailoverClusters](/powershell/module/failoverclusters/) module, as shown in the following examples. Replace placeholder `<values>` with your own values.
 
 1. Open a PowerShell session as an administrator on one of the nodes in the cluster that you want to replicate to, or connect remotely by using the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession) cmdlet on a device you use to manage the cluster or host.
 
@@ -144,7 +188,7 @@ To enable and configure the Hyper-V Replica Broker cluster role with PowerShell,
    Get-ClusterGroup | ? GroupType -eq VMReplicaBroker
    ```
 
-   Here's an example of the output you should see. The value for the **State** parameter should be  `Online`.
+   Here's an example of the output you should see. The value for the **State** parameter should be `Online`.
 
    ```output
    Name         OwnerNode State
@@ -156,11 +200,11 @@ To enable and configure the Hyper-V Replica Broker cluster role with PowerShell,
 
 ## Enable Windows Firewall rules for Hyper-V Replica
 
-To allow replication between the primary and replica clusters and hosts, traffic must get through the Windows Firewall (or any other third-party firewalls). When you install the Hyper-V role on each host, the Windows Firewall creates exceptions for HTTP (80) and HTTPS (443), but doesn't enable them by default. You need to enable the appropriate rules for all receiving hosts.
+To allow replication between the primary and replica clusters and hosts, traffic must get through the Windows Firewall (or any other third-party firewalls). When you install the Hyper-V role on each host, the Windows Firewall creates exceptions for HTTP (80) and HTTPS (443), but it doesn't enable them by default. You need to enable the appropriate rules for all receiving hosts.
 
 You can enable the rules by using your preferred method of managing the Windows Firewall, such as centrally using Group Policy, or locally on each node by using the Windows Firewall with Advanced Security console or PowerShell. For more information about managing the Windows Firewall and how-to guides, see [Windows Firewall tools](/windows/security/operating-system-security/network-security/windows-firewall/tools).
 
-The rules you need to enable depend on the authentication method you chose when you configured the Hyper-V Replica Broker role:
+The rules you need to enable depend on the authentication method you choose when you configure the Hyper-V Replica Broker role:
 
 - Enable `Hyper-V Replica HTTP Listener (TCP-In)` for Kerberos (HTTP) authentication.
 - Enable `Hyper-V Replica HTTPS Listener (TCP-In)` for certificate-based (HTTPS) authentication.

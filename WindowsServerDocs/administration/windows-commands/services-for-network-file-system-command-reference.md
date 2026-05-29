@@ -2,8 +2,8 @@
 title: Services for Network File System (NFS) command-line tools
 description: Reference article about Services for Network File System (NFS) command-line tools
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

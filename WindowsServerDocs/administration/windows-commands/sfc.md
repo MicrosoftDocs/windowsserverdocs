@@ -2,8 +2,8 @@
 title: sfc
 description: Reference article for the sfc command, which scans and verifies the integrity of all protected system files and replaces incorrect versions with correct versions.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/19/2022
 ---
 

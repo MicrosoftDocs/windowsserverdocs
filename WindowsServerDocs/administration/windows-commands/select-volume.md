@@ -2,8 +2,8 @@
 title: select volume
 description: Reference article for the select volume command, which selects the specified volume and shifts the focus to it.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

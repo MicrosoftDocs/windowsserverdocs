@@ -2,8 +2,8 @@
 title: Create and configure a virtual switch with Hyper-V
 description: Learn how to create and configure a virtual switch for use by the Hyper-V host and guest virtual machines.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/29/2025
 zone_pivot_groups: windows
 ---

@@ -2,8 +2,8 @@
 title: Create a Linux shielded VM template disk
 description: "Learn more about: Create a Linux shielded VM template disk"
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

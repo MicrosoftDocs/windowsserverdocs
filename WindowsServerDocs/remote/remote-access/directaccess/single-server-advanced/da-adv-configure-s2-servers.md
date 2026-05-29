@@ -2,8 +2,8 @@
 title: Step 2 Configure Advanced DirectAccess Servers
 description: Learn how to configure the client and server settings that are required for an advanced Remote Access deployment that uses a single Remote Access server in a mixed IPv4 and IPv6 environment.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Configure Advanced DirectAccess Servers

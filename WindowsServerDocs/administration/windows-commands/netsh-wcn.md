@@ -2,8 +2,8 @@
 title: netsh wcn
 description: The netsh wcn command configures, manages, and troubleshoots Wireless Configuration Network (WCN) settings on Windows devices.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/29/2025
 ---
 

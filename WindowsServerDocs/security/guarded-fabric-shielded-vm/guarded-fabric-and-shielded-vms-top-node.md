@@ -2,8 +2,8 @@
 title: Guarded fabric and shielded VMs
 description: "Learn more about: Guarded fabric and shielded VMs"
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

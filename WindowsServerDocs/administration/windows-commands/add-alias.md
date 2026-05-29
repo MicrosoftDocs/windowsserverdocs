@@ -3,8 +3,8 @@ title: add alias
 no-loc: [add alias]
 description: Reference article for the add alias command, which adds aliases to the alias environment.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

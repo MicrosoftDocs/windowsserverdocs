@@ -2,8 +2,8 @@
 title: Configure a file share witness for Failover Clustering in Windows Server
 description: Configure cluster quorum as a file share witness in domain-joined and non-domain joined devices using Failover Cluster Manager.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/28/2025
 #customer intent: As a cluster administrator, I want to configure a file share witness so that I can use it to determine the availability of the cluster nodes in addition to the node majority vote.
 ---
@@ -95,6 +95,8 @@ To configure the file share witness on a domain-joined Windows device, follow th
 1. Select the **Security** tab, then select **Advanced**.
 
 1. In the **Advanced Security Settings** screen, under the **Permissions** tab, select **Add**.
+
+1. Select **Select a principal**, and then enter the name or locate the Cluster Name Object (CNO) for the cluster or suitable Active Directory group containing the CNO. Select **OK**.
 
 1. Under **Basic permissions**, select **Modify**, **Read & execute**, **List folder contents**, and **Read**. Then select **OK**.
 

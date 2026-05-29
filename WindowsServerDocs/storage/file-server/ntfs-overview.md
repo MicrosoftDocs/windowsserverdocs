@@ -2,8 +2,8 @@
 title: NTFS overview
 description: Learn how NTFS provides a full set of features including security descriptors, encryption, disk quotas, and rich metadata in Windows.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/17/2025
 ---
 

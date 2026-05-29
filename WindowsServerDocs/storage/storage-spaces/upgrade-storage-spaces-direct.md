@@ -2,8 +2,8 @@
 title: Upgrade a Storage Spaces Direct cluster
 description: Upgrade your Storage Spaces Direct cluster efficiently. Review supported upgrade methods, prerequisites, and how to keep your workloads running.
 #customer intent: As an IT professional, I want to upgrade my Storage Spaces Direct cluster with minimal VM downtime so that my workloads stay available.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/27/2025
 ms.topic: upgrade-and-migration-article
 ---

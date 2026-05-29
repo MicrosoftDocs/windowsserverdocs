@@ -3,24 +3,43 @@ title: Hyper-v Architecture
 description: Describes the Hyper-V architecture and its role in virtualization and provides an overview and glossary of the architecture.
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/14/2020
+ms.date: 01/21/2026
 ms.topic: concept-article
 ---
 # Hyper-V Architecture
 
-Hyper-V is a hypervisor-based virtualization technology for certain x64 versions of Windows.  The hypervisor is core to virtualization.  It is the processor-specific virtualization platform that allows multiple isolated operating systems to share a single hardware platform.
+Hyper-V is a hypervisor-based virtualization technology for certain x64 versions of Windows. The hypervisor is core to virtualization. It is the processor-specific virtualization platform that allows multiple isolated operating systems to share a single hardware platform.
 
-Hyper-V supports isolation in terms of a partition. A partition is a logical unit of isolation, supported by the hypervisor, in which operating systems execute. The Microsoft hypervisor must have at least one parent, or root, partition, running Windows. The virtualization management stack runs in the parent partition and has direct access to hardware devices. The root partition then creates the child partitions which host the guest operating systems. A root partition creates child partitions using the hypercall application programming interface (API).
-
-Partitions do not have access to the physical processor, nor do they handle the processor interrupts. Instead, they have a virtual view of the processor and run in a virtual memory address region that is private to each guest partition. The hypervisor handles the interrupts to the processor, and redirects them to the respective partition. Hyper-V can also hardware accelerate the address translation between various guest virtual address spaces by using an Input Output Memory Management Unit (IOMMU) which operates independent of the memory management hardware used by the CPU. An IOMMU is used to remap physical memory addresses to the addresses that are used by the child partitions.
-
-Child partitions also do not have direct access to other hardware resources and are presented a virtual view of the resources, as virtual devices (VDevs). Requests to the virtual devices are redirected either via the VMBus or the hypervisor to the devices in the parent partition, which handles the requests. The VMBus is a logical inter-partition communication channel. The parent partition hosts Virtualization Service Providers (VSPs) which communicate over the VMBus to handle device access requests from child partitions. Child partitions host Virtualization Service Consumers (VSCs) which redirect device requests to VSPs in the parent partition via the VMBus. This entire process is transparent to the guest operating system.
-
-Virtual Devices can also take advantage of a Windows Server Virtualization feature, named Enlightened I/O, for storage, networking, graphics, and input subsystems. Enlightened I/O is a specialized virtualization-aware implementation of high level communication protocols (such as SCSI) that utilize the VMBus directly, bypassing any device emulation layer. This makes the communication more efficient but requires an enlightened guest that is hypervisor and VMBus aware. Hyper-V enlightened I/O and a hypervisor aware kernel is provided via installation of Hyper-V integration services. Integration components, which include virtual server client (VSC) drivers, are also available for other client operating systems. Hyper-V requires a processor that includes hardware assisted virtualization, such as is provided with Intel VT or AMD Virtualization (AMD-V) technology.
+Hyper-V requires a processor that includes hardware assisted virtualization, such as is provided with Intel VT or AMD Virtualization (AMD-V) technology.
 
 The following diagram provides a high-level overview of the architecture of a Hyper-V environment.
 
-![Diagram of the Hyper V High Level Architecture, showing the four partitions and Hypervisor sections.](./media/architecture/hyper-v-architecture.png)
+:::image type="content" source="./media/architecture/hyper-v-architecture.png" alt-text="A diagram of the Hyper-V architecture showing the hypervisor, root partition, child partitions, VMBus, Virtualization Service Providers (VSPs), and Virtualization Service Consumers (VSCs).":::
+
+## Root and child partitions
+
+Hyper-V supports isolation in terms of a partition. A partition is a logical unit of isolation, supported by the hypervisor, in which operating systems execute. The Microsoft hypervisor must have at least one parent, or root, partition, running Windows. The virtualization management stack runs in the parent partition and has direct access to hardware devices. The root partition then creates the child partitions which host the guest operating systems. A root partition creates child partitions using the hypercall application programming interface (API).
+
+Child partitions don't have direct access to other hardware resources and are presented a virtual view of the resources, as virtual devices (VDevs). Requests to the virtual devices are redirected either via the VMBus or the hypervisor to the devices in the parent partition, which handles the requests.
+
+## Interrupt and memory handling
+
+Partitions don't have access to the physical processor, nor do they handle the processor interrupts. Instead, they have a virtual view of the processor and run in a virtual memory address region that is private to each guest partition. The hypervisor handles the interrupts to the processor, and redirects them to the respective partition.
+
+Hyper-V can also hardware accelerate the address translation between various guest virtual address spaces by using an Input Output Memory Management Unit (IOMMU) which operates independent of the memory management hardware used by the CPU. An IOMMU is used to remap physical memory addresses to the addresses that are used by the child partitions.
+
+> [!NOTE]
+> Second Level Address Translation (SLAT) is required for Hyper-V on Windows Server 2016 and later.
+
+## VMBus, VSP, and VSC
+
+The VMBus is a logical inter-partition communication channel. The parent partition hosts Virtualization Service Providers (VSPs) which communicate over the VMBus to handle device access requests from child partitions. Child partitions host Virtualization Service Consumers (VSCs) which redirect device requests to VSPs in the parent partition via the VMBus. This entire process is transparent to the guest operating system.
+
+## Enlightened I/O and integration services
+
+Virtual devices can also take advantage of a Windows Server Virtualization feature, named Enlightened I/O, for storage, networking, graphics, and input subsystems. Enlightened I/O is a specialized virtualization-aware implementation of high level communication protocols (such as SCSI) that utilize the VMBus directly, bypassing any device emulation layer. This makes the communication more efficient but requires an enlightened guest that is hypervisor and VMBus aware.
+
+Hyper-V enlightened I/O and a hypervisor aware kernel is provided via Hyper-V integration services. Integration components, which include Virtual Server Client (VSC) drivers, are also available for other client operating systems.
 
 ## Glossary
 
@@ -29,9 +48,11 @@ The following diagram provides a high-level overview of the architecture of a Hy
 * **Hypercall** – Interface for communication with the hypervisor - The hypercall interface accommodates access to the optimizations provided by the hypervisor.
 * **Hypervisor** – A layer of software that sits between the hardware and one or more operating systems. Its primary job is to provide isolated execution environments called partitions. The hypervisor controls and arbitrates access to the underlying hardware.
 * **IC** – Integration component – Component that allows child partitions to communication with other partitions and the hypervisor.
+* **IOMMU** – Input/Output Memory Management Unit – A memory management unit that connects a direct-memory-access-capable I/O bus to main memory, remapping physical addresses to guest physical addresses for device isolation.
 * **I/O stack** – Input/output stack
-* **MSR** – Memory Service Routine
-* **Root Partition** – Sometimes called parent partition.  Manages machine-level functions such as device drivers, power management, and device hot addition/removal. The root (or parent) partition is the only partition that has direct access to physical memory and devices.
+* **MSR** – Model-Specific Registers. Used for status and control values.
+* **Root Partition** – Sometimes called parent partition. Manages machine-level functions such as device drivers, power management, and device hot addition/removal. The root (or parent) partition is the only partition that has direct access to physical memory and devices.
+* **VDev** – Virtual Device – A virtualized representation of a hardware device presented to child partitions. VDevs abstract physical hardware, allowing guest operating systems to interact with devices through the VMBus or hypervisor.
 * **VID** – Virtualization Infrastructure Driver – Provides partition management services, virtual processor management services, and memory management services for partitions.
 * **VMBus** – Channel-based communication mechanism used for inter-partition communication and device enumeration on systems with multiple active virtualized partitions. The VMBus is installed with Hyper-V Integration Services.
 * **VMMS** – Virtual Machine Management Service – Responsible for managing the state of all virtual machines in child partitions.

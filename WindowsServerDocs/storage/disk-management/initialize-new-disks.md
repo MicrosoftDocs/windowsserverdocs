@@ -3,8 +3,8 @@ title: Initialize New Disks
 description: Initialize new disks with the Disk Management utility in Windows and prepare them for use or get help with troubleshooting.
 ms.date: 06/24/2025
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 #customer intent: As an administrator, I want to initialize disks with Disk Management in Windows, so I can get the disks ready for use and get help with troubleshooting.
 ---
 

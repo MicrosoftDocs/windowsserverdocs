@@ -2,8 +2,8 @@
 title: makecab
 description: Reference article for the makecab command, which packages existing files into a cabinet (.cab) file.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

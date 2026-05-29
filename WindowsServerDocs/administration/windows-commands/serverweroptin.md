@@ -2,8 +2,8 @@
 title: serverweroptin
 description: Reference article for the serverweroptin command, which allows you to turn on error reporting.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

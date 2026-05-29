@@ -2,8 +2,8 @@
 title: takeown
 description: Reference article for the takeown command, which enables an administrator to recover access to a file that was previously denied.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/04/2025
 ---
 

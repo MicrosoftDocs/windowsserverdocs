@@ -2,8 +2,8 @@
 title: DirectAccess
 description: You can use this topic for a brief overview of DirectAccess in Windows Server.
 ms.topic: overview
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/16/2022
 ---
 # DirectAccess

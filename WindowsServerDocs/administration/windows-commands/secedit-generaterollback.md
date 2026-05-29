@@ -2,8 +2,8 @@
 title: secedit generaterollback
 description: Reference article for the secedit generaterollback command, which allows you to generate a rollback template for a specified configuration template.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

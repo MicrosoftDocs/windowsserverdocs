@@ -2,8 +2,8 @@
 title: Track your Remote Desktop Services client access licenses (RDS CALs)
 description: Learn how to track CALs across your RDS deployment.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 7/3/2024
 ---
 # Track your Remote Desktop Services client access licenses (RDS CALs)

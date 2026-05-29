@@ -2,8 +2,8 @@
 title: Step 2 Configure the Basic DirectAccess Server
 description: Learn how to configure the client and server settings required for a basic DirectAccess deployment.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Basic DirectAccess Server

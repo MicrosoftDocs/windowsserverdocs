@@ -2,8 +2,8 @@
 title: STEP 3 Configure DC1
 description: Learn how to verify that User1 has a User Principal Name defined on DC1.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 3 Configure DC1

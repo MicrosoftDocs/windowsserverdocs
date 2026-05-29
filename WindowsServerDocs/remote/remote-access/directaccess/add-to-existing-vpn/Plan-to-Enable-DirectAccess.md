@@ -2,8 +2,8 @@
 title: Plan to Enable DirectAccess
 description: Learn about DirectAccess infrastructure and DirectAccess deployment for Windows Server 2016.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Plan to Enable DirectAccess

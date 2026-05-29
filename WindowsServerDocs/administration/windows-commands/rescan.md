@@ -2,8 +2,8 @@
 title: rescan
 description: Reference article for the rescan command, which locates new disks added to the computer.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

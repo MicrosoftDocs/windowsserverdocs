@@ -65,8 +65,18 @@
       href: use/logging.md
     - name: Manage AWS Machines
       href: use/manage-aws-machines.md
-    - name: Migrate VMware virtual machines to Hyper-V
-      href: use/migrate-vmware-to-hyper-v.md  
+    - name: VM Conversion extension (preview)
+      items:
+      - name: VM Conversion extension overview
+        href: use/vm-conversion-extension-overview.md
+      - name: Migrate virtual machines
+        href: use/migrate-virtual-machines-vm-conversion-extension.md
+      - name: Troubleshoot the VM Conversion extension
+        href: use/troubleshoot-vm-conversion-extension.md
+      - name: What's new in the VM Conversion extension
+        href: use/whats-new-vm-conversion-extension.md
+      - name: VM Conversion extension FAQ
+        href: use/vm-conversion-extension-faq.yml
     - name: Virtualization Mode (preview)
       items:
       - name: Install Virtualization Mode
@@ -75,6 +85,8 @@
         href: add-virtualization-mode-resources.md
       - name: Manage virtual machines in Virtualization Mode
         href: manage-virtualization-mode-virtual-machines.md
+      - name: Use VM templates in Virtualization Mode
+        href: use-virtualization-mode-vm-templates.md
       - name: Known issues in Virtualization Mode
         href: virtualization-mode-known-issues.md
   - name: Connect to Azure

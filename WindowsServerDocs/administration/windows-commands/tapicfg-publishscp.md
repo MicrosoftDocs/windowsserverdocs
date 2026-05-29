@@ -2,8 +2,8 @@
 title: tapicfg publishscp
 description: Reference article for the tapicfg publishscp command, which creates a service connection point to publish a TAPI application directory partition.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/29/2020
 ---
 

@@ -2,8 +2,8 @@
 title: create volume raid
 description: Reference article for the create volume raid command, which creates a RAID-5 volume using three or more specified dynamic disks.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # create volume raid

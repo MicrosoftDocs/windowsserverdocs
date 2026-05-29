@@ -2,8 +2,8 @@
 title: Automatic Virtual Machine Activation in Windows Server
 description: Learn about Automatic Virtual Machine Activation (AVMA) and how to enable seamless activation of Windows Server virtual machines on licensed Hyper-V hosts.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 07/14/2025
 ---
 

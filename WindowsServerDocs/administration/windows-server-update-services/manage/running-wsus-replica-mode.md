@@ -2,8 +2,8 @@
 title: Running WSUS Replica mode
 description: Windows Server Update Service (WSUS) topic - How to configure Replica mode
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 # Running WSUS Replica mode

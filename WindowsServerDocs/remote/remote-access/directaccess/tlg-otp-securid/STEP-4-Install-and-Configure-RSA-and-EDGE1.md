@@ -2,8 +2,8 @@
 title: STEP 4 Install and Configure RSA and EDGE1
 description: Learn how to install and configure RSA and EDGE1.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 4 Install and Configure RSA and EDGE1

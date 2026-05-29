@@ -1,8 +1,8 @@
 ---
 title: Windows Server and Azure Management
 description: Learn how Microsoft Azure can extend Windows Server Management
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.reviewer: rclaus
 ms.topic: overview
 ms.date: 02/27/2022

@@ -1,8 +1,8 @@
 ---
 title: Deploy Storage Spaces Direct on Windows Server
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
 ms.date: 11/24/2025
 ---

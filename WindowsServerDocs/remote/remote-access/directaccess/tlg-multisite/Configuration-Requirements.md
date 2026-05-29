@@ -2,8 +2,8 @@
 title: Configuration Requirements
 description: Learn about the components that have to have Remote Access configured in the test lab.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Configuration Requirements

@@ -1,10 +1,10 @@
 ---
 title: Upgrade Remote Desktop Services deployments
 description: Learn about which Remote Desktop Services versions can be upgraded and the order to upgrade your Remote Desktop role services.
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: upgrade-and-migration-article
-author: dknappettmsft
+author: robinharwood
 ---
 # Upgrade Remote Desktop Services deployments
 

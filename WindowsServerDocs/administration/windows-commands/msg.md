@@ -2,8 +2,8 @@
 title: msg
 description: Reference article for the msg command, which sends a message to a user on a Remote Desktop Session Host server
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/19/2022
 ---
 

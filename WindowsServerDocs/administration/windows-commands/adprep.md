@@ -3,8 +3,8 @@ title: Adprep
 no-loc: [Adprep]
 description: Learn about adprep command line tool to prepare a forest and domain for a domain controller for Windows Server.
 ms.topic: reference
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/22/2024
 
 ---

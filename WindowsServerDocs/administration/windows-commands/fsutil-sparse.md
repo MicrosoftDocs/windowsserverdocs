@@ -1,8 +1,8 @@
 ---
 title: fsutil sparse
 description: Reference article for the fsutil sparse command, which manages sparse files.
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.topic: reference
 ms.date: 10/16/2017
 ---

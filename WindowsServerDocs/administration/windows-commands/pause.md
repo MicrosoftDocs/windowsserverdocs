@@ -2,8 +2,8 @@
 title: pause
 description: Reference article for the pause command, which suspends the processing of batch programs.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

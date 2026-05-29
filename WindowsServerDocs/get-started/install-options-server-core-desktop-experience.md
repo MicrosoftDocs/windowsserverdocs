@@ -2,8 +2,8 @@
 title: Server Core vs Server with Desktop Experience install options
 description: Learn the differences between the Server Core and Server with Desktop Experience install options.
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 04/15/2025
 ---
 

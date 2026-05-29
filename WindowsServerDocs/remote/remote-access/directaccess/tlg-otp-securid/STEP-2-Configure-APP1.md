@@ -2,8 +2,8 @@
 title: STEP 2 Configure APP1
 description: Learn how to create and deploy a certificate template used to sign OTP certificate requests and one used for OTP certificates issued by the corporate CA.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # STEP 2 Configure APP1

@@ -2,8 +2,8 @@
 title: Windows Logon Scenarios
 description: Learn about common Windows logon and sign-in scenarios.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/30/2025
 ms.custom: sfi-image-nochange
 ---

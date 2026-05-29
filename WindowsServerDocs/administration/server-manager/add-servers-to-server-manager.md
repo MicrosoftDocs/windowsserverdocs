@@ -2,8 +2,8 @@
 title: Add Servers to Server Manager
 description: Learn how to add servers to the Server Manager server pool.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 02/01/2018
 ---
 

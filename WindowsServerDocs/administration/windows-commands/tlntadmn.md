@@ -2,8 +2,8 @@
 title: tlntadmn
 description: Reference article for the tlntadmn command, which administers a local or remote computer, running the telnet Server Service.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

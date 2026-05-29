@@ -2,8 +2,8 @@
 title: bitsadmin transfer
 description: Reference article for the bitsadmin transfer command, which transfers one or more files.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

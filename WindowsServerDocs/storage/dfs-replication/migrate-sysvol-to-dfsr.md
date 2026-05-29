@@ -1,8 +1,8 @@
 ---
 title: Migrate SYSVOL replication from FRS to DFS Replication
 description: Learn how to migrate SYSVOL replication from File Replication Service (FRS) to Distributed File System Replication (DFSR). Follow this step-by-step guide to ensure a smooth transition and improve your Active Directory reliability.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: upgrade-and-migration-article
 ms.date: 05/14/2025
 ---

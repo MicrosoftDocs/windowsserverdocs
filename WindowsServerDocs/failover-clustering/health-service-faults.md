@@ -1,9 +1,9 @@
 ---
 description: "Learn more about: Health Service faults"
 title: Health Service faults
-ms.author: daknappe
+ms.author: roharwoo
 ms.topic: concept-article
-author: dknappettmsft
+author: robinharwood
 ms.date: 10/05/2017
 ---
 

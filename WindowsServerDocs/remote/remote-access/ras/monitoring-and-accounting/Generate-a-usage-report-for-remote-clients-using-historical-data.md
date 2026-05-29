@@ -2,8 +2,8 @@
 title: Generate a usage report for remote clients using historical data
 description: Learn how to enable accounting on the Remote Access server so you can generate a usage report for the remote clients that are accessing the server.
 ms.topic: how-to
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Generate a usage report for remote clients using historical data

@@ -3,8 +3,8 @@ title: Hyper-V Features and Terminology Overview
 description: Discover key Hyper-V features and terminology for Windows Server and Windows. Learn about virtual machine generations, processor compatibility, memory management, security features, storage options, networking capabilities, and more.
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/06/2025
 ---
 

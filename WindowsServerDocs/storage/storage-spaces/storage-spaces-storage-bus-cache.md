@@ -1,8 +1,8 @@
 ---
 title: Storage bus cache on Storage Spaces 
 description: Learn how to enable the storage bus cache on standalone servers for better read and write performance.
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.topic: tutorial #Required; leave this attribute/value as-is.
 ms.date: 02/12/2025
 ms.custom: template-tutorial #Required; leave this attribute/value as-is.

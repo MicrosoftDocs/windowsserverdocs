@@ -57,7 +57,7 @@ To enable SSHD using Server Manager:
 
 1. In the **Properties** window, locate **Remote SSH Access**.
 
-1. Select **Disabled** to enable the OpenSSH service.
+1. Select **Enabled** to enable the OpenSSH service.
 
 > [!NOTE]
 > If you need to allow or restrict specific users or groups from using OpenSSH for remote access, add them to the **OpenSSH Users** user group.

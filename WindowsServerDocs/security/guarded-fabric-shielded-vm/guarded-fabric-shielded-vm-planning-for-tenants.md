@@ -2,8 +2,8 @@
 description: Provides a guide to guarded fabric and shielded VM planning for VM owners who need to protect their virtual machines.
 title: Guarded Fabric and Shielded VM Planning Guide for Tenants
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 

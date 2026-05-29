@@ -3,8 +3,8 @@ title: Storage Spaces Direct Hardware Requirements in Windows Server
 description: Discover the minimum hardware requirements for Storage Spaces Direct in Windows Server and ensure optimal performance. Plan your deployment today.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/12/2025
 ---
 

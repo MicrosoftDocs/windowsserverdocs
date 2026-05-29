@@ -2,8 +2,8 @@
 title: pathping
 description: Reference article for the pathping command, which gets info about network latency and network loss at intermediate hops between a source and a destination.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/11/2018
 ---
 

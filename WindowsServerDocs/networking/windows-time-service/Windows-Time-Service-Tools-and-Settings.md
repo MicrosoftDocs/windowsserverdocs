@@ -2,8 +2,8 @@
 title: Windows Time Service Tools and Settings
 description: Find out about the settings in the Windows Time service (W32Time). See how to configure these settings in the registry or Group Policy Object Editor.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 09/18/2025
 # customer intent: As an administrator, I want to find out more about Windows Time service settings so that I can adjust their configuration when I need to.
 ---

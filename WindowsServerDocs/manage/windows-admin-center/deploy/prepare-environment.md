@@ -2,8 +2,8 @@
 title: Prepare your environment for Windows Admin Center
 description: Prepare your environment for Windows Admin Center (Project Honolulu)
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/07/2019
 ---
 

@@ -2,8 +2,8 @@
 title: tpmvscmgr
 description: Reference article for tpmvscmgr, which is a command-line tool that lets users with Administrative credentials create and delete TPM virtual smart cards on a computer.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

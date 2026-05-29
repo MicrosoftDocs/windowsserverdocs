@@ -3,8 +3,8 @@ title: "Tutorial: Create Always On VPN Connection on Windows Client Devices"
 description: Learn how to configure an Always On VPN connection for Windows client devices. Automatically connect to your VPN server without manual steps.
 ms.topic: tutorial
 ms.date: 05/08/2025
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ---
 
 # Tutorial: Create an Always On VPN connection on Windows client devices

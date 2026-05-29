@@ -2,8 +2,8 @@
 title: Windows Defender Overview for Windows Server
 description: Learn about Windows Defender Antivirus and how its malware protection that immediately and actively protects Windows Server 2016 against known malware. 
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/10/2022
 ---
 # Windows Defender Antivirus for Windows Server

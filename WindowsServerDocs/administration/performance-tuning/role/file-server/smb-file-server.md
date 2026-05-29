@@ -2,8 +2,8 @@
 title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers in Windows.
 ms.topic: best-practice
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/16/2025
 ---
 

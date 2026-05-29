@@ -2,8 +2,8 @@
 description: Describes the two major decisions that are needed to enable shielded virtual machines on a Hyper-V fabric setup.
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: concept-article
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

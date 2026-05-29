@@ -2,8 +2,8 @@
 title: Kerberos authentication overview in Windows Server
 description: Explore Kerberos authentication in Windows Server, including its protocol, benefits, interoperability, and practical applications.
 ms.topic: concept-article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/17/2025
 ---
 # Kerberos authentication overview in Windows Server

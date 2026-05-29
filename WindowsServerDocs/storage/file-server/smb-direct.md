@@ -2,8 +2,8 @@
 title: Improve performance of a file server with SMB Direct
 description: SMB Direct allows for faster file transfer and more efficient network usage by utilizing remote direct memory access (RDMA) technology in Windows.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/16/2025
 ---
 

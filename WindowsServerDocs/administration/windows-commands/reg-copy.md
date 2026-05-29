@@ -2,8 +2,8 @@
 title: reg copy
 description: Reference article for the reg copy command, which copies a registry entry to a specified location on the local or remote computer.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

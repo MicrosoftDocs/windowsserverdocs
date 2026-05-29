@@ -2,8 +2,8 @@
 title: Windows Admin Center SDK Case Study - Thomas-Krenn
 description: Windows Admin Center SDK Case Study - Thomas-Krenn
 ms.topic: partner-tools
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/24/2019
 ms.custom: sfi-image-nochange
 ---

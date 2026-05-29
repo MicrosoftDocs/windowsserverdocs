@@ -53,6 +53,8 @@ landingContent:
             url: rds-plan-build-anywhere.md
           - text: Network guidelines
             url: network-guidance.md
+          - text: Windows Server 2025 Capacity Planning whitepaper (PDF)
+            url: https://download.microsoft.com/download/41af4cc7-8c9d-4c12-b148-d4454c2edaea/Windows%20Server%202025%20Capacity%20Planning%20Whitepaper.pdf
 
   # Card (Optional; Remove if not applicable.)
   - title: Build and deploy

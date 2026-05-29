@@ -2,8 +2,8 @@
 title: scwcmd rollback
 description: Reference article for the scwcmd rollback command, which applies the most recent rollback policy available, and then deletes that rollback policy.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

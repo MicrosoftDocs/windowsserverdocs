@@ -2,8 +2,8 @@
 title: bitsadmin cache and help
 description: Reference article for the bitsadmin cache and help command, which displays the command-line usage for the **cache** switches.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 

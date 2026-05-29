@@ -1,10 +1,10 @@
 ---
 title: OSConfig overview for Windows Server
 description: OSConfig is a cross-platform scenario-based security tool to manage on-premises Windows Server and Azure Arc-connected devices.
-ms.topic: concept-article
-ms.product: windows-server
-ms.author: daknappe
-author: dknappettmsft
+ms.topic: overview
+ms.service: windows-server
+ms.author: roharwoo
+author: robinharwood
 ms.contributor: Dona Mukherjee, Carlos Mayol Berral, Simon Jäger
 ms.date: 03/17/2025
 ---
@@ -17,7 +17,7 @@ The OSConfig stack consists of base cmdlets, native APIs, and a scenario definit
 
 OSConfig is commonly released with the Windows Server operating system (OS) to provide an abstraction for local device configuration. Its object model design is data driven, which allows for mapping to various providers in the Windows OS for device configuration. The following diagram describes the OSConfig flow.
 
-![Flowchart of the o s config PowerShell module.](../media/osconfig/osconfig-module-flowchart.png)
+![Flowchart of the o s config PowerShell module.](/windows-server/security/media/osconfig/osconfig-module-flowchart.png)
 
 Currently, with OSConfig, you can establish security baselines for various Microsoft OSs, including Windows Server 2025 and Azure Local 2311.2 and later. It integrates with Azure Policy, Microsoft Defender, Windows Admin Center, and Azure Automanage machine configuration to facilitate monitoring and compliance reporting.
 
@@ -60,5 +60,4 @@ OSConfig is a single platform that:
 
 ## Related content
 
-- [Deploy OSConfig security baselines locally](osconfig-how-to-configure-security-baselines.md)
-
+- [Deploy OSConfig security baselines locally](/windows-server/security/osconfig/osconfig-how-to-configure-security-baselines)

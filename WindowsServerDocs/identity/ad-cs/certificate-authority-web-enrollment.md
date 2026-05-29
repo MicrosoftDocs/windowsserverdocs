@@ -3,8 +3,8 @@ title: Certification Authority Web Enrollment
 description: Learn about Certification Authority Web Enrollment in Active Directory Certificate Services (AD CS) and its benefits for certificate management.
 ms.topic: concept-article
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/19/2025
 ---
 

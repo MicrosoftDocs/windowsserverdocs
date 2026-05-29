@@ -3,8 +3,8 @@ title: Install Distributed File System (DFS) Replication on Windows Server
 description: Learn how to install DFS Replication on Windows Server using Server Manager or PowerShell. Follow this guide to enable efficient file replication and redundancy. 
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 05/28/2025
 ---
 

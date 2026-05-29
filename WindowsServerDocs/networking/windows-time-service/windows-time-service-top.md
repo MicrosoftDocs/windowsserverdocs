@@ -1,8 +1,8 @@
 ---
 description: "Learn more about: Windows Time Service (W32Time)"
 title: Windows Time Service (W32Time)
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 11/04/2021
 ms.topic: concept-article
 ---

@@ -2,8 +2,8 @@
 title: vssadmin resize shadowstorage
 description: A description of the vssadmin resize shadowstorage command, which resizes the maximum amount of storage space that can be used for shadow copy storage.
 ms.topic: reference
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 03/05/2020
 ---
 

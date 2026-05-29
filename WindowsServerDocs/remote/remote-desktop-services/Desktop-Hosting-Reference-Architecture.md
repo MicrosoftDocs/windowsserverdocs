@@ -1,10 +1,10 @@
 ---
 title: Desktop Hosting Reference Architecture
 description: Architectural guidance for creating a desktop hosting solution with RDS and Azure.
-ms.author: daknappe
+ms.author: roharwoo
 ms.date: 7/3/2024
 ms.topic: reference-architecture
-author: dknappettmsft
+author: robinharwood
 ---
 # Desktop Hosting Reference Architecture
 

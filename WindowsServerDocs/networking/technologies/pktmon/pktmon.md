@@ -2,8 +2,8 @@
 title: Packet Monitor (Pktmon)
 description: This article provides an overview of the Packet Monitor (Pktmon) network diagnostics tool and its uses.
 ms.topic: overview
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/05/2025
 ---
 

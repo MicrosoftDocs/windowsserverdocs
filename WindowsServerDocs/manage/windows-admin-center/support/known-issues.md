@@ -2,8 +2,8 @@
 title: Windows Admin Center known issues
 description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: troubleshooting-known-issue
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/05/2024
 ms.custom: sfi-image-nochange
 ---
@@ -60,6 +60,15 @@ If you encounter an issue not described on this page, let us know at the [Window
 - When you update Windows Admin Center, you must reinstall your extensions.
 
 - If you add an extension feed that is inaccessible, no warning or error message appears.
+
+### Extension development
+The entries shown using the DeploymentShare API are not always accurate. Shares can get orphaned if deleted with methods that do not use the DeploymentShare API. 
+
+You can view a list of all shares created by the API by navigating to your installation's `inventory.json` file. The file can be found in two locations:
+- `C:\Users\Public`, where C represents the drive where the OS is installed, for Administrator shares.
+- `C:\Users\<user>`, where C represents the drive where the OS is installers, for user shares.
+
+There is not a programmatic way to clean up this file at this time. To clean the file, manually remove the wrong entries from the `inventory.json` file. 
 
 ### Extensions not supported
 
@@ -452,6 +461,14 @@ The cluster deployment feature in Windows Admin Center 2007 doesn't support remo
 ## Hyper-Converged Cluster Manager solution
 
 Windows Admin Center has disabled certain commands, such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open**, because it doesn't currently support them.
+
+### Incorrect deletions in Volumes tool
+Instances of Windows Admin Center with installed versions of Cluster Manager lower than 5.2.6 might experience problems with volume deletion operations. To prevent data loss, ensure one of following is true:
+- You're using version 5.2.6 or higher of the Cluster manager extension
+- You’re using Windows Admin Center version 2511 build 2.6.6.18 or higher
+- You're using Windows Admin Center in the Azure Portal extension version 0.76.0.0 or higher. 
+
+Don't delete your volumes in Windows Admin Center unless one of the above conditions are met.
 
 ## Azure services
 

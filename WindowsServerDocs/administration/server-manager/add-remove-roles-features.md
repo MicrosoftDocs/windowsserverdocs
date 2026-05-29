@@ -3,8 +3,8 @@ title: Add or Remove Roles and Features in Windows Server
 description: Learn how to add or remove roles and features in Windows Server on local, remote servers, or offline virtual hard disks (VHDs), including to multiple servers concurrently. Get step-by-step guidance.
 ms.topic: install-set-up-deploy
 ai-usage: ai-assisted
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/09/2025
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: Configure Stretch Cluster Replication using shared storage in Windows Server
 description: Stretch cluster replication using shared storage
-ms.author: daknappe
+ms.author: roharwoo
 ms.topic: how-to
-author: dknappettmsft
+author: robinharwood
 ms.date: 04/16/2025
 ---
 

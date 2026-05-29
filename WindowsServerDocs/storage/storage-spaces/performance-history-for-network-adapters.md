@@ -35,7 +35,7 @@ These series are collected for every eligible network adapter:
 | `netadapter.bandwidth.rdma.total`    | bits per second |
 
    > [!NOTE]
-   > Network adapter performance history is recorded in **bits** per second, not bytes per second. One 10 GbE network adapter can send and receive approximately 1,000,000,000 bits = 125,000,000 bytes = 1.25 GB per second at its theoretical maximum.
+   > Network adapter performance history is recorded in **bits per second**, not bytes per second. One 10 GbE (gigabit Ethernet) network adapter can send and receive approximately 10,000,000,000 bits per second = 1,250,000,000 bytes per second = 1.25 GB/s (gigabytes per second) at its theoretical maximum.
 
 ## How to interpret
 

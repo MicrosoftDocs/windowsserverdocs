@@ -2,8 +2,8 @@
 description: "Learn more about: Initialize the HGS cluster using TPM mode in an existing bastion forest"
 title: Initialize the HGS cluster using TPM mode in a bastion forest
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 

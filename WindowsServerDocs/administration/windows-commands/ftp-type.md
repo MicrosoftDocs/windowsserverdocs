@@ -2,8 +2,8 @@
 title: ftp type
 description: Reference article for the ftp type command, which sets or displays the file transfer type.
 ms.topic: reference
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
