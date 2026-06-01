@@ -1,6 +1,6 @@
 ---
-title: Prepare your environment for Windows Admin Center
-description: Prepare your environment for Windows Admin Center (Project Honolulu)
+title: Prepare Your Environment for Windows Admin Center
+description: Prepare your environment for Windows Admin Center (Project Honolulu).
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
@@ -9,118 +9,112 @@ ms.date: 06/07/2019
 
 # Prepare your environment for Windows Admin Center
 
-There are some Server versions that need additional preparation before they are ready to manage with Windows Admin Center:
+Some server versions need more preparation before they're ready for you to manage by using Windows Admin Center:
 
 - [Windows Server 2012 and 2012 R2](#prepare-windows-server-2012-and-2012-r2)
 - [Microsoft Hyper-V Server 2016](#prepare-microsoft-hyper-v-server-2016)
 - [Microsoft Hyper-V Server 2012 R2](#prepare-microsoft-hyper-v-server-2012-r2)
 
-There are also some scenarios where [port configuration on the target server](#port-configuration-on-the-target-server) may need to be modified before managing with Windows Admin Center.
+You might also need to modify [port configuration on the target server](#port-configuration-on-the-target-server) before you can manage it by using Windows Admin Center.
 
 ## Prepare Windows Server 2012 and 2012 R2
 
-### Install WMF version 5.1 or higher
+### Install Windows Management Framework version 5.1 or higher
 
-Windows Admin Center requires PowerShell features that are not included by default in Windows Server 2012 and 2012 R2. To manage Windows Server 2012 or 2012 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers.
+Windows Admin Center requires Windows PowerShell features that aren't included by default in Windows Server 2012 and 2012 R2. To manage Windows Server 2012 or 2012 R2 by using Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher on those servers.
 
-Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher.
-
-If it is not installed, you can [download and install WMF 5.1](/powershell/scripting/wmf/setup/install-configure).
+Enter `$PSVersiontable` in PowerShell to verify that Windows Management Framework is installed and that the version is 5.1 or higher. If it isn't installed, [download and install Windows Management Framework 5.1](/powershell/scripting/wmf/setup/install-configure).
 
 ## Prepare Microsoft Hyper-V Server 2016
 
-To manage Microsoft Hyper-V Server 2016 with Windows Admin Center, there are some Server roles you'll need to enable before you can do so.
+To manage Microsoft Hyper-V Server 2016 by using Windows Admin Center, you need to enable some server roles.
 
-### To manage Microsoft Hyper-V Server 2016 with Windows Admin Center:
+### Manage Microsoft Hyper-V Server 2016 by using Windows Admin Center
 
-1. Enable Remote Management.
-2. Enable File Server Role.
-3. Enable Hyper-V Module for PowerShell.
+1. Enable remote management.
+1. Enable the File Server role.
+1. Enable the Hyper-V module for PowerShell.
 
-### **Step 1:** Enable Remote Management
+### Step 1: Enable remote management
 
 To enable remote management in Hyper-V Server:
 
-1. Log into Hyper-V Server.
-2. At the **Server Configuration** (SCONFIG) tool, type **4** to configure remote management.
-3. Type **1** to enable Remote Management.
-4. Type **4** to return to the main menu.
+1. Sign in to Hyper-V Server.
+1. At the **Server Configuration** (`SCONFIG`) tool, enter **4** to configure remote management.
+1. Enter **1** to enable remote management.
+1. Enter **4** to return to the main menu.
 
-### **Step 2:** Enable File Server Role
+### Step 2: Enable the File Server role
 
-To enable File Server Role for basic file sharing and remote management:
+To enable the File Server role for basic file sharing and remote management:
 
-1. Click **Roles and Features** in the **Tools** menu.
-2. In **Roles and Features**, find **File and Storage Services**, and check **File and iSCSI Services** and **File Server**:
+1. On the **Tools** menu, select **Roles & features**.
+1. In the **Roles and features** pane, find **File and Storage Services**, and select **File and iSCSI Services** > **File Server**.
 
-![Screenshot of Roles and Features showing the File and iSCSI Services role selected](../media/prepare-environment/prepare-your-environment-image-1.png)
+   ![Screenshot that shows the Roles and features pane with the File Server role selected.](../media/prepare-environment/prepare-your-environment-image-1.png)
 
-### **Step 3:** Enable Hyper-V Module for PowerShell
+### Step 3: Enable Hyper-V module for PowerShell
 
-To enable Hyper-V Module for PowerShell features:
+To enable Hyper-V module for PowerShell features:
 
-1. Click **Roles and Features** in the **Tools** menu.
-2. In **Roles and Features**, find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for PowerShell**:
+1. On the **Tools** menu, select **Roles & features**.
+1. In the **Roles and features** pane, find **Remote Server Administration Tools** and select **Role Administration Tools** > **Hyper-V Module for Windows PowerShell**.
 
-![Screenshot of Roles and Features showing Hyper-V roles selected](../media/prepare-environment/prepare-your-environment-image-2.png)
+   ![Screenshot that shows Roles and features with Hyper-V roles selected.](../media/prepare-environment/prepare-your-environment-image-2.png)
 
-Microsoft Hyper-V Server 2016 is now ready for management with Windows Admin Center.
+Microsoft Hyper-V Server 2016 is now ready for management by using Windows Admin Center.
 
 ## Prepare Microsoft Hyper-V Server 2012 R2
 
-To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, there are some Server roles you'll need to enable before you can do so.  In addition, you will need to install WMF version 5.1 or higher.
+To manage Microsoft Hyper-V Server 2012 R2 by using Windows Admin Center, you need to enable some server roles. You also need to install Windows Management Framework version 5.1 or higher.
 
-### To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center:
+### Manage Microsoft Hyper-V Server 2012 R2 by using Windows Admin Center
 
-1. Install Windows Management Framework (WMF) version 5.1 or higher
-2. Enable Remote Management
-3. Enable File Server Role
-4. Enable Hyper-V Module for PowerShell
+1. Install Windows Management Framework version 5.1 or higher.
+1. Enable remote management.
+1. Enable the File Server role.
+1. Enable the Hyper-V module for PowerShell.
 
 ### Step 1: Install Windows Management Framework 5.1
 
-Windows Admin Center requires PowerShell features that are not included by default in Microsoft Hyper-V Server 2012 R2. To manage Microsoft Hyper-V Server 2012 R2 with Windows Admin Center, you will need to install WMF version 5.1 or higher.
+Windows Admin Center requires PowerShell features that aren't included by default in Microsoft Hyper-V Server 2012 R2. To manage Microsoft Hyper-V Server 2012 R2 by using Windows Admin Center, you need to install Windows Management Framework version 5.1 or higher.
 
-Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-and that the version is 5.1 or higher.
+Enter `$PSVersiontable` in PowerShell to verify that Windows Management Framework is installed and that the version is 5.1 or higher.
 
-If it is not installed, you can [download WMF 5.1](/powershell/scripting/wmf/setup/install-configure).
+If it isn't installed, you can [download Windows Management Framework 5.1](/powershell/scripting/wmf/setup/install-configure).
 
-### Step 2: Enable Remote Management
+### Step 2: Enable remote management
 
 To enable Hyper-V Server remote management:
 
-1. Log into Hyper-V Server.
-2. At the **Server Configuration** (SCONFIG) tool, type **4** to configure remote management.
-3. Type **1** to enable remote management.
-4. Type **4** to return to the main menu.
+1. Sign in to Hyper-V Server.
+1. At the **Server Configuration** (`SCONFIG`) tool, enter **4** to configure remote management.
+1. Enter **1** to enable remote management.
+1. Enter **4** to return to the main menu.
 
-### Step 3: Enable File Server Role
+### Step 3: Enable the File Server role
 
-To enable File Server Role for basic file sharing and remote management:
+To enable the File Server role for basic file sharing and remote management:
 
-1. Click **Roles and Features** in the **Tools** menu.
-2. In **Roles and Features**, find **File and Storage Services** and check **File and iSCSI Services** and **File Server**:
+1. On the **Tools** menu, select **Roles & features**.
+1. In the **Roles and features** pane, find **File and Storage Services** and select **File and iSCSI Services** > **File Server**.
 
-![Screenshot of Roles and Features showing the File and iSCSI Services role selected](../media/prepare-environment/prepare-your-environment-image-1.png)
+   ![Screenshot that shows the Roles and features pane with the File Server role selected.](../media/prepare-environment/prepare-your-environment-image-1.png)
 
-### Step 4: Enable Hyper-V Module for PowerShell
+### Step 4: Enable the Hyper-V module for PowerShell
 
-To enable Hyper-V Module for PowerShell features:
+To enable the Hyper-V module for PowerShell features:
 
-1. Click **Roles and Features** in the **Tools** menu.
-2. In **Roles and Features**, find **Remote Server Administration Tools** and check **Role Administration Tools** and **Hyper-V Module for PowerShell**:
+1. On the **Tools** menu, select **Roles & features**.
+1. In the **Roles and features** pane, find **Remote Server Administration Tools** and select **Role Administration Tools** > **Hyper-V Module for Windows PowerShell**.
 
-![Screenshot of Roles and Features showing Hyper-V remote server administration tools selected](../media/prepare-environment/prepare-your-environment-image-2.png)
+   ![Screenshot that shows the Roles and features pane with Hyper-V Module for Windows PowerShell selected.](../media/prepare-environment/prepare-your-environment-image-2.png)
 
-Microsoft Hyper-V Server 2012 R2 is now ready for management with Windows Admin Center.
+Microsoft Hyper-V Server 2012 R2 is now ready for management by using Windows Admin Center.
 
 ## Port configuration on the target server
 
-Windows Admin Center uses the SMB file sharing protocol for some file copying tasks, such as when importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445.  You can use the Firewall tool in Windows Admin Center to verify the incoming rule for ‘File Server Remote Management (SMB-In)' is set to allow access on this port.
+Windows Admin Center uses the Server Message Block (SMB) file-sharing protocol for some file-copying tasks, such as importing a certificate on a remote server. For these file copy operations to succeed, the firewall on the remote server must allow inbound connections on port 445. You can use the Firewall tool in Windows Admin Center to verify that the incoming rule for `File Server Remote Management (SMB-In)` is set to allow access on this port.
 
-> [!Tip]
-> Ready to install Windows Admin Center? [Download now](../overview.md#download-now)
-
-
+> [!TIP]
+> Ready to install Windows Admin Center? [Download now](../overview.md#download-now).
