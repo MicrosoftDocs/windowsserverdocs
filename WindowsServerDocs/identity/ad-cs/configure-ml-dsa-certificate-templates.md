@@ -21,7 +21,7 @@ ML-DSA is a signature-only algorithm and doesn't support encryption operations. 
 - A Root CA and Subordinate CA configured with ML-DSA. See [Configure a certification authority to use ML-DSA](configure-ml-dsa-certification-authority.md).
 - Membership in **Domain Admins** or equivalent to manage certificate templates.
 - Access to the **Certificate Templates** console on a computer with AD CS management tools installed.
-- For client enrollment testing: a domain-joined client running Windows 11, version 24H2 or 25H2 with the 2025-10 non-security update ([KB5067036](https://support.microsoft.com/topic/october-28-2025-kb5067036-os-builds-26200-7019-and-26100-7019-preview-ec3da7dc-63ba-4b1d-ac41-cf2494d2123a)) or later installed.
+- For client enrollment testing: a domain-joined client running Windows 11, version 24H2 or 25H2 with the 2025-10 non-security update ([KB5067036](https://support.microsoft.com/help/5067036)) or later installed.
 
 ## Review ML-DSA template requirements
 
