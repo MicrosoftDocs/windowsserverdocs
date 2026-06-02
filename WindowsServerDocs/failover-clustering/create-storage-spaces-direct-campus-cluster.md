@@ -162,7 +162,7 @@ Failover Cluster Manager doesn't support configuring rack-level fault domains th
 
 ## Enable Storage Spaces Direct on the campus cluster
 
-After you define the two rack fault domains, enable Storage Spaces Direct on the campus cluster. Enabling Storage Spaces Direct creates the storage pool and configures it for rack-level fault tolerance.
+After you define the two rack fault domains, enable Storage Spaces Direct on the campus cluster. When you enable Storage Spaces Direct, it creates the storage pool and configures it for rack-level fault tolerance.
 
 #### [PowerShell](#tab/powershell)
 
