@@ -40,6 +40,8 @@
       href: cluster-aware-updating-options.md
 - name: How-tos
   items:
+  - name: Create a Storage Spaces Direct campus cluster
+    href: create-storage-spaces-direct-campus-cluster.md
   - name: Cluster-domain migration
     href: cluster-domain-migration.md
   - name: Troubleshooting using Windows Error Reporting
