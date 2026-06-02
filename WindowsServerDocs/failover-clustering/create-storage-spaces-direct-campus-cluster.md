@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 # Create a Storage Spaces Direct campus cluster
 
-A campus cluster is a failover cluster that distributes nodes and data across two physical racks in separate rooms or buildings within the same campus. This topology keeps your workloads available when an entire rack goes offline, for example because of a power, network, or cooling outage.
+A campus cluster is a failover cluster that distributes nodes and data across two physical racks in separate rooms or buildings within the same campus. This topology keeps your workloads available when an entire rack goes offline, such as during a power, network, or cooling outage.
 
 This article shows you how to create a four-node (2+2) Storage Spaces Direct campus cluster on Windows Server 2025 or later, with two nodes in each rack-level fault domain. The cluster uses Storage Spaces Direct for storage and Resilient File System (ReFS) for the file system.
 
@@ -24,7 +24,7 @@ For more information about campus cluster architecture, supported configurations
 - All-flash capacity drives of the same type on every node (SSD or NVMe). Don't use HDDs and don't configure a caching tier.
 - An equal number of nodes in each of the two rack-level fault domains. For supported node configurations, see [Failover Clustering topologies](topologies.md). This article shows the 2+2 configuration.
 - Exactly two rack-level fault domains, with cluster nodes spanning both racks.
-- Shared or direct-attached storage that follows your hardware original equipment manufacturer (OEM) guidelines, including driver versions.
+- Direct-attached storage that follows your hardware original equipment manufacturer (OEM) guidelines, including driver versions.
 - A quorum witness (file share witness, disk witness, cloud witness, or USB witness) in a third physical location, separate from the two campus cluster racks.
 
 For optimal performance and resiliency, use the following configurations:
@@ -36,7 +36,7 @@ For optimal performance and resiliency, use the following configurations:
 
 ## Create the campus failover cluster
 
-To create a Storage Spaces Direct campus cluster on Windows Server 2025, complete these high-level steps in order:
+To create a Storage Spaces Direct campus cluster on Windows Server 2025 or later, complete these high-level steps in order:
 
 1. Create a failover cluster without storage.
 1. Define two rack fault domains.
@@ -47,7 +47,7 @@ This section covers the first step: creating the failover cluster without storag
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to create the failover cluster by using the [New-Cluster](/powershell/module/failoverclusters/new-cluster) cmdlet.
+To create the failover cluster, use the [New-Cluster](/powershell/module/failoverclusters/new-cluster) cmdlet.
 
 1. Run PowerShell on your computer in an elevated session.
 
@@ -61,7 +61,7 @@ Here's how to create the failover cluster by using the [New-Cluster](/powershell
 
 #### [Failover Cluster Manager](#tab/fcm)
 
-Here's how to create the failover cluster by using Failover Cluster Manager.
+To create the failover cluster, use Failover Cluster Manager.
 
 1. From the Windows desktop, open the **Start** menu, and then select the **Server Manager** tile.
 
@@ -71,7 +71,7 @@ Here's how to create the failover cluster by using Failover Cluster Manager.
 
 1. On the **Before You Begin** page, select **Next**.
 
-1. On the **Select Servers** page, in the **Enter name** box, enter the name of a server that you plan to add as a failover cluster node, and then select **Add**. Repeat this step for each of the four nodes. When you're finished, select **Next**.
+1. On the **Select Servers** page, in the **Enter name** box, enter the name of a server to add as a failover cluster node, and then select **Add**. Repeat this step for each of the four nodes. When you're finished, select **Next**.
 
 1. On the **Validation Warning** page, select **Yes** to run cluster validation, and then select **Next**. Complete the Validate a Configuration Wizard.
 
@@ -79,7 +79,7 @@ Here's how to create the failover cluster by using Failover Cluster Manager.
 
 1. On the **Confirmation** page, clear the **Add all eligible storage to the cluster** checkbox because you configure storage later when enabling Storage Spaces Direct. Select **Next**.
 
-1. On the **Summary** page, confirm that the failover cluster was created successfully, and then select **Finish**.
+1. On the **Summary** page, confirm that the wizard created the failover cluster successfully, and then select **Finish**.
 
 ---
 
@@ -176,7 +176,7 @@ Here's how to enable Storage Spaces Direct by using the [Enable-ClusterStorageSp
    Enable-ClusterStorageSpacesDirect
    ```
 
-1. Update the storage pool to ensure it's using the latest features:
+1. Update the storage pool to use the latest features:
 
    ```powershell
    Get-StoragePool S2D* | Update-StoragePool
@@ -243,7 +243,7 @@ For more information about volume resiliency options, see [Fault tolerance and s
 
 #### [PowerShell](#tab/powershell)
 
-Here's how to create a four-copy mirrored volume by using PowerShell.
+To create a four-copy mirrored volume by using PowerShell, follow these steps:
 
 1. Run PowerShell on your computer in an elevated session.
 
@@ -286,6 +286,26 @@ Here's how to create volumes using Failover Cluster Manager. To create four-copy
 1. After you create the virtual disk, right-click it and select **New Volume** to format it by using ReFS.
 
 ---
+
+## Scale the campus cluster by adding nodes
+
+You can grow a campus cluster from 1+1 to 2+2, 3+3, 4+4, or 5+5 by adding one node at a time to a rack and then to the cluster. For each new node, first add it to the rack fault domain by using [New-ClusterFaultDomain](/powershell/module/failoverclusters/new-clusterfaultdomain), and then add it to the cluster by using [Add-ClusterNode](/powershell/module/failoverclusters/add-clusternode).
+
+The following example adds `Node5` to `Room1` and `Node6` to `Room2`:
+
+```powershell
+$nodeName = 'Node5'
+$rackFaultDomainName = 'Room1'
+New-ClusterFaultDomain -Type Node -Name $nodeName -FaultDomain $rackFaultDomainName
+Add-ClusterNode -Name $nodeName
+
+$nodeName = 'Node6'
+$rackFaultDomainName = 'Room2'
+New-ClusterFaultDomain -Type Node -Name $nodeName -FaultDomain $rackFaultDomainName
+Add-ClusterNode -Name $nodeName
+```
+
+Repeat the pattern, alternating racks, until you reach your target configuration. Always keep an equal number of nodes in each rack.
 
 ## Related content
 
