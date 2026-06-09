@@ -10,11 +10,7 @@ ms.date: 02/12/2026
 ai-usage: ai-assisted
 ---
 
-# Enable DNS over HTTPS in DNS Server (preview)
-
-> [!IMPORTANT]
-> DNS over HTTPS (DoH) for DNS Server on Windows Server is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Enable DNS over HTTPS in DNS Server
 
 This article explains how to enable DNS over HTTPS (DoH) in the DNS Server service running on Windows Server.
 
@@ -39,8 +35,6 @@ Before you begin, ensure you have:
 - Firewall rules configured to allow inbound connections on TCP port 443 for DoH
 
 - Administrative or equivalent access to the Windows Server hosting the DNS Server service
-
-- To enable DNS over HTTPS on the DNS Server service, request access by using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview). Once requested, follow the instructions you receive before continuing.
 
 DoH certificates must meet the following requirements:
 

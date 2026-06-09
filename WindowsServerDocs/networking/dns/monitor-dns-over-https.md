@@ -10,11 +10,7 @@ ms.date: 02/12/2026
 ai-usage: ai-assisted
 ---
 
-# Monitor DNS over HTTPS in DNS Server (Preview)
-
-> [!IMPORTANT]
-> DNS over HTTPS (DoH) for DNS Server on Windows Server is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Monitor DNS over HTTPS in DNS Server
 
 This article explains how to monitor DNS over HTTPS (DoH) activity on DNS Server using event logs and performance counters.
 
