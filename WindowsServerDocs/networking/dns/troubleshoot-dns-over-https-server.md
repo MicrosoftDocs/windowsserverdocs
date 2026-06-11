@@ -22,7 +22,7 @@ Before you troubleshoot DoH problems, make sure that you have:
 
 - Windows Server 2025 with the 2026-02 Security Update (([KB5075899](https://support.microsoft.com/help/5075899))) or later installed.
 
-- DNS over HTTPS on the DNS Server service is enabled. For more information, see [Enable DNS over HTTPS in DNS Server](enable-dns-over-https-server.md).
+- DNS over HTTPS on the DNS Server service enabled. For more information, see [Enable DNS over HTTPS in DNS Server](enable-dns-over-https-server.md).
 
 - Administrative or equivalent access to the Windows Server hosting the DNS Server service.
 

@@ -42,7 +42,7 @@ An example of the DoH communication flow is as shown in the following diagram.
 
 :::image type="content" source="../media/dns-encryption-dns-over-https/overview.png" alt-text="Diagram that shows the DNS over HTTPS communication flow between a client and server." lightbox="../media/dns-encryption-dns-over-https/overview.png":::
 
-When configuring DNS over HTTPS for DNS Server, consider the following:
+When you configure DNS over HTTPS for DNS Server, consider the following points:
 
 - Upstream DNS communication (forwarders, conditional forwarders, authoritative servers) remains unencrypted.
 
