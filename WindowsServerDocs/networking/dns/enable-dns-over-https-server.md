@@ -22,7 +22,7 @@ For more information about how DoH works, see [DNS encryption using DNS over HTT
 
 Before you begin, ensure you have:
 
-- Windows Server 2025 with the 2026-06 Security Update ([KB5094125](https://support.microsoft.com/en-us/topic/june-9-2026-kb5094125-os-build-26100-32995-e28b3956-9a5a-4b4d-bc2c-fb1bdc5d3709)) or later installed
+- Windows Server 2025 with the 2026-06 Security Update ([KB5094125](https://support.microsoft.com/help/5094125)) or later installed
 
 - Access to a certification authority (CA):
 
