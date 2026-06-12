@@ -10,23 +10,19 @@ ms.reviewer: canasjorge,sruthytv
 ai-usage: ai-assisted
 ---
 
-# Troubleshoot DNS over HTTPS in DNS Server (Preview)
-
-> [!IMPORTANT]
-> DNS over HTTPS (DoH) for DNS Server on Windows Server is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+# Troubleshoot DNS over HTTPS in DNS Server
 
 Are your clients unable to connect to your DNS server using DoH, or are encrypted DNS queries failing without a clear reason? This article helps you identify and fix common DNS over HTTPS (DoH) problems on Windows DNS Server. Whether you're dealing with certificate binding errors, port conflicts, or performance issues, you'll find step-by-step guidance to get DoH working correctly.
 
-Start with the troubleshooting checklist to quickly pinpoint your problem, then follow the symptom-specific sections for detailed resolution steps. This article applies to Windows Server 2025 and later versions with the DoH preview feature enabled.
+Start with the troubleshooting checklist to quickly pinpoint your problem, then follow the symptom-specific sections for detailed resolution steps. This article applies to Windows Server 2025 and later versions with the DoH feature enabled.
 
 ## Prerequisites
 
 Before you troubleshoot DoH problems, make sure that you have:
 
-- Windows Server 2025 with the 2026-02 Security Update (([KB5075899](https://support.microsoft.com/help/5075899))) or later installed.
+- Windows Server 2025 with the 2026-06 Security Update ([KB5094125](https://support.microsoft.com/help/5094125)) or later installed.
 
-- DNS over HTTPS on the DNS Server service is enabled using the instructions provided after requesting access using [DoH on Windows DNS Server: Public Preview Registration](https://aka.ms/doh-preview).
+- DNS over HTTPS on the DNS Server service enabled. For more information, see [Enable DNS over HTTPS in DNS Server](enable-dns-over-https-server.md).
 
 - Administrative or equivalent access to the Windows Server hosting the DNS Server service.
 
