@@ -174,7 +174,7 @@ For the Built-in Administrator account in each domain in your forest, you should
 
 #### Verification Steps
 
-The verification steps outlined here are specific to Windows 8 and Windows Server 2012.
+The verification steps outlined here are specific to Windows 10/11 and Windows Server 2022, 2019, 2016.
 
 ##### Verify "Smart card is required for interactive logon" Account Option
 
