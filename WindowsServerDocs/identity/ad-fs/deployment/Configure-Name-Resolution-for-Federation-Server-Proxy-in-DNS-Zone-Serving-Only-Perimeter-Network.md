@@ -30,7 +30,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 3.  Add the IP address and the host name of a federation server in the account partner to the **hosts** file, as shown in the following example:
 
-    **192.168.1.4fs.fabrikam.com**
+    **192.168.1.4 fs.fabrikam.com**
 
 4.  Save and close the file.
 
