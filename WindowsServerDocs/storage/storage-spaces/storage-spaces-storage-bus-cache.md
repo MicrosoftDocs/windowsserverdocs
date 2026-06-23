@@ -196,11 +196,11 @@ Update-StorageBusCache
 
 ### Add or replace cache drives (NVMes or SSDs)
 
-There's no cmdlet to unbind/rebind existing bindings and balance the relationship. The following steps cause the existing read cache to be lost.
+There's no cmdlet to unbind/rebind existing bindings and balance the relationship. The following steps cause the existing read cache to be lost and new will be created.
 
 ```powershell
-Remove-StorageBusBinding
-New-StorageBusBinding 
+Get-StorageBusBinding | Select-Object -ExpandProperty DeviceGuid | Remove-StorageBusBinding
+Update-StorageBusCache
 ```
 
 ### Check and balance the cache and capacity bindings
