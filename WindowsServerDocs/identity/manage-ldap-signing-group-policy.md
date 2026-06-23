@@ -44,11 +44,13 @@ To enable detailed logging that identifies specific client IP addresses:
 1. Set the **16 LDAP Interface Events** value to **2** (Basic logging).
 1. Monitor for Event ID 2889, which logs each unsigned bind attempt including the client IP address and identity.
 
+**Note:** The eventlog and registry path names have the LDS instance name for LDS servers.
+
 After you identify all clients that need updates, configure them to request LDAP signing before you enforce signing requirements on your domain controllers.
 
 ## Configure LDAP signing requirements
 
-Configure LDAP signing on both domain controllers and client computers to ensure secure LDAP communications across your environment.
+Configure LDAP signing on both servers (domain controllers and LDS servers) and client computers to ensure secure LDAP communications across your environment.
 
 ### Client computers
 
@@ -141,6 +143,19 @@ The setting takes effect immediately without needing a restart. The **LDAPServer
 
 - **0**: Signing is disabled (default)
 - **2**: Signing is required
+
+To configure LDAP signing enforcement for an AD LDS instance:
+
+1. Open **Registry Editor** on the server hosting the AD LDS instance.
+1. Go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<InstanceName>\Parameters`.
+1. Create a new **DWORD (32-bit) Value** named **LDAPServerEnforceIntegrity**.
+1. Set the value to **1** to enable signing requirements.
+1. Close **Registry Editor**.
+
+The setting takes effect immediately without needing a restart. The **LDAPServerIntegrity** value accepts the following values:
+
+- **0**: Signing behavior follows registry entry LDAPServerIntegrity
+- **1**: Signing is required (default)
 
 ## Verify LDAP signing configuration
 
