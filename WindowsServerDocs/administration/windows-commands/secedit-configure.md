@@ -28,6 +28,8 @@ secedit /configure /db <database file name> [/cfg <configuration file name>] [/o
 | /log | Specifies the path and file name of the log file to be used in the process. If you don't specify a file location, the default log file, `<systemroot>\Documents and Settings\<UserAccount>\My Documents\Security\Logs\<databasename>.log` is used. |
 | /quiet | Suppresses screen and log output. You can still view analysis results by using the Security Configuration and Analysis snap-in to the Microsoft Management Console (MMC). |
 
+**Note**: SECEDIT may write the registry keys and values in the INF file to the registry in lowercase. This is not a problem as both registry keys and values are not case sensitive.
+
 ## Examples
 
 To perform the analysis for the security parameters on the security database, *SecDbContoso.sdb*, and then direct the output to the file *SecAnalysisContosoFY11*, including prompts to verify the command ran correctly, type:
