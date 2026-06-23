@@ -403,7 +403,7 @@ For more information about more Windows PowerShell operations with pipelines and
 Note also that Windows PowerShell 3.0 significantly simplified the command-line arguments needed in this pipeline operation. Windows PowerShell 2.0 would have required:
 
 ```powershell
-Get-WindowsFeature | where {$_.displayname - like "*active dir*"}
+Get-WindowsFeature | where {$_.displayname -like "*active dir*"}
 ```
 
 By using the Windows PowerShell pipeline, you can create readable results. For example:
