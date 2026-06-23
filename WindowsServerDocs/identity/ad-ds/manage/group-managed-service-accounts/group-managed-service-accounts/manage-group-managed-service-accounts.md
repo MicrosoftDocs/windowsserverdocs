@@ -24,12 +24,12 @@ Services can choose the principal to use. Each principal type supports different
 | Computer Account without Windows system | Any domain joined server | None |
 | Virtual Account | Limited to one server| Computer manages |
 | Windows standalone Managed Service Account | Limited to one domain joined server | Computer manages|
-| User Account|Any domain joined server | None |
+| User Account | Any domain joined server | None |
 | Group Managed Service Account | Any Windows Server domain-joined server | The domain controller manages, and the host retrieves |
 
 A Windows computer account, a Windows standalone Managed Service Account (sMSA), or virtual accounts can't be shared across multiple systems. When you use virtual accounts, the identity is also local to the machine and not recognized by the domain. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts don't have the capability of single-point-of-control password management. Without password management, each organization needs to update keys for the service in Active Directory (AD) and distribute these keys to all instances of those services.
 
-With Windows Server, services and service administrators don't need to manage password synchronization between service instances when using gMSA. You create the gMSA in AD and then configure the service that supports Managed Service Accounts. Use of the gMSA is scoped to any machine that is able to use the Lightweight Directory Access Protocol (LDAP) to retrieve the gMSA's credentials. You can create a gMSA using the `New-ADServiceAccount` cmdlets that are part of the AD module. The following services support the service identity configuration on the host.
+With Windows Server, services and service administrators don't need to manage password synchronization between service instances when using gMSA. You create the gMSA in AD and then configure the service that supports Managed Service Accounts. Use of the gMSA is scoped to any machine that is able to use the Lightweight Directory Access Protocol (LDAP) to retrieve the gMSA's credentials. You can configure a gMSA using the `*-ADServiceAccount` cmdlets that are part of the AD module. The following services support the service identity configuration on the host.
 
 - Same APIs as sMSA, so products that support sMSA support gMSA
 
@@ -45,7 +45,7 @@ To manage gMSAs, your device must meet the following requirements:
 
 - Your device must have the **Active Directory Domain Services** (AD DS) role installed. To learn more, see [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).
 
-- You must be a member of the **Domain Admins** or **Enterprise Admins** group.
+- You must be a member of the **Domain Admins** or **Enterprise Admins** group, or have been delegated permissions to create `msDS-GroupManagedServiceAccount`.
 
 - Both the domain and forest functional levels should be set to Windows Server 2012 or later to support gMSA features for all devices. To learn more about updating the schema, see [Raise domain and forest functional levels in Active Directory Domain Services](/windows-server/identity/ad-ds/plan/raise-domain-forest-functional-levels).
 
@@ -66,7 +66,7 @@ For Kerberos authentication to work with services using gMSAs, the following are
 
 - All systems involved in the authentication process must have synchronized clocks. Kerberos is sensitive to time configuration, and discrepancies can cause authentication failures.
 
-- All systems that log on as, or install using a gMSA must support the Kerberos encryption types required by gMSA. Systems that don't meet this requirement can't log on or install gMSA.
+- All systems that log on as, or install using a gMSA, must support the Kerberos encryption types required by gMSA. Systems that don't meet this requirement can't log on or install gMSA.
 
 If you're managing AD from a computer that isn't a domain controller, install the Remote Server Administration Tools (RSAT) to access the necessary management features. RSAT provides the AD module for PowerShell. After installing RSAT, open PowerShell as an administrator and run `Import-Module ActiveDirectory` to enable AD management cmdlets. This allows administrators to manage AD remotely and securely, minimizing the load on domain controllers.
 
@@ -94,7 +94,7 @@ To create a gMSA using PowerShell, follow these steps in an elevated PowerShell 
    > [!IMPORTANT]
    > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
 
-1. Run the following command to verify see if the target device has access to retrieve the gMSA password.
+1. Run the following command on the target device to verify if the device has access to retrieve the gMSA password.
 
    ```powershell
    Test-ADServiceAccount -Identity <gMSAName>
@@ -102,7 +102,7 @@ To create a gMSA using PowerShell, follow these steps in an elevated PowerShell 
 
 Membership in the appropriate security group or having the necessary delegated permissions to create `msDS-GroupManagedServiceAccount` objects is required to complete this procedure. While members of **Account Operators** can manage certain user and group objects in AD, they don't have default rights to create gMSAs unless those permissions are delegated to them. For detailed information about using the appropriate accounts and group memberships, see [Active Directory security groups](../../../manage/understand-security-groups.md).
 
-You can also update the gMSA properties using the `Set-ADServiceAccount` cmdlet. For example, to update the computers display name, run the following command replacing `<gMSAName>` and `<NewDisplayName>` with your values:
+You can also update the gMSA properties using the `Set-ADServiceAccount` cmdlet. For example, to update the gMSA account's display name, run the following command replacing `<gMSAName>` and `<NewDisplayName>` with your values:
 
 ```powershell
 Set-ADServiceAccount -Identity "<gMSAName>" -DisplayName "<NewDisplayName>"
@@ -148,8 +148,6 @@ Run the following command to add a device to a security group. Replace `<Compute
 Add-ADPrincipalGroupMembership -Identity <ComputerName> -MemberOf <SecurityGroup>
 ```
 
-To learn more about these cmdlets, see [Add-ADPrincipalGroupMembership](/powershell/module/activedirectory/add-adprincipalgroupmembership) and [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember).
-
 Alternatively, you can run the following commands.
 
 1. To add a single device to a security group, run this command replacing `<SecurityGroupName>` and `<ComputerName>` with your values:
@@ -180,6 +178,8 @@ Alternatively, you can run the following commands.
    }
    ```
 
+To learn more about these cmdlets, see [Add-ADPrincipalGroupMembership](/powershell/module/activedirectory/add-adprincipalgroupmembership) and [Add-ADGroupMember](/powershell/module/activedirectory/add-adgroupmember).
+
 ---
 
 If using computer accounts, find the existing accounts and then add the new computer account.
@@ -203,8 +203,6 @@ Run the following command to remove a device from a security group. Replace `<Co
 ```powershell
 Remove-ADPrincipalGroupMembership -Identity <ComputerName> -MemberOf <SecurityGroup> -Confirm:$false
 ```
-
-To learn more about these cmdlets, see [Remove-ADPrincipalGroupMembership](/powershell/module/activedirectory/remove-adprincipalgroupmembership) and [Remove-ADGroupMember](/powershell/module/activedirectory/remove-adgroupmember).
 
 Alternatively, you can run the following commands.
 
@@ -235,6 +233,8 @@ Alternatively, you can run the following commands.
    Remove-ADGroupMember @params -Confirm:$false
    }
    ```
+
+To learn more about these cmdlets, see [Remove-ADPrincipalGroupMembership](/powershell/module/activedirectory/remove-adprincipalgroupmembership) and [Remove-ADGroupMember](/powershell/module/activedirectory/remove-adgroupmember).
 
 ---
 
