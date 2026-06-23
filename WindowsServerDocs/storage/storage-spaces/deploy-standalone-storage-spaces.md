@@ -96,20 +96,20 @@ Get-StoragePool -IsPrimordial $true | Get-PhysicalDisk -CanPool $True
 The following example creates a new storage pool named *StoragePool1* that uses all available disks.
 
 ```PowerShell
-New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk –CanPool $True)
+New-StoragePool -FriendlyName StoragePool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $True)
 ```
 
 The following example creates a new storage pool, *StoragePool1*, that uses four of the available disks.
 
 ```PowerShell
-New-StoragePool –FriendlyName StoragePool1 –StorageSubsystemFriendlyName "Windows Storage*" –PhysicalDisks (Get-PhysicalDisk PhysicalDisk1, PhysicalDisk2, PhysicalDisk3, PhysicalDisk4)
+New-StoragePool -FriendlyName StoragePool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk PhysicalDisk1, PhysicalDisk2, PhysicalDisk3, PhysicalDisk4)
 ```
 
 The following example sequence of cmdlets shows how to add an available physical disk *PhysicalDisk5* as a hot spare to the storage pool *StoragePool1*.
 
 ```PowerShell
-$PDToAdd = Get-PhysicalDisk –FriendlyName PhysicalDisk5
-Add-PhysicalDisk –StoragePoolFriendlyName StoragePool1 –PhysicalDisks $PDToAdd –Usage HotSpare
+$PDToAdd = Get-PhysicalDisk -FriendlyName PhysicalDisk5
+Add-PhysicalDisk -StoragePoolFriendlyName StoragePool1 -PhysicalDisks $PDToAdd -Usage HotSpare
 ```
 
 ## Step 2: Create a virtual disk
@@ -183,19 +183,19 @@ The following Windows PowerShell cmdlets perform the same function as the preced
 The following example creates a 50-GB virtual disk named *VirtualDisk1* on a storage pool named *StoragePool1*.
 
 ```PowerShell
-New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualDisk1 –Size (50GB)
+New-VirtualDisk -StoragePoolFriendlyName StoragePool1 -FriendlyName VirtualDisk1 -Size (50GB)
 ```
 
 The following example creates a mirrored virtual disk named *VirtualDisk1* on a storage pool named *StoragePool1*. The disk uses the storage pool's maximum storage capacity.
 
 ```PowerShell
-New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualDisk1 –ResiliencySettingName Mirror –UseMaximumSize
+New-VirtualDisk -StoragePoolFriendlyName StoragePool1 -FriendlyName VirtualDisk1 -ResiliencySettingName Mirror -UseMaximumSize
 ```
 
 The following example creates a 50-GB virtual disk named *VirtualDisk1* on a storage pool that is named *StoragePool1*. The disk uses the thin provisioning type.
 
 ```PowerShell
-New-VirtualDisk –StoragePoolFriendlyName StoragePool1 –FriendlyName VirtualDisk1 –Size (50GB) –ProvisioningType Thin
+New-VirtualDisk -StoragePoolFriendlyName StoragePool1 -FriendlyName VirtualDisk1 -Size (50GB) -ProvisioningType Thin
 ```
 
 The following example creates a virtual disk named *VirtualDisk1* on a storage pool named *StoragePool1*. The virtual disk uses three-way mirroring and has a fixed size of 20 GB.
@@ -248,7 +248,7 @@ The following Windows PowerShell cmdlet performs the same function as the previo
 The following example initializes the disks for virtual disk *VirtualDisk1*, creates a partition with an assigned drive letter, and then formats the volume with the default NTFS file system.
 
 ```PowerShell
-Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Passthru | New-Partition –AssignDriveLetter –UseMaximumSize | Format-Volume
+Get-VirtualDisk -FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk -Passthru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume
 ```
 
 ## Additional information
