@@ -52,12 +52,12 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 To install the Windows Feature "Active Directory module for Windows PowerShell":
 
 ```
-Install-WindowsFeature "Name RSAT-AD-PowerShell
+Install-WindowsFeature -Name RSAT-AD-PowerShell
 ```
 
 or add the "Active Directory PowerShell Snap-In" via OptionalFeatures.
 
-If running the following cmdlets on  Windows 7"  or  Windows Server 2008 R2 , then the Active Directory PowerShell module must be imported:
+Depending on the OS you might need to import the Active Directory PowerShell module:
 
 ```
 Import-Module ActiveDirectory
@@ -134,7 +134,7 @@ For more information, see [Installing an Additional Domain Controller](/previous
 15. Restart the computer if it did not restart automatically.
 
 ## <a name="BKMK_ConfigSG"></a>2.3. Configure security groups
-A multisite deployment requires an additional security group for  Windows 7  client computers for every entry point in the deployment that allows access to  Windows 7  client computers. If there are multiple domains containing  Windows 7  client computers, then it is recommended to create a security group in each domain for the same entry point. Alternatively, one universal security group containing the client computers from both domains can be used. For example, in an environment with two domains, if you want to allow access to  Windows 7  client computers in entry points 1 and 3, but not in entry point 2, then create two new security groups to contain the  Windows 7  client computers for each entry point in each of the domains.
+A multisite deployment requires an additional security group for  Windows 7  client computers for every entry point in the deployment that allows access to  Windows 7  client computers. If there are multiple domains containing  Windows 7  client computers, then it is recommended to create a security group in each domain for the same entry point. Alternatively, one universal security group containing the client computers from both domains can be used. For example, in an environment with two domains, if you want to allow access to  Windows 7  client computers in entry points 1 and 3, but not in entry point 2, then create two new security groups to contain the  Windows 7  client computers for each entry point in each of the domains. Windows 7 client computers need to be treated in this way because they do not support multisite, so the option is to create separate policies with separate security groups to allow the configuration of interest.
 
 ### To configure additional security groups
 
@@ -161,12 +161,12 @@ The following Windows PowerShell cmdlet or cmdlets perform the same function as 
 To install the Windows Feature "Active Directory module for Windows PowerShell":
 
 ```
-Install-WindowsFeature "Name RSAT-AD-PowerShell
+Install-WindowsFeature -Name RSAT-AD-PowerShell
 ```
 
 or add the "Active Directory PowerShell Snap-In" via OptionalFeatures.
 
-If running the following cmdlets on  Windows 7"  or  Windows Server 2008 R2 , then the Active Directory PowerShell module must be imported:
+Depending on the OS you might need to import the Active Directory PowerShell module:
 
 ```
 Import-Module ActiveDirectory
