@@ -18,7 +18,7 @@ The _Database 32k pages optional feature_ offers a huge improvement in scalabili
 > Once you have enabled the Database 32k pages optional feature, you can't revert back to the previous 8k page simulation mode. As a result, any 8k-page backup media created prior to enabling the feature will be unusable unless a complete authoritative forest recovery is performed.
 
 In this article, you learn how to enable the Database 32k pages optional feature in Active Directory Domain Services using PowerShell.
-
+ 
 ## Prerequisites
 
 Before you can enable the Database 32k pages optional feature in Active Directory Domain Services, you need to complete the following prerequisites.
@@ -55,6 +55,10 @@ To verify the page database size of a domain controller using ADSI Edit, follow 
 1. Right-click the **CN=NTDS Settings** object for the server you want to check, and then select **Properties**.
 
 1. Find the **msDS-JetDBPageSize** attribute in the attributes list. The value is the page database size capability. A value of `32768` means it's a 32k page database capable domain controller. A value of `8192` means an 8k page database size. No value means the domain controller is running Windows Server 2022 or earlier.
+
+> [!IMPORTANT]
+> When you see 8192 for a Windows Server 2025 Domain Dontroller, the reason may be that it was in-place upgraded from an older Version of Windows. In this case, the database is taken from the earlier version of Windows and is not prepared to run with 32KB database pages.
+
 
 ### [PowerShell](#tab/PowerShell)
 
