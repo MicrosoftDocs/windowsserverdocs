@@ -20,11 +20,11 @@ Unlike with AD FS in Windows Server 2012 R2, the AD FS 2016 Microsoft Entra mult
 
 ## Register users for Microsoft Entra multifactor authentication by using AD FS
 
-AD FS doesn't support inline "proofup" registration of Microsoft Entra multifactor authentication security verification information, such as on a phone number or mobile app. Without support for inline proof, users must get proofed up by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx) before they use Microsoft Entra multifactor authentication to authenticate to AD FS applications.
+AD FS doesn't support inline "proofup" registration of Microsoft Entra multifactor authentication security verification information, such as on a phone number or mobile app. Without support for inline proof, users must get proofed up by visiting [https://aka.ms/mfasetup](https://aka.ms/mfasetup) before they use Microsoft Entra multifactor authentication to authenticate to AD FS applications.
 When a user that hasn't yet proofed up in Microsoft Entra ID tries to authenticate with Microsoft Entra multifactor authentication at AD FS, they get an AD FS error. As an AD FS administrator, you can customize this error experience to guide the user to the proofup page instead. You can create this message by using onload.js customization to detect the error message string within the AD FS page. Then you can show a new message to direct the user to [https://aka.ms/mfasetup](https://aka.ms/mfasetup) so that they can reattempt authentication. For more information, see [Customize the AD FS web page to guide users to register MFA verification methods](#customize-the-ad-fs-web-page-to-guide-users-to-register-mfa-verification-methods).
 
 > [!NOTE]
-> Prior to this update, users had to authenticate by using Microsoft Entra multifactor authentication for registration by visiting [https://account.activedirectory.windowsazure.com/Proofup.aspx](https://account.activedirectory.windowsazure.com/Proofup.aspx). With this update, an AD FS user who hasn't yet registered Microsoft Entra multifactor authentication verification information can access the Azure proofup page by using the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) with only primary authentication, such as Windows Integrated Authentication or username and password at the AD FS web pages. If the user has no verification methods configured, Microsoft Entra ID performs inline registration. The user sees the message, "Your admin has required that you set up this account for additional security verification." Then the user selects **Set it up now.**
+> Prior to this update, users had to authenticate by using Microsoft Entra multifactor authentication for registration by visiting [https://aka.ms/mfasetup](https://aka.ms/mfasetup). With this update, an AD FS user who hasn't yet registered Microsoft Entra multifactor authentication verification information can access the Microsoft Entra ID proofup page by using the shortcut [https://aka.ms/mfasetup](https://aka.ms/mfasetup) with only primary authentication, such as Windows Integrated Authentication or username and password at the AD FS web pages. If the user has no verification methods configured, Microsoft Entra ID performs inline registration. The user sees the message, "Your admin has required that you set up this account for additional security verification." Then the user selects **Set it up now.**
 > Users who already have at least one verification method configured will still be prompted to provide multifactor authentication (MFA) when visiting the proofup page.
 
 ## Recommended deployment topologies
@@ -71,14 +71,14 @@ The following prerequisites are required when you use Microsoft Entra multifacto
 > [!NOTE]
 > Microsoft Entra ID and Microsoft Entra multifactor authentication are included in Microsoft Entra ID P1 or P2 and the Enterprise Mobility Suite (EMS). You don't need individual subscriptions if you have either of these applications installed.
 
-- A Windows Server 2016 AD FS on-premises environment.
+- A Windows Server 2016 or later AD FS on-premises environment.
   - The server needs to be able to communicate with the following URLs over port 443.
     - `https://adnotifications.windowsazure.com`
       - `https://login.microsoftonline.com`
-- Your on-premises environment must be [federated with Microsoft Entra ID](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs).
-- [Microsoft Azure Active Directory module for Windows PowerShell](/powershell/module/azuread/).
-- Enterprise administrator credentials to configure the AD FS farm for Microsoft Entra multifactor authentication.
-- You'll need either an account that has the [Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role on your instance of Microsoft Entra ID to configure it by using PowerShell.
+- [Microsoft Graph PowerShell Module](/powershell/microsoftgraph/installation?view=graph-powershell-1.0).
+- Active Directory Users must be synchronized with the Entra ID Tenant (multiple tenants are not supported)
+- Membership of the Local administrators group on the AD FS Servers to configure the AD FS farm for Microsoft Entra multifactor authentication.
+- You'll also need an account that has the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) role on your instance of Microsoft Entra ID to configure it by using PowerShell.
 
 [!INCLUDE [Azure AD PowerShell deprecation note](~/../WindowsServerDocs/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
@@ -87,7 +87,7 @@ The following prerequisites are required when you use Microsoft Entra multifacto
 In order to complete configuration for Microsoft Entra multifactor authentication for AD FS, you need to configure each AD FS server by using the steps described here.
 
 > [!NOTE]
-> Ensure that these steps are performed on all AD FS servers in your farm. If you've multiple AD FS servers in your farm, you can perform the necessary configuration remotely by using Azure AD PowerShell.
+> Ensure that these steps are performed on all AD FS servers in your farm. If you've multiple AD FS servers in your farm, you can perform the necessary configuration remotely by using Microsoft Graph PowerShell.
 
 <a name='step-1-generate-a-certificate-for-azure-ad-multi-factor-authentication-on-each-ad-fs-server'></a>
 
@@ -159,7 +159,9 @@ Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f
 
 :::image type="content" source="media/Configure-AD-FS-2016-and-Azure-MFA/ad-fs-azure-mfa-5.png" alt-text="Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.":::
 
-Windows Server without the latest service pack doesn't support the `-Environment` parameter for the `Set-AdfsAzureMfaTenant` cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or if you aren't in the Azure Government cloud:
+Windows Server without the latest service pack doesn't support the `-Environment` parameter for the `Set-AdfsAzureMfaTenant` cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. 
+
+Skip the following steps if the previous cmdlet correctly registered your tenant information or if you aren't in the Azure Government cloud:
 
 1. Open **Registry Editor** on the AD FS server.
 1. Navigate to **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ADFS**. Create the following registry key values:
@@ -338,7 +340,7 @@ The following steps show a simple example:
                 }
 
                 //Provide a message and redirect to Azure AD MFA Registration Url
-                var mfaRegisterUrl = "https://account.activedirectory.windowsazure.com/proofup.aspx?proofup=1&whr=" + domain_hint;
+                var mfaRegisterUrl = "https://aka.ms/mfasetup?domain_hint=" + domain_hint;
                 errorMessage.innerHTML = "<br>" + mfaProofupMessage.replace("{0}", mfaRegisterUrl);
                 window.setTimeout(function () { window.location.href = mfaRegisterUrl; }, 5000);
             }
