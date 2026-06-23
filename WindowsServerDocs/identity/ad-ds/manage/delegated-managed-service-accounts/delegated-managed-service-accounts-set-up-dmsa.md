@@ -46,7 +46,7 @@ The following instructions allow users to create a new dMSA without migrating fr
 
    ```powershell
    $params = @{
-    Name = "ServiceAccountName"
+    Name = "<DMSA Name>"
     DNSHostName = "DNSHostName"
     CreateDelegatedServiceAccount = $true
     KerberosEncryptionType = "AES256"
@@ -58,17 +58,17 @@ The following instructions allow users to create a new dMSA without migrating fr
 
    ```powershell
    $params = @{
-    Identity = "DMSA Name"
+    Identity = "<DMSA Name>"
     PrincipalsAllowedToRetrieveManagedPassword = "Machine$"
    }
    Set-ADServiceAccount @params
    ```
 
-1. The **msDS-DelegatedMSAState** property value for the dMSA must be set to **3**. To view the current property value, run:
+1. The **msDS-DelegatedMSAState** property value for the dMSA must be set to **3** if this is a standalone dMSA (no migration). If there will be a migration the property value must be set to **0** (default value). To view the current property value, run:
 
    ```powershell
    $params = @{
-    Identity = "dMSAsnmp"
+    Identity = "<DMSA Name>"
     Properties = "msDS-DelegatedMSAState"
    }
    Get-ADServiceAccount @params
@@ -78,8 +78,8 @@ The following instructions allow users to create a new dMSA without migrating fr
 
    ```powershell
    $params = @{
-    Identity = "dMSAsnmp"
-    Properties = @{
+    Identity = "<DMSA Name>"
+    Replace = @{
      "msDS-DelegatedMSAState" = 3
     }
    }
@@ -96,7 +96,7 @@ To migrate a service account to a dMSA, follow these steps:
 
    ```powershell
    $params = @{
-    Identity = "<DMSAName>"
+    Identity = "<DMSA Name>"
     SupersededAccount = "<DN of service account>"
    }
    Start-ADServiceAccountMigration @params
@@ -135,7 +135,7 @@ To disable the traditional service account, run the following command:
 
 ```powershell
 $params = @{
- Identity = "<DMSAName>"
+ Identity = "<DMSA Name>"
  SupersededAccount = "<DN of service account>"
 }
 Complete-ADServiceAccountMigration @params
@@ -145,7 +145,7 @@ If the wrong account is being migrated, run the following to undo all steps duri
 
 ```powershell
 $params = @{
- Identity = "<DMSAName>"
+ Identity = "<DMSA Name>"
  SupersededAccount = "<DN of service account>"
 }
 Undo-ADServiceAccountMigration @params
@@ -155,7 +155,7 @@ To revert a service account back to an inactive or unlinked state, run:
 
 ```powershell
 $params = @{
- Identity = "<DMSAName>"
+ Identity = "<DMSA Name>"
  SupersededAccount = "<DN of service account>"
 }
 Reset-ADServiceAccountMigration @params
