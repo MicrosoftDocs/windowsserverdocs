@@ -49,7 +49,7 @@ The next step is to export your custom web theme so you have an onload.js file t
 Run the following cmdlet to export your custom web theme and generate an onload.js file:
 
 ```powershell
-Export-AdfsWebTheme –Name default –DirectoryPath c:\theme
+Export-AdfsWebTheme –Name custom –DirectoryPath c:\theme
 ```
 
 The onload.js file is placed in the **script** folder in the directory specified in the cmdlet. In the example, the specified folder is `c:\theme`.
