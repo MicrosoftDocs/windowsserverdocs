@@ -240,11 +240,17 @@ For more information about managing Secure Boot, see [UEFI Firmware](/previous-v
 
 ## Verify LSA protection
 
+# Check the status through events
 To determine whether LSA starts in protected mode when Windows starts, take the following steps:
 
 1. Open Event Viewer.
 1. Expand **Windows Logs** > **System**.
 1. Look for the following **WinInit** event: **12: LSASS.exe was started as a protected process with level: 4**.
+
+# Check the current status from the registry
+
+1. Open the Registry Editor, or enter **RegEdit.exe** in the **Run** dialog, and then go to the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa** registry key.
+1. Look up the **RunAsPPLBoot** value, it shows the PPL Mode used for the current OS session. if for example it is set to "1" and **RunAsPPL** is 0, the UEFI variable is still active.
 
 ## LSA and Credential Guard
 
@@ -260,5 +266,6 @@ Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by def
 
 - [Credentials protection and management](credentials-protection-and-management.md)
 - [Partner Center for Windows Hardware](/windows-hardware/drivers/dashboard/)
+
 
 
