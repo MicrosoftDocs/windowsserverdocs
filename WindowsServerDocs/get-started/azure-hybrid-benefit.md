@@ -15,7 +15,7 @@ For other Azure hybrid benefits (for example, Microsoft SQL Server), see [Azure 
 
 ## What qualifies you for Azure Hybrid Benefit?
 
-To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server from an applicable program with active Software Assurance or qualifying subscription licenses. Software Assurance and qualifying subscription licenses are only available as part of certain commercial licensing agreements. To learn more about commercial licensing, see [Microsoft Licensing Resources](https://www.microsoft.com/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server).
+To qualify for Azure Hybrid Benefit for Windows Server, you need on-premises core licenses for Windows Server from an *applicable program with active Software Assurance* or *qualifying subscription licenses*. Software Assurance and qualifying subscription licenses are only available as part of certain commercial licensing agreements. To learn more about commercial licensing, see [Microsoft Licensing Resources](https://www.microsoft.com/licensing/default). To learn more about Windows Server core licenses, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server).
 
 > [!IMPORTANT]
 > - Workloads using Azure Hybrid Benefit can run only during the Software Assurance or subscription license term. When the Software Assurance or subscription license term approaches expiration, you must either renew your agreement with either Software Assurance or a subscription license, disable the hybrid benefit functionality, or deprovision those workloads that are using Azure Hybrid Benefit.
@@ -31,6 +31,16 @@ Azure Hybrid Benefit includes the following cost savings:
 - **Windows Server VMs on Azure:** The license for Windows Server is covered by Azure Hybrid Benefit, so you only need to pay for the base compute rate of the VM. The base compute rate is equal to the Linux rate for VMs.
 
 - **Azure Local:** The Azure Local host fee and Windows Server subscription fee are waived with Azure Hybrid Benefit. That is, unlimited virtualization rights are provided at no extra cost. You still pay other costs associated with Azure Local (for example, customer-managed hardware, Azure services, and workloads).
+
+> [!IMPORTANT]
+> The Azure Local Host fee IS waived ONLY when licensed  with qualifying license and the Azure Local instance is deployed as Azure Local (L1) - For hyperconverged deployments with no external storage (S2D Storage only).
+> The activiation of such benefits needs to be manually confirmed per instance in the Azure Portal.
+> The Azure Local host fee IS NOT waived, regardless otherwise qualifying licenses, when deploying an Azure Local instance with one of the following scenarios:
+> - Azure Local - For disaggregated deployments or hyperconverged deployments with external storage (L2).
+> - Azure Local with disconnected operations (ALDO), locally hosted control plane (L3).
+> - Microsoft 365 Local.
+> For more information please refer to Azure Local pricing and Azure products in Microsoft Product Terms, as provided in this article.
+> The Microsoft Product Terms for your program take precedent over this article or Azure Local pricing page.
 
 - **AKS:** Run AKS on Windows Server and Azure Local at no extra cost. You still pay for the underlying host infrastructure and any licenses for Windows containers unless you're also eligible for Azure Hybrid Benefit for Azure Local. With Azure Hybrid Benefit for Azure Local, you can waive fees for the Azure Local host and Windows Server subscription.
 
@@ -119,6 +129,11 @@ If you don't have enough eligible Windows Server licenses for your deployed VMs,
 # [Azure Local](#tab/azure-local)
 
 Follow the guidance in this section to get Azure Hybrid Benefit for your Windows VMs on Azure Local infrastructure.
+
+### Deployment prerequisites
+
+To qualify for Azure Hybrid Benefit for Azure Local, you must meet the following deployment prerequisites:
+Azure Local instance is deployed as Azure Local (L1) - For hyperconverged deployments with no external storage (S2D Storage only).
 
 ### Licensing prerequisites
 
