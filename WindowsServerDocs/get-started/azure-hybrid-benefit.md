@@ -34,11 +34,14 @@ Azure Hybrid Benefit includes the following cost savings:
 
 > [!IMPORTANT]
 > The Azure Local Host fee IS waived ONLY when licensed  with qualifying license and the Azure Local instance is deployed as Azure Local (L1) - For hyperconverged deployments with no external storage (S2D Storage only).
+>
 > The activiation of such benefits needs to be manually confirmed per instance in the Azure Portal.
+>
 > The Azure Local host fee IS NOT waived, regardless otherwise qualifying licenses, when deploying an Azure Local instance with one of the following scenarios:
 > - Azure Local - For disaggregated deployments or hyperconverged deployments with external storage (L2).
 > - Azure Local with disconnected operations (ALDO), locally hosted control plane (L3).
 > - Microsoft 365 Local.
+>
 > For more information please refer to Azure Local pricing and Azure products in Microsoft Product Terms, as provided in this article.
 > The Microsoft Product Terms for your program take precedent over this article or Azure Local pricing page.
 
