@@ -39,15 +39,15 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | --- | :---: | :---: | :---: |
 | **Account Logon** |  |  |  |
 | Audit Credential Validation | `No | No` | `Yes | No` | `Yes | Yes` |
-| Audit Kerberos Authentication Service |  |  | `Yes | Yes` |
-| Audit Kerberos Service Ticket Operations |  |  | `Yes | Yes` |
-| Audit Other Account Logon Events |  |  | `Yes | Yes` |
+| Audit Kerberos Authentication Service |  |  |  |
+| Audit Kerberos Service Ticket Operations |  |  |  |
+| Audit Other Account Logon Events |  |  |  |
 
 | Audit Policy Category or Subcategory | Windows Default<br>`Success | Failure` | Baseline Recommendation<br>`Success | Failure` | Stronger Recommendation<br>`Success | Failure` |
 | --- | :---: | :---: | :---: |
 | **Account Management** |  |  |  |
 | Audit Application Group Management |  |  |  |
-| Audit Computer Account Management |  | `Yes | No` | `Yes | Yes` |
+| Audit Computer Account Management |  |  |  |
 | Audit Distribution Group Management |  |  |  |
 | Audit Other Account Management Events |  | `Yes | No` | `Yes | Yes` |
 | Audit Security Group Management |  | `Yes | No` | `Yes | Yes` |
