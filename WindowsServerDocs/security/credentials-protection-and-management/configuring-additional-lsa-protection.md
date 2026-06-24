@@ -232,6 +232,21 @@ You can use the [Local Security Authority (LSA) Protected Process Opt-out tool](
 
 > [!NOTE]
 > The Download Center offers two files named *LsaPplConfig.efi*. The smaller file is for x86-based systems and the larger file is for x64-based systems.
+1. Disable the registry key (Group Policy for the registry key, if applicable) and wait for the change to propagate to clients.The corresponding registry key is `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\RunAsPPL`.
+2. Download the Local Security Authority (LSA) Protected Process Opt-out / LSAPPLConfig.efi tool files from the download center link above and store the efi tool that corresponds to your machines architecture on a local disk, for example at C: drive's root
+3. Open a Command Prompt as an Administrator and run the following commands to bootstrap the tool:
+```
+mountvol X: /s copy C:\LSAPPLConfig.efi X:\EFI\Microsoft\Boot\LSAPPLConfig.efi /Y
+bcdedit /create {0cb3b571-2f2e-4343-a879-d86a476d7215} /d "DebugTool" /application osloader
+bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} path "\EFI\Microsoft\Boot\LSAPPLConfig.efi"
+bcdedit /set {bootmgr} bootsequence {0cb3b571-2f2e-4343-a879-d86a476d7215}
+bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} loadoptions %1
+bcdedit /set {0cb3b571-2f2e-4343-a879-d86a476d7215} device partition=X:
+mountvol X: /d
+```
+4. Restart the machine, the EFI application will start after the restart.
+5. Accept the prompt to disable LSA's protection. Windows will continue to launch and LSA protection will be disabled.
+6. Verify LSA protection is disabled, search for the following WinInit event in the System log under Windows Logs, and ensure that it does not exist:       12: LSASS.exe was started as a protected process with level: 4
 
 For more information about managing Secure Boot, see [UEFI Firmware](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10)).
 
@@ -260,5 +275,8 @@ Starting in Windows 11 version 22H2, VBS and Credential Guard are enabled by def
 
 - [Credentials protection and management](credentials-protection-and-management.md)
 - [Partner Center for Windows Hardware](/windows-hardware/drivers/dashboard/)
+
+
+
 
 
