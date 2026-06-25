@@ -20,6 +20,14 @@ This page is updated monthly, so check back regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 0.80.0.0 - June 2026
+
+### New features
+- Extension versions updated to parity with on-premises Windows Admin Center version 2606.
+
+### Fixed
+- Fixed an issue where PAS<->POP token validation was failing for personal MSA accounts.
+
 ## Version 0.76.0.0 - April 2026
 
 ### Fixed
