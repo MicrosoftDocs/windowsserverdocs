@@ -12,12 +12,29 @@ ms.date: 05/12/2025
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed when running `adprep /forestprep` on Windows Server.
 
-Beginning in Windows Server 2012, Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
+Adprep commands run automatically as needed during AD DS installation. They can also be run separately in advance of AD DS installation. For more information, see [Running Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
 > [!IMPORTANT]
 > Forest-wide schema updates are performed cumulatively by `adprep`. For example, operations 131 - 135 are performed before operations 136 - 142.
 
 For more information about how to interpret the access control entry (ACE) strings, see [ACE strings](/windows/win32/secauthz/ace-strings). For more information about how to interpret the security ID (SID) strings, see [SID strings](/windows/win32/secauthz/sid-strings).
+
+## Windows Server 2025: Forest-wide updates
+
+After the operations are performed by the `/forestprep` switch in Windows Server 2025 (operations 143-152) are complete, the **revision** attribute for the CN=ActiveDirectoryUpdate,CN=ForestUpdates,CN=Configuration,DC=ForestRootDomain object is set to **18**.
+
+| Operation number and GUID | Description | Attributes | Permissions |
+|--|--|--|--|
+| **Operation 143**: {098A24A2-8B61-42CE-AFFF-8B312EB97845} | Granting the `CN=Paritions` to Authenticated Users. | msDS-JetDBPageSize | Read |
+| **Operation 144**: {105194B5-88D4-472B-9D3D-6E6C2DF8EF87} | Granting the `CN=Sites` to Enterprise Read-Only Domain Controllers. | msDS-JetDBPageSize | Self Write |
+| **Operation 145**: {df8b3782-7a0d-4f51-99fa-0a81a642bda4} | Granting the `CN=Send-As,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 146**: {a7a6c0db-e72e-4e71-a43a-8a95d299b258} | Granting the `CN=Receive-As,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 147**: {ab2311b2-1b57-4398-bda8-e9550c1561bd} | Granting the `CN=Personal-Information,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 148**: {46065238-4601-49de-ac78-5932f6afcf3e} | Granting the `CN=Public-Information,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 149**: {1be5c8f8-49d8-4253-a030-798210e42dc7} | Granting the `CN=Validated-SPN,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 150**: {62cbbb34-bb24-4d76-8387-cb8c8b30b531} | Granting the `CN=Allowed-To-Authenticate,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 151**: {5629ad26-8c4c-459f-8c43-eccb74c1e310} | Granting the `CN=MS-TS-GatewayAccess,CN=Extended-Rights` to dMSA accounts. | N/A | N/A |
+| **Operation 152**: {11153ced-f267-480b-9fc1-0f2d60d65e6b} | dMSAs can be used in CN=ad://ext/AuthenticationSilo,CN=Claim Types,CN=Claims Configuration,CN=Services | N/A | N/A |
 
 ## Windows Server 2016: Forest-wide updates
 
