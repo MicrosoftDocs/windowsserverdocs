@@ -7,7 +7,7 @@ author: robinharwood
 ms.date: 05/11/2023
 ---
 
-# Add folder targets
+# Add folder targets to a DFS namespace
 
 > 
 
