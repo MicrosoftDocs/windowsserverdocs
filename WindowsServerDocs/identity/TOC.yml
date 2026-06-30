@@ -393,6 +393,8 @@
                   href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
             - name: Delegation of Control in Active Directory Domain Services
               href: ad-ds/manage/delegation-control-wizard.md
+            - name: AD DS Tier Model for tiered administration
+              href: ad-ds/tier-model.md
             - name: Best Practices for Securing Active Directory
               href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
               items:
