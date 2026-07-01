@@ -169,3 +169,7 @@ In cases when an administrative user must connect via RDP to a destination serve
 
 -   Implementing designated jump servers and administrative workstations requires careful planning and configuration that maps to any security zones configured in the environment.
 
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+

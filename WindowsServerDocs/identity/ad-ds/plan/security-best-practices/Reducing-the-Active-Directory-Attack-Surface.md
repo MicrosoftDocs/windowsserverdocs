@@ -95,3 +95,8 @@ In versions of Windows earlier than Windows Server 2008, owners of an object can
 > An attribute on the AdminSDHolder object, dSHeuristics, allows limited customization (removal) of groups that are considered protected groups and are affected by AdminSDHolder and SDProp. This customization should be carefully considered if it is implemented, although there are valid circumstances in which modification of dSHeuristics on AdminSDHolder is useful. More information about modification of the dSHeuristics attribute on an AdminSDHolder object can be found in the Microsoft Support articles [817433](https://support.microsoft.com/?id=817433) <!--and [973840](https://support.microsoft.com/kb/973840),--> and in [Appendix C: Protected Accounts and Groups in Active Directory](Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).
 
 Although the most privileged groups in Active Directory are described here, there are a number of other groups that have been granted elevated levels of privilege. For more information about all of the default and built-in groups in Active Directory and the user rights assigned to each, see [Appendix B: Privileged Accounts and Groups in Active Directory](./Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md).
+
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+

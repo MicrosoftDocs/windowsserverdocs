@@ -186,6 +186,8 @@ Each measure is also categorized based on whether it's tactical, strategic, prev
 
 - [Implementing secure administrative hosts](../../../ad-ds/plan/security-best-practices/Implementing-Secure-Administrative-Hosts.md)
 
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+
 - [Securing domain controllers against attack](../../../ad-ds/plan/security-best-practices/Securing-Domain-Controllers-Against-Attack.md)
 
 - [Monitoring Active Directory for signs of compromise](../../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md)
