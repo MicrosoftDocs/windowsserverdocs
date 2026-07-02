@@ -15,15 +15,15 @@ Creates, lists, and deletes stored user names and passwords or credentials.
 ## Syntax
 
 ```
-cmdkey [{/add:<targetname>|/generic:<targetname>}] {/smartcard | /user:<username> [/pass:<password>]} [/delete{:<targetname> | /ras}] /list:<targetname>
+cmdkey [{/add:<targetname>[:port]|/generic:<targetname>[:port]}] {/smartcard | /user:<username> [/pass:<password>]} [/delete{:<targetname> | /ras}] /list:<targetname>
 ```
 
 ### Parameters
 
 | Parameters | Description |
 | ---------- | ----------- |
-| /add:`<targetname>` | Adds a user name and password to the list.<p>Requires the parameter of `<targetname>` which identifies the computer or domain name that this entry will be associated with. |
-| /generic:`<targetname>` | Adds generic credentials to the list.<p>Requires the parameter of `<targetname>` which identifies the computer or domain name that this entry will be associated with. |
+| /add:`<targetname>[:port]` | Adds a user name and password to the list.<p>Requires the parameter of `<targetname>[:port]` which identifies the computer or domain name and optional port number that this entry will be associated with. |
+| /generic:`<targetname>[:port]` | Adds generic credentials to the list.<p>Requires the parameter of `<targetname>[:port]` which identifies the computer or domain name and optional port number that this entry will be associated with. |
 | /smartcard | Retrieves the credential from a smart card. If more than one smart card is found on the system when this option is used, **cmdkey** displays information about all available smart cards, and then prompts the user to specify which one to use. |
 | /user:`<username>` | Specifies the user or account name to store with this entry. If `<username>` isn't supplied, it will be requested. |
 |/pass:`<password>` | Specifies the password to store with this entry. If `<password>` isn't supplied, it will be requested. Passwords are not displayed after they're stored. |
@@ -43,6 +43,12 @@ To add a user name and password for user *Mikedan* to access computer *Server01*
 
 ```
 cmdkey /add:server01 /user:mikedan /pass:Kleo
+```
+
+To add a user name and password for user *Mikedan* to access computer *Server01* on port *123* with the password *Kleo*, type:
+
+```
+cmdkey /add:server01:123 /user:mikedan /pass:Kleo
 ```
 
 To add a user name and password for user *Mikedan* to access computer *Server01* and prompt for the password whenever Server01 is accessed, type:
