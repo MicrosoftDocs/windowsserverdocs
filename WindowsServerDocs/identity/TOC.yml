@@ -459,6 +459,8 @@
               href: ad-ds/manage/Managing-RID-Issuance.md
             - name: Raise domain and forest functional levels
               href: ad-ds/plan/raise-domain-forest-functional-levels.md
+            - name: Lower domain and forest functional levels
+              href: ad-ds/plan/lower-domain-forest-functional-levels.md
             - name: DC locator
               href: ad-ds/manage/dc-locator.md
             - name: Active Directory Forest Recovery Guide
