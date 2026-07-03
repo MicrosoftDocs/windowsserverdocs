@@ -121,30 +121,72 @@ items:
     href: create-security-policies-extended-port-access-control-lists.md
 - name: Manage
   items:
-  - name: About dump encryption
-    href: manage/About-dump-encryption.md
-  - name: Configuring Persistent Memory Devices for Hyper-V VMs
-    href: manage/persistent-memory-cmdlets.md
-  - name: Work with checkpoints
-    href: checkpoints.md
-  - name: Create a VHD set
-    href: manage/Create-VHDSet-file.md
   - name: Manage hosts with Hyper-V Manager
     href: manage/Remotely-manage-Hyper-V-hosts.md
-  - name: Manage host CPU resource controls
-    href: manage/manage-hyper-v-minroot-2016.md
-  - name: Using VM CPU Groups
-    href: manage/manage-hyper-v-cpugroups.md
-  - name: Manage hypervisor scheduler types
-    href: manage/manage-hyper-v-scheduler-types.md
-  - name: About Hyper-V scheduler type selection
-    href: manage/about-hyper-v-scheduler-type-selection.md
+  - name: Use PowerShell with Hyper-V
+    href: powershell.md
+  - name: Work with checkpoints
+    href: checkpoints.md
+  - name: Performance and resource management
+    items:
+    - name: Manage host CPU resource controls
+      href: manage/manage-hyper-v-minroot-2016.md
+    - name: Using VM CPU Groups
+      href: manage/manage-hyper-v-cpugroups.md
+    - name: Manage hypervisor scheduler types
+      href: manage/manage-hyper-v-scheduler-types.md
+    - name: About Hyper-V scheduler type selection
+      href: manage/about-hyper-v-scheduler-type-selection.md
+    - name: Processor compatibility for VMs
+      href: processor-compatibility-mode.md
+    - name: Configure processor compatibility mode
+      href: configure-processor-compatibility-mode.md
+    - name: Enable Intel Performance Monitoring Hardware
+      href: manage/Performance-Monitoring-Hardware.md
+  - name: Memory
+    items:
+    - name: Dynamic Memory
+      href: dynamic-memory.md
+    - name: NUMA and virtual machines
+      href: manage/non-uniform-memory-access.md
+    - name: Configure NUMA
+      href: manage/configure-non-uniform-memory-access.md
+  - name: Storage
+    items:
+    - name: Create a VHD set
+      href: manage/Create-VHDSet-file.md
+    - name: Configuring Persistent Memory Devices for Hyper-V VMs
+      href: manage/persistent-memory-cmdlets.md
+    - name: About dump encryption
+      href: manage/About-dump-encryption.md
   - name: Integration Services
     items:
     - name: Integration Services overview
       href: integration-services.md
     - name: Manage Integration Services
       href: manage/Manage-Hyper-V-integration-services.md
+  - name: Virtual machines
+    items:
+    - name: Virtual Machine Connection overview
+      href: virtual-machine-connection.md
+    - name: Use local resources with VMConnect
+      href: Use-local-resources-virtual-machine-connection.md
+    - name: Share devices with your virtual machine
+      href: enhanced-session-mode.md
+    - name: Manage Windows VMs with PowerShell Direct
+      href: powershell-direct.md
+    - name: Create a custom VM Gallery
+      href: custom-vm-gallery.md
+  - name: Move VMs with live migration
+    items:
+    - name: Live migration overview
+      href: manage/Live-migration-overview.md
+    - name: Set up hosts for live migration
+      href: deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
+    - name: Use live migration without Failover Clustering
+      href: manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
+    - name: Use live migration with workgroup clusters
+      href: manage/live-migration-workgroup-cluster.md
   - name: Replicate virtual machines
     items:
     - name: Hyper-V Replica overview
@@ -158,41 +200,7 @@ items:
     - name: Failover a replicated virtual machine
       href: replication-failover.md
     - name: Configure multiple CSV for VM replication
-      href: manage/configure-multiple-csv-for-vm-replication.md  
-  - name: Enable Intel Performance Monitoring Hardware
-    href: manage/Performance-Monitoring-Hardware.md
-  - name: Processor compatibility mode
-    items:
-    - name: Processor compatibility for VMs
-      href: processor-compatibility-mode.md
-    - name: Configure processor compatibility mode
-      href: configure-processor-compatibility-mode.md
-  - name: Move VMs with live migration
-    items:
-    - name: Live migration overview
-      href: manage/Live-migration-overview.md
-    - name: Set up hosts for live migration
-      href: deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md
-    - name: Use live migration without Failover Clustering
-      href: manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md
-    - name: Use live migration with workgroup clusters
-      href: manage/live-migration-workgroup-cluster.md
-  - name: Use PowerShell with Hyper-V
-    href: powershell.md
-  - name: Dynamic Memory
-    href: dynamic-memory.md
-  - name: Virtual machines
-    items:
-    - name: Virtual Machine Connection overview
-      href: virtual-machine-connection.md
-    - name: Use local resources with VMConnect
-      href: Use-local-resources-virtual-machine-connection.md
-    - name: Share devices with your virtual machine
-      href: enhanced-session-mode.md
-    - name: Manage Windows VMs with PowerShell Direct
-      href: powershell-direct.md
-    - name: Create a custom VM Gallery
-      href: custom-vm-gallery.md
+      href: manage/configure-multiple-csv-for-vm-replication.md
 - name: Reference and developers
   items:
   - name: PowerShell module reference
