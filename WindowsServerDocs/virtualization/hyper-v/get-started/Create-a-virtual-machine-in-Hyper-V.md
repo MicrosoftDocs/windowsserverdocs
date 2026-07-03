@@ -75,6 +75,19 @@ To create a virtual machine in Hyper-V Manager, follow these steps:
 
 1. After verifying your choices in the **Summary** page, select **Finish**.
 
+Now that the virtual machine is created, you can specify the number of virtual processors by following these steps:
+
+1. In Hyper-V Manager, in the right pane, right-click the virtual machine and select **Settings...** to open the Settings window.
+
+1. In the left pane, under **Hardware**, select the **Processor** setting. In the right pane, locate the **Number of virtual processors** setting.
+
+1. Specify the number of virtual processors you want to allocate to the virtual machine.
+
+   > [!NOTE]
+   > You cannot specify more number of virtual processors for the virtual machine than there are logical processors on the host.
+   > You cannot specify more number of virtual processors for the virtual machine than what is supported by the version of Windows Server running on the host. For more information regarding the maximum number of virtual processors supported by the version of Windows Server running on the host, see [Hyper-V Maximum Scale Limits](../maximum-scale-limits.md).
+   > Hyper-V Manager does not allow you to specify more than 1024 virtual processors, even if the host has more than 1024 logical processors and the version of Windows Server running on the host supports it. The [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) cmdlet in Windows Powershell does not have this limitation and can be used instead to specify more than 1024 virtual processors.
+
 ### [PowerShell](#tab/powershell)
 
 To create a virtual machine with Windows PowerShell using [New-VM](/powershell/module/hyper-v/new-vm), follow these steps:
@@ -122,6 +135,16 @@ To create a virtual machine with Windows PowerShell using [New-VM](/powershell/m
      ```
 
    - **New virtual hard disk that boots to operating system image** - To create a virtual machine with a new virtual disk that boots to an operating system image, see the PowerShell example in [Create virtual machine walkthrough for Hyper-V on Windows](/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine).
+
+1. Use the [Set-VMProcessor](/powershell/module/hyper-v/set-vmprocessor) cmdlet to specify the number of virtual processors you want to allocate to the virtual machine:
+
+   ```powershell
+   Set-VMProcessor -Name <Name> -Count <NumberOfVirtualProcessors>
+   ```
+
+   > [!NOTE]
+   > You cannot specify more number of virtual processors for the virtual machine than there are logical processors on the host.
+   > You cannot specify more number of virtual processors for the virtual machine than what is supported by the version of Windows Server running on the host. For more information regarding the maximum number of virtual processors supported by the version of Windows Server running on the host, see [Hyper-V Maximum Scale Limits](../maximum-scale-limits.md).
 
 ---
 
