@@ -12,6 +12,12 @@ ms.date: 06/11/2025
 
 This article describes the latest updates for the [Remote Desktop web client](remote-desktop-web-client.md). Updates include new features, improvements, bug fixes, and security enhancements to help you stay productive.
 
+## Updates for version 2.1.65.2
+
+*Date published: July 7, 2026*
+
+- Fixed an important security vulnerability.
+
 ## Updates for version 2.1.65.0
 
 *Date published: June 6, 2025*
