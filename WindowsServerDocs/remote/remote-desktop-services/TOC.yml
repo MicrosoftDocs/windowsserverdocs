@@ -197,5 +197,7 @@
         href: remotepc/uninstall-remote-desktop-connection.md
       - name: Understand security warnings when opening RDP files
         href: remotepc/understanding-security-warnings.md
+      - name: RDP file security settings in Group Policy
+        href: remotepc/manage-rdp-file-security-settings-with-group-policy.md
     - name: Remote PC connections FAQ
       href: remotepc/remote-pc-connections-faq.yml
