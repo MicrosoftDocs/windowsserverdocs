@@ -28,7 +28,7 @@ This page is updated monthly, so check back regularly.
 ### Fixed
 - Fixed an issue where users with personal email addresses were incorrectly blocked from using Windows Admin Center in favor of corporate or MSA accounts.
 - Fixed an issue where expected fields like filename or script name are not logged in event logs, even though the action itself is recorded.
-- Improved security and oveall product quality.
+- Improved security and overall product quality.
 
 ## Version 0.76.0.0 - April 2026
 
