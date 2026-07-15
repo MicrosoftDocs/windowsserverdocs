@@ -26,7 +26,7 @@ This page is updated monthly, so check back regularly.
 - Extension versions updated to parity with on-premises Windows Admin Center version 2606.
 
 ### Fixed
-- Fixed an issue where users using personal email addresses were incorrectly blocked from using Windows Admin Center in favor of corporate or MSA accounts.
+- Fixed an issue where users with personal email addresses were incorrectly blocked from using Windows Admin Center in favor of corporate or MSA accounts.
 - Fixed an issue where expected fields like filename or script name are not logged in event logs, even though the action itself is recorded.
 - Improved security and oveall product quality.
 
