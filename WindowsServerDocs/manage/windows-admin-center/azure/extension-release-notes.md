@@ -23,7 +23,7 @@ This page is updated monthly, so check back regularly.
 ## Version 0.85.0.0 - June 2026
 
 ### New features
-- Extension versions updated to parity with on-premises Windows Admin Center version 2606.
+- Updated extension versions to match on-premises Windows Admin Center version 2606.
 
 ### Fixed
 - Fixed an issue where users with personal email addresses were incorrectly blocked from using Windows Admin Center in favor of corporate or MSA accounts.
