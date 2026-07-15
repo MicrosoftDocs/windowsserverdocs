@@ -61,4 +61,5 @@ To use the Delegation of Control Wizard, perform the following steps:
 ## Related content
 
 - [Delegating Administration by Using OU Objects](../plan/Delegating-Administration-by-Using-OU-Objects.md)
+- [Tier Model for Active Directory Domain Services](../tier-model.md)
 - [Setting up delegated Managed Service Accounts](../../../security/delegated-managed-service-accounts/delegated-managed-service-accounts-set-up-dmsa.md)

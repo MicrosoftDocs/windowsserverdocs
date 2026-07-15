@@ -88,6 +88,7 @@ There are several key factors that affect the capacity of session hosts. Underst
 - **Graphics processing unit (GPU) requirements**
   - Some workloads, such as graphics-intensive applications for video rendering, 3D design, and simulations or virtual desktops with high-resolution displays, might require dedicated GPUs to ensure optimal performance.
   - Consider using session hosts with GPU capabilities if your users run graphics-intensive applications or require high-resolution displays.
+  - RDP on CPU-only session hosts relies entirely on software-based video encoders that share CPU time with other processes on the VM. When the endpoint display configuration exceeds 3840 x 2160 total resolution, CPU resource contention can lead to unexpected graphical behavior like block artifacts, pixelation, frame freezing, and cache corruption. If users hit these problems on a CPU-only VM with an endpoint display setup exceeding 3840 x 2160 total resolution, consider moving them to a GPU-enabled session host.
 
 All these factors can impact the overall performance and capacity of session hosts. The measurement of user input delay, or end-to-end session response time, is a key metric to consider when evaluating the performance for users. This metric measures the time it takes for a user's input to be processed and reflected in the session, providing a more accurate representation of user experience. Users generally expect a response time of less than 200 milliseconds for their actions, and any delay beyond that can lead to a degraded user experience. For more information about measuring user experience, see [Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts](rds-rdsh-performance-counters.md).
 
@@ -139,7 +140,7 @@ The following table lists the maximum suggested number of users per virtual cent
 | Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v5, D8s_v4, F8s_v2, D8as_v4, D16s_v5, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
 | Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D16ds_v5, D16s_v4, D16as_v4, NV6, NV16as_v4 | 30 GB |
 
-For multi-session workloads, you should limit VM size to between 4 vCPUs and 24 vCPUs for the following reasons:
+For multi-session workloads, limit VM size to between 6 vCPUs and 24 vCPUs for the following reasons:
 
 - All VMs should have more than two cores. The UI components in Windows rely on the use of at least two parallel threads for some of the heavier rendering operations. For multi-session scenarios, having multiple users on a two-core VM leads to the UI and apps becoming unstable, which lowers the quality of user experience. Four cores are the lowest recommended number of cores that a stable multi-session VM should have.
 

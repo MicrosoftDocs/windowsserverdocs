@@ -81,3 +81,8 @@ An often overlooked target in Active Directory breaches is the accounts of "very
 
 ### "Privilege-Attached" Active Directory Accounts
 "Privilege-attached" Active Directory accounts are domain accounts that have not been made members of any of the groups that have the highest levels of privilege in Active Directory, but have instead been granted high levels of privilege on many servers and workstations in the environment. These accounts are most often domain-based accounts that are configured to run services on domain-joined systems, typically for applications running on large sections of the infrastructure. Although these accounts have no privileges in Active Directory, if they are granted high privilege on large numbers of systems, they can be used to compromise or even destroy large segments of the infrastructure, achieving the same effect as compromise of a privileged Active Directory account.
+
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+

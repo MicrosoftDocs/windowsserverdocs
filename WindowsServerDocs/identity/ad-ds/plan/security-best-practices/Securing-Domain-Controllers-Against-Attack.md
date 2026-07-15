@@ -90,4 +90,9 @@ Perimeter firewalls should be configured to block outbound connections from doma
 
 You can use a combination of AppLocker configuration, "black hole" proxy configuration, and Windows Firewall with Advanced Security configuration to prevent domain controllers from accessing the Internet and to prevent the use of web browsers on domain controllers.
 
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+
+
 

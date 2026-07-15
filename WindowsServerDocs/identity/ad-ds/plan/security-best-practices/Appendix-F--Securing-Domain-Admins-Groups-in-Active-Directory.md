@@ -282,3 +282,8 @@ From any member server or workstation affected by the GPO changes, log on locall
 5.  A dialog box similar to the following should appear.
 
     ![Screenshot that shows the message that indicates the sign-in method you're using isn't allowed.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_78.gif)
+
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+

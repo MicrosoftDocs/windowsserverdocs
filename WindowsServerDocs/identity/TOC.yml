@@ -393,6 +393,8 @@
                   href: ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md
             - name: Delegation of Control in Active Directory Domain Services
               href: ad-ds/manage/delegation-control-wizard.md
+            - name: AD DS Tier Model for tiered administration
+              href: ad-ds/tier-model.md
             - name: Best Practices for Securing Active Directory
               href: ad-ds/plan/security-best-practices/Best-Practices-for-Securing-active-directory.md
               items:
@@ -457,6 +459,8 @@
               href: ad-ds/manage/Managing-RID-Issuance.md
             - name: Raise domain and forest functional levels
               href: ad-ds/plan/raise-domain-forest-functional-levels.md
+            - name: Lower domain and forest functional levels
+              href: ad-ds/plan/lower-domain-forest-functional-levels.md
             - name: DC locator
               href: ad-ds/manage/dc-locator.md
             - name: Active Directory Forest Recovery Guide
