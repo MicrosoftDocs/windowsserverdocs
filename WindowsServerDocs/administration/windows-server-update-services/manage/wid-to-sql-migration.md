@@ -4,7 +4,7 @@ description: Windows Server Update Service (WSUS) topic - How to migrate the WSU
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 07/25/2018
+ms.date: 07/28/2026
 ms.custom: sfi-image-nochange
 ---
 
@@ -175,6 +175,8 @@ From PowerShell (elevated), run:
 
 > [!NOTE]
 > If you are using the WSUS Console, close and restart it.
+
+If you migrated the WSUS database to a remote SQL Server, secure the connection by enabling SQL Server Extended Protection for Authentication (EPA). For more information, see [Secure the SQL Server connection](../deploy/2-configure-wsus.md#234-secure-the-sql-server-connection-if-needed).
 
 ## Uninstalling the WID role (not recommended)
 
