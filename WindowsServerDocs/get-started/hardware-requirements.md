@@ -154,7 +154,7 @@ The following items are required only for certain features:
 
 - Trusted Platform Module (TPM).
 
-- Integrated or dedicated graphics and monitor capable of Super VGA (1024×768) or higher-resolution.
+- Integrated or dedicated graphics and monitor capable of Super VGA (1024×768) or higher resolution.
 
 - Keyboard and mouse (or other compatible pointing device).
 
