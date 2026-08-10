@@ -4,7 +4,6 @@ description: Reference article for the list volume command, which displays a lis
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 

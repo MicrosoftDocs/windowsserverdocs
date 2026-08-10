@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: AD DS Deployment Requirements"
-ms.assetid: e02bb152-d0db-40b0-9942-846dce75f6c7
 title: AD DS Deployment Requirements
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # AD DS Deployment Requirements
-
->
 
 The structure of your existing environment determines your strategy for deploying Windows Server 2008 Active Directory Domain Services (AD DS). If you are creating an AD DS environment and you do not have an existing domain structure, complete your AD DS design before you begin creating your AD DS environment. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.
 

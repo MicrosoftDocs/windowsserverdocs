@@ -1,7 +1,7 @@
 ---
 title: Performance Tuning for HTTP 1.1/2
 description: Performance tuning recommendations for HTTP 1.1/2
-ms.topic: article
+ms.topic: best-practice
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

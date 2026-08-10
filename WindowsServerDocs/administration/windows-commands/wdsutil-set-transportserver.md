@@ -2,10 +2,8 @@
 title: wdsutil set-transportserver
 description: Reference article for Subcommand set-TransportServer, which sets configuration settings for a Transport Server.
 ms.topic: reference
-ms.assetid: 7863225c-f4b2-4cd0-b929-78a454bef249
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil set-transportserver

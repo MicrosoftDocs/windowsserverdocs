@@ -2,10 +2,9 @@
 title: Release Notes - Important Issues in Windows Server, version 1803
 description: Learn about any known issues, limitations, or other information you need before you install Windows Server, version 1803
 ms.date: 05/07/2018
-ms.topic: article
+ms.topic: release-notes
 author: robinharwood
 ms.author: roharwoo
-manager: dougkim
 ---
 # Release Notes: Important Issues in Windows Server, version 1803
 

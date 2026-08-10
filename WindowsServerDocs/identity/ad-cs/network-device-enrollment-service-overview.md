@@ -1,10 +1,10 @@
 ---
 title: What is Network Device Enrollment Service for Active Directory Certificate Services?
 description: Learn about the role of Network Device Enrollment Service and how it works with certificates based on Simple Certificate Enrollment Protocol
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 03/30/2023
+ms.date: 01/03/2025
 ---
 
 # What is Network Device Enrollment Service for Active Directory Certificate Services?
@@ -92,8 +92,4 @@ successfully.
 
 - [Configure Network Device Enrollment Service for Active Directory Certificate Services](create-domain-user-account-ndes-service-account.md)
 
-- If you require over-the-air enrollment for mobile devices, see
-  [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473016(v=ws.11)).
-
-- For detailed information about NDES configuration and operation, see
-  [Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS)](/windows-server/identity/ad-cs/network-device-enrollment-service-overview).
+- If you require over-the-air enrollment for mobile devices, see  [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473016(v=ws.11)).

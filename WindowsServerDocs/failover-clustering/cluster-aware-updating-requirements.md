@@ -1,8 +1,6 @@
 ---
-ms.assetid: 75cc1d24-fa2f-45bd-8f3b-1bbd4a1aead0
 title: Cluster-Aware Updating requirements and best practices
-ms.topic: article
-manager: lizross
+ms.topic: best-practice
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/21/2021
@@ -18,7 +16,7 @@ This section describes the requirements and dependencies that are needed to use 
 > You may need to independently validate that your cluster environment is ready to apply updates if you use a plug\-in other than **Microsoft.WindowsUpdatePlugin**. If you are using a non\-Microsoft plug\-in, contact the publisher for more information. For more information about plug\-ins, see [How Plug\-ins Work](cluster-aware-updating-plug-ins.md).
 
 ## <a name="BKMK_REQ_CLUS"></a>Install the Failover Clustering feature and the Failover Clustering Tools
-CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Installing the Failover Clustering Feature and Tools](create-failover-cluster.md#install-the-failover-clustering-feature).
+CAU requires an installation of the Failover Clustering feature and the Failover Clustering Tools. The Failover Clustering Tools include the CAU tools \(clusterawareupdating.dll\), the Failover Clustering  cmdlets, and other components needed for CAU operations. For steps to install the Failover Clustering feature, see [Install the Failover Clustering feature using Failover Cluster Manager](create-failover-cluster.md#install-the-failover-clustering-feature-using-failover-cluster-manager) or [PowerShell](create-failover-cluster.md#install-the-failover-clustering-feature-using-powershell).
 
 The exact installation requirements for the Failover Clustering Tools depend on whether CAU coordinates updates as a clustered role on the failover cluster \(by using self\-updating mode\) or from a remote computer. The self\-updating mode of CAU additionally requires the installation of the CAU clustered role on the failover cluster by using the CAU tools.
 
@@ -248,3 +246,4 @@ The following table lists the cluster updating readiness tests, some common issu
 ## Additional References
 
 -   [Cluster-Aware Updating overview](cluster-aware-updating.md)
+

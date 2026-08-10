@@ -2,8 +2,8 @@
 title: Kernel Mode Hardware-enforced Stack Protection
 description: Learn how to enable stack protection, in order to prevent stacks from return-oriented programming-based attacks (ROP).
 ms.topic: how-to
-author: meaghanlewis
-ms.author: wscontent
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/29/2024
 ---
 

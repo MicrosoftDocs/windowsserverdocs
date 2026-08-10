@@ -1,16 +1,13 @@
 ---
 title: Configure virtual network peering
 description: Configuring the virtual network peering involves creating two virtual networks that get peered.
-manager: grcusanz
 ms.topic: how-to
 ms.author: roharwoo
-author: AnirbanPaul
+author: robinharwood
 ms.date: 11/04/2021
 ---
 
 # Configure virtual network peering
-
->
 
 In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 

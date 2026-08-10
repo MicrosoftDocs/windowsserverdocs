@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Deploy a Central Access Policy (Demonstration Steps)"
-ms.assetid: 8738c03d-6ae8-49a7-8b0c-bef7eab81057
 title: Deploy a Central Access Policy (Demonstration Steps)
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Deploy a Central Access Policy (Demonstration Steps)
-
->
 
 In this scenario, the finance department security operations is working with central information security to specify the need for a central access policy so that they can protect archived finance information stored on file servers. The archived finance information from each country can be accessed as read-only by finance employees from the same country. A central finance admin group can access the finance information from all countries.
 

@@ -2,14 +2,11 @@
 title: Define File Groups for Screening
 description: This article describes how to define file groups to create a namespace for file screen, file screen exception, or files by file group storage reports
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Define File Groups for Screening
-
->
 
 A *file group* is used to define a namespace for a file screen, file screen exception, or **Files by File Group** storage report. It consists of a set of file name patterns, which are grouped by the following:
 
@@ -44,5 +41,6 @@ A *file group* is used to define a namespace for a file screen, file screen exce
 -   [Create a File Screen Exception](create-file-screen-exception.md)
 -   [Create a File Screen Template](create-file-screen-template.md)
 -   [Storage Reports Management](storage-reports-management.md)
+
 
 

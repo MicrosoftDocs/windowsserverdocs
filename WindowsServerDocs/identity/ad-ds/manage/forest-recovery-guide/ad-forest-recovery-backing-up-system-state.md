@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: AD Forest Recovery - Backing up the System State data"
 title: AD Forest Recovery - Backing up the System State data
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: how-to
 ms.custom: 9238cb27-0020-42f7-90d6-fcebf7e3c0bc, inhenkel
 ---
 
 # Active Directory Forest Recovery - Back up the System State data
-
->
 
 Use the following procedure to perform a system state backup on a Domain Controller (DC) by using Windows Server Backup or wbadmin.exe.
 

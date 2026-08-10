@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Troubleshooting Active Directory Replication Problems"
-ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Troubleshooting Active Directory Replication Problems
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 03/07/2024
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: troubleshooting-general
 ---
 # Troubleshooting Active Directory Replication Problems
-
->
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=adrepl" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues.</span>
 
@@ -22,7 +18,7 @@ The rest of this article explains tools and a general methodology to fix Active 
 
 Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem isn't immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes.
 
-For a UI-based tool to help monitor replication and diagnose errors, download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication).
+For a UI-based tool to help monitor replication and diagnose errors, download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/SaRASetup).
 
 For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)).
 
@@ -67,13 +63,13 @@ If a domain controller running Windows 2000 Server has failed for longer than th
 2. Either forcefully remove Active Directory or reinstall the operating system.
 3. Remove the server metadata from Active Directory so that the server object can't be revived.
 
-You can use a script to clean up server metadata on most Windows operating systems. For information about using this script, see [Remove Active Directory Domain Controller Metadata](https://go.microsoft.com/fwlink/?LinkID=123599).
-
 By default, NTDS Settings objects that are deleted are revived automatically for a period of 14 days. Therefore, if you don't remove server metadata (use Ntdsutil or the script mentioned previously to perform metadata cleanup), the server metadata is reinstated in the directory, which prompts replication attempts to occur. In this case, errors will be logged persistently as a result of the inability to replicate with the missing domain controller.
+
+For more information about removing server metadata, see [Clean up Active Directory Domain Controller server metadata](../../deploy/ad-ds-metadata-cleanup.md).
 
 ## Root causes
 
-If you rule out intentional disconnections, hardware failures, and outdated Windows 2,000 domain controllers, the remainder of replication problems almost always have one of the following root causes:
+If you rule out intentional disconnections, hardware failures, and outdated Windows Server 2000 domain controllers, the remainder of replication problems almost always have one of the following root causes:
 
 - Network connectivity: The network connection might be unavailable, or network settings aren't configured properly.
 - Name resolution: DNS misconfigurations are a common cause of replication failures.

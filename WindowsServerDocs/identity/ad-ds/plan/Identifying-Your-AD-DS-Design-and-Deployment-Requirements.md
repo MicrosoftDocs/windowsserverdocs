@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Identifying Your AD DS Design and Deployment Requirements"
-ms.assetid: f0398494-773d-4070-aa4e-25b4815b001e
 title: Identifying Your AD DS Design and Deployment Requirements
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Identifying Your AD DS Design and Deployment Requirements
-
->
 
 Performing a high-level assessment of your current environment and correctly identifying your Active Directory Domain Services (AD DS) deployment tasks is essential for the success of your AD DS deployment strategy.
 

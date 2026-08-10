@@ -4,7 +4,8 @@ description: Learn how to install Storage Migration Service, and use the service
 author: robinharwood
 ms.author: roharwoo
 ms.date: 06/25/2024
-ms.topic: conceptual
+ms.topic: upgrade-and-migration-article
+ms.custom: sfi-image-nochange
 ---
 
 # Use Storage Migration Service to migrate a server
@@ -178,3 +179,4 @@ After migrating a server or cluster, evaluate the environment for possible post 
 - [Storage Migration Service overview](overview.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.yml)
 - [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)
+

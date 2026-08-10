@@ -4,7 +4,7 @@ description: This section provides an overview of the recommended path for recov
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Steps to restore the forest
@@ -50,3 +50,5 @@ these steps to account for such factors as:
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

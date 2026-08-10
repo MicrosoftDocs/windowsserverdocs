@@ -1,14 +1,12 @@
 ---
 title: Configure secure protocol options for Windows HTTP Services (WinHTTP)
 description: This article provides information about how to configure secure protocol options for Windows HTTP Services (WinHTTP).
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 03/27/2024
 ---
 # Configure secure protocol options for WinHTTP
-
->
 
 This how-to guide shows you how to use the `DefaultSecureProtocols` registry entry to choose which protocols for the Windows HTTP Services (WinHTTP).
 

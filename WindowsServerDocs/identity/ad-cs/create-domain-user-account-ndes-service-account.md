@@ -1,7 +1,7 @@
 ---
 title: Configure Network Device Enrollment Service to use a domain user account for Active Directory Certificate Services
 description: Learn how to configure a service account for the Network Device Enrollment Service (NDES) as a role service with certificates based on Simple Certificate Enrollment Protocol (SCEP)
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 04/03/2023
@@ -145,7 +145,7 @@ balancer or virtual name. In this section, learn how to determine whether it's n
 SPN in Active Directory.
 
 - If you're using a single NDES server and its actual hostname (most common scenario), the account
-  doesn't need an SPN registered. The computer accounts default SPNs for HOST/computerFQDN cover
+  doesn't need an SPN registered. The computer account's default SPNs for HOST/computerFQDN cover
   this case. If you're using all other defaults (particularly around IIS kernel-mode
   authentication), you can skip ahead to the next section of this article.
 

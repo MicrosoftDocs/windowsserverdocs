@@ -1,17 +1,13 @@
 ---
-ms.assetid: 4163cf03-3bff-426c-9844-4cc2d7897d52
 title: DNS for AD DS Owner Role
 description: Information about the DNS for AD DS Owner role.
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 12/17/2021
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # DNS for AD DS Owner Role
-
->
 
 The DNS for AD DS owner of the forest is a person (or group of people) who is responsible for overseeing the deployment of the DNS for AD DS infrastructure and for making sure that (if necessary) domain names are registered with the proper Internet authorities. The forest owner assigns a Domain Name System (DNS) for Active Directory Domain Services (AD DS) owner for the forest.
 

@@ -4,7 +4,6 @@ description: Windows Server Update Service (WSUS) topic - How Independent Softwa
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # Monthly Delta update ISV support without WSUS

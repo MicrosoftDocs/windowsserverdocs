@@ -4,6 +4,7 @@ description: A list of some of the most frequently used commands in Git Bash whe
 author: eross-msft
 ms.author: roharwoo
 ms.date: 05/06/2019
+ms.topic: contributor-guide
 ---
 
 # Common Git Bash commands

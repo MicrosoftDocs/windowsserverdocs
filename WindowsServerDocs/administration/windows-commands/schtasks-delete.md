@@ -4,7 +4,6 @@ description: Reference article for the schtasks delete command, which deletes a 
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 09/16/2020
 ---
 
@@ -34,7 +33,7 @@ schtasks /delete /tn {<taskname> | *} [/f] [/s <computer> [/u [<domain>\]<user> 
 To delete the *Start Mail* task from the schedule of a remote computer.
 
 ```
-schtasks /delete /tn Start Mail /s Svr16
+schtasks /delete /tn "Start Mail" /s Svr16
 ```
 
 This command uses the **/s** parameter to identify the remote computer.

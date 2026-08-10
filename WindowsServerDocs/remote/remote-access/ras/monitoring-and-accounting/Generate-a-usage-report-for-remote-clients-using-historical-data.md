@@ -1,16 +1,12 @@
 ---
 title: Generate a usage report for remote clients using historical data
 description: Learn how to enable accounting on the Remote Access server so you can generate a usage report for the remote clients that are accessing the server.
-manager: brianlic
-ms.topic: article
-ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Generate a usage report for remote clients using historical data
-
->
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 

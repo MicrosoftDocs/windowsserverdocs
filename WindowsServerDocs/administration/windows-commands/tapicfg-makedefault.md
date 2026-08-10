@@ -4,7 +4,6 @@ description: Reference article for the tapicfg makedefault command, which sets t
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 09/29/2020
 ---
 

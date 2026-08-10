@@ -1,8 +1,7 @@
 ---
 title: Step 1 Plan the Basic DirectAccess Infrastructure
 description: Learn how to perform planning for the infrastructure required for the basic DirectAccess deployment.
-manager: brianlic
-ms.topic: article
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 

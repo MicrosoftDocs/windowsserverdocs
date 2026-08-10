@@ -2,15 +2,12 @@
 title: Classification Management
 description: This article describes how to categorize files based on classification properties
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: concept-article
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
 # Classification Management
-
->
 
 Classification properties are used to categorize files and can be used to select files for scheduled file management tasks.
 
@@ -29,3 +26,4 @@ This section includes the following topics:
 ## Additional References
 
 [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+

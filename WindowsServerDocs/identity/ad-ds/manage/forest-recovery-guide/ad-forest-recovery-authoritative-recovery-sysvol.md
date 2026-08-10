@@ -4,7 +4,8 @@ description: There are different ways to perform an authoritative restore of SYS
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Active Directory Forest Recovery - Perform an authoritative synchronization of DFSR-replicated SYSVOL
@@ -57,3 +58,5 @@ Active Directory Users and Computers**
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

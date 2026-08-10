@@ -2,14 +2,11 @@
 title: Optimize Namespace Polling
 description: This article describes how to optimize namespace polling to maintain a consistent domain-based namespace across namespace servers
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Optimize Namespace Polling
-
->
 
 To maintain a consistent domain-based namespace across namespace servers, it is necessary for namespace servers to periodically poll Active Directory Domain Services (AD DS) to obtain the most current namespace data.
 
@@ -33,3 +30,4 @@ Use the following procedure to optimize how namespace polling occurs:
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

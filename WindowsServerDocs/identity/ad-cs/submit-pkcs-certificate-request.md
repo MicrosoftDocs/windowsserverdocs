@@ -1,7 +1,7 @@
 ---
 title: "Submit certificate requests to AD CS using a PKCS #10 or PKCS #7 file in Windows Server"
 description: "Learn how to submit a certificate in CA Web Enrollment role service by using a PKCS #10 file or a PKCS #7 file in Windows Server"
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 09/09/2023

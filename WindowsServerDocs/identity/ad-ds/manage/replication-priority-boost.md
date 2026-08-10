@@ -1,8 +1,8 @@
 ---
 title: Active Directory Domain Services Replication Priority Boost
 description: Learn about what the Active Directory Domain Services Replication Priority Boost feature is and how to manage it.
-ms.author: clfish
-author: gswashington
+ms.author: roharwoo
+author: robinharwood
 ms.topic: how-to
 ms.date: 10/21/2024
 ---

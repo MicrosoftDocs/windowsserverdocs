@@ -3,7 +3,7 @@ title: schtasks query
 description: Reference article for the schtasks query command, which lists all the tasks scheduled to run on the computer.
 ms.topic: reference
 ms.author: roharwoo
-author: xelu86
+author: robinharwood
 ms.date: 02/13/2024
 ---
 

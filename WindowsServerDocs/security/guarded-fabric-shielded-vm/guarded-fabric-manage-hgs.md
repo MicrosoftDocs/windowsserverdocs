@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Managing the Host Guardian Service"
 title: Managing the Host Guardian Service
-ms.topic: article
-ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
-manager: dongill
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 12/10/2020
 ---
 
 # Managing the Host Guardian Service
-
->
 
 The Host Guardian Service (HGS) is the centerpiece of the guarded fabric solution.
 It is responsible for ensuring that Hyper-V hosts in the fabric are known to the hoster or enterprise and running trusted software and for managing the keys used to start up shielded VMs.
@@ -815,3 +811,5 @@ If you no longer intend to use the computer as a HGS node, you can remove the ro
 ```powershell
 Uninstall-WindowsFeature HostGuardianServiceRole
 ```
+
+

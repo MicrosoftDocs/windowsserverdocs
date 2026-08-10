@@ -2,15 +2,12 @@
 title: File Management Tasks
 description: This article describes the process of automating file management tasks
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 
 # File Management Tasks
-
->
 
 File management tasks automate the process of finding subsets of files on a server and applying simple commands. These tasks can be scheduled to occur periodically to reduce repetitive costs. Files that will be processed by a file management task can be defined through any of the following properties:
 
@@ -37,5 +34,6 @@ This section includes the following topics:
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+
 
 

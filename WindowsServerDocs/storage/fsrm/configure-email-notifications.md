@@ -2,14 +2,11 @@
 title: Configure E-Mail Notifications
 description: This article describes how to configure e-mail notifications
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Configure E-Mail Notifications
-
->
 
 When you create quotas and file screens, you have the option of sending e-mail notifications to users when their quota limit is approaching or after they have attempted to save files that have been blocked. When you generate storage reports, you have the option of sending the reports to specific recipients by e-mail. If you want to routinely notify certain administrators about quota and file screening events, or send storage reports, you can configure one or more default recipients.
 
@@ -55,3 +52,4 @@ Send-FsrmTestEmail @MHT
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
+

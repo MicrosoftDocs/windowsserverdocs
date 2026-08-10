@@ -1,9 +1,9 @@
 ---
 title: RPC context handles for HCN
 description: Information about HCN Network entities, represented using HCN_NETWORK RPC context handles.
-ms.topic: article
+ms.topic: reference
 ms.author: roharwoo
-author: daschott
+author: robinharwood
 ms.date: 04/01/2023
 
 ---

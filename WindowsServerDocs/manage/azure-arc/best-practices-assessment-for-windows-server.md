@@ -2,9 +2,10 @@
 title: How to configure best practices assessment for Arc-enabled Windows servers
 description: Learn how to deploy the best Practices Assessment tool to evaluate your servers by identifying and providing guidance on areas for improvement for Arc-enabled Windows servers and Azure VMs.
 ms.topic: how-to
-ms.author: alalve
-author: trungtran
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/31/2024
+ms.custom: sfi-image-nochange
 ---
 
 # Configure Best Practices Assessment for Arc-enabled Windows servers
@@ -31,7 +32,7 @@ The Best Practices Assessment tool installs the following three extensions on yo
 
 - Your device must be running an Arc-enabled on-premises Windows Server 2016 or later operating system with a minimum of 4 GB of memory.
 - If you’re new to Azure Arc, your device must be onboarded. To learn more, see [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
-- You must use Windows Server Pay-as-you-go or Software Assurance license types.
+- You must use [Windows Server Pay-as-you-go](../../get-started/windows-server-pay-as-you-go.md) or [Software Assurance](/azure/azure-arc/servers/windows-server-management-overview) license types.
 
 ### Deploy Best Practices Assessment
 
@@ -101,3 +102,10 @@ If this error occurs, your extension needs to be reenabled. To correct this issu
 ## Submit tooling feedback
 
 To report app feedback for the best practices assessment tool or if other issues are encountered, let us know via the Feedback Hub. To learn more, see [Submit tooling feedback](azure-site-recovery-for-windows-server.md#submit-tooling-feedback). Under **Summarize your feedback**, type **Azure Arc BPA (preview)** and proceed with the remaining steps.
+
+## See also
+
+- [Configure Azure Site Recovery for Arc-enabled Windows servers](azure-site-recovery-for-windows-server.md)
+
+- [Configure Remote Support for Arc-enabled Windows servers](remote-support-for-windows-server.md)
+

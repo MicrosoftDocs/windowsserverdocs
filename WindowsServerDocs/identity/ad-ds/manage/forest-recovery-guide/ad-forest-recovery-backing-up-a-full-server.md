@@ -4,7 +4,7 @@ description: A Bare Metal Recovery (BMR) backup is recommended to prepare for a 
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Back up a full server
@@ -75,3 +75,5 @@ Windows Server Backup isn't installed by default. In Windows Server 2012 R2, Win
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

@@ -2,14 +2,11 @@
 title: Using Inherited Permissions with Access-based Enumeration
 description: This article describes how to use inherited permissions with access-based enumeration
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Using inherited permissions with Access-based Enumeration
-
->
 
 By default, the permissions used for a DFS folder are inherited from the local file system of the namespace server. The permissions are inherited from the root directory of the system drive and grant the DOMAIN\\Users group Read permissions. As a result, even after enabling access-based enumeration, all folders in the namespace remain visible to all domain users.
 
@@ -53,3 +50,4 @@ To limit which users can view a DFS folder, you must perform one of the followin
 ## Additional References
 
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
+

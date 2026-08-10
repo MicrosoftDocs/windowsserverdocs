@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Mapping Your Requirements to an AD DS Deployment Strategy"
-ms.assetid: ce3be131-06ad-41dc-a26b-1168fa68c8ed
 title: Mapping Your Requirements to an AD DS Deployment Strategy
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Mapping Your Requirements to an AD DS Deployment Strategy
-
->
 
 After you finish reviewing and identifying the Active Directory Domain Services (AD DS) design and deployment requirements and you determine which of them are related to your specific deployment, you can map those requirements to a specific AD DS deployment strategy.
 

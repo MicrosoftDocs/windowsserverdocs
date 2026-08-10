@@ -1,17 +1,17 @@
 ---
 description: "Learn more about: AD Forest Recovery - Raising the value of available RID pools"
 title: AD Forest Recovery - Raising RID pools
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
-ms.custom: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4, inhenkel
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: how-to
+ms.custom:
+  - c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # Active Directory Forest Recovery - Raise the value of available RID pools
-
->
 
 Use the following procedure to raise the value of the relative ID (RID) pools that the RID operations master will allocate after that DC is restored. By raising the value of the available RID pools, you can ensure that no DC allocates a RID for a security principal that was created after the backup that was used to restore the domain.
 

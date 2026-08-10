@@ -2,14 +2,11 @@
 title: Change the Amount of Time that Clients Cache Referrals
 description: This article describes how to change the amount of time that clients cache referrals
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Change the amount of time that clients cache referrals
-
->
 
 A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets in the namespace. You can adjust how long clients cache a referral before requesting a new one.
 
@@ -37,3 +34,4 @@ cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

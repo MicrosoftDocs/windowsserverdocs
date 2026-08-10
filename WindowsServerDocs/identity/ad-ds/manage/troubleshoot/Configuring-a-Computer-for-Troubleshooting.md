@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Configuring a Computer for Troubleshooting"
-ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: troubleshooting-general
 ---
 # Configuring a Computer for Troubleshooting
-
->
 
 Before you use advanced troubleshooting techniques to identify and fix Active Directory problems, configure your computers for troubleshooting. You should also have a basic understanding of troubleshooting concepts, procedures, and tools.
 

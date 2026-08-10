@@ -1,16 +1,14 @@
 ---
 description: Learn more about planning for compromise
 title: Planning for compromise
-author: iainfoulds
-ms.author: justinha
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+
 ---
 
 # Planning for Compromise
-
->
 
 *Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 

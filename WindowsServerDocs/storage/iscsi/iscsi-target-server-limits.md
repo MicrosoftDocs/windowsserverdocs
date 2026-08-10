@@ -2,16 +2,13 @@
 title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
 description: "Learn more about: iSCSI Target Server Scalability Limits"
-ms.topic: article
+ms.topic: limits-and-quotas
 author: robinharwood
-manager: dougkim
 ms.author: roharwoo
 ms.date: 09/11/2018
 ---
 
 # iSCSI Target Server Scalability Limits
-
->
 
 This topic provides the supported and tested Microsoft iSCSI Target Server limits on Windows Server. The following tables display the tested support limits and, where applicable, whether the limits are enforced.
 
@@ -540,3 +537,4 @@ The following list provides additional resources about iSCSI Target Server and r
 - [iSCSI Target Boot Overview](iscsi-boot-overview.md)
 
 - [Storage in Windows Server](../storage.yml)
+

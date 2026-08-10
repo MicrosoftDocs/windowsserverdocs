@@ -2,7 +2,7 @@
 title: Create a Classification Property
 description: This article describes classification properties used to assign values to files within a specified folder or volume.
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ---

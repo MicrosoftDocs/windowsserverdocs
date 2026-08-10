@@ -3,12 +3,10 @@ title: Create a workgroup cluster in Windows Server
 description: Learn how-to create Failover Clusters without Active Directory using the Failover Cluster Manager or PowerShell.
 ms.topic: how-to
 ms.author: roharwoo
-author: meaghanlewis
-ms.date: 07/16/2024
+author: robinharwood
+ms.date: 01/29/2024
 ---
 # Create a workgroup cluster
-
-
 
 In this article, learn about and create a workgroup cluster. First, understand what workgroup clusters are and how they differ from traditional failover clusters. Then, create a workgroup cluster either using the Failover Cluster Manager or Windows PowerShell.
 
@@ -36,7 +34,7 @@ The following prerequisites must be met for your workgroup cluster to meet the c
 
 Workgroup clusters support several workloads. Workgroup clusters are recommended and supported for:
 
-- **Hyper-V VMs.** Supported cluster workload starting in Windows Server S2025.
+- **Hyper-V VMs.** Supported cluster workload starting in Windows Server 2025.
 - **SQL Server Availability Groups.** SQL Server is a supported workload for Windows Server 2016 through Windows Server 2025. To deploy a SQL Server workload, follow the instructions to create a [domain independent availability group](/sql/database-engine/availability-groups/windows/domain-independent-availability-groups#create-a-domain-independent-availability-group-1).
 
 Workgroup clusters aren't supported for:
@@ -71,7 +69,7 @@ A consistent administrator user account must be created on each node. The userna
 1. If the nonbuiltin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The following set of steps describes how to set the LocalAccountTokenFilterPolicy.
 
     > [!IMPORTANT]
-    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly.     Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
+    > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 1. Click **Start**, click **Run**, type _regedit_, and then press ENTER.
 
@@ -94,7 +92,7 @@ A consistent administrator user account must be created on each node. The userna
 
 1. If the nonbuiltin administrator account isn't used, then you need to set the LocalAccountTokenFilterPolicy in the registry. The policy can be done in PowerShell with the following command:
     ```PowerShell
-    New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System –Name LocalAccountTokenFilterPolicy -Value 1​
+    New-itemproperty -path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name LocalAccountTokenFilterPolicy -Value 1​
     ```
 
 ---
@@ -178,7 +176,7 @@ The following steps show how to install the Failover Clustering feature in Power
 
 1. Run the PowerShell command:
     ```PowerShell
-    Install-WindowsFeature –Name Failover-Clustering –IncludeManagementTools
+    Install-WindowsFeature -Name Failover-Clustering -IncludeManagementTools
     ```
 
 1. Once the installation process is done, verify installation was successful by running these commands:
@@ -199,7 +197,7 @@ Now you're ready to create a workgroup cluster with the server nodes you prepare
 Before you create the failover cluster, we strongly recommend that you validate the configuration to make sure that the hardware and hardware settings are compatible with failover clustering. Microsoft supports a cluster solution only if the complete configuration passes all validation tests and if all hardware is certified for the version of Windows Server that the cluster nodes are running.
 
 > [!NOTE]
-> You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests do not run.
+> You must have at least two nodes to run all tests. If you have only one node, many of the critical storage tests don't run.
 
 #### Run cluster validation tests
 
@@ -253,7 +251,7 @@ The nodes that were validated are automatically added to the Create Cluster Wiza
 
 1. To confirm that the cluster was created, verify that the cluster name is listed under **Failover Cluster Manager** in the navigation tree. You can expand the cluster name and then select items under **Nodes**, **Storage**, or **Networks** to view the associated resources.
 
-After the cluster is created, you can do things such as verify cluster [quorum configuration](/azure-stack/hci/concepts/quorum), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
+After the cluster is created, you can do things such as verify cluster [quorum configuration](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
 
 
 #### [PowerShell](#tab/powershell)
@@ -267,13 +265,15 @@ If you prefer to create a workgroup cluster using PowerShell, follow these steps
 
 1. After validation passes, create the workgroup cluster using the following command:
     ```PowerShell
-    New-Cluster –Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS
+    New-Cluster -Name MyCluster -Node server1, server2 -AdministrativeAccessPoint DNS
     ```
 
-1. After the cluster is successfully created, you can do things such as verify cluster [quorum configuration](/azure-stack/hci/concepts/quorum), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
+1. After the cluster is successfully created, you can do things such as verify cluster [quorum configuration](/azure/azure-local/concepts/quorum?context=/windows-server/context/windows-server-failover-clustering), [create clustered roles](/windows-server/failover-clustering/create-failover-cluster#create-clustered-roles), and optionally, create [Cluster Shared Volumes (CSV)](failover-cluster-csvs.md).
 
 ---
 
 ## Related content
 
 - [Create a failover cluster](./create-failover-cluster.md)
+
+

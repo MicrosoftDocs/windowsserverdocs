@@ -1,7 +1,7 @@
 ---
 title: Enable Database 32k pages optional feature in Active Directory Domain Services on Windows Server
 description: Learn how-to enable the Database 32k pages optional feature in Active Directory Domain Services and how to enable the optional feature using PowerShell.
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024
 ms.topic: how-to

@@ -1,7 +1,6 @@
 ---
 title: Cluster affinity
-manager: femila
-ms.topic: article
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/20/2021

@@ -1,10 +1,11 @@
 ---
 title: How cutover works in Storage Migration Service
 description: Summary and details of cutover stages in Storage Migration Service
-author: nedpyle
-ms.author: alalve
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/31/2020
-ms.topic: article
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
 ---
 # How cutover works in Storage Migration Service
 
@@ -154,3 +155,4 @@ See the [known issues page](./known-issues.md) for more information on the follo
 - [Migrate a file server by using Storage Migration Service](migrate-data.md)
 - [Storage Migration Services frequently asked questions (FAQ)](faq.yml)
 - [Storage Migration Service known issues](known-issues.md)
+

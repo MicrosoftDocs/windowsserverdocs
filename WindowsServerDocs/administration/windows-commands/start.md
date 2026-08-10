@@ -2,10 +2,9 @@
 title: start
 description: Reference article for the start command, which starts a separate Command Prompt window to run a specified program or command.
 ms.topic: reference
-ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
 ms.author: roharwoo
-author: xelu86
-ms.date: 10/02/2023
+author: robinharwood
+ms.date: 04/16/2026
 ---
 
 # start
@@ -46,7 +45,7 @@ start <"title"> [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
 #### Remarks
 
-- You can run non-executable files through their file association by typing the name of the file as a command.
+- You can run non-executable files through their file association by typing the name of the file as a command. This applies to any file type that has a registered association, including URLs, which are automatically detected and opened in the default browser, and documents such as `.txt` or `.pdf` files, which are opened in their associated application.
 
 - If you run a command that contains the string CMD as the first token without an extension or path qualifier, CMD is replaced with the value of the COMSPEC variable. This prevents users from picking up `cmd` from the current directory.
 
@@ -72,6 +71,12 @@ To view the **start** command-line help information in a separate maximized **Co
 
 ```cmd
 start /max start /?
+```
+
+To open a URL in the default browser, type:
+
+```cmd
+start "Bing" "https://www.bing.com"
 ```
 
 ## Related links

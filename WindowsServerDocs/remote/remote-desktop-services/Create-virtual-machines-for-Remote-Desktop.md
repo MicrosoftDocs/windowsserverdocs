@@ -3,15 +3,11 @@ title: Create virtual machines for Remote Desktop
 description: Create VMs to host Remote Desktop components in the cloud.
 ms.author: roharwoo
 ms.date: 7/3/2024
-ms.topic: article
-ms.assetid: b0f62d6f-0915-44ca-afef-be44a922e20e
+ms.topic: how-to
 author: robinharwood
-manager: dongill
 ---
 
 # Create virtual machines for Remote Desktop
-
->
 
 Use the following steps to create the virtual machines in the tenant's environment that will be used to run the Windows Server 2016 roles, services, and features required for a desktop hosting deployment.
 

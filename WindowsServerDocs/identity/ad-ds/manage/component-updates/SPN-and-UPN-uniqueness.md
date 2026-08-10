@@ -1,18 +1,16 @@
 ---
 description: "Learn more about: SPN and UPN uniqueness"
-ms.assetid: 40bc24b1-2e7d-4e77-bd0f-794743250888
 title: SPN and UPN uniqueness
-author: iainfoulds
-ms.author: justinha
-manager: daveba
-ms.date: 05/18/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom:
+  - inhenkel
+  - sfi-image-nochange
 ---
 
 # SPN and UPN uniqueness
-
->
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 
@@ -217,10 +215,6 @@ The attribute value provided is not unique in the forest or partition. Attribute
 servicePrincipalName Value=<SPN>
 <Object DN> Winerror: 8467
 ```
-
-![Screenshot that shows the error logged when creation of duplicate SPN is blocked.](media/SPN-and-UPN-uniqueness/GTR_ADDS_Fig17_DupSPN2974.gif)
-
-**Figure  SEQ Figure \\\* ARABIC 9 Error logged when creation of duplicate SPN is blocked**
 
 ### Workflow
 

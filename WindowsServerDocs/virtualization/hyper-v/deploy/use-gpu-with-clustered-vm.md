@@ -1,40 +1,32 @@
 ---
-title: Use GPUs with clustered VMs on Hyper-V
-description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Stack HCI.
+title: Use GPUs with Discrete Device Assignment in clustered VMs on Windows Server and Azure Local
+description: Learn how to use GPUs with clustered virtual machines (VMs) to provide GPU acceleration to workloads in the clustered VMs on Windows Server and Azure Local.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 10/25/2024
+ms.date: 01/30/2026
 zone_pivot_groups: windows-os
-#customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Stack HCI.
+#customer intent: As a virtualization administrator, I want to use GPUs with clustered VMs to provide GPU acceleration to workloads in the clustered VMs on Windows Server or Azure Local.
 ---
 
-# Use GPUs with clustered VMs
+# Use GPUs with Discrete Device Assignment in clustered VMs
 
-:::zone pivot="windows-server"
->
+You can include graphics processing units (GPUs) in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration can be provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM, or through GPU Partitioning. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover.
 
-::: zone-end
+In this article, you'll learn how to use GPUs with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
 
-:::zone pivot="azure-stack-hci"
-
-[!INCLUDE [applies-to](~/../_azurestack/azure-stack/includes/hci-applies-to-23h2-22h2.md)]
-
-[!INCLUDE [hci-arc-vm](~/../_azurestack/azure-stack/includes/hci-arc-vm.md)]
-
-::: zone-end
-
-You can include GPUs in your clusters to provide GPU acceleration to workloads running in clustered VMs. GPU acceleration can be provided via Discrete Device Assignment (DDA), which allows you to dedicate one or more physical GPUs to a VM, or through GPU Partitioning. Clustered VMs can take advantage of GPU acceleration, and clustering capabilities such as high availability via failover. Live migration of virtual machines (VMs) isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure.
-
-In this article, you will learn how to use graphics processing units (GPUs) with clustered VMs to provide GPU acceleration to workloads using Discrete Device Assignment. This article guides you through preparing the cluster, assigning a GPU to a cluster VM, and failing over that VM using Windows Admin Center and PowerShell.
+> [!TIP]
+> Live migration of virtual machines (VMs) using GPUs provided by DDA isn't currently supported, but VMs can be automatically restarted and placed where GPU resources are available if there's a failure. Looking to use Live Migration in clustered VMs? Consider using GPU partitioning. GPU partitioning allows you to share a fraction of the GPU instead of the entire GPU. To learn more about when to use GPU partition and support for live migration, see [Partition and assign GPUs to a virtual machine](../partition-assign-vm-gpu.md).
 
 ## Prerequisites
 
 There are several requirements and things to consider before you begin to use GPUs with clustered VMs:
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
-- You need an Azure Stack HCI cluster running Azure Stack HCI, version 22H2 or later.
+- You need Azure Local 2311.2 and later.
+
+- Review how to manage GPUs in Azure Local 2311.2 and later, see [Prepare GPUs for Azure Local](/azure/azure-local/manage/gpu-preparation).
 
 ::: zone-end
 
@@ -42,7 +34,11 @@ There are several requirements and things to consider before you begin to use GP
 
 - You need a Windows Server Failover cluster running Windows Server 2025 or later.
 
+- Windows Server 2025 Datacenter edition is required for using DDA with GPU Pools in clustered VMs.
+
 ::: zone-end
+
+- You must have a familiarity with Failover clustering and Hyper-V.
 
 - You must install the same make and model of the GPUs across all the servers in your cluster.
 
@@ -60,18 +56,18 @@ There are several requirements and things to consider before you begin to use GP
 
 ::: zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 - Follow the steps in [Plan for deploying devices by using Discrete Device Assignment](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context) to prepare GPU devices in the cluster.
 
 - Make sure your device has enough MMIO space allocated within the VM. For more information, see [MMIO Space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment?context=/azure-stack/context/hci-context#mmio-space).
 
-- Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&toc=/azure-stack/hci/toc.json&bc=/azure-stack/breadcrumb/toc.json).
+- Create a VM to assign the GPU to. Prepare that VM for DDA by setting its cache behavior, stop action, and memory-mapped I/O (MMIO) properties according to the instructions in [Deploy graphics devices using Discrete Device Assignment](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda?pivots=azure-stack-hci&context=/windows-server/context/windows-server-virtualization).
 
 - Prepare the GPUs in each server by installing security mitigation drivers on each server, disabling the GPUs, and dismounting them from the host. To learn more about this process, see [Deploy graphics devices by using Discrete Device Assignment](Deploying-graphics-devices-using-dda.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context).
 
 >[!NOTE]
-> Your system must be supported Azure Stack HCI solution with GPU support. To browse options, visit the [Azure Stack HCI Catalog](https://azurestackhcisolutions.azure.microsoft.com/#/catalog?gpuSupport=GPU_P&gpuSupport=DDA).
+> Your system must be supported Azure Local solution with GPU support. To browse options, visit the [Azure Local Catalog](https://azurestackhcisolutions.azure.microsoft.com/#/catalog?gpuSupport=GPU_P&gpuSupport=DDA).
 
 ::: zone-end
 
@@ -191,7 +187,7 @@ Follow these steps to assign an existing VM to a GPU resource pool using PowerSh
    ```
 
    >[!NOTE]
-   > If you want to add more than one GPU to the VM, first verify that the resource pool has more than one assignable GPU available, and then run the previous command again.
+   > To add more than one GPU to the VM, first check that the resource pool contains multiple assignable GPUs. Then, run the previous command again for each GPU you want to add.
 
    You can also remove an assigned GPU from a VM. To do so, in PowerShell, run the following command. Make sure to replace `<vmname>` with the name of the VM that you want to assign to the GPU resource pool.
 
@@ -208,11 +204,15 @@ When you start the VM, the cluster ensures that the VM is placed on a server wit
 ## Fail over a VM with an assigned GPU
 
 :::zone pivot="windows-server"
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure-stack/hci/manage/maintain-servers?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server causes the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
+
+To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-virtualization). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
-To test the cluster’s ability to keep your GPU workload available, perform a drain operation on the server where the VM is running with an assigned GPU. To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure-stack/hci/manage/maintain-servers). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
+:::zone pivot="azure-local"
+To test the cluster’s ability to fail over your GPU workload, perform a drain operation on the server where the VM is running with an assigned GPU. Performing a drain operation on the server causes the cluster to restart the VM on another server in the cluster, as long as another server has sufficient available resources in the pool that you created.
+
+To drain the server, follow the instructions in [Failover cluster maintenance procedures](/azure/azure-local/manage/maintain-servers?context=/windows-server/context/windows-server-failover-clustering). The cluster restarts the VM on another server in the cluster, as long as another server has sufficient available GPU resources in the pool that you created.
 :::zone-end
 
 ## Related content
@@ -221,16 +221,18 @@ To test the cluster’s ability to keep your GPU workload available, perform a d
 
 For more information on using GPUs with your clustered VMs, see:
 
-- [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json)
+- [Manage VMs with Windows Admin Center](/azure/azure-local/manage/vm?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json)
 - [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md)
 
 :::zone-end
 
-:::zone pivot="azure-stack-hci"
+:::zone pivot="azure-local"
 
 For more information on using GPUs with your VMs and GPU partitioning, see:
 
-- [Manage VMs with Windows Admin Center](/azure-stack/hci/manage/vm)
+- [Manage VMs with Windows Admin Center](/azure/azure-local/manage/vm)
 - [Plan for deploying devices by using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md?pivots=azure-stack-hci&context=/azure-stack/context/hci-context)
 
 :::zone-end
+
+

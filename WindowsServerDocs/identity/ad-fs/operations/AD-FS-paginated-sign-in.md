@@ -1,10 +1,9 @@
 ---
 title: AD FS paginated sign-in
 description: This article describes new sign-in experience for AD FS.
-author: billmath
-ms.author: billmath
-ms.date: 02/13/2024
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 # AD FS paginated sign-in
 

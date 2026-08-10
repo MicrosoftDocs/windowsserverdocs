@@ -4,7 +4,7 @@ description: The following document discusses prerequisites that you should be f
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # Active Directory Forest Recovery - Prerequisites
@@ -86,3 +86,5 @@ and [Performing Nonauthoritative Restore of Active Directory Domain Services](/p
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

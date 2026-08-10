@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Appendix A: Dynamic Access Control Glossary"
-ms.assetid: 7f6b27e5-dc55-4ffc-8e76-6d57e65a870b
 title: Appendix A Dynamic Access Control Glossary
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: glossary
 ---
 
 # Appendix A: Dynamic Access Control Glossary
-
->
 
 Following are the list of terms and definitions that are included in the Dynamic Access Control scenario.
 

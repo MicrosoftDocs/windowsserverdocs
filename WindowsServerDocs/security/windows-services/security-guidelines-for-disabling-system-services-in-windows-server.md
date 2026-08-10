@@ -1,16 +1,13 @@
 ---
 title: Security guidelines for system services in Windows Server 2016
 description: Provides security guidelines and recommendations for disabling services in Windows Server 2016 with Desktop Experience.
-ms.topic: article
+ms.topic: best-practice
 ms.date: 08/22/2024
-ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
-author: nirb
+author: robinharwood
 ms.author: roharwoo
 ---
 
 # Guidance on disabling system services on Windows Server 2016 with Desktop Experience
-
->
 
 Windows operating systems (OSes) include many important system services. Different services have different default startup policies:
 
@@ -1662,8 +1659,8 @@ The following tables describes the default services found in Windows Server 2016
 | **Description** | Enables Touch Keyboard and Handwriting Panel pen and ink functionality. |
 | **Installation** | Only with Desktop Experience |
 | **Startup type** | Manual |
-| **Recommendation** | OK to disable |
-| **Comments** | None |
+| **Recommendation** | Do not disable |
+| **Comments** | Do not disable if Desktop Experience is installed. |
 
 ### Update Orchestrator Service for Windows Update
 
@@ -2148,3 +2145,4 @@ The following tables describes the default services found in Windows Server 2016
 | **Startup type** | Manual |
 | **Recommendation** | Should be disabled |
 | **Comments** | This service syncs save data for Xbox Live save enabled games. If you stop this service, game save data will not upload to or download from Xbox Live. |
+

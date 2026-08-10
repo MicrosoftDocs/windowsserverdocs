@@ -1,10 +1,11 @@
 ---
-title: What is Active Directory Certificate Services?
-description: Overview of the Active Directory Certificate Services (AD CS) server role in Windows Server, including key features and next steps.
+title: What is Active Directory Certificate Services in Windows Server?
+description: Learn about Active Directory Certificate Services (AD CS) in Windows Server and how it enhances security with certificates for authentication and encryption.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 03/20/2023
+ms.date: 05/12/2026
+#customer intent: As a security professional, I want to explore the key features of AD CS so that I can determine how it supports encryption, authentication, and digital signatures.
 ---
 
 # What is Active Directory Certificate Services?
@@ -13,7 +14,7 @@ Active Directory Certificate Services (AD CS) is a Windows Server role for issui
 
 ## Issue and manage certificates
 
-Digital certificates can be used to encrypt and digitally sign electronic documents and messages as well as for authentication of computer, user, or device accounts on a network. For example, digital certificates are used to provide:
+Digital certificates can be used to encrypt and digitally sign electronic documents and messages as well as for authentication of computer, user, or device accounts on a network. For example, digital certificates provide:
 
 - Confidentiality through encryption.
 - Integrity through digital signatures.
@@ -37,18 +38,19 @@ AD CS provides the following important features:
 
 - **Certificate Enrollment Web Service:** Certificate Enrollment Web Service enables users and computers to perform certificate enrollment through a web service. Together with the Certificate Enrollment Policy Web Service, this enables policy-based certificate enrollment when the client computer isn't a member of a domain or when a domain member isn't connected to the domain.
 
+- **Post-Quantum Cryptography (PQC) support:** AD CS supports Module-Lattice-Based Digital Signature Algorithm (ML-DSA), a NIST-standardized post-quantum digital signature algorithm. You can configure CAs, certificate templates, and Online Responders to use ML-DSA for signing operations. To learn more, see [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md).
+
 ## Benefits
 
 You can use AD CS to enhance security by binding the identity of a person, computer, or service to a
-corresponding private key. AD CS gives you a cost-effective, efficient, and secure way to manage the
+corresponding private key. AD CS provides a cost-effective, efficient, and secure way to manage the
 distribution and use of certificates. In addition to binding of identities and private keys, AD CS
 also includes features that allow you to manage certificate enrollment and revocation.
 
-You can use existing endpoint identity information in Active Directory to register certificates,
-meaning you can have information automatically inserted into certificates. AD CS can also be used to
-configure Active Directory group policies to designate which users and machines are allowed which
-types of certificates. Group policy configuration enables role-based or attribute-based access
-control.
+Existing endpoint identity information in Active Directory is used to register certificates,
+allowing information to be automatically inserted into certificates. Active Directory group policies
+can also be used to designate which users and machines are allowed which types of certificates.
+Group policy configuration enables role-based or attribute-based access control.
 
 Applications supported by AD CS include Secure/Multipurpose Internet Mail Extensions (S/MIME),
 secure wireless networks, virtual private network (VPN), Internet Protocol security (IPsec),
@@ -57,6 +59,8 @@ Encrypting File System (EFS), smart card sign in, Secure Socket Layer/Transport 
 
 ## Next steps
 
+- [Post-quantum cryptography in AD CS overview](post-quantum-cryptography-overview.md)
+- [What is ML-DSA support in AD CS?](ml-dsa-overview.md)
 - [What is the Certification Authority Role Service?](certification-authority-role.md)
 - [Implement and manage Active Directory Certificate Services](/training/modules/implement-manage-active-directory-certificate-services/)
 - [All AD CS role services run on any version](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn473011(v=ws.11))

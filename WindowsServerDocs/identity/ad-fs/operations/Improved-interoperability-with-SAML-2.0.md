@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Improved interoperability with SAML 2.0"
-ms.assetid: 80b5335b-fa02-4944-900c-5fe4f5c6111d
 title: Improved interoperability with SAML 2.0
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 # Improved interoperability with SAML 2.0
 
@@ -37,7 +33,7 @@ Add-AdfsClaimsProviderTrustsGroup -MetadataFile "C:\metadata.xml"
 
 ## References
 
-The eGov 2.0 profile can be found [here.](https://kantarainitiative.org/confluence/download/attachments/60817482/kantara-report-egov-saml2-profile-2.0.pdf?version=1&modificationDate=1345580916000&api=v2)
+You can find the eGov 2.0 profile [here](https://kantarainitiative.github.io/SAMLprofiles/eGovImplProfile.html).
 
 The SAML Core specification can be found [here.](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf)
 

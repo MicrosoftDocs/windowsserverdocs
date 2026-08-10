@@ -4,7 +4,7 @@ description: A full server recovery is necessary if you're restoring to differen
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery -  Perform a full server recovery
@@ -112,3 +112,5 @@ a network share, use the following steps.
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

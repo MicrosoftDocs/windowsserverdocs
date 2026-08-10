@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: When to Use Identity Delegation"
-ms.assetid: 6e711a96-9055-4508-b6d4-318d6aa95fd1
 title: When to Use Identity Delegation
-author: billmath
-ms.author: billmath
-manager: amycolannino
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: concept-article
 ---
 
 # When to Use Identity Delegation

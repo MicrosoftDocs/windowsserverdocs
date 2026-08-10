@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set-up Clients"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 5, Set Up Clients
-ms.topic: article
-manager: klaasl
+ms.topic: install-set-up-deploy
 ms.author: roharwoo
-author: JeffPatt24
+author: robinharwood
 ms.date: 4/5/2017
-ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set-up Clients
-
->
 
 This topic describes the fifth step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:
 
@@ -119,5 +115,7 @@ This concludes the procedure for deploying Work Folders, AD FS and Web Applicati
 
 ## See Also
 [Work Folders Overview](Work-Folders-Overview.md)
+
+
 
 

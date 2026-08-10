@@ -1,16 +1,13 @@
 ---
 description: Learn more about various site functions in AD DS
 title: Site functions
-author: iainfoulds
-ms.author: justinha
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Site functions
-
->
 
  Windows Server 2008  uses site information for many purposes, including routing replication, client affinity, system volume (SYSVOL) replication, Distributed File System Namespaces (DFSN), and service location.
 

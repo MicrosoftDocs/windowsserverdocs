@@ -4,7 +4,7 @@ description: In certain scenarios, it may be necessary to recover only a single 
 ms.author: roharwoo
 author: robinharwood
 ms.date: 07/10/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Recover a single domain in a multidomain forest
@@ -86,3 +86,5 @@ For more information, see [Use repadmin to remove lingering objects](/previous-v
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

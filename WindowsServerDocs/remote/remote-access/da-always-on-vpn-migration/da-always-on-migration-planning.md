@@ -1,17 +1,13 @@
 ---
 title: Remote Access Always On VPN migration planning
 description: Migrating from DirectAccess to Always On VPN requires proper planning to determine your migration phases, which helps identify any issues before they affect the entire organization.
-manager: dougkim
-ms.topic: article
-ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 05/29/2018
 ---
 
 # Plan the DirectAccess to Always On VPN migration
-
->
 
 &#171; [**Previous:** Overview of the DirectAccess to Always On VPN migration](da-always-on-migration-overview.md)<br>
 &#187; [**Next:** Migrate to Always On VPN and decommission DirectAccess](da-always-on-migration-deploy.md)

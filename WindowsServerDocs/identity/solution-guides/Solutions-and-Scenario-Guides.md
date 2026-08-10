@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Solutions and Scenario Guides"
-ms.assetid: bdb9ad4b-139c-4031-8f26-827432779829
 title: Solutions and Scenario Guides
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: solution-overview
 ---
 
 # Solutions and Scenario Guides
-
->
 
 
 With Microsoft's access and information protection solutions, you can deploy and configure access to corporate resources across your on-premises environment and cloud applications. And you can do it while protecting corporate information.

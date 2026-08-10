@@ -2,8 +2,8 @@
 title: Block NTLM connections on SMB in Windows Server 2025
 description: Learn how to make SMB more secure by blocking NTLM.
 ms.topic: how-to
-author: Heidilohr
-ms.author: helohr
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/25/2024
 ---
 # Block NTLM connections on SMB
@@ -45,7 +45,7 @@ To configure NTLM blocking:
 1. Run the following command to enable NTLM blocking.
 
    ```powershell
-   Set-SMbClientConfiguration -BlockNTLM $true 
+   Set-SmbClientConfiguration -BlockNTLM $true 
    ```
 
 ---
@@ -116,3 +116,4 @@ Run this command to specify NTLM blocking when mapping an SMB drive:
 - [SMB security](smb-security.md)
 
 - [Secure SMB traffic in Windows Server](smb-secure-traffic.md)
+

@@ -1,15 +1,13 @@
 ---
 title: Deploy Storage Spaces on a stand-alone server
 description: Learn the necessary prerequisites and processes for deploying Storage Spaces on a stand-alone Windows Server-based server.
-ms.topic: article
+ms.topic: install-set-up-deploy
 author: robinharwood
 ms.author: roharwoo
 ms.date: 03/27/2023
 ---
 
 # Deploy Storage Spaces on a stand-alone server
-
->
 
 This article describes how to deploy Storage Spaces on a stand-alone server. For information about how to create a clustered storage space, see [Deploy a Storage Spaces cluster on Windows Server 2012 R2](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt270997(v%3dws.11)>).
 

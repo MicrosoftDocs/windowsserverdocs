@@ -1,16 +1,13 @@
 ---
 description: "Learn more about: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
-ms.topic: article
-manager: dongill
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
-
->
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 
@@ -41,3 +38,5 @@ ms.date: 08/29/2018
 
 > [!div class="nextstepaction"]
 > [Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
+
+

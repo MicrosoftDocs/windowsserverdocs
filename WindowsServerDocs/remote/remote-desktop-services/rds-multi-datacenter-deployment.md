@@ -1,16 +1,12 @@
 ---
 title: Geo-redundant RDS data centers in Azure
 description: Learn how to create an RDS deployment that uses multiple data centers to provide high availability across geographic locations.
-ms.topic: article
-ms.assetid: 61c36528-cf47-4af0-83c1-a883f79a73a5
+ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 7/3/2024
-manager: femila
 ---
 # Create a geo-redundant, multi-data center RDS deployment for disaster recovery
-
->
 
 You can enable disaster recovery for your Remote Desktop Services deployment by leveraging multiple data centers in Azure. Unlike a standard highly available RDS deployment (as outlined in the [Remote Desktop Services architecture](desktop-hosting-logical-architecture.md)), which uses data centers in a single Azure region (for example, Western Europe), a multi-data center deployment uses data centers in multiple geographic locations, increasing the availability of your deployment - one Azure data center might be unavailable, but it is unlikely that multiple regions would go down at the same time. By deploying a geo-redundant RDS architecture, you can enable failover in the case of catastrophic failure of an entire region.
 

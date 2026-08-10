@@ -1,16 +1,12 @@
 ---
 title: Manage Remote Access
 description: This topic provides information on how to manage Remote Access in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 1459819a-b1b6-4800-8770-4a85d02c7a2b
+ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Manage Remote Access
-
->
 
 The DirectAccess Remote Client Management deployment scenario uses DirectAccess to maintain clients over the Internet. This section explains the scenario, including its phases, roles, features, and links to additional resources.
 

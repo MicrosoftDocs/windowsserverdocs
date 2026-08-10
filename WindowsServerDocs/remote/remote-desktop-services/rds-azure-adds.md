@@ -3,8 +3,8 @@ title: Microsoft Entra Domain Services and Remote Desktop Services
 description: Learn how to integrate Microsoft Entra Domain Services into your RDS deployment.
 ms.author: roharwoo
 ms.date: 7/3/2024
-ms.topic: article
-author: christianmontoya
+ms.topic: how-to
+author: robinharwood
 ---
 # Integrate Microsoft Entra Domain Services with your RDS deployment
 

@@ -1,12 +1,8 @@
 ---
 description: Learn how to upgrade the farm behavior level for an existing Active Directory Federation Service farm by using Windows Internal Database in Windows Server.
-ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrade an AD FS farm by using Windows Internal Database in Windows Server
-author: billmath
-manager: amycolannino
 ms.date: 06/21/2023
-ms.topic: article
-ms.author: roharwoo
+ms.topic: upgrade-and-migration-article
 ---
 
 # Upgrade an existing AD FS farm by using Windows Internal Database
@@ -21,7 +17,7 @@ Administrators can add new federation servers to an existing Windows Server farm
 
 Before you can upgrade the farm behavior level, you must meet the following prerequisites:
 
-- Determine [which version of Windows Server to upgrade to](../../../get-started/upgrade-overview.md).
+- Determine [which version of Windows Server to upgrade to](../../../get-started/install-upgrade-migrate.md#supported-in-place-upgrade-paths-by-version).
 
 - Deploy the target Windows Server version on a new computer, apply all Windows Updates, and install the Active Directory Federation Service server role. For more information, see [Add a federation server to an existing federation server farm](Configure-a-Federation-Server.md#add-a-federation-server-to-an-existing-federation-server-farm).
 

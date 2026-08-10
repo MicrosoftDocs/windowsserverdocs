@@ -1,16 +1,12 @@
 ---
 description: "Learn more about: Understanding AD DS Design"
-ms.assetid: d590c90e-9adf-4305-b226-eb2a5743337b
 title: Understanding AD DS Design
-ms.author: justinha
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 # Understanding AD DS Design
-
->
 
 Organizations can use Active Directory Domain Services (AD DS) in Windows Server to simplify user and resource management while creating scalable, secure, and manageable infrastructures. You can use AD DS to manage your network infrastructure, including branch office, Microsoft Exchange Server, and multiple forest environments.
 

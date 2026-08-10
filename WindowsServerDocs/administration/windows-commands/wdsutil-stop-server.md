@@ -2,10 +2,8 @@
 title: wdsutil stop-server
 description: Reference article for Subcommand stop-Server, which stops all services on a Windows Deployment Services server.
 ms.topic: reference
-ms.assetid: 09f411c0-099f-4591-95fd-b77b3fd9118a
 ms.author: roharwoo
 author: robinharwood
-manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil stop-server

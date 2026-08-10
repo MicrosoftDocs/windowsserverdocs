@@ -3,7 +3,7 @@ title: list (diskshadow)
 description: Reference article for the list command, which displays information about the shadow copy (snapshot) set of an existing drive or volume.
 ms.topic: reference
 ms.author: roharwoo
-author: xelu86
+author: robinharwood
 ms.date: 10/12/2023
 ---
 

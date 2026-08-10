@@ -1,15 +1,12 @@
 ---
 description: "Learn more about: Device Health Attestation"
 title: Device Health Attestation
-ms.topic: article
-ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
-author: brianlic-msft
+ms.topic: concept-article
+author: robinharwood
 ms.author: roharwoo
 ms.date: 10/25/2024
 ---
 # Device Health Attestation
-
->
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 

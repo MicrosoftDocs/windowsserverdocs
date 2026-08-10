@@ -2,14 +2,13 @@
 title: Configure trusted roots and disallowed certificates in Windows
 description: Guidance on how to configure individual software updates for automatic daily Root Certificate Updates, including certificate trust lists (CTLs)
 ms.topic: how-to 
-author: gswashington
+author: robinharwood
 ms.author: roharwoo
-ms.date: 08/22/2023
+ms.date: 05/15/2025
+#customer intent: As a security admin, I want to configure trusted roots and disallowed certificates in Windows, so that I can manage certificate trust lists (CTLs) and untrusted CTLs in a disconnected environment.
 ---
 
 # Configure trusted roots and disallowed certificates in Windows
-
-> 
 
 Redirect the Microsoft Automatic Update URL to a file or web server hosting Certificate Trust Lists
 (CTLs), untrusted CTLs, or a subset of the trusted CTL files in a disconnected environment.
@@ -28,7 +27,7 @@ certificates automatically across Windows operating systems, see
 Before you can configure your disconnected environment to use CTL files hosted on a file or web
 server, you need to complete the following prerequisites.
 
-### Client prerequisites
+Client prerequisites:
 
 - At least one computer that is able to connect to the Internet to download CTLs from Microsoft. The
   computer requires HTTP (TCP port 80) access and name resolution (TCP and UDP port 53) ability to
@@ -37,12 +36,11 @@ server, you need to complete the following prerequisites.
 - Client machines must be connected to an Active Directory Domain Service domain.
 - You must be a member of the local _Administrators_ group.
 
-### Server prerequisites
+Server prerequisites:
 
 - A file server or web server for hosting the CTL files.
 - AD Group policy or MDM solution to deploy configuration settings to your client.
-- An account that is a member of the _Domain Admins_ group or that has been delegated the necessary
-  permissions
+- An account that is a member of the _Domain Admins_ group or equivalent permissions
 
 ## Configuration methods
 
@@ -68,7 +66,7 @@ trusted CTLs. The following methods are available.
   update mechanism for trusted and untrusted CTLs, without having access to the Windows Update site.
   This configuration is described in the [Redirect the Microsoft Automatic Update URL](#redirect-the-microsoft-automatic-update-url) section of this document.
 
-- Configure AD DS domain member computers to independently opt-in for untrusted and trusted CTL
+- Configure AD DS domain member computers to independently opt in for untrusted and trusted CTL
   automatic updates. The independent opt-in configuration is described in the
   [Redirect the Microsoft Automatic Update URL for untrusted CTLs only](#redirect-the-microsoft-automatic-update-url-for-untrusted-ctls-only)
   section of this document.
@@ -80,7 +78,7 @@ trusted CTLs. The following methods are available.
 
 > [!IMPORTANT]
 >
-> - The settings described in this document are implemented by using GPOs. These settings are not
+> - The settings described in this document are implemented by using GPOs. These settings aren't
 > automatically removed if the GPO is unlinked or removed from the AD DS domain. When implemented,
 > these settings can be changed only by using a GPO or by modifying the registry of the affected
 > computers.
@@ -95,27 +93,29 @@ mechanism.
 
 ### Retrieve the CTL files from Windows Update
 
+You can retrieve the CTL files from the Windows Update site by using the `certutil` command using the following steps:
+
 1. Create a shared folder on a file or web server that is able to synchronize by using the automatic
    update mechanism and that you want to use to store the CTL files.
 
-    > [!TIP]
-    > Before you begin, you may have to adjust the shared folder permissions and NTFS folder
-    > permissions to allow the appropriate account access, especially if you're using a scheduled
-    > task with a service account. For more information on adjusting permissions, see
-    > [Managing Permissions for Shared Folders](https://technet.microsoft.com/library/cc753731.aspx).
+   > [!TIP]
+   > Before you begin, you might have to adjust the shared folder permissions and NTFS folder
+   > permissions to allow the appropriate account access, especially if you're using a scheduled
+   > task with a service account. For more information on adjusting permissions, see
+   > [Managing Permissions for Shared Folders](https://technet.microsoft.com/library/cc753731.aspx).
 
 1. From an elevated PowerShell prompt, run the following command:
 
-    ```powershell
-    Certutil -syncWithWU \\<server>\<share>
-    ```
+   ```powershell
+   Certutil -syncWithWU \\<server>\<share>
+   ```
 
-    Substitute the actual server name for `<server>` and shared folder name for `<share>` For
-    example, for a server named `Server1` with a shared folder named CTL, you'd run the command:
+   Substitute the actual server name for `<server>` and shared folder name for `<share>` For
+   example, for a server named `Server1` with a shared folder named CTL, you'd run the command:
 
-    ```powershell
-    Certutil -syncWithWU \\Server1\CTL
-    ```
+   ```powershell
+   Certutil -syncWithWU \\Server1\CTL
+   ```
 
 1. Download the CTL files on a server that computers on a disconnected environment can access over
    the network by using a FILE path (for example, `FILE://\\Server1\CTL`) or an HTTP path (for
@@ -123,11 +123,11 @@ mechanism.
 
 > [!NOTE]
 >
-> - If the server that synchronizes the CTLs is not accessible from the computers in the
+> - If the server that synchronizes the CTLs isn't accessible from the computers in the
 > disconnected environment, you must provide another method to transfer the information. For
 > example, you can allow one of the domain members to connect to the server, then schedule
 > another task on the domain member computer to pull the information into a shared folder on an
-> internal web server. If there is absolutely no network connection, you may have to use a manual
+> internal web server. If there's absolutely no network connection, you might have to use a manual
 > process to transfer the files, such as a removable storage device.
 >
 > - If you plan to use a web server, you should create a new virtual directory for the CTL files.
@@ -175,7 +175,7 @@ The configuration in this section requires that you already completed the steps 
 
     - Ensure that the file name extension is `.adm` and not `.txt`.
 
-    - If you haven't already enabled file name extension viewing, see
+    - If you need to enable file name extension viewing, see
       [How To: View File Name Extensions](https://answers.microsoft.com/en-us/windows/forum/all/how-can-i-get-the-extension-to-display-along-with/ec523f53-357b-41eb-a6c7-9b6b95a91235).
 
     - If you save the file to the `%windir%\inf` folder, it's easier to locate in the following
@@ -223,9 +223,7 @@ settings, or you can type `gpupdate /force` from an elevated command prompt or f
 PowerShell.
 
 > [!IMPORTANT]
-> The trusted and untrusted CTLs can be updated on a daily basis, so ensure that you keep the files
-> synchronized by using a scheduled task or another method (such as a script that handles error
-> conditions) to update the shared folder or web virtual directory. For more information about
+> The trusted and untrusted CTLs can be updated daily. To keep the files synchronized, use a scheduled task or a script. Ensure the script can handle errors when updating the shared folder or web directory. For more information about
 > creating a scheduled task using PowerShell, see
 > [New-ScheduledTask](/powershell/module/scheduledtasks/new-scheduledtask). If you plan to write a
 > script to make daily updates, see the
@@ -328,9 +326,7 @@ settings, or you can type `gpupdate /force` from an elevated command prompt or f
 PowerShell.
 
 > [!IMPORTANT]
-> The trusted and untrusted CTLs can be updated on a daily basis, so ensure that you keep the files
-> synchronized by using a scheduled task or another method to update the shared folder or virtual
-> directory.
+> Trusted and untrusted CTLs can update daily. To keep the files synchronized in the shared folder or virtual directory, you can use a scheduled task.
 
 ## Use a subset of the trusted CTLs
 
@@ -345,12 +341,12 @@ There are two procedures to customize the list of trusted CTLs.
 
 1. Distribute the trusted certificates by using Group Policy
 
-### To create a subset of trusted certificates
+### Create a subset of trusted certificates
 
 Here's how to generate SST files by using the automatic Windows update mechanism from Windows. For
 more information about generating SST files, see the
-[Certutil](../../administration/windows-commands/certutil.md#-generatesstfromwu) Windows
-commands reference.
+[Certutil](../../administration/windows-commands/certutil.md) Windows
+commands reference. To create a subset of trusted certificates, follow these steps:
 
 1. From a computer that is connected to the Internet, open Windows PowerShell as an Administrator or
    open an elevated command prompt, and type the following command:
@@ -367,7 +363,7 @@ commands reference.
 
     > [!TIP]
     > You also can use Internet Explorer to navigate to the file and double-click it to open it.
-    > Depending on where you stored the file, you may also be able to open it by typing
+    > Depending on where you stored the file, you might also be able to open it by typing
     > `wuroots.sst`.
 
 1. Open Certificate Manager.
@@ -376,7 +372,7 @@ commands reference.
    select **Certificates**.
 
 1. In the details pane, you can see the trusted certificates. Hold down the <kbd>CTRL</kbd> key and
-   select each of the certificates that you want to allow. When you've finished selecting the
+   select each of the certificates that you want to allow. When you finished selecting the
    certificates you want to allow, right-click one of the selected certificates, select **All
    Tasks**, then select **Export**.
 
@@ -430,21 +426,21 @@ The settings described in this document configure the following registry keys on
 computers. These settings aren't automatically removed if the GPO is unlinked or removed from the
 domain. These settings must be reconfigured, if you want to change them.
 
-- Enable or disable the Windows AutoUpdate of the trusted CTL:
+- Enable or disable the Windows Auto-Update of the trusted CTL:
 
   - **Key**: `HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot\DisableRootAutoUpdate`
   - **Type**: `REG_DWORD`
   - **Name**: `DisableRootAutoUpdate`
   - **Data**: `0` to enabled or `1` to disable.
-  - **Default**: There is no key present by default. Without a key present, the default is enabled.
+  - **Default**: There's no key present by default. Without a key present, the default is enabled.
 
-- Enable or disable the Windows AutoUpdate of the untrusted CTL:
+- Enable or disable the Windows Auto-Update of the untrusted CTL:
 
   - **Key**: `SOFTWARE\Policies\Microsoft\SystemCertificates\AuthRoot`
   - **Type**: `REG_DWORD`
   - **Name**: `EnableDisallowedCertAutoUpdate`
   - **Data**: `1` to enabled or `0` to disable.
-  - **Default**: There is no key present by default. Without a key present, the default is enabled.
+  - **Default**: There's no key present by default. Without a key present, the default is enabled.
 
 - Set the shared CTL file location (HTTP or the FILE path):
 
@@ -452,12 +448,12 @@ domain. These settings must be reconfigured, if you want to change them.
   - **Type**: `REG_SZ`
   - **Name**: `RootDirUrl`
   - **Data**: Enter a valid HTTP or file URI.
-  - **Default**: There is no key present by default. Without a key present, the default behavior
+  - **Default**: There's no key present by default. Without a key present, the default behavior
      used Windows Update.
 
 ## Verify Trusted and Untrusted CTLs
 
-It may be necessary for various reasons to verify all Trusted and Untrusted CTLs from a client
+It might be necessary for various reasons to verify all Trusted and Untrusted CTLs from a client
 machine. The following Certutil options can be used to verify all Trusted and Untrusted CTLs from a
 client machine.
 
@@ -476,7 +472,7 @@ certutil -verifyctl AuthRoot | findstr /i "lastsynctime"
 certutil -verifyctl Disallowed | findstr /i "lastsynctime"
 ```
 
-## Related links
+## Related content
 
 - [Certificates and trust](certificate-trust.md)
 

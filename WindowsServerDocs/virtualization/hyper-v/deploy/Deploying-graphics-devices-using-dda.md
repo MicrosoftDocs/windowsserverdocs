@@ -4,17 +4,20 @@ description: Learn how to use DDA to deploy graphics devices in Windows Server a
 ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
-ms.date: 04/04/2024
+ms.date: 01/30/2026
 ---
 # Deploy graphics devices by using Discrete Device Assignment
 
-Learn how to use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM) with PowerShell. Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
+Learn how to use Discrete Device Assignment (DDA) to pass an entire PCIe device into a virtual machine (VM) on standalone (non-clustered) Hyper-V hosts with PowerShell. Doing so allows high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or graphics cards from within a VM while being able to apply the device's native drivers. For more information on devices that work and possible security implications, see [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
 This article takes you through the steps to use a device with DDA:
 
 1. [Configure the VM for DDA](#configure-the-vm-for-dda)
 1. [Dismount the device from the host partition](#dismount-the-device-from-the-host-partition)
 1. [Assign the device to the guest VM](#assign-the-device-to-the-guest-vm)
+
+> [!IMPORTANT]
+> Deploying graphics devices to clustered virtual machines? Learn about using DDA with GPU Pools in clustered environments. See [Use GPUs with Discrete Device Assignment in clustered VMs](use-gpu-with-clustered-vm.md).
 
 ## Prerequisites
 
@@ -181,3 +184,5 @@ If you pass a GPU into a VM but Remote Desktop Services or an application isn't 
   **Computer Configuration\Administrator Templates\Windows Components\Remote Desktop Services\Remote Desktop Session Host\Remote Session Environment\Use hardware graphics adapters for all Remote Desktop Services sessions**.
 
   Set the Group Policy value to **Enabled**, then reboot the VM after you apply the policy.
+
+

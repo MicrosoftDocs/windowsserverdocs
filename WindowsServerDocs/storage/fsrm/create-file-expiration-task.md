@@ -2,14 +2,11 @@
 title: Create a File Expiration Task
 description: This article describes the process of creating a file management task for files about to expire
 ms.date: 7/7/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Create a File Expiration Task
-
->
 
 The following procedure guides you through the process of creating a file management task for expiring files. File expiration tasks are used to automatically move all files that match certain criteria to a specified expiration directory, where an administrator can then back those files up and delete them.
 
@@ -92,3 +89,4 @@ The new directory name is based on the name of the file management task and the 
 
 -   [Classification Management](classification-management.md)
 -   [File Management Tasks](file-management-tasks.md)
+

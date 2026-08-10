@@ -2,9 +2,8 @@
 title: for
 description: Reference article for the for command, which runs a specified command for each file, within a set of files.
 ms.topic: reference
-ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
 ms.author: roharwoo
-author: xelu86
+author: robinharwood
 ms.date: 10/04/2023
 ---
 
@@ -104,7 +103,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
     | eol=`<c>` | Specifies an end of line character (just one character). |
     | skip=`<n>` | Specifies the number of lines to skip at the beginning of the file. |
     | delims=`<xxx>` | Specifies a delimiter set. This replaces the default delimiter set of space and tab. |
-    | tokens=`<x,y,m–n>` | Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *m-n* specifies a range, from the *m*th through the *n*th tokens. If the last character in the **tokens=** string is an asterisk (**&#42;**), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed. |
+    | tokens=`<x,y,m-n>` | Specifies which tokens from each line are to be passed to the **for** loop for each iteration. As a result, additional variable names are allocated. *m-n* specifies a range, from the *m*th through the *n*th tokens. If the last character in the **tokens=** string is an asterisk (**&#42;**), an additional variable is allocated, and it receives the remaining text on the line after the last token that is parsed. |
     | usebackq | Specifies to run a back-quoted string as a command, use a single-quoted string as a literal string, or, for long file names that contain spaces, allow file names in `<set>`, to each be enclosed in double-quotation marks. |
 
   - **Variable substitution:** The following table lists optional syntax (for any variable **I**):
@@ -160,7 +159,7 @@ In the preceding example, each file that has the .doc or .txt extension in the c
 To parse a file, ignoring commented lines, type:
 
 ```
-for /f eol=; tokens=2,3* delims=, %i in (myfile.txt) do @echo %i %j %k
+for /f "eol=; tokens=2,3* delims=," %i in (myfile.txt) do @echo %i %j %k
 ```
 
 This command parses each line in *myfile.txt*. It ignores lines that begin with a semicolon and passes the second and third token from each line to the **for** body (tokens are delimited by commas or spaces). The body of the **for** statement references **%i** to get the second token, **%j** to get the third token, and **%k** to get all of the remaining tokens. If the file names that you supply contain spaces, use quotation marks around the text (for example, File Name). To use quotation marks, you must use **usebackq**. Otherwise, the quotation marks are interpreted as defining a literal string to parse.

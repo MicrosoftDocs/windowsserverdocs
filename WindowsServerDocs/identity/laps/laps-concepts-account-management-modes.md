@@ -2,9 +2,9 @@
 title: Windows LAPS account management modes
 description: Documents account management modes for Windows Local Administrator Password Solution (Windows LAPS).
 author: jay98014
-ms.author: justinha
-ms.date: 12/25/2023
-ms.topic: conceptual
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Windows LAPS account management modes
@@ -30,12 +30,11 @@ Manual mode is the default mode. The IT admin has the choice of whether to targe
 
 When a custom local account is specified, the IT admin is responsible for creating that account before enabling Windows LAPS - Windows LAPS doesn't create the account in this mode. There are many ways to create a local account:
 
-- Configuring the Local Users and Groups GPO
 - Configuring the Accounts CSP
 - Deploying custom policy-driven management scripts
 - Adding the target account to a base OS image.
 
-These mechanisms do add extra complexity which can be avoided by using Automatic account management mode.
+These mechanisms add extra complexity which can be avoided by using Automatic account management mode.
 
 In this mode, the target account's *password* is protected against accidental or careless tampering. All other account configuration changes are allowed.
 

@@ -1,17 +1,13 @@
 ---
 title: Manage NPSs
 description: This topic provides links to procedures for managing NPSs in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 6005dc27-f49e-427f-92f7-b0e558ffe3ff
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Manage NPSs
-
->
 
 You can use the topics in this section to manage NPSs.
 

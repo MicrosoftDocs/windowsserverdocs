@@ -1,11 +1,11 @@
 ---
 description: An overview of the syntax and structure of DCPROMO answer files.
 title: DCPROMO answer file syntax
-author: Heidilohr
-ms.author: helohr
-manager: femila
+ms.author: roharwoo
+author: robinharwood
 ms.date: 04/25/2024
-ms.topic: conceptual
+ms.topic: reference
+ms.custom: sfi-ropc-nochange
 ---
 
 # DCPROMO answer file syntax

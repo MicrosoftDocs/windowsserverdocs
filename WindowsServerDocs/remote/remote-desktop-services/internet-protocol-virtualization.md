@@ -1,11 +1,10 @@
 ---
 title: Remote Desktop IP virtualization in Windows Server
 description: How to use IP address virtualization for Winsock applications using Remote Desktop in Windows Server 2019 and later.
-ms.author: helohr
+author: robinharwood
 ms.date: 7/3/2024
-ms.topic: article
-author: Heidilohr
-manager: femila
+ms.topic: how-to
+ms.author: roharwoo
 ---
 # Remote Desktop IP Virtualization in Windows Server
 

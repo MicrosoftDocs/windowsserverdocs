@@ -1,17 +1,13 @@
 ---
 title: STEP 7 Install and Configure 2-APP1
 description: Learn how to install and configure 2-APP1.
-manager: brianlic
-ms.topic: article
-ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
+ms.topic: how-to
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # STEP 7 Install and Configure 2-APP1
-
->
 
 2-APP1 provides web and file sharing services. 2-APP1 configuration consists of the following:
 

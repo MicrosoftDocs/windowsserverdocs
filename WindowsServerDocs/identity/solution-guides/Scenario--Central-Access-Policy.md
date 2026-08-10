@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Scenario: Central Access Policy"
-ms.assetid: 7f285c9f-c3e8-4aae-9ff4-a9123815114e
 title: Scenario Central Access Policy
-author: billmath
-ms.author: billmath
-manager: femila
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/13/2024
-ms.topic: article
+ms.topic: example-scenario
 ---
 
 # Scenario: Central Access Policy
-
->
 
 Central access policies for files enable organizations to centrally deploy and manage authorization policies that include conditional expressions that use user groups, user claims, device claims, and resource properties. (Claims are assertions about the attributes of the object with which they are associated). For example, to access high-business-impact (HBI) data, a user must be a full-time employee, obtain access from a managed device, and log on with a smart card. These policies are defined and hosted in Active Directory Domain Services (AD DS).
 

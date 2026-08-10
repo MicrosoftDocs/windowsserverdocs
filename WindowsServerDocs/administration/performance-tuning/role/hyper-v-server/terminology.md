@@ -1,7 +1,7 @@
 ---
 title: Hyper-V terminology
 description: Hyper-v terminology useful in Hyper-V performance tuning
-ms.topic: article
+ms.topic: glossary
 ms.author: roharwoo
 author: robinharwood
 ms.date: 10/16/2017

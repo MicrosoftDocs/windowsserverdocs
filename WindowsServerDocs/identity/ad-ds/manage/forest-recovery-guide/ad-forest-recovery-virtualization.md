@@ -4,7 +4,7 @@ description: Virtualized domain controller (DC) cloning simplifies and expedites
 ms.author: roharwoo
 author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Virtualization
@@ -36,3 +36,5 @@ The PDC Emulator must be available during cloning operations.For step-by-step in
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

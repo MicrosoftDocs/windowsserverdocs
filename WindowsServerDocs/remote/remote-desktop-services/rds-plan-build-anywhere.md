@@ -1,17 +1,13 @@
 ---
 title: Remote Desktop Services - Build anywhere
 description: Planning information to help you determine where to host your RDS deployment.
-ms.topic: article
-ms.assetid: c803a383-0eea-4e11-bca5-d204ab758048
+ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 7/3/2024
-manager: dongill
 
 ---
 # Remote Desktop Services - Build anywhere
-
->
 
 Deploy on-premises, in the cloud, or a hybrid of the two. Modify your deployment as your business needs change.
 

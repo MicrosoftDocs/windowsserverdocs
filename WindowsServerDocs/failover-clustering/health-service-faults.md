@@ -1,10 +1,9 @@
 ---
 description: "Learn more about: Health Service faults"
 title: Health Service faults
-manager: eldenc
 ms.author: roharwoo
-ms.topic: article
-author: cosmosdarwin
+ms.topic: concept-article
+author: robinharwood
 ms.date: 10/05/2017
 ---
 
@@ -522,3 +521,4 @@ In Windows Server 2016, the Health Service provides the following fault coverage
 ## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)
+

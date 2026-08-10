@@ -3,7 +3,7 @@ title: diskpart
 description: Reference article for the diskpart command interpreter, which helps you manage your computer's drives.
 ms.topic: reference
 author: robinharwood
-ms.author: alalve
+ms.author: roharwoo
 ms.date: 09/21/2022
 ---
 

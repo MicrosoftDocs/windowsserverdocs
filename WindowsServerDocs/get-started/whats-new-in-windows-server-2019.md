@@ -1,10 +1,10 @@
 ---
 title: What's new in Windows Server 2019
 description: This article describes some of the new features in Windows Server 2019.
-ms.topic: article
+ms.topic: whats-new
 author: robinharwood
 ms.author: roharwoo
-ms.date: 07/31/2024
+ms.date: 07/25/2025
 ---
 
 # What's new in Windows Server 2019
@@ -17,7 +17,7 @@ This article describes some of the new features in Windows Server 2019. Windows 
 
 Windows Admin Center is a locally deployed, browser-based app for managing servers, clusters, hyper-converged infrastructure, and Windows 10 PCs. It comes at no extra cost beyond Windows and is ready to use in production.
 
-You can install Windows Admin Center on Windows Server 2019 and Windows 10 and earlier versions of Windows and Windows Server, and use it to manage servers and clusters running Windows Server 2008 R2 and later.
+You can install Windows Admin Center on Windows Server 2019 and Windows 10 and 11, and use it to manage servers and clusters running Windows Server 2012 and later.
 
 For more info, see [Windows Admin Center](../manage/windows-admin-center/overview.md).
 
@@ -53,7 +53,7 @@ We made several improvements to the core network stack, such as TCP Fast Open (T
 
 In the past, Virtual Machine Queues and Virtual Machine Multi-Queues (VMMQs) enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a much larger undertaking than IT administrators anticipated.
 
-Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as needed. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements).
 
 ## Security
 
@@ -86,7 +86,7 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
 
 ### Security with Software Defined Networking (SDN)
 
-[Security with SDN](/azure-stack/hci/manage/nc-security) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
+[Security with SDN](/azure/azure-local/manage/nc-security) delivers many features to increase customer confidence in running workloads, either on-premises, or as a service provider in the cloud.
 
 These security enhancements are integrated into the comprehensive SDN platform introduced in Windows Server 2016.
 
@@ -128,7 +128,7 @@ For more information, see [Encrypted networks](../networking/sdn/vnet-encryption
 
 ### Firewall auditing
 
-[Firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
+[Firewall auditing](/azure/azure-local/manage/use-datacenter-firewall-powershell) is a new feature for SDN firewall that records any flow processed by SDN firewall rules and access control lists (ACLs) that have logging enabled.
 
 ### Virtual network peering
 
@@ -148,7 +148,7 @@ It's now possible to prevent the File Server Resource Manager service from creat
 
 ### SMB
 
--  Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
+- Windows Server no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
 
 - You can now disable oplocks in SMB2+ for legacy applications. You can also require signing or encryption on per-connection basis from a client. For more information, see [SMBShare PowerShell module help](/powershell/module/smbshare/?view=windowsserver2019-ps&preserve-view=true).
 
@@ -169,7 +169,7 @@ You can also access the following post-release-to-manufacturing (RTM) features w
 
 ### Storage Spaces Direct
 
-Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Stack HCI solution overview](/azure-stack/operator/azure-stack-hci-overview).
+Here's what's new in Storage Spaces Direct. For more information about how to acquire validated Storage Spaces Direct systems, see [Azure Local solution overview](/azure/azure-local/overview).
 
 - Deduplication and compression for ReFS volumes. Variable-size chunk store with optional compression maximizes savings rates, while multi-threaded post-processing architecture minimizes performance impact. This feature supports volumes up to 64 TB and deduplicates the first 4 MB of each file.
 
@@ -179,11 +179,11 @@ Here's what's new in Storage Spaces Direct. For more information about how to ac
 
 - Two-server clusters can now use a USB flash drive as a witness. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more information, see our [Storage Spaces Direct announcement blog post](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) and [Configure a file share witness for Failover Clustering](../failover-clustering/file-share-witness.md).
 
-- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [What is Windows Admin Center?](../manage/windows-admin-center/use/manage-hyper-converged.md#what-is-windows-admin-center).
+- Windows Admin Center supports a dashboard that lets you manage and monitor Storage Spaces direct. You can monitor IOPS and IO latency from the overall cluster level down to individual SSDs or HDDs at no extra cost. To learn more, see [Manage a hyper-converged infrastructure by using Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md).
 
 - Performance history is a new feature that provides effortless visibility into resource utilization and measurements. To learn more, see [Performance history for Storage Spaces Direct](../storage/storage-spaces/performance-history.md).
 
-- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/azure-stack/hci/deploy/cluster-set) for even greater scale within a single storage namespace.
+- Scale up to 4 PB per cluster using a capacity of up to 64 volumes of up to 64 TB. You can also stitch multiple clusters together into a [cluster set](/windows-server/failover-clustering/cluster-set) for even greater scale within a single storage namespace.
 
 - By utilizing mirror-accelerated parity, it is possible to construct Storage Spaces Direct volumes that incorporate both mirror and parity strategies, similar to a blend of RAID-1 and RAID-5/6. Mirror-accelerated parity is now two times faster than Windows Server 2016.
 
@@ -413,7 +413,7 @@ AD FS 2019 includes the following Security Assertion Markup Language (SAML) upda
 Previously, AD FS required the desired resource and scope to be in a separate parameter in any authentication request. For example, the following example OAuth request contains a scope parameter:
 
 ```http
-https:&#47;&#47;fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https:&#47;&#47;adfshelp.microsoft.com/
+https://fs.contoso.com/adfs/oauth2/authorize?response_type=code&client_id=claimsxrayclient&resource=urn:microsoft:adfs:claimsxray&scope=oauth&redirect_uri=https://adfshelp.microsoft.com/
 ClaimsXray/TokenResponse&prompt=login
 ```
 
@@ -423,3 +423,4 @@ The scope parameter can now be organized as a space-separated list that structur
 
 > [!NOTE]
 > You can only specify one resource in the authentication request. If you include more than one resource in the request, AD FS returns an error and authentication doesn't succeed.
+

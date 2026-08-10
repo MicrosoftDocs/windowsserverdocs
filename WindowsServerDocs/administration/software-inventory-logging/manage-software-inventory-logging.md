@@ -1,12 +1,11 @@
 ---
 title: Manage Software Inventory Logging
 description: Describes how to manage Software Inventory Logging
-ms.topic: article
-ms.assetid: 812173d1-2904-42f4-a9e2-de19effec201
-author: brentfor
+ms.topic: how-to
+author: robinharwood
 ms.author: roharwoo
-manager: mtillman
 ms.date: 10/16/2017
+ms.custom: sfi-image-nochange
 ---
 # Manage Software Inventory Logging
 
@@ -274,17 +273,10 @@ Below are two examples of what the output on the PowerShell console would look l
 > [!NOTE]
 > Since SIL data is output on the console, when using the Get-SilData cmdlet, in data streams, objects will not always be output in a predictive order.  In the two examples below, the text has been color coded (blue for physical host data and green for virtual guest data) only as an illustrative tool for this document.
 
-**Output Example 1**
-
-![Screenshot of the first example output report.](../media/software-inventory-logging/SILHyper-VExample1.png)
-
-**Output Example 2** (w/ Expand-SilData function)
-
-![Screenshot of the second example output report that includes the Expand-SilData function.](../media/software-inventory-logging/SILHyper-VExample2.png)
-
 ## See Also
 [Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)
 [Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md)
 [Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)
 [Import-BinaryMiLog](/powershell/module/cimcmdlets/import-binarymilog)
 [Export-BinaryMiLog](/powershell/module/cimcmdlets/export-binarymilog)
+

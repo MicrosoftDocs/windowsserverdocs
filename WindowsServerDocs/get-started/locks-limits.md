@@ -1,20 +1,32 @@
 ---
 title: Locks and limits in Windows Server
 description: In this article, you can compare the operating system locks and limits across the different editions of Windows Server.
-ms.topic: conceptual
+#customer intent: As an IT admin, I want to compare locks and limits across Windows Server editions so that I can choose the right version for my organization.
+ms.topic: product-comparison
 author: robinharwood
 ms.author: roharwoo
-ms.date: 10/25/2024
+ms.date: 06/27/2025
 zone_pivot_groups: windows-os-version
 ---
 
 # Comparison of locks and limits in Windows Server
 
-Use this article to compare the operating system locks and limits across the different editions of Windows Server.
+Choosing the right edition of Windows Server is essential for meeting your organization's technical and business requirements. This article provides a side-by-side comparison of key operating system locks and limits across supported Windows Server editions. Use these tables to compare key features across Windows Server editions, such as:
+
+- Maximum number of users
+- Connection limits
+- Virtualization rights
+- Hardware support
+
+This information can help you choose the version that best fits your needs.
+
+Select a Windows Server release to view its locks and limits.
 
 ## Locks and limits
 
 :::zone pivot="windows-server-2025"
+
+To view the locks and limits for Windows Server 2025, select the full comparison tab or the version differences tab.
 
 # [Full Comparison](#tab/full-comparison)
 
@@ -36,7 +48,7 @@ Use this article to compare the operating system locks and limits across the dif
 
 # [Version Differences](#tab/version-differences)
 
-| Locks and limits | Windows Server 2022 Standard | Windows Server 2022 Datacenter | Windows Server 2022 Datacenter: Azure Edition |
+| Locks and limits | Windows Server 2025 Standard | Windows Server 2025 Datacenter | Windows Server 2025 Datacenter: Azure Edition |
 |--|--|--|--|
 | Maximum number of cores | Unlimited | Unlimited | 2,048 logical processors |
 | Maximum RAM | <ul><li>4 PB for hosts that support 5-level paging</li><li>256 TB for hosts that support 4-level paging</li></ul> | <ul><li>4 PB for hosts that support 5-level paging</li><li>256 TB for hosts that support 4-level paging</li></ul> | <ul><li>240 TB for a generation 2 virtual machine</li><li>1 TB for a generation 1 virtual machine</li></ul> |
@@ -50,6 +62,8 @@ Use this article to compare the operating system locks and limits across the dif
 ::: zone-end
 
 :::zone pivot="windows-server-2022"
+
+To view the locks and limits for Windows Server 2022, select the full comparison tab or the version differences tab.
 
 # [Full Comparison](#tab/full-comparison)
 
@@ -84,6 +98,8 @@ Use this article to compare the operating system locks and limits across the dif
 
 :::zone pivot="windows-server-2019"
 
+To view the locks and limits for Windows Server 2019, select the full comparison tab or the version differences tab.
+
 # [Full Comparison](#tab/full-comparison)
 
 | Locks and limits | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
@@ -111,6 +127,8 @@ Use this article to compare the operating system locks and limits across the dif
 ::: zone-end
 
 :::zone pivot="windows-server-2016"
+
+To view the locks and limits for Windows Server 2016, select the full comparison tab or the version differences tab.
 
 # [Full Comparison](#tab/full-comparison)
 

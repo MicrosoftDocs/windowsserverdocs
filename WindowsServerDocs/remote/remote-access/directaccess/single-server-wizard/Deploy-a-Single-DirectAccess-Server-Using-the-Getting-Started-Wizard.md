@@ -1,16 +1,12 @@
 ---
 title: Deploy a Single DirectAccess Server Using the Getting Started Wizard
 description: Learn about the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess in a few easy steps.
-manager: brianlic
-ms.topic: article
-ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
+ms.topic: install-set-up-deploy
 ms.author: roharwoo
 author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server Using the Getting Started Wizard
-
->
 
 >[!IMPORTANT]
 >Microsoft highly recommends that you use Always On VPN instead of DirectAccess for new deployments. For more information, see [Always on VPN](../../overview-always-on-vpn.md).

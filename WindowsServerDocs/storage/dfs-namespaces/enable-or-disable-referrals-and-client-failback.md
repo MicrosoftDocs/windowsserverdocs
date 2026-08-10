@@ -2,14 +2,11 @@
 title: Enable or Disable Referrals and Client Failback
 description: This article describes how to enable or disable referrals and client failback.
 ms.date: 6/5/2017
-ms.topic: article
+ms.topic: how-to
 author: robinharwood
-manager: brianlic
 ms.author: roharwoo
 ---
 # Enable or Disable Referrals and Client Failback
-
->
 
 A referral is an ordered list of servers that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or DFS folder with targets. After the computer receives the referral, the computer attempts to access the first server in the list. If the server is not available, the client computer attempts to access the next server. If a server becomes unavailable, you can configure clients to fail back to the preferred server after it becomes available.
 
@@ -65,3 +62,4 @@ Folders with targets inherit client failback settings from the namespace root. I
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Review DFS Namespaces Client Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11))
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
+

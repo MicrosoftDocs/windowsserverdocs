@@ -1,11 +1,9 @@
 ---
 title: AD FS MSAL Native app calling Web API
 description: earn how to build a native app signing-in users authenticated by AD FS 2019 and acquiring tokens using MSAL library to call web APIs.
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 02/13/2024
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: example-scenario
+ms.custom: sfi-image-nochange
 ---
 
 # Scenario: Native App calling Web API
