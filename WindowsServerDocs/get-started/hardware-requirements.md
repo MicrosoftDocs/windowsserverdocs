@@ -43,7 +43,7 @@ Processor performance depends not only on the clock frequency of the processor, 
 
 ::: zone-end
 
-You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Windows Sysinternals, to verify the capabilities of your CPU.
+You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Microsoft Sysinternals suite, to verify the capabilities of your CPU.
 
 # [RAM](#tab/ram)
 
@@ -102,7 +102,7 @@ The following are the estimated **minimum** disk space requirements for the syst
 > [!NOTE]
 > 32 GB should be considered an *absolute minimum* value for successful installation. This minimum should allow you to install Windows Server 2022 or later using the Server Core installation option with the Web Services (IIS) server role. A server in Server Core mode is ~4 GB smaller than the same server using the **Server with Desktop Experience** installation option.
 >
-> The system partition needs extra space for any of the following circumstances:
+> The boot (operating system) partition needs extra space for any of the following circumstances:
 >
 > - If you install the system over a network
 > - Computers with more than 16 GB of RAM require more disk space for paging, hibernation, and dump files
@@ -154,7 +154,7 @@ The following items are required only for certain features:
 
 - Trusted Platform Module (TPM).
 
-- Integrated or dedicated graphics and monitor capable of Super VGA (1024 x 768) or higher-resolution.
+- Integrated or dedicated graphics and monitor capable of Super VGA (1024×768) or higher-resolution.
 
 - Keyboard and mouse (or other compatible pointing device).
 
