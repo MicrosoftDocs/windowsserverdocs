@@ -1,19 +1,15 @@
 ---
 title: Software only (SO) features and technologies
 description: These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features require some tuning of the NIC for optimal operation. Examples of these include Hyper-V features such as Virtual Machine Quality of Service (vmQoS), Access Control Lists (ACLs), and non-Hyper-V features like NIC Teaming.
-ms.topic: article
-ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
-manager: dougkim
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/26/2021
 ---
 
 # Software only (SO) features and technologies
 
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
-
-Software only features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features require some tuning of the NIC for optimal operation. Examples of these include Hyper-V features such as Virtual Machine Quality of Service (vmQoS), Access Control Lists (ACLs), and non-Hyper-V features like NIC Teaming. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+Software only features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features require some tuning of the NIC for optimal operation. Examples of these include Hyper-V features such as Virtual Machine Quality of Service (vmQoS), Access Control Lists (ACLs), and non-Hyper-V features like NIC Teaming. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 ## Access Control Lists (ACLs)
 
@@ -57,7 +53,7 @@ The SDN extension in Windows Server 2016 improved ways to provide bandwidth cont
 
 ## Switch Embedded Teaming (SET)
 
-SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For information about Switch Embedded Teaming in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For information about Switch Embedded Teaming in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 ## Virtual Receive Side Scaling (vRSS)
 

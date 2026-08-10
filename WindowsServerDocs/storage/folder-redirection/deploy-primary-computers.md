@@ -1,14 +1,12 @@
 ---
 title: Deploy primary computers for Folder Redirection and Roaming User Profiles
 description: How to enable primary computer support and designate primary computers for users with Folder Redirection and Roaming User Profiles.
-ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+ms.topic: install-set-up-deploy
+author: robinharwood
+ms.author: roharwoo
 ms.date: 06/06/2019
 ---
 # Deploy primary computers for Folder Redirection and Roaming User Profiles
-
->Applies to: Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 This topic describes how to enable primary computer support and designate primary computers for users. Doing so enables you to control which computers use Folder Redirection and Roaming User Profiles.
 

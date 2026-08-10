@@ -1,10 +1,11 @@
 ---
 title: Windows Admin Center SDK Case Study - BiitOps
 description: Windows Admin Center SDK Case Study - BiitOps
-ms.topic: article
+ms.topic: partner-tools
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 06/2/2019
+ms.custom: sfi-image-nochange
 ---
 # BiitOps
 BiitOps provides operational insights and data to help management and IT Operations make informed decisions.
@@ -30,8 +31,6 @@ BiitOps is a company striving to bring clarity into an IT world of ever-increasi
 BiitOps Inventory for Windows Admin Center provides a fast, easy, and powerful way to find the information about a computer you need in any given situation without having to search through different Windows Admin Center extensions or even resort to using remote PowerShell. BiitOps DataEngine is the central repository for automatically updated configuration and asset information, and the Inventory extension delivers out-of-box high-value based on this data. This solution works with all versions of Windows servers and clients currently supported by Microsoft.
 
 BiitOps Inventory extension requires a BiitOps DataEngine instance. Visit the [BiitOps website](https://biitops.com) to schedule a free demo.
-
-![BiitOps Inventory Extension screenshot](../../media/extend-case-study-biitops/biitops-1.png)
 
 ## BiitOps Changes Extension
 

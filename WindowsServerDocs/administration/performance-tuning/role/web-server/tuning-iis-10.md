@@ -1,11 +1,10 @@
 ---
 title: Tuning IIS 10.0
 description: Performance tuning recommendations for IIS 10.0 web servers on Windows Server 16
-ms.topic: conceptual
-ms.author: ericam
-author: phstee
+ms.topic: best-practice
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
-ms.custom: contperf-fy22q2
 ---
 
 # Tuning IIS 10.0
@@ -284,7 +283,7 @@ Besides the maxConcurrentRequestPerCpu setting, ASP.NET 4.7 also provides settin
 ```
 
 -   **percentCpuLimit** Default value: 90
-Asynchronous request has some scalability issues when a huge load (beyond the hardware capabilities) is put on such scenario. The problem is due to the nature of allocation on asynchronous scenarios. In these conditions, allocation will happen when the asynchronous operation starts, and it will be consumed when it completes. By that time, itâs very possible the objects have been moved to generation 1 or 2 by GC. When this happens, increasing the load will show increase on request per second (rps) until a point. Once we pass that point, the time spent in GC will start to become a problem and the rps will start to dip, having a negative scaling effect. To fix the problem, when the cpu usage exceeds percentCpuLimit setting, requests will be sent to the ASP.NET native queue.
+Asynchronous request has some scalability issues when a huge load (beyond the hardware capabilities) is put on such scenario. The problem is due to the nature of allocation on asynchronous scenarios. In these conditions, allocation will happen when the asynchronous operation starts, and it will be consumed when it completes. By that time, it's very possible the objects have been moved to generation 1 or 2 by GC. When this happens, increasing the load will show increase on request per second (rps) until a point. Once we pass that point, the time spent in GC will start to become a problem and the rps will start to dip, having a negative scaling effect. To fix the problem, when the cpu usage exceeds percentCpuLimit setting, requests will be sent to the ASP.NET native queue.
 -   **percentCpuLimitMinActiveRequestPerCpu** Default value: 100
 CPU throttling(percentCpuLimit setting) is not based on number of requests but on how expensive they are. As a result, there could be just a few CPU-intensive requests causing a backup in the native queue with no way to empty it aside from incoming requests. To solve this problem, percentCpuLimitMinActiveRequestPerCpu can be used to ensure a minimum number of requests are being served before throttling kicks in.
 
@@ -309,7 +308,7 @@ Starting in Windows Server 2012 R2, IIS offers the option of configuring worke
 
 The main purpose of both the idle worker process page-out and idle worker process termination features is to conserve memory utilization on the server, since a site can consume a lot of memory even if it's just sitting there, listening. Depending on the technology used on the site (static content vs ASP.NET vs other frameworks), the memory used can be anywhere from about 10 MB to hundreds of MBs, and this means that if your server is configured with many sites, figuring out the most effective settings for your sites can dramatically improve performance of both active and suspended sites.
 
-Before we go into specifics, we must keep in mind that if there are no memory constraints, then it's probably best to simply set the sites to never suspend or terminate. After all, thereâs little value in terminating a worker process if it's the only one on the machine.
+Before we go into specifics, we must keep in mind that if there are no memory constraints, then it's probably best to simply set the sites to never suspend or terminate. After all, there's little value in terminating a worker process if it's the only one on the machine.
 
 > [!NOTE]
 > In case the site runs unstable code, such as code with a memory leak, or otherwise unstable, setting the site to terminate on idle can be a quick-and-dirty alternative to fixing the code bug. This isn't something we would encourage, but in a crunch, it may be better to use this feature as a clean-up mechanism while a more permanent solution is in the works.\]
@@ -346,7 +345,7 @@ Whether you use an SSD or not, we also recommend fixing the size of the page fil
 To configure a pre-fixed page file size, you need to calculate its ideal size, which depends on how many sites you will be suspending, and how much memory they consume. If the average is 200 MB for an active worker process and you have 500 sites on the servers that will be suspending, then the page file should be at least (200 \* 500) MB over the base size of the page file (so base + 100 GB in our example).
 
 > [!NOTE]
-> When sites are suspended, they will consume approximately 6 MB each, so in our case, memory usage if all sites are suspended would be around 3 GB. In reality, though, youâre probably never going to have them all suspended at the same time.
+> When sites are suspended, they will consume approximately 6 MB each, so in our case, memory usage if all sites are suspended would be around 3 GB. In reality, though, you're probably never going to have them all suspended at the same time.
 
 ## Transport Layer Security tuning parameters
 

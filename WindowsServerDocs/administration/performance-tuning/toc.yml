@@ -108,7 +108,7 @@
     - name: Storage subsystem tuning
       items:
       - name: Storage Spaces Direct Overview
-        href: /azure-stack/hci/concepts/storage-spaces-direct-overview
+        href: /azure/azure-local/concepts/storage-spaces-direct-overview?context=/windows-server/context/windows-server-storage
       - name: Storage Replication FAQ
         href: ../../storage/storage-replica/storage-replica-frequently-asked-questions.yml
       - name: Data Deduplication advanced settings

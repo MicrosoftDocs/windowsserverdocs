@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: AD Forest Recovery - Seizing an operations master role"
 title: AD Forest Recovery - Seizing an Operations Master Role
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 06/21/2023
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: how-to
 ms.custom: 7e6bb370-f840-4416-b5e2-86b0ba715f4f, inhenkel
 ---
 
 # Active Directory Forest Recovery - Seize an operations master role
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to seize an operations master role (also known as a flexible single master operations (FSMO) role). You can use Ntdsutil.exe, a command-line tool that is installed automatically on all DCs.
 

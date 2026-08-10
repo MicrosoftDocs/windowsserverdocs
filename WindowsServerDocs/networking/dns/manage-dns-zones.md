@@ -2,9 +2,9 @@
 title: Manage DNS zones using DNS server in Windows Server
 description: Learn how to create DNS zones and manage them with DNS server in Windows Server using PowerShell and the DNS Manager console.
 author: robinharwood
-ms.author: wscontent
+ms.author: roharwoo
 ms.topic: how-to 
-ms.date: 03/23/2023
+ms.date: 01/02/2025
 ms.custom: template-how-to, team=cloud_advocates #Required; leave this attribute/value as-is.
 ms.contributors: orthomas
 # Customer intent: As a DNS administrator, I want create DNS zones, so that my systems
@@ -23,7 +23,7 @@ prerequisites:
 
 - A Windows Server with the DNS Server role installed and configured. See
   [Quickstart: Installing and configure DNS Server](quickstart-install-configure-dns-server.md) to
-  found out how to get stared.
+  found out how to get started.
 - Determine the type of zone you want to create, see [DNS zones](zone-types.md) to learn more.
 - An account that is a member of the Administrators group, or equivalent.
 - You need the fully qualified domain name (FQDN) of the zone you want to create.

@@ -2,16 +2,14 @@
 title: nslookup lserver
 description: Reference article for the nslookup lserver command, which changes the initial server to the specified Domain Name System (DNS) domain.
 ms.topic: reference
-ms.assetid: aee5ea0b-bb17-4c14-bde7-2f7a91f2f22b
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
 # nslookup lserver
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
 
 Changes the initial server to the specified Domain Name System (DNS) domain.
 

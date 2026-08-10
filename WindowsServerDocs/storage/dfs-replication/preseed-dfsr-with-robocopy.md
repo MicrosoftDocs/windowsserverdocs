@@ -1,14 +1,12 @@
 ---
 title: Use Robocopy to pre-seed files for DFS Replication
 description: How to use Robocopy.exe to pre-seed files for DFS Replication.
-ms.topic: article
-author: JasonGerend
-ms.author: jgerend
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/18/2018
 ---
 # Use Robocopy to pre-seed files for DFS Replication
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 This topic explains how to use the command-line tool, **Robocopy.exe**, to pre-seed files when setting up replication for Distributed File System (DFS) Replication (also known as DFSR or DFS-R) in Windows Server. By pre-seeding files before you set up DFS Replication, add a new replication partner, or replace a server, you can speed up initial synchronization and enable cloning of the DFS Replication database in Windows Server 2012 R2. The Robocopy method is one of several pre-seeding methods; for an overview, see [Step 1: pre-seed files for DFS Replication](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn495046(v%3dws.11)>).
 

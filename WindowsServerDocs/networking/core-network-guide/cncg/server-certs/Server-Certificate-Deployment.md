@@ -1,16 +1,12 @@
 ---
 title: Server Certificate Deployment
 description: Learn about the steps you have to carry out to install an enterprise root certification authority and to deploy server certificates for use with PEAP and EAP.
-manager: brianlic
-ms.topic: article
-ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Server Certificate Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.
 

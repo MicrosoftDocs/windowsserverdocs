@@ -1,19 +1,15 @@
 ---
 title: Software and hardware (SH) integrated features and technologies
 description: These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS.
-ms.topic: article
-ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
-manager: dougkim
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/26/2021
 ---
 
 # Software and hardware (SH) integrated features and technologies
 
->Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
-
-These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS. To learn more, see [Host network requirements for Azure Local](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 >[!TIP]
 >SH and HO features are available if the installed NIC supports it. The feature descriptions below will cover how to tell if your NIC supports the feature.
@@ -34,7 +30,7 @@ To use the converged NIC capability:
 
 3.  Ensure to enable RDMA on the vNICs designated for RDMA in the host.
 
-For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
+For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 ## Data Center Bridging (DCB)
 
@@ -69,7 +65,7 @@ For details about PVLAN isolation, see [System Center: Virtual Machine Manager E
 
 RDMA is a networking technology that provides high-throughput, low-latency communication that minimizes CPU usage. RDMA supports zero-copy networking by enabling the network adapter to transfer data directly to or from application memory. RDMA-capable means the NIC (physical or virtual) is capable of exposing RDMA to an RDMA client. RDMA-enabled, on the other hand, means an RDMA-capable NIC is exposing the RDMA interface up the stack.
 
-For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
+For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure/azure-local/concepts/host-network-requirements?context=/windows-server/context/windows-server-edge-networking).
 
 ## Receive Side Scaling (RSS)
 

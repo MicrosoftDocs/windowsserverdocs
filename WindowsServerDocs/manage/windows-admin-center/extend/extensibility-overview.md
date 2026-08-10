@@ -1,14 +1,13 @@
 ---
 title: Extensions for Windows Admin Center
 description: Extensions for Windows Admin Center SDK (Project Honolulu)
-ms.topic: article
+ms.topic: concept-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 09/17/2018
+ms.custom: sfi-image-nochange
 ---
 # Extensions for Windows Admin Center
-
->Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is built as an extensible platform to enable partners and developers to leverage existing capabilities within Windows Admin Center, seamlessly integrate with other IT administration products and solutions, and provide extra value to customers. Each solution and tool in Windows Admin Center is built as an extension using the same extensibility features available to partners and developers, so you can build powerful tools just like the ones available in Windows Admin Center today.
 
@@ -19,7 +18,7 @@ Windows Admin Center extensions are built using modern web technologies includin
 Here's the value you can bring to your product and customers by developing extensions for Windows Admin Center:
 
 - **Integrate with Windows Admin Center tools:** Integrate your products and services with server and cluster management tools in Windows Admin Center and deliver unified and seamless, end-to-end monitoring, management, troubleshooting experiences to your customers.
-- **Leverage platform security, identity and management capabilities:** Enable Azure Active Directory support, multi-factor authentication, Role-Based Access Control (RBAC), logging, and auditing for your product and services by leveraging Windows Admin Center platform capabilities to meet the complex requirements of today's IT organizations.
+- **Leverage platform security, identity and management capabilities:** Enable Microsoft Entra ID support, multi-factor authentication, Role-Based Access Control (RBAC), logging, and auditing for your product and services by leveraging Windows Admin Center platform capabilities to meet the complex requirements of today's IT organizations.
 - **Develop using the latest web technologies:** Quickly build stunning user experiences using modern web technologies including HTML5, CSS, Angular, TypeScript and jQuery, and rich, powerful UI controls included in the Windows Admin Center SDK.
 - **Extend product outreach:** Become a part of the Windows Admin Center ecosystem with outreach to our expanding customer base.
 
@@ -73,6 +72,6 @@ Pure Storage provides enterprise, all-flash data storage solutions that deliver 
 
 ### QCT
 
-The QCT Management Suite extension complements Windows Admin Center by providing physical server monitoring and management for QCT Azure Stack HCI certified systems. The QCT Management Suite extension displays server hardware information, and provides an intuitive wizard UI to help replace physical disks efficiently, hardware event log tools, and S.M.A.R.T. based predictive disk management. [Learn more about the QCT Management Suite extension](case-studies/qct.md).
+The QCT Management Suite extension complements Windows Admin Center by providing physical server monitoring and management for QCT Azure Local certified systems. The QCT Management Suite extension displays server hardware information, and provides an intuitive wizard UI to help replace physical disks efficiently, hardware event log tools, and S.M.A.R.T. based predictive disk management. [Learn more about the QCT Management Suite extension](case-studies/qct.md).
 
 ![QCT extension](../media/extensibility-overview/qct-extension.png)

@@ -1,18 +1,17 @@
 ---
 description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
-ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
-author: msmbaldwin
-ms.author: esaggese
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/30/2019
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Upgrading AD RMS to Windows Server 2016
 
 ## Introduction
 
-Active Directory Rights Management Services (AD RMS) is a Microsoft service that protects sensitive documents and emails. Unlike traditional protection methods, such as firewalls and ACLs, AD RMS encryption and protection are persistent no matter where a file goes or how it is transported.
+Active Directory Rights Management Services (AD RMS) is a Microsoft service that protects sensitive documents and emails. Unlike traditional protection methods, such as firewalls and ACLs, AD RMS encryption and protection are persistent no matter where a file goes or how it's transported.
 
 This document provides guidance for migrating from Windows Server 2012 R2 with SQL Server 2012 to Windows Server 2016 and SQL Server 2016. The same process can be used to migrate from older but supported versions of AD RMS.
 Please note that Active Directory Rights Management Services is no longer in active development, and for the latest capabilities customers should consider migrating to [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which offers a much more comprehensive set of features with more complete device and application support.
@@ -63,13 +62,13 @@ The CNAME is used to help ensure that the Windows Server 2016 setup will be gett
 
 ##### Backup the AD RMS and AD FS Databases
 
-The AD RMS and AD FS databases hold critical information necessary to AD RMS, such as the public key of the Server Licensor Certificate, rights policy templates, AD FS configuration data, and logging information. Without these databases, clients cannot issue licenses to consume protected content, among other issues.
+The AD RMS and AD FS databases hold critical information necessary to AD RMS, such as the public key of the Server Licensor Certificate, rights policy templates, AD FS configuration data, and logging information. Without these databases, clients can't issue licenses to consume protected content, among other issues.
 
 Of the databases, the AD RMS configuration database is considered the most important, as it stores the SLC, rights policy templates, users' keys, and configuration information. Therefore, though you should take care to back up all of the AD RMS and AD FS databases, you should plan to back up the configuration database regularly.
 
 The logging database stores information about user requests to the AD RMS cluster for certificates and use licenses. Your backup strategy of this database should be based on company policy for retaining this type of information.
 
-The directory services database is not critical to AD RMS functionality and, if the latest data is lost, the database will repopulate with information as the AD RMS server receives requests for certificates and use licenses. You do not need to backup this database regularly, but you do need to have at least a copy of the database as it was originally configured after deploying AD RMS.
+The directory services database is not critical to AD RMS functionality and, if the latest data is lost, the database will repopulate with information as the AD RMS server receives requests for certificates and use licenses. You don't need to backup this database regularly, but you do need to have at least a copy of the database as it was originally configured after deploying AD RMS.
 
 **To backup an AD RMS and/or AD FS database with Microsoft SQL Server**
 
@@ -83,7 +82,7 @@ The directory services database is not critical to AD RMS functionality and, if 
 
 5.  Repeat step 4 for the remaining databases.
 
-6.  Ensure that the backup of the databases can be accessed by other machines on the network or using a storage device as they will be needed for later steps during the migration.
+6.  Ensure that the backup of the databases can be accessed by other machines on the network or using a storage device as they'll be needed for later steps during the migration.
 
 Now you can store the database copies in a secure location. Remember to back up your databases frequently.
 
@@ -103,7 +102,7 @@ The following steps will showcase how to add the various Service Accounts to SQL
 
 5.  Expand **Security** and then right-click **Logins** and select **New Login** from the context menu that appears.
 
-6.  Once the window appears enter in the Domain Admin account in the **Login name** field (Ex. Contoso\\ContosoAdmin)
+6.  Once the window appears, enter in the Domain Admin account in the **Login name** field (Ex. Contoso\\ContosoAdmin)
 
 7.  From the left navigation pane, choose **Server Roles**.
 
@@ -139,19 +138,21 @@ The following sections provide guidance on operational tasks you may need to per
 
 You can deploy additional AD FS servers to support the AD RMS deployment. You may choose to perform this action in the event of increased traffic to the AD RMS servers, or additional applications, or if you need to retire one of the servers currently being used for AD FS.
 
+Review the [Prerequisites for Microsoft Entra Connect](/entra/identity/hybrid/connect/how-to-connect-install-prerequisites) before proceeding.
+
 **To add the 2016 AD FS server to the farm**
 
-1.  From the Azure AD Connect server, double click the **Azure AD Connect** icon to launch the Azure AD Connect wizard.
+1.  From the Microsoft Entra Connect server, double click the **Microsoft Entra Connect** icon to launch the Microsoft Entra Connect wizard.
 
 2.  In the Welcome page, click **Configure**.
 
 3.  In the Additional Tasks page, click **Deploy an additional Federation Server** and then click **Next**.
 
-4.  In the Connect to Azure AD page, enter the user name and password of an account with Global Administrative permissions and then click **Next**.
+4.  In the Connect to Microsoft Entra ID page, enter the user name and password of an account with appropriate permissions as defined in [Microsoft Entra Connect installation prerequisites](/entra/identity/hybrid/connect/how-to-connect-install-prerequisites#installation-prerequisites) and then click **Next**.
 
 5.  In the Domain Administrator credentials page, enter the user name and password of an account with Domain Admin permissions and click **Next**.
 
-6.  Click **Browse** and select the certificate file used when configuring the AD FS farm using the Azure AD Connect.
+6.  Click **Browse** and select the certificate file used when configuring the AD FS farm using the Microsoft Entra Connect.
 
 7.  Click **Enter Password** to open the Certificate Password dialog box.
 
@@ -199,7 +200,7 @@ The Mobile Device Extension can log requests it receives from end user devices. 
 
 4.  Type the following command and press **Enter**: **Set-ItemProperty -Path AdrmsCluster:\\ -Name IsLoggingEnabled -Value \$true**
 
-If you are using MDE logging for troubleshooting, we recommend disabling it after addressing the issue.
+If you're using MDE logging for troubleshooting, we recommend disabling it after addressing the issue.
 
 **To disable Mobile Device Extension logging**
 
@@ -219,11 +220,11 @@ After you add one Windows Server 2016-based AD RMS server has been added to your
 
 You can deploy additional AD RMS servers to the cluster to support the load on your AD RMS deployment. You may also choose to perform this action in the event of increased traffic to the AD RMS servers.
 
-This guide doesn't cover the steps required to alter the load balancing mechanisms you might be using in your environment to exclude the servers you are deprecating and to include the ones you are adding to the cluster.
+This guide doesn't cover the steps required to alter the load balancing mechanisms you might be using in your environment to exclude the servers you're deprecating and to include the ones you're adding to the cluster.
 
 #### Adding a 2016 AD RMS Server
 
-If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuragtion files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
+If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you'll need to install the software and other HSM artifacts (e.g. key and configuration files) on the server before installing AD RMS. You'll also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
 
 **To add a 2016 AD RMS Server**
 
@@ -249,7 +250,7 @@ If your AD RMS cluster is using a Hardware Security Module instead of a Centrall
 
 11. Click **Install** to begin the installation.
 
-12. After configuration completes, you will need to log off and back on to administer AD RMS.
+12. After configuration completes, you'll need to log off and back on to administer AD RMS.
 
 13. Once logged back on, open **Server Manager** select **Tools** and then **Active Directory Rights Management**. The management window should appear and indicate that the cluster has the additional server in the cluster.
 
@@ -258,7 +259,7 @@ At this point, you can repurpose all the preexisting nodes or upgrade them to Wi
 
 ### Configuring Windows Server 2016 Web Application Proxy (WAP)
 
-The following sections provide guidance on operational tasks you may need to perform on your Web Application Proxy deployment. This is an optional step, not required if you are publishing AD RMS to the Internet through other mechanisms.
+The following sections provide guidance on operational tasks you may need to perform on your Web Application Proxy deployment. This is an optional step, not required if you're publishing AD RMS to the Internet through other mechanisms.
 
 #### Adding a Windows Server 2016 WAP Server
 
@@ -270,7 +271,7 @@ You can deploy additional Web Application Proxy servers to support the AD RMS de
 
 2.  In the **Add Roles and Features Wizard**, click **Next** until you get to the Server Role selection screen.
 
-3.  On the Select Server Roles screen, select **Remote Access**, and then click **Next** until you are back at the Select Server Roles screen.
+1.  On the Select Server Roles screen, select **Remote Access**, and then click **Next** until you're back at the Select Server Roles screen.
 
 4.  On the Select Server Roles screen, select **Web Application Proxy**, click **Add Features**, and then click **Next**.
 
@@ -278,7 +279,7 @@ You can deploy additional Web Application Proxy servers to support the AD RMS de
 
 6.  Once the installation has completed, click **Close**.
 
-7.  Now it is time to configure the server. To do this, open the Remote Access Management console on the Web Application Proxy server. Open the **Start** menu, type **RAMgmtUI.exe**, and then select the application.
+7.  Now it's time to configure the server. To do this, open the Remote Access Management console on the Web Application Proxy server. Open the **Start** menu, type **RAMgmtUI.exe**, and then select the application.
 
 8.  In the navigation pane, click **Web Application Proxy**.
 
@@ -320,13 +321,13 @@ Detailed logging information is available on the Web Application Proxy servers. 
 
 4.  Open the **Web Application Proxy** logs.
 
-5.  You will then be able to open the **Admin** logs.
+5.  You'll then be able to open the **Admin** logs.
 
 6.  Open the **Action** menu, located in the top left, and select **Properties**.
 
 7.  Under the **General** tab, choose the option to **Enable Logging**.
 
-8.  Finally, you are able to customize maximum log size and what happens when the maximum event log size is reached.
+8.  Finally, you're able to customize maximum log size and what happens when the maximum event log size is reached.
 
 ### Configuring High Availability for Windows Server 2016 Services
 
@@ -360,7 +361,7 @@ You can deploy additional AD RMS servers to setup High Availability. You may cho
 
 11. Click **Install** to begin the installation.
 
-12. After configuration completes, you will need to log off and back on to administer AD RMS.
+12. After configuration completes, you'll need to log off and back on to administer AD RMS.
 
 13. Once logged back on, open **Server Manager** select **Tools** and then **Active Directory Rights Management**. The management window should appear and indicate that the cluster has the additional server in the cluster.
 
@@ -402,7 +403,7 @@ You can deploy additional WAP servers to setup High Availability. You may choose
 
 2.  In the **Add Roles and Features Wizard**, click **Next** until you get to the Server Role selection screen.
 
-3.  On the Select Server Roles screen, select **Remote Access**, and then click **Next** until you are back at the Select Server Roles screen.
+3.  On the Select Server Roles screen, select **Remote Access**, and then click **Next** until you're back at the Select Server Roles screen.
 
 4.  On the Select Server Roles screen, select **Web Application Proxy**, click **Add Features**, and then click **Next**.
 
@@ -410,7 +411,7 @@ You can deploy additional WAP servers to setup High Availability. You may choose
 
 6.  Once the installation has completed, click **Close**.
 
-7.  Now it is time to configure the server. To do this, open the Remote Access Management console on the Web Application Proxy server. Open the **Start** menu, type **RAMgmtUI.exe**, and then select the application.
+7.  Now it's time to configure the server. To do this, open the Remote Access Management console on the Web Application Proxy server. Open the **Start** menu, type **RAMgmtUI.exe**, and then select the application.
 
 8.  In the navigation pane, click **Web Application Proxy**.
 
@@ -448,11 +449,11 @@ You can deploy additional SQL servers to setup Always On High Availability. You 
 
 8.  Browse for the SQL server 2016 servers which will be used for Always On High Availability and enter them in then click **Next**.
 
-9.  You will receive a validation warning. Select **Yes** to Validate the Cluster nodes and then click **Next**.
+9.  You'll receive a validation warning. Select **Yes** to Validate the Cluster nodes and then click **Next**.
 
 10. Under the **Testing Options** page, select the option **Run all tests** and click **Next.**
 
-11. **Note: The Cluster Validation Wizard is expected to return several Warning messages, especially if you will not be using shared storage. Other than that, if you find any error messages you need to fix them prior to creating the Windows Server Failover Cluster**.
+11. **Note: The Cluster Validation Wizard is expected to return several Warning messages, especially if you'll not be using shared storage. Other than that, if you find any error messages you need to fix them prior to creating the Windows Server Failover Cluster**.
 
 12. In the **Access Point for Administering the Cluster** dialog box, enter the cluster name and virtual IP address for the Windows Server Failover Cluster, then click **Next**.
 
@@ -525,3 +526,4 @@ You can remove unnecessary AD RMS servers after an upgrade. You may choose to pe
 7.  Once this completes, restart the server.
 
 8.  You can now shut down this server and reallocate the resources as needed.
+

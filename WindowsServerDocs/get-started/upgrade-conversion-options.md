@@ -1,81 +1,76 @@
 ---
-title: Upgrade and conversion options for Windows Server
-description: Explains how to upgrade or convert Windows Server to newer versions, different editions, and switch between licensing options, such as evaluation, retail, and volume licensed.
-ms.date: 11/25/2021
-ms.topic: conceptual
-ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
-author: dknappettmsft
-ms.author: daknappe
-manager: femila
+title: Convert Windows Server editions and license types
+description: Learn how to convert Windows Server evaluation versions to retail, upgrade Standard to Datacenter edition, and switch between retail, volume-licensed, and OEM licenses using DISM and slmgr commands.
+ms.author: roharwoo
+author: robinharwood
+ms.date: 03/23/2026
+ms.topic: how-to
+# customer intent: As a Windows Server administrator, I want to convert my Windows Server edition or license type so I can switch to the right edition or licensing model for my environment.
 ---
 
-# Upgrade and conversion options for Windows Server
+# Convert Windows Server editions and license types
 
-You can upgrade or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
+After you install Windows Server, you can convert between editions (for example, evaluation to retail, or Standard to Datacenter) and switch between licensing types (retail, volume-licensed, and OEM). This article provides step-by-step procedures for each conversion scenario.
 
-The process of upgrading or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it is licensed, and the pathway you take. We use different terms to distinguish between actions, any of which could be involved in a deployment of Windows Server: clean install, in-place upgrade, cluster operating system (OS) rolling upgrade, migration, and license conversion. You can learn more about these terms at [Install, upgrade, or migrate](install-upgrade-migrate.md).
+For information about supported in-place upgrade paths and restrictions, see [Plan your Windows Server upgrade](install-upgrade-migrate.md).
 
-## Upgrading licensed versions of Windows Server
+## Prerequisites
 
-Below are general guidelines for in-place upgrade paths where Windows Server is **already licensed** (that is, not evaluation):
+Before you convert your Windows Server edition or license type, make sure you have:
 
-- Upgrades from 32-bit to 64-bit architectures are not supported. All releases of Windows Server since Windows Server 2008 R2 are 64-bit only.
-- Upgrades from one language to another are not supported.
-- If the server is an Active Directory domain controller, you cannot convert it to a retail version. See [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md) for important information.
-- Upgrades from pre-release versions (previews) of Windows Server are not supported. Perform a clean installation of Windows Server.
-- Upgrades that switch from a Server Core installation to a Server with Desktop Experience installation (or vice versa) are not supported.
-- Upgrades from a previous Windows Server installation to an evaluation copy of Windows Server are not supported. Evaluation versions should be installed as a clean installation.
-- You can only change from Standard edition to Datacenter edition when upgrading. Changing from Datacenter edition to Standard edition is not supported.
+- The product key for the target edition or license type.
+- An elevated command prompt or PowerShell session on the server you want to convert.
+- Administrative access to the server.
 
-> [!IMPORTANT]
-> If your server uses NIC Teaming, disable NIC Teaming prior to upgrade, and then re-enable it after upgrade is complete. See [NIC Teaming Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)) for details.
+## Convert an evaluation version to a retail version
 
-## Converting an evaluation version to a retail version
+You can convert evaluation versions and editions of Windows Server to retail versions and editions. For example, if you install the evaluation version of Standard (Desktop Experience) edition, you can convert it to the retail version of either the Standard (Desktop Experience) edition or the Datacenter (Desktop Experience) edition.
 
-You can convert the evaluation version of Windows Server to the retail version. If you have installed the evaluation of Standard edition, you can convert it to the retail version of either the Standard edition or Datacenter edition. Similarly, if you have installed the evaluation of the Datacenter edition, you can only convert it to the retail version of the Datacenter edition.
+However, you can't convert all Windows Server evaluation versions and editions to all retail versions or editions. For example, if you install the evaluation Datacenter edition, you can only convert it to the retail Datacenter edition, not to the retail Standard edition.
 
-If you haven't already activated Windows, the bottom right-hand corner of the desktop shows the time remaining in the evaluation period.
+Since Windows Server 2016, you can't convert Desktop Experience evaluation versions to Core retail versions. If you install the Standard Core evaluation version, you can convert it only to retail Datacenter Core, not to retail Standard Core.
 
-> [!IMPORTANT]
-> For releases of Windows Server 2016 prior to 14393.0.161119-1705.RS1_REFRESH, you can only convert from evaluation to retail when Windows Server has been installed with the Server with Desktop Experience installation option (not Server Core). Starting with version 14393.0.161119-1705.RS1_REFRESH and later releases, you can convert evaluation editions to retail regardless of the installation option used.
+It's important to run the `DISM /online /Get-TargetEditions` command as instructed in the following procedure to determine which retail versions you can convert to. If the retail version you want isn't listed as a target version, you need to do a fresh install of the retail version you want.
 
 > [!NOTE]
-> Before you attempt to convert from evaluation to retail, verify that your server is actually running an evaluation version. To do this, launch an elevated command prompt and run the command `slmgr.vbs /dlv`; evaluation versions will include **EVAL** in the output.
+> To verify that your server is running an evaluation version, you can run either of the following commands at an elevated command prompt:
+>
+> - Run `DISM /online /Get-CurrentEdition` and make sure the current edition name includes `Eval`.
+> - Run `slmgr.vbs /dlv` and make sure the output includes `EVAL`.
+
+If Windows isn't activated, the bottom right-hand corner of the desktop shows the time remaining in the evaluation period.
 
 ### Windows Server Standard or Datacenter
 
-If the server is running an evaluation version of Windows Server Standard edition or Windows Server Datacenter edition, you can convert it to a retail version as follows:
+If your server is running an evaluation version of Windows Server Standard or Datacenter edition, you can convert it to an available retail version. Run the following commands in an elevated command prompt or PowerShell session.
 
-1. From an elevated command prompt or PowerShell session, run the following command to save the Microsoft Software License Terms for Windows Server, which you can then review:
+1. Determine the current edition name by running the following command. The output is an abbreviated form of the edition name. For example, Windows Server Datacenter (Desktop Experience) Evaluation edition is `ServerDatacenterEval`.
 
-   ```
-   DISM /online /Set-Edition:ServerDatacenter /GetEula:C:\eula.rtf
-   ```
-
-1. Determine the current edition name by running the command below. The output is an abbreviated form of the edition name, for example Windows Server Datacenter edition is **ServerDatacenter**:
-
-   ```
+   ```cmd
    DISM /online /Get-CurrentEdition
    ```
 
-1. Verify which editions the current installation can be converted to by running the command below. The evaluation version of Windows Server Standard can be converted to the retail version of either the Standard or Datacenter editions of Windows Server, whereas the evaluation version of Windows Server Datacenter can only be converted to the retail version Windows Server Datacenter:
+1. Verify which editions the current installation can be converted to by running the following command. From the output, make a note of the edition name you want to convert to.
 
-   ```
+   ```cmd
    DISM /online /Get-TargetEditions
    ```
 
-1. Make note of the target edition name you want to convert to, and enter this and your retail product key in the command below. This process requires you to accept the Microsoft Software License Terms for Windows Server you saved previously.
+1. Run the following command to save the Microsoft Software License Terms for Windows Server, which you can then review. Replace the `<target edition>` placeholder with the edition name you noted from the previous step.
 
-   > [!TIP]
-   > You can convert from the evaluation version of Windows Server Standard to the retail version of Windows Server Datacenter in one step by using the appropriate product key and edition ID.
-
+   ```cmd
+   DISM /online /Set-Edition:<target edition> /GetEula:C:\license.rtf
    ```
-   DISM /online /Set-Edition:<edition ID> /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
+
+1. Enter the new edition name and corresponding retail product key in the following command. The set edition process requires you to accept the Microsoft Software License Terms for Windows Server that you saved previously.
+
+   ```cmd
+   DISM /online /Set-Edition:<target edition> /ProductKey:<product key> /AcceptEula
    ```
 
    For example:
 
-   ```
+   ```cmd
    DISM /online /Set-Edition:ServerDatacenter /ProductKey:ABCDE-12345-ABCDE-12345-ABCDE /AcceptEula
    ```
 
@@ -83,46 +78,53 @@ If the server is running an evaluation version of Windows Server Standard editio
 > For more information about Dism.exe, see [DISM Command-line options](/previous-versions/orphan-topics/ws.10/dd772580(v=ws.10)).
 
 > [!IMPORTANT]
-> If the server is an Active Directory domain controller, you cannot convert it to a retail version. In this case, install an additional domain controller on a server that runs a retail version, migrate any FSMO roles held, and remove Active Directory Domain Services (AD DS) from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012](../identity/ad-ds/deploy/upgrade-domain-controllers-to-windows-server-2012-r2-and-windows-server-2012.md).
+> You can't convert an Active Directory domain controller from an evaluation to a retail version. In this case, install another domain controller on a server that runs a retail version. Then migrate any FSMO roles that are held by the evaluation domain controller. Finally, remove Active Directory Domain Services (AD DS) from the domain controller that runs on the evaluation version. For more information, see [Upgrade Domain Controllers to Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md).
 
 ### Windows Server Essentials
 
-If the server is running Windows Server Essentials, you can convert it to the full retail version by entering a retail, volume license, or OEM key by launching an elevated command prompt and entering it as part of the following command:
+If the server is running Windows Server Essentials, you can convert it to the full retail version by entering a retail, volume license, or OEM key in the following command at an elevated command prompt:
 
-   ```
-   slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
-   ```
+```cmd
+slmgr.vbs /ipk <license key>
+```
 
-## Converting Windows Server Standard edition to Datacenter edition
+## Convert Windows Server Standard edition to Datacenter edition
 
-At any time after installing Windows Server, you can convert Windows Server Standard edition to Datacenter edition. You can also run `setup.exe` from the installation media to upgrade or repair the installation (sometimes called in-place repair). If you run `setup.exe` to upgrade or repair in-place on any edition of Windows Server, the result will be the same edition you started with.
+At any time after installing Windows Server, you can convert Windows Server Standard edition to Datacenter edition. You can also run `setup.exe` from the installation media to upgrade or repair the installation, sometimes called in-place repair. If you run `setup.exe` to upgrade or repair in-place on any edition of Windows Server, the result is the same edition you started with.
 
 You can convert the Standard edition of Windows Server to the Datacenter edition as follows:
 
-1. Determine that Windows Server Standard is the current edition name by running the command below. The output is an abbreviated form of the edition name, for example Windows Server Standard edition is **ServerStandard**:
+1. Determine that Windows Server Standard is the current edition name by running the following command. The output is an abbreviated form of the edition name, for example Windows Server Standard (Desktop Experience) edition is `ServerStandard`.
 
-   ```
+   ```cmd
    DISM /online /Get-CurrentEdition
    ```
 
 1. Verify that Windows Server Datacenter is a valid option to convert to by running the following command:
 
-   ```
+   ```cmd
    DISM /online /Get-TargetEditions
    ```
 
-1. Enter **ServerDatacenter** and your retail product key in the command below:
+1. Enter `ServerDatacenter` and your retail product key in the following command:
 
+   ```cmd
+   DISM /online /Set-Edition:ServerDatacenter /ProductKey:<product key> /AcceptEula
    ```
-   DISM /online /Set-Edition:ServerDatacenter /ProductKey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /AcceptEula
-   ```
 
-## Converting between retail, volume-licensed, and OEM licenses
+## Convert between retail, volume-licensed, and OEM licenses
 
-At any time after installing Windows Server, you can freely convert between a retail license, a volume-licensed license, or an OEM license. The edition (Standard or Datacenter) remains the same during this conversion. If you are starting with an evaluation version, [convert it to the retail version first](#converting-an-evaluation-version-to-a-retail-version), then you can convert between the versions.
+At any time after installing Windows Server, you can freely convert between a retail license, a volume-licensed license, or an OEM license. The edition (Standard or Datacenter) remains the same during this conversion. If you're starting with an evaluation version, [convert it to the retail version first](#convert-an-evaluation-version-to-a-retail-version) and then convert between the versions by running the following command from an elevated command prompt. Provide your volume-license, retail, or OEM product key.
 
-To do this, run the following command from an elevated command prompt, including providing your volume-license, retail, or OEM product key:
-
+```cmd
+slmgr.vbs /ipk <product key>
 ```
-slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
-```
+
+## Related content
+
+For more information about upgrading Windows Server, see the following articles:
+
+- [Overview of Windows Server upgrades](upgrade-overview.md)
+- [Server Core vs Server with Desktop Experience install options](install-options-server-core-desktop-experience.md)
+- [Perform an in-place upgrade of Windows Server](upgrade-in-place.md)
+- [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)

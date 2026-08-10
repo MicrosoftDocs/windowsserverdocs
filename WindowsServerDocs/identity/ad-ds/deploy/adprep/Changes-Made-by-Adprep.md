@@ -1,17 +1,13 @@
 ---
-ms.assetid: b432980c-601f-492b-924e-7427419c8457
 title: Changes Made by Adprep.exe
 description: Describes the changes that Adprep.exe makes in Windows Server 2012 R2 and Windows Server 2012
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Changes Made by Adprep.exe
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes the changes that Adprep.exe makes in Windows Server 2012 R2 and Windows Server 2012.
 

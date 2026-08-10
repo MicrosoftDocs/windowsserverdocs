@@ -1,11 +1,10 @@
 ---
 title: Network guidelines
 description: Bandwidth recommendations for Remote Desktop deployments.
-ms.author: helohr
-ms.date: 12/12/2019
-ms.topic: article
-author: Heidilohr
-manager: femila
+author: robinharwood
+ms.date: 7/3/2024
+ms.topic: best-practice
+ms.author: roharwoo
 ---
 # Network guidelines
 
@@ -53,3 +52,4 @@ The Azure region you're in can affect user experience as much as network conditi
 ## Assistive technologies
 
 Assistive technology workloads, like using Narrator in the remote session, require connections with a connection round trip time (RTT) of 20 milliseconds (ms) or better for the best user experience.
+

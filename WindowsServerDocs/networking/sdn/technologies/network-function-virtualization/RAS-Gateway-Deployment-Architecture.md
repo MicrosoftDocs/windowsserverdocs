@@ -1,16 +1,12 @@
 ---
 title: RAS Gateway Deployment Architecture
 description: You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway in Windows Server 2019 and 2016, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
-manager: grcusanz
 ms.topic: how-to
-ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # RAS Gateway Deployment Architecture
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 You can use this topic to learn about Cloud Service Provider (CSP) deployment of RAS Gateway, including RAS Gateway pools, Route Reflectors, and deploying multiple  gateways for individual tenants.
 
@@ -38,22 +34,22 @@ RAS Gateway includes multiple new features that change and improve the way in wh
 ### BGP Route Reflector
 The Border Gateway Protocol (BGP) Route Reflector capability  is now included with RAS Gateway, and provides an alternative to BGP full mesh topology that is normally required for route synchronization between routers. With full mesh synchronization, all BGP routers must connect with all other routers in the routing topology. When you use Route Reflector, however, the Route Reflector is the only router that connects with all of the other routers, called BGP Route Reflector clients, thereby simplifying route synchronization and reducing network traffic. The Route Reflector learns all routes, calculates best routes, and redistributes the best routes to its BGP clients.
 
-For more information, see [What's New in RAS Gateway](/azure-stack/hci/concepts/gateway-overview).
+For more information, see [What's New in RAS Gateway](/azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking).
 
 ### <a name="bkmk_pools"></a>Gateway Pools
 In  Windows Server 2016, you can create many gateway pools of different types. Gateway pools contain many instances of RAS Gateway, and route network traffic between physical and virtual networks.
 
-For more information, see [What's New in RAS Gateway](/azure-stack/hci/concepts/gateway-overview) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).
+For more information, see [What's New in RAS Gateway](/azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).
 
 ### <a name="bkmk_gps"></a>Gateway Pool Scalability
 You can easily scale a gateway pool up or down by adding or removing gateway VMs in the pool. Removal or addition of gateways does not disrupt the services that are provided by a pool. You can also add and remove entire pools of gateways.
 
-For more information, see [What's New in RAS Gateway](/azure-stack/hci/concepts/gateway-overview) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).
+For more information, see [What's New in RAS Gateway](/azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).
 
 ### <a name="bkmk_m"></a>M+N Gateway Pool Redundancy
 Every gateway pool is M+N redundant. This means that an 'M' number of active gateway VMs are backed up by an 'N' number of standby gateway VMs. M+N redundancy provides you with more flexibility in determining  the level of reliability that you require when you deploy RAS Gateway.
 
-For more information, see [What's New in RAS Gateway](/azure-stack/hci/concepts/gateway-overview) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).
+For more information, see [What's New in RAS Gateway](/azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking) and [RAS Gateway High Availability](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md).
 
 ## <a name="bkmk_example"></a>Example Deployment
 The following illustration provides an example with eBGP peering over site-to-site VPN connections configured between two tenants, Contoso and Woodgrove, and the Fabrikam CSP datacenter.
@@ -86,7 +82,7 @@ When you sign a new customer and add the customer as a new tenant in your datace
     > -   After Network Controller has configured a RAS Gateway and Route Reflector for the tenant, whenever the same tenant requires a new site-to-site VPN connection, Network Controller checks for the available capacity on this RAS Gateway VM. If the original gateway can service the required capacity, the new network connection is also configured on the same RAS Gateway VM. If the RAS Gateway VM cannot handle additional capacity, Network Controller selects a new available RAS Gateway VM and configures the new connection on it. This new RAS Gateway VM associated with the tenant becomes the Route Reflector client of the original tenant RAS Gateway Route Reflector.
     > -   Because RAS Gateway pools are behind Software Load Balancers (SLBs), the tenants' site-to-site VPN addresses each use a single public IP address, called a virtual IP address (VIP), which is translated by the SLBs into a datacenter-internal IP address, called a dynamic IP address (DIP), for a RAS Gateway that routes traffic for the Enterprise tenant. This public-to-private IP address mapping by SLB ensures that the site-to-site VPN tunnels are correctly established between the Enterprise sites and the CSP RAS Gateways and Route Reflectors.
     >
-    >     For more information about SLB, VIPs, and DIPs, see [Software Load Balancing &#40;SLB&#41; for SDN](/azure-stack/hci/concepts/software-load-balancer).
+    >     For more information about SLB, VIPs, and DIPs, see [Software Load Balancing &#40;SLB&#41; for SDN](/azure/azure-local/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking).
 
 5.  After the site-to-site VPN tunnel between the Enterprise site and the CSP datacenter RAS Gateway is established for the new tenant, the static routes that are associated with the tunnels are automatically provisioned on both the Enterprise and CSP sides of the tunnel.
 

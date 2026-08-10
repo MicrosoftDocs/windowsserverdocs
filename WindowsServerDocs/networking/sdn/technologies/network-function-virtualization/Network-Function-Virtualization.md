@@ -1,24 +1,20 @@
 ---
 title: Network Function Virtualization
 description: You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances like Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing (SLB) in Windows Server 2019 and 2016.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
-ms.author: anpaul
-author: AnirbanPaul
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/28/2021
 ---
 # Network Function Virtualization
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
 
 >[!NOTE]
 >In addition to this topic, the following Network Function Virtualization documentation is available.
-> - [Datacenter Firewall Overview](/azure-stack/hci/concepts/datacenter-firewall-overview)
-> - [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
-> - [Software Load Balancing (SLB) for SDN](/azure-stack/hci/concepts/software-load-balancer)
+> - [Datacenter Firewall Overview](/azure/azure-local/concepts/datacenter-firewall-overview?context=/windows-server/context/windows-server-edge-networking)
+> - [RAS Gateway for SDN](/azure/azure-local/concepts/gateway-overview?context=/windows-server/context/windows-server-edge-networking)
+> - [Software Load Balancing (SLB) for SDN](/azure/azure-local/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking)
 
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.
 
@@ -85,7 +81,7 @@ The Microsoft platform has been engineered to be a great platform to build and d
 
 -   You can deploy a virtual appliance from the vendor of your choice.
 
--   You can deploy, configure, and manage your virtual appliances with the Microsoft Network Controller which comes with Windows Server 2016. For more information about the Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
+-   You can deploy, configure, and manage your virtual appliances with the Microsoft Network Controller which comes with Windows Server 2016. For more information about the Network Controller, see [Network Controller](/azure/azure-local/concepts/network-controller-overview?context=/windows-server/context/windows-server-edge-networking).
 
 -   Hyper-V can host the top guest operating systems that you need.
 
@@ -96,7 +92,7 @@ The following virtual appliances are provided with Windows Server 2016:
 
 **Software load balancer**
 
-A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](/previous-versions/windows/server/mt632286(v=ws.12)). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/blog/2014/04/08/microsoft-azure-load-balancing-services/).
+A layer-4 load balancer operating at datacenter scale. This is a similar version of Azure's load balancer that has been deployed at scale in the Azure environment. For more information about the Microsoft Software Load Balancer, see [Software Load Balancing (SLB) for SDN](/previous-versions/windows/server/mt632286(v=ws.12)). For more information about Microsoft Azure Load Balancing Services, see [Microsoft Azure Load Balancing Services](https://azure.microsoft.com/blog/microsoft-azure-load-balancing-services/).
 
 **Gateway**. RAS Gateway provides all combinations of the following gateway functions.
 
@@ -118,4 +114,4 @@ Hyper-V Network Virtualization (HNV) Routing Control is the logical, centralized
 
 **Distributed multi-tenant firewall**
 
-The firewall protects the network layer of virtual networks. The policies are enforced at the SDN-vSwitch port of each tenant VM. It protects all traffic flows: east-west and north-south. The policies are pushed through the tenant portal and the Network Controller distributes them to all applicable hosts. For more information about the distributed multi-tenant firewall, see [Datacenter Firewall Overview](/azure-stack/hci/concepts/datacenter-firewall-overview).
+The firewall protects the network layer of virtual networks. The policies are enforced at the SDN-vSwitch port of each tenant VM. It protects all traffic flows: east-west and north-south. The policies are pushed through the tenant portal and the Network Controller distributes them to all applicable hosts. For more information about the distributed multi-tenant firewall, see [Datacenter Firewall Overview](/azure/azure-local/concepts/datacenter-firewall-overview?context=/windows-server/context/windows-server-edge-networking).

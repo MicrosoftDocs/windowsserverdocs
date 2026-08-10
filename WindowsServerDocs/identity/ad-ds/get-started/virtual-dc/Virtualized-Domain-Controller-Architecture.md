@@ -2,17 +2,13 @@
 description: "Learn more about: Virtualized Domain Controller Architecture"
 s.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: Virtualized Domain Controller Architecture
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/16/2023
-ms.topic: article
-ms.custom: inhenkel
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Virtualized Domain Controller Architecture
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article covers the architecture of virtualized domain controller cloning and safe restore. It shows the processes cloning and safe restore with flowcharts and then provides a detailed explanation of each step in the process.
 

@@ -1,16 +1,14 @@
 ---
 description: "Learn more about: Implementing Least-Privilege Administrative Models"
-ms.assetid: 7a7ab95c-9cb3-4a7b-985a-3fc08334cf4f
 title: Implementing Least-Privilege Administrative Models
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/09/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
+ms.custom: sfi-image-nochange
+
 ---
 # Implementing Least-Privilege Administrative Models
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following excerpt is from [The Administrator Accounts Security Planning Guide](/previous-versions/tn-archive/cc162797(v=technet.10)), first published on April 1, 1999:
 
@@ -327,3 +325,8 @@ The user account on which the target UPN has now been configured is used to requ
 When certificates have been obtained for the attacker's account, the UPNs on the "new" account and the target account are returned to their original values.
 
 The attacker now has one or more certificates that can be presented for authentication to resources and applications as if the user is the VIP user whose account was temporarily modified. Although a full discussion of all of the ways in which certificates and PKI can be targeted by attackers is outside the scope of this document, this attack mechanism is provided to illustrate why you should monitor privileged and VIP accounts in AD DS for changes, particularly for changes to any of the attributes on the **Account** tab for the account (for example, cn, name, sAMAccountName, userPrincipalName, and userAccountControl). In addition to monitoring the accounts, you should restrict who can modify the accounts to as small a set of administrative users as possible. Likewise, the accounts of administrative users should be protected and monitored for unauthorized changes.
+
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+

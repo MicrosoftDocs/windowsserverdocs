@@ -1,42 +1,101 @@
 ---
-title: Install, upgrade, or migrate to Windows Server
-description: How to clean install, in-place upgrade or migrate to Windows Server.
-ms.topic: conceptual
-author: dknappettmsft
-ms.author: daknappe
-manager: femila
-ms.date: 11/26/2021
-ms.prod: windows-server
+title: Plan Your Windows Server Upgrade Path
+description: Explore Windows Server upgrade options including in-place upgrade, clean install, migration, and cluster rolling upgrade. Find supported upgrade paths.
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 04/14/2026
+# customer intent: As a server administrator, I want to understand my upgrade options and supported paths so I can plan the right approach for moving to a newer version of Windows Server.
 ---
 
-# Install, upgrade, or migrate to Windows Server
+# Plan your Windows Server upgrade
 
-Is it time to move to a newer version of Windows Server? Depending on what you're running now, you have several options to get there.
+Windows Server supports several methods for moving to a newer version, including in-place upgrade, clean install, migration, cluster rolling upgrade, and edition conversion. Each method has different trade-offs for downtime, complexity, and hardware requirements. Upgrading keeps your servers secure, supported, and able to use the latest features and performance improvements.
+
+This article explains the available upgrade methods, the supported in-place upgrade paths by version, and the restrictions that apply.
+
+## Factors for choosing an upgrade method
+
+The best method depends on your environment and requirements. Consider the following factors when planning your upgrade:
+
+- **Downtime tolerance** — An in-place upgrade requires a reboot but keeps you on the same hardware. A cluster rolling upgrade maintains workload availability throughout the process. A clean install or migration might require more downtime but gives you a fresh environment.
+- **Hardware constraints** — If you're staying on the same hardware, an in-place upgrade or clean install is appropriate. If you're moving to new hardware, migration is the better choice.
+- **Roles and features** — Not all roles support in-place upgrade. Check the [role and feature migration matrix](upgrade-migrate-roles-features.md) to verify support for your configuration.
+- **Version gap** — Starting with Windows Server 2025, nonclustered systems can upgrade up to four versions at a time. For Windows Server 2022 and earlier, nonclustered systems can upgrade up to two versions at a time. Cluster rolling upgrades can only advance one version at a time. See the [supported paths table](#supported-in-place-upgrade-paths-by-version) for details.
+- **Licensing** — Before you upgrade, ensure you have a valid product key and activation method for the target version. Unlike Windows client, each Windows Server upgrade requires a separate license.
+
+## Windows Server upgrade methods
+
+Use the following table to decide which method fits your scenario.
 
 > [!IMPORTANT]
-> Extended support for Windows Server 2008 R2 and Windows Server 2008 ended in January 2020. Extended Security Updates (ESU) are available, with one option to migrate your on-premises servers to Azure, where you can continue to run them on virtual machines. To find out more, see [Extended Security Updates overview](extended-security-updates-overview.md).
+> Always back up your system and important files before performing an in-place upgrade, clean install, or migration to a later version of Windows Server.
 
-> [!TIP]
-> To download Windows Server 2022, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022).
+| Method | What it does | When to use it | More information |
+|---|---|---|---|
+| **In-place upgrade** | Installs a newer version of Windows Server over the existing one, keeping your settings, server roles, features, and data. You can perform an in-place upgrade by using installation media or receive it as a feature update through Windows Update. | You want the fastest path to a newer version on the same hardware, and your roles and features [support in-place upgrade](upgrade-migrate-roles-features.md). | [Perform an in-place upgrade](perform-in-place-upgrade.md) |
+| **Clean install** | Installs Windows Server on a new server or overwrites the existing OS. | You want a fresh start, your hardware is new, or an in-place upgrade isn't supported for your current configuration. | [Install Windows Server](install-windows-server.md) |
+| **Migration** | Moves roles or features from a source server to a different destination server running Windows Server. | You're moving to new hardware, or you need to migrate one role or feature at a time without upgrading the OS in-place. | [Upgrade and migrate roles and features](upgrade-migrate-roles-features.md) |
+| **Cluster OS rolling upgrade** | Upgrades cluster node operating systems one at a time without stopping Hyper-V or Scale-Out File Server workloads. Clusters can only upgrade one version at a time. You can perform a rolling upgrade by using installation media or receive it as a feature update through Windows Update. For failover clusters running on Azure Local, use the [Lifecycle Manager (LCM)](/azure/azure-local/upgrade/about-upgrades-23h2) instead. | You're running a failover cluster and need to maintain availability during the upgrade. | [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) |
+| **License conversion** | Converts one edition of Windows Server to another edition of the same release by using a command and a product key (for example, Standard to Datacenter). | You need to change your Windows Server edition or switch between retail, volume-licensed, and OEM licenses. | [Convert Windows Server editions and license types](upgrade-conversion-options.md) |
 
-## Clean install
+## Supported in-place upgrade paths by version
 
-Clean install is simplest way to install Windows Server, where you install on a blank server or overwrite an existing operating system, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as [hardware requirements](hardware-requirements.md), so be sure to check the details for Windows Server.
+Upgrade to the latest version of Windows Server to get the latest features, security updates, and best performance.
 
-## In-place upgrade
+Starting with Windows Server 2025, nonclustered systems can upgrade up to four versions at a time. You can upgrade directly to Windows Server 2025 from Windows Server 2012 R2 and later. For Windows Server 2022 and earlier, nonclustered systems can upgrade up to two versions at a time. If you're using a [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md), you can only upgrade one version at a time.
 
-In-place upgrade enables you to keep the same hardware and all the server roles you have set up without wiping and reinstalling the operating system, by which you go from an older operating system to a newer one, keeping your settings, server roles and features, and data intact. For example, if your server is running Windows Server 2019, you can upgrade it to Windows Server 2022. However, not every older operating system has a pathway to every newer one and some roles or features don't support this or need you to take extra steps.  In-place upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.
+For step-by-step instructions for how to perform an in-place upgrade, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md).
 
-  For step-by-step guidance and more information on upgrading, review the [Windows Server upgrade content](../get-started/upgrade-overview.md) and [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
+Select the tab for your upgrade method to see the supported paths:
 
-## Cluster Operating System rolling upgrade
+# [Installation media](#tab/media)
 
-Cluster Operating System (OS) rolling upgrade gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your cluster are running Windows Server 2019 you can install Windows Server 2022 on them avoiding downtime to the cluster, which would otherwise impact Service Level Agreements. This feature is discussed in more detail at [Cluster OS rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
+| Upgrade from / to | Windows Server 2012 R2 | Windows Server 2016 | Windows Server 2019 | Windows Server 2022 | Windows Server 2025 |
+|--|--|--|--|--|--|
+| **Windows Server 2012** | Yes | Yes | No | No | No |
+| **Windows Server 2012 R2** | No | Yes | Yes | No | Yes |
+| **Windows Server 2016** | No | No | Yes | Yes | Yes |
+| **Windows Server 2019** | No | No | No | Yes | Yes |
+| **Windows Server 2022** | No | No | No | No | Yes |
+| **Windows Server 2025** | No | No | No | No | Yes |
 
-## Migration
+# [Windows Update](#tab/windows-update)
 
-Migration of Windows Server is when you move one role or feature at a time from a source computer that is running Windows Server to another destination computer that is running Windows Server, either the same or a newer version. For these purposes, migration is defined as moving one role or feature and its data to a different computer, not upgrading the feature on the same computer.
+To upgrade using Windows Update, you must have the required cumulative update installed. For prerequisites, see [Perform an in-place upgrade of Windows Server](upgrade-in-place.md#prerequisites).
 
-## License conversion
+| Upgrade from / to | Windows Server 2025 |
+|--|--|
+| **Windows Server 2019** | Yes |
+| **Windows Server 2022** | Yes |
 
-License conversion enables you to convert a particular edition of the release to another edition of the same release in a single step with a simple command and the appropriate license key for some Windows Server releases. For example, if your server is running Windows Server 2022 Standard, you can convert it to Windows Server 2022 Datacenter. Keep in mind that while you can move up from Windows Server 2022 Standard to Windows Server 2022 Datacenter, you are unable to reverse the process and go from Datacenter edition to Standard edition. In some releases of Windows Server, you can also freely convert between OEM, volume-licensed, and retail versions with the same command and the appropriate key.
+---
+
+## Upgrade restrictions for licensed versions of Windows Server
+
+The following restrictions apply to in-place upgrades where Windows Server is already licensed (not an evaluation version):
+
+- Upgrades from 32-bit to 64-bit architectures aren't supported. All releases since Windows Server 2008 R2 are 64-bit only.
+- Upgrades from one language to another aren't supported.
+- If the server is an Active Directory domain controller, you can't convert it to a retail version. See [Upgrade domain controllers to Windows Server](../identity/ad-ds/deploy/upgrade-domain-controllers.md) for important information.
+- Upgrades from prerelease versions (previews) of Windows Server aren't supported. Perform a clean install instead.
+- Switching from a Server Core installation to a Server with Desktop Experience installation (or vice versa) during an in-place upgrade isn't supported.
+- Upgrades from a previous Windows Server installation to an evaluation copy aren't supported. Install evaluation versions as clean installs.
+- By default, an upgrade retains the existing edition. For example, Standard upgrades to Standard and Datacenter upgrades to Datacenter.
+- You can change from Standard to Datacenter or Datacenter: Azure Edition, or from Datacenter to Datacenter: Azure Edition, during an upgrade. You can't downgrade from Datacenter to Standard, or from Datacenter: Azure Edition to Standard or Datacenter.
+- If your server uses NIC Teaming, disable NIC Teaming before the in-place upgrade. You can re-enable it when the in-place upgrade is complete. For more information, see [NIC Teaming overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831648(v=ws.11)).
+- In-place upgrades on Windows Server configured to boot from VHD aren't supported.
+- In-place upgrades from Windows Storage Server editions aren't supported.
+- Some public and private cloud providers support in-place upgrades. Check with your cloud provider for details.
+
+## End-of-support Windows Server versions
+
+Support for [Windows Server 2012](/lifecycle/products/windows-server-2012) and [Windows Server 2012 R2](/lifecycle/products/windows-server-2012-r2) ended October 10, 2023. Extended Security Updates (ESU) are available, with one option to migrate your on-premises servers to Azure, where you can continue to run them on virtual machines. For more information, see [Extended Security Updates overview](extended-security-updates-overview.md).
+
+## Related content
+
+- [Perform an in-place upgrade of Windows Server](perform-in-place-upgrade.md)
+- [Convert Windows Server editions and license types](upgrade-conversion-options.md)
+- [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md)
+- [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md)
+- [Cluster-Aware Updating overview](../failover-clustering/cluster-aware-updating.md)

@@ -1,17 +1,13 @@
 ---
 title: Manage NPS Templates
 description: This topic provides instructions on how to create, apply, export, and import NPS templates for Network Policy Server in Windows Server 2016.
-manager: brianlic
-ms.topic: article
-ms.assetid: 989b00c5-4767-4081-ace5-6321f8b2c55e
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 
 # Manage NPS Templates
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use Network Policy Server \(NPS\) templates to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs.
 

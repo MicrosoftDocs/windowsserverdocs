@@ -1,16 +1,13 @@
 ---
 title: Plan for Hyper-V security in Windows Server
 description: Provides a list of security considerations for Hyper-V hosts and virtual machines
-ms.topic: article
-ms.assetid: 115db481-b57e-41c3-8354-504f4bc6113a
-ms.author: benarm
-author: BenjaminArmstrong
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/03/2018
 ---
 
 # Plan for Hyper-V security in Windows Server
-
->Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Secure the Hyper-V host operating system, the virtual machines, configuration files, and virtual machine data. Use the following list of recommended practices as a checklist to help you secure your Hyper-V environment.
 
@@ -27,7 +24,7 @@ Secure the Hyper-V host operating system, the virtual machines, configuration fi
     - Use a private/dedicated network for your live migration traffic. Consider enabling IPSec on this network to use encryption and secure your VM's data going over the network during migration. For more information, see [Set up hosts for live migration without Failover Clustering](../deploy/set-up-hosts-for-live-migration-without-failover-clustering.md).
 - **Secure storage migration traffic.**
 
-    Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn551363(v=ws.11)).
+    Use SMB 3.0 for end-to-end encryption of SMB data and data protection tampering or eavesdropping on untrusted networks. Use a private network to access the SMB share contents to prevent man-in-the-middle attacks. For more information, see [SMB Security Enhancements](/windows-server/storage/file-server/smb-security).
 - **Configure hosts to be part of a guarded fabric.**
 
     For more information, see [Guarded fabric](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
@@ -61,7 +58,7 @@ For more secure environments:
 
 - **Use hardware with a Trusted Platform Module (TPM) 2.0 chip to set up a guarded fabric.**
 
-    For more information, see [System requirements for Hyper-V on Windows Server 2016](../system-requirements-for-hyper-v-on-windows.md).
+    For more information, see [System requirements for Hyper-V on Windows Server 2016](../host-hardware-requirements.md).
 
 ## Secure virtual machines
 - **Create generation 2 virtual machines for supported guest operating systems.**
@@ -103,3 +100,5 @@ For more secure environments:
 - **Deploy virtual machines with shielding enabled and deploy them to a guarded fabric.**
 
     For more information, see [Generation 2 security settings](../learn-more/Generation-2-virtual-machine-security-settings-for-Hyper-V.md) and [Guarded fabric](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
+
+

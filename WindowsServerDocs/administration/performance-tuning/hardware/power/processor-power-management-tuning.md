@@ -1,9 +1,9 @@
 ---
 title: Processor Power Management (PPM) tuning for the Windows Server balanced power plan
 description: Processor Power Management (PPM) Tuning for the Windows Server balanced power plan
-ms.topic: conceptual
-ms.author: qizha
-author: phstee
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +34,7 @@ The tuning in each power policy is data driven by the following five workloads s
 
 - **File Server workload**
 
-    A Microsoft-developed benchmark called [FSCT](https://www.snia.org/sites/default/orig/sdc_archives/2009_presentations/tuesday/BartoszNyczkowski-JianYan_FileServerCapacityTool.pdf) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read, and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
+    A Microsoft-developed benchmark called [FSCT](https://techcommunity.microsoft.com/blog/filecab/file-server-capacity-tool-fsct-1-0-available-for-download/423993) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read, and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
 
 - **SPECpower – JAVA workload**
 
@@ -49,9 +49,9 @@ All of the benchmarks except SPECpower were originally designed for performance 
 
 The above workloads use throughput as the performance metric for tuning. During the steady state, throughput does not change with varying utilizations until the system is overloaded (~100% utilization). As a result, the Balanced power plan favors power quite a lot with minimizing processor frequency and maximizing utilization. Starting from Windows Server 2016, the requirement of quick response time has dramatically increased. Even though Microsoft suggested the users switch to the High Performance power plan when they need quick response time, some users do not want to lose the power benefit during light to medium load levels. Hence, Windows Server PPM tuning also includes response time sensitive workloads for tuning.
 
-- **GeekBench 3**
+- **GeekBench**
 
-    [GeekBench 3](http://www.geekbench.com/geekbench3/) is a cross-platform processor benchmark that separates the scores for single-core and multi-core performance. It simulates a set of workloads including integer workloads (encryptions, compressions, image processing, etc.), floating point workloads (modeling, fractal, image sharpening, image blurring, etc.) and memory workloads (streaming).
+    [GeekBench](http://www.geekbench.com/) is a cross-platform processor benchmark that separates the scores for single-core and multi-core performance. It simulates a set of workloads including integer workloads (encryptions, compressions, image processing, etc.), floating point workloads (modeling, fractal, image sharpening, image blurring, etc.) and memory workloads (streaming).
 
     **Response time** is a major measure in its score calculation. In our tested system, Windows Server 2008 default Balanced power plan has ~18% regression in single-core tests and ~40% regression in multi-core tests compared to the **High Performance** power plan. Windows Server 2016 removes these regressions.
 

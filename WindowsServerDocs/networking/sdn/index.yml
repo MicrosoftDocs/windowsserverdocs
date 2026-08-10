@@ -6,7 +6,6 @@ summary: Learn about the features, technology, and deployment of Software Define
 metadata:
   title: Software Defined Networking (SDN) # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about the features, technology, and deployment of Software Defined Networking (SDN). # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: AnirbanPaul #Required; your GitHub user alias, with correct capitalization.
   ms.author: anpaul #Required; microsoft alias of author; optional team alias.
@@ -61,7 +60,7 @@ landingContent:
       - linkListType: learn
         links:
           - text: Troubleshoot Configuring SDN RAS Gateway VPN Bandwidth Settings in VMM
-            url: https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/
+            url: https://techcommunity.microsoft.com/t5/networking-blog/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings/ba-p/339661
           - text: Microsoft Software Defined Networking Datasheet
             url: https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf
 

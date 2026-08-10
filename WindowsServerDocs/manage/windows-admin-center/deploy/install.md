@@ -1,76 +1,117 @@
 ---
 title: Install Windows Admin Center
-description: How to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
-ms.topic: article
-author: jwwool
-ms.author: jeffrew
-ms.date: 07/17/2019
+description: Learn how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center by using a web browser.
+ms.topic: install-set-up-deploy
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/28/2025
 ---
 # Install Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+This article explains how to install Windows Admin Center on a Windows PC or a Windows Server remote server so that multiple users can use Windows Admin Center in a web browser.
 
-This topic describes how to install Windows Admin Center on a Windows PC or on a server so that multiple users can access Windows Admin Center using a web browser.
-
-> [!Tip]
-> New to Windows Admin Center?
-> [Learn more about Windows Admin Center](../overview.md) or [Download now](../overview.md).
+> [!TIP]
+> New to Windows Admin Center? Learn more about [Windows Admin Center](../overview.md) or [download now](https://www.microsoft.com/evalcenter/download-windows-admin-center).
 
 ## Determine your installation type
 
-Review the [installation options](../plan/installation-options.md) which includes the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Review the [installation options](../plan/installation-options.md), which include the [supported operating systems](../plan/installation-options.md#installation-supported-operating-systems). To install Windows Admin Center on a virtual machine (VM) in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
-## Install on Windows 10
+## Download the Windows Admin Center installer
 
-When you install Windows Admin Center on Windows 10, it uses port 6516 by default, but you have the option to specify a different port. You can also create a desktop shortcut and let Windows Admin Center manage your TrustedHosts.
+Download the Windows Admin Center installer from the [Windows Admin Center Evaluation Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) to a location on the machine where you want to install Windows Admin Center.
 
-> [!NOTE]
-> Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts).
+## Prerequisites
 
-When you start Windows Admin Center from the **Start** menu, it opens in your default browser.
+- A Windows PC or server on which to install Windows Admin Center.
+- Admin privileges or equivalent permissions on the machine on which you're installing Windows Admin Center.
+- Optional: A TLS/SSL certificate for _Server Authentication (1.3.6.1.5.5.7.3.1)_. Use a self-signed certificate for testing, but always use a certificate from a trusted certificate authority for production environments. If you don't have a certificate, use the Windows Admin Center installer to generate a self-signed certificate. The certificate is valid for 60 days.
 
-When you start Windows Admin Center for the first time, you'll see an icon in the notification area of your desktop. Right-click this icon and choose **Open** to open the tool in your default browser, or choose **Exit** to quit the background process.
+## Install Windows Admin Center
 
-## Install on Windows Server with desktop experience
+To install Windows Admin Center, follow the steps for the desktop experience or Windows Server Core.
 
-On Windows Server, Windows Admin Center is installed as a network service. You must specify the port that the service listens on, and it requires a certificate for HTTPS. The installer can create a self-signed certificate for testing, or you can provide the thumbprint of a certificate already installed on the computer. If you use the generated certificate, it will match the DNS name of the server. If you use your own certificate, make sure the name provided in the certificate matches the machine name (wildcard certificates are not supported.) You are also given the choice to let Windows Admin Center manage your TrustedHosts.
+### [Desktop experience](#tab/desktop-experience)
 
-> [!NOTE]
-> Modifying TrustedHosts is required in a workgroup environment, or when using local administrator credentials in a domain. If you choose to forego this setting, you must [configure TrustedHosts manually](../support/troubleshooting.md#configure-trustedhosts)
+To install Windows Admin Center on your machine running the Windows Server desktop experience, follow these steps:
 
-Once the install is complete, open a browser from a remote computer and navigate to URL presented in the last step of the installer.
+1. Sign in to the machine where you want to install Windows Admin Center.
 
-> [!WARNING]
-> Automatically generated certificates expire 60 days after installation.
+1. Run the Windows Admin Center installer that you previously downloaded.
 
-## Install on Server Core
+    ![Screenshot that shows the Windows Admin Center v2 installer setup wizard welcome page.](../media/windows-admin-center-v2-installer.png)
 
-If you have a Server Core installation of Windows Server, you can install Windows Admin Center from the command prompt (running as Administrator). Specify a port and SSL certificate by using the `SME_PORT` and `SSL_CERTIFICATE_OPTION` arguments respectively. If you're going to use an existing certificate, use the `SME_THUMBPRINT` to specify its thumbprint.
+1. On the **Welcome to the Windows Admin Center setup wizard** page, select **Next**.
 
-> [!WARNING]
-> Installing Windows Admin Center will restart the WinRM service, which will sever all remote PowerShells sessions. It is recommended that you install from a local Cmd or PowerShell. If you are installing with an automation solution that would be broken by the WinRM service restarting, you can add the parameter ```RESTART_WINRM=0``` to the install arguments, but WinRM must be restarted for Windows Admin Center to function.
+1. On the **License Terms and Privacy Statement** page, if you agree to the terms, select **I accept these terms and understand the privacy statement**. Then select **Next** to prepare your environment and start the installation process.
 
-Run the following command to install Windows Admin Center and automatically generate a self-signed certificate:
+    ![Screenshot that shows the Windows Admin Center v2 installer with two installation modes for express or custom setup.](../media/windows-admin-center-v2-installation-mode.png)
 
-```
-msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SSL_CERTIFICATE_OPTION=generate
-```
+1. On the **Select installation mode** page, select either **Express setup** or **Custom setup**:
 
-Run the following command to install Windows Admin Center with an existing certificate:
+    - **Express setup**: Determines your network access and port selection based on your operating system. Express setup doesn't allow for configuration of extra features.
+    - **Custom setup**: Allows you to configure network access, port numbers, Transport Layer Security (TLS) certificate type and thumbprint, fully qualified domain name of the endpoint, trusted hosts mode, and WinRM over HTTPS.
 
-```
-msiexec /i <WindowsAdminCenterInstallerName>.msi /qn /L*v log.txt SME_PORT=<port> SME_THUMBPRINT=<thumbprint> SSL_CERTIFICATE_OPTION=installed
-```
+1. Select **Next**.
 
-> [!WARNING]
-> Don't invoke `msiexec` from PowerShell using dot-slash relative path notation (like,  `.\<WindowsAdminCenterInstallerName>.msi`). That notation isn't supported, the installation will fail. Remove the `.\` prefix or specify the full path to the MSI.
+1. On the **Select TLS certificate** page, select the option that matches your needs, and then select **Next**.
 
-## Upgrading to a new version of Windows Admin Center
+   You must select which TLS certificate that Windows Admin Center should use. If you already have a certificate, it must be installed in the `LocalMachine\My` certificates store. If you install Windows Admin Center for testing purposes only, the installer can generate a self-signed certificate that expires after 60 days.
 
-You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually installing.
+   ![Screenshot that shows the Windows Admin Center v2 installer with the certificate options.](../media/select-tls-certificate.png)
 
-Your settings are preserved when upgrading to a new version of Windows Admin Center. We don't officially support upgrading Insider Preview versions of Windows Admin Center - we think it's better to do a clean install - but we don't block it.
+1. On the **Automatic updates** page, select your preferred update option. The recommended option to install updates automatically is selected by default. Then select **Next**.
 
-## Updating the certificate used by Windows Admin Center
+1. On the **Send diagnostic data to Microsoft** page, select your preference, and then select **Next**.
 
-When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. To update this certificate at a later time, re-run the installer and choose ```change```.
+1. Review **Ready to install**, and then select **Install** to start the installation process.
+
+1. After the installation process finishes, select **Start Windows Admin Center** checkbox, and then select **Finish**.
+
+1. Sign in as an administrator to start using Windows Admin Center.
+
+   ![Screenshot that shows the Windows Admin Center sign-in page in the browser window.](../media/sign-in-to-windows-admin-center.png)
+
+### [Server Core](#tab/server-core)
+
+To install Windows Admin Center on a machine running the Windows Server Core experience or by using Windows PowerShell, follow these steps:
+
+1. Sign in to your machine. If you're on Server Core, from the `SConfig` menu, enter option **15**, and then select <kbd>Enter</kbd>
+   to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and start PowerShell.
+
+1. Download the Windows Admin Center installer, and copy it to your computer by using the following PowerShell command:
+
+   ```powershell
+   $parameters = @{
+        Source = "https://aka.ms/WACdownload"
+        Destination = ".\WindowsAdminCenter.exe"
+   }
+   Start-BitsTransfer @parameters
+   ```
+
+1. To install Windows Admin Center, run the following command:
+
+   ```powershell
+   Start-Process -FilePath '.\WindowsAdminCenter.exe' -ArgumentList '/VERYSILENT' -Wait
+   ```
+
+1. You might also need to start Windows Admin Center by using the following command:
+
+   ```powershell
+   Start-Service -Name WindowsAdminCenter
+   ```
+
+> [!TIP]
+> You can use the following options for the `-ArgumentList` parameter:
+>
+> - /Silent
+> - /VerySilent
+> - /HTTPSPortNumber
+> - /CertificateThumbprint
+>
+> To specify the HTTPS port number and certificate thumbprint on installation through PowerShell, run the following command:
+>
+> ```powershell
+> .\WindowsAdminCenter2511.exe /HTTPSPortNumber=1234 /CertificateThumbprint=“1234abcd4567efgh”
+
+---

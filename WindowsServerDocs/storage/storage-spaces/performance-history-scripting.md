@@ -1,18 +1,22 @@
 ---
 description: "Learn more about: Scripting with PowerShell and Storage Spaces Direct performance history"
 title: Scripting with Storage Spaces Direct performance history
-ms.author: cosdar
-manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.author: roharwoo
+ms.topic: how-to
+author: robinharwood
 ms.date: 05/15/2018
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Scripting with PowerShell and Storage Spaces Direct performance history
 
->Applies to: Windows Server 2022, Windows Server 2019
-
-In Windows Server 2019, [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
+In Windows Server 2019, [Storage Spaces Direct](storage-spaces-direct-overview.md) records and stores extensive [performance history](performance-history.md) for virtual machines, servers, drives, volumes, network adapters, and more. Performance history is easy to query and process in PowerShell so you can quickly go from *raw data* to *actual answers* to questions like:
 
 1. Were there any CPU spikes last week?
 2. Is any physical disk exhibiting abnormal latency?
@@ -370,7 +374,7 @@ Function Format-Trend {
             $Sign = "-"
         }
         # Return
-        $Sign + $(Format-Bytes [Math]::Abs($RawValue)) + "/day"
+        $Sign + $(Format-Bytes ([Math]::Abs($RawValue))) + "/day"
     }
 }
 
@@ -484,5 +488,6 @@ That's it! Hopefully these samples inspire you and help you get started. With St
 ## Additional References
 
 - [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
-- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Performance history](performance-history.md)
+

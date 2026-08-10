@@ -1,3 +1,8 @@
+---
+ms.topic: include
+ms.date: 12/29/2025
+---
+
 > [!Note] 
 > When running the Guarded Fabric diagnostics tool (Get-HgsTrace -RunDiagnostics), incorrect status may be returned claiming that the HTTPS configuration is broken when it is, in fact, not broken or not being used. This error can be returned regardless of HGS' attestation mode. The possible root-causes are as follows:
 >

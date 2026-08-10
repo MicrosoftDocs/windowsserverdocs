@@ -1,16 +1,12 @@
 ---
 title: Use DNS Policy for Split-Brain DNS Deployment
 description: Learn how to configure DNS policy in Windows Server 2016 for split-brain DNS deployments, where there are two versions of a single zone - one for the internal users on your organization intranet, and one for the external users, who are typically users on the Internet.
-manager: brianlic
-ms.topic: article
-ms.assetid: a255a4a5-c1a0-4edc-b41a-211bae397e3c
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Split\-Brain DNS Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 for split-brain DNS deployments, where there are two versions of a single zone - one for the internal users on your organization intranet, and one for the external users, who are typically users on the Internet.
 

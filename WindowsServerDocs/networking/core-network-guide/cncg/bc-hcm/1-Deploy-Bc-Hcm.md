@@ -1,16 +1,12 @@
 ---
 title: Deploy BranchCache Hosted Cache Mode
 description: Learn how to build on the core network by providing instructions for deploying BranchCache in hosted cache mode in one or more branch offices with a Read-Only Domain Controller where client computers are running Windows 10, Windows 8.1, or Windows 8, and are joined to the domain.
-manager: brianlic
-ms.topic: article
-ms.assetid: 4235231c-4732-4ea9-9330-2a8c8a616d39
-ms.author: jgerend
-author: JasonGerend
+ms.topic: install-set-up-deploy
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Deploy BranchCache Hosted Cache Mode
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Windows Server 2016 Core Network Guide provides instructions for planning and deploying the core components required for a fully functioning network and a new Active Directory&reg; domain in a new forest.
 

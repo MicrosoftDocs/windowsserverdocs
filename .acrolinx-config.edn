@@ -1,2 +1,0 @@
-{:allowed-branchname-matches ["main" "master" "release-.*"]
- :allowed-filename-matches ["EssentialsDocs" "WindowsServerDocs" "includes"]}

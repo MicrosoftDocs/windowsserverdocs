@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Creating a Site Design"
-ms.assetid: 83f746e5-81db-4610-9977-1d5c57699f50
 title: Creating a Site Design
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Creating a Site Design
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creating a site design involves deciding which locations will become sites, creating site objects, creating subnet objects, and associating the subnets with sites.
 

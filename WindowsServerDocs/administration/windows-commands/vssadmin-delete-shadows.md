@@ -2,16 +2,19 @@
 title: vssadmin delete shadows
 description: A description of the vssadmin delete shadows command, which deletes a specified volume's shadow copies.
 ms.topic: reference
-author: JasonGerend
-ms.author: jgerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 05/18/2018
 ---
 
 # vssadmin delete shadows
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+
 
 Deletes a specified volume's shadow copies. You can only delete shadow copies with the *client-accessible* type.
+
+> [!NOTE]
+> If you encounter the error "Error: Snapshots were found, but they were outside of your allowed context," the shadow copies are not client-accessible and cannot be deleted with `vssadmin`. Use the [diskshadow](diskshadow.md) command instead to manage and delete those shadow copies.
 
 ## Syntax
 
@@ -44,3 +47,5 @@ vssadmin delete shadows /for=c: /oldest
 - [vssadmin command](vssadmin.md)
 
 - [vssadmin list shadows command](vssadmin-list-shadows.md)
+
+- [diskshadow command](diskshadow.md)

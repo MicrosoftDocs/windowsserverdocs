@@ -2,14 +2,11 @@
 title: Migrate a Domain-based Namespace to Windows Server 2008 Mode
 description: This article describes how to migrate a domain-based namespace to Windows Server 2008 mode
 ms.date: 6/5/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: upgrade-and-migration-article
+author: robinharwood
+ms.author: roharwoo
 ---
 # Migrate a domain-based namespace to Windows Server 2008 Mode
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 The Windows Server 2008 mode for domain-based namespaces includes support for access-based enumeration and increased scalability.
 
@@ -48,3 +45,4 @@ To migrate a domain-based namespace from Windows 2000 Server mode to Windows Ser
 ## Additional References
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Choose a Namespace Type](choose-a-namespace-type.md)
+
