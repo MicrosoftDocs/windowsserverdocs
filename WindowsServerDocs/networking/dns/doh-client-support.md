@@ -1,44 +1,32 @@
 ---
 title: Secure DNS Client over HTTPS (DoH) on Windows Server 2022
 description: Starting with Windows Server 2022, the DNS client supports DNS-over-HTTPS (DoH). When DoH is enabled, DNS queries between Windows Server’s DNS client and the DNS server pass across a secure HTTPS connection rather than in plain text. By passing the DNS query across an encrypted connection, it's protected from interception by untrusted third parties.
-ms.topic: conceptual
-author: IngridAtMicrosoft
+ms.topic: how-to
+author: Orin-Thomas
 ms.author: orthomas
-manager: femila
-ms.date: 07/15/2021
-ms.prod: windows-server
+ms.date: 12/03/2023
 ms.custom: team=cloud_advocates
 ms.contributors: orthomas-08202021
 ---
 
 # Secure DNS Client over HTTPS (DoH)
 
-Starting with Windows Server 2022, the DNS client supports DNS-over-HTTPS (DoH). When DoH is
-enabled, DNS queries between Windows Server’s DNS client and the DNS server pass across a secure HTTPS connection rather than in plain text. By passing the DNS query across an encrypted connection, it's
-protected from interception by untrusted third parties.
+Starting with Windows Server 2022, the DNS client supports DNS-over-HTTPS (DoH). When DoH is enabled, DNS queries between Windows Server’s DNS client and the DNS server pass across a secure HTTPS connection rather than in plain text. By passing the DNS query across an encrypted connection, it's protected from interception by untrusted third parties.
 
 ## Configure the DNS client to support DoH
 
-You can only configure the Windows Server client to use DoH if the primary
-or secondary DNS server selected for the network interface is on the list of
-known DoH servers. You can configure the DNS client to require DoH, request DoH
-or only use traditional plain-text DNS queries. To configure the DNS client to
-support DoH on Windows Server with Desktop Experience, do the
-following steps:
+You can only configure the Windows Server client to use DoH if the primary or secondary DNS server selected for the network interface is on the list of known DoH servers. You can configure the DNS client to require DoH, request DoH or only use traditional plain-text DNS queries. To configure the DNS client to support DoH on Windows Server with Desktop Experience, do the following steps:
 
 1. From the Windows Settings control panel, select **Network & Internet**.
-
-1. On the Network & Internet page, select **Ethernet**.
-
-1. On the Ethernet screen, select the network interface that you want to
+2. On the Network & Internet page, select **Ethernet**.
+3. On the Ethernet screen, select the network interface that you want to
     configure for DoH.
 
     ![screen shot of ethernet settings](../media/doh-client-support/ethernet.png)
 
-1. On the Network screen, scroll down to **DNS settings** and select the
+4. On the Network screen, scroll down to **DNS settings** and select the
     **Edit** button.
-
-1. On the Edit DNS settings screen, select Manual from the automatic or manual
+5. On the Edit DNS settings screen, select Manual from the automatic or manual
     IP settings dropdown. This setting allows you to configure the Preferred DNS
     and Alternate DNS servers. If the addresses of these servers are present in
     the list of known DoH servers, the **Preferred DNS encryption** dropdown
@@ -63,7 +51,7 @@ following steps:
 
         ![screen shot of dns settings](../media/doh-client-support/dns-settings.png)
 
-1. Select **Save** to apply the DoH settings to the DNS client.
+6. Select **Save** to apply the DoH settings to the DNS client.
 
 If you're configuring the DNS server address for a client using PowerShell
 using the `Set-DNSClientServerAddress` cmdlet, the DoH setting will depend on
@@ -87,11 +75,11 @@ enabled, this policy can be configured with the following settings:
 - **Require DoH**. Will require that queries are performed using DoH. If
     configured DNS servers don't support DoH, name resolution will fail.
 
-    ![screenshot of dns configuration](../media/doh-client-support/dns-configuration.png)
+    ![screenshot of dns configuration.](../media/doh-client-support/dns-configuration.png)
 
 Don't enable the Require DoH option for domain joined computers as
 Active Directory Domain Services is heavily reliant on DNS because the Windows
-Server DNS Server service does not support DoH queries. If you require DNS
+Server DNS Server service doesn't support DoH queries. If you require DNS
 query traffic on Active Directory Domain Services network to be encrypted,
 consider implementing IPsec based connection security rules to protect this
 traffic. See [Securing end-to-end IPsec connections by using IKEv2](/windows/security/threat-protection/windows-firewall/securing-end-to-end-ipsec-connections-by-using-ikev2) for more information.

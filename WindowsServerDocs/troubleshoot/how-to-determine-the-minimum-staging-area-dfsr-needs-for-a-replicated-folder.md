@@ -2,8 +2,8 @@
 title: How to determine the minimum staging area DFSR needs for a replicated folder
 description: This article is a quick reference guide on how to calculate the minimum staging area needed for DFSR to function properly.
 ms.date: 06/10/2020
-author: Deland-Han
-ms.author: delhan
+author: robinharwood
+ms.author: roharwoo
 ms.topic: troubleshooting
 ---
 # How to determine the minimum staging area DFSR needs for a replicated folder

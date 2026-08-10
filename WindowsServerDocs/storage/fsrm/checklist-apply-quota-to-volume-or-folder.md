@@ -2,14 +2,11 @@
 title: Apply a quota to a volume or folder
 description: This article describes how to apply a storage quota to a volume or folder
 ms.date: 7/7/2017
-ms.topic: article
-author: JasonGerend
-manager: brianlic
-ms.author: jgerend
+ms.topic: checklist
+author: robinharwood
+ms.author: roharwoo
 ---
 # Checklist: Apply a Quota to a volume or folder
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 1. Configure e-mail settings if you plan to send threshold notifications or storage reports by e-mail. [Configure E-Mail Notifications](configure-email-notifications.md)
 
@@ -25,6 +22,7 @@ ms.author: jgerend
 
 > [!Note]
 > If you want to screen files on a volume or folder, see [Checklist: Apply a File Screen to a Volume or Folder](checklist-apply-file-screen-to-volume-or-folder.md).
+
 
 
 

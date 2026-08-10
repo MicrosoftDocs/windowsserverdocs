@@ -1,16 +1,12 @@
 ---
 title: Configure the CDP and AIA Extensions on CA1
 description: Learn how to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.
-manager: dougkim
-ms.topic: article
-ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 07/26/2018
 ---
 # Configure the CDP and AIA Extensions on CA1
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to configure the Certificate Revocation List (CRL) Distribution Point (CDP) and the Authority Information Access (AIA) settings on CA1.
 
@@ -53,7 +49,7 @@ To perform this procedure, you must be a member of Domain Admins.
 
     -   **Publish Delta CRLs to this location**
 
-10. Change **Select extension** to **Authority Information Access (AIA)**, and in the **Specify locations from which users can obtain a certificate revocation list (CRL)**, do the following:
+1.  Change **Select extension** to **Authority Information Access (AIA)**, and in the **Specify locations from which users can obtain a certificate for this CA**, complete the following steps:
 
     1.  Select the entry that starts with the path `ldap:///CN=<CATruncatedName>,CN=AIA,CN=Public Key Services`, and then click **Remove**. In **Confirm removal**, click **Yes**.
 

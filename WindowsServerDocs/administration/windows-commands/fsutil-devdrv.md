@@ -1,17 +1,15 @@
 ---
 title: fsutil devdrv
 description: Reference article for the fsutil devdrv command, which groups dev drive related functionality.
-manager: nealch
 ms.author: chandkv
 author: chandkv
-ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d
 ms.topic: reference
 ms.date: 08/29/2023
 ---
 
 # fsutil devdrv
 
->Applies to: Windows 11
+
 
 Dev drive or a developer volume is a volume that is tuned for performance of developer scenarios. The command also lets an administrator of the device control the file system minifilters that are attached to the volume.
 

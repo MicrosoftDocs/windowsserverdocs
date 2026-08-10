@@ -1,15 +1,12 @@
 ---
 title: AD FS 2016 Single Sign On Settings
 description: "Learn more about: AD FS single sign-on Settings"
-ms.topic: article
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
+ms.topic: how-to
+ms.date: 04/08/2025
 ---
 # AD FS single sign-on settings
 
-Applies to: Windows Server (All supported versions)
+
 
 Single sign-on (SSO) allows users to authenticate once and access multiple resources without being prompted for more credentials. This article describes the default AD FS behavior for SSO and the configuration settings that let you customize this behavior.
 
@@ -124,7 +121,7 @@ Set-AdfsProperties -PersistentSsoCutoffTime <DateTime>
 
 After PSSO is enabled and configured, AD FS creates a persistent cookie immediately after user authentication. PSSO avoids the need to reauthenticate in subsequent sessions, as long as the cookie is still valid.
 
-Users can also avoid extra authentication prompts for Office 365 and SharePoint Online. Configure the following two claims rules in AD FS to trigger persistence at Microsoft Azure AD and SharePoint Online. To enable PSSO for Office 365 users to access SharePoint online, install this [hotfix](https://support.microsoft.com/kb/2958298/). It's part of the [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
+Users can also avoid extra authentication prompts for Office 365 and SharePoint Online. Configure the following two claims rules in AD FS to trigger persistence at Microsoft Entra ID and SharePoint Online. To enable PSSO for Office 365 users to access SharePoint online, install this [hotfix](https://support.microsoft.com/kb/2958298/). It's part of the [August 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/kb/2975719).
 
  An Issuance Transform rule to pass through the InsideCorporateNetwork claim
 
@@ -166,4 +163,4 @@ AD FS issues a new refresh token only if the validity of the newer refresh token
 
 Federated users who don't have the **LastPasswordChangeTimestamp** attribute synced are issued session cookies and refresh tokens that have a **Max Age value of 12 hours**.
 
-Max Age value session cookies and refresh tokens are issued because Azure AD can't determine when to revoke tokens that are related to an old credential. This behavior could be caused by a password that has been changed, for example. Azure AD must check more frequently to make sure that user and associated tokens are still valid.
+Max Age value session cookies and refresh tokens are issued because Microsoft Entra ID can't determine when to revoke tokens that are related to an old credential. This behavior could be caused by a password that has been changed, for example. Microsoft Entra ID must check more frequently to make sure that user and associated tokens are still valid.

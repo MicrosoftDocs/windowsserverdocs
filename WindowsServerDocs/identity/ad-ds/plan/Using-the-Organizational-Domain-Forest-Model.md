@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Using the Organizational Domain Forest Model"
-ms.assetid: 093ef1ae-ebc1-490f-9fb1-2c000ce89eb6
 title: Using the Organizational Domain Forest Model
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 08/07/2018
-ms.topic: article
+ms.author: roharwoo
+author: robinharwood
+ms.date: 05/12/2025
+ms.topic: concept-article
 ---
 
 # Using the Organizational Domain Forest Model
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In the organizational domain forest model, several autonomous groups each own a domain within a forest. Each group controls domain-level service administration, which enables them to manage certain aspects of service management autonomously while the forest owner controls forest-level service management.
 

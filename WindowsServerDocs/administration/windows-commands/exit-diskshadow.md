@@ -2,8 +2,8 @@
 title: exit (diskshadow)
 description: Reference article for exit, which exits the DiskShadow command interpreter.
 ms.topic: reference
-ms.author: wscontent
-author: xelu86
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2023
 ---
 

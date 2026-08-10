@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: AD FS user sign-in customization"
-ms.assetid: 61b6c115-1082-45d5-b0b1-ed24d06fcdce
 title: AD FS user sign-in customization
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 # AD FS user sign-in customization
 

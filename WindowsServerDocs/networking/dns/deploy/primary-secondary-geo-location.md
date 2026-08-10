@@ -1,16 +1,12 @@
 ---
 title: Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
 description: Learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.
-manager: brianlic
-ms.topic: article
-ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to create DNS policy for geo-location based traffic management when your DNS deployment includes both primary and secondary DNS servers.
 
@@ -97,7 +93,7 @@ The following sections provide detailed configuration instructions.
 
 You can create the secondary copy of the zone you want to replicate to SecondaryServer1 and SecondaryServer2 (assuming the cmdlets are being executed remotely from a single management client).
 
-For example, you can create the secondary copy of www.woodgrove.com on SecondaryServer1 and SecondarySesrver2.
+For example, you can create the secondary copy of www.woodgrove.com on SecondaryServer1 and SecondaryServer2.
 
 You can use the following Windows PowerShell commands to create the secondary zones.
 

@@ -1,16 +1,12 @@
 ---
 title: BranchCache
 description: This topic provides an overview of BranchCache in Windows Server 2016
-manager: brianlic
-ms.topic: article
-ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: jgerend
-author: JasonGerend
+ms.topic: concept-article
+author: robinharwood
+ms.author: roharwoo
 ms.date: 08/07/2020
 ---
 # BranchCache
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.
 
@@ -139,7 +135,7 @@ Because BranchCache does not require new hardware or network topology changes, i
 > Because some Web proxies cannot process non-standard Content-Encoding headers, it is recommended that you use BranchCache with Hyper Text Transfer Protocol Secure (HTTPS) and not HTTP.
 
 =======
-For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking).
+For more information about cloud technologies in Windows Server 2016, see [Software Defined Networking &#40;SDN&#41;](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking).
 
 ## <a name="bkmk_version"></a>Content information versions
 
@@ -468,3 +464,4 @@ In a hosted cache environment where the hosted cache server is running  Windows 
 > Hosted cache servers that are running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 encrypt all data in the cache by default, so the use of additional encryption technologies is not required.
 
 Even if a client is configured in hosted cache mode, it will still cache data locally, and you might want to take steps to protect the local cache in addition to the cache on the hosted cache server.
+

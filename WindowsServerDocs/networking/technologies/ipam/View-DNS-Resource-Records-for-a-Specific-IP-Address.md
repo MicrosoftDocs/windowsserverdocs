@@ -1,16 +1,13 @@
 ---
 title: View DNS Resource Records for a Specific IP Address
 description: Learn how to view the DNS resource records that are associated with the IP Address that you choose.
-manager: brianlic
-ms.topic: article
-ms.assetid: f590fb86-4195-4f90-98cb-e90459d4c1e3
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
+ms.custom: sfi-image-nochange
 ---
 # View DNS Resource Records for a Specific IP Address
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to view the DNS resource records that are associated with the IP Address that you choose.
 

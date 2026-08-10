@@ -1,51 +1,52 @@
 ---
 title: Manage Failover Clusters with Windows Admin Center
-description: Manage Failover Clusters with Windows Admin Center
-ms.topic: article
-author: PatAltimore
-ms.author: patricka
+description: Learn how to manage failover clusters by using Windows Admin Center.
+ms.topic: how-to
+author: robinharwood
+ms.author: roharwoo
 ms.date: 02/28/2022
 ---
-# Manage Failover Clusters with Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+# Manage failover clusters by using Windows Admin Center
 
 > [!Tip]
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).
 
-## Managing failover clusters
-[Failover clustering](../../../failover-clustering/failover-clustering-overview.md) is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster to increase availability and scalability of applications and services such as Scale-Out File Server, Hyper-V and Microsoft SQL Server.
+[Failover Clustering](../../../failover-clustering/failover-clustering-overview.md) is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster. The purpose is to increase availability and scalability of applications and services such as Scale-Out File Server, Hyper-V, and Microsoft SQL Server.
 
-While you can manage failover cluster nodes as individual servers by adding them with [Server Manager](manage-servers.md) in Windows Admin Center, you can also add them as Failover clusters to view and manage cluster resources, storage, network, nodes, roles, virtual machines and virtual switches.
+You can manage failover cluster nodes as individual servers by using [Server Manager](manage-servers.md) to add them in Windows Admin Center. But you can also add them as failover clusters to view and manage cluster resources, storage, networks, nodes, roles, virtual machines, and virtual switches.
 
-![Failover cluster Overview screen](../media/manage-failover-clusters/fcm-overview.png)
+![Screenshot of the list of cluster resources in Windows Admin Center.](../media/manage-failover-clusters/fcm-overview.png)
 
-## Adding a failover cluster to Windows Admin Center
-To add a cluster to Windows Admin Center:
+## Add a failover cluster to Windows Admin Center
 
-1. Click **+ Add** under All Connections.
-2. Choose to add **Server clusters**.
-3. Type the name of the cluster and, if prompted, the credentials to use.
-4. You will have the option to add the cluster nodes as individual server connections in Windows Admin Center.
-5. Click **Add** to finish.
+1. Under **All Connections**, select **+ Add**.
 
-The cluster will be added to your connection list on the Overview page. Click it to connect to the cluster.
+2. Select **Server clusters** as the connection type.
+
+3. Enter the name of the cluster. If you're prompted, enter the credentials to use.
+
+4. Choose whether to add the cluster nodes as individual server connections in Windows Admin Center.
+
+5. Select **Add** to finish.
+
+The cluster is added to your list of connections on the **Overview** page. Select it to connect to the cluster.
 
 > [!NOTE]
-> You can also manage hyper-converged clustered by adding the cluster as a [Hyper-Converged Cluster connection](manage-hyper-converged.md) in Windows Admin Center.
+> You can also manage hyper-converged clusters by adding the cluster as a [hyper-converged cluster connection](manage-hyper-converged.md) in Windows Admin Center.
 
 ## Tools
 
-The following tools are available for failover cluster connections:
+The following areas of Windows Admin Center represent tools that are available for failover cluster connections:
 
-| Tool | Description |
+| Area | Description |
 | ---- | ----------- |
-| Overview | View failover cluster details and manage cluster resources |
-| Disks | View cluster shared disks and volumes |
-| Networks | View networks in the cluster |
-| Nodes | View and manage cluster nodes |
-| Roles | Manage cluster roles or create an empty role |
-| Updates | Manage Cluster-Aware Updates (requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-)) |
-| [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
-| Virtual Switches | View and manage virtual switches |
+| **Overview** | View failover cluster details and manage cluster resources. |
+| **Disks** | View cluster shared disks and volumes. |
+| **Networks** | View networks in the cluster. |
+| **Nodes** | View and manage cluster nodes. |
+| **Roles** | Manage cluster roles or create an empty role. |
+| **Updates** | Manage Cluster-Aware Updating (requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-)). |
+| **Virtual Machines** | View and manage [virtual machines](manage-virtual-machines.md). |
+| **Virtual Switches** | View and manage virtual switches. |

@@ -1,16 +1,20 @@
 ---
 description: "Learn more about: Performance history for network adapters"
 title: Performance history for network adapters
-ms.author: cosdar
-manager: eldenc
-ms.topic: article
-author: cosmosdarwin
+ms.author: roharwoo
+ms.topic: concept-article
+author: robinharwood
 ms.date: 02/02/2018
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 
 # Performance history for network adapters
-
->Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for network adapters. Network adapter performance history is available for every physical network adapter in every server in the cluster. Remote Direct Memory Access (RDMA) performance history is available for every physical network adapter with RDMA enabled.
 
@@ -31,7 +35,7 @@ These series are collected for every eligible network adapter:
 | `netadapter.bandwidth.rdma.total`    | bits per second |
 
    > [!NOTE]
-   > Network adapter performance history is recorded in **bits** per second, not bytes per second. One 10 GbE network adapter can send and receive approximately 1,000,000,000 bits = 125,000,000 bytes = 1.25 GB per second at its theoretical maximum.
+   > Network adapter performance history is recorded in **bits per second**, not bytes per second. One 10 GbE (gigabit Ethernet) network adapter can send and receive approximately 10,000,000,000 bits per second = 1,250,000,000 bytes per second = 1.25 GB/s (gigabytes per second) at its theoretical maximum.
 
 ## How to interpret
 
@@ -76,3 +80,4 @@ Get-NetAdapter <Name> | Get-ClusterPerf
 ## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)
+

@@ -1,16 +1,12 @@
 ---
 title: Wireless Access Deployment
 description: Learn how to deploy wireless access in five steps.
-manager: brianlic
-ms.topic: article
-ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
-ms.author: jgerend
-author: JasonGerend
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 08/07/2020
 ---
 # Wireless Access Deployment
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Follow these steps to deploy wireless access:
 

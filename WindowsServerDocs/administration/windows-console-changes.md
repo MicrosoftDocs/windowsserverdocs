@@ -2,11 +2,9 @@
 title: Changes to the Windows Console in Windows Server
 description: Starting with Windows Server 2016, the console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.
 ms.date: 05/12/2021
-ms.topic: article
-ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
-author: dknappettmsft
-ms.author: daknappe
-manager: femila
+ms.topic: feature-guide
+author: robinharwood
+ms.author: roharwoo
 ---
 # Changes to the Windows Console in Windows Server
 

@@ -1,12 +1,9 @@
 ---
 description: "Learn more about: Update password customization"
-ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
 title: Update password customization
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
+ms.custom: sfi-image-nochange
 ---
 
 # Update password customization

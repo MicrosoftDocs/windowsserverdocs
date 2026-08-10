@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: How URIs Are Used in AD FS"
-ms.assetid: 53ee93e2-09ea-4f8b-adb7-c24c59f055ea
 title: How URIs Are Used in AD FS
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: concept-article
 ---
 
 

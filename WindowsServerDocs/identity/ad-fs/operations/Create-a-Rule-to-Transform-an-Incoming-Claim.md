@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Create a Rule to Transform an Incoming Claim"
-ms.assetid: ef83960f-d2cf-441f-b2b6-d97822ec7149
 title: Create a Rule to Transform an Incoming Claim
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 
 ---
 

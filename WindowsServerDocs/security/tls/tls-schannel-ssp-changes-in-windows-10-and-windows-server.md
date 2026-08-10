@@ -1,14 +1,11 @@
 ---
 description: "Learn more about: TLS (Schannel SSP) changes in Windows 10 and Windows Server 2016"
 title: TLS (Schannel SSP)
-ms.topic: article
-ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df
+ms.topic: how-to
 ms.date: 05/16/2018
 ---
 
 # TLS (Schannel SSP) changes in Windows 10 and Windows Server 2016
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows 10
 
 ## Cipher Suite Changes
 

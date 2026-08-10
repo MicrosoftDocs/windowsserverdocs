@@ -1,18 +1,15 @@
 ---
 description: "Learn more about: Determining the Interval"
-ms.assetid: 96a6749c-6c9f-4f2f-ad0a-51272d282ace
 title: Determining the Interval
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: how-to
+
 
 ---
 
 # Determining the Interval
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You must set the site link replication interval property to indicate how frequently you want replication to occur during the times when the schedule allows replication. For example, if the schedule allows replication between 02:00 hours and 04:00 hours, and the replication interval is set for 30 minutes, replication can occur up to four times during the scheduled time. The default replication interval is 180 minutes, or 3 hours. The minimum interval is 15 minutes.
 

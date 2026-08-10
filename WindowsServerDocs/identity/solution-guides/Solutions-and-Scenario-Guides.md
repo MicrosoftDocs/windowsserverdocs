@@ -1,17 +1,13 @@
 ---
 description: "Learn more about: Solutions and Scenario Guides"
-ms.assetid: bdb9ad4b-139c-4031-8f26-827432779829
 title: Solutions and Scenario Guides
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 02/13/2024
+ms.topic: solution-overview
 ---
 
 # Solutions and Scenario Guides
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 With Microsoft's access and information protection solutions, you can deploy and configure access to corporate resources across your on-premises environment and cloud applications. And you can do it while protecting corporate information.

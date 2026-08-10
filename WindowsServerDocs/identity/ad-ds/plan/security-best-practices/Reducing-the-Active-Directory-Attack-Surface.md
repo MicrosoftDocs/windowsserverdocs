@@ -1,17 +1,14 @@
 ---
 description: "Learn more about: Reducing the Active Directory Attack Surface"
-ms.assetid: 864ad4bc-8428-4a8b-8671-cb93b68b0c03
 title: Reducing the Active Directory Attack Surface
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
-ms.topic: article
+author: robinharwood
+ms.author: roharwoo
+ms.date: 05/12/2025
+ms.topic: best-practice
+
 ---
 
 # Reducing the Active Directory Attack Surface
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section focuses on technical controls to implement to reduce the attack surface of the Active Directory installation. The section contains the following information:
 
@@ -98,3 +95,8 @@ In versions of Windows earlier than Windows Server 2008, owners of an object can
 > An attribute on the AdminSDHolder object, dSHeuristics, allows limited customization (removal) of groups that are considered protected groups and are affected by AdminSDHolder and SDProp. This customization should be carefully considered if it is implemented, although there are valid circumstances in which modification of dSHeuristics on AdminSDHolder is useful. More information about modification of the dSHeuristics attribute on an AdminSDHolder object can be found in the Microsoft Support articles [817433](https://support.microsoft.com/?id=817433) <!--and [973840](https://support.microsoft.com/kb/973840),--> and in [Appendix C: Protected Accounts and Groups in Active Directory](Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md).
 
 Although the most privileged groups in Active Directory are described here, there are a number of other groups that have been granted elevated levels of privilege. For more information about all of the default and built-in groups in Active Directory and the user rights assigned to each, see [Appendix B: Privileged Accounts and Groups in Active Directory](./Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md).
+
+## Related content
+
+- [Tier Model for Active Directory Domain Services](../../tier-model.md)
+

@@ -2,16 +2,12 @@
 title: Configure Network Policy Server Certificate Revocation List registry settings for Windows Server
 description: This article provides information about configuring Certificate Revocation List registry settings for EAP-TLS authentication on a Network Policy Server in a Windows Server environment.
 ms.topic: how-to
-ms.assetid: 9624b301-d9f9-4d97-8651-39bf4bbae83e
-ms.author: wscontent
-author: marcussa
+author: robinharwood
+ms.author: roharwoo
 ms.date: 10/31/2023
-ms.contributor: alalve
 ---
 
 # Configure Network Policy Server Certificate Revocation List check registry settings
-
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When using a Network Policy Server (NPS) to enforce certificate-based authentication for network access, it's important to configure Certificate Revocation Lists (CRLs) to ensure that only valid certificates are accepted. CRLs are used to check whether a digital certificate has been revoked by the Certificate Authority (CA) before its scheduled expiration date. In an NPS, CRLs can be configured to be checked during the authentication process to ensure that only valid certificates are used for network access. Configuring NPS CRLs is an important step in implementing a secure network access infrastructure.
 
@@ -90,3 +86,4 @@ To manually update the CRL on your NPS server, run these commands in the command
 certutil -urlcache * delete
 certutil -setreg chain\ChainCacheResyncFiletime @now
 ```
+

@@ -1,16 +1,12 @@
 ---
 title: Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
 description: Learn how to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.
-manager: brianlic
 ms.topic: how-to
-ms.assetid: da956be0-c92d-46ea-99eb-85e2bd67bf07
-ms.author: jgerend
-author: JasonGerend
+author: robinharwood
+ms.author: roharwoo
 ms.date: 01/05/2021
 ---
 # Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the information in this topic to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.
 
@@ -43,6 +39,7 @@ Firewall settings must allow inbound and outbound traffic. You can use the follo
 Inbound traffic: Local port: 80, Remote port: ephemeral
 
 Outbound traffic: Local port: ephemeral, Remote port: 80
+
 
 
 

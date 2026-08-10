@@ -1,17 +1,13 @@
 ---
 title: Guest clustering in a virtual network
 description: Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network.  Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
-manager: grcusanz
-ms.topic: article
-ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
-ms.author: grcusanz
-author: AnirbanPaul
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 11/20/2021
 ---
 
 # Guest clustering in a virtual network
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Virtual machines connected to a virtual network are only permitted to use the IP addresses that Network Controller has assigned to communicate on the network. Clustering technologies that require a floating IP address, such as Microsoft Failover Clustering, require some extra steps to function correctly.
 

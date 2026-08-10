@@ -1,12 +1,9 @@
 ---
 title: AD FS Password Attack protection
 description:  This document describes how to protect AD FS users from password attacks
-author: billmath
-manager: amycolannino
 ms.reviewer: andandyMSFT
-ms.date: 08/15/2023
-ms.topic: article
-ms.author: billmath
+ms.date: 04/08/2025
+ms.topic: best-practice
 ---
 
 # What is a password attack?
@@ -61,7 +58,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 1. Monitor & Block suspicious IP addresses
 
-    If you have Azure AD Premium, implement Connect Health for AD FS, and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
+    If you have Microsoft Entra ID P1 or P2, implement Connect Health for AD FS, and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
 
     a. Licensing is not for all users and requires 25 licenses per AD FS/WAP server that may be easy for a customer.
 
@@ -75,7 +72,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
      b. If you are on AD FS 2012 R2 or lower, block the IP address directly at Exchange Online and optionally on your firewall.
 
-1. If you have Azure AD Premium, use [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to prevent guessable passwords from getting into Azure AD.
+1. If you have Microsoft Entra ID P1 or P2, use [Microsoft Entra Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) to prevent guessable passwords from getting into Microsoft Entra ID.
 
     a. If you have guessable passwords, you can crack them with just 1-3 attempts. This feature prevents these from getting set.
 
@@ -91,15 +88,15 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 1. Enable MFA for all extranet access. This gives you added protection for any extranet access.
 
-    a. If you have Azure AD premium, use [Azure AD Conditional Access policies](/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Azure AD, when requesting a new access token (typically every hour) using a refresh token.
+    a. If you have Microsoft Entra ID P1 or P2, use [Microsoft Entra Conditional Access policies](/azure/active-directory/conditional-access/overview) to control this.  This is better than implementing the rules at AD FS.  This is because modern client apps are enforced on a more frequent basis.  This occurs, at Microsoft Entra ID, when requesting a new access token (typically every hour) using a refresh token.
 
-    b. If you don't have Azure AD premium or have additional apps on AD FS that you allow internet based access, implement Azure AD Multi-Factor Authentication and configure a [global multi-factor authentication policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
+    b. If you don't have Microsoft Entra ID P1 or P2 or have additional apps on AD FS that you allow internet based access, implement Microsoft Entra multifactor authentication and configure a [global multifactor authentication policy](../../ad-fs/operations/configure-authentication-policies.md#to-configure-multi-factor-authentication-globally) for all extranet access.
 
 ## Level 3: Move to password-less for extranet access
 
 1. Move to Window 10 and use [Hello For Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
-1. For other devices, if on AD FS 2016, you can use [Azure AD Multi-Factor Authentication OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa.md) as the first factor and password as the 2nd factor.
+1. For other devices, if on AD FS 2016, you can use [Microsoft Entra multifactor authentication OTP](../../ad-fs/operations/configure-ad-fs-and-azure-mfa.md) as the first factor and password as the 2nd factor.
 
 1. For mobile devices, if you only allow MDM managed devices, you can use [Certificates](../../ad-fs/operations/configure-user-certificate-authentication.md) to log the user in.
 
@@ -116,4 +113,4 @@ If the AD FS environment is under active attack, the following steps should be i
 - [Upgrade to AD FS server 2016](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md)
 - [Extranet smart lockout in AD FS 2016](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md)
 - [Configure conditional access policies](/azure/active-directory/conditional-access/overview)
-- [Azure AD password protection](/azure/active-directory/authentication/howto-password-ban-bad-on-premises)
+- [Microsoft Entra password protection](/azure/active-directory/authentication/howto-password-ban-bad-on-premises)

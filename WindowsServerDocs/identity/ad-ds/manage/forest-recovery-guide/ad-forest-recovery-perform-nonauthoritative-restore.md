@@ -2,15 +2,15 @@
 title: Active Directory Forest Recovery - Performing a nonauthoritative restore of Active Directory Domain Services
 description: The following procedures use the wbadmin.exe to perform a nonauthoritative restore of Active Directory or Active Directory Domain Services (AD DS). If you're using a different backup solution or if you intend to complete the authoritative restore of SYSVOL later in the forest recovery process...
 perform an authoritative restore of SYSVOL by using these alternative methods:
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: roharwoo
+author: robinharwood
 ms.date: 06/21/2023
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Active Directory Forest Recovery - Perform a nonauthoritative restore of Active Directory Domain Services
 
-> Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 and 2012
+> 
 
 To perform a nonauthoritative restore, complete the following procedure.
 
@@ -53,3 +53,5 @@ For example:
 ## Next steps
 
 [!INCLUDE [ad-forest-recovery-guide-links](includes/ad-forest-recovery-guide-links.md)]
+
+

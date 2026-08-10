@@ -1,10 +1,10 @@
 ---
 title: Customize the RDS title “Work Resources” using PowerShell on Windows Server
 description: Provides description of how to change workspace name from default in Windows Server.
-ms.author: helohr
-ms.date: 10/26/2017
-ms.topic: article
-author: Heidilohr
+author: robinharwood
+ms.date: 7/3/2024
+ms.topic: how-to
+ms.author: roharwoo
 ---
 # Customize the RDS title “Work Resources” using PowerShell on Windows Server
 
@@ -35,3 +35,4 @@ If you are running multiple Connection Brokers in High Availability mode, you mu
 ```
 
 For more information about the Set-RDWorkspace cmdlet, see the [Set-RDSWorkspace](/powershell/module/remotedesktop/set-rdworkspace) reference.
+

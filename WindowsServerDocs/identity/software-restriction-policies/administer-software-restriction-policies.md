@@ -1,16 +1,12 @@
 ---
 title: Administer Software Restriction Policies
 description: Learn how to administer application control policies using Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
-ms.topic: article
-ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
-ms.author: jgerend
-author: JasonGerend
-manager: mtillman
+ms.topic: how-to
+ms.author: roharwoo
+author: robinharwood
 ms.date: 10/12/2016
 ---
 # Administer Software Restriction Policies
-
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic for the IT professional contains procedures how to administer application control policies using Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 

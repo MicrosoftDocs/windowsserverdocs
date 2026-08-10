@@ -1,12 +1,8 @@
 ---
 description: "Learn more about: Create a Rule to Send Claims Using a Custom Rule"
-ms.assetid: 38eb3726-e97b-484e-9926-67e8a046b0c5
 title: Create a Rule to Send Claims Using a Custom Rule
-author: billmath
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 02/13/2024
+ms.topic: how-to
 ---
 
 # Create a Rule to Send Claims Using a Custom Rule

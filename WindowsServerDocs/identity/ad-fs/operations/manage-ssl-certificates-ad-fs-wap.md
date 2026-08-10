@@ -1,12 +1,8 @@
 ---
-ms.assetid: a3f50046-5d48-43d3-b0f8-ac2346b15285
 title: Manage TLS/SSL Certificates in AD FS and WAP in Windows Server 2016
 description: Learn how to manage TLS/SSL Certificates in Active Directory Federation Services (AD FS) and WAP in Windows Server 2016.
-author: jenfieldmsft
-ms.author: billmath
-manager: amycolannino
-ms.date: 08/15/2023
-ms.topic: article
+ms.date: 04/08/2025
+ms.topic: how-to
 ---
 
 # Manage TLS/SSL certificates in AD FS and WAP in Windows Server 2016
@@ -14,7 +10,7 @@ ms.topic: article
 This article describes how to deploy a new TLS/SSL certificate to your Active Directory Federation Services (AD FS) and Web Application Proxy (WAP) servers.
 
 > [!NOTE]
-> The recommended way to replace the TLS/SSL certificate going forward for an AD FS farm is to use Azure AD Connect. For more information, see [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
+> The recommended way to replace the TLS/SSL certificate going forward for an AD FS farm is to use Microsoft Entra Connect. For more information, see [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
 ## Obtain your TLS/SSL certificates
 

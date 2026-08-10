@@ -1,17 +1,21 @@
 ---
 description: "Learn more about: Performance history for Storage Spaces Direct"
 title: Performance history for Storage Spaces Direct
-ms.author: cosdar
-manager: eldenc
-ms.topic: article
-author: cosmosdarwin
-ms.date: 09/07/2018
+ms.author: roharwoo
+ms.topic: concept-article
+author: robinharwood
+ms.date: 10/25/2024
+appliesto: [
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2019</a>",
+			"✅ <a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2016</a>",
+			"✅ <a href=\"https://learn.microsoft.com/azure/azure-local/release-information-23h2\" target=\"_blank\">Azure Local 2311.2 and later</a>"
+		   ]
 ---
 # Performance history for Storage Spaces Direct
 
->Applies to: Windows Server 2022, Windows Server 2019
-
-Performance history is a new feature that gives [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
+Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
    > [!IMPORTANT]
    > This feature is new in Windows Server 2019. It is not available in Windows Server 2016.
@@ -198,7 +202,7 @@ Stop-ClusterPerformanceHistory -DeleteHistory
 
 ### The cmdlet doesn't work
 
-An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server Insider Preview build 17692 or later, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
+An error message like "*The term 'Get-ClusterPerf' is not recognized as the name of a cmdlet*" means the feature is not available or installed. Verify that you have Windows Server 2025, that you've installed Failover Clustering, and that you're running Storage Spaces Direct.
 
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
@@ -221,4 +225,5 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 ## Additional References
 
-- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
+- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+
