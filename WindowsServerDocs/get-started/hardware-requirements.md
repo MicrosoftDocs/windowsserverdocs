@@ -43,7 +43,7 @@ Processor performance depends not only on the clock frequency of the processor, 
 
 ::: zone-end
 
-You can utilize [Coreinfo](/sysinternals/downloads/coreinfo), which is a tool included in Microsoft Sysinternals suite, to verify the capabilities of your CPU.
+To check your CPU capabilities, use [Coreinfo](/sysinternals/downloads/coreinfo), a tool that's part of the Microsoft Sysinternals suite.
 
 # [RAM](#tab/ram)
 
