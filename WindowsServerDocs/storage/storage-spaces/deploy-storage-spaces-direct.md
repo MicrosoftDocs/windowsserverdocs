@@ -97,12 +97,13 @@ Net localgroup Administrators <Domain\Account> /add
 
 The next step is to install server roles on every server through [Windows Admin Center](../../manage/windows-admin-center/use/manage-servers.md), [Server Manager](../../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md), or PowerShell. Here are the roles to install:
 
-- Failover Clustering
-- Hyper-V
-- File Server (if you want to host any file shares, such as for a converged deployment)
-- Data-Center-Bridging (if you're using RoCEv2 instead of iWARP network adapters)
-- RSAT-Clustering-PowerShell
-- Hyper-V-PowerShell
+•	Failover Clustering (required to enable S2D)
+•	Hyper-V (required if using virtual switch network)
+•	File Server (required if you want to host any file shares, such as for a converged deployment)
+•	Data-Center-Bridging (required if you're using RoCEv2 instead of iWARP network adapters)
+•	RSAT-Clustering-PowerShell (required for managing the environment with powershell remotely)
+•	Hyper-V-PowerShell (required for Hyper-V powershell commands)
+
 
 To install roles via PowerShell, use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
