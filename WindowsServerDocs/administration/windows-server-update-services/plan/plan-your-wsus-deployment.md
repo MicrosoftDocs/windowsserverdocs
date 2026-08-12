@@ -99,6 +99,21 @@ Two file types are required for the on-premises update management with UUP. The 
    - MIME type: `application/octet-stream`
 1. Select **OK** when you're finished adding the MIME type. 
 
+### UUP on Prem Considerations
+
+Two file types are reqauired for the on-premises update management with Unified Update Platform.  You need to add .msu and .wim MIME types on your WSUS servers to support UUP on premises.  An update for WSUS is coming in 2023.03B cumlative security update.  You can also follow these steps to add teh required file types manually:
+
+1. On your Windows Server install, open Server Manager.
+2. Select **Internet Information Services (IIS)** in the left column.
+3. Right click on your server in the list of servers.
+4. Select **Internet Information Services (IIS) Manager**.
+5. Select your server from the connections list on the left side of the window that opens.  
+6. In the center pane, scroll down and double cick **MIME types**.  
+7. On the right side select **Add**.
+8. Create a MIME Type with the extension ".wim" and the MIME Type "applicatin/x-ms-wim."
+9. Select **Add** again.
+10. Create a MIME type with the extension ".msu" and the MIME Type "application/octet-stream."  
+
 ### Features on Demand Considerations
 
 Be aware that configuring client computers (including servers) to update by using WSUS will result in the following limitations:
