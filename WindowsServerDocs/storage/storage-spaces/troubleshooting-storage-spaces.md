@@ -350,7 +350,7 @@ There are two ways to check:
     {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST,HUH721010AL4200,7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    Cache Not Enabled: When all disks are of the same type, case isn't enabled by default. Here you can see there's no GUID present and the state is `CacheDiskStateIneligibleDataPartition`.
+    Cache Not Enabled: When all disks are of the same type, cache isn't enabled by default. Here you can see there's no GUID present and the state is `CacheDiskStateIneligibleDataPartition`.
 
     ```
     {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe,INTEL SSDPE7KX02,PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
