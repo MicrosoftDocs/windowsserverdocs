@@ -45,6 +45,8 @@ The purpose of the AdminSDHolder object is to provide "template" permissions for
 
 While the Administrators group owns most objects in an Active Directory domain, the Domain Admins group owns the AdminSDHolder object. By default, Enterprise Admins can make changes to any domain's AdminSDHolder object, as can the domain's Domain Admins and Administrators groups. Additionally, although the default owner of AdminSDHolder is the domain's Domain Admins group, members of Administrators or Enterprise Admins can take ownership of the object.
 
+> [!NOTE]
+> If the user object has been removed from a Protected Group, the SDProp process will no longer evaluate this account for new updates on the AdminSDHolder permissions. Therefore it is recommended to set the adminCount attribute back to 0, then re-enable inheritance to complete the ‘de-admining’ process.
 #### SDProp
 
 SDProp is a process that runs every 60 minutes (by default) on the domain controller that holds the domain's PDC Emulator (PDCE). SDProp compares the permissions on the domain's AdminSDHolder object with the permissions on the protected accounts and groups in the domain. If the permissions on any of the protected accounts and groups do not match the permissions on the AdminSDHolder object, SDProp resets the permissions on the protected accounts and groups to match those configured for the domain's AdminSDHolder object.
