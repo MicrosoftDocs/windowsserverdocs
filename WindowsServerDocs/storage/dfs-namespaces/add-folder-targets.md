@@ -37,6 +37,10 @@ The following animation demonstrates the steps to add a folder target by using D
 
 If the folder is replicated using DFS Replication, you can specify whether to add the new folder target to the replication group.
 
+> [!CAUTION]
+> If there is an existing folder in the DFS Namespace with the same Name used in the New Folder prompt, the existing folder will be renamed without warning. A new, empty folder will be created with the provided Name value.
+> For example, if \\\\server\\share\\images already exists, and you use the New Folder form in DFS Management to add a folder named images to the \\\\server\\share namespace. No warning will be show, the existing images folder will be renamed to "DFS.&lt;GUID&gt;images", and a new, empty folder named images will be created. Where &lt;GUID&gt; is a randomly generated [globally uniquie identifier](https://learn.microsoft.com/en-us/windows/win32/api/guiddef/ns-guiddef-guid).
+
 > [!TIP]
 > To add a folder target by using Windows PowerShell, use the [New-DfsnFolderTarget](/powershell/module/dfsn/new-dfsnfoldertarget) cmdlet. The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
