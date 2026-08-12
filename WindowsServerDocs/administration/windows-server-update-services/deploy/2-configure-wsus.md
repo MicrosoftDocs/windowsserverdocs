@@ -61,8 +61,6 @@ Your first WSUS server must have outbound access to ports 80 and 443 on the foll
 
 - http\://\*.download.windowsupdate.com
 
-- http\://wustat.windows.com
-
 - http\://ntservicepack.microsoft.com
 
 - http\://go.microsoft.com
