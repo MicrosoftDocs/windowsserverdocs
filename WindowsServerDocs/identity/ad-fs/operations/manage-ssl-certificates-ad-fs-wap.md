@@ -28,10 +28,19 @@ For requirements, including naming root of trust and extensions, see [AD FS and 
 
 ## Replace the TLS/SSL certificate for AD FS
 
+First, determine whether your AD FS servers run default certificate authentication binding mode or alternate client TLS binding mode.
+You can do so by verifying the value for the `TlsClientPort` in the ADFS Properties
+
+```powershell
+(Get-AdfsProperties).TlsClientPort
+```
+If the value returned is 49443 the AD FS Farm is running in default certificate authentication binding mode.  
+If the value returned is 443 the AD FS is running in alternate TLS binding mode.  
+
+Alternatively use `Get-AdfsSslCertificate` and verify if the 49443 binding or the certauth binding is present.  
+
 > [!NOTE]
 > The AD FS TLS/SSL certificate isn't the same as the AD FS Service communications certificate found in the AD FS Management snap-in. To change the AD FS TLS/SSL certificate, you need to use PowerShell.
-
-First, determine whether your AD FS servers run default certificate authentication binding mode or alternate client TLS binding mode.
 
 ### Replace the TLS/SSL certificate for AD FS running in default certificate authentication binding mode
 
@@ -87,7 +96,7 @@ dir Cert:\LocalMachine\My\
 - The `Set-AdfsSslCertificate` and `Set-AdfsAlternateTlsClientBinding` cmdlets have to run only on the primary server. The primary server has to run Server 2016, and you should raise the farm behavior level to 2016.
 - The `Set-AdfsSslCertificate` and `Set-AdfsAlternateTlsClientBinding` cmdlets use PowerShell Remoting to configure the other AD FS servers, make sure port 5985 (TCP) is open on the other nodes.
 - The `Set-AdfsSslCertificate` and `Set-AdfsAlternateTlsClientBinding` cmdlets grant the adfssrv principal read permissions to the private keys of the TLS/SSL certificate. This principal represents the AD FS service. It's not necessary to grant the AD FS service account read access to the private keys of the TLS/SSL certificate.
-
+- The `Set-AdfsSslCertificate` and `Set-AdfsAlternateTlsClientBinding` cmdlets support the optional `-Member` parameter accepting a list of server names against which the command should be run. This can be used to update the bindings on specific servers only. eg: a given node was offline or otherwise unreachable whilst updating the bindings.
 ## Replace the TLS/SSL certificate for the Web Application Proxy
 
 If you want to configure both, the default certificate authentication binding or alternate client TLS binding mode on the WAP, you can use the `Set-WebApplicationProxySslCertificate` cmdlet.
