@@ -127,7 +127,7 @@ To migrate a service account to a dMSA, follow these steps:
 ### Complete account migration
 
 > [!WARNING]
-> When finalizing the migration, **never** delete the original service account in case you need to revert back to it post migration as this causes several issues.
+> When finalizing the migration, **never** delete the original service account! Deleting the original service account prevents you to revert back to a previous state, but also prevents anything still using/configured with that original service account from authenticating successfully. The original service account, although disabled, is the link between the services running the original service account and the dMSA in AD. Deleting the original service account breaks that linkage and logons will fail! Resetting the password in AD of original service account to a stronger password is OK, unless you need to revert back to the previous state. Keeping the history of password(s) of the original service account in a secure password may therefore be recommended.
 
 To complete the account migration, traditional service accounts must be disabled to ensure that all services use the dMSA.
 
