@@ -560,6 +560,10 @@ If you copied the system disk manually, you must create a new virtual machine us
 3. On the Connect Virtual Hard Disk page, specify the copied system disk.
 
 4. Complete the wizard to create the VM.
+    
+> Note: While virtualized domain controllers can perform well when configured with dynamic memory, not all components within Active Directory were designed 
+    to work with dynamic memory. If the virtualized domain controller is expected to handle large and/or atypical workloads, performance may be better if
+    the virtual machine is configured with a static amount of memory.
 
 If there were multiple disks, network adapters, or other customizations, configure them before starting the domain controller. The "Export-Import" method of copying disks is recommended for complex VMs.
 
