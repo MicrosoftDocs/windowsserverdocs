@@ -1,150 +1,159 @@
 ---
-title: DNS Aging and Scavenging in Windows Server
-description: Learn about DNS aging and scavenging in Windows Server, including prerequisites, terminology, and the aging and scavenging process for a sample record.
+title: DNS aging and scavenging in Windows Server
+description: Learn how DNS aging and scavenging in Windows Server find and remove stale resource records, including terminology, intervals, and the record lifecycle.
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 02/06/2025
-
+ms.date: 08/14/2026
+ai-usage: ai-assisted
+# Customer intent: As a DNS or AD DS administrator, I want to understand how aging and scavenging decide when a record is stale, so that I can enable them safely without deleting valid records.
 ---
 
 # DNS aging and scavenging
 
-DNS servers running Windows Server support aging and scavenging features. These features are provided as a mechanism for performing cleanup and removal of stale resource records, which can accumulate in zone data over time.
+DNS aging and scavenging are two DNS Server features in Windows Server that work together to find and remove stale dynamic resource records from zone data over time. A stale record is one that a client registered automatically but that stays in the zone after the client is gone.
 
-## Why use aging and scavenging
+With dynamic update, resource records are added to zones automatically, for example when computers join the network. But only an administrator or the aging and scavenging process removes these records. Without cleanup, stale records accumulate and cause name resolution problems.
 
-With dynamic update, resource records are automatically added to zones when computers start on the network. However, in some cases, they aren't automatically removed when computers leave the network. For example, if a computer registers its own host (A) resource record at startup and is later improperly disconnected from the network, its host (A) resource record might not be deleted. If your network has mobile users and computers, this situation can occur frequently.
+Aging and scavenging apply to Active Directory–integrated zones too. Active Directory Domain Services (AD DS) uses multi-master replication to propagate record additions, timestamp updates, and scavenged deletions to the DNS servers that host the zone within its replication scope. Replication itself doesn't remove stale records, so you still need aging and scavenging to identify and remove them.
 
-If left unmanaged, the presence of stale resource records in zone data might cause some problems. The following are examples:
+This article explains the terminology, intervals, and record lifecycle that aging and scavenging use to decide when a record is stale. Understanding these mechanics helps you enable the features with confidence, without deleting records that are still in use.
 
-- If a large number of stale resource records remain in server zones, they can eventually take up server disk space and cause long zone transfers.
-- DNS servers with stale resource records might use outdated information to answer client queries, potentially causing the clients to experience name resolution problems on the network.
-- The accumulation of stale resource records at the DNS server can degrade its performance and responsiveness.
-- In some cases, the presence of a stale resource record in a zone could prevent a DNS domain name from being used by another computer or host device.
+## Why stale records are a problem
 
-To solve these problems, the DNS Server service has the following features:
+With dynamic update, resource records are automatically added to zones when computers start on the network, but they aren't always removed when computers leave. For example, if a computer registers its host (A) resource record at startup and is later improperly disconnected from the network, its host (A) resource record might not be deleted. On networks with mobile users and computers, this situation can occur frequently.
 
-- Time stamping, based on the current date and time set at the server computer, for any resource records added dynamically to primary-type zones. In addition, time stamps are recorded in standard primary zones where aging/scavenging is enabled.
-- For resource records that you add manually, the server assigns a time stamp value of zero. Meaning the aging process doesn't apply. These records can remain in the zone data indefinitely unless you change their time stamp or delete them.
-- The DNS Server service ages resource records in local data based on a specified refresh time period for any eligible zones. Only primary type zones that the DNS Server service loads can participate in this process.
-- Scavenging for any resource records that persist beyond the specified refresh period. When a DNS server performs a scavenging operation, it can determine aged resource records to the point of becoming stale and remove them from zone data. Servers can be configured to perform recurring scavenging operations automatically, or you can initiate an immediate scavenging operation at the server.
+If left unmanaged, stale resource records in zone data can cause the following problems:
+
+- DNS servers with stale resource records might use outdated information to answer client queries, which causes clients to experience name resolution problems on the network.
+- Many stale resource records can take up server disk space and cause long zone transfers.
+- The accumulation of stale resource records can degrade the DNS server's performance and responsiveness.
 
 > [!WARNING]
-> By default, the aging and scavenging mechanism for the DNS Server service is disabled. It should only be enabled when all parameters are fully understood. Otherwise, the server could be accidentally configured to delete records that shouldn't be deleted. If a record is accidentally deleted, users fail to resolve queries for that record. Also, any user can create the record and take ownership of it, even on zones configured for secure dynamic update.
+> By default, aging and scavenging are disabled for the DNS Server service. Enable them only after you fully understand all the parameters. Accidental misconfiguration can delete legitimate records, leaving users unable to resolve those DNS records.
 
-The server uses the time stamp of each resource record to determine when to scavenge records. You can configure aging and scavenging properties to control this process.
+## Aging and scavenging are independent mechanisms
 
-## Prerequisites
+Aging and scavenging are two independent but complementary mechanisms. You must enable both for automatic cleanup of stale records to occur.
 
-Before the aging and scavenging features of DNS can be used, several conditions must be met:
+### What aging does
 
-- Scavenging and aging must be enabled both at the DNS server and on the zone.
+Aging determines whether an incoming dynamic update can refresh the timestamp of a DNS record. Aging uses the no-refresh interval to decide whether a timestamp update is eligible. If a dynamic refresh arrives earlier than the record timestamp plus the no-refresh interval, the server discards it.
 
-By default, aging and scavenging of resource records is disabled.
+The DNS server distinguishes two kinds of records by their timestamp:
 
-- Resource records must either be dynamically added to zones or manually modified to be used in aging and scavenging operations.
+- **Dynamic records (timestamp isn't zero)**: Records added through dynamic update. The timestamp represents the date and hour of the last allowed refresh or update.
+- **Static records (timestamp is zero)**: Records added manually or from a text-based zone file. The server assigns these records a timestamp of zero, so they aren't eligible for scavenging unless you later allow dynamic updates for the record, at which point the server can assign a timestamp during a subsequent update.
 
-Typically, only those resource records added dynamically using the DNS dynamic update protocol are subject to aging and scavenging.
+### What scavenging does
 
-You can, however, enable scavenging for other resource records added through nondynamic means. For records added using a text-based zone file from another DNS server or added manually, the server sets a time stamp of zero. A time stamp of zero makes these records ineligible for use in aging and scavenging operations.
+Scavenging deletes stale records. It considers only records that have a nonzero timestamp, so it can scavenge only dynamic records. Scavenging is optional, but when you enable it, it runs automatically and periodically.
 
-In order to change this default, you can configure these records individually, reset, and permit them to use a current (nonzero) time stamp value. A current (nonzero) time stamp value enables these records to become aged and scavenged.
+Scavenging examines resource records and deletes the records that it identifies as stale. It determines the stale condition from the age that the aging process assigns to each record.
 
-> [!TIP]
-> When changing a zone from a standard primary zone to Active Directory–integrated, you might want to enable scavenging of all existing resource records in the zone. To enable aging for all existing resource records in a zone, you can use the **AgeAllRecords command**, which is available through the `dnscmd` command-line tool.
+### Conditions for scavenging a record
 
-## Terminology
+Scavenging removes a record only when it meets all four of the following conditions:
 
-The following list indicates terms used when discussing aging and scavenging.
+- Scavenging is enabled on the DNS server (a server-level setting).
+- Aging is enabled on the DNS zone where the record exists.
+- The resource record is eligible (it has a nonzero timestamp).
+- The record timestamp plus the no-refresh interval plus the refresh interval is earlier than the current server time.
 
-- **Current server time** The current date and time on the DNS server. This number can be expressed as an exact numeric value at any point in time.
+Aging alone never deletes records; it only tracks timestamps. Scavenging runs automatically as scheduled even when aging is disabled, but it skips any zone that has aging disabled and takes no action on records in those zones, even records whose timestamps would otherwise mark them as stale. You must enable both aging and scavenging to clean up stale records automatically on a given zone.
 
-- **No-refresh interval** An interval of time, determined for each zone, as bounded by the following two events:
-  
-  - The date and time when the record was last refreshed and its time stamp set.
-  - The date and time when the record next becomes available for refresh and have its time stamp reset.
+## Terminology and intervals
 
-This value is needed to decrease the number of write operations to the Active Directory database. By default, this interval is set to 7 days. 
+The following terms apply when you discuss aging and scavenging.
 
-It shouldn't be increased to an unreasonably high level, because the benefits of the aging and scavenging feature might either be lost or diminished.
+| Term | Definition |
+|---|---|
+| Current server time | The current date and time on the DNS server. It serves as the reference point for all aging calculations. |
+| No-refresh interval | The period after the server sets a record's timestamp, during which the server doesn't accept a timestamp refresh. This period reduces unnecessary replication traffic. The server acknowledges a same-data refresh as successful, but no database write occurs and the timestamp doesn't change. The server still writes updates that change record data. The default is 7 days. |
+| Refresh interval | The period after the no-refresh interval during which the server accepts a refresh. If the record isn't refreshed before this period ends, it becomes stale. The default is 7 days. |
+| Record refresh | A dynamic update that leaves the host name and IP address unchanged and revises only the timestamp. The server blocks refreshes during the no-refresh interval. |
+| Record update | A dynamic update in which the record data changes, such as a new IP address. The server always accepts updates, even during the no-refresh interval, and they reset the timestamp. |
+| Scavenging period | The interval between automatic scavenging operations on a DNS server. The default is 7 days and the minimum is 1 hour. It resets whenever the DNS service restarts. |
+| Start scavenging time | A per-zone value that indicates when the zone first becomes eligible for scavenging. For the formula, see [When scavenging can start](#when-scavenging-can-start). |
+| Resource record timestamp | The date and time value stamped on a record, to the nearest hour, by the aging process or manually by an administrator. Scavenging uses it to determine whether the record is stale. |
+| Scavenging servers | An optional advanced zone parameter that configures which DNS server IP addresses can scavenge the zone. By default, every DNS server that hosts the zone can scavenge it. |
+| dnsNode | An Active Directory object that represents a DNS name within an Active Directory–integrated zone. A `dnsNode` can contain one or more DNS records for the same host name. For example, a `dnsNode` object represents a host named `server1.contoso.com` and can contain A, AAAA, or other record types. |
+| dnsRecord | The DNS record data stored within a `dnsNode` object, such as A, AAAA, CNAME, MX, and PTR records. Active Directory–integrated zones store record data, timestamps, and aging information as attributes of the `dnsNode` object. |
+| dnsTombstoned | An Active Directory attribute that marks a `dnsNode` as logically deleted after scavenging, an administrator, or an authorized dynamic update removes its last record. The DNS Server service sets the attribute, and then AD DS replicates the tombstoned object before permanently removing it. |
+| Active Directory replication scope | The setting that defines which DNS servers receive an Active Directory–integrated zone through AD DS replication. The zone can replicate to all DNS servers running on domain controllers in the domain or forest, or to all domain controllers in the domain for Windows 2000 compatibility. |
+| Directory polling interval | The interval at which the DNS Server service polls Active Directory for changes that other domain controllers make. Polling lets the DNS server detect and load updates that replicated through Active Directory. |
 
-- **Record refresh** When a DNS dynamic update is processed for a resource record when only the resource record time stamp, and no other characteristics of the record, are revised. Refreshes generally occur for the following reasons:
+### Stale record calculation
 
-  - When a computer restarts on the network, it checks if its name and IP address are the same as before it was shut down. If the name and IP address are consistent, the computer sends a refresh to renew its associated resource records.
-  - The computer sends a periodic refresh while it's running.
-  - The Windows and Windows Server DNS Client service renews DNS registration of client resource records every 24 hours. If the dynamic update request doesn't cause modification to the DNS database, a refresh is performed.
-  - Another network service makes a refresh attempt. For example:
-    - DHCP servers renew a client address lease.
-    - Cluster servers register and update records for a cluster.
-    - The Netlogon service registers and updates resource records used by Active Directory domain controllers.
+A record is stale and eligible for deletion by scavenging when the following condition is true:
 
-- **Record update** When a DNS dynamic update is processed for a resource record where other characteristics of the record in addition to its time stamp are revised. Updates generally occur for the following reasons:
+*Record timestamp + no-refresh interval + refresh interval < current server time*
 
-  - When a new computer is added to the network. At startup, the computer sends an update to register its resource records for the first time with its configured zone.
-  - When a computer with existing records in the zone has a change in IP address, causing updates to be sent for its revised name-to-address mappings in DNS zone data.
-  - When the Netlogon service registers a new Active Directory domain controller.
+With default settings (7 days plus 7 days), a record that isn't refreshed within 14 days becomes stale. The actual deletion depends on when the next scavenging cycle runs, so a stale record can persist for up to the no-refresh interval plus the refresh interval plus the scavenging period, which is up to 21 days with all defaults.
 
-- **Refresh interval** An interval of time, determined for each zone, as bound by the following two distinct events:
+## How aging and scavenging work
 
-  - The earliest date and time when the record can be refreshed and have its time stamp reset.
-  - The earliest date and time when the record can be scavenged and removed from the zone database.
+To understand the process, consider the life span and stages of a single resource record on a server and zone where aging and scavenging are enabled.
 
-This value should be large enough to allow all clients to refresh their records. By default, this interval is set to seven days. The refresh interval shouldn't be configured too high, because the benefits of the aging and scavenging feature might either be lost or diminished. Consider the requirements and behavior of your network when setting this value.
+### Record lifecycle
 
-- **Resource record time stamp** A date and time value used by the DNS server to determine removal of the resource record when it performs aging and scavenging operations.
+The following steps describe the complete life of a dynamically registered record on a DNS server and zone where aging and scavenging are enabled:
 
-- **Scavenging period** When automatic scavenging is enabled at the server, this period represents the time between repetitions of the automated scavenging process. The default value is seven days. To prevent deterioration of DNS server performance, the minimum allowed value is one hour.
+1. **The record is created.** A host, such as `host-a.example.contoso.com`, registers its host (A) resource record with the DNS server. The server stamps the record with the current server time, to the nearest hour.
 
-- **Scavenging servers** An optional advanced zone parameter that enables you to specify a restricted list of IP addresses for DNS servers that are enabled to perform scavenging of the zone. By default, if this parameter isn't specified, all DNS servers that load a directory-integrated zone (also enabled for scavenging) attempt to perform scavenging of the zone. In some cases, this parameter can be useful if it's preferable that scavenging only be performed at some servers loading the directory-integrated zone. To set this parameter, you must specify the list of IP addresses for the servers enabled to scavenge the zone in the **ScavengingServers** parameter for the zone. Use the `dnscmd` command to set the parameter, `dnscmd` is a command-line based tool for administering Windows DNS servers. Alternatively, you can use the [Set-DnsServerScavenging](/powershell/module/dnsserver/set-dnsserverscavenging) PowerShell cmdlet.
+1. **The record lives without updates.** Immediately after registration, the no-refresh interval starts. During this interval, the server suppresses refresh attempts for the record, which reduces Active Directory replication traffic. The server still accepts updates that change record data, such as a new IP address, and each update resets the record timestamp.
 
-- **Start scavenging time** A specific time, expressed as a number. This time is used by the server to determine when a zone becomes available for scavenging.
+1. **The refresh window opens.** After the no-refresh interval expires, the refresh interval begins and the server accepts refreshes. When the server processes a refresh, it resets the timestamp and the no-refresh interval starts again.
 
-## When can scavenging start
+1. **The record becomes stale.** If the record isn't refreshed during the refresh interval, it becomes stale. The record remains in the zone until the next scavenging cycle runs.
 
-After all prerequisites for enabling the use of scavenging are met, scavenging can start for a server zone when the current server time is greater than the value of the start scavenging time for the zone.
+1. **The record is scavenged.** During scavenging, the server examines every record in the zone. For each record, the server compares the current server time to the following sum:
 
-The server sets the time value to start scavenging on a per-zone basis whenever any one of the following events occurs:
+   *Record timestamp + no-refresh interval + refresh interval*
 
-- Dynamic updates are enabled for the zone.
-- A change in the state of the **Scavenge stale resource records** check box is applied. You can use the DNS console to modify this setting at either an applicable DNS server or one of its primary zones.
-- The DNS server or service is started, causing the server to load a primary zone  which is enabled to use scavenging.
-- When a zone resumes service after being paused.
+   - If the sum is greater than the current server time, the server takes no action and the record keeps aging in the zone.
+   - If the sum is less than the current server time, the server removes the record from the zone data in server memory. For a directory-integrated zone, the server writes the deletion to AD DS, which replicates it to the other DNS servers that host the zone so they remove their copies of the record.
 
-When any of the previous events occur, the DNS server sets the value of start scavenging time by calculating the following sum:
+The following diagram shows the lifecycle of a resource record through the no-refresh interval, refresh interval, stale state, and scavenging.
 
-Current server time + Refresh interval = Start scavenging time
+:::image type="content" source="../media/aging-scavenging/aging-scavenging-process.png" alt-text="Timeline diagram tracing a DNS record from registration through the no-refresh and refresh intervals to the stale state and scavenging deletion.":::
 
-This value is used as a basis of comparison during scavenging operations.
+### When scavenging can start
 
-## Aging and scavenging example process for a record
+Scavenging can start for a zone when the current server time is greater than the zone's start scavenging time. The server sets the start scavenging time for each zone whenever any of the following events occur:
 
-To understand the process of aging and scavenging at the server, consider the life span and stages of a single resource record.
+- You enable dynamic updates for the zone.
+- The **Scavenge stale resource records** checkbox state changes.
+- The DNS Server service starts and loads a scavenging-enabled primary zone.
+- A zone resumes service after a pause.
 
-In the following example, a record is added to a server and zone where aging and scavenging are enabled. It then ages and is eventually removed from the database.
+After you enable aging on a zone, the zone gets one refresh interval of scavenging protection before it becomes eligible for scavenging.
 
-1. A sample DNS host, `host-a.example.contoso.com`, registers its host (A) resource record at the DNS server for a zone where aging/scavenging is enabled for use.
+The server calculates the start scavenging time as:
 
-1. When the DNS server registers the record, it places a time stamp on this record based on current server time.
+*Current server time (rounded down to the nearest hour) + refresh interval*
 
-   After the record time stamp is written, the DNS server doesn't accept refreshes for this record during the zone no-refresh interval. It can, however, accept updates before that time. For example, if the IP address for `host-a.example.contoso.com` changes, the DNS server can accept the update. In this case, the server also updates (resets) the record time stamp.
+### Behavior in Active Directory–integrated zones
 
-1. Upon expiration of the no-refresh period, the server begins to accept attempts to refresh this record.
+In an Active Directory–integrated zone, the server stores zone data in AD DS and replicates it through Active Directory rather than in a local text-based zone file. AD DS stores all resource records for the same name, such as the A and AAAA records for `host.contoso.com`, in a single `dnsNode` object as values of its multi-valued `dnsRecord` attribute.
 
-   After the initial no-refresh period ends, the refresh period immediately begins for the record. During this time, the server doesn't suppress attempts to refresh the record for its remaining life span.
+Scavenging and tombstoning are distinct operations:
 
-1. During and after the refresh period, if the server receives a refresh for the record, it processes it.
+- **Scavenging** removes stale `dnsRecord` values. When the server scavenges a stale record, it removes the corresponding `dnsRecord` value. If other records remain for that name, the `dnsNode` object remains.
+- **Tombstoning** is the Active Directory deletion state for the `dnsNode` object after its last record is gone. When the server removes the final record, the DNS Server service sets `dnsTombstoned` to `TRUE`, AD DS replicates the logical deletion so that other DNS servers hosting the zone stop loading the node, and normal directory cleanup removes the object later.
 
-   This resets the time stamp for the record based on the method described in step 2.
+The server uses standard zone transfers (AXFR or IXFR) only when you configure an Active Directory–integrated zone to serve a conventional, non-integrated secondary DNS server. Otherwise, zone data propagates only through Active Directory replication.
 
-1. When the server for the `example.contoso.com` zone performs subsequent scavenging, the records (and all other zone records) are examined.
+### Why we recommend one scavenging server per zone
 
-   Each record is compared to current server time based on the following sum to determine whether the record should be removed:
+Enable server-level scavenging on only one DNS server per zone. Don't configure multiple scavenging servers per zone because:
 
-   Record time stamp + **No-refresh interval** for zone + **Refresh interval** for zone
+- Scavenging events and audit data spread across multiple servers.
+- Different scavenging schedules make deletions harder to predict and trace.
+- Replication or configuration issues become more difficult to troubleshoot.
 
-   1. If the value of this sum is greater than current server time, no action is taken and the record continues to age in the zone.
+Use the `ScavengingServers` zone parameter to restrict which DNS server IP addresses can scavenge the zone. You can configure multiple servers for redundancy, but they're generally unnecessary.
 
-      Or
+## Related content
 
-   1. If the value of this sum is less than the current server time, the record is deleted from both the zone data in server memory and the DnsZone object store in Active Directory for the directory-integrated `example.contoso.com` zone.
+- [Configure DNS aging and scavenging](configure-aging-scavenging.md)
