@@ -28,9 +28,9 @@ tasklist [/s <computer> [/u [<domain>\]<username> [/p <password>]]] [{/m <module
 | /u `<domain>\<username>` | Runs the command with the account permissions of the user who is specified by `<username>` or by `<domain>\<username>`. The **/u** parameter can be specified only if **/s** is also specified. The default is the permissions of the user who is currently logged on to the computer that is issuing the command. |
 | /p `<password>` | Specifies the password of the user account that is specified in the **/u** parameter. |
 | /m `<module>` | Lists all tasks with DLL modules loaded that match the given pattern name. If the module name is not specified, this option displays all modules loaded by each task. |
-| svc | Lists all the service information for each process without truncation. Valid when the **/fo** parameter is set to **table**. |
+| /svc | Lists all the service information for each process without truncation. Valid when the **/fo** parameter is set to **table**. |
 | /v | Displays verbose task information in the output. For complete verbose output without truncation, use **/v** and **/svc** together. |
-| /fo `{table | list | csv}` | Specifies the format to use for the output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**. |
+| /fo `{table \| list \| csv}` | Specifies the format to use for the output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**. |
 | /nh | Suppresses column headers in the output. Valid when the **/fo** parameter is set to **table** or **csv**. |
 | /fi `<filter>` | Specifies the types of processes to include in or exclude from the query. You can use more than one filter or use the wildcard character (`\`) to specify all tasks or image names. The valid filters are listed in the **Filter names, operators, and values** section of this article.  |
 | /? | Displays help at the command prompt. |
@@ -39,7 +39,7 @@ tasklist [/s <computer> [/u [<domain>\]<username> [/p <password>]]] [{/m <module
 
 | Filter Name | Valid Operators | Valid Value(s) |
 |--|--|--|
-| STATUS | eq, ne | `RUNNING | NOT RESPONDING | UNKNOWN`. This filter isn't supported if you specify a remote system. |
+| STATUS | eq, ne | `RUNNING \| NOT RESPONDING \| UNKNOWN \| SUSPENDED`. This filter isn't supported if you specify a remote system. |
 | IMAGENAME | eq, ne | Image name |
 | PID | eq, ne, gt, lt, ge, le | PID value |
 | SESSION | eq, ne, gt, lt, ge, le | Session number |
