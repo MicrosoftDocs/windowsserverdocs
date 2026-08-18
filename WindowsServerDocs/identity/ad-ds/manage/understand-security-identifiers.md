@@ -241,6 +241,10 @@ The following table lists the well-known SIDs:
 |S-1-5-32-578|Builtin\Hyper-V Administrators|A built-in local group. Members of this group have complete and unrestricted access to all features of Hyper-V.|
 |S-1-5-32-579|Builtin\Access Control Assistance Operators|A built-in local group. Members of this group can remotely query authorization attributes and permissions for resources on the computer.|
 |S-1-5-32-580|Builtin\Remote Management Users|A built-in local group. Members of this group can access Windows Management Instrumentation (WMI) resources over management protocols such as Web Services for Management (WS-Management) via the Windows Remote Management service. This access applies only to WMI namespaces that grant access to the user.|
+|S-1-5-32-581|Builtin\System Managed Accounts Group|Members of this group are managed by the system.|
+|S-1-5-32-582|Builtin\Storage Replica Administrators|Members of this group have complete and unrestricted access to all features of Storage Replica.|
+|S-1-5-32-583|Builtin\Device Owners|Members of this group can change system-wide settings.|
+|S-1-5-32-585|Builtin\OpenSSH Users|Members of this group may connect to this computer using SSH.|
 | S-1-5-64-10| NTLM Authentication| A SID that's used when the New Technology LAN Manager (NTLM) authentication package authenticates the client.|
 | S-1-5-64-14 | SChannel Authentication| A SID that's used when the Secure Channel (Schannel) authentication package authenticates the client.|
 | S-1-5-64-21 | Digest Authentication| A SID that's used when the Digest authentication package authenticates the client.|
