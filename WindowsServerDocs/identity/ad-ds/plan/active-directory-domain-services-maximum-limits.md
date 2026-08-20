@@ -215,9 +215,17 @@ In real-world deployments, errors begin to appear when the object approaches the
 
 For more information about the limit, see the [AD database details article](/previous-versions/windows/it-pro/windows-server-2003/cc772829(v=ws.10)#maximum-database-record-size), [many DNS records on a single DNS name](/troubleshoot/windows-server/identity/problems-with-dc-ad-integrated-dns-zones), and [Active Directory replication error 8304: The maximum size on an object has been exceeded](/troubleshoot/windows-server/identity/active-directory-replication-error-8304).
 
+Note this also applies to schema objects, for example how many attributes you can add to a class with "maycontain" attribute values. In this case you can add additional attribtues through auxiliary classes.
+
 ## Maximum size of Active Directory objects
+
+When you want to add object data beyond the database limit, you get an error like:
+The server side error is: 0x2024 The administrative limit for this request was exceeded.
+The extended server error is:
+00002024: SvcErr: DSID-0205089D, problem 5008 (ADMIN_LIMIT_EXCEEDED), data -1026
 
 To change an attribute with a lot of data, you must store the new and old values in the database transaction. Storing the values lets you roll back the transaction if the database shuts down in the middle of the transaction. The maximum size of a transaction limits the total blob size of attribute value data to 5 MB.
 
 The maximum size of the Active Directory transactions that you can perform also affects the limit of how many group members you can have before link-value replication and how many transactions in group membership changes exist.
 
+Another related limit is the number of attributes that can be populated on an AD object. In testing we find 830-950 non-linked attributes can be populated with 8KB database page size. With 32KB database pages, you can get to about 2500 attributes. If you have the need to store this many attributes, you should consider having additional child objects for your purpose.
