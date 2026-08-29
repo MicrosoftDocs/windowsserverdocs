@@ -47,7 +47,7 @@ typeperf -qx [object] [options]
 To write the values for the local computer's performance counter `\Processor(_Total)\% Processor Time` to the command window at a default sample interval of 1 second until CTRL+C is pressed, type:
 
 ```
-typeperf \Processor(_Total)\% Processor Time
+typeperf "\Processor(_Total)\% Processor Time"
 ```
 
 To write the values for the list of counters in the file *counters.txt* to the tab-delimited file *domain2.tsv* at a sample interval of 5 seconds until 50 samples have been collected, type:
