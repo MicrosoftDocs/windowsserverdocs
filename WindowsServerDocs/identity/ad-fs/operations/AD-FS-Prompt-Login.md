@@ -38,28 +38,29 @@ The following is a list of AD FS versions that support the `prompt=login` parame
 
 Use the [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) module to configure the setting.
 
-1. First obtain the current values of `FederatedIdpMfaBehavior`, `PreferredAuthenticationProtocol`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
+1. First obtain the current Domain Federation Configuration for the federated domain by running the following PowerShell command:
 
    ```powershell
-   Get-MgDomainFederationConfiguration -DomainId <your_domain_name> | Format-List *
+   $tdo= Get-MgDomainFederationConfiguration -DomainID <your_domain_name>
    ```
 
    > [!NOTE]
-   > The output of `Get-MgDomainFederationConfiguration` by default does not display certain properties in the console. To view all the properties you should pipe (`|`) its output to `Format-List *` to force the output of all the properties of the object.
+   > You can review the current configuration settings by calling the $tdo parameter.  To view all the properties you should pipe (|) its output to Format-List * to force the output of all the properties of the object.
 
-   If the value of the property `PromptLoginBehavior` is empty (`$null`) the behavior of `TranslateToFreshPasswordAuth` is used.
+   If the value of the property `PromptLoginBehavior` is empty (`$null`) the behavior of `translateToFreshPasswordAuthentication` is used.
 
 2. Configure the desired value of `PromptLoginBehavior` by running the following command:
 
    ```powershell
-   New-MgDomainFederationConfiguration -DomainId <your_domain_name> `
-      -FederatedIdpMfaBehavior <current_value_from_step1> `
-      -PreferredAuthenticationProtocol <current_value_from_step1> `
-      -PromptLoginBehavior <TranslateToFreshPasswordAuth|nativeSupport|Disabled>
-   ```
+   Update-MgDomainFederationConfiguration -DomainId <your_domain_name>  `
+   -InternalDomainFederationId $tdo.Id  `
+   -PromptLoginBehavior <translateToFreshPasswordAuthentication | nativeSupport | disabled>
 
+   ```
+   > [!NOTE]
+   > Graph is case-senstive. Provide the value as documented in this article.
 Following are the possible values of `PromptLoginBehavior` parameter and their meaning:
 
-- **TranslateToFreshPasswordAuth**: means the default Microsoft Entra behavior of translating `prompt=login` to `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
+- **translateToFreshPasswordAuthentication**: means the default Microsoft Entra behavior of translating `prompt=login` to `wauth=https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` and `wfresh=0`.
 - **nativeSupport**: means that the `prompt=login` parameter will be sent as is to AD FS. This is the recommended value if AD FS is in Windows Server 2012 R2 with the July 2016 update rollup or higher.
-- **Disabled**: means that only `wfresh=0` is sent to AD FS.
+- **disabled**: means that only `wfresh=0` is sent to AD FS.
