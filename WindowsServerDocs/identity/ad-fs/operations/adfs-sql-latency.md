@@ -36,25 +36,29 @@ In the event of a network glitch, which results in AD FS missing the SQL notific
 
 The configuration file supports multiple cache entries. The following listed below can all be configured based on the needs of your organization.
 
-The following example enables the background cache refresh and sets the cache refresh period to 1800 seconds, or 30 minutes. This must be done on each AD FS node and the AD FS service must be restarted afterwards. The changes do not impact other nodes and test the first node before making the change in all the nodes.
+The following example enables the background cache refresh and sets the cache refresh period to 3600 seconds, or 60 minutes. This must be done on each AD FS node and the AD FS service must be restarted afterwards. The changes do not impact other nodes and test the first node before making the change in all the nodes.
 
   1. Navigate to the AD FS config file
   (default location **C:\Windows\ADFS\Microsoft.IdentityServer.ServiceHost.exe.config**) and under the section "Microsoft.IdentityServer.Service", add the below entry:
-
+```
+<cache cacheRefreshIntervalSecs="3600" backgroundCacheRefreshEnabled="true" />
+```
 - `backgroundCacheRefreshEnabled` - Specifies if the background cache feature is enabled. "true/false" values.
 - `cacheRefreshIntervalSecs` - Value in seconds at which AD FS will refresh the cache. AD FS will refresh the cache if there is any change in SQL. AD FS will receive a SQL notification and refresh the cache.
 
  > [!NOTE]
  > All the entries in the configuration file are case sensitive.
- > &lt;cache cacheRefreshIntervalSecs="1800" > backgroundCacheRefreshEnabled="true" /&gt;
+
+ > [!NOTE]
+ > The SQL Server Service Broker must be enabled for the configuration database to receive the aforementioned SQL notification.
 
 Additional supported configurable values:
 
-- **maxRelyingPartyEntries** - Maximum number of relying party entries which AD FS will keep in memory. This value is also used by the oAuth application permission cache. If there are more application permissions than RPs and if all will be stored in memory, this value should be the number of application permissions. The default value is 1000.
-- **maxIdentityProviderEntries** - This is the maximum number of claims provider entries AD FS will keep in memory. The default value is 200.
-- **maxClientEntries** - This is the maximum number of OAuth client entries AD FS will keep in memory. The default value is 500.
-- **maxClaimDescriptorEntries** - Maximum number of claim descriptor entries AD FS will keep in memory. The default value is 500.
-- **maxNullEntries** - This is used as negative cache. When AD FS looks for an entry in the database and it is not found, AD FS adds in negative cache. This is the max size of that cache. There is negative cache for each type of objects, it is not a single cache for all the objects. The default value is 50,0000.
+- `maxRelyingPartyEntries` - Maximum number of relying party entries which AD FS will keep in memory. This value is also used by the oAuth application permission cache. If there are more application permissions than RPs and if all will be stored in memory, this value should be the number of application permissions. The default value is 1000.
+- `maxIdentityProviderEntries` - This is the maximum number of claims provider entries AD FS will keep in memory. The default value is 200.
+- `maxClientEntries` - This is the maximum number of OAuth client entries AD FS will keep in memory. The default value is 500.
+- `maxClaimDescriptorEntries` - Maximum number of claim descriptor entries AD FS will keep in memory. The default value is 500.
+- `maxNullEntries` - This is used as negative cache. When AD FS looks for an entry in the database and it is not found, AD FS adds in negative cache. This is the max size of that cache. There is negative cache for each type of objects, it is not a single cache for all the objects. The default value is 50,000.
 
 ## Multiple artifact DB support across datacenters
 
