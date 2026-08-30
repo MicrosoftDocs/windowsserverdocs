@@ -17,7 +17,7 @@ OpenSSH is a connectivity tool for remote sign-in that uses the SSH protocol. It
 An OpenSSH-compatible client can be used to connect to Windows Server and Windows client devices.
 
 > [!IMPORTANT]
-> If you downloaded the OpenSSH beta from the GitHub repo at [PowerShell/openssh-portal](https://github.com/PowerShell/openssh-portable), follow the instructions listed there, not the ones in this article. Some information in the Win32-OpenSSH repository relates to prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, express or implied, with respect to the information provided there.
+> If you downloaded the OpenSSH beta from the GitHub repo at [PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable), follow the instructions listed there, not the ones in this article. Some information in the Win32-OpenSSH repository relates to prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, express or implied, with respect to the information provided there.
 
 ## Prerequisites
 
