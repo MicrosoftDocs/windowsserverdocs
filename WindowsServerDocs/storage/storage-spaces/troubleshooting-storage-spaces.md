@@ -61,13 +61,13 @@ To fix this issue, follow these steps:
    Remove-ClusterSharedVolume -Name "CSV Name"
    ```
 
-1. On the node that owns the Available Storage group, run the following command on every disk that's in a no redundancy state. To identify which node the Available Storage group is on, you can run this command:
+1. Identify which node the “Available Storage” group is on using the following command:
 
    ```powershell
    Get-ClusterGroup
    ```
 
-1. Set the disk recovery action and then start the disk(s).
+1. On the node that owns the Available Storage group, run the following commands on every disk that’s in a No Redundancy state. This commands will set the disk recovery action and then start the disk(s).
    ```powershell
    Get-ClusterResource "Physical Disk Resource Name" | Set-ClusterParameter -Name DiskRecoveryAction -Value 1
    Start-ClusterResource -Name "Physical Disk Resource Name"
