@@ -51,6 +51,7 @@ chkdsk [<volume>[[<path>]<filename>]] [/f] [/v] [/r] [/x] [/i] [/c] [/l[:<size>]
 | /? | Displays help at the command prompt. |
 
 ## Remarks
+- It is recommended to use /scan and then /spotfix, instead of using /f or /r, as a way to perform fixes while requiring less downtime.
 
 - The **/i** or **/c** switch reduces the amount of time required to run **chkdsk** by skipping certain volume checks.
 
