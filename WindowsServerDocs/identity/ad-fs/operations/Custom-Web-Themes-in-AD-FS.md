@@ -18,7 +18,7 @@ New-AdfsWebTheme –Name custom –SourceName default
 You can modify the .css file and configure the new web theme by using the new .css file. To export a web theme, use the following cmdlet.
 
 ```powershell
-Export-AdfsWebTheme –Name default –DirectoryPath c:\theme
+Export-AdfsWebTheme –Name custom –DirectoryPath c:\theme
 ```
 
 To apply the .css file to the new theme, use the following cmdlet.
