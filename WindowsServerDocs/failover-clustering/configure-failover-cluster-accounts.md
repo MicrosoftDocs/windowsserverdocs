@@ -13,7 +13,7 @@ Cluster accounts in Active Directory (AD) are essential for the secure and relia
 
 ## Prerequisites
 
-The **Active Directory Domain Services** role must be installed on your device. To learn more, see [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).
+The **Active Directory Domain Services Snap-ins and Command-line tools (RSAT-ADDS-Tools)** must be installed on your device. To learn more, see [Add or remove roles and features in Windows Server](/windows-server/administration/server-manager/add-remove-roles-features).
 
 The account used by the person installing the cluster is important since it's used to create the computer account for the cluster during setup. The following are required based on your scenario:
 
