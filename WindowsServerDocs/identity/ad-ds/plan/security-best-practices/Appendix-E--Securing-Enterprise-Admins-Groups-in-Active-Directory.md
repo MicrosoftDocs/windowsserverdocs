@@ -169,16 +169,16 @@ For the Enterprise Admins group in the forest:
     6.  In a forest that contains multiple domains, a similar GPO should be created in each domain that requires that the Enterprise Admins group be secured.
 
 > [!IMPORTANT]
-> If jump servers are used to administer domain controllers and Active Directory, ensure that jump servers are located in an OU to which this GPOs is not linked.
+> If jump servers are used to administer domain controllers and Active Directory, ensure that jump servers are located in an OU to which this GPOs is **not** linked.
 
 ### Verification Steps
 
 #### Verify "Deny access to this computer from the network" GPO Settings
-From any member server or workstation that is not affected by the GPO changes (such as a "jump server"), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:
+From any member server or workstation that is **not** affected by the GPO changes (such as a "jump server"), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:
 
 1.  Log on locally using an account that is a member of the EA group.
 
-2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
+2.  click **Search**.
 
 3.  In the **Search** box, type **command prompt**, right-click **Command Prompt**, and then click **Run as administrator** to open an elevated command prompt.
 
@@ -196,9 +196,9 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 From any member server or workstation affected by the GPO changes, log on locally.
 
-##### Create a Batch File
+##### 1.Create a Batch File
 
-1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
+1.  Click **Search**.
 
 2.  In the **Search** box, type **notepad**, and click **Notepad**.
 
@@ -208,14 +208,11 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 5.  In the **File** name box, type **\<Filename>.bat** (where \<Filename> is the name of the new batch file).
 
-##### Schedule a Task
+##### 2.Schedule a Task
 
-1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
+1.  Click **Search**.
 
 2.  In the **Search** box, type **task scheduler**, and click **Task Scheduler**.
-
-    > [!NOTE]
-    > On computers running Windows 8, in the **Search** box, type **schedule tasks**, and click **Schedule tasks**.
 
 3.  Click **Action**, and click **Create Task**.
 
@@ -245,13 +242,14 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 16. A dialog box similar to the following should appear.
 
-    ![Screenshot that shows the Task Scheduler dialog box.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_58.gif)
+    ![Screenshot that shows the Task Scheduler dialog box.](https://github.com/user-attachments/assets/8f812553-f16f-4791-89b1-1233d14b9d95)
+
 
 #### Verify "Deny log on as a service" GPO Settings
 
 1.  From any member server or workstation affected by the GPO changes, log on locally.
 
-2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
+2.  Click **Search**.
 
 3.  In the **Search** box, type **services**, and click **Services**.
 
@@ -271,13 +269,14 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 11. When the service is restarted, a dialog box similar to the following should appear.
 
-    ![Screenshot that shows a message that says that Windows could not start the Print Spooler server.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_59.gif)
+    ![Screenshot that shows a message that says that Windows could not start the Print Spooler server.](https://github.com/user-attachments/assets/ae8867cd-d683-4975-8ffa-af1acd669d54)
+
 
 #### Revert Changes to the Printer Spooler Service
 
 1.  From any member server or workstation affected by the GPO changes, log on locally.
 
-2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
+2.  Click **Search**.
 
 3.  In the **Search** box, type **services**, and click **Services**.
 
@@ -290,12 +289,13 @@ From any member server or workstation affected by the GPO changes, log on locall
 #### Verify "Deny log on locally" GPO Settings
 
 1.  From any member server or workstation affected by the GPO changes, attempt to log on locally using an account that is a member of the EA group. A dialog box similar to the following should appear.
+ 
+    ![Screenshot that shows a message that says that the sign-in method you're using isn't allowed.](https://github.com/user-attachments/assets/40e35fed-c633-4537-83d7-7294c8e3709b)
 
-    ![Screenshot that shows a message that says that the sign-in method you're using isn't allowed.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_60.gif)
 
 #### Verify "Deny log on through Remote Desktop Services" GPO Settings
 
-1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
+1.  Click **Search**.
 
 2.  In the **Search** box, type **remote desktop connection**, and then click **Remote Desktop Connection**.
 
@@ -305,4 +305,4 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 5.  A dialog box similar to the following should appear.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_61.gif)
+    ![secure enterprise admin groups during RDP connection](https://github.com/user-attachments/assets/6f8bb855-1f02-4ddc-8804-971768e78217)
