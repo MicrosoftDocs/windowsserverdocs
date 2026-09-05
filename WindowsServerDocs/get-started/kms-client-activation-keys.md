@@ -40,6 +40,59 @@ For example, to install the product key for Windows Server 2022 Datacenter Editi
 ```cmd
 slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 ```
+## Specify KMS Server with `slmgr.vbs /skms`
+
+The `slmgr.vbs` script in Windows allows you to manage the Key Management Service (KMS) settings, including specifying the KMS server address. The KMS server is used for activation and licensing in enterprise environments.
+
+**Usage:**
+To specify the KMS server address using `slmgr.vbs /skms`, follow these steps:
+
+1. Open an administrative command prompt or PowerShell window on the Windows client machine.
+
+2. Type the following command and then press `Enter`, replacing `kms_server_address` with the hostname or IP address of your KMS server:
+
+ ```cmd
+ cscript //nologo C:\Windows\System32\slmgr.vbs /skms kms_server_address
+ ```
+Once the command is executed successfully, the KMS server address will be set, and the client machine will use this server for activation and licensing.
+
+**Note:**
+
+- Ensure you have administrative privileges to execute this command.
+- After specifying the KMS server, you may need to activate Windows using the same `slmgr.vbs` script with the `/ato` option (`cscript //nologo C:\Windows\System32\slmgr.vbs /ato`).
+- If you encounter any issues during activation or need to check the current license information, you can use the `slmgr.vbs` script with the `/dlv` option (`cscript //nologo C:\Windows\System32\slmgr.vbs /dlv`).
+
+Remember to replace `C:\Windows\System32` with the appropriate path to the `slmgr.vbs` script on your system. The `//nologo` option is used to suppress displaying the logo during script execution.
+
+## Activate Windows with `slmgr /ato`
+
+The `slmgr /ato` command is used to activate Windows on the client machine. Activation is necessary to verify the authenticity of the operating system and enable access to all features and updates provided by Microsoft. Before using this command, ensure that you have a valid product key for your edition of Windows.
+
+**Usage:**
+To activate Windows using `slmgr /ato`, follow these steps:
+
+1. Open an administrative command prompt or PowerShell window on the client machine.
+2. Type the following command and then press `Enter`:
+```slmgr /ato```
+3. Wait for the activation process to complete. You should receive a message indicating successful activation or any errors encountered during the activation attempt.
+
+- If you encounter any issues during activation, double-check the product key and kms client settings and ensure it corresponds to the edition of Windows installed on your machine.
+
+## Display License Information with `slmgr /dlv`
+
+The `slmgr /dlv` command allows you to view detailed license information about the current Windows installation. This command provides valuable insights into the license status, activation type, and other related details.
+
+**Usage:**
+To display license information using `slmgr /dlv`, follow these steps:
+
+1. Open an administrative command prompt or PowerShell window on the client machine.
+2. Type the following command and then press `Enter`:
+```slmgr /dlv```
+3. A dialog box will appear, displaying comprehensive information about the Windows license. The information includes the license version, activation status, partial product key, and activation expiration date (if applicable).
+
+**Note:**
+- The license information displayed by this command is for informational purposes only and does not impact the activation status of Windows.
+- If you want to activate Windows, use the `slmgr /ato` command as explained in the previous section.
 
 ## Generic Volume License Keys
 
