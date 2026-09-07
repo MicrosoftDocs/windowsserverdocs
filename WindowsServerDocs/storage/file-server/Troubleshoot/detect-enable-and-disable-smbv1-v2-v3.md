@@ -12,6 +12,9 @@ ms.date: 02/28/2025
 
 This article describes how to enable and disable Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on SMB client and server components.
 
+> [!NOTE]
+> SMB signing is a separate security feature from enabling or disabling SMB protocol versions, and this article covers only how to turn protocol versions on or off. In Windows 11, version 24H2 and Windows Server 2025, SMB signing is required by default, which can prevent connections to workgroup computers, guest-authenticated shares, or third-party SMB servers that don't support signing. Don't disable SMB protocol versions—or SMB signing—to work around these connection failures. Instead, enable SMB signing on the remote server, or update or replace devices that don't support SMB signing. For more information, see [Control SMB signing behavior](../smb-signing.md).
+
 If you disable or remove SMBv1, you might encounter compatibility issues with old computers or software. SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). [SMBv1 isn't installed by default](smbv1-not-installed-by-default-in-windows.md) in any edition of Windows 11 or Windows Server 2019 and later versions. SMBv1 also isn't installed by default in Windows 10, except Home and Pro editions. We recommend that instead of reinstalling SMBv1, you update the SMB server that still requires it. For a list of partners that require SMBv1 and their updates that remove the requirement, see [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
 
 ## Disable SMBv2 or SMBv3 for troubleshooting
