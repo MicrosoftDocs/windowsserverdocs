@@ -6,6 +6,7 @@ ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
 ms.custom: "se-defect-target"
+ai-usage: ai-assisted
 zone_pivot_groups: openssh-windows-version
 #customer intent: As a Windows administrator, I want to install and set up OpenSSH on Windows Server and Windows client devices, so that I can enable secure remote access and management of my Windows systems.
 ---
@@ -42,6 +43,9 @@ To validate your environment, open an elevated PowerShell session and do the fol
   ```powershell
   (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
   ```
+
+> [!NOTE]
+> This quickstart uses the in-box OpenSSH feature that comes with Windows and Windows Server. Microsoft supports this version and services it through Windows Update, which is the recommended way to get started. If you specifically need the newest OpenSSH features and fixes, you can instead install the latest Win32-OpenSSH release from GitHub, which ships separately as an MSI or ZIP package that you update and maintain manually. The GitHub release has its own prerequisites and installation and upgrade steps. For those steps, see [Upgrade in-box OpenSSH to the latest OpenSSH release](/troubleshoot/windows-server/system-management-components/upgrade-in-box-openssh-to-latest-openssh-release).
 
 :::zone pivot="windows-server-2025"
 
