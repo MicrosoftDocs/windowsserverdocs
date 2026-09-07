@@ -172,6 +172,22 @@ To parse the output of a command by placing *set* between the parentheses, type:
 for /f "usebackq delims==" %i in (`set`) do @echo %i
 ```
 
+To display the name of each subdirectory (not the files) within a directory, type:
+
+```
+for /d %D in ("C:\Users\*") do @echo %~nxD
+```
+
+This command uses the **/d** option to iterate over the directories that match `C:\Users\*`, and uses the `%~nxD` modifier to display each directory's name without its full path. To use this command in a batch file, replace `%D` with `%%D`.
+
+To step through a range of numbers, type:
+
+```
+for /l %N in (1,2,9) do @echo %N
+```
+
+This command uses the **/l** option with the start, step, and end values in `(1,2,9)` to generate the sequence 1 3 5 7 9, and echoes each number. To use this command in a batch file, replace each `%N` with `%%N`.
+
 To perform a recursive loop of all files in a directory, including subdirectories and echo their full path, when they were last modified, and their file size, type:
 
 ```
