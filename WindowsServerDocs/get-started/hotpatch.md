@@ -19,6 +19,11 @@ Hotpatching is a way to install OS security updates on Windows Server without ha
 
 - Reduces the time exposed to security risks and change windows, and easier patch orchestration with Azure Update Manager.
 
+This article describes Hotpatch for Windows Server, which uses the Windows Server support and management model on Azure, Azure Local, and Azure Arc-connected machines.
+
+> [!NOTE]
+> This article doesn't cover Hotpatch for Windows client, which is separate from the Windows Server support and management model described here. For hotpatch guidance for Windows 11 Enterprise, version 24H2 or later, see [Hotpatch updates](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates). On Windows client, Windows Autopatch manages hotpatch updates through Microsoft Intune, and only eligible devices that meet the prerequisites on that page receive them.
+
 ## Supported platforms
 
 ### Azure and Azure Local virtual machines

@@ -38,7 +38,7 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
 | /n | Displays a long list format with file names on the far right of the screen. |
 | /x | Displays the short names generated for non-8dot3 file names. The display is the same as the display for **/n**, but the short name is inserted before the long name. |
 | /c | Displays the thousand separator in file sizes. This is the default behavior. Use **/-c** to hide separators. |
-| /4 | Displays years in four-digit format. |
+| /4 | Displays years in four-digit format. Because the default **dir** output can already display four-digit years, you might not notice a change when you use this parameter. |
 | /r | Display alternate data streams of the file. |
 | /? | Displays help at the command prompt. |
 

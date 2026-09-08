@@ -1549,8 +1549,14 @@
       items:
       - name: vssadmin delete shadows
         href: vssadmin-delete-shadows.md
+      - name: vssadmin list providers
+        href: vssadmin-list-providers.md
       - name: vssadmin list shadows
         href: vssadmin-list-shadows.md
+      - name: vssadmin list shadowstorage
+        href: vssadmin-list-shadowstorage.md
+      - name: vssadmin list volumes
+        href: vssadmin-list-volumes.md
       - name: vssadmin list writers
         href: vssadmin-list-writers.md
       - name: vssadmin resize shadowstorage

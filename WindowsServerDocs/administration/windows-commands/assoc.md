@@ -22,6 +22,9 @@ Displays or modifies file name extension associations. If used without parameter
 assoc [<.[ext]>[=[<filetype>]]]
 ```
 
+> [!NOTE]
+> In the syntax, square brackets `[ ]` indicate optional items and angle brackets `< >` indicate placeholder values that you replace with your own text. Don't type the brackets. For example, to remove the association for the .jar file name extension, type `assoc .jar=`, not `assoc .jar=<filetype>`. If you type the angle brackets, cmd.exe treats `<` and `>` as redirection operators and returns an error. For more information, see [Command-Line Syntax Key](command-line-syntax-key.md).
+
 ### Parameters
 
 | Parameter | Description |
@@ -34,7 +37,7 @@ assoc [<.[ext]>[=[<filetype>]]]
 
 - To make changes in associations, you need administrator privileges.
 
-- To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
+- To remove the file type association for a file name extension, type the extension and an equal sign with nothing after it, for example `assoc .ext=`. You don't need to add a trailing space after the equal sign.
 
 - To associate files without extension to a file type, use just a dot (see the examples).
 
@@ -56,8 +59,13 @@ To remove the file type association for the file name extension .bak, type:
 assoc .bak=
 ```
 
-> [!NOTE]
-> Make sure you add a space after the equal sign.
+Type nothing after the equal sign. Don't type placeholder text such as `<filetype>`, and don't add a trailing space.
+
+To remove the file type association for the file name extension .jar, type:
+
+```
+assoc .jar=
+```
 
 To view the output of **assoc** one screen at a time, type:
 
