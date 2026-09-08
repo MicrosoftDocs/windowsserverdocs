@@ -46,7 +46,12 @@ To open the firewall ports and enable file and printer sharing, complete the fol
 
 1. For each rule, select and hold (or right-click) the rule, and then select **Enable Rule**.
 
+> [!NOTE]
+> The preceding steps configure Windows Defender Firewall on a single server. If you manage applicable devices with Microsoft Intune, you can centrally deploy Windows Defender Firewall policy and firewall rules to multiple devices instead of configuring each server locally. Intune doesn't run the Best Practices Analyzer or convert its findings automatically. Instead, you define the equivalent inbound firewall rules for file and printer sharing in an endpoint security firewall policy. For the procedure, see [Firewall policy for endpoint security in Intune](/intune/device-configuration/endpoint-security/firewall).
+
 ## Related links
+
+- [Firewall policy for endpoint security in Intune](/intune/device-configuration/endpoint-security/firewall)
 
 - [Understanding shared folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))
 
