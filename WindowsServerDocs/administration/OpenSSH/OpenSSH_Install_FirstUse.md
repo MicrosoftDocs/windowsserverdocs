@@ -17,9 +17,6 @@ OpenSSH is a connectivity tool for remote sign-in that uses the SSH protocol. It
 
 An OpenSSH-compatible client can be used to connect to Windows Server and Windows client devices.
 
-> [!IMPORTANT]
-> If you downloaded the OpenSSH beta from the GitHub repo at [PowerShell/openssh-portal](https://github.com/PowerShell/openssh-portable), follow the instructions listed there, not the ones in this article. Some information in the Win32-OpenSSH repository relates to prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, express or implied, with respect to the information provided there.
-
 ## Prerequisites
 
 Before you start, your computer must meet the following requirements:
@@ -45,7 +42,9 @@ To validate your environment, open an elevated PowerShell session and do the fol
   ```
 
 > [!NOTE]
-> This quickstart uses the in-box OpenSSH feature that comes with Windows and Windows Server. Microsoft supports this version and services it through Windows Update, which is the recommended way to get started. If you specifically need the newest OpenSSH features and fixes, you can instead install the latest Win32-OpenSSH release from GitHub. This release ships separately as an MSI or ZIP package that you update and maintain manually. The GitHub release has its own prerequisites and installation and upgrade steps. For those steps, see [Upgrade in-box OpenSSH to the latest OpenSSH release](/troubleshoot/windows-server/system-management-components/upgrade-in-box-openssh-to-latest-openssh-release).
+> This article uses the in-box OpenSSH Feature on Demand in Windows and Windows Server. Microsoft supports and services this version through Windows Update, and it's the recommended option for most users.
+>
+> The PowerShell/openssh-portable project is Microsoft's fork of the upstream, open-source OpenSSH project. Releases from this project might differ substantially from the OpenSSH version included with Windows. They use separate MSI or ZIP packages, have their own prerequisites and installation steps, and require manual updates and maintenance. For more information, see the [PowerShell/openssh-portable repository on GitHub](https://github.com/PowerShell/openssh-portable). If you need to install its packages, see [Upgrade in-box OpenSSH to the latest OpenSSH release](/troubleshoot/windows-server/system-management-components/upgrade-in-box-openssh-to-latest-openssh-release).
 
 :::zone pivot="windows-server-2025"
 
