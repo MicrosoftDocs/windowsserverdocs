@@ -108,7 +108,9 @@ The memory and disk requirements for AD FS are fairly static. The requirements a
 
 ### SQL Server Hardware Requirements
 
-If you're using Azure SQL for your AD FS configuration database, size the SQL Server according to the most basic SQL Server recommendations. The AD FS database size is small, and AD FS doesn't put a significant processing load on the database instance. AD FS does, however, connect to the database multiple times during an authentication, so the network connection should be robust. Unfortunately, SQL Azure isn't supported for the AD FS configuration database.
+If you're using SQL Server for your AD FS configuration database, size the SQL Server according to the most basic SQL Server recommendations. The AD FS database size is small, and AD FS doesn't put a significant processing load on the database instance. AD FS does, however, connect to the database multiple times during an authentication, so the network connection should be robust.  
+
+Unfortunately, SQL Azure isn't supported for the AD FS configuration database.
 
 ## Proxy requirements
 
