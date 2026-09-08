@@ -19,7 +19,7 @@ An OpenSSH-compatible client can be used to connect to Windows Server and Window
 
 This article uses the in-box OpenSSH Feature on Demand in Windows and Windows Server. Microsoft supports and services this version through Windows Update, so it's the recommended option for most users.
 
-The PowerShell/openssh-portable project is Microsoft's fork of the upstream, open-source OpenSSH project, and its releases might differ substantially from the OpenSSH version in Windows. These releases use separate MSI or ZIP packages with their own prerequisites, installation steps, and manual maintenance. For more information, see the [PowerShell/openssh-portable repository on GitHub](https://github.com/PowerShell/openssh-portable). If you need to install its packages, see [Upgrade in-box OpenSSH to the latest OpenSSH release](/troubleshoot/windows-server/system-management-components/upgrade-in-box-openssh-to-latest-openssh-release).
+Microsoft also maintains [PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable), a fork of the upstream, open-source OpenSSH project. Its releases might differ from the version in Windows.
 
 ## Prerequisites
 
