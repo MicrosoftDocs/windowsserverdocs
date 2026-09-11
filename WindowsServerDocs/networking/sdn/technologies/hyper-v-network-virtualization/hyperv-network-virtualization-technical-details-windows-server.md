@@ -274,7 +274,7 @@ HNV policy is programmed by the host agent. Each virtual machine network adapter
 Figure 9: HNV Architecture
 
 >[!IMPORTANT]
->HNVv2 includes vfpctrl.exe as a tool for VFP diagnostics. Administrators should use this tool only under the direction of Microsoft Support. Any other use of vfpctrl.exe is unsupported and could result in system instability.
+>HNVv2 includes vfpctrl.exe as a tool for VFP diagnostics. Administrators should use this tool only under the direction of Microsoft Support. Any other use of vfpctrl.exe is unsupported and could result in system instability or compromise security in ways that could leave the Hyper-V host vulnerable to attacks from a VM.
 
 ## Summary
 Cloud-based datacenters can provide many benefits such as improved scalability and better resource utilization. To realize these potential benefits requires a technology that fundamentally addresses the issues of multi-tenant scalability in a dynamic environment. HNV was designed to address these issues and also improve the operational efficiency of the datacenter by decoupling the virtual network topology for the physical network topology. Building on an existing standard, HNV runs in today's datacenter and operates with your existing VXLAN infrastructure. Customers with HNV can now consolidate their datacenters into a private cloud or seamlessly extend their datacenters to a hosting server provider's environment with a hybrid cloud.
