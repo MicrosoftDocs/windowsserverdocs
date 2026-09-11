@@ -4,7 +4,7 @@ description: Develop a tool extension Windows Admin Center SDK (Project Honolulu
 ms.topic: how-to
 author: davannaw-msft
 ms.author: dawhite
-ms.date: 09/18/2018
+ms.date: 08/17/2026
 ---
 
 # Develop a tool extension
@@ -24,19 +24,36 @@ If you haven't already, [prepare your environment](prepare-development-environme
 
 Once you have all the dependencies installed, you are ready to create your new tool extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed previously, create a new extension with the following syntax:
 
-``` cmd
+```console
 wac create --company "{!Company Name}" --tool "{!Tool Name}" --version latest
 ```
 
 | Value | Explanation | Example |
 | ----- | ----------- | ------- |
-| ```{!Company Name}``` | Your company name (with spaces) | ```Contoso Inc``` |
-| ```{!Tool Name}``` | Your tool name (with spaces) | ```Manage Foo Works``` |
+| `{!Company Name}` | Your company name (with spaces) | `Contoso Inc` |
+| `{!Tool Name}` | Your tool name (with spaces) | `Manage Foo Works` |
 
 Here's an example usage:
 
-``` cmd
+```console
 wac create --company "Contoso Inc" --tool "Manage Foo Works" --version latest
+```
+
+By using Windows Admin Center SDK versions 6.0.0 and higher, you can also create React-based tool extensions. Create a new React-based tool extension by using the following syntax:
+
+```console
+wac create-react --company "{!Company Name}" --tool "{!Tool Name}" --version latest
+```
+
+| Value | Explanation | Example |
+| ----- | ----------- | ------- |
+| `{!Company Name}` | Your company name (with spaces) | `Contoso Inc` |
+| `{!Tool Name}` | Your tool name (with spaces) | `Manage Foo Works` |
+
+Here's an example:
+
+```console
+wac create-react --company "Contoso Inc" --tool "Manage Foo Works" --version latest
 ```
 
 This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.
@@ -46,7 +63,7 @@ This creates a new folder inside the current working directory using the name yo
 
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
-``` cmd
+```console
 npm install
 ```
 
@@ -85,27 +102,33 @@ This configuration is only valid for side loading in dev mode, so it's important
 
 ## Build and side load your extension
 
-Next, build and side load your extension into Windows Admin Center.  Open a command window, change directory to your source directory, then you're ready to build.
+Next, build and sideload your extension into Windows Admin Center. Open a command window and change directory to your source directory.
 
-* Build and serve with gulp:
+- To build and serve the extension, run the following command:
 
-    ``` cmd
-    gulp build
-    gulp serve --port 4201
+    ```console
+    npm run build
+    npm start
     ```
 
-Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.
+Keep this terminal running.
 
-Your project can be side loaded into a local instance of Windows Admin Center for testing by attaching the locally served project into Windows Admin Center.
+By default, the extension sideloads on port **4200**. To change the port, modify your extension's `package.json` and `appsettings.json` files. Ensure you don't use the port that Windows Admin Center is running on.
 
-* Launch Windows Admin Center in a web browser
-* Open the debugger (F12)
-* Open the Console and type the following command:
+To sideload your project into a local instance of Windows Admin Center for testing, attach the locally served project.
 
-    ``` cmd
-    MsftSme.sideLoad("http://localhost:4201")
+- Launch Windows Admin Center in a web browser
+- Open the debugger (F12)
+- Open the Console and type the following command for sideloading with localhost:
+
+    ```console
+    MsftSme.sideLoad("http://localhost:4200")
     ```
+    If you followed the [instructions to sideload by using an FQDN](prepare-development-environment.md#sideloading-by-using-fully-qualified-domain-name), open the console and type the following command:
 
-*	Refresh the web browser
+    ```console
+    MsftSme.sideLoad("http://<FQDN>:4200")
+    ```
+- Refresh the web browser.
 
-Your project will now be visible in the Tools list with (side loaded) next to the name.
+Your project now appears in the **Tools** list with (side loaded) next to the name.

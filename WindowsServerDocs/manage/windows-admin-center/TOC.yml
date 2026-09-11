@@ -183,7 +183,9 @@
       - name: Upgrade extensions to Angular 11
         href: extend/guides/upgrade-to-angular-11.md
       - name: Upgrade extensions to Angular 15
-        href: extend/guides/upgrade-to-angular-15.md  
+        href: extend/guides/upgrade-to-angular-15.md
+      - name: Upgrade extensions to Angular 20
+        href: extend/guides/upgrade-to-angular-20.md
       - name: Extension management of Application Control enforced infrastructure
         href: extend/guides/application-control-infrastructure-extensions.md
     - name: Publishing extensions

@@ -200,6 +200,8 @@ items:
         href: dns/manage-dns-zones.md
       - name: Manage DNS resource records
         href: dns/manage-resource-records.md
+      - name: Configure DNS aging and scavenging
+        href: dns/configure-aging-scavenging.md
       - name: Enable DNS over HTTPS in DNS Server
         href: dns/enable-dns-over-https-server.md
       - name: Monitor DNS over HTTPS in DNS Server

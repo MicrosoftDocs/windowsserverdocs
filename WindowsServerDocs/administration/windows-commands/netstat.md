@@ -19,7 +19,7 @@ Displays active TCP connections, ports on which the computer is listening, Ether
 ## Syntax
 
 ```
-netstat [-a] [-b] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
+netstat [-a] [-b] [-e] [-n] [-o] [-p <Protocol>] [-q] [-r] [-s] [<interval>]
 ```
 
 ### Parameters
@@ -32,6 +32,7 @@ netstat [-a] [-b] [-e] [-n] [-o] [-p <Protocol>] [-r] [-s] [<interval>]
 | -n | Displays active TCP connections, however, addresses and port numbers are expressed numerically and no attempt is made to determine names. |
 | -o | Displays active TCP connections and includes the process ID (PID) for each connection. You can find the application based on the PID on the Processes tab in Windows Task Manager. This parameter can be combined with **-a**, **-n**, and **-p**. |
 | -p `<Protocol>` | Shows connections for the protocol specified by *Protocol*. In this case, the *Protocol* can be tcp, udp, tcpv6, or udpv6. If this parameter is used with **-s** to display statistics by protocol, *Protocol* can be tcp, udp, icmp, ip, tcpv6, udpv6, icmpv6, or ipv6. |
+| -q | Displays all connections, listening ports, and bound nonlistening TCP ports. Bound nonlistening ports may or may not be associated with an active connection. |
 | -s | Displays statistics by protocol. By default, statistics are shown for the TCP, UDP, ICMP, and IP protocols. If the IPv6 protocol is installed, statistics are shown for the TCP over IPv6, UDP over IPv6, ICMPv6, and IPv6 protocols. The **-p** parameter can be used to specify a set of protocols. |
 | -r | Displays the contents of the IP routing table. This is equivalent to the route print command. |
 | `<interval>` | Redisplays the selected information every *interval* seconds. Press CTRL+C to stop the redisplay. If this parameter is omitted, this command prints the selected information only once. |
@@ -72,6 +73,12 @@ To display active TCP connections and the process IDs using numerical form, type
 
 ```
 netstat -n -o
+```
+
+To display all connections, listening ports, and bound nonlistening ports in numerical form along with the process ID and executable for each, type:
+
+```
+netstat -anobq
 ```
 
 ## Related links

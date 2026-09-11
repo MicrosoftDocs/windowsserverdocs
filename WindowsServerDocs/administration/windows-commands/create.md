@@ -32,6 +32,41 @@ create volume
 | [create volume raid command](create-volume-raid.md) | Creates a RAID-5 volume using three or more specified dynamic disks. |
 | [create volume stripe command](create-volume-stripe.md) | Creates a striped volume using two or more specified dynamic disks. |
 
+## Examples
+
+You run these commands in the DiskPart interpreter. To start it, type `diskpart` at an elevated command prompt. Each example creates a 1000-megabyte (MB) object; omit the `size` parameter to use the remaining available space. For the full parameter list and behavior of each command, see the linked child article.
+
+Before you create a partition, run `list disk` to identify the intended basic disk, then use the [select disk](select-disk.md) command to give it focus. In the following example, replace `<disk-number>` with the number of the basic disk you want. To create a 1000-MB primary partition on the disk with focus:
+
+```
+select disk <disk-number>
+create partition primary size=1000
+```
+
+Volume commands create volumes on dynamic disks that you specify by number. To create a 1000-MB simple volume on dynamic disk 1:
+
+```
+create volume simple size=1000 disk=1
+```
+
+To create a 1000-MB mirrored volume across dynamic disks 1 and 2:
+
+```
+create volume mirror size=1000 disk=1,2
+```
+
+To create a 1000-MB striped volume across dynamic disks 1 and 2:
+
+```
+create volume stripe size=1000 disk=1,2
+```
+
+To create a 1000-MB RAID-5 volume across dynamic disks 1, 2, and 3:
+
+```
+create volume raid size=1000 disk=1,2,3
+```
+
 ## Related links
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
