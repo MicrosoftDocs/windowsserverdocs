@@ -16,9 +16,6 @@ To enable the latest forest-wide features, all domain controllers in the forest 
 
 The domain and forest functional levels only affect how the domain controllers operate together as a group. The clients that interact with the domain or with the forest are unaffected by the changes. Applications are also unaffected by these changes. However, applications can use new features found in later versions of Windows Server after the administrator raises the domain level. For more information about the functional levels, see [Active Directory Domain Services functional levels](/windows-server/identity/ad-ds/active-directory-functional-levels).
 
-> [!WARNING]
-> Changes to the domain and forest functional levels are irreversible. To undo the change, you must perform a forest recovery to revert to an earlier point in time.
-
 ## Prerequisites
 
 You need to meet the following prerequisites to raise the domain functional level:
@@ -87,9 +84,6 @@ For more information about the `Get-ADDomain` and `Get-ADForest` cmdlets, see [G
 
 To raise the domain and forest functional levels, you can use the Active Directory Domains and Trusts console or Windows PowerShell. The following sections describe how to raise the functional levels by using these methods.
 
-> [!WARNING]
-> Changes to the domain and forest functional levels are irreversible. In order to undo a change, you must perform a forest recovery to revert to an earlier point in time.
-
 > [!IMPORTANT]
 > If all domain controllers in all domains in the forest are running Windows Server 2025, it isn't necessary to raise individual domain functional levels manually because raising the forest functional level to Windows Server 2025 automatically raises the domain functional level of all domains in the forest to Windows Server 2025.
 
@@ -144,6 +138,8 @@ You've now raised the domain and forest functional level. For more information a
 ---
 
 ## Related content
+
+- [Lower domain and forest functional levels in Active Directory Domain Services](lower-domain-forest-functional-levels.md)
 
 - [Forest and Domain Functional Levels](../active-directory-functional-levels.md)
 

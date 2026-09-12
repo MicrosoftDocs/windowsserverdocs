@@ -128,3 +128,9 @@ To disable publishing of DNS records by the KMS host:
 1. Select **Skip to Configuration**, and then select **Next**.
 
 1. Next to **DNS Records**, clear the **Publish** checkbox, and then select **Commit**.
+
+## Related content
+
+- [Guidelines for troubleshooting the Key Management Service (KMS)](activation-troubleshoot-kms-general.md)
+- [KMS activation known issues](activation-troubleshoot-kms-issues.md)
+- [Guidelines for troubleshooting DNS-related activation issues](common-troubleshooting-procedures-kms-dns.md)

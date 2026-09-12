@@ -149,7 +149,7 @@ If not specified, this setting defaults to 6 words.
 The `PassphraseLength` setting is ignored unless `PasswordComplexity` is configured to one of the passphrase options.
 
 > [!IMPORTANT]
-> `PassphraseLength` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `PassphraseLength` is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### PasswordComplexity
 
@@ -175,7 +175,7 @@ If not specified, this setting defaults to *4*.
 > Don't configure `PasswordComplexity` to a setting that's incompatible with the managed device's local password policy. Doing so results in Windows LAPS failing to create a new compatible password. (Look for a 10027 event in the Windows LAPS event log.)
 
 > [!IMPORTANT]
-> `PasswordComplexity` values 5 through 8 are only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `PasswordComplexity` values 5 through 8 are only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### PasswordExpirationProtectionEnabled
 
@@ -277,7 +277,7 @@ If not specified, this setting defaults to *3*.
 > From a security perspective, a malicious user who acquires administrative privileges on a device using a valid Windows LAPS password does have the ultimate ability to prevent or circumvent these mechanisms.
 
 > [!IMPORTANT]
-> `PostAuthenticationActions` value 11 is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `PostAuthenticationActions` value 11 is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementEnabled
 
@@ -288,7 +288,7 @@ Supported values are either *1* (True) or *0* (False).
 This setting defaults to *0* (False).
 
 > [!IMPORTANT]
-> `AutomaticAccountManagementEnabled` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `AutomaticAccountManagementEnabled` is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementTarget
 
@@ -304,7 +304,7 @@ This setting defaults to *1*.
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
 > [!IMPORTANT]
-> `AutomaticAccountManagementTarget` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `AutomaticAccountManagementTarget` is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementNameOrPrefix
 
@@ -319,7 +319,7 @@ This setting is treated as a name prefix if `AutomaticAccountManagementRandomize
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
 > [!IMPORTANT]
-> `AutomaticAccountManagementNameOrPrefix` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `AutomaticAccountManagementNameOrPrefix` is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementEnableAccount
 
@@ -335,7 +335,7 @@ This setting defaults to *0*.
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
 > [!IMPORTANT]
-> `AutomaticAccountManagementEnableAccount` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `AutomaticAccountManagementEnableAccount` is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ### AutomaticAccountManagementRandomizeName
 
@@ -355,7 +355,7 @@ This setting defaults to *0*.
 This setting is ignored unless `AutomaticAccountManagementEnabled` is enabled.
 
 > [!IMPORTANT]
-> `AutomaticAccountManagementRandomizeName` is only supported in Windows 11 24H2, Windows Server 2025, and later releases.
+> `AutomaticAccountManagementRandomizeName` is only supported in Windows 11, version 24H2, Windows Server 2025, and later releases.
 
 ## Windows LAPS default policy values
 

@@ -1,16 +1,29 @@
 ---
 title: What's New in the Remote Desktop Web Client
 description: Learn about recent changes to the Remote Desktop web client, including new features, improvements, and fixes. Discover what's new and stay updated.
-ms.topic: whats-new
+ms.topic: release-notes
 ai-usage: ai-assisted
 ms.author: roharwoo
 author: robinharwood
-ms.date: 06/11/2025
+ms.date: 08/20/2026
 ---
 
 # What's new in the Remote Desktop web client
 
 This article describes the latest updates for the [Remote Desktop web client](remote-desktop-web-client.md). Updates include new features, improvements, bug fixes, and security enhancements to help you stay productive.
+
+## Latest version - Remote Desktop web client 2.1.85.0
+
+*Date published: August 20, 2026*
+
+- Bug fixes and security updates.
+- Removed versions before 2.1.65.2 and made them inaccessible.
+
+## Updates for version 2.1.65.2
+
+*Date published: July 7, 2026*
+
+- Fixed an important security vulnerability.
 
 ## Updates for version 2.1.65.0
 
@@ -21,7 +34,7 @@ This article describes the latest updates for the [Remote Desktop web client](re
 - New minimum browser requirements will apply in the next release. Your browser must:
   - Be no more than 12 months old on a rolling basis.
   - Support the AVC codec. Most browsers on desktops and laptops support AVC by default.
-  - Have WebGL enabled. WebGL is enabled by default on most recent browser versions.
+  - Have WebGL enabled. Most recent browser versions enable WebGL by default.
 
 ## Updates for version 2.1.62.1
 
@@ -35,8 +48,8 @@ This article describes the latest updates for the [Remote Desktop web client](re
 *Date published: March 21, 2024*
 
 - The new web client is now generally available.
-- UX improvements added.
-- New key features added to this client version.
+- Added UX improvements.
+- Added new key features to this client version.
 - Now available for on-premises download.
 
 ## Updates for version 1.0.28.0
@@ -70,11 +83,11 @@ This article describes the latest updates for the [Remote Desktop web client](re
 
 *Date published: July 22, 2021*
 
-- Client now has web assembly on supported browsers.
+- The client now has WebAssembly on supported browsers.
 - Added file transfer support.
 - Bug fixes.
 
-## Updates for 1.0.24.0
+## Updates for version 1.0.24.0
 
 *Date published: January 6, 2021*
 
@@ -85,16 +98,16 @@ This article describes the latest updates for the [Remote Desktop web client](re
 - Fixed issues with <kbd>AltGr</kbd> and several other keyboard bugs.
 - Accessibility improvements.
 
-## Updates for 1.0.22.0
+## Updates for version 1.0.22.0
 
 *Date published: September 2, 2020*
 
-- Users can now move the minimized menu.
+- You can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
-- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Azure Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
+- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, see [Connect to Azure Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
 - Changed the **All Resources** page UI.
-- Fixed several connection sequence failures where web client returned a *General Protocol Error*.
-- Fixed keyboard input issues where specific key sequences weren't handled appropriately.
+- Fixed several connection sequence failures where the web client returned a *General Protocol Error*.
+- Fixed keyboard input issues where the web client didn't handle specific key sequences appropriately.
 - Accessibility improvements.
 
 ## Updates for version 1.0.21.0
@@ -102,31 +115,31 @@ This article describes the latest updates for the [Remote Desktop web client](re
 *Date published: November 15, 2019*
 
 - Added support for using an Input Method Editor (IME) in the remote session to input complex characters.
-- Fixed a regression where users couldn't copy and paste into the remote session on macOS devices.
-- Fixed a regression where local Windows Key was sent to the remote session on Firefox.
-- Added link to RDWeb password change when enabled by your administrator.
+- Fixed a regression where you couldn't copy and paste into the remote session on macOS devices.
+- Fixed a regression where Firefox sent the local Windows key to the remote session.
+- Added a link to RDWeb password change when your administrator enables it.
 
 ## Updates for version 1.0.20.0
 
 *Date published: October 18, 2019*
 
 - Added support for connections to Windows 7 and Windows Server 2008 R2 hosts.
-- Fixed an issue where certain app icons were shown as transparent tiles.
+- Fixed an issue where certain app icons appeared as transparent tiles.
 - Fixed connection issues for Internet Explorer browser on Windows 7.
-- Fixed unexpected disconnects when the browser was resized.
-- Accessibility improvements.
+- Fixed unexpected disconnects when you resized the browser.
+- Improved accessibility.
 - Updated third-party libraries.
 
 ## Updates for version 1.0.18.0
 
 *Date published: May 14, 2019*
 
-- Added Resource Launch Method configuration in the Settings tab, enabling users to either open resources in the browser or download a `.rdp` file to handle with another client. An administrator needs to configure this behavior. Details regarding administrator configurations for this feature can be found in the [web client setup documentation](remote-desktop-web-client-admin.md).
+- Added **Resource Launch Method** configuration in the **Settings** tab, so you can either open resources in the browser or download a `.rdp` file to use with another client. An administrator needs to set up this behavior. For details about administrator configurations for this feature, see the [web client setup documentation](remote-desktop-web-client-admin.md).
 - Fixed color rendering issues, enabling more vivid colors in your remote session.
 - Revised error messages related to remote resource feed errors.
 - Added support for more office shortcuts, such as paste special (Ctrl+Alt+V).
-- Added keyboard shortcut for users to invoke the Windows Key in the remote session (Alt+F3)
-- Updated error message for users attempting to authenticate using an expired password.
+- Added a keyboard shortcut so you can invoke the Windows key in the remote session (Alt+F3).
+- Updated the error message that appears when you try to authenticate by using an expired password.
 - Refreshed feed UI on the All Resources page.
 - Resolved overlapping dialogues that occurred during session reconnect.
 - Fixed remote resource icon sizing in the resource taskbar.
@@ -137,7 +150,7 @@ This article describes the latest updates for the [Remote Desktop web client](re
 
 - Enabled connection to a Remote Desktop Broker without a Remote Desktop Gateway in Windows Server 2019.
 - Sorted feeds alphabetically (for example, RemoteApps first, Desktops second).
-- Fixed multiple accessibility bugs improving screen reader compatibility.
+- Fixed multiple accessibility bugs, improving screen reader compatibility.
 - Updated our build tools.
 - Various bug fixes.
 
@@ -145,14 +158,14 @@ This article describes the latest updates for the [Remote Desktop web client](re
 
 *Date published: January 24, 2019*
 
-- Offline use on internal networks is now supported.
-- Improved rendering on non Microsoft Edge browsers.
-- Implemented limit for feed retrieval retry attempts to prevent DoS.
-- Fixed accessibility bugs, enabling users with visual disabilities to use the web client.
-- Improved error messages displayed to the user for feed errors.
-- Added Ctrl + Alt + End (Windows) and fn + control + option + delete (Mac) shortcuts to invoke Ctrl + Alt + Del in remote machine.
+- Added support for offline use on internal networks.
+- Improved rendering on non-Microsoft Edge browsers.
+- Implemented a limit for feed retrieval retry attempts to prevent DoS.
+- Fixed accessibility bugs so users with visual disabilities can use the web client.
+- Improved error messages for feed errors.
+- Added **Ctrl + Alt + End** (Windows) and **fn + control + option + delete** (Mac) shortcuts to invoke **Ctrl + Alt + Del** on the remote machine.
 - Improved telemetry for crash events.
-- Improved our build pipeline and build tools.
+- Improved the build pipeline and build tools.
 - Various bug fixes.
 
 ## Updates for version 1.0.1
@@ -160,12 +173,12 @@ This article describes the latest updates for the [Remote Desktop web client](re
 *Date published: October 29, 2018*
 
 - Added an option to **Capture support information** on the About page to diagnose issues.
-- InPrivate mode is now supported.
+- Added support for InPrivate mode.
 - Improved support for non-English keyboards.
 - Fixed an issue where tooltips with non-English characters showed incorrectly.
-- Fixed graphics rendering issue that affected Chrome users.
+- Fixed a graphics rendering issue that affected Chrome users.
 - Updated time zone redirection with full daylight savings time support.
-- Improved the error message for out-of-memory error.
+- Improved the error message for an out-of-memory error.
 - Various bug fixes.
 
 ## Updates for version 1.0.0
@@ -180,8 +193,8 @@ This article describes the latest updates for the [Remote Desktop web client](re
 
 *Date published: July 5, 2018*
 
-- New sign in experience within the web client.
-- No longer prompted for credentials when launching a desktop or app connection (Single sign on).
+- New sign-in experience within the web client.
+- The web client no longer prompts you for credentials when you launch a desktop or app connection (single sign-on).
 - Added time zone redirection.
 - Various bug fixes.
 
@@ -190,15 +203,15 @@ This article describes the latest updates for the [Remote Desktop web client](re
 *Date published: May 17, 2018*
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
-- Fixed connection failures for some languages when printing is enabled.
+- Fixed connection failures for some languages when you enable printing.
 - Improved error message when a gateway isn't part of the deployment.
-- **Help** and **Feedback** options were added.
+- Added **Help** and **Feedback** options.
 
 ## Updates for version 0.8.0
 
 *Date published: March 28, 2018*
 
 - Initial preview release of the web client.
-- Copy/paste text through the clipboard with **CTRL+C** and **CTRL+V**.
+- Copy and paste text through the clipboard with **Ctrl+C** and **Ctrl+V**.
 - Print to a PDF file.
 - Localized in 18 languages.

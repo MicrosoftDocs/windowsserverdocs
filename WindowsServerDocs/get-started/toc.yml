@@ -97,6 +97,8 @@ items:
       href: automatic-vm-activation.md
     - name: KMS activation planning
       href: kms-activation-planning.md
+    - name: Hardware-secured KMS activation
+      href: kms-hardware-secured.md
     - name: Create a KMS host
       href: kms-create-host.md
     - name: Replace a KMS host

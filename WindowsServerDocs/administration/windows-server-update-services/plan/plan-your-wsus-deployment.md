@@ -4,8 +4,8 @@ description: Windows Server Update Service (WSUS) - An overview of the deploymen
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 05/02/2025
-# freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
+ms.date: 07/28/2026
+# freshness notes: Reviewed 07/28/2026. Added a callout recommending SQL Server Extended Protection (EPA) for remote SQL Server databases. Otherwise evergreen until the next version or end of support.
 ---
 # Plan your WSUS deployment
 
@@ -142,6 +142,9 @@ You can install the WSUS role on a computer that is separate from the database s
 1. The database server must be in the same active directory domain as the WSUS server, or it must have a trust relationship with the active directory domain of the WSUS server.
 
 1. The WSUS server and the database server must be in the same time zone or be synchronized to the same Coordinated Universal time (Greenwich Mean time) source.
+
+> [!IMPORTANT]
+> When WSUS uses a remote SQL Server database, enable SQL Server Extended Protection for Authentication (EPA) to help protect the database connection. For more information, see [Secure the SQL Server connection](../deploy/2-configure-wsus.md#234-secure-the-sql-server-connection-if-needed).
 
 ## 1.2. Choose a WSUS deployment scenario
 

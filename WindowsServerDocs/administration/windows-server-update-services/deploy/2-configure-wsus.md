@@ -4,9 +4,9 @@ description: See how to configure a Windows Server Update Services (WSUS) server
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 5/02/2025
+ms.date: 07/28/2026
 # customer intent: As an administrator, I want to see how to configure Windows Server Update Services (WSUS) so that I can deploy the latest Microsoft product updates to computers in my network.
-# freshness notes: Other than specific feedback, this article should be evergreen as of 5/02/2025 until the next version released or the end of support. The content is still relevant and accurate, and the links are still valid. The article is not time-sensitive and does not require any updates or changes at this time.
+# freshness notes: Reviewed 07/28/2026. Added SQL Server Extended Protection (EPA) guidance for remote SQL Server connections. Otherwise evergreen until the next version or end of support.
 ---
 
 # Step 2: Configure WSUS
@@ -320,6 +320,8 @@ You must reinitialize the `ClientServicingProxy` client proxy if the server name
 ### 2.3.4. Secure the SQL Server connection, if needed
 
 If you use WSUS with a remote SQL Server database, the connection between the WSUS server and the database server isn't secured through TLS. This situation creates a potential attack vector. To help protect this connection, consider the following recommendations:
+
+- Enable SQL Server Extended Protection for Authentication (EPA) on the SQL Server instance, and configure the encryption setting that your SQL Server version requires. EPA validates channel-binding information to help protect the connection. After you enable EPA, confirm that WSUS synchronization completes successfully. For more information, see [SQL Server security best practices](/sql/relational-databases/security/sql-server-security-best-practices).
 
 - Move the WSUS database to the WSUS server.
 

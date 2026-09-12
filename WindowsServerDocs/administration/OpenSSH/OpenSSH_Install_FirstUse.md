@@ -6,6 +6,7 @@ ms.topic: quickstart
 ms.author: roharwoo
 author: robinharwood
 ms.custom: "se-defect-target"
+ai-usage: ai-assisted
 zone_pivot_groups: openssh-windows-version
 #customer intent: As a Windows administrator, I want to install and set up OpenSSH on Windows Server and Windows client devices, so that I can enable secure remote access and management of my Windows systems.
 ---
@@ -16,8 +17,9 @@ OpenSSH is a connectivity tool for remote sign-in that uses the SSH protocol. It
 
 An OpenSSH-compatible client can be used to connect to Windows Server and Windows client devices.
 
-> [!IMPORTANT]
-> If you downloaded the OpenSSH beta from the GitHub repo at [PowerShell/openssh-portal](https://github.com/PowerShell/openssh-portable), follow the instructions listed there, not the ones in this article. Some information in the Win32-OpenSSH repository relates to prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, express or implied, with respect to the information provided there.
+This article uses the in-box OpenSSH Feature on Demand in Windows and Windows Server. Microsoft supports and services this version through Windows Update, so it's the recommended option for most users.
+
+Microsoft also maintains [PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable), a fork of the upstream, open-source OpenSSH project. Its releases might differ from the version in Windows.
 
 ## Prerequisites
 

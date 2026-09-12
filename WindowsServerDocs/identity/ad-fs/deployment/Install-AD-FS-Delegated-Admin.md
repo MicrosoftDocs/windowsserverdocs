@@ -1,7 +1,7 @@
 ---
 title: Creating an AD FS farm without Domain Administrator privileges
 description: Using the Install-AdfsFarm cmdlet and script to create an AD FS farm using delegated admin credentials
-ms.date: 02/13/2024
+ms.date: 07/09/2026
 ms.topic: how-to
 
 ---
@@ -175,6 +175,55 @@ if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assigning access"
     New-ADObject -Name $ouName -Type Container -Path $ouPath
 }
 
+#######################################
+## Harden DKM container: disable inheritance, purge
+## Authenticated Users and Pre-Windows 2000 Compatible Access.
+## This prevents broad principals from reading thumbnailPhoto
+## (where the DKM key material is stored on child Contact objects).
+#######################################
+if ($pscmdlet.ShouldProcess("$ou", "Disabling inheritance and purging Authenticated Users / Pre-Windows 2000"))
+{
+    $acl = get-acl -Path $ou
+
+    # Block inheritance and discard all inherited ACEs.
+    $acl.SetAccessRuleProtection($true, $false)
+
+    # Purge Authenticated Users
+    $authenticatedUsers = New-Object System.Security.Principal.SecurityIdentifier([System.Security.Principal.WellKnownSidType]::AuthenticatedUserSid, $null)
+    $acl.PurgeAccessRules($authenticatedUsers)
+
+    # Purge Pre-Windows 2000 Compatible Access
+    $preWin2k = New-Object System.Security.Principal.SecurityIdentifier([System.Security.Principal.WellKnownSidType]::BuiltinPreWindows2000CompatibleAccessSid, $null)
+    $acl.PurgeAccessRules($preWin2k)
+
+    set-acl -Path $ou -AclObject $acl
+}
+
+#######################################
+## Grant Domain Admins, Enterprise Admins, and SYSTEM full control.
+## These are the approved principals for the DKM container.
+#######################################
+if ($pscmdlet.ShouldProcess("$ou", "Granting DA, EA, and SYSTEM GenericAll"))
+{
+    $acl = get-acl -Path $ou
+    [System.DirectoryServices.ActiveDirectorySecurityInheritance]$adSecInEnum = [System.DirectoryServices.ActiveDirectorySecurityInheritance]::All
+
+    # Domain Admins
+    $domainSid = (Get-ADDomain).DomainSID
+    $domainAdminsSid = New-Object System.Security.Principal.SecurityIdentifier([System.Security.Principal.WellKnownSidType]::AccountDomainAdminsSid, $domainSid)
+    $acl.AddAccessRule((New-Object System.DirectoryServices.ActiveDirectoryAccessRule $domainAdminsSid,"GenericAll","Allow",$adSecInEnum))
+
+    # Enterprise Admins (forest root domain)
+    $rootDomainSid = (Get-ADForest).RootDomain | Get-ADDomain | Select-Object -ExpandProperty DomainSID
+    $enterpriseAdminsSid = New-Object System.Security.Principal.SecurityIdentifier([System.Security.Principal.WellKnownSidType]::AccountEnterpriseAdminsSid, $rootDomainSid)
+    $acl.AddAccessRule((New-Object System.DirectoryServices.ActiveDirectoryAccessRule $enterpriseAdminsSid,"GenericAll","Allow",$adSecInEnum))
+
+    # SYSTEM
+    $systemSid = New-Object System.Security.Principal.SecurityIdentifier([System.Security.Principal.WellKnownSidType]::LocalSystemSid, $null)
+    $acl.AddAccessRule((New-Object System.DirectoryServices.ActiveDirectoryAccessRule $systemSid,"GenericAll","Allow",$adSecInEnum))
+
+    set-acl -Path $ou -AclObject $acl
+}
 
 #######################################
 ## Grant the following permission to the service account
@@ -274,5 +323,4 @@ if ($pscmdlet.ShouldProcess("$strSID", "Granting GenericRead, CreateChild, Write
 }
 
 pop-location
-
 ```
