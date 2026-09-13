@@ -23,7 +23,7 @@ To perform this procedure, you must be a member of **Domain Admins**.
 
 2.  Create a new folder named PKI on the C: drive. To do so, click **Home**, and then click **New Folder**. A new folder is created with the temporary name highlighted. Type **pki** and then press ENTER.
 
-3.  In Windows Explorer, right-click the folder you just created, hover the mouse cursor over **Share with**, and then click **Specific people**. The **File Sharing** dialog box opens.
+3.  In Windows Explorer, right-click the folder you just created, hover the mouse cursor over **Give access to**, and then click **Specific people**. The **File Sharing** dialog box opens.
 
 4.  In **File Sharing**, type **Cert Publishers**, and then click **Add**. The Cert Publishers group is added to the list. In the list, in **Permission Level**, click the arrow next to **Cert Publishers**, and then click **Read/Write**. Click **Share**, and then click **Done**.
 
