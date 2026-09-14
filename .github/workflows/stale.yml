@@ -1,0 +1,56 @@
+# Nudges inactive pull requests and closes them if they stay inactive.
+# Cadence: nudge at 7 days of inactivity, close 14 days after that (21 days total).
+# Draft PRs and PRs labeled keep-open are never touched.
+name: Mark stale pull requests
+
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93 # v11.0.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # Only act on PRs opened on or after go-live. Update this to the merge date.
+          start-date: "2026-09-11T00:00:00Z"
+          # Pull requests only; leave issues alone.
+          days-before-issue-stale: -1
+          days-before-issue-close: -1
+          # Nudge after 7 days of inactivity, close 14 days after the nudge.
+          days-before-pr-stale: 7
+          days-before-pr-close: 14
+          stale-pr-label: inactive
+          close-pr-label: auto-close
+          exempt-pr-labels: keep-open
+          # Treat draft PRs as work in progress: never nudge them.
+          exempt-draft-pr: true
+          remove-stale-when-updated: true
+          stale-pr-message: >
+            This pull request has been inactive for 7 days, so it now has the
+            `inactive` label.
+
+
+            - **Ready for review?** Comment `#sign-off` to request review and merge.
+
+            - **Still working on it?** Switch the pull request back to a **draft**.
+            Draft pull requests don't get these reminders.
+
+            - **Ready, but this is long-running** (for example, a release)? Comment
+            `#label:"keep-open"` to add the `keep-open` label and pause this reminder.
+
+
+            With no further activity, this pull request closes in 14 days. You can
+            reopen it at any time.
+          close-pr-message: >
+            This pull request has been inactive for 21 days, so it's now closed.
+            No problem if you want to keep going: reopen the pull request whenever
+            you're ready to pick it back up.

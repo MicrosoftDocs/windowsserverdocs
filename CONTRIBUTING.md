@@ -1,22 +1,47 @@
 # Contributing to Windows Server technical documentation
 
-Thank you for your interest in the Windows Server technical documentation! We appreciate your feedback, edits, and additions to our docs. There are two separate locations where we keep Windows Server technical content. One of the locations is public (`windowsserverdocs`) while the other is private (`windowsserverdocs-pr`). Who you are determines which location you contribute to:
+Thank you for your interest in the Windows Server technical documentation! We appreciate your feedback, edits, and additions to our docs. There are a few ways to contribute, depending on the size of your change:
 
-- **I'm not a Microsoft employee.** As a non-Microsoft employee, you must contribute to the public location. For information about how to do that, continue reading this article.
+- **Create a brand-new article.** Create and set up your GitHub account and tools, fork and clone this repo, set up your remote branch, create the article, and then create a pull request for review and publishing. For these instructions, see the [Create new Windows Server articles using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/Contributor-guide/create-new-using-github.md) article.
 
-- **I'm a Microsoft employee.** As a Microsoft employee, you have options, based on what you're trying to do:
+- **Make large changes to an existing article.** To make substantial changes to an existing article, follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/Contributor-guide/edit-existing-using-github.md) article.
 
-    - **Create a brand-new article.** To create a brand-new article, you must create and set up your GitHub account and tools, fork and clone the `windowsserverdocs-pr` repo, set up your remote branch, create the article, and finally create a new pull request for approval and publishing. For these instructions, see the [Create new Windows Server articles using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/create-new-using-github.md) article.
+- **Make minor changes to an existing article.** To make minor changes to an existing article, follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](https://github.com/MicrosoftDocs/windowsserverdocs/blob/main/Contributor-guide/github-browser-updates.md) article.
 
-    - **Make large changes to an existing article.** To make substantial changes to an existing article, you can follow the instructions in the [Edit an existing Windows Server article using GitHub and Visual Studio Code](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/edit-existing-using-github.md) article.
+## How your pull request gets reviewed and merged
 
-    - **Make minor changes to an existing article.** To make minor changes to an existing article, you can follow the instructions in the [Update existing Windows Server articles using a web browser and GitHub](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/Contributor-guide/github-browser-updates.md) article.
+Every pull request (PR) goes through the same simple lifecycle:
+
+1. **Open your PR.** If it's still a work in progress, open it as a **draft**. Draft pull requests don't get inactivity reminders, so take the time you need.
+1. **Mark it ready.** When your changes are ready, comment `#sign-off` to request review and merge. Only the listed authors of the changed files can sign off.
+1. **Review.** A member of the content team reviews your PR and might suggest changes. Reply to the comments and update your branch.
+1. **Merge and publish.** After sign-off and review, your PR is merged and your changes publish to Microsoft Learn.
+
+### Comment commands
+
+Steer your pull request with these comments:
+
+| Comment | What it does |
+| --- | --- |
+| `#sign-off` | Marks the pull request ready for review and merge. |
+| `#hold-off` | Pauses merge. |
+| `#please-close` | Closes the pull request. |
+| `#please-open` | Reopens a closed pull request. |
+| `#label:"keep-open"` | Pauses inactivity reminders (adds the `keep-open` label). |
+| `#assign-reviewer:<github-account>` | Requests a review from a specific person. |
+
+### Inactivity reminders
+
+To help keep things moving, a pull request with no activity for 7 days gets an `inactive` label and a reminder comment. With no further activity, the pull request closes 14 days later. To avoid this:
+
+- Keep a work-in-progress pull request as a **draft**.
+- Comment `#label:"keep-open"` to pause reminders when a pull request is ready but long-running, such as a release.
+
+You can reopen a closed pull request at any time.
 
 ## Sign a CLA
 
-All contributors who are ***not*** a Microsoft employee must [sign a Microsoft Contribution Licensing Agreement (CLA)](https://cla.microsoft.com/) before editing any Microsoft repositories. 
-If you've already edited within Microsoft repositories in the past, congratulations!
-You've already completed this step.
+Most contributors need to [sign a Microsoft Contribution Licensing Agreement (CLA)](https://cla.microsoft.com/) before their first change can be merged. When a signature is needed, the CLA bot comments on your pull request with what to do. If you've contributed to a Microsoft repository before, you've already completed this step.
 
 ## Editing topics
 
@@ -38,9 +63,9 @@ We've tried to make editing an existing, public file as simple as possible.
 
 4. Using Markdown language, make your changes to the topic. For info about how to edit content using Markdown, see:
 
-    - **If you're linked to the Microsoft organization in GitHub:** [Windows Server Contributor's Guide](https://github.com/MicrosoftDocs/windowsserverdocs-pr/tree/master/Contributor-guide)
+    - [Windows Server Contributor's Guide](https://github.com/MicrosoftDocs/windowsserverdocs/tree/main/Contributor-guide)
 
-    - **If you're external to Microsoft:** [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+    - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 5. Make your suggested change, and then select **Preview Changes** to make sure it looks correct.
 
