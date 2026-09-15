@@ -4,7 +4,8 @@ description: Explore Kerberos authentication in Windows Server, including its pr
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
-ms.date: 07/17/2025
+ms.date: 09/14/2026
+ai-usage: ai-assisted
 ---
 # Kerberos authentication overview in Windows Server
 
@@ -13,6 +14,16 @@ Kerberos is an authentication protocol that is used to verify the identity of a 
 The Windows Server operating systems implement the Kerberos version 5 authentication protocol and extensions for public key authentication, transporting authorization data, and delegation. The Kerberos authentication client is implemented as a security support provider (SSP), and it can be accessed through the Security Support Provider Interface (SSPI). Initial user authentication is integrated with the Winlogon single sign-on architecture.
 
 The Kerberos Key Distribution Center (KDC) is integrated with other Windows Server security services that run on the domain controller. The KDC uses the domain's Active Directory Domain Services database as its security account database. Active Directory Domain Services is required for default Kerberos implementations within the domain or forest.
+
+## How Kerberos authentication works
+
+Kerberos authentication involves three parties: the client that acts for a security principal, the service the principal wants to reach, and the Key Distribution Center (KDC) that both parties trust. A *security principal* is an identity, such as a user, computer, or service, that the system can authenticate. In Windows Server, the KDC runs on every domain controller and uses the domain's Active Directory Domain Services database as its account database.
+
+When a user signs in, the Kerberos client contacts the KDC to prove the user's identity and obtain a ticket-granting ticket (TGT). The TGT is a credential that lets the client request access to services without presenting the user's password again. The client stores the TGT in its ticket cache and reuses it until the ticket expires.
+
+To connect to a service, the client presents its TGT to the KDC and requests a service ticket for that specific service. The KDC returns a service ticket, which the client presents directly to the target service. Because the ticket already contains the information that the service needs to verify the client's identity, the service can authenticate the client without contacting a domain controller for each connection.
+
+Windows Server implements the industry-standard Kerberos version 5 protocol that the Internet Engineering Task Force (IETF) defines. This standards-track foundation lets the Windows implementation interoperate with other systems that use Kerberos. On top of the standard, Windows adds extensions for public key authentication, transporting authorization data, and delegation. Microsoft documents these Windows-specific behaviors in the Windows Protocols specification [[MS-KILE]: Kerberos Protocol Extensions](/openspecs/windows_protocols/ms-kile/2a32282e-dd48-4ad9-a542-609804b02cc9), which describes where the Windows implementation extends or differs from the standard.
 
 ## Practical applications
 
