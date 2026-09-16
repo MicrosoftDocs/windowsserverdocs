@@ -1,24 +1,24 @@
 ---
 title: Service Accounts in Windows Server
-
-description: Learn about sMSA, gMSA, dMSA, and virtual accounts in Windows Server Active Directory.
+description: Learn how service accounts work in Windows Server, including sMSA, gMSA, dMSA, and virtual accounts, and the password policy and minimum length for each type.
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 07/08/2025
-
+ms.date: 09/14/2026
+ai-usage: ai-assisted
 ---
 
 # Service accounts
 
 A service account is a user account that's created explicitly to provide a security context for services that are running on Windows Server operating systems. The security context determines the service's ability to access local and network resources. Windows operating systems rely on services to run various features. These services can be configured through the applications, the Services snap-in, or Task Manager, or by using Windows PowerShell.
 
-This article contains information about the following types of service accounts:
+This article contains information about the following types of service accounts and their password management:
 
 - [Standalone Managed Service Accounts (sMSA)](#standalone-managed-service-accounts)
 - [Group Managed Service Accounts (gMSA)](#group-managed-service-accounts)
 - [Delegated Managed Service Accounts (dMSA)](#delegated-managed-service-accounts)
 - [Virtual accounts](#virtual-accounts)
+- [Password policy for service accounts](#password-policy-for-service-accounts)
 
 ## Standalone Managed Service Accounts
 
@@ -76,6 +76,40 @@ To learn how to configure and use virtual service accounts, see [Managed service
 > [!NOTE]
 > Virtual accounts apply only to the Windows operating systems that are listed in the **Applies to** list at the beginning of this article.
 
+## Password policy for service accounts
+
+The password policy that applies to a service account depends on the account type, so there's no single minimum password length (and no fixed minimum number of characters) that applies to every service account. Traditional service accounts follow ordinary Active Directory password policy, which an administrator sets and maintains. Managed service accounts (sMSA, gMSA, and dMSA) and virtual accounts generally don't require an administrator-defined minimum password length, because Windows manages their credentials. The following details cover the exceptions.
+
+The following table summarizes who manages the password and what minimum password length applies for each service account type.
+
+| Service account type | Who manages the password | Minimum password length |
+|--|--|--|
+| Traditional (standard) service account | An administrator sets and rotates it manually. | Whatever the domain's Active Directory password policy specifies through the **Minimum password length** setting. This value is in the Default Domain Policy, or a fine-grained password policy that overrides it. There's no service-account-specific minimum. |
+| Standalone Managed Service Account (sMSA) | Windows maintains the password automatically by default. An administrator can supply a password when creating the account and can reset the password. | Usually Windows-generated, so no administrator minimum applies. If an administrator supplies a password at creation, it must meet the applicable domain password policy. |
+| Group Managed Service Account (gMSA) | Windows generates and manages the password automatically. | Not administrator-defined. The domain controller manages the password, and authorized hosts retrieve it, so administrators normally don't enter or coordinate it. |
+| Delegated Managed Service Account (dMSA) | Windows manages fully randomized keys automatically. | Not administrator-defined. The account uses fully randomized, machine-managed keys, and when a dMSA replaces an existing account, Windows disables that account's password. |
+| Virtual account | Windows uses the computer account's credentials. | No service-account password for an administrator to set or rotate. |
+
+The following sections explain the password behavior for each account type in more detail.
+
+### Traditional service account passwords
+
+A traditional, or standard, service account is an ordinary domain user account that runs a service. Its password follows the same Active Directory password policy as any other user account, so there's no special service-account minimum length. The minimum length and complexity are whatever the domain's Default Domain Policy defines through the **Minimum password length** setting, unless a [fine-grained password policy](../get-started/adac/fine-grained-password-policies.md) (a Password Settings Object, or PSO) scoped to the account or its group overrides that default. An administrator sets these passwords and must rotate them manually. The minimum is whatever the applicable domain or fine-grained policy specifies, not a fixed number.
+
+For more information about how Active Directory stores and validates passwords, see [Passwords technical overview](../../../security/kerberos/passwords-technical-overview.md). To view the domain default, see [`Get-ADDefaultDomainPasswordPolicy`](/powershell/module/activedirectory/get-addefaultdomainpasswordpolicy). To change it, see [`Set-ADDefaultDomainPasswordPolicy`](/powershell/module/activedirectory/set-addefaultdomainpasswordpolicy).
+
+### Managed service account passwords (sMSA, gMSA, and dMSA)
+
+For standalone Managed Service Accounts (sMSA), Windows maintains the password automatically by default. When you create an sMSA, you can let Windows generate and manage a complex password, or you can supply an account password by using the `AccountPassword` parameter of [`New-ADServiceAccount`](/powershell/module/activedirectory/new-adserviceaccount). If you supply a password, it must meet the applicable domain password policy. You can also reset an sMSA password by running [`Reset-ADServiceAccountPassword`](/powershell/module/activedirectory/reset-adserviceaccountpassword) on the computer where you installed the account. Password reset applies only to sMSAs, not gMSAs.
+
+For group Managed Service Accounts (gMSA), the domain controller computes and manages the password, and the hosts that you authorize retrieve it automatically. As a result, administrators normally don't enter or coordinate a gMSA password, and the domain **Minimum password length** policy doesn't meaningfully apply. Windows rotates the gMSA password on a fixed interval. The default interval is 30 days. You can specify a different interval only when you create the account, by setting the `ManagedPasswordIntervalInDays` parameter of [`New-ADServiceAccount`](/powershell/module/activedirectory/new-adserviceaccount), which Windows stores in the [`msDS-ManagedPasswordInterval`](/windows/win32/adschema/a-msds-managedpasswordinterval) attribute. You can't change the interval after you create the account. For more information, see [Group Managed Service Accounts overview](group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview.md) and [Manage group Managed Service Accounts](group-managed-service-accounts/group-managed-service-accounts/manage-group-managed-service-accounts.md).
+
+Delegated Managed Service Accounts (dMSA) in Windows Server 2025 don't manage passwords the same way as sMSA and gMSA. Rather than a standalone generated account password, a dMSA uses a fully randomized secret. The domain controller derives this secret from the associated machine account credential, holds it, and ties authentication to the device identity. When the dMSA replaces an existing account, Windows disables that account's password. An administrator doesn't configure or rotate a dMSA password.
+
+### Virtual account passwords
+
+Virtual accounts are managed local accounts that require no password management. They access network resources by using the computer account's credentials, so there's no service-account password for an administrator to set or rotate.
+
 ## Choosing your service account
 
  
@@ -108,5 +142,5 @@ When choosing a service account, it's important to consider factors such as the 
 |---------------|-------------|
 | Product evaluation | [What's New for Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831451(v=ws.11)) <br> [Get Started with Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431(v=ws.11)) |
 | Deployment | [Windows Server 2012: Group Managed Service Accounts - Tech Community](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/windows-server-2012-group-managed-service-accounts/ba-p/255910) |
-| Related technologies | [Security principals](understand-security-principals.md) <br> [What's new in Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services) |
+| Related technologies | [Security principals](understand-security-principals.md) <br> [Fine-grained password policies](/windows-server/identity/ad-ds/get-started/adac/fine-grained-password-policies) <br> [What's new in Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services) |
 
