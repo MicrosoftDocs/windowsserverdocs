@@ -13,7 +13,7 @@ This article provides background information about Active Directory Domain Servi
 
 ## Prerequisites
 
-The recommended way to upgrade a domain is to use a clean OS install to promote new servers to DCs that run a newer version of Windows Server and demote the older DCs as needed. This method is preferable to upgrading the operating system of an existing DC, which is also known as an in-place upgrade. A clean OS install ensures you get the full Active Directory performance improvements included in new versions of Windows Server.
+The recommended way to upgrade a domain is to use a clean OS install to promote new servers to DCs that run a newer version of Windows Server and demote the older DCs as needed. This method is preferable to performing an in-place upgrade of the operating system on an existing DC. A clean OS install ensures you get the full Active Directory performance improvements included in new versions of Windows Server.
 
 Follow these general steps before you promote a server to a DC that runs a newer version of Windows Server:
 
