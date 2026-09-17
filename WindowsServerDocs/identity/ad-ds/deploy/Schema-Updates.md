@@ -6222,6 +6222,129 @@ objectVersion: 56
 
 Sch0.ldf through Sch47.ldf are introduced with Windows Server 2000 to Windows Server 2008 R2.
 
+### PAS.ldf
+
+PAS.ldf updates the partial attribute set (PAS) and should run only when the current forest functional level is 1 or greater.
+
+```
+# Fix the isMemberOfPartialAttributeSet for Windows Server 2007 schema.
+# Should only run when the current forest functionality level is 1 or greater.
+
+dn: CN=ms-DS-HAB-Seniority-Index,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Phonetic-Last-Name,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Phonetic-First-Name,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Phonetic-Department,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Phonetic-Display-Name,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Phonetic-Company-Name,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-FVE-VolumeGuid,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-FVE-RecoveryGuid,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=Last-Logon-Timestamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-PKI-DPAPIMasterKeys,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-PKI-AccountCredentials,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=ms-PKI-RoamingTimeStamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: FALSE
+-
+
+dn: CN=Last-Logon-Timestamp,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Is-Enabled,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Device-OS-Type,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Device-OS-Version,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Device-Physical-IDs,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn: CN=ms-DS-Device-ID,CN=Schema,CN=Configuration,DC=X
+changetype: ntdsSchemaModify
+replace: isMemberOfPartialAttributeSet
+isMemberOfPartialAttributeSet: TRUE
+-
+
+dn:
+changetype: ntdsSchemaModify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+```
+
 ### Sch0.ldf
 
 ```
