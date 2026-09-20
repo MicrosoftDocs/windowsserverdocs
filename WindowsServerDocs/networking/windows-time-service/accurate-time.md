@@ -58,7 +58,7 @@ There are many different reasons you might need accurate time. The typical case 
 
 - Government Regulations like:
     - 50 ms accuracy for FINRA in the US
-    - 1 ms ESMA (MiFID II) in the EU.
+    - 1 ms ESMA (MiFID II) in the EU. 100 microseconds for High Frequency Trading environments.
 - Cryptography Algorithms
 - Distributed systems like Cluster/SQL/Exchange and Document DBs
 - Blockchain framework for bitcoin transactions
