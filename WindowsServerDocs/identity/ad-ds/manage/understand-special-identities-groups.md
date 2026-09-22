@@ -173,6 +173,8 @@ Any user who accesses the system through a dial-up connection has the Dialup ide
 
 ### Digest Authentication
 
+A group that is used when the Digest authentication package authenticated the client.
+
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-64-21|
@@ -316,6 +318,8 @@ The Network Service account is similar to the Authenticated User account. Member
 
 ### NTLM Authentication
 
+A group that is used when the NTLM authentication package authenticated the client.
+
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-64-10 |
@@ -325,7 +329,7 @@ The Network Service account is similar to the Authenticated User account. Member
 
 ### Other Organization
 
-This group implicitly includes all users who are logged on to the system through a dial-up connection. Membership is controlled by the operating system.
+A group that includes all users and computers from another organization.
 
 |Attribute|Value|
 | --- | --- |
@@ -405,6 +409,8 @@ Users and computers with restricted capabilities have the Restricted identity. T
 
 ### SChannel Authentication
 
+A group that is used when the SChannel authentication package authenticated the client.
+
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-64-14|
@@ -447,6 +453,8 @@ Any user that's accessing the system through Terminal Services has the Terminal 
 
 ### This Organization
 
+A group that includes all users from the same organization.
+
 |Attribute|Value|
 | --- | --- |
 |Well-known SID/RID|S-1-5-15|
@@ -455,6 +463,8 @@ Any user that's accessing the system through Terminal Services has the Terminal 
 |Default user rights| None |
 
 ### Window Manager\\Window Manager Group
+
+A built-in group that is used by the Desktop Windows Manager (DWM). DWM is a Windows service that manages information display for Windows applications. It is a pseudo group which all virtual accounts that are window managers get.
 
 |Attribute|Value|
 | --- | --- |
