@@ -59,6 +59,10 @@ For more information about Supplemental Credentials, see [MS-SAMR: supplementalC
 
 On domain members and workstations, local user account password hashes are stored in a local Security Account Manager (SAM) Database located in the registry. They are encrypted using the same encryption and hashing algorithms as Active Directory. The passwords in the supplementalCredentials attribute for local user accounts are also stored in the local SAM Database since Windows Server 2016.
 
+### Passwords stored in Lightweight Directory Service (LDS)
+
+In LDS, user account password hashes are stored in the user record in the LDS database in attribute unicodePwd. They are encrypted using the same encryption and hashing algorithms as Active Directory.
+
 ### Cached credentials
 
 Windows also stores a password verifier on domain members when a domain user logs on to that domain member. This verifier can be used to authenticate a domain user if the computer is not able to access the domain controller. The password verifier is also commonly called a cached credential. It is computed by taking the NT hash, concatenating the user name to it, and then hashing the result by using the MD4 hash function.
