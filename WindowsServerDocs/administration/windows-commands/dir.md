@@ -71,7 +71,7 @@ dir [<drive>:][<path>][<filename>] [...] [/p] [/q] [/w] [/d] [/a[[:]<attributes>
   11/30/2004  01:16 PM 0 t97.txt
   ```
 
-  You might expect that typing `dir t97\*` would return the file t97.txt. However, typing `dir t97\*` returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map *T97B4~1.TXT*. Similarly, typing `del t97\*` would delete both files.
+  You might expect that typing `dir t97*` would return the file t97.txt. However, typing `dir t97*` returns both files, because the asterisk wildcard matches the file t.txt2 to t97.txt by using its short name map *T97B4~1.TXT*. Similarly, typing `del t97*` would delete both files.
 
 - You can use the question mark (?) as a substitute for a single character in a name. For example, typing `dir read???.txt` lists any files in the current directory with the .txt extension that begin with read and are followed by up to three characters. This includes Read.txt, Read1.txt, Read12.txt, Read123.txt, and Readme1.txt, but not Readme12.txt.
 
