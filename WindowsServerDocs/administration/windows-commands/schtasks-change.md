@@ -70,6 +70,8 @@ schtasks /change /tn <Taskname> [/s <computer> [/u [<domain>\]<user> [/p <passwo
 
 - To run a **/change** command with the permissions of a different user (**/u**, **/p**), the local computer must be in the same domain as the remote computer or must be in a domain that the remote computer domain trusts.
 
+- If a **/change** command run with the **/u** and **/p** parameters results in **ERROR: User credentials are not allowed on the local machine.**, then the **/ru** and **/rp** parameters should be used in place of **/u** and **/p**.
+
 - The System account doesn't have interactive logon rights. Users don't see, and can't interact with, programs run with system permissions.
 To identify tasks with the **/it** property, use a verbose query (**/query /v**). In a verbose query display of a task with **/it**, the Logon Mode field has a value of Interactive only.
 
