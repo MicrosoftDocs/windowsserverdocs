@@ -129,7 +129,10 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
     ```powershell
     Enable-StorageBusCache
     ```
-
+    
+    > [!NOTE]
+    > The cache tier is a mirror tier and requires two drives for this command to complete.
+    
     This step will:
     > [!div class="checklist"]
     > * Create a storage pool with all the available drives.
@@ -234,4 +237,3 @@ See the following example for changing the Provision Mode from Shared (default) 
 ```powershell
 Set-StorageBusCache -ProvisionMode Cache
 ```
-
