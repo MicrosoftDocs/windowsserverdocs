@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page
   ms.author: roharwoo
   author: robinharwood
-  ms.date: 05/28/2025
+  ms.date: 09/25/2026
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -28,6 +28,9 @@ highlightedContent:
     - title: Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates-overview.md
+    - title: Local AI inference
+      itemType: overview
+      url: ./ai/index.yml
 
 conceptualContent:
   sections:
