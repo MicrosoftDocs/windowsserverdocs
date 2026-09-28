@@ -1,0 +1,60 @@
+### YamlMime:Landing
+
+title: Distributed AI inference on Windows Server documentation
+summary: Explore distributed AI inference on Windows Server. Compare runtimes, connect clients to endpoints, build with SQL Server, and plan GPU infrastructure.
+
+metadata:
+  title: Windows Server AI Inference Documentation
+  description: Explore distributed AI inference on Windows Server. Compare runtimes, connect clients to endpoints, build with SQL Server, and plan GPU infrastructure.
+  ms.topic: landing-page
+  author: robinharwood
+  ms.author: roharwoo
+  ms.date: 09/25/2026
+  ms.service: windows-server
+  ai-usage: ai-assisted
+
+landingContent:
+  - title: Understand AI inference approaches
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Plan distributed AI inference on Windows Server
+            url: local-ai-inference.md
+      - linkListType: concept
+        links:
+          - text: What is Windows ML?
+            url: /windows/ai/new-windows-ml/overview?context=/windows-server/context/windows-server-ai
+  - title: Plan GPU acceleration in Windows Server
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Plan for GPU acceleration in Windows Server
+            url: ../virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md
+  - title: Explore inference runtimes
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Get started with Foundry Local for on-device inference
+            url: /azure/foundry-local/get-started?context=/windows-server/context/windows-server-ai
+  - title: Connect apps and tools to model endpoints
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Connect GitHub Copilot CLI to a Windows Server inference endpoint
+            url: configure-github-copilot-cli-local-inference.md
+          - text: Connect Visual Studio Code to local and remote model endpoints
+            url: configure-visual-studio-code-local-models.md
+          - text: Connect Intelligent Terminal Preview to a Windows Server model endpoint
+            url: configure-intelligent-terminal-local-language-model.md
+  - title: Build AI solutions with SQL Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Intelligent applications and AI in SQL Server
+            url: /sql/sql-server/ai/artificial-intelligence-intelligent-applications?context=/windows-server/context/windows-server-ai
+  - title: Configure GPUs for clustered VMs
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Use GPUs with Discrete Device Assignment in clustered VMs
+            url: ../virtualization/hyper-v/deploy/use-gpu-with-clustered-vm.md

@@ -1,0 +1,47 @@
+items:
+- name: Local AI inference documentation
+  href: index.yml
+- name: Overview
+  items:
+  - name: Plan distributed AI inference on Windows Server
+    href: local-ai-inference.md
+  - name: What is Windows ML?
+    href: /windows/ai/new-windows-ml/overview?context=/windows-server/context/windows-server-ai
+  - name: What is Foundry Local?
+    href: /azure/foundry-local/what-is-foundry-local?context=/windows-server/context/windows-server-ai
+- name: Plan and deploy
+  items:
+  - name: Plan for GPU acceleration in Windows Server
+    href: ../virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md?context=/windows-server/context/windows-server-ai
+  - name: GPU partitioning
+    href: ../virtualization/hyper-v/gpu-partitioning.md?context=/windows-server/context/windows-server-ai
+  - name: Partition and assign GPUs to a virtual machine
+    href: ../virtualization/hyper-v/partition-assign-vm-gpu.md?context=/windows-server/context/windows-server-ai
+  - name: Run ONNX models using Windows ML
+    href: /windows/ai/new-windows-ml/run-onnx-models?context=/windows-server/context/windows-server-ai
+  - name: Get started with Foundry Local
+    href: /azure/foundry-local/get-started?context=/windows-server/context/windows-server-ai
+  - name: Foundry Local CLI reference
+    href: /azure/foundry-local/reference/reference-cli?context=/windows-server/context/windows-server-ai
+- name: Connect apps and tools
+  items:
+  - name: Connect GitHub Copilot CLI to a Windows Server inference endpoint
+    href: configure-github-copilot-cli-local-inference.md
+  - name: Connect Visual Studio Code to local and remote model endpoints
+    href: configure-visual-studio-code-local-models.md
+  - name: Connect Intelligent Terminal Preview on a Windows client to a Windows Server model endpoint
+    href: configure-intelligent-terminal-local-language-model.md
+  - name: OpenAI-compatible endpoints in Microsoft Agent Framework
+    href: /agent-framework/hosting/self-hosting/openai-endpoints?context=/windows-server/context/windows-server-ai
+  - name: Integrate inference SDKs with Foundry Local
+    href: /azure/foundry-local/how-to/how-to-integrate-with-inference-sdks?context=/windows-server/context/windows-server-ai
+- name: Build, secure, and operate
+  items:
+  - name: Intelligent applications and AI in SQL Server
+    href: /sql/sql-server/ai/artificial-intelligence-intelligent-applications?context=/windows-server/context/windows-server-ai
+  - name: Create an external model with local ONNX Runtime
+    href: /sql/t-sql/statements/create-external-model-transact-sql?context=/windows-server/context/windows-server-ai#example-with-onnx-runtime-running-locally
+  - name: Vector search and vector indexes
+    href: /sql/sql-server/ai/vectors?context=/windows-server/context/windows-server-ai
+  - name: Use GPUs with Discrete Device Assignment in clustered VMs
+    href: ../virtualization/hyper-v/deploy/use-gpu-with-clustered-vm.md?context=/windows-server/context/windows-server-ai
