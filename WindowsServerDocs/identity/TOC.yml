@@ -539,13 +539,15 @@
                   href: ad-ds/ldap-client-performance-counters.md
                 - name: SAM client logging and diagnostics
                   href: ad-ds/enable-sam-client-logging-diagnostics.md
-            - name: LDAP signing
+            - name: LDAP signing and channel binding
               items:
                 - name: LDAP signing overview
                   href: ad-ds/ldap-signing.md
+                - name: LDAP channel binding
+                  href: ad-ds/ldap-channel-binding.md
                 - name: Configure certificates for LDAP
                   href: ad-ds/configure-ldap-signing-certificates.md
-                - name: Manage LDAP signing using Group Policy
+                - name: Configure LDAP signing by using Group Policy
                   href: manage-ldap-signing-group-policy.md
         - name: AD DS Troubleshooting
           href: ad-ds/manage/AD-DS-Troubleshooting.md
@@ -1074,54 +1076,74 @@
               href: ad-cs/certificate-template-concepts.md
             - name: PKI design considerations
               href: ad-cs/pki-design-considerations.md
-        - name: How-to guides
+        - name: ML-DSA post-quantum cryptography
           items:
-            - name: ML-DSA post-quantum cryptography
-              items:
-                - name: Configure a certification authority to use ML-DSA
-                  href: ad-cs/configure-ml-dsa-certification-authority.md
-                - name: Configure certificate templates for ML-DSA
-                  href: ad-cs/configure-ml-dsa-certificate-templates.md
-                - name: Configure Online Responders (OCSP) to use ML-DSA
-                  href: ad-cs/configure-ml-dsa-online-responder.md
-            - name: Configure Network Device Enrollment Service to use a domain user account
-              href: ad-cs/create-domain-user-account-ndes-service-account.md
-            - name: Certificate Enrollment Web Service
-              items:
-                - name: Configure Certificate Enrollment Web Service
-                  href: ad-cs/configure-certificate-enrollment-web-service.md
-                - name: Configure Certificate Enrollment Policy Web Service
-                  href: ad-cs/configure-certificate-enrollment-policy-web-service.md
-                - name: Use a custom port for Certificate Enrollment Web Service
-                  href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
-            - name: Certification Authority Web Enrollment
-              items:
-                - name: Request certificates using Web Enrollment
-                  href: ad-cs/request-certificate-windows-server.md
-                - name: Retrieve base and delta CRLs
-                  href: ad-cs/retrieve-base-and-delta-crl.md
-                - name: "Submit certificate requests using a PKCS #10 or PKCS #7 file"
-                  href: ad-cs/submit-pkcs-certificate-request.md
-            - name: Configure trusted roots and disallowed certificates
-              href: ad-cs/configure-trusted-roots-disallowed-certificates.md
-            - name: Distribute certificates using Group Policy
-              href: ad-cs/distribute-certificates-group-policy.md
-            - name: Export a certificate with its private key
-              href: ad-cs/export-certificate-private-key.md
-            - name: Install a policy module with Network Device Enrollment Service
-              href: ad-cs/install-policy-module-network-device-enrollment-service.md
-            - name: Manage certificate templates
-              href: ad-cs/manage-certificate-templates.md
+            - name: Configure a certification authority to use ML-DSA
+              href: ad-cs/configure-ml-dsa-certification-authority.md
+            - name: Configure certificate templates for ML-DSA
+              href: ad-cs/configure-ml-dsa-certificate-templates.md
+            - name: Configure Online Responders (OCSP) to use ML-DSA
+              href: ad-cs/configure-ml-dsa-online-responder.md
+        - name: Manage and secure the certification authority
+          items:
+            - name: Secure, delegate, and audit AD CS administration
+              href: ad-cs/secure-delegate-audit-certification-authority.md
+            - name: Configure AD CS policy and exit modules
+              href: ad-cs/configure-govern-ca-policy-exit-modules.md
             - name: Migrate the Certification Authority
               href: ad-cs/migrate-certification-authority.md
             - name: Renew root CA certificate
               href: ad-cs/renew-root-ca-certificate.md
+        - name: Request and manage certificates
+          items:
+            - name: Manage certificate templates
+              href: ad-cs/manage-certificate-templates.md
+            - name: Request and renew AD CS certificates
+              href: ad-cs/request-renew-certificates-certificates-mmc.md
+            - name: Issue or deny pending certificate requests in AD CS
+              href: ad-cs/review-dispose-pending-certificate-requests.md
+            - name: Configure AD CS key archival and key recovery
+              href: ad-cs/configure-key-archival-recover-private-keys.md
+        - name: Distribute, store, and trust certificates
+          items:
+            - name: Distribute certificates using Group Policy
+              href: ad-cs/distribute-certificates-group-policy.md
+            - name: Export a certificate with its private key
+              href: ad-cs/export-certificate-private-key.md
+            - name: Inspect and manage certificate stores in Windows Server
+              href: ad-cs/inspect-certificates-manage-certificate-stores.md
+            - name: Configure trusted roots and disallowed certificates
+              href: ad-cs/configure-trusted-roots-disallowed-certificates.md
+            - name: Disable weak cryptographic algorithms in certificate validation
+              href: ad-cs/disable-weak-cryptographic-algorithms.md
+        - name: Certificate revocation, validation, and monitoring
+          items:
+            - name: Revoke certificates and publish CRLs in AD CS
+              href: ad-cs/operate-certificate-revocation-crl-cdp.md
+            - name: Configure AIA retrieval and path validation in AD CS
+              href: ad-cs/configure-certificate-path-validation-revocation-policy.md
+            - name: Monitor AD CS health with Enterprise PKI
+              href: ad-cs/monitor-ad-cs-health-enterprise-pki.md
+            - name: Secure and scale AD CS Online Responders
+              href: ad-cs/secure-monitor-scale-online-responders.md
+        - name: Certificate and Network Device Enrollment Services
+          items:
+            - name: Configure Certificate Enrollment Web Service
+              href: ad-cs/configure-certificate-enrollment-web-service.md
+            - name: Configure Certificate Enrollment Policy Web Service
+              href: ad-cs/configure-certificate-enrollment-policy-web-service.md
+            - name: Use a custom port for Certificate Enrollment Web Service
+              href: ad-cs/certificate-enrollment-certificate-key-based-renewal.md
+            - name: Configure Network Device Enrollment Service to use a domain user account
+              href: ad-cs/create-domain-user-account-ndes-service-account.md
+            - name: Install a policy module with Network Device Enrollment Service
+              href: ad-cs/install-policy-module-network-device-enrollment-service.md
+        - name: Certification Authority Web Enrollment
+          items:
             - name: Request certificates using Web Enrollment
               href: ad-cs/request-certificate-windows-server.md
             - name: Retrieve base and delta CRLs
               href: ad-cs/retrieve-base-and-delta-crl.md
-            - name: Disable weak cryptographic algorithms in certificate validation
-              href: ad-cs/disable-weak-cryptographic-algorithms.md
             - name: "Submit certificate requests using a PKCS #10 or PKCS #7 file"
               href: ad-cs/submit-pkcs-certificate-request.md
     - name: Administrative tools and logon types reference
