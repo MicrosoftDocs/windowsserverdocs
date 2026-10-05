@@ -6224,7 +6224,7 @@ Sch0.ldf through Sch47.ldf are introduced with Windows Server 2000 to Windows Se
 
 ### PAS.ldf
 
-PAS.ldf updates the partial attribute set (PAS) and should run only when the current forest functional level is 1 or greater.
+PAS.ldf updates the partial attribute set (PAS). Run it only if the current forest functional level is one or greater.
 
 ```
 # Fix the isMemberOfPartialAttributeSet for Windows Server 2007 schema.
