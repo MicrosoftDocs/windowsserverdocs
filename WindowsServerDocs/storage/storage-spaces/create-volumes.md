@@ -82,6 +82,10 @@ First, launch Windows PowerShell from the Windows start menu. We recommend using
 The **New-Volume** cmdlet has four parameters you need to provide:
 
 - **FriendlyName:** Any string you want, for example *"Volume1"*
+
+   > [!NOTE]
+   > Don't use the format "UserStorage_<#>", such as "UserStorage_1". This format is a deployment-managed naming pattern.
+ 
 - **FileSystem:** Either **CSVFS_ReFS** (recommended for all volumes; required for mirror-accelerated parity volumes) or **CSVFS_NTFS**
 - **StoragePoolFriendlyName:** The name of your storage pool, for example *"S2D on ClusterName"*
 - **Size:** The size of the volume, for example *"10TB"*
