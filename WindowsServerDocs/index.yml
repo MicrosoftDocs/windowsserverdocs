@@ -10,7 +10,7 @@ metadata:
   ms.topic: hub-page
   ms.author: roharwoo
   author: robinharwood
-  ms.date: 09/25/2026
+  ms.date: 10/05/2026
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -28,9 +28,6 @@ highlightedContent:
     - title: Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates-overview.md
-    - title: Local AI inference
-      itemType: overview
-      url: ./ai/index.yml
 
 conceptualContent:
   sections:
@@ -174,6 +171,24 @@ conceptualContent:
         footerLink:
           text: See more
           url: ./failover-clustering/failover-clustering-overview.md
+      # Card
+      - title: AI inference
+        links:
+          - text: Plan distributed AI inference on Windows Server
+            itemType: overview
+            url: ./ai/local-ai-inference.md
+          - text: Plan for GPU acceleration in Windows Server
+            itemType: concept
+            url: ./virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md
+          - text: Get started with Foundry Local for on-device inference
+            itemType: get-started
+            url: /azure/foundry-local/get-started?context=/windows-server/context/windows-server-ai
+          - text: Connect Visual Studio Code to local and remote model endpoints
+            itemType: how-to-guide
+            url: ./ai/configure-visual-studio-code-local-models.md
+        footerLink:
+          text: Explore AI inference
+          url: ./ai/index.yml
 
 productDirectory:
   title: Windows Server and Azure
