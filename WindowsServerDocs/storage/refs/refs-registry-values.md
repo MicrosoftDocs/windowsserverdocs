@@ -1,17 +1,17 @@
 ---
-description: "Look up supported ReFS registry values in Windows Server, including each value's type, default behavior, dependencies, and cautions to weigh before you change it."
-title: ReFS Registry Values in Windows Server
+description: "Look up supported ReFS registry values in Windows client and Windows Server, including each value's type, default behavior, dependencies, and cautions."
+title: ReFS Registry Values in Windows and Windows Server
 ms.author: roharwoo
 ms.topic: concept-article
 author: robinharwood
-ms.date: 10/01/2026
+ms.date: 10/05/2026
 ai-usage: ai-assisted
-#customer intent: As a Windows Server or storage administrator, I want to look up a specific ReFS registry value and understand its purpose, type, default behavior, and cautions so that I can make a safe configuration decision.
+#customer intent: As a storage administrator for a supported Windows client or Windows Server edition, I want to look up a specific ReFS registry value and understand its purpose, type, default behavior, and cautions so that I can make a safe configuration decision.
 ---
 
-# Supported ReFS registry values in Windows Server
+# Supported ReFS registry values in Windows client and Windows Server
 
-Resilient File System (ReFS) registry values are settings that adjust how the file system behaves for safety, space management, caching, tiering, and thin provisioning. Changing these values without understanding their effects might affect data integrity, performance, and supportability.
+Resilient File System (ReFS) registry values in supported Windows client and Windows Server editions adjust how the file system behaves for safety, space management, caching, tiering, and thin provisioning. Changing these values without understanding their effects might affect data integrity, performance, and supportability.
 
 Use this article to look up a specific supported value and understand its purpose, type, default behavior, dependencies, and cautions. The article assumes that you already understand ReFS and are evaluating an individual value. It isn't a tuning workflow and doesn't recommend combinations, target settings, or an order in which to configure values.
 
@@ -20,7 +20,7 @@ Use this article to look up a specific supported value and understand its purpos
 > [!WARNING]
 > Changing file system registry values can affect data integrity, performance, and supportability. Only change a value when you understand its effect, and only change support-only values under direction from Microsoft support. Test changes in a nonproduction environment first.
 
-ReFS reads most of its tunable behavior from values under the file system control key in the registry. Unless a value's entry says otherwise, every value in this article lives under the same key:
+ReFS reads local tunable behavior from values under the file system control key in the registry. Unless an entry identifies a policy override, create or edit the local value under this key:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`
 
@@ -35,7 +35,7 @@ Changes take effect after you restart the system, not immediately.
 
 ## How precedence works
 
-You can set some behaviors in more than one place. When both a policy and the corresponding setting under the file system control key govern a behavior, the policy takes precedence over the `Control\FileSystem` value. When you don't configure a policy, ReFS uses the `Control\FileSystem` value. When neither is present, the value's absent-value behavior applies.
+Values of the same name in both `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies` and `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem` configure some ReFS behaviors. ReFS checks the `Policies` value first. If it isn't present, ReFS checks the `Control\FileSystem` value. If neither value is present, ReFS uses the absent-value behavior documented in the table.
 
 The **Dependencies and precedence** column in each category table records, per value, which policy (if any) overrides the setting and which other values it depends on or interacts with.
 
@@ -53,7 +53,7 @@ The **Default or absent-value behavior** and **Supported values** columns in eac
 
 ## How to read a value entry
 
-All values live under the registry key listed in [How ReFS registry configuration works](#how-refs-registry-configuration-works), so the tables don't repeat the path. Each category table describes its values with the same columns:
+The tables use the local registry key listed in [How ReFS registry configuration works](#how-refs-registry-configuration-works) as the default path. For values that support a policy override, the **Dependencies and precedence** column identifies which location ReFS checks first.
 
 - **Value name**: the exact name of the value to create or edit.
 - **Type**: `REG_DWORD` or `REG_QWORD`.
@@ -73,7 +73,7 @@ Safety and corruption response settings control ReFS behaviors that protect data
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsDisableWriteThrough`** | `REG_DWORD` | Fixed default `0`. If absent, treated as `0`. | `0` or `1` | Controls whether ReFS honors write-through requests, such as `FILE_FLAG_WRITE_THROUGH`. `0` honors write-through and forces data to stable media. `1` ignores all write-through requests. | None. This value is independent of `RefsDisableLastAccessUpdate`. | Setting `1` can cause data loss for apps that depend on write-through, such as databases, during power loss or system failure. |
+| **`RefsDisableWriteThrough`** | `REG_DWORD` | Fixed default `0`. If absent, treated as `0`. | `0` or `1` | Controls whether ReFS honors write-through requests, such as `FILE_FLAG_WRITE_THROUGH`. `0` honors write-through and forces data to stable media. `1` ignores all write-through requests. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. This value is independent of `RefsDisableLastAccessUpdate`. | Setting `1` can cause data loss for apps that depend on write-through, such as databases, during power loss or system failure. |
 | **`RefsDisableUserDataTriage`** | `REG_DWORD` | Fixed default `0`. If absent, treated as `0`. | `0` or `1` | Controls whether ReFS self-heals corruption in user file and directory metadata. ReFS repairs internal file system metadata regardless of this value. `0` enables user-data self-healing. `1` disables it. | None. | Disabling self-healing leaves detected user-data corruption unrepaired. |
 
 ## Memory usage (working-set trim) settings
@@ -82,24 +82,26 @@ Memory usage settings control how aggressively ReFS trims its working set to red
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsNumberOfChunksToTrim`** | `REG_DWORD` | Calculated default. If absent, ReFS uses an internal default of up to 512. | Number of chunks to trim per pass. | Overrides the number of chunks ReFS trims from the working set per pass. | None. | Increasing the value reclaims memory faster under pressure, at extra CPU cost. |
-| **`RefsEnableLargeWorkingSetTrim`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` disables aggressive trimming. `1` trims large working sets more aggressively. | None. | None. |
-| **`RefsEnableInlineTrim`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` disables inline trim, so ReFS reclaims memory in the background. `1` enables inline trim, so ReFS reclaims memory during operations, which reduces peak memory on metadata-intensive workloads. | None. | None. |
+| **`RefsNumberOfChunksToTrim`** | `REG_DWORD` | Calculated default. If absent, ReFS uses an internal default of up to 512. | Number of chunks to trim per pass. | Overrides the number of chunks ReFS trims from the working set per pass. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | Increasing the value reclaims memory faster under pressure, at extra CPU cost. |
+| **`RefsEnableLargeWorkingSetTrim`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` disables aggressive trimming. `1` trims large working sets more aggressively. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | None. |
+| **`RefsEnableInlineTrim`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` disables inline trim, so ReFS reclaims memory in the background. `1` enables inline trim, so ReFS reclaims memory during operations, which reduces peak memory on metadata-intensive workloads. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | None. |
 
 ## Tiering and destage settings
 
-Tiering and destage settings tune container rotation and destage behavior on mirror-accelerated parity volumes, which use 64-MB slabs (containers). Each fill-ratio threshold takes a percentage: `0` or an absent value uses the built-in default, and `1` through `100` sets the ratio explicitly.
+ReFS manages space in fixed-size 64-MB slabs, also called containers. During compaction, ReFS reads a slab and writes only its valid clusters sequentially to another slab. Compression follows the same process, but ReFS compresses the valid data before writing it sequentially to another slab.
+
+On mirror-accelerated parity (MAP) volumes, writes land in the mirrored solid-state drive (SSD) performance tier. As data cools, ReFS rotates colder regions in the background to the parity hard disk drive (HDD) capacity tier. ReFS moves data in large regions, not at the individual-file level, without rewriting individual files or modifying file metadata. The settings in this section tune this container rotation and destage behavior. Each fill-ratio threshold takes a percentage: `0` or an absent value uses the built-in default, and `1` through `100` sets the ratio explicitly.
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsEnableParallelContainerRotation`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` disables parallel container rotation. `1` queues work items so container rotation runs in parallel. | Governs whether `RefsContainerRotationThreadCount` and `RefsContainerRotationQueueSizeLimit` apply. | None. |
-| **`RefsContainerRotationThreadCount`** | `REG_DWORD` | Fixed default `0`, which uses an internal default of 4. | `0` (internal default of 4) or a positive thread count. | Maximum number of threads for container rotation. | Applies only when you enable parallel container rotation (`RefsEnableParallelContainerRotation` = `1`). | Higher values speed up rotation but use more CPU and memory. |
-| **`RefsContainerRotationQueueSizeLimit`** | `REG_DWORD` | Fixed default `0`, which uses an internal default of 9. | `0` (internal default of 9) or a positive limit. | Overrides the container-rotation work-item queue limit that throttles the maximum number of queued work items. | Applies to parallel container rotation. | None. |
-| **`DataDestageSsdFillRatioThreshold`** | `REG_DWORD` | Fixed default `85`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | Solid-state drive (SSD) data-tier fill ratio (%) that triggers destage from the SSD to the hard disk drive (HDD). | None. | None. |
-| **`MetadataDestageSsdFillRatioThreshold`** | `REG_DWORD` | Fixed default `85`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | SSD metadata-tier fill ratio (%) that triggers destage from SSD to HDD. | None. | None. |
-| **`DataDestageHddFillRatioThreshold`** | `REG_DWORD` | Fixed default `92`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | HDD data-tier fill ratio (%) that triggers reverse rotation from HDD to SSD when the HDD is too full. | None. | None. |
-| **`MetadataDestageHddFillRatioThreshold`** | `REG_DWORD` | Fixed default `92`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | HDD metadata-tier fill ratio (%) that triggers reverse rotation from HDD to SSD. | None. | None. |
-| **`DataDestageCompactionThreshold`** | `REG_DWORD` | Fixed default `85`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | Compaction trigger for data containers. When the HDD data-container fill ratio reaches this percentage, compaction reclaims fragmented space. | Set at least 5% below the HDD-to-SSD rotation threshold (`DataDestageHddFillRatioThreshold`). | None. |
+| **`RefsEnableParallelContainerRotation`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` disables parallel container rotation. `1` queues work items so container rotation runs in parallel. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. This value governs whether `RefsContainerRotationThreadCount` and `RefsContainerRotationQueueSizeLimit` apply. | None. |
+| **`RefsContainerRotationThreadCount`** | `REG_DWORD` | Fixed default `0`, which uses an internal default of 4. | `0` (internal default of 4) or a positive thread count. | Maximum number of threads for container rotation. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. Applies only when you enable parallel container rotation (`RefsEnableParallelContainerRotation` = `1`). | Higher values speed up rotation but use more CPU and memory. |
+| **`RefsContainerRotationQueueSizeLimit`** | `REG_DWORD` | Fixed default `0`, which uses an internal default of 9. | `0` (internal default of 9) or a positive limit. | Overrides the container-rotation work-item queue limit that throttles the maximum number of queued work items. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. Applies to parallel container rotation. | None. |
+| **`DataDestageSsdFillRatioThreshold`** | `REG_DWORD` | Fixed default `85`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | SSD data-tier fill ratio (%) that triggers destage from the SSD to the HDD. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
+| **`MetadataDestageSsdFillRatioThreshold`** | `REG_DWORD` | Fixed default `85`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | SSD metadata-tier fill ratio (%) that triggers destage from SSD to HDD. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
+| **`DataDestageHddFillRatioThreshold`** | `REG_DWORD` | Fixed default `92`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | HDD data-tier fill ratio (%) that triggers reverse rotation from HDD to SSD when the HDD is too full. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
+| **`MetadataDestageHddFillRatioThreshold`** | `REG_DWORD` | Fixed default `92`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | HDD metadata-tier fill ratio (%) that triggers reverse rotation from HDD to SSD. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
+| **`DataDestageCompactionThreshold`** | `REG_DWORD` | Fixed default `85`. `0` or absent uses the built-in default. | `0` (built-in default) or `1` to `100` (percent). | Compaction trigger for data containers. When the HDD data-container fill ratio reaches this percentage, compaction reclaims fragmented space. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. Set this value at least 5% below the HDD-to-SSD rotation threshold (`DataDestageHddFillRatioThreshold`). | None. |
 
 ## TRIM and space reclamation settings
 
@@ -107,10 +109,10 @@ TRIM and space reclamation settings control how ReFS notifies storage devices ab
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsDisableDeleteNotification`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` sends delete/TRIM notifications to the storage device. `1` disables them. | None. | None. |
-| **`RefsInvalidateOnFileLevelTrim`** | `REG_DWORD` | Fixed default `0`. | `0`, `1`, or `2` | `0` lets ReFS decide whether to notify the device on delete (typically disk trim on tiered volumes; retains space internally on non-tiered volumes). `1` marks the deleted portion unused without notifying the device (less background I/O, but ReFS might delay reclamation). `2` always notifies the device (faster reclamation at extra background I/O cost). | None. | None. |
-| **`RefsDisableThinProvisioningUnmap`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` enables background unmapping. When mapped-but-free headroom rises above the maximum, ReFS unmaps unused ranges until headroom approaches the target. `1` disables background reclamation of unused mapped ranges. | Operates independently of `RefsDisableThinProvisioningProactiveMap` and uses the minimum, target, and maximum headroom values. | Setting `1` prevents ReFS from returning unused backing capacity through background unmapping. |
-| **`RefsDisableThinProvisioningProactiveMap`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` enables background proactive mapping. When mapped-free headroom falls below the minimum, ReFS maps free ranges until headroom approaches the target. `1` disables background pre-mapping of free ranges. | Operates independently of `RefsDisableThinProvisioningUnmap` and uses the minimum, target, and maximum headroom values. | Setting `1` prevents ReFS from reserving backing capacity ahead of write demand. |
+| **`RefsDisableDeleteNotification`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` sends delete/TRIM notifications to the storage device. `1` disables them. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
+| **`RefsInvalidateOnFileLevelTrim`** | `REG_DWORD` | Fixed default `0`. | `0`, `1`, or `2` | `0` lets ReFS decide whether to notify the device on delete (typically disk trim on tiered volumes; retains space internally on non-tiered volumes). `1` marks the deleted portion unused without notifying the device (less background I/O, but ReFS might delay reclamation). `2` always notifies the device (faster reclamation at extra background I/O cost). | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
+| **`RefsDisableThinProvisioningUnmap`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` enables background unmapping. When mapped-but-free headroom rises above the maximum, ReFS unmaps unused ranges until headroom approaches the target. `1` disables background reclamation of unused mapped ranges. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. It operates independently of `RefsDisableThinProvisioningProactiveMap` and uses the minimum, target, and maximum headroom values. | Setting `1` prevents ReFS from returning unused backing capacity through background unmapping. |
+| **`RefsDisableThinProvisioningProactiveMap`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` enables background proactive mapping. When mapped-free headroom falls below the minimum, ReFS maps free ranges until headroom approaches the target. `1` disables background pre-mapping of free ranges. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. It operates independently of `RefsDisableThinProvisioningUnmap` and uses the minimum, target, and maximum headroom values. | Setting `1` prevents ReFS from reserving backing capacity ahead of write demand. |
 
 ## Thin provisioning headroom settings
 
@@ -118,9 +120,9 @@ Thin provisioning headroom settings set the free-space buffer ReFS maintains on 
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsThinProvisioningMinHeadroomBytes`** | `REG_QWORD` | Calculated default: the greater of 2 GB or 2 × slab size. | Size in bytes. | Absolute minimum free-space headroom that ReFS enforces on thin volumes. | Must be less than or equal to the target and maximum headroom values. | None. |
-| **`RefsThinProvisioningTargetHeadroomBytes`** | `REG_QWORD` | Calculated default: (minimum + maximum) / 2. | Size in bytes. | Desired steady-state free-space buffer. | Should fall between the minimum and maximum headroom values. | None. |
-| **`RefsThinProvisioningMaxHeadroomBytes`** | `REG_QWORD` | Calculated default: the greater of 4 GB or 4 × slab size. | Size in bytes. | Upper bound on headroom, which avoids over-reservation. | Can't be lower than the minimum value. | ReFS automatically corrects a value set below the minimum. |
+| **`RefsThinProvisioningMinHeadroomBytes`** | `REG_QWORD` | Calculated default: the greater of 2 GB or 2 × slab size. | Size in bytes. | Absolute minimum free-space headroom that ReFS enforces on thin volumes. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. The value must be less than or equal to the target and maximum headroom values. | None. |
+| **`RefsThinProvisioningTargetHeadroomBytes`** | `REG_QWORD` | Calculated default: (minimum + maximum) / 2. | Size in bytes. | Desired steady-state free-space buffer. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. The value should fall between the minimum and maximum headroom values. | None. |
+| **`RefsThinProvisioningMaxHeadroomBytes`** | `REG_QWORD` | Calculated default: the greater of 4 GB or 4 × slab size. | Size in bytes. | Upper bound on headroom, which avoids over-reservation. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. The value can't be lower than the minimum value. | ReFS automatically corrects a value set below the minimum. |
 
 ## Caching and input/output (I/O) performance settings
 
@@ -128,10 +130,10 @@ Caching and I/O performance settings tune the ReFS caching and I/O paths. Only `
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsDisableAsyncDelete`** | `REG_DWORD` | Fixed default `0`. Only the lowest bit is significant. | `0` or `1` | `0` enables async delete, so a large delete returns quickly and ReFS frees space in the background. `1` frees space synchronously before the delete returns, which makes large deletes slower. | None. | None. |
+| **`RefsDisableAsyncDelete`** | `REG_DWORD` | Fixed default `0`. Only the lowest bit is significant. | `0` or `1` | `0` enables async delete, so a large delete returns quickly and ReFS frees space in the background. `1` frees space synchronously before the delete returns, which makes large deletes slower. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | None. |
 | **`RefsDisableTrueAsyncCachedReads`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` enables async cached reads. `1` services reads synchronously, blocking the calling thread while cached reads fetch from disk. | None. | None. |
-| **`RefsDisableCachedPins`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | Controls a metadata-lookup optimization that reuses a recent internal metadata search. `0` enables it. `1` disables it, so each lookup does a full search. | None. | None. |
-| **`RefsDisableWriteCombining`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | Controls combining adjacent metadata writes into fewer, larger writes. `0` enables it. `1` disables it. | None. | None. |
+| **`RefsDisableCachedPins`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | Controls a metadata-lookup optimization that reuses a recent internal metadata search. `0` enables it. `1` disables it, so each lookup does a full search. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | None. |
+| **`RefsDisableWriteCombining`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | Controls combining adjacent metadata writes into fewer, larger writes. `0` enables it. `1` disables it. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | None. |
 
 ## Last-access timestamp settings
 
@@ -139,11 +141,13 @@ Last-access timestamp settings control whether ReFS issues I/O to persist last-a
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsDisableLastAccessUpdate`** | `REG_DWORD` | Fixed default `1`. If the value is absent, ReFS treats it as `1`. | `0` or `1` | Controls whether ReFS issues I/O to persist last-access timestamps. `0` enables last-access updates. `1` (default) disables them, so ReFS issues no I/O solely to update last-access timestamps. | Group Policy takes precedence over this local value. This setting is independent of `RefsDisableWriteThrough`. | None. |
+| **`RefsDisableLastAccessUpdate`** | `REG_DWORD` | Fixed default `1`. If the value is absent, ReFS treats it as `1`. | `0` or `1` | Controls whether ReFS issues I/O to persist last-access timestamps. `0` enables last-access updates. `1` (default) disables them, so ReFS issues no I/O solely to update last-access timestamps. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. This setting is independent of `RefsDisableWriteThrough`. | None. |
 
 ## Dev Drive and case sensitivity settings
 
-ReFS also underlies Dev Drive and supports per-directory case sensitivity. Separate articles document the values that control Developer Mode, per-directory case sensitivity, and Dev Drive enablement, for example, `AllowDevelopmentWithoutDevLicense`, `RefsEnableDirCaseSensitivity`, and the `FsEnableDevDrive` policy. For those settings, see:
+ReFS also underlies Dev Drive and supports per-directory case sensitivity. Separate articles document the values that control Developer Mode, per-directory case sensitivity, and Dev Drive enablement, for example, `AllowDevelopmentWithoutDevLicense`, `RefsEnableDirCaseSensitivity`, and the `FsEnableDevDrive` policy. `RefsEnableDirCaseSensitivity` is local only: ReFS reads it from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`.
+
+For those settings, see:
 
 - [Dev Drive](/windows/dev-drive/)
 - [Case sensitivity](/windows/wsl/case-sensitivity)
@@ -162,8 +166,8 @@ These support-only settings throttle concurrent global posts and control table-s
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsGlobalPostLimit`** | `REG_DWORD` | Fixed default `4`. | Bounded-internal: ReFS clamps values to a minimum of 4 and a maximum of 200. | Maximum number of concurrent active global posts. ReFS throttles global IRPs beyond this limit. | None. | Support-only. |
-| **`RefsTableSetEntriesToNavigateBeforeCaching`** | `REG_DWORD` | Fixed default `32`. | `0` (disables caching) or a positive count. | Number of table-set entries to traverse before caching one for lookups. Higher values cache less frequently. | None. | Support-only. |
+| **`RefsGlobalPostLimit`** | `REG_DWORD` | Fixed default `4`. | Bounded-internal: ReFS clamps values to a minimum of 4 and a maximum of 200. | Maximum number of concurrent active global posts. ReFS throttles global IRPs beyond this limit. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | Support-only. |
+| **`RefsTableSetEntriesToNavigateBeforeCaching`** | `REG_DWORD` | Fixed default `32`. | `0` (disables caching) or a positive count. | Number of table-set entries to traverse before caching one for lookups. Higher values cache less frequently. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | Support-only. |
 
 ## Support-only ReFS metadata validation and corruption handling settings
 
@@ -171,9 +175,9 @@ These support-only settings change how ReFS validates on-disk metadata and respo
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsCheckPageFailureAction`** | `REG_DWORD` | Fixed default `1`. | `0`, `1`, or `2` | Controls the action ReFS takes when metadata-page validation fails. `0` converts the failure to success and continues. `1` (default) returns `STATUS_FS_METADATA_INCONSISTENT`. `2` returns `STATUS_DATA_CHECKSUM_ERROR` to invoke the repair path. | None. | Support-only. Setting `0` can suppress metadata-validation failures. |
-| **`RefsEnableMetadataValidation`** | `REG_DWORD` | Fixed default `0`. | Bitmask from `0` through `3`: bit 0 enables metadata structural validation; bit 1 enables a debugger break on invalid metadata in checked builds. | Controls extra runtime structural validation of on-disk metadata and debugger behavior when validation fails. | None. | Support-only. Setting `0` bypasses this structural validation. Bit 1 can break into a debugger in checked builds. |
-| **`RefsEnableBreakOnChecksumMismatch`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` (default) doesn't break into a debugger on a checksum mismatch. `1` breaks into a debugger when ReFS detects a checksum mismatch, including a mismatch in a repairable copy. | None. | Support-only. Setting `1` can break into a debugger. |
+| **`RefsCheckPageFailureAction`** | `REG_DWORD` | Fixed default `1`. | `0`, `1`, or `2` | Controls the action ReFS takes when metadata-page validation fails. `0` converts the failure to success and continues. `1` (default) returns `STATUS_FS_METADATA_INCONSISTENT`. `2` returns `STATUS_DATA_CHECKSUM_ERROR` to invoke the repair path. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | Support-only. Setting `0` can suppress metadata-validation failures. |
+| **`RefsEnableMetadataValidation`** | `REG_DWORD` | Fixed default `0`. | Bitmask from `0` through `3`: bit 0 enables metadata structural validation; bit 1 enables a debugger break on invalid metadata in checked builds. | Controls extra runtime structural validation of on-disk metadata and debugger behavior when validation fails. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | Support-only. Setting `0` bypasses this structural validation. Bit 1 can break into a debugger in checked builds. |
+| **`RefsEnableBreakOnChecksumMismatch`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` (default) doesn't break into a debugger on a checksum mismatch. `1` breaks into a debugger when ReFS detects a checksum mismatch, including a mismatch in a repairable copy. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | Support-only. Setting `1` can break into a debugger. |
 
 ## Support-only ReFS low-level I/O and debugging settings
 
@@ -181,8 +185,8 @@ These support-only settings control low-level I/O behavior and debugging.
 
 | Value name | Type | Default or absent-value behavior | Supported values | Behavior controlled | Dependencies and precedence | Cautions |
 |---|---|---|---|---|---|---|
-| **`RefsAssumeInvariantMdl`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | Controls whether ReFS assumes memory descriptor lists (MDLs) are invariant. `0` (default) queries the page-content state. `1` treats every MDL as invariant without querying its page-content state. | None. | Support-only. Setting `1` bypasses buffering and repair safeguards for buffers that can change during checksum validation, which risks data correctness or corruption. |
-| **`DisableAssociatedIrpAsyncPosting`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` (default) allows ReFS to post intermediate associated I/O request packets (IRPs) to work items. `1` sends them to the storage driver inline instead. | Group Policy takes precedence over this local value. | Support-only. Changing low-level I/O scheduling can have workload-dependent performance and storage-stack effects. |
+| **`RefsAssumeInvariantMdl`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | Controls whether ReFS assumes memory descriptor lists (MDLs) are invariant. `0` (default) queries the page-content state. `1` treats every MDL as invariant without querying its page-content state. | Local only. ReFS reads this value from `HKLM\SYSTEM\CurrentControlSet\Control\FileSystem` and doesn't check `HKLM\SYSTEM\CurrentControlSet\Policies`. | Support-only. Setting `1` bypasses buffering and repair safeguards for buffers that can change during checksum validation, which risks data correctness or corruption. |
+| **`DisableAssociatedIrpAsyncPosting`** | `REG_DWORD` | Fixed default `0`. | `0` or `1` | `0` (default) allows ReFS to post intermediate associated I/O request packets (IRPs) to work items. `1` sends them to the storage driver inline instead. | ReFS queries `HKLM\SYSTEM\CurrentControlSet\Policies` first. If the value isn't present there, ReFS reads the local `Control\FileSystem` value. | Support-only. Changing low-level I/O scheduling can have workload-dependent performance and storage-stack effects. |
 
 ## Next steps
 
