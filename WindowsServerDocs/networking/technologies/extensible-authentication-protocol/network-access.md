@@ -7,6 +7,7 @@ ms.topic: concept-article
 ms.date: 07/09/2025
 ms.contributor: samyun
 ms.reviewer: samyun
+ms.custom: os_security, network_security, eap
 ---
 
 # Extensible Authentication Protocol (EAP) for network access

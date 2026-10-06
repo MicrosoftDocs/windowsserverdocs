@@ -5,6 +5,7 @@ ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
 ms.date: 05/07/2025
+ms.custom: os_security, network_security
 ---
 
 # Always On VPN Overview
