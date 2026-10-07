@@ -157,7 +157,7 @@ The following links lead to descriptions of the default groups that are located 
 
 ### Access Control Assistance Operators
 
-Members of this group can remotely query authorization attributes and permissions for resources on the computer. This group can't be renamed, deleted, or removed.
+Members of this group can remotely query authorization attributes and permissions for resources on the computer. This can disclose details about access of other users, including administrators. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -252,7 +252,7 @@ Members of the Backup Operators group can back up and restore all files on a com
 
 ### Certificate Service DCOM Access
 
-Members of this group can connect to certification authorities in the enterprise. This group can't be renamed, deleted, or removed.
+Members of this group can connect to certification authorities in the enterprise. It allows calls to enroll certificates, wich can cause downstream problems due to a high number of certificates created. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -263,12 +263,12 @@ Members of this group can connect to certification authorities in the enterprise
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Cert Publishers
 
-Members of the Cert Publishers group are authorized to publish certificates for user objects in Active Directory. This group can't be renamed, deleted, or removed.
+Members of the Cert Publishers group are authorized to publish certificates for user objects in Active Directory. It allows members to create lots of AD data or remove certificates that are required. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
 |--- |--- |
@@ -395,7 +395,7 @@ Members of the Distributed COM Users group can launch, activate, and use Distrib
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### DnsUpdateProxy
@@ -403,6 +403,8 @@ Members of the Distributed COM Users group can launch, activate, and use Distrib
 Members of the DnsUpdateProxy group are Domain Name System (DNS) clients. They're permitted to perform dynamic updates on behalf of other clients, such as DHCP servers. A DNS server can develop stale resource records when a DHCP server is configured to dynamically register host (A) and pointer (PTR) resource records on behalf of DHCP clients by using dynamic update. Adding clients to this security group mitigates this scenario.
 
 To protect against unsecured records or to permit members of the DnsUpdateProxy group to register records in zones that allow only secured dynamic updates, you must create a dedicated user account. You must also configure DHCP servers to perform DNS dynamic updates by using the username, password, and domain of this account. Multiple DHCP servers can use the credentials of one dedicated user account. This group exists only if the DNS server role is or was once installed on a domain controller in the domain.
+
+Members of the group can modify or delete DNS records and cause a denial of service type of problem.
 
 For more information, see [DNS record ownership and the DnsUpdateProxy group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd334715(v=ws.10)).
 
@@ -415,7 +417,7 @@ For more information, see [DNS record ownership and the DnsUpdateProxy group](/p
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### DnsAdmins
@@ -467,7 +469,7 @@ This group can include all computers and servers that join the domain, excluding
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes, but not required|
-|Safe to delegate management of this group to non-service admins?|Yes |
+|Safe to delegate management of this group to non-service admins?|Yes|
 |Default user rights|None|
 
 ### Domain Controllers
@@ -483,7 +485,7 @@ The Domain Controllers group can include all domain controllers in the domain. N
 |Default member of|[Denied RODC Password Replication](#denied-rodc-password-replication)|
 |Protected by AdminSDHolder?|Yes|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Domain Guests
@@ -551,7 +553,7 @@ Members of this group can perform administrative actions on key objects within t
 | Default member of | None |
 | Protected by AdminSDHolder? | Yes |
 | Safe to move out of default container? | Yes |
-| Safe to delegate management of this group to non-service admins? | No |
+| Safe to delegate management of this group to non-service admins? |No|
 | Default user rights | None |
 
 ### Enterprise Read-only Domain Controllers
@@ -719,6 +721,8 @@ Members of the Network Configuration Operators group have the following administ
 - Issue `ipconfig`, `ipconfig /release`, and `ipconfig /renew` commands
 - Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card
 
+Group Members are able to disrupt the network communication of a Domain Controller and thus should not be delegated.
+
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
 |Attribute|Value|
@@ -730,7 +734,7 @@ This group appears as an SID until the domain controller is made the primary dom
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Performance Log Users
@@ -787,6 +791,8 @@ This group appears as an SID until the domain controller is made the primary dom
 ### Pre–Windows 2000 Compatible Access
 
 Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers that run Windows NT 4.0 and earlier. By default, the special identity group Everyone is a member of this group. Add users to this group only if they run Windows NT 4.0 or earlier.
+
+When no Windows NT4.0 or older system is in the domain, and all components are updated to be AD aware, this group should have no members.
 
 > [!WARNING]
 > This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
@@ -867,7 +873,7 @@ Computers that are members of the RAS and IAS Servers group, when properly confi
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### RDS Endpoint Servers
@@ -952,6 +958,8 @@ For more information, see [Understanding Planning and Deployment for Read-Only D
 
 You can use the Remote Desktop Users group on a Remote Desktop Session Host (RD Session Host) server to grant users and groups permissions to remotely connect to an RD Session Host server. This group can't be renamed, deleted, or removed. The group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
 
+Only Administrators are expected to use RDS sessions on a Domain Controller, and only in emergencies. So this group should be empty.
+
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-555|
@@ -961,7 +969,7 @@ You can use the Remote Desktop Users group on a Remote Desktop Session Host (RD 
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?|Yes|
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Remote Management Users
@@ -983,7 +991,7 @@ For more information, see [About WMI](/windows/win32/wmisdk/about-wmi) and [What
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Can't be moved|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ### Replicator
@@ -1115,6 +1123,8 @@ Members of the Users group are prevented from making accidental or intentional s
 
 Users can do tasks like run an application, use local and network printers, shut down the computer, and lock the computer. Users can install applications that only they can use if the installation program of the application supports per-user installation. This group can't be renamed, deleted, or removed.
 
+Do not clean up the membership of the group other than anonymous, as permissions the group has are also used by remotely connected uses and computers only having "Authenticated Users" permissions.
+
 |Attribute|Value|
 |--- |--- |
 |Well-known SID/RID|S-1-5-32-545|
@@ -1166,7 +1176,7 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes|
-|Safe to delegate management of this group to non-service admins?||
+|Safe to delegate management of this group to non-service admins?|No|
 |Default user rights|None|
 
 ## Related content
