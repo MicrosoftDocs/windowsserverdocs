@@ -133,7 +133,7 @@ Using a specific user account as the service account is the recommended configur
 1. Select **Check Names**, select **OK** twice, and then close **Computer Management**.
 
 > [!TIP]
-> You can also type `net localgroup IIS_IUSRS <domain>\<username> /Add</` to add the service account for the Certificate Enrollment Web Service to the local IIS_IUSRS group. The command prompt or Windows PowerShell must be run as an administrator. See [Add a member to a local group](https://technet.microsoft.com/library/cc739265.aspx) for more information.
+> You can also type `net localgroup IIS_IUSRS <domain>\<username> /Add` to add the service account for the Certificate Enrollment Web Service to the local IIS_IUSRS group. The command prompt or Windows PowerShell must be run as an administrator. See [Add a member to a local group](https://technet.microsoft.com/library/cc739265.aspx) for more information.
 
 #### Set a service principal name for the service account
 
