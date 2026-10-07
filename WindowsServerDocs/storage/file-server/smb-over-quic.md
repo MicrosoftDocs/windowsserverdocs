@@ -281,7 +281,7 @@ By default, a Windows client device won't have access to an Active Directory dom
 1. Add the file server's SMB over QUIC names as SPNs in Active Directory for Kerberos. For example:
 
    ```powershell
-   NETDOM computername ws2022-quic.corp.contoso.com /add fsedge1.contoso.com`
+   NETDOM computername ws2022-quic.corp.contoso.com /add fsedge1.contoso.com
    ```
 
 1. Set the KDC Proxy service to automatic and start it:
