@@ -3,6 +3,7 @@ title: TLS/SSL overview (Schannel SSP)
 description: Learn about the TLS and SSL implementations in Windows using the Schannel Security Service Provider (SSP).
 ms.topic: concept-article
 ms.date: 01/18/2024
+ms.custom: os_security, network_security
 ---
 
 # TLS/SSL overview (Schannel SSP)

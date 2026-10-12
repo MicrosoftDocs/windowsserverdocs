@@ -7,6 +7,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.date: 11/27/2025
 ai-usage: ai-assisted
+ms.custom: os_security, network_security
 ---
 
 # What is SMB File Sharing for Windows and Windows Server?
