@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 10/29/2024
+ms.custom: hardware_security, silicon_assisted_security
 ---
 
 # Kernel Mode Hardware-enforced Stack Protection

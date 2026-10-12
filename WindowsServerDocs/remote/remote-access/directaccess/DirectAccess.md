@@ -5,6 +5,7 @@ ms.topic: overview
 ms.author: roharwoo
 author: robinharwood
 ms.date: 11/16/2022
+ms.custom: os_security, network_security
 ---
 # DirectAccess
 

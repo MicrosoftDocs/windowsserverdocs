@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 01/16/2025
+ms.custom: os_security, network_security
 ---
 
 # SMB Direct

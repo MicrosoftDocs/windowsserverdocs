@@ -5,7 +5,7 @@ ms.topic: how-to
 author: Orin-Thomas
 ms.author: orthomas
 ms.date: 12/03/2023
-ms.custom: team=cloud_advocates
+ms.custom: os_security, network_security 
 ms.contributors: orthomas-08202021
 ---
 

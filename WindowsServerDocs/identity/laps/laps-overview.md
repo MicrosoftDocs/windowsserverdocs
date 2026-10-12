@@ -6,6 +6,7 @@ ms.author: roharwoo
 ms.date: 09/14/2026
 ms.topic: concept-article
 ai-usage: ai-assisted
+ms.custom: identity_protection, adv_cred_protect
 # customer intent: As an administrator, I want to become familiar with the Windows Local Administrator Password Solution (Windows LAPS) feature so that I can use it to manage and back up administrator passwords.
 ---
 
