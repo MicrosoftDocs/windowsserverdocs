@@ -29,7 +29,7 @@ This release marks the general availability of Windows Admin Center for Arc-enab
 ## Version 0.85.0.0 - June 2026
 
 ### New features
-- Updated the build of Windows Admin Center to v2606. For a full summary of new features, visit [our blog post](https://aka.ms/wac2606)
+- Updated the build of Windows Admin Center to v2606. For a full summary of new features, visit [our blog post](https://aka.ms/wac2606).
 
 ### Fixed
 - Fixed an issue where users with personal email addresses were incorrectly blocked from using Windows Admin Center in favor of corporate or MSA accounts.
