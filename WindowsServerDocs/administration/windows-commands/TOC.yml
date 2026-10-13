@@ -504,8 +504,6 @@
           href: detail-vdisk.md
         - name: detail volume
           href: detail-volume.md
-      - name: exit
-        href: exit.md
       - name: expand vdisk
         href: expand-vdisk.md
       - name: extend
@@ -540,8 +538,8 @@
           href: online-volume.md
       - name: recover
         href: recover.md
-      - name: rem
-        href: rem.md
+      - name: recover disk group
+        href: recover_1.md
       - name: remove
         href: remove.md
       - name: repair
@@ -663,6 +661,8 @@
       href: eventcreate.md
     - name: evntcmd
       href: evntcmd.md
+    - name: exit
+      href: exit.md
     - name: expand
       href: expand.md
     - name: extract
@@ -1279,8 +1279,6 @@
       href: rd.md
     - name: rdpsign
       href: rdpsign.md
-    - name: recover disk group
-      href: recover_1.md
     - name: refsutil
       href: refsutil.md
       items:
@@ -1331,6 +1329,8 @@
       href: regsvr32.md
     - name: relog
       href: relog.md
+    - name: rem
+      href: rem.md
     - name: ren
       href: ren.md
     - name: rename
