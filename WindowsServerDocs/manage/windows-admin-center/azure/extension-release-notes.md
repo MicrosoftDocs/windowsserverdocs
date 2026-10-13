@@ -24,7 +24,7 @@ This page is updated monthly, so check back regularly.
 This release marks the general availability of Windows Admin Center for Arc-enabled Servers. 
 
 ### Fixed
-- Fixed an issue where users with Windows Server 2019 or older were receiving the error "RegCreateKeyEx failed; code 5 - Access is denied" during install.
+- Fixed an issue where users with Windows Server 2019 or older received the error "RegCreateKeyEx failed; code 5 - Access is denied" during install.
 
 ## Version 0.85.0.0 - June 2026
 
