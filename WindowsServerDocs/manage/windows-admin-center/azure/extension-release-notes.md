@@ -20,10 +20,16 @@ This page is updated monthly, so check back regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 1.0.0.0 - October 2026
+This release marks the general availability of Windows Admin Center for Arc-enabled Servers. 
+
+### Fixed
+- Fixed an issue where users with Windows Server 2019 or older were receiving the error "RegCreateKeyEx failed; code 5 - Access is denied" during install.
+
 ## Version 0.85.0.0 - June 2026
 
 ### New features
-- Updated extension versions to match on-premises Windows Admin Center version 2606.
+- Updated the build of Windows Admin Center to v2606. For a full summary of new features, visit [our blog post](https://aka.ms/wac2606)
 
 ### Fixed
 - Fixed an issue where users with personal email addresses were incorrectly blocked from using Windows Admin Center in favor of corporate or MSA accounts.
