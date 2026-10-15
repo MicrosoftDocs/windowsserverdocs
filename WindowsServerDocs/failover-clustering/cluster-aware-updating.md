@@ -18,12 +18,13 @@ This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature th
 ## <a name="BKMK_OVER"></a>Feature description
 Cluster-Aware Updating is an automated feature that enables you to update servers in a [failover cluster](failover-clustering-overview.md) with little or no loss in availability during the update process. During an Updating Run, Cluster-Aware Updating transparently performs the following tasks:
 
-1. Puts each node of the cluster into node maintenance mode.
-2. Moves the clustered roles off the node.
-3. Installs the updates and any dependent updates.
-4. Performs a restart if necessary.
-5. Brings the node out of maintenance mode.
-6. Restores the clustered roles on the node.
+1. Installs the updates and any dependent updates.
+2. If updates need a restart.
+    1. Puts each node of the cluster into node maintenance mode.
+    2. Moves the clustered roles off the node if put into maintenance mode.
+    3. Performs a restart.
+    4. Brings the node out of maintenance mode.
+    5. Restores the clustered roles on the node.
 7. Moves to update the next node.
 
 For many clustered roles in the cluster, the automatic update process triggers a planned failover. This can cause a transient service interruption for connected clients. However, in the case of continuously available workloads, such as Hyper\-V with live migration or file server with SMB Transparent Failover, Cluster-Aware Updating can coordinate cluster updates with no impact to the service availability.
