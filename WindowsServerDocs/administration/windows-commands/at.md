@@ -14,6 +14,9 @@ ms.date: 10/16/2017
 
 Schedules commands and programs to run on a computer at a specified time and date. You can use **at** only when the Schedule service is running. Used without parameters, **at** lists scheduled commands. You must be a member of the local Administrators group to run this command.
 
+> [!IMPORTANT]
+> The `at` command (`at.exe`) was deprecated in Windows 8. It was removed in Windows Insider Preview build 29671. Use [schtasks](schtasks.md) instead.
+
 ## Syntax
 
 ```
