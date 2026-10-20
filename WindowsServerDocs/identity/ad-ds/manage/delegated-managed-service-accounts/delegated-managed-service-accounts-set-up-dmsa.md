@@ -77,13 +77,7 @@ The following instructions allow users to create a new dMSA without migrating fr
    To set this value to **3**, run:
 
    ```powershell
-   $params = @{
-    Identity = "dMSAsnmp"
-    Properties = @{
-     "msDS-DelegatedMSAState" = 3
-    }
-   }
-   Set-ADServiceAccount @params
+   Get-ADServiceAccount -Identity "dMSAsnmp" | Set-ADObject -Replace @{"msDS-DelegatedMSAState" = 3}
    ```
 
 ## Migrate to a dMSA
