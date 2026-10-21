@@ -21,27 +21,27 @@ tracerpt <[-l] <value [value [...]]>|-rt <session_name [session_name [...]]>> [o
 
 | Parameters | Description |
 |--|--|
-| -config `<filename>` | Specifies which settings file to load, which includes your command options. |
-| -y | Specifies to answer **yes** to all questions, without prompting. |
-| -f `<XML | HTML>` | Specifies the report file format. |
-| -of `<CSV | EVTX | XML>` | Specifies the dump file format. The default is **XML*. |
-| -df `<filename>` | Specifies to create a Microsoft-specific counting/reporting schema file. |
-| -int `<filename>` | Specifies to dump the interpreted event structure to the specified file. |
-| -rts | Specifies to add the report raw timestamp in the event trace header. Can only be used with **-o**. It's not supported with **-report** or **-summary**. |
-| -tmf `<filename>` | Specifies which Trace Message Format definition file to use. |
-| -tp `<value>` | Specifies the TMF file search path. Multiple paths may be used, separated by a semicolon (;). |
-| -i `<value>` | Specifies the provider image path. The matching PDB will be located in the Symbol Server. Multiple paths can be used, separated by a semicolon (;). |
-| -pdb `<value>` | Specifies the symbol server path. Multiple paths can be used, separated by a semicolon (;). |
-| -gmt | Specifies to convert WPP payload timestamps to Greenwich Mean Time. |
-| -rl `<value>` | Specifies the System Report Level from 1 to 5. Default is *1*. |
-| -summary [filename] | Specifies to create a summary report text file. The filename, if not specified, is *summary.txt*. |
-| -o [filename] | Specifies to create a text output file. The filename, if not specified, is *dumpfile.xml*. |
-| -report [filename] | Specifies to create a text output report file. The filename, if not specified, is *workload.xml*. |
-| -lr | Specifies to be less restrictive. This uses best efforts for events that don't match the events schema. |
-| -export [filename] | Specifies to create an Event Schema export file. The filename, if not specified, is *schema.man*. |
-| [-l] `<value [value […]]>` | Specifies the Event Trace log file to process. |
-| -rt `<session_name [session_name […]]>` | Specifies the Real-time Event Trace Session data sources. |
-| -? | Displays help at the command prompt. |
+| :::no-loc text="-config"::: `<filename>` | Specifies which settings file to load, which includes your command options. |
+| :::no-loc text="-y"::: | Specifies to answer **yes** to all questions, without prompting. |
+| :::no-loc text="-f"::: `<XML | HTML>` | Specifies the report file format. |
+| :::no-loc text="-of"::: `<CSV | EVTX | XML>` | Specifies the dump file format. The default is **XML*. |
+| :::no-loc text="-df"::: `<filename>` | Specifies to create a Microsoft-specific counting/reporting schema file. |
+| :::no-loc text="-int"::: `<filename>` | Specifies to dump the interpreted event structure to the specified file. |
+| :::no-loc text="-rts"::: | Specifies to add the report raw timestamp in the event trace header. Can only be used with **-o**. It's not supported with **-report** or **-summary**. |
+| :::no-loc text="-tmf"::: `<filename>` | Specifies which Trace Message Format definition file to use. |
+| :::no-loc text="-tp"::: `<value>` | Specifies the TMF file search path. Multiple paths may be used, separated by a semicolon (;). |
+| :::no-loc text="-i"::: `<value>` | Specifies the provider image path. The matching PDB will be located in the Symbol Server. Multiple paths can be used, separated by a semicolon (;). |
+| :::no-loc text="-pdb"::: `<value>` | Specifies the symbol server path. Multiple paths can be used, separated by a semicolon (;). |
+| :::no-loc text="-gmt"::: | Specifies to convert WPP payload timestamps to Greenwich Mean Time. |
+| :::no-loc text="-rl"::: `<value>` | Specifies the System Report Level from 1 to 5. Default is *1*. |
+| :::no-loc text="-summary"::: [filename] | Specifies to create a summary report text file. The filename, if not specified, is *summary.txt*. |
+| :::no-loc text="-o"::: [filename] | Specifies to create a text output file. The filename, if not specified, is *dumpfile.xml*. |
+| :::no-loc text="-report"::: [filename] | Specifies to create a text output report file. The filename, if not specified, is *workload.xml*. |
+| :::no-loc text="-lr"::: | Specifies to be less restrictive. This uses best efforts for events that don't match the events schema. |
+| :::no-loc text="-export"::: [filename] | Specifies to create an Event Schema export file. The filename, if not specified, is *schema.man*. |
+| :::no-loc text="[-l]"::: `<value [value […]]>` | Specifies the Event Trace log file to process. |
+| :::no-loc text="-rt"::: `<session_name [session_name […]]>` | Specifies the Real-time Event Trace Session data sources. |
+| :::no-loc text="-?"::: | Displays help at the command prompt. |
 
 ## Examples
 

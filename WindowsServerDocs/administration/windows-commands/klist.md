@@ -24,19 +24,20 @@ klist [-lh <logonID.highpart>] [-li <logonID.lowpart>] tickets | tgt | purge | s
 
 | Parameter | Description |
 | --------- | ----------- |
-| -lh | Denotes the high part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **-lh** nor **-li** are present, the command defaults to the LUID of the user who is currently signed in. |
-| -li | Denotes the low part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **-lh** nor **-li** are present, the command defaults to the LUID of the user who is currently signed in. |
-| tickets | Lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option. |
-| tgt | Displays the initial Kerberos TGT. |
-| purge | Allows you to delete all the tickets of the specified logon session. |
-| sessions | Displays a list of logon sessions on this computer. |
-| kcd_cache | Displays the Kerberos constrained delegation cache information. |
-| get | Allows you to request a ticket to the target computer specified by the service principal name (SPN). |
-| add_bind | Allows you to specify a preferred domain controller for Kerberos authentication. |
-| query_bind | Displays a list of cached preferred domain controllers for each domain that Kerberos has contacted. |
-| purge_bind | Removes the cached preferred domain controllers for the domains specified. |
-| kdcoptions | Displays the Key Distribution Center (KDC) options specified in RFC 4120. |
-| /? | Displays Help for this command. |
+| :::no-loc text="\-lh"::: | Denotes the high part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **-lh** nor **-li** are present, the command defaults to the LUID of the user who is currently signed in. |
+| :::no-loc text="\-li"::: | Denotes the low part of the user's locally unique identifier (LUID), expressed in hexadecimal. If neither **-lh** nor **-li** are present, the command defaults to the LUID of the user who is currently signed in. |
+| :::no-loc text="tickets"::: | Lists the currently cached ticket-granting-tickets (TGTs), and service tickets of the specified logon session. This is the default option. |
+| :::no-loc text="tgt"::: | Displays the initial Kerberos TGT. |
+| :::no-loc text="purge"::: | Allows you to delete all the tickets of the specified logon session. |
+| :::no-loc text="sessions"::: | Displays a list of logon sessions on this computer. |
+| :::no-loc text="kcd\_cache"::: | Displays the Kerberos constrained delegation cache information. |
+| :::no-loc text="get"::: | Allows you to request a ticket to the target computer specified by the service principal name (SPN). |
+| :::no-loc text="add\_bind"::: | Allows you to specify a preferred domain controller for Kerberos authentication. |
+| :::no-loc text="query\_bind"::: | Displays a list of cached preferred domain controllers for each domain that Kerberos has contacted. |
+| :::no-loc text="purge\_bind"::: | Removes the cached preferred domain controllers for the domains specified. |
+| :::no-loc text="kdcoptions"::: | Displays the Key Distribution Center (KDC) options specified in RFC 4120. |
+| :::no-loc text="/?"::: | Displays Help for this command. |
+
 
 #### Remarks
 

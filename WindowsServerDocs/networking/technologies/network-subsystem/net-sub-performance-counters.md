@@ -21,41 +21,41 @@ This topic lists the counters that are relevant to managing network performance,
 
 The following performance counters are relevant to network resource utilization.
 
-- IPv4, IPv6
+- :::no-loc text="IPv4, IPv6":::
 
-  -   Datagrams Received/sec
+  -   :::no-loc text="Datagrams Received/sec":::
 
-  -   Datagrams Sent/sec
+  -   :::no-loc text="Datagrams Sent/sec":::
 
-- TCPv4, TCPv6
+- :::no-loc text="TCPv4, TCPv6":::
 
-  -   Segments Received/sec
+  -   :::no-loc text="Segments Received/sec":::
 
-  -   Segments Sent/sec
+  -   :::no-loc text="Segments Sent/sec":::
 
-  -   Segments Retransmitted/sec
+  -   :::no-loc text="Segments Retransmitted/sec":::
 
-- Network Interface(*), Network Adapter(\*)
+- :::no-loc text="Network Interface(\*), Network Adapter(\*)":::
 
-  - Bytes Received/sec
+  - :::no-loc text="Bytes Received/sec":::
 
-  - Bytes Sent/sec
+  - :::no-loc text="Bytes Sent/sec":::
 
-  - Packets Received/sec
+  - :::no-loc text="Packets Received/sec":::
 
-  - Packets Sent/sec
+  - :::no-loc text="Packets Sent/sec":::
 
-  - Output Queue Length
+  - :::no-loc text="Output Queue Length":::
 
     This counter is the length of the output packet queue \(in packets\). If this is longer than 2, delays occur. You should find the bottleneck and eliminate it if you can. Because NDIS queues the requests, this length should always be 0.
 
-- Processor Information
+- :::no-loc text="Processor Information":::
 
-  - % Processor Time
+  - % :::no-loc text="Processor Time":::
 
-  - Interrupts/sec
+  - :::no-loc text="Interrupts/sec":::
 
-  - DPCs Queued/sec
+  - :::no-loc text="DPCs Queued/sec":::
 
     This counter is an average rate at which DPCs were added to the logical processor's DPC queue. Each logical processor has its own DPC queue. This counter measures the rate at which DPCs are added to the queue, not the number of DPCs in the queue. It displays the difference between the values that were observed in the last two samples, divided by the duration of the sample interval.
 
@@ -63,65 +63,65 @@ The following performance counters are relevant to network resource utilization.
 
 The following performance counters are relevant to potential network problems.
 
--   Network Interface(*), Network Adapter(\*)
+-   :::no-loc text="Network Interface(\*), Network Adapter(\*)":::
 
-    -   Packets Received Discarded
+    -   :::no-loc text="Packets Received Discarded":::
 
-    -   Packets Received Errors
+    -   :::no-loc text="Packets Received Errors":::
 
-    -   Packets Outbound Discarded
+    -   :::no-loc text="Packets Outbound Discarded":::
 
-    -   Packets Outbound Errors
+    -   :::no-loc text="Packets Outbound Errors":::
 
--   WFPv4, WFPv6
+-   :::no-loc text="WFPv4, WFPv6":::
 
-    -   Packets Discarded/sec
+    -   :::no-loc text="Packets Discarded/sec":::
 
--   UDPv4, UDPv6
+-   :::no-loc text="UDPv4, UDPv6":::
 
-    -   Datagrams Received Errors
+    -   :::no-loc text="Datagrams Received Errors":::
 
--   TCPv4, TCPv6
+-   :::no-loc text="TCPv4, TCPv6":::
 
-    -   Connection Failures
+    -   :::no-loc text="Connection Failures":::
 
-    -   Connections Reset
+    -   :::no-loc text="Connections Reset":::
 
--   Network QoS Policy
+-   :::no-loc text="Network QoS Policy":::
 
-    -   Packets dropped
+    -   :::no-loc text="Packets dropped":::
 
-    -   Packets dropped/sec
+    -   :::no-loc text="Packets dropped/sec":::
 
--   Per Processor Network Interface Card Activity
+-   :::no-loc text="Per Processor Network Interface Card Activity":::
 
-    -   Low Resource Receive Indications/sec
+    -   :::no-loc text="Low Resource Receive Indications/sec":::
 
-    -   Low Resource Received Packets/sec
+    -   :::no-loc text="Low Resource Received Packets/sec":::
 
--   Microsoft Winsock BSP
+-   :::no-loc text="Microsoft Winsock BSP":::
 
-    -   Dropped Datagrams
+    -   :::no-loc text="Dropped Datagrams":::
 
-    -   Dropped Datagrams/sec
+    -   :::no-loc text="Dropped Datagrams/sec":::
 
-    -   Rejected Connections
+    -   :::no-loc text="Rejected Connections":::
 
-    -   Rejected Connections/sec
+    -   :::no-loc text="Rejected Connections/sec":::
 
 ##  <a name="bkmk_rsc"></a> Receive Side Coalescing (RSC) performance
 
 The following performance counters are relevant to RSC performance.
 
--   Network Adapter(*)
+-   :::no-loc text="Network Adapter(\*)":::
 
-    -   TCP Active RSC Connections
+    -   :::no-loc text="TCP Active RSC Connections":::
 
-    -   TCP RSC Average Packet Size
+    -   :::no-loc text="TCP RSC Average Packet Size":::
 
-    -   TCP RSC Coalesced Packets/sec
+    -   :::no-loc text="TCP RSC Coalesced Packets/sec":::
 
-    -   TCP RSC Exceptions/sec
+    -   :::no-loc text="TCP RSC Exceptions/sec":::
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).
 
