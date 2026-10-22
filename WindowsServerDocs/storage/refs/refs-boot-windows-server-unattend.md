@@ -7,7 +7,6 @@ ms.author: roharwoo
 ms.topic: how-to
 ms.date: 09/28/2026
 ms.reviewer: chcurlet
-appliesto: []
 #customer intent: As a Windows Server administrator, I want to install Windows Server with a ReFS boot volume by using an unattend answer file so that I can deploy a unified ReFS-based storage host with a working recovery environment.
 ---
 
