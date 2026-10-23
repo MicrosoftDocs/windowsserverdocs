@@ -200,6 +200,8 @@ items:
         href: dns/manage-dns-zones.md
       - name: Manage DNS resource records
         href: dns/manage-resource-records.md
+      - name: Configure DNS forwarding
+        href: dns/configure-dns-forwarding.md
       - name: Configure DNS aging and scavenging
         href: dns/configure-aging-scavenging.md
       - name: Enable DNS over HTTPS in DNS Server
@@ -248,6 +250,8 @@ items:
         href: dns/troubleshoot/troubleshoot-dns-client.md
       - name: Troubleshooting DNS servers
         href: dns/troubleshoot/troubleshoot-dns-server.md
+      - name: Resolve a DNS conditional forwarder zone conflict
+        href: dns/troubleshoot/resolve-conditional-forwarder-zone-conflict.md
       - name: Troubleshoot DNS over HTTPS in DNS Server
         href: dns/troubleshoot-dns-over-https-server.md
   - name: Dynamic Host Configuration Protocol (DHCP)
