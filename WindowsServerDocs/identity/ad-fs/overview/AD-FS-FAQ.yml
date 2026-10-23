@@ -412,7 +412,14 @@ sections:
           In AD FS 2016, token binding is automatically enabled and causes multiple known problems with proxy and federation scenarios. These problems cause this event. To resolve the event, run the following PowerShell command to remove token binding support:
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
-         
+
+      - question: |
+          After the October 2026 update, OAuth sign-ins are failing with Event ID 364 / MSIS9224. How do I fix this?
+
+        answer: |
+          The October 2026 update changes AD FS to require an exact URI match for the OAuth redirect_uri parameter [(RFC 6749 §3.1.2.3)](https://www.rfc-editor.org/info/rfc6749/#section-3.1.2.3). Previously AD FS used prefix matching, which allowed sub-paths, case variations, and wildcard-derived URIs to be accepted. These patterns are now correctly rejected. 
+          All fixes are client registration changes only — no server patch or configuration change is needed. Check the AD FS Admin event log for **Event ID 364** — the error message includes the exact **redirect_uri** value that was rejected and the client ID, which identifies which client registration needs to be updated using `Set-AdfsClient` or `Set-AdfsNativeClientApplication.`    
+
       - question: |
           I'm getting Event ID 543. How do I mitigate this event?
           
