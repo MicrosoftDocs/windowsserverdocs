@@ -146,7 +146,7 @@ In cross-site scripting, the vulnerability is introduced in the application's ou
 
 XSS is often exploited in online banking and e-commerce scenarios where an attacker can make purchases or transfer money in the context of the exploited user. In the case of a targeted attack on a custom web-based identity management application, it can allow an attacker to create their own identities, modify permissions and rights, and lead to a systemic compromise.
 
-Although a full discussion of cross-site scripting and SQL injection is outside the scope of this document, the [Open Web Application Security Project (OWASP)](https://www.owasp.org/index.php/Main_Page) publishes a top 10 list with in-depth discussion of the vulnerabilities and countermeasures.
+Although a full discussion of cross-site scripting and SQL injection is outside the scope of this document, the [Open Web Application Security Project (OWASP)](https://top10.owasp.org/2025/) publishes a top 10 list with in-depth discussion of the vulnerabilities and countermeasures.
 
 Regardless of the investment in infrastructure security, if poorly designed and written applications are deployed within that infrastructure, the environment is made vulnerable to attacks. Even well-secured infrastructures often can't provide effective countermeasures to these application attacks. Compounding the problem, poorly designed applications may require that service accounts be granted excessive permissions for the application to function.
 
