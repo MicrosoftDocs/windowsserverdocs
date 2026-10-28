@@ -18,7 +18,7 @@ This article describes the latest updates for the [Remote Desktop web client](re
 
 - Security updates
 
-- Fixed a bug where logon/logoff may not work on non-English locales after XSLT deprecation by Chrome
+- Fixed a bug where sign-in and sign-out might not work on non-English locales after XSLT deprecation by Chrome.
 
 ## Updates for version 2.1.85.0
 
