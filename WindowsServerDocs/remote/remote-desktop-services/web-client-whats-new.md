@@ -17,7 +17,6 @@ This article describes the latest updates for the [Remote Desktop web client](re
 *Date published: October 28, 2026*
 
 - Security updates
-
 - Fixed a bug where sign-in and sign-out might not work on non-English locales after XSLT deprecation by Chrome.
 
 ## Updates for version 2.1.85.0
