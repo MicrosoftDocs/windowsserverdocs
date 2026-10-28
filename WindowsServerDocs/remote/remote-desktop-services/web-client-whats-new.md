@@ -12,7 +12,15 @@ ms.date: 08/20/2026
 
 This article describes the latest updates for the [Remote Desktop web client](remote-desktop-web-client.md). Updates include new features, improvements, bug fixes, and security enhancements to help you stay productive.
 
-## Latest version - Remote Desktop web client 2.1.85.0
+## Latest version - Remote Desktop web client 2.1.87.0
+
+*Date published: October, 28 2026*
+
+- Security updates
+
+- Fixed a bug where logon/logoff may not work on non-English locales after XSLT deprecation by Chrome
+
+## Updates for version 2.1.85.0
 
 *Date published: August 20, 2026*
 
