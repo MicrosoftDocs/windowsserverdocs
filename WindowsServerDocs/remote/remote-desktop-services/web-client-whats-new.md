@@ -14,7 +14,7 @@ This article describes the latest updates for the [Remote Desktop web client](re
 
 ## Latest version - Remote Desktop web client 2.1.87.0
 
-*Date published: October, 28 2026*
+*Date published: October 28, 2026*
 
 - Security updates
 
