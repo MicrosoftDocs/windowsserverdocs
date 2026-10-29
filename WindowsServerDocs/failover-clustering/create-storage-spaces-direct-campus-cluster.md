@@ -20,7 +20,7 @@ For more information about campus cluster architecture, supported configurations
 
 ## Prerequisites
 
-- Windows Server 2025 or later with the 2025-12 security update ([KB5072033](https://support.microsoft.com/help/5072033)) installed on every node in the failover cluster.
+- Windows Server 2025 or later with the 2025-12 security update ([KB5072033](https://support.microsoft.com/help/5072033)) installed on every server that will be part of the cluster.
 - All-flash capacity drives of the same type on every node (SSD or NVMe). Don't use HDDs and don't configure a caching tier.
 - An equal number of nodes in each of the two rack-level fault domains. For supported node configurations, see [Failover Clustering topologies](topologies.md). This article shows the 2+2 configuration.
 - Exactly two rack-level fault domains, with cluster nodes spanning both racks.
@@ -182,7 +182,7 @@ Here's how to enable Storage Spaces Direct by using the [Enable-ClusterStorageSp
    Get-StoragePool S2D* | Update-StoragePool
    ```
 
-1. Verify that the storage pool version is 29 or later. A campus cluster requires storage pool version 29 for rack-level fault domain awareness:
+1. Campus clusters need storage pool version 29 or later for rack-level fault domain awareness. Verify the pool version:
 
    ```powershell
    (Get-CimInstance -Namespace root/microsoft/windows/storage `
@@ -190,10 +190,10 @@ Here's how to enable Storage Spaces Direct by using the [Enable-ClusterStorageSp
        -Filter 'IsPrimordial = false').CimInstanceProperties['Version'].Value
    ```
 
-1. Verify that the storage pool's `FaultDomainAwareness` property has the value `StorageRack`. This value confirms that Storage Spaces Direct places data copies across the two rack fault domains:
+1. Verify that the storage pool's `FaultDomainAwarenessDefault` property has the value `StorageRack`. This value confirms that Storage Spaces Direct places data copies across the two rack fault domains:
 
    ```powershell
-   Get-StoragePool -FriendlyName S2D* | Format-List FaultDomainAwareness
+   Get-StoragePool -FriendlyName S2D* | Format-List FaultDomainAwarenessDefault
    ```
 
 #### [Failover Cluster Manager](#tab/fcm)
@@ -212,7 +212,7 @@ Here's how to enable Storage Spaces Direct by using Failover Cluster Manager.
    Get-StoragePool S2D* | Update-StoragePool
    ```
 
-1. Verify that the storage pool version is 29 or later. A campus cluster requires storage pool version 29 for rack-level fault domain awareness:
+1. Campus clusters need storage pool version 29 or later for rack-level fault domain awareness. Verify the pool version:
 
    ```powershell
    (Get-CimInstance -Namespace root/microsoft/windows/storage `
@@ -220,10 +220,10 @@ Here's how to enable Storage Spaces Direct by using Failover Cluster Manager.
        -Filter 'IsPrimordial = false').CimInstanceProperties['Version'].Value
    ```
 
-1. Verify that the storage pool's `FaultDomainAwareness` property has the value `StorageRack`. This value confirms that Storage Spaces Direct places data copies across the two rack fault domains:
+1. Verify that the storage pool's `FaultDomainAwarenessDefault` property has the value `StorageRack`. This value confirms that Storage Spaces Direct places data copies across the two rack fault domains:
 
    ```powershell
-   Get-StoragePool -FriendlyName S2D* | Format-List FaultDomainAwareness
+   Get-StoragePool -FriendlyName S2D* | Format-List FaultDomainAwarenessDefault
    ```
 
 ---
