@@ -103,7 +103,7 @@ $propertyName = "Options"
 try {
     $regCheck = (Get-ItemProperty -Path $registryPath -Name $propertyName -ErrorAction Stop).$propertyName
  
-    switch ($value) {
+    switch ($regCheck) {
         0 { "AIA is Enabled" }
         2 { "AIA is Disabled" }
         default { "Unexpected value: $regCheck" }
