@@ -58,14 +58,14 @@ $nwConnectionProperties.IpSecConfiguration.QuickMode.AuthenticationTransformatio
 $nwConnectionProperties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "GCMAES256"
 $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 3600
 $nwConnectionProperties.IpSecConfiguration.QuickMode.IdleDisconnectSeconds = 500
-$nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000
+$nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000000
 
 $nwConnectionProperties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode
 $nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2"
 $nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"
 $nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"
 $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 28800
-$nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000
+$nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 500
 
 # L3 specific configuration (leave blank for IPSec)
 $nwConnectionProperties.IPAddresses = @()
