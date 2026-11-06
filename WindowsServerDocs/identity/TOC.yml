@@ -1138,6 +1138,8 @@
               href: ad-cs/create-domain-user-account-ndes-service-account.md
             - name: Install a policy module with Network Device Enrollment Service
               href: ad-cs/install-policy-module-network-device-enrollment-service.md
+            - name: Configure NDES to handle certificate requests containing SID information
+              href: ad-cs/configure-ndes-sid-certificate-requests.md
         - name: Certification Authority Web Enrollment
           items:
             - name: Request certificates using Web Enrollment
