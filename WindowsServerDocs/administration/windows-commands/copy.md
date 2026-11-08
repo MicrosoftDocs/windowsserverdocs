@@ -4,7 +4,7 @@ description: Reference article for the copy command, which copies one or more fi
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 11/08/2026
 ---
 
 # copy
@@ -86,6 +86,13 @@ copy [/d] [/v] [/n] [/y | /-y] [/z] [/a | /b] <source> [/a | /b] [+<source> [/a 
     Where the commas indicate that the *destination* parameter has been intentionally left out.
 
 ## Examples
+
+To add the command `echo Hello, World!` as a batch file named `Hello.bat` to the current directory, type the following and press CTRL+Z and then ENTER:
+
+```
+copy con Hello.bat
+echo Hello, World!
+```
 
 To copy a file called *memo.doc* to *letter.doc* in the current drive and ensure that an end-of-file character (CTRL+Z) is at the end of the copied file, type:
 
