@@ -149,6 +149,8 @@
       href: rds-user-management.md
     - name: Customize the RDS title "Work Resources" using PowerShell on Windows Server
       href: rds-work-resources.md
+    - name: Migrate RD Web Access customizations to server-side XSLT
+      href: migrate-rd-web-access-customizations-to-server-side-xslt.md
     - name: Diagnose app performance issues with performance counters
       href: rds-rdsh-performance-counters.md
     - name: Optimizing Windows configuration for VDI desktops

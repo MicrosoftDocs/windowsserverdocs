@@ -39,7 +39,7 @@ On the Windows Admin Center Gateway machine, ensure you have the following:
 
 - The latest version of PowerCLI installed. To download and install PowerCLI, see the [PowerCLI Installation Guide](https://developer.broadcom.com/powercli/installation-guide).
 
-- [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://developer.broadcom.com/sdks/vmware-virtual-disk-development-kit-vddk/latest/) downloaded and extracted to the directory: `C:\Program Files\WindowsAdminCenter\Service\VDDK`. Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
+- [VMware Virtual Disk Development Kit (VDDK) version 8.0.3](https://support.broadcom.com/group/ecx/downloads) downloaded and extracted to the directory: `C:\Program Files\WindowsAdminCenter\Service\VDDK`. Ensure you download **VDDK version 8.0.3** specifically. Other versions aren't supported.
 
 - [Visual Studio 2015 (VC++ 14.0) Redistributable](/cpp/windows/latest-supported-vc-redist#visual-studio-2015-vc-140-no-longer-supported) and [Visual C++ Redistributable Packages for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784) installed.
 
