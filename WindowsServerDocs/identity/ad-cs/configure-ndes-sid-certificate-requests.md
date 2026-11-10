@@ -11,7 +11,7 @@ ms.date: 11/05/2026
 
 **Applies to:** Windows Server 2012 and later versions
 
-By default, Network Device Enrollment Service (NDES) rejects certificate enrollment requests that contain security identifier (SID) information in either the Subject Alternative Name (SAN) extension or a separate SID extension, unless you configure a custom NDES policy module. This security change was introduced in the October 2026 Windows Server security updates to help prevent certificate-based impersonation attacks.
+By default, Network Device Enrollment Service (NDES) rejects certificate enrollment requests that contain security identifier (SID) information in either the Subject Alternative Name (SAN) extension or a separate SID extension, unless you configure a custom NDES policy module. This behavior is one of several changes introduced in the October 2026 Windows Server security updates to address [CVE-2026-69802](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69802). These changes help prevent certificate-based impersonation attacks.
 
 In this article, you learn how to configure NDES to allow certificate enrollment requests that contain SID information when a trusted component validates that information.
 
@@ -82,5 +82,6 @@ When NDES rejects a certificate enrollment request that contains SID information
 ## Related content
 
 - [Use a policy module with Network Device Enrollment Service](use-policy-module-with-network-device-enrollment-service.md)
+- [CVE-2026-69802](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-69802)
 - [[MS-WCCE]: szOID_NTDS_CA_SECURITY_EXT](/openspecs/windows_protocols/ms-wcce/e563cff8-1af6-4e6f-a655-7571ca482e71) describes the NTDS CA security extension (OID `1.3.6.1.4.1.311.25.2`).
 - [Preview of SAN URI for Certificate Strong Mapping for KB5014754](https://techcommunity.microsoft.com/blog/askds/preview-of-san-uri-for-certificate-strong-mapping-for-kb5014754/3789785) describes the SAN URI format `tag:microsoft.com,2022-09-14:sid:<SID>`.
