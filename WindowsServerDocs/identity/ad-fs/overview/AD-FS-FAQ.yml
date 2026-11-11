@@ -392,9 +392,9 @@ sections:
           
           If the AD FS farm is using the Windows Internal Database, the default location for the database files is C:\Windows\WID\Data. To prevent filling this drive, be sure to have at least 5 GB of free storage before you enable ESL. In addition to disk storage, plan for total process memory to grow after you enable ESL by up to another 1 GB of RAM for user populations of 500,000 or less.
 
-     - question: |
+      - question: |
           How can I prevent unexpected outbound DNS and CLDAP traffic from AD FS username and password requests?
-       answer: |
+        answer: |
           When AD FS processes a username and password authentication request, it might perform domain controller discovery. If the request contains an unrecognized domain identifier, this discovery can send DNS SRV queries and Connectionless Lightweight Directory Access Protocol (CLDAP) pings to destinations outside your organization.
 
         To mitigate this behavior, we recommend that you:
