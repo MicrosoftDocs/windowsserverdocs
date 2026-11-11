@@ -141,3 +141,4 @@ We're removing the following features and functionalities from the installed pro
 ## Related content
 
 - [Deprecation: What it means in the Windows lifecycle](https://techcommunity.microsoft.com/blog/windows-itpro-blog/deprecation-what-it-means-in-the-windows-lifecycle/4372457)
+
