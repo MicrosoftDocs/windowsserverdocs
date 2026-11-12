@@ -5,6 +5,7 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 02/27/2025
+ai-usage: ai-assisted
 #customer intent: As a network administrator, I want to enable DNS logging and diagnostics in Windows Server so that I can monitor DNS server operations and troubleshoot DNS issues.
 ---
 
@@ -215,6 +216,12 @@ DNS server performance can be affected when logging is enabled, however the enha
 
 Before the introduction of DNS analytic logs, DNS debug logging was an available method to monitor DNS transactions. DNS debug logging isn't the same as the enhanced DNS logging and diagnostics feature discussed in this article. Debug logging is a tool that also can be used for DNS logging and diagnostics. The DNS debug log provides detailed data about all DNS information sent and received by the DNS server. The information gathered is similar to the data that can be gathered using packet capture tools such as network monitor.
 
+Starting with the applicable 2026-11 cumulative update ([KB5131080](https://support.microsoft.com/help/5131080) for Windows Server 2025, [KB5131090](https://support.microsoft.com/help/5131090) for Windows Server 2022, [KB5131085](https://support.microsoft.com/help/5131085) for Windows Server 2019, or [KB5131291](https://support.microsoft.com/help/5131291) for Windows Server 2016), DNS Server only honors configured debug log paths under `C:\Windows\System32\dns\`.
+
+If an existing configured path is outside this directory, DNS Server logs Event ID 506 and normally relocates the debug log to `C:\Windows\System32\dns\log\dns.log`. If that filename already exists, the relocated log name ends in `-<timestamp>.log`. If `C:\Windows\System32\dns\log` is a directory, DNS Server writes the relocated log in that directory. If `C:\Windows\System32\dns\log` is a file, DNS Server writes the relocated log in `C:\Windows\System32\dns\`.
+
+Changing `LogFilePath` by using PowerShell, DNS Manager, or MS-DNSP RPC requires membership in the local **Administrators** group on the target DNS server. Members of **DnsAdmins** who aren't local administrators receive `PermissionDenied` (Win32 error 5) or `Access denied` when changing `LogFilePath`, but can change other debug logging settings when `LogFilePath` is unchanged.
+
 By default, all debug logging options are disabled. When selectively enabled, the DNS Server service can perform trace-level logging of selected types of events or messages for general troubleshooting and debugging of the server.
 
 Debug logging can be resource intensive, affecting overall server performance, and consuming disk space. Therefore, it should only be used temporarily when more detailed information about server performance is needed.
@@ -266,13 +273,9 @@ The following DNS debug logging options are available:
 
 - **Enable filtering based on IP address** Provides filtering of packets logged in the DNS server log file. This option allows logging of packets sent from specific IP addresses to a DNS server, or from a DNS server to specific IP addresses.  
 
-  - **File name** - Lets you specify the name and location of the DNS server log file.  
+  - **File name** - Lets you specify the name and location of the DNS server log file.
 
-    For example:  
-
-    - **dns.log** specifies that the DNS server log file should be saved as **dns.log** in the `<systemroot>zSystem32Dns directory`. Remember to replace `<systemroot>` with the actual path to the Windows directory on your computer.
-
-    - **temp\dns.log** specifies that the DNS server log file should be saved as **dns.log** in the `<systemroot>\Temp directory`. Remember to replace `<systemroot>` with the actual path to the Windows directory on your computer.
+    For example, `C:\Windows\System32\dns\log\custom.log` saves the debug log as `custom.log` in the permitted DNS log directory.
 
 - **Log file maximum size limit** Lets you set the maximum file size for the DNS server log file. When the specified maximum size of the DNS server log file is reached, the DNS server overwrites the oldest packet information with new information. Note: If left unspecified, the DNS server log file's size can take up a large amount of hard disk space.  
 
