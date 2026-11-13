@@ -157,7 +157,7 @@ The following links lead to descriptions of the default groups that are located 
 
 ### Access Control Assistance Operators
 
-Members of this group can remotely query authorization attributes and permissions for resources on the computer. This can disclose details about access of other users, including administrators. This group can't be renamed, deleted, or removed.
+Members of this group can remotely query authorization attributes and permissions for resources on the computer. This capability can disclose details about access of other users, including administrators. You can't rename, delete, or remove this group.
 
 |Attribute|Value|
 |--- |--- |
@@ -252,7 +252,7 @@ Members of the Backup Operators group can back up and restore all files on a com
 
 ### Certificate Service DCOM Access
 
-Members of this group can connect to certification authorities in the enterprise. It allows calls to enroll certificates, wich can cause downstream problems due to a high number of certificates created. This group can't be renamed, deleted, or removed.
+Members of this group can connect to certification authorities in the enterprise. It allows calls to enroll certificates, which can cause downstream problems due to a high number of certificates created. You can't rename, delete, or remove this group.
 
 |Attribute|Value|
 |--- |--- |
@@ -268,7 +268,7 @@ Members of this group can connect to certification authorities in the enterprise
 
 ### Cert Publishers
 
-Members of the Cert Publishers group are authorized to publish certificates for user objects in Active Directory. It allows members to create lots of AD data or remove certificates that are required. This group can't be renamed, deleted, or removed.
+Members of the Cert Publishers group are authorized to publish certificates for user objects in Active Directory. By using this group, members can create a large amount of AD data or remove certificates that are required. You can't rename, delete, or remove this group.
 
 |Attribute|Value|
 |--- |--- |
@@ -469,7 +469,7 @@ This group can include all computers and servers that join the domain, excluding
 |Default member of|None|
 |Protected by AdminSDHolder?|No|
 |Safe to move out of default container?|Yes, but not required|
-|Safe to delegate management of this group to non-service admins?|Yes|
+| Safe to delegate management of this group to non-service admins? | Yes |
 |Default user rights|None|
 
 ### Domain Controllers
@@ -721,7 +721,7 @@ Members of the Network Configuration Operators group have the following administ
 - Issue `ipconfig`, `ipconfig /release`, and `ipconfig /renew` commands
 - Enter the PIN unblock key (PUK) for mobile broadband devices that support a SIM card
 
-Group Members are able to disrupt the network communication of a Domain Controller and thus should not be delegated.
+Group members can disrupt the network communication of a Domain Controller and thus should not be delegated.
 
 This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role. This group can't be renamed, deleted, or removed.
 
@@ -792,7 +792,7 @@ This group appears as an SID until the domain controller is made the primary dom
 
 Members of the Pre–Windows 2000 Compatible Access group have Read access for all users and groups in the domain. This group is provided for backward compatibility for computers that run Windows NT 4.0 and earlier. By default, the special identity group Everyone is a member of this group. Add users to this group only if they run Windows NT 4.0 or earlier.
 
-When no Windows NT4.0 or older system is in the domain, and all components are updated to be AD aware, this group should have no members.
+When no Windows NT 4.0 or older system is in the domain, and all components are updated to be AD aware, this group should have no members.
 
 > [!WARNING]
 > This group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
@@ -958,7 +958,7 @@ For more information, see [Understanding Planning and Deployment for Read-Only D
 
 You can use the Remote Desktop Users group on a Remote Desktop Session Host (RD Session Host) server to grant users and groups permissions to remotely connect to an RD Session Host server. This group can't be renamed, deleted, or removed. The group appears as an SID until the domain controller is made the primary domain controller and it holds the operations master (FSMO) role.
 
-Only Administrators are expected to use RDS sessions on a Domain Controller, and only in emergencies. So this group should be empty.
+Only administrators should use RDS sessions on a domain controller, and only in emergencies. Keep this group empty.
 
 |Attribute|Value|
 |--- |--- |
@@ -1123,7 +1123,7 @@ Members of the Users group are prevented from making accidental or intentional s
 
 Users can do tasks like run an application, use local and network printers, shut down the computer, and lock the computer. Users can install applications that only they can use if the installation program of the application supports per-user installation. This group can't be renamed, deleted, or removed.
 
-Do not clean up the membership of the group other than anonymous, as permissions the group has are also used by remotely connected uses and computers only having "Authenticated Users" permissions.
+Don't clean up the membership of the group other than anonymous, as remotely connected users and computers use the permissions the group has with only "Authenticated Users" permissions.
 
 |Attribute|Value|
 |--- |--- |

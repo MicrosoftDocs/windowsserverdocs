@@ -214,7 +214,7 @@ Disconnect-VIServer -Server "<vCenterServer>" -Force -Confirm:$false
 For more information about CBT limitations and troubleshooting guidance, see the following Broadcom documentation:
 
 - [Troubleshooting Changed Block Tracking (CBT) – Broadcom Knowledge Base](https://knowledge.broadcom.com/external/article/320557/changed-block-tracking-cbt-on-virtual-ma.html)
-- [Troubleshooting Changed Block Tracking (CBT) – VDDK Programming Guide](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/virtual-disk-development-kit-programming-guide/error-codes-and-open-source/troubleshooting-changed-block-tracking-cbt.html)
+- [Troubleshooting Changed Block Tracking (CBT) – VDDK Programming Guide](https://developer.broadcom.com/xapis/virtual-disk-api/latest/vddkBkupVadp.9.3.html)
 
 **Best Practice**
 

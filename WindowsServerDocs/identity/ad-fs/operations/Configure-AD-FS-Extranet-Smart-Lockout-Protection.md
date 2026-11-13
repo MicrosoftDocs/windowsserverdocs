@@ -12,7 +12,7 @@ Extranet Smart Lockout (ESL) protects your users from experiencing extranet acco
 
 ESL enables AD FS to differentiate between sign-in attempts from a familiar location for a user and sign-in attempts from what might be an attacker. AD FS can lock out attackers while letting valid users continue to use their accounts. This distinction prevents and protects against denial-of-service and certain classes of password spray attacks on the user. ESL is available for AD FS in Windows Server 2016 and is built into AD FS in Windows Server 2019.
 
-ESL is only available for username and password authentication requests that come through the extranet with the Web Application Proxy or a third party proxy. Any third party proxy must support the MS-ADFSPIP protocol to be used in place of the Web Application Proxy, such as [F5 BIG-IP Access Policy Manager](https://devcentral.f5.com/s/articles/ad-fs-proxy-replacement-on-f5-big-ip-30191). Consult the third party proxy documentation to determine if the proxy supports the MS-ADFSPIP protocol.
+ESL is only available for username and password authentication requests that come through the extranet with the Web Application Proxy or a third party proxy. Any third party proxy must support the MS-ADFSPIP protocol to be used in place of the Web Application Proxy, such as [F5 BIG-IP Access Policy Manager](https://techdocs.f5.com/en-us/bigip-17-0-0/big-ip-access-policy-manager-third-party-integration/apm-as-an-ad-fs-proxy.html). Consult the third party proxy documentation to determine if the proxy supports the MS-ADFSPIP protocol.
 
 ## Features in AD FS 2019
 
