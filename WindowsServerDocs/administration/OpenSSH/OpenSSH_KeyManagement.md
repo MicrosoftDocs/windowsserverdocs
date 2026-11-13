@@ -156,11 +156,11 @@ To add a removed key again, you need the original private key file and its passp
 
 ## Deploy the public key
 
-To use the user key that you created previously, you need to place the contents of your public key (\\*.ssh\id\_ecdsa.pub*) on the server into a text file. The name and location of the file depend on whether the user account is a member of the local administrator group or a standard user account. The following sections cover both standard and administrative users.
+To use the user key that you created previously, you need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file. The name and location of the file depend on whether the user account is a member of the local administrator group or a standard user account. The following sections cover both standard and administrative users.
 
 ### Standard user
 
-You need to place the contents of your public key (\\*.ssh\id\_ecdsa.pub*) on the server into a text file called `authorized_keys` in *C:\Users\username.ssh\\*. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file.
+You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called `authorized_keys` in _C:\Users\username\\.ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file.
 
 You can use the following code to copy the public key to the server. In the last line, replace `username` with your username. Initially, you're prompted to enter a password for the user account for the server.
 
@@ -177,7 +177,7 @@ ssh username@domain@hostname $remotePowershell
 
 ### Administrative user
 
-You need to place the contents of your public key (\\*.ssh\id\_ecdsa.pub*) on the server into a text file called `administrators_authorized_keys` in *C:\ProgramData\ssh\\*. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and the System user.
+You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called `administrators_authorized_keys` in _C:\ProgramData\ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and the System user.
 
 You can use the following code to copy the public key to the server and configure the ACL. In the last line, replace `username` with your username. Initially, you're prompted to enter a password for the user account for the server.
 
