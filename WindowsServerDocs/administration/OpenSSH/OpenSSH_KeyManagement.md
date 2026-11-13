@@ -134,10 +134,10 @@ Get-Service ssh-agent
 ssh-add $env:USERPROFILE\.ssh\id_ecdsa
 ```
 
-The Win32 `ssh-agent` service persists added private keys in the registry under `HKCU\Software\OpenSSH\Agent\Keys`. The stored keys are encrypted with the Windows Data Protection API (DPAPI), using protection tied to the Windows user who added them. They remain available after you sign out or restart the computer. The agent performs signing operations for your SSH client without requiring the original private key file.
+The Windows `ssh-agent` service persists added private keys under `HKCU\Software\OpenSSH\Agent\Keys`, encrypted with the Windows Data Protection API (DPAPI) for the user who added them. The agent uses these keys to perform signing operations for your SSH client without requiring the original private key file.
 
 > [!IMPORTANT]
-> For a passphrase-protected key added to the Win32 `ssh-agent` service, the SSH key passphrase is required only on the first add; subsequent use across reboots requires only the user's Windows logon. The passphrase protects the original private key file, but it doesn't provide an additional prompt or authentication factor for use of the persisted key. A process running as that Windows user can use the agent to authenticate with the key. Protect access to your Windows account and session accordingly.
+> The SSH key passphrase is required only when you first add the key; subsequent use across sign-outs and reboots requires only your Windows logon. Any process running as your Windows user can use the agent to authenticate with the key without another passphrase prompt. Protect access to your Windows account and session accordingly.
 
 > [!IMPORTANT]
 > We recommend that you back up your private key to a secure location and then delete it
@@ -146,19 +146,21 @@ The Win32 `ssh-agent` service persists added private keys in the registry under 
 > access to the private key, you have to create a new key pair and update the public key on all
 > systems you interact with.
 
-Stopping the `ssh-agent` service, signing out, restarting the computer, or deleting the original private key file doesn't remove the persisted keys. Use `ssh-add -D` to explicitly remove them from the agent. If you add a passphrase-protected key again after removing it, you must enter its passphrase again. Removing keys from the agent doesn't delete your original key files or remove public keys from SSH servers.
+Stopping the `ssh-agent` service, signing out, restarting the computer, or deleting the original private key file doesn't remove persisted keys. With the service running, run the following command as the user who added them to remove all keys from that user's agent storage:
 
 ```powershell
 ssh-add -D
 ```
 
+To add a removed key again, you need the original private key file and its passphrase, if one was set.
+
 ## Deploy the public key
 
-To use the user key that you created previously, you need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file. The name and location of the file depend on whether the user account is a member of the local administrator group or a standard user account. The following sections cover both standard and administrative users.
+To use the user key that you created previously, you need to place the contents of your public key (*\.ssh\id\_ecdsa.pub*) on the server into a text file. The name and location of the file depend on whether the user account is a member of the local administrator group or a standard user account. The following sections cover both standard and administrative users.
 
 ### Standard user
 
-You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called `authorized_keys` in _C:\Users\username\\.ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file.
+You need to place the contents of your public key (*\.ssh\id\_ecdsa.pub*) on the server into a text file called `authorized_keys` in *C:\Users\username\.ssh\\*. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file.
 
 You can use the following code to copy the public key to the server. In the last line, replace `username` with your username. Initially, you're prompted to enter a password for the user account for the server.
 
@@ -175,7 +177,7 @@ ssh username@domain@hostname $remotePowershell
 
 ### Administrative user
 
-You need to place the contents of your public key (_\\.ssh\id\_ecdsa.pub_) on the server into a text file called `administrators_authorized_keys` in _C:\ProgramData\ssh\\_. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and the System user.
+You need to place the contents of your public key (*\.ssh\id\_ecdsa.pub*) on the server into a text file called `administrators_authorized_keys` in *C:\ProgramData\ssh\\*. You can copy your public key by using the OpenSSH `scp` secure file-transfer utility, or by using PowerShell to write the key to the file. The ACL on this file needs to be configured to only allow access to administrators and the System user.
 
 You can use the following code to copy the public key to the server and configure the ACL. In the last line, replace `username` with your username. Initially, you're prompted to enter a password for the user account for the server.
 
