@@ -26,6 +26,9 @@ This release marks the general availability of Windows Admin Center for Arc-enab
 ### Fixed
 - Fixed an issue where users with Windows Server 2019 or older received the error "RegCreateKeyEx failed; code 5 - Access is denied" during install.
 
+> [!WARNING]
+> Versions of the Azure Connected Machine Agent (Arc agent) 1.65 or lower will not be able to upgrade to this version (or later) of Windows Admin Center. You can [download the current Azure Connected Machine Agent version here](https://aka.ms/AzureConnectedMachineAgent).
+
 ## Version 0.85.0.0 - June 2026
 
 ### New features
