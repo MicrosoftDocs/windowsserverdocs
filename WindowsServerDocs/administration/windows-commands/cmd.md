@@ -26,7 +26,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 | --------- | ----------- |
 | /c | Carries out the command specified by `<string>` and then exits the command processor. |
 | /k | Carries out the command specified by `<string>` and keeps the command processor running. |
-| /s | When used with `/c` or `/k`, triggers special non-parsing rules that strip the first and last quotes (`"`) around the `<string>` but leaves the rest of the command unchanged. |
+| /s | Used with `/c` or `/k`, forces old behavior: if `<string>` begins with a quote (`"`), remove the first and last quote in `<string>`  (the last quote is not necessarily at the end). |
 | /q | Turns echo off. |
 | /d | Disables execution of AutoRun commands. |
 | /a | Formats command output as American National Standards Institute (ANSI). |
