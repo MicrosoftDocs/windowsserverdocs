@@ -20,11 +20,19 @@ This page is updated monthly, so check back regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 1.3.0.0 - November 2026
+
+### Fixed
+- Upgraded Windows Admin Center's .NET version to .NET 10.
+
 ## Version 1.0.0.0 - October 2026
 This release marks the general availability of Windows Admin Center for Arc-enabled Servers. 
 
 ### Fixed
 - Fixed an issue where users with Windows Server 2019 or older received the error "RegCreateKeyEx failed; code 5 - Access is denied" during install.
+
+> [!WARNING]
+> Versions of the Azure Connected Machine Agent (Arc agent) 1.65 or lower can't upgrade to this version (or later) of Windows Admin Center. You can [download the current Azure Connected Machine Agent version here](https://aka.ms/AzureConnectedMachineAgent).
 
 ## Version 0.85.0.0 - June 2026
 
