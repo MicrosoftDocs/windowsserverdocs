@@ -20,6 +20,11 @@ This page is updated monthly, so check back regularly.
 > [!NOTE]
 > This article is only for Windows Admin Center in Azure. For release notes on Windows Admin Center on-premises, go to [release history](/windows-server/manage/windows-admin-center/support/release-history).
 
+## Version 1.3.0.0 - November 2026
+
+### Fixed
+- Upgraded Windows Admin Center's .NET version to .NET 10.
+
 ## Version 1.0.0.0 - October 2026
 This release marks the general availability of Windows Admin Center for Arc-enabled Servers. 
 
