@@ -4,12 +4,13 @@ description: Reference article for the telnet send command, which sends telnet c
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 11/11/2026
 ---
 
 # telnet: send
 
-
+> [!IMPORTANT]
+> Telnet Client is deprecated and will be removed from Windows in a future release.
 
 Sends telnet commands to the telnet server.
 
