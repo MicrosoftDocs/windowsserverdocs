@@ -6,6 +6,7 @@ author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/21/2019
 ms.custom: sfi-image-nochange
+ai-usage: ai-assisted
 ---
 
 # Manage servers in Windows Admin Center
@@ -14,9 +15,11 @@ ms.custom: sfi-image-nochange
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).
 
-You can add individual servers running Windows Server to Windows Admin Center so that you can manage them by using a comprehensive set of tools.
+Windows Admin Center Administration Mode provides the Server Manager experience and tools described in this article. You can add individual servers running Windows Server to Administration Mode and manage them by using a set of tools.
 
-## Procedure for adding a server to Windows Admin Center
+If you're using Virtualization Mode, add servers as compute resources instead. For more information, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md#add-resources).
+
+## Add a server in Administration Mode
 
 1. Under **All connections**, select **+ Add**.
 2. For the **Servers** resource type, select **Add**.
@@ -30,7 +33,7 @@ The server is added to your list of connections on the **All connections** page.
 
 ## Summary of tools
 
-The following table briefly describes the tools that are available in Windows Admin Center for server connections. Sections in this article provide more details for all the tools except Performance Monitor and Packetmon (whose links go to blog posts).
+The following table describes the Administration Mode tools available for server connections. The sections that follow provide more details for all tools except Performance Monitor and Packetmon; those links go to blog posts.
 
 | Tool | Description |
 | ---- | ----------- |

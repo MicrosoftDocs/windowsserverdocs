@@ -5,7 +5,7 @@
     items:
     - name: What is Windows Admin Center?
       href: understand/what-is.md
-    - name: What is Virtualization Mode? (preview)
+    - name: What is Virtualization Mode?
       href: virtualization-mode-overview.md
     - name: FAQ
       href: understand/faq.yml
@@ -43,7 +43,7 @@
       href: configure/use-powershell.md
     - name: Websocket validation
       href: configure/websocket-validation.md
-    - name: Update the certificate
+    - name: Update the Administration Mode certificate
       href: configure/update-certificate.md    
   - name: Use
     items:
@@ -77,16 +77,24 @@
         href: use/whats-new-vm-conversion-extension.md
       - name: VM Conversion extension FAQ
         href: use/vm-conversion-extension-faq.yml
-    - name: Virtualization Mode (preview)
+    - name: Virtualization Mode
       items:
-      - name: Install Virtualization Mode
-        href: install-virtualization-mode.md
-      - name: Add resources in Virtualization Mode
+      - name: Manage certificates in Virtualization Mode
+        href: manage-virtualization-mode-certificates.md
+      - name: Add storage resources in Virtualization Mode
+        href: add-virtualization-mode-storage-resources.md
+      - name: Add compute resources in Virtualization Mode
         href: add-virtualization-mode-resources.md
+      - name: Onboard machines to Azure Arc in Virtualization Mode
+        href: azure/onboard-azure-arc-virtualization-mode.md
       - name: Manage virtual machines in Virtualization Mode
         href: manage-virtualization-mode-virtual-machines.md
       - name: Use VM templates in Virtualization Mode
         href: use-virtualization-mode-vm-templates.md
+      - name: Back up and restore Virtualization Mode
+        href: back-up-restore-virtualization-mode.md
+      - name: Authentication and access control in Virtualization Mode
+        href: virtualization-mode-authentication-access-control.md
       - name: Known issues in Virtualization Mode
         href: virtualization-mode-known-issues.md
   - name: Connect to Azure

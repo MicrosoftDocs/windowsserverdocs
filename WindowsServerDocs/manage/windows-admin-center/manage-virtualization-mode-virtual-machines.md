@@ -23,7 +23,7 @@ Virtualization Mode focuses on virtualization infrastructure and presents resour
 
 Before you can add resources in Windows Admin Center Virtualization Mode, ensure the following prerequisites are met:
 
-- At least one Resource Group exists and contains one or more Hyper-V hosts added with the **Compute** profile. For more information about adding resources, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+- At least one Resource Group exists and contains one or more Hyper-V hosts added with the **Compute** profile. For more information about adding resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 - You're accessing the Virtualization Mode gateway site using an account that has the _Gateway Administrator_ role or equivalent permissions and have local Administrator rights on each Hyper-V host.
 

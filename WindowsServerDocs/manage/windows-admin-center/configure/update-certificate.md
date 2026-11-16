@@ -1,26 +1,32 @@
 ---
-title: Update the certificate used by Windows Admin Center
-description: Learn how to update the HTTPS certificate used by Windows Admin Center, including PowerShell commands and steps to apply and activate the new certificate.
+title: Update the Administration Mode Certificate
+description: Learn how to update the single gateway HTTPS certificate used by Windows Admin Center Administration Mode with PowerShell or the installer.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
-ms.date: 08/19/2025
+ms.date: 09/30/2026
+ai-usage: ai-assisted
 ---
-# Update the certificate used by Windows Admin Center
+# Update the Administration Mode gateway certificate
 
-When you have Windows Admin Center deployed as a service, you must provide a certificate for HTTPS. TLS certificates play a critical role in securing communications between the WAC gateway and connected devices. By encrypting data and authenticating identities, these certificates enhance the integrity and security of the system.
+When you deploy Windows Admin Center in Administration Mode as a service, the gateway uses a single HTTPS certificate to secure communication between the gateway and connected devices. This certificate encrypts data and authenticates identities to protect the gateway. This article shows you how to update that single gateway HTTPS certificate.
+
+Administration Mode uses this single gateway HTTPS certificate. Virtualization Mode manages its agent and gateway certificates differently, so the steps in this article don't apply to Virtualization Mode deployments.
 
 You might want to update the certificate if:
 
-- You have a new CA
+- You have a new certificate authority (CA)
 - Your existing private key was disclosed
 - You need to renew your certificate
 
 To update this certificate, follow the guidance in this article.
 
+> [!NOTE]
+> If you use Windows Admin Center in Virtualization Mode, see [Manage certificates in Windows Admin Center Virtualization Mode](../manage-virtualization-mode-certificates.md) instead.
+
 ## Prerequisites
 
-To update the certificate used by Windows Admin Center, you need the following prerequisites:
+To update the certificate that Windows Admin Center uses, you need the following prerequisites:
 
 - A Windows PC or server with Windows Admin Center installed.
 
@@ -32,32 +38,32 @@ To update the certificate used by Windows Admin Center, you need the following p
   - Valid for the fully qualified domain name (FQDN) or IP address used to access Windows Admin Center.
   - Contains the private key.
 
-> [!NOTE]  
+> [!NOTE]
 > Self-signed certificates aren't recommended for use with Windows Admin Center in production environments.
 
 ## Update the certificate
 
 ### [PowerShell](#tab/powershell)
 
-1. Sign-in to your machine. If you're on Server core, from the SConfig menu, enter option **15**, then press Enter to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
+1. Sign in to your machine. If you're on Server Core, from the SConfig menu, enter option **15**, then select **Enter** to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
 
-1. Import the Windows Admin Center configuration PowerShell module using the following command:
-
-   ```powershell
-   Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.Configuration" 
-   ```
-
-1. Apply the new certificate using the subject name of the certificate. Make sure the certificate uses a unique subject name. The subject name can be found in the `LocalMachine\My\` certificate store on your computer.
-
-    ```powershell
-    Get-ChildItem -Path Cert:\LocalMachine\My
-    ```
+1. Import the Windows Admin Center configuration PowerShell module by using the following command:
 
    ```powershell
-   Set-WACCertificateSubjectName -SubjectName "<subject name>" 
+   Import-Module "$env:ProgramFiles\WindowsAdminCenter\PowerShellModules\Microsoft.WindowsAdminCenter.Configuration"
    ```
 
-   Alternatively, you can use the SHA1 thumbprint of the certificate using the **Thumbprint** parameter. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
+1. Apply the new certificate by using the subject name of the certificate. Ensure the certificate uses a unique subject name. You can find the subject name in the `LocalMachine\My\` certificate store on your computer.
+
+   ```powershell
+   Get-ChildItem -Path Cert:\LocalMachine\My
+   ```
+
+   ```powershell
+   Set-WACCertificateSubjectName -SubjectName "<subject name>"
+   ```
+
+   Alternatively, you can use the SHA1 thumbprint of the certificate by using the **Thumbprint** parameter. You can find the thumbprint in the `LocalMachine\My\` certificate store on your computer.
 
    ```powershell
    Set-WACCertificateSubjectName -Thumbprint "<thumbprint>"
@@ -66,10 +72,10 @@ To update the certificate used by Windows Admin Center, you need the following p
 1. Update the certificate access control list to grant permissions for the _Network Service_ account to access the certificate. Use the following command, replacing `<subject name>` with the subject name of the certificate:
 
    ```powershell
-   Set-WACCertificateAcl -SubjectName "<subject name>" 
+   Set-WACCertificateAcl -SubjectName "<subject name>"
    ```
 
-1. You must restart the Windows Admin Center service for the changes to take effect. Restart the Windows Admin Center service using the following command:
+1. You must restart the Windows Admin Center service for the changes to take effect. Restart the Windows Admin Center service by using the following command:
 
    ```powershell
    Restart-Service -Name WindowsAdminCenter
@@ -77,49 +83,49 @@ To update the certificate used by Windows Admin Center, you need the following p
 
 ### [Windows Admin Center](#tab/wac)
 
-  1. Open the installer that matches the version of Windows Admin Center currently installed.
+1. Open the installer that matches the version of Windows Admin Center currently installed.
 
-  1. Advance through the wizard to the **Select TLS certificate** screen.
-  
-  1. Select the **Use the pre-installed TLS certificate** radio button, then select **Next**.
+1. Advance through the wizard to the **Select TLS certificate** screen.
 
-      :::image type="content" source="../media/select-pre-installed-certificate.png" alt-text="Screenshot of the Select TLS certificate screen.":::
+1. Select the **Use the pre-installed TLS certificate** option, and then select **Next**.
 
-  1. Provide the thumbprint of your certificate. The thumbprint can be found in the `LocalMachine\My\` certificate store on your computer.
+   :::image type="content" source="../media/select-pre-installed-certificate.png" alt-text="Screenshot of the Select TLS certificate screen.":::
 
-      :::image type="content" source="../media/select-thumbprint-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+1. Enter the thumbprint of your certificate. Find the thumbprint in the `LocalMachine\My\` certificate store on your computer.
 
-  1. Complete the wizard and start Windows Admin Center.
+   :::image type="content" source="../media/select-thumbprint-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+
+1. Complete the wizard and start Windows Admin Center.
 
 ---
 
-## Troubleshooting
+## Troubleshoot certificate issues
 
-There are different tools that you can use to find logs and error messages. The following are the best diagnostic tools to use:
+Several tools help you find logs and error messages. The following diagnostic tools are the most useful:
 
-- **Events Viewer**: Utilize the Events Viewer under the WindowsAdminCenter Event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
-- **Browser errors**: If the WAC service is properly set up but the browser indicates an error, verify the configuration of the TLS certificate and ensure it matches the required setup parameters.
-- **Ajax error**: An Ajax error might appear when attempting to open a connection with an invalid certificate. To avoid this issue, ensure the certificate is correctly installed and validated.
+- **Event Viewer**: Use the Event Viewer under the WindowsAdminCenter event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
+- **Browser errors**: If you set up the Windows Admin Center service properly but the browser indicates an error, verify the TLS certificate configuration and ensure it matches the required setup parameters.
+- **Ajax error**: An Ajax error might appear when you attempt to open a connection with an invalid certificate. To avoid this issue, install and validate the certificate correctly.
 
 ### Common problems
 
 - **Invalid certificate**
-  - A certificate might be invalid. This shows as "invalid certificate."
-  - Even if you don't see an error on WindowsAdminCenter event log, the browser could indicate invalid certificate status as icon at the address bar. WACv2 can't be used if an invalid certificate is used when communicating with the sub processes.
+  - A certificate might be invalid. This condition shows as "invalid certificate."
+  - Even if you don't see an error on the WindowsAdminCenter event log, the browser could indicate invalid certificate status as an icon at the address bar. You can't use Windows Admin Center if it uses an invalid certificate when communicating with the subprocesses.
   - You shouldn't generate a self-signed certificate because it's a security issue.
 
 - **Mismatched DNS name**
-  - The certificate DNS name might be different from the WAC DNS name.
-  - If this isn't resolved then WAC might not work or bring errors.
+  - The certificate DNS name might be different from the Windows Admin Center DNS name.
+  - If you don't resolve this mismatch, Windows Admin Center might not work or return errors.
 
 - **Wrong or inaccurate thumbprint**
-  - Check that the thumbprint is present, correctly registered, and doesn't match what is expected. WAC might not detect the certificate.
+  - Check that the thumbprint is present and correctly registered. If the thumbprint doesn't match what Windows Admin Center expects, Windows Admin Center might not detect the certificate.
 
-- **Private Key not configured to be accessed by the network service**
-  - HTTPS protocol layer reads private key of certificate to encrypt TLS payload when communicating over HTTPS protocol.
-  - WAC uses Network Service account, so Private Key must be accessible by Network Service. Use certlm.msc tool to select All Tasks menu to open **Manage Private Keys...** dialog.
-  - Make sure `NETWORK SERVICE` is configured to access the private key.
+- **Private key not configured to be accessed by the network service**
+  - The HTTPS protocol layer reads the certificate's private key to encrypt the TLS payload when communicating over the HTTPS protocol.
+   - Windows Admin Center uses the Network Service account, so Network Service must be able to access the private key. Use the `certlm.msc` tool to select the **All Tasks** menu and open the **Manage Private Keys...** dialog.
+   - Ensure `NETWORK SERVICE` can access the private key.
 
-- **Network, Policy and Firewall configuration issues**
-  - If you restrict TLS communications, then the WAC Gateway might not be able to access the certificate. This might be firewall or GPO issue.
+- **Network, policy, and firewall configuration issues**
+  - If you restrict TLS communications, the Windows Admin Center gateway might not be able to access the certificate. This issue might stem from a firewall or Group Policy Object (GPO).
 
