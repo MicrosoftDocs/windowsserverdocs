@@ -1,5 +1,5 @@
 ---
-title: Deploy a token factory on Windows Server
+title: Set Up a token factory on Windows Server
 description: Deploy and validate a token factory on Windows Server 2025 by using WSL 2, Ubuntu 24.04, vLLM, Qwen3-Coder 30B, and one NVIDIA RTX PRO 6000 GPU.
 author: robinharwood
 ms.author: roharwoo
@@ -13,11 +13,11 @@ ai-usage: ai-assisted
 
 # Deploy a token factory on Windows Server
 
-A token factory is an AI model-serving system that generates text or code in response to application requests. Running one locally lets you evaluate AI-assisted application scenarios without sending prompts to a hosted model service.
+A *token factory* is an artificial intelligence (AI) model-serving system that generates text or code in response to application requests. When you run one locally, you can evaluate AI-assisted application scenarios without sending prompts to a hosted model service.
 
 In this article, you deploy `Qwen/Qwen3-Coder-30B-A3B-Instruct` with vLLM on Windows Server 2025 and validate the resulting OpenAI-compatible endpoint. The tested configuration uses Ubuntu 24.04 on Windows Subsystem for Linux (WSL) 2 and one NVIDIA RTX PRO 6000 GPU. The procedure creates an endpoint that you operate manually for lab and test use; it doesn't configure production access, authentication, remote networking, or automatic startup.
 
-:::image type="complex" border="false" source="media/deploy-token-factory/token-factory-platform-stack.svg" alt-text="An application sends requests to a local Qwen3-Coder endpoint on Windows Server 2025. The endpoint runs vLLM in Ubuntu 24.04 on WSL 2 and uses one NVIDIA RTX PRO 6000 GPU.":::
+:::image type="complex" border="false" source="media/deploy-token-factory/token-factory-platform-stack.svg" alt-text="Diagram that shows an application that uses a local Qwen3-Coder endpoint on Windows Server 2025 with WSL 2, Ubuntu, vLLM, and an RTX PRO 6000 GPU.":::
 An OpenAI-compatible API client sends an application request to the local endpoint at 127.0.0.1:8000 and receives an endpoint response. The endpoint runs vLLM with Qwen3-Coder 30B inside Ubuntu 24.04, which runs inside WSL 2 on Windows Server 2025. vLLM sends model-inference work to one NVIDIA RTX PRO 6000 GPU.
 :::image-end:::
 
@@ -29,7 +29,7 @@ An OpenAI-compatible API client sends an application request to the local endpoi
 - An NVIDIA Windows driver that's compatible with CUDA 13.0. Install the driver on Windows, not in WSL.
 - An account that can use `sudo` in Ubuntu.
 - Internet access from Ubuntu to the Ubuntu, NVIDIA, Astral, PyTorch, vLLM, and Hugging Face resources that this procedure uses.
-- Access to the [`Qwen/Qwen3-Coder-30B-A3B-Instruct` model repository](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct), acceptance of any applicable license terms, and any credentials that the repository host requires. Complete any required authentication in Ubuntu before you start vLLM. Store credentials according to your organization's secret-handling policy.
+- Access to the [`Qwen/Qwen3-Coder-30B-A3B-Instruct` model repository on Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct), acceptance of any applicable license terms, and any credentials that the repository host requires. Complete any required authentication in Ubuntu before you start vLLM. Store credentials according to your organization's secret-handling policy.
 
 > [!IMPORTANT]
 > Don't install a Linux NVIDIA kernel driver, display driver, or driver metapackage in WSL. WSL uses the NVIDIA driver that Windows provides.

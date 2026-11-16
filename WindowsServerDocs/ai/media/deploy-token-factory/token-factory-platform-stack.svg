@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title description">
-  <title id="title">Local token factory architecture on Windows Server 2025</title>
+  <title id="title">Diagram that shows a local token factory architecture on Windows Server 2025.</title>
   <desc id="description">An application sends a request to a local endpoint and receives a response. The endpoint uses vLLM and Qwen3-Coder 30B in Ubuntu 24.04 on WSL 2 in Windows Server 2025. The model runs on one NVIDIA RTX PRO 6000 GPU.</desc>
   <defs>
     <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
