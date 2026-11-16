@@ -11,6 +11,16 @@ items:
     href: /azure/foundry-local/what-is-foundry-local?context=/windows-server/context/windows-server-ai
 - name: Plan and deploy
   items:
+  - name: Deploy a token factory on Windows Server
+    href: deploy-token-factory.md
+  - name: Deploy with Foundry Local
+    items:
+    - name: Get started with Foundry Local
+      href: /azure/foundry-local/get-started?context=/windows-server/context/windows-server-ai
+    - name: Integrate inference SDKs with Foundry Local
+      href: /azure/foundry-local/how-to/how-to-integrate-with-inference-sdks?context=/windows-server/context/windows-server-ai
+    - name: Foundry Local CLI reference
+      href: /azure/foundry-local/reference/reference-cli?context=/windows-server/context/windows-server-ai
   - name: Plan for GPU acceleration in Windows Server
     href: ../virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md?context=/windows-server/context/windows-server-ai
   - name: GPU partitioning
@@ -19,10 +29,6 @@ items:
     href: ../virtualization/hyper-v/partition-assign-vm-gpu.md?context=/windows-server/context/windows-server-ai
   - name: Run ONNX models using Windows ML
     href: /windows/ai/new-windows-ml/run-onnx-models?context=/windows-server/context/windows-server-ai
-  - name: Get started with Foundry Local
-    href: /azure/foundry-local/get-started?context=/windows-server/context/windows-server-ai
-  - name: Foundry Local CLI reference
-    href: /azure/foundry-local/reference/reference-cli?context=/windows-server/context/windows-server-ai
 - name: Connect apps and tools
   items:
   - name: Connect GitHub Copilot CLI to a Windows Server inference endpoint
@@ -33,8 +39,6 @@ items:
     href: configure-intelligent-terminal-local-language-model.md
   - name: OpenAI-compatible endpoints in Microsoft Agent Framework
     href: /agent-framework/hosting/self-hosting/openai-endpoints?context=/windows-server/context/windows-server-ai
-  - name: Integrate inference SDKs with Foundry Local
-    href: /azure/foundry-local/how-to/how-to-integrate-with-inference-sdks?context=/windows-server/context/windows-server-ai
 - name: Build, secure, and operate
   items:
   - name: Intelligent applications and AI in SQL Server

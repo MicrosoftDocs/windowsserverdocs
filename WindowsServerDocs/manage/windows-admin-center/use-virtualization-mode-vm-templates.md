@@ -21,9 +21,9 @@ This article walks you through converting a VM to a template, deploying new VMs 
 
 ## Prerequisites
 
-- Windows Admin Center Virtualization Mode installed and available. For more information, see [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md).
+- Windows Admin Center Virtualization Mode installed and available. For more information, see [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 
-- At least one resource group that contains one or more Hyper-V hosts that you added by using the **Compute** profile. For more information, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+- At least one resource group that contains one or more Hyper-V hosts that you added by using the **Compute** profile. For more information, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 - An account with the _Gateway Administrator_ role or equivalent permissions and local Administrator rights on each Hyper-V host.
 
@@ -93,5 +93,5 @@ To convert a template back to a VM:
 
 - [What is Windows Admin Center Virtualization Mode?](virtualization-mode-overview.md)
 - [Manage virtual machines in Windows Admin Center Virtualization Mode](manage-virtualization-mode-virtual-machines.md)
-- [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md)
+- [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md)
 - [Known issues in Windows Admin Center Virtualization Mode](virtualization-mode-known-issues.md)
