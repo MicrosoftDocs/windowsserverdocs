@@ -4,7 +4,7 @@ description: Learn what Windows Admin Center Virtualization Mode is. See how it 
 author: robinharwood
 ms.author: roharwoo
 ms.topic: overview
-ms.date: 05/01/2026
+ms.date: 10/14/2026
 ai-usage: ai-assisted
 #customer intent: As a virtualization operator, I want to understand what Windows Admin Center Virtualization Mode is, so that I can efficiently administer distributed Hyper-V resources at scale.
 ---
@@ -29,7 +29,7 @@ To get an overview of Windows Admin Center Virtualization Mode, watch the follow
 Virtualization Mode offers the following key capabilities:
 
 - Search across navigation objects with contextual filtering.
-- Support for SAN, NAS, hyperconverged, and scale-out file server architectures.
+- Support for SAN, NAS, and scale-out file server architectures. Hyperconverged storage configuration isn't available at this time.
 - VM templates for standardized provisioning. For more information about creating and deploying VM templates, see [Use VM templates in Virtualization Mode](use-virtualization-mode-vm-templates.md).
 - Software-defined storage and networking (not available at this time).
 
@@ -65,13 +65,13 @@ Virtualization Mode includes the following tools and features:
 | Compute (hosts) | - Overview dashboard<br>- Settings<br>- Updates<br>- Virtual Machines<br>- Servers<br>- Volumes<br>- Hyper-V Replica<br>- GPU-P |
 | Compute (servers) | - Dashboard<br>- Settings<br>- Events<br>- Firewall<br>- Updates<br>- Virtual Machines<br>- Networks<br>- Storage |
 | Storage | The Storage view displays onboarded storage devices and their linked compute systems. |
-| Networking | The Network view lets you browse, create, edit, and delete network intent templates. The networking host profile isn't available at this time. |
+| Networking | The Networking view lets you browse, create, edit, and delete network intent templates. The networking host profile isn't available at this time. |
 
 To learn about the tools available to Administration Mode for non-virtualization scenarios, see [Manage Servers with Windows Admin Center](use/manage-servers.md).
 
 ## How it works
 
-Virtualization Mode deploys as an appliance on physical or virtual machines. For more information about the installation requirements, see [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md).
+Virtualization Mode deploys as an appliance on physical or virtual machines. For more information about the installation requirements, see [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 
 This mode uses a client-server architecture with a web-based gateway and local agents on managed Hyper-V hosts. The gateway handles user authentication, request routing, and maintains a stateful database, while agents perform operations on hosts. TLS secures communication between the gateway and agents.
 
@@ -99,18 +99,22 @@ Host profiles indicate the service a system provides to virtual machines within 
 Profile types:
 
 - Compute: Hosts provide compute virtualization.
-- Storage: Storage systems for virtual machines (SAN, NAS, or hyperconverged using Storage Spaces Direct). The Storage view displays onboarded storage devices linked to your compute systems. The storage host profile isn't available at this time.
-- Networking: Software Defined Networking (SDN) services for virtual machines. The Network view lets you manage network intent templates. The networking host profile isn't available at this time.
+- Storage: Storage systems for virtual machines, including SAN, NAS, and Scale-Out File Server resources. The Storage view displays onboarded storage devices linked to your compute systems. Hyperconverged storage configuration isn't available at this time.
+- Networking: Software Defined Networking (SDN) services for virtual machines. The Networking view lets you manage network intent templates. The networking host profile isn't available at this time.
 
 ### Network intent templates
 
 Windows Admin Center Virtualization Mode introduces a concept called a _Network intent template_, which is an abstracted, predefined intent that you didn't yet apply to a network adapter or associate with a cluster or standalone host. A network intent template serves as a blueprint that you can use to create intents after you specify which NICs the template should apply to.
 
-Network intent templates persist across sessions. After you create a template in the Add Resource workflow, it's saved and available for reuse the next time you onboard new hosts or clusters. You can select a saved template from the dropdown without recreating it. For more information about configuring network intent templates during onboarding, see [Add resources in Virtualization Mode](add-virtualization-mode-resources.md#add-resources).
+Network intent templates persist across sessions. After you create a template in the Add Resource workflow, it's saved and available for reuse the next time you onboard new hosts or clusters. You can select a saved template from the dropdown without recreating it. For more information about configuring network intent templates during onboarding, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md#add-compute-resources).
 
-You can also manage network intent templates outside of the Add Resource workflow. Select the **Network** view in the top navigation bar to browse, create, edit, and delete your network intent templates.
+Editing a network intent template affects only future deployments that use the template. It doesn't update existing Network ATC intents on standalone hosts or failover clusters.
+
+To manage Network ATC intents after deployment, use the Network ATC PowerShell cmdlets. For guidance on updating intent settings, changing assigned network adapters, or removing intents, see [Manage Network ATC](../../networking/network-atc/manage-network-atc.md).
+
+You can also manage network intent templates outside of the Add Resource workflow. Select the **Networking** view in the top navigation bar to browse, create, edit, and delete your network intent templates.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md)
+> [Install Windows Admin Center Virtualization Mode](deploy/install.md)

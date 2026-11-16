@@ -1,30 +1,54 @@
 ---
-title: What type of installation is right for you
-description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins.
+title: "Windows Admin Center: Choose an Installation"
+description: Compare Windows Admin Center Administration Mode and Virtualization Mode, and choose an Administration Mode installation topology.
 ms.topic: concept-article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 07/14/2025
+ai-usage: ai-assisted
 ---
-# What type of installation is right for you?
+# Windows Admin Center installation options
 
-This topic describes the different installation options for Windows Admin Center, including installing on a Windows PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+Windows Admin Center provides two management experiences that you install independently: Administration Mode for general server and cluster management, and Virtualization Mode for virtualization fabric management at scale. This article helps you choose an experience and, if you choose Administration Mode, select an installation topology.
 
-We don't recommend using Windows Admin Center for local management of the same server on which it’s installed. To manage a server, use Windows Admin Center to connect to the server remotely from a management PC or other server.
+The installation topologies and supported operating systems in this article apply to Administration Mode. To install Windows Admin Center on a virtual machine (VM) in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
 
-## Installation: Types
+## Choose a management experience
 
-![img](../media/deployment-options/install-options.PNG)
+Choose the experience that matches the scope and type of resources you need to manage.
 
-| Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
-|---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| [Install](../deploy/install.md) on a local Windows 11 client that has connectivity to the managed servers. Great for quick start, testing, ad-hoc, or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server. Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of remotely managing the server or a cluster in which it's a member node. Great for distributed scenarios. | [Deploy](#high-availability) in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+| Experience | Choose this experience when | Installation model |
+|---|---|---|
+| **Administration Mode** | You need general administration and troubleshooting tools for individual servers and clusters. | Install on a local client, gateway server, managed server, or failover cluster by using the standard Windows Admin Center installer. |
+| **Virtualization Mode** | You need centralized, large-scale management of Hyper-V hosts, clusters, virtual machines, storage, and networking. | Install as a dedicated appliance on a physical or virtual Windows Server machine by using the separate Virtualization Mode installer. |
 
-## Installation: Supported operating systems
+> [!IMPORTANT]
+> You can't install Administration Mode and Virtualization Mode on the same system.
 
-You can **install** Windows Admin Center on the following Windows operating systems:
+Virtualization Mode doesn't replace Administration Mode for general server administration. Install each mode on a separate system to use both experiences in the same environment. For more information about the capabilities and architecture of each experience, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md) For Virtualization Mode requirements and installation guidance, see [Install Windows Admin Center Virtualization Mode](../install-virtualization-mode.md).
 
-| **Platform**                       | **Installation mode** |
+## Administration Mode installation topologies
+
+For Administration Mode, choose one of the following installation topologies.
+
+![Diagram that shows the four Administration Mode installation topologies.](../media/deployment-options/install-options.PNG)
+
+| Topology | Install location | Choose this topology when |
+|---|---|---|
+| Local client | [Install Windows Admin Center](../deploy/install.md) on a local Windows 11 client that has connectivity to the managed servers. | One administrator needs a quick setup for testing, ad hoc work, or small-scale management. |
+| Gateway server | [Install Windows Admin Center](../deploy/install.md) on a designated gateway server that client browsers can reach. | Multiple administrators need shared access or you manage a larger environment. |
+| Managed server | [Install Windows Admin Center](../deploy/install.md) directly on a managed server. | You need to remotely manage that server or a cluster in which the server is a member node, such as in a distributed environment. |
+| Failover cluster | [Deploy high availability](#administration-mode-high-availability) for the gateway service on a failover cluster. | A production environment requires a highly available and resilient management service. |
+
+We don't recommend using Administration Mode for local management of the same server on which it's installed. To manage a server, connect to it remotely from Windows Admin Center installed on a management PC or another server.
+
+These topology choices don't apply to Virtualization Mode, which uses a dedicated appliance and has separate installation requirements.
+
+## Installation supported operating systems
+
+Use the following Windows operating systems to install Windows Admin Center Administration Mode:
+
+| **Platform**                       | **Administration Mode topology** |
 | -----------------------------------| --------------------- |
 | Windows 11                         | Local client |
 | Windows 11 ARM64 Client            | Local client |
@@ -34,24 +58,24 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | Windows Server 2019                | Gateway server, managed server, failover cluster |
 | Windows Server 2016                | Gateway server, managed server, failover cluster |
 
-To operate Windows Admin Center:
+To use Administration Mode:
 
-- **In local client scenario:** Launch the Windows Admin Center gateway from the Start menu and connect to it from a client web browser by accessing `https://localhost:6516`.
-- **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
+- **Local client:** Launch the Windows Admin Center gateway from the Start menu, and connect to it from a client web browser by accessing `https://localhost:6516`.
+- **Other topologies:** Connect to the Windows Admin Center gateway on a different machine from a client browser by using its URL, for example, `https://servername.contoso.com`.
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
+> Don't install Windows Admin Center on a domain controller because this configuration isn't supported. For more information, see [domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
 > [!NOTE]
-> Port usage and defaults for Windows Admin Center installations on the modernized gateway vary from what is mentioned above. [Read more about what's different in the modernized gateway.](../understand/modernized-gateway.md)
+> Port usage and defaults for Windows Admin Center installations on the modernized gateway vary from what is mentioned above. For more information, see [what's different in the modernized gateway](../understand/modernized-gateway.md).
 
 ## Installation: Supported web browsers
 
-Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10 and 11. Other web browsers—including Firefox—aren't currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
+Microsoft Edge (including [Microsoft Edge insider](https://www.microsoft.com/edge/download/insider)) and Google Chrome are tested and supported on Windows 10 and 11. Other web browsers, including Firefox, aren't currently part of our test matrix and are therefore not *officially* supported. These browsers might have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
 
-## Management target: Supported operating systems
+## Administration Mode supported management targets
 
-You can **manage** the following Windows operating systems using Windows Admin Center:
+Use Windows Admin Center Administration Mode to manage the following Windows operating systems:
 
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
@@ -70,14 +94,13 @@ Type `$PSVersiontable` in PowerShell to verify that WMF is installed, and that t
 
 If WMF isn't installed, you can [download WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
-## High availability
+## Administration Mode high availability
 
-> [!WARNING]
-> Windows Admin Center version 2410 doesn't support high availability. If you are using high availability, you won't be able to update.
+You can enable high availability for the Administration Mode gateway service by deploying Windows Admin Center in an active-passive model on a failover cluster. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, so you can continue managing the servers in your environment without interruption.
 
-You can enable high availability of the gateway service by deploying Windows Admin Center in an active-passive model on a failover cluster. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
+[Deploy Windows Admin Center with high availability](../deploy/high-availability.md).
 
-[Learn how to deploy Windows Admin Center with high availability.](../deploy/high-availability.md)
+## Next steps
 
-> [!Tip]
-> Ready to install Windows Admin Center? [Download now](../overview.md)
+- To deploy Administration Mode, see [Install Windows Admin Center](../deploy/install.md).
+- To deploy Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](../install-virtualization-mode.md).

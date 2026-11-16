@@ -1,22 +1,23 @@
 ---
-title: Deploy Windows Admin Center with High Availability
-description: Deploy Windows Admin Center with high availability (Project Honolulu).
+title: Deploy Windows Admin Center High Availability
+description: Learn how to deploy a highly available Windows Admin Center Administration Mode gateway on a failover cluster for resilient server management.
 ms.topic: install-set-up-deploy
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 06/23/2025
+ai-usage: ai-assisted
 ---
 
-# Deploy Windows Admin Center with high availability
+# Deploy Windows Admin Center in Administration Mode with high availability
 
-You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway. This solution is  active-passive, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node so that you can continue managing the servers in your environment seamlessly.
+You can deploy a Windows Admin Center Administration Mode gateway in a failover cluster to provide high availability. This article applies to Administration Mode deployments and doesn't provide high availability guidance for Virtualization Mode. This solution is active-passive, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center fails over to another node so that you can continue managing the servers in your environment.
 
 Learn about [other Windows Admin Center deployment options](../plan/installation-options.md).
 
 > [!IMPORTANT]
 > Windows Admin Center versions 2311 and older don't support direct upgrades from high-availability deployments to versions 2410 and newer because of architectural changes. To upgrade, you must uninstall and reinstall Windows Admin Center.
 
-## Prerequisites
+## Prerequisites for Windows Admin Center high availability
 
 - High-availability deployment scripts from the [Windows Admin Center HA Script zip file](https://aka.ms/WACHAScript). Download the .zip file containing the scripts to your local machine. Then copy the deployment script as needed based on the guidance in this article.
 - A failover cluster of two or more nodes running on Windows Server 2016 or later. Learn more about [how to deploy a failover cluster](../../../failover-clustering/failover-clustering-overview.md).
@@ -48,7 +49,7 @@ Learn about [other Windows Admin Center deployment options](../plan/installation
 
 To perform further lifecycle operations on your high-availability installation, ensure that all scripts from the `Deploy-GatewayV2Ha.zip` file are present on all nodes.
 
-### Example
+### Example deployment script for a highly available Windows Admin Center gateway
 
 ```powershell
 $parameters = @{
@@ -108,7 +109,7 @@ $parameters = @{
 Deploy-GatewayV2Ha.Uninstall @parameters
 ```
 
-## Troubleshooting
+## Troubleshoot a highly available Windows Admin Center gateway
 
 Logs are saved in the temp folder of the CSV. An example is `C:\ClusterStorage\Volume1\temp`.
 

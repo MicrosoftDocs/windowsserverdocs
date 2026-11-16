@@ -9,21 +9,21 @@ metadata:
   ms.topic: landing-page
   author: robinharwood
   ms.author: roharwoo
-  ms.date: 09/25/2026
+  ms.date: 11/05/2026
   ms.service: windows-server
   ai-usage: ai-assisted
 
 landingContent:
-  - title: Understand AI inference approaches
+  - title: Plan and deploy AI inference
     linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy a token factory on Windows Server
+            url: deploy-token-factory.md
       - linkListType: overview
         links:
           - text: Plan distributed AI inference on Windows Server
             url: local-ai-inference.md
-      - linkListType: concept
-        links:
-          - text: What is Windows ML?
-            url: /windows/ai/new-windows-ml/overview?context=/windows-server/context/windows-server-ai
   - title: Plan GPU acceleration in Windows Server
     linkLists:
       - linkListType: concept
@@ -34,8 +34,16 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Get started with Foundry Local for on-device inference
+          - text: Get started with the Foundry Local SDK
             url: /azure/foundry-local/get-started?context=/windows-server/context/windows-server-ai
+      - linkListType: how-to-guide
+        links:
+          - text: Use the Foundry Local CLI
+            url: /azure/foundry-local/how-to/how-to-use-foundry-local-cli?context=/windows-server/context/windows-server-ai
+      - linkListType: concept
+        links:
+          - text: What is Windows ML?
+            url: /windows/ai/new-windows-ml/overview?context=/windows-server/context/windows-server-ai
   - title: Connect apps and tools to model endpoints
     linkLists:
       - linkListType: how-to-guide

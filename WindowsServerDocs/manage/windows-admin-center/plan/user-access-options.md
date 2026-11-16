@@ -1,20 +1,25 @@
 ---
 title: User access options with Windows Admin Center
-description: User access options and identity providers with Windows Admin Center (Project Honolulu)
+description: Learn about user access options, identity providers, and role-based access control for Windows Admin Center in Administration and Virtualization modes.
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 03/07/2019
+ai-usage: ai-assisted
 ---
 
 # User access options with Windows Admin Center
 
-When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
+When you deploy Windows Admin Center on Windows Server, it provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape. Access requirements differ between Windows Admin Center Administration Mode and Windows Admin Center Virtualization Mode.
 
 > [!NOTE]
 > Windows Admin Center as an application depends on the operating system and infrastructure for security. Windows Admin Center does not implement, monitor, or enforce a security boundary.
 
-## Gateway access roles
+## Administration Mode access and role-based access control
+
+The gateway access roles, identity provider options, and role-based access control described in this section apply to Administration Mode. For an overview of the differences between the two modes, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md#operational-modes)
+
+### Gateway access roles
 
 Windows Admin Center defines two roles for access to the gateway service: gateway users and gateway administrators.
 
@@ -30,7 +35,7 @@ Windows Admin Center defines two roles for access to the gateway service: gatewa
 
 [Configure gateway user and administrator access in Windows Admin Center.](../configure/user-access-control.md)
 
-## Identity provider options
+### Identity provider options
 
 Gateway administrators can choose either of the following:
 
@@ -38,15 +43,15 @@ Gateway administrators can choose either of the following:
  - [Microsoft Entra ID as the identity provider for Windows Admin Center](../configure/user-access-control.md#azure-active-directory)
 
 
-### Smartcard authentication
+#### Smartcard authentication
 
 When using Active Directory or local machine groups as the identity provider, you can enforce smartcard authentication by requiring users who access Windows Admin Center to be a member of additional smartcard-based security groups. [Configure smartcard authentication in Windows Admin Center.](../configure/user-access-control.md#active-directory-or-local-machine-groups)
 
-### Conditional access and multi-factor authentication
+#### Conditional access and multifactor authentication
 
 By requiring Microsoft Entra authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Microsoft Entra ID. [Learn more about configuring conditional access with Microsoft Entra ID.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
-## Role-based access control
+### Role-based access control
 
 By default, users require full local administrator privileges on the machines they wish to manage using Windows Admin Center.
 This allows them to connect to the machine remotely and ensures they have sufficient permissions to view and modify system settings.
@@ -67,7 +72,7 @@ Finally, if the user is neither an administrator nor a member of a role, they wi
 
 Role-based access control is available for the Server Manager and Failover Cluster solutions.
 
-### Available roles
+#### Available roles
 
 Windows Admin Center supports the following end-user roles:
 
@@ -86,7 +91,7 @@ The following built-in extensions have reduced functionality when a user connect
 
 At this time, you cannot create custom roles for your organization, but you can choose which users are granted access to each role.
 
-### Preparing for role-based access control
+#### Preparing for role-based access control
 
 To leverage the temporary local accounts, each target machine needs to be configured to support role-based access control in Windows Admin Center.
 The configuration process involves installing PowerShell scripts and a Just Enough Administration endpoint on the machine using Desired State Configuration.
@@ -96,4 +101,12 @@ When you set up role-based access control on an individual computer, local secur
 You can grant access to users or other security groups by adding them as members of the role security groups.
 
 For an enterprise-wide deployment on multiple machines, you can download the configuration script from the gateway and distribute it to your computers using a Desired State Configuration pull server, Azure Automation, or your preferred management tooling.
+
+## Virtualization Mode access
+
+Virtualization Mode has separate access requirements from Administration Mode. To access the Virtualization Mode gateway site and perform its documented workflows, use an account that has the **Gateway Administrator** role or equivalent permissions.
+
+Virtual machine workflows also require the signed-in user to have local Administrator rights on each managed Hyper-V host. Gateway access doesn't grant these host permissions.
+
+For more information about authentication, role assignments, and host permissions, see [Authentication and access control in Windows Admin Center Virtualization Mode](../virtualization-mode-authentication-access-control.md). For the requirements of specific workflows, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md#prerequisites) and [Manage virtual machines in Windows Admin Center Virtualization Mode](../manage-virtualization-mode-virtual-machines.md#prerequisites).
 

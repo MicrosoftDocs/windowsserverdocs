@@ -539,6 +539,10 @@
       "source_path": "WindowsServerDocs/sddc.md",
       "redirect_url": "/azure/azure-local/overview/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/install-virtualization-mode.md",
+      "redirect_url": "/windows-server/manage/windows-admin-center/deploy/install"
     }
   ]
 }

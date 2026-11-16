@@ -1,237 +1,316 @@
 ---
-title: Add resources in Windows Admin Center Virtualization Mode (preview)
-description: Learn how to add Hyper-V hosts, create resource groups, and configure networking, storage, and compute settings in Windows Admin Center Virtualization Mode.
+title: Add Hyper-V Resources in Windows Admin Center
+description: Learn how to add Hyper-V hosts and clusters, configure networking and storage, and monitor onboarding in Windows Admin Center Virtualization Mode.
 author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
-ms.date: 05/01/2026
+ms.date: 11/10/2026
 ai-usage: ai-assisted
-#customer intent: As an infrastructure operator, I want to organize virtualization assets into Resource Groups and add Hyper-V hosts, so that I can manage compute resources consistently and prepare for future storage/network expansion.
+#customer intent: As an infrastructure operator, I want to add Hyper-V hosts and clusters to a resource group so that I can manage compute resources consistently.
 ---
 
-# Add resources in Windows Admin Center Virtualization Mode (preview)
+# Add compute resources in Windows Admin Center Virtualization Mode
 
-> [!IMPORTANT]
-> Windows Admin Center Virtualization Mode is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+Windows Admin Center Virtualization Mode organizes Hyper-V hosts and clusters into resource groups for centralized compute management. Resource groups give you a consistent scope for networking, storage, and Hyper-V settings across the compute resources you manage. This procedure applies only to supported Standard and Datacenter editions of Windows Server 2025 and Windows Server 2022 with the March 2026 cumulative update or a later cumulative update.
 
-Windows Admin Center Virtualization Mode (preview) lets you group virtualization assets for consistent management. This article explains how to create resource groups, add Hyper-V hosts or clusters, configure networking intents, storage, and compute settings, monitor deployment status, and remove resources safely.
-
-Virtualization Mode focuses on virtualization infrastructure and presents resources through a navigation hierarchy. Before managing virtual machines (VMs), ensure you install Virtualization Mode and add at least one Hyper-V host as a compute resource in a resource group. For more information about Windows Admin Center Virtualization Mode concepts, see [What is Windows Admin Center Virtualization Mode?](virtualization-mode-overview.md)
+In this article, you create a resource group and onboard standalone hosts or a cluster. After deployment finishes, Windows Admin Center Virtualization Mode configures the compute resources for management.
 
 ## Prerequisites
 
-Before you can add resources in Windows Admin Center Virtualization Mode (preview), ensure the following prerequisites are met:
-
-- Windows Admin Center Virtualization Mode is installed and available. For more information about installing Windows Admin Center Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md).
-
-- You're accessing the Virtualization Mode gateway site by using an account that has the _Gateway Administrator_ role or equivalent permissions.
-
-- You have at least one host ready to add with the following prerequisites:
-
-  - A minimum of 4 virtual CPUs (or equivalent physical cores), at least 8 GB of RAM, and 10 GB of free disk space.
-
-  - Windows Server 2025 or later, Datacenter edition only.
-
-  - Your server is domain-joined and has DNS resolution by using Fully Qualified Domain Name (FQDN). Hyper-V hosts you plan to manage are also on the same domain as the Virtualization Mode gateway.
-
-  - Each host has the following Windows Server features installed:
-
-    - Network ATC. For deployment guidance, see [Deploy host networking with Network ATC](../../networking/network-atc/network-atc.md).
-
-    - Data Center Bridging. Included in the Network ATC guidance.
-
-    - Hyper-V. For deployment guidance, see [Install Hyper-V](../../virtualization/hyper-v/get-started/Install-Hyper-V.md).
-
-    - Failover Clustering. For more information about creating a cluster, see [Create a failover cluster](../../failover-clustering/create-failover-cluster.md).
-
-- The signed-in user is a local Administrator on each Hyper-V host you plan to add.
-
-- Each host isn't already managed by another Virtualization Mode instance. If a host has an existing Virtualization Mode agent, either remove the resource from the other Virtualization Mode system or uninstall the agent from **Installed apps** on the host before adding it.
+- Completion of [Install Windows Admin Center Virtualization Mode](deploy/install.md).
+- An account with the **Fabric Manager** role in Virtualization Mode. For more information, see [Built-in roles in Windows Admin Center Virtualization Mode](virtualization-mode-authentication-access-control.md#built-in-roles-in-windows-admin-center-virtualization-mode).
+- At least one host with a minimum of 4 virtual central processing units (CPUs) or equivalent physical cores, 8 GB of random access memory (RAM), and 10 GB of free disk space.
+- A supported Standard or Datacenter edition of Windows Server 2025, or Windows Server 2022 with the March 2026 cumulative update or later, on each host.
+- Ensure that each host joins the same domain as the Virtualization Mode gateway and that the Domain Name System (DNS) can resolve the host by its fully qualified domain name (FQDN).
+- An account that is a member of the local **Administrators** group on each host.
+- Network connectivity from the gateway to each host for Server Message Block (SMB), the `C$` administrative share, and Windows Remote Management (WinRM).
+- Enable the **File and Printer Sharing (SMB-In)** and **Windows Remote Management** inbound firewall rules on each host. Keep SMB-In and access to `C$` available while Virtualization Mode manages the resource. The gateway uses these dependencies to deploy, update, or remove the agent and perform management operations. Enable the rules by using Group Policy, Windows Defender Firewall with Advanced Security, or PowerShell. For more information, see [Windows Firewall tools](/windows/security/operating-system-security/network-security/windows-firewall/tools).
+- A host that no other Virtualization Mode instance manages. If the Virtualization Mode agent is already installed, remove the resource from its current Virtualization Mode instance or uninstall the agent from **Installed apps**.
 
 ## Create a resource group
 
-To create a resource group, follow these steps:
+Create a resource group to organize the hosts and clusters that you manage together. If you already have a resource group, continue to [Add compute resources](#add-compute-resources). For background information, see [What is Windows Admin Center Virtualization Mode?](virtualization-mode-overview.md)
 
-1. From a web browser, open the Windows Admin Center Virtualization Mode gateway site and sign in.
+1. Open the Windows Admin Center Virtualization Mode gateway site in a web browser, and then sign in.
 
-1. In the resource pane, select the ellipsis (...) next to the Virtualization Mode host, and then choose **Add Resource Group**. If you didn't add any resource groups yet, you can also select the **Create your first Resource Group** tile in the resource pane.
+1. In the **resource pane**, select the **ellipsis (...)** next to the Virtualization Mode gateway, and then select **Add resource group**.
 
-   :::image type="content" source="media/add-virtualization-mode-resources/create-resource-group.PNG" alt-text="Screenshot of the Virtualization Mode resource pane with the ellipsis menu open on the host showing the Add Resource Group action.":::
+   :::image type="content" source="media/add-virtualization-mode-resources/create-resource-group.png" alt-text="Screenshot of Windows Admin Center Virtualization Mode showing the Create a resource group tile in the resource pane.":::
 
-1. Enter a unique name for the resource group and a descriptive environment or service name. Select **Create** to confirm.
+1. Enter a unique resource group name. The name can contain letters, numbers, periods, underscores, and hyphens. Don't use spaces, other special characters, or a period at the beginning or end of the name.
 
-1. The new resource group appears in the navigation hierarchy with no resources. You can also select the notification bell icon to access recent actions and confirm creation.
+1. Optionally, enter a description, and then select **Create resource group**.
 
-   :::image type="content" source="media/add-virtualization-mode-resources/resource-group-created.PNG" alt-text="Screenshot of the Virtualization Mode navigation pane displaying the new empty resource group and a notification confirming creation.":::
+1. Verify that the empty resource group appears in the **navigation hierarchy** and that the **notification pane** contains a **Group Created** notification.
 
-## Enable host Windows Firewall rules
+   :::image type="content" source="media/add-virtualization-mode-resources/resource-group-created.png" alt-text="Screenshot of Windows Admin Center Virtualization Mode showing the Corp resource group and a Group Created notification marked Completed.":::
 
-Before you can add a resource, you need to enable the following firewall inbound rules:
+## Add compute resources
 
-- **File and Printer Sharing (SMB-In)**: only required for the agent installation and can be disabled after the resource is added.
-- **Windows Remote Management**: used by the Virtualization Mode gateway to communicate with the host after the agent is installed.
+Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing failover cluster, or standalone hosts that Virtualization Mode joins into a new cluster.
 
-You can enable the rules by using your preferred method of managing the Windows Firewall. For example, centrally use Group Policy, or locally on each node by using the Windows Firewall with Advanced Security console or PowerShell. For more information about managing the Windows Firewall and how-to guides, see [Windows Firewall tools](/windows/security/operating-system-security/network-security/windows-firewall/tools).
+1. In the resource pane, select the ellipsis (...) next to the resource group, and then select **Add resource**.
 
-## Add resources
+1. On the **Getting started** tab, configure the resources and select the onboarding path:
 
-To add a resource to a resource group, follow these steps:
-
-1. In the resource pane, select the ellipsis (...) next to the resource group, and then choose **Add Host**.
-
-1. For the **Getting started** tab, complete the following fields, and then select **Next** to continue.
-
-   | Field | Description |
-   |---|---|
-   | **Host profile** | Select the profile for the hosts you're adding. For Hyper-V hosts, select **Compute**. For storage systems, select **Storage**. |
-   | **Enter server or cluster names** | Enter the fully qualified domain name (FQDN) of the server or cluster you want to add (for example: `hv01.contoso.com`). Select **Validate** to verify the host, and then select **Add** to add it to the list. |
-
-   When you add a cluster name, the wizard automatically detects and adds all member nodes in that cluster. The server list displays the number of clusters, nodes, and associated cluster node names.
-
-   When you add standalone servers, a **Clustered** toggle appears with a **Create a new cluster** option. Enable this toggle to create a new failover cluster from the standalone nodes during onboarding.
-
-   :::image type="content" source="media/add-virtualization-mode-resources/add-resource-getting-started.PNG" alt-text="Screenshot of the Virtualization Mode Add Resource wizard Getting started tab with Host FQDN field entered and Host Profile set to Compute.":::
-
-1. For the **Clustering** tab, configure the cluster settings and then select **Next** to continue.
-
-   If you're adding an existing cluster, leave the default settings and select **Next** to continue.
-
-   If you're creating a new cluster, complete the following information:
-
-   1. **Cluster name**: Enter a name for the new cluster. The wizard validates that the name is available.
-
-   1. **IP address assignment**: Select one of the following options:
-
-      - **Assign address dynamically with DHCP**: Use DHCP to automatically assign the cluster IP address.
-      - **Specify one or more static addresses**: Enter a static IP address for the cluster. The wizard validates that the address is available. Select **Add IP address** to add more addresses if needed.
-
-   :::image type="content" source="media/add-virtualization-mode-resources/add-resource-clustering.png" alt-text="Screenshot of the Virtualization Mode Add Resource wizard Clustering tab showing the cluster name field, network information, and static IP address assignment.":::
-
-1. For the **Networking** tab, configure Network ATC intent templates for your hosts, and then select **Next** to continue. If you already have Network ATC intents configured on the host, they appear in the list.
-
-   You need at least one management, one compute, and one storage intent configured before you can proceed.
-
-   To apply an existing network intent template, select a template from the **network intent template** dropdown. Network intent templates you created in previous sessions are saved and available for reuse. Select a network interface on the host to bind the intent to, and then select **Add**.
-
-   To create a new network intent template, follow these steps. To learn more about network intent templates, see [Network intent templates](virtualization-mode-overview.md#network-intent-templates).
-
-   1. Select **Network intent template** to open the **Add new network intent template** dialog.
-
-   1. Enter the following required fields:
+   1. Configure the following fields:
 
       | Field | Description |
       |---|---|
-      | **Template name** | A name that identifies this template for reuse across onboarding sessions. |
-      | **Network intent name** | The name for the Network ATC intent. |
-      | **Network intent type** | Select the intent type from the dropdown (for example, **Compute, Management, Storage** or **Storage**). |
+      | **Host profile** | Select **Compute**. To add a storage resource instead, select **Storage** and follow [Add storage resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-storage-resources.md). You can see the **Networking** profile, but you can't select it. |
+      | **Enter server or cluster names** | Enter the FQDN of a standalone server or cluster, such as `hv01.contoso.com`. You can't enter compute resources by IP address. |
 
-   1. Optionally, expand the **Advanced configuration** section to customize override settings. The available overrides change dynamically based on the intent type you select. Defaults are prepopulated, and only values you change are submitted as overrides.
+   1. Select **Validate**. Validation checks the resource type, Windows Server version, DNS resolution, cluster membership, SMB connectivity, and whether another Virtualization Mode gateway manages the resource.
 
-      | Override section | Settings |
-      |---|---|
-      | **Adapter advanced overrides** | Jumbo packet size, Network direct technology |
-      | **QoS policy overrides** | Priority value 802.1 action (cluster), Priority value 802.1 action (SMB), Bandwidth percentage (SMB) |
-      | **Adapter storage overrides** | Enable automatic IP generation |
+      You can't add the Virtualization Mode gateway itself. You also can't combine an existing cluster with standalone hosts or add more than one existing cluster in the same workflow.
 
-   1. Select **Create network intent template** to save the template.
+   1. After validation succeeds, select **Add**.
 
-   1. Select the newly created template from the **network intent template** dropdown and select a network interface on the host to bind the intent to, and then select **Add**.
+   1. Select one of the following paths:
 
-   The wizard displays all physical network adapters on your hosts, including disconnected adapters, so you can see your full hardware inventory before configuring intents. The wizard validates that the network intent is successfully applied before onboarding completes.
+      If you add an existing cluster, continue with the discovered cluster. The wizard discovers its member nodes. The cluster must have an FQDN, member-node FQDNs, and at least one online Internet Protocol version 4 (IPv4) cluster address.
 
-   > [!TIP]
-   > You can also view and manage your network intent templates outside of the Add Resource wizard. Select the **Network** view in the top navigation bar to browse, create, edit, and delete network intent templates.
+      If the validated standalone hosts should remain standalone, leave **Clustered** cleared.
 
-1. For the **Storage** tab, select your storage configuration from the **Storage options** dropdown, and then select **Next** to continue. You can select multiple storage options. To learn more about storage architectures, see [Storage architectures for failover clusters](../../failover-clustering/storage-architectures.md). The following options are available:
+      If you want to create a cluster from the validated standalone hosts, enable **Clustered**, and then select **Create a new cluster**.
 
-   - **SAN storage**: Configure Storage Area Network (SAN)-attached disks as Cluster Shared Volumes (CSVs).
+      :::image type="content" source="media/add-virtualization-mode-resources/add-resource-getting-started.png" alt-text="Screenshot of Windows Admin Center Virtualization Mode Add resource wizard with Host profile and server name fields blank and Clustered cleared.":::
 
-     <details>
-     <summary>SAN storage configuration details</summary>
+   1. Select **Next**.
 
-     When you select **SAN storage**, the wizard scans for available SAN disks on the cluster and sorts them into three categories:
+1. On the **Clustering** tab, follow the path for the resources that you add:
 
-     - **Ready**: These disks are already configured as a CSV and ready for use. The table displays the **CSV** name, **Friendly Name**, **Serial Number**, **Storage Target**, **Status**, and **Partitioned** columns.
+   If you add an existing cluster, accept the displayed configuration, and then select **Next**.
 
-     - **Auto configure**: These disks can be automatically set up as CSVs. Enter a **CSV** name for each disk you want to configure, and the wizard performs the following steps:
+   If you add standalone hosts that should remain standalone, accept the displayed configuration, and then select **Next**.
 
-       1. Initializes and brings the disk online.
-       1. Creates a GPT partition and formats it with NTFS.
-       1. Adds the disk to the failover cluster.
-       1. Adds the disk as a Cluster Shared Volume with the name you specify.
-       1. Ensures the file system path matches the CSV name (for example, `C:\ClusterStorage\CSV01`).
-       1. Configures the CSV Block Cache to the recommended value.
+   If you create a new cluster from standalone Hyper-V hosts:
 
-       If you don't want the wizard to configure a disk, leave the **CSV** name blank and the wizard skips it.
+   1. Enter a cluster name of 15 characters or fewer.
 
-     - **Manual configure**: These disks require manual intervention before they can be configured as CSVs. Hover over the information icon to see the reason, such as the disk not being available on every cluster node.
+      The name can contain letters, numbers, and hyphens. It must start and end with a letter or number, can't contain only numbers, and must not match a reserved Windows name.
 
-     Select **Refresh** to rescan for disks. Expand the **More information on SAN storage** section at the bottom of the page for more details about disk requirements.
+   1. Wait for the wizard to confirm that the cluster name is available.
 
-     </details>
+   1. Select an IP address assignment option:
 
-   - **File server storage**: Configure Server Message Block (SMB) file shares for VM storage.
+      - **Assign address dynamically with DHCP**. This option uses Dynamic Host Configuration Protocol (DHCP).
+      - **Specify one or more static addresses**.
 
-     <details>
-     <summary>File server storage configuration details</summary>
+   1. If you selected static addresses, enter an IPv4 address, select **Validate**, and then select **Add IP address**. Repeat this step for each address.
 
-     When you select **File server storage**, you configure SMB file shares for your VM storage:
+   1. Select **Next**.
 
-     1. Enter the SMB file share path. The wizard validates that the share exists and has access.
+      :::image type="content" source="media/add-virtualization-mode-resources/add-resource-clustering.png" alt-text="Screenshot of the Windows Admin Center Virtualization Mode Clustering tab showing Cluster01 and 10.0.0.42 available with static addressing selected.":::
 
-     1. For Windows-based file servers, the Virtualization Mode agent is installed so you can manage the file server from the **Storage** view after the wizard completes.
+1. On the **Networking** tab, configure Network ATC intents for hosts in a new or existing failover cluster. The wizard shows existing intents and their status. For an existing cluster, an existing intent satisfies a requirement only when its configuration is successful and symmetric across all selected cluster nodes.
 
-     1. Optionally, select whether you want Virtualization Mode to configure access permissions for the file share. When selected, permissions are updated to include all systems needed for live migration.
+   If you add standalone Hyper-V hosts that remain standalone, you don't need to configure Network ATC intents. The wizard leaves their existing network configuration unchanged. Select **Next**.
 
-     1. Optionally, select whether you want Virtualization Mode to enable SMB delegation. When selected, Virtualization Mode attempts to enable constrained delegation for live migration. If the necessary Active Directory permissions aren't available, the deployment status informs you so you can configure delegation manually.
+   Network intent requirements depend on the resource profile and resource type:
 
-     > [!NOTE]
-     > For non-Windows-based file servers, the permissions and delegation options aren't available.
-
-     </details>
-
-   - **Hyperconverged storage**: Not available in this preview release.
-   - **Use existing storage already configured on the system**: Skip storage configuration if you already configured storage or plan to configure it later.
-
-1. For the **Compute** tab, configure the following Hyper-V host settings for your systems, and then select **Next** to continue.
-
-   | Setting | Description |
+   | Resource profile | Required intent types |
    |---|---|
-   | **Remove non-essential features** | Select this checkbox to remove unused Windows Server features from the hosts. This action reduces the system's attack surface and lowers patching overhead. |
-   | **Enable enhanced session mode** | Select this checkbox to enable Enhanced Session Mode for both user and computer configuration. It provides resizable windows, clipboard sharing, and device redirection when connecting to VMs. |
-   | **Configure concurrent migrations** | Select the number of concurrent live and storage migrations allowed (1, 2, or 4). Higher values reduce batch migration time but increase CPU, storage, and network usage. |
-   | **Default virtual machine path** | Select the default storage location for VMs and virtual hard disks. The dropdown is populated from your **Storage** tab configuration (for example, `C:\ClusterStorage\csv01\Virtual Machines\`). |
+   | Clustered Compute | Management and Compute. One intent can include both types. |
+   | Windows Storage-only | Management |
+   | Non-Windows Storage | None |
 
-1. For the **Review** tab, verify your configuration settings and select **Submit** to begin the deployment.
+   For clustered compute resources, verify that the configuration includes Management and Compute. Storage Spaces Direct and Ethernet-based storage such as SMB or iSCSI benefit from a Storage intent, but external SAN storage doesn't require one.
 
-When you add a resource, you can monitor its deployment status by using the _Workflow status_ icon at the top right of the Virtualization Mode site. The workflow status provides real-time updates on deployment progress, including agent installation and configuration steps.
+   1. If you create a new failover cluster from standalone Hyper-V hosts, delete every existing Network ATC intent from those hosts before cluster creation. You can delete each intent in the wizard.
 
-During deployment, the wizard installs the required features on all compute hosts, including Hyper-V, Network ATC, Data Center Bridging, Failover Clustering, and AD RSAT PowerShell tools. If you configured SAN storage, the wizard also installs Multipath I/O (MPIO). The wizard removes non-essential features if you selected that option. This process requires a reboot. For existing clusters, the wizard performs a rolling reboot, draining VMs from each node first to avoid disruption.
+      Alternatively, you can delete the intents directly from the hosts before you start onboarding. If you change networking directly on a host while the wizard is open, select **Refresh** to retrieve the current intents and adapters.
 
-:::image type="content" source="media/add-virtualization-mode-resources/add-resource-workflow-complete.PNG" alt-text="Screenshot of the Virtualization Mode workflow status panel showing deployment steps for the added host marked as complete.":::
+   1. Configure a Network ATC intent by applying an existing network intent template or by creating and applying a template:
 
-## Remove a resource
+      If you want to apply an existing network intent template:
 
-To remove a resource from a resource group, follow these steps:
+      1. Under **Create network intents**, select a template from **Select network intent template**.
 
-1. From the resource pane, select the ellipsis (...) next to the resource, and then choose **Remove Host**.
+      1. Select one or more eligible adapters, and then close the adapter dropdown. Validation starts automatically.
 
-1. When prompted, select **Remove** to confirm the removal.
+      1. Resolve any errors or warnings. If you change the configuration after the initial validation, select **Revalidate**.
 
-1. Monitor the progress from the Workflow status icon.
+      1. After validation succeeds, select **Add intent**.
 
-## Remove a resource group
+      If you want to create a template, see [Network intent templates](virtualization-mode-overview.md#network-intent-templates) for more information, and then follow these steps:
 
-Before deleting a resource group, ensure it contains no hosts. To remove an empty resource group, follow these steps:
+      1. Select **Create intent template**, and then enter:
 
-1. From the resource pane, select the ellipsis (...) next to the resource group, and then choose **Delete Resource Group**.
+         | Field | Description |
+         |---|---|
+         | **Network intent type** | One or more intent types. Management and Storage can each appear in only one intent per cluster. Compute can appear in multiple intents. |
+         | **Template name** | A unique name for the reusable configuration. Virtualization Mode saves templates across sessions. |
+         | **Network intent name** | The Network ATC intent name. If an existing cluster already has an intent with this name, Virtualization Mode creates the template, but the template doesn't appear in the **Select network intent template** dropdown. |
 
-1. When prompted, select **Delete resource group** to confirm the deletion.
+         Virtualization Mode stores templates as reusable configurations. Applying a template creates an intent on a host or cluster. Editing a template changes only future deployments that use it; it doesn't update an intent that you applied. The template name and network intent name can differ.
 
-1. You receive a notification confirming the resource group removal.
+         Network ATC doesn't support renaming existing intents.
 
-## Next steps
+         If you want to change the applicable settings, expand **Advanced configuration**. The intent type that you select determines the available advanced options. The wizard prepopulates its shipped defaults and submits only values that you change as overrides.
+
+         | Override section | Settings |
+         |---|---|
+         | **Adapter advanced overrides** | Jumbo packet size and Network Direct technology |
+         | **QoS policy overrides** | Quality of Service (QoS) settings for cluster priority, Server Message Block (SMB) priority, and SMB bandwidth percentage |
+         | **Adapter storage overrides** | Automatic IP generation and Storage virtual local area network (VLAN) identifiers |
+         | **Switch configuration overrides** | I/O virtualization (IOV) and load-balancing algorithm |
+
+         Storage VLAN settings appear under **Adapter storage overrides**, but they aren't Network ATC overrides.
+
+      1. Select **Create intent template**.
+
+         If the template is valid, Virtualization Mode automatically adds it to **Select network intent template** under **Create network intents**.
+
+      1. Select one or more eligible adapters, and then close the adapter dropdown. Validation starts automatically.
+
+      1. Resolve any errors or warnings. If you change the configuration after the initial validation, select **Revalidate**.
+
+      1. After validation succeeds, select **Add intent**.
+
+      Physical Ethernet adapters can appear in the inventory even when no cable connects them. To use an adapter in a new intent, its **Status** must be **Up**, it must report a link speed, no other intent can use it, and it must be symmetric across the selected nodes. It must also support the Network Direct technology that the template selects. For more information, see [Network ATC prerequisites](../../networking/network-atc/network-atc.md#prerequisites).
+
+   1. Resolve any unhealthy or asymmetric existing intent configurations, and then select **Next**.
+
+      Network changes can interrupt connectivity. Removing an intent doesn't necessarily remove underlying network objects, such as virtual switches, that can conflict with a new intent. Review the existing configuration before you continue.
+
+      For a new cluster, onboarding creates and verifies the configured intents on each host before it creates the cluster, and then applies and verifies the intents at cluster scope. A host-level creation or verification failure stops the workflow before cluster creation. For an existing cluster, Virtualization Mode uses its successful, symmetric intents and applies the additional intents that you configure.
+
+      > [!TIP]
+      > You can manage network intent templates outside the **Add resource** wizard. Select the **Network** view in the top navigation bar to browse, create, edit, and delete network intent templates. Template changes apply only to future deployments that use the template.
+      >
+      > To manage Network ATC intents after deployment, use the Network ATC PowerShell cmdlets. For guidance on updating intent settings, changing assigned network adapters, or removing intents, see [Manage Network ATC](../../networking/network-atc/manage-network-atc.md).
+
+1. On the **Storage** tab, configure storage access that the Compute profile uses for virtual machines. This configuration attaches or uses existing storage; it doesn't onboard the storage system as a managed resource. To onboard a storage system by using the **Storage** host profile, see [Add storage resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-storage-resources.md).
+
+   1. Select one or more options:
+
+      - **SAN storage**, which uses a storage area network (SAN).
+      - **File server storage**
+      - **Use existing storage already configured on the system**
+
+      If you select **Use existing storage already configured on the system**, don't select either of the other options. **Hyperconverged storage** isn't available.
+
+      <details>
+      <summary>SAN storage configuration details</summary>
+
+      When you select **SAN storage**, the wizard scans for available SAN disks on the cluster and sorts them into three categories:
+
+      > [!WARNING]
+      > Selecting a SAN disk for automatic configuration can result in data loss. Protect or back up any existing data that you need to keep before you select the disk.
+
+      1. If you configure Internet Small Computer Systems Interface (iSCSI) SAN storage:
+
+         1. Select **SAN storage**, and then review the disks in the following categories:
+
+            - **Ready**: A standalone-host disk has a New Technology File System (NTFS) volume and drive letter. A clustered disk is already a Cluster Shared Volume (CSV).
+            - **Auto configure**: Virtualization Mode can configure the disk automatically.
+            - **Manual configure**: The disk doesn't meet the automatic-configuration requirements. Select its information icon to view the required remediation.
+
+         1. For each **Auto configure** disk that you want to use, follow the applicable path:
+
+            If you add a standalone host, select a drive letter.
+
+            If you add or create a cluster, enter a unique CSV name.
+
+            Leave the drive letter or CSV name blank to omit the disk from automatic configuration. Select **Refresh** after you change storage directly on a host.
+
+            If you add or create a cluster, automatic configuration brings the disk online, initializes an unpartitioned disk as GPT, formats it with NTFS, adds it to the cluster and CSV, aligns the path with `C:\ClusterStorage\<CSVName>`, and sets the CSV Block Cache to at least 2,048 MB.
+
+      </details>
+
+      <details>
+      <summary>File server storage configuration details</summary>
+
+      When you select **File server storage**, you configure SMB file shares for your virtual machine (VM) storage:
+
+      1. If you use SMB storage:
+
+         1. Select **File server storage**, enter a Universal Naming Convention (UNC) share path, and then select **Add**.
+
+            The wizard validates the path, your access, and the server type. A Windows file server must be part of a failover cluster, and all Windows shares in one workflow must belong to the same storage cluster. You must be an administrator on every storage-cluster node.
+
+         1. If you use a Windows storage cluster, optionally select:
+
+            - Configure SMB and NTFS permissions for the compute hosts.
+            - Configure constrained delegation for live migration.
+
+            If you use non-Windows storage, Virtualization Mode doesn't offer these options. If Virtualization Mode can't configure delegation automatically, workflow status identifies the manual action.
+
+      </details>
+
+   1. Select **Next**.
+
+1. On the **Compute** tab, configure the Hyper-V settings that Virtualization Mode applies to each compute host:
+
+   1. Configure the following settings:
+
+      | Setting | Description |
+      |---|---|
+      | **Remove non-essential features** | Removes payloads for unused Windows Server features. |
+      | **Enable enhanced session mode** | Configures the Hyper-V host setting for clipboard sharing, display resizing, and local device redirection. |
+      | **Configure concurrent migrations** | Sets both the simultaneous virtual machine and storage migration limits. Select **None**, **1**, **2 (Default)**, or **4**. |
+      | **Default virtual machine path** | Sets the default path for VM configuration and virtual hard disk files. Choose a path from the drive letters, CSVs, or SMB shares that you configured, or select **Custom**. |
+
+   1. Select **Next**.
+
+1. On the **Review** tab, review the configuration before Virtualization Mode starts the onboarding workflow:
+
+   1. Verify the configuration.
+
+   1. Select **Submit**.
+
+1. Open **Workflow status** to monitor the deployment. Virtualization Mode polls active workflow status every five seconds and shows the current agent installation and configuration step.
+
+   The resource appears in the navigation hierarchy while Virtualization Mode onboards it. Select the resource to view its workflow status.
+
+   During onboarding, Virtualization Mode installs the applicable Windows Server features, updates, and related components, including Hyper-V, Network ATC, Data Center Bridging, Failover Clustering, and Multipath I/O. It restarts a standalone host only when installation or updates require a restart. For a cluster, Virtualization Mode drains and conditionally restarts affected nodes sequentially.
+
+   Network intent verification allows its PowerShell check up to 15 minutes to finish. A 20-minute workflow guard stops the verification step if it doesn't finish.
+
+1. If the workflow stops before completion, follow the applicable path:
+
+   If an interrupted workflow offers **Resume**, select it to continue.
+
+   If a failed workflow offers **Retry**, select it to rerun the failed step. Retry only safely rerunnable steps, up to three times.
+
+   If network intent verification fails, review the failed step in **Workflow status**. Keep the intent names that you configured in the wizard if you repair an intent and retry verification in the same workflow. The Virtualization Mode Agent logs include Network ATC event logs. For more information, see [Common Network ATC error messages](../../networking/network-atc/network-atc.md#common-error-messages).
+
+1. Verify that the workflow status is **Completed** and that the compute resource is available in the navigation hierarchy.
+
+   :::image type="content" source="media/add-virtualization-mode-resources/add-resource-workflow-complete.png" alt-text="Screenshot of Windows Admin Center Virtualization Mode Workflow status pane showing all Add host steps complete for contosohv03.contoso.com.":::
+
+## Remove compute resources and resource groups
+
+Remove compute resources and resource groups you no longer want Virtualization Mode to manage.
+
+### Remove a compute resource
+
+Removal starts a workflow that uninstalls the Virtualization Mode agent, removes its certificates and deployment files, and unregisters the resource.
+
+1. In the resource pane, select the **ellipsis (...)** next to the resource.
+
+1. Select **Remove resource** for a standalone host or **Remove cluster** for a cluster.
+
+1. Select **Remove** to confirm.
+
+1. Monitor the removal from **Workflow status**.
+
+### Remove a resource group
+
+You must empty a resource group before you can delete it.
+
+Remove all resources associated with the resource group from every Virtualization Mode view.
+
+1. Remove every resource from the resource group.
+
+1. Select the **ellipsis (...)** next to the resource group, and then select **Delete resource group**.
+
+1. Select **Delete resource group** to confirm.
+
+1. Verify that the notification pane contains the deletion notification.
+
+## Manage virtual machines after adding compute resources
 
 > [!div class="nextstepaction"]
 > [Manage virtual machines in Windows Admin Center Virtualization Mode](manage-virtualization-mode-virtual-machines.md)

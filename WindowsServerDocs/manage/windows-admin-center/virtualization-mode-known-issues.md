@@ -43,7 +43,7 @@ To check and recreate the Network ATC network intent, perform the following step
 
 1. Re-create or redeploy the intent if required:
 
-   - Rerun the Add resources workflow and create the intent again using the Networking tab in the Add Host workflow. For more information about the steps to add resources, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+   - Rerun the Add resources workflow and create the intent again by using the **Networking** tab in the Add resources workflow. For more information about the steps to add resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
    Or
 
@@ -51,7 +51,7 @@ To check and recreate the Network ATC network intent, perform the following step
 
      1. Create a new intent using the PowerShell cmdlet `Add-NetIntent`. For more information about creating network intents, see [Deploy host networking with Network ATC](../../networking/network-atc/network-atc.md).
 
-     1. Rerun the Add resources workflow and check the intent you created appears in the Networking tab. For more information about the steps to add resources, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+       1. Rerun the Add resources workflow and check that the intent you created appears in the **Networking** tab. For more information about the steps to add resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 ## Required reboot after feature installation not handled automatically
 
@@ -73,7 +73,7 @@ To detect and complete required reboots and activate installed features, perform
 
 1. Reboot the affected host or hosts.
 
-1. After the restart, re-verify the installed features and re-run the Add resources. For more information about the steps to add resources, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+1. After the restart, re-verify the installed features and re-run the Add resources. For more information about the steps to add resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 ## Cluster resource onboarding fails repeatedly
 
@@ -118,11 +118,12 @@ To align prerequisites across cluster nodes and retry resource onboarding, perfo
 
 1. Validate cluster health with `Get-Cluster` and remediate any issues.
 
-1. Re-run the resource onboarding workflow. To learn more about the steps to add resources, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+1. Re-run the resource onboarding workflow. To learn more about the steps to add resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 ## Related information
 
-- [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md)
+- [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md)
+- [Add storage resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-storage-resources.md)
 - [Virtualization Mode overview](virtualization-mode-overview.md)
 - [Manage virtual machines in Virtualization Mode](manage-virtualization-mode-virtual-machines.md)
 
