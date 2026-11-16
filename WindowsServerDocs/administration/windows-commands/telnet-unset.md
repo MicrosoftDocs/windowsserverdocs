@@ -4,12 +4,13 @@ description: Reference article for the telnet unset command, which turns off pre
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 11/11/2026
 ---
 
 # telnet: unset
 
-
+> [!IMPORTANT]
+> Telnet Client is deprecated and will be removed from Windows in a future release.
 
 Turns off previously set options.
 

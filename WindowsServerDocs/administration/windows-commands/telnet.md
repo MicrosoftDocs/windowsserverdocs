@@ -4,7 +4,7 @@ description: Reference article for the telnet command, which communicates with a
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 6/21/2022
+ms.date: 11/11/2026
 ---
 
 # telnet
@@ -14,6 +14,8 @@ ms.date: 6/21/2022
 Communicates with a computer running the telnet server service. Running this command without any parameters, lets you enter the telnet context, as indicated by the telnet prompt (**Microsoft telnet>**). From the telnet prompt, you can use telnet commands to manage the computer running the telnet client.
 
 > [!IMPORTANT]
+> Telnet Client is deprecated and will be removed from Windows in a future release.
+>
 > You must install the telnet client software before you can run this command. For more information, see [Installing telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293(v=ws.10)).
 
 ## Syntax

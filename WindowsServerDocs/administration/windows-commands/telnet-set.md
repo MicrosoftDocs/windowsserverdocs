@@ -4,12 +4,13 @@ description: Reference article for the telnet set command, which sets options.
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 11/11/2026
 ---
 
 # telnet: set
 
-
+> [!IMPORTANT]
+> Telnet Client is deprecated and will be removed from Windows in a future release.
 
 Sets options. You can use the [telnet unset command](telnet-unset.md) to turn off an option that was previously set.
 
