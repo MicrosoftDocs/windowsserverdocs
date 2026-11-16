@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title description">
+  <title id="title">Local token factory architecture on Windows Server 2025</title>
+  <desc id="description">An application sends a request to a local endpoint and receives a response. The endpoint uses vLLM and Qwen3-Coder 30B in Ubuntu 24.04 on WSL 2 in Windows Server 2025. The model runs on one NVIDIA RTX PRO 6000 GPU.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0067b8"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#107c10"/>
+    </marker>
+    <style>
+      .text { font-family: "Segoe UI", Arial, sans-serif; fill: #17212b; }
+      .heading { font-size: 22px; font-weight: 600; }
+      .body { font-size: 18px; }
+      .detail { font-size: 16px; }
+      .host { fill: #f3f8fc; stroke: #0067b8; stroke-width: 2; }
+      .wsl { fill: #e8f6f3; stroke: #008575; stroke-width: 2; }
+      .ubuntu { fill: #fff7ed; stroke: #c43e1c; stroke-width: 2; }
+      .service { fill: #ffffff; stroke: #5c2d91; stroke-width: 2; }
+      .gpu { fill: #edf7e8; stroke: #107c10; stroke-width: 2; }
+      .app { fill: #ffffff; stroke: #5b6670; stroke-width: 2; }
+      .request { fill: none; stroke: #0067b8; stroke-width: 2.5; marker-end: url(#arrow-blue); }
+      .response { fill: none; stroke: #107c10; stroke-width: 2.5; marker-end: url(#arrow-green); }
+      .compute { fill: none; stroke: #5b6670; stroke-width: 2; marker-end: url(#arrow-blue); }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="520" fill="#ffffff"/>
+
+  <rect x="25" y="185" width="190" height="135" rx="12" class="app"/>
+  <text x="120" y="238" text-anchor="middle" class="text heading">Application</text>
+  <text x="120" y="270" text-anchor="middle" class="text body">OpenAI-compatible</text>
+  <text x="120" y="296" text-anchor="middle" class="text body">API client</text>
+
+  <rect x="300" y="25" width="570" height="470" rx="14" class="host"/>
+  <text x="325" y="58" class="text heading">Windows Server 2025</text>
+
+  <rect x="325" y="75" width="520" height="315" rx="12" class="wsl"/>
+  <text x="350" y="108" class="text heading">WSL 2</text>
+
+  <rect x="350" y="125" width="470" height="240" rx="11" class="ubuntu"/>
+  <text x="375" y="158" class="text heading">Ubuntu 24.04</text>
+
+  <rect x="375" y="178" width="420" height="155" rx="10" class="service"/>
+  <text x="585" y="215" text-anchor="middle" class="text heading">vLLM</text>
+  <text x="585" y="250" text-anchor="middle" class="text body">Qwen3-Coder 30B</text>
+  <rect x="425" y="272" width="320" height="42" rx="18" fill="#f3f8fc" stroke="#0067b8" stroke-width="1.5"/>
+  <text x="585" y="299" text-anchor="middle" class="text detail">Local endpoint: 127.0.0.1:8000</text>
+
+  <rect x="410" y="420" width="350" height="52" rx="10" class="gpu"/>
+  <text x="585" y="452" text-anchor="middle" class="text heading">1 NVIDIA RTX PRO 6000</text>
+
+  <path d="M215 220 L285 220 L285 290 L425 290" class="request"/>
+  <text x="235" y="205" class="text detail">Application request</text>
+
+  <path d="M425 312 L270 312 L270 285 L215 285" class="response"/>
+  <text x="228" y="342" class="text detail">Endpoint response</text>
+
+  <path d="M585 333 L585 410" class="compute"/>
+  <text x="600" y="382" class="text detail">Model inference</text>
+</svg>
