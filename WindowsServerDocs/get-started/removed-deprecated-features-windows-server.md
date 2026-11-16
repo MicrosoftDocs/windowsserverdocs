@@ -4,7 +4,7 @@ description: Learn about the features and functionalities removed or no longer d
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/24/2025
+ms.date: 11/12/2026
 ---
 
 # Features removed or no longer developed in Windows Server
@@ -35,6 +35,7 @@ We're no longer actively developing these features and might remove them from a 
 | Network Load Balancing (NLB) | NLB is no longer in active feature development and is deprecated. Consider using a Software Load Balancer (SLB) as an alternative. To learn more about SLB, see [What is Software Load Balancer (SLB) for SDN?](/azure/azure-local/concepts/software-load-balancer?context=/windows-server/context/windows-server-edge-networking) |
 | NTLM | [NTLMv1](/windows/win32/secauthn/microsoft-ntlm) is removed. LANMAN and NTLMv2 are no longer under active feature development and are deprecated. NTLMv2 will continue to work but will be removed from Windows Server in a future release. Replace calls to NTLM with calls to [Negotiate](/windows/win32/secauthn/microsoft-negotiate), which tries to authenticate with Kerberos and only fall back to NTLM when necessary. For more information, see [The evolution of Windows authentication](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-evolution-of-windows-authentication/ba-p/3926848). |
 | Remote Mailslots | Remote Mailslots are deprecated. The Remote Mailslot protocol, which was initially introduced in MS DOS, is a dated and simple IPC method that is both unreliable and insecure. This protocol was first disabled by default in [Windows 11 Insider Preview Build 25314](https://blogs.windows.com/windows-insider/2023/03/08/announcing-windows-11-insider-preview-build-25314/). For more information on Remote Mailslots, see [About Mailslots](/windows/win32/ipc/about-mailslots) and [[MS-MAIL]: Remote Mailslot Protocol](/openspecs/windows_protocols/ms-mail/8ea19aa4-6e5a-4aed-b628-0b5cd75a1ab9). |
+| Windows Sockets Direct | Windows Sockets Direct is deprecated. SAN endpoint creation will be disabled by default in a future Windows Server release, and the feature will be removed in a later release. This change doesn't affect NetworkDirect, SMB Direct, or other RDMA functionality. |
 | TLS 1.0 TLS 1.1 | TLS versions 1.0 and 1.1 are deprecated per internet standards and regulatory bodies due to security concerns mentioned in [RFC 8996](https://www.rfc-editor.org/rfc/rfc8996). These versions are disabled by default in Windows Server 2025. For more information on TLS deprecation, see [TLS 1.0 and TLS 1.1 deprecation in Windows](/windows/win32/secauthn/tls-10-11-deprecation-in-windows). |
 | WebDAV Redirector service | The WebDAV Redirector service is deprecated. The service isn't installed by default in Windows Server. For more information on the WebDAV Redirector service, see [WebDAV - Win32 apps](/windows/win32/webdav/webdav-portal). |
 | Windows Internal Database (WID) | WID is used by several roles, including AD FS, AD RMS, IPAM, RD Connection Broker, and WSUS. Consider using a free or full version of SQL Server for these roles. WID will be removed from Windows in a future release. To learn more, see [SQL Server editions](/sql/sql-server/editions-and-components-of-sql-server-2022). |
