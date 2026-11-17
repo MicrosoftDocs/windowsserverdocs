@@ -312,7 +312,7 @@ items:
         href: network-atc/network-atc.md
       - name: Manage Network ATC
         href: network-atc/manage-network-atc.md
-    - name: Network HUD (preview)
+    - name: Network HUD
       items:
       - name: What is Network HUD?
         href: network-hud-overview.md

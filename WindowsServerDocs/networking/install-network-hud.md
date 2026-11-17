@@ -1,130 +1,177 @@
 ---
-title: Install Network HUD for Windows Server (preview)
-description: Install and enable Network HUD on Windows Server 2025 Datacenter clustered deployments.
+title: Install Network HUD on Windows Server clusters
+description: Install Network HUD on Azure Arc-enabled Windows Server 2025 Datacenter cluster nodes, verify initialization, and view active health faults.
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: baselkablawi
-ms.date: 11/17/2025
+ms.date: 11/17/2026
 ms.topic: install-set-up-deploy
 ai-usage: ai-assisted
-ms.custom: references_regions
-#customer intent: As a cluster administrator, I want to install and enable Network HUD so that I can surface proactive host networking health faults.
+#customer intent: As a cluster administrator, I want to install Network HUD on each cluster node and verify initialization so that I can view host networking health faults.
 ---
 
 # Install Network HUD for Windows Server
 
-> [!IMPORTANT]
-> Network HUD for Windows Server is currently in PREVIEW.
-> This information relates to a prerelease product that might be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+Network HUD is a host networking diagnostics tool that identifies configuration and operational conditions in physical Windows Server clusters. It helps cluster administrators investigate network reliability issues by correlating host and physical network information that they otherwise need to gather separately.
 
-Network HUD is a cluster‑aware, intent‑driven host networking diagnostics tool that continuously analyzes adapters, links, and switch signals to surface actionable health faults early. This article explains how to enable Network HUD on an Azure Arc connected Windows Server 2025 Datacenter clustered deployment and how to view health faults using Windows Admin Center or PowerShell.
+In this article, you install Network HUD on each Azure Arc-enabled machine in a Windows Server 2025 Datacenter cluster, verify detection initialization, and view active cluster health faults.
 
-## Prerequisites
+## Prerequisites for installing Network HUD
 
-Before you install Network HUD, ensure you have the following prerequisites in place:
+- A failover cluster with at least two physical machines that meet the [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md). Network HUD doesn't support installation on virtual machines.
+- Windows Server 2025 Datacenter installed on each cluster node.
+- Hyper-V role and management tools installed on each cluster node.
+- Network ATC configured with host networking intents. For more information, see [Network ATC overview](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
+- Storage Spaces Direct enabled. For more information, see [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).
+- Data Center Bridging and Link Layer Discovery Protocol (LLDP) tools installed on each cluster node.
+- Each cluster node connected to Azure Arc and enrolled in Windows Server Management enabled by Azure Arc. For more information, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview). Network HUD doesn't support offline installation.
+- Validated physical switches that meet the applicable **Network switches for Azure Local** and **Network switch requirements** in [Physical network requirements for Azure Local](/azure/azure-local/concepts/physical-network-requirements).
+- Connected physical switch ports that advertise the LLDP information required for the cluster nodes' traffic roles. Network HUD uses these advertisements for physical-network checks.
+- The Azure Connected Machine Resource Administrator role, Contributor role, or a custom role with equivalent permissions on each Azure Arc-enabled server resource.
+- Administrative access to the cluster nodes for local PowerShell checks.
+- Access to a Windows Admin Center instance that can manage the cluster for the Windows Admin Center procedure.
 
-- Windows Server Failover Clustering requirements:
-  - You have at least one node in the cluster.
-  - Cluster nodes must be running Windows Server 2025 Datacenter.
-  - Network ATC is deployed with host networking intents. To learn more about deploying Network ATC, see [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
-  - The cluster must have Storage Spaces Direct (S2D) enabled. To learn more about deploying Storage Spaces Direct, see [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).
-  - Each cluster node has the `DataCenterBridging LLDP Tools` installed from the Remote Server Administration Tools feature.
+## Install Network HUD on each cluster node
 
-- Azure Arc requirements:
-  - Each cluster node must be connected to Azure Arc.
-  - You must be eligible for Windows Server Management enabled by Azure Arc. To learn more about the availability of the Network HUD benefit, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
-  - Network HUD is only available on machines in the following regions:
-    - East US 2 EUAP
-    - Central US EUAP
-    - Central US
-    - East US 2
-    - East US
-    - Canada Central
-    - West US 2
-    - North Europe
-    - West Europe
-    - Japan East
-    - Southeast Asia
-    - Australia East
+The Azure Arc extension installs the Network HUD service and PowerShell module. It doesn't configure the prerequisites.
 
-- Network HUD for Windows Server has the same network switch requirements as Azure Local. When using Network HUD on Windows Server, ensure you're using validated physical switches for Azure Local and that the network switch requirements are met. To learn more, review the sections _**Network switches for Azure Local**_ and _**Network switch requirements**_ in [Physical network requirements for Azure Local](/azure/azure-local/concepts/physical-network-requirements). Other sections in the Physical network requirements for Azure Local article don't apply to Network HUD Windows. Server
+1. In the [Azure portal](https://portal.azure.com), search for and select **Machines - Azure Arc**.
 
-## Enable the Network HUD extension in the Azure portal
+1. Select a cluster node.
 
-To use the Azure portal to enable the Network HUD extension, follow these steps:
+1. On the node's **Overview** page, under **Capabilities**, select the **Network HUD** tile.
 
-1. Navigate to the [Azure portal](https://portal.azure.com), then search for and select **Machines - Azure Arc**.
+   :::image type="content" source="media/install-network-hud/network-hud-azure-arc.png" alt-text="Screenshot of an Azure Arc-enabled server Overview page in the Azure portal, with Capabilities selected and Network HUD marked Not Configured." lightbox="media/install-network-hud/network-hud-azure-arc.png" loc-scope="azure":::
 
-1. Select the machine you want to enable the Network HUD extension on.
+1. Select **Enable**.
 
-1. Select the **Network HUD** tile.
+1. Wait until the Azure Arc extension operation succeeds and the **Network HUD** tile reports **Enabled**.
 
-   :::image type="content" source="media/install-network-hud/network-hud-azure-arc.png" alt-text="Screenshot of the Azure portal Machines - Azure Arc page showing the Network HUD extension tile before it's enabled.":::
+1. Repeat these steps for every cluster node. Install the extension on each Azure Arc-enabled machine, rather than once per cluster.
 
-1. When ready, select **Enable**.
+## Verify Network HUD extension deployment
 
-1. Once the extension is successfully enabled, you see a confirmation message and the tile shows as **Enabled**.
+In the Azure portal, verify the extension deployment on every cluster node.
 
-## View health faults
+1. Open each node's Azure Arc resource.
 
-To verify installation and view health faults, select your preferred method.
+1. Under **Settings**, select **Extensions**, and then inspect the Network HUD extension deployment status.
+
+1. If a deployment failed, review its error details before retrying the deployment.
+
+## Verify Network HUD initialization
+
+Perform these checks locally on every cluster node.
+
+1. Open PowerShell as an administrator.
+
+1. Verify that the `NetworkHUD` service is running:
+
+   ```powershell
+   Get-Service -Name NetworkHUD
+   ```
+
+1. Verify that the Network HUD PowerShell module is available:
+
+   ```powershell
+   Get-Module -ListAvailable -Name Az.StackHCI.NetworkHUD
+   ```
+
+1. Use `Get-WinEvent` to query events 105, 106, and 111 in the `Microsoft-Windows-Networking-NetworkHUD/Operational` log since the current service start time:
+
+   ```powershell
+   $service = Get-CimInstance -ClassName Win32_Service -Filter "Name = 'NetworkHUD'"
+   $serviceStartTime = (Get-Process -Id $service.ProcessId).StartTime
+
+   Get-WinEvent -FilterHashtable @{
+       LogName      = 'Microsoft-Windows-Networking-NetworkHUD/Operational'
+       ProviderName = 'Microsoft-Windows-Networking-NetworkHUD'
+       Id           = 105, 106, 111
+       StartTime    = $serviceStartTime
+   } -MaxEvents 20 |
+       Select-Object TimeCreated, Id, LevelDisplayName, Message
+   ```
+
+1. Verify that the current service startup has event 105, which confirms initialization, and event 111, which confirms that Network HUD loaded scenarios. Event 106 reports an initialization failure.
+
+A running service confirms only that the service started. It doesn't confirm that Network HUD detections initialized.
+
+## View active Network HUD health faults
+
+After you confirm initialization, view active health faults by using Windows Admin Center or PowerShell.
 
 # [Windows Admin Center](#tab/windowsadmincenter)
 
-To verify the installation and view health faults using Windows Admin Center, follow these steps:
-
 1. Open Windows Admin Center and connect to your Windows Server 2025 Datacenter cluster.
 
-1. In the Cluster view, either view alerts from the dashboard or select the notification bell icon on the top right corner.
+1. In the cluster view, view alerts on the dashboard or select the notification bell icon.
 
-   :::image type="content" source="media/install-network-hud/windows-admin-center-alerts.png" alt-text="Screenshot of Windows Admin Center cluster dashboard displaying active alerts including a Network HUD networking fault.":::
+   :::image type="content" source="media/network-hud/windows-admin-center-alerts.png" alt-text="Windows Admin Center cluster dashboard displaying active alerts, including a Network HUD networking fault." lightbox="media/network-hud/windows-admin-center-alerts.png":::
 
-1. Look for alerts related to Network HUD. These alerts provide information about any detected host networking issues.
+1. Look for Network HUD alerts.
 
-1. Select an alert to view more details and recommended actions for remediation.
+1. Select an alert to view its details and recommended actions.
 
-   :::image type="content" source="media/install-network-hud/windows-admin-center-alert-detail.png" alt-text="Screenshot of Windows Admin Center fault detail pane for a Network HUD alert showing fields and recommended remediation actions.":::
+   :::image type="content" source="media/install-network-hud/windows-admin-center-alert-detail.png" alt-text="Windows Admin Center fault detail pane for a Network HUD alert showing fields and recommended remediation actions.":::
 
-Alerts automatically resolve themselves when the underlying issue is fixed.
+Network HUD clears an alert after it no longer detects the underlying condition.
+
+Clearing an alert doesn't mean that Network HUD automatically repaired the underlying issue.
 
 # [PowerShell](#tab/powershell)
 
-To verify the installation and view health faults using PowerShell, follow these steps:
+1. Open PowerShell as an administrator on a cluster node.
 
-1. Sign in to your administrative machine with an account that has the necessary permissions to access the Windows Server 2025 Datacenter cluster.
-
-1. Open PowerShell and import the FailoverClusters module:
+1. Import the Failover Clusters module:
 
    ```powershell
    Import-Module FailoverClusters
    ```
 
-1. Get the cluster object to connect to your cluster, replacing `<YourClusterName>` with the name of your cluster:
+1. Get active cluster health faults for Network HUD:
 
    ```powershell
-   $cluster = Get-Cluster -Name "<YourClusterName>"
+   Get-HealthFault | Where-Object Reason -like '*HUD*'
    ```
 
-1. To get health faults related to Network HUD, run the following command:
-
-   ```powershell
-   Get-HealthFault -Cluster $cluster | Where Reason -like '*hud*'
-   ```
-
-1. The command output displays a list of Network HUD related health faults, including details about the issue and a recommended resolution. The following is an example output:
-
-   ```powershell
-   FaultId      : 1015
-   
-   Reason       : Network HUD detected incorrect VLAN configuration
-   
-   Severity     : Warning
-   
-   NodeName     : ClusterNode01
-   
-   Timestamp    : 11/04/2025 09:15:32
-   
-   Resolution   : Verify VLAN settings on NIC and switch ports
-   ```
+Run the command once on any cluster node. An empty result means that the query returned no active Network HUD health faults. It doesn't confirm that Network HUD detections initialized.
 
 ---
+
+## Troubleshoot Network HUD installation and initialization failures
+
+Troubleshoot locally on the affected node.
+
+1. If you can't enable Network HUD, review extension errors in the Azure portal and logs on the affected node.
+
+1. Verify that the required Windows features are installed, Network ATC intents are configured, Storage Spaces Direct is enabled, the node is connected to Azure Arc, and Windows Server Management enabled by Azure Arc enrollment is active.
+
+1. Import the Network HUD PowerShell module:
+
+   ```powershell
+   Import-Module Az.StackHCI.NetworkHUD
+   ```
+
+1. Review recent Network HUD Operational events for service initialization and scenario loading:
+
+   ```powershell
+   Get-NetHUDLog -OperationalLog
+   ```
+
+1. Review recent Network HUD Diagnostic events for scenario results:
+
+   ```powershell
+   Get-NetHUDLog -ContentLog
+   ```
+
+   Diagnostic event 102 reports scenario success, and event 103 reports scenario failure. These diagnostic events aren't cluster health faults.
+
+1. If you can't import the `Az.StackHCI.NetworkHUD` module, investigate the extension deployment status and Azure Arc extension logs.
+
+1. If the extension deployment failed, follow [Troubleshoot Azure Arc-enabled servers VM extension issues](/azure/azure-arc/servers/troubleshoot-vm-extensions).
+
+Don't treat a running service, an empty health-fault query, or missing log output as evidence that initialization succeeded. Review Operational events 105, 106, and 111 to determine initialization status.
+
+## Next steps
+
+- [Network HUD overview](network-hud-overview.md)
