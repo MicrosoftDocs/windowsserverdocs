@@ -10,6 +10,8 @@ items:
       href: overview.md
     - name: What's new in Windows Server
       items:
+      - name: Windows Server 2028 Preview
+        href: whats-new-windows-server-2028.md
       - name: Windows Server 2025
         href: whats-new-windows-server-2025.md
       - name: Windows Server 2022

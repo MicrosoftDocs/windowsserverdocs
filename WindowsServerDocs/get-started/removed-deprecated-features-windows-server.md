@@ -4,7 +4,8 @@ description: Learn about the features and functionalities removed or no longer d
 ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
-ms.date: 09/24/2025
+ms.date: 11/16/2026
+ai-usage: ai-assisted
 ---
 
 # Features removed or no longer developed in Windows Server
@@ -14,17 +15,28 @@ Each release of Windows Server brings new features and improvements. Sometimes o
 > [!TIP]
 > You can get early access to Windows Server builds by joining the [Windows Insider Program for Windows Server](https://www.microsoft.com/windowsinsider/for-business-getting-started-server), which is a great way to test feature changes.
 
-> [!NOTE]
-> Windows Server long-term servicing channel (LTSC) releases have a Fixed Lifecycle Policy that includes 5 years of mainstream support and 5 years of extended support for a total lifecycle of 10 years. To learn more, see:
->
-> - [Fixed Lifecycle Policy](/lifecycle/policies/fixed)
-> - [Lifecycle Terms and Definitions](/lifecycle/definitions)
+Windows Server long-term servicing channel (LTSC) releases have a Fixed Lifecycle Policy that includes 5 years of mainstream support and 5 years of extended support for a total lifecycle of 10 years. To learn more, see:
+
+- [Fixed Lifecycle Policy](/lifecycle/policies/fixed)
+- [Lifecycle Terms and Definitions](/lifecycle/definitions)
 
 **This list is subject to change and might not include every affected feature or functionality.**
 
 ## Features no longer in development
 
 We're no longer actively developing these features and might remove them from a future update. Some features were replaced with other features or functionality. Others are now available from different sources. *Deprecation* means that a feature, functionality, or service is no longer in active development. A deprecated feature might be removed in future releases. A deprecated component still ships in Windows Server, is supported for production deployments, and continues to receive security and quality updates per the product lifecycle.
+
+# [Windows Server 2028 (Preview)](#tab/ws28-preview)
+
+> [!IMPORTANT]
+> Windows Server 2028 is in preview. The feature deprecations in this tab don't mean that the features are absent from current preview builds. The features might still be available in current preview builds, and the deprecation plans can change before release.
+
+| Feature | Explanation |
+|--|--|
+| BranchCache | BranchCache is deprecated beginning with Windows Server 2028. Identify deployments that use BranchCache to cache content from file servers, web servers, or Background Intelligent Transfer Service (BITS), and plan a transition. For more information, see [BranchCache](../networking/branchcache/BranchCache.md). |
+| Windows Deployment Services (WDS) server role | The WDS server role is deprecated beginning with Windows Server 2028, including its role services, management tools, interfaces, and WDS-provided Preboot Execution Environment (PXE) functionality. You should inventory your WDS dependencies and plan a migration. If you use WDS-backed PXE with [Microsoft Configuration Manager](/mem/configmgr/osd/understand/introduction-to-operating-system-deployment), migrate to the Configuration Manager PXE responder without WDS. For more information, see [Windows Deployment Services deprecation in the next Windows Server release](https://support.microsoft.com/servicing/os/windows/docs/2026/09/windows-deployment-services-deprecation-in-the-next-windows-server-release). |
+| Windows PowerShell 5.1 | Windows Server 2028 deprecates Windows PowerShell 5.1. Test existing scripts, modules, and management workflows with PowerShell 7, and use the results to plan your migration. Because PowerShell 7 and Windows PowerShell 5.1 have compatibility differences, assess dependencies before migrating. For guidance, see [Migrating from Windows PowerShell 5.1 to PowerShell 7](/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7). |
+| Windows Sockets Direct | Windows Sockets Direct is deprecated. Beginning with Windows Server 2028, system area network (SAN) endpoint creation is disabled by default, and the feature will be removed in a later release. This change doesn't affect NetworkDirect, SMB Direct, or other Remote Direct Memory Access (RDMA) functionality. For more information, see [Windows Sockets Direct Architecture](/windows-hardware/drivers/network/windows-sockets-direct-architecture). |
 
 # [Windows Server 2025](#tab/ws25)
 
@@ -94,6 +106,26 @@ We're no longer actively developing these features and might remove them from a 
 
 We're removing the following features and functionalities from the installed product image in Windows Server. Applications or code that depend on these features won't function in future releases unless you use an alternative method. Removal occurs when a feature or functionality is no longer available for use and is eliminated from a product or service. The removal of features and functionalities can take place in any release of Windows Server. Some features are deprecated but still ship in current versions of Windows Server. Components aren't removed from generally available supported versions that are within their product lifecycle.
 
+# [Windows Server 2028 (Preview)](#tab/ws28-preview)
+
+> [!IMPORTANT]
+> Windows Server 2028 is in preview. The feature removals in this tab aren't confirmation that the features are absent from current preview builds. The features might still be available in current preview builds, and the removal plans can change before release.
+
+| Feature | Explanation |
+|--|--|
+| Windows Internet Name Service (WINS) server role | WINS is removed in Windows Server 2028 after being no longer developed since Windows Server 2022. Migrate WINS-dependent clients and services to DNS-based name resolution. For more information, see [WINS removal: Moving forward with modern name resolution](https://support.microsoft.com/servicing/os/windows/docs/2025/11/wins-removal-moving-forward-with-modern-name-resolution). |
+| DirectAccess | DirectAccess is removed from Windows Server 2028. Migrate existing DirectAccess deployments to Always On VPN by using a side-by-side migration. For more information, see [Overview of the DirectAccess to Always On VPN migration](../remote/remote-access/da-always-on-vpn-migration/da-always-on-migration-overview.md) and [DirectAccess deprecation on future Windows Server releases](https://support.microsoft.com/servicing/os/windows/docs/2026/06/directaccess-deprecation-on-future-windows-server-releases-a-new-era-of-always-on-connectivity). |
+| Point-to-Point Tunneling Protocol (PPTP) and Layer 2 Tunneling Protocol (L2TP) remote access | Remote access through PPTP and L2TP is removed from Windows Server 2028. Migrate remote access connections to Internet Key Exchange version 2 (IKEv2) or Secure Socket Tunneling Protocol (SSTP). For more information, see [Configure VPN protocols](../remote/remote-access/configure-vpn-protocols.md) and [L2TP and PPTP removal](https://support.microsoft.com/servicing/os/windows/docs/2026/10/l2tp-pptp-removal-article). |
+| Server Message Block version 1 (SMBv1) | Windows Server 2028 no longer includes SMBv1. Update dependent clients, servers, and devices to use SMBv2 or SMBv3. For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/blog/filecab/stop-using-smb1/425858). |
+| VBScript | Windows Server 2028 removes VBScript, so scripts and apps that depend on it stop working. Migrate administrative scripts to PowerShell and web scripts to JavaScript. For more information, see [VBScript deprecation: Timelines and next steps](https://techcommunity.microsoft.com/blog/windows-itpro-blog/vbscript-deprecation-timelines-and-next-steps/4148301). |
+| Windows Management Instrumentation command-line utility (WMIC) | Windows Server 2028 removes the Windows Management Instrumentation Command-line (WMIC) utility, not Windows Management Instrumentation (WMI). Replace WMIC commands with PowerShell or programmatic WMI queries. For more information, see [WMI command line (WMIC) utility deprecation: Next steps](https://techcommunity.microsoft.com/blog/windows-itpro-blog/wmi-command-line-wmic-utility-deprecation-next-steps/4039242). |
+| Windows Server Update Services (WSUS) | Windows Server 2028 removes the WSUS server role. This change applies only to Windows Server 2028 and doesn't change WSUS availability or support in earlier Windows Server releases.<br><br>WSUS remains available and supported in earlier Windows Server releases, including Windows Server 2025, for the duration of each release's [support lifecycle](/lifecycle/). You can continue to use WSUS on those releases to manage updates for supported Windows client and Windows Server releases.<br><br>Microsoft recognizes the need to manage updates in disconnected and highly controlled environments. We're invested in supporting for these scenarios and we'll share more as the work progresses. For more information about previews of disconnected server patching technologies, contact the [Windows Server TAP team](https://aka.ms/WSTAP). |
+| Legacy basic input/output system (BIOS) support | PC/AT (PCAT) and legacy BIOS boot are removed from Windows Server 2028. Unified Extensible Firmware Interface (UEFI) is required. Windows Server 2028 guest VMs require generation 2 Hyper-V VMs. This requirement doesn't change support for generation 1 VMs that run earlier guest operating systems. For planning guidance, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../virtualization/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md). |
+| MultiPoint Services | MultiPoint Services is removed from Windows Server 2028 after being no longer developed since Windows Server 2019. The MultiPoint Connector is available as a Feature on Demand in Windows 11, version 26H2, but won't be included in later Windows releases. Use Remote Desktop Services, in particular Remote Desktop Session Host, for shared desktop and application sessions. For more information, see [Remote Desktop Services overview](../remote/remote-desktop-services/overview.md). |
+| Shielded VMs | Shielded VMs are removed from Windows Server 2028. Use Trusted VMs as an alternative where their capabilities meet your requirements. The preview doesn't support failover clusters or Hyper-V Replica, and VM key portability is limited. For more information, see [Trusted Launch for generation 2 virtual machines](whats-new-windows-server-2028.md#trusted-launch-for-generation-2-virtual-machines). |
+| AT Time Service (ATSVC) and AT command (`at.exe`) | The legacy AT Time Service (ATSVC) and its `at.exe` command-line client are removed from Windows Server 2028. ATSVC was already disabled by default and was superseded by Task Scheduler. Use [schtasks](../administration/windows-commands/schtasks.md) instead to schedule commands and programs. |
+| .NET Framework 3.5 optional Windows component | Windows Server 2028 no longer includes .NET Framework 3.5 as an inbox optional component or Feature on Demand. The framework remains available through a standalone installer. For installation guidance, see [Install .NET Framework 3.5 on Windows 11](/dotnet/framework/install/dotnet-35-windows-11). For more information about the deployment change, see [.NET Framework 3.5 moves to standalone deployment in new versions of Windows](https://devblogs.microsoft.com/dotnet/dotnet-framework-3-5-moves-to-standalone-deployment-in-new-versions-of-windows/). |
+
 # [Windows Server 2025](#tab/ws25)
 
 | Feature | Explanation |
@@ -121,7 +153,7 @@ We're removing the following features and functionalities from the installed pro
 | Hyper-V Network Virtualization (HNV) | [Network virtualization](../networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) is now included in Windows Server as part of [software defined networking](/azure/azure-local/concepts/software-defined-networking?context=/windows-server/context/windows-server-edge-networking) (SDN). SDN also includes the Network Controller, Software Load Balancer, User Defined Routing, and access control lists. |
 | Nano Server installation option | Nano Server isn't available as an installable host operating system. Instead, Nano Server is available as a container operating system. To learn more about Nano Server as a container, see [Windows Container Base Images](/virtualization/windowscontainers/manage-containers/container-base-images). |
 | Print components <br><br> (Now optional components for Server Core installations) | In previous releases of Windows Server, the print components were disabled by default in the Server Core installation option. We changed that in Windows Server 2016, enabling them by default. In Windows Server 2019, those print components are once again disabled by default for Server Core. If you need to enable the print components, you can do so by running the following cmdlet:<br><br> `Install-WindowsFeature Print-Server` |
-| [Remote Desktop Connection Broker and Remote Desktop Virtualization Host](../remote/remote-desktop-services/desktop-hosting-service.md) in a Server Core installation | Most Remote Desktop Services deployments have these roles colocated with the Remote Desktop Session Host (RDSH), which requires Server with Desktop Experience. To be consistent with RDSH, we're changing these roles to also require Server with Desktop Experience. These RDS roles are no longer available for use in a [Server Core installation](../administration/server-core/what-is-server-core.md). If you need to [deploy these roles as part of your Remote Desktop infrastructure](../remote/remote-desktop-services/rds-deploy-infrastructure.md), you can [install them on Windows Server with Desktop Experience](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br/>These roles are also included in the Desktop Experience installation option of Windows Server 2019. |
+| [Remote Desktop Connection Broker and Remote Desktop Virtualization Host](../remote/remote-desktop-services/desktop-hosting-service.md) in a Server Core installation | Most Remote Desktop Services deployments colocate these roles with the Remote Desktop Session Host (RDSH), which requires Server with Desktop Experience. To be consistent with RDSH, Microsoft changed these roles to also require Server with Desktop Experience. These RDS roles aren't available for use in a [Server Core installation](../administration/server-core/what-is-server-core.md). If you need to [deploy these roles as part of your Remote Desktop infrastructure](../remote/remote-desktop-services/rds-deploy-infrastructure.md), you can [install them on Windows Server with Desktop Experience](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br>These roles are also included in the Desktop Experience installation option of Windows Server 2019. |
 | [RemoteFX 3D video adapter (vGPU)](../virtualization/hyper-v/deploy/deploy-graphics-devices-using-remotefx-vgpu.md) | We're developing new graphics acceleration options for virtualized environments. You can also use [Discrete Device Assignment](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) as an alternative. |
 | SMB version 1 | Starting with this release, SMB version 1 is no longer installed by default. For details, see [SMBv1 isn't installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions](../storage/file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md). |
 
@@ -140,4 +172,3 @@ We're removing the following features and functionalities from the installed pro
 ## Related content
 
 - [Deprecation: What it means in the Windows lifecycle](https://techcommunity.microsoft.com/blog/windows-itpro-blog/deprecation-what-it-means-in-the-windows-lifecycle/4372457)
-

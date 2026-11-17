@@ -1,98 +1,107 @@
 ---
-title: What is Network HUD (preview) for Windows Server? 
-description: Learn what Network HUD is, how it works, and the core capabilities it provides for host networking diagnostics across Windows Server clusters.
+title: Network HUD Overview for Windows Server 2025
+description: Network HUD detects networking issues in physical Windows Server 2025 Datacenter clusters. Learn about requirements, health faults, and detection scenarios.
 author: robinharwood
 ms.author: roharwoo
 ms.reviewer: baselkablawi
-ms.date: 11/17/2025
-ms.topic: overview
+ms.date: 11/17/2026
+ms.topic: concept-article
 ai-usage: ai-assisted
 #customer intent: As a cluster administrator, I want to understand what Network HUD does and when to use it so that I can improve host networking reliability and performance.
 ---
 
-# What is Network HUD for Windows Server?
+# What is Network HUD for Windows Server 2025?
 
-> [!IMPORTANT]
-> Network HUD for Windows Server is currently in PREVIEW.
-> This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+Network HUD is a host networking diagnostics tool for physical Windows Server 2025 Datacenter failover clusters. It uses Network ATC intent data and signals from cluster nodes, network adapters, and physical switches to detect configuration and operational conditions and report them as cluster health faults.
 
-Network HUD is a host networking diagnostics and operational tool that analyzes and remediates host networking issues. Network HID runs continuously, correlating physical switch links, host adapter settings, and the cluster roles that consume them. Using network intent data, Network HUD selects relevant tests and raises early alerts when emerging issues threaten workload performance or stability.
+Network HUD helps cluster administrators correlate host and physical network information without gathering it separately. Its detections identify conditions for administrators to investigate; Network HUD doesn't automatically remediate the reported conditions or guarantee that workloads avoid performance or connectivity problems.
 
-Host networking can be hard to troubleshoot because you need to gather information from the physical fabric switches, cluster hosts, network adapters settings, and guest workloads. This separation obscures root causes, slows remediation, and increases the risk of performance or stability degradation. Network HUD helps you to:
+Network HUD helps you:
 
-- Identify misconfiguration on the physical network. For example, missing VLAN or PFC priority.
-- Detect operational hardware issues, such as flapping or unstable adapters, PCIe oversubscription.
-- Optimize and validate host configuration symmetry and driver readiness.
-- Autoremediate selected conditions, such as removing persistently unstable adapters from service when safe to do so.
+- Identify physical network misconfigurations, such as missing VLANs or Priority Flow Control (PFC) priorities.
+- Detect adapter instability and Peripheral Component Interconnect Express (PCIe) bandwidth limitations.
+- Validate host networking configuration consistency and identify driver maintenance needs.
+- Review health faults and recommended actions in Windows Admin Center or PowerShell.
 
-## Availability and requirements
+After reading this article, you'll understand when Network HUD applies and how to use its detections and health faults to investigate host networking conditions.
 
-For Network HUD to be available to you, you must be eligible for Windows Server Management enabled by Azure Arc. To learn more about the availability of the Network HUD benefit, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
+## Network HUD availability and requirements
 
-When your machines are eligible for Windows Server Management enabled by Azure Arc, your environment must meet the following requirements:
+Network HUD is available as a benefit of Windows Server Management enabled by Azure Arc. For benefit availability and enrollment information, see [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
 
-- You're using Windows Server Failover Clustering.
-- Cluster nodes must run Windows Server 2025 Datacenter.
-- Network ATC is deployed with host networking intents. To learn more about deploying Network ATC, see [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
-- The cluster must have Storage Spaces Direct (S2D) enabled (required for the Cluster Health service). To learn more about deploying Storage Spaces Direct, see [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).
-- Each cluster node must be connected to Azure Arc.
+A supported Network HUD deployment has the following requirements:
 
-## Terminology
+- A physical Windows Server failover cluster with at least two servers. This deployment doesn't support virtual machines or offline deployments.
+- Windows Server 2025 Datacenter on every cluster node.
+- The Hyper-V role and its management tools on every cluster node.
+- Configure Network ATC with host networking intents.
+- Enable Storage Spaces Direct (S2D), which provides the Health Service that Network HUD uses to report faults. For cluster hardware requirements, see [Storage Spaces Direct hardware requirements](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md).
+- Install the Data Center Bridging and Link Layer Discovery Protocol (LLDP) tools on every cluster node.
+- Connect every cluster node to Azure Arc and enroll it in the Windows Server Management benefit.
 
-The following table defines some of the key terms used in this document:
+## Network HUD terminology
+
+The following terms describe the configuration and detection model that Network HUD uses:
 
 | Term | Definition |
 |--|--|
-| Network HUD: Network HUD | Windows Server Management enabled by Azure Arc benefit that analyzes and, where possible, remediates host networking issues. |
-| Network HUD: Content | Detection logic packages downloaded separately and updated over time; can run disconnected. |
-| Network HUD: Content Detection | Individual detection units that watch for behavior indicating an issue is occurring or likely to occur. |
-| Network ATC: Intent | Definition of how you intend to use one or more physical adapters. For example, a converged management/compute/storage set. Each physical adapter can belong to only one intent. |
-| Network ATC: Intent type | A role assigned within an intent. Supported types: Management, Compute, Storage, Stretch (similar to Storage but without RDMA). |
+| Network HUD | A Windows Server Management enabled by Azure Arc benefit that detects host networking configuration and operational issues. |
+| Content | Logic that Network HUD uses to evaluate host and network signals. |
+| Detection | An individual check that identifies a configuration or operational condition. |
+| Network ATC intent | A definition that specifies how to use one or more physical network adapters. Each physical adapter can belong to only one intent. |
+| Network ATC intent type | A role assigned within an intent. The supported types are Management, Compute, Storage, and Stretch. Stretch is similar to Storage but doesn't use remote direct memory access (RDMA). |
 
 ## How Network HUD works
 
-Network HUD is cluster-aware and continuously interprets raw host and fabric signals in the context of declared Network ATC intents and cluster states. Instead of treating adapters, switches, and roles as isolated components, it correlates them across the cluster so you can understand emerging instability in an operational context. For example, it detects a flapping port in the context of storage, compute, or management intents. Each detection combines multiple telemetry streams to reduce noise and surface only actionable health faults.
+Network HUD interprets host and physical network signals in the context of Network ATC intents and cluster state. For example, it can associate an unstable adapter with the storage, compute, or management traffic that its intent assigns to it. Each node evaluates its local configuration and signals, and Network HUD publishes detected conditions to the cluster Health Service.
 
-To surface actionable health faults, Network HUD gathers and normalizes events from:
+Network HUD uses the following sources to evaluate conditions:
 
-- Network ATC intent metadata that declares what each adapter is supposed to carry, shaping which tests are relevant and suppressing unnecessary probes.
-- LLDP exchanges with top-of-rack switches to map physical ports, VLAN advertisement, and Priority Flow Control readiness for RDMA traffic.
-- Event logs signaling adapter resets, link state transitions, or driver load anomalies that often precede performance degradation.
-- Performance counters and real-time adapter metrics for bandwidth, congestion indicators, and stability.
-- Packet-level insights (using `pktmon`) and low-level hardware properties when precision is required. For example, validating oversubscription risk.
+- Network ATC intent metadata, which identifies the traffic roles for physical adapters.
+- LLDP information from physical switches, including virtual local area networks (VLANs) and Priority Flow Control (PFC) priorities that the switches advertise.
+- Adapter and driver properties, link-state events, performance counters, and hardware properties.
 
-These inputs are combined into intent-aware detections that publish health faults through the existing cluster health pipeline—so Windows Admin Center and PowerShell reflect networking issues. Network HUD runs locally on each node for low latency and resilience.
+Network HUD reports detected conditions through health faults and diagnostic events. Health faults appear through the cluster Health Service in Windows Admin Center and PowerShell, with recommended actions to help you investigate and resolve issues. Network HUD runs locally on each node and requires Azure Arc connectivity.
 
-## Health detection scenarios
+## Network HUD health detection scenarios
 
-Network HUD proactively detects host networking conditions that typically precede instability or performance degradation. The following scenarios translate raw detection signals into actionable health faults you can remediate before misconfigurations or hardware issues impact workload performance or stability.
+Network HUD reports configuration and operational conditions through the cluster Health Service. The following table describes its detection inventory:
 
-| Detection | Purpose |
+| Network HUD detection | Condition detected |
 |--|--|
-| Failed Network ATC intents | Detects intents that don't provision completely (missing virtual adapters, QoS, storage settings) to prevent silent drift and unreliable baselines. |
-| Missing Network ATC intent types | Ensures required traffic roles (management, compute, storage) exist so role‑specific diagnostics run; absence reduces coverage and masks unmanaged traffic. |
-| PCIe bandwidth oversubscription | Compares aggregate NIC link rates to slot/PCIe lane capacity; oversubscription can cause throttling and inconsistent performance under load. |
-| Unstable (flapping) adapters | Flags frequent link resets or drops that trigger failovers, raise latency, and degrade throughput before workload impact escalates. |
-| Inbox (unsupported) production drivers | Identifies NICs that use only basic inbox drivers lacking advanced offloads and optimizations, increasing reliability and performance risk. |
-| Aging or out‑of‑date drivers | Assesses driver package age and surfaces early maintenance needs. Warns when a driver is more than one year old so you can plan an update. |
-| Driver version inconsistency | Detects mismatched versions across identical adapters, preventing asymmetric behavior, and unpredictable performance. |
-| LLDP operational status | Indicates LLDP packet absences or parsing failure, reducing physical switch link detection and degrading other fabric validation tests. |
-| Misconfigured or inconsistent VLANs | Compares advertised versus expected VLANs across the same-host intent members, the same intent across all hosts, and against the required workload (VM NIC) VLAN availability. Deviations risk VM connectivity loss or storage isolation failure. VLAN consistency across three discrete scopes to catch localized misconfiguration before it becomes a cluster issue: Same-host intent scope: Relevant switchports must advertise the same VLAN set to each adapter in the same Network ATC intent on a single host. Cluster intent scope: All switchports must advertise a consistent VLAN set to adapters in the same Network ATC intent across every host in the cluster. Workload availability scope: VLANs required for all compute workloads (VM NICs) must be advertised to each adapter participating in the same Network ATC intent on every host. |
-| Inconsistent Priority Flow Control (PFC) | For storage intent adapters, Network HUD compares LLDP-advertised priorities from the physical switch with host-configured PFC. Flags missing or mismatched settings can cause congestion, prolonged pause conditions, elevated latency, or storage (S2D) failures. Alignment of PFC priorities for RDMA storage traffic with host intent configuration. For storage intent adapters, PFC validation includes comparing the LLDP-advertised priorities from the switch with the priorities enabled by Network ATC on the host. Network HUD flags mismatched configurations to make sure congestion, prolonged pause conditions, elevated latency, or storage (S2D) failures don't occur. |
+| Failed Network ATC intents | Identifies intents that didn't provision completely, including missing virtual adapters, quality-of-service settings, or storage settings. |
+| Missing Network ATC intent types | Identifies missing traffic roles so administrators can determine whether the intended management, compute, storage, or stretch configuration is present. |
+| Peripheral Component Interconnect Express (PCIe) bandwidth oversubscription | Compares aggregate network adapter link rates with the reported PCIe slot and lane capacity to identify potential oversubscription. |
+| Unstable (flapping) adapters | Identifies repeated adapter link-state changes or resets. |
+| Inbox drivers in production | Identifies adapters that use inbox drivers instead of validated vendor drivers. |
+| Aging drivers | Identifies drivers whose reported driver date is more than 12 months old by default. The detection doesn't use the driver installation date or determine whether a newer driver is available. |
+| Driver version inconsistency | Compares the major and minor driver versions that equivalent adapters report and identifies differences. |
+| LLDP operational status | Identifies missing LLDP packets or LLDP parsing failures that can limit physical switch and fabric validation. |
+| Misconfigured or inconsistent VLANs | Compares VLANs that switches advertise in three scopes: adapters in the same intent on one host, the same intent across cluster hosts, and VLAN availability for compute workload virtual machine (VM) network adapters on every adapter in that intent across the cluster. |
+| Inconsistent PFC | For storage intent adapters, compares the PFC priorities that the physical switch advertises through LLDP with the priorities that Network ATC enables on the host. |
 
-Administrators can query faults using PowerShell, for example:
+## Network HUD health faults and events
+
+Network HUD diagnostic events and cluster health faults serve different purposes. Events in the Operational and Diagnostic channels provide node-local diagnostic information. Active cluster health faults report detected conditions and recommended actions through the cluster health service.
+
+Run the following command locally on a cluster node to query active cluster health faults for Network HUD:
 
 ```powershell
 Get-HealthFault | Where-Object Reason -like '*HUD*'
 ```
 
-Administrators can also view Network HUD faults in Windows Admin Center cluster health views. The following screenshot shows an example of a Network HUD fault in Windows Admin Center:
+The `NetworkHUD` service can be running even when a Network HUD detection scenario didn't initialize. Similarly, an empty health-fault result means that the query returned no active matching faults; it doesn't prove that every detection initialized successfully.
 
-:::image type="content" source="media/install-network-hud/windows-admin-center-alerts.png" alt-text="Screenshot of Windows Admin Center cluster alerts panel showing a Network HUD fault among other health alerts.":::
+You can also view Network HUD faults and recommended actions in Windows Admin Center cluster alerts. The following screenshot shows an example:
+
+:::image type="complex" source="media/network-hud/windows-admin-center-alerts.png" alt-text="Screenshot of Windows Admin Center showing two Network HUD driver fault alerts for a cluster." lightbox="media/network-hud/windows-admin-center-alerts.png":::
+The Windows Admin Center dashboard for cluster CONTOSOSRV01 shows two identical server alerts. Each alert reports that an inbox driver was detected on the adapter in slot 3 for the intent named convergedintent and that inbox drivers aren't supported.
+:::image-end:::
+
+An alert clears after Network HUD no longer detects the condition that caused it. The alert might not clear immediately, and clearing doesn't indicate that Network HUD automatically repaired the condition.
 
 ## Next steps
 
 - [Install Network HUD for Windows Server](install-network-hud.md)
-- [Windows Server Management enabled by Azure Arc](/azure/azure-arc/servers/windows-server-management-overview).
-- [Deploy host networking with Network ATC](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server).
-- [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md).
+- [Network ATC overview](/azure/azure-local/concepts/network-atc-overview?pivots=windows-server)
+- [Deploy Storage Spaces Direct on Windows Server](../storage/storage-spaces/deploy-storage-spaces-direct.md)

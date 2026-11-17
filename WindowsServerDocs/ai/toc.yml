@@ -1,5 +1,5 @@
 items:
-- name: Local AI inference documentation
+- name: Hybrid Intelligence documentation
   href: index.yml
 - name: Overview
   items:
@@ -31,9 +31,9 @@ items:
     href: /windows/ai/new-windows-ml/run-onnx-models?context=/windows-server/context/windows-server-ai
 - name: Connect apps and tools
   items:
-  - name: Connect GitHub Copilot CLI to a Windows Server inference endpoint
+  - name: Connect GitHub Copilot CLI to a Windows Server Token factory endpoint
     href: configure-github-copilot-cli-local-inference.md
-  - name: Connect Visual Studio Code to local and remote model endpoints
+  - name: Connect Visual Studio Code to a Windows Server Token factory endpoint
     href: configure-visual-studio-code-local-models.md
   - name: Connect Intelligent Terminal Preview on a Windows client to a Windows Server model endpoint
     href: configure-intelligent-terminal-local-language-model.md

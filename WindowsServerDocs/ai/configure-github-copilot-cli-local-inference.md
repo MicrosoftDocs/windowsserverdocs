@@ -7,10 +7,10 @@ ms.date: 09/25/2026
 ms.topic: install-set-up-deploy
 ms.service: windows-server
 ai-usage: ai-assisted
-#customer intent: As a developer or administrator, I want to connect GitHub Copilot CLI on a Windows client to an existing Windows Server inference endpoint so that I can access my organization's local model from my terminal.
+#customer intent: As a developer or administrator, I want to connect GitHub Copilot CLI on a Windows client to an existing Windows Server Token factory endpoint so that I can access my organization's local model from my terminal.
 ---
 
-# Connect GitHub Copilot CLI to a Windows Server inference endpoint
+# Connect GitHub Copilot CLI to a Windows Server Token factory endpoint
 
 GitHub Copilot CLI is an AI coding agent that can send model requests from a supported Windows client to an OpenAI-compatible inference endpoint hosted on Windows Server. This configuration lets you use an organization-hosted model from your terminal while Windows Server centralizes model hosting and compute.
 
@@ -29,7 +29,7 @@ This article shows you how to configure the client connection and verify that th
    - Listens only on the intended server network interface, allows inbound connections only from authorized client computers or subnets, and doesn't accept direct connections from the public internet.
    - Supports streaming and tool or function calling. OpenAI compatibility alone doesn't guarantee support for every GitHub Copilot CLI capability. Verify the endpoint and selected model capabilities with the endpoint operator.
 - A Windows-client-to-Windows-Server network connection that has:
-   - A DNS name for the Windows Server inference endpoint that resolves from the client computer.
+   - A DNS name for the Windows Server Token factory endpoint that resolves from the client computer.
    - A network route and firewall rules that permit only authorized clients or subnets to connect to the endpoint port.
    - An HTTPS certificate that the client trusts and whose subject name or subject alternative name matches the endpoint DNS name.
 - The endpoint base URL, such as `https://inference.contoso.com/v1`.
@@ -53,7 +53,7 @@ This article shows you how to configure the client connection and verify that th
 
    The command returns the installed GitHub Copilot CLI version.
 
-## Get a model ID from the Windows Server inference endpoint
+## Get a model ID from the Windows Server Token factory endpoint
 
 1. Set the base URL that the endpoint operator provided:
 
@@ -193,7 +193,7 @@ This article shows you how to configure the client connection and verify that th
 
    The configured model on the Windows Server endpoint returns `Local inference test succeeded` without a provider, authentication, or model compatibility error. After you exit GitHub Copilot CLI, PowerShell runs the `finally` block. PowerShell can't reliably erase the immutable plaintext `$endpointCredential` string from memory, so close the PowerShell session after the command completes to release the process memory.
 
-## Troubleshoot GitHub Copilot CLI connections to a Windows Server inference endpoint
+## Troubleshoot GitHub Copilot CLI connections to a Windows Server Token factory endpoint
 
 | Issue | What to check |
 |---|---|
