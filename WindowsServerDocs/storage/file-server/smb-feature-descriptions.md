@@ -4,7 +4,7 @@ description: "Discover the SMB features available in different Windows versions 
 author: robinharwood
 ms.author: roharwoo
 ms.topic: concept-article
-ms.date: 11/27/2025
+ms.date: 11/10/2026
 ai-usage: ai-assisted
 
 #customer intent: As a Windows Server administrator, I want to understand the SMB features available in different Windows Server versions so that I can plan upgrades and configure file sharing with the appropriate security, performance, and availability capabilities.
@@ -21,7 +21,7 @@ SMB features include:
 - **Networking and connectivity** options including SMB over QUIC for secure access without VPN, alternative ports, and RDMA support for high-performance workloads.
 - **Performance** enhancements such as SMB compression, bandwidth limits, and improved directory caching.
 - **High availability and scale** features like transparent failover, scale-out file servers, and rolling cluster upgrades.
-- **Management and monitoring** tools including PowerShell cmdlets, performance counters, and dialect control.
+- **Management and monitoring** tools including PowerShell cmdlets, performance counters, dialect control, and [intent-based configuration with SMB Policy Controller](#smb-policy-controller-preview).
 
 For more information about specific SMB capabilities, see [SMB security enhancements](smb-security.md), [SMB over QUIC](smb-over-quic.md), and [SMB compression](smb-compression.md).
 
@@ -595,6 +595,19 @@ SMB Transparent Failover has the following requirements:
 Support for multiple SMB instances on a Scale-Out File Server. Using Cluster Shared Volumes (CSV) version 2, administrators can create file shares that provide simultaneous access to data files, with direct I/O, through all nodes in a file server cluster. SMB Scale Out provides better utilization of network bandwidth and load balancing of the file server clients, and optimizes performance for server applications.
 
 ### Management and monitoring
+
+#### SMB Policy Controller (preview)
+
+**SMB dialect version**: Not applicable
+
+**Availability**:
+
+- 🖥️ Server: Windows Server Insider Preview build 29707 or later
+- 💻 Client: Not applicable (server-side feature)
+
+**Description**:
+
+SMB Policy Controller (preview) is available in Windows Server Insider Preview build 29707 or later. It uses intent-based configuration and reconciliation to maintain server-wide and share-specific SMB settings. Administrators use PowerShell to select security or performance outcomes, verify the effective configuration, and manage configuration drift. For more information, see [SMB Policy Controller](smb-policy-controller.md).
 
 #### SMB dialect control
 

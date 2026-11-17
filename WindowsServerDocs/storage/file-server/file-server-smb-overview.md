@@ -1,11 +1,11 @@
 ---
-title: What is SMB File Sharing for Windows and Windows Server?
+title: What is SMB File Sharing for Windows and Windows Server
 description: Learn how the SMB protocol enhances file sharing in Windows Server with features like encryption, performance optimization, and high availability.
 #customer intent: As an IT admin, I want to understand the SMB protocol so that I can configure secure and efficient file sharing in my organization.
 ms.topic: overview
 author: robinharwood
 ms.author: roharwoo
-ms.date: 11/27/2025
+ms.date: 11/10/2026
 ai-usage: ai-assisted
 ms.custom: os_security, network_security
 ---
@@ -43,7 +43,7 @@ SMB includes a wide range of features organized into the following categories:
 
 - **High availability and scale** - For enterprise environments, SMB supports transparent failover, scale-out file servers, and rolling cluster upgrades to ensure continuous access to file shares during maintenance or failures.
 
-- **Management and monitoring** - Administrators can manage SMB using PowerShell cmdlets, control dialect versions, and monitor performance through dedicated counters.
+- **Management and monitoring** - Administrators can manage SMB by using PowerShell cmdlets, control dialect versions, and monitor performance through dedicated counters. The SMB Policy Controller (preview) is available in Windows Server Insider Preview build 29707 or later and Windows 11. It uses intent-based configuration to define the desired state of server-wide and share-specific SMB settings, then reconciles the settings to maintain that state. For more information, see [SMB Policy Controller in Windows Server](smb-policy-controller.md).
 
 For detailed information about individual features and their availability across Windows versions, see [SMB features in Windows and Windows Server](smb-feature-descriptions.md).
 
