@@ -125,6 +125,10 @@ items:
           href: file-server/Troubleshoot/detect-enable-and-disable-smbv1-v2-v3.md
         - name: SMBv1 is not installed by default
           href: file-server/Troubleshoot/smbv1-not-installed-by-default-in-windows.md
+    - name: SMB Policy Controller
+      href: file-server/smb-policy-controller.md
+    - name: Configure and manage SMB Policy Controller
+      href: file-server/configure-smb-policy-controller.md
     - name: Network File System (NFS)
       items:
       - name: Network File System overview

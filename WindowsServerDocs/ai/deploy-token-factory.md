@@ -317,5 +317,5 @@ Use PowerShell to list the models that the endpoint serves, and then verify that
 ## Related content
 
 - [AI inference on Windows Server](local-ai-inference.md)
-- [Configure Visual Studio Code to use a local model endpoint](configure-visual-studio-code-local-models.md)
-- [Configure GitHub Copilot CLI for local inference](configure-github-copilot-cli-local-inference.md)
+- [Connect Visual Studio Code to a Windows Server Token factory endpoint](configure-visual-studio-code-local-models.md)
+- [Connect GitHub Copilot CLI to a Windows Server Token factory endpoint](configure-github-copilot-cli-local-inference.md)
