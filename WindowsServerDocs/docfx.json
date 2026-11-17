@@ -234,6 +234,9 @@
         "get-started/whats-new-windows-server-2025.md": [
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2025</a>"
         ],
+        "get-started/whats-new-windows-server-2028.md": [
+          "✅&nbsp;<a href=\"/windows-server/get-started/get-started-with-windows-server-insiders-preview\" target=\"_blank\">Windows Server 2028 Preview</a>"
+        ],
         "get-started/whats-new-in-windows-server-2022.md": [
           "✅&nbsp;<a href=\"https://learn.microsoft.com/windows-server/get-started/windows-server-release-info\" target=\"_blank\">Windows Server 2022</a>"
         ],
