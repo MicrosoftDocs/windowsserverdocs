@@ -4,13 +4,18 @@ description: Reference article for the cscript command, which starts a script so
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 10/16/2017
+ms.date: 11/18/2026
+ai-usage: ai-assisted
 ---
 # cscript
 
 
 
 Starts a script to run in a command-line environment.
+
+Windows Server 2025 includes VBScript as a preinstalled Feature on Demand. Windows Server 2028 Preview removes VBScript, so `cscript` can't run scripts that require the VBScript engine on that release. This change applies to VBScript only; it doesn't remove Windows Script Host or JScript.
+
+Migrate VBScript automation to PowerShell. For migration guidance, see the [VBScript-to-Windows PowerShell Conversion Guide](/previous-versions/windows/it-pro/windows-powershell-1.0/ee221101%28v=msdn.10%29). For release-specific availability, see [Features removed or no longer developed in Windows Server](../../get-started/removed-deprecated-features-windows-server.md).
 
 >[!IMPORTANT]
 > Performing this task does not require you to have administrative credentials. Therefore, as a security best practice, consider performing this task as a user without administrative credentials.
