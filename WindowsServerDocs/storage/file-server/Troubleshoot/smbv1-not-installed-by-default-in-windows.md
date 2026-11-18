@@ -1,28 +1,33 @@
 ---
-title: SMBv1 Not Installed by Default in Windows Server and Windows
+title: 'SMBv1 Availability: Windows Server and Windows'
 description: Discover SMBv1 protocol changes in Windows Server and Windows, explore alternatives for legacy compatibility, and learn best practices.
-ms.topic: troubleshooting
+ms.topic: troubleshooting-problem-resolution
 ai-usage: ai-assisted
 ms.author: roharwoo
 author: robinharwood
-ms.date: 06/18/2025
+ms.date: 11/18/2026
 ---
 
-# SMBv1 not installed by default in Windows Server and Windows
+# SMBv1 availability in Windows Server and Windows
 
-The Server Message Block version 1 (SMBv1) protocol is deprecated and no longer installed by default in modern versions of Windows and Windows Server. This article provides an overview of SMBv1's removal, its behavior in various Windows editions, and alternatives for legacy compatibility. Learn how to address issues related to SMBv1, explore best practices, and understand the implications of its absence in network environments.
+Server Message Block version 1 (SMBv1) is a legacy network file-sharing protocol that Windows uses to access shared files and printers. Because SMBv1 has significant security vulnerabilities, Windows 11 and Windows Server 2019 through Windows Server 2025 don't install it by default. Starting with Windows Server 2028 Preview, Windows Server no longer includes SMBv1, and you can't install or enable it. For more information, see [SMBv1 removal in Windows Server 2028](../../../get-started/removed-deprecated-features-windows-server.md#features-removed).
 
-## Default behavior for SMBv1
+This article explains SMBv1 behavior for these Windows releases and provides alternatives for legacy compatibility.
+
+## Default behavior for SMBv1 in Windows Server 2028 Preview and earlier releases
 
 Since Windows 10, version 1709 and Windows Server, version 1709, the Server Message Block version 1 (SMBv1) network protocol is no longer installed by default. SMBv2 and later protocols superseded SMBv1 starting in 2007. Microsoft publicly deprecated the SMBv1 protocol in 2014.
 
-SMBv1 has the following behavior in Windows 10 and Windows Server 2019 and later versions:
+> [!IMPORTANT]
+> Starting with Windows Server 2028 Preview, Windows Server no longer includes SMBv1. For more information, see [SMBv1 removal in Windows Server 2028](../../../get-started/removed-deprecated-features-windows-server.md#features-removed). You can't install or enable SMBv1 on Windows Server 2028 Preview. Guidance in this article for reinstalling or re-enabling SMBv1 applies only to earlier Windows Server versions and Windows client versions where SMBv1 remains available as an optional component.
+
+SMBv1 has the following installation and removal behavior across affected Windows client and Windows Server releases:
 
 - SMBv1 now has both client and server sub-features that can be uninstalled separately.
 
 - Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations no longer contain the SMBv1 client or server by default after a clean installation.
 
-- Windows Server 2019 and later no longer contains the SMBv1 client or server by default after a clean installation.
+- Windows Server 2019 through Windows Server 2025 don't contain the SMBv1 client or server by default after a clean installation.
 
 - Windows 10 Home and Windows 10 Pro no longer contain the SMBv1 server by default after a clean installation.
 
@@ -118,9 +123,11 @@ You should contact the manufacturer of the product that supports only SMBv1, an
 
 [SMBv1 Product Clearinghouse](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/SMB1-Product-Clearinghouse/ba-p/426008)
 
+Before you upgrade Windows Server, [audit SMBv1 usage](detect-enable-and-disable-smbv1-v2-v3.md#audit-smbv1-usage) to identify SMBv1 dependencies. Then follow the guidance in [Stop using SMB1](https://techcommunity.microsoft.com/blog/filecab/stop-using-smb1/425858) to update or replace dependent systems and migrate them to SMBv2 or SMBv3.
+
 If an update isn't available, you can use the following workarounds to allow legacy applications to work with SMBv2 or a later version. However, these workarounds should be used only as a last resort, and only if the vendor states that they're required.
 
-If you can't use any of these workarounds, or if the application manufacturer can't provide supported versions of SMB, you can re-enable SMBv1 manually by following the steps in [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](detect-enable-and-disable-smbv1-v2-v3.md).
+If you can't use any of these workarounds or the application manufacturer can't provide supported versions of SMB, you can manually re-enable SMBv1 on Windows releases where it's available as an optional component. Follow the steps in [How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows](detect-enable-and-disable-smbv1-v2-v3.md). You can't re-enable SMBv1 on Windows Server 2028 Preview.
 
 > [!WARNING]
 > We strongly recommend that you don't reinstall SMBv1. This older protocol has known security issues regarding ransomware and other malware.

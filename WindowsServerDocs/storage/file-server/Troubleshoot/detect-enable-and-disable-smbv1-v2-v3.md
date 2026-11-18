@@ -1,18 +1,24 @@
 ---
 title: Detect, enable, and disable SMBv1, SMBv2, and SMBv3 in Windows
-description: See various ways to detect, enable, and disable the Server Message Block (SMB) protocol (SMBv1, SMBv2, and SMBv3) in Windows client and server environments.
+description: Manage SMBv1, SMBv2, and SMBv3 in Windows. Learn how to detect protocol status, enable or disable SMB, audit SMBv1 use, and apply Group Policy.
 author: robinharwood
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.author: roharwoo
-ms.date: 02/28/2025
+ms.date: 11/18/2026
 # customer intent: As an administrator, I want to see how to detect the status of SMBv1, SMBv2, and SMBv3 and how to enable and disable these protocols so that I can improve the security of my environment.
 ---
 
 # Detect, enable, and disable SMBv1, SMBv2, and SMBv3 in Windows
 
-This article describes how to enable and disable Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on SMB client and server components.
+Server Message Block (SMB) is the network file-sharing protocol that Windows uses to access shared files and printers. Managing available SMB versions helps you maintain compatibility while reducing exposure to insecure protocols.
 
-If you disable or remove SMBv1, you might encounter compatibility issues with old computers or software. SMBv1 has significant security vulnerabilities, and [we strongly encourage you not to use it](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). [SMBv1 isn't installed by default](smbv1-not-installed-by-default-in-windows.md) in any edition of Windows 11 or Windows Server 2019 and later versions. SMBv1 also isn't installed by default in Windows 10, except Home and Pro editions. We recommend that instead of reinstalling SMBv1, you update the SMB server that still requires it. For a list of partners that require SMBv1 and their updates that remove the requirement, see [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
+This article explains how to detect, enable, and disable SMBv1, SMBv2, and SMBv3 on SMB client and server components.
+
+If you disable or remove SMBv1, you might encounter compatibility issues with old computers or software. SMBv1 has significant security vulnerabilities, and Microsoft strongly encourages you not to use it. For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). [Windows doesn't install SMBv1](smbv1-not-installed-by-default-in-windows.md) in any edition of Windows 11 or Windows Server 2019 through Windows Server 2025. Windows 10 also doesn't install SMBv1 by default, except in Home and Pro editions. Microsoft recommends that instead of reinstalling SMBv1, you update the SMB server that still requires it. For a list of partners that require SMBv1 and their updates that remove the requirement, see [SMB1 Product Clearinghouse](https://aka.ms/stillneedssmb1).
+
+> [!IMPORTANT]
+> Starting with Windows Server 2028 Preview, Windows Server no longer includes SMBv1. For more information, see [SMBv1 removal in Windows Server 2028](../../../get-started/removed-deprecated-features-windows-server.md#features-removed). You can't use the procedures in this article to enable SMBv1 on Windows Server 2028 Preview. Before you upgrade, use the auditing steps in this article to identify SMBv1 dependencies, and then update or replace systems that require SMBv1. The SMBv1 procedures still apply to earlier Windows Server versions and Windows client versions where the SMBv1 optional feature is available.
 
 In Windows 11, version 24H2 and Windows Server 2025, SMB signing is required by default, which can prevent connections to workgroup computers, guest-authenticated shares, or third-party SMB servers that don't support signing. Changing which SMB protocol versions you enable doesn't change this signing requirement. Don't disable SMB protocol versions or SMB signing to work around these connection failures. Instead, enable SMB signing on the remote server, or update or replace devices that don't support SMB signing. For more information, see [Control SMB signing behavior](../smb-signing.md).
 
@@ -50,7 +56,7 @@ The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008. The 
 
 ## Use PowerShell to remove SMBv1
 
-You can use the [Get-WindowsOptionalFeature](/powershell/module/dism/get-windowsoptionalfeature), [Disable-WindowsOptionalFeature](/powershell/module/dism/disable-windowsoptionalfeature), and [Enable-WindowsOptionalFeature](/powershell/module/dism/enable-windowsoptionalfeature) PowerShell commands to detect, disable, and enable an SMBv1 client or server. Run the commands at an elevated command prompt.
+Windows Server 2028 Preview doesn't include SMBv1, so these PowerShell procedures don't apply to that release. On Windows versions where the SMBv1 optional feature is available, use the [`Get-WindowsOptionalFeature`](/powershell/module/dism/get-windowsoptionalfeature), [`Disable-WindowsOptionalFeature`](/powershell/module/dism/disable-windowsoptionalfeature), and [`Enable-WindowsOptionalFeature`](/powershell/module/dism/enable-windowsoptionalfeature) PowerShell commands to detect, disable, and enable an SMBv1 client or server. Run the commands at an elevated command prompt.
 
 > [!NOTE]
 > The computer restarts after you run the PowerShell commands to disable or enable SMBv1.
@@ -80,7 +86,7 @@ You can use the [Get-WindowsOptionalFeature](/powershell/module/dism/get-windows
 
 # [Server](#tab/server)
 
-SMBv1 isn't installed by default on Windows Server 2019 and later versions. On earlier versions of Windows Server, you can use Server Manager to remove SMBv1:
+Windows Server 2019 through Windows Server 2025 don't install SMBv1 by default, and Windows Server 2028 (Preview) no longer includes it. On Windows Server versions with an existing SMBv1 installation, use Server Manager to remove it:
 
 1. On the server that you want to remove SMBv1 from, open Server Manager.
 
@@ -118,7 +124,7 @@ To disable SMBv1 on these operating systems, take the following steps:
 
 ## Use the command line or Registry Editor to manage SMB protocols
 
-Starting with the Windows 10 Fall Creators Update and Windows Server 2019, SMBv1 is no longer installed by default. For more information, see [SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709, and later versions](smbv1-not-installed-by-default-in-windows.md).
+Starting with the Windows 10 Fall Creators Update, Windows no longer installs SMBv1 by default. The same default applies to Windows Server 2019 through Windows Server 2025. Windows Server 2028 Preview no longer includes SMBv1, so the SMBv1 procedures in this section don't apply to that release. For more information, see [SMBv1 behavior in Windows and Windows Server](smbv1-not-installed-by-default-in-windows.md).
 
 When you enable or disable SMBv2 in Windows 8 or Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
 
@@ -238,7 +244,7 @@ For more information, see [Stop using SMB1](https://techcommunity.microsoft.com/
 
 To enable or disable SMBv1 on an SMB server, open Registry Editor and go to the following registry key path:
 
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters`
 
 Configure an entry that has the following properties:
 
