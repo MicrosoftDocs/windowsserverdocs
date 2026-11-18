@@ -175,7 +175,7 @@ To gather more detail, capture a browser HTTP Archive (HAR) file while you repro
 ## Next steps
 
 - [What is Windows Admin Center Virtualization Mode?](virtualization-mode-overview.md)
-- [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md)
+- [Install Windows Admin Center Virtualization Mode](deploy/install.md)
 - [Add resources to Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md)
 - [Windows Admin Center Virtualization Mode known issues](virtualization-mode-known-issues.md)
 - [User access options with Windows Admin Center](plan/user-access-options.md)

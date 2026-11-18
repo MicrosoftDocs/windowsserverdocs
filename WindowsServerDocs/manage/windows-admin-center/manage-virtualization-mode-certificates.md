@@ -25,7 +25,7 @@ The **Renew certificate** command doesn't renew the gateway serving certificate.
 
 ## Prerequisites
 
-- Windows Admin Center Virtualization Mode installed and running. For more information, see [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md).
+- Windows Admin Center Virtualization Mode installed and running. For more information, see [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 - Administrator access to configure certificate management. Changing certificate-expiry alert thresholds requires the **Fabric Manager** role.
 - For AD CS certificate management, an Active Directory domain with an enterprise certification authority (CA). The gateway and managed nodes require domain connectivity and must trust the CA chain.
 - A gateway serving certificate supplied as a PFX or installed in the gateway's `LocalMachine\My` certificate store. Windows Admin Center doesn't enroll this certificate. The certificate must:
