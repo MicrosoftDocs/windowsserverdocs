@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 Windows Admin Center Administration Mode provides the Server Manager experience and tools described in this article. You can add individual servers running Windows Server to Administration Mode and manage them by using a set of tools.
 
-If you're using Virtualization Mode, add servers as compute resources instead. For more information, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md#add-resources).
+If you're using Virtualization Mode, add servers as compute resources instead. For more information, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md#add-compute-resources).
 
 ## Add a server in Administration Mode
 
