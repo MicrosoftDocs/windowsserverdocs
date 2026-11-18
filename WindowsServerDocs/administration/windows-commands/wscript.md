@@ -4,7 +4,8 @@ description: Reference article for the wscript command; wscript provides an envi
 ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
-ms.date: 04/01/2023
+ms.date: 11/18/2026
+ai-usage: ai-assisted
 ---
 
 # wscript
@@ -12,6 +13,13 @@ ms.date: 04/01/2023
 Applies to: Windows Server (All supported versions)
 
 Windows Script Host provides an environment in which users can execute scripts in various languages that use various object models to perform tasks.
+
+## Is VBScript available by using `wscript` in Windows Server 2028 Preview?
+
+> [!IMPORTANT]
+> No. VBScript is available in Windows Server 2025. VBScript isn't available in Windows Server 2028 Preview, and you can't install it. Removing VBScript doesn't remove Windows Script Host or JScript.
+>
+> Before you move workloads that use VBScript to Windows Server 2028, migrate automation scripts to PowerShell and web content that uses VBScript to JavaScript. Test the migrated scripts and deployment processes in a nonproduction environment before rollout.
 
 ## Syntax
 
