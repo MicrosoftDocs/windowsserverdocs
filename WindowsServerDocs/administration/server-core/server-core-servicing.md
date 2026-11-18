@@ -5,9 +5,8 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: robinharwood
 ms.author: roharwoo
-ms.date: 11/18/2026
+ms.date: 03/10/2025
 ms.topic: how-to
-ai-usage: ai-assisted
 ---
 
 # Configure Windows Server Core Windows Update
@@ -46,7 +45,7 @@ wmic qfe list
 
 ## Configure Windows updates via SConfig
 
-Beginning with Windows Server 2022, the SConfig menu loads once you sign in. If the SConfig menu doesn't appear, run `sconfig` and select **Enter**. Once the menu loads, perform the following steps to configure your settings:
+Beginning with Windows Server 2002, the SConfig menu loads once you sign in. If the SConfig menu doesn't appear, run `sconfig` and select **Enter**. Once the menu loads, perform the following steps to configure your settings:
 
 1. Type **5**, select **Enter**. Select one of these options, then select **Enter**.
 
@@ -62,37 +61,30 @@ Beginning with Windows Server 2022, the SConfig menu loads once you sign in. If 
 
 ## Configure Windows updates via command line
 
-### Windows Server 2028 Preview
-
-> [!IMPORTANT]
-> Windows Server 2028 Preview doesn't include VBScript. On that release, use the [SConfig menu](#configure-windows-updates-via-sconfig) to configure Windows Update. This change doesn't remove Windows Script Host or JScript.
-
-### Windows Server 2025 and earlier
-
-> [!IMPORTANT]
-> The commands in both tabs in this section use `cscript` to run `scregedit.wsf`, which depends on VBScript. These commands apply to Windows Server 2025 and earlier releases that include VBScript. Running the script from PowerShell doesn't remove the VBScript dependency.
-
 # [Command Prompt](#tab/cmd)
+
+> [!TIP]
+> VBScript is deprecated. VBScript remains available as a feature on demand (FoD) and is preinstalled in Windows Server 2025, however consider using PowerShell or the SConfig menu to configure Windows Update settings. To learn more about the deprecation of VBScript, see [https://techcommunity.microsoft.com/blog/windows-itpro-blog/vbscript-deprecation-timelines-and-next-steps/4148301](https://techcommunity.microsoft.com/blog/windows-itpro-blog/vbscript-deprecation-timelines-and-next-steps/4148301).
 
 To verify the current Windows Update setting, run the following command:
 
-   ```cmd
+   ```powershell
    %systemroot%\system32\cscript %systemroot%\system32\scregedit.wsf /AU /v
    ```
 
 To enable automatic updates, run the following command:
 
-   ```cmd
+   ```powershell
    Net stop wuauserv
-   %systemroot%\system32\cscript %systemroot%\system32\scregedit.wsf /AU 4
+   %systemroot%\system32\cscript %systemroot%\system32\scregedit.wsf /AU /v 4
    Net start wuauserv
    ```
 
 To disable automatic updates, run the following command:
 
-   ```cmd
+   ```powershell
    Net stop wuauserv
-   %systemroot%\system32\cscript %systemroot%\system32\scregedit.wsf /AU 1
+   %systemroot%\system32\cscript %systemroot%\system32\scregedit.wsf /AU /v 1
    Net start wuauserv
    ```
 

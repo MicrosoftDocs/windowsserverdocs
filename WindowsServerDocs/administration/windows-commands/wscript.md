@@ -14,12 +14,9 @@ Applies to: Windows Server (All supported versions)
 
 Windows Script Host provides an environment in which users can execute scripts in various languages that use various object models to perform tasks.
 
-## Is VBScript available by using `wscript` in Windows Server 2028 Preview?
+Windows Server 2025 includes VBScript as a preinstalled Feature on Demand. Windows Server 2028 Preview removes VBScript, so `wscript` can't run scripts that require the VBScript engine on that release. This change applies to VBScript only; it doesn't remove Windows Script Host or JScript.
 
-> [!IMPORTANT]
-> No. VBScript is available in Windows Server 2025. VBScript isn't available in Windows Server 2028 Preview, and you can't install it. Removing VBScript doesn't remove Windows Script Host or JScript.
->
-> Before you move workloads that use VBScript to Windows Server 2028, migrate automation scripts to PowerShell and web content that uses VBScript to JavaScript. Test the migrated scripts and deployment processes in a nonproduction environment before rollout.
+Before you move workloads that use VBScript to Windows Server 2028, migrate automation scripts to PowerShell and web content that uses VBScript to JavaScript. Test the migrated scripts and deployment processes in a nonproduction environment before rollout. For migration guidance, see the [VBScript-to-Windows PowerShell Conversion Guide](/previous-versions/windows/it-pro/windows-powershell-1.0/ee221101%28v=msdn.10%29). For release-specific availability, see [Features removed or no longer developed in Windows Server](../../get-started/removed-deprecated-features-windows-server.md).
 
 ## Syntax
 
