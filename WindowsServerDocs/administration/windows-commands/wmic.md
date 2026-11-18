@@ -5,6 +5,7 @@ ms.topic: reference
 ms.author: roharwoo
 author: robinharwood
 ms.date: 05/19/2025
+ai-usage: ai-assisted
 ---
 
 # wmic
@@ -12,7 +13,7 @@ ms.date: 05/19/2025
 Displays WMI information inside an interactive command shell.
 
 > [!IMPORTANT]
-> The WMI command-line (WMIC) utility is deprecated as of Windows 10, version 21H1, and as of the 21H1 semi-annual channel release of Windows Server. This utility is superseded by Windows PowerShell for WMI (see [Chapter 7 - Working with WMI](/powershell/scripting/learn/ps101/07-working-with-wmi)). This deprecation applies only to the WMI command-line (WMIC) utility; Windows Management Instrumentation (WMI) itself is not affected. Also see [Windows 10 features we're no longer developing](/windows/deployment/planning/windows-10-deprecated-features).
+> The Windows Management Instrumentation (WMI) command-line (WMIC) utility is deprecated as of Windows 10, version 21H1, and as of the 21H1 semi-annual channel release of Windows Server. Beginning with Windows Server 2025, WMIC is available as a Feature on Demand (FOD). To add WMIC, use the `DISM /Add-Capability` command. The announced Windows Server 2028 (preview) release removes the WMIC utility. Windows Server 2028 is in preview, and this removal announcement doesn't mean that WMIC is absent from current preview builds. WMIC might still be available in current preview builds, and the removal plans can change before release. This deprecation and removal apply only to the WMIC utility; WMI itself is not removed. Windows PowerShell replaces this utility for WMI (see [Chapter 7 - Working with WMI](/powershell/scripting/learn/ps101/07-working-with-wmi)). Use PowerShell or programmatically query WMI as a replacement for WMIC. For more information, see [Features removed or no longer developed in Windows Server](../../get-started/removed-deprecated-features-windows-server.md) and [Windows 10 features we're no longer developing](/windows/deployment/planning/windows-10-deprecated-features).
 
 ## Syntax
 
