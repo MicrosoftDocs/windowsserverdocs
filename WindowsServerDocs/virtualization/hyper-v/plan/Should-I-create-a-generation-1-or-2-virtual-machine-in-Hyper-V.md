@@ -58,7 +58,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 
 | 64-bit versions of Windows | Generation 1 | Generation 2 |
 |--|--|--|
-| **Windows Server 2028 Preview** | Planned for release: No | Planned for release: Yes |
+| Windows Server 2028 (Preview) |&#10006;|&#10004;|
 | Windows Server 2025 |&#10004;|&#10004;|
 | Windows Server 2022 |&#10004;|&#10004;|
 | Windows Server 2019 |&#10004;|&#10004;|
@@ -68,7 +68,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 | Windows 11 |&#10006;|&#10004;|
 | Windows 10 |&#10004;|&#10004;|
 
-You can evaluate Windows Server 2028 Preview. For the Windows Server 2028 release, plan to use a generation 2 virtual machine (VM). Whether current preview builds enforce the planned generation 2 requirement remains unconfirmed. The requirement might change before release. Generation 1 support for earlier guest operating systems is unchanged. For the planned requirements, see [Hardware requirements for Windows Server](../../../get-started/hardware-requirements.md#other-requirements).
+For Windows Server 2028 (Preview), use a generation 2 virtual machine (VM). Current preview builds might not enforce the generation 2 requirement. Generation 1 support for earlier guest operating systems is unchanged.
 
 The following table shows which 32-bit versions of Windows you can use as a guest operating system for generation 1 and generation 2 virtual machines.
 
@@ -211,7 +211,7 @@ Virtual hard drives created on generation 1 and generation 2 VMs can be uploaded
 
 ### Use UEFI firmware
 
-- Physical Hyper-V hosts that run Windows Server 2025 or earlier don't require Secure Boot or UEFI firmware. For physical Hyper-V hosts that run Windows Server 2028 Preview, plan for UEFI firmware. For details, see [Hardware requirements for Windows Server](../../../get-started/hardware-requirements.md#other-requirements). Enforcement of the planned UEFI requirement in current preview builds is unconfirmed, and the requirement might change before release. For generation 2 VMs, Hyper-V provides virtual firmware that is independent of the physical Hyper-V host's firmware.
+- Physical Hyper-V hosts that run Windows Server 2025 or earlier don't require Secure Boot or UEFI firmware. For physical Hyper-V hosts that run Windows Server 2028 (Preview), plan for UEFI firmware. For generation 2 VMs, Hyper-V provides virtual firmware that is independent of the physical Hyper-V host's firmware.
 - UEFI firmware in a generation 2 virtual machine doesn't support setup mode for Secure Boot.
 - We don't support running a UEFI shell or other UEFI applications in a generation 2 virtual machine. Using a non-Microsoft UEFI shell or UEFI applications is technically possible if they're compiled directly from the sources. If these applications aren't digitally signed correctly, you must disable Secure Boot for the virtual machine.
 

@@ -5,7 +5,6 @@ ms.topic: concept-article
 author: robinharwood
 ms.author: roharwoo
 ms.date: 07/02/2025
-ai-usage: ai-assisted
 zone_pivot_groups: windows-os-version
 ---
 
@@ -149,17 +148,9 @@ There are other hardware requirements to consider, depending on your scenario:
 
 - DVD drive (if you intend to install the OS from DVD media)
 
-Plan for these announced firmware and platform requirements for Windows Server 2028 Preview:
-
-- For Windows Server 2028, plan for Unified Extensible Firmware Interface (UEFI) on physical systems, including Hyper-V hosts. Microsoft plans to remove support for PC/AT (PCAT) and legacy basic input/output system (BIOS) boot in Windows Server 2028.
-
-- Windows Server 2028 guest virtual machines (VMs) on Hyper-V must be generation 2 VMs. This requirement doesn't change support for generation 1 VMs that run earlier guest operating systems. For planning guidance, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../virtualization/hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md).
-
-Windows Server 2028 is in preview. Microsoft plans to apply the firmware and Hyper-V platform requirements in this section to the Windows Server 2028 release. These plans don't say whether current preview builds enforce those requirements. The plans might change before release.
-
 The following items are required only for certain features:
 
-- For Windows Server releases earlier than Windows Server 2028, a UEFI 2.3.1c-based system and firmware that supports Secure Boot.
+- UEFI 2.3.1c-based system and firmware that supports secure boot.
 
 - Trusted Platform Module (TPM).
 
