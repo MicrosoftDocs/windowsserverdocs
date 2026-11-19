@@ -45,7 +45,7 @@ To update the certificate that Windows Admin Center uses, you need the following
 
 ### [PowerShell](#tab/powershell)
 
-1. Sign in to your machine. If you're on Server Core, from the SConfig menu, enter option **15**, then select **Enter** to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
+1. Sign in to your machine. If you're on Server Core, from the SConfig menu, enter option **15**, then select <kbd>Enter</kbd> to open a PowerShell session. If you're on the desktop experience, remote desktop into your VM and launch PowerShell.
 
 1. Import the Windows Admin Center configuration PowerShell module by using the following command:
 
