@@ -11,17 +11,9 @@ ai-usage: ai-assisted
 
 # Manage virtual machines in Windows Admin Center Administration Mode
 
-If you installed Windows Admin Center in Virtualization Mode, see [Manage virtual machines in Windows Admin Center Virtualization Mode](../manage-virtualization-mode-virtual-machines.md). Use the article that matches the Windows Admin Center mode in your environment.
+The Virtual Machines tool in Windows Admin Center Administration Mode provides a browser-based interface for managing Hyper-V hosts and virtual machines (VMs) from server, failover cluster, and hyper-converged cluster connections. It helps you monitor resources and perform common VM administration from one place instead of switching between Hyper-V Manager and Failover Cluster Manager. The tool requires an enabled Hyper-V role and supports Windows Server hosts with Desktop Experience or Server Core, plus Hyper-V Server 2016 and 2019. If you installed Windows Admin Center in Virtualization Mode, use the corresponding Virtualization Mode guidance instead.
 
-The Virtual Machines tool in Windows Admin Center is available in [server](manage-servers.md), [failover cluster](manage-failover-clusters.md), or [hyper-converged cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server, either installed with Desktop Experience or installed as Server Core. Hyper-V Server 2016 and 2019 are also supported.
-
-Highlights of the Virtual Machines tool in Windows Admin Center include:
-
-- **High-level Hyper-V host resource monitoring**. View overall CPU and memory usage, I/O performance metrics, and virtual machine (VM) health alerts and events for the Hyper-V host server or the entire cluster in a single dashboard.
-- **Unified experience that brings together Hyper-V Manager and Failover Cluster Manager capabilities**. View all the virtual machines across a cluster and drill down into a single virtual machine for advanced management and troubleshooting.
-- **Simplified, yet powerful workflows for virtual machine management**. Use UI experiences that are tailored to IT administration scenarios to create, manage, and replicate virtual machines.
-
-This article describes some of the Hyper-V tasks that you can do in Windows Admin Center.
+This article guides you through common host and VM management workflows, including monitoring, configuration, migration, troubleshooting, and replication.
 
 ## Monitor Hyper-V host resources and performance
 
