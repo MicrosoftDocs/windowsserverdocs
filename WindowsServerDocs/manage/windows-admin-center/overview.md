@@ -10,9 +10,9 @@ ai-usage: ai-assisted
 
 # Windows Admin Center overview
 
-Windows Admin Center is a browser-based management product for Windows Server infrastructure running in physical, virtual, on-premises, Azure, or hosted environments at no extra cost. It provides two management experiences: Administration Mode and Virtualization Mode.
+Windows Admin Center is a browser-based management product for Windows Server infrastructure running in physical, virtual, on-premises, Azure, or hosted environments. If you need to manage individual servers and clusters or large-scale, distributed Hyper-V resources, Windows Admin Center provides dedicated experiences.
 
-To find out what's new, see [Release history](support/release-history.md).
+This overview describes the two management experiences, Administration Mode and Virtualization Mode, and helps you choose one for your scenario.
 
 ## Choose a Windows Admin Center experience
 

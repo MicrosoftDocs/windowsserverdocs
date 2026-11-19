@@ -10,7 +10,9 @@ ai-usage: ai-assisted
 
 # User access options with Windows Admin Center
 
-When you deploy Windows Admin Center on Windows Server, it provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape. Access requirements differ between Windows Admin Center Administration Mode and Windows Admin Center Virtualization Mode.
+User access options in Windows Admin Center determine who can connect to a gateway and what they can manage. Choosing the right access controls helps you protect your server environment while granting users only the permissions they need.
+
+This article explains how gateway access, identity providers, and role-based access control work in Administration Mode and how access requirements differ in Virtualization Mode.
 
 > [!NOTE]
 > Windows Admin Center as an application depends on the operating system and infrastructure for security. Windows Admin Center does not implement, monitor, or enforce a security boundary.

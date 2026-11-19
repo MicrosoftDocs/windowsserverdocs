@@ -10,9 +10,9 @@ ai-usage: ai-assisted
 ---
 # Manage certificates in Windows Admin Center Virtualization Mode
 
-Windows Admin Center Virtualization Mode uses certificates to secure browser access to the gateway and authenticate managed nodes. Active Directory Certificate Services (AD CS) can issue and renew agent certificates, while you provide the certificate that secures the gateway.
+Windows Admin Center Virtualization Mode uses certificates to protect browser connections to the gateway and authenticate managed nodes. Managing these certificates helps you maintain secure access and prevent expired agent certificates from causing node connection failures.
 
-This article shows you how to configure AD CS certificate management, automatically migrate self-signed agent certificates to AD CS when agents reconnect, renew self-signed or AD CS agent certificates, and configure certificate-expiry alerts.
+In this article, you configure the gateway certificate, use Active Directory Certificate Services (AD CS) to manage agent certificates throughout their lifecycle, and set alerts so that you can act before certificates expire.
 
 ## Understand gateway serving and agent client certificate roles
 
