@@ -31,7 +31,9 @@ Virtualization Mode doesn't replace Administration Mode for general server admin
 
 For Administration Mode, choose one of the following installation topologies.
 
-![Diagram that shows the four Administration Mode installation topologies.](../media/deployment-options/install-options.PNG)
+:::image type="complex" source="../media/deployment-options/install-options.PNG" alt-text="Diagram that shows local client, gateway server, managed server, and failover cluster installation topologies." border="false":::
+The diagram shows four Administration Mode installation topologies. In the local client topology, you install Windows Admin Center on your local personal computer (PC) for quick access and testing, and the PC connects to managed servers. Gateway server provides a central access point that multiple administrators reach through a browser; the gateway then connects to managed servers. In the managed server topology, you install Windows Admin Center directly on the server that you connect to and manage. In the failover cluster topology, you install Windows Admin Center on a cluster to provide a highly available, resilient management service. Administrators use the failover cluster gateway to manage standalone servers and other failover clusters.
+:::image-end:::
 
 | Topology | Install location | Choose this topology when |
 |---|---|---|

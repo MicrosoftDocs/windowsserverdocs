@@ -89,11 +89,11 @@ To update the certificate that Windows Admin Center uses, you need the following
 
 1. Select the **Use the pre-installed TLS certificate** option, and then select **Next**.
 
-   :::image type="content" source="../media/select-pre-installed-certificate.png" alt-text="Screenshot of the Select TLS certificate screen.":::
+   :::image type="content" source="../media/select-pre-installed-certificate.png" alt-text="Screenshot of the Windows Admin Center installer with Use the pre-installed TLS certificate selected.":::
 
 1. Enter the thumbprint of your certificate. Find the thumbprint in the `LocalMachine\My\` certificate store on your computer.
 
-   :::image type="content" source="../media/select-thumbprint-certificate.png" alt-text="Screenshot of the Certificate thumbprint screen.":::
+   :::image type="content" source="../media/select-thumbprint-certificate.png" alt-text="Screenshot of the Windows Admin Center installer with the empty TLS certificate thumbprint dropdown expanded.":::
 
 1. Complete the wizard and start Windows Admin Center.
 

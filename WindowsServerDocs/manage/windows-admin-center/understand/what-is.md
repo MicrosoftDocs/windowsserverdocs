@@ -23,7 +23,9 @@ After you publish the Administration Mode gateway to DNS and configure the corre
 
 The **Administration Mode gateway** uses a .NET 10 backend for improved performance, security, and cryptography. It also includes support for HTTP/2, reducing latency and enhancing the responsiveness of Windows Admin Center.
 
-![Diagram of the Windows Admin Center Administration Mode architecture.](../media/architecture.png)
+:::image type="complex" source="../media/architecture.png" alt-text="Diagram of the Windows Admin Center Administration Mode gateway connecting a browser to managed nodes." lightbox="../media/architecture.png" border="false":::
+Diagram of an on-premises Windows Admin Center Administration Mode deployment. A client connects from a modern browser to the Windows Admin Center web server and gateway over HTTPS. The gateway connects to managed nodes by using PowerShell and Windows Management Instrumentation (WMI) over Windows Remote Management (WinRM), and the managed nodes require no agent installation. The deployment doesn't require an internet connection. To access the gateway over the internet, publish it to DNS and configure the firewall. The diagram labels the installer as about 60 MB and says it installs in minutes.
+:::image-end:::
 
 ### Administration Mode architecture
 
