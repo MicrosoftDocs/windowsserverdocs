@@ -9,13 +9,11 @@ ai-usage: ai-assisted
 ---
 # Configure user access control and permissions in Windows Admin Center
 
-This article explains how to configure user access control and permissions for a Windows Admin Center gateway. For background, see [user access control options in Windows Admin Center](../plan/user-access-options.md).
+Windows Admin Center user access control determines who can connect to a gateway and what they can manage after they connect. Configuring access helps prevent unauthorized management while giving users the permissions they need. Windows Admin Center doesn't support group-based access in workgroup environments or across non-trusted domains.
 
-These procedures apply only to Windows Admin Center Administration Mode and don't configure access for Virtualization Mode.
+These procedures apply only to Windows Admin Center Administration Mode. To learn more about the requirements for Virtualization Mode, see [Authentication and access control in Windows Admin Center Virtualization Mode](../virtualization-mode-authentication-access-control.md).
 
-For Virtualization Mode, access the gateway site with an account that has the **Gateway Administrator** role or equivalent permissions. Virtual machine (VM) workflows also require local **Administrator** rights on each managed Hyper-V host. For more information, see [Authentication and access control in Windows Admin Center Virtualization Mode](../virtualization-mode-authentication-access-control.md).
-
-Windows Admin Center doesn't support group-based access in workgroup environments or across non-trusted domains.
+Use this article to configure gateway access, authentication, single sign-on, and role-based permissions for managed machines.
 
 ## Gateway access role definitions
 

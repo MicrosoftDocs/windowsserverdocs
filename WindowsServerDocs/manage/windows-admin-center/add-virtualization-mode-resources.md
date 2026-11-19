@@ -111,9 +111,9 @@ Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing fai
 
    | Resource profile | Required intent types |
    |---|---|
-   | Clustered Compute | Management and Compute. One intent can include both types. |
-   | Windows Storage-only | Management |
-   | Non-Windows Storage | None |
+   | **Clustered Compute** | Management and Compute. One intent can include both types. |
+   | **Windows Storage-only** | Management |
+   | **Non-Windows Storage** | None |
 
    For clustered compute resources, verify that the configuration includes Management and Compute. Storage Spaces Direct and Ethernet-based storage such as SMB or iSCSI benefit from a Storage intent, but external SAN storage doesn't require one.
 

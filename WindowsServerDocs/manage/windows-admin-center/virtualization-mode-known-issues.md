@@ -51,7 +51,7 @@ To check and recreate the Network ATC network intent, perform the following step
 
      1. Create a new intent using the PowerShell cmdlet `Add-NetIntent`. For more information about creating network intents, see [Deploy host networking with Network ATC](../../networking/network-atc/network-atc.md).
 
-       1. Rerun the Add resources workflow and check that the intent you created appears in the **Networking** tab. For more information about the steps to add resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+     1. Rerun the Add resources workflow and check that the intent you created appears in the **Networking** tab. For more information about the steps to add resources, see [Add compute resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 ## Required reboot after feature installation not handled automatically
 

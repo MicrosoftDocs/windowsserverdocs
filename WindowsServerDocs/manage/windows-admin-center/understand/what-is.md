@@ -9,9 +9,9 @@ ai-usage: ai-assisted
 ---
 # What is Windows Admin Center?
 
-You deploy Windows Admin Center locally as a browser-based management platform with two modes that share a common platform core. **Administration Mode** provides general management for Windows clients, servers, and clusters. **Virtualization Mode** provides centralized management for Hyper-V hosts, clusters, storage, and networking at scale. Install the modes separately because they use different management architectures. For more information about Virtualization Mode, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md)
+Windows Admin Center is a browser-based platform for managing Windows clients, servers, clusters, and virtualization infrastructure. It gives you a unified management experience for systems across on-premises, disconnected, and hybrid environments while complementing tools such as System Center.
 
-Administration Mode lets you manage systems without connecting to the cloud and is useful for servers on private networks that aren't connected to the internet. Administration Mode modernizes "in-box" management tools such as Server Manager and Microsoft Management Console (MMC). It complements System Center; it doesn't replace it.
+Windows Admin Center provides two modes that share a platform core: **Administration Mode** for general system management and **Virtualization Mode** for centralized management of Hyper-V infrastructure at scale. You install each mode separately. This article explains how the modes work, where each mode fits, and how Windows Admin Center can improve your management environment.
 
 ![Diagram of Windows Admin Center working with other solutions](../media/wac-complements.png)
 
@@ -23,7 +23,9 @@ After you publish the Administration Mode gateway to DNS and configure the corre
 
 The **Administration Mode gateway** uses a .NET 10 backend for improved performance, security, and cryptography. It also includes support for HTTP/2, reducing latency and enhancing the responsiveness of Windows Admin Center.
 
-![Diagram of the Windows Admin Center Administration Mode architecture.](../media/architecture.png)
+:::image type="complex" source="../media/architecture.png" alt-text="Diagram of the Windows Admin Center Administration Mode gateway connecting a browser to managed nodes." lightbox="../media/architecture.png" border="false":::
+Diagram of an on-premises Windows Admin Center Administration Mode deployment. A client connects from a modern browser to the Windows Admin Center web server and gateway over HTTPS. The gateway connects to managed nodes by using PowerShell and Windows Management Instrumentation (WMI) over Windows Remote Management (WinRM), and the managed nodes require no agent installation. The deployment doesn't require an internet connection. To access the gateway over the internet, publish it to DNS and configure the firewall. The diagram labels the installer as about 60 MB and says it installs in minutes.
+:::image-end:::
 
 ### Administration Mode architecture
 

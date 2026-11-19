@@ -10,9 +10,9 @@ ai-usage: ai-assisted
 
 # Windows Admin Center overview
 
-Windows Admin Center is a browser-based management product for Windows Server infrastructure running in physical, virtual, on-premises, Azure, or hosted environments at no extra cost. It provides two management experiences: Administration Mode and Virtualization Mode.
+Windows Admin Center is a browser-based management product for Windows Server infrastructure running in physical, virtual, on-premises, Azure, or hosted environments. If you need to manage individual servers and clusters or large-scale, distributed Hyper-V resources, Windows Admin Center provides dedicated experiences.
 
-To find out what's new, see [Release history](support/release-history.md).
+This overview describes the two management experiences, Administration Mode and Virtualization Mode, and helps you choose one for your scenario.
 
 ## Choose a Windows Admin Center experience
 
@@ -29,7 +29,7 @@ You can use both experiences in the same environment. To compare their architect
 
 **Download** [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) from the Microsoft Evaluation Center.
 
-For help installing Administration Mode, see [Install Windows Admin Center](deploy/install.md). For help installing Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md). For tips on getting started, see [Get started](use/get-started.md).
+For help installing Administration Mode, see [Install Windows Admin Center](deploy/install.md). For help installing Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](deploy/install.md). For tips on getting started, see [Get started](use/get-started.md).
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually downloading and installing Windows Admin Center. Each non-preview version is supported until 30 days after the next non-preview version is released. For more information, see the [Windows Admin Center support policy](support/index.md).
 
