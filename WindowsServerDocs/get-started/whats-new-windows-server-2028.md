@@ -65,7 +65,7 @@ To share feedback about the preview, submit the [Intune Server Management previe
 
 ## Secure by default for Server Core
 
-**Insider Preview build:** [Windows Server Insider Preview build 29683](https://techcommunity.microsoft.com/discussions/windowsserverinsiders/announcing-windows-server-vnext-preview-build-29683/4563923) (October 12, 2026)
+**Insider Preview build:** [Windows Server Insider Preview build 29706](https://aka.ms/serverinsiders) (November 17, 2026)
 
 Windows Server 2028 Preview includes secure-by-default configuration settings for Server Core. New installations start with stronger security protections. This change reduces the need to harden servers after deployment. These defaults help protect servers against common attacks, including credential theft, lateral movement, and protocol downgrade attacks, from the first boot.
 
