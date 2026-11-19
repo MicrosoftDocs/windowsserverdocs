@@ -10,15 +10,13 @@ ai-usage: ai-assisted
 
 # Manage failover clusters by using Windows Admin Center
 
+Failover Clustering groups multiple servers into a fault-tolerant cluster so that applications and services can remain available if a server fails. Windows Admin Center provides a central interface for managing these clusters, which helps you monitor and maintain cluster resources without managing each node separately.
+
+This article shows you how to add a failover cluster to Windows Admin Center and lists the tools available for managing cluster resources, storage, networks, nodes, roles, virtual machines, and virtual switches. The guidance applies only to failover cluster connections in Windows Admin Center Administration Mode. To manage virtualization clusters in Virtualization Mode, use the virtualization fabric and resource hierarchy.
+
 > [!Tip]
 > New to Windows Admin Center?
 > [Download or learn more about Windows Admin Center](../overview.md).
-
-[Failover Clustering](../../../failover-clustering/failover-clustering-overview.md) is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster. The purpose is to increase availability and scalability of applications and services such as Scale-Out File Server, Hyper-V, and Microsoft SQL Server.
-
-You can manage failover cluster nodes as individual servers by using [Server Manager](manage-servers.md) to add them in Windows Admin Center. But you can also add them as failover clusters to view and manage cluster resources, storage, networks, nodes, roles, virtual machines, and virtual switches.
-
-This article applies only to the failover cluster connection experience in Windows Admin Center Administration Mode. Windows Admin Center Virtualization Mode doesn't use failover cluster connections to manage virtualization clusters. Instead, manage virtualization clusters through the virtualization fabric and resource hierarchy. For more information, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md)
 
 ![Screenshot of the list of cluster resources in Windows Admin Center.](../media/manage-failover-clusters/fcm-overview.png)
 

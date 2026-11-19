@@ -21,7 +21,7 @@ In this article, you create and validate a backup, restore the management databa
 
 ## Prerequisites for Windows Admin Center Virtualization Mode backup and restore
 
-- Complete [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md).
+- Complete [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 - An account with the Windows Admin Center [**Global Administrator**](virtualization-mode-authentication-access-control.md) role. This role is a Windows Admin Center role, not a Microsoft Entra role.
 - An encryption password that contains 12 to 256 characters.
 - To restore an instance, use a backup file that the target gateway can access and the password that you used to create that backup.
@@ -57,7 +57,7 @@ Create an encrypted backup and monitor the operation until it finishes. For a UN
    | **Encryption password** | Enter a password that contains from 12 through 256 characters. |
    | **Confirm encryption password** | Enter the password again. |
 
-   :::image type="content" source="media/back-up-restore-virtualization-mode/create-backup-dialog.jpg" alt-text="Screenshot of the Windows Admin Center Create backup dialog with Backup path (Optional), Encryption password, and Confirm encryption password fields.":::
+   :::image type="content" source="media/back-up-restore-virtualization-mode/create-backup-dialog.png" alt-text="Screenshot of the Windows Admin Center Create backup dialog with Backup path (Optional), Encryption password, and Confirm encryption password fields.":::
 
 1. Select **Start backup**.
 
@@ -126,5 +126,5 @@ Agent trust convergence can continue after the management database restore succe
 ## Related content
 
 - [What is Windows Admin Center Virtualization Mode?](virtualization-mode-overview.md)
-- [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md)
+- [Install Windows Admin Center Virtualization Mode](deploy/install.md)
 - [Known issues for Windows Admin Center Virtualization Mode](virtualization-mode-known-issues.md)

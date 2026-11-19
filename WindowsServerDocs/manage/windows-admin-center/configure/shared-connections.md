@@ -10,13 +10,15 @@ ai-usage: ai-assisted
 
 # Configure shared connections for all users of the Windows Admin Center gateway
 
-By configuring shared connections, gateway administrators can set up the connections list once for all users of a Windows Admin Center gateway. This shared-connections model applies only to Windows Admin Center in Administration Mode. It doesn't apply to Virtualization Mode.
+Shared connections in Windows Admin Center are gateway-managed server, cluster, and PC connections that appear for every user of a gateway. Gateway administrators can maintain one consistent list instead of requiring each user to add the same connections and tags individually. Shared connections are available only in Administration Mode, not Virtualization Mode.
 
-From the **Shared Connections** tab of Windows Admin Center gateway Settings, gateway administrators can add servers, clusters, and PC connections as you would from the all connections page, including the ability to tag connections. Any connections and tags added in the Shared Connections list will appear for all users of this Windows Admin Center gateway, from their all connections page.
+This article explains where gateway administrators add shared connections and tags, and how Windows Admin Center shows shared and personal connections to gateway users.
 
-![Screenshot of the Windows Admin Center Shared Connections page showing six servers tagged redmond.](../media/shared-cnxns-1.png)
+Gateway administrators can add servers, clusters, and PC connections, and assign tags, on the **Shared Connections** tab in the Windows Admin Center gateway settings. The connections and tags appear on the **All Connections** page for all users of the gateway.
+
+:::image type="content" source="../media/shared-cnxns-1.png" alt-text="Screenshot of the Windows Admin Center Shared Connections page showing six servers tagged redmond.":::
 
 When any Windows Admin Center user accesses the "All Connections" page after Shared Connections have been configured, they will see their connections grouped into two sections: Personal and Shared connections. The Personal group is a specific user's connection list and persists across that user's browser sessions. The Shared connections group is the same across all users, and cannot be modified from the All Connections page.
 
-![Screenshot of the Windows Admin Center All Connections page showing Personal and Shared connection groups.](../media/shared-cnxns-2.png)
+:::image type="content" source="../media/shared-cnxns-2.png" alt-text="Screenshot of the Windows Admin Center All Connections page showing Personal and Shared connection groups.":::
 
