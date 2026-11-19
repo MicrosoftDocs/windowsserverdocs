@@ -28,7 +28,7 @@ The Virtualization Mode workflow installs the Azure Connected Machine agent and 
 
 ## Prerequisites for Azure Arc onboarding in Virtualization Mode
 
-- Windows Admin Center Virtualization Mode installed and available. For more information, see [Install Windows Admin Center Virtualization Mode](../install-virtualization-mode.md).
+- Windows Admin Center Virtualization Mode installed and available. For more information, see [Install Windows Admin Center Virtualization Mode](../deploy/install.md).
 - Target machines added as compute resources in Virtualization Mode. For more information, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md).
 - A Windows Admin Center account with the **Gateway Administrator** role and local administrator permissions on each target machine.
 - An Azure account with the [Azure Connected Machine Onboarding](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role for the Azure resource group where you want to create the machine resources.

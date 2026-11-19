@@ -25,7 +25,7 @@ Choose the experience that matches the scope and type of resources you need to m
 > [!IMPORTANT]
 > You can't install Administration Mode and Virtualization Mode on the same system.
 
-Virtualization Mode doesn't replace Administration Mode for general server administration. Install each mode on a separate system to use both experiences in the same environment. For more information about the capabilities and architecture of each experience, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md) For Virtualization Mode requirements and installation guidance, see [Install Windows Admin Center Virtualization Mode](../install-virtualization-mode.md).
+Virtualization Mode doesn't replace Administration Mode for general server administration. Install each mode on a separate system to use both experiences in the same environment. For more information about the capabilities and architecture of each experience, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md) For Virtualization Mode requirements and installation guidance, see [Install Windows Admin Center Virtualization Mode](../deploy/install.md).
 
 ## Administration Mode installation topologies
 
@@ -103,4 +103,4 @@ You can enable high availability for the Administration Mode gateway service by 
 ## Next steps
 
 - To deploy Administration Mode, see [Install Windows Admin Center](../deploy/install.md).
-- To deploy Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](../install-virtualization-mode.md).
+- To deploy Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](../deploy/install.md).

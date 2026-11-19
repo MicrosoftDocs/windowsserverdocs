@@ -29,7 +29,7 @@ You can use both experiences in the same environment. To compare their architect
 
 **Download** [Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center) from the Microsoft Evaluation Center.
 
-For help installing Administration Mode, see [Install Windows Admin Center](deploy/install.md). For help installing Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](install-virtualization-mode.md). For tips on getting started, see [Get started](use/get-started.md).
+For help installing Administration Mode, see [Install Windows Admin Center](deploy/install.md). For help installing Virtualization Mode, see [Install Windows Admin Center Virtualization Mode](deploy/install.md). For tips on getting started, see [Get started](use/get-started.md).
 
 You can update non-preview versions of Windows Admin Center by using Microsoft Update or by manually downloading and installing Windows Admin Center. Each non-preview version is supported until 30 days after the next non-preview version is released. For more information, see the [Windows Admin Center support policy](support/index.md).
 
