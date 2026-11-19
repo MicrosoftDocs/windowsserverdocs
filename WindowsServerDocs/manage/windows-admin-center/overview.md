@@ -101,4 +101,4 @@ To learn how Windows Admin Center complements other Microsoft management solutio
 ## Stay updated on Windows Admin Center
 
 - [Follow us on X (formerly Twitter)](https://twitter.com/servermgmt)
-- [Windows Admin Center blog](https://techcommunity.microsoft.com/category/windows-server/blog/windows-admin-center-blog)
+- [Windows Admin Center blog](https://aka.ms/wacblog)
