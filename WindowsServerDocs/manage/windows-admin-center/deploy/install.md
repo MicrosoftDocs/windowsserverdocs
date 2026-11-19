@@ -14,8 +14,7 @@ Windows Admin Center is a browser-based tool for managing Windows servers and cl
 
 This article explains how to choose a mode and install Windows Admin Center by using the interactive installer or the command line, with an optional configuration file. Both installation methods support Administration Mode and Virtualization Mode. You then verify the installation and sign in for the first time.
 
-> [!TIP]
-> New to Windows Admin Center? Learn more about [Windows Admin Center](../overview.md) or [download Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center).
+New to Windows Admin Center? Learn more about [Windows Admin Center](../overview.md) or [download Windows Admin Center](https://www.microsoft.com/evalcenter/download-windows-admin-center).
 
 ## Prerequisites
 

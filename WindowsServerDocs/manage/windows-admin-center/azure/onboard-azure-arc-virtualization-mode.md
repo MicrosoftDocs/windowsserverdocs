@@ -11,7 +11,7 @@ ai-usage: ai-generated
 
 # Onboard machines to Azure Arc in Windows Admin Center Virtualization Mode
 
-Azure Arc onboarding connects physical and virtual machines to Azure so you can manage them as Azure resources. In Windows Admin Center, use Virtualization Mode when you need to apply the same Azure configuration to multiple managed machines and monitor each machine’s onboarding progress.
+Azure Arc onboarding connects physical and virtual machines to Azure so you can manage them as Azure resources. In Windows Admin Center, use Virtualization Mode when you need to apply the same Azure configuration to multiple managed machines and monitor each machine's onboarding progress.
 
 This article explains which workflow to use and shows you how to onboard multiple machines from Virtualization Mode. For Azure Arc administration after onboarding, use the Azure portal and the Azure Arc documentation.
 
