@@ -9,9 +9,9 @@ ai-usage: ai-assisted
 ---
 # What is Windows Admin Center?
 
-You deploy Windows Admin Center locally as a browser-based management platform with two modes that share a common platform core. **Administration Mode** provides general management for Windows clients, servers, and clusters. **Virtualization Mode** provides centralized management for Hyper-V hosts, clusters, storage, and networking at scale. Install the modes separately because they use different management architectures. For more information about Virtualization Mode, see [What is Windows Admin Center Virtualization Mode?](../virtualization-mode-overview.md)
+Windows Admin Center is a browser-based platform for managing Windows clients, servers, clusters, and virtualization infrastructure. It gives you a unified management experience for systems across on-premises, disconnected, and hybrid environments while complementing tools such as System Center.
 
-Administration Mode lets you manage systems without connecting to the cloud and is useful for servers on private networks that aren't connected to the internet. Administration Mode modernizes "in-box" management tools such as Server Manager and Microsoft Management Console (MMC). It complements System Center; it doesn't replace it.
+Windows Admin Center provides two modes that share a platform core: **Administration Mode** for general system management and **Virtualization Mode** for centralized management of Hyper-V infrastructure at scale. You install each mode separately. This article explains how the modes work, where each mode fits, and how Windows Admin Center can improve your management environment.
 
 ![Diagram of Windows Admin Center working with other solutions](../media/wac-complements.png)
 
