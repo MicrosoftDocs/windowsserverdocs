@@ -13,6 +13,14 @@ The gateway HTTPS certificate in Windows Admin Center Administration Mode secure
 
 This article explains how to replace the certificate by using PowerShell or the Windows Admin Center installer. The procedure applies only to Administration Mode because Virtualization Mode manages its agent and gateway certificates differently.
 
+You might want to update the certificate in Administration Mode if:
+
+- You have a new certificate authority (CA)
+- Your existing private key was disclosed
+- You need to renew your certificate
+
+To update this certificate, follow the guidance in this article.
+
 > [!NOTE]
 > If you use Windows Admin Center in Virtualization Mode, see [Manage certificates in Windows Admin Center Virtualization Mode](../manage-virtualization-mode-certificates.md) instead.
 
