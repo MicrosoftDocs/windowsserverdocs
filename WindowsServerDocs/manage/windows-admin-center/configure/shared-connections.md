@@ -14,9 +14,9 @@ By configuring shared connections, gateway administrators can set up the connect
 
 From the **Shared Connections** tab of Windows Admin Center gateway Settings, gateway administrators can add servers, clusters, and PC connections as you would from the all connections page, including the ability to tag connections. Any connections and tags added in the Shared Connections list will appear for all users of this Windows Admin Center gateway, from their all connections page.
 
-![Screenshot of the Windows Admin Center Shared Connections page showing six servers tagged redmond.](../media/shared-cnxns-1.png)
+:::image type="content" source="../media/shared-cnxns-1.png" alt-text="Screenshot of the Windows Admin Center Shared Connections page showing six servers tagged redmond.":::
 
 When any Windows Admin Center user accesses the "All Connections" page after Shared Connections have been configured, they will see their connections grouped into two sections: Personal and Shared connections. The Personal group is a specific user's connection list and persists across that user's browser sessions. The Shared connections group is the same across all users, and cannot be modified from the All Connections page.
 
-![Screenshot of the Windows Admin Center All Connections page showing Personal and Shared connection groups.](../media/shared-cnxns-2.png)
+:::image type="content" source="../media/shared-cnxns-2.png" alt-text="Screenshot of the Windows Admin Center All Connections page showing Personal and Shared connection groups.":::
 

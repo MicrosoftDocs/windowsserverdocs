@@ -57,7 +57,7 @@ Create an encrypted backup and monitor the operation until it finishes. For a UN
    | **Encryption password** | Enter a password that contains from 12 through 256 characters. |
    | **Confirm encryption password** | Enter the password again. |
 
-   :::image type="content" source="media/back-up-restore-virtualization-mode/create-backup-dialog.jpg" alt-text="Screenshot of the Windows Admin Center Create backup dialog with Backup path (Optional), Encryption password, and Confirm encryption password fields.":::
+   :::image type="content" source="media/back-up-restore-virtualization-mode/create-backup-dialog.png" alt-text="Screenshot of the Windows Admin Center Create backup dialog with Backup path (Optional), Encryption password, and Confirm encryption password fields.":::
 
 1. Select **Start backup**.
 
