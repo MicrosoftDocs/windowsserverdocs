@@ -9,9 +9,9 @@ ai-usage: ai-assisted
 ---
 # Windows Admin Center installation options
 
-Windows Admin Center provides two management experiences that you install independently: Administration Mode for general server and cluster management, and Virtualization Mode for virtualization fabric management at scale. This article helps you choose an experience and, if you choose Administration Mode, select an installation topology.
+Windows Admin Center is a browser-based management tool with two experiences that you install independently: Administration Mode for general server and cluster management, and Virtualization Mode for virtualization fabric management at scale. Choosing the right experience and deployment model helps you meet the management and availability needs of your environment.
 
-The installation topologies and supported operating systems in this article apply to Administration Mode. To install Windows Admin Center on a virtual machine (VM) in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+This article compares the two experiences so you can choose one. If you choose Administration Mode, it also helps you select an installation topology and supported operating system. These topologies and operating system requirements apply only to Administration Mode. Deployments on Azure virtual machines (VMs) use a separate installation process.
 
 ## Choose a management experience
 
