@@ -9,11 +9,11 @@ ai-usage: ai-assisted
 ---
 # Update the Administration Mode gateway certificate
 
-When you deploy Windows Admin Center in Administration Mode as a service, the gateway uses a single HTTPS certificate to secure communication between the gateway and connected devices. This certificate encrypts data and authenticates identities to protect the gateway. This article shows you how to update that single gateway HTTPS certificate.
+The gateway HTTPS certificate in Windows Admin Center Administration Mode secures communication between the gateway and connected devices by encrypting data and verifying identities. Update the certificate before it expires, if its private key is compromised, or when your organization changes certificate authorities.
 
-Administration Mode uses this single gateway HTTPS certificate. Virtualization Mode manages its agent and gateway certificates differently, so the steps in this article don't apply to Virtualization Mode deployments.
+This article explains how to replace the certificate by using PowerShell or the Windows Admin Center installer. The procedure applies only to Administration Mode because Virtualization Mode manages its agent and gateway certificates differently.
 
-You might want to update the certificate if:
+You might want to update the certificate in Administration Mode if:
 
 - You have a new certificate authority (CA)
 - Your existing private key was disclosed
