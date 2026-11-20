@@ -17,15 +17,16 @@ Use the **Storage** host profile to onboard either type of storage. For a Window
 
 ## Prerequisites
 
-- Complete [Install Windows Admin Center Virtualization Mode](deploy/install.md).
+- Completion of [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 - An existing resource group. For creation steps and naming rules, see [Create a resource group](add-virtualization-mode-resources.md#create-a-resource-group).
 - An account with the **Fabric Manager** role in Virtualization Mode.
 - For Windows storage, a supported Windows Server failover cluster with:
-  - DNS resolution for the cluster and every member node.
-  - At least one online IPv4 cluster address.
-  - SMB and WinRM connectivity from the Virtualization Mode gateway.
+  - Domain Name System (DNS) resolution for the cluster and every member node.
+  - At least one online Internet Protocol version 4 (IPv4) cluster address.
+  - Server Message Block (SMB) and Windows Remote Management (WinRM) connectivity from the Virtualization Mode gateway.
   - Membership in the local **Administrators** group on every cluster node.
-- For existing Scale-Out File Server shares, CSV-backed paths that are available to the storage cluster.
+- For existing or new Scale-Out File Server shares, Cluster Shared Volume (CSV)-backed paths that are available to the storage cluster.
+- For non-Windows storage, a resolvable host name or Internet Protocol (IP) address for the NAS or SAN system.
 - A resource that no other Virtualization Mode instance manages.
 
 > [!IMPORTANT]
@@ -41,7 +42,9 @@ Onboard an existing Windows Server failover cluster to discover or create Scale-
 
    1. Select **Storage** for **Host profile**.
 
-   1. Enter the cluster fully qualified domain name (FQDN), and then select **Validate**.
+   1. Enter the cluster fully qualified domain name (FQDN).
+
+   1. Select **Validate**.
 
       Validation discovers every cluster node, verifies the supported Windows Server configuration, checks DNS and SMB connectivity, confirms that you're an administrator on every node, and checks for an existing Virtualization Mode agent.
 
@@ -49,7 +52,9 @@ Onboard an existing Windows Server failover cluster to discover or create Scale-
 
    1. Select **Next**.
 
-1. On the **Clustering** tab, select **Next**.
+1. On the **Clustering** tab, verify the discovered cluster and member nodes.
+
+1. Select **Next**.
 
 1. On the **Networking** tab, complete the following actions:
 
@@ -67,7 +72,9 @@ Onboard an existing Windows Server failover cluster to discover or create Scale-
 
    1. If you want to create a Scale-Out File Server role, complete the following actions:
 
-      1. Select **Add file server**, and then enter a unique file-server name.
+      1. Select **Add file server**.
+
+      1. Enter a unique file-server name.
 
       1. Add at least one share for each new file server, and then enter:
 
@@ -102,6 +109,10 @@ Onboard an existing Windows Server failover cluster to discover or create Scale-
 
    If a failed workflow offers **Retry**, select it to rerun the failed step. Retry is limited to three attempts.
 
+1. Verify that the workflow status is **Completed** and that the storage resource appears in the navigation hierarchy.
+
+   If you created a Scale-Out File Server role or shares, verify that they appear for the storage resource.
+
 ## Register non-Windows storage
 
 Register a non-Windows NAS or SAN system as a standalone resource that uses the **Storage** host profile.
@@ -110,17 +121,41 @@ Register a non-Windows NAS or SAN system as a standalone resource that uses the 
 
 1. On the **Getting started** tab, select **Storage** for **Host profile**.
 
-1. Enter the resolvable host name or IP address of the storage system, and then select **Validate**.
+1. Enter the resolvable host name or IP address of the storage system.
+
+1. Select **Validate**.
 
 1. After validation succeeds, select **Add**.
 
-1. Continue through the wizard to the **Review** tab.
+1. Verify that the **Clustering** tab lists the resource as standalone.
 
-1. Verify the configuration, and then select **Submit**.
+1. Select **Next**.
+
+1. On the **Networking** tab, confirm that Virtualization Mode doesn't require a Network ATC intent for the resource.
+
+1. Select **Next**.
+
+1. On the **Storage** tab, review the registered storage resource.
+
+1. Select **Next**.
+
+1. On the **Compute** tab, confirm that no compute settings are available.
+
+1. Select **Next** to open the **Review** tab.
+
+1. Verify the configuration.
+
+1. Select **Submit**.
+
+1. Open **Workflow status** and monitor the registration.
+
+1. Verify that the workflow status is **Completed** and that the storage resource appears in the navigation hierarchy.
 
 Virtualization Mode registers non-Windows storage without installing the Windows agent. Automatic SMB permission and constrained-delegation configuration aren't available for non-Windows storage.
 
-## Remove a storage resource
+<a id="remove-a-storage-resource"></a>
+
+## Clean up storage resources
 
 Remove a storage resource when you no longer want Virtualization Mode to manage it.
 
@@ -130,7 +165,9 @@ Remove a storage resource when you no longer want Virtualization Mode to manage 
 
 1. Select **Remove** to confirm.
 
-1. Monitor the removal from **Workflow status**.
+1. Open **Workflow status** and monitor the removal.
+
+1. Verify that the workflow status is **Completed** and that the resource no longer appears in the navigation hierarchy.
 
 For Windows storage, removal uninstalls the Virtualization Mode agents, removes their certificates and deployment files, and unregisters the storage cluster. Removing the resource from Virtualization Mode doesn't delete its Scale-Out File Server roles, shares, or stored data.
 

@@ -45,7 +45,9 @@ Create a resource group to organize the hosts and clusters that you manage toget
 
    :::image type="content" source="media/add-virtualization-mode-resources/resource-group-created.png" alt-text="Screenshot of Windows Admin Center Virtualization Mode showing the Corp resource group and a Group Created notification marked Completed.":::
 
-## Add compute resources
+<a id="add-compute-resources"></a>
+
+## Select and validate Hyper-V compute resources
 
 Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing failover cluster, or standalone hosts that Virtualization Mode joins into a new cluster.
 
@@ -78,7 +80,9 @@ Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing fai
 
    1. Select **Next**.
 
-1. On the **Clustering** tab, follow the path for the resources that you add:
+## Configure clustering for Hyper-V compute resources
+
+1. On the **Clustering** tab, follow the path for the Hyper-V hosts or failover cluster that you add:
 
    If you add an existing cluster, accept the displayed configuration, and then select **Next**.
 
@@ -103,7 +107,9 @@ Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing fai
 
       :::image type="content" source="media/add-virtualization-mode-resources/add-resource-clustering.png" alt-text="Screenshot of the Windows Admin Center Virtualization Mode Clustering tab showing Cluster01 and 10.0.0.42 available with static addressing selected.":::
 
-1. On the **Networking** tab, configure Network ATC intents for hosts in a new or existing failover cluster. The wizard shows existing intents and their status. For an existing cluster, an existing intent satisfies a requirement only when its configuration is successful and symmetric across all selected cluster nodes.
+## Configure Network ATC for clustered Hyper-V resources
+
+1. On the **Networking** tab, configure Network ATC intents for Hyper-V hosts in a new or existing failover cluster. The wizard shows existing intents and their status. For an existing cluster, an existing intent satisfies a requirement only if its configuration is successful and symmetric across all selected cluster nodes.
 
    If you add standalone Hyper-V hosts that remain standalone, you don't need to configure Network ATC intents. The wizard leaves their existing network configuration unchanged. Select **Next**.
 
@@ -181,7 +187,9 @@ Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing fai
       >
       > To manage Network ATC intents after deployment, use the Network ATC PowerShell cmdlets. For guidance on updating intent settings, changing assigned network adapters, or removing intents, see [Manage Network ATC](../../networking/network-atc/manage-network-atc.md).
 
-1. On the **Storage** tab, configure storage access that the Compute profile uses for virtual machines. This configuration attaches or uses existing storage; it doesn't onboard the storage system as a managed resource. To onboard a storage system by using the **Storage** host profile, see [Add storage resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-storage-resources.md).
+## Configure storage access for Hyper-V resources
+
+1. On the **Storage** tab, configure how the **Compute** profile accesses storage for Hyper-V virtual machines. This configuration attaches or uses existing storage; it doesn't onboard the storage system as a managed resource. To onboard a storage system by using the **Storage** host profile, see [Add storage resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-storage-resources.md).
 
    1. Select one or more options:
 
@@ -241,7 +249,9 @@ Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing fai
 
    1. Select **Next**.
 
-1. On the **Compute** tab, configure the Hyper-V settings that Virtualization Mode applies to each compute host:
+## Configure Hyper-V host settings
+
+1. On the **Compute** tab, configure Hyper-V settings. Windows Admin Center Virtualization Mode applies these settings to each compute host:
 
    1. Configure the following settings:
 
@@ -254,7 +264,9 @@ Use the **Add resource** wizard to add standalone Hyper-V hosts, an existing fai
 
    1. Select **Next**.
 
-1. On the **Review** tab, review the configuration before Virtualization Mode starts the onboarding workflow:
+## Review and monitor Hyper-V resource onboarding
+
+1. On the **Review** tab, review the configuration before Windows Admin Center Virtualization Mode starts the Hyper-V resource onboarding workflow:
 
    1. Verify the configuration.
 

@@ -5,15 +5,27 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 11/05/2026
-ai-usage: ai-generated
+ai-usage: ai-assisted
 #customer intent: As a hybrid or virtualization administrator, I want to onboard multiple machines to Azure Arc from Windows Admin Center, so that I can connect my virtualization infrastructure to Azure at scale.
 ---
 
 # Onboard machines to Azure Arc in Windows Admin Center Virtualization Mode
 
-Azure Arc onboarding connects physical and virtual machines to Azure so you can manage them as Azure resources. In Windows Admin Center, use Virtualization Mode when you need to apply the same Azure configuration to multiple managed machines and monitor each machine's onboarding progress.
+Azure Arc onboarding connects physical and virtual machines to Azure so you can manage them as Azure resources. In Windows Admin Center, use Virtualization Mode when you need to apply the same Azure configuration to multiple managed machines and monitor each machine's onboarding workflow status.
 
 This article explains which workflow to use and shows you how to onboard multiple machines from Virtualization Mode. For Azure Arc administration after onboarding, use the Azure portal and the Azure Arc documentation.
+
+<a id="prerequisites-for-azure-arc-onboarding-in-virtualization-mode"></a>
+
+## Prerequisites
+
+- Windows Admin Center Virtualization Mode installed and available. For more information, see [Install Windows Admin Center Virtualization Mode](../deploy/install.md).
+- Target machines added as compute resources in Virtualization Mode. For more information, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md).
+- A Windows Admin Center account with the **Gateway Administrator** role and local administrator permissions on each target machine.
+- An Azure account with the [Azure Connected Machine Onboarding](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role for the Azure resource group where you want to create the machine resources.
+- An Azure subscription and an existing resource group for the connected machine resources.
+- Target machines that meet the [Azure Connected Machine agent prerequisites](/azure/azure-arc/servers/prerequisites), including a supported operating system, network connectivity, and Azure resource provider requirements.
+- Public endpoint connectivity from the Azure Connected Machine agent on each target machine, either directly or through a proxy server. Private endpoint and Azure Arc gateway connectivity aren't available in this workflow.
 
 ## Choose an Azure Arc onboarding workflow in Windows Admin Center
 
@@ -25,16 +37,6 @@ Choose the workflow based on how you manage the target machines in Windows Admin
 | Virtualization Mode | Select multiple managed compute machines from the gateway-level **Azure Arc** tool, apply common Azure settings, and monitor a separate workflow for each machine. | You manage virtualization infrastructure and want to onboard machines in bulk. |
 
 The Virtualization Mode workflow installs the Azure Connected Machine agent and connects each selected machine to Azure Arc. It doesn't provide general Azure Arc administration after the connection is complete.
-
-## Prerequisites for Azure Arc onboarding in Virtualization Mode
-
-- Windows Admin Center Virtualization Mode installed and available. For more information, see [Install Windows Admin Center Virtualization Mode](../deploy/install.md).
-- Target machines added as compute resources in Virtualization Mode. For more information, see [Add resources in Windows Admin Center Virtualization Mode](../add-virtualization-mode-resources.md).
-- A Windows Admin Center account with the **Gateway Administrator** role and local administrator permissions on each target machine.
-- An Azure account with the [Azure Connected Machine Onboarding](/azure/role-based-access-control/built-in-roles#azure-connected-machine-onboarding) role for the Azure resource group where you want to create the machine resources.
-- An Azure subscription and an existing resource group for the connected machine resources.
-- Target machines that meet the [Azure Connected Machine agent prerequisites](/azure/azure-arc/servers/prerequisites), including a supported operating system, network connectivity, and Azure resource provider requirements.
-- Public endpoint connectivity from the Azure Connected Machine agent on each target machine, either directly or through a proxy server. Private endpoint and Azure Arc gateway connectivity aren't available in this workflow.
 
 ## Onboard machines to Azure Arc
 
@@ -63,9 +65,11 @@ Select the machines and provide one set of Azure configuration values for the fu
 
 1. Select **Onboard**.
 
-Windows Admin Center starts an independent onboarding workflow for each selected machine. A machine might complete or fail without stopping the workflows for the other machines in the selection.
+Windows Admin Center starts an independent onboarding workflow for each selected machine. Each workflow might complete or fail without affecting the others.
 
-## Monitor Azure Arc onboarding status in Windows Admin Center
+<a id="monitor-azure-arc-onboarding-status-in-windows-admin-center"></a>
+
+## Monitor Azure Arc onboarding workflow status in Windows Admin Center
 
 Use **Workflow status** to check progress and verify the result for each machine.
 
@@ -73,18 +77,24 @@ Use **Workflow status** to check progress and verify the result for each machine
 
 1. Select a target with the **Azure Arc onboarding** action type.
 
-   The details pane shows the status and completed or active workflow steps. A successful workflow goes through these steps:
+   The details pane shows the workflow status and the completed or active workflow steps. A successful workflow goes through these steps:
 
    1. Download Azure Connected Machine agent.
    1. Install Azure Connected Machine agent.
    1. Connect machine to Azure Arc.
    1. Refresh Azure Arc status.
 
-1. Review each selected target independently until its status is **Complete**. If a workflow fails, select that target to identify the failed step and review the available agent logs.
+1. Review each selected target independently until its workflow status is **Complete**.
 
-1. Close the **Workflow status** pane, and then select **Refresh** on the **Azure Arc** page.
+1. If an onboarding workflow fails, select the target to identify the failed step.
 
-   Successfully onboarded machines show a **Connected** status and their Azure resource group. You can also [verify the connected machines in the Azure portal](/azure/azure-arc/servers/onboard-windows-admin-center#verify-the-connection-with-azure-arc).
+1. Review the available agent logs.
+
+1. Close the **Workflow status** pane.
+
+1. On the **Azure Arc** page, select **Refresh**.
+
+   After an onboarding workflow reaches **Complete**, the corresponding machine shows an Azure Arc connection status of **Connected** and its Azure resource group. You can also [verify the connected machines in the Azure portal](/azure/azure-arc/servers/onboard-windows-admin-center#verify-the-connection-with-azure-arc).
 
 ## Manage Azure Arc-enabled servers after onboarding
 
