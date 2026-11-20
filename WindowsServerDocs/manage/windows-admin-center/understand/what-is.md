@@ -15,7 +15,9 @@ Windows Admin Center provides two modes that share a platform core: **Administra
 
 ![Diagram of Windows Admin Center working with other solutions](../media/wac-complements.png)
 
-## How do Windows Admin Center modes work?
+<a id="how-do-windows-admin-center-modes-work"></a>
+
+## How Windows Admin Center Administration Mode works
 
 In Administration Mode, Windows Admin Center runs in a web browser and connects directly to one managed system at a time through the **Windows Admin Center gateway**. Administration Mode manages Windows Server 2016 and later, Windows 11, Windows 10, and more. You can install its gateway on Windows Server or domain-joined Windows 10 or 11. The gateway manages servers by using Remote PowerShell and Windows Management Instrumentation (WMI) over Windows Remote Management (WinRM). A single lightweight .msi package, available from the [Windows Admin Center overview](../overview.md), includes the Administration Mode gateway.
 
@@ -27,7 +29,9 @@ The **Administration Mode gateway** uses a .NET 10 backend for improved performa
 Diagram of an on-premises Windows Admin Center Administration Mode deployment. A client connects from a modern browser to the Windows Admin Center web server and gateway over HTTPS. The gateway connects to managed nodes by using PowerShell and Windows Management Instrumentation (WMI) over Windows Remote Management (WinRM), and the managed nodes require no agent installation. The deployment doesn't require an internet connection. To access the gateway over the internet, publish it to DNS and configure the firewall. The diagram labels the installer as about 60 MB and says it installs in minutes.
 :::image-end:::
 
-### Administration Mode architecture
+<a id="administration-mode-architecture"></a>
+
+## How the Windows Admin Center Administration Mode gateway works
 
 The modernized Administration Mode gateway uses microservice architecture. Before this upgrade, the gateway performed all tasks in a single process. With this new model, one process starts with Administration Mode and serves as a process manager. As you use Administration Mode, the process manager starts more subprocesses to perform specific tasks.
 
@@ -35,16 +39,22 @@ Gateway plug-ins that are compatible with the modernized Administration Mode gat
 
 Changing from a monolithic service to a microservice model helps the modernized gateway be more flexible, scalable, and resilient.
 
-#### Kestrel HTTP web server
+<a id="kestrel-http-web-server"></a>
+
+### Kestrel HTTP web server in the Administration Mode gateway
 
 Previously, the Administration Mode gateway utilized [Katana](/aspnet/aspnet/overview/owin-and-katana) components, including a web server, on the backend. The modernized gateway uses an ASP.NET Core Kestrel web server.
 [Kestrel](/aspnet/core/fundamentals/servers/kestrel) is the recommended web server for ASP.NET Core applications. Kestrel supports the HTTP/2 web protocol, where the Administration Mode gateway previously supported only HTTP/1.1 with the Katana components. The upgrade from HTTP/1.1 to HTTP/2 brings reduced latency to the application and increased responsiveness through features like multiplexing and server push.
 
-### Virtualization Mode architecture
+<a id="virtualization-mode-architecture"></a>
+
+## How the Windows Admin Center Virtualization Mode gateway works
 
 Virtualization Mode uses a separate, centralized gateway and a stateful architecture. The gateway maintains a database, and local agents on managed Hyper-V hosts collect data and perform operations. This architecture supports persistent connections and parallel operations across virtualization infrastructure instead of the direct, per-session WinRM connections that Administration Mode uses. For more information, see [How Virtualization Mode works](../virtualization-mode-overview.md#how-it-works).
 
-## Learn how Windows Admin Center improves your management environment
+<a id="learn-how-windows-admin-center-improves-your-management-environment"></a>
+
+## Windows Admin Center capabilities and integrations
 
 ### Familiar functionality
 

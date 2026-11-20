@@ -26,6 +26,8 @@ To get an overview of Windows Admin Center Virtualization Mode, watch the follow
 
 > [!VIDEO 872cf385-a09d-439e-8afc-39f78348fd57]
 
+## Virtualization Mode capabilities and limitations
+
 Virtualization Mode offers the following key capabilities:
 
 - Search across navigation objects with contextual filtering.
@@ -33,7 +35,9 @@ Virtualization Mode offers the following key capabilities:
 - VM templates for standardized provisioning. For more information about creating and deploying VM templates, see [Use VM templates in Virtualization Mode](use-virtualization-mode-vm-templates.md).
 - Software-defined storage and networking (not available at this time).
 
-## Operational modes
+<a id="operational-modes"></a>
+
+## Compare Windows Admin Center modes
 
 Windows Admin Center has two independent modes:
 
@@ -56,7 +60,9 @@ The following table summarizes the key differences between administration mode a
 
 You must install Windows Admin Center Administration Mode and Windows Admin Center Virtualization mode on separate systems.
 
-### Tools and features
+<a id="tools-and-features"></a>
+
+## Virtualization Mode tools and features
 
 Virtualization Mode includes the following tools and features:
 
@@ -69,11 +75,13 @@ Virtualization Mode includes the following tools and features:
 
 To learn about the tools available to Administration Mode for non-virtualization scenarios, see [Manage Servers with Windows Admin Center](use/manage-servers.md).
 
-## How it works
+<a id="how-it-works"></a>
+
+## How Windows Admin Center Virtualization Mode works
 
 Virtualization Mode deploys as an appliance on physical or virtual machines. For more information about the installation requirements, see [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 
-This mode uses a client-server architecture with a web-based gateway and local agents on managed Hyper-V hosts. The gateway handles user authentication, request routing, and maintains a stateful database, while agents perform operations on hosts. TLS secures communication between the gateway and agents.
+Windows Admin Center Virtualization Mode uses a client-server architecture with a web-based gateway and local agents on managed Hyper-V hosts. The gateway handles user authentication, request routing, and maintains a stateful database, while agents perform operations on hosts. TLS secures communication between the gateway and agents.
 
 The following diagram illustrates the architecture of Windows Admin Center Virtualization Mode:
 
@@ -83,7 +91,9 @@ The architecture efficiently orchestrates large-scale virtualization environment
 
 Virtualization Mode introduces the concepts of resource groups and host profiles to help organize and manage virtualization resources at scale.
 
-### Resource groups
+<a id="resource-groups"></a>
+
+## What are resource groups in Windows Admin Center Virtualization Mode?
 
 A resource group is a logical container in Virtualization Mode that you use to organize virtualization resources. Resource groups don't nest. Each host belongs to exactly one resource group for organization and profile-based management.
 
@@ -92,7 +102,9 @@ Use resource groups to:
 - Segregate hosts by environment (production, lab, staging).
 - Simplify navigation by scoping search and operations.
 
-### Host profiles
+<a id="host-profiles"></a>
+
+## What are host profiles in Windows Admin Center Virtualization Mode?
 
 Host profiles indicate the service a system provides to virtual machines within Virtualization Mode. A profile classifies each added system by its primary role so Virtualization Mode can present it in the correct navigation view and role-aware workflows.
 
@@ -102,7 +114,9 @@ Profile types:
 - Storage: Storage systems for virtual machines, including SAN, NAS, and Scale-Out File Server resources. The Storage view displays onboarded storage devices linked to your compute systems. Hyperconverged storage configuration isn't available at this time.
 - Networking: Software Defined Networking (SDN) services for virtual machines. The Networking view lets you manage network intent templates. The networking host profile isn't available at this time.
 
-### Network intent templates
+<a id="network-intent-templates"></a>
+
+## What are network intent templates in Windows Admin Center Virtualization Mode?
 
 Windows Admin Center Virtualization Mode introduces a concept called a _Network intent template_, which is an abstracted, predefined intent that you didn't yet apply to a network adapter or associate with a cluster or standalone host. A network intent template serves as a blueprint that you can use to create intents after you specify which NICs the template should apply to.
 

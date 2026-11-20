@@ -16,7 +16,7 @@ Authentication in Windows Admin Center Virtualization Mode verifies who signs in
 After reading this article, you understand how users authenticate to the Virtualization Mode gateway, how the gateway establishes trust with managed hosts, and how role-based access control (RBAC) determines what each user can do across the resource hierarchy.
 
 > [!IMPORTANT]
-> Access to the Virtualization Mode (Virtualization Mode) gateway doesn't replace Windows permissions on your hosts. Many host and virtual machine (VM) operations run as the signed-in user, so users also need administrative rights on the hosts they manage. For details, see [Permissions on managed hosts](#permissions-on-managed-hosts).
+> Access to the Virtualization Mode gateway doesn't replace Windows permissions on your hosts. Many host and virtual machine (VM) operations run as the signed-in user, so users also need administrative rights on the hosts they manage. For details, see [Permissions on managed hosts](#permissions-on-managed-hosts).
 
 ## How access works at a glance
 
@@ -96,7 +96,7 @@ Use resource groups for broad delegation, and use cluster or host assignments wh
 
 ## Built-in roles in Windows Admin Center Virtualization Mode
 
-Virtualization Mode includes three built-in roles. You can't modify built-in roles or create custom roles.
+Virtualization Mode includes three built-in roles. You can't modify built-in roles or create custom roles. These roles control Virtualization Mode actions only; they don't replace Windows permissions on managed hosts. A user who is a local administrator on a host can still perform host-level operations.
 
 | Role | Intended for | Summary |
 |---|---|---|
@@ -106,21 +106,21 @@ Virtualization Mode includes three built-in roles. You can't modify built-in rol
 
 ## Permissions for each Virtualization Mode role
 
-The following table lists Virtualization Mode actions and the roles that can perform them.
+The following table lists Virtualization Mode actions and the roles that can perform them. It doesn't describe host-level Windows permissions. Users also need local administrator rights on managed hosts to perform host-level operations.
 
 | Action | Global Administrator | Fabric Manager | Reader |
 |---|:-:|:-:|:-:|
-| View resources, inventory, and status | ✅ | ✅ | ✅ |
-| Assign and remove roles (access control) | ✅ | ❌ | ❌ |
-| Create, rename, or delete resource groups | ✅ | ❌ | ❌ |
-| Add or remove hosts and clusters in a resource group | ✅ | ✅ | ❌ |
-| Create and manage network intent templates | ✅ | ✅ | ❌ |
-| Create, deploy, and convert VM templates | ✅ | ✅ | ❌ |
-| Onboard resources to Azure Arc | ✅ | ✅ | ❌ |
-| Renew agent certificates on managed resources (resource health) | ✅ | ✅ | ❌ |
-| Configure gateway and agent certificate settings (AD CS) | ✅ | ❌ | ❌ |
-| Re-establish trust with a host after restore | ✅ | ❌ | ❌ |
-| Back up and restore the Virtualization Mode environment | ✅ | ❌ | ❌ |
+| View resources, inventory, and status | Allowed | Allowed | Allowed |
+| Assign and remove roles (access control) | Allowed | Not allowed | Not allowed |
+| Create, rename, or delete resource groups | Allowed | Not allowed | Not allowed |
+| Add or remove hosts and clusters in a resource group | Allowed | Allowed | Not allowed |
+| Create and manage network intent templates | Allowed | Allowed | Not allowed |
+| Create, deploy, and convert VM templates | Allowed | Allowed | Not allowed |
+| Onboard resources to Azure Arc | Allowed | Allowed | Not allowed |
+| Renew agent certificates on managed resources (resource health) | Allowed | Allowed | Not allowed |
+| Configure gateway and agent certificate settings (AD CS) | Allowed | Not allowed | Not allowed |
+| Re-establish trust with a host after restore | Allowed | Not allowed | Not allowed |
+| Back up and restore the Virtualization Mode environment | Allowed | Not allowed | Not allowed |
 
 Only users who hold the Global Administrator role can see the **Certificates** settings page.
 
