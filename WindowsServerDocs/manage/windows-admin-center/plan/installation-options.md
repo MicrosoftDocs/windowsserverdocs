@@ -46,7 +46,9 @@ We don't recommend using Administration Mode for local management of the same se
 
 These topology choices don't apply to Virtualization Mode, which uses a dedicated appliance and has separate installation requirements.
 
-## Installation supported operating systems
+<a id="installation-supported-operating-systems"></a>
+
+## Operating systems supported for Windows Admin Center Administration Mode
 
 Use the following Windows operating systems to install Windows Admin Center Administration Mode:
 
@@ -71,7 +73,9 @@ To use Administration Mode:
 > [!NOTE]
 > Port usage and defaults for Windows Admin Center installations on the modernized gateway vary from what is mentioned above. For more information, see [what's different in the modernized gateway](../understand/modernized-gateway.md).
 
-## Installation: Supported web browsers
+<a id="installation-supported-web-browsers"></a>
+
+## Web browsers supported by Windows Admin Center
 
 Microsoft Edge (including [Microsoft Edge insider](https://www.microsoft.com/edge/download/insider)) and Google Chrome are tested and supported on Windows 10 and 11. Other web browsers, including Firefox, aren't currently part of our test matrix and are therefore not *officially* supported. These browsers might have problems running Windows Admin Center. For example, Firefox has its own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
 
