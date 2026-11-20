@@ -1,5 +1,5 @@
 ---
-title: Manage VMs in Windows Admin Center Administration Mode
+title: Manage VMs in Windows Admin Center
 description: Learn how to manage Hyper-V hosts and virtual machines in Windows Admin Center Administration Mode, including VM creation, configuration, and migration.
 ms.topic: how-to
 author: robinharwood

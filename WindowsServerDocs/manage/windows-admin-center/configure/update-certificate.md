@@ -1,5 +1,5 @@
 ---
-title: Update the Administration Mode Certificate
+title: Update Windows Admin Center Gateway Certificate
 description: Learn how to update the single gateway HTTPS certificate used by Windows Admin Center Administration Mode with PowerShell or the installer.
 ms.topic: how-to
 author: robinharwood
