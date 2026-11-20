@@ -64,7 +64,7 @@ Configure the gateway serving certificate, select the custom client certificate 
 
 1. Wait for Windows Admin Center to validate the selected or uploaded certificate automatically. When validation succeeds, the page shows **AD CS certificate recognized. Configure the agent certificate template below.**
 
-1. Under **Client certificate template**, select a custom template from the eligible templates that the interface discovers. The template must include the Client Authentication EKU without Server Authentication, build the subject name from Active Directory, and accept 2,048-bit RSA keys. Your enterprise CA must publish the template. For managed-node permissions, see [Prerequisites](#prerequisites).
+1. Under **Client certificate template**, select an eligible custom template that the interface discovers. The template must include the Client Authentication EKU without Server Authentication, build the subject name from Active Directory, and accept 2,048-bit RSA keys. Your enterprise CA must publish the template. Each managed node's computer object must have **Read** and **Enroll** permissions. For AD CS autoenrollment renewal, also grant **Autoenroll** permission and enable computer certificate autoenrollment through Group Policy.
 
 1. Select **Apply and restart**.
 
@@ -81,7 +81,7 @@ Configure the gateway serving certificate, select the custom client certificate 
 Each time an agent reconnects, the gateway evaluates whether to migrate its self-signed agent certificate to AD CS. Automatic migration starts only if all these conditions are true:
 
 - You configure the gateway to manage agent certificates with AD CS.
-- The agent record still identifies its certificate as self-signed.
+- The resource record in the gateway's management database still identifies the agent certificate as self-signed.
 - The gateway settings contain an eligible agent client certificate template.
 - No conflicting certificate renewal is running for the agent.
 - Fewer than eight agent certificate migration workflows are running.
@@ -132,9 +132,9 @@ During adoption, the workflow moves the previous agent certificate to the agent'
 
 ## Onboard a node with an AD CS certificate
 
-For an AD CS-managed gateway, Windows Admin Center uses the selected agent client certificate template to enroll the certificate locally on the managed node before it installs the agent. Before onboarding, grant the managed node's computer object **Read** and **Enroll** permissions on the template.
+To onboard a node with an AD CS certificate, first configure the Windows Admin Center Virtualization Mode gateway to manage agent certificates with AD CS and select a published, eligible agent client certificate template. Verify that the gateway and managed node can connect to the domain, can reach the enterprise CA, and trust its CA chain. Grant the managed node's computer object **Read** and **Enroll** permissions on the selected template.
 
-For the complete onboarding procedure, see [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
+During onboarding, Windows Admin Center uses the selected template to enroll the agent client certificate locally on the managed node before it installs the agent. Complete the steps in [Add resources in Windows Admin Center Virtualization Mode](add-virtualization-mode-resources.md).
 
 ## Configure certificate-expiry alerts
 
@@ -161,7 +161,7 @@ Use the following guidance to troubleshoot certificate management. For agent fai
 - **The enterprise CA can't be reached**: Verify that the gateway and managed node have domain connectivity, can locate an enterprise CA, and trust the CA chain. Enrollment can't continue without an available enterprise CA.
 - **No eligible client certificate template appears**: Verify that an enterprise CA publishes the template and that it meets every client certificate requirement in [Prerequisites](#prerequisites). In particular, check the EKUs, subject name source, RSA support, and minimum key-size requirement.
 - **Agent enrollment is denied**: Verify that the managed node's computer object has **Read** and **Enroll** on the selected agent client certificate template. For AD CS autoenrollment renewal, also verify **Autoenroll** and the computer autoenrollment Group Policy setting. Windows Admin Center enrollment runs locally on the managed node, not on the gateway.
-- **Automatic migration doesn't start**: Confirm that the agent reconnects and that the gateway manages agent certificates with AD CS. Verify that the agent record still identifies the certificate as self-signed, includes an eligible client template, and has no renewal in progress. If eight migrations are running, keep the node available so Windows Admin Center can retry on a later reconnect.
+- **Automatic migration doesn't start**: Confirm that the agent reconnects and that the gateway manages agent certificates with AD CS. Verify that the resource record in the gateway's management database still identifies the agent certificate as self-signed, that gateway settings contain an eligible client template, and that no renewal is in progress. If eight migrations are running, keep the node available so Windows Admin Center can retry when the agent reconnects.
 - **Self-signed renewal fails**: Open **Workflow status** to identify the failed step. Use **Get agent health** and **Get agent logs** to investigate. Windows Admin Center rolls back to the previous self-signed certificates on failure. Resolve the reported problem, and then retry **Renew certificate**.
 - **AD CS renewal finds no newer certificate**: Verify that AD CS computer autoenrollment placed a newer eligible certificate in the managed node's `LocalMachine\My` store. If none exists, no renewal occurs. Resolve autoenrollment, wait for enrollment, and then retry **Renew certificate**.
 - **The gateway certificate switch fails validation**: Verify that the PFX or installed `LocalMachine\My` certificate has a private key, is currently valid, meets the RSA or ECDSA key-size requirement, has Server Authentication or no EKU restriction, chains to a trusted root, and has a SAN that covers the gateway FQDN.

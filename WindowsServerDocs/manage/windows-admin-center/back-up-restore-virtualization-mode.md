@@ -5,7 +5,7 @@ author: robinharwood
 ms.author: roharwoo
 ms.topic: how-to
 ms.date: 11/04/2026
-ai-usage: ai-generated
+ai-usage: ai-assisted
 appliesto:
    - Windows Admin Center
 #customer intent: As a Windows Server administrator, I want to back up and restore a Windows Admin Center Virtualization Mode instance so that I can recover its database.
@@ -23,14 +23,14 @@ In this article, you create and validate a backup, restore the management databa
 
 - Complete [Install Windows Admin Center Virtualization Mode](deploy/install.md).
 - An account with the Windows Admin Center [**Global Administrator**](virtualization-mode-authentication-access-control.md) role. This role is a Windows Admin Center role, not a Microsoft Entra role.
-- An encryption password that contains 12 to 256 characters.
+- An encryption password of 12 through 256 characters. Enter the same value in **Encryption password** and **Confirm encryption password**, and retain that exact value for validation and restore.
 - To restore an instance, use a backup file that the target gateway can access and the password that you used to create that backup.
 - For a restore to a rebuilt gateway:
    - A target gateway that uses the same intended hostname as the original gateway.
    - A gateway release and database schema that are compatible with the backup. The restore validation checks compatibility.
    - An administrator-managed gateway HTTPS certificate that's valid for the hostname. Provision this certificate separately. The backup doesn't include it.
    - If the backup uses Active Directory Certificate Services (AD CS) for agent trust, configure the required AD CS Client certificate template before restoring. If the target gateway currently uses self-signed agent trust, configure the gateway for AD CS before restoring the AD CS backup.
-- For a backup or restore on a UNC share, share and NTFS permissions for the gateway's domain machine account, which commonly appears as `<DOMAIN>\<GatewayComputerName>$`. At both permission layers, grant write access for backup and read access for validation and restore. A rebuilt gateway computer account might require new grants even when you reuse the hostname.
+- For a backup or restore on a universal naming convention (UNC) share, grant the gateway computer account (`<DOMAIN>\<GatewayComputerName>$`) both share and NTFS permissions. Grant **Write** permission for backup and **Read** permission for validation and restore. If you rebuilt or rejoined the gateway, grant permissions to its current computer account even if you reused the hostname.
 
 Windows Admin Center doesn't create network shares, configure share or NTFS permissions, or store alternate share credentials. Windows Admin Center doesn't support workgroup or standalone shares that require alternate credentials.
 
@@ -41,7 +41,7 @@ Windows Admin Center doesn't create network shares, configure share or NTFS perm
 
 ## Create a Windows Admin Center Virtualization Mode backup
 
-Create an encrypted backup and monitor the operation until it finishes. For a UNC backup path, first grant the gateway's domain machine account write access at both the share and NTFS permission layers.
+Create an encrypted backup and monitor the operation until it finishes.
 
 1. Sign in to the Windows Admin Center Virtualization Mode gateway site.
 
@@ -53,7 +53,7 @@ Create an encrypted backup and monitor the operation until it finishes. For a UN
 
    | Create backup field | What to enter |
    |---|---|
-   | **Backup path (Optional)** | Enter an absolute local folder or a UNC share. Leave the field blank to use `C:\ProgramData\WindowsAdminCenter\Backup`. |
+   | **Backup path (Optional)** | Enter the absolute path of the destination folder, either a local folder or a UNC folder. Don't include a backup file name. Leave the field blank to use `C:\ProgramData\WindowsAdminCenter\Backup`. |
    | **Encryption password** | Enter a password that contains from 12 through 256 characters. |
    | **Confirm encryption password** | Enter the password again. |
 
@@ -63,11 +63,13 @@ Create an encrypted backup and monitor the operation until it finishes. For a UN
 
 1. In **Backup and restore history**, verify that the new backup entry changes from **In progress** to **Succeeded**.
 
-1. Select the notification bell icon to open the **Workflow status** panel. Verify that **Action** is **Backup** and **Status** is **Complete**.
+1. Select the notification bell icon to open the **Workflow status** panel.
+
+1. Verify that **Action** is **Backup** and **Status** is **Complete**.
 
 ## Restore a Windows Admin Center Virtualization Mode backup
 
-Validate and restore a backup from an existing backup-history record or a custom path. A custom path supports recovery of a rebuilt gateway that doesn't have the original backup-history records. During restoration, the interface shows the restore status while the service restarts. Before you restore a rebuilt gateway, use the same intended hostname as the original gateway, provision its HTTPS certificate, configure AD CS when required, and grant its domain machine account read access at both the share and NTFS permission layers for a UNC backup path.
+Validate and restore a backup from an existing backup-history record or a custom path. A custom path supports recovery of a rebuilt gateway that doesn't have the original backup-history records. During restoration, the interface shows the restore status while the service restarts.
 
 1. Sign in to the Windows Admin Center Virtualization Mode gateway site.
 
@@ -75,24 +77,30 @@ Validate and restore a backup from an existing backup-history record or a custom
 
 1. Select **Restore**.
 
-1. In the **Restore from backup** dialog, choose a restore source:
+1. In the **Restore from backup** dialog, choose the source backup file:
 
-   - Choose **Select from existing backups**, and then select a backup from the list.
-   - Select **Enter a custom path**, and then enter the full path to a backup file in an absolute local folder or a UNC share.
+   - Choose **Select from existing backups**, and then select a backup-history record. Windows Admin Center uses the backup file path in that record.
+   - Select **Enter a custom path**, and then enter the absolute local or UNC path to the source backup file, including its file name.
 
 1. Verify that **Backup file path** shows the path for the selected backup.
 
-1. Enter the password for the selected backup in **Backup password**, and then select **Validate**.
+1. Enter the password for the selected backup in **Backup password**.
+
+1. Select **Validate**.
 
    Validation checks the password, detects unauthorized modifications to the backup, and verifies that its gateway release and database schema are compatible. Validation fails for an incorrect password, an unauthorized modification, or an incompatible backup.
 
 1. Verify that the message **Backup is compatible and ready to restore** appears and **Start restore** becomes available.
 
-1. Select **Start restore**, and then in the **Restore database?** dialog, select **Confirm restore**.
+1. Select **Start restore**.
+
+1. In the **Restore database?** dialog, select **Confirm restore**.
 
 1. Verify that **Start restore** changes to **Restoring...** and the **Restore in progress** dialog appears.
 
-1. Wait for the service to restart, and then select **OK**.
+1. Wait for the service to restart.
+
+1. Select **OK**.
 
 1. From **Overview**, select **Backup & Restore**.
 

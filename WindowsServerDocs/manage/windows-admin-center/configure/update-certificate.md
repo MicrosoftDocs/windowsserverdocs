@@ -99,33 +99,117 @@ To update the certificate that Windows Admin Center uses, you need the following
 
 ---
 
-## Troubleshoot certificate issues
+<a id="troubleshoot-certificate-issues"></a>
 
-Several tools help you find logs and error messages. The following diagnostic tools are the most useful:
+## Validate the certificate update
 
-- **Event Viewer**: Use the Event Viewer under the WindowsAdminCenter event log to diagnose any issues related to the TLS certificate registration process. This tool provides detailed logs that can help pinpoint specific errors.
-- **Browser errors**: If you set up the Windows Admin Center service properly but the browser indicates an error, verify the TLS certificate configuration and ensure it matches the required setup parameters.
-- **Ajax error**: An Ajax error might appear when you attempt to open a connection with an invalid certificate. To avoid this issue, install and validate the certificate correctly.
+Run the validation commands in an elevated PowerShell session on the Windows Admin Center gateway. These commands work on Desktop Experience and Server Core.
 
-### Common problems
+### Select the certificate used for the update
 
-- **Invalid certificate**
-  - A certificate might be invalid. This condition shows as "invalid certificate."
-  - Even if you don't see an error on the WindowsAdminCenter event log, the browser could indicate invalid certificate status as an icon at the address bar. You can't use Windows Admin Center if it uses an invalid certificate when communicating with the subprocesses.
-  - You shouldn't generate a self-signed certificate because it's a security issue.
+Run only the command block that matches the method you used.
 
-- **Mismatched DNS name**
-  - The certificate DNS name might be different from the Windows Admin Center DNS name.
-  - If you don't resolve this mismatch, Windows Admin Center might not work or return errors.
+If you used `Set-WACCertificateSubjectName -SubjectName`, replace `<subject name>` with the exact certificate subject that you supplied to that command.
 
-- **Wrong or inaccurate thumbprint**
-  - Check that the thumbprint is present and correctly registered. If the thumbprint doesn't match what Windows Admin Center expects, Windows Admin Center might not detect the certificate.
+```powershell
+$subjectName = '<subject name>'
+$matches = @(Get-ChildItem -Path Cert:\LocalMachine\My |
+    Where-Object Subject -EQ $subjectName)
 
-- **Private key not configured to be accessed by the network service**
-  - The HTTPS protocol layer reads the certificate's private key to encrypt the TLS payload when communicating over the HTTPS protocol.
-   - Windows Admin Center uses the Network Service account, so Network Service must be able to access the private key. Use the `certlm.msc` tool to select the **All Tasks** menu and open the **Manage Private Keys...** dialog.
-   - Ensure `NETWORK SERVICE` can access the private key.
+if ($matches.Count -ne 1) {
+    throw "Expected exactly one certificate with subject '$subjectName'; found $($matches.Count)."
+}
 
-- **Network, policy, and firewall configuration issues**
-  - If you restrict TLS communications, the Windows Admin Center gateway might not be able to access the certificate. This issue might stem from a firewall or Group Policy Object (GPO).
+$certificate = $matches[0]
+```
+
+The command must find exactly one certificate.
+
+If you used `Set-WACCertificateSubjectName -Thumbprint` or the Windows Admin Center installer, replace `<thumbprint>` with the SHA1 thumbprint that you supplied during the update.
+
+```powershell
+$expectedThumbprint = ('<thumbprint>' -replace '\s', '').ToUpperInvariant()
+$certificate = Get-Item -Path "Cert:\LocalMachine\My\$expectedThumbprint" -ErrorAction Stop
+$certificate.Thumbprint -eq $expectedThumbprint
+```
+
+The expected result is `True`.
+
+### Check the certificate properties
+
+Run the following command:
+
+```powershell
+$now = Get-Date
+
+[pscustomobject]@{
+    Subject              = $certificate.Subject
+    Thumbprint           = $certificate.Thumbprint
+    HasPrivateKey        = $certificate.HasPrivateKey
+    CurrentlyValid       = $certificate.NotBefore -le $now -and $now -lt $certificate.NotAfter
+    ServerAuthentication = @($certificate.EnhancedKeyUsageList.ObjectId.Value) -contains '1.3.6.1.5.5.7.3.1'
+}
+```
+
+Compare the results with these values:
+
+| Property | Expected result |
+|---|---|
+| `Subject` | The subject selected with the subject-name method, if you used that method. |
+| `Thumbprint` | The thumbprint selected with the thumbprint or installer method, if you used either method. |
+| `HasPrivateKey` | `True` |
+| `CurrentlyValid` | `True` |
+| `ServerAuthentication` | `True` |
+
+### Validate the certificate chain and gateway name
+
+If you access Windows Admin Center by FQDN, replace `<gateway FQDN>` with the exact FQDN used in the Windows Admin Center URL.
+
+```powershell
+Test-Certificate -Cert $certificate -Policy SSL -DNSName 'dns=<gateway FQDN>'
+```
+
+The expected result is `True`.
+
+If you access Windows Admin Center by IP address, run:
+
+```powershell
+Test-Certificate -Cert $certificate -Policy SSL
+certutil.exe -store My $($certificate.Thumbprint)
+```
+
+The expected result from `Test-Certificate` is `True`. In the `certutil` output, verify that **Subject Alternative Name** contains the exact gateway IP address used in the Windows Admin Center URL.
+
+### Verify the service and HTTPS port
+
+Verify that the Windows Admin Center service is running:
+
+```powershell
+(Get-Service -Name WindowsAdminCenter).Status
+```
+
+The expected result is `Running`.
+
+Replace `<gateway FQDN or IP address>` with the gateway address used in the Windows Admin Center URL. Replace `<HTTPS port>` with the port from that URL.
+
+```powershell
+Test-NetConnection -ComputerName '<gateway FQDN or IP address>' -Port <HTTPS port>
+```
+
+The expected value of `TcpTestSucceeded` is `True`.
+
+### Resolve validation failures
+
+If the certificate-selection check fails, rerun `Set-WACCertificateSubjectName` with the corrected unique subject name or thumbprint.
+
+If a certificate-property or policy check fails, use a certificate that meets the failed prerequisite.
+
+If the service isn't running, grant the required certificate access again:
+
+```powershell
+Set-WACCertificateAcl -SubjectName $certificate.Subject
+Restart-Service -Name WindowsAdminCenter
+```
+
+Repeat the service and port checks once.
 
