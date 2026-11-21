@@ -1,7 +1,7 @@
 ---
 title: Key-Based Authentication in OpenSSH for Windows
 description: Find out about OpenSSH Server key-based authentication, generation, and deployment for Windows. See how to use built-in Windows tools or PowerShell to manage keys.
-ms.date: 10/03/2025
+ms.date: 11/12/2026
 ms.topic: concept-article
 ms.author: roharwoo
 author: robinharwood
@@ -33,7 +33,7 @@ SSH public key authentication uses asymmetric cryptographic algorithms to genera
 
 The SSH server and client can use key-based authentication to compare the public key for a user name provided against the private key. If the server-side public key can't be validated against the client-side private key, authentication fails.
 
-You can implement multifactor authentication with key pairs by entering a passphrase when you generate the key pair. For more information, see [User key generation](#user-key-generation). The user is prompted for the passphrase during authentication. The passphrase combined with the presence of the private key is used on the SSH client to authenticate the user.
+You can protect a private key file by entering a passphrase when you generate the key pair. For more information, see [User key generation](#user-key-generation). When the SSH client uses the private key file directly, the user is prompted for the passphrase to decrypt it. When you use `ssh-agent`, the passphrase isn't required for each authentication, as explained in the following guidance.
 
 > [!IMPORTANT]
 > A remote session opened via key-based authentication doesn't have associated user credentials. As a result, the session isn't capable of outbound authentication as the user. This behavior is by design.
@@ -83,7 +83,7 @@ Enter file in which to save the key (C:\Users\username/.ssh/id_ecdsa):
 
 At the prompt, you can select __Enter__ to accept the default file path, or you can specify a path or file name for your generated keys.
 
-Next, you're prompted to use a passphrase to encrypt your private key files. In general, we don't recommend using an empty passphrase, because the passphrase works with the key file to provide two-factor authentication. But for this example, you can leave the passphrase empty.
+Next, you're prompted to use a passphrase to encrypt your private key files. In general, we don't recommend using an empty passphrase, because the passphrase protects the private key file if someone obtains it. But for this example, you can leave the passphrase empty.
 
 ```Output
 Enter passphrase (empty for no passphrase):
@@ -134,7 +134,10 @@ Get-Service ssh-agent
 ssh-add $env:USERPROFILE\.ssh\id_ecdsa
 ```
 
-After you add the key to the `ssh-agent` service on your client, the `ssh-agent` service automatically retrieves the local private key and passes it to your SSH client.
+The Windows `ssh-agent` service persists added private keys under `HKCU\Software\OpenSSH\Agent\Keys`, encrypted with the Windows Data Protection API (DPAPI) for the user who added them. The agent uses these keys to perform signing operations for your SSH client without requiring the original private key file.
+
+> [!IMPORTANT]
+> The SSH key passphrase is required only when you first add the key; subsequent use across sign-outs and reboots requires only your Windows logon. Any process running as your Windows user can use the agent to authenticate with the key without another passphrase prompt. Protect access to your Windows account and session accordingly.
 
 > [!IMPORTANT]
 > We recommend that you back up your private key to a secure location and then delete it
@@ -142,6 +145,14 @@ After you add the key to the `ssh-agent` service on your client, the `ssh-agent`
 > the agent when a strong algorithm, such as ECDSA in this example, is used. If you lose
 > access to the private key, you have to create a new key pair and update the public key on all
 > systems you interact with.
+
+Stopping the `ssh-agent` service, signing out, restarting the computer, or deleting the original private key file doesn't remove persisted keys. With the service running, run the following command as the user who added them to remove all keys from that user's agent storage:
+
+```powershell
+ssh-add -D
+```
+
+To add a removed key again, you need the original private key file and its passphrase, if one was set.
 
 ## Deploy the public key
 
